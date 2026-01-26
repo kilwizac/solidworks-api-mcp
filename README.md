@@ -9,8 +9,9 @@ A Model Context Protocol (MCP) server that provides intelligent access to SolidW
 - **Programming Guides** - Includes best practices, patterns, and code examples
 - **Structured JSON Data** - Well-organized API reference data in JSON format for reliable queries
 - **MCP Protocol Support** - Full implementation of the Model Context Protocol (2024-11-05)
+- **Multiple Deployment Options** - Local, Claude Desktop, or FastMCP Cloud
 
-## Installation
+## Quick Start
 
 ### Prerequisites
 
@@ -25,33 +26,38 @@ git clone https://github.com/kilwizac/sw-api-mcp.git
 cd sw-api-mcp
 ```
 
-2. No additional dependencies required - the server uses only Python standard library.
+2. Install dependencies (FastMCP Cloud version):
+```bash
+pip install -r requirements.txt
+```
 
-## Usage
+Note: The standard MCP version (`solidworks_mcp_server.py`) requires no external dependencies.
 
-### Running the Server
+## Deployment Options
 
-The server reads from standard input (stdin) and writes responses to standard output (stdout) following the MCP protocol.
+### Option 1: Local Deployment (Standard MCP Protocol)
 
+Use the standard `solidworks_mcp_server.py` for local deployment with no external dependencies.
+
+**Running the server:**
 ```bash
 python server/solidworks_mcp_server.py
 ```
 
-### Configuration
+The server reads from stdin and writes responses to stdout following the MCP protocol.
 
+**Configuration:**
 You can override the data directory using the `SW_API_DATA_ROOT` environment variable:
-
 ```bash
 export SW_API_DATA_ROOT=/path/to/solidworks-api
 python server/solidworks_mcp_server.py
 ```
 
-If not set, the server defaults to `../solidworks-api` relative to the server script.
-
-### Using with Claude Desktop
+### Option 2: Claude Desktop Integration
 
 Add to your `claude_desktop_config.json`:
 
+**On macOS/Linux** (typically `~/.config/Claude/claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
@@ -63,27 +69,64 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
+**On Windows** (typically `%APPDATA%\Claude\claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "solidworks-api": {
+      "command": "python",
+      "args": ["C:\\path\\to\\sw-api-mcp\\server\\solidworks_mcp_server.py"]
+    }
+  }
+}
+```
+
+After updating the config, restart Claude Desktop to activate the server.
+
+### Option 3: FastMCP Cloud Deployment
+
+Use `solidworks_mcp_server_fastmcp.py` for deployment to FastMCP Cloud platform.
+
+**Entrypoint:** `server/solidworks_mcp_server_fastmcp.py:main`
+
+**Features:**
+- Automatic HTTP server wrapping
+- FastMCP framework integration
+- Cloud-native deployment
+
+**Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+**Local testing:**
+```bash
+python server/solidworks_mcp_server_fastmcp.py
+```
+
 ## Project Structure
 
 ```
 sw-api-mcp/
 ├── server/
-│   └── solidworks_mcp_server.py    # Main MCP server implementation
+│   ├── solidworks_mcp_server.py           # Standard MCP server (recommended for local/Claude)
+│   └── solidworks_mcp_server_fastmcp.py   # FastMCP Cloud compatible version
 ├── solidworks-api/
-│   ├── _index.json                 # Documentation index
-│   ├── _search_index.json          # Search index for queries
+│   ├── _index.json                        # Documentation index
+│   ├── _search_index.json                 # Search index for queries
 │   └── json/
-│       ├── sldworksapi/            # API interface definitions
-│       └── progguide/              # Programming guides and examples
-├── README.md                        # This file
-└── .gitignore                       # Git ignore rules
+│       ├── sldworksapi/                   # API interface definitions
+│       └── progguide/                     # Programming guides and examples
+├── README.md                              # This file
+├── requirements.txt                       # Python dependencies
+└── .gitignore                             # Git configuration
 ```
 
 ## Available Tools
 
-The server exposes the following tools to MCP clients:
+Both server versions expose the following tools to MCP clients:
 
-### `search_api`
+### `search_solidworks_api`
 Search the SolidWorks API documentation by keywords.
 
 **Parameters:**
@@ -93,7 +136,7 @@ Search the SolidWorks API documentation by keywords.
 **Returns:**
 Array of matching documentation entries with titles, summaries, and relevance scores.
 
-### `get_interface_info`
+### `get_interface_details` (FastMCP version only)
 Get detailed information about a specific API interface.
 
 **Parameters:**
@@ -102,23 +145,25 @@ Get detailed information about a specific API interface.
 **Returns:**
 Detailed interface documentation including methods, properties, and examples.
 
-## Data Sources
+### `get_method_details` (FastMCP version only)
+Get information about a specific method or property.
 
-The API documentation data is structured as follows:
+**Parameters:**
+- `interface_name` (string): Name of the interface
+- `method_name` (string): Name of the method or property
 
-### JSON Database Structure
+**Returns:**
+Detailed method/property documentation including parameters and examples.
 
-- **Interfaces**: Complete definitions of SolidWorks API interfaces
-  - Location: `solidworks-api/json/sldworksapi/interfaces/`
-  - Each interface has its own directory with method and property files
+### `search_programming_guides` (FastMCP version only)
+Search programming guides and code examples.
 
-- **Programming Guides**: Best practices and code examples
-  - Location: `solidworks-api/json/progguide/`
-  - Includes patterns, examples, and tutorials
+**Parameters:**
+- `query` (string): Search terms (e.g., "macro best practices", "event handler")
+- `limit` (integer, optional): Maximum results to return (default: 5)
 
-- **Indexes**: Fast lookup structures
-  - `_index.json`: Main documentation index
-  - `_search_index.json`: Optimized search index for quick queries
+**Returns:**
+List of matching programming guides with summaries and links.
 
 ## API Search Examples
 
@@ -147,7 +192,46 @@ The server implements the MCP protocol with the following core components:
 1. **DataStore**: Loads and caches API documentation JSON files
 2. **Indexing System**: Creates searchable indexes of API documentation
 3. **Search Engine**: Tokenizes queries and scores results based on relevance
-4. **MCPServer**: Handles MCP protocol messages and coordinates responses
+4. **MCPServer**: Handles MCP protocol messages and coordinates responses (standard version)
+5. **FastMCP Integration**: Provides framework integration for cloud deployment (FastMCP version)
+
+## Server Specifications
+
+- **Name**: solidworks-mcp
+- **Version**: 0.1.0
+- **MCP Protocol Version**: 2024-11-05
+- **Language**: Python 3.8+
+
+### Standard Version (`solidworks_mcp_server.py`)
+- **Dependencies**: None (standard library only)
+- **Best for**: Local deployment, Claude Desktop
+- **I/O**: stdin/stdout (JSON-based MCP protocol)
+
+### FastMCP Version (`solidworks_mcp_server_fastmcp.py`)
+- **Dependencies**: fastmcp>=2.12.3
+- **Best for**: FastMCP Cloud deployment
+- **I/O**: HTTP server wrapper
+- **Entrypoint**: `main()` function returns FastMCP instance
+
+## Data Format
+
+The API documentation is stored in JSON format with the following structure:
+
+- `_index.json` - Master index of all documentation
+- `_search_index.json` - Pre-computed search index for fast queries
+- `json/_index.json` - JSON-specific documentation index
+- `json/sldworksapi/interfaces/` - Individual interface definitions
+- `json/progguide/` - Programming guides and patterns
+
+## Environment Variables
+
+- `SW_API_DATA_ROOT` - Optional path to the API data directory. If not set, defaults to `./solidworks-api` relative to the server script.
+
+Example:
+```bash
+export SW_API_DATA_ROOT=/custom/path/to/solidworks-api
+python server/solidworks_mcp_server.py
+```
 
 ## Contributing
 
@@ -173,11 +257,17 @@ For SolidWorks API documentation, refer to the official SolidWorks API Help reso
 - Ensure Python 3.8+ is installed
 - Check that the `solidworks-api` directory exists and contains `_index.json`
 - Verify file permissions for the data directory
+- For FastMCP version: ensure fastmcp is installed (`pip install -r requirements.txt`)
 
 ### Search returns no results
 - Try simpler search terms
 - Check that the `_search_index.json` file is not corrupted
 - Ensure the data directory path is correct
+
+### FastMCP Cloud build fails
+- Verify the entrypoint is set to `server/solidworks_mcp_server_fastmcp.py:main`
+- Ensure `fastmcp` is in requirements.txt
+- Check that the `main()` function returns a FastMCP instance
 
 ### Memory issues with large searches
 - Limit results using the `limit` parameter
