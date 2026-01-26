@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "AddProfileBspline",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Props",
+        "type": "System.Object",
+        "description": "Contains 4 integers packed into 2 double elements (see Remarks )"
+      },
+      {
+        "name": "Knots",
+        "type": "System.Object",
+        "description": "Array of numKnots (see Remarks )"
+      },
+      {
+        "name": "CtrlPtCoords",
+        "type": "System.Object",
+        "description": "Array of numCtrlPtCoord (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IAddProfileBspline"
+    ],
+    "keywords": [
+      "addprofilebspline",
+      "ibody2",
+      "body2",
+      "add",
+      "profile",
+      "bspline",
+      "props",
+      "object",
+      "knots",
+      "ctrl",
+      "pt",
+      "coords",
+      "create",
+      "reference",
+      "curve",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBody2.AddProfileBspline",
+  "description": "Creates an B-spline profile curve and returns a pointer to that curve.",
+  "signature": "System.Object AddProfileBspline( \n   System.Object\nProps\n,\n   System.Object\nKnots\n,\n   System.Object\nCtrlPtCoords\n)",
+  "parameters": [
+    {
+      "name": "Props",
+      "type": "System.Object",
+      "description": "Contains 4 integers packed into 2 double elements (see Remarks )"
+    },
+    {
+      "name": "Knots",
+      "type": "System.Object",
+      "description": "Array of numKnots (see Remarks )"
+    },
+    {
+      "name": "CtrlPtCoords",
+      "type": "System.Object",
+      "description": "Array of numCtrlPtCoord (see Remarks )"
+    }
+  ],
+  "returns": "Curve",
+  "remarks": "You can use this method with\nIBody2::CreateRevolutionSurface\nto generate any surface of revolution or with\nIBody2::CreateExtrusionSurface\nto generate a tabulated cylinder.\nThe Props argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nThe length of the knots array is given by:\nnumKnots = NumCtrlPoints + Order\nThe length of the CtrlPtCoords is given by:\nNumCtrlPtCoord = NumCtrlPoints + DimensionControlPoints",
+  "examples": [
+    {
+      "title": "Create Reference Curve (C#)",
+      "href": "Create_Reference_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Reference Curve (VB.NET)",
+      "href": "Create_Reference_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Reference Curve (VBA)",
+      "href": "Create_Reference_Curve_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IAddProfileBspline"
+  ]
+}

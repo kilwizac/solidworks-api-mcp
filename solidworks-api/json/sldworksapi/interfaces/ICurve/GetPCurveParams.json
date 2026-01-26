@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetPCurveParams",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.IGetPCurveParams",
+      "ICurve.IGetPCurveParamsSize",
+      "ICurve.Identity"
+    ],
+    "keywords": [
+      "getpcurveparams",
+      "icurve",
+      "curve",
+      "params",
+      "object"
+    ]
+  },
+  "title": "ICurve.GetPCurveParams",
+  "description": "Obsolete. Superseded by ICurve::GetPCurveParams2.",
+  "signature": "System.Object GetPCurveParams()",
+  "parameters": [],
+  "returns": "Array of doubles describing the parameters of the curve (see Remarks )",
+  "remarks": "This method returns the curve as a series of segments, each of which has this form:\n(w0*a0 + w1*a1*t + w2*a2*t**2 + w3*a3*t**3)\np(t) = --------------------------------------------\n(w0 + w1*t + w2*t**2 + w3*t**3)\nWhere w is the weight coefficient and a is the polynomial coefficient.\nThe coefficients returned are vectors of dimensions \"dim\". For example, if the curve is rational, then\ndimension\n= 4, and the coefficients returned for each segment are as follows:\n(a0x,a0y,a0z,w0),(a1x,a1y,a1z,w1)...\nHowever, if the curve is returned as non-rational, then\ndimension\n= 3, and its coefficients are:\n(a0x,a0y,a0z),(a1x,a1y,a1z),...\nThe size of the return value array is (3 +\nNumberKnots\n+\nNumberSegments\nx\nOrder\nx\nDimension\n).\nThe array is as follows:\n[\npackedDouble1\n,\npackedDouble2\n,\npackedDouble3, knot1\n,\nknot2\n,...,\nCoefficientsSegment1\n[\nDimension\n],\nCoefficientsSegment2\n[\nDimension\n],...\n]\nwhere:\npackedDouble1\n: Integer pair containing\nReserved\nand\nOrder\npackedDouble2\n: Integer pair containing\nNumberSegments\nand\nPeriodicity\npackedDouble3\n: Integer pair containing\nNumberKnots\nand\nDimension\nknot1\nknot2\n...\nCoefficientsSegment1\n[\nDimension\n]\nCoefficientsSegment2\n[\nDimension\n]\n...\nThe coefficients for each segment start with the constant term and end with the term of highest degree (for example, ConstantX, ConstantY, ConstantZ, AX, AY, AZ, BX, BY, BZ). The total number of coefficients is:\n(\nNumberSegments\n) x (\nOrder\n) x (\nDimension\n).",
+  "examples": [],
+  "related": [
+    "ICurve.IGetPCurveParams",
+    "ICurve.IGetPCurveParamsSize",
+    "ICurve.Identity"
+  ]
+}

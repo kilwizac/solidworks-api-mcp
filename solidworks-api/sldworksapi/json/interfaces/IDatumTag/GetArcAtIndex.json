@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTag",
+    "member": "GetArcAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arc; index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTag.GetArcCount",
+      "IDatumTag.IGetArcAtIndex"
+    ],
+    "keywords": [
+      "getarcatindex",
+      "idatumtag",
+      "datum",
+      "tag",
+      "arc",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDatumTag.GetArcAtIndex",
+  "description": "Gets information for the specified arc for this datum tag.",
+  "signature": "System.Object GetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arc; index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3],\ncenterPt\n[3],\nrotationDir\n]\nwhere:\nlineType\nLine type as defined in\nswLineTypes_e\nstartPt\n[3]\nXYZ arc start point\nendPt\n[3]\nXYZ arc end point\ncenterPt\n[3]\nXYZ arc center point\nrotationDir\nBoolean returned as a double that represents the rotation direction, where CCW = True and CW = false\nBefore calling this method, call\nIDatumTag::GetArcCount\nto find out the number of arcs in this datum tag.",
+  "examples": [],
+  "related": [
+    "IDatumTag.GetArcCount",
+    "IDatumTag.IGetArcAtIndex"
+  ]
+}

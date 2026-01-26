@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetHeader",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Header style as defined in swTableHeaderPosition_e"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of lines in the header"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.GetHeaderCount",
+      "ITableAnnotation.GetHeaderStyle"
+    ],
+    "keywords": [
+      "table",
+      "header",
+      "setheader",
+      "itableannotation",
+      "annotation",
+      "style",
+      "int32",
+      "count",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SetHeader",
+  "description": "Sets the header for this table.",
+  "signature": "System.Boolean SetHeader( \n   System.Int32\nStyle\n,\n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Header style as defined in swTableHeaderPosition_e"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of lines in the header"
+    }
+  ],
+  "returns": "True if header is set successfully, false if not",
+  "remarks": "Tables created internally by the SOLIDWORKS Design software, such as Hole Charts, Revision Blocks, and BOM tables, are created with a specific number of headers lines.\nThis method cannot:\nChange the number of lines in the header for these tables; thus, the Count argument is ignored.\nTurn off the header in these types of tables; thus, this method has no effect, and FALSE is returned.\nEssentially, the only thing this method can do with these types of tables is to change the header between the top and the bottom.\nIf you are changing the header style and number of header lines in a single use of this method, the number of lines is considered before changing the header style. For example, if you are changing a table that had 1 header line at the top, by calling SetHeader (swTableHeader_Bottom, 3), the first 3 lines in the table are moved to the bottom of the table.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.GetHeaderCount",
+    "ITableAnnotation.GetHeaderStyle"
+  ]
+}

@@ -1,0 +1,66 @@
+---
+type: property
+interface: IMoveCopyBodyFeatureData
+member: TransformReferenceEntity
+returns: System.Object
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - geometry
+related: []
+keywords:
+  - rotate
+  - bodies
+  - move
+  - transformreferenceentity
+  - imovecopybodyfeaturedata
+  - copy
+  - body
+  - feature
+  - data
+  - transform
+  - reference
+  - entity
+  - object
+  - using
+  - edge
+  - vba
+  - modify
+  - vertex
+  - vb
+  - net
+readonly: null
+---
+
+# IMoveCopyBodyFeatureData.TransformReferenceEntity
+
+Gets or sets the entity to reference when moving or rotating the selected bodies.
+
+## Signature
+
+```csharp
+System.Object TransformReferenceEntity {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Pointer to one of these entities: Coordinate system Edge Sketch point Vertex
+
+## Remarks
+
+See
+Accessing Selections that Define Features
+for additional details on using this method.
+
+## Examples
+
+- Copy and Rotate Body Using Edge (VBA) (Copy_and_Rotate_Body_using_Edge_Example_VB.htm)
+- Modify Move/Copy Body Using Vertex (C#) (Move_and_Copy_Body_Using_Vertex_Example_CSharp.htm)
+- Modify Move/Copy Body Using Vertex (VB.NET) (Move_and_Copy_Body_Using_Vertex_Example_VBNET.htm)
+- Modify Move/Copy Body Using Vertex (VBA) (Move_and_Copy_Body_using_Vertex_Example_VB.htm)

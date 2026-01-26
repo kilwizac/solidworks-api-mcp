@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "Parameter",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of parameter (for example, \"D1\")"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IDimension.FullName",
+      "IFeature.IParameter",
+      "IModelDoc2.IParameter"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "features",
+      "parameter",
+      "ifeature",
+      "feature",
+      "name",
+      "string",
+      "object",
+      "change",
+      "dimension",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeature.Parameter",
+  "description": "Gets a pointer to the object for the specified parameter or a pointer to the specified parameter.",
+  "signature": "System.Object Parameter( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of parameter (for example, \"D1\")"
+    }
+  ],
+  "returns": "Parameter (see Remarks )",
+  "remarks": "Most parameters are\ndimensions\n.\nThe Name argument for this method does not have to be the \"full\" dimension name. For example, you only need to pass \"D1\" not \"D1@Base-Revolve\". The full dimension name is required if you call\nIModelDoc2::Parameter\n.\nSOLIDWORKS recognizes some characters as special characters. The use of these characters in part or feature names can cause this method to fail and not return a dimension. These special characters are not recognized in names of parts or features:\nat sign ( @ )\nperiod ( . )\nbackslash ( / )",
+  "examples": [
+    {
+      "title": "Change Dimension (VBA)",
+      "href": "Change_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Dimension (VB.NET)",
+      "href": "Change_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Dimension (C#)",
+      "href": "Change_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimension.FullName",
+    "IFeature.IParameter",
+    "IModelDoc2.IParameter"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateChamfer",
+    "returns": "SketchSegment",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of chamfer as defined in swSketchChamferType_e"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance of the chamfer"
+      },
+      {
+        "name": "AngleORdist",
+        "type": "System.Double",
+        "description": "If Type = swSketchChamfer_DistanceDistance, then the second chamfer distance If Type = swSketchChamfer_DistanceAngle, then the second chamfer angle If Type = swSketchChamfer_DistanceEqual, then this argument is ignored because Distance is used for both edges"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "chamfers",
+      "see",
+      "also",
+      "ichamferfeaturedata2",
+      "sketch",
+      "tools",
+      "chamfer",
+      "isketch",
+      "createchamfer",
+      "isketchmanager",
+      "manager",
+      "create",
+      "type",
+      "int32",
+      "distance",
+      "double",
+      "angle",
+      "rdist",
+      "segment"
+    ]
+  },
+  "title": "ISketchManager.CreateChamfer",
+  "description": "Creates a chamfer between two selected sketch entities.",
+  "signature": "SketchSegment CreateChamfer( \n   System.Int32\nType\n,\n   System.Double\nDistance\n,\n   System.Double\nAngleORdist\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of chamfer as defined in swSketchChamferType_e"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance of the chamfer"
+    },
+    {
+      "name": "AngleORdist",
+      "type": "System.Double",
+      "description": "If Type = swSketchChamfer_DistanceDistance, then the second chamfer distance If Type = swSketchChamfer_DistanceAngle, then the second chamfer angle If Type = swSketchChamfer_DistanceEqual, then this argument is ignored because Distance is used for both edges"
+    }
+  ],
+  "returns": "Sketch segment for the chamfer",
+  "remarks": "",
+  "examples": [],
+  "related": []
+}

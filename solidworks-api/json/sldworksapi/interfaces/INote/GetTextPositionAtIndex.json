@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetTextPositionAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the piece of text where the index begins at 1"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.AddText",
+      "INote.GetText",
+      "INote.GetTextAngleAtIndex",
+      "INote.GetTextAtIndex",
+      "INote.GetTextFontAtIndex",
+      "INote.GetTextHeightAtIndex",
+      "INote.GetTextInvertAtIndex",
+      "INote.GetTextJustification",
+      "INote.GetTextJustificationAtIndex",
+      "INote.GetTextLineSpacingAtIndex",
+      "INote.GetTextOffsetAtIndex",
+      "INote.GetTextPoint2",
+      "INote.GetTextRefPositionAtIndex",
+      "INote.GetTextVerticalJustification",
+      "INote.IGetTextOffsetAtIndex",
+      "INote.IGetTextPoint2",
+      "INote.IGetTextPositionAtIndex",
+      "INote.PropertyLinkedText",
+      "INote.SetText",
+      "INote.SetTextAtIndex",
+      "INote.SetTextJustification",
+      "INote.SetTextJustificationAtIndex",
+      "INote.SetTextOffsetAtIndex",
+      "INote.SetTextPoint",
+      "INote.SetTextVerticalJustification",
+      "INote.TextRightToLeft"
+    ],
+    "keywords": [
+      "text",
+      "notes",
+      "note",
+      "see",
+      "also",
+      "inote",
+      "gettextpositionatindex",
+      "position",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "INote.GetTextPositionAtIndex",
+  "description": "Gets the text item's offset relative to the document origin.",
+  "signature": "System.Object GetTextPositionAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the piece of text where the index begins at 1"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Before using this method, use\nINote::GetTextCount\n.\nThe return value is the following array of doubles :\n[\ntextPtX, textPtY, textPtZ\n]\nwhere these text position values are in relation to the document.\nThe data returned from this method is in terms of document space.\nIf the document containing this note is...\nThen the coordinates returned are based on the...\nDrawing\nSheet origin\nPart or assembly\nModel origin",
+  "examples": [],
+  "related": [
+    "INote.AddText",
+    "INote.GetText",
+    "INote.GetTextAngleAtIndex",
+    "INote.GetTextAtIndex",
+    "INote.GetTextFontAtIndex",
+    "INote.GetTextHeightAtIndex",
+    "INote.GetTextInvertAtIndex",
+    "INote.GetTextJustification",
+    "INote.GetTextJustificationAtIndex",
+    "INote.GetTextLineSpacingAtIndex",
+    "INote.GetTextOffsetAtIndex",
+    "INote.GetTextPoint2",
+    "INote.GetTextRefPositionAtIndex",
+    "INote.GetTextVerticalJustification",
+    "INote.IGetTextOffsetAtIndex",
+    "INote.IGetTextPoint2",
+    "INote.IGetTextPositionAtIndex",
+    "INote.PropertyLinkedText",
+    "INote.SetText",
+    "INote.SetTextAtIndex",
+    "INote.SetTextJustification",
+    "INote.SetTextJustificationAtIndex",
+    "INote.SetTextOffsetAtIndex",
+    "INote.SetTextPoint",
+    "INote.SetTextVerticalJustification",
+    "INote.TextRightToLeft"
+  ]
+}

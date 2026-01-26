@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddComponents",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Names",
+        "type": "System.Object",
+        "description": "Array of strings component file names"
+      },
+      {
+        "name": "Transforms",
+        "type": "System.Object",
+        "description": "Array of doubles of the component transforms"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.IAddComponents2"
+    ],
+    "keywords": [
+      "addcomponents",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "add",
+      "components",
+      "names",
+      "object",
+      "transforms",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.AddComponents",
+  "description": "Obsolete. Superseded by IAssemblyDoc::AddComponents3.",
+  "signature": "System.Object AddComponents( \n   System.Object\nNames\n,\n   System.Object\nTransforms\n)",
+  "parameters": [
+    {
+      "name": "Names",
+      "type": "System.Object",
+      "description": "Array of strings component file names"
+    },
+    {
+      "name": "Transforms",
+      "type": "System.Object",
+      "description": "Array of doubles of the component transforms"
+    }
+  ],
+  "returns": "Array of objects of newly created components",
+  "remarks": "The array of file names represents all of the components that are added to the assembly. If there is more than one instance of a given component, make sure you add the file name of the component for each instance of the component.\nThe array of transforms consists of [count x 16] doubles. There should be one transform for each component being added.\nTIP\n: See\nISldWorks::OpenDoc6\nfor tips on how to avoid using large amounts of memory when opening up multiple parts to add to an assembly",
+  "examples": [
+    {
+      "title": "Add Components (VBA)",
+      "href": "Add_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IAddComponents2"
+  ]
+}

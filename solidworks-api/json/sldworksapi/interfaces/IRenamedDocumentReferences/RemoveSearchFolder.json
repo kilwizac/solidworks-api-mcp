@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRenamedDocumentReferences",
+    "member": "RemoveSearchFolder",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Folder",
+        "type": "System.String",
+        "description": "Folder in which to search for documents whose references to update"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IRenamedDocumentReferences.AddSearchFolder",
+      "IRenamedDocumentReferences.GetSearchPath",
+      "IRenamedDocumentReferences.IncludeFileLocations"
+    ],
+    "keywords": [
+      "removesearchfolder",
+      "irenameddocumentreferences",
+      "renamed",
+      "document",
+      "references",
+      "remove",
+      "search",
+      "folder",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IRenamedDocumentReferences.RemoveSearchFolder",
+  "description": "Removes the specified folder in which to search for documents whose references to update.",
+  "signature": "System.Boolean RemoveSearchFolder( \n   System.String\nFolder\n)",
+  "parameters": [
+    {
+      "name": "Folder",
+      "type": "System.String",
+      "description": "Folder in which to search for documents whose references to update"
+    }
+  ],
+  "returns": "True if the specified folder is removed from the search, false if not",
+  "remarks": "This method is only available if\nIRenamedDocumentReferences::UpdateWhereUsedReferences\nis true.",
+  "examples": [],
+  "related": [
+    "IRenamedDocumentReferences.AddSearchFolder",
+    "IRenamedDocumentReferences.GetSearchPath",
+    "IRenamedDocumentReferences.IncludeFileLocations"
+  ]
+}

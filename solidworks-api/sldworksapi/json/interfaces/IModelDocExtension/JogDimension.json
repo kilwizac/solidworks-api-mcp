@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "JogDimension",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Jog",
+        "type": "System.Boolean",
+        "description": "True if jog points are on, false if not"
+      },
+      {
+        "name": "WitnessIndex",
+        "type": "System.Int16",
+        "description": "Index, 0 or 1, of linear dimension extension line; ignored if an ordinate dimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "ui"
+    ],
+    "related": [
+      "IDisplayDimension.AutoJogOrdinate",
+      "IDisplayDimension.GetJogParameters",
+      "IDisplayDimension.Jogged",
+      "IDisplayDimension.SetJogParameters",
+      "IModelDocExtension.AddOrdinateDimension"
+    ],
+    "keywords": [
+      "jog",
+      "see",
+      "ijogfeaturedata",
+      "dimension",
+      "also",
+      "idimension",
+      "jogged",
+      "ordinate",
+      "dimensions",
+      "linear",
+      "extension",
+      "lines",
+      "jogdimension",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "boolean",
+      "witness",
+      "index",
+      "int16",
+      "add",
+      "offset",
+      "jogs",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.JogDimension",
+  "description": "Gets or sets whether jog points are on or off on an interactively selected linear or ordinate dimension.",
+  "signature": "System.Boolean JogDimension( \n   System.Boolean\nJog\n,\n   System.Int16\nWitnessIndex\n)",
+  "parameters": [
+    {
+      "name": "Jog",
+      "type": "System.Boolean",
+      "description": "True if jog points are on, false if not"
+    },
+    {
+      "name": "WitnessIndex",
+      "type": "System.Int16",
+      "description": "Index, 0 or 1, of linear dimension extension line; ignored if an ordinate dimension"
+    }
+  ],
+  "returns": "True if operation succeeds, false if it fails",
+  "remarks": "This method is equivalent to clicking the right-mouse button on a linear or ordinate dimension in the SOLIDWORKS Design user-interface, selecting\nDisplay\nOptions\non the shortcut menu, and selecting\nJog\n.\nCall\nIModelView::GraphicsRedraw\nafter setting jog points to redraw the graphics area.",
+  "examples": [
+    {
+      "title": "Add and Offset Dimension Extension Lines Jogs (VBA)",
+      "href": "Add_and_Offset_Dimension_Extension_Lines_Jogs_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.AutoJogOrdinate",
+    "IDisplayDimension.GetJogParameters",
+    "IDisplayDimension.Jogged",
+    "IDisplayDimension.SetJogParameters",
+    "IModelDocExtension.AddOrdinateDimension"
+  ]
+}

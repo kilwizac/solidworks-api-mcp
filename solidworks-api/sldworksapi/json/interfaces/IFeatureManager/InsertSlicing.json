@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSlicing",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "SlicingData",
+        "type": "System.Object",
+        "description": "ISlicingData (see Remarks )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Errors as defined in swInsertSlicingError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "insertslicing",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "slicing",
+      "data",
+      "object",
+      "errors",
+      "int32",
+      "islicingdata"
+    ]
+  },
+  "title": "IFeatureManager.InsertSlicing",
+  "description": "Creates and inserts slicing into the FeatureManager design tree.",
+  "signature": "System.Object InsertSlicing( \n   System.Object\nSlicingData\n,\n   out System.Int32\nErrors\n)",
+  "parameters": [
+    {
+      "name": "SlicingData",
+      "type": "System.Object",
+      "description": "ISlicingData (see Remarks )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Errors as defined in swInsertSlicingError_e"
+    }
+  ],
+  "returns": "Array of sketch and reference plane objects",
+  "remarks": "This method invokes the Slicing tool. For more information, refer to\nSOLIDWORKS Help > Parts and Features > Controlling Parts > Slicing Tool\n.\nBefore calling this method:\nPre-select in the graphics area a planar entity (to create a linear pattern of slices) or a combination of a linear entity and a point entity (to create an angular pattern of slices whose axis is the linear entity).\nUse\nIFeatureManager::GetSlicingData\nto get an ISlicingData object.\nSet\nISlicingData::PlaneReferences\nif step 1 is not performed. Specify a planar entity or a combination of a linear entity and a point entity as specified in step 1.\nSet other ISlicingData properties.\nPopulate SlicingData with the ISlicingData object.\nAfter calling this method:\nUse the array of sketch and reference plane objects returned by this method to perform further work.\nIf\nISlicingData::AddSlicingPlanesAndSketchesToFolder\nwas set to true, then a\nSlice1\nfolder in the FeatureManager design tree is created containing the slicing planes and sketches. You can edit the slicing planes and sketches individually as needed.\nDelete the Slice1 folder and its contents to remove slicing from the model.",
+  "examples": [
+    {
+      "title": "ISlicingData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISlicingData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

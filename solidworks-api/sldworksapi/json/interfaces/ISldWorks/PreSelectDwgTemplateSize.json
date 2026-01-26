@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "PreSelectDwgTemplateSize",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "TemplateToUse",
+        "type": "System.Int32",
+        "description": "Type of template to use as defined in swDwgTemplates_e"
+      },
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Reserved for future use; use NULL"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDocumentTemplate",
+      "ISldWorks.GetTemplateSizes",
+      "ISldWorks.IGetTemplateSizes"
+    ],
+    "keywords": [
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "templates",
+      "preselectdwgtemplatesize",
+      "isldworks",
+      "sld",
+      "works",
+      "pre",
+      "select",
+      "dwg",
+      "template",
+      "size",
+      "use",
+      "int32",
+      "name",
+      "string",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.PreSelectDwgTemplateSize",
+  "description": "Establishes which template to use when creating a drawing.",
+  "signature": "void PreSelectDwgTemplateSize( \n   System.Int32\nTemplateToUse\n,\n   System.String\nTemplateName\n)",
+  "parameters": [
+    {
+      "name": "TemplateToUse",
+      "type": "System.Int32",
+      "description": "Type of template to use as defined in swDwgTemplates_e"
+    },
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Reserved for future use; use NULL"
+    }
+  ],
+  "returns": "",
+  "remarks": "By calling this method and specifying a template size, no dialog appears when the end-user interactively selects\nFile, New, Drawing\n.",
+  "examples": [],
+  "related": [
+    "ISldWorks.GetDocumentTemplate",
+    "ISldWorks.GetTemplateSizes",
+    "ISldWorks.IGetTemplateSizes"
+  ]
+}

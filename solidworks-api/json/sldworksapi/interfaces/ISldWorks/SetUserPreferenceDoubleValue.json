@@ -1,0 +1,131 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetUserPreferenceDoubleValue",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UserPreferenceValue",
+        "type": "System.Int32",
+        "description": "User preference as defined in swUserPreferenceDoubleValue_e"
+      },
+      {
+        "name": "Value",
+        "type": "System.Double",
+        "description": "Value of UserPreferenceValue"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetUserPreferenceDouble",
+      "IModelDocExtension.GetUserPreferenceDoubleValueRange",
+      "IModelDocExtension.GetUserPreferenceInteger",
+      "IModelDocExtension.GetUserPreferenceString",
+      "IModelDocExtension.GetUserPreferenceTextFormat",
+      "IModelDocExtension.GetUserPreferenceToggle",
+      "IModelDocExtension.SetUserPreferenceDouble",
+      "IModelDocExtension.SetUserPreferenceInteger",
+      "IModelDocExtension.SetUserPreferenceString",
+      "IModelDocExtension.SetUserPreferenceTextFormat",
+      "IModelDocExtension.SetUserPreferenceToggle",
+      "ISldWorks.GetUserPreferenceDoubleValue",
+      "ISldWorks.GetUserPreferenceIntegerValue",
+      "ISldWorks.GetUserPreferenceStringListValue",
+      "ISldWorks.GetUserPreferenceStringValue",
+      "ISldWorks.GetUserPreferenceToggle",
+      "ISldWorks.SetUserPreferenceIntegerValue",
+      "ISldWorks.SetUserPreferenceStringListValue",
+      "ISldWorks.SetUserPreferenceStringValue",
+      "ISldWorks.SetUserPreferenceToggle"
+    ],
+    "keywords": [
+      "options",
+      "user",
+      "preferences",
+      "setuserpreferencedoublevalue",
+      "isldworks",
+      "sld",
+      "works",
+      "preference",
+      "double",
+      "value",
+      "int32",
+      "boolean",
+      "save",
+      "document",
+      "tiff",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.SetUserPreferenceDoubleValue",
+  "description": "Sets system default user preference values.",
+  "signature": "System.Boolean SetUserPreferenceDoubleValue( \n   System.Int32\nUserPreferenceValue\n,\n   System.Double\nValue\n)",
+  "parameters": [
+    {
+      "name": "UserPreferenceValue",
+      "type": "System.Int32",
+      "description": "User preference as defined in swUserPreferenceDoubleValue_e"
+    },
+    {
+      "name": "Value",
+      "type": "System.Double",
+      "description": "Value of UserPreferenceValue"
+    }
+  ],
+  "returns": "True if UserPreferenceValue is set, false if not",
+  "remarks": "This method is intended for user preferences of type double.\nThis method is equivalent to interactively setting system options in the SOLIDWORKS Design software.\nTo use this method, choose one of the items from the swUserPreferenceDoubleValue_e enumeration\n.\nThen, call this method and pass in the desired user preference from the swUserPreferenceDoubleValue_e enumeration and the desired value for that user preference.\nFor a description of the user-preference types and which object supports that type, see\nswUserPreferenceDoubleValue_e\n.\nSee\nSystem Options and Document Properties\nfor details.",
+  "examples": [
+    {
+      "title": "Save Document As TIFF (VBA)",
+      "href": "Save_As_Tiff_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (VBA)",
+      "href": "Get_and_Set_User_Preferences_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (VB.NET)",
+      "href": "Get_and_Set_User_Preferences_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (C#)",
+      "href": "Get_and_Set_User_Preferences_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.GetUserPreferenceDouble",
+    "IModelDocExtension.GetUserPreferenceDoubleValueRange",
+    "IModelDocExtension.GetUserPreferenceInteger",
+    "IModelDocExtension.GetUserPreferenceString",
+    "IModelDocExtension.GetUserPreferenceTextFormat",
+    "IModelDocExtension.GetUserPreferenceToggle",
+    "IModelDocExtension.SetUserPreferenceDouble",
+    "IModelDocExtension.SetUserPreferenceInteger",
+    "IModelDocExtension.SetUserPreferenceString",
+    "IModelDocExtension.SetUserPreferenceTextFormat",
+    "IModelDocExtension.SetUserPreferenceToggle",
+    "ISldWorks.GetUserPreferenceDoubleValue",
+    "ISldWorks.GetUserPreferenceIntegerValue",
+    "ISldWorks.GetUserPreferenceStringListValue",
+    "ISldWorks.GetUserPreferenceStringValue",
+    "ISldWorks.GetUserPreferenceToggle",
+    "ISldWorks.SetUserPreferenceIntegerValue",
+    "ISldWorks.SetUserPreferenceStringListValue",
+    "ISldWorks.SetUserPreferenceStringValue",
+    "ISldWorks.SetUserPreferenceToggle"
+  ]
+}

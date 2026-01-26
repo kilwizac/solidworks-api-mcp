@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateCircleByRadius2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "XC",
+        "type": "System.Double",
+        "description": "X value of the circle center point in meters"
+      },
+      {
+        "name": "YC",
+        "type": "System.Double",
+        "description": "Y value of the circle center point in meters"
+      },
+      {
+        "name": "Zc",
+        "type": "System.Double",
+        "description": "Z value of the circle center point in meters"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Radius of the circle in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ICreateCircleByRadius2"
+    ],
+    "keywords": [
+      "createcirclebyradius2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "circle",
+      "radius2",
+      "xc",
+      "double",
+      "yc",
+      "zc",
+      "radius",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.CreateCircleByRadius2",
+  "description": "Obsolete. Superseded by SketchManager::CreateCircleByRadius.",
+  "signature": "System.Object CreateCircleByRadius2( \n   System.Double\nXC\n,\n   System.Double\nYC\n,\n   System.Double\nZc\n,\n   System.Double\nRadius\n)",
+  "parameters": [
+    {
+      "name": "XC",
+      "type": "System.Double",
+      "description": "X value of the circle center point in meters"
+    },
+    {
+      "name": "YC",
+      "type": "System.Double",
+      "description": "Y value of the circle center point in meters"
+    },
+    {
+      "name": "Zc",
+      "type": "System.Double",
+      "description": "Z value of the circle center point in meters"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Radius of the circle in meters"
+    }
+  ],
+  "returns": "Newly created circle",
+  "remarks": "This method creates a partial arc in the active 2D sketch. If a sketch is not active, then a new sketch is\ncreated. You can check for an active sketch using\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\n.\nFor COM applications, the object pointer returned from this method can be used to call any APIs on the\nISketchSegment\ninterface. The underlying\nISketchArc\nobject can be obtained using QueryInterface on the returned ISketchSegment object.\nOLE applications can define a new ISketchSegment or ISketchArc object using the returned Dispatch pointer. Visual Basic applications interpret the pointer for you automatically, so you can use the returned object to call ISketchSegment or ISketchArc functions.\nIModelDoc2::SetAddToDB\nand\nIModelDoc2::SetDisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database.\nIModelDoc2::SetAddToDB also avoids some of the peculiarities involved with creating entities via the user interface, such as inferencing, automatic relations, and snapping to the grid. Adding entities directly to the database also increases the performance of this API. When you are done creating entities, it is important to call IModelDoc2::SetAddToDB(false), to restore SOLIDWORKS to its normal operating mode.\nThis method also works with IModelDoc2::SetDisplayWhenAdded. If you have called IModelDoc2::SetAddToDB(True), additional performance can be gained by calling IModelDoc2::SetDisplayWhenAdded(false) to disable immediate display of entities as they are added to the database. When you are done creating all of your sketch entities, you must redraw your document window (see\nIModelDoc2::GraphicsRedraw2\n) to see the entities that you added. You should also restore the original display settings by calling IModelDoc2::SetDisplayWhenAdded(True).\nTo create a circle using a center point and a point on the circle, see\nIModelDoc2::CreateCircle2\nor\nIModelDoc2::ICreateCircle2\n. To create a partial arc, see\nIModelDoc2::CreateArc2\nor\nIModelDoc2::ICreateArc2\n.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ICreateCircleByRadius2"
+  ]
+}

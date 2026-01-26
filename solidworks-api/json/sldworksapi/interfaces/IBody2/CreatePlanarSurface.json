@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "CreatePlanarSurface",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "VRootPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "VNormal",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.ICreatePlanarSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "planar",
+      "createplanarsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "root",
+      "point",
+      "object",
+      "normal",
+      "body",
+      "using",
+      "trimmed",
+      "surfaces",
+      "vba"
+    ]
+  },
+  "title": "IBody2.CreatePlanarSurface",
+  "description": "Creates a new infinite planar surface.",
+  "signature": "System.Object CreatePlanarSurface( \n   System.Object\nVRootPoint\n,\n   System.Object\nVNormal\n)",
+  "parameters": [
+    {
+      "name": "VRootPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "VNormal",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "New planar surface",
+  "remarks": "You can use this method with:\nA set of related functions that construct a body from trimmed surfaces.\nTrimming curve creation routines (for example,\nISurface::AddTrimmingLoop2\n) to construct a trimmed surface.\nTo create a planar trimmed surface directly from the vertex points, see\nIBody2::CreatePlanarTrimSurfaceDLL\n.\nAny existing object created by this method is destroyed if you call this method again.",
+  "examples": [
+    {
+      "title": "Create Body Using Trimmed Surfaces (VBA)",
+      "href": "Create_Body_using_Trimmed_Surfaces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.ICreatePlanarSurface"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "IGetFaceFacets2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FaceObj",
+        "type": "Face2",
+        "description": "Face from which you want to return the corresponding facet IDs"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ITessellation.GetFaceFacets"
+    ],
+    "keywords": [
+      "igetfacefacets2",
+      "itessellation",
+      "tessellation",
+      "face",
+      "facets2",
+      "obj",
+      "face2",
+      "int32"
+    ]
+  },
+  "title": "ITessellation.IGetFaceFacets2",
+  "description": "Gets the facets IDs that correspond to a face.",
+  "signature": "System.Int32 IGetFaceFacets2( \n   Face2\nFaceObj\n)",
+  "parameters": [
+    {
+      "name": "FaceObj",
+      "type": "Face2",
+      "description": "Face from which you want to return the corresponding facet IDs"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of longs or integers that describe the facet IDs that correspond to the face VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "ITessellation::NeedFaceFacetMap\nmust be set to true to return results.\nBefore calling this method, call\nITessellation::IGetFaceFacetsCount2\nto fetch the raw facet data. ITessellation::IGetFaceFacets2 clears the cache of raw facet data.",
+  "examples": [],
+  "related": [
+    "ITessellation.GetFaceFacets"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "ShortenedRadius",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "diameter",
+      "foreshortened",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "shortenedradius",
+      "idisplaydimension",
+      "display",
+      "shortened",
+      "radius",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.ShortenedRadius",
+  "description": "Gets or sets whether to display this radius display dimension with a foreshortened radius.",
+  "signature": "System.Boolean ShortenedRadius {get; set;}",
+  "parameters": [],
+  "returns": "True displays a foreshortened radius, false does not display a foreshortened radius",
+  "remarks": "In certain instances, you might want to show a radius dimension where the leader goes towards the center of the arc, but stops just before reaching the center. This is commonly used when the center of the arc is beyond the bounds of a drawing, or interferes with another view. This method controls that display characteristic.\nThis property applies only to radius dimensions. It does not affect other types of dimensions.\nAfter using this property, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": []
+}

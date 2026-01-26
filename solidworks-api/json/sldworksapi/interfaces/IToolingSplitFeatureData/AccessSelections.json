@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IToolingSplitFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component to which this feature is to be applied"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "itoolingsplitfeaturedata",
+      "tooling",
+      "split",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean"
+    ]
+  },
+  "title": "IToolingSplitFeatureData.AccessSelections",
+  "description": "Gains access to the selections that define this tooling split feature.",
+  "signature": "System.Boolean AccessSelections( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component to which this feature is to be applied"
+    }
+  ],
+  "returns": "True if access is successful, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nIToolingSplitFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "IToolingSplitFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IToolingSplitFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

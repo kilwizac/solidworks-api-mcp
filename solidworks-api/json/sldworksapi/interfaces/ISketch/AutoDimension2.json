@@ -1,0 +1,127 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "AutoDimension2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "EntitiesToDimension",
+        "type": "System.Int32",
+        "description": "Entities to dimension as defined in swAutodimEntities_e"
+      },
+      {
+        "name": "HorizontalScheme",
+        "type": "System.Int32",
+        "description": "Horizontal dimensioning scheme as defined in swAutodimScheme_e"
+      },
+      {
+        "name": "HorizontalPlacement",
+        "type": "System.Int32",
+        "description": "Placement relative to the sketch as defined in swAutodimHorizontalPlacement_e"
+      },
+      {
+        "name": "VerticalScheme",
+        "type": "System.Int32",
+        "description": "Vertical dimensioning scheme as defined in swAutodimScheme_e"
+      },
+      {
+        "name": "VerticalPlacement",
+        "type": "System.Int32",
+        "description": "Placement relative to the sketch as defined in swAutodimVerticalPlacement_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "autodimension2",
+      "isketch",
+      "sketch",
+      "auto",
+      "dimension2",
+      "entities",
+      "dimension",
+      "int32",
+      "horizontal",
+      "scheme",
+      "placement",
+      "vertical",
+      "autodimension",
+      "vba",
+      "insert",
+      "dxf",
+      "file",
+      "add",
+      "all",
+      "sketches",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketch.AutoDimension2",
+  "description": "Obsolete. Superseded by ISketchManager::FullyDefineSketch.",
+  "signature": "System.Int32 AutoDimension2( \n   System.Int32\nEntitiesToDimension\n,\n   System.Int32\nHorizontalScheme\n,\n   System.Int32\nHorizontalPlacement\n,\n   System.Int32\nVerticalScheme\n,\n   System.Int32\nVerticalPlacement\n)",
+  "parameters": [
+    {
+      "name": "EntitiesToDimension",
+      "type": "System.Int32",
+      "description": "Entities to dimension as defined in swAutodimEntities_e"
+    },
+    {
+      "name": "HorizontalScheme",
+      "type": "System.Int32",
+      "description": "Horizontal dimensioning scheme as defined in swAutodimScheme_e"
+    },
+    {
+      "name": "HorizontalPlacement",
+      "type": "System.Int32",
+      "description": "Placement relative to the sketch as defined in swAutodimHorizontalPlacement_e"
+    },
+    {
+      "name": "VerticalScheme",
+      "type": "System.Int32",
+      "description": "Vertical dimensioning scheme as defined in swAutodimScheme_e"
+    },
+    {
+      "name": "VerticalPlacement",
+      "type": "System.Int32",
+      "description": "Placement relative to the sketch as defined in swAutodimVerticalPlacement_e"
+    }
+  ],
+  "returns": "swAutodimStatusSuccess if the sketch is automatically dimensioned successfully; see swAutodimStatus_e for values for reasons for possible failures",
+  "remarks": "If the EntitiesToDimension argument takes the value swAutodimEntitiesSelected, then use\nIModelDocExtension::SelectByID2\nwith a mark value of swAutodimMarkEntities to select the sketch entities to dimension.\nYou can supply datums for horizontal and vertical dimensioning schemes. Select and mark a unique vertical edge, vertex, sketch point, or vertical sketch line as the datum for the horizontal dimensioning scheme, using swAutodimMarkHorizontalDatum as the mark value. Similarly, select a unique horizontal edge, vertex, sketch point, or horizontal sketch line as the datum for the vertical dimensioning scheme, using swAutodimMarkVerticalDatum as the mark value. It is an error to supply just one datum as indicated by the status value swAutodimStatus_DatumNotSupplied.",
+  "examples": [
+    {
+      "title": "Autodimension a Sketch (VBA)",
+      "href": "Autodimension_a_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert DXF File and Add Dimension (VBA)",
+      "href": "Insert_DXF_File_and_Add_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension All Sketches (C#)",
+      "href": "Autodimension_All_Sketches_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension All Sketches (VB.NET)",
+      "href": "Autodimension_All_Sketches_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension all Sketches (VBA)",
+      "href": "Autodimension_All_Sketches_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

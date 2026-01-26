@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty2",
+    "member": "PrincipalAxesOfInertia",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Axis",
+        "type": "System.Int32",
+        "description": "0 = x axis 1 = y axis 2 = z axis"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty2.GetMomentOfInertia",
+      "IMassProperty2.PrincipalMomentsOfInertia",
+      "IMassPropertyOverrideOptions.GetOverridePrincipalAxesOrientation",
+      "IMassPropertyOverrideOptions.SetOverridePrincipalAxesOrientation"
+    ],
+    "keywords": [
+      "principalaxesofinertia",
+      "imassproperty2",
+      "mass",
+      "property2",
+      "principal",
+      "axes",
+      "inertia",
+      "axis",
+      "int32",
+      "object"
+    ],
+    "readonly": true
+  },
+  "title": "IMassProperty2.PrincipalAxesOfInertia",
+  "description": "Gets the principal axis of inertia for the specified axis.",
+  "signature": "System.Object PrincipalAxesOfInertia( \n   System.Int32\nAxis\n) {get;}",
+  "parameters": [
+    {
+      "name": "Axis",
+      "type": "System.Int32",
+      "description": "0 = x axis 1 = y axis 2 = z axis"
+    }
+  ],
+  "returns": "Zero-based array of size 3 (see Remarks )",
+  "remarks": "This method returns:\nA vector that represents the specified Axis: lx, ly, or lz.\nMetric units unless explicitly specified otherwise.\nIf\nIMassPropertyOverrideOptions::OverrideMomentsOfInertia\nis true or\nIMassProperty2::IncludeHiddenBodiesOrComponents\nis reset, then call\nIMassProperty2::Recalculate\nbefore using this property.",
+  "examples": [],
+  "related": [
+    "IMassProperty2.GetMomentOfInertia",
+    "IMassProperty2.PrincipalMomentsOfInertia",
+    "IMassPropertyOverrideOptions.GetOverridePrincipalAxesOrientation",
+    "IMassPropertyOverrideOptions.SetOverridePrincipalAxesOrientation"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetCThreads",
+    "returns": "CThread",
+    "parameters": [
+      {
+        "name": "NumCThread",
+        "type": "System.Int32",
+        "description": "Total number of cosmetic threads on the drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetCThreadCount",
+      "IView.GetCThreads",
+      "IView.GetFirstCThread"
+    ],
+    "keywords": [
+      "view",
+      "see",
+      "also",
+      "iview",
+      "cosmetic",
+      "threads",
+      "icosmeticthreadfeaturedata",
+      "icthread",
+      "interfaces",
+      "annotations",
+      "annotation",
+      "iannotation",
+      "igetcthreads",
+      "num",
+      "thread",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetCThreads",
+  "description": "Gets all of the cosmetic threads on this drawing view.",
+  "signature": "CThread IGetCThreads( \n   System.Int32\nNumCThread\n)",
+  "parameters": [
+    {
+      "name": "NumCThread",
+      "type": "System.Int32",
+      "description": "Total number of cosmetic threads on the drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of cosmetic threads VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of cosmetic threads all at once instead of calling\nIView::GetFirstCThread\nand then repeatedly calling\nICThread::GetNext\nto obtain the remaining cosmetic threads on the drawing view.\nBefore calling this method, call\nIView::GetCThreadCount\nto get the value for numCThread.",
+  "examples": [],
+  "related": [
+    "IView.GetCThreadCount",
+    "IView.GetCThreads",
+    "IView.GetFirstCThread"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IUserProgressBar",
+    "member": "End",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "end",
+      "iuserprogressbar",
+      "user",
+      "progress",
+      "bar",
+      "boolean"
+    ]
+  },
+  "title": "IUserProgressBar.End",
+  "description": "Removes the progress indicator from the SOLIDWORKS status bar.",
+  "signature": "System.Boolean End()",
+  "parameters": [],
+  "returns": "True if the progress indicator is removed, false if not",
+  "remarks": "This method does not immediately remove the progress bar from the status bar. Instead, a show-window event is posted to the message queue of the given window when this method is called. After Windows processes the message, the progress bar is removed\nfrom the status bar.",
+  "examples": [
+    {
+      "title": "IUserProgressBar",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IUserProgressBar",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

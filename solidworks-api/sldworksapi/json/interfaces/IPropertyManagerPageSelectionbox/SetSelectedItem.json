@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "SetSelectedItem",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Item",
+        "type": "System.Int16",
+        "description": "Index of the item to select or clear"
+      },
+      {
+        "name": "Selected",
+        "type": "System.Boolean",
+        "description": "True to select the item, false to clear it"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageSelectionbox.GetSelectedItems",
+      "IPropertyManagerPageSelectionbox.GetSelectedItemsCount",
+      "IPropertyManagerPageSelectionbox.IGetSelectedItems",
+      "IPropertyManagerPageSelectionbox.Style"
+    ],
+    "keywords": [
+      "setselecteditem",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "selected",
+      "item",
+      "int16",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageSelectionbox.SetSelectedItem",
+  "description": "Sets whether an item is selected or cleared in a selection box enabled for multiple selection.",
+  "signature": "System.Boolean SetSelectedItem( \n   System.Int16\nItem\n,\n   System.Boolean\nSelected\n)",
+  "parameters": [
+    {
+      "name": "Item",
+      "type": "System.Int16",
+      "description": "Index of the item to select or clear"
+    },
+    {
+      "name": "Selected",
+      "type": "System.Boolean",
+      "description": "True to select the item, false to clear it"
+    }
+  ],
+  "returns": "True if the time was selected or cleared, false if not",
+  "remarks": "The value specified for Item must be a valid index number. If it is not, then this method returns false. Thus, set up your list item index before using this method.\nIf you use this method to set a selected item in a single-selection style list box and another item in the list box is already selected, then that item is automatically cleared. You can use this method to clear a selection in a single-selection style list box, which results in no current selection in that list box.",
+  "examples": [],
+  "related": [
+    "IPropertyManagerPageSelectionbox.GetSelectedItems",
+    "IPropertyManagerPageSelectionbox.GetSelectedItemsCount",
+    "IPropertyManagerPageSelectionbox.IGetSelectedItems",
+    "IPropertyManagerPageSelectionbox.Style"
+  ]
+}

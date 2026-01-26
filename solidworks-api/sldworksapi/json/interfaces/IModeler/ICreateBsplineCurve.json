@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateBsplineCurve",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "Properties",
+        "type": "System.Int32",
+        "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+      },
+      {
+        "name": "KnotArray",
+        "type": "System.Double",
+        "description": "Array of numKnots doubles (see Remarks )"
+      },
+      {
+        "name": "ControlPointCoordArray",
+        "type": "System.Double",
+        "description": "Array of NumCtrlPtCoord doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateBsplineCurve",
+      "IModeler.CreateBsplineSurface",
+      "IModeler.ICreateBsplineSurface"
+    ],
+    "keywords": [
+      "spline",
+      "curve",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "brep",
+      "splines",
+      "icreatebsplinecurve",
+      "imodeler",
+      "modeler",
+      "create",
+      "bspline",
+      "properties",
+      "int32",
+      "knot",
+      "array",
+      "double",
+      "control",
+      "point",
+      "coord"
+    ]
+  },
+  "title": "IModeler.ICreateBsplineCurve",
+  "description": "Creates a b-spline curve.",
+  "signature": "Curve ICreateBsplineCurve( \n   ref System.Int32\nProperties\n,\n   ref System.Double\nKnotArray\n,\n   ref System.Double\nControlPointCoordArray\n)",
+  "parameters": [
+    {
+      "name": "Properties",
+      "type": "System.Int32",
+      "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+    },
+    {
+      "name": "KnotArray",
+      "type": "System.Double",
+      "description": "Array of numKnots doubles (see Remarks )"
+    },
+    {
+      "name": "ControlPointCoordArray",
+      "type": "System.Double",
+      "description": "Array of NumCtrlPtCoord doubles (see Remarks )"
+    }
+  ],
+  "returns": "B-spline curve",
+  "remarks": "The Properties argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nLength of this array...\nGiven by...\nKnots\nnumKnots = NumCtrlPoints + Order\nCtrlPtCoords\nNumCtrlPtCoord = NumCtrlPoints + DimensionControlPoints",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBsplineCurve",
+    "IModeler.CreateBsplineSurface",
+    "IModeler.ICreateBsplineSurface"
+  ]
+}

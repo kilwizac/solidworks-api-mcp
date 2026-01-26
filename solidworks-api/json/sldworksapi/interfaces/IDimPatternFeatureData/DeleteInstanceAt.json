@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "DeleteInstanceAt",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index indicating where to delete this pattern instance in the pattern table and pattern; -1 indicates to delete this pattern instance at the end of the pattern table and pattern (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.AddInstanceAt"
+    ],
+    "keywords": [
+      "deleteinstanceat",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "delete",
+      "instance",
+      "index",
+      "int32",
+      "boolean",
+      "instances",
+      "dimensions",
+      "variable",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimPatternFeatureData.DeleteInstanceAt",
+  "description": "Deletes the specified pattern instance in this variable pattern feature.",
+  "signature": "System.Boolean DeleteInstanceAt( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index indicating where to delete this pattern instance in the pattern table and pattern; -1 indicates to delete this pattern instance at the end of the pattern table and pattern (see Remarks )"
+    }
+  ],
+  "returns": "True if the pattern instance is deleted, false if not",
+  "remarks": "Use\nIDimPatternFeatureData::GetInstanceCount\nto get the number of pattern instances.",
+  "examples": [
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (C#)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (VB.NET)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (VBA)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimPatternFeatureData.AddInstanceAt"
+  ]
+}

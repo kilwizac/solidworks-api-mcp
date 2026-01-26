@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetFrameDiameterSymbols",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameSymbols2",
+      "IGtol.GetFrameValues",
+      "IGtol.IGetFrameSymbols2",
+      "IGtol.IGetFrameValues",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "igetframediametersymbols",
+      "igtol",
+      "gtol",
+      "diameter",
+      "symbols",
+      "number",
+      "int16",
+      "boolean"
+    ]
+  },
+  "title": "IGtol.IGetFrameDiameterSymbols",
+  "description": "Gets whether diameter symbols are displayed for the specified frame.",
+  "signature": "System.Boolean IGetFrameDiameterSymbols( \n   System.Int16\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of Booleans (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value should be an array of two Booleans, with the following format:\nretval\n[0] = True if the first tolerance value has a diameter symbol, false if it does not\nretval\n[1] = True if the second tolerance value has a diameter symbol, false if it does not\nUse this method in combination with\nIGtol::GetFrameSymbols2\nthat is used to retrieve the frame symbols.",
+  "examples": [],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameSymbols2",
+    "IGtol.GetFrameValues",
+    "IGtol.IGetFrameSymbols2",
+    "IGtol.IGetFrameValues",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues"
+  ]
+}

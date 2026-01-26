@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchText",
+    "member": "GetUseDocTextFormat",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchText.Text"
+    ],
+    "keywords": [
+      "getusedoctextformat",
+      "isketchtext",
+      "sketch",
+      "text",
+      "use",
+      "doc",
+      "format",
+      "boolean",
+      "all",
+      "elements",
+      "vba"
+    ]
+  },
+  "title": "ISketchText.GetUseDocTextFormat",
+  "description": "Gets whether default model text format is in use in this sketch text.",
+  "signature": "System.Boolean GetUseDocTextFormat()",
+  "parameters": [],
+  "returns": "True if the default model text format is used, false if not",
+  "remarks": "To change the text format of an existing sketch text, get the\nITextFormat\nobject using\nISketchText::GetTextFormat\nor\nISketchText::IGetTextFormat\n, next use the ITextFormat APIs to set the text format properties to what you want the sketch text to look like. Then, use\nISketchText::SetTextFormat\nor\nISketchText::ISetTextFormat\nto change how the sketch text looks.\nTo make the sketch text use the default model text format, use ISketchText::SetTextFormat and ISketchText::ISetTextFormat with the UseDoc argument set to True.",
+  "examples": [
+    {
+      "title": "Get All Elements of Sketch (VBA)",
+      "href": "Get_All_Elements_of_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchText.Text"
+  ]
+}

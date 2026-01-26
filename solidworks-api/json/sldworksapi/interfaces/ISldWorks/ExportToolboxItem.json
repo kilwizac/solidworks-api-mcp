@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ExportToolboxItem",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StdToExport",
+        "type": "System.String",
+        "description": "Standard to export (see Remarks )"
+      },
+      {
+        "name": "DestinationFolderPath",
+        "type": "System.String",
+        "description": "Path where to export the data (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ImportToolboxItem"
+    ],
+    "keywords": [
+      "exporttoolboxitem",
+      "isldworks",
+      "sld",
+      "works",
+      "export",
+      "toolbox",
+      "item",
+      "std",
+      "string",
+      "destination",
+      "folder",
+      "path",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.ExportToolboxItem",
+  "description": "Exports data for the specified Toolbox standard.",
+  "signature": "System.Int32 ExportToolboxItem( \n   System.String\nStdToExport\n,\n   System.String\nDestinationFolderPath\n)",
+  "parameters": [
+    {
+      "name": "StdToExport",
+      "type": "System.String",
+      "description": "Standard to export (see Remarks )"
+    },
+    {
+      "name": "DestinationFolderPath",
+      "type": "System.String",
+      "description": "Path where to export the data (see Remarks )"
+    }
+  ],
+  "returns": "0 if successful, 1 if errors",
+  "remarks": "Specify StdToImport with the path and file name beneath\nC:\\SOLIDWORKS Data\\browser\n, e.g., \"\nansi inch\\bolts and screws\\hex head\\heavy hex bolt_ai.sldprt\n\".\nSpecify DestinationFolderPath with the path where to export the Excel Workbook (\n*.xslx\n). The data is exported to a file whose name is formatted as follows:\nstandard\n_\nhole class\n_\nhole type\n.xslx",
+  "examples": [],
+  "related": [
+    "ISldWorks.ImportToolboxItem"
+  ]
+}

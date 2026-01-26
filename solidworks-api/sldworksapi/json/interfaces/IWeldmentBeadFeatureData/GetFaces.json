@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentBeadFeatureData",
+    "member": "GetFaces",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Side",
+        "type": "System.Int32",
+        "description": "Side as defined in swWeldBeadSide_e"
+      },
+      {
+        "name": "FaceSet1",
+        "type": "System.Object",
+        "description": "First set of faces"
+      },
+      {
+        "name": "FaceSet2",
+        "type": "System.Object",
+        "description": "Second set of faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IWeldmentBeadFeatureData.GetFacesCount",
+      "IWeldmentBeadFeatureData.IGetFaces",
+      "IWeldmentBeadFeatureData.ISetFaces",
+      "IWeldmentBeadFeatureData.SetFaces"
+    ],
+    "keywords": [
+      "getfaces",
+      "iweldmentbeadfeaturedata",
+      "weldment",
+      "bead",
+      "feature",
+      "data",
+      "faces",
+      "side",
+      "int32",
+      "face",
+      "set1",
+      "object",
+      "set2",
+      "void"
+    ]
+  },
+  "title": "IWeldmentBeadFeatureData.GetFaces",
+  "description": "Gets the sets of faces whose edges intersection defines the edges to which the weld bead is applied.",
+  "signature": "void GetFaces( \n   System.Int32\nSide\n,\n   out System.Object\nFaceSet1\n,\n   out System.Object\nFaceSet2\n)",
+  "parameters": [
+    {
+      "name": "Side",
+      "type": "System.Int32",
+      "description": "Side as defined in swWeldBeadSide_e"
+    },
+    {
+      "name": "FaceSet1",
+      "type": "System.Object",
+      "description": "First set of faces"
+    },
+    {
+      "name": "FaceSet2",
+      "type": "System.Object",
+      "description": "Second set of faces"
+    }
+  ],
+  "returns": "",
+  "remarks": "After using this method, use\nIWeldmentBeadFeatureData::GetVirtualEdges\nto get the new intersections. Then use\nIWeldmentBeadFeatureData::SetVirtualEdges\nto specify the edges to which you want the weld bead applied. By default,\nIWeldmentBeadFeatureData::SetFaces\ncreates the bead on all virtual edges.\nIWeldmentBeadFeatureData::SetVirtualEdges\nlets\nyou exclude any of these edges.",
+  "examples": [
+    {
+      "title": "IWeldmentBeadFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWeldmentBeadFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWeldmentBeadFeatureData.GetFacesCount",
+    "IWeldmentBeadFeatureData.IGetFaces",
+    "IWeldmentBeadFeatureData.ISetFaces",
+    "IWeldmentBeadFeatureData.SetFaces"
+  ]
+}

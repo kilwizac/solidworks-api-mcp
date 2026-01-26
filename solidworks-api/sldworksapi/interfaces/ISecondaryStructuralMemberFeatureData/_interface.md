@@ -1,0 +1,20 @@
+---
+type: interface
+interface: ISecondaryStructuralMemberFeatureData
+inherits: null
+description: Allows access to a secondary structure system member.
+member_count: 1
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - SecondaryMemberType
+---
+
+# ISecondaryStructuralMemberFeatureData
+
+Allows access to a secondary structure system member.
+
+## Common Members
+
+- `SecondaryMemberType`

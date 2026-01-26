@@ -1,0 +1,86 @@
+---
+type: method
+interface: IAssemblyDoc
+member: CreateExplodedView
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+  - core
+  - ui
+related:
+  - IAssemblyDoc.AutoExplode
+  - IAssemblyDoc.GetExplodedViewConfigurationName
+  - IAssemblyDoc.GetExplodedViewCount2
+  - IAssemblyDoc.GetExplodedViewNames2
+  - IAssemblyDoc.ShowExploded2
+  - IAssemblyDoc.ViewCollapseAssembly
+  - IAssemblyDoc.ViewExplodeAssembly
+  - IConfiguration.AddExplodeStep2
+  - IConfiguration.AddRadialExplodeStep
+  - IModelDocExtension.IsExploded
+  - IView.IsExploded
+  - IView.ShowExploded
+keywords:
+  - assemblies
+  - see
+  - also
+  - iassemblydoc
+  - exploded
+  - views
+  - createexplodedview
+  - assembly
+  - doc
+  - create
+  - view
+  - boolean
+  - vba
+  - vb
+  - net
+---
+
+# IAssemblyDoc.CreateExplodedView
+
+Creates an explode view of the active assembly configuration.
+
+## Signature
+
+```csharp
+System.Boolean CreateExplodedView()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if the explode view is successfully created, false if not
+
+## Remarks
+
+Call this method multiple times to add multiple explode views to the active assembly configuration.
+Perfect explode views often require user interaction. This method attempts to create a perfect explode view based on the current mate conditions.
+
+## Examples
+
+- Create Exploded Views of an Assembly (VBA) (Create_Exploded_Views_Example_VB.htm)
+- Create Exploded Views of an Assembly (VB.NET) (Create_Exploded_Views_Example_VBNET.htm)
+- Create Exploded Views of an Assembly (C#) (Create_Exploded_Views_Example_CSharp.htm)
+
+## See Also
+
+- `IAssemblyDoc.AutoExplode`
+- `IAssemblyDoc.GetExplodedViewConfigurationName`
+- `IAssemblyDoc.GetExplodedViewCount2`
+- `IAssemblyDoc.GetExplodedViewNames2`
+- `IAssemblyDoc.ShowExploded2`
+- `IAssemblyDoc.ViewCollapseAssembly`
+- `IAssemblyDoc.ViewExplodeAssembly`
+- `IConfiguration.AddExplodeStep2`
+- `IConfiguration.AddRadialExplodeStep`
+- `IModelDocExtension.IsExploded`
+- `IView.IsExploded`
+- `IView.ShowExploded`

@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILocalCurvePatternFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component in which the feature is to be modified (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "ilocalcurvepatternfeaturedata",
+      "local",
+      "curve",
+      "pattern",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean"
+    ]
+  },
+  "title": "ILocalCurvePatternFeatureData.AccessSelections",
+  "description": "Gains access to the selections that define this curve-driven component pattern feature.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component in which the feature is to be modified (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections are successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nif you modified the feature\nILocalCurvePatternFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [],
+  "related": []
+}

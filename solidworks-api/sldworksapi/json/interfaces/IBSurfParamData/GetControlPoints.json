@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBSurfParamData",
+    "member": "GetControlPoints",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "1 <= index of row <= ControlPointRowCount"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "1 <= index of column <= ControlPointColumnCount"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBSurfParamData.IGetControlPoints"
+    ],
+    "keywords": [
+      "getcontrolpoints",
+      "ibsurfparamdata",
+      "ib",
+      "surf",
+      "param",
+      "data",
+      "control",
+      "points",
+      "row",
+      "int32",
+      "column",
+      "object",
+      "spline",
+      "surface",
+      "parameterization",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBSurfParamData.GetControlPoints",
+  "description": "Gets the coordinates of a control point at a specific row and column of the control point matrix.",
+  "signature": "System.Object GetControlPoints( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "1 <= index of row <= ControlPointRowCount"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "1 <= index of column <= ControlPointColumnCount"
+    }
+  ],
+  "returns": "Array of control point coordinates",
+  "remarks": "Control points are stored in (ControlPointColumnCount*ControlPointRowCount) vectors of dimension\nControlPointDimension\n. The U direction of surface is in the row direction. The V direction of surface is in the column direction.\nFor non-rational surfaces ControlPointDimension = 3, and control point coordinates are stored as [x0,y0,z0,x1,y1,z1,.........].\nFor rational surfaces ControlPointDimension = 4, and control point coordinates and weights are stored as [x0,y0,z0,w0,x1,y1,z1,w1,........].\nFor example, 6 control points are stored in 6 vectors of dimension 3 in a 2X3 matrix as follows:\nRow1, Column1\nRow1, Column2\n# Coordinates\nx0, y0, z0\nx1, y1, z1\n= 6\nRow2, Column1\nRow2, Column2\nx2, y2, z2\nx3, y3, z3\n= 6\nRow3, Column1\nRow3, Column2\nx4, y4, z4\nx5, y5, z5\n= 6\nTotal\n= 18",
+  "examples": [
+    {
+      "title": "Get B-Spline Surface Parameterization Data (C#)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get B-Spline Surface Parameterization Data (VB.NET)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get B-Spline Surface Parameterization Data (VBA)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBSurfParamData.IGetControlPoints"
+  ]
+}

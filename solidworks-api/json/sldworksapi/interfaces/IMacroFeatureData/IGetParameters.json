@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "IGetParameters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ParamCount",
+        "type": "System.Int32",
+        "description": "Number of user-defined parameters"
+      },
+      {
+        "name": "ParamNames",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of parameter names of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "ParamTypes",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of parameter data types of size paramCount as defined in swMacroFeatureParamType_e VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "ParamValues",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of parameter values of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.GetDoubleByName",
+      "IMacroFeatureData.GetIntegerByName",
+      "IMacroFeatureData.GetParameters",
+      "IMacroFeatureData.GetStringByName",
+      "IMacroFeatureData.ISetParameters",
+      "IMacroFeatureData.SetParameters",
+      "IMacroFeatureData.SetStringByName"
+    ],
+    "keywords": [
+      "igetparameters",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "parameters",
+      "param",
+      "count",
+      "int32",
+      "names",
+      "string",
+      "types",
+      "values",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.IGetParameters",
+  "description": "Gets the user-defined parameters.",
+  "signature": "void IGetParameters( \n   System.Int32\nParamCount\n,\n   out System.String\nParamNames\n,\n   out System.Int32\nParamTypes\n,\n   out System.String\nParamValues\n)",
+  "parameters": [
+    {
+      "name": "ParamCount",
+      "type": "System.Int32",
+      "description": "Number of user-defined parameters"
+    },
+    {
+      "name": "ParamNames",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of parameter names of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "ParamTypes",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of parameter data types of size paramCount as defined in swMacroFeatureParamType_e VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "ParamValues",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of parameter values of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIMacroFeatureData::GetParameterCount\nto determine the size of the arrays.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetDoubleByName",
+    "IMacroFeatureData.GetIntegerByName",
+    "IMacroFeatureData.GetParameters",
+    "IMacroFeatureData.GetStringByName",
+    "IMacroFeatureData.ISetParameters",
+    "IMacroFeatureData.SetParameters",
+    "IMacroFeatureData.SetStringByName"
+  ]
+}

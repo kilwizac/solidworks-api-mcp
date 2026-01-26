@@ -1,0 +1,132 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "AddDisplayStateSpecificRenderMaterial",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PRenderMaterial",
+        "type": "RenderMaterial",
+        "description": "Appearance to add"
+      },
+      {
+        "name": "DisplayStateOption",
+        "type": "System.Int32",
+        "description": "Display states as defined in swDisplayStateOpts_e"
+      },
+      {
+        "name": "DisplayStateNames",
+        "type": "System.Object",
+        "description": "Names of display states to which to add the appearance"
+      },
+      {
+        "name": "PWMaterialId1",
+        "type": "System.Int32",
+        "description": "First ID of appearance"
+      },
+      {
+        "name": "PWMaterialId2",
+        "type": "System.Int32",
+        "description": "Second ID of appearance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration.CreateDisplayState",
+      "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IAddDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+      "IRenderMaterial"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "material",
+      "appearances",
+      "add",
+      "render",
+      "adddisplaystatespecificrendermaterial",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "state",
+      "specific",
+      "option",
+      "int32",
+      "names",
+      "object",
+      "pw",
+      "id1",
+      "id2",
+      "boolean",
+      "delete",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.AddDisplayStateSpecificRenderMaterial",
+  "description": "Adds the specified appearance to the specified display states in the active configuration and returns the IDs assigned to that appearance.",
+  "signature": "System.Boolean AddDisplayStateSpecificRenderMaterial( \n   RenderMaterial\nPRenderMaterial\n,\n   System.Int32\nDisplayStateOption\n,\n   System.Object\nDisplayStateNames\n,\n   out System.Int32\nPWMaterialId1\n,\n   out System.Int32\nPWMaterialId2\n)",
+  "parameters": [
+    {
+      "name": "PRenderMaterial",
+      "type": "RenderMaterial",
+      "description": "Appearance to add"
+    },
+    {
+      "name": "DisplayStateOption",
+      "type": "System.Int32",
+      "description": "Display states as defined in swDisplayStateOpts_e"
+    },
+    {
+      "name": "DisplayStateNames",
+      "type": "System.Object",
+      "description": "Names of display states to which to add the appearance"
+    },
+    {
+      "name": "PWMaterialId1",
+      "type": "System.Int32",
+      "description": "First ID of appearance"
+    },
+    {
+      "name": "PWMaterialId2",
+      "type": "System.Int32",
+      "description": "Second ID of appearance"
+    }
+  ],
+  "returns": "True if appearance is added, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Add and Delete Appearances from Specific Display States (C#)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VB.NET)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VBA)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.CreateDisplayState",
+    "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IAddDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+    "IRenderMaterial"
+  ]
+}

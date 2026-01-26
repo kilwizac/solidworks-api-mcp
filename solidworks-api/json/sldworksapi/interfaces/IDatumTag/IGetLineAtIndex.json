@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTag",
+    "member": "IGetLineAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line; index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTag.GetLineCount"
+    ],
+    "keywords": [
+      "igetlineatindex",
+      "idatumtag",
+      "datum",
+      "tag",
+      "line",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IDatumTag.IGetLineAtIndex",
+  "description": "Gets information for the specified line in this datum tag.",
+  "signature": "System.Double IGetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line; index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\n]\nwhere:\nlineType\nLine type as defined in\nswLineTypes_e\nstartPt\n[3]\nXYZ line start point\nendPt\n[3]\nXYZ line end point\nCall\nIDatumTag::GetLineCount\nbefore calling this method.",
+  "examples": [],
+  "related": [
+    "IDatumTag.GetLineCount"
+  ]
+}

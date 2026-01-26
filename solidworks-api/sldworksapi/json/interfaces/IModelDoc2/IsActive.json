@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IsActive",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CompStr",
+        "type": "System.String",
+        "description": "Name specification of the component"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.HideComponent2",
+      "IModelDoc2.ShowComponent2"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "hide",
+      "show",
+      "components",
+      "icomponent2",
+      "isactive",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "active",
+      "comp",
+      "str",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.IsActive",
+  "description": "Gets whether the specified assembly component is shown or hidden in this model document.",
+  "signature": "System.Boolean IsActive( \n   System.String\nCompStr\n)",
+  "parameters": [
+    {
+      "name": "CompStr",
+      "type": "System.String",
+      "description": "Name specification of the component"
+    }
+  ],
+  "returns": "True if component is shown, false if component is hidden",
+  "remarks": "The CompStr parameter is the full assembly component name designation. The format of the name designation is:\nparentModel\n/\nchildModel\nwhere:\nchildModel is the model whose display status you want to determine. For example, if you want to determine the display status of a part named SPOKE.SLDPRT and if this part is a child of WHEEL.SLDPRT, which itself is a child of AXIS.SLDPRT, then you would specify CompStr as follows:\nAXIS\n/\nWHEEL\n/\nSPOKE\nTIP:\nThe assembly component name designation is shown in the lower-left corner of the SOLIDWORKS Design application when an assembly component is selected.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.HideComponent2",
+    "IModelDoc2.ShowComponent2"
+  ]
+}

@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DAssemblyDocEvents_ComponentReorganizeNotifyEventHandler
+inherits: null
+description: Fired when one or more components are reorganized in an assembly or sub-assembly.
+member_count: 0
+docset: sldworksapi
+categories:
+  - assemblies
+common_members: []
+---
+
+# DAssemblyDocEvents_ComponentReorganizeNotifyEventHandler
+
+Fired when one or more components are reorganized in an assembly or sub-assembly.

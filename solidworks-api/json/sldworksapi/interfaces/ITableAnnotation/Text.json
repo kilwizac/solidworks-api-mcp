@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITableAnnotation",
+    "member": "Text",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Index of the row"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "Index of the column"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.CellTextHorizontalJustification",
+      "ITableAnnotation.CellTextVerticalJustification",
+      "ITableAnnotation.GetCellTextFormat",
+      "ITableAnnotation.GetCellUseDocTextFormat",
+      "ITableAnnotation.GetTextFormat",
+      "ITableAnnotation.GetUseDocTextFormat",
+      "ITableAnnotation.IsCellTextEditable",
+      "ITableAnnotation.SetCellTextFormat",
+      "ITableAnnotation.SetTextFormat"
+    ],
+    "keywords": [
+      "text",
+      "itableannotation",
+      "table",
+      "annotation",
+      "row",
+      "int32",
+      "column",
+      "string",
+      "contents",
+      "vba",
+      "insert",
+      "hole"
+    ],
+    "readonly": null
+  },
+  "title": "ITableAnnotation.Text",
+  "description": "Obsolete. Superseded by ITableAnnotation::Text2.",
+  "signature": "System.String Text( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Index of the row"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "Index of the column"
+    }
+  ],
+  "returns": "Cell text",
+  "remarks": "Index for both rows and columns is 0-based.\nThis property returns the string that drives the text displayed in the specified cell. For example, the string returned by this property would be the parameter string if the cell is linked to a dimension value or custom property. To get the text actually displayed in the cell, use\nITableAnnotation::DisplayedText\n.\nTable annotation:\nBOM\n: All cells are editable.\nGeneral\n: All cells are editable.\nHole\n: Only some columns are editable because some information is automatically generated, thus, that information cannot be edited. The header row and custom columns are editable.\nRevision\n: All cells are editable\nYou might experience decreased performance when updating\nthe text in multiple cells in large tables because the table is rebuilt after changing the text in a cell. To increase performance while updating the text in large tables:\nSet\nIAnnotation::Visible\nto false. (The table is not rebuilt while the table is hidden.)\nUpdate the text in the table cells.\nSet IAnnotation::Visible to true.",
+  "examples": [
+    {
+      "title": "Get Table Annotation and Contents (VBA)",
+      "href": "Get_Table_Annotation_and_Contents_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Table (VBA)",
+      "href": "Insert_Hole_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.CellTextHorizontalJustification",
+    "ITableAnnotation.CellTextVerticalJustification",
+    "ITableAnnotation.GetCellTextFormat",
+    "ITableAnnotation.GetCellUseDocTextFormat",
+    "ITableAnnotation.GetTextFormat",
+    "ITableAnnotation.GetUseDocTextFormat",
+    "ITableAnnotation.IsCellTextEditable",
+    "ITableAnnotation.SetCellTextFormat",
+    "ITableAnnotation.SetTextFormat"
+  ]
+}

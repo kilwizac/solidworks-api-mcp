@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetUnloadedComponentNames",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "UnloadedComponentPathNames",
+        "type": "System.Object",
+        "description": "Array of children components' path names"
+      },
+      {
+        "name": "UnloadedComponentReferencedConfigurationNames",
+        "type": "System.Object",
+        "description": "Array of children components' referenced configuration names"
+      },
+      {
+        "name": "ReasonForUnloadingComponents",
+        "type": "System.Object",
+        "description": "Array indicating the reason each child component is unloaded as defined by swComponentLoadStatus_e"
+      },
+      {
+        "name": "DocTypes",
+        "type": "System.Object",
+        "description": "Array of document types as defined in swDocumentTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.GetUnloadedComponentNames",
+      "IAssemblyDoc.HasUnloadedComponents",
+      "IComponent2.GetHiddenUnloadedChildrenCount",
+      "IComponent2.HasUnloadedComponents"
+    ],
+    "keywords": [
+      "hidden",
+      "components",
+      "unloaded",
+      "see",
+      "also",
+      "icomponent2",
+      "suppressed",
+      "getunloadedcomponentnames",
+      "component2",
+      "component",
+      "names",
+      "path",
+      "object",
+      "referenced",
+      "configuration",
+      "reason",
+      "unloading",
+      "doc",
+      "types"
+    ]
+  },
+  "title": "IComponent2.GetUnloadedComponentNames",
+  "description": "Gets the component's unloaded children components' path names, referenced configuration names, reasons why they are unloaded, document types, and names.",
+  "signature": "System.Object GetUnloadedComponentNames( \n   out System.Object\nUnloadedComponentPathNames\n,\n   out System.Object\nUnloadedComponentReferencedConfigurationNames\n,\n   out System.Object\nReasonForUnloadingComponents\n,\n   out System.Object\nDocTypes\n)",
+  "parameters": [
+    {
+      "name": "UnloadedComponentPathNames",
+      "type": "System.Object",
+      "description": "Array of children components' path names"
+    },
+    {
+      "name": "UnloadedComponentReferencedConfigurationNames",
+      "type": "System.Object",
+      "description": "Array of children components' referenced configuration names"
+    },
+    {
+      "name": "ReasonForUnloadingComponents",
+      "type": "System.Object",
+      "description": "Array indicating the reason each child component is unloaded as defined by swComponentLoadStatus_e"
+    },
+    {
+      "name": "DocTypes",
+      "type": "System.Object",
+      "description": "Array of document types as defined in swDocumentTypes_e"
+    }
+  ],
+  "returns": "Array of children components' names",
+  "remarks": "This method is useful when the assembly document was opened with\nQuick View/Selective open\n.\nTo get whether a component has hidden or suppressed children components, call\nIComponent2::HasUnloadedComponents\n.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.GetUnloadedComponentNames",
+    "IAssemblyDoc.HasUnloadedComponents",
+    "IComponent2.GetHiddenUnloadedChildrenCount",
+    "IComponent2.HasUnloadedComponents"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSpline",
+    "member": "ModifyControlPoint",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "1-based index of the control point to modify"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSpline.ModifyKnot",
+      "ISplineParamData.SetControlPoints"
+    ],
+    "keywords": [
+      "modifycontrolpoint",
+      "isketchspline",
+      "sketch",
+      "spline",
+      "modify",
+      "control",
+      "point",
+      "index",
+      "int32",
+      "double",
+      "boolean",
+      "edit",
+      "vba"
+    ]
+  },
+  "title": "ISketchSpline.ModifyControlPoint",
+  "description": "Specifies new coordinates for the specified control point of this sketch spline.",
+  "signature": "System.Boolean ModifyControlPoint( \n   System.Int32\nIndex\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "1-based index of the control point to modify"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate"
+    }
+  ],
+  "returns": "True if control point successfully modified, false if not",
+  "remarks": "Before calling this method, call\nISplineParamData::GetControlPoints\nand\nISplineParamData::ControlPointsCount\nto help specify Index and the new coordinates.\nAfter calling this method, you must call\nIModelDoc2::ForceRebuild3\nto update the sketch.",
+  "examples": [
+    {
+      "title": "Edit Spline (VBA)",
+      "href": "Edit_Spline_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchSpline.ModifyKnot",
+    "ISplineParamData.SetControlPoints"
+  ]
+}

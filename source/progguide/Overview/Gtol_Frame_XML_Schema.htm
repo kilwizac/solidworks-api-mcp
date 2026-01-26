@@ -1,0 +1,1124 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Gtol Frame XML Schema</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=MS-HKWD content="SOLIDWORKS Connected">
+<meta name=MS-HKWD content="3DEXPERIENCE">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=634>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+
+<style type="text/css">
+.auto-style1 {
+	color: #000000;
+}
+.auto-style2 {
+	text-indent: .5in;
+	color: #000000;
+}
+.auto-style3 {
+	text-indent: .5in;
+	color: #000000;
+	margin-left: .5in;
+}
+.auto-style4 {
+	text-indent: .5in;
+	color: #000000;
+	margin-left: 1.0in;
+}
+.auto-style5 {
+	text-indent: .5in;
+	color: #000000;
+	margin-left: 1.5in;
+}
+.auto-style6 {
+	font-size: xx-small;
+}
+</style>
+
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Gtol Frame XML Schema</h1>
+
+
+<ul>
+	<li class="auto-style6"><a href="#node_struct">Gtol frame symbol XML 
+	structure</a></li>
+	<li class="auto-style6"><a href="#mapping">Gtol frame symbol XML node to 
+	user interface mapping</a></li>
+</ul>
+<h3><a name="node_struct"></a>Gtol frame symbol XML structure</h3>
+	<p class=MsoNormal></p>
+	<p class=auto-style1>The Gtol frame XML schema definition (<strong>*.xsd</strong>) 
+	file is located in <em>install_dir</em><strong>\data\xmlschema</strong>. 
+	SOLIDWORKS uses the XML schema definition file to validate the symbol 
+	XML file that is passed to
+	<a href="sldworksapi.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IGtolFrame~SetSymbolXml.html">
+	IGtolFrame::SetSymbolXml.</a></p>
+<p class=auto-style1>The Gtol frame symbol XML file has the following node structure. The top level node is 
+	&lt;GtolFrame&gt;, and sub-nodes are indented below it. If a node is missing 
+in an XML file, the corresponding category has all default values. For more information about geometric tolerance symbols and 
+their values, see the <strong>SOLIDWORKS user-interface help &gt; Detailing and 
+Drawings &gt; Annotations &gt; Symbols &gt; Geometric Tolerance Symbols &gt; Tolerance 
+Dialog Box </strong>topics. If you are new to XML, see
+<a href="https://www.w3schools.com/xml/">XML Tutorial</a>.</p>
+
+<p class=auto-style1><strong>&lt;GtolFrame&gt;</strong></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;ToleranceSymbol&gt;</strong>&nbsp;Mandatory. 
+Value: forty-four possible strings or empty if this frame is a composite with
+the previous frame<o:p></o:p>. See the Tolerance dialog section in
+<a href="#mapping">Gtol Frame symbol XML node to user interface mapping</a>. </p>
+
+<p class=auto-style2><strong>&lt;ToleranceRangeInfo&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;PrimaryToleranceValue&gt;</strong>&nbsp;Mandatory. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;PrimaryRangeSymbol&gt;</strong>&nbsp;Optional. Values: phi/sPhi/sqr<o:p>, 
+where phi = diameter, sPhi = spherical diameter, sqr = square</o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ConjunctionSymbol1&gt;</strong>&nbsp;Optional. Values: dash “-“ or slash “/”<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ToleranceZone&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ToleranceZoneSymbol&gt;</strong> Optional. Values: phi/sPhi/sqr/deg<o:p>, 
+where deg = angle degree</o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ConjunctionSymbol2&gt;</strong> Optional. Values: dash “-“ or “X”<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RestrictedToleranceZoneLimit&gt;</strong> Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RestrictedToleranceZoneLimitSymbol&gt;</strong> Optional. Values: phi/sPhi/sqr/deg<o:p></o:p></p>
+<p class=auto-style1>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>ApplyMAXTolerance</strong>&gt; Optional. Values: true/false</o:p></p>
+<p class=auto-style1>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>MaxToleranceSymbol</strong>&gt; Optional. Values: phi</o:p></p>
+<p class=auto-style1>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>MaxToleranceValue</strong>&gt; Optional. Values: numerical</o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;OffsetZoneInfo&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;UnequallyDisposedProfile&gt; /
+&lt;ToleranceZoneOffset&gt;</strong>&nbsp;&nbsp;Optional. Specify one of these 
+two nodes.
+See below</p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;UnequallyDisposedProfile&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;OutsideDisposition&gt;</strong>
+Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ToleranceZoneOffset&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;OutsideFirstZoneOffset&gt; /
+&lt;InsideFirstZoneOffset&gt;&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FirstOffset&gt;&nbsp;</strong>Optional. 
+Values: numerical</p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;OutsideSecondZoneOffset&gt; /
+&lt;InsideSecondZoneOffset&gt;</strong>&nbsp;&nbsp;&nbsp;Optional. Specify one of these 
+two nodes. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SecondOffset&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;<strong>DynamicProfile</strong>&gt; Optional. Values: true/false</p>
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Combination&gt;</strong> Optional. Values: CZ/SZ<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Constraint&gt;</strong>
+Optional. Specify up to three of these nodes. Values: OffsetToleranceZone|UnspecifiedAngularToleranceZoneOffset|OrientationOnly<o:p></o:p></p>
+
+<p class=auto-style2><strong>&lt;FeatureInfo&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Filters&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;FilterDetail&gt; </strong>Unlimited number of these nodes<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;FilterSymbol&gt;</strong>
+Values: G/S/SW/CW/RG/RS/OB/OH/OD/CB/CH/CD/AB/AH/AD/F/H<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ShortWavePassFilter&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;CutOff&gt;</strong> Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;LongWavePassFilter&gt;</strong>
+Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;FilterIndicationSeparator&gt;</strong>&nbsp;Optional. Values: space/X or empty<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ShortWavePassFilter2&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;CutOff2&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;LongWavePassFilter2&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;AssociatedFeatureInfo&gt;</strong>&nbsp;Optional. Values: Minimax / LeastSquares / MinimumCircumscribed / Tangent /
+MaximumInscribed<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ProjectedToleranceZone&gt;</strong>
+Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Projection&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ProjectionRange&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;<strong>DerivedFeatureForFeatureOfSize&gt;&nbsp;</strong>Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<strong>&lt;AssociatedCharacteristic&gt;</strong> Optional. Values: C/CE/CI/G/GE/GI/X/N or empty<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;ParametricCharacteristic&gt;</strong> Optional. Values: P/V/T/Q or empty<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;MaterialCondition&gt;</strong> Optional.<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;MaximumMaterialCondition&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;LeastMaterialCondition&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ReciprocityRequirement&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RegardlessToFeatureSize&gt;</strong>&nbsp;Optional. Values: true/false&nbsp; Valid only if &lt;MaximumMaterialCondition&gt; or &lt;LeastMaterialCondition&gt;<o:p> 
+is specified</o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;StateSymbol&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;StatisticalSymbol&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;DatumCompartment&gt;</strong>&nbsp;Optional. 
+Specify up to three of these nodes</p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;TranslationConstraintAlongXAxis&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;TranslationConstraintAlongYAxis&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;TranslationConstraintAlongZAxis&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RotationalConstraintAlongXAxis&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RotationalConstraintAlongYAxis&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;RotationalConstraintAlongZAxis&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;ContactFeature&gt;&nbsp;</strong>Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;OrientationDegreesOfFreedomOnly&gt;</strong> Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;VariableLinearDistanceWithinACollectionOfFeatures&gt;</strong>&nbsp;Optional.
+Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<strong>Translation&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+<p class=auto-style2>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>TranslationValueI</strong>&gt; Optional. Values: numerical</o:p></p>
+<p class=auto-style2>
+<o:p>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>TranslationValueJ</strong>&gt; Optional. Values: numerical</o:p></o:p></p>
+<p class=auto-style2>
+<o:p>
+<o:p>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>TranslationValueK</strong>&gt; Optional. Values: numerical</o:p></o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;DatumDetail&gt; /
+&lt;Datums&gt;</strong>&nbsp;Specify one of these two nodes. See below</p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Datums&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;DatumDetail&gt;/&lt;Datums&gt;</strong> Any number of either of these nodes</p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> &lt;SubDatums&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;DatumDetail&gt; </strong>Any number of these nodes</p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&nbsp;&lt;DatumDetail&gt;</strong><o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;DatumLetter&gt;</strong>&nbsp;Values: text<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;PlaneSituationFeature&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;StraightLineSituationFeature&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;PointSituationFeature&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+<p class=auto-style2>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>AnyCrossSection</strong>&gt; Optional. Values: true/false</o:p></p>
+<p class=auto-style2>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;<strong>AnyLongitudinalSection</strong>&gt; Optional. Values: true/false</o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;FeatureProjection&gt;</strong>&nbsp;Optional. Values: true/false<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;Projection&gt;</strong>&nbsp;Optional. Values: numerical<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;DatumMaterialCondition&gt;</strong> Optional. Values: MaximumMaterialCondition/ LeastMaterialCondition/
+RegardlessToFeatureSize<o:p></o:p></p>
+
+<p class=auto-style2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>&lt;FreeState&gt;&nbsp;</strong>Optional. Values: true/false<o:p></o:p></p>
+
+<h3><a name="mapping"></a>Gtol frame symbol XML node to user interface mapping</h3>
+
+<h5><span class="auto-style1">Tolerance dialog</span></h5>
+<p class=MsoNormal><span class="auto-style1">&nbsp;
+<img height="291" src="image002.jpg" width="180"></p>
+
+<p class=auto-style1><span class="auto-style1">The Tolerance dialog above appears when a 
+Gtol symbol is placed in the graphics area. </span>The symbols inside the yellow 
+oval each map to Gtol XML &lt;ToleranceSymbol&gt;. In SOLIDWORKS, each of these 
+tolerance symbols is defined in <strong>C:\ProgramData\SolidWorks\SolidWorks</strong>
+<span style="COLOR: rgb(0,0,0)"><strong>20</strong></span><em>nn</em><strong>\lang\english\</strong><span style="FONT-WEIGHT: bold">gtol.sym.</span>&nbsp;Using 
+the Gtol API, you can specify 42 different tolerance symbols (14 tolerance 
+symbols (ANGULAR, CIRC, CONC, CYL, FLAT, LPROF, PARA, PERP, POSI, SPROF, SRUN, 
+STRAIGHT, SYMMETRY, TRUN) in each of three libraries:&nbsp; GTOL, IGTOL, and 
+GGTOL). You can specify two additional tolerance symbols using the GGTOL 
+library: LONG, AXIS. Inspect the GTOL,&nbsp; IGTOL, and GGTOL libraries in
+<strong>gtol.sym</strong> and specify the XML geometric tolerance symbol&nbsp;name in
+<em>LibraryName-SymbolName </em>format.</p>
+<p>Internally, SOLIDWORKS formats the tolerance symbol with angle brackets: &lt;<em>LibraryName-SymbolName</em>&gt;. 
+&lt;IGTOL-FLAT&gt; (Flatness tolerance symbol (*FLAT) in the ISO Geometric Tolerancing 
+library (IGTOL) of <strong>gtol.sym</strong>) </p>
+<p class=auto-style1>You must remove the angle brackets when specifying the 
+flatness symbol in the Gtol XML string: <o:p></o:p></p>
+
+<p class=auto-style1>&lt;ToleranceSymbol&gt;IGTOL-FLAT&lt;/ToleranceSymbol&gt;</p>
+
+<p class=auto-style1>If a frame is a composite with the frame above it, 
+&lt;ToleranceSymbol&gt; for the second frame is empty:</p>
+<p class=auto-style1>&lt;ToleranceSymbol&gt;&lt;/ToleranceSymbol&gt; for frame 2
+means that frame 1 and 2 are composites. <o:p></o:p></p>
+
+<p class=MsoNormal>In Gtol <img width=71 height=53
+src="image004.jpg" style='height:.552in;
+width:.739in'> the first frame has XML string &lt;ToleranceSymbol&gt;IGTOL-FLAT&lt;/ToleranceSymbol&gt;
+and second frame has XML string &lt;ToleranceSymbol&gt;&lt;/ToleranceSymbol&gt;<o:p>.</o:p></p>
+
+<h5>Range&nbsp;</h5>
+
+<p class=MsoNormal><img width=393 height=145
+src="image006.jpg" style='height:1.51in;
+width:4.093in'></p>
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img alt="" height="53" src="image142424.jpg" width="318"></p>
+
+<p class=auto-style1>A Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area. The Range information in 
+the picture above maps to XML node &lt;ToleranceRangeInfo&gt; and its sub-nodes.<o:p></o:p></p>
+
+<p class=auto-style1>The ovals
+are numbered and colored in a top to bottom, left to right fashion as follows: 1 (yellow), 2 (red), 3 (purple), 4 (yellow), 5 (red), 6 (purple), 7 (yellow), 8
+(red).<o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1>Yellow oval 1 maps to XML node &lt;PrimaryToleranceValue&gt; which has a numerical value. <o:p></o:p></p>
+
+<p class=auto-style1>Red oval 2 maps to XML node
+&lt;PrimaryRangeSymbol&gt;, with possible values&nbsp;sPhi (for spherical diameter),
+phi (diameter), sqr (square), or empty for none.<o:p></o:p></p>
+
+<p class=auto-style1>Purple oval 3<span class="auto-style1"> maps to XML node</span>
+&lt;ConjunctionSymbol1&gt;, with possible values -,&nbsp; /, or empty for neither.<o:p></o:p></p>
+
+<p class=auto-style1>Yellow oval 4<span class="auto-style1"> maps to XML node</span> &lt;ToleranceZone&gt;
+which has a numerical value.<o:p></o:p></p>
+
+<p class=auto-style1>Red oval 5<span class="auto-style1"> maps to XML node </span>&lt;ToleranceZoneSymbol&gt;, with 
+possible values&nbsp;sPhi (for spherical diameter), phi
+(diameter), sqr (square), deg (degree), or empty for none.<o:p></o:p></p>
+
+<p class=auto-style1>Purple oval 6<span class="auto-style1"> maps to XML node </span>&lt;ConjunctionSymbol2&gt; with values - 
+or&nbsp; X (no empty value option
+here).<o:p></o:p></p>
+
+<p class=auto-style1>Yellow oval 7<span class="auto-style1"> maps to XML node </span>&lt;RestrictedToleranceZoneLimit&gt; has a numerical value.<o:p></o:p></p>
+
+<p class=auto-style1>Red oval 8<span class="auto-style1"> maps to XML node </span>&lt;RestrictedToleranceZoneLimitSymbol&gt; with 
+possible values&nbsp;sPhi (for spherical
+diameter), phi (diameter), sqr (square), deg (degree), or empty for none.<o:p></o:p></p>
+<p class=auto-style1>
+<o:p>Apply Max Tolerance control maps to XML node &lt;ApplyMAXTolerance&gt; with 
+possible values true or false. If Apply Max Tolerance is selected in the dialog, 
+the max tolerance symbol and value controls are enabled.</o:p></p>
+<p class=auto-style1>
+<o:p>Max tolerance symbol control maps to XML node &lt;MaxToleranceSymbol&gt; with 
+possible value of phi (diameter).</o:p></p>
+<p class=auto-style1>
+<o:p>Max tolerance value control maps to XML node &lt;MaxToleranceValue&gt; with 
+possible numerical values.</o:p></p>
+
+<p class=MsoNormal><img width=185 height=57
+src="image008.jpg" style='height:.593in;
+width:1.927in'></p>
+
+<p class=auto-style1>The first frame in the above Gtol has Range XML string:<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ToleranceRangeInfo&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PrimaryToleranceValue&gt;0.01&lt;/PrimaryToleranceValue&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PrimaryRangeSymbol&gt;sqr&lt;/PrimaryRangeSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ConjunctionSymbol1&gt;/&lt;/ConjunctionSymbol1&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ToleranceZone&gt;0.02&lt;/ToleranceZone&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ToleranceZoneSymbol&gt;phi&lt;/ToleranceZoneSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ConjunctionSymbol2&gt;-&lt;/ConjunctionSymbol2&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RestrictedToleranceZoneLimit&gt;0.03&lt;/RestrictedToleranceZoneLimit&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RestrictedToleranceZoneLimitSymbol&gt;deg&lt;/RestrictedToleranceZoneLimitSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/ToleranceRangeInfo&gt;<o:p></o:p></p>
+
+<p class=auto-style1>The second frame has Range XML string:<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ToleranceRangeInfo&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PrimaryToleranceValue&gt;0.02&lt;/PrimaryToleranceValue&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PrimaryRangeSymbol&gt;&lt;/PrimaryRangeSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/ToleranceRangeInfo&gt;<o:p></o:p></p>
+
+<h5>Offset Zone</h5>
+
+<p class=MsoNormal>
+<img alt="" height="374" src="image142746.jpg" width="486"></p>
+
+<p class=auto-style1>A<span class="auto-style1"> Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area. The Offset Zone information in the 
+picture above maps to XML node </span>&lt;OffsetZoneInfo&gt; and its 
+sub-nodes.<o:p></o:p></p>
+
+<p class=auto-style1>In the first row, the circle-U control maps to Gtol XML 
+node &lt;UnequallyDisposedProfile &gt;. Setting its value to true is analogous to clicking that 
+control. <o:p><span class="auto-style1">The edit field control next to circle-U 
+maps to Gtol XML node &lt;OutsideDeposition&gt; which takes a numerical value.<o:p></o:p></span></o:p></p>
+
+<p class=auto-style1>The UZ control in the second row
+<span class="auto-style1">maps to Gtol XML node</span> &lt;ToleranceZoneOffset&gt;. <span class="auto-style1">
+Setting its value to true is analogous to clicking that 
+control. <o:p></o:p>
+</span></p>
+
+<p class=auto-style1>The +/- controls next to UZ
+map to Gtol XML nodes &lt;OutsideFirstZoneOffset&gt; and
+&lt;InsideFirstZoneOffset&gt;. Setting each to true is analogous to clicking those controls. The last edit value field on the
+UZ line maps to Gtol XML node &lt;FirstOffset&gt; which takes&nbsp; a numerical value.<o:p></o:p></p>
+
+<p class=auto-style1>The next line’s +/- controls map to Gtol XML nodes &lt;OutsideSecondZoneOffset&gt; and
+&lt;InsideSecondZoneOffset&gt;<span class="auto-style1">. Set each to true to 
+click those controls. </span>The last edit value field on the
+line <span class="auto-style1">maps to Gtol XML node </span>&lt;SecondOffset&gt; which 
+takes a numerical value.<o:p></o:p></p>
+
+<p class=auto-style1>&lt;UnequallyDisposedProfile&gt; and &lt;ToleranceZoneOffset&gt; are mutually exclusive. <o:p></o:p></p>
+
+<p class=auto-style1>The Dynamic Profile control maps to Gtol XML node 
+&lt;DynamicProfile&gt; with possible values, true or false.</p>
+<p class=auto-style1>The Combination controls map to Gtol XML node &lt;Combination&gt; 
+with possible values CZ or SZ, but not both.<o:p></o:p></p>
+
+<p class=auto-style1><span class="auto-style1">The Constraint controls (OZ 
+(Offset Tolerance Zone), VA (Unspecified Angular Tolerance Zone Offset 
+Specification Element), &gt;&lt; (Orientation-only Specification Element)) map to Gtol 
+XML node </span>&lt;Constraint&gt; with possible values 
+OffsetToleranceZone / UnspecifiedAngularToleranceZoneOffset / OrientationOnly. 
+Specify one, two, or all three.</p>
+<p class=auto-style1>&nbsp;Gtol <![if !vml]>
+<img width=125 height=40
+src="image012.jpg" style='height:.416in;
+width:1.302in'>&nbsp;has the following Offset Zone XML string:</p>
+
+<p class=auto-style1><o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1>&lt;OffsetZoneInfo&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Constraint&gt;OffsetToleranceZone&lt;/Constraint&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Constraint&gt;OrientationOnly&lt;/Constraint&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/OffsetZoneInfo&gt;<o:p></o:p></p>
+
+<h5>Feature</h5>
+
+<p class=MsoNormal>
+<img width=404 height=217
+src="image014.jpg" style='height:2.26in;
+width:4.208in' ></p>
+
+<p class=auto-style1>A <span class="auto-style1">Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area. The Feature information in the 
+picture above maps to XML node </span>&lt;FeatureInfo&gt; and its 
+sub-nodes.<o:p></o:p></p>
+
+<p class=auto-style1>The top four rows define multiple filters. The filter types are listed in the second 
+and third rows. Each filter type has associated information in the fourth row. <o:p></o:p></p>
+
+<p class=auto-style1>The information about a filter
+type (as shown in an edit box in the top row) maps to Gtol XML node
+&lt;FilterDetail&gt;. Since there could be many &lt;FilterDetail&gt; elements, &lt;Filters&gt; contains an 
+array of &lt;FilterDetail&gt;.<o:p></o:p></p>
+
+<![endif]>
+
+<p class=auto-style1>The 17 controls in the second and third rows of the dialog 
+map to Gtol XML node &lt;FilterSymbol&gt;. </p>
+<p class=auto-style1>There are seven controls in the fourth row of the dialog. The first three controls correspond to the first 
+cutoff value, with possible short/long wave dashes around it. The middle control 
+is a separator value that can be a space or an X. The last three controls 
+correspond to the second cutoff value, with possible short/long wave dashes 
+around it. </p>
+
+<p class=MsoNormal><span class="auto-style1">The fourth row of controls in the 
+Gtol,&nbsp; <img width=264 height=30
+src="image018.jpg" style='height:.312in;
+width:2.75in'> map (from left to right) to the following Gtol XML nodes:</p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ShortWavePassFilter&gt; true/false, analogous to setting/unsetting the first dash</p>
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CutOff&gt; numerical value<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;LongWavePassFilter&gt; true/false, analogous to setting/unsetting the second dash<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;FilterIndicationSeparator&gt; Three possible values: space, &quot;X&quot;, or empty. If 
+empty, no space or X is added between cutoff and cutoff2 strings</p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ShortWavePassFilter2&gt; true/false, analogous to setting/unsetting the first dash<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CutOff2&gt; numerical value<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;LongWavePassFilter2&gt; true/false, analogous to setting/unsetting the second dash<o:p></o:p></p>
+
+<p class=auto-style1><o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1><span class="auto-style1"><![if !vml]>
+Gtol<img width=224 height=39
+src="image016.jpg" style='height:.406in;
+width:2.333in'><![endif]> has two filters of type AB and CD. “AB-2” is filter 1 
+and “CD-3x-4” is filter 2. The filter portion of its </span>XML string:<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Filters&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterSymbol&gt;AB&lt;/FilterSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CutOff&gt;1&lt;/CutOff&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;LongWavePassFilter&gt;true&lt;/LongWavePassFilter&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterIndicationSeparator&gt;&lt;/FilterIndicationSeparator&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CutOff2&gt;2&lt;/CutOff2&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;LongWavePassFilter2&gt;true&lt;/LongWavePassFilter2&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/FilterDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterSymbol&gt;CD&lt;/FilterSymbol&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ShortWavePassFilter&gt;true&lt;/ShortWavePassFilter&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CutOff&gt;3&lt;/CutOff&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;FilterIndicationSeparator&gt;X&lt;/FilterIndicationSeparator&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ShortWavePassFilter2&gt;true&lt;/ShortWavePassFilter2&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;CutOff2&gt;4&lt;/CutOff2&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/FilterDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/Filters&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;</p>
+
+<p class=auto-style1>The row of Associated Feature controls <img width=151 height=40
+src="image020.jpg" style='height:.416in;
+width:1.572in'> map to Gtol XML node &lt;AssociatedFeatureInfo&gt;. This node has five 
+possible mutually exclusive string values (corresponding to the five controls from left to right) “Minimax /
+LeastSquares / MinimumCircumscribed / Tangent / MaximumInscribed”. </p>
+<p class=auto-style1>&lt;AssociatedFeatureInfo&gt;&lt;/AssociatedFeatureInfo&gt; 
+is analogous to de-selecting all five controls.</p>
+
+<p class=auto-style1><o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1>The 4 controls in the last row, 
+<img width=175 height=40
+src="image022.jpg" style='height:.416in;
+width:1.822in'>&nbsp;map to the following Gtol XML nodes:</p>
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;ProjectedToleranceZone&gt; true/false, analogous to clicking/unclicking the <img width=24 height=24
+src="image023.gif" style='height:.25in;
+width:.25in'>&nbsp;control</p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Projection&gt; numerical value<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ProjectionRange&gt; numerical value</p>
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DerivedFeatureForFeatureOfSize&gt; true/false, 
+analogous to 
+clicking/unclicking the
+<img width=24 height=24
+src="image024.gif" style='height:.25in;
+width:.25in'>&nbsp;control</p>
+
+<h5>Characteristic</h5>
+
+<p class=MsoNormal>
+<img width=287 height=123
+src="image026.jpg" style='height:1.281in;
+width:2.989in'></p>
+
+<p class=auto-style1>A <span class="auto-style1">Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area. The Characteristic information in 
+the picture above maps to Gtol XML nodes: </span>&nbsp;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;AssociatedCharacteristic&gt; has mutually exclusive values, C, CE, CI, G, GE, GI, 
+X, N, or empty</p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;ParametricCharacteristic&gt; has mutually exclusive values, P, V, T, Q, or empty</p>
+
+<h5>Material Condition</h5>
+
+<p class=MsoNormal>
+<img width=235 height=103
+src="image028.jpg" style='height:1.072in;
+width:2.447in'></p>
+
+<p class=auto-style1>A<span class="auto-style1"> Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area. The Material Condition information 
+in the picture above maps to XML node &lt;MaterialCondition&gt; and its four</span> 
+sub-nodes. All of these nodes have true/false values. Setting a node to true 
+is analogous to clicking the control in the user interface.</p>
+
+<p class=MsoNormal style='text-autospace:none'><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;MaximumMaterialCondition&gt;&nbsp; </span><img width=24 height=24
+src="image029.gif" style='height:.25in;
+width:.25in'></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;LeastMaterialCondition&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<img width=24 height=24
+src="image030.gif" style='height:.25in;
+width:.25in'></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ReciprocityRequirement&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<img width=24 height=24
+src="image031.gif" style='height:.25in;
+width:.25in'></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RegardlessToFeatureSize&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<img width=24 height=24
+src="image032.gif" style='height:.25in;
+width:.25in'></p>
+
+<p class=auto-style1>Gtol 
+<img width=153 height=35
+src="image034.jpg" style='height:.364in;
+width:1.593in'>&nbsp;has the following Material Condition XML string:</p>
+
+<p class=auto-style1><o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1>&lt;MaterialCondition&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;MaximumMaterialCondition&gt;true&lt;/MaximumMaterialCondition&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;ReciprocityRequirement&gt;true&lt;/ReciprocityRequirement&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/MaterialCondition&gt;<o:p></o:p></p>
+
+<p class=auto-style1><o:p>&nbsp;</o:p></p>
+
+<p class=auto-style1>Only M, L, S,
+MR, and LR are allowed. No other combinations are permitted.<o:p></o:p></p>
+
+<h5>Symbol</h5>
+
+<p class=MsoNormal>
+<img width=235 height=103
+src="image036.jpg" style='height:1.072in;
+width:2.447in'></p>
+
+<p class=auto-style1>A<span class="auto-style1"> Tolerance options dialog above appears when a tolerance symbol is selected 
+in the Tolerance dialog and the Gtol is placed in the graphics area.The Symbol information in the 
+picture above maps to XML</span> nodes &lt;StateSymbol&gt; and &lt;StatisticalSymbol&gt;. Both have
+true/false values. Set each to true to click the corresponding control.<o:p></o:p></p>
+
+<h5>Datum dialog</h5>
+
+<p class=MsoNormal>
+<img alt="" height="344" src="image142119.jpg" width="475"></p>
+
+<p class=MsoNormal><span class="auto-style1">The Datum dialog above appears when you 
+click <strong>Add Datum</strong> in the Tolerance Options dialog box. </span></p>
+<p class=MsoNormal>&nbsp;<img width=170 height=34
+src="image040.jpg" style='height:.354in;
+width:1.77in'></p>
+
+<p class=MsoNormal><span class="auto-style1">Each of the 3 datums (A-B, C, D) 
+maps to Gtol XML node &lt;DatumCompartment&gt; and sub-nodes &lt;DatumDetail&gt; and 
+&lt;DatumLetter&gt;. Each datum compartment can have a 
+single datum letter, like C or D, or it can have a datum group 
+(A-B) as in the Gtol above. A datum compartment can also have a sub-datum group 
+(C-D) which maps to Gtol XML node &lt;SubDatums&gt; and its sub-nodes.</span></p>
+<p class=MsoNormal>
+Gtol
+<img width=215 height=32
+src="image042.jpg" style='height:.333in;
+width:2.239in'>has the following Gtol XML string:</p>
+
+<span style='color:#5B9BD5'>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;A&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;B&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;SubDatums&gt;</p>
+
+<p class=auto-style4>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style5>&lt;DatumLetter&gt;C&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style5>&lt;DatumLetter&gt;D&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/SubDatums&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;E&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;F&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+</span>
+
+<p class=auto-style1>The datum letters are listed in the top row of the Datum 
+dialog. The next five rows of 23 controls are associated with each datum letter, 
+with 13 exceptions. The 13 exceptions
+are controls x,y,z,u,v,w,[CF], &gt;&lt;, [DV], triangle symbol, i, j, and k. These 
+13 
+controls apply to the whole datum compartment and display at the end of the
+datum compartment. They all have true/false values.
+<o:p>The 13 user-interface controls that apply to the entire datum compartment 
+map to Gtol XML nodes as follows:</o:p></p>
+
+<p class=auto-style2 style='text-autospace:none'>&nbsp;&nbsp;&nbsp; &lt;TranslationConstraintAlongXAxis&gt;&nbsp;&nbsp;- x<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;TranslationConstraintAlongYAxis&gt;&nbsp;&nbsp;- y<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;TranslationConstraintAlongZAxis&gt;&nbsp;&nbsp;- z<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RotationalConstraintAlongXAxis&gt;&nbsp;&nbsp;&nbsp;&nbsp;- u<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RotationalConstraintAlongYAxis&gt;&nbsp;&nbsp;&nbsp;&nbsp;- v<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;RotationalConstraintAlongZAxis&gt;&nbsp;&nbsp;&nbsp;&nbsp;- w<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;ContactFeature&gt;&nbsp;- [CF]<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;OrientationDegreesOfFreedomOnly&gt;&nbsp;&nbsp;- &gt;&lt;<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;VariableLinearDistanceWithinACollectionOfFeatures&gt;&nbsp; - [DV]<o:p></o:p></p>
+
+<p class=MsoNormal style='text-autospace:none'><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Translation&gt;&nbsp;&nbsp;- triangle symbol 
+<img width=24 height=24
+src="image043.gif" style='height:.25in;
+width:.25in'></span></p>
+<p class=MsoNormal style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;TranslationValueI&gt; - i</p>
+<p class=MsoNormal style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;TranslationValueJ&gt; - j</p>
+<p class=MsoNormal style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;TranslationValueK&gt; - k&nbsp;</p>
+
+<p class=auto-style1>The other ten controls pertain to a datum letter 
+and are listed under the node &lt;DatumDetail&gt; for that datum letter.<o:p> The 
+ten datum user-interface controls map to Gtol XML nodes as follows</o:p>:<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DatumLetter&gt; - string value for datum letter displayed in the edit 
+box in the top row of the Datum dialog</p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PlaneSituationFeature&gt;&nbsp;-[PL]<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;StraightLineSituationFeature&gt;&nbsp;-[SL]<o:p></o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;PointSituationFeature&gt;&nbsp;-[PT]<o:p></o:p></p>
+<p class=auto-style1 style='text-autospace:none'>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;AnyCrossSection&gt; - [ACS]</o:p></p>
+<p class=auto-style1 style='text-autospace:none'>
+<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;AnyLongitudinalSection&gt; - [ALS]</o:p></p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;FeatureProjection&gt;&nbsp; -<span style='color:#5B9BD5'><img width=24 height=24
+src="image023.gif" style='height:.25in;
+width:.25in'></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Projection&gt;&nbsp;- the edit box next to feature projection<o:p> in the 
+Datum dialog</o:p></p>
+
+<p class=auto-style1 style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;DatumMaterialCondition&gt;&nbsp;- 3 possible values MaximumMaterialCondition / LeastMaterialCondition / RegardlessToFeatureSize<o:p></o:p></p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&lt;FreeState&gt; -<span style='color:#5B9BD5'>
+<img width=24 height=24
+src="image046.gif" style='height:.25in;
+width:.25in'></p>
+
+</span>
+
+<p class=MsoNormal>The s<span class="auto-style1">econd datum compartment
+of this Gtol </span><img width=329 height=29
+src="image045.jpg" style='height:.302in;
+width:3.427in'>&nbsp;has the following Gtol XML string:</p>
+
+<p class=auto-style2>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;TranslationConstraintAlongXAxis&gt;true&lt;/TranslationConstraintAlongXAxis&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;TranslationConstraintAlongYAxis&gt;true&lt;/TranslationConstraintAlongYAxis&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;ContactFeature&gt;true&lt;/ContactFeature&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;VariableLinearDistanceWithinACollectionOfFeatures&gt;true&lt;/VariableLinearDistanceWithinACollectionOfFeatures&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;E&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/DatumCompartment&gt;<o:p>&nbsp;</o:p></p>
+
+<span style='color:#5B9BD5'>
+
+<p class=MsoNormal><span class="auto-style1">The
+last datum compartment of this Gtol </span>&nbsp;<span class="auto-style1"><span style='color:#5B9BD5'><img width=420 height=27
+src="image048.jpg" style='height:.281in;
+width:4.375in'> </span>has the following Gtol XML string:</span></p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumLetter&gt;G&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;PlaneSituationFeature&gt;true&lt;/PlaneSituationFeature&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;StraightLineSituationFeature&gt;true&lt;/StraightLineSituationFeature&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;PointSituationFeature&gt;true&lt;/PointSituationFeature&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;FeatureProjection&gt;true&lt;/FeatureProjection&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;Projection&gt;0.02&lt;/Projection&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumMaterialCondition&gt;LeastMaterialCondition&lt;/DatumMaterialCondition&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;FreeState&gt;true&lt;/FreeState&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span class="auto-style1">When the datum compartment has more
+than one datum letter, the node &lt;Datums&gt; contains a number of sub-nodes of type &lt;DatumDetail&gt;, 
+&lt;SubDatums&gt;, and &lt;DatumLetter&gt;. </span></p>
+<p class=MsoNormal><span class="auto-style1">For this Gtol </span><img width=227 height=25
+src="image050.jpg" style='height:.26in;
+width:2.364in'>:</p>
+
+<p class=auto-style1>The first datum compartment has the following Gtol XML 
+string:<o:p></o:p></p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;A&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;B&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;SubDatums&gt;</p>
+
+<p class=auto-style4>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style5>&lt;DatumLetter&gt;C&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style5>&lt;DatumLetter&gt;D&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/SubDatums&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style1>The second datum compartment has the following Gtol XML 
+string:</p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;E&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style4>&lt;DatumLetter&gt;F&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/Datums&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style1>The third datum compartment has the following Gtol XML 
+string:<o:p></o:p></p>
+
+<p class=auto-style1>&lt;DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style3>&lt;DatumLetter&gt;G&lt;/DatumLetter&gt;<o:p></o:p></p>
+
+<p class=auto-style2>&lt;/DatumDetail&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&lt;/DatumCompartment&gt;<o:p></o:p></p>
+
+<p class=auto-style1>&nbsp;</p>
+
+
+</body>
+
+</html>

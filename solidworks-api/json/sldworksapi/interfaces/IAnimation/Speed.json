@@ -1,0 +1,31 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAnimation",
+    "member": "Speed",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "speed",
+      "ianimation",
+      "animation",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAnimation.Speed",
+  "description": "Obsolete. Not superseded.",
+  "signature": "System.Int32 Speed {get; set;}",
+  "parameters": [],
+  "returns": "Speed at which the animation plays as defined by swAnimationPlaySpeed_e",
+  "remarks": "This property affects the duration of the animation. It allows you to specify whether\nor not to play the animation at half speed or double speed, which halves or doubles\nthe animation duration.\nIf you use\nIAnimation::Duration\nwhile an animation is playing, then you might not get\nthe same result as when the animation is not running.\nIf you get the Animation object using...\nAnd then use...\nThen the duration...\nISimulation::Animation\nAnimation::Duration\nIs at the normal playing speed\nISimulation::PlayAnimation\nAnimation::Duration\nMight be a different value because the animation is playing and the\nAnimation\nController\nspeed may be set to\nNormal\n,\nSlow Play\n, or\nFast Play",
+  "examples": [],
+  "related": []
+}

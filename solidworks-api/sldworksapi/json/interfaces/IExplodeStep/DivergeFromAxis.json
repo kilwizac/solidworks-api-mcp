@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IExplodeStep",
+    "member": "DivergeFromAxis",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "divergefromaxis",
+      "iexplodestep",
+      "explode",
+      "step",
+      "diverge",
+      "axis",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IExplodeStep.DivergeFromAxis",
+  "description": "Gets or sets whether to move components at an angle from the explode direction of this radial explode step.",
+  "signature": "System.Boolean DivergeFromAxis {get; set;}",
+  "parameters": [],
+  "returns": "True to move components at an angle from the explode direction, false to not (see Remarks )",
+  "remarks": "This property is valid only if\nIExplodeStep::ExplodeStepType\nis set to\nswAssemblyExplodeStepType_e\n.swAssemblyExplodeStepType_Radial.\nIf you set this property to false, then\nIExplodeStep::DivergeDirection\nis automatically set to nothing or null.\nIf you want to set this property to true, then you must first set IExplodeStep::DivergeDirection to a valid diverge direction entity.",
+  "examples": [
+    {
+      "title": "IExplodeStep",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IExplodeStep",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,27 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swActivateDocError_e",
+    "description": "Document activation errors. Bitmask.",
+    "member_count": 2,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swActivateDocError_e",
+  "description": "Document activation errors. Bitmask.",
+  "values": [
+    {
+      "member": "swDocNeedsRebuildWarning",
+      "value": "2",
+      "description": "or 0x2; The document that was activated needs to be rebuilt (your application can use EditRebuild on the PartDoc, AssemblyDoc, or DrawingDoc to perform the rebuild)."
+    },
+    {
+      "member": "swGenericActivateError",
+      "value": "1",
+      "description": "or 0x1; An unspecified error was encountered, and the document was not activated."
+    }
+  ]
+}

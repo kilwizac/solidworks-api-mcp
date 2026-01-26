@@ -1,0 +1,111 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "ActivateSheet",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the sheet"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.GetSheetCount",
+      "IDrawingDoc.GetSheetNames",
+      "IDrawingDoc.IGetSheetNames",
+      "ISheet"
+    ],
+    "keywords": [
+      "activate",
+      "drawing",
+      "sheets",
+      "see",
+      "also",
+      "isheet",
+      "activatesheet",
+      "idrawingdoc",
+      "doc",
+      "sheet",
+      "name",
+      "string",
+      "boolean",
+      "copy",
+      "paste",
+      "vb",
+      "net",
+      "vba",
+      "each",
+      "view",
+      "current",
+      "rebuild",
+      "all",
+      "configurations",
+      "loaded"
+    ]
+  },
+  "title": "IDrawingDoc.ActivateSheet",
+  "description": "Activates the specified drawing sheet.",
+  "signature": "System.Boolean ActivateSheet( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the sheet"
+    }
+  ],
+  "returns": "True if the sheet was activated, false if SOLIDWORKS generated an error",
+  "remarks": "This command makes the specified sheet the active or current sheet, similar to\nIDrawingDoc::SheetNext\nor\nIDrawingDoc::SheetPrevious\n. You can use\nIDrawingDoc::GetCurrentSheet\nor\nIDrawing::IGetCurrentSheet\nwith an active sheet to gain access to the ISheet interface.\nTo activate a drawing view, you can use\nIDrawingView::ActivateView\n.",
+  "examples": [
+    {
+      "title": "Copy and Paste Drawing Sheet (C#)",
+      "href": "Copy_and_Paste_Drawing_Sheet_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Copy and Paste Drawing Sheet (VB.NET)",
+      "href": "Copy_and_Paste_Drawing_Sheet_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Copy and Paste Drawing Sheet (VBA)",
+      "href": "Copy_and_Paste_Drawing_Sheet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Activate Each View on Current Sheet (VBA)",
+      "href": "Activate_Each_View_on_Current_Sheet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rebuild All Configurations (VBA)",
+      "href": "Rebuild_All_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Loaded Sheets (C#)",
+      "href": "Get_Loaded_Sheets_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Loaded Sheets (VB.NET)",
+      "href": "Get_Loaded_Sheets_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.GetSheetCount",
+    "IDrawingDoc.GetSheetNames",
+    "IDrawingDoc.IGetSheetNames",
+    "ISheet"
+  ]
+}

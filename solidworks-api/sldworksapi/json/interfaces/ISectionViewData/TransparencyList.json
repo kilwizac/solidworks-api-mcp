@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISectionViewData",
+    "member": "TransparencyList",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISectionViewData.FirstPlane",
+      "ISectionViewData.SecondPlane",
+      "ISectionViewData.ThirdPlane"
+    ],
+    "keywords": [
+      "section",
+      "views",
+      "see",
+      "also",
+      "idrsection",
+      "transparent",
+      "sectioning",
+      "transparencylist",
+      "isectionviewdata",
+      "view",
+      "data",
+      "transparency",
+      "list",
+      "object",
+      "selectively",
+      "transparently",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "ISectionViewData.TransparencyList",
+  "description": "Gets or sets the sectioned bodies in the multibody part or the sectioned components in the assembly to transparently section in this section view.",
+  "signature": "System.Object TransparencyList {get; set;}",
+  "parameters": [],
+  "returns": "Array of bodies in the multibody part or an array of components to transparently section (see Remarks )",
+  "remarks": "Call this property before calling\nISectionViewData::SectionTransparentItemsTransparent\nto specify which sectioned bodies in the multibody part or which sectioned components in the assembly to transparently section.\nTo select each sectioned body or component, specify a Mark of 32 for\nIModelDocExtension::SelectByID2\n. Select the section planes after selecting the sectioned bodies or components.\nThis property is only available if\nISectionViewData::ZonalSection\nand\nISectionViewData::TransparentSection\nare true.",
+  "examples": [
+    {
+      "title": "Selectively and Transparently Section a Section View (C#)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Selectively and Transparently Section a Section View (VB.NET)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Selectively and Transparently Section a Section View (VBA)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISectionViewData.FirstPlane",
+    "ISectionViewData.SecondPlane",
+    "ISectionViewData.ThirdPlane"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateSpline",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "PointData",
+        "type": "System.Object",
+        "description": "Set of X,Y,Z point coordinates to use in creating the spline (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.CreateSplineByEqnParams",
+      "IModelDoc2.CreateSplinesByEqnParams",
+      "IModelDoc2.ICreateSpline",
+      "IModelDoc2.ICreateSplineByEqnParams",
+      "IModelDoc2.ICreateSplinesByEqnParams",
+      "IModelDoc2.InsertSplinePoint"
+    ],
+    "keywords": [
+      "createspline",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "spline",
+      "point",
+      "data",
+      "object",
+      "3d",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.CreateSpline",
+  "description": "Obsolete. Superseded by ISketchManager::CreateSpline.",
+  "signature": "System.Object CreateSpline( \n   System.Object\nPointData\n)",
+  "parameters": [
+    {
+      "name": "PointData",
+      "type": "System.Object",
+      "description": "Set of X,Y,Z point coordinates to use in creating the spline (see Remarks )"
+    }
+  ],
+  "returns": "Newly created spline",
+  "remarks": "This method creates a spline in the active 2D sketch. If a sketch is not active, then a new sketch is created. Use\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\nto check if the sketch active.\nThe PointData array is a set of, at least, two X, Y, Z values. The X value for the start point of the spline is PointData[0], the Y value for the start point is PointData[1], and the Z value for the start point is PointData[2]. The X value for the next point is PointData[3], and so on. For the COM interface, the total number of points in the array must be passed in. For the OLE interface, the total number of points are determined automatically, by taking the UBound of the PointData VARIANT and dividing by 3, so be careful to dimension that array correctly.\nFor COM applications, you can use the object pointer returned from this method to call any APIs on the\nISketchSegment\ninterface. You can obtain the underlying\nISketchSpline\nobject by using QueryInterface on the returned ISketchSegment object.\nOLE applications can define a new ISketchSegment or ISketchSpline object using the returned Dispatch pointer. Visual Basic applications interpret the pointer for you automatically, so you can use the returned object to call SketchSegment or\nISketchEllipse\nAPIs.\nThis method does not work with\nIModelDoc2::SetAddToDB\nor\nIModelDoc2::SetDisplayWhenAdded\n. It always adds the spline directly to the database (as if IModelDoc2::SetAddToDB(True) was in effect), and you must redraw your document window to see the entities that you added (as if IModelDoc2::SetDisplayWhenAdded(false) was in effect).\nIn 2D sketches, SOLIDWORKS ignores the Z value in PointData.",
+  "examples": [
+    {
+      "title": "Create 3D Spline (VBA)",
+      "href": "Create_3D_Spline_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.CreateSplineByEqnParams",
+    "IModelDoc2.CreateSplinesByEqnParams",
+    "IModelDoc2.ICreateSpline",
+    "IModelDoc2.ICreateSplineByEqnParams",
+    "IModelDoc2.ICreateSplinesByEqnParams",
+    "IModelDoc2.InsertSplinePoint"
+  ]
+}

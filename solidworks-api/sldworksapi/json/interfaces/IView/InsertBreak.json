@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertBreak",
+    "returns": "BreakLine",
+    "parameters": [
+      {
+        "name": "Orientation",
+        "type": "System.Int32",
+        "description": "Horizontal or vertical cut as defined in swBreakLineOrientation_e"
+      },
+      {
+        "name": "Position1",
+        "type": "System.Double",
+        "description": "Location of the first line in the break (see Remarks )"
+      },
+      {
+        "name": "Position2",
+        "type": "System.Double",
+        "description": "Location of the second line in the break (see Remarks )"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Cut style as defined in swBreakLineStyle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IBreakLine.Style",
+      "IDrawingDoc.BreakView",
+      "IView.BreakLineGap",
+      "IView.GetBreakLineCount",
+      "IView.GetBreakLineInfo",
+      "IView.GetBreakLines",
+      "IView.IGetBreakLineInfo",
+      "IView.IGetBreakLines",
+      "IView.IsBroken"
+    ],
+    "keywords": [
+      "insertbreak",
+      "iview",
+      "view",
+      "insert",
+      "break",
+      "orientation",
+      "int32",
+      "position1",
+      "double",
+      "position2",
+      "style",
+      "line"
+    ]
+  },
+  "title": "IView.InsertBreak",
+  "description": "Obsolete. Superseded by IView::InsertBreak2.",
+  "signature": "BreakLine InsertBreak( \n   System.Int32\nOrientation\n,\n   System.Double\nPosition1\n,\n   System.Double\nPosition2\n,\n   System.Int32\nStyle\n)",
+  "parameters": [
+    {
+      "name": "Orientation",
+      "type": "System.Int32",
+      "description": "Horizontal or vertical cut as defined in swBreakLineOrientation_e"
+    },
+    {
+      "name": "Position1",
+      "type": "System.Double",
+      "description": "Location of the first line in the break (see Remarks )"
+    },
+    {
+      "name": "Position2",
+      "type": "System.Double",
+      "description": "Location of the second line in the break (see Remarks )"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Cut style as defined in swBreakLineStyle_e"
+    }
+  ],
+  "returns": "Break line",
+  "remarks": "A break in a drawing view consists of a pair of lines. This method inserts the break lines at the locations indicated by Position1 and Position2.\nIf the orientation of the break is...\nThen Position1 and Position2 are...\nHorizontal\nY values, relative to the drawing view origin, indicating where along the Y axis to place the breaks\nVertical\nX values, relative to the drawing view origin, indicating where along the X axis to place the breaks",
+  "examples": [],
+  "related": [
+    "IBreakLine.Style",
+    "IDrawingDoc.BreakView",
+    "IView.BreakLineGap",
+    "IView.GetBreakLineCount",
+    "IView.GetBreakLineInfo",
+    "IView.GetBreakLines",
+    "IView.IGetBreakLineInfo",
+    "IView.IGetBreakLines",
+    "IView.IsBroken"
+  ]
+}

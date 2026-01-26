@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDocumentSpecification",
+    "member": "AutoRepair",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "autorepair",
+      "idocumentspecification",
+      "document",
+      "specification",
+      "auto",
+      "repair",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDocumentSpecification.AutoRepair",
+  "description": "Gets or sets whether to automatically repair non-critical custom properties errors in the file to be opened.",
+  "signature": "System.Boolean AutoRepair {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically repair custom properties errors, false to not (default) (see Remarks )",
+  "remarks": "This property is valid only if\nIDocumentSpecification::Silent\nis set to true.\nIf the document to be opened has a non-critical data error, the non-critical data error may or may not be repaired, depending on how you set this property and other conditions.\nIf you set this property to true, and the file to open has non-critical data corruption in:\nThe custom properties area, the repair proceeds, and\nISldWorks::OpenDoc7\nreturns the document with warning,\nswFileLoadWarning_e\n.swFileLoadWarning_AutomaticRepair.\nAn area other than custom properties, the document is not repaired.\nThe following files are created in c\n:\\Users\\\nuser\n\\AppData\\Local\\Temp:\nRepaired_\nfile_name.sld*\nBackup of\nfile_name.sld*\nIf you set this property to false, and the file to open has non-critical data corruption:\nThe document is not repaired.\nThe document does not open.\nISldWorks::OpenDoc7\nfails and returns null with error code,\nswFileLoadError_e\n.FileRequiresAutoRepair.\nIf critical data corruption exists in the file, and you set\nIDocumentSpecification::CriticalDataRepair\nto true to handle critical data corruption:\nNon-critical data corruptions are ignored and not repaired.\nRepairing critical errors necessitates obliterating all non-critical data.\nUse For C++ only, VARIANT_TRUE (-1) automatically repairs the file, and VARIANT_FALSE (0) does not.",
+  "examples": [],
+  "related": []
+}

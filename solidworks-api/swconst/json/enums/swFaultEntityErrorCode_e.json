@@ -1,0 +1,197 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFaultEntityErrorCode_e",
+    "description": "Fault entity error codes.",
+    "member_count": 36,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFaultEntityErrorCode_e",
+  "description": "Fault entity error codes.",
+  "values": [
+    {
+      "member": "swBodyCorrupt",
+      "value": "1",
+      "description": "= Data structure is corrupt"
+    },
+    {
+      "member": "swBodyInsideOut",
+      "value": "3",
+      "description": "= Body is inside out"
+    },
+    {
+      "member": "swBodyInvalidIdentifiers",
+      "value": "2",
+      "description": "= Body has invalid or duplicate identifiers"
+    },
+    {
+      "member": "swBodyRegionsInconsistent",
+      "value": "4",
+      "description": "= Regions of body are inconsistent"
+    },
+    {
+      "member": "swEdgeBadFaceOrder",
+      "value": "14",
+      "description": "= On a non-manifold edge, the face order around the edge does not match the order of the faces' surfaces around the edge"
+    },
+    {
+      "member": "swEdgeBadWire",
+      "value": "15",
+      "description": "= Two wireframe edges intersect at a position other than a vertex"
+    },
+    {
+      "member": "swEdgeNonPeriodicCurve",
+      "value": "5",
+      "description": "= Open or non-periodic curve on ring edge"
+    },
+    {
+      "member": "swEdgeNonPeriodicNomGeom",
+      "value": "6",
+      "description": "= Open or non-periodic nominal geometry on ring edge"
+    },
+    {
+      "member": "swEdgeSpcurveOutOfTol",
+      "value": "11",
+      "description": "= Spcurve not within edge's tolerance"
+    },
+    {
+      "member": "swEdgeSpcurveOutOfTolNomGeom",
+      "value": "12",
+      "description": "= Spcurve not within edge's tolerance of nominal geometry"
+    },
+    {
+      "member": "swEdgeTouchEdge",
+      "value": "36",
+      "description": "= Edges touch"
+    },
+    {
+      "member": "swEdgeVertexNotLie",
+      "value": "7",
+      "description": "= Vertex does not lie on edge's curve"
+    },
+    {
+      "member": "swEdgeVertexNotLieNomGeom",
+      "value": "8",
+      "description": "= Vertex does not lie on nominal geometry"
+    },
+    {
+      "member": "swEdgeVerticesTouch",
+      "value": "13",
+      "description": "= Vertices of edge touch"
+    },
+    {
+      "member": "swEdgeWrongDir",
+      "value": "9",
+      "description": "= Curve in wrong direction for edge"
+    },
+    {
+      "member": "swEdgeWrongDirNomGeom",
+      "value": "10",
+      "description": "= Nominal geometry in wrong direction"
+    },
+    {
+      "member": "swEntityStateInvalid",
+      "value": "34",
+      "description": "= State of entity is invalid"
+    },
+    {
+      "member": "swFaceBadEdge",
+      "value": "17",
+      "description": "= Edge does not lie on face's surface"
+    },
+    {
+      "member": "swFaceBadEdgeOrder",
+      "value": "18",
+      "description": "= Edge order around the face does not match the order of the edges' curves around the face"
+    },
+    {
+      "member": "swFaceBadLoops",
+      "value": "20",
+      "description": "= Loops inconsistent"
+    },
+    {
+      "member": "swFaceBadVertex",
+      "value": "16",
+      "description": "= Vertex does not lie on face's surface"
+    },
+    {
+      "member": "swFaceBadWireframe",
+      "value": "22",
+      "description": "= A wireframe edge intersects a face at a position other than a vertex"
+    },
+    {
+      "member": "swFaceCheckerFailure",
+      "value": "23",
+      "description": "= Checker failure during face/face check"
+    },
+    {
+      "member": "swFaceFaceInconsistency",
+      "value": "24",
+      "description": "= Inconsistent faces"
+    },
+    {
+      "member": "swFaceNoAccomVertex",
+      "value": "19",
+      "description": "= A surface singularity has no accompanying vertex"
+    },
+    {
+      "member": "swFaceSelfIntersecting",
+      "value": "21",
+      "description": "= Face is self intersecting"
+    },
+    {
+      "member": "swGeomDegenerate",
+      "value": "26",
+      "description": "= Geometry degenerated"
+    },
+    {
+      "member": "swGeomStateSelfIntersect",
+      "value": "25",
+      "description": "= Geometry is self intersecting"
+    },
+    {
+      "member": "swRegionBadShells",
+      "value": "27",
+      "description": "= Inconsistent shells"
+    },
+    {
+      "member": "swShellBadTopologyGeometry",
+      "value": "28",
+      "description": "= A topological entity belonging to a shell is not geometrically within the shell"
+    },
+    {
+      "member": "swShellIntersect",
+      "value": "29",
+      "description": "= Shell shell inconsistency"
+    },
+    {
+      "member": "swTopolMissingGeometry",
+      "value": "35",
+      "description": "= Missing geometry"
+    },
+    {
+      "member": "swTopolNotG1Continuous",
+      "value": "30",
+      "description": "= Topology's geometry is not G1 continuous"
+    },
+    {
+      "member": "swTopolSizeBoxViolation",
+      "value": "31",
+      "description": "= Some or all of entity is outside size box"
+    },
+    {
+      "member": "swTopolStateCheckFail",
+      "value": "32",
+      "description": "= Checker failure"
+    },
+    {
+      "member": "swTopolStateNoGeometry",
+      "value": "33",
+      "description": "= Missing geometry"
+    }
+  ]
+}

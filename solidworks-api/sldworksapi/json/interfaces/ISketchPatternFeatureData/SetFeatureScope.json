@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchPatternFeatureData",
+    "member": "SetFeatureScope",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FeatureScopeOption",
+        "type": "System.Boolean",
+        "description": "True to specify affected bodies, false to apply the pattern to all bodies every time the feature regenerates (see Remarks )"
+      },
+      {
+        "name": "AutoSelectBodies",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies intersected by this pattern feature, false to specify affected bodies (see Remarks )"
+      },
+      {
+        "name": "Bodies",
+        "type": "System.Object",
+        "description": "Array of bodies to be affected; valid only if FeatureScopeOption is true and AutoSelectBodies is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [
+      "ISketchPatternFeatureData.AutoSelect",
+      "ISketchPatternFeatureData.FeatureScope",
+      "ISketchPatternFeatureData.FeatureScopeBodies"
+    ],
+    "keywords": [
+      "setfeaturescope",
+      "isketchpatternfeaturedata",
+      "sketch",
+      "pattern",
+      "feature",
+      "data",
+      "scope",
+      "option",
+      "boolean",
+      "auto",
+      "select",
+      "bodies",
+      "object"
+    ]
+  },
+  "title": "ISketchPatternFeatureData.SetFeatureScope",
+  "description": "Sets the feature scope, whether to autoselect the affected bodies, and the affected bodies in this sketch pattern feature.",
+  "signature": "System.Boolean SetFeatureScope( \n   System.Boolean\nFeatureScopeOption\n,\n   System.Boolean\nAutoSelectBodies\n,\n   System.Object\nBodies\n)",
+  "parameters": [
+    {
+      "name": "FeatureScopeOption",
+      "type": "System.Boolean",
+      "description": "True to specify affected bodies, false to apply the pattern to all bodies every time the feature regenerates (see Remarks )"
+    },
+    {
+      "name": "AutoSelectBodies",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies intersected by this pattern feature, false to specify affected bodies (see Remarks )"
+    },
+    {
+      "name": "Bodies",
+      "type": "System.Object",
+      "description": "Array of bodies to be affected; valid only if FeatureScopeOption is true and AutoSelectBodies is false"
+    }
+  ],
+  "returns": "True if feature scope set successfully, false if not (see Remarks )",
+  "remarks": "If this method returns false, then default values for FeatureScopeOption and AutoSelectBodies are set. A subsequent call to\nIFeatureManager::CreateFeature\ncreates the feature with a FeatureScopeOption of true and an AutoSelectBodies of true.\nAfter calling IFeature::ModifyDefinition, call\nIFeature::GetErrorCode2\nto determine what's wrong and then take necessary remedial action.\nFor more information, see the\nSketch Driven Patterns PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": [
+    "ISketchPatternFeatureData.AutoSelect",
+    "ISketchPatternFeatureData.FeatureScope",
+    "ISketchPatternFeatureData.FeatureScopeBodies"
+  ]
+}

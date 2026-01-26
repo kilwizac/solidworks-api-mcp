@@ -1,0 +1,148 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "MultiSelect2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of selectable objects: can be the same type of objects (e.g., an array of faces or an array of edges) or different types of objects (e.g., an array of entities of faces and edges ) if an object is not selected, then it is ignored"
+      },
+      {
+        "name": "AppendFlag",
+        "type": "System.Boolean",
+        "description": "True to append the objects to the selection list, false to replace the current selection list with these objects"
+      },
+      {
+        "name": "Data",
+        "type": "System.Object",
+        "description": "ISelectData object, Nothing, or null"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.SelectAll",
+      "IModelDocExtension.SelectByID2",
+      "ISelectionMgr"
+    ],
+    "keywords": [
+      "select",
+      "multiple",
+      "items",
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "multiselect2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "multi",
+      "select2",
+      "objects",
+      "object",
+      "append",
+      "flag",
+      "boolean",
+      "data",
+      "int32",
+      "boxes",
+      "vb",
+      "net",
+      "vba",
+      "specify",
+      "iges",
+      "levels",
+      "values",
+      "import",
+      "file",
+      "multiselect",
+      "same",
+      "different"
+    ]
+  },
+  "title": "IModelDocExtension.MultiSelect2",
+  "description": "Selects multiple objects and returns the number of objects selected in the model.",
+  "signature": "System.Int32 MultiSelect2( \n   System.Object\nObjects\n,\n   System.Boolean\nAppendFlag\n,\n   System.Object\nData\n)",
+  "parameters": [
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of selectable objects: can be the same type of objects (e.g., an array of faces or an array of edges) or different types of objects (e.g., an array of entities of faces and edges ) if an object is not selected, then it is ignored"
+    },
+    {
+      "name": "AppendFlag",
+      "type": "System.Boolean",
+      "description": "True to append the objects to the selection list, false to replace the current selection list with these objects"
+    },
+    {
+      "name": "Data",
+      "type": "System.Object",
+      "description": "ISelectData object, Nothing, or null"
+    }
+  ],
+  "returns": "Number of objects selected in the model",
+  "remarks": "If using this method to populate...\nThen...\nA selection box in a PropertyManager page\nIPropertyManagerPage2Handler9::OnSubmitSelection\nfires when set to true and\nISelectData::Mark\nis set to either a 0 or a non-0 value.\nNOTE\n: IPropertyManagerPage2Handler9::OnSubmitSelection only fires when set to true and ISelectData::Mark is set to 0 if using either of the now obsolete\nModelDocExtension::MultiSelect\nand\nIModelDocExtension::IMultiSelect\nmethods.\nMultiple selection boxes with different multiple selections in a PropertyManager page\nSet:\neach selection box's\nIPropertyManagerPageSelectionbox::Mark\nto a different power of two; for example, 1, 2, 4, 8, etc. (Setting a selection box's mark to 0 causes all selections to appear in that selection box and the active selection box.)\nISelectData::Mark and each selection box's IPropertyManagerPageSelectionbox::Mark to the same value. See the examples for details.\nNOTE:\nIf an object is already selected with a mark of\nx\nand you attempt to select the same object again using this method with AppendFlag = true, then that object remains selected with a mark with\nx\n. Reselecting a previously selected object does not assign a new mark value.",
+  "examples": [
+    {
+      "title": "Select Multiple Objects for Selection Boxes (C#)",
+      "href": "Select_Multiple_Objects_for_Selection_Boxes_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Multiple Objects for Selection Boxes (VB.NET)",
+      "href": "Select_Multiple_Objects_for_Selection_Boxes_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Multiple Objects for Selection Boxes (VBA)",
+      "href": "Select_Multiple_Objects_for_Selection_Boxes_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (C#)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VB.NET)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VBA)",
+      "href": "Specify_IGES_Levels_and_Values,_Then_Import_IGES_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Multiselect Same and Different Objects (C#)",
+      "href": "Multiselect_Same and_Different_Objects_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Multiselect Same and Different Objects (VB.NET)",
+      "href": "Multiselect_Same and_Different_Objects_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Multiselect Same and Different Objects (VBA)",
+      "href": "Multiselect_Same and_Different_Objects_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.SelectAll",
+    "IModelDocExtension.SelectByID2",
+    "ISelectionMgr"
+  ]
+}

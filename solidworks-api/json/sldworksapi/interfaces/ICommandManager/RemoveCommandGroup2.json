@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "RemoveCommandGroup2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "User-defined ID of the CommandGroup to remove"
+      },
+      {
+        "name": "RuntimeOnly",
+        "type": "System.Boolean",
+        "description": "True to remove the CommandGroup , saving its toolbar information in the registry; false to remove both the CommandGroup and its toolbar information in the registry"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "removecommandgroup2",
+      "icommandmanager",
+      "command",
+      "manager",
+      "remove",
+      "group2",
+      "user",
+      "id",
+      "int32",
+      "runtime",
+      "only",
+      "boolean"
+    ]
+  },
+  "title": "ICommandManager.RemoveCommandGroup2",
+  "description": "Removes the specified CommandGroup from the CommandManager.",
+  "signature": "System.Int32 RemoveCommandGroup2( \n   System.Int32\nUserID\n,\n   System.Boolean\nRuntimeOnly\n)",
+  "parameters": [
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "User-defined ID of the CommandGroup to remove"
+    },
+    {
+      "name": "RuntimeOnly",
+      "type": "System.Boolean",
+      "description": "True to remove the CommandGroup , saving its toolbar information in the registry; false to remove both the CommandGroup and its toolbar information in the registry"
+    }
+  ],
+  "returns": "Error code as defined in swRemoveCommandGroupErrors",
+  "remarks": "This method removes CommandGroups created using\nICommandManager::AddContextMenu\nand\nICommandManager::CreateCommandGroup2\n.",
+  "examples": [],
+  "related": []
+}

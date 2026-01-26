@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "GetControlPointConicRhoOrRadiusAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Zero-based index of the control point (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetControlPointRadiusAtIndex",
+      "IVariableFilletFeatureData2.SetControlPointConicRhoOrRadiusAtIndex"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "getcontrolpointconicrhoorradiusatindex",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "control",
+      "point",
+      "rho",
+      "radius",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.GetControlPointConicRhoOrRadiusAtIndex",
+  "description": "Gets the conic rho or radius at the specified control point.",
+  "signature": "System.Double GetControlPointConicRhoOrRadiusAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Zero-based index of the control point (see Remarks )"
+    }
+  ],
+  "returns": "Conic rho or radius",
+  "remarks": "Call\nIVariableFilletFeatureData2::GetControlPointsCount\nbefore calling this method to determine a value for Index.\nIf\nIVariableFilletFeatureData2::ConicTypeForCrossSectionProfile\nis set to\nswFeatureFilletProfileType_e\n.:\nswFeatureFilletConicRadius (symmetric fillet only), then this method returns a radius.\nswFeatureFilletConicRho (symmetric or asymmetric fillet), then this method returns a conic rho value in the range [0.05, 0.95].\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetControlPointRadiusAtIndex",
+    "IVariableFilletFeatureData2.SetControlPointConicRhoOrRadiusAtIndex"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "ModifyDefinition",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Data",
+        "type": "System.Object",
+        "description": "Feature data object"
+      },
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component for the feature (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.IGetDefinition",
+      "IFeature.IModifyDefinition2"
+    ],
+    "keywords": [
+      "modify",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "definition",
+      "modifydefinition",
+      "data",
+      "object",
+      "top",
+      "doc",
+      "component",
+      "boolean",
+      "change",
+      "bend",
+      "radius",
+      "sheet",
+      "metal",
+      "part",
+      "vba",
+      "constraint",
+      "dome",
+      "plane",
+      "editing",
+      "its",
+      "insert",
+      "deleteface",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeature.ModifyDefinition",
+  "description": "Updates the definition of a feature with the new values in an associated feature data object obtained with IFeature::GetDefinition.",
+  "signature": "System.Boolean ModifyDefinition( \n   System.Object\nData\n,\n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "Data",
+      "type": "System.Object",
+      "description": "Feature data object"
+    },
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component for the feature (see Remarks )"
+    }
+  ],
+  "returns": "True if the feature definition modified successfully, false if not",
+  "remarks": "If this method returns:\nFalse, you may have specified invalid properties in the feature data modifier object. The feature definition was not modified, so the feature may have rolled back to its previous state.\nTrue, the feature was updated using the feature data modifier object provided. This method will return true even if the feature data modifier object does not include any changed properties or references; some feature data modifier objects reject invalid changes before this method is called. For some feature modifications, this method applies the new properties, returns true, but results in a new rebuild error on the feature.\nIn either case, this method may leave the feature in an unpredictable state due to errors. After calling this method, call\nIFeature::GetErrorCode2\nto ascertain whether the feature has rebuild errors. If so, try again with valid feature data. To correct rebuild errors, call\nIModelDoc2::ForceRebuild3\n. You can also move the rollback bar in the FeatureManager design tree to before and after the feature to correct its state.\nYou should carefully read specific feature data interface documentation to learn how to correctly specify feature data properties and how this method works with specific features.\nTo modify a feature in...\nThen TopDoc argument...\nA part\nIs the\nIModelDoc2\nobject for the part and the Component argument should be Nothing or null\nAn assembly\nShould be the assembly IModelDoc2 object and the Component argument should be the\nIComponent2\nobject in which the feature is to be modified\nWhen you modify a feature in an assembly, this method leaves the assembly in Editing Part mode. You can switch back to editing the assembly by calling\nIAssemblyDoc::EditAssembly\n.",
+  "examples": [
+    {
+      "title": "Change Bend Radius of Sheet Metal Part (VBA)",
+      "href": "Change_Bend_Radius_of_Sheet_Metal_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Constraint for Dome Feature (VBA)",
+      "href": "Get_and_Set_Constraint_for_Dome_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Plane By Editing its Definition (VBA)",
+      "href": "Modify_Plane_by_Editing_Its_Definition_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (C#)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VB.NET)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VBA)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.IGetDefinition",
+    "IFeature.IModifyDefinition2"
+  ]
+}

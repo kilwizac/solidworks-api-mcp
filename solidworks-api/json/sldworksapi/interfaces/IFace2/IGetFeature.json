@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IGetFeature",
+    "returns": "Feature",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetFeatureId"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "feature",
+      "ifeature",
+      "igetfeature",
+      "face2"
+    ]
+  },
+  "title": "IFace2.IGetFeature",
+  "description": "Gets the feature that owns this face.",
+  "signature": "Feature IGetFeature()",
+  "parameters": [],
+  "returns": "Pointer to the owning feature",
+  "remarks": "In SOLIDWORKS, a face:\nis the result of evaluating a feature.\ncan be owned by several features.\nIFeature::GetFaces\nor\nIFeature::IGetFaces2\nreturns all of the faces owned by a feature. This is different from the faces highlighted in the user interface when the feature is selected. The user interface filters out multiple feature faces. This filter is only for display purposes.\nTo filter out multiple feature faces using the SOLIDWORKS API, you must call\nIFace2::GetFeature\nor IFace2::IGetFeature. Only the oldest feature from the face is returned, that is, the first owning feature in the FeatureManager design tree.",
+  "examples": [],
+  "related": [
+    "IFace2.GetFeatureId"
+  ]
+}

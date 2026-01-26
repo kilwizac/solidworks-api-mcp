@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITableAnnotation",
+    "member": "DisplayedText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Index of the row"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "Index of the column"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.CellTextHorizontalJustification",
+      "ITableAnnotation.CellTextVerticalJustification",
+      "ITableAnnotation.GetCellTextFormat",
+      "ITableAnnotation.GetCellUseDocTextFormat",
+      "ITableAnnotation.IsCellMerged",
+      "ITableAnnotation.IsCellTextEditable",
+      "ITableAnnotation.MergeCells",
+      "ITableAnnotation.SetCellRange",
+      "ITableAnnotation.SetCellTextFormat",
+      "ITableAnnotation.SetTextFormat"
+    ],
+    "keywords": [
+      "displayedtext",
+      "itableannotation",
+      "table",
+      "annotation",
+      "displayed",
+      "text",
+      "row",
+      "int32",
+      "column",
+      "string"
+    ],
+    "readonly": true
+  },
+  "title": "ITableAnnotation.DisplayedText",
+  "description": "Obsolete. Superseded by ITableAnnotation::DisplayedText2.",
+  "signature": "System.String DisplayedText( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n) {get;}",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Index of the row"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "Index of the column"
+    }
+  ],
+  "returns": "Text displayed in the specified cell",
+  "remarks": "Index for both rows and columns is 0-based.\nTo get the string that drives the text displayed in the specified cell, use\nITableAnnotation::Text\n.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.CellTextHorizontalJustification",
+    "ITableAnnotation.CellTextVerticalJustification",
+    "ITableAnnotation.GetCellTextFormat",
+    "ITableAnnotation.GetCellUseDocTextFormat",
+    "ITableAnnotation.IsCellMerged",
+    "ITableAnnotation.IsCellTextEditable",
+    "ITableAnnotation.MergeCells",
+    "ITableAnnotation.SetCellRange",
+    "ITableAnnotation.SetCellTextFormat",
+    "ITableAnnotation.SetTextFormat"
+  ]
+}

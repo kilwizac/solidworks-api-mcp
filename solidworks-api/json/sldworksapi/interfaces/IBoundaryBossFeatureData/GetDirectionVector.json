@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "GetDirectionVector",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.SetDirectionVector"
+    ],
+    "keywords": [
+      "getdirectionvector",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "direction",
+      "vector",
+      "int32",
+      "guide",
+      "index",
+      "object",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.GetDirectionVector",
+  "description": "Gets the entity used as the direction vector for the specified curve in the specified direction in this boundary feature.",
+  "signature": "System.Object GetDirectionVector( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    }
+  ],
+  "returns": "Entity used as the direction vector: linear edge axis face plane",
+  "remarks": "This method is only available if the type of tangency of the direction vector is\nswBoundaryBossTangencyType_e\n.swBoundaryBossTangency_DirectionVector. Use\nIBoundaryBossFeatureData::GetGuideTangencyType\nto determine the type of tangency.\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.\nNOTE:\nUsing two vertices for the direction vector is not currently supported by the SOLIDWORKS API.",
+  "examples": [
+    {
+      "title": "Insert Boundary Feature (C#)",
+      "href": "Insert_Boundary_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VB.NET)",
+      "href": "Insert_Boundary_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VBA)",
+      "href": "Insert_Boundary_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBoundaryBossFeatureData.SetDirectionVector"
+  ]
+}

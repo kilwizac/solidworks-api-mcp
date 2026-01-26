@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISplitLineFeatureData",
+    "member": "IGetSplitTools",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of tools used to make the split"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISplitLineFeatureData.ISetSplitTools",
+      "ISplitLineFeatureData.SplitTools"
+    ],
+    "keywords": [
+      "igetsplittools",
+      "isplitlinefeaturedata",
+      "split",
+      "line",
+      "feature",
+      "data",
+      "tools",
+      "count",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISplitLineFeatureData.IGetSplitTools",
+  "description": "Gets the tools to use to make the split.",
+  "signature": "System.Object IGetSplitTools( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of tools used to make the split"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of tools used to make the split (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Reference planes\n,\nplanar model faces\n, and\nbodies\nare valid tools to make a split.\nCall\nISplitLineFeatureData::GetSplitToolsCount\nbefore calling this method to determine the size of the array for this method.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISplitLineFeatureData.ISetSplitTools",
+    "ISplitLineFeatureData.SplitTools"
+  ]
+}

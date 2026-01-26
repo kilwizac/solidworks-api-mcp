@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICornerReliefFeatureData",
+    "member": "CollectAllCorners",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Corner relief type as defined by swCornerReliefType_e"
+      },
+      {
+        "name": "Corners",
+        "type": "System.Object",
+        "description": "Array of ISMCornerReliefData s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "collectallcorners",
+      "icornerrelieffeaturedata",
+      "corner",
+      "relief",
+      "feature",
+      "data",
+      "collect",
+      "all",
+      "corners",
+      "type",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ICornerReliefFeatureData.CollectAllCorners",
+  "description": "Creates corners, all with the specified relief, in a selected sheet-metal body.",
+  "signature": "System.Int32 CollectAllCorners( \n   System.Int32\nReliefType\n,\n   out System.Object\nCorners\n)",
+  "parameters": [
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Corner relief type as defined by swCornerReliefType_e"
+    },
+    {
+      "name": "Corners",
+      "type": "System.Object",
+      "description": "Array of ISMCornerReliefData s"
+    }
+  ],
+  "returns": "Error code as defined by swCornerReliefError_e",
+  "remarks": "Before calling this method, call\nICornerReliefFeatureData::SetBodyScope\n.",
+  "examples": [
+    {
+      "title": "ICornerReliefFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICornerReliefFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

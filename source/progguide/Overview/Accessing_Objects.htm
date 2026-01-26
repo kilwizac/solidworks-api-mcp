@@ -1,0 +1,108 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Accessing SOLIDWORKS Objects</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT="Accessing Objects">
+<meta name=date content="09 11, 2002 9:24:49 AM">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=425>
+<meta name=layout-width content=630>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Accessing SOLIDWORKS Objects</h1>
+
+<p style="margin-left: 8px;">To call any of the SOLIDWORKS API's methods 
+ or properties, you first need to obtain the object. For example, to use 
+ the IFace2::GetArea method you need to have a IFace2 object. </p>
+
+<p style="margin-left: 8px;">There are various ways to access objects within 
+ the SOLIDWORKS API. To obtain the Face2 object, you could use one of the 
+ following accessors:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 24.00pt;">Obtain the IBody2 
+ object using IPartDoc::GetBodies2 or IPartDoc::EnumBodies3, and then traverse 
+ the faces on the body using the IBody2::GetFirstFace and IFace2::GetNextFace 
+ methods.<br>
+	<br>
+	- or -</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 24.00pt;">Get the IFace2 object 
+ from the current set of selected items using ISelectionMgr::GetSelectedObject6.<br>
+	<br>
+	- or -</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 24.00pt;">Get the IFace2 object 
+ by its name using IPartDoc::GetEntityByName. </p></li>
+</ul>
+
+<p style="margin-left: 8px;">When you have the IFace2 object, you can access 
+ the properties and methods found in the Face2 class. For example, you 
+ could get the number of edges on the face using the IFace2::GetEdgeCount 
+ method, or you could get the normal vector for the face using the IFace2::Normal 
+ property.</p>
+
+<p style="margin-left: 8px;"><span style="font-weight: bold;">NOTE:</span> 
+ Some methods and properties, such as IFeatureManager::InsertMateReference, 
+ also require one or more selected items. The items can be selected in 
+ one of two ways: </p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 24.00pt;">The end-user can 
+ interactively select the items. <br>
+	<br>
+	- or -</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 24.00pt;">You can programmatically 
+ select the items using IModelDocExtension::SelectByID2.</p></li>
+</ul>
+
+
+
+<p>See <a href="Accessing_Add-ins.htm">Accessing SOLIDWORKS Add-in Objects</a>.</p>
+
+
+
+</body>
+
+</html>

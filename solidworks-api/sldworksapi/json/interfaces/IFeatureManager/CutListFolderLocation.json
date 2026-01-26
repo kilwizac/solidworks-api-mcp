@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "CutListFolderLocation",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "QueryObj",
+        "type": "System.Object",
+        "description": "Solid Body / cut list item / body folder / sub-weldment folder feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IModelDocExtension.ReorderFeature2"
+    ],
+    "keywords": [
+      "cutlistfolderlocation",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "cut",
+      "list",
+      "folder",
+      "location",
+      "query",
+      "obj",
+      "object",
+      "imodeldocextension",
+      "reorderfeature2"
+    ]
+  },
+  "title": "IFeatureManager.CutListFolderLocation",
+  "description": "Gets the parent folder of the specified solid body / cut list item / body folder.",
+  "signature": "System.Object CutListFolderLocation( \n   System.Object\nQueryObj\n)",
+  "parameters": [
+    {
+      "name": "QueryObj",
+      "type": "System.Object",
+      "description": "Solid Body / cut list item / body folder / sub-weldment folder feature"
+    }
+  ],
+  "returns": "Parent folder feature of QueryObj; null if QueryObj is not a Solid Body / cut list / body folder / sub-weldment folder",
+  "remarks": "This method only works for:\nSolid Bodies / cut list items\nFeature / body folders\nSub-weldment folders\nUse\nIFeatureManager::FeatureFolderLocation\nto locate other FeatureManager design tree objects.",
+  "examples": [
+    {
+      "title": "IModelDocExtension::ReorderFeature2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ReorderFeature2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.ReorderFeature2"
+  ]
+}

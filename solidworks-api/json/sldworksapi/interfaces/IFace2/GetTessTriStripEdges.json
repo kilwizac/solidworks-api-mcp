@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetTessTriStripEdges",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetTessNorms",
+      "IFace2.GetTessTextures",
+      "IFace2.GetTessTriStripNorms",
+      "IFace2.GetTessTriStripSize",
+      "IFace2.GetTessTriStrips",
+      "IFace2.GetTessTriangleCount",
+      "IFace2.GetTessTriangles",
+      "IFace2.IGetTessNorms",
+      "IFace2.IGetTessTextures",
+      "IFace2.IGetTessTriStripEdgeSize",
+      "IFace2.IGetTessTriStripEdges",
+      "IFace2.IGetTessTriStripNorms",
+      "IFace2.IGetTessTriStrips",
+      "IFace2.IGetTessTriangles"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "faces",
+      "face",
+      "iface2",
+      "gettesstristripedges",
+      "face2",
+      "tess",
+      "tri",
+      "strip",
+      "edges",
+      "object"
+    ]
+  },
+  "title": "IFace2.GetTessTriStripEdges",
+  "description": "Gets the edge ID for each of the edges in the triangles that make up the tessellation for this face.",
+  "signature": "System.Object GetTessTriStripEdges()",
+  "parameters": [],
+  "returns": "Array that contains the list of edge IDs for this face (see Remarks )",
+  "remarks": "Returns an array of long or integers (see\nLong vs. Integer\n) values that indicate which edges of the given triangle strip represent a face boundary. The array takes the form of:\n[\nnStrips\n,\nstripEdgeCount1\n,\nstripEdgeCount2\n,...,\nstripVertCountN\n,\nstrip1\n[\ntriStripFlag\n,\nstripEdgeCount1\nelements],\nstrip2\n[\ntriStripFlag\n,\nstripEdgeCount2\nelements],...,\nstripN\n[\ntriStripFlag\n,\nstripEdgeCountN\nelements&cd;\nwhere:\nnStrips\n= The number of triangle strips on the face.\nstripEdgeCountN\n= The number of triangle edges for the\nN\nth triangle strip + 1.\nstripN\n= A sub-array that consists of the\ntriStripFlag\nand an array of\nstripEdgeCountN\nedgeId\ns.\ntriStripFlag\n= Indicates if the triangle strip is a strip (=1) or if the triangle strip is a triangle (=0).\nedgeId\n= An identifier with an arbitrary value that represents the edge of the face. Each edge has a unique\nedgeId\n.\nIf you have this triangle strip, then you get a\nstripVertexCount\nof 10 using\nIFace2::GetTessTriStrips\nor\nIFace2::IGetTessTriStrips\n. IFace2::GetTessTriStripEdges and\nIFace2::IGetTessTriStripEdges\nget a\nstripEdgeCount\nof 18. This means that for each triangle strip\nstripEdgeCount\n- 1 = 2(\nstripVertexCount\n- 2) + 1. The first element represents a flag indicating if the current strip is a triangle strip or a simple triangle, 1 or 0, respectively.\nIf one of the triangle strip edges lies on a face edge, then the value of\nstripN\n[i] =\nedgeId\n. If the triangle strip edge does not lie on a face edge, then the value of\nstripN\n[i] = 0.",
+  "examples": [],
+  "related": [
+    "IFace2.GetTessNorms",
+    "IFace2.GetTessTextures",
+    "IFace2.GetTessTriStripNorms",
+    "IFace2.GetTessTriStripSize",
+    "IFace2.GetTessTriStrips",
+    "IFace2.GetTessTriangleCount",
+    "IFace2.GetTessTriangles",
+    "IFace2.IGetTessNorms",
+    "IFace2.IGetTessTextures",
+    "IFace2.IGetTessTriStripEdgeSize",
+    "IFace2.IGetTessTriStripEdges",
+    "IFace2.IGetTessTriStripNorms",
+    "IFace2.IGetTessTriStrips",
+    "IFace2.IGetTessTriangles"
+  ]
+}

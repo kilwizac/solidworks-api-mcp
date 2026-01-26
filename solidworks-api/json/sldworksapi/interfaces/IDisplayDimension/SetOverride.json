@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetOverride",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Override",
+        "type": "System.Boolean",
+        "description": "True to display a value other than the actual dimension value, false to display the actual value"
+      },
+      {
+        "name": "Value",
+        "type": "System.Double",
+        "description": "Value to display instead of the actual dimension value"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setoverride",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "override",
+      "boolean",
+      "value",
+      "double"
+    ]
+  },
+  "title": "IDisplayDimension.SetOverride",
+  "description": "Sets whether to display the actual dimension value or to display another value, and, if so, that value.",
+  "signature": "System.Boolean SetOverride( \n   System.Boolean\nOverride\n,\n   System.Double\nValue\n)",
+  "parameters": [
+    {
+      "name": "Override",
+      "type": "System.Boolean",
+      "description": "True to display a value other than the actual dimension value, false to display the actual value"
+    },
+    {
+      "name": "Value",
+      "type": "System.Double",
+      "description": "Value to display instead of the actual dimension value"
+    }
+  ],
+  "returns": "True if setting an override value is successful, false if not",
+  "remarks": "This method can only be used on a display dimension in a drawing. In a part or assembly, this method takes no action and returns false.\nIf Override is set to false, then the Value argument is ignored.\nUse\nIDisplayDimension::GetOverride\nto get whether the actual dimension value or another value is displayed.\nUse\nIDisplayDimension::GetOverrideValue\nto get the value to display instead of the actual dimension value.",
+  "examples": [],
+  "related": []
+}

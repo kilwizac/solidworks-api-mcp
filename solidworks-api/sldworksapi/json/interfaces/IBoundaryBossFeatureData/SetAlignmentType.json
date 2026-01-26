@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "SetAlignmentType",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      },
+      {
+        "name": "AlignmentType",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined in swBoundaryBossAlignment_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetAlignmentType"
+    ],
+    "keywords": [
+      "setalignmenttype",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "alignment",
+      "type",
+      "direction",
+      "int32",
+      "guide",
+      "index",
+      "void"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.SetAlignmentType",
+  "description": "Sets the type of alignment for the specified curve in the specified direction for this boundary feature.",
+  "signature": "void SetAlignmentType( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n,\n   System.Int32\nAlignmentType\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    },
+    {
+      "name": "AlignmentType",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined in swBoundaryBossAlignment_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is only available for a single-direction boundary feature.\nYou must use the appropriate combination of tangents and alignments.\nType of\ntangency\nas defined in\nswBoundaryBossTangencyType_e\nType of alignment as defined in swBoundaryBossAlignment_e\nswBoundaryBossTangency_DirectionVector\n- or -\nswBoundaryBossTangency_NormalToProfile\nswAlignWithNextSection\nswAlignWithSectionNormal\nswBoundaryBossTangency_TangencyToFace\n-or -\nswBoundaryBossTangency_CurvatureToFace\nswAlignWithNextSection\nswAlignWithSectionNormal\nswAlignWithIsoParameter\nswAlignWithOtherGeometry\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetAlignmentType"
+  ]
+}

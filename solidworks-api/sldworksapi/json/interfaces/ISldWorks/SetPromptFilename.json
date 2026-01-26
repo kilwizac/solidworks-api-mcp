@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetPromptFilename",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Filename"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.LoadFile4",
+      "ISldWorks.OpenDoc6",
+      "ISldWorks.SetMultipleFilenamesPrompt",
+      "ISldWorks.SetNewFilename"
+    ],
+    "keywords": [
+      "setpromptfilename",
+      "isldworks",
+      "sld",
+      "works",
+      "prompt",
+      "filename",
+      "file",
+      "name",
+      "string",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.SetPromptFilename",
+  "description": "Obsolete. Superseded by ISldWorks::SetPromptFilename2.",
+  "signature": "void SetPromptFilename( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Filename"
+    }
+  ],
+  "returns": "",
+  "remarks": "The filename specified is only used if the SOLIDWORKS events\nPromptForFileNameNotify\nor\nReferencedFilePreNotify\nreturns S_FALSE. This implies that you cannot specify an initial filename for SOLIDWORKS to use in the standard dialog. Instead, you must provide your own file dialog and return the filename after the user selects it.",
+  "examples": [],
+  "related": [
+    "ISldWorks.LoadFile4",
+    "ISldWorks.OpenDoc6",
+    "ISldWorks.SetMultipleFilenamesPrompt",
+    "ISldWorks.SetNewFilename"
+  ]
+}

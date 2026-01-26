@@ -1,0 +1,57 @@
+---
+type: method
+interface: IModelDoc2
+member: SetConsiderLeadersAsLines
+returns: System.Boolean
+parameters:
+  -
+    name: LeadersAsLines
+    type: System.Boolean
+    description: True to return leaders as line data, false to not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related: []
+keywords:
+  - leaders
+  - lines
+  - setconsiderleadersaslines
+  - imodeldoc2
+  - model
+  - doc2
+  - consider
+  - boolean
+---
+
+# IModelDoc2.SetConsiderLeadersAsLines
+
+Sets a flag on the document that indicates whether the display data of a leader should be included as lines when the lines are retrieved from a view or annotation in this document.
+
+## Signature
+
+```csharp
+System.Boolean SetConsiderLeadersAsLines( 
+   System.Boolean
+LeadersAsLines
+)
+```
+## Parameters
+
+- `LeadersAsLines` (System.Boolean): True to return leaders as line data, false to not
+
+## Return Value
+
+Original value of the flag before calling this method
+
+## Remarks
+
+The various GetLeaderCount and GetLeaderAtIndex methods that are found on several different annotations return the information about where the vertices of the leader are located. GetLineCount and GetLinesAtIndex also return the leader information as part of its line information. Depending on what your program is trying to accomplish and which methods it is using, this duplication of information may not be desirable. This method controls this behavior by setting a flag on the document that indicates whether or not the leader information is returned as part of the line information or not.
+Initially, when a document is opened, the flag is set to True, so that existing applications work as they have always worked. If you do not want to get back leader information as part of the line information, call this method and set the value to false. The flag is not saved with the document, so you must specifically set it to false whenever you do not want leaders as part of the line information.
+The various GetArrowHeadCount and GetArrowHeadAtIndex methods are also affected. When this flag has been set to false so that leaders are not considered as lines, the arrowhead information for the arrowheads on those leaders is not returned. However, GetArrowHeadInfo still returns valid information.
+Use
+IModelDoc2::GetConsiderLeadersAsLines
+to determine the current behavior.

@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "GetEntitiesNeedUserIdCount",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Body",
+        "type": "Body2",
+        "description": "Body"
+      },
+      {
+        "name": "FaceCount",
+        "type": "System.Int32",
+        "description": "Number of faces"
+      },
+      {
+        "name": "EdgeCount",
+        "type": "System.Int32",
+        "description": "Number of edges"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IMacroFeatureData.GetEntitiesNeedUserId",
+      "IMacroFeatureData.GetFaceIdType",
+      "IMacroFeatureData.GetFaceUserId",
+      "IMacroFeatureData.SetEdgeUserId",
+      "IMacroFeatureData.SetFaceUserId"
+    ],
+    "keywords": [
+      "getentitiesneeduseridcount",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "entities",
+      "need",
+      "user",
+      "id",
+      "count",
+      "body",
+      "body2",
+      "face",
+      "int32",
+      "edge",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.GetEntitiesNeedUserIdCount",
+  "description": "Gets the number of faces and edges that need to be assigned user IDs for the macro feature.",
+  "signature": "void GetEntitiesNeedUserIdCount( \n   Body2\nBody\n,\n   out System.Int32\nFaceCount\n,\n   out System.Int32\nEdgeCount\n)",
+  "parameters": [
+    {
+      "name": "Body",
+      "type": "Body2",
+      "description": "Body"
+    },
+    {
+      "name": "FaceCount",
+      "type": "System.Int32",
+      "description": "Number of faces"
+    },
+    {
+      "name": "EdgeCount",
+      "type": "System.Int32",
+      "description": "Number of edges"
+    }
+  ],
+  "returns": "",
+  "remarks": "Call this method before calling\nIMacroFeatureData::IGetEntitiesNeedUserId\nto determine the size of the array for that method.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetEntitiesNeedUserId",
+    "IMacroFeatureData.GetFaceIdType",
+    "IMacroFeatureData.GetFaceUserId",
+    "IMacroFeatureData.SetEdgeUserId",
+    "IMacroFeatureData.SetFaceUserId"
+  ]
+}

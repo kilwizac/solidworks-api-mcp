@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "Crop2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "JaggedOutline",
+        "type": "System.Boolean",
+        "description": "True to use a jagged outline, false to not; only valid if NoOutline is false"
+      },
+      {
+        "name": "NoOutline",
+        "type": "System.Boolean",
+        "description": "True to not show an outline, false to show an outline"
+      },
+      {
+        "name": "ShapeIntensity",
+        "type": "System.Int32",
+        "description": "Shape intensity of the jagged outline; valid range is 1 (most) to 5 (least); only valid if JaggedOutline is true"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.CropViewJaggedOutline",
+      "IView.CropViewJaggedShapeIntensity",
+      "IView.CropViewNoOutline",
+      "IView.IsCropped"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "crop",
+      "view",
+      "crop2",
+      "jagged",
+      "outline",
+      "boolean",
+      "no",
+      "shape",
+      "intensity",
+      "int32",
+      "using",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.Crop2",
+  "description": "Crops this view using the selected closed sketch profile.",
+  "signature": "System.Int32 Crop2( \n   System.Boolean\nJaggedOutline\n,\n   System.Boolean\nNoOutline\n,\n   System.Int32\nShapeIntensity\n)",
+  "parameters": [
+    {
+      "name": "JaggedOutline",
+      "type": "System.Boolean",
+      "description": "True to use a jagged outline, false to not; only valid if NoOutline is false"
+    },
+    {
+      "name": "NoOutline",
+      "type": "System.Boolean",
+      "description": "True to not show an outline, false to show an outline"
+    },
+    {
+      "name": "ShapeIntensity",
+      "type": "System.Int32",
+      "description": "Shape intensity of the jagged outline; valid range is 1 (most) to 5 (least); only valid if JaggedOutline is true"
+    }
+  ],
+  "returns": "Crop view status as defined in swCropViewErrors_e",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Crop Drawing View Using Jagged Outline (C#)",
+      "href": "Crop_Drawing_View_Using_Jagged_Outline_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Crop Drawing View Using Jagged Outline (VB.NET)",
+      "href": "Crop_Drawing_View_Using_Jagged_Outline_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Crop Drawing View Using Jagged Outline (VBA)",
+      "href": "Crop_Drawing_View_Using_Jagged_Outline_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.CropViewJaggedOutline",
+    "IView.CropViewJaggedShapeIntensity",
+    "IView.CropViewNoOutline",
+    "IView.IsCropped"
+  ]
+}

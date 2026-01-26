@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISplineParamData",
+    "member": "IGetControlPoints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Size of ControlPoints array"
+      },
+      {
+        "name": "ControlPoints",
+        "type": "System.Double",
+        "description": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISplineParamData.GetControlPoints"
+    ],
+    "keywords": [
+      "igetcontrolpoints",
+      "isplineparamdata",
+      "spline",
+      "param",
+      "data",
+      "control",
+      "points",
+      "count",
+      "int32",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISplineParamData.IGetControlPoints",
+  "description": "Gets the coordinates of all of the control points of the spline.",
+  "signature": "System.Boolean IGetControlPoints( \n   System.Int32\nCount\n,\n   out System.Double\nControlPoints\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Size of ControlPoints array"
+    },
+    {
+      "name": "ControlPoints",
+      "type": "System.Double",
+      "description": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, call\nISplineParamData::ControlPointsCount\nto populate the Count parameter.\nControl points determine the shape of a spline or curve. Starting with a set of control points, all other points of a spline can be calculated. A given point on the spline is calculated using the polynomial basis functions of its nearest control points. The\nknot vector\ndetermines which control point basis functions are in force for calculating each point along a curve.\nThe size of the ControlPoints array is based on the curve dimension:\nif\ndimension\n= 2 then each control point has 2 doubles ( x, y )\nif\ndimension\n= 3 then each control point has 3 doubles ( x, y, z )\nif\ndimension\n= 4, and the curve is closed or periodic, then each control point has 4 doubles ( x, y, z, w ), where w = weight\nif\ndimension\n= 4, and the curve is open or non-periodic, then each control point has 4 doubles ( w*x, w*y, w*z, w ), where w = weight\nSize of ControlPoints array =\ncontrol points count\n*\ndimension",
+  "examples": [],
+  "related": [
+    "ISplineParamData.GetControlPoints"
+  ]
+}

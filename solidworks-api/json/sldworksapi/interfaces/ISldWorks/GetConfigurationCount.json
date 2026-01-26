@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetConfigurationCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FilePathName",
+        "type": "System.String",
+        "description": "Path and file name for the SOLIDWORKS document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "ISldWorks.GetActiveConfigurationName",
+      "ISldWorks.GetConfigurationNames",
+      "ISldWorks.IGetConfigurationNames"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "number",
+      "getconfigurationcount",
+      "isldworks",
+      "sld",
+      "works",
+      "count",
+      "file",
+      "path",
+      "name",
+      "string",
+      "int32",
+      "work",
+      "configurations",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetConfigurationCount",
+  "description": "Gets the number of configurations in the SOLIDWORKS document, whether the document is opened or closed.",
+  "signature": "System.Int32 GetConfigurationCount( \n   System.String\nFilePathName\n)",
+  "parameters": [
+    {
+      "name": "FilePathName",
+      "type": "System.String",
+      "description": "Path and file name for the SOLIDWORKS document"
+    }
+  ],
+  "returns": "Number of configurations in SOLIDWORKS document",
+  "remarks": "Call this method before calling\nISldWorks::IGetConfigurationNames\nto get the size of the array for that method.",
+  "examples": [
+    {
+      "title": "Work With Configurations (VBA)",
+      "href": "Work_with_Configurations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "ISldWorks.GetActiveConfigurationName",
+    "ISldWorks.GetConfigurationNames",
+    "ISldWorks.IGetConfigurationNames"
+  ]
+}

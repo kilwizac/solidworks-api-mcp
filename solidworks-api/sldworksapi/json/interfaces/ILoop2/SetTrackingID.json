@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "SetTrackingID",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      },
+      {
+        "name": "TrackingID",
+        "type": "System.Int32",
+        "description": "Application-defined value for the tracking ID Value Action >0 Loop is tracked 0 Tracking of loop is stopped"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ILoop2.GetTrackingIDs",
+      "ILoop2.GetTrackingIDsCount",
+      "ILoop2.IGetTrackingIDs",
+      "ILoop2.RemoveTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "loops",
+      "see",
+      "also",
+      "iloop2",
+      "settrackingid",
+      "loop2",
+      "id",
+      "cookie",
+      "int32"
+    ]
+  },
+  "title": "ILoop2.SetTrackingID",
+  "description": "Assigns a tracking ID to this loop.",
+  "signature": "System.Int32 SetTrackingID( \n   System.Int32\nTrackingCookie\n,\n   System.Int32\nTrackingID\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    },
+    {
+      "name": "TrackingID",
+      "type": "System.Int32",
+      "description": "Application-defined value for the tracking ID Value Action >0 Loop is tracked 0 Tracking of loop is stopped"
+    }
+  ],
+  "returns": "Status as defined by swTrackingIDError_e",
+  "remarks": "You can assign tracking IDs to\nbodies\n,\nedges\n,\nfaces\n, loops, and\nvertices\nin parts and assemblies only; you cannot assign tracking IDs to these entities in drawings. See\nTracking IDs\nfor more information.",
+  "examples": [],
+  "related": [
+    "ILoop2.GetTrackingIDs",
+    "ILoop2.GetTrackingIDsCount",
+    "ILoop2.IGetTrackingIDs",
+    "ILoop2.RemoveTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

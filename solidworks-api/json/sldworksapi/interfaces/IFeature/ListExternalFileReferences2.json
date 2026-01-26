@@ -1,0 +1,188 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "ListExternalFileReferences2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ModelPathName",
+        "type": "System.Object",
+        "description": "Array of path names of documents"
+      },
+      {
+        "name": "ComponentPathName",
+        "type": "System.Object",
+        "description": "Array of path names of referenced components"
+      },
+      {
+        "name": "Feature",
+        "type": "System.Object",
+        "description": "Array of in-context items (sketches, features, and so on)"
+      },
+      {
+        "name": "DataType",
+        "type": "System.Object",
+        "description": "Array of data used to create the items (converted edge or face, converted or offset sketch entity, body, and so on)"
+      },
+      {
+        "name": "Status",
+        "type": "System.Object",
+        "description": "Array of statuses of external reference as defined in swExternalReferenceStatus_e"
+      },
+      {
+        "name": "RefEntity",
+        "type": "System.Object",
+        "description": "Array of actual items being used and the names of the documents that contain the items"
+      },
+      {
+        "name": "FeatCom",
+        "type": "System.Object",
+        "description": "Array of the names of the components in which the affected features exist; this information is only displayed when one or more RefEntity is in a different component in an assembly and does not apply to derived parts"
+      },
+      {
+        "name": "ConfigOption",
+        "type": "System.Int32",
+        "description": "Configuration option as defined by swExternalFileReferencesConfig_e"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of the configuration when ConfigOption is swExternalFileReferencesNamedConfig"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "file-io"
+    ],
+    "related": [
+      "IComponent2.IListExternalFileReferences2",
+      "IComponent2.ListExternalFileReferences2",
+      "IComponent2.ListExternalFileReferencesCount",
+      "IComponent2.UpdateExternalFileReferences",
+      "IFeature.IListExternalFileReferences2",
+      "IFeature.ListExternalFileReferencesCount",
+      "IFeature.UpdateExternalFileReferences",
+      "IModelDocExtension.IListExternalFileReferences",
+      "IModelDocExtension.ListExternalFileReferences",
+      "IModelDocExtension.ListExternalFileReferencesCount",
+      "IModelDocExtension.UpdateExternalFileReferences"
+    ],
+    "keywords": [
+      "external",
+      "references",
+      "features",
+      "listexternalfilereferences2",
+      "ifeature",
+      "feature",
+      "list",
+      "file",
+      "references2",
+      "model",
+      "path",
+      "name",
+      "object",
+      "component",
+      "data",
+      "type",
+      "status",
+      "ref",
+      "entity",
+      "feat",
+      "com",
+      "config",
+      "option",
+      "int32",
+      "string",
+      "void",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeature.ListExternalFileReferences2",
+  "description": "Gets the names and statuses of the external references on the feature in a part or assembly.",
+  "signature": "void ListExternalFileReferences2( \n   out System.Object\nModelPathName\n,\n   out System.Object\nComponentPathName\n,\n   out System.Object\nFeature\n,\n   out System.Object\nDataType\n,\n   out System.Object\nStatus\n,\n   out System.Object\nRefEntity\n,\n   out System.Object\nFeatCom\n,\n   out System.Int32\nConfigOption\n,\n   out System.String\nConfigName\n)",
+  "parameters": [
+    {
+      "name": "ModelPathName",
+      "type": "System.Object",
+      "description": "Array of path names of documents"
+    },
+    {
+      "name": "ComponentPathName",
+      "type": "System.Object",
+      "description": "Array of path names of referenced components"
+    },
+    {
+      "name": "Feature",
+      "type": "System.Object",
+      "description": "Array of in-context items (sketches, features, and so on)"
+    },
+    {
+      "name": "DataType",
+      "type": "System.Object",
+      "description": "Array of data used to create the items (converted edge or face, converted or offset sketch entity, body, and so on)"
+    },
+    {
+      "name": "Status",
+      "type": "System.Object",
+      "description": "Array of statuses of external reference as defined in swExternalReferenceStatus_e"
+    },
+    {
+      "name": "RefEntity",
+      "type": "System.Object",
+      "description": "Array of actual items being used and the names of the documents that contain the items"
+    },
+    {
+      "name": "FeatCom",
+      "type": "System.Object",
+      "description": "Array of the names of the components in which the affected features exist; this information is only displayed when one or more RefEntity is in a different component in an assembly and does not apply to derived parts"
+    },
+    {
+      "name": "ConfigOption",
+      "type": "System.Int32",
+      "description": "Configuration option as defined by swExternalFileReferencesConfig_e"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of the configuration when ConfigOption is swExternalFileReferencesNamedConfig"
+    }
+  ],
+  "returns": "",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get External References (VBA)",
+      "href": "Get_External_References_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get External References (VB.NET)",
+      "href": "Get_External_References_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get External References (C#)",
+      "href": "Get_External_References_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.IListExternalFileReferences2",
+    "IComponent2.ListExternalFileReferences2",
+    "IComponent2.ListExternalFileReferencesCount",
+    "IComponent2.UpdateExternalFileReferences",
+    "IFeature.IListExternalFileReferences2",
+    "IFeature.ListExternalFileReferencesCount",
+    "IFeature.UpdateExternalFileReferences",
+    "IModelDocExtension.IListExternalFileReferences",
+    "IModelDocExtension.ListExternalFileReferences",
+    "IModelDocExtension.ListExternalFileReferencesCount",
+    "IModelDocExtension.UpdateExternalFileReferences"
+  ]
+}

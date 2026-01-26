@@ -1,0 +1,524 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>FeatureChainPattern Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureChainPattern" />
+    <meta name="Description" content="Obsolete. See IFeatureManager::CreateFeature and the Remarks in IChainPatternFeatureData." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.FeatureChainPattern" />
+    <meta name="Microsoft.Help.Keywords" content="FeatureChainPattern Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                FeatureChainPattern Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : FeatureChainPattern Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="PitchMethodPopupContent" class="i-popup-content">
+        Pitch method as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternPitchMethod_e.html">swChainPatternPitchMethod_e</a>; available for all types of chain patterns
+    </div>
+
+    <div id="FlipDirectionPopupContent" class="i-popup-content">
+        True to reverse the direction of the chain pattern, false to not; available for all types of chain patterns
+    </div>
+
+    <div id="FillPathPopupContent" class="i-popup-content">
+        True to automatically set the number of pattern instances to fill the path, false to not; available for all types of chain patterns and when EqualSpacing is false for distance and linkage distance&#160;chain patterns
+    </div>
+
+    <div id="NumberPopupContent" class="i-popup-content">
+        Number of pattern instances; available for all types of chain patterns when FillPath is false
+    </div>
+
+    <div id="SpacingPopupContent" class="i-popup-content">
+        Distance between the pattern instances when EqualSpacing is false; only available&#160;for distance and linkage distance chain patterns when EqualSpacing is false
+    </div>
+
+    <div id="GroupOneFlipPlanePopupContent" class="i-popup-content">
+        True to flip the path alignment plane for <strong>Chain Group 1</strong>, false to not; available for all types of chain patterns
+    </div>
+
+    <div id="GroupTwoChainPopupContent" class="i-popup-content">
+        True to set the component to pattern for <strong>Chain Group 2</strong>, false to not; only available for connected linkage chain patterns
+    </div>
+
+    <div id="GroupTwoFlipPlanePopupContent" class="i-popup-content">
+        True to flip the path alignment plane for <strong>Chain Group 2</strong>, false to not; only available for connected linkage chain patterns
+    </div>
+
+    <div id="AlignMethodPopupContent" class="i-popup-content">
+        Alignment method as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternAlignment_e.html">swChainPatternAlignment_e</a>; only available for distance and linkage distance&#160;chain patterns
+    </div>
+
+    <div id="OptionsPopupContent" class="i-popup-content">
+        Option as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternOptions_e.html">swChainPatternOptions_e</a>; available for all types of chain patterns
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <p><span style="COLOR: #ff0000">Obsolete.</span> See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~CreateFeature">IFeatureManager::CreateFeature</a> and the Remarks in&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IChainPatternFeatureData">IChainPatternFeatureData</a>.</p>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function FeatureChainPattern( _
+   ByVal <i><a class="i-popup-link" id="PitchMethodPopupLink" data-popup-contentsource="#PitchMethodPopupContent" data-popup-showevent="click mouseenter">PitchMethod</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="FlipDirectionPopupLink" data-popup-contentsource="#FlipDirectionPopupContent" data-popup-showevent="click mouseenter">FlipDirection</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="FillPathPopupLink" data-popup-contentsource="#FillPathPopupContent" data-popup-showevent="click mouseenter">FillPath</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="NumberPopupLink" data-popup-contentsource="#NumberPopupContent" data-popup-showevent="click mouseenter">Number</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="SpacingPopupLink" data-popup-contentsource="#SpacingPopupContent" data-popup-showevent="click mouseenter">Spacing</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="GroupOneFlipPlanePopupLink" data-popup-contentsource="#GroupOneFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupOneFlipPlane</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="GroupTwoChainPopupLink" data-popup-contentsource="#GroupTwoChainPopupContent" data-popup-showevent="click mouseenter">GroupTwoChain</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="GroupTwoFlipPlanePopupLink" data-popup-contentsource="#GroupTwoFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupTwoFlipPlane</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="AlignMethodPopupLink" data-popup-contentsource="#AlignMethodPopupContent" data-popup-showevent="click mouseenter">AlignMethod</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i> As System.Integer _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim PitchMethod As System.Integer
+Dim FlipDirection As System.Boolean
+Dim FillPath As System.Boolean
+Dim Number As System.Integer
+Dim Spacing As System.Double
+Dim GroupOneFlipPlane As System.Boolean
+Dim GroupTwoChain As System.Boolean
+Dim GroupTwoFlipPlane As System.Boolean
+Dim AlignMethod As System.Integer
+Dim Options As System.Integer
+Dim value As Feature
+ 
+value = instance.FeatureChainPattern(PitchMethod, FlipDirection, FillPath, Number, Spacing, GroupOneFlipPlane, GroupTwoChain, GroupTwoFlipPlane, AlignMethod, Options)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature FeatureChainPattern( 
+   System.int <i><a class="i-popup-link" id="PitchMethodPopupLink" data-popup-contentsource="#PitchMethodPopupContent" data-popup-showevent="click mouseenter">PitchMethod</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipDirectionPopupLink" data-popup-contentsource="#FlipDirectionPopupContent" data-popup-showevent="click mouseenter">FlipDirection</a></i>,
+   System.bool <i><a class="i-popup-link" id="FillPathPopupLink" data-popup-contentsource="#FillPathPopupContent" data-popup-showevent="click mouseenter">FillPath</a></i>,
+   System.int <i><a class="i-popup-link" id="NumberPopupLink" data-popup-contentsource="#NumberPopupContent" data-popup-showevent="click mouseenter">Number</a></i>,
+   System.double <i><a class="i-popup-link" id="SpacingPopupLink" data-popup-contentsource="#SpacingPopupContent" data-popup-showevent="click mouseenter">Spacing</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupOneFlipPlanePopupLink" data-popup-contentsource="#GroupOneFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupOneFlipPlane</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupTwoChainPopupLink" data-popup-contentsource="#GroupTwoChainPopupContent" data-popup-showevent="click mouseenter">GroupTwoChain</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupTwoFlipPlanePopupLink" data-popup-contentsource="#GroupTwoFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupTwoFlipPlane</a></i>,
+   System.int <i><a class="i-popup-link" id="AlignMethodPopupLink" data-popup-contentsource="#AlignMethodPopupContent" data-popup-showevent="click mouseenter">AlignMethod</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ FeatureChainPattern( 
+   System.int <i><a class="i-popup-link" id="PitchMethodPopupLink" data-popup-contentsource="#PitchMethodPopupContent" data-popup-showevent="click mouseenter">PitchMethod</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipDirectionPopupLink" data-popup-contentsource="#FlipDirectionPopupContent" data-popup-showevent="click mouseenter">FlipDirection</a></i>,
+   System.bool <i><a class="i-popup-link" id="FillPathPopupLink" data-popup-contentsource="#FillPathPopupContent" data-popup-showevent="click mouseenter">FillPath</a></i>,
+   System.int <i><a class="i-popup-link" id="NumberPopupLink" data-popup-contentsource="#NumberPopupContent" data-popup-showevent="click mouseenter">Number</a></i>,
+   System.double <i><a class="i-popup-link" id="SpacingPopupLink" data-popup-contentsource="#SpacingPopupContent" data-popup-showevent="click mouseenter">Spacing</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupOneFlipPlanePopupLink" data-popup-contentsource="#GroupOneFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupOneFlipPlane</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupTwoChainPopupLink" data-popup-contentsource="#GroupTwoChainPopupContent" data-popup-showevent="click mouseenter">GroupTwoChain</a></i>,
+   System.bool <i><a class="i-popup-link" id="GroupTwoFlipPlanePopupLink" data-popup-contentsource="#GroupTwoFlipPlanePopupContent" data-popup-showevent="click mouseenter">GroupTwoFlipPlane</a></i>,
+   System.int <i><a class="i-popup-link" id="AlignMethodPopupLink" data-popup-contentsource="#AlignMethodPopupContent" data-popup-showevent="click mouseenter">AlignMethod</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>PitchMethod</i></dt>
+
+                <dd>Pitch method as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternPitchMethod_e.html">swChainPatternPitchMethod_e</a>; available for all types of chain patterns</dd>
+
+                <dt><i>FlipDirection</i></dt>
+
+                <dd>True to reverse the direction of the chain pattern, false to not; available for all types of chain patterns</dd>
+
+                <dt><i>FillPath</i></dt>
+
+                <dd>True to automatically set the number of pattern instances to fill the path, false to not; available for all types of chain patterns and when EqualSpacing is false for distance and linkage distance&#160;chain patterns</dd>
+
+                <dt><i>Number</i></dt>
+
+                <dd>Number of pattern instances; available for all types of chain patterns when FillPath is false</dd>
+
+                <dt><i>Spacing</i></dt>
+
+                <dd>Distance between the pattern instances when EqualSpacing is false; only available&#160;for distance and linkage distance chain patterns when EqualSpacing is false</dd>
+
+                <dt><i>GroupOneFlipPlane</i></dt>
+
+                <dd>True to flip the path alignment plane for <strong>Chain Group 1</strong>, false to not; available for all types of chain patterns</dd>
+
+                <dt><i>GroupTwoChain</i></dt>
+
+                <dd>True to set the component to pattern for <strong>Chain Group 2</strong>, false to not; only available for connected linkage chain patterns</dd>
+
+                <dt><i>GroupTwoFlipPlane</i></dt>
+
+                <dd>True to flip the path alignment plane for <strong>Chain Group 2</strong>, false to not; only available for connected linkage chain patterns</dd>
+
+                <dt><i>AlignMethod</i></dt>
+
+                <dd>Alignment method as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternAlignment_e.html">swChainPatternAlignment_e</a>; only available for distance and linkage distance&#160;chain patterns</dd>
+
+                <dt><i>Options</i></dt>
+
+                <dd>Option as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swChainPatternOptions_e.html">swChainPatternOptions_e</a>; available for all types of chain patterns</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Chain pattern&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">feature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>You must pre-select the&#160;entities for&#160;the chain pattern feature. Using the selected entities, this method inserts one of these chain pattern features:</p>
+
+            <ul>
+                <li>distance</li>
+
+                <li>distance linkage</li>
+
+                <li>connected linkage</li>
+            </ul>
+
+            <p>&#160;</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="VERTICAL-ALIGN: bottom">Entity to select</th>
+
+                        <th style="VERTICAL-ALIGN: bottom">Corresponding Chain Pattern PropertyManager control</th>
+
+                        <th style="VERTICAL-ALIGN: bottom">Selection mark</th>
+
+                        <th style="VERTICAL-ALIGN: bottom">Number of selections</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td width="193">
+                            <ul>
+                                <li>2D or 3D&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketch">sketch</a> containing&#160;an open or closed loop,</li>
+
+                                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchLine">Sketch line</a>, or</li>
+
+                                <li>Model <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge">edge</a></li>
+                            </ul>
+                        </td>
+
+                        <td><strong>Path</strong></td>
+
+                        <td width="141">2</td>
+
+                        <td>1 for all types of chain patterns</td>
+                    </tr>
+
+                    <tr>
+                        <td width="193">Assembly&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2">component</a></td>
+
+                        <td><strong>Chain Group 1 Component to Pattern</strong></td>
+
+                        <td width="141">1</td>
+
+                        <td>1 for all types of chain patterns</td>
+                    </tr>
+
+                    <tr>
+                        <td width="193">
+                            <ul>
+                                <li>Cylindrical <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">face</a>,</li>
+
+                                <li>Circular or linear&#160;edge,</li>
+
+                                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchPoint">Sketch point</a>,</li>
+
+                                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex">Vertex</a>, or</li>
+
+                                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRefAxis">Reference axis</a></li>
+                            </ul>
+                        </td>
+
+                        <td><strong>Chain Group 1 Path Link 1</strong></td>
+
+                        <td width="141">
+                            <p>256</p>
+                        </td>
+
+                        <td>1 for all types of chain patterns</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Cylindrical face,</li>
+
+                                <li>Circular or linear&#160;edge,</li>
+
+                                <li>Sketch&#160;point,</li>
+
+                                <li>Vertex, or</li>
+
+                                <li>Reference axis</li>
+                            </ul>
+                        </td>
+
+                        <td><strong>Chain Group 1 Path Link 2</strong></td>
+
+                        <td>512</td>
+
+                        <td>
+                            <ul>
+                                <li>1 for distance linkage or connected linkage</li>
+
+                                <li>None&#160;for distance</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>Component <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRefPlane">plane</a>&#160;or&#160;planar&#160;face</p>
+                        </td>
+
+                        <td><strong>Chain Group 1 Path Alignment Plane</strong></td>
+
+                        <td>16384</td>
+
+                        <td>1 for all types of chain patterns</td>
+                    </tr>
+
+                    <tr>
+                        <td width="193">
+                            <p>Assembly component</p>
+                        </td>
+
+                        <td><strong>Chain Group 2 Component to Pattern</strong></td>
+
+                        <td width="141">
+                            <p>2048</p>
+                        </td>
+
+                        <td>
+                            <ul>
+                                <li>1 for connected linkage</li>
+
+                                <li>None&#160;for distance or linkage distance</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Cylindrical face,</li>
+
+                                <li>Circular or linear&#160;edge,</li>
+
+                                <li>Sketch&#160;point,</li>
+
+                                <li>Vertex, or</li>
+
+                                <li>Reference axis</li>
+                            </ul>
+                        </td>
+
+                        <td><strong>Chain Group 2 Path Link 1</strong></td>
+
+                        <td>4096</td>
+
+                        <td>
+                            <ul>
+                                <li>1 for connected linkage</li>
+
+                                <li>None&#160;for distance or linkage distance</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Cylindrical face,</li>
+
+                                <li>Circular or linear&#160;edge,</li>
+
+                                <li>Sketch&#160;point,</li>
+
+                                <li>Vertex, or</li>
+
+                                <li>Reference axis</li>
+                            </ul>
+                        </td>
+
+                        <td><strong>Chain Group 2 Path Link 2</strong></td>
+
+                        <td>8192</td>
+
+                        <td>
+                            <ul>
+                                <li>1 for connected linkage</li>
+
+                                <li>None&#160;for distance or linkage distance</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>Component plane&#160;or planar face</p>
+                        </td>
+
+                        <td><strong>Group 2 Path Alignment Plane</strong></td>
+
+                        <td width="141">32768</td>
+
+                        <td>
+                            <ul>
+                                <li>1 for connected linkage</li>
+
+                                <li>None&#160;for distance or linkage distance</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Assembly plane</td>
+
+                        <td><strong>Face normal alignment</strong></td>
+
+                        <td width="141">1024</td>
+
+                        <td>
+                            <ul>
+                                <li>1 if the chain path is&#160;a sketch line&#160;</li>
+
+                                <li>None for all other types of paths</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>To&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IChainPatternFeatureData~SetEqualSpacing">set equal spacing</a> between chain pattern instances, edit the chain pattern feature&#160;after creating it.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureChainPattern.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

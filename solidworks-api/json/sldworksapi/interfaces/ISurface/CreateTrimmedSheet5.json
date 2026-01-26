@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "CreateTrimmedSheet5",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Curves",
+        "type": "System.Object",
+        "description": "Array of curves that represent the boundary of the trimmed sheet (see Remarks )"
+      },
+      {
+        "name": "PreserveAnalyticCurves",
+        "type": "System.Boolean",
+        "description": "True to preserve analytic curves, false to store all trimming curves as SP-curves"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance for gaps between edges (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "trim",
+      "surfaces",
+      "createtrimmedsheet5",
+      "create",
+      "trimmed",
+      "sheet5",
+      "curves",
+      "object",
+      "preserve",
+      "analytic",
+      "boolean",
+      "tolerance",
+      "double",
+      "spherical",
+      "sheet",
+      "feature",
+      "body",
+      "vba"
+    ]
+  },
+  "title": "ISurface.CreateTrimmedSheet5",
+  "description": "Creates a trimmed sheet body from this surface.",
+  "signature": "System.Object CreateTrimmedSheet5( \n   System.Object\nCurves\n,\n   System.Boolean\nPreserveAnalyticCurves\n,\n   System.Double\nTolerance\n)",
+  "parameters": [
+    {
+      "name": "Curves",
+      "type": "System.Object",
+      "description": "Array of curves that represent the boundary of the trimmed sheet (see Remarks )"
+    },
+    {
+      "name": "PreserveAnalyticCurves",
+      "type": "System.Boolean",
+      "description": "True to preserve analytic curves, false to store all trimming curves as SP-curves"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance for gaps between edges (see Remarks )"
+    }
+  ],
+  "returns": "Temporary sheet body",
+  "remarks": "The Curves array contains all of the curves required to add the appropriate trimming loops to the surface. A null or Nothing entry in the array represents the separation between loops.\nThe trimming curves supplied are assumed to lie on the surface. If the curves are 2D curves, then they should be created using this surface.\nIf your application is creating a trimmed sheet body from a periodic surface without trimming curves, then the Curves array should contain only one entry: null or Nothing.\nTolerance sets the edge precision in PK_SURF_make_sheet_trimmed. The default parasolid tolerance is 0.00001. This parameter allows you to specify a looser tolerance for gaps between edges.\nBefore calling this method, trim the curves created by\nIModeler::CreateArc\nand\nIModeler::CreateLine\nby calling\nICurve::CreateTrimmedCurve2\n. Elliptical curves created by\nIModeler::CreateEllipse\ndo not need to be trimmed before calling this method.",
+  "examples": [
+    {
+      "title": "Create Spherical Surface, Trimmed Sheet, and Feature from Body (VBA)",
+      "href": "Create_Spherical_Surface_Trimmed_Sheet_and_Feature_From_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

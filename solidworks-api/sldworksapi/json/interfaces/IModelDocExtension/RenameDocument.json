@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "RenameDocument",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "NewName",
+        "type": "System.String",
+        "description": "New name for the component"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "rename",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "documents",
+      "document",
+      "renamedocument",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "new",
+      "name",
+      "string",
+      "int32",
+      "save",
+      "assembly",
+      "vb",
+      "net",
+      "vba",
+      "component",
+      "update",
+      "references"
+    ]
+  },
+  "title": "IModelDocExtension.RenameDocument",
+  "description": "Temporarily renames the selected component using the specified name.",
+  "signature": "System.Int32 RenameDocument( \n   System.String\nNewName\n)",
+  "parameters": [
+    {
+      "name": "NewName",
+      "type": "System.String",
+      "description": "New name for the component"
+    }
+  ],
+  "returns": "Status of temporarily renaming the component as defined in swRenameDocumentError_e (see Remarks )",
+  "remarks": "If this method returns swRenameDocumentError_e.swRenameDocumentError_None, then the new name of the component is shown in the FeatureManager design tree and the file name of the component changes in memory. All currently open documents that reference the renamed file are updated to reference the new file name.\nTo:\nget whether the document has renamed components, call\nIModelDocExtension::HasRenamedDocuments\n.\nto avoid\nan error when attempting to save the document without first saving its references, use\nIRenamedDocumentReferences\nto update references to the renamed component in unopened documents.\npermanently rename the component,\nsave\nthe document.\nSee the SOLIDWORKS Help for details about renaming components.",
+  "examples": [
+    {
+      "title": "Rename Components and Save Assembly (C#)",
+      "href": "Rename_Components_and_Save_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Components and Save Assembly (VB.NET)",
+      "href": "Rename_Components_and_Save_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Components and Save Assembly (VBA)",
+      "href": "Rename_Components_and_Save_Assembly_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Component and Update References (C#)",
+      "href": "Rename_Component_and_Update_References_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Component and Update References (VB.NET)",
+      "href": "Rename_Component_and_Update_References_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Component and Update References (VBA)",
+      "href": "Rename_Component_and_Update_References_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

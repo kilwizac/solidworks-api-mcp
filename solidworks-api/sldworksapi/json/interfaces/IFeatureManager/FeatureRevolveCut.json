@@ -1,0 +1,138 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureRevolveCut",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True reverses the angle direction, false does not"
+      },
+      {
+        "name": "Angle2",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "RevType",
+        "type": "System.Int32",
+        "description": "Type of revolution as defined in swRevolveType_e (can be either mid-plane or two-direction)"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Additional control (see Remarks )"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureRevolve",
+      "IFeatureManager.FeatureRevolveThin",
+      "IFeatureManager.FeatureRevolveThinCut",
+      "IRevolveFeatureData2"
+    ],
+    "keywords": [
+      "featurerevolvecut",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "revolve",
+      "cut",
+      "angle",
+      "double",
+      "reverse",
+      "dir",
+      "boolean",
+      "angle2",
+      "rev",
+      "type",
+      "int32",
+      "options",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select",
+      "create",
+      "features",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.FeatureRevolveCut",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureRevolveCut2.",
+  "signature": "Feature FeatureRevolveCut( \n   System.Double\nAngle\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nAngle2\n,\n   System.Int32\nRevType\n,\n   System.Int32\nOptions\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True reverses the angle direction, false does not"
+    },
+    {
+      "name": "Angle2",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "RevType",
+      "type": "System.Int32",
+      "description": "Type of revolution as defined in swRevolveType_e (can be either mid-plane or two-direction)"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Additional control (see Remarks )"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "The Options argument allows additional control of the feature creation. Supported value is\nswAutoCloseSketch\nclose the sketch if it is open.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.\nFor extruded feature cuts, see\nIFeatureManager::FeatureCut\n.",
+  "examples": [
+    {
+      "title": "Create Revolve Features (VBA)",
+      "href": "Create_Revolve_Features_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.FeatureRevolve",
+    "IFeatureManager.FeatureRevolveThin",
+    "IFeatureManager.FeatureRevolveThinCut",
+    "IRevolveFeatureData2"
+  ]
+}

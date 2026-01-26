@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetBatchUploadedFilesInfo",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ProcessedFileNames",
+        "type": "System.Object",
+        "description": "Array of processed file names"
+      },
+      {
+        "name": "NonProcessedFileNames",
+        "type": "System.Object",
+        "description": "Array of unprocessed file names"
+      },
+      {
+        "name": "FailedFileNames",
+        "type": "System.Object",
+        "description": "Array of file names that failed to upload"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "3dexperience",
+      "getbatchuploadedfilesinfo",
+      "isldworks",
+      "sld",
+      "works",
+      "batch",
+      "uploaded",
+      "files",
+      "info",
+      "processed",
+      "file",
+      "names",
+      "object",
+      "non",
+      "failed",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.GetBatchUploadedFilesInfo",
+  "description": "Gets the files uploaded to 3DEXPERIENCE during a batch process.",
+  "signature": "System.Boolean GetBatchUploadedFilesInfo( \n   out System.Object\nProcessedFileNames\n,\n   out System.Object\nNonProcessedFileNames\n,\n   out System.Object\nFailedFileNames\n)",
+  "parameters": [
+    {
+      "name": "ProcessedFileNames",
+      "type": "System.Object",
+      "description": "Array of processed file names"
+    },
+    {
+      "name": "NonProcessedFileNames",
+      "type": "System.Object",
+      "description": "Array of unprocessed file names"
+    },
+    {
+      "name": "FailedFileNames",
+      "type": "System.Object",
+      "description": "Array of file names that failed to upload"
+    }
+  ],
+  "returns": "True if retrieval successful, false if not",
+  "remarks": "This method is valid only for\nSOLIDWORKS Design Augmented\n.\nBefore using this method, call\nISldWorks::RunBatchSaveProcess\n.",
+  "examples": [],
+  "related": []
+}

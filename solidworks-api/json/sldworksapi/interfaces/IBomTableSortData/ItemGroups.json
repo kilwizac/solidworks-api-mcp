@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBomTableSortData",
+    "member": "ItemGroups",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "itemgroups",
+      "ibomtablesortdata",
+      "bom",
+      "table",
+      "sort",
+      "data",
+      "item",
+      "groups",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IBomTableSortData.ItemGroups",
+  "description": "Gets and sets the categories into which the BOM table rows are grouped.",
+  "signature": "System.Object ItemGroups {get; set;}",
+  "parameters": [],
+  "returns": "Array of categories as defined in swBomTableSortItemGroup_e or null (see Remarks )",
+  "remarks": "You can set this property in one of two ways:\nSpecify null to indicate that the BOM table rows are not to be grouped into categories.\nSpecify an array of\nswBomTableSortItemGroup_e\nenumerators to indicate that the BOM table rows are to be grouped into categories (assemblies, parts, user defined).\nFor example, when you set this property to an array of three enumerators in the following order, assemblies are grouped first, parts are grouped next, and user-defined categories are grouped last:\nswBomTableSortItemGroup_e\n.swBomTableSortItemGroup_Assemblies\nswBomTableSortItemGroup_e\n.swBomTableSortItemGroup_Parts\nswBomTableSortItemGroup_e\n.swBomTableSortItemGroup_Other\nTo eliminate grouping into a category, do not include it in the array.\nFor example, when you set this property to the following array, no assemblies are grouped, parts are grouped first, and user-defined categories are grouped last:\nswBomTableSortItemGroup_e\n.swBomTableSortItemGroup_Parts\nswBomTableSortItemGroup_e\n.swBomTableSortItemGroup_Other",
+  "examples": [
+    {
+      "title": "IBomTableSortData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBomTableSortData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

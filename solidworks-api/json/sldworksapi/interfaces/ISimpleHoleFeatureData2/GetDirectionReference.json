@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleHoleFeatureData2",
+    "member": "GetDirectionReference",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Ref1",
+        "type": "System.Object",
+        "description": "First reference entity (see Remarks )"
+      },
+      {
+        "name": "Type1",
+        "type": "System.Int32",
+        "description": "Type of reference entity as defined by swSelectType_e"
+      },
+      {
+        "name": "Ref2",
+        "type": "System.Object",
+        "description": "Second reference entity (see Remarks )"
+      },
+      {
+        "name": "Type2",
+        "type": "System.Int32",
+        "description": "Type of reference entity as defined by swSelectType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISimpleHoleFeatureData2.ReverseDirection",
+      "ISimpleHoleFeatureData2.SetDirectionReference"
+    ],
+    "keywords": [
+      "getdirectionreference",
+      "isimpleholefeaturedata2",
+      "simple",
+      "hole",
+      "feature",
+      "data2",
+      "direction",
+      "reference",
+      "ref1",
+      "object",
+      "type1",
+      "int32",
+      "ref2",
+      "type2"
+    ]
+  },
+  "title": "ISimpleHoleFeatureData2.GetDirectionReference",
+  "description": "Gets the direction of the cut extrude for this simple hole feature.",
+  "signature": "System.Int32 GetDirectionReference( \n   out System.Object\nRef1\n,\n   out System.Int32\nType1\n,\n   out System.Object\nRef2\n,\n   out System.Int32\nType2\n)",
+  "parameters": [
+    {
+      "name": "Ref1",
+      "type": "System.Object",
+      "description": "First reference entity (see Remarks )"
+    },
+    {
+      "name": "Type1",
+      "type": "System.Int32",
+      "description": "Type of reference entity as defined by swSelectType_e"
+    },
+    {
+      "name": "Ref2",
+      "type": "System.Object",
+      "description": "Second reference entity (see Remarks )"
+    },
+    {
+      "name": "Type2",
+      "type": "System.Int32",
+      "description": "Type of reference entity as defined by swSelectType_e"
+    }
+  ],
+  "returns": "Number of reference entities used to define the direction of this hole feature",
+  "remarks": "Sometimes one reference entity defines a direction; for example, an edge or axis. Other times, two reference entities define a direction; for example, two vertices or two sketch points.\nIf...\nThen...\nOne reference entity defined the direction\nRef2 is NULL and the return value  is 1\nTwo reference entities defined the direction\nBoth Ref1 and Ref2 are non-NULL and return value is 2\nValid reference entities for Ref1 and Ref2:\nline segment\nedge\naxis\nvertex\nface\nplane\nsketch point\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISimpleHoleFeatureData2.ReverseDirection",
+    "ISimpleHoleFeatureData2.SetDirectionReference"
+  ]
+}

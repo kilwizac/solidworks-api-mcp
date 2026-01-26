@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "SuspendSelectionList",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "objects",
+      "suspendselectionlist",
+      "mgr",
+      "suspend",
+      "list",
+      "int32",
+      "add",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISelectionMgr.SuspendSelectionList",
+  "description": "Suspends the current selection list.",
+  "signature": "System.Int32 SuspendSelectionList()",
+  "parameters": [],
+  "returns": "0 if the suspended list is empty, 1 if not",
+  "remarks": "To add objects to a selection list without preselecting the objects in the user interface:\nCall ISelectionMgr::SuspendSelectionList to suspend the current selection list, preserving its contents and starting a new selection list.\nTo populate a new selection list, call\nISelectionMgr::AddSelectionListObject\nor\nISelectionMgr::AddSelectionListObjects\n.\nNOTE\n: To add objects in a\nselection set\nto a new selection list, call\nISelectionSet::Select\n.\nCall\nISelectionMgr::ResumeSelectionList\nto reinstate the suspended selection list.\nTo programmatically preselect objects in the user interface and add them to a selection list, use\nIModelDocExtension::SelectByID2\n.\nIModelDoc2::ClearSelection2\nworks like ISelectionMgr::SuspendSelectionList to clear the selection list. Unlike IModelDoc2::ClearSelection2, this method preserves the list for future reinstatement.",
+  "examples": [
+    {
+      "title": "Add Objects to Selection List (C#)",
+      "href": "Add_Objects_to_Selection_List_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (VB.NET)",
+      "href": "Add_Objects_to_Selection_List_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (VBA)",
+      "href": "Add_Objects_to_Selection_List_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Objects in Selection List (C#)",
+      "href": "Get_Objects_in_Selection_Set_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Objects in Selection List (VB.NET)",
+      "href": "Get_Objects_in_Selection_Set_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Objects in Selection List (VBA)",
+      "href": "Get_Objects_in_Selection_Set_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,619 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>IFacet Interface</title>
+    <meta name="Title" content="IFacet Interface" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFacet" />
+    <meta name="Description" content="Allows access to a triangular facet of a mesh or graphics body." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFacet" />
+    <meta name="Microsoft.Help.Keywords" content="Facet. See IFacet Interface" />
+    <meta name="Microsoft.Help.Keywords" content="IFacet Interface" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                IFacet Interface
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <a class="i-page-link" href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFacet_members">Members</a>&#160; <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> : IFacet Interface</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Allows access to a triangular facet of a mesh or graphics body.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Public Interface IFacet 
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFacet">IFacet</a>
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+public interface IFacet 
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+public interface class IFacet 
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            For more information about graphics bodies, read the <strong>Graphics Mesh and Mesh BREP Bodies</strong> topic in <strong>SOLIDWORKS Design user-interface help &gt; Parts and Features</strong>.
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>'===================================================</p>
+
+            <p>'Preconditions:</p>
+
+            <p>'1. Copy <em>Public_Documents</em><strong>\SOLIDWORKS\SOLIDWORKS 2022\samples\tutorial\api\Part1.PLY</strong> to <strong>c:\temp</strong>.</p>
+
+            <p>'2. Open the Immediate window.</p>
+
+            <p>'Postconditions:</p>
+
+            <p>'1. Press F5 five times, inspecting the Immediate window after each press.</p>
+
+            <p>'2. The part is imported first as a graphics body and then as a mesh body.</p>
+
+            <p>'3. The macro tests facets, facet edges, and facet vertexes after each import.</p>
+
+            <p>'==================================================</p>
+
+            <p>Option Explicit</p>
+
+            <p>Dim swApp As SldWorks.SldWorks<br />
+            Dim swModelDoc As SldWorks.ModelDoc2</p>
+
+            <p>Sub main()</p>
+
+            <p>&#160;&#160;&#160; Set swModelDoc = Nothing<br />
+            &#160;&#160;&#160; Set swApp = Application.SldWorks</p>
+
+            <p>&#160;&#160;&#160; TestGraphicsBody<br />
+            &#160;&#160;&#160; TestBodies<br />
+            &#160;&#160;&#160; Set swModelDoc = Nothing<br />
+            &#160;&#160;&#160; swApp.CloseDoc "Part1"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; TestMeshBody<br />
+            &#160;&#160;&#160; TestBodies<br />
+            &#160;&#160;&#160; Set swModelDoc = Nothing<br />
+            &#160;&#160;&#160; swApp.CloseDoc "Part1"</p>
+
+            <p>End Sub</p>
+
+            <p>Sub TestGraphicsBody()</p>
+
+            <p>&#160;&#160;&#160; Debug.Print "Importing Part1.PLY as a graphics body..."<br />
+            &#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;&#160; boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swImportStlVrmlModelType, swImportStlVrmlModelType_e.swImportStlVrmlModelType_Graphics)<br />
+            &#160;&#160;&#160; boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swImportStlVrmlModelType, 0)<br />
+            &#160;&#160;&#160;</p>
+
+            <p>&#160;&#160;&#160; boolstatus = swApp.LoadFile2("c:\temp\Part1.PLY", "r")<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swModelDoc = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; SelectGraphicsBody</p>
+
+            <p>End Sub</p>
+
+            <p>Sub TestMeshBody()</p>
+
+            <p>&#160;&#160;&#160; Debug.Print "Importing Part1.PLY as a mesh body..."<br />
+            &#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;&#160; boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swImportStlVrmlModelType, swImportStlVrmlModelType_e.swImportStlVrmlModelType_Surface)<br />
+            &#160;&#160;&#160; boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swImportStlVrmlModelType, 1)<br />
+            &#160;&#160;&#160; swApp.SetUserPreferenceToggle swUserPreferenceToggle_e.swVrmlStlImportAsPSMesh, True<br />
+            &#160;&#160;&#160;</p>
+
+            <p>&#160;&#160;&#160; boolstatus = swApp.LoadFile2("c:\temp\Part1.PLY", "r")<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swModelDoc = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; SelectMeshBody</p>
+
+            <p>End Sub</p>
+
+            <p>Sub SelectGraphicsBody()<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160; Debug.Print "Getting the graphics body, Graphic (Closed) -1..."<br />
+            &#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; boolstatus = swModelDoc.Extension.SelectByID2("Graphic (Closed) -1", "MESH BODY FEATURE", -9.32538825377272E-02, 0.091, 0.033742378078639, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swSelMgr As SldWorks.SelectionMgr<br />
+            &#160;&#160;&#160; Set swSelMgr = swModelDoc.SelectionManager<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim lSelType As Long<br />
+            &#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160; If lSelType = swSelGRAPHICSBODY Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "lSelType = swSelGRAPHICSBODY"<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swFeature As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set swFeature = swSelMgr.GetSelectedObject6(1, -1)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; If swFeature Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swFeature is Nothing"<br />
+            &#160;&#160;&#160; ElseIf lSelType = swSelGRAPHICSBODY Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Select GraphicsBody success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swBody As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBody = swFeature.GetSpecificFeature2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; If swBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swBody Is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Getting Body success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lBodyType As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lBodyType = swBody.GetType<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lBodyType = swconst.swBodyType_e.swGraphicsBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swGraphicsBody As SldWorks.GraphicsBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swGraphicsBody = swBody.<strong>GetGraphicsBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swGraphicsBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Graphics body object&#160;is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "GetGraphicsBody success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swBodyFromGraphics As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBodyFromGraphics = swGraphicsBody.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swBodyFromGraphics Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swGraphicsBody.GetBody failed"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swGraphicsBody.GetBody success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print "Selecting facet, facet edge, and facet vertex objects in graphics body..."<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; swModelDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160; boolstatus = swModelDoc.Extension.SelectByID2("Unknown", "MESHFACETREF", -0.130140285581291, 9.09999999999798E-02, 5.26687725669035E-02, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160; If lSelType = swconst.swSelFACETS Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet selected"<br />
+            &#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Object selected not of type facet"<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; swModelDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160; boolstatus = swModelDoc.Extension.SelectByID2("Unknown", "MESHFINREF", -7.01858537194084E-02, 9.09999999999798E-02, 5.13894806662165E-02, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160; If lSelType = swSelMESHFACETEDGES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet edge selected"<br />
+            &#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Object selected not of type facet edge"<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; swModelDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160; boolstatus = swModelDoc.Extension.SelectByID2("Unknown", "MESHVERTEXREF", -0.117127148857435, 9.09999999999513E-02, 0.099920771345694, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160; If lSelType = swSelMESHFACETVERTICES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet vertex selected"<br />
+            &#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Object selected not of type facet vertex"<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print ""<br />
+            End Sub</p>
+
+            <p>Sub SelectMeshBody()<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160; Debug.Print "Getting mesh body, Surface-Imported5..."<br />
+            &#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;&#160; ' SW-35234<br />
+            &#160;&#160;&#160; boolstatus = swModelDoc.Extension.SelectByID2("Surface-Imported5", "SURFACEBODY", -9.55822368965755E-02, 9.10000000000082E-02, 3.36061875443647E-02, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swSelMgr As SldWorks.SelectionMgr<br />
+            &#160;&#160;&#160; Set swSelMgr = swModelDoc.SelectionManager<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim lSelType As Long<br />
+            &#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160; If lSelType = swSelSURFACEBODIES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swBody As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBody = swSelMgr.GetSelectedObject6(1, -1)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lBodyType As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; lBodyType = swBody.GetType<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; If lBodyType = swconst.swBodyType_e.swMeshBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Select MeshBody success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swMeshBody As SldWorks.MeshBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swMeshBody = swBody.<strong>GetMeshBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swMeshBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Mesh body object&#160;is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Mesh body retrieved"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swMBody As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swMBody = swMeshBody.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swMBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swMeshBody.GetBody failed"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swMeshBody.GetBody success"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print ""<br />
+            End Sub</p>
+
+            <p>Sub TestBodies()<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160; Debug.Print "Testing facets, facet edges, and facet vertexes..."<br />
+            &#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;<br />
+            &#160;&#160;&#160; Dim bFilter As Boolean<br />
+            &#160;&#160;&#160; bFilter = swApp.GetSelectionFilter(swSelMESHFACETEDGES)<br />
+            &#160;&#160;&#160; swApp.SetSelectionFilter swSelMESHFACETEDGES, (bFilter = False)<br />
+            &#160;&#160;&#160; bFilter = swApp.GetSelectionFilter(swSelMESHFACETEDGES)</p>
+
+            <p>&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim vFilters As Variant<br />
+            &#160;&#160;&#160; vFilters = swApp.GetSelectionFilters<br />
+            &#160;&#160;&#160; Dim j As Integer<br />
+            &#160;&#160;<br />
+            &#160;&#160;&#160; If Not IsNull(vFilters) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; For j = 0 To UBound(vFilters)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lCurFilter As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lCurFilter = vFilters(j)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lCurFilter = swSelGRAPHICSBODY Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Selection filter is swSelGRAPHICSBODY"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lCurFilter = swSelFACETS Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Selection filter is swSelFACETS"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lCurFilter = swSelMESHFACETEDGES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Selection filter is swSelMESHFACETEDGES"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lCurFilter = swSelMESHFACETVERTICES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Selection filter is swSelMESHFACETVERTICES"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Selection filter is other than facet/facet edge/facet vertex"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Next j<br />
+            &#160;&#160;&#160; End If</p>
+
+            <p>&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim lSelFilters(0) As Long<br />
+            &#160;&#160;&#160; Dim vSelFilters As Variant<br />
+            &#160;&#160;&#160; lSelFilters(0) = swSelMESHFACETVERTICES<br />
+            &#160;&#160;&#160; vSelFilters = lSelFilters<br />
+            &#160;&#160;&#160; swApp.SetSelectionFilters vSelFilters, True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; vSelFilters(0) = swSelFACETS<br />
+            &#160;&#160;&#160; swApp.SetSelectionFilters vSelFilters, False<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim bApplySelFilters As Boolean<br />
+            &#160;&#160;&#160; bApplySelFilters = swApp.GetApplySelectionFilter<br />
+            &#160;&#160;&#160; Dim bOppSelFilter As Boolean<br />
+            &#160;&#160;&#160; bOppSelFilter = (bApplySelFilters = False)<br />
+            &#160;&#160;&#160; swApp.SetApplySelectionFilter bOppSelFilter<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; swApp.SetApplySelectionFilter False<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swModelDoc = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; Dim swPartDoc As SldWorks.PartDoc<br />
+            &#160;&#160;&#160; Set swPartDoc = swModelDoc<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim vBodies As Variant<br />
+            &#160;&#160;&#160; vBodies = swPartDoc.GetBodies2(-1, False)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swSelMgr As SldWorks.SelectionMgr<br />
+            &#160;&#160;&#160; Set swSelMgr = swModelDoc.SelectionManager<br />
+            &#160;&#160;&#160; Dim lSelType As Long<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swCurBod As SldWorks.Body2<br />
+            &#160;&#160;&#160; If Not IsEmpty(vBodies) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim i As Integer<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; For i = 0 To UBound(vBodies)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print ""<br />
+            &#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swCurBod = vBodies(i)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lCurBodyType As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lCurBodyType = swCurBod.GetType<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lCurBodyType = swBodyType_e.swMeshBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Testing mesh body"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lCurBodyType = swBodyType_e.swGraphicsBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Testing graphics body"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Some other body type"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; swCurBod.Select2 False, Nothing</p>
+
+            <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; swCurBod.DeSelect<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim bIsVisible As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; bIsVisible = swCurBod.Visible<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Visible is " &amp; bIsVisible<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim sBodyName As String<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; sBodyName = swCurBod.Name<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Name is """ &amp; sBodyName &amp; """"</p>
+
+            <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim bIsMesh As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; bIsMesh = swCurBod.<strong>IsMeshBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "IsMeshBody returned " &amp; bIsMesh<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim bIsGraphics As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; bIsGraphics = swCurBod.<strong>IsGraphicsBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "IsGraphicsBody method returned " &amp; bIsGraphics<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swThisMeshBody As SldWorks.MeshBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swThisMeshBody = swCurBod.<strong>GetMeshBody</strong> '<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swThisMeshBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swThisBodyFromMesh As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swThisBodyFromMesh = swThisMeshBody.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not swThisBodyFromMesh Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swThisMeshBody.GetBody returned an IBody2."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swThisMeshBody.GetBody returned Nothing."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Getting facet, facet edge, and facet vertex objects in this mesh body..."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetCount As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lFacetCount = swThisMeshBody.<strong>GetFacetCount</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet count is " &amp; lFacetCount</p>
+
+            <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vMFacets As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vMFacets = swThisMeshBody.<strong>GetFacets</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lMFacetIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lMFacetIndex = 0 To UBound(vMFacets)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet " &amp; lMFacetIndex + 1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swCurMFacet As SldWorks.Facet<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swCurMFacet = vMFacets(lMFacetIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swBodyFromCurMFacet As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBodyFromCurMFacet = swCurMFacet.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vEdges As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vVerts As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vEdges = swCurMFacet.<strong>GetFacetEdges</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lEdgesIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lEdgesIndex = 0 To UBound(vEdges)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swCurEdge As SldWorks.Edge<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swCurEdge = vEdges(lEdgesIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swCurEdge Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Edge object is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Edge retrieved"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lEdgesIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vVerts = swCurMFacet.<strong>GetFacetVertices</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lVertsIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lVertsIndex = 0 To UBound(vVerts)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swCurVert As SldWorks.Vertex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swCurVert = vVerts(lVertsIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swCurVert Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Vertex object is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Vertex retrieved"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lVertsIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; swCurMFacet.Select False, Nothing<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lSelType = swconst.swSelectType_e.swSelFACETS Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet selected"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Object not of type Facet"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lMFacetIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swThisGraphicsBody As SldWorks.GraphicsBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swThisGraphicsBody = swCurBod.<strong>GetGraphicsBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swThisGraphicsBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swThisBodyFromGraphics As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swThisBodyFromGraphics = swThisGraphicsBody.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not swThisBodyFromGraphics Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swThisGraphicsBody.GetBody returned an IBody2."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swThisGraphicsBody.GetBody returned Nothing."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Getting facet, facet edge, and facet vertex objects in this graphics body..."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lGFacetCount As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lGFacetCount = swThisGraphicsBody.<strong>GetFacetCount</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet count is " &amp; lGFacetCount<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vFacets As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vFacets = swThisGraphicsBody.<strong>GetFacets</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lFacetIndex = 0 To UBound(vFacets)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet " &amp; lFacetIndex + 1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swFacet As SldWorks.Facet<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swFacet = vFacets(lFacetIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swFacetBody As SldWorks.Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swFacetGraphicsBody As GraphicsBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swFacetBody = swFacet.<strong>GetBody</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swFacetBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swFacet.GetBody failed"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swFacet.GetBody returned an IBody2"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vGEdges As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vGEdges = swFacet.<strong>GetFacetEdges</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetEdgesCount As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lFacetEdgesCount = UBound(vGEdges) + 1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetEdgesIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lFacetEdgesIndex = 0 To UBound(vGEdges)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swFacetEdge As SldWorks.Edge<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swFacetEdge = vGEdges(lFacetEdgesIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swFacetEdge Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Edge object is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Edge retrieved"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lFacetEdgesIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim vGVerts As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; vGVerts = swFacet.<strong>GetFacetVertices</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetVertsCount As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lFacetVertsCount = UBound(vGVerts) + 1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lFacetVertsIndex As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For lFacetVertsIndex = 0 To UBound(vGVerts)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swFacetVert As SldWorks.Vertex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swFacetVert = vGVerts(lFacetVertsIndex)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If swFacetVert Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Vertex object is Nothing"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Vertex retrieved"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If</p>
+
+            <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lFacetVertsIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; swFacet.Select False, Nothing<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lSelType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lSelType = swconst.swSelectType_e.swSelFACETS Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Facet selected"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Object not of type Facet"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If</p>
+
+            <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next lFacetIndex<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Next i<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160; Debug.Print ""<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; End Sub</p>
+        </div>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Inspect_Facets_Example_VBNET.htm">Inspect Facets of Graphics and Mesh Bodies (VB.NET)</a><br />
+            <a href="Inspect_Facets_Example_CSharp.htm">Inspect Facets of Graphics and Mesh Bodies (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFacet_members">IFacet Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFacet.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

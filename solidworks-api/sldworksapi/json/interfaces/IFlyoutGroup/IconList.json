@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFlyoutGroup",
+    "member": "IconList",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetImageSize"
+    ],
+    "keywords": [
+      "iconlist",
+      "iflyoutgroup",
+      "flyout",
+      "group",
+      "icon",
+      "list",
+      "object",
+      "create",
+      "flyouts",
+      "commandmanager",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IFlyoutGroup.IconList",
+  "description": "Gets or sets the paths for the icons for the toolbar buttons for this flyout.",
+  "signature": "System.Object IconList {get; set;}",
+  "parameters": [],
+  "returns": "Array of strings of the paths for the icons for the toolbar buttons for this flyout (see Remarks )",
+  "remarks": "This property supports scaling for high resolution screens with high resolution operating system scaling options.\nThe array of strings for the paths to the image files can contain icons of the following sizes:\n20 x 20 pixels\n32 x 32 pixels\n40 x 40 pixels\n64 x 64 pixels\n96 x 96 pixels\n128 x128 pixels\nEach image file (\n.bmp\nor\n.png\n) should contain all of the same-size icons for all of the buttons. For example:\nEach icon strip should use a 256-color palette.\nThe order in which you specify the icons must be the same for this property and\nIFlyoutGroup::MainIconList\n. For example, if you specify an array of paths to 20 x 20 pixels, 32 x 32 pixels, and 40 x 40 pixels icons for this property, then you must specify an array of paths to 20 x 20 pixels, 32 x 32 pixels, and 40 x 40 pixels icons for IFlyoutGroup::MainIconList.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetImageSize"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty",
+    "member": "PrincipleAxesOfInertia",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Axis",
+        "type": "System.Int32",
+        "description": "0 = x axis 1 = y axis 2 = z axis"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty.GetMomentOfInertia",
+      "IMassProperty.IGetMomentOfInertia",
+      "IMassProperty.IGetPrincipleAxesOfInertia",
+      "IMassProperty.IGetPrincipleMomentsOfInertia",
+      "IMassProperty.ISetOverridePrincipleAxesOrientation",
+      "IMassProperty.PrincipleMomentsOfInertia",
+      "IMassProperty.SetOverridePrincipleAxesOrientation"
+    ],
+    "keywords": [
+      "principleaxesofinertia",
+      "imassproperty",
+      "mass",
+      "principle",
+      "axes",
+      "inertia",
+      "axis",
+      "int32",
+      "object",
+      "insert",
+      "coordinate",
+      "center",
+      "vba",
+      "properties",
+      "multibody",
+      "assembly",
+      "component",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IMassProperty.PrincipleAxesOfInertia",
+  "description": "Gets the principal axes of inertia for this model.",
+  "signature": "System.Object PrincipleAxesOfInertia( \n   System.Int32\nAxis\n) {get;}",
+  "parameters": [
+    {
+      "name": "Axis",
+      "type": "System.Int32",
+      "description": "0 = x axis 1 = y axis 2 = z axis"
+    }
+  ],
+  "returns": "Array of size 3 (see Remarks )",
+  "remarks": "This method returns:\na vector that represents the requested axis.\nmetric units unless explicitly specified otherwise.\nThe return value is a 0-based array of doubles:\n[\nlx, ly, lz\n]",
+  "examples": [
+    {
+      "title": "Insert Coordinate System at Center of Mass (VBA)",
+      "href": "Insert_Coordinate_System_at_Center_of_Mass_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (C#)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (VB.NET)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (VBA)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty.GetMomentOfInertia",
+    "IMassProperty.IGetMomentOfInertia",
+    "IMassProperty.IGetPrincipleAxesOfInertia",
+    "IMassProperty.IGetPrincipleMomentsOfInertia",
+    "IMassProperty.ISetOverridePrincipleAxesOrientation",
+    "IMassProperty.PrincipleMomentsOfInertia",
+    "IMassProperty.SetOverridePrincipleAxesOrientation"
+  ]
+}

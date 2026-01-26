@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetFrameSymbols2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameValues",
+      "IGtol.IGetFrameDiameterSymbols",
+      "IGtol.IGetFrameSymbols2",
+      "IGtol.IGetFrameValues",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "getframesymbols2",
+      "igtol",
+      "gtol",
+      "symbols2",
+      "number",
+      "int16",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetFrameSymbols2",
+  "description": "Obsolete. Superseded by IGtol::GetFrameSymbols3.",
+  "signature": "System.Object GetFrameSymbols2( \n   System.Int16\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "The return array is an array of six strings in the following format:\nretval\n[0] = Geometric tolerance symbol\nretval\n[1] = Material condition symbol for first tolerance value\nretval\n[2] = Material condition symbol for second tolerance value\nretval\n[3] = Material condition symbol for datum1\nretval\n[4] = Material condition symbol for datum2\nretval\n[5] = Material condition symbol for datum3\nThe character strings returned in the array correspond to symbols defined in\nC:\\ProgramData\\SolidWorks\\SolidWorks\n20\nnn\n\\lang\\english\\gtol.sym\n. The format of each string is <\nLibraryName-SymbolName\n> (for example,\n<GTOL-ANGULAR>,\nwhich is the angularity symbol from the ASME Geometric Tolerancing Symbols library).\nUse this method with\nIGtol::GetFrameDiameterSymbols\n, which determines whether diameter symbols are displayed.",
+  "examples": [],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameValues",
+    "IGtol.IGetFrameDiameterSymbols",
+    "IGtol.IGetFrameSymbols2",
+    "IGtol.IGetFrameValues",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues"
+  ]
+}

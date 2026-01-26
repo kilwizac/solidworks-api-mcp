@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateExtrusionSurfaceDLL",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "ProfileCurve",
+        "type": "Curve",
+        "description": "Pointer to the profile curve"
+      },
+      {
+        "name": "AxisDirection",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreateextrusionsurfacedll",
+      "ibody2",
+      "body2",
+      "create",
+      "extrusion",
+      "dll",
+      "profile",
+      "curve",
+      "axis",
+      "direction",
+      "double"
+    ]
+  },
+  "title": "IBody2.ICreateExtrusionSurfaceDLL",
+  "description": "Creates an extruded surface.",
+  "signature": "Surface ICreateExtrusionSurfaceDLL( \n   Curve\nProfileCurve\n,\n   ref System.Double\nAxisDirection\n)",
+  "parameters": [
+    {
+      "name": "ProfileCurve",
+      "type": "Curve",
+      "description": "Pointer to the profile curve"
+    },
+    {
+      "name": "AxisDirection",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "Pointer to the new surface of extrusion (tabulated cylinder)",
+  "remarks": "Any existing object created by this method is destroyed if you call this method again.",
+  "examples": [],
+  "related": []
+}

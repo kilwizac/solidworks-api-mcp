@@ -1,0 +1,316 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertProtrusionBlend2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Closed",
+        "type": "System.Boolean",
+        "description": "True closes the loft, false leaves the loft open; if true and less than three profiles are selected, then any selected guide curves must be closed curves"
+      },
+      {
+        "name": "KeepTangency",
+        "type": "System.Boolean",
+        "description": "True maintains the tangency as seen in the section curves, false does not; if the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; when generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics"
+      },
+      {
+        "name": "ForceNonRational",
+        "type": "System.Boolean",
+        "description": "True obtains smoother surfaces, false does not"
+      },
+      {
+        "name": "TessToleranceFactor",
+        "type": "System.Double",
+        "description": "Factor that controls the number of intermediate sections used for loft with centerline; the default value is 1.0; the greater the value, the more intermediate sections are created"
+      },
+      {
+        "name": "StartMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the start profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to a selected vector 3 = tangency to all the adjacent faces sharing an edge with the start profile 4 = tangent to some of the selected faces sharing an edge with the start profile (not available)"
+      },
+      {
+        "name": "EndMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the end profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to a selected vector 3 = tangency to all the adjacent faces sharing an edge with the start profile 4 = tangent to some of the selected faces sharing an edge with the start profile (not available)"
+      },
+      {
+        "name": "StartTangentLength",
+        "type": "System.Double",
+        "description": "Start tangent length"
+      },
+      {
+        "name": "EndTangentLength",
+        "type": "System.Double",
+        "description": "End tangent length"
+      },
+      {
+        "name": "StartTangentDir",
+        "type": "System.Boolean",
+        "description": "True is one direction, false is the opposite"
+      },
+      {
+        "name": "EndTangentDir",
+        "type": "System.Boolean",
+        "description": "True is one direction, false is the opposite"
+      },
+      {
+        "name": "IsThinBody",
+        "type": "System.Boolean",
+        "description": "True if this feature is a thin body, false if it is not"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Thickness value for the first direction"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Thickness value for the second direction"
+      },
+      {
+        "name": "ThinType",
+        "type": "System.Int16",
+        "description": "Thin wall type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True merges the results in a multibody part, false does not"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+      },
+      {
+        "name": "GuideCurveInfluence",
+        "type": "System.Int32",
+        "description": "Guide curves influence as defined in swGuideCurveInfluence_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertCutBlend",
+      "ILoftFeatureData"
+    ],
+    "keywords": [
+      "lofts",
+      "see",
+      "also",
+      "iloftfeaturedata",
+      "body",
+      "boss",
+      "feature",
+      "ifeature",
+      "loft",
+      "insertprotrusionblend2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "protrusion",
+      "blend2",
+      "closed",
+      "boolean",
+      "keep",
+      "tangency",
+      "force",
+      "non",
+      "rational",
+      "tess",
+      "tolerance",
+      "factor",
+      "double",
+      "start",
+      "matching",
+      "type",
+      "int16",
+      "end",
+      "tangent",
+      "length",
+      "dir",
+      "thin",
+      "thickness1",
+      "thickness2",
+      "merge",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select",
+      "guide",
+      "curve",
+      "influence",
+      "int32",
+      "blend",
+      "vba",
+      "vb",
+      "net",
+      "fill",
+      "surface",
+      "multiple",
+      "splines",
+      "curves"
+    ]
+  },
+  "title": "IFeatureManager.InsertProtrusionBlend2",
+  "description": "Creates a lofted body or boss from the selected profiles, centerline, and guide curves.",
+  "signature": "Feature InsertProtrusionBlend2( \n   System.Boolean\nClosed\n,\n   System.Boolean\nKeepTangency\n,\n   System.Boolean\nForceNonRational\n,\n   System.Double\nTessToleranceFactor\n,\n   System.Int16\nStartMatchingType\n,\n   System.Int16\nEndMatchingType\n,\n   System.Double\nStartTangentLength\n,\n   System.Double\nEndTangentLength\n,\n   System.Boolean\nStartTangentDir\n,\n   System.Boolean\nEndTangentDir\n,\n   System.Boolean\nIsThinBody\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Int16\nThinType\n,\n   System.Boolean\nMerge\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n,\n   System.Int32\nGuideCurveInfluence\n)",
+  "parameters": [
+    {
+      "name": "Closed",
+      "type": "System.Boolean",
+      "description": "True closes the loft, false leaves the loft open; if true and less than three profiles are selected, then any selected guide curves must be closed curves"
+    },
+    {
+      "name": "KeepTangency",
+      "type": "System.Boolean",
+      "description": "True maintains the tangency as seen in the section curves, false does not; if the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; when generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics"
+    },
+    {
+      "name": "ForceNonRational",
+      "type": "System.Boolean",
+      "description": "True obtains smoother surfaces, false does not"
+    },
+    {
+      "name": "TessToleranceFactor",
+      "type": "System.Double",
+      "description": "Factor that controls the number of intermediate sections used for loft with centerline; the default value is 1.0; the greater the value, the more intermediate sections are created"
+    },
+    {
+      "name": "StartMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the start profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to a selected vector 3 = tangency to all the adjacent faces sharing an edge with the start profile 4 = tangent to some of the selected faces sharing an edge with the start profile (not available)"
+    },
+    {
+      "name": "EndMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the end profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to a selected vector 3 = tangency to all the adjacent faces sharing an edge with the start profile 4 = tangent to some of the selected faces sharing an edge with the start profile (not available)"
+    },
+    {
+      "name": "StartTangentLength",
+      "type": "System.Double",
+      "description": "Start tangent length"
+    },
+    {
+      "name": "EndTangentLength",
+      "type": "System.Double",
+      "description": "End tangent length"
+    },
+    {
+      "name": "StartTangentDir",
+      "type": "System.Boolean",
+      "description": "True is one direction, false is the opposite"
+    },
+    {
+      "name": "EndTangentDir",
+      "type": "System.Boolean",
+      "description": "True is one direction, false is the opposite"
+    },
+    {
+      "name": "IsThinBody",
+      "type": "System.Boolean",
+      "description": "True if this feature is a thin body, false if it is not"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Thickness value for the first direction"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Thickness value for the second direction"
+    },
+    {
+      "name": "ThinType",
+      "type": "System.Int16",
+      "description": "Thin wall type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True merges the results in a multibody part, false does not"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+    },
+    {
+      "name": "GuideCurveInfluence",
+      "type": "System.Int32",
+      "description": "Guide curves influence as defined in swGuideCurveInfluence_e"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Selection of guide curves and centerline is optional. However, you must select the profiles in an order consistent with the desired direction of the loft. Because a solid is being created, the section profiles must be closed.\nIt is best to use guide curves, especially when you select profiles in the FeatureManager design tree.\nYou can use any number of profiles; however, if you select only one profile, then any selected guide curves must be closed curves.\nUse\nIModelDocExtension::SelectByID2\nto select the profiles and guide curves. Set the mark for:\n1 = profile selections\n2 = guide curve selections\n4 = centerline selection\n8 = start tangency vector selection\n16 = start tangency faces selection (not available)\n32 = end tangency vector selection\n64 = end tangency faces selection (not available)\nNOTE:\nLinear edge, sketch line, axis, plane and planar faces are qualified for tangency vector sections.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.",
+  "examples": [
+    {
+      "title": "Insert Protrusion Blend (VBA)",
+      "href": "Insert_Protrusion_Blend_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Protrusion Blend (VB.NET)",
+      "href": "Insert_Protrusion_Blend_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Protrusion Blend (C#)",
+      "href": "Insert_Protrusion_Blend_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (C#)",
+      "href": "Insert_Fill-surface_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VB.NET)",
+      "href": "Insert_Fill-surface_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VBA)",
+      "href": "Insert_Fill-surface_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Multiple Splines for Loft Guide Curves (C#)",
+      "href": "Select_Multiple_Splines_for_Loft_Guide_Curves_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Multiple Splines for Loft Guide Curves (VB.NET)",
+      "href": "Select_Multiple_Splines_for_Loft_Guide_Curves_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Multiple Splines for Loft Guide Curves (VBA)",
+      "href": "Select_Multiple_Splines_for_Loft_Guide_Curves_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertCutBlend",
+    "ILoftFeatureData"
+  ]
+}

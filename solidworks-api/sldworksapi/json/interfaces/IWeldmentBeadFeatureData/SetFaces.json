@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentBeadFeatureData",
+    "member": "SetFaces",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Side",
+        "type": "System.Int32",
+        "description": "Side as defined in swWeldBeadSide_e"
+      },
+      {
+        "name": "FaceSet1",
+        "type": "System.Object",
+        "description": "First set of faces to which to apply the weld bead"
+      },
+      {
+        "name": "FaceSet2",
+        "type": "System.Object",
+        "description": "Second set of faces to which to apply the weld bead"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IWeldmentBeadFeatureData.GetFaces",
+      "IWeldmentBeadFeatureData.GetFacesCount",
+      "IWeldmentBeadFeatureData.IGetFaces",
+      "IWeldmentBeadFeatureData.ISetFaces"
+    ],
+    "keywords": [
+      "setfaces",
+      "iweldmentbeadfeaturedata",
+      "weldment",
+      "bead",
+      "feature",
+      "data",
+      "faces",
+      "side",
+      "int32",
+      "face",
+      "set1",
+      "object",
+      "set2",
+      "boolean",
+      "change",
+      "weld",
+      "vba"
+    ]
+  },
+  "title": "IWeldmentBeadFeatureData.SetFaces",
+  "description": "Sets the faces to which to apply the weld bead.",
+  "signature": "System.Boolean SetFaces( \n   System.Int32\nSide\n,\n   System.Object\nFaceSet1\n,\n   System.Object\nFaceSet2\n)",
+  "parameters": [
+    {
+      "name": "Side",
+      "type": "System.Int32",
+      "description": "Side as defined in swWeldBeadSide_e"
+    },
+    {
+      "name": "FaceSet1",
+      "type": "System.Object",
+      "description": "First set of faces to which to apply the weld bead"
+    },
+    {
+      "name": "FaceSet2",
+      "type": "System.Object",
+      "description": "Second set of faces to which to apply the weld bead"
+    }
+  ],
+  "returns": "True if the weld bead is applied to the specified faces, false if not",
+  "remarks": "Although you must select planar faces for the face sets, fillet weld beads can follow non-planar, tangent contours when you set\nIWeldmentBeadFeatureData::TangentPropagation\nto TRUE.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "Change Weld Bead Faces (VBA)",
+      "href": "Change_Weld_Bead_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWeldmentBeadFeatureData.GetFaces",
+    "IWeldmentBeadFeatureData.GetFacesCount",
+    "IWeldmentBeadFeatureData.IGetFaces",
+    "IWeldmentBeadFeatureData.ISetFaces"
+  ]
+}

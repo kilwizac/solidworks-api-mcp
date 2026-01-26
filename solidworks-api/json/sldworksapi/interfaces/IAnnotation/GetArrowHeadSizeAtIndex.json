@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetArrowHeadSizeAtIndex",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of leader on this annotation"
+      },
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "TRUE indicates that the document default setting for arrow head size was used, FALSE indicates that the Length, Width, and Height values were specified"
+      },
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Length of arrow head"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width of arrow head"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Height of arrow head"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetArrowHeadStyleAtIndex",
+      "IAnnotation.SetArrowHeadStyleAtIndex"
+    ],
+    "keywords": [
+      "arrows",
+      "leaders",
+      "getarrowheadsizeatindex",
+      "iannotation",
+      "annotation",
+      "arrow",
+      "head",
+      "size",
+      "index",
+      "int32",
+      "use",
+      "doc",
+      "boolean",
+      "length",
+      "double",
+      "width",
+      "height"
+    ]
+  },
+  "title": "IAnnotation.GetArrowHeadSizeAtIndex",
+  "description": "Gets the arrow head size of the specified leader on this annotation.",
+  "signature": "System.Boolean GetArrowHeadSizeAtIndex( \n   System.Int32\nIndex\n,\n   out System.Boolean\nUseDoc\n,\n   out System.Double\nLength\n,\n   out System.Double\nWidth\n,\n   out System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of leader on this annotation"
+    },
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "TRUE indicates that the document default setting for arrow head size was used, FALSE indicates that the Length, Width, and Height values were specified"
+    },
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Length of arrow head"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width of arrow head"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Height of arrow head"
+    }
+  ],
+  "returns": "True if the method succeeds, false if not",
+  "remarks": "The index value is 0-based. Therefore, a valid index value is greater than or equal to 0, but less than the number of leaders on this annotation. Use\nIAnnotation::GetArrowHeadCount\nto find the number of leaders on this annotation. If the index value is invalid, SOLIDWORKS returns the arrowhead style as -1, and returns an S_FALSE status (COM interface).\nUse\nIAnnotation::SetArrowHeadSizeAtIndex\nto set the arrow head size of a specific leader.",
+  "examples": [],
+  "related": [
+    "IAnnotation.GetArrowHeadStyleAtIndex",
+    "IAnnotation.SetArrowHeadStyleAtIndex"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "MergeBendTags",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to merge bend tags, false to unmerge a merged bend tag"
+      },
+      {
+        "name": "BendNotes",
+        "type": "System.Object",
+        "description": "Array of two or more bend tags to merge or an array of one merged bend tag to unmerge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "INote.IsBendLineNote"
+    ],
+    "keywords": [
+      "bends",
+      "tags",
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "bend",
+      "view",
+      "iview",
+      "note",
+      "inote",
+      "mergebendtags",
+      "merge",
+      "boolean",
+      "notes",
+      "object",
+      "unmerge",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.MergeBendTags",
+  "description": "Merges or unmerges bend tags in drawings of sheet metal parts.",
+  "signature": "System.Boolean MergeBendTags( \n   System.Boolean\nMerge\n,\n   System.Object\nBendNotes\n)",
+  "parameters": [
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to merge bend tags, false to unmerge a merged bend tag"
+    },
+    {
+      "name": "BendNotes",
+      "type": "System.Object",
+      "description": "Array of two or more bend tags to merge or an array of one merged bend tag to unmerge"
+    }
+  ],
+  "returns": "True if the bend tags are merged or a merged bend tag is unmerged, false if not",
+  "remarks": "To...\nDo...\nMerge two or more bend tags\nSelect the bend tags to merge.\nSelect the drawing view in which the bend tags exist.\nCall this method with the Merge parameter set to true.\nRebuild the drawing.\nUnmerge a merged bend tag\nSelect the drawing view in which the merged bend tag exists.\nActivate the drawing view in which the merged bend tag exists.\nSelect the merged bend tag to unmerge.\nCall this method with the Merge parameter set to false.",
+  "examples": [
+    {
+      "title": "Merge and Unmerge Bend Tags (C#)",
+      "href": "Merge_and_Unmerge_Bend_Tags_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Merge and Unmerge Bend Tags (VB.NET)",
+      "href": "Merge_and_Unmerge_Bend_Tags_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Merge and Unmerge Bend Tags (VBA)",
+      "href": "Merge_and_Unmerge_Bend_Tags_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "INote.IsBendLineNote"
+  ]
+}

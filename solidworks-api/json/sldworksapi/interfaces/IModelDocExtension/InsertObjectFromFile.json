@@ -1,0 +1,122 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "InsertObjectFromFile",
+    "returns": "SwOLEObject",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "type": "System.String",
+        "description": "Path and filename for the OLE object file"
+      },
+      {
+        "name": "CreateLink",
+        "type": "System.Boolean",
+        "description": "True to create an external link to the OLE object file, false to embed the OLE object on the document"
+      },
+      {
+        "name": "Aspect",
+        "type": "System.Int32",
+        "description": "Viewing aspect of the object as defined in the DVASPECT enumeration (see Remarks )"
+      },
+      {
+        "name": "XPos",
+        "type": "System.Double",
+        "description": "x coordinate for the OLE object"
+      },
+      {
+        "name": "YPos",
+        "type": "System.Double",
+        "description": "y coordinate for the OLE object"
+      },
+      {
+        "name": "ZPos",
+        "type": "System.Double",
+        "description": "z coordinate for the OLE object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.CreateOLEObject",
+      "IModelDocExtension.GetOLEObjectCount",
+      "IModelDocExtension.GetOLEObjects",
+      "IModelDocExtension.ICreateOLEObject",
+      "IModelDocExtension.IGetOLEObjects"
+    ],
+    "keywords": [
+      "ole",
+      "objects",
+      "insertobjectfromfile",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "insert",
+      "object",
+      "file",
+      "path",
+      "string",
+      "create",
+      "link",
+      "boolean",
+      "aspect",
+      "int32",
+      "pos",
+      "double",
+      "sw"
+    ]
+  },
+  "title": "IModelDocExtension.InsertObjectFromFile",
+  "description": "Inserts an OLE object from a file.",
+  "signature": "SwOLEObject InsertObjectFromFile( \n   System.String\nFilePath\n,\n   System.Boolean\nCreateLink\n,\n   System.Int32\nAspect\n,\n   System.Double\nXPos\n,\n   System.Double\nYPos\n,\n   System.Double\nZPos\n)",
+  "parameters": [
+    {
+      "name": "FilePath",
+      "type": "System.String",
+      "description": "Path and filename for the OLE object file"
+    },
+    {
+      "name": "CreateLink",
+      "type": "System.Boolean",
+      "description": "True to create an external link to the OLE object file, false to embed the OLE object on the document"
+    },
+    {
+      "name": "Aspect",
+      "type": "System.Int32",
+      "description": "Viewing aspect of the object as defined in the DVASPECT enumeration (see Remarks )"
+    },
+    {
+      "name": "XPos",
+      "type": "System.Double",
+      "description": "x coordinate for the OLE object"
+    },
+    {
+      "name": "YPos",
+      "type": "System.Double",
+      "description": "y coordinate for the OLE object"
+    },
+    {
+      "name": "ZPos",
+      "type": "System.Double",
+      "description": "z coordinate for the OLE object"
+    }
+  ],
+  "returns": "Newly inserted object",
+  "remarks": "Currently, only the drawing documents use the x,y,z coordinate position. Part and assembly documents place the inserted object at the upper-right corner of the model view.\nThe aspect argument uses the DVASPECT enumeration, which has the following values:\nDVASPECT_CONTENT = 1\nDVASPECT_THUMBNAIL = 2\nDVASPECT_ICON = 4\nDVASPECT_DOCPRINT = 8\nSee the MSDN documentation for additional details about the DVASPECT enumeration.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.CreateOLEObject",
+    "IModelDocExtension.GetOLEObjectCount",
+    "IModelDocExtension.GetOLEObjects",
+    "IModelDocExtension.ICreateOLEObject",
+    "IModelDocExtension.IGetOLEObjects"
+  ]
+}

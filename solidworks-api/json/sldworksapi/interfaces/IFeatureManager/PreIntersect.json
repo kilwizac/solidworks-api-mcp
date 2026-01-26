@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "PreIntersect",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "CapPlanar",
+        "type": "System.Boolean",
+        "description": "True to cap the flat openings of surfaces to define closed volumes, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IIntersectFeatureData"
+    ],
+    "keywords": [
+      "preintersect",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "pre",
+      "intersect",
+      "cap",
+      "planar",
+      "boolean",
+      "object",
+      "data",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.PreIntersect",
+  "description": "Obsolete. Superseded by IFeatureManager::PreIntersect2.",
+  "signature": "System.Object PreIntersect( \n   System.Boolean\nCapPlanar\n)",
+  "parameters": [
+    {
+      "name": "CapPlanar",
+      "type": "System.Boolean",
+      "description": "True to cap the flat openings of surfaces to define closed volumes, false to not"
+    }
+  ],
+  "returns": "Array of intersect bodies",
+  "remarks": "Before calling this method, you must select the intersecting\nsurfaces\n,\nsolids\n, or\nplanes\nthat make up the intersect feature.\nAfter calling this method, call\nIFeatureManager::PostIntersect\nto create the intersect feature.",
+  "examples": [
+    {
+      "title": "Get Intersect Feature Data (VBA)",
+      "href": "Get_Intersect_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersect Feature Data (VB.NET)",
+      "href": "Get_Intersect_Feature_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersect Feature Data (C#)",
+      "href": "Get_Intersect_Feature_Data_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IIntersectFeatureData"
+  ]
+}

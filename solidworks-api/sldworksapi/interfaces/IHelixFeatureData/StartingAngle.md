@@ -1,0 +1,40 @@
+---
+type: property
+interface: IHelixFeatureData
+member: StartingAngle
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related: []
+keywords:
+  - startingangle
+  - ihelixfeaturedata
+  - helix
+  - feature
+  - data
+  - starting
+  - angle
+  - double
+readonly: null
+---
+
+# IHelixFeatureData.StartingAngle
+
+Gets or sets the angle for the first turn of this helix feature.
+
+## Signature
+
+```csharp
+System.Double StartingAngle {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Angle for the first turn

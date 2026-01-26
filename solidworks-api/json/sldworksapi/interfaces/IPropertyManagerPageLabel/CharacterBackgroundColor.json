@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageLabel",
+    "member": "CharacterBackgroundColor",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StartChar",
+        "type": "System.Int16",
+        "description": "0-based index value of start character"
+      },
+      {
+        "name": "EndChar",
+        "type": "System.Int16",
+        "description": "0-based index value of end character"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "characterbackgroundcolor",
+      "ipropertymanagerpagelabel",
+      "manager",
+      "page",
+      "label",
+      "character",
+      "background",
+      "color",
+      "start",
+      "char",
+      "int16",
+      "end",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageLabel.CharacterBackgroundColor",
+  "description": "Gets or sets the background color for the specified range of characters in this PropertyManager label.",
+  "signature": "System.Int32 CharacterBackgroundColor( \n   System.Int16\nStartChar\n,\n   System.Int16\nEndChar\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "StartChar",
+      "type": "System.Int16",
+      "description": "0-based index value of start character"
+    },
+    {
+      "name": "EndChar",
+      "type": "System.Int16",
+      "description": "0-based index value of end character"
+    }
+  ],
+  "returns": "RGB value for the text background color for the specified characters; if not specified, then the background color for this control is used",
+  "remarks": "You can use a\ngroup box\nwith just a\nlabel\nto look like a\nmessage box\non a PropertyManager page. Set the\nbackground of the group box\nand the background of the label to the same color and the\nlabel text\nto a different color. You can also position the group box anywhere on the PropertyManager page.\nNOTE:\nIf you want to set the background color of the message box to be the same as the color typically used by SOLIDWORKS for a message box, use\nISldWorks::GetUserPreferenceIntegerValue\nswPropertyManagerColorImportantMessage to get the COLORREF value.",
+  "examples": [],
+  "related": []
+}

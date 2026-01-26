@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBaseFlangeFeatureData",
+    "member": "UseReliefRatio",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "usereliefratio",
+      "ibaseflangefeaturedata",
+      "base",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "relief",
+      "ratio",
+      "boolean"
+    ],
+    "readonly": true
+  },
+  "title": "IBaseFlangeFeatureData.UseReliefRatio",
+  "description": "Gets whether the relief ratio is used in this base flange feature.",
+  "signature": "System.Boolean UseReliefRatio {get;}",
+  "parameters": [],
+  "returns": "True uses the relief ratio, false uses relief depth / relief width",
+  "remarks": "This property is valid when:\nIBaseFlangeFeatureData::UseDefaultBendRelief\nis false,\n- and -\nIBaseFlangeFeatureData::ReliefType\nis\nswSheetMetalReliefTypes_e\n.swSheetMetalReliefRectangular or swSheetMetalReliefTypes_e.swSheetMetalReliefObround.\nIf this property is:\nTrue, then use\nIBaseFlangeFeatureData::ReliefRatio\nto get the relief ratio used to\ninitialize\nthis base flange.\nFalse, then use\nIBaseFlangeFeatureData::ReliefWidth\nand\nIBaseFlangeFeatureData::ReliefDepth\nto get the relief width and relief depth used to initialize this base flange.\nWhether to use a relief ratio was set during the\ninitialization\nof this base flange and cannot be changed.",
+  "examples": [
+    {
+      "title": "IBaseFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBaseFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

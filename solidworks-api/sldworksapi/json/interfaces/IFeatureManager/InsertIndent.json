@@ -1,0 +1,130 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertIndent",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness of the indent feature"
+      },
+      {
+        "name": "Clearance",
+        "type": "System.Double",
+        "description": "Distance between the tool body and target body (see Remarks )"
+      },
+      {
+        "name": "Exclude",
+        "type": "System.Boolean",
+        "description": "True to exclude the selections, false to include the selections"
+      },
+      {
+        "name": "ClrDir",
+        "type": "System.Boolean",
+        "description": "True to leave the direction of clearance as is, false to reverse the direction of the clearance"
+      },
+      {
+        "name": "Cut",
+        "type": "System.Boolean",
+        "description": "True to cut the target body, false to not"
+      },
+      {
+        "name": "CutDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the cut if the tool body is a surface, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IIndentFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "indent",
+      "indentfeaturedata",
+      "iindentfeaturedata",
+      "insertindent",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "thickness",
+      "double",
+      "clearance",
+      "exclude",
+      "boolean",
+      "clr",
+      "dir",
+      "cut",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertIndent",
+  "description": "Inserts an indent feature using a selected target body and tool body regions.",
+  "signature": "Feature InsertIndent( \n   System.Double\nThickness\n,\n   System.Double\nClearance\n,\n   System.Boolean\nExclude\n,\n   System.Boolean\nClrDir\n,\n   System.Boolean\nCut\n,\n   System.Boolean\nCutDir\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness of the indent feature"
+    },
+    {
+      "name": "Clearance",
+      "type": "System.Double",
+      "description": "Distance between the tool body and target body (see Remarks )"
+    },
+    {
+      "name": "Exclude",
+      "type": "System.Boolean",
+      "description": "True to exclude the selections, false to include the selections"
+    },
+    {
+      "name": "ClrDir",
+      "type": "System.Boolean",
+      "description": "True to leave the direction of clearance as is, false to reverse the direction of the clearance"
+    },
+    {
+      "name": "Cut",
+      "type": "System.Boolean",
+      "description": "True to cut the target body, false to not"
+    },
+    {
+      "name": "CutDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the cut if the tool body is a surface, false to not"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Prior to calling this method, you must have selected the target body and tool body regions, using these selection marks:\nTarget body = 1\nTool body region = 4",
+  "examples": [
+    {
+      "title": "Insert Indent Feature (C#)",
+      "href": "Insert_Indent_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Indent Feature (VB.NET)",
+      "href": "Insert_Indent_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Indent Feature (VBA)",
+      "href": "Insert_Indent_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IIndentFeatureData"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "Diametric",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.DisplayAsLinear",
+      "IDisplayDimension.GetType",
+      "IDisplayDimension.Type2"
+    ],
+    "keywords": [
+      "diameter",
+      "dimension",
+      "diametric",
+      "idisplaydimension",
+      "display",
+      "boolean",
+      "change",
+      "radial",
+      "style",
+      "vba",
+      "create",
+      "non",
+      "associative"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.Diametric",
+  "description": "Gets or sets whether this display dimension is radial/single distance or diameter/doubled distance.",
+  "signature": "System.Boolean Diametric {get; set;}",
+  "parameters": [],
+  "returns": "True to display the diameter/doubled distance dimension, false to display the radial/single distance dimension",
+  "remarks": "Depending on the\ntype\nof this display dimension, this property toggles between:\nradial and diameter display dimensions\nradial linear and diametric linear display dimensions\nThis property does not affect other types of dimensions.\nUse\nIModelDocExtension::AddSpecificDimension\nto create single or doubled distance display dimensions.\nAfter using this property, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [
+    {
+      "title": "Change Radial to Diametric Style (VBA)",
+      "href": "Change_Radial_to_Diametric_Style_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Non-associative Diameter Dimension (VBA)",
+      "href": "Create_Non-associative_Diameter_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.DisplayAsLinear",
+    "IDisplayDimension.GetType",
+    "IDisplayDimension.Type2"
+  ]
+}

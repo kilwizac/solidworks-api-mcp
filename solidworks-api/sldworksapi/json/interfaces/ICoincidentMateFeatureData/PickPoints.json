@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICoincidentMateFeatureData",
+    "member": "PickPoints",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "pickpoints",
+      "icoincidentmatefeaturedata",
+      "coincident",
+      "mate",
+      "feature",
+      "data",
+      "pick",
+      "points",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ICoincidentMateFeatureData.PickPoints",
+  "description": "Gets or sets the pick points for the entities to mate in this coincident mate.",
+  "signature": "System.Object PickPoints {get; set;}",
+  "parameters": [],
+  "returns": "Array of x, y, z-coordinates, one set for each mate entity in ICoincidentMateFeatureData::EntitiesToMate",
+  "remarks": "Pick points define the position of the entities to mate. If no pick points are specified, then entities are mated using default pick points.\nAfter you create this mate using the pick points for a given selection of ICoincidentMateFeatureData::EntitiesToMate, you cannot edit the pick points. If you want to use new pick points, then you must create an entirely new coincident mate with mate entities and pick points.\nIf you pre-select the mate entities by coordinates (e.g.,\nIModelDocExtension::SelectByID2\n), then you do not need to specify pick points.",
+  "examples": [],
+  "related": []
+}

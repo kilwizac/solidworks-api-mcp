@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swShowMessageBarResult_e",
+    "description": "Message bar display result codes.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swShowMessageBarResult_e",
+  "description": "Message bar display result codes.",
+  "values": [
+    {
+      "member": "swShowMessageBarResult_DontShowAgain",
+      "value": "1",
+      "description": "= The message bar is not shown when \"Don't show again\" is selected"
+    },
+    {
+      "member": "swShowMessageBarResult_FailedInvalidDefinition",
+      "value": "2",
+      "description": "= The message bar could not be displayed due to an invalid definition (e.g., empty title/description)"
+    },
+    {
+      "member": "swShowMessageBarResult_FailedInvalidHandler",
+      "value": "3",
+      "description": "= The message bar could not be desiplayed because the Handler argument is NULL or does not support the expected interface"
+    },
+    {
+      "member": "swShowMessageBarResult_Shown",
+      "value": "0",
+      "description": "= The modeless message bar is shown"
+    }
+  ]
+}

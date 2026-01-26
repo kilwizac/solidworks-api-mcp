@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISafeArrayUtility",
+    "member": "PutBstr",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "VariantArray",
+        "type": "System.Object",
+        "description": "Variant SafeArray of BSTRs"
+      },
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of BSTR"
+      },
+      {
+        "name": "Value",
+        "type": "System.String",
+        "description": "BSTR"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISafeArrayUtility.GetBstr"
+    ],
+    "keywords": [
+      "putbstr",
+      "isafearrayutility",
+      "safe",
+      "array",
+      "utility",
+      "put",
+      "bstr",
+      "variant",
+      "object",
+      "index",
+      "int32",
+      "value",
+      "string",
+      "void"
+    ]
+  },
+  "title": "ISafeArrayUtility.PutBstr",
+  "description": "Adds the specified BSTR to a Variant SafeArray of BSTRs.",
+  "signature": "void PutBstr( \n   out System.Object\nVariantArray\n,\n   System.Int32\nIndex\n,\n   System.String\nValue\n)",
+  "parameters": [
+    {
+      "name": "VariantArray",
+      "type": "System.Object",
+      "description": "Variant SafeArray of BSTRs"
+    },
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of BSTR"
+    },
+    {
+      "name": "Value",
+      "type": "System.String",
+      "description": "BSTR"
+    }
+  ],
+  "returns": "",
+  "remarks": "Be aware that calling ISafeArrayUtility::PutBstr within a loop that inserts a BSTR repeatedly declared on the stack results in an array of pointers to the same BSTR; i.e., all elements of the SafeArray are the same, which is most likely not your intention. For example, you should avoid using code similar to the following:\nfor (ULONG ulIndex = 0L; ulIndex < ulSize; ulIndex++)\n{\nCString testString;\ntestString.Format(_T('Index = %d'), ulIndex);\nCComBSTR bstrTemp = testString;\nHRESULT hres = iSAUtil->PutBstr(&vPacked, ulIndex, bstrTemp);\nbstrArray[ulIndex] = bstrTemp;\n}",
+  "examples": [],
+  "related": [
+    "ISafeArrayUtility.GetBstr"
+  ]
+}

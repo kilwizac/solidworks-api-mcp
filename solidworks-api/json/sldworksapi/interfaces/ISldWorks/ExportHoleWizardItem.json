@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ExportHoleWizardItem",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StdToExport",
+        "type": "System.String",
+        "description": "Standard to export (see Remarks )"
+      },
+      {
+        "name": "DestinationFolderPath",
+        "type": "System.String",
+        "description": "Path where to export the data (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ImportHoleWizardItem"
+    ],
+    "keywords": [
+      "exportholewizarditem",
+      "isldworks",
+      "sld",
+      "works",
+      "export",
+      "hole",
+      "wizard",
+      "item",
+      "std",
+      "string",
+      "destination",
+      "folder",
+      "path",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.ExportHoleWizardItem",
+  "description": "Exports data for the specified Hole Wizard standard.",
+  "signature": "System.Int32 ExportHoleWizardItem( \n   System.String\nStdToExport\n,\n   System.String\nDestinationFolderPath\n)",
+  "parameters": [
+    {
+      "name": "StdToExport",
+      "type": "System.String",
+      "description": "Standard to export (see Remarks )"
+    },
+    {
+      "name": "DestinationFolderPath",
+      "type": "System.String",
+      "description": "Path where to export the data (see Remarks )"
+    }
+  ],
+  "returns": "0 if successful, 1 if errors",
+  "remarks": "Specify StdToImport with the path and file name as shown on the Hole Wizard tab of the Toolbox, e.g., \"\nansi inch\\Counterbore Holes\\Hex Bolt\n\".\nSpecify DestinationFolderPath with the path where to create the Excel Workbook (\n*.xslx\n). The data is exported to a file whose name is formatted as follows:\nstandard\n_\nhole class\n_\nhole type\n.xslx",
+  "examples": [],
+  "related": [
+    "ISldWorks.ImportHoleWizardItem"
+  ]
+}

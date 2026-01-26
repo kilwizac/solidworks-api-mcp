@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SaveAsText2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path and filename of text data file (see Remarks )"
+      },
+      {
+        "name": "Separator",
+        "type": "System.String",
+        "description": "Character or string to use to separate each of the text within each of the cells in the table in the text file (see Remarks )"
+      },
+      {
+        "name": "IncludeHidden",
+        "type": "System.Boolean",
+        "description": "True to include text in hidden cells, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "file-io"
+    ],
+    "related": [
+      "ITableAnnotation.SaveAsPDF",
+      "ITableAnnotation.SaveAsTemplate"
+    ],
+    "keywords": [
+      "table",
+      "save",
+      "text",
+      "saveastext2",
+      "itableannotation",
+      "annotation",
+      "text2",
+      "file",
+      "name",
+      "string",
+      "separator",
+      "include",
+      "hidden",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SaveAsText2",
+  "description": "Saves this table to a text data file.",
+  "signature": "System.Boolean SaveAsText2( \n   System.String\nFileName\n,\n   System.String\nSeparator\n,\n   System.Boolean\nIncludeHidden\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path and filename of text data file (see Remarks )"
+    },
+    {
+      "name": "Separator",
+      "type": "System.String",
+      "description": "Character or string to use to separate each of the text within each of the cells in the table in the text file (see Remarks )"
+    },
+    {
+      "name": "IncludeHidden",
+      "type": "System.Boolean",
+      "description": "True to include text in hidden cells, false to not"
+    }
+  ],
+  "returns": "True if table is saved as a text file, false if not",
+  "remarks": "FileName should include the path, filename, and filename extension to which to save the table as a text file.\nIf a file of the specified name in the specified path...\nThen it is...\nExists\nOverwritten\nDoes not exist\nCreated\nSeparator is typically a single character, but it can be a string. If Separator is empty, then the tab character is used.\nNOTE\n: Although you can save a table as a text file for use with other applications, like Microsoft Excel, you cannot currently import a text file to a table in SOLIDWORKS.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.SaveAsPDF",
+    "ITableAnnotation.SaveAsTemplate"
+  ]
+}

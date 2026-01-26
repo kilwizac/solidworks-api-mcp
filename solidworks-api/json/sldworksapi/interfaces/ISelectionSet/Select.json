@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionSet",
+    "member": "Select",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "selection",
+      "select",
+      "see",
+      "also",
+      "iselectionmgr",
+      "objects",
+      "iselectionset",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISelectionSet.Select",
+  "description": "Selects all of the objects in this selection set.",
+  "signature": "System.Boolean Select()",
+  "parameters": [],
+  "returns": "True if all of the objects in this selection set are selected, false if not (see Remarks )",
+  "remarks": "To use this method:\nCall\nISelectionMgr::SuspendSelectionList\nto suspend the current selection list, preserving its contents and starting a new selection list.\nCall ISelectionSet::Select to add the objects in the selection set to the new selection list.\nProcess the objects in the new selection list.\nCall\nISelectionMgr::ResumeSelectionList\nto reinstate the suspended selection list.",
+  "examples": [
+    {
+      "title": "Get Objects in Selection Set (C#)",
+      "href": "Get_Objects_in_Selection_Set_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Objects in Selection Set (VB.NET)",
+      "href": "Get_Objects_in_Selection_Set_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Objects in Selection Set (VBA)",
+      "href": "Get_Objects_in_Selection_Set_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

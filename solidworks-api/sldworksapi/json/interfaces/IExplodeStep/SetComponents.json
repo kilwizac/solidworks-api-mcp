@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExplodeStep",
+    "member": "SetComponents",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Components",
+        "type": "System.Object",
+        "description": "Array of components"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IExplodeStep.GetComponents"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "explode",
+      "step",
+      "setcomponents",
+      "iexplodestep",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IExplodeStep.SetComponents",
+  "description": "Specifies the components of this explode step.",
+  "signature": "void SetComponents( \n   System.Object\nComponents\n)",
+  "parameters": [
+    {
+      "name": "Components",
+      "type": "System.Object",
+      "description": "Array of components"
+    }
+  ],
+  "returns": "",
+  "remarks": "Modifying components during editing of this regular explode step modifies the rotational axis if:\nthe rotational axis was not provided during creation,\n- and -\nthe component to which it referred (the last component in the selection list) was removed during editing.\nIn that case, a rotational axis using the last selected component in the selection list is created.",
+  "examples": [],
+  "related": [
+    "IExplodeStep.GetComponents"
+  ]
+}

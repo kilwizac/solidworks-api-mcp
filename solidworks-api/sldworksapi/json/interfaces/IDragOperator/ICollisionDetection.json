@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDragOperator",
+    "member": "ICollisionDetection",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of components for collision detection"
+      },
+      {
+        "name": "ComponentArray",
+        "type": "Component2",
+        "description": "Array of components for collision detection"
+      },
+      {
+        "name": "PartOnly",
+        "type": "System.Boolean",
+        "description": "True checks for collisions with only the components that you selected to move, false check for collisions in all affected components"
+      },
+      {
+        "name": "StopAt",
+        "type": "System.Boolean",
+        "description": "True stops the motion of the component when it touches any other entity, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IDragOperator.CollisionDetection",
+      "IDragOperator.CollisionDetectionEnabled"
+    ],
+    "keywords": [
+      "icollisiondetection",
+      "idragoperator",
+      "drag",
+      "operator",
+      "collision",
+      "detection",
+      "count",
+      "int32",
+      "component",
+      "array",
+      "component2",
+      "part",
+      "only",
+      "boolean",
+      "stop"
+    ]
+  },
+  "title": "IDragOperator.ICollisionDetection",
+  "description": "Sets the collision detection parameters.",
+  "signature": "System.Boolean ICollisionDetection( \n   System.Int32\nCount\n,\n   ref Component2\nComponentArray\n,\n   System.Boolean\nPartOnly\n,\n   System.Boolean\nStopAt\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of components for collision detection"
+    },
+    {
+      "name": "ComponentArray",
+      "type": "Component2",
+      "description": "Array of components for collision detection"
+    },
+    {
+      "name": "PartOnly",
+      "type": "System.Boolean",
+      "description": "True checks for collisions with only the components that you selected to move, false check for collisions in all affected components"
+    },
+    {
+      "name": "StopAt",
+      "type": "System.Boolean",
+      "description": "True stops the motion of the component when it touches any other entity, false does not"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IDragOperator.CollisionDetection",
+    "IDragOperator.CollisionDetectionEnabled"
+  ]
+}

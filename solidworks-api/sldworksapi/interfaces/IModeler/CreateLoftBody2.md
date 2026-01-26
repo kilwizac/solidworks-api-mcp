@@ -1,0 +1,281 @@
+---
+type: method
+interface: IModeler
+member: CreateLoftBody2
+returns: Body2
+parameters:
+  -
+    name: PModDoc
+    type: ModelDoc2
+    description: Model document in which to create the loft body
+  -
+    name: Profile
+    type: System.Object
+    description: Array of sketches representing the profiles of the loft body
+  -
+    name: GuideCurve
+    type: System.Object
+    description: Array of sketches representing the guide curves of the loft body
+  -
+    name: Centerline
+    type: System.Object
+    description: Sketch representing a centerline of the loft body
+  -
+    name: IsThinBody
+    type: System.Boolean
+    description: True if the loft body is to be a thin body, false if not
+  -
+    name: ThinType
+    type: System.Int32
+    description: 0 = One direction 1 = One direction reverse 2 = Midplane 3 = Two direction
+  -
+    name: Thickness1
+    type: System.Double
+    description: Value for thickness for first direction if a thin body
+  -
+    name: Thickness2
+    type: System.Double
+    description: Value for thickness for second direction if a thin body
+  -
+    name: FeatureScope
+    type: System.Boolean
+    description: True if the loft body only affects selected bodies, false if the loft body affects all bodies
+  -
+    name: IsBlendClosed
+    type: System.Boolean
+    description: True for a closed loft, false for an open loft; if true and you selected less that three profiles, then any selected guide curves must be closed curves
+  -
+    name: KeepTangency
+    type: System.Boolean
+    description: If the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; specify true to maintain the tangency as seen in the section curves, false to not NOTE: When generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics.
+  -
+    name: ForceNonRational
+    type: System.Boolean
+    description: True to force the resulting surface to be non-rational, false to not
+  -
+    name: IsSolidBody
+    type: System.Boolean
+    description: True to return a solid loft body, false to return a surface loft body
+  -
+    name: TessTolFactor
+    type: System.Double
+    description: Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created
+  -
+    name: StartTangentLength
+    type: System.Double
+    description: Start tangent length
+  -
+    name: EndTangentLength
+    type: System.Double
+    description: End tangent length
+  -
+    name: StartTangentDir
+    type: System.Boolean
+    description: True is one direction, false is the opposite direction
+  -
+    name: EndTangentDir
+    type: System.Boolean
+    description: True is one direction, false is the opposite direction
+  -
+    name: StartMatchingType
+    type: System.Int32
+    description: Tangency type at the start profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to the selected vector 3 = tangent to all adjacent faces sharing an edge with the start profile
+  -
+    name: EndMatchingType
+    type: System.Int32
+    description: Tangency type as the end profile : 0 = none 1 = tangent to the normal of the profile 2 = tangent to the selected vector 3 = tangent to all adjacent faces sharing an edge with the start profile
+  -
+    name: Merge
+    type: System.Boolean
+    description: True merges the results in a multibody part, false does not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+  - geometry
+related:
+  - IFeatureManager.InsertCutBlend
+  - IFeatureManager.InsertProtrusionBlend
+  - IModelDoc2.InsertLoftRefSurface2
+  - IModeler.CreateLoftSurface
+  - IModeler.ICreateLoftSurface
+keywords:
+  - bodies
+  - see
+  - also
+  - ibody2
+  - loft
+  - lofts
+  - iloftfeaturedata
+  - body
+  - surfaces
+  - surface
+  - isurface
+  - createloftbody2
+  - imodeler
+  - modeler
+  - create
+  - body2
+  - mod
+  - doc
+  - model
+  - doc2
+  - profile
+  - object
+  - guide
+  - curve
+  - centerline
+  - thin
+  - boolean
+  - type
+  - int32
+  - thickness1
+  - double
+  - thickness2
+  - feature
+  - scope
+  - blend
+  - closed
+  - keep
+  - tangency
+  - force
+  - non
+  - rational
+  - solid
+  - tess
+  - tol
+  - factor
+  - start
+  - tangent
+  - length
+  - end
+  - dir
+  - matching
+  - merge
+  - change
+  - vba
+  - vb
+  - net
+---
+
+# IModeler.CreateLoftBody2
+
+Creates a loft body using the specified profiles, guide curves, and centerline.
+
+## Signature
+
+```csharp
+Body2 CreateLoftBody2( 
+   ModelDoc2
+PModDoc
+,
+   System.Object
+Profile
+,
+   System.Object
+GuideCurve
+,
+   System.Object
+Centerline
+,
+   System.Boolean
+IsThinBody
+,
+   System.Int32
+ThinType
+,
+   System.Double
+Thickness1
+,
+   System.Double
+Thickness2
+,
+   System.Boolean
+FeatureScope
+,
+   System.Boolean
+IsBlendClosed
+,
+   System.Boolean
+KeepTangency
+,
+   System.Boolean
+ForceNonRational
+,
+   System.Boolean
+IsSolidBody
+,
+   System.Double
+TessTolFactor
+,
+   System.Double
+StartTangentLength
+,
+   System.Double
+EndTangentLength
+,
+   System.Boolean
+StartTangentDir
+,
+   System.Boolean
+EndTangentDir
+,
+   System.Int32
+StartMatchingType
+,
+   System.Int32
+EndMatchingType
+,
+   System.Boolean
+Merge
+)
+```
+## Parameters
+
+- `PModDoc` (ModelDoc2): Model document in which to create the loft body
+- `Profile` (System.Object): Array of sketches representing the profiles of the loft body
+- `GuideCurve` (System.Object): Array of sketches representing the guide curves of the loft body
+- `Centerline` (System.Object): Sketch representing a centerline of the loft body
+- `IsThinBody` (System.Boolean): True if the loft body is to be a thin body, false if not
+- `ThinType` (System.Int32): 0 = One direction 1 = One direction reverse 2 = Midplane 3 = Two direction
+- `Thickness1` (System.Double): Value for thickness for first direction if a thin body
+- `Thickness2` (System.Double): Value for thickness for second direction if a thin body
+- `FeatureScope` (System.Boolean): True if the loft body only affects selected bodies, false if the loft body affects all bodies
+- `IsBlendClosed` (System.Boolean): True for a closed loft, false for an open loft; if true and you selected less that three profiles, then any selected guide curves must be closed curves
+- `KeepTangency` (System.Boolean): If the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; specify true to maintain the tangency as seen in the section curves, false to not NOTE: When generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics.
+- `ForceNonRational` (System.Boolean): True to force the resulting surface to be non-rational, false to not
+- `IsSolidBody` (System.Boolean): True to return a solid loft body, false to return a surface loft body
+- `TessTolFactor` (System.Double): Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created
+- `StartTangentLength` (System.Double): Start tangent length
+- `EndTangentLength` (System.Double): End tangent length
+- `StartTangentDir` (System.Boolean): True is one direction, false is the opposite direction
+- `EndTangentDir` (System.Boolean): True is one direction, false is the opposite direction
+- `StartMatchingType` (System.Int32): Tangency type at the start profile: 0 = none 1 = tangent to the normal of the profile 2 = tangent to the selected vector 3 = tangent to all adjacent faces sharing an edge with the start profile
+- `EndMatchingType` (System.Int32): Tangency type as the end profile : 0 = none 1 = tangent to the normal of the profile 2 = tangent to the selected vector 3 = tangent to all adjacent faces sharing an edge with the start profile
+- `Merge` (System.Boolean): True merges the results in a multibody part, false does not
+
+## Return Value
+
+Loft body
+
+## Remarks
+
+Specifying guide curves and a centerline are optional. It is best to use guide curves, especially when you select profiles in the FeatureManager design tree.
+You must specify the profiles in an order consistent with the desired direction of the loft. If creating a solid loft body, then the profiles must be closed. You can use any number of profiles. However, if you specify only one profile, then any specified guide curves must be closed curves.
+Linear edge, sketch line, axis, plane and planar faces are qualified for tangency vector sections.
+
+## Examples
+
+- Create Loft Surface Body and Change Into Feature (VBA) (Create_Loft_Surface_Body_and_Change_Into_Feature_Example_VB.htm)
+- Create Loft Body (VB.NET) (Create_Loft_Body_Example_VBNET.htm)
+- Create Loft Body (VBA) (Create_Loft_Body_Example_VB.htm)
+- Create Loft Body (C#) (Create_Loft_Body_Example_CSharp.htm)
+
+## See Also
+
+- `IFeatureManager.InsertCutBlend`
+- `IFeatureManager.InsertProtrusionBlend`
+- `IModelDoc2.InsertLoftRefSurface2`
+- `IModeler.CreateLoftSurface`
+- `IModeler.ICreateLoftSurface`

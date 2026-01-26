@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "EnumDocuments2",
+    "returns": "EnumDocuments2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActiveDoc",
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.GetFirstDocument",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.IActiveDoc2",
+      "ISldWorks.IGetFirstDocument2"
+    ],
+    "keywords": [
+      "document",
+      "open",
+      "enumdocuments2",
+      "isldworks",
+      "sld",
+      "works",
+      "documents2",
+      "list",
+      "documents"
+    ]
+  },
+  "title": "ISldWorks.EnumDocuments2",
+  "description": "Gets a list of documents currently open in the application.",
+  "signature": "EnumDocuments2 EnumDocuments2()",
+  "parameters": [],
+  "returns": "Documents enumeration",
+  "remarks": "The list of\nIModelDoc2\nobjects contained in the\nIEnumDocuments2\nobject contain any open IModelDoc2 pointer. This includes IModelDoc2 objects that may have been opened as file references, for example, from an assembly or drawing.\nYou might want to use the\nIModelDoc::Visible\nproperty to determine if a particular document has its own window and is visible to the user.",
+  "examples": [
+    {
+      "title": "Get List of Open Documents (C++)",
+      "href": "Get_List_of_Open_Documents_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ActiveDoc",
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.GetFirstDocument",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.IActiveDoc2",
+    "ISldWorks.IGetFirstDocument2"
+  ]
+}

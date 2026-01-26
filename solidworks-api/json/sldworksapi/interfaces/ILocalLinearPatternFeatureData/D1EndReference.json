@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILocalLinearPatternFeatureData",
+    "member": "D1EndReference",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ILocalLinearPatternFeatureData.D1EndReferenceType"
+    ],
+    "keywords": [
+      "d1endreference",
+      "ilocallinearpatternfeaturedata",
+      "local",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "d1",
+      "end",
+      "reference",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ILocalLinearPatternFeatureData.D1EndReference",
+  "description": "Gets or sets the up-to reference entity in Direction 1 for this linear component pattern feature.",
+  "signature": "System.Object D1EndReference {get; set;}",
+  "parameters": [],
+  "returns": "Pattern's up-to reference ( vertex , edge , face , or plane ) in Direction 1",
+  "remarks": "This property is valid only if\nILocalLinearPatternFeatureData::D1EndCondition\nis set to\nswPatternEndCondition_e\n.swPatternEndCondition_UpToReference.\nTo pre-select, use selection Mark = 256.\nDuring edit of this property, if you specify an invalid entity\nIFeature::ModifyDefinition\nreturns false and the feature does not roll back. To roll back the feature, call\nIModelDoc2::ForceRebuild3\nor move the rollback bar in the user interface to before and after the feature.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.\nFor more information, see the\nLinear Component Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": [
+    "ILocalLinearPatternFeatureData.D1EndReferenceType"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParagraphs",
+    "member": "SetFormatting",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Paragraphspacing",
+        "type": "System.Double",
+        "description": "Paragraph spacing"
+      },
+      {
+        "name": "LineSpacing",
+        "type": "System.Double",
+        "description": "Line spacing"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IParagraphs.GetFormatting"
+    ],
+    "keywords": [
+      "setformatting",
+      "iparagraphs",
+      "paragraphs",
+      "formatting",
+      "paragraphspacing",
+      "double",
+      "line",
+      "spacing",
+      "boolean"
+    ]
+  },
+  "title": "IParagraphs.SetFormatting",
+  "description": "Sets the formatting of the current paragraph.",
+  "signature": "System.Boolean SetFormatting( \n   System.Double\nParagraphspacing\n,\n   System.Double\nLineSpacing\n)",
+  "parameters": [
+    {
+      "name": "Paragraphspacing",
+      "type": "System.Double",
+      "description": "Paragraph spacing"
+    },
+    {
+      "name": "LineSpacing",
+      "type": "System.Double",
+      "description": "Line spacing"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, set the current paragraph using\nIParagraphs::CurrentParagraph\n.\nAfter calling this method, call\nIParagraphs::UpdateParagraph\nto update the model.",
+  "examples": [
+    {
+      "title": "IParagraphs",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IParagraphs",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IParagraphs.GetFormatting"
+  ]
+}

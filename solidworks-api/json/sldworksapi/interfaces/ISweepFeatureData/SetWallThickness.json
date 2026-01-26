@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "SetWallThickness",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Forward",
+        "type": "System.Boolean",
+        "description": "True for Direction 1, false for Direction 2 (see Remarks )"
+      },
+      {
+        "name": "WallThickness",
+        "type": "System.Double",
+        "description": "Wall thickness"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.GetWallThickness",
+      "ISweepFeatureData.IsThinFeature",
+      "ISweepFeatureData.ThinFeature"
+    ],
+    "keywords": [
+      "thin",
+      "features",
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "feature",
+      "setwallthickness",
+      "sweep",
+      "data",
+      "wall",
+      "thickness",
+      "forward",
+      "boolean",
+      "double",
+      "void"
+    ]
+  },
+  "title": "ISweepFeatureData.SetWallThickness",
+  "description": "Sets the wall thickness, forward (Direction 1) or reverse (Direction 2), of this thin-walled sweep feature.",
+  "signature": "void SetWallThickness( \n   System.Boolean\nForward\n,\n   System.Double\nWallThickness\n)",
+  "parameters": [
+    {
+      "name": "Forward",
+      "type": "System.Boolean",
+      "description": "True for Direction 1, false for Direction 2 (see Remarks )"
+    },
+    {
+      "name": "WallThickness",
+      "type": "System.Double",
+      "description": "Wall thickness"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method:\nis valid only if\nISweepFeatureData::IsThinFeature\nis true.\nsets the thickness in Direction 1 and Direction 2, depending on\nISweepFeaureData::ThinWallType\n.\nis not valid for swept-surface features.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.GetWallThickness",
+    "ISweepFeatureData.IsThinFeature",
+    "ISweepFeatureData.ThinFeature"
+  ]
+}

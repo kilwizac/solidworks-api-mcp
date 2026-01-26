@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetColumnTitle",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the column whose title to set"
+      },
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Column title"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.ColumnCount",
+      "ITableAnnotation.ColumnHidden",
+      "ITableAnnotation.DeleteColumn",
+      "ITableAnnotation.GetColumnTitle",
+      "ITableAnnotation.GetColumnType",
+      "ITableAnnotation.GetColumnWidth",
+      "ITableAnnotation.GetLockColumnWidth",
+      "ITableAnnotation.InsertColumn",
+      "ITableAnnotation.MoveColumn",
+      "ITableAnnotation.SetColumnType",
+      "ITableAnnotation.SetColumnWidth",
+      "ITableAnnotation.SetLockColumnWidth",
+      "ITableAnnotation.TotalColumnCount"
+    ],
+    "keywords": [
+      "setcolumntitle",
+      "itableannotation",
+      "table",
+      "annotation",
+      "column",
+      "title",
+      "index",
+      "int32",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SetColumnTitle",
+  "description": "Obsolete. Superseded by ITableAnnotation::SetColumnTitle2.",
+  "signature": "System.Boolean SetColumnTitle( \n   System.Int32\nIndex\n,\n   System.String\nTitle\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the column whose title to set"
+    },
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Column title"
+    }
+  ],
+  "returns": "True if title is set, false if not",
+  "remarks": "The index for both rows and columns is 0-based.\nFalse is returned if the table does not have a header enabled. The title cannot be set to empty text.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.ColumnCount",
+    "ITableAnnotation.ColumnHidden",
+    "ITableAnnotation.DeleteColumn",
+    "ITableAnnotation.GetColumnTitle",
+    "ITableAnnotation.GetColumnType",
+    "ITableAnnotation.GetColumnWidth",
+    "ITableAnnotation.GetLockColumnWidth",
+    "ITableAnnotation.InsertColumn",
+    "ITableAnnotation.MoveColumn",
+    "ITableAnnotation.SetColumnType",
+    "ITableAnnotation.SetColumnWidth",
+    "ITableAnnotation.SetLockColumnWidth",
+    "ITableAnnotation.TotalColumnCount"
+  ]
+}

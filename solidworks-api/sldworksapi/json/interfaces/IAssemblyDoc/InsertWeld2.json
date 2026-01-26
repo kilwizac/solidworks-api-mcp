@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertWeld2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.String",
+        "description": "Weld bead type"
+      },
+      {
+        "name": "Shape",
+        "type": "System.String",
+        "description": "Surface shape"
+      },
+      {
+        "name": "TopDelta",
+        "type": "System.Double",
+        "description": "Distance for the top surface delta, if appropriate"
+      },
+      {
+        "name": "BottomDelta",
+        "type": "System.Double",
+        "description": "Distance for the bottom surface delta, if appropriate"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Weld radius, if appropriate"
+      },
+      {
+        "name": "Part",
+        "type": "System.String",
+        "description": "Path and filename for the part used for the weld; this file is created and merged into your assembly"
+      },
+      {
+        "name": "TopFaces",
+        "type": "System.Object",
+        "description": "Array of faces from which to measure the top surface delta"
+      },
+      {
+        "name": "StopFace",
+        "type": "System.Object",
+        "description": "Array of faces that define the beginning and the end of the weld bead"
+      },
+      {
+        "name": "ContactFaces",
+        "type": "System.Object",
+        "description": "Array of faces that are joined by the weld bead"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IWeldBead",
+      "IWeldmentBeadFeatureData"
+    ],
+    "keywords": [
+      "insertweld2",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "insert",
+      "weld2",
+      "type",
+      "string",
+      "shape",
+      "top",
+      "delta",
+      "double",
+      "bottom",
+      "radius",
+      "part",
+      "faces",
+      "object",
+      "stop",
+      "face",
+      "contact",
+      "void"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertWeld2",
+  "description": "Obsolete. Do not use. Superseded by IFeatureManager::InsertCosmeticWeldBead.",
+  "signature": "void InsertWeld2( \n   System.String\nType\n,\n   System.String\nShape\n,\n   System.Double\nTopDelta\n,\n   System.Double\nBottomDelta\n,\n   System.Double\nRadius\n,\n   System.String\nPart\n,\n   System.Object\nTopFaces\n,\n   System.Object\nStopFace\n,\n   System.Object\nContactFaces\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.String",
+      "description": "Weld bead type"
+    },
+    {
+      "name": "Shape",
+      "type": "System.String",
+      "description": "Surface shape"
+    },
+    {
+      "name": "TopDelta",
+      "type": "System.Double",
+      "description": "Distance for the top surface delta, if appropriate"
+    },
+    {
+      "name": "BottomDelta",
+      "type": "System.Double",
+      "description": "Distance for the bottom surface delta, if appropriate"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Weld radius, if appropriate"
+    },
+    {
+      "name": "Part",
+      "type": "System.String",
+      "description": "Path and filename for the part used for the weld; this file is created and merged into your assembly"
+    },
+    {
+      "name": "TopFaces",
+      "type": "System.Object",
+      "description": "Array of faces from which to measure the top surface delta"
+    },
+    {
+      "name": "StopFace",
+      "type": "System.Object",
+      "description": "Array of faces that define the beginning and the end of the weld bead"
+    },
+    {
+      "name": "ContactFaces",
+      "type": "System.Object",
+      "description": "Array of faces that are joined by the weld bead"
+    }
+  ],
+  "returns": "",
+  "remarks": "For the most up-to-date list of available types and shapes, see\nC:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\\nlang\n\\\nenglish\\gtol.sym\n.\nTo create a weld bead by preselecting the top, stop, and contact faces, use\nIAssemblyDoc::InsertWeld\n.",
+  "examples": [],
+  "related": [
+    "IWeldBead",
+    "IWeldmentBeadFeatureData"
+  ]
+}

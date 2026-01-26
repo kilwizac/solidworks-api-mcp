@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetMBD3DPdfData",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IView3D"
+    ],
+    "keywords": [
+      "imbd3dpdfdata",
+      "mbd3dpdfdata",
+      "see",
+      "mbd",
+      "solidworks",
+      "model",
+      "based",
+      "definition",
+      "3d",
+      "pdf",
+      "getmbd3dpdfdata",
+      "imodeldocextension",
+      "doc",
+      "extension",
+      "mbd3",
+      "data",
+      "object",
+      "publish",
+      "text",
+      "custom",
+      "properties",
+      "theme",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.GetMBD3DPdfData",
+  "description": "Gets the SOLIDWORKS MBD 3D PDF data object.",
+  "signature": "System.Object GetMBD3DPdfData()",
+  "parameters": [],
+  "returns": "IMBD3DPdfData object",
+  "remarks": "SOLIDWORKS Model Based Definition (MBD) is an integrated drawingless manufacturing solution for SOLIDWORKS.\nThis method requires that the SOLDWORKS MBD add-in be loaded. (\nISldWorks::LoadAddIn\n)\nTypical steps for generating a SOLIDWORKS MBD 3D PDF using the SOLIDWORKS API are:\nGet the MBD3DPdfData object using this method.\nSet the path and file name of the SOLIDWORKS MBD 3D PDF theme using\nIMBD3DPdfData::ThemeName\n.\nGet standard and custom views using\nIMBD3DPdfData::GetStandardViews\nand\nIMBD3DPdfData::GetMoreViews\n.\nSet standard and custom views using\nIMBD3DPdfData::SetStandardViews\nand\nIMBD3DPdfData::SetMoreViews\n.\nGet and set text and custom properties in the theme using\nIMBD3DPdfData::GetTextAndCustomProperties\nand\nITextAndCustomProperty\n.\nSet the path for the SOLIDWORKS MBD 3D PDF using\nIMBD3DPdfData::FilePath\n.\nGenerate the SOLIDWORKS MBD 3D PDF using\nIModelDocExtension::PublishTo3DPDF\n.\nSee the SOLIDWORKS Help for details about MBD.",
+  "examples": [
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (C#)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (VB.NET)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (VBA)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView3D"
+  ]
+}

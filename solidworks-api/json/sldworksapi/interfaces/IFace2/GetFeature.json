@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetFeature",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetFeatureId",
+      "IFace2.IGetFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "face",
+      "getfeature",
+      "iface2",
+      "face2",
+      "object",
+      "part",
+      "corresponding",
+      "component",
+      "vba",
+      "faces",
+      "associated",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFace2.GetFeature",
+  "description": "Gets the feature that owns this face.",
+  "signature": "System.Object GetFeature()",
+  "parameters": [],
+  "returns": "Owning feature",
+  "remarks": "In SOLIDWORKS, a face:\nis the result of evaluating a feature.\ncan be owned by several features.\nIFeature::GetFaces\nor\nIFeature::IGetFaces2\nreturns all of the faces owned by a feature. This is different from the faces highlighted in the user interface when the feature is selected. The user interface filters out multiple feature faces. This filter is only for display purposes.\nTo filter out multiple feature faces using the SOLIDWORKS API, you must call IFace2::GetFeature or\nIFace2::IGetFeature\n. Only the oldest feature from the face is returned, that is, the first owning feature in the FeatureManager design tree.",
+  "examples": [
+    {
+      "title": "Get Part for Corresponding Component (VBA)",
+      "href": "Get_Part_for_Corresponding_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (C#)",
+      "href": "Get_Faces_Associated_with_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VB.NET)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFace2.GetFeatureId",
+    "IFace2.IGetFeature"
+  ]
+}

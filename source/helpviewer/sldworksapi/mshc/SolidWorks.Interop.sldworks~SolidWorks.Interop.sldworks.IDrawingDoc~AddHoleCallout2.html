@@ -1,0 +1,279 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>AddHoleCallout2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc~AddHoleCallout2" />
+    <meta name="Description" content="Adds a hole callout at the specified position to the hole whose edge is selected." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IDrawingDoc.AddHoleCallout2" />
+    <meta name="Microsoft.Help.Keywords" content="Hole callouts" />
+    <meta name="Microsoft.Help.Keywords" content="Holes (see also ISimpleHoleFeatureData2 and IWizardHoleFeatureData2 Interfaces),callouts" />
+    <meta name="Microsoft.Help.Keywords" content="Callout (see also ICallout Interface),hole" />
+    <meta name="Microsoft.Help.Keywords" content="AddHoleCallout2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                AddHoleCallout2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc">IDrawingDoc Interface</a> : AddHoleCallout2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="XPopupContent" class="i-popup-content">
+        X position of hole callout in meters
+    </div>
+
+    <div id="YPopupContent" class="i-popup-content">
+        Y position of hole callout in meters
+    </div>
+
+    <div id="ZPopupContent" class="i-popup-content">
+        Z position of hole callout in meters
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Adds a&#160;hole callout at the specified position to the hole whose edge is selected.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function AddHoleCallout2( _
+   ByVal <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i> As System.Double _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc">IDrawingDoc</a>
+Dim X As System.Double
+Dim Y As System.Double
+Dim Z As System.Double
+Dim value As System.Object
+ 
+value = instance.AddHoleCallout2(X, Y, Z)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object AddHoleCallout2( 
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ AddHoleCallout2( 
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>X</i></dt>
+
+                <dd>X position of hole callout in meters</dd>
+
+                <dt><i>Y</i></dt>
+
+                <dd>Y position of hole callout in meters</dd>
+
+                <dt><i>Z</i></dt>
+
+                <dd>Z position of hole callout in meters</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDisplayDimension">Display dimension</a>&#160;representing the hole callout
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">When you call this method, the user must click <span style="FONT-WEIGHT: bold">OK</span> in the dialog that shows the system-generated hole callout.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>'---------------------------------------------------------<br />
+            ' This example shows how to add a hole callout to<br />
+            ' a hole in a drawing.<br />
+            '<br />
+            ' Preconditions:<br />
+            ' 1. Open the drawing of a part that contains a hole.<br />
+            ' 2. Select the edge of the hole where to add the callout in the graphics area.<br />
+            ' 3. Open the Immediate window.<br />
+            '<br />
+            ' Postconditions:<br />
+            ' 1. A hole callout is added to the hole in the drawing.<br />
+            ' 2. Examine the drawing and Immediate window to verify.<br />
+            ' 3. Close the drawing without saving any changes.<br />
+            '<br />
+            ' Tested using SolidWorks 2011 SP1.<br />
+            '-----------------------------------------------------------</p>
+
+            <p>Option Explicit</p>
+
+            <p>Const Xpos&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As Double = 0.165<br />
+            Const Ypos&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As Double = 0.435<br />
+            Const Zpos&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As Double = 0#</p>
+
+            <p>Sub main()<br />
+            &#160;&#160;&#160; Dim swApp&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.SldWorks<br />
+            &#160;&#160;&#160; Dim swModel&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.ModelDoc2<br />
+            &#160;&#160;&#160; Dim swModelDocExt&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.ModelDocExtension<br />
+            &#160;&#160;&#160; Dim swDraw&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.DrawingDoc<br />
+            &#160;&#160;&#160; Dim swDispDim&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.DisplayDimension<br />
+            &#160;&#160;&#160; Dim swAnn&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As SldWorks.Annotation<br />
+            &#160;&#160;&#160; Dim status&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As Boolean<br />
+            &#160;&#160;&#160; Dim annType&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; As Long<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swApp = CreateObject("SldWorks.Application")<br />
+            &#160;&#160;&#160; Set swModel = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; Set swModelDocExt = swModel.Extension<br />
+            &#160;&#160;&#160; Set swDraw = swModel</p>
+
+            <p>&#160;&#160;&#160; status = swDraw.ActivateView("Drawing View1")<br />
+            &#160;&#160;&#160; ' Select the edge of the hole where to add the callout<br />
+            &#160;&#160;&#160; ' status = swModelDocExt.SelectByID2("", "EDGE", 0.6280838894175, 0.4565734807731, -499.9234340021, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; Set swDispDim = swDraw.<strong>AddHoleCallout2</strong>(Xpos, Ypos, Zpos)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print "All&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; = " + swDispDim.GetText(swDimensionTextAll)<br />
+            &#160;&#160;&#160; Debug.Print "Prefix&#160;&#160;&#160;&#160;&#160;&#160; = " + swDispDim.GetText(swDimensionTextPrefix)<br />
+            &#160;&#160;&#160; Debug.Print "Suffix&#160;&#160;&#160;&#160;&#160;&#160; = " + swDispDim.GetText(swDimensionTextSuffix)<br />
+            &#160;&#160;&#160; Debug.Print "CalloutAbove = " + swDispDim.GetText(swDimensionTextCalloutAbove)<br />
+            &#160;&#160;&#160; Debug.Print "CalloutBelow = " + swDispDim.GetText(swDimensionTextCalloutBelow)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swAnn = swDispDim.GetAnnotation<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; annType = swAnn.GetType<br />
+            &#160;&#160;&#160; Debug.Print "Annotation Type&#160;&#160;&#160;&#160;&#160; = " + Str(annType)<br />
+            End Sub</p>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc">IDrawingDoc Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc_members">IDrawingDoc Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc~IAddHoleCallout2">IDrawingDoc::IAddHoleCallout2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDisplayDimension~IsHoleCallout">IDisplayDimension::IsHoleCallout Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDisplayDimension~GetHoleCalloutVariables">IDisplayDimension::GetHoleCalloutVariables Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc~AddHoleCallout2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

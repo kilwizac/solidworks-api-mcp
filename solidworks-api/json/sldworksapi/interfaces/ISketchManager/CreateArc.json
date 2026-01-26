@@ -1,0 +1,180 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateArc",
+    "returns": "SketchSegment",
+    "parameters": [
+      {
+        "name": "XC",
+        "type": "System.Double",
+        "description": "X coordinate of the circle center point in meters"
+      },
+      {
+        "name": "YC",
+        "type": "System.Double",
+        "description": "coordinate of the circle center point in meters"
+      },
+      {
+        "name": "Zc",
+        "type": "System.Double",
+        "description": "Z coordinate of the circle center point in meters"
+      },
+      {
+        "name": "X1",
+        "type": "System.Double",
+        "description": "X coordinate of the start point of the arc in meters"
+      },
+      {
+        "name": "Y1",
+        "type": "System.Double",
+        "description": "coordinate of the start point of the arc in meters"
+      },
+      {
+        "name": "Z1",
+        "type": "System.Double",
+        "description": "Z coordinate of the start point of the arc in meters"
+      },
+      {
+        "name": "X2",
+        "type": "System.Double",
+        "description": "X coordinate of the end point of the arc in meters"
+      },
+      {
+        "name": "Y2",
+        "type": "System.Double",
+        "description": "Y coordinate of the end point of the arc in meters"
+      },
+      {
+        "name": "Z2",
+        "type": "System.Double",
+        "description": "coordinate of the end point of the arc in meters"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Int16",
+        "description": "+1 : Go from the start point to the end point in a counter-clockwise direction -1 : Go from the start point to the end point in a clockwise direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "IModelDoc2.CreateArcByCenter",
+      "ISketchManager.Create3PointArc",
+      "ISketchManager.CreateTangentArc"
+    ],
+    "keywords": [
+      "arcs",
+      "create",
+      "sketch",
+      "entities",
+      "see",
+      "also",
+      "isketch",
+      "createarc",
+      "isketchmanager",
+      "manager",
+      "arc",
+      "xc",
+      "double",
+      "yc",
+      "zc",
+      "x1",
+      "y1",
+      "z1",
+      "x2",
+      "y2",
+      "z2",
+      "direction",
+      "int16",
+      "segment",
+      "data",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchManager.CreateArc",
+  "description": "Creates an arc based on a center point, a start point, an end point, and a direction.",
+  "signature": "SketchSegment CreateArc( \n   System.Double\nXC\n,\n   System.Double\nYC\n,\n   System.Double\nZc\n,\n   System.Double\nX1\n,\n   System.Double\nY1\n,\n   System.Double\nZ1\n,\n   System.Double\nX2\n,\n   System.Double\nY2\n,\n   System.Double\nZ2\n,\n   System.Int16\nDirection\n)",
+  "parameters": [
+    {
+      "name": "XC",
+      "type": "System.Double",
+      "description": "X coordinate of the circle center point in meters"
+    },
+    {
+      "name": "YC",
+      "type": "System.Double",
+      "description": "coordinate of the circle center point in meters"
+    },
+    {
+      "name": "Zc",
+      "type": "System.Double",
+      "description": "Z coordinate of the circle center point in meters"
+    },
+    {
+      "name": "X1",
+      "type": "System.Double",
+      "description": "X coordinate of the start point of the arc in meters"
+    },
+    {
+      "name": "Y1",
+      "type": "System.Double",
+      "description": "coordinate of the start point of the arc in meters"
+    },
+    {
+      "name": "Z1",
+      "type": "System.Double",
+      "description": "Z coordinate of the start point of the arc in meters"
+    },
+    {
+      "name": "X2",
+      "type": "System.Double",
+      "description": "X coordinate of the end point of the arc in meters"
+    },
+    {
+      "name": "Y2",
+      "type": "System.Double",
+      "description": "Y coordinate of the end point of the arc in meters"
+    },
+    {
+      "name": "Z2",
+      "type": "System.Double",
+      "description": "coordinate of the end point of the arc in meters"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Int16",
+      "description": "+1 : Go from the start point to the end point in a counter-clockwise direction -1 : Go from the start point to the end point in a clockwise direction"
+    }
+  ],
+  "returns": "ISketchArc",
+  "remarks": "This method creates a partial arc in the active 2D sketch. If a sketch is not active, then a new sketch is\ncreated. You can check for an active sketch using I\nSketchManager::ActiveSketch\n.\nISketchManager::AddToDB\nand\nISketchManager::DisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database.\nISketchManager::AddToDB also avoids some of the peculiarities involved with creating entities via the user interface, such as inferencing, automatic relations, and snapping to the grid. Adding entities directly to the database also increases the performance of this API. When you are done creating entities, it is important to call ISketchManager::AddToDB(False), to restore SOLIDWORKS to its normal operating mode.\nThis method also works with ISketchManager::DisplayWhenAdded. If you have called ISketchManager::AddToDB (True), additional performance can be gained by calling ISketchManager::DisplayWhenAdded(False) to disable immediate display of entities as they are added to the database. When you are done creating all of your sketch entities, you must redraw your document window (see\nIModelView::GraphicsRedraw\nor\nIModelView::IGraphicsRedraw\n) to see the entities that you added. You should also restore the original display settings by calling ISketchManager::DisplayWhenAdded(True).",
+  "examples": [
+    {
+      "title": "Get Sketch Arc Data (VBA)",
+      "href": "Get_Sketch_Arc_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Arc Data (VB.NET)",
+      "href": "Get_Sketch_Arc_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Arc Data (C#)",
+      "href": "Get_Sketch_Arc_Data_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.CreateArcByCenter",
+    "ISketchManager.Create3PointArc",
+    "ISketchManager.CreateTangentArc"
+  ]
+}

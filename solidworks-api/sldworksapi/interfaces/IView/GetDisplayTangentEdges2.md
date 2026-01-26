@@ -1,0 +1,63 @@
+---
+type: method
+interface: IView
+member: GetDisplayTangentEdges2
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - drawings
+  - geometry
+  - ui
+related:
+  - IView.GetDisplayEdgesInShadedMode
+  - IView.GetDisplayMode2
+  - IView.GetFacettedHlrDisplay
+  - IView.GetUseParentDisplayMode
+  - IView.SetDisplayMode3
+  - IView.UpdateViewDisplayGeometry
+keywords:
+  - drawing
+  - views
+  - see
+  - also
+  - iview
+  - display
+  - mode
+  - edges
+  - view
+  - edge
+  - iedge
+  - getdisplaytangentedges2
+  - tangent
+  - edges2
+  - int32
+---
+
+# IView.GetDisplayTangentEdges2
+
+Gets the current tangent edge display mode of the drawing view.
+
+## Signature
+
+```csharp
+System.Int32 GetDisplayTangentEdges2()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Tangent edge display mode as defined in swDisplayTangentEdges_e
+
+## See Also
+
+- `IView.GetDisplayEdgesInShadedMode`
+- `IView.GetDisplayMode2`
+- `IView.GetFacettedHlrDisplay`
+- `IView.GetUseParentDisplayMode`
+- `IView.SetDisplayMode3`
+- `IView.UpdateViewDisplayGeometry`

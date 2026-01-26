@@ -1,0 +1,182 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertRib",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Is2Sided",
+        "type": "System.Boolean",
+        "description": "True if the rib is double-sided, false if the rib is single sided; a double-sided rib thickens on both sides of the sketch"
+      },
+      {
+        "name": "ReverseThicknessDir",
+        "type": "System.Boolean",
+        "description": "True to thicken the opposite side of the sketch normal, false to not; only valid for single-sided ribs"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Rib thickness"
+      },
+      {
+        "name": "ReferenceEdgeIndex",
+        "type": "System.Int32",
+        "description": "Edge in the sketch to use to determine the material direction and for draft reference; when the rib is drafted, the mid point of this edge maintains the thickness value; other points on the rib may have a different thicknesses due to the draft"
+      },
+      {
+        "name": "ReverseMaterialDir",
+        "type": "System.Boolean",
+        "description": "True to flip the direction of the extrusion, false to not"
+      },
+      {
+        "name": "IsDrafted",
+        "type": "System.Boolean",
+        "description": "True to draft the rib, false to not"
+      },
+      {
+        "name": "DraftOutward",
+        "type": "System.Boolean",
+        "description": "True to draft the rib outward, false to not; only valid if IsDrafted is true"
+      },
+      {
+        "name": "DraftAngle",
+        "type": "System.Double",
+        "description": "Draft angle of the rib; only valid if IsDrafted is true"
+      },
+      {
+        "name": "IsNormToSketch",
+        "type": "System.Boolean",
+        "description": "True if extrusion direction is normal to sketch, false if parallel to sketch"
+      },
+      {
+        "name": "IsDraftedFromWall",
+        "type": "System.Boolean",
+        "description": "True if draft is from wall, false if not; only valid if IsDrafted is true"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IRibFeatureData2"
+    ],
+    "keywords": [
+      "ribs",
+      "see",
+      "also",
+      "iribfeaturedata2",
+      "insert",
+      "insertrib",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "rib",
+      "is2",
+      "sided",
+      "boolean",
+      "reverse",
+      "thickness",
+      "dir",
+      "double",
+      "reference",
+      "edge",
+      "index",
+      "int32",
+      "material",
+      "drafted",
+      "draft",
+      "outward",
+      "angle",
+      "norm",
+      "sketch",
+      "wall",
+      "void",
+      "data",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertRib",
+  "description": "Inserts a rib.",
+  "signature": "void InsertRib( \n   System.Boolean\nIs2Sided\n,\n   System.Boolean\nReverseThicknessDir\n,\n   System.Double\nThickness\n,\n   System.Int32\nReferenceEdgeIndex\n,\n   System.Boolean\nReverseMaterialDir\n,\n   System.Boolean\nIsDrafted\n,\n   System.Boolean\nDraftOutward\n,\n   System.Double\nDraftAngle\n,\n   System.Boolean\nIsNormToSketch\n,\n   System.Boolean\nIsDraftedFromWall\n)",
+  "parameters": [
+    {
+      "name": "Is2Sided",
+      "type": "System.Boolean",
+      "description": "True if the rib is double-sided, false if the rib is single sided; a double-sided rib thickens on both sides of the sketch"
+    },
+    {
+      "name": "ReverseThicknessDir",
+      "type": "System.Boolean",
+      "description": "True to thicken the opposite side of the sketch normal, false to not; only valid for single-sided ribs"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Rib thickness"
+    },
+    {
+      "name": "ReferenceEdgeIndex",
+      "type": "System.Int32",
+      "description": "Edge in the sketch to use to determine the material direction and for draft reference; when the rib is drafted, the mid point of this edge maintains the thickness value; other points on the rib may have a different thicknesses due to the draft"
+    },
+    {
+      "name": "ReverseMaterialDir",
+      "type": "System.Boolean",
+      "description": "True to flip the direction of the extrusion, false to not"
+    },
+    {
+      "name": "IsDrafted",
+      "type": "System.Boolean",
+      "description": "True to draft the rib, false to not"
+    },
+    {
+      "name": "DraftOutward",
+      "type": "System.Boolean",
+      "description": "True to draft the rib outward, false to not; only valid if IsDrafted is true"
+    },
+    {
+      "name": "DraftAngle",
+      "type": "System.Double",
+      "description": "Draft angle of the rib; only valid if IsDrafted is true"
+    },
+    {
+      "name": "IsNormToSketch",
+      "type": "System.Boolean",
+      "description": "True if extrusion direction is normal to sketch, false if parallel to sketch"
+    },
+    {
+      "name": "IsDraftedFromWall",
+      "type": "System.Boolean",
+      "description": "True if draft is from wall, false if not; only valid if IsDrafted is true"
+    }
+  ],
+  "returns": "",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Rib Feature Data (VBA)",
+      "href": "Get_Rib_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Rib Feature Data (VB.NET)",
+      "href": "Get_Rib_Feature_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Rib Feature Data (C#)",
+      "href": "Get_Rib_Feature_Data_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IRibFeatureData2"
+  ]
+}

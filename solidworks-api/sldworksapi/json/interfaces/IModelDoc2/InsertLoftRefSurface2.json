@@ -1,0 +1,132 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertLoftRefSurface2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Closed",
+        "type": "System.Boolean",
+        "description": "True for closed loft, false for open loft; if True, then you must have at least three profiles selected, and if you are using guide curves, the guide curves must be closed"
+      },
+      {
+        "name": "KeepTangency",
+        "type": "System.Boolean",
+        "description": "If the section curves are tangent, then you have the option to specify whether the resulting surfaces are also be tangent; specify True to maintain the tangency as seen in the section curves, false otherwise; when generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics"
+      },
+      {
+        "name": "ForceNonRational",
+        "type": "System.Boolean",
+        "description": "True to force the resulting surface to be non-rational, false to not"
+      },
+      {
+        "name": "TessToleranceFactor",
+        "type": "System.Double",
+        "description": "Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created"
+      },
+      {
+        "name": "StartMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the start profile (see Remarks )"
+      },
+      {
+        "name": "EndMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the end profile (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.InsertCutBlend",
+      "IFeatureManager.InsertProtrusionBlend",
+      "ILoftFeatureData",
+      "IModeler.CreateLoftSurface"
+    ],
+    "keywords": [
+      "lofts",
+      "see",
+      "also",
+      "iloftfeaturedata",
+      "surfaces",
+      "surface",
+      "isurface",
+      "loft",
+      "insertloftrefsurface2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "ref",
+      "surface2",
+      "closed",
+      "boolean",
+      "keep",
+      "tangency",
+      "force",
+      "non",
+      "rational",
+      "tess",
+      "tolerance",
+      "factor",
+      "double",
+      "start",
+      "matching",
+      "type",
+      "int16",
+      "end",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertLoftRefSurface2",
+  "description": "Creates a loft surface from the selected profiles, centerline, and guide curves.",
+  "signature": "void InsertLoftRefSurface2( \n   System.Boolean\nClosed\n,\n   System.Boolean\nKeepTangency\n,\n   System.Boolean\nForceNonRational\n,\n   System.Double\nTessToleranceFactor\n,\n   System.Int16\nStartMatchingType\n,\n   System.Int16\nEndMatchingType\n)",
+  "parameters": [
+    {
+      "name": "Closed",
+      "type": "System.Boolean",
+      "description": "True for closed loft, false for open loft; if True, then you must have at least three profiles selected, and if you are using guide curves, the guide curves must be closed"
+    },
+    {
+      "name": "KeepTangency",
+      "type": "System.Boolean",
+      "description": "If the section curves are tangent, then you have the option to specify whether the resulting surfaces are also be tangent; specify True to maintain the tangency as seen in the section curves, false otherwise; when generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics"
+    },
+    {
+      "name": "ForceNonRational",
+      "type": "System.Boolean",
+      "description": "True to force the resulting surface to be non-rational, false to not"
+    },
+    {
+      "name": "TessToleranceFactor",
+      "type": "System.Double",
+      "description": "Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created"
+    },
+    {
+      "name": "StartMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the start profile (see Remarks )"
+    },
+    {
+      "name": "EndMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the end profile (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Selection of guide curves and centerline is optional; however, selection of the profiles must be in an order consistent with the desired direction of the loft. Because you are creating a surface, the section profiles can be open.\nUse of guide curves is strongly recommended, especially when selection of profiles is done in the FeatureManager design tree.\nYou can use any number of profiles; however, if you have selected only one profile, then any selected guide curves must be closed curves.\nUse\nIModelDocExtension::SelectByID2\nto select the profiles and guide curves. The mark for:\nprofile selections should be 1\nany guide curve selection, if provided, should be 2\ncenterline selection, if provided, should be 4\nstart tangency vector selection, if provided, should be an 8\nstart tangency faces selection, if provided, should be a 16 (not available currently\nend tangency vector selection, if provided, should be a 32\nend tangency faces selection, if provided, should be a 64 (not available currently)\nLinear edge, sketch line, axis, plane and planar faces are qualified for tangency vector sections.\nThe tangency types can be one of the following:\n0\n=\nnone\n1\n=\ntangent to the normal of the profile\n2\n=\ntangent to a selected vector\n3\n=\ntangency to all the adjacent faces sharing an edge with the start profile\n4\n=\ntangent to some of the selected faces sharing an edge with the start profile (not available at this moment).",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertCutBlend",
+    "IFeatureManager.InsertProtrusionBlend",
+    "ILoftFeatureData",
+    "IModeler.CreateLoftSurface"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreatePlanarSurface",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "VRootPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "VNormal",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.CreatePlanarSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "planar",
+      "icreateplanarsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "root",
+      "point",
+      "object",
+      "normal"
+    ]
+  },
+  "title": "IBody2.ICreatePlanarSurface",
+  "description": "Creates a new infinite planar surface.",
+  "signature": "Surface ICreatePlanarSurface( \n   System.Object\nVRootPoint\n,\n   System.Object\nVNormal\n)",
+  "parameters": [
+    {
+      "name": "VRootPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "VNormal",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "New planar surface",
+  "remarks": "You can use this method with:\nA set of related functions that construct a body from trimmed surfaces.\nTrimming curve creation routines (for example,\nISurface::IAddTrimmingLoop2\n) to construct a trimmed surface.\nTo create a planar trimmed surface directly from the vertex points, see\nIBody2::ICreatePlanarTrimSurfaceDLL\n.\nAny existing object created by this method is destroyed if you call this method again.",
+  "examples": [],
+  "related": [
+    "IBody2.CreatePlanarSurface"
+  ]
+}

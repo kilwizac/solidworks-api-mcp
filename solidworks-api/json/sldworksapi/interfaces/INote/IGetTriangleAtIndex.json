@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "IGetTriangleAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the triangle where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetTriangleAtIndex",
+      "INote.GetTriangleCount"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "triangle",
+      "igettriangleatindex",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "INote.IGetTriangleAtIndex",
+  "description": "Gets the triangle at the specified index.",
+  "signature": "System.Double IGetTriangleAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the triangle where the index begins at 0"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles :\n[\nvertexPt1\n[3],\nvertexPt2\n[3],\nvertexPt3\n[3],\nisFilled\n,\nlineType\n]\nwhere:\nvertexPt1\n[3]\n= first XYZ vertex point\nvertexPt2\n[3]\n= second XYZ vertex point\nvertexPt3\n[3]\n= third XYZ vertex point\nisFilled\n= BOOLEAN returned as a double and is True if the triangle is filled, false otherwise\nlineType\n= line type; see\nswLineTypes_e",
+  "examples": [],
+  "related": [
+    "INote.GetTriangleAtIndex",
+    "INote.GetTriangleCount"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "IsBackgroundProcessingCompleted",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "type": "System.String",
+        "description": "Fully qualified path and filename of the drawing document that was opened in a background process"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "open",
+      "document",
+      "drawing",
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "background",
+      "processing",
+      "isbackgroundprocessingcompleted",
+      "isldworks",
+      "sld",
+      "works",
+      "completed",
+      "file",
+      "path",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.IsBackgroundProcessingCompleted",
+  "description": "Gets whether SOLIDWORKS has finished background processing a drawing document that requires a lot of CPU time to open.",
+  "signature": "System.Boolean IsBackgroundProcessingCompleted( \n   System.String\nFilePath\n)",
+  "parameters": [
+    {
+      "name": "FilePath",
+      "type": "System.String",
+      "description": "Fully qualified path and filename of the drawing document that was opened in a background process"
+    }
+  ],
+  "returns": "True if background processing is finished, false if not",
+  "remarks": "SOLIDWORKS recommends that you only use this method with\nISldWorks::EnableBackgroundProcessing\nand\nIDrawingDoc::BackgroundProcessingOption\nwhen you can quickly open a drawing document via the user interface, but that same drawing takes significantly more time to open programmatically.\nTo more efficiently and programmatically open a drawing document that requires a lot of CPU time and no user input:\nSet ISldWorks::EnableBackgroundProcessing to true.\nUse\nISldWorks Event BackgroundProcessingStartNotify\nto handle the background processing start event.\nOpen the drawing document by calling either\nISldWorks::OpenDoc6\nor\nISldWorks::OpenDoc7\n.\nSet IDrawingDoc::BackgroundProcessingOption to\nswBackgroundProcessOption_e\n.swBackgroundProcessing_DeferToApplication.\nCall ISldWorks::IsBackgroundProcessingCompleted repeatedly, which polls the status of the open operation, to know when background processing ends.\nUse\nISldWorks Event BackgroundProcessingEndNotify\nto handle the background processing end event.\nWhen the open operation is finished, set ISldWorks::EnableBackgroundProcessing to false.",
+  "examples": [],
+  "related": []
+}

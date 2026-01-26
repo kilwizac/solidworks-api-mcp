@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetUseDocTextFormat",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Number indicating which text within this annotation to check (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "getusedoctextformat",
+      "iannotation",
+      "annotation",
+      "use",
+      "doc",
+      "text",
+      "format",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IAnnotation.GetUseDocTextFormat",
+  "description": "Gets whether SOLIDWORKS is currently using the document default text format setting for this annotation.",
+  "signature": "System.Boolean GetUseDocTextFormat( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Number indicating which text within this annotation to check (see Remarks )"
+    }
+  ],
+  "returns": "True if the setting is a document default setting, false if not",
+  "remarks": "The behavior of this method differs slightly depending on the type of annotation.\nWeld\n,\nDatum Target\n,\nDatum Feature\n, and\nSurface Finish\nSymbols\nThese symbols always use the document default setting for dimension text format of the text objects within the symbol. Therefore, this method always returns True for these annotation types. The index argument is not used and should be set to 0.\nGeometric Tolerance\nSymbols,\nDisplay Dimensions\n, and\nSimple Notes\nThese symbols can use the document default setting to display all of the text objects within the symbol (dimension text setting for the geometric tolerance symbols and display dimensions, or note text setting for notes), in which case this method returns True. They can also use a local format, in which case this method returns false. The index argument is not used and should be set to 0.\nBlocks\n(and compound notes created in SOLIDWORKS 2015 and earlier)\nThese symbols can contain several different pieces of text, each individually using the document default setting for notes or a local format. The index argument identifies the text. The index value is 0-based. If the index value is invalid, this method returns True. To get the number of text or text format objects, use\nIAnnotation::GetTextFormatCount\n.\nTo get the text format object for this annotation, use\nIAnnotation::GetTextFormat\n,\nIAnnotation::IGetTextFormat\n,\nIAnnotation::SetTextFormat\n, or\nIAnnotation::ISetTextFormat\n.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,502 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>OpenDoc6 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~OpenDoc6" />
+    <meta name="Description" content="Opens an existing document and returns a pointer to the document object." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISldWorks.OpenDoc6" />
+    <meta name="Microsoft.Help.Keywords" content="Document, open" />
+    <meta name="Microsoft.Help.Keywords" content="Open, document" />
+    <meta name="Microsoft.Help.Keywords" content="Parents, documents" />
+    <meta name="Microsoft.Help.Keywords" content="OpenDoc6 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                OpenDoc6 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks Interface</a> : OpenDoc6 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="FileNamePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Document name or full path if not in current directory, including extension</p>
+    </div>
+
+    <div id="TypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Document type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swDocumentTypes_e.html">swDocumentTypes_e</a></p>
+    </div>
+
+    <div id="OptionsPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Mode in which to open the document as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swOpenDocOptions_e.html">swOpenDocOptions_e</a></p>
+    </div>
+
+    <div id="ConfigurationPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Model configuration in which to open this document</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p">
+                <p>Applies to parts and assemblies, not drawings</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">If this argument is empty or the specified configuration is not present in the model, the model is opened in the last-used configuration</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="ErrorsPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Load errors as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadError_e.html">swFileLoadError_e</a>&#160;(<strong>See Remarks</strong>)</p>
+    </div>
+
+    <div id="WarningsPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Warnings or extra information generated during the open operation as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadWarning_e.html">swFileLoadWarning_e</a></p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Opens an existing document and returns a pointer to the document object.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function OpenDoc6( _
+   ByVal <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ConfigurationPopupLink" data-popup-contentsource="#ConfigurationPopupContent" data-popup-showevent="click mouseenter">Configuration</a></i> As System.String, _
+   ByRef <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="WarningsPopupLink" data-popup-contentsource="#WarningsPopupContent" data-popup-showevent="click mouseenter">Warnings</a></i> As System.Integer _
+) As ModelDoc2
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks</a>
+Dim FileName As System.String
+Dim Type As System.Integer
+Dim Options As System.Integer
+Dim Configuration As System.String
+Dim Errors As System.Integer
+Dim Warnings As System.Integer
+Dim value As ModelDoc2
+ 
+value = instance.OpenDoc6(FileName, Type, Options, Configuration, Errors, Warnings)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+ModelDoc2 OpenDoc6( 
+   System.string <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i>,
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>,
+   System.string <i><a class="i-popup-link" id="ConfigurationPopupLink" data-popup-contentsource="#ConfigurationPopupContent" data-popup-showevent="click mouseenter">Configuration</a></i>,
+   out System.int <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i>,
+   out System.int <i><a class="i-popup-link" id="WarningsPopupLink" data-popup-contentsource="#WarningsPopupContent" data-popup-showevent="click mouseenter">Warnings</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+ModelDoc2^ OpenDoc6( 
+   System.String^ <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i>,
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>,
+   System.String^ <i><a class="i-popup-link" id="ConfigurationPopupLink" data-popup-contentsource="#ConfigurationPopupContent" data-popup-showevent="click mouseenter">Configuration</a></i>,
+   [Out] System.int <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i>,
+   [Out] System.int <i><a class="i-popup-link" id="WarningsPopupLink" data-popup-contentsource="#WarningsPopupContent" data-popup-showevent="click mouseenter">Warnings</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>FileName</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Document name or full path if not in current directory, including extension</p>
+                </dd>
+
+                <dt><i>Type</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Document type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swDocumentTypes_e.html">swDocumentTypes_e</a></p>
+                </dd>
+
+                <dt><i>Options</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Mode in which to open the document as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swOpenDocOptions_e.html">swOpenDocOptions_e</a></p>
+                </dd>
+
+                <dt><i>Configuration</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Model configuration in which to open this document</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p>Applies to parts and assemblies, not drawings</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">If this argument is empty or the specified configuration is not present in the model, the model is opened in the last-used configuration</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>Errors</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Load errors as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadError_e.html">swFileLoadError_e</a>&#160;(<strong>See Remarks</strong>)</p>
+                </dd>
+
+                <dt><i>Warnings</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Warnings or extra information generated during the open operation as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadWarning_e.html">swFileLoadWarning_e</a></p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Newly loaded <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">model document</a> or NULL if document failed to open
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>As of SOLIDWORKS 2020 SP03.1, SOLIDWORKS Design works on the <strong>3D</strong>EXPERIENCE platform as&#160;<a href="ms-its:sldworksapiprogguide.chm:://Overview/SOLIDWORKS_Connected.htm">SOLIDWORKS Design Augmented</a>. Use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~OpenDoc7">ISldWorks::OpenDoc7</a>&#160;to open documents with SOLIDWORKS Design Augmented.</p>
+
+            <p>As of SOLIDWORKS 2012 SP5, loading future file versions is supported, and&#160;<font style="COLOR: #000000" color="#0066CC">ISldWorks::OpenDoc6</font> no longer throws a <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadError_e.html">swFileLoadError_e</a>.swFutureVersion error. Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~IsFutureVersion">IModelDocExtension::IsFutureVersion</a> to determine whether a component is for a future version of SOLIDWORKS.</p>
+
+            <p>As of SOLIDWORKS 2008,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~OpenDoc7">ISldWorks::OpenDoc7</a> performs the same work as this method, but also:</p>
+
+            <ul>
+                <li>Allows you to open a document with a specified display state.</li>
+
+                <li>Uses&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDocumentSpecification">IDocumentSpecification</a> to specify input parameters.</li>
+            </ul>
+
+            <p>This method also allows control over whether to:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p-CapiDescriptionText">
+                    <p class="apiDescriptionText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Suppress displaying dialog boxes</p>
+                </li>
+
+                <li class="kadov-p-CapiDescriptionText">
+                    <p class="apiDescriptionText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Open the document read-only</p>
+                </li>
+
+                <li class="kadov-p-CapiDescriptionText">
+                    <p class="apiDescriptionText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Open the document in Large Design Review mode</p>
+                </li>
+
+                <li class="kadov-p-CapiDescriptionText">
+                    <p class="apiDescriptionText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Convert a drawing to a detached drawing</p>
+                </li>
+            </ul>
+
+            <p class="apiRemarksText">When opening a parent document (assembly, drawing, and so on):</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">SOLIDWORKS Design also opens any additional documents that are referenced in the parent document (parts, subassemblies, and so on).</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">SOLIDWORKS Design follows certain rules in trying to locate its referenced documents. If explicit Search Folders have not been set using <span style="FONT-WEIGHT: bold">Tools, Options, System Options, ExternalReferences</span>, then the first place SOLIDWORKS Design looks for the referenced documents is in the current working directory. If SOLIDWORKS Design&#160;finds the referenced file in the current working directory, then it is loaded from that directory.</p>
+                </li>
+            </ul>
+
+            <p class="apiRemarksText">Calling ISldWorks::OpenDoc6 does not change the current working directory to that of the opened file, whereas, interactively using the File Open dialog box does. This may affect documents with references.</p>
+
+            <p class="apiRemarksText">Because the user may have interactively opened files from some random directory, you cannot be certain that the current working directory is pointing to the desired location. This may affect the referenced documents that ultimately get loaded when using ISldWorks::OpenDoc6 versus performing File Open interactively. You may want to set the current working directory before calling ISldWorks::OpenDoc6. This can be done using the <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~SetCurrentWorkingDirectory">ISldWorks::SetCurrentWorkingDirectory</a> method. To mimic the behavior of the File Open dialog, you set the current working directory to that of the file being opened.</p>
+
+            <p class="apiRemarksText">When opening files that contain references, you may also want to consider the current Search Folder settings because they may affect the references that ultimately get loaded. This can be done using <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetSearchFolders">ISldWorks::GetSearchFolders</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~SetSearchFolders">ISldWorks::SetSearchFolders</a>. If Search Folders are currently in use, SOLIDWORKS Design&#160;looks for references in the Search Folders before trying to locate references in the current working directory.</p>
+
+            <p class="apiRemarksText">If this method successfully opens an assembly, it still returns swFileLoadError_e.swFileNotFoundError in Errors if a referenced component file cannot be located.</p>
+
+            <p class="apiRemarksText">ISldWorks::OpenDoc6 does not activate and display the document if the file is already open in memory in an assembly or drawing. However, ISldWorks::OpenDoc6 should return a valid <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">IModelDoc2</a> pointer that is usable with functions that do not require a document to be displayed. If you want, <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ActivateDoc2">ISldWorks::ActivateDoc2</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IActivateDoc3">ISldWorks::IActivateDoc3</a> will activate and display the document. Because calling ISldWorks::OpenDoc6 does not activate nor display the file, calling the <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ActiveDoc">ISldWorks::ActiveDoc</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IActiveDoc2">ISldWorks::IActiveDoc2</a> property will not return a pointer to this document.</p>
+
+            <p class="apiRemarksText">This method fires the the SOLIDWORKS event <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DSldWorksEvents_FileOpenNotify2EventHandler">FileOpenNotify2</a> event. Also, the SOLIDWORKS event <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DSldWorksEvents_ActiveDocChangeNotifyEventHandler">ActiveDocChangeNotify</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DSldWorksEvents_ActiveModelDocChangeNotifyEventHandler">ActiveModelDocChangeNotify</a> events are sent if the file being loaded is not already open as the active document.</p>
+
+            <p class="apiRemarksText">&#160;</p>
+
+            <p class="apiRemarksText" style="FONT-WEIGHT: bold">TIPS</p>
+
+            <p class="apiDescriptionText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><!--(Table)=========================================================--></p>
+
+            <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 50%" />
+                    <col style="WIDTH: 50%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>To...</strong></p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>Then...</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">Open an assembly in Large Design Review mode</td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Set the Options argument to swOpenDocOptions_LDR_EditAssembly. This option opens large assemblies in edit mode without actually loading them. This is useful for conducting a quick walk-through of a large assembly. Call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~SelectiveOpen">IAssemblyDoc::SelectiveOpen</a> to open selected components&#160;after an assembly has been opened in Large Design Review mode.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 50%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p>Avoid warnings when opening the document</p>
+                        </td>
+
+                        <td style="WIDTH: 50%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p>Set the Options argument to swOpenDocOptions_Silent. The&#160;software uses&#160;the last-displayed configuration if it discovers missing configurations or component references.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Open a library feature part</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Set the Type argument to swDocPART.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Open foreign files (IGES, STEP, and so on)</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~LoadFile4">ISldWorks::LoadFile4</a>.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Avoid a warning when opening shaded models in views</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Set the Options argument to swOpenDocOptions_LoadModel. This option loads the model so that the view comes in shaded automatically.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Avoid large increases in memory usage caused when adding parts to assemblies</p>
+
+                            <p>&#160;</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Opening a model causes SceneGraph to display the model. SceneGraph uses maps with defaults sizes of 2MB - 3MB for even the simplest model. And, assemblies and parts do not share the same SceneGraph buffer. To avoid large increases in your memory usage:</p>
+
+                            <ol style="LIST-STYLE-TYPE: decimal" type="1">
+                                <li class="kadov-p">
+                                    <p>Set the document to invisible.</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Open the parts.</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Set the document to visible.</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Add the part to the assembly.</p>
+                                </li>
+                            </ol>
+
+                            <p>See <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~DocumentVisible">ISldWorks::DocumentVisible</a> for details.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Open a document with a specified display state</td>
+
+                        <td>Use ISldWorks::OpenDoc7.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p></p>
+
+            <p>A warning is displayed if you <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IsRapidDraft">open a&#160;Detached drawing</a> without loading the model, and the model was saved since the drawing was last saved.</p>
+
+            <p>This method honors:</p>
+
+            <ul>
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetUserPreferenceToggle">ISldWorks::GetUserPreferenceToggle</a> swLargeAsmModeEnabled</li>
+            </ul>
+
+            <p>&#160;&#160;&#160; - and -</p>
+
+            <ul>
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~SetUserPreferenceToggle">ISldWorks::SetUserPreferenceToggle</a> swLargeAsmModeEnabled, true/false (NOTE: if this toggle is set to true, then the file opens in lightweight mode)</li>
+            </ul>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Add_Component_and_Mate_Example_CPlusPlus_COM.htm">Add Component and Mate (C++)</a><br />
+            <a href="Open_Document_Example_VB.htm">Open Document (VBA)</a><br />
+            <a href="Open_Document_Silently_Example_VB.htm">Open Document Silently (VBA)</a><br />
+            <a href="Open_Assembly_in_Large_Design_Review_Mode_Example_VB.htm">Open Assembly in Large Design Review Mode (VBA)</a><br />
+            <a href="Open_Assembly_in_Large_Design_Review_Mode_Example_VBNET.htm">Open Assembly in Large Design Review Mode (VB.NET)</a><br />
+            <a href="Open_Assembly_in_Large_Design_Review_Mode_Example_CSharp.htm">Open Assembly in Large Design Review Mode (C#)</a><br />
+            <a href="Switch_Documents_Example_CSharp.htm">Switch Documents (C#)</a><br />
+            <a href="Switch_Documents_Example_VBNET.htm">Switch Documents (VB.NET)</a><br />
+            <a href="Switch_Documents_Example_VB.htm">Switch Documents (VBA)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_members">ISldWorks Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~CloseAllDocuments">ISldWorks::CloseAllDocuments Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~CloseDoc">ISldWorks::CloseDoc Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~CopyDocument">ISldWorks::CopyDocument Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~EnumDocuments2">ISldWorks::EnumDocuments2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetCurrentWorkingDirectory">ISldWorks::GetCurrentWorkingDirectory Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetDataFolder">ISldWorks::GetDataFolder Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetDocumentDependencies2">ISldWorks::GetDocumentDependencies2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetFirstDocument">ISldWorks::GetFirstDocument Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenDocument">ISldWorks::GetOpenDocument Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenDocumentByName">ISldWorks::GetOpenDocumentByName Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenedFileInfo">ISldWorks::GetOpenedFileInfo Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenFileName">ISldWorks::GetOpenFileName Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetRecentFiles">ISldWorks::GetRecentFiles Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ICopyDocument">ISldWorks::ICopyDocument Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IGetDocumentDependencies2">ISldWorks::IGetDocumentDependencies2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IGetFirstDocument2">ISldWorks::IGetFirstDocument2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IGetOpenDocumentByName2">ISldWorks::IGetOpenDocumentByName2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IMoveDocument">ISldWorks::IMoveDocument Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~PreviewDoc">ISldWorks::PreviewDoc Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~PreviewDocx64">ISldWorks::PreviewDocx64 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~QuitDoc">ISldWorks::QuitDoc Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~SetPromptFilename">ISldWorks::SetPromptFilename Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~EnableBackgroundProcessing">ISldWorks::EnableBackgroundProcessing Property</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IsBackgroundProcessingCompleted">ISldWorks::IsBackgroundProcessingCompleted Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~OpenDoc6.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

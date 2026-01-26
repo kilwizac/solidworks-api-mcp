@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateExtrusionSurface",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "ProfileCurve",
+        "type": "Curve",
+        "description": "Profile curve"
+      },
+      {
+        "name": "AxisDirection",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBody2.CreateExtrusionSurface",
+      "IBody2.ICreateExtrusionSurface",
+      "IModeler.CreateBsplineSurface",
+      "IModeler.CreateConicalSurface2",
+      "IModeler.CreateCoonsBSurface",
+      "IModeler.CreateCylindricalSurface2",
+      "IModeler.CreateExtrusionSurface",
+      "IModeler.CreateLoftSurface",
+      "IModeler.CreateOffsetSurface",
+      "IModeler.CreatePlanarSurface2",
+      "IModeler.CreateRuledSurface",
+      "IModeler.CreateSweptSurface",
+      "IModeler.CreateToroidalSurface",
+      "IModeler.ICreateBsplineSurface",
+      "IModeler.ICreateConicalSurface2",
+      "IModeler.ICreateCylindricalSurface2",
+      "IModeler.ICreateLoftSurface",
+      "IModeler.ICreateOffsetSurface",
+      "IModeler.ICreatePlanarSurface2",
+      "IModeler.ICreateRuledSurface",
+      "IModeler.ICreateSphericalSurface2",
+      "IModeler.ICreateSweptSurface",
+      "IModeler.ICreateToroidalSurface"
+    ],
+    "keywords": [
+      "extrude",
+      "see",
+      "also",
+      "iextrudefeaturedata2",
+      "surfaces",
+      "surface",
+      "isurface",
+      "extruded",
+      "icreateextrusionsurface",
+      "imodeler",
+      "modeler",
+      "create",
+      "extrusion",
+      "profile",
+      "curve",
+      "axis",
+      "direction",
+      "double"
+    ]
+  },
+  "title": "IModeler.ICreateExtrusionSurface",
+  "description": "Creates an extruded surface.",
+  "signature": "Surface ICreateExtrusionSurface( \n   Curve\nProfileCurve\n,\n   ref System.Double\nAxisDirection\n)",
+  "parameters": [
+    {
+      "name": "ProfileCurve",
+      "type": "Curve",
+      "description": "Profile curve"
+    },
+    {
+      "name": "AxisDirection",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "",
+  "remarks": "You can use this method with:\nA set of related functions that construct a body from trimmed surfaces. The profile curve is extruded along the direction vector of axis direction, the new surface being the envelope of the curve. The profile curve must be of type line, circle, or b-spline curve.\nTrimming curve creation routines (for example,\nISurface::AddTrimmingLoop2\nor\nISurface::IAddTrimmingLoop2\n) to construct a trimmed tabulated cylinder.",
+  "examples": [],
+  "related": [
+    "IBody2.CreateExtrusionSurface",
+    "IBody2.ICreateExtrusionSurface",
+    "IModeler.CreateBsplineSurface",
+    "IModeler.CreateConicalSurface2",
+    "IModeler.CreateCoonsBSurface",
+    "IModeler.CreateCylindricalSurface2",
+    "IModeler.CreateExtrusionSurface",
+    "IModeler.CreateLoftSurface",
+    "IModeler.CreateOffsetSurface",
+    "IModeler.CreatePlanarSurface2",
+    "IModeler.CreateRuledSurface",
+    "IModeler.CreateSweptSurface",
+    "IModeler.CreateToroidalSurface",
+    "IModeler.ICreateBsplineSurface",
+    "IModeler.ICreateConicalSurface2",
+    "IModeler.ICreateCylindricalSurface2",
+    "IModeler.ICreateLoftSurface",
+    "IModeler.ICreateOffsetSurface",
+    "IModeler.ICreatePlanarSurface2",
+    "IModeler.ICreateRuledSurface",
+    "IModeler.ICreateSphericalSurface2",
+    "IModeler.ICreateSweptSurface",
+    "IModeler.ICreateToroidalSurface"
+  ]
+}

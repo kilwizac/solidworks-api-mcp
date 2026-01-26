@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetColumnWidth",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of column for which to set the width"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width at which to set specified column, in system units"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Table's behavior after changing column width as defined by swTableRowColSizeChangeBehavior_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.ColumnCount",
+      "ITableAnnotation.ColumnHidden",
+      "ITableAnnotation.DeleteColumn",
+      "ITableAnnotation.GetColumnTitle",
+      "ITableAnnotation.GetColumnType",
+      "ITableAnnotation.GetColumnWidth",
+      "ITableAnnotation.GetLockColumnWidth",
+      "ITableAnnotation.InsertColumn",
+      "ITableAnnotation.MoveColumn",
+      "ITableAnnotation.SetColumnTitle",
+      "ITableAnnotation.SetColumnType",
+      "ITableAnnotation.SetLockColumnWidth",
+      "ITableAnnotation.TotalColumnCount"
+    ],
+    "keywords": [
+      "table",
+      "columns",
+      "setcolumnwidth",
+      "itableannotation",
+      "annotation",
+      "column",
+      "width",
+      "index",
+      "int32",
+      "double",
+      "options"
+    ]
+  },
+  "title": "ITableAnnotation.SetColumnWidth",
+  "description": "Sets the width of the specified column in this table.",
+  "signature": "System.Double SetColumnWidth( \n   System.Int32\nIndex\n,\n   System.Double\nWidth\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of column for which to set the width"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width at which to set specified column, in system units"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Table's behavior after changing column width as defined by swTableRowColSizeChangeBehavior_e (see Remarks )"
+    }
+  ],
+  "returns": "Width at which specified column is set (see Remarks )",
+  "remarks": "Index is the column number for which to set the width. Thus, the first column is column 0. It can also be a value from the\nswTableCellRangeIdentifier_e\nenumerator.\nIf Index equals...\nThen the width of all of the columns...\nswTableCellRange_All\nIs set, if possible.\nswTableCellRange_Current\nIn the current range (see\nITableAnnotation::GetCellRange\nand\nITableAnnotation::SetCellRange\n) is set, if possible.\nWhen the width of a column changes, the rest of the table is affected. The Options argument indicates how the rest of the table should behave.\nIf...\nThen...\nOptions =\nswTableRowColChange_TableSizeCanChange\nThe rest of the columns remain the same width and are shifted away from the table anchor to make room for the changed column.\nWidth of the entire table must remain the same, so that the table continues to fit properly on the drawing\nOther columns must absorb the change in width.\nThere are two possibilities supported by this method.\nIf Options =\nswTableRowColChange_AbsorbedByNext\n, then the first column to the right of the columns whose width has changed, is adjusted if possible. If that is not possible, then the first column to the left of the columns whose width has changed, is adjusted if possible. If that is not possible either, then no action is taken.\nThe other similar case is if Options =\nswTableRowColChange_AbsorbedByPrevious\n. First the column to the left is tried, then the column to the right.\nOptions =\nswTableRowColChange_AbsorbedByNext\nor\nswTableRowColChange_AbsorbedByPrevious\nIt may not be possible to get the desired results. If this is the case, you must determine the full width of the table yourself and set row widths individually using the\nswTableRowColChange_TableSizeCanChange\noption, making sure to end up with the original table width.\nThe return value is the width that the column is set to. If you specified a range of columns, it is the width of the first column of that range.\nIt is possible that the return value is different than the width value that you passed in.\nOne possibility is that if you specify a column width that is less than the minimum column width, the minimum column width is used, instead of what you specified. Another possibility is that if you are trying to maintain a fixed table width, but the width of the adjacent columns is not big enough to absorb the width changes to the columns that you specified, then the return value is the same as the column's original width instead of what you specified.\nTo get the column width, use\nITableAnnotation::GetColumnWidth\n.\nTo get or set the row height, use\nITableAnnotation::GetRowHeight\nand\nITableAnnotation::SetRowHeight\n.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.ColumnCount",
+    "ITableAnnotation.ColumnHidden",
+    "ITableAnnotation.DeleteColumn",
+    "ITableAnnotation.GetColumnTitle",
+    "ITableAnnotation.GetColumnType",
+    "ITableAnnotation.GetColumnWidth",
+    "ITableAnnotation.GetLockColumnWidth",
+    "ITableAnnotation.InsertColumn",
+    "ITableAnnotation.MoveColumn",
+    "ITableAnnotation.SetColumnTitle",
+    "ITableAnnotation.SetColumnType",
+    "ITableAnnotation.SetLockColumnWidth",
+    "ITableAnnotation.TotalColumnCount"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfigurationManager",
+    "member": "AddSpeedPak2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Selection type: 1 = Geometry 2 = Graphics"
+      },
+      {
+        "name": "PartThreshold",
+        "type": "System.Double",
+        "description": "1.0 >= Double value for part or body selection threshold >= 0.0; 1.0 selects nothing, and 0.0 selects all (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.CreateSpeedPak",
+      "IConfiguration.IsSpeedPak",
+      "IConfiguration.UpdateSpeedPak"
+    ],
+    "keywords": [
+      "speedpak",
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "assemblies",
+      "iassemblydoc",
+      "addspeedpak2",
+      "iconfigurationmanager",
+      "manager",
+      "add",
+      "speed",
+      "pak2",
+      "type",
+      "int32",
+      "part",
+      "threshold",
+      "double",
+      "object",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IConfigurationManager.AddSpeedPak2",
+  "description": "Creates a SpeedPak configuration that includes all faces and the specified threshold of parts or bodies for the active assembly configuration.",
+  "signature": "System.Object AddSpeedPak2( \n   System.Int32\nType\n,\n   System.Double\nPartThreshold\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Selection type: 1 = Geometry 2 = Graphics"
+    },
+    {
+      "name": "PartThreshold",
+      "type": "System.Double",
+      "description": "1.0 >= Double value for part or body selection threshold >= 0.0; 1.0 selects nothing, and 0.0 selects all (see Remarks )"
+    }
+  ],
+  "returns": "SpeedPak configuration",
+  "remarks": "PartThreshold corresponds to the value of the\nBodies to Include\nslider on the SpeedPak PropertyManager page.\nThis method includes all faces in the SpeedPak configuration.",
+  "examples": [
+    {
+      "title": "Create a SpeedPak Configuration (VBA)",
+      "href": "Create_SpeedPak_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Speedpak Configuration (VB.NET)",
+      "href": "Create_SpeedPak_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Speedpak Configuration (C#)",
+      "href": "Create_Speedpak_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.CreateSpeedPak",
+    "IConfiguration.IsSpeedPak",
+    "IConfiguration.UpdateSpeedPak"
+  ]
+}

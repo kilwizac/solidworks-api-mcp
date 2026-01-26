@@ -1,0 +1,16 @@
+---
+type: interface
+interface: DPartDocEvents_ViewNewNotify2EventHandler
+inherits: null
+description: Post-notifies the user program when a new model view window is created. For example, this event is sent for each new model view created by the window split bar.
+member_count: 0
+docset: sldworksapi
+categories:
+  - parts
+  - ui
+common_members: []
+---
+
+# DPartDocEvents_ViewNewNotify2EventHandler
+
+Post-notifies the user program when a new model view window is created. For example, this event is sent for each new model view created by the window split bar.

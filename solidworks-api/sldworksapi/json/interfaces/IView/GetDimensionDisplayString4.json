@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDimensionDisplayString4",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDimensionDisplayInfo5",
+      "IView.GetDimensionDisplayInfoSize2",
+      "IView.GetDimensionIds4",
+      "IView.GetDimensionInfo6",
+      "IView.GetDimensionString4",
+      "IView.GetFirstDisplayDimension5",
+      "IView.IGetDimensionDisplayInfo5",
+      "IView.IGetDimensionIds4",
+      "IView.IGetDimensionInfo6",
+      "IView.IGetDimensionString4",
+      "IView.ProjectedDimensions"
+    ],
+    "keywords": [
+      "getdimensiondisplaystring4",
+      "iview",
+      "view",
+      "dimension",
+      "display",
+      "string4",
+      "object"
+    ]
+  },
+  "title": "IView.GetDimensionDisplayString4",
+  "description": "Obsolete. Superseded by IView::GetDimensionDisplayString5.",
+  "signature": "System.Object GetDimensionDisplayString4()",
+  "parameters": [],
+  "returns": "Array of strings containing the dimension text (see Remarks )",
+  "remarks": "For each dimension in the drawing sheet or drawing view, this method returns 10 strings. If any of the dimension strings are not used, then those strings are returned as empty strings.\n[\nvalue1, tolMax1 tolMin1, value2, tolMax2, tolMin2, prefix, suffix, callout1, callout2\n]\nThis set of data is returned for each dimension in the view. See\nIView::GetDimensionCount4\nto determine the number of dimensions in the drawing sheet or drawing view.\nNOTES:\nA previous version of this method,\nIView::GetDimensionDisplayString2\nor\nIView::IGetDimensionDisplayString2\n, detects and overlooks dangling dimensions. These method, IView::GetDimensionDisplayString4 and\nIView::IGetDimensionDisplayString4\n, do not overlook nor do they indicate that any dimensions are dangling. Use IView::GetDimensionDisplayString2 if you need dangling dimensions detected and overlooked.\nThis method does not support\nhole callouts\n.",
+  "examples": [],
+  "related": [
+    "IView.GetDimensionDisplayInfo5",
+    "IView.GetDimensionDisplayInfoSize2",
+    "IView.GetDimensionIds4",
+    "IView.GetDimensionInfo6",
+    "IView.GetDimensionString4",
+    "IView.GetFirstDisplayDimension5",
+    "IView.IGetDimensionDisplayInfo5",
+    "IView.IGetDimensionIds4",
+    "IView.IGetDimensionInfo6",
+    "IView.IGetDimensionString4",
+    "IView.ProjectedDimensions"
+  ]
+}

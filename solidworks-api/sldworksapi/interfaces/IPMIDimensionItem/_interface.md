@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IPMIDimensionItem
+inherits: null
+description: Allows access to a Product and Manufacturing Information (PMI) dimension item.
+member_count: 14
+docset: sldworksapi
+categories:
+  - dimensions
+common_members:
+  - AdditionalSymbol
+  - CalloutText
+  - InstanceCount
+  - IsReferenceOnly
+  - MaxVariation
+  - MinVariation
+  - Prefix
+  - Suffix
+---
+
+# IPMIDimensionItem
+
+Allows access to a Product and Manufacturing Information (PMI) dimension item.
+
+## Common Members
+
+- `AdditionalSymbol`
+- `CalloutText`
+- `InstanceCount`
+- `IsReferenceOnly`
+- `MaxVariation`
+- `MinVariation`
+- `Prefix`
+- `Suffix`

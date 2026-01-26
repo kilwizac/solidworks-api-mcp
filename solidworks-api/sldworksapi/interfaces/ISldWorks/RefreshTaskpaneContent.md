@@ -1,0 +1,57 @@
+---
+type: method
+interface: ISldWorks
+member: RefreshTaskpaneContent
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - ISldWorks.ActivateTaskPane
+  - ISldWorks.CreateTaskpaneView2
+  - ISldWorks.TaskPaneIsPinned
+  - ITaskpaneView
+keywords:
+  - task
+  - pane
+  - see
+  - also
+  - itaskpaneview
+  - refresh
+  - refreshtaskpanecontent
+  - isldworks
+  - sld
+  - works
+  - taskpane
+  - content
+  - void
+---
+
+# ISldWorks.RefreshTaskpaneContent
+
+Refreshes the view of the Design Library tab in the Task Pane.
+
+## Signature
+
+```csharp
+void RefreshTaskpaneContent()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `ISldWorks.ActivateTaskPane`
+- `ISldWorks.CreateTaskpaneView2`
+- `ISldWorks.TaskPaneIsPinned`
+- `ITaskpaneView`

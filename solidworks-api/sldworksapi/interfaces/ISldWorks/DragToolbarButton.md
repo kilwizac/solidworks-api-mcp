@@ -1,0 +1,106 @@
+---
+type: method
+interface: ISldWorks
+member: DragToolbarButton
+returns: void
+parameters:
+  -
+    name: SourceToolbar
+    type: System.Int32
+    description: Toolbar as defined by swToolbar_e or if a CommandGroup toolbar, use ICommandGroup::ToolbarId
+  -
+    name: TargetToolbar
+    type: System.Int32
+    description: Toolbar as defined by swToolbar_e or if a CommandGroup toolbar, use ICommandGroup::ToolbarId
+  -
+    name: SourceIndex
+    type: System.Int32
+    description: 0-based index of the toolbar button on the native SOLIDWORKS toolbar or CommandGroup toolbar
+  -
+    name: TargetIndex
+    type: System.Int32
+    description: 0-based index of the toolbar button on the native SOLIDWORKS toolbar or CommandGroup toolbar
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - ISldWorks.AddToolbar4
+  - ISldWorks.AddToolbarCommand2
+  - ISldWorks.DragToolbarButtonFromCommandID
+  - ISldWorks.GetCommandID
+  - ISldWorks.GetLastToolbarID
+  - ISldWorks.GetToolbarDock2
+  - ISldWorks.GetToolbarState2
+  - ISldWorks.HideToolbar2
+  - ISldWorks.RemoveToolbar2
+  - ISldWorks.SetToolbarDock2
+keywords:
+  - toolbars
+  - button
+  - toolbar
+  - dragtoolbarbutton
+  - isldworks
+  - sld
+  - works
+  - drag
+  - source
+  - int32
+  - target
+  - index
+  - void
+---
+
+# ISldWorks.DragToolbarButton
+
+Copies the specified toolbar button from the specified native SOLIDWORKS toolbar or ICommandGroup toolbar to the specified native SOLIDWORKS toolbar or ICommandGroup toolbar.
+
+## Signature
+
+```csharp
+void DragToolbarButton( 
+   System.Int32
+SourceToolbar
+,
+   System.Int32
+TargetToolbar
+,
+   System.Int32
+SourceIndex
+,
+   System.Int32
+TargetIndex
+)
+```
+## Parameters
+
+- `SourceToolbar` (System.Int32): Toolbar as defined by swToolbar_e or if a CommandGroup toolbar, use ICommandGroup::ToolbarId
+- `TargetToolbar` (System.Int32): Toolbar as defined by swToolbar_e or if a CommandGroup toolbar, use ICommandGroup::ToolbarId
+- `SourceIndex` (System.Int32): 0-based index of the toolbar button on the native SOLIDWORKS toolbar or CommandGroup toolbar
+- `TargetIndex` (System.Int32): 0-based index of the toolbar button on the native SOLIDWORKS toolbar or CommandGroup toolbar
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+This method makes a copy of the specified source toolbar button and moves a copy of the toolbar button to the target toolbar. This method does not remove the specified source toolbar button from the source toolbar.
+Examine the toolbars in the user interface to determine the values for SourceIndex and TargetIndex.
+Using this method to drag a toolbar button from one toolbar to another is persistent across sessions of SOLIDWORKS and need only be performed once. For example, do not include this operation in any SolidsWorks API start-up routine because you would then be adding a copy of the same toolbar button to the same target toolbar every time you start up SOLIDWORKS.
+
+## See Also
+
+- `ISldWorks.AddToolbar4`
+- `ISldWorks.AddToolbarCommand2`
+- `ISldWorks.DragToolbarButtonFromCommandID`
+- `ISldWorks.GetCommandID`
+- `ISldWorks.GetLastToolbarID`
+- `ISldWorks.GetToolbarDock2`
+- `ISldWorks.GetToolbarState2`
+- `ISldWorks.HideToolbar2`
+- `ISldWorks.RemoveToolbar2`
+- `ISldWorks.SetToolbarDock2`

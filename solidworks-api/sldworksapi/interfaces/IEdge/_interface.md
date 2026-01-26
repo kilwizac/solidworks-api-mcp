@@ -1,0 +1,35 @@
+---
+type: interface
+interface: IEdge
+inherits: null
+description: Allows access to its defining coedge, and adjacent faces, and its underlying curve and vertices as well as edge data.
+member_count: 47
+docset: sldworksapi
+categories:
+  - documents
+  - geometry
+common_members:
+  - Check
+  - CreateWireBody
+  - Display
+  - EdgeInFaceSense
+  - EnumCoEdges
+  - Evaluate
+  - Evaluate2
+  - GetBody
+---
+
+# IEdge
+
+Allows access to its defining coedge, and adjacent faces, and its underlying curve and vertices as well as edge data.
+
+## Common Members
+
+- `Check`
+- `CreateWireBody`
+- `Display`
+- `EdgeInFaceSense`
+- `EnumCoEdges`
+- `Evaluate`
+- `Evaluate2`
+- `GetBody`

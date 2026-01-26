@@ -1,0 +1,125 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IMatchedBoolean3",
+    "returns": "EnumBodies2",
+    "parameters": [
+      {
+        "name": "OperationType",
+        "type": "System.Int32",
+        "description": "One of these operation types: SWBODYADD SWBODYCUT SWCODYINTERSECT"
+      },
+      {
+        "name": "ToolBodyCount",
+        "type": "System.Int32",
+        "description": "Number of bodies"
+      },
+      {
+        "name": "ToolBodyArr",
+        "type": "Body2",
+        "description": "Array of bodies of size ToolBodyCount"
+      },
+      {
+        "name": "NumOfMatchingFaces",
+        "type": "System.Int32",
+        "description": "Number of matching faces"
+      },
+      {
+        "name": "FaceList1",
+        "type": "Face2",
+        "description": "First face list (see Remarks )"
+      },
+      {
+        "name": "FaceList2",
+        "type": "Face2",
+        "description": "Second face list (see Remarks )"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "Error indicated as defined in swBodyOperationError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.MatchedBoolean3"
+    ],
+    "keywords": [
+      "imatchedboolean3",
+      "ibody2",
+      "body2",
+      "matched",
+      "boolean3",
+      "operation",
+      "type",
+      "int32",
+      "tool",
+      "body",
+      "count",
+      "arr",
+      "num",
+      "matching",
+      "faces",
+      "face",
+      "list1",
+      "face2",
+      "list2",
+      "error",
+      "code",
+      "bodies2"
+    ]
+  },
+  "title": "IBody2.IMatchedBoolean3",
+  "description": "Obsolete. Superseded by IBody2::IMatchedBoolean4.",
+  "signature": "EnumBodies2 IMatchedBoolean3( \n   System.Int32\nOperationType\n,\n   System.Int32\nToolBodyCount\n,\n   ref Body2\nToolBodyArr\n,\n   System.Int32\nNumOfMatchingFaces\n,\n   ref Face2\nFaceList1\n,\n   ref Face2\nFaceList2\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "OperationType",
+      "type": "System.Int32",
+      "description": "One of these operation types: SWBODYADD SWBODYCUT SWCODYINTERSECT"
+    },
+    {
+      "name": "ToolBodyCount",
+      "type": "System.Int32",
+      "description": "Number of bodies"
+    },
+    {
+      "name": "ToolBodyArr",
+      "type": "Body2",
+      "description": "Array of bodies of size ToolBodyCount"
+    },
+    {
+      "name": "NumOfMatchingFaces",
+      "type": "System.Int32",
+      "description": "Number of matching faces"
+    },
+    {
+      "name": "FaceList1",
+      "type": "Face2",
+      "description": "First face list (see Remarks )"
+    },
+    {
+      "name": "FaceList2",
+      "type": "Face2",
+      "description": "Second face list (see Remarks )"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "Error indicated as defined in swBodyOperationError_e"
+    }
+  ],
+  "returns": "Pointer to the IEnumBodies2 object for a list of matches",
+  "remarks": "The concept of match means that the caller tells the boolean operator beforehand which faces can be considered to coincide. Basically, the caller performs part of the boolean operation.\nSometimes the application knows that two faces match because of the way the bodies are constructed; i.e., the application knows which faces are intended to match.\nHaving a list of matching face pairs may allow the matched boolean operator to resolve other geometric operations that otherwise it would not be able to work out. In general, providing matched faces speeds up the boolean operation and makes results more reliable.\nThe arguments FaceList1 and FaceList2 arguments can be empty lists. If matching face pairs are passed in, these faces must match such that:\nthe surface geometry is coinciding.\nfor each edge in a face, there is an edge in the other face that coincides",
+  "examples": [],
+  "related": [
+    "IBody2.MatchedBoolean3"
+  ]
+}

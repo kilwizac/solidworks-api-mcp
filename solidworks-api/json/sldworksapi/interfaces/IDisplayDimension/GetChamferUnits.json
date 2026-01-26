@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetChamferUnits",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "LengthUnit",
+        "type": "System.Int32",
+        "description": "Unit of length as defined in swLengthUnit_e"
+      },
+      {
+        "name": "AngularUnit",
+        "type": "System.Int32",
+        "description": "Unit of angle as defined in swAngleUnit_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.ChamferPrecision",
+      "IDisplayDimension.GetUnits"
+    ],
+    "keywords": [
+      "getchamferunits",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "chamfer",
+      "units",
+      "length",
+      "unit",
+      "int32",
+      "angular",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetChamferUnits",
+  "description": "Gets the local units of measurement for a chamfer display dimension.",
+  "signature": "System.Boolean GetChamferUnits( \n   out System.Int32\nLengthUnit\n,\n   out System.Int32\nAngularUnit\n)",
+  "parameters": [
+    {
+      "name": "LengthUnit",
+      "type": "System.Int32",
+      "description": "Unit of length as defined in swLengthUnit_e"
+    },
+    {
+      "name": "AngularUnit",
+      "type": "System.Int32",
+      "description": "Unit of angle as defined in swAngleUnit_e"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The unit display setting of a chamfer display dimension is controlled by a value stored in one of two places: on the owning document or on the individual display dimension. Use\nIDisplayDimension::GetUseDocUnits\nto determine whether the units settings are local or from the owning document. If IDisplayDimension::GetUseDocUnits returns true, then the units settings are from the owning document, and this API returns -1 for both length and angle units of measurement.\nLocal unit information for a chamfer display dimension is in force when Override Units is selected on the Other tab of the dimension's PropertyManager page. If Override Units is selected, then this API returns units as defined in swLengthUnit_e (length measurement) and swAngleUnit_e (angle measurement).",
+  "examples": [
+    {
+      "title": "Get Chamfer Display Dimension (C#)",
+      "href": "Get_Chamfer_Display_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Display Dimension (VB.NET)",
+      "href": "Get_Chamfer_Display_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Display Dimension (VBA)",
+      "href": "Get_Chamfer_Display_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.ChamferPrecision",
+    "IDisplayDimension.GetUnits"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFormToolFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Path",
+        "type": "System.String",
+        "description": "Pathname of the forming tool part file in the Design Library"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "Whether to reverse the direction of the cut of the forming tool when inserted"
+      },
+      {
+        "name": "RotAngle",
+        "type": "System.Double",
+        "description": "Angle of the forming tool"
+      },
+      {
+        "name": "Config",
+        "type": "System.String",
+        "description": "Name of the configuration of the forming tool to insert"
+      },
+      {
+        "name": "OverrideDoc",
+        "type": "System.Boolean",
+        "description": "True to override the document settings in Tools > Options > Document Properties > Sheet Metal, false to not"
+      },
+      {
+        "name": "ShowPunch",
+        "type": "System.Boolean",
+        "description": "True to display the cut of the forming tool when the part is flattened, false to not; valid only if OverrideDoc = true"
+      },
+      {
+        "name": "ShowProfile",
+        "type": "System.Boolean",
+        "description": "True to display the placement sketch of the forming tool when the part is flattened, false to not; valid only if OverrideDoc = true"
+      },
+      {
+        "name": "ShowCenter",
+        "type": "System.Boolean",
+        "description": "True to display the center mark where the forming tool is located in the flat pattern, false to not; valid only if OverrideDoc = true"
+      },
+      {
+        "name": "LinkToPart",
+        "type": "System.Boolean",
+        "description": "True to link the forming tool feature to its part in the Design Library, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IView.InsertPunchTable"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "forming",
+      "tools",
+      "sheet",
+      "metal",
+      "isheetmetalfeaturedata",
+      "insertformtoolfeature",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "form",
+      "tool",
+      "path",
+      "string",
+      "flip",
+      "boolean",
+      "rot",
+      "angle",
+      "double",
+      "config",
+      "override",
+      "doc",
+      "show",
+      "punch",
+      "profile",
+      "center",
+      "link",
+      "part"
+    ]
+  },
+  "title": "IFeatureManager.InsertFormToolFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::CreateDefinition and IFeatureManager::CreateFeature.",
+  "signature": "Feature InsertFormToolFeature( \n   System.String\nPath\n,\n   System.Boolean\nFlip\n,\n   System.Double\nRotAngle\n,\n   System.String\nConfig\n,\n   System.Boolean\nOverrideDoc\n,\n   System.Boolean\nShowPunch\n,\n   System.Boolean\nShowProfile\n,\n   System.Boolean\nShowCenter\n,\n   System.Boolean\nLinkToPart\n)",
+  "parameters": [
+    {
+      "name": "Path",
+      "type": "System.String",
+      "description": "Pathname of the forming tool part file in the Design Library"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "Whether to reverse the direction of the cut of the forming tool when inserted"
+    },
+    {
+      "name": "RotAngle",
+      "type": "System.Double",
+      "description": "Angle of the forming tool"
+    },
+    {
+      "name": "Config",
+      "type": "System.String",
+      "description": "Name of the configuration of the forming tool to insert"
+    },
+    {
+      "name": "OverrideDoc",
+      "type": "System.Boolean",
+      "description": "True to override the document settings in Tools > Options > Document Properties > Sheet Metal, false to not"
+    },
+    {
+      "name": "ShowPunch",
+      "type": "System.Boolean",
+      "description": "True to display the cut of the forming tool when the part is flattened, false to not; valid only if OverrideDoc = true"
+    },
+    {
+      "name": "ShowProfile",
+      "type": "System.Boolean",
+      "description": "True to display the placement sketch of the forming tool when the part is flattened, false to not; valid only if OverrideDoc = true"
+    },
+    {
+      "name": "ShowCenter",
+      "type": "System.Boolean",
+      "description": "True to display the center mark where the forming tool is located in the flat pattern, false to not; valid only if OverrideDoc = true"
+    },
+    {
+      "name": "LinkToPart",
+      "type": "System.Boolean",
+      "description": "True to link the forming tool feature to its part in the Design Library, false to not"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method, select either a face or a 2D sketch containing points. If you select:\nface, a single instance of the Design Library forming tool is placed on it.\nsketch containing points, an instance of the Design Library forming tool is placed at each point in the sketch.\nTo create your own forming tool, call\nIFeatureManager::CreateFormTool\n.",
+  "examples": [],
+  "related": [
+    "IView.InsertPunchTable"
+  ]
+}

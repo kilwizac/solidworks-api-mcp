@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetSmartComponentData",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Features",
+        "type": "System.Object",
+        "description": "Array of IFeature s that can be selected for this Smart Component (see Remarks )"
+      },
+      {
+        "name": "FeaturesSelected",
+        "type": "System.Object",
+        "description": "Array of boolean values; true if the corresponding item in the Features array is selected, false if it is not selected"
+      },
+      {
+        "name": "Components",
+        "type": "System.Object",
+        "description": "Array of IComponent2 s that can be selected for this Smart Component (see Remarks )"
+      },
+      {
+        "name": "ComponentsSelected",
+        "type": "System.Object",
+        "description": "Array of boolean values; true if the corresponding item in the Components array is selected, false if it is not selected"
+      },
+      {
+        "name": "References",
+        "type": "System.Object",
+        "description": "Array of feature reference entities that are used to activate the Smart Features specified by Features and FeaturesSelected; empty if the Smart Component features have not been activated (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.AddSmartComponent",
+      "IAssemblyDoc.CreateSmartComponent"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "smart",
+      "getsmartcomponentdata",
+      "component2",
+      "component",
+      "data",
+      "features",
+      "object",
+      "selected",
+      "references",
+      "boolean",
+      "activate",
+      "assembly",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IComponent2.GetSmartComponentData",
+  "description": "Gets the features, components, and feature references of a Smart Component.",
+  "signature": "System.Boolean GetSmartComponentData( \n   out System.Object\nFeatures\n,\n   out System.Object\nFeaturesSelected\n,\n   out System.Object\nComponents\n,\n   out System.Object\nComponentsSelected\n,\n   out System.Object\nReferences\n)",
+  "parameters": [
+    {
+      "name": "Features",
+      "type": "System.Object",
+      "description": "Array of IFeature s that can be selected for this Smart Component (see Remarks )"
+    },
+    {
+      "name": "FeaturesSelected",
+      "type": "System.Object",
+      "description": "Array of boolean values; true if the corresponding item in the Features array is selected, false if it is not selected"
+    },
+    {
+      "name": "Components",
+      "type": "System.Object",
+      "description": "Array of IComponent2 s that can be selected for this Smart Component (see Remarks )"
+    },
+    {
+      "name": "ComponentsSelected",
+      "type": "System.Object",
+      "description": "Array of boolean values; true if the corresponding item in the Components array is selected, false if it is not selected"
+    },
+    {
+      "name": "References",
+      "type": "System.Object",
+      "description": "Array of feature reference entities that are used to activate the Smart Features specified by Features and FeaturesSelected; empty if the Smart Component features have not been activated (see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "A Smart Component is defined by:\nComponents\nFeatures\nFeature references\nSee the SOLIDWORKS Help for more information about Smart Components.\nUse this method to get the current features, components, and feature references of a Smart Component.\nBefore calling this method:\nOpen an assembly that contains a Smart Component whose Smart Features are not activated.\nFind the Smart Component in the assembly using\nIComponent2::IsSmartComponent\n.\nAfter calling this method, use\nIComponent2::SetSmartComponentData\nto change which features and components of a Smart Component to enable and which Smart Features to activate.\nUse\nISmartComponentFeatureData\nto:\nInsert new features and components into a Smart Component.\nDelete features and components from a Smart Component.",
+  "examples": [
+    {
+      "title": "Activate Smart Features in an Assembly (VBA)",
+      "href": "Activate_Smart_Features_in_an_Assembly_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Activate Smart Features in an Assembly (VB.NET)",
+      "href": "Activate_Smart_Features_in_an_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Activate Smart Features in an Assembly (C#)",
+      "href": "Activate_Smart_Features_in_an_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddSmartComponent",
+    "IAssemblyDoc.CreateSmartComponent"
+  ]
+}

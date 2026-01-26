@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "GetArcAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arc where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.IGetArcAtIndex"
+    ],
+    "keywords": [
+      "getarcatindex",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "arc",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISFSymbol.GetArcAtIndex",
+  "description": "Gets information for the specified arc.",
+  "signature": "System.Object GetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arc where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Call\nISFSymbol::GetArcCount\nbefore calling this method to get the number of arcs in this surface finish symbol.\nThe return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3],\ncenterPt\n[3],\nrotationDir\n]\nwhere:\nlineType\n= Line type as defined in\nswLineTypes_e\nenumeration\nstartPt\n[3]\n= XYZ arc start point\nendPt\n[3]\n= XYZ arc end point\ncenterPt\n[3]\n= XYZ arc center point\nrotationDir\n=\nValue is a boolean returned as a double and represents the rotation direction, where CCW = True and CW = FALS",
+  "examples": [],
+  "related": [
+    "ISFSymbol.IGetArcAtIndex"
+  ]
+}

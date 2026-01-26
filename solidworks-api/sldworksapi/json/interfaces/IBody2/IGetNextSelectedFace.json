@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IGetNextSelectedFace",
+    "returns": "Face2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry",
+      "selections"
+    ],
+    "related": [
+      "IBody2.GetNextSelectedFace",
+      "IBody2.GetSelectedFaceCount",
+      "IBody2.GetSelectedFaces",
+      "IBody2.IGetFirstSelectedFace",
+      "IBody2.IGetSelectedFaces"
+    ],
+    "keywords": [
+      "iges",
+      "routines",
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "body",
+      "bodies",
+      "ibody2",
+      "faces",
+      "igetnextselectedface",
+      "body2",
+      "next",
+      "selected",
+      "face2"
+    ]
+  },
+  "title": "IBody2.IGetNextSelectedFace",
+  "description": "Gets the next selected face. For use with IBody2::GetProcessedBodyWithSelFace and intended for IGES routines.",
+  "signature": "Face2 IGetNextSelectedFace()",
+  "parameters": [],
+  "returns": "Pointer to the selected face",
+  "remarks": "Do not use this method for general selection handling. If you want to handle items selected by the user or items selected with\nIModelDocExtension::SelectByID2\n, use\nISelectionMgr::GetSelectedObject6\n.",
+  "examples": [],
+  "related": [
+    "IBody2.GetNextSelectedFace",
+    "IBody2.GetSelectedFaceCount",
+    "IBody2.GetSelectedFaces",
+    "IBody2.IGetFirstSelectedFace",
+    "IBody2.IGetSelectedFaces"
+  ]
+}

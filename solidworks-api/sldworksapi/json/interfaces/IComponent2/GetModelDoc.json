@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetModelDoc",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.IGetModelDoc"
+    ],
+    "keywords": [
+      "getmodeldoc",
+      "icomponent2",
+      "component2",
+      "model",
+      "doc",
+      "object",
+      "change",
+      "material",
+      "properties",
+      "vba",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "bom",
+      "balloon",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IComponent2.GetModelDoc",
+  "description": "Obsolete. Superseded by IComponent2::GetModelDoc2.",
+  "signature": "System.Object GetModelDoc()",
+  "parameters": [],
+  "returns": "Model document",
+  "remarks": "This method might return Nothing or null if:\na component is suppressed or lightweight.\nthe component ID is not loaded into memory by SOLIDWORKS.\nFor more information on lightweight components, see\nWork With Lightweight Components\n.\nWhen you use the IModelDoc2 object of a component, you do not have access to whatever uniqueness might exist for this instance of the assembly IComponent2. This occurs because the IModelDoc2 object goes back to the saved part file. By comparison, the IComponent2 object gathers information at the assembly level. This allows IComponent2 objects to recognize assembly-level changes made to a component instance (for example, assembly-level features and material changes).\nIn addition, the IModelDoc2 object returned from this method represents the last-saved state. If the component part is currently open, then the IModelDoc2 object represents the state of the opened document. For example, if the component part is not open and it was last saved in the default configuration, then IComponent2::GetModelDoc\nreturns a IModelDoc2 pointer representing that state. To get access to other configuration information (such as features and configuration properties), you must activate the part and show the desired configuration using\nIModelDoc2::ShowConfiguration2\n.\nIf this component is the root component, then this method returns a NULL pointer. For more information, see\nIConfiguration::GetRootComponent.",
+  "examples": [
+    {
+      "title": "Change Material Properties (VBA)",
+      "href": "Change_Material_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (C#)",
+      "href": "Get_BOM_Balloon_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VB.NET)",
+      "href": "Get_BOM_Balloon_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VBA)",
+      "href": "Get_BOM_Balloon_Properties_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.IGetModelDoc"
+  ]
+}

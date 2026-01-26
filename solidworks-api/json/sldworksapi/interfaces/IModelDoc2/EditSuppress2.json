@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "EditSuppress2",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.EditUnsuppress2",
+      "IModelDoc2.EditUnsuppressDependent2"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "suppress",
+      "features",
+      "feature",
+      "ifeature",
+      "sheet",
+      "metal",
+      "isheetmetalfeaturedata",
+      "fold",
+      "editsuppress2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "edit",
+      "suppress2",
+      "boolean",
+      "vba",
+      "part",
+      "persistent",
+      "reference",
+      "ids",
+      "vb",
+      "net",
+      "component"
+    ]
+  },
+  "title": "IModelDoc2.EditSuppress2",
+  "description": "Suppresses the selected feature, the selected component, or the owning feature of the selected face.",
+  "signature": "System.Boolean EditSuppress2()",
+  "parameters": [],
+  "returns": "True if the selected feature, component, or owning feature of the selected face is suppressed, false if not",
+  "remarks": "This routine is identical to the now obsolete IModelDoc2::EditSuppress. The version number was incremented to allow VB applications to take advantage of information not available in the now obsolete IPartDoc::EditSuppress2.\nThis method closes any component files when called in an assembly.\nIf the components were modified, then those modifications are not automatically saved. You must save any modifications before the files are closed.\nSOLIDWORKS does not allow suppressing features or components while a PropertyManager page is open.",
+  "examples": [
+    {
+      "title": "Suppress Feature (VBA)",
+      "href": "Suppress_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set and Get Sheet Metal Part's Persistent Reference IDs (C#)",
+      "href": "Set_and_Get_Sheet_Metal_Part's_Persistent_Reference_IDs_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set and Get Sheet Metal Part's Persistent Reference IDs (VB.NET)",
+      "href": "Set_and_Get_Sheet_Metal_Part's_Persistent_Reference_IDs_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set and Get Sheet Metal Part's Persistent Reference IDs (VBA)",
+      "href": "Set_and_Get_Sheet_Metal_Part's_Persistent_Reference_IDs_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Suppress Component Feature (C#)",
+      "href": "Suppress_Component_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Suppress Component Feature (VB.NET)",
+      "href": "Suppress_Component_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Suppress Component Feature (VBA)",
+      "href": "Suppress_Component_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.EditUnsuppress2",
+    "IModelDoc2.EditUnsuppressDependent2"
+  ]
+}

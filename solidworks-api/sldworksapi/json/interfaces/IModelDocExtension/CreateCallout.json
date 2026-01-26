@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "CreateCallout",
+    "returns": "Callout",
+    "parameters": [
+      {
+        "name": "NumberOfRows",
+        "type": "System.Int32",
+        "description": "Number of rows in the callout"
+      },
+      {
+        "name": "Handler",
+        "type": "System.Object",
+        "description": "Pointer to the event handler for the callout ( ISwCalloutHandler )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "callout",
+      "see",
+      "also",
+      "icallout",
+      "create",
+      "createcallout",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "number",
+      "rows",
+      "int32",
+      "handler",
+      "object",
+      "independent",
+      "selection",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.CreateCallout",
+  "description": "Creates a callout independent of a selection.",
+  "signature": "Callout CreateCallout( \n   System.Int32\nNumberOfRows\n,\n   System.Object\nHandler\n)",
+  "parameters": [
+    {
+      "name": "NumberOfRows",
+      "type": "System.Int32",
+      "description": "Number of rows in the callout"
+    },
+    {
+      "name": "Handler",
+      "type": "System.Object",
+      "description": "Pointer to the event handler for the callout ( ISwCalloutHandler )"
+    }
+  ],
+  "returns": "Callout",
+  "remarks": "This method allows you to create a callout independently of a selection. You can define the position of the callout using the\nICallout::Position\nand\nICallout::SetTargetPoint\n.\nTo create a callout dependent on a selection, use\nISelectionMgr::CreateCallout2\n.",
+  "examples": [
+    {
+      "title": "Create a Callout Independent of a Selection (VB.NET)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Callout Independent of a Selection (VBA)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Callout Independent of a Selection (C#)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

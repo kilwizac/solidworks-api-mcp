@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "SetSheetsSelected",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NewSheetList",
+        "type": "System.Object",
+        "description": "Names of the drawing sheets whose setups to modify (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "up",
+      "multiple",
+      "drawing",
+      "sheets",
+      "setsheetsselected",
+      "idrawingdoc",
+      "doc",
+      "selected",
+      "new",
+      "list",
+      "object",
+      "void",
+      "modify",
+      "setups",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.SetSheetsSelected",
+  "description": "Sets the specified drawing sheets whose setups to modify.",
+  "signature": "void SetSheetsSelected( \n   System.Object\nNewSheetList\n)",
+  "parameters": [
+    {
+      "name": "NewSheetList",
+      "type": "System.Object",
+      "description": "Names of the drawing sheets whose setups to modify (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "The first drawing sheet in the drawing is automatically included in NewSheetList and need not be specified.\nAfter calling this method, call\nIDrawingDoc::SetupSheet6\nto specify how to modify the setups of the specified drawing sheets.",
+  "examples": [
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (C#)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (VB.NET)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (VBA)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

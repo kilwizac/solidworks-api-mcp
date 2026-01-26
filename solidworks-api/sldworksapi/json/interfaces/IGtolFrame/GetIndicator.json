@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtolFrame",
+    "member": "GetIndicator",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "IndicatorIndex",
+        "type": "System.Int32",
+        "description": "One-based index of tolerance indicator to retrieve"
+      },
+      {
+        "name": "BorderType",
+        "type": "System.Int32",
+        "description": "Type of border as defined by swGtolIndicatorBorderType_e"
+      },
+      {
+        "name": "TolType",
+        "type": "System.Int32",
+        "description": "Tolerance type as defined by swGtolGeomCharSymbol_e (see Remarks )"
+      },
+      {
+        "name": "Datum",
+        "type": "System.String",
+        "description": "Datum feature symbol that refers to the BorderType"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "getindicator",
+      "igtolframe",
+      "gtol",
+      "frame",
+      "indicator",
+      "index",
+      "int32",
+      "border",
+      "type",
+      "tol",
+      "datum",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IGtolFrame.GetIndicator",
+  "description": "Gets the indicator border type, tolerance type, and datum at the specified indicator index for this Gtol frame.",
+  "signature": "System.Boolean GetIndicator( \n   System.Int32\nIndicatorIndex\n,\n   out System.Int32\nBorderType\n,\n   out System.Int32\nTolType\n,\n   out System.String\nDatum\n)",
+  "parameters": [
+    {
+      "name": "IndicatorIndex",
+      "type": "System.Int32",
+      "description": "One-based index of tolerance indicator to retrieve"
+    },
+    {
+      "name": "BorderType",
+      "type": "System.Int32",
+      "description": "Type of border as defined by swGtolIndicatorBorderType_e"
+    },
+    {
+      "name": "TolType",
+      "type": "System.Int32",
+      "description": "Tolerance type as defined by swGtolGeomCharSymbol_e (see Remarks )"
+    },
+    {
+      "name": "Datum",
+      "type": "System.String",
+      "description": "Datum feature symbol that refers to the BorderType"
+    }
+  ],
+  "returns": "True if indicator successfully retrieved, false if not",
+  "remarks": "Before calling this method, use\nIGtolFrame:GetIndicatorCount\nto determine IndicatorIndex.\nTolType may be one of only swGtolGeomCharSymbol_e.:\nswGcsANG\nswGcsPARALLEL\nswGcsPERP\nswGcsCIRCRUNOUT\nswGcsSYMMETRY",
+  "examples": [
+    {
+      "title": "IGtolFrame",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IGtolFrame",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

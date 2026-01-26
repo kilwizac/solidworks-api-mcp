@@ -1,0 +1,201 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMacroFeature3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BaseName",
+        "type": "System.String",
+        "description": "Name of the base feature (see Remarks )"
+      },
+      {
+        "name": "ProgId",
+        "type": "System.String",
+        "description": "COM or .NET callback object; empty string if VBA (see Remarks )"
+      },
+      {
+        "name": "MacroMethods",
+        "type": "System.Object",
+        "description": "Array of strings of size 9 only for VBA; \"\" otherwise (see Remarks )"
+      },
+      {
+        "name": "ParamNames",
+        "type": "System.Object",
+        "description": "Array of strings of the names of the parameters"
+      },
+      {
+        "name": "ParamTypes",
+        "type": "System.Object",
+        "description": "Array of the types of parameters of size paramCount as defined by swMacroFeatureParamType_e"
+      },
+      {
+        "name": "ParamValues",
+        "type": "System.Object",
+        "description": "Array of strings of the values of parameters"
+      },
+      {
+        "name": "DimTypes",
+        "type": "System.Object",
+        "description": "Array of the types of dimensions as defined by swDimensionType_e (see Remarks )"
+      },
+      {
+        "name": "DimValues",
+        "type": "System.Object",
+        "description": "Array of values of the dimensions"
+      },
+      {
+        "name": "EditBodies",
+        "type": "System.Object",
+        "description": "Array of IBody2 objects to modify in the macro feature"
+      },
+      {
+        "name": "IconFiles",
+        "type": "System.Object",
+        "description": "Array of strings of the files names for the icons (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Placement of the macro feature in the FeatureManager design tree as defined by swMacroFeatureOptions_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.IInsertMacroFeature3",
+      "IMacroFeatureData"
+    ],
+    "keywords": [
+      "com",
+      "feature",
+      "macro",
+      "see",
+      "also",
+      "imacrofeaturedata",
+      "ifeature",
+      "insertmacrofeature3",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature3",
+      "base",
+      "name",
+      "string",
+      "prog",
+      "id",
+      "methods",
+      "object",
+      "param",
+      "names",
+      "types",
+      "values",
+      "dim",
+      "edit",
+      "bodies",
+      "icon",
+      "files",
+      "options",
+      "int32",
+      "create",
+      "subfeature",
+      "vba",
+      "multibody",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertMacroFeature3",
+  "description": "Inserts a macro feature in this model.",
+  "signature": "Feature InsertMacroFeature3( \n   System.String\nBaseName\n,\n   System.String\nProgId\n,\n   System.Object\nMacroMethods\n,\n   System.Object\nParamNames\n,\n   System.Object\nParamTypes\n,\n   System.Object\nParamValues\n,\n   System.Object\nDimTypes\n,\n   System.Object\nDimValues\n,\n   System.Object\nEditBodies\n,\n   System.Object\nIconFiles\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "BaseName",
+      "type": "System.String",
+      "description": "Name of the base feature (see Remarks )"
+    },
+    {
+      "name": "ProgId",
+      "type": "System.String",
+      "description": "COM or .NET callback object; empty string if VBA (see Remarks )"
+    },
+    {
+      "name": "MacroMethods",
+      "type": "System.Object",
+      "description": "Array of strings of size 9 only for VBA; \"\" otherwise (see Remarks )"
+    },
+    {
+      "name": "ParamNames",
+      "type": "System.Object",
+      "description": "Array of strings of the names of the parameters"
+    },
+    {
+      "name": "ParamTypes",
+      "type": "System.Object",
+      "description": "Array of the types of parameters of size paramCount as defined by swMacroFeatureParamType_e"
+    },
+    {
+      "name": "ParamValues",
+      "type": "System.Object",
+      "description": "Array of strings of the values of parameters"
+    },
+    {
+      "name": "DimTypes",
+      "type": "System.Object",
+      "description": "Array of the types of dimensions as defined by swDimensionType_e (see Remarks )"
+    },
+    {
+      "name": "DimValues",
+      "type": "System.Object",
+      "description": "Array of values of the dimensions"
+    },
+    {
+      "name": "EditBodies",
+      "type": "System.Object",
+      "description": "Array of IBody2 objects to modify in the macro feature"
+    },
+    {
+      "name": "IconFiles",
+      "type": "System.Object",
+      "description": "Array of strings of the files names for the icons (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Placement of the macro feature in the FeatureManager design tree as defined by swMacroFeatureOptions_e (see Remarks )"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "BaseName\nThe argument BaseName is serialized within the feature and cannot be changed.\nYou can find out the name of the base feature by using\nIMacroFeatureData::GetBaseName\n.\nThe BaseName argument is also used to generate the name of the feature when the feature is first created.\nProgId\nIf creating a macro feature using...\nThen ProgId is...\nCOM callbacks\nThe name of the program ID for the component that implements the COM callback methods. The object that is represented by ProgID must support the\nISwComFeature\ninterface.\nInsertMacroFeature3 (\"Sample\", \"Sample.MyFeature\", _\nNothing, paramNames, paramTypes, _\nparamValues, dimTypes, dimValues, _\neditBodies, iconFiles, _\nswMacroFeatureByDefault)\nIn the COM server, the Sample.Feature class is derived from ISwComFeature and implements\nrebuild\n,\nedit\n, and\nsecurity\nfunctions.\nVBA\nAn empty string.\nInsertMacroFeature3(\"Sample\", \"\",...)\n.NET add-in callbacks\nThe name of the class that implements the .NET callbacks and ISwComFeature.\nInsertMacroFeature3(\"Sample\", \"\nproject_name.class_module\n\",...)\nMacroMethods\nThe macroMethods argument is implemented for VBA only. The array of nine strings consists of the following values:\nFilename - File executed during feature generation.\nModule - Source module executed during feature generation.\nProcedure - Source procedure executed during feature generation.\nFilename - File executed after edit definition is selected.\nModule - Source module executed after edit definition is selected.\nProcedure - Source procedure executed after edit definition is selected.\nFilename - File executed while querying security; optional, see the next paragraph.\nModule - Source Module executed while querying security; optional, see the next paragraph.\nProcedure - Source Procedure executed while querying security; optional, see the next paragraph.\nFilename should be the full pathname to the macro file. If the procedure resides in the same macro file that calls IFeatureManager::InsertMacroFeature3, then a call to\nISldWorks::GetCurrentMacroPathName\nprovides all of the information necessary for the Filename.\nIModelDoc2::ListAuxiliaryExternalFileReferences\nreturns an array containing the names of the features that include external references and an array containing the names of the external files for Filename elements 1, 4, and 7 in the array.\nThe list of:\nfeatures can contain duplicates, if the macro feature uses more than one procedure.\nfile names can contain duplicates if:\nthe procedures are implemented in the same macro file.\nmore than one instance of the same macro feature is present.\nIf a security procedure is not used, then Filename, Module, and Procedure must all be empty strings.\nProcedure names must have an\nswm\nprefix in the name. This prefix identifies the procedures to execute.\nDimTypes\nOnly these dimension types are supported by this method:\nswAngularDimension\nswLinearDimension\nswRadialDimension\nIconFiles\nThe array of the file names for the icons can contain either three or nine strings.\nNumber of strings in array\nTypes of images in this order\nImage format and sizes\nThree\nRegular\nSuppressed\nHighlighted\nWindows bitmap (\n*.bmp\n) format\n16 pixels wide X 18 pixels high\nNine\nNOTES:\nThis size array is only valid for macro features created in parts, assemblies, and drawings in SOLIDWORKS 2017 and later.\nSOLIDWORKS displays the appropriate images based on the current DPI setting of the display device.\nRegular small\nSuppressed small\nHighlighted small\nRegular medium\nSuppressed medium\nHighlighted medium\nRegular large\nSuppressed large\nHighlighted large\nWindows bitmap (\n*.bmp\n) format\nRecommended sizes are:\nSmall: 20 pixels wide X 20 pixels high\nMedium: 32 pixels wide X 32 pixels high\nLarge: 40 pixels wide X 40 pixels high\nYou can specify either the full path name or just the file name for the strings; for example,\nc:\n\\\nbitmaps\n\\\nicon1.bmp\nor\nicon1.bmp\n.\nOptions\nswMacroFeatureOptions_e.swMacroFeatureEmbedMacroFile is not supported by programming languages for the Microsoft .NET Framework; for example, not supported by C#, Visual Basic .NET, or Managed C++.\nSee\nOverview of Macro Features\nfor more information.",
+  "examples": [
+    {
+      "title": "Create Macro Feature Subfeature (VBA)",
+      "href": "Create_Macro_Feature_Subfeature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (VBA)",
+      "href": "Create_Multibody_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (VB.NET)",
+      "href": "Create_Multibody_Macro_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (C#)",
+      "href": "Create_Multibody_Macro_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.IInsertMacroFeature3",
+    "IMacroFeatureData"
+  ]
+}

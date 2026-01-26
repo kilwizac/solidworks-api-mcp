@@ -1,0 +1,100 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetColumnType3",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the column whose type to set"
+      },
+      {
+        "name": "ColumnType",
+        "type": "System.Int32",
+        "description": "Type of column as defined in swTableColumnTypes_e (see Remarks )"
+      },
+      {
+        "name": "IncludeHidden",
+        "type": "System.Boolean",
+        "description": "True to include hidden columns in Index, false to not"
+      },
+      {
+        "name": "PropertyData",
+        "type": "System.Object",
+        "description": "Property data specific to ColumnType (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.GetColumnType3",
+      "ITableAnnotation.SetCellEquation"
+    ],
+    "keywords": [
+      "table",
+      "columns",
+      "setcolumntype3",
+      "itableannotation",
+      "annotation",
+      "column",
+      "type3",
+      "index",
+      "int32",
+      "type",
+      "include",
+      "hidden",
+      "boolean",
+      "data",
+      "object",
+      "bom",
+      "types",
+      "cell",
+      "equations",
+      "vba"
+    ]
+  },
+  "title": "ITableAnnotation.SetColumnType3",
+  "description": "Sets the type and property data for the specified BOM table column.",
+  "signature": "System.Int32 SetColumnType3( \n   System.Int32\nIndex\n,\n   System.Int32\nColumnType\n,\n   System.Boolean\nIncludeHidden\n,\n   System.Object\nPropertyData\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the column whose type to set"
+    },
+    {
+      "name": "ColumnType",
+      "type": "System.Int32",
+      "description": "Type of column as defined in swTableColumnTypes_e (see Remarks )"
+    },
+    {
+      "name": "IncludeHidden",
+      "type": "System.Boolean",
+      "description": "True to include hidden columns in Index, false to not"
+    },
+    {
+      "name": "PropertyData",
+      "type": "System.Object",
+      "description": "Property data specific to ColumnType (see Remarks )"
+    }
+  ],
+  "returns": "Return code as defined in swColumnTypeStatus_e",
+  "remarks": "PropertyData specifies the column title and contents.\nIf ColumnType is set to swTableColumnTypes_e....\nThen Set PropertyData with...\nswBomTableColumnType_CustomProperty\nValid property name*\nswBomTableColumnType_UnitOfMeasure\nValid property name*\nswBomTableColumnType_Equation\nEquation string\nswBomTableColumnType_ComponentReference\nNull or Nothing\nswBomTableColumnType_ToolboxProperty\nProperty as defined in\nswToolBoxPropertyName_e\nswBomTableColumnType_CutListProperties (valid only for sheetmetal parts)\nValid cutlist property name*\nswBomTableColumnType_ItemNumber\nArray of four values {\nStart_Item_Int\n,\nIncrement_Int\n,\nOrder_balloons_and_BOM_to_follow_assembly_order_Bool\n,\nDo_not_change_BOM_item_number_Bool\n}\nswBomTableColumnType_PartNumber\nTrue to use title summary, false to not\n* Note: To get the valid property names for a given column type, open a part in SOLIDWORKS and add a BOM table to it. Right-click a column and select\nInsert > Column Right\n. In the popup, select the column type of interest in the first dropdown. Inspect the contents of the second dropdown to see the valid property names for the column type.\nWhen you set a column type, the title is automatically changed to match that column type. If you change the column type to custom property, you must set the column title using\nITableAnnotation::SetColumnTitle2\n.\nThis method is consistent with the SOLIDWORKS Design user interface where you cannot add, delete, or replace the Quantity type column in a BOM table.",
+  "examples": [
+    {
+      "title": "Get and Set BOM Column Types and Cell Equations (VBA)",
+      "href": "Get_and_Set_Column_Types_and_Cell_Equations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.GetColumnType3",
+    "ITableAnnotation.SetCellEquation"
+  ]
+}

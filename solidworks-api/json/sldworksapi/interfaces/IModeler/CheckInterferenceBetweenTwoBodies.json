@@ -1,0 +1,120 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CheckInterferenceBetweenTwoBodies",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Body1",
+        "type": "System.Object",
+        "description": "First body in interference detection (see Remarks )"
+      },
+      {
+        "name": "Body2",
+        "type": "System.Object",
+        "description": "Second body in interference detection (see Remarks )"
+      },
+      {
+        "name": "CoincidentInterference",
+        "type": "System.Boolean",
+        "description": "True to treat coincidence as interference, false to not"
+      },
+      {
+        "name": "Body1InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces in the first body that interfered with the second body"
+      },
+      {
+        "name": "Body2InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces in the second body that interfered with the first body"
+      },
+      {
+        "name": "IntersectedBodyArray",
+        "type": "System.Object",
+        "description": "Array of interfering bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IInterferenceDetectionMgr",
+      "IModeler.CheckInterference3"
+    ],
+    "keywords": [
+      "check",
+      "interference",
+      "detection",
+      "checkinterferencebetweentwobodies",
+      "imodeler",
+      "modeler",
+      "between",
+      "two",
+      "bodies",
+      "body1",
+      "object",
+      "body2",
+      "coincident",
+      "boolean",
+      "interfered",
+      "face",
+      "array",
+      "intersected",
+      "body",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CheckInterferenceBetweenTwoBodies",
+  "description": "Checks for interference between the specified bodies in an assembly.",
+  "signature": "System.Boolean CheckInterferenceBetweenTwoBodies( \n   System.Object\nBody1\n,\n   System.Object\nBody2\n,\n   System.Boolean\nCoincidentInterference\n,\n   out System.Object\nBody1InterferedFaceArray\n,\n   out System.Object\nBody2InterferedFaceArray\n,\n   out System.Object\nIntersectedBodyArray\n)",
+  "parameters": [
+    {
+      "name": "Body1",
+      "type": "System.Object",
+      "description": "First body in interference detection (see Remarks )"
+    },
+    {
+      "name": "Body2",
+      "type": "System.Object",
+      "description": "Second body in interference detection (see Remarks )"
+    },
+    {
+      "name": "CoincidentInterference",
+      "type": "System.Boolean",
+      "description": "True to treat coincidence as interference, false to not"
+    },
+    {
+      "name": "Body1InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces in the first body that interfered with the second body"
+    },
+    {
+      "name": "Body2InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces in the second body that interfered with the first body"
+    },
+    {
+      "name": "IntersectedBodyArray",
+      "type": "System.Object",
+      "description": "Array of interfering bodies"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, transform Body1 and Body2 to their proper positions in the coordinate space of the top-level assembly:\nSelect the assembly components.\nUse\nIComponent2::Transform2\nto get the transform of each component.\nCall IComponent2::GetBodies2 for each component.\nUse\nIBody2::ApplyTransform\non each body using the transforms in step 2.\nSpecify Body1 and Body1 with the bodies that have been transformed to their correct positions in the assembly.",
+  "examples": [
+    {
+      "title": "Check for Interference Between Two Bodies (VBA)",
+      "href": "Check_Interference_Between_Two_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IInterferenceDetectionMgr",
+    "IModeler.CheckInterference3"
+  ]
+}

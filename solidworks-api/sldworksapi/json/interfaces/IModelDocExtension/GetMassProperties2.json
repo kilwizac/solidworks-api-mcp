@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetMassProperties2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Accuracy",
+        "type": "System.Int32",
+        "description": "0 = as is 1 = default 2 = maximum"
+      },
+      {
+        "name": "Status",
+        "type": "System.Int32",
+        "description": "Error code as defined in swMassPropertiesStatus_e"
+      },
+      {
+        "name": "UseSelected",
+        "type": "System.Boolean",
+        "description": "True to return the mass properties of the selected components only, false to return the mass properties of the entire model, excluding suppressed components"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IMassProperty",
+      "IModelDocExtension.CreateMassProperty"
+    ],
+    "keywords": [
+      "getmassproperties2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "mass",
+      "properties2",
+      "accuracy",
+      "int32",
+      "status",
+      "use",
+      "selected",
+      "boolean",
+      "object",
+      "properties",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.GetMassProperties2",
+  "description": "Obsolete. Superseded by IMassProperty2.",
+  "signature": "System.Object GetMassProperties2( \n   System.Int32\nAccuracy\n,\n   out System.Int32\nStatus\n,\n   System.Boolean\nUseSelected\n)",
+  "parameters": [
+    {
+      "name": "Accuracy",
+      "type": "System.Int32",
+      "description": "0 = as is 1 = default 2 = maximum"
+    },
+    {
+      "name": "Status",
+      "type": "System.Int32",
+      "description": "Error code as defined in swMassPropertiesStatus_e"
+    },
+    {
+      "name": "UseSelected",
+      "type": "System.Boolean",
+      "description": "True to return the mass properties of the selected components only, false to return the mass properties of the entire model, excluding suppressed components"
+    }
+  ],
+  "returns": "Array of size 12 (see Remarks )",
+  "remarks": "If this model is...\nThen pre-select...\nAn assembly\nComponents for which to get mass properties. This method returns the center of mass and moments of inertia in the coordinate system of the assembly.\nA part\nSolid bodies for which to get mass properties. The calculated origin for the returned values is based on the default coordinate system of the part. It is not based on the selected coordinate system.\nThe return value is a 0-based array of doubles as follows:\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Volume, SurfaceArea, Mass, MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ\n]\nWhere:\nMom\nNN\n=\nNN-component\nof the moment of inertia taken at the center of mass and aligned with the output coordinate system\nYou can use\nISldWorks::GetUserPreferenceDoubleValue\nand swMaterialPropertyDensity to get the density of the SOLIDWORKS part. If the user did not explicitly set the density, then SOLIDWORKS uses a value of 1.0. You can also derive the density of the body by calculating:\nDensity = (\nMass\n/\nVolume\n)\nThis method:\nreturns values in metric units.\nsupports multibody parts.",
+  "examples": [
+    {
+      "title": "Get Mass Properties (VBA)",
+      "href": "Get_Mass_Properties_of_ActiveDoc_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties (VB.NET)",
+      "href": "Get_Mass_Properties_of_ActiveDoc_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties (C#)",
+      "href": "Get_Mass_Properties_of_ActiveDoc_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty",
+    "IModelDocExtension.CreateMassProperty"
+  ]
+}

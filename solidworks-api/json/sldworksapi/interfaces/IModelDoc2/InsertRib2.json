@@ -1,0 +1,145 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertRib2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Is2Sided",
+        "type": "System.Boolean",
+        "description": "True if the rib is double-sided rib, false if the rib is single sided; a double-sided rib thickens on both sides of the sketch"
+      },
+      {
+        "name": "ReverseThicknessDir",
+        "type": "System.Boolean",
+        "description": "For single-sided ribs, the direction thickened is the opposite side of the sketch normal"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Rib thickness"
+      },
+      {
+        "name": "ReferenceEdgeIndex",
+        "type": "System.Int32",
+        "description": "Edge in the sketch to us to determine the material direction and for draft reference; when the rib is drafted, the mid point of this edge maintains the thickness value; other points on the rib may have a different thickness due to the draft"
+      },
+      {
+        "name": "ReverseMaterialDir",
+        "type": "System.Boolean",
+        "description": "Which direction the rib has material; it is on one side or the order side of the reference edge base on this flag"
+      },
+      {
+        "name": "IsDrafted",
+        "type": "System.Boolean",
+        "description": "True if the rib is drafted, false if not"
+      },
+      {
+        "name": "DraftOutward",
+        "type": "System.Boolean",
+        "description": "True to draft outwards, false to not"
+      },
+      {
+        "name": "DraftAngle",
+        "type": "System.Double",
+        "description": "Draft angle to apply to the rib"
+      },
+      {
+        "name": "IsNormToSketch",
+        "type": "System.Boolean",
+        "description": "True if the rib is normal to the sketch, false if the rib is parallel to the sketch"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "insertrib2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "rib2",
+      "is2",
+      "sided",
+      "boolean",
+      "reverse",
+      "thickness",
+      "dir",
+      "double",
+      "reference",
+      "edge",
+      "index",
+      "int32",
+      "material",
+      "drafted",
+      "draft",
+      "outward",
+      "angle",
+      "norm",
+      "sketch",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertRib2",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertRib.",
+  "signature": "void InsertRib2( \n   System.Boolean\nIs2Sided\n,\n   System.Boolean\nReverseThicknessDir\n,\n   System.Double\nThickness\n,\n   System.Int32\nReferenceEdgeIndex\n,\n   System.Boolean\nReverseMaterialDir\n,\n   System.Boolean\nIsDrafted\n,\n   System.Boolean\nDraftOutward\n,\n   System.Double\nDraftAngle\n,\n   System.Boolean\nIsNormToSketch\n)",
+  "parameters": [
+    {
+      "name": "Is2Sided",
+      "type": "System.Boolean",
+      "description": "True if the rib is double-sided rib, false if the rib is single sided; a double-sided rib thickens on both sides of the sketch"
+    },
+    {
+      "name": "ReverseThicknessDir",
+      "type": "System.Boolean",
+      "description": "For single-sided ribs, the direction thickened is the opposite side of the sketch normal"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Rib thickness"
+    },
+    {
+      "name": "ReferenceEdgeIndex",
+      "type": "System.Int32",
+      "description": "Edge in the sketch to us to determine the material direction and for draft reference; when the rib is drafted, the mid point of this edge maintains the thickness value; other points on the rib may have a different thickness due to the draft"
+    },
+    {
+      "name": "ReverseMaterialDir",
+      "type": "System.Boolean",
+      "description": "Which direction the rib has material; it is on one side or the order side of the reference edge base on this flag"
+    },
+    {
+      "name": "IsDrafted",
+      "type": "System.Boolean",
+      "description": "True if the rib is drafted, false if not"
+    },
+    {
+      "name": "DraftOutward",
+      "type": "System.Boolean",
+      "description": "True to draft outwards, false to not"
+    },
+    {
+      "name": "DraftAngle",
+      "type": "System.Double",
+      "description": "Draft angle to apply to the rib"
+    },
+    {
+      "name": "IsNormToSketch",
+      "type": "System.Boolean",
+      "description": "True if the rib is normal to the sketch, false if the rib is parallel to the sketch"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method supports multibody parts. You must select the input body by calling\nIModelDocExtension::SelectByID2\nand setting its Mark argument to 1 before calling this method.",
+  "examples": [],
+  "related": []
+}

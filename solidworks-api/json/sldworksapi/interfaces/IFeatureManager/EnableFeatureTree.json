@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFeatureManager",
+    "member": "EnableFeatureTree",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.UpdateFeatureTree"
+    ],
+    "keywords": [
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "update",
+      "rebuild",
+      "enablefeaturetree",
+      "feature",
+      "manager",
+      "enable",
+      "boolean",
+      "only",
+      "show",
+      "selected",
+      "components",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IFeatureManager.EnableFeatureTree",
+  "description": "Gets or sets whether or not to update the FeatureManager design tree.",
+  "signature": "System.Boolean EnableFeatureTree {get; set;}",
+  "parameters": [],
+  "returns": "True to update FeatureManager design tree, false to not",
+  "remarks": "Use this property to temporarily enable or disable the FeatureManager design tree while an add-in is running a series of operations. Temporarily disabling the FeatureManager design tree should increase performance. However, while the FeatureManager design tree is disabled and not being updated, it may become out of date with what is actually in the model.\nIf an interactive user attempts to interact with the FeatureManager design tree while it is in this out-of-date state, problems could occur. Normally, this should not happen because the add-in should only be disabling the FeatureManager design tree update temporarily and then enabling it immediately after the series of operations completes. However, if there is any possibility that the interactive user could interact with the FeatureManager design tree while it is an out-of-date state, then also use\nIFeatureManager::EnableFeatureTreeWindow\n, which prohibits any user interaction with the FeatureManager design tree because the control itself is disabled.",
+  "examples": [
+    {
+      "title": "Only Show Selected Components (VBA)",
+      "href": "Only_Show_Selected_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.UpdateFeatureTree"
+  ]
+}

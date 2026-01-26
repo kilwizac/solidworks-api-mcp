@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelViewManager",
+    "member": "CreateSectionViewData",
+    "returns": "SectionViewData",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelViewManager.GetSectionViewData",
+      "IModelViewManager.RemoveSectionView"
+    ],
+    "keywords": [
+      "section",
+      "views",
+      "see",
+      "also",
+      "idrsection",
+      "model",
+      "createsectionviewdata",
+      "imodelviewmanager",
+      "view",
+      "manager",
+      "create",
+      "data",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelViewManager.CreateSectionViewData",
+  "description": "Creates an empty ISectionViewData object whose properties you set before creating a section view in a part or an assembly.",
+  "signature": "SectionViewData CreateSectionViewData()",
+  "parameters": [],
+  "returns": "Section view data",
+  "remarks": "To create a section view in a part or assembly:\nUse this method to create the SectionViewData object.\nSet the properties of\nISectionViewData\n.\nUse\nIModelViewManager::CreateSectionView\nto create the section view. IModelViewManager::CreateSectionView only returns whether it successfully created the section view. It does not return whether it created valid section bodies. Set\nISectionViewData::Redraw\nto true to have IModelViewManager::CreateSectionView validate and return a status for section bodies.",
+  "examples": [
+    {
+      "title": "Create Section View in Model (C#)",
+      "href": "Create_Section_View_in_Model_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Section View in Model (VB.NET)",
+      "href": "Create_Section_View_in_Model_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Section View in Model (VBA)",
+      "href": "Create_Section_View_in_Model_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelViewManager.GetSectionViewData",
+    "IModelViewManager.RemoveSectionView"
+  ]
+}

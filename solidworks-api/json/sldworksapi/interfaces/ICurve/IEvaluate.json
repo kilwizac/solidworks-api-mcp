@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IEvaluate",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Parameter",
+        "type": "System.Double",
+        "description": "Curve parameter"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "ievaluate",
+      "icurve",
+      "curve",
+      "evaluate",
+      "parameter",
+      "double"
+    ]
+  },
+  "title": "ICurve.IEvaluate",
+  "description": "Obsolete. Superseded by ICurve::Evaluate2.",
+  "signature": "System.Double IEvaluate( \n   System.Double\nParameter\n)",
+  "parameters": [
+    {
+      "name": "Parameter",
+      "type": "System.Double",
+      "description": "Curve parameter"
+    }
+  ],
+  "returns": "Pointer to an array of doubles (see Remarks )",
+  "remarks": "To determine a valid parameter range, use\nICurve::GetEndParams\nor\nIEdge::GetCurveParams2\nor\nIEdge::IGetCurveParams2\n.\nThe OLE Automation return value is an array of doubles with the following format:\n[\nPointX, PointY, PointZ, TangentX, TangentY, TangentZ, Success\n]\nwhere:\nPointX\n,\nPointY,\nand\nPointZ\nrepresent the 3D point in space for the given parameter\nTangentX\n,\nTangentY,\nand\nTangentZ\nrepresent the tangent vector at the point\nTrue if the operation is successful\nThe COM return value is an array of 6 doubles representing the point and tangent. The success value is determined from the HRESULT return.\nThis method returns values in meters.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPackAndGo",
+    "member": "SetSaveToName",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Override",
+        "type": "System.Boolean",
+        "description": "True to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames , false to not"
+      },
+      {
+        "name": "SaveToName",
+        "type": "System.String",
+        "description": "Path or the path and filename of the Zip file to use to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IPackAndGo.FlattenToSingleFolder",
+      "IPackAndGo.GetSaveToName"
+    ],
+    "keywords": [
+      "setsavetoname",
+      "ipackandgo",
+      "pack",
+      "go",
+      "save",
+      "name",
+      "override",
+      "boolean",
+      "string"
+    ]
+  },
+  "title": "IPackAndGo.SetSaveToName",
+  "description": "Obsolete. Superseded by IPackAndGo::SetSaveToName2.",
+  "signature": "System.Boolean SetSaveToName( \n   System.Boolean\nOverride\n,\n   System.String\nSaveToName\n)",
+  "parameters": [
+    {
+      "name": "Override",
+      "type": "System.Boolean",
+      "description": "True to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames , false to not"
+    },
+    {
+      "name": "SaveToName",
+      "type": "System.String",
+      "description": "Path or the path and filename of the Zip file to use to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames"
+    }
+  ],
+  "returns": "True if the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames are overridden, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IPackAndGo.FlattenToSingleFolder",
+    "IPackAndGo.GetSaveToName"
+  ]
+}

@@ -1,0 +1,33 @@
+---
+type: interface
+interface: IExportPdfData
+inherits: null
+description: Allows access to the PDF export data interface, which allows you to save:
+one or more drawing sheets to PDF.
+parts and assemblies to 3D PDF.
+member_count: 5
+docset: sldworksapi
+categories:
+  - documents
+  - file-io
+common_members:
+  - ExportAs3D
+  - GetSheets
+  - GetWhichSheets
+  - SetSheets
+  - ViewPdfAfterSaving
+---
+
+# IExportPdfData
+
+Allows access to the PDF export data interface, which allows you to save:
+one or more drawing sheets to PDF.
+parts and assemblies to 3D PDF.
+
+## Common Members
+
+- `ExportAs3D`
+- `GetSheets`
+- `GetWhichSheets`
+- `SetSheets`
+- `ViewPdfAfterSaving`

@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IImportDxfDwgData",
+    "member": "ImportMethod",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io"
+    ],
+    "related": [
+      "IImportDxfDwgData.GetImportLayerVisibility",
+      "IImportDxfDwgData.SetImportLayerToSheetFormat",
+      "IImportDxfDwgData.SetImportLayerVisibility"
+    ],
+    "keywords": [
+      "importmethod",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "sheet",
+      "string",
+      "int32",
+      "file",
+      "part",
+      "sketch",
+      "vba",
+      "insert",
+      "add",
+      "dimensions",
+      "vb",
+      "net",
+      "position",
+      "drawing"
+    ],
+    "readonly": null
+  },
+  "title": "IImportDxfDwgData.ImportMethod",
+  "description": "Gets or sets whether to import this sheet (layout).",
+  "signature": "System.Int32 ImportMethod( \n   System.String\nSheet\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets (see Remarks )"
+    }
+  ],
+  "returns": "Import method as defined in swImportDxfDwg_ImportMethod_e",
+  "remarks": "By default, all sheets are imported into a new drawing.\nIf you want to import...\nThen set...\nAll sheets except for a specific one into a new drawing\nImportDxfDwgData.ImportMethod(\"<\nsheet to exclude\n>\") = swImportDxfDwg_DoNotImportSheet\nOnly a single sheet into a sketch in a new part\nImportDxfDwgData.ImportMethod(\"\") = swImportDxfDwg_DoNotImportSheet\nto make the default not to import sheets. Then set:\nImportDxfDwgData.ImportMethod(\"<\nsheet to import\n>\") = swImportDxfDwg_ImportToPartSketch\nto import only this sheet.",
+  "examples": [
+    {
+      "title": "Import DXF File into Part Sketch (VBA)",
+      "href": "Import_DXF_File_into_Part_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert DXF/DWG File and Add Dimensions (VBA)",
+      "href": "Insert_DXF_File_and_Add_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert DXF/DWG File and Add Dimensions (VB.NET)",
+      "href": "Insert_DXF_File_and_Add_Dimensions_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert DXF/DWG File and Add Dimensions (C#)",
+      "href": "Insert_DXF_File_and_Add_Dimensions_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (VBA)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (VB.NET)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (C#)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IImportDxfDwgData.GetImportLayerVisibility",
+    "IImportDxfDwgData.SetImportLayerToSheetFormat",
+    "IImportDxfDwgData.SetImportLayerVisibility"
+  ]
+}

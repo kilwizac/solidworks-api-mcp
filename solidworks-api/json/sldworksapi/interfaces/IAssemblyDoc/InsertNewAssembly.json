@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertNewAssembly",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full pathname of new sub-assembly document ( see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.InsertNewVirtualAssembly",
+      "IComponent2.IsVirtual",
+      "IComponent2.SaveVirtualComponent",
+      "IModelDocExtension.IsVirtualComponent3"
+    ],
+    "keywords": [
+      "virtual",
+      "assembly",
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "insertnewassembly",
+      "doc",
+      "insert",
+      "new",
+      "file",
+      "name",
+      "string",
+      "int32",
+      "save",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertNewAssembly",
+  "description": "Creates a new virtual sub-assembly and optionally saves it to the specified file.",
+  "signature": "System.Int32 InsertNewAssembly( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full pathname of new sub-assembly document ( see Remarks )"
+    }
+  ],
+  "returns": "Error code as defined by swInsertNewAssemblyErrorCode_e",
+  "remarks": "If\nTools > Options > System Options > Assemblies > Save new components to external files\nis:\nselected, then this API creates a virtual sub-assembly and saves it to the file specified in FileName.\nnot selected, then this API ignores FileName, does not save the sub-assembly, and creates only a virtual sub-assembly in the FeatureManager design tree.",
+  "examples": [
+    {
+      "title": "Insert and Save Virtual Assembly (C#)",
+      "href": "Insert_and_Save_Virtual_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Save Virtual Assembly (VB.NET)",
+      "href": "Insert_and_Save_Virtual_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Save Virtual Assembly (VBA)",
+      "href": "Insert_and_Save_Virtual_Assembly_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.InsertNewVirtualAssembly",
+    "IComponent2.IsVirtual",
+    "IComponent2.SaveVirtualComponent",
+    "IModelDocExtension.IsVirtualComponent3"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetSketchPictures",
+    "returns": "SketchPicture",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of sketch pictures in this view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IView.GetSketchPictures"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "sketch",
+      "pictures",
+      "view",
+      "isketch",
+      "igetsketchpictures",
+      "count",
+      "int32",
+      "picture"
+    ]
+  },
+  "title": "IView.IGetSketchPictures",
+  "description": "Gets all of the sketch pictures imported to this view when a drawing is created from a part.",
+  "signature": "SketchPicture IGetSketchPictures( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of sketch pictures in this view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of ISketchPicture s VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use\nIView::GetSketchPictureCount\nto populate the Count parameter before calling this method. Only sketch pictures orthogonal to this view are returned.",
+  "examples": [],
+  "related": [
+    "IView.GetSketchPictures"
+  ]
+}

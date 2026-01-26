@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBody2",
+    "member": "MaterialPropertyValues2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.Display3",
+      "IBody2.GetMaterialIdName2",
+      "IBody2.GetMaterialPropertyName",
+      "IBody2.GetMaterialUserName2",
+      "IBody2.HasMaterialPropertyValues",
+      "IBody2.IGetMaterialPropertyValuesForFace",
+      "IBody2.IMaterialPropertyValues2",
+      "IBody2.IRemoveMaterialProperty",
+      "IBody2.RemoveMaterialProperty",
+      "IBody2.SetMaterialIdName2",
+      "IBody2.SetMaterialProperty",
+      "IBody2.SetMaterialUserName2",
+      "IComponent2.MaterialPropertyValues",
+      "IFace2.MaterialPropertyValues",
+      "IModelDoc2.MaterialPropertyValues",
+      "IPartDoc.MaterialPropertyValues"
+    ],
+    "keywords": [
+      "color",
+      "bodies",
+      "material",
+      "properties",
+      "see",
+      "also",
+      "ibody2",
+      "materialpropertyvalues2",
+      "body2",
+      "values2",
+      "object",
+      "values",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IBody2.MaterialPropertyValues2",
+  "description": "Gets or sets the material properties for a body other than the base body in the active configuration.",
+  "signature": "System.Object MaterialPropertyValues2 {get; set;}",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The material values include the face color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency, and emission. Valid settings are from 0 to 1 for all values.\nThis property is intended to be used on bodies other than the base body and should follow a call to\nIPartDoc::EnumRelatedBodies2\n. The format of the parameters or return values is an array of 9 doubles as follows:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after setting this property.",
+  "examples": [
+    {
+      "title": "Get Material Property Values (VBA)",
+      "href": "Get_Material_Property_Values_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.Display3",
+    "IBody2.GetMaterialIdName2",
+    "IBody2.GetMaterialPropertyName",
+    "IBody2.GetMaterialUserName2",
+    "IBody2.HasMaterialPropertyValues",
+    "IBody2.IGetMaterialPropertyValuesForFace",
+    "IBody2.IMaterialPropertyValues2",
+    "IBody2.IRemoveMaterialProperty",
+    "IBody2.RemoveMaterialProperty",
+    "IBody2.SetMaterialIdName2",
+    "IBody2.SetMaterialProperty",
+    "IBody2.SetMaterialUserName2",
+    "IComponent2.MaterialPropertyValues",
+    "IFace2.MaterialPropertyValues",
+    "IModelDoc2.MaterialPropertyValues",
+    "IPartDoc.MaterialPropertyValues"
+  ]
+}

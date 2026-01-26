@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetWeldSymbols",
+    "returns": "WeldSymbol",
+    "parameters": [
+      {
+        "name": "NumWeldSymbol",
+        "type": "System.Int32",
+        "description": "Total number of weld symbols on this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetWeldSymbols"
+    ],
+    "keywords": [
+      "weld",
+      "symbols",
+      "see",
+      "iweldsymbol",
+      "annotation",
+      "also",
+      "iannotation",
+      "view",
+      "iview",
+      "igetweldsymbols",
+      "num",
+      "symbol",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetWeldSymbols",
+  "description": "Gets all of the weld symbols on this drawing view.",
+  "signature": "WeldSymbol IGetWeldSymbols( \n   System.Int32\nNumWeldSymbol\n)",
+  "parameters": [
+    {
+      "name": "NumWeldSymbol",
+      "type": "System.Int32",
+      "description": "Total number of weld symbols on this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of weld symbols VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of weld symbols all at once instead of calling\nIView::GetFirstWeldSymbol\nand then repeatedly calling\nIWeldSymbol::GetNext\nto obtain the weld symbols in the drawing view.\nBefore calling this method, call\nIView::GetWeldSymbolCount\nto get the value for numWeldSymbol.",
+  "examples": [],
+  "related": [
+    "IView.GetWeldSymbols"
+  ]
+}

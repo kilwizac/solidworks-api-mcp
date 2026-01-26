@@ -1,0 +1,301 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureExtrusion2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Sd",
+        "type": "System.Boolean",
+        "description": "True for single ended, false for double ended"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "True to flip side to cut"
+      },
+      {
+        "name": "Dir",
+        "type": "System.Boolean",
+        "description": "True to flip the direction to extrude"
+      },
+      {
+        "name": "T1",
+        "type": "System.Int32",
+        "description": "Termination type for first end as defined in swEndConditions_e"
+      },
+      {
+        "name": "T2",
+        "type": "System.Int32",
+        "description": "Termination type for second end as defined in swEndConditions_e"
+      },
+      {
+        "name": "D1",
+        "type": "System.Double",
+        "description": "Depth of extrusion for first end in meters"
+      },
+      {
+        "name": "D2",
+        "type": "System.Double",
+        "description": "Depth of extrusion for second end in meters"
+      },
+      {
+        "name": "Dchk1",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in first direction, false does not allow drafting"
+      },
+      {
+        "name": "Dchk2",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in second direction, false does not allow drafting"
+      },
+      {
+        "name": "Ddir1",
+        "type": "System.Boolean",
+        "description": "True for first draft angle to be inward, false to be outward"
+      },
+      {
+        "name": "Ddir2",
+        "type": "System.Boolean",
+        "description": "True for second draft angle to be inward, false to be outward"
+      },
+      {
+        "name": "Dang1",
+        "type": "System.Double",
+        "description": "Draft angle for first end"
+      },
+      {
+        "name": "Dang2",
+        "type": "System.Double",
+        "description": "Draft angle for second end"
+      },
+      {
+        "name": "OffsetReverse1",
+        "type": "System.Boolean",
+        "description": "If you chose to offset the first end condition from another face or plane, then True specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+      },
+      {
+        "name": "OffsetReverse2",
+        "type": "System.Boolean",
+        "description": "If you chose to offset the second end condition from another face or plane, then True specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+      },
+      {
+        "name": "TranslateSurface1",
+        "type": "System.Boolean",
+        "description": "When you choose swEndcondOffsetFromSurface as the termination type for the first end, then True specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+      },
+      {
+        "name": "TranslateSurface2",
+        "type": "System.Boolean",
+        "description": "When you choose swEndcondOffsetFromSurface as the termination type for the second end, then True specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to merge the results in a multibody part, false to not"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      },
+      {
+        "name": "T0",
+        "type": "System.Int32",
+        "description": "Start condition as defined in swStartConditions_e"
+      },
+      {
+        "name": "StartOffset",
+        "type": "System.Double",
+        "description": "If t0 set to swStartOffset, then specify offset value"
+      },
+      {
+        "name": "FlipStartOffset",
+        "type": "System.Boolean",
+        "description": "If t0 set to swStartOffset, then True to flip the direction or false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IExtrudeFeatureData2",
+      "IFeatureManager.FeatureCut",
+      "IFeatureManager.FeatureExtrusionThin2"
+    ],
+    "keywords": [
+      "featureextrusion2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "extrusion2",
+      "sd",
+      "boolean",
+      "flip",
+      "dir",
+      "t1",
+      "int32",
+      "t2",
+      "d1",
+      "double",
+      "d2",
+      "dchk1",
+      "dchk2",
+      "ddir1",
+      "ddir2",
+      "dang1",
+      "dang2",
+      "offset",
+      "reverse1",
+      "reverse2",
+      "translate",
+      "surface1",
+      "surface2",
+      "merge",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select",
+      "t0",
+      "start"
+    ]
+  },
+  "title": "IFeatureManager.FeatureExtrusion2",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureExtrusion3.",
+  "signature": "Feature FeatureExtrusion2( \n   System.Boolean\nSd\n,\n   System.Boolean\nFlip\n,\n   System.Boolean\nDir\n,\n   System.Int32\nT1\n,\n   System.Int32\nT2\n,\n   System.Double\nD1\n,\n   System.Double\nD2\n,\n   System.Boolean\nDchk1\n,\n   System.Boolean\nDchk2\n,\n   System.Boolean\nDdir1\n,\n   System.Boolean\nDdir2\n,\n   System.Double\nDang1\n,\n   System.Double\nDang2\n,\n   System.Boolean\nOffsetReverse1\n,\n   System.Boolean\nOffsetReverse2\n,\n   System.Boolean\nTranslateSurface1\n,\n   System.Boolean\nTranslateSurface2\n,\n   System.Boolean\nMerge\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n,\n   System.Int32\nT0\n,\n   System.Double\nStartOffset\n,\n   System.Boolean\nFlipStartOffset\n)",
+  "parameters": [
+    {
+      "name": "Sd",
+      "type": "System.Boolean",
+      "description": "True for single ended, false for double ended"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "True to flip side to cut"
+    },
+    {
+      "name": "Dir",
+      "type": "System.Boolean",
+      "description": "True to flip the direction to extrude"
+    },
+    {
+      "name": "T1",
+      "type": "System.Int32",
+      "description": "Termination type for first end as defined in swEndConditions_e"
+    },
+    {
+      "name": "T2",
+      "type": "System.Int32",
+      "description": "Termination type for second end as defined in swEndConditions_e"
+    },
+    {
+      "name": "D1",
+      "type": "System.Double",
+      "description": "Depth of extrusion for first end in meters"
+    },
+    {
+      "name": "D2",
+      "type": "System.Double",
+      "description": "Depth of extrusion for second end in meters"
+    },
+    {
+      "name": "Dchk1",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in first direction, false does not allow drafting"
+    },
+    {
+      "name": "Dchk2",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in second direction, false does not allow drafting"
+    },
+    {
+      "name": "Ddir1",
+      "type": "System.Boolean",
+      "description": "True for first draft angle to be inward, false to be outward"
+    },
+    {
+      "name": "Ddir2",
+      "type": "System.Boolean",
+      "description": "True for second draft angle to be inward, false to be outward"
+    },
+    {
+      "name": "Dang1",
+      "type": "System.Double",
+      "description": "Draft angle for first end"
+    },
+    {
+      "name": "Dang2",
+      "type": "System.Double",
+      "description": "Draft angle for second end"
+    },
+    {
+      "name": "OffsetReverse1",
+      "type": "System.Boolean",
+      "description": "If you chose to offset the first end condition from another face or plane, then True specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+    },
+    {
+      "name": "OffsetReverse2",
+      "type": "System.Boolean",
+      "description": "If you chose to offset the second end condition from another face or plane, then True specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+    },
+    {
+      "name": "TranslateSurface1",
+      "type": "System.Boolean",
+      "description": "When you choose swEndcondOffsetFromSurface as the termination type for the first end, then True specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+    },
+    {
+      "name": "TranslateSurface2",
+      "type": "System.Boolean",
+      "description": "When you choose swEndcondOffsetFromSurface as the termination type for the second end, then True specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to merge the results in a multibody part, false to not"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    },
+    {
+      "name": "T0",
+      "type": "System.Int32",
+      "description": "Start condition as defined in swStartConditions_e"
+    },
+    {
+      "name": "StartOffset",
+      "type": "System.Double",
+      "description": "If t0 set to swStartOffset, then specify offset value"
+    },
+    {
+      "name": "FlipStartOffset",
+      "type": "System.Boolean",
+      "description": "If t0 set to swStartOffset, then True to flip the direction or false to not"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "The default direction for cut operations is opposite the sketch normal. The default direction for boss operations is along the sketch normal. Setting the Dir argument to True reverses the default direction. For double-ended extrusions, Direction 2 is always opposite of Direction 1.\nThe default sketch normal is the same as the face or plane normal where the sketch was placed. To determine this normal vector, see\nIFace2::Normal\nand\nIRefPlane::Transform\n, respectively.\nWhen useAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.\nTo extrude a 3D sketch, select:\n3D sketch with selection mark 0.\nExtrusion direction edge with selection mark 16.",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2",
+    "IFeatureManager.FeatureCut",
+    "IFeatureManager.FeatureExtrusionThin2"
+  ]
+}

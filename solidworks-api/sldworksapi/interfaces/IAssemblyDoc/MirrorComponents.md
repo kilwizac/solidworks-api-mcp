@@ -1,0 +1,128 @@
+---
+type: method
+interface: IAssemblyDoc
+member: MirrorComponents
+returns: System.Object
+parameters:
+  -
+    name: Plane
+    type: System.Object
+    description: Plane or planar face about which to mirror the components
+  -
+    name: ComponentsToInstance
+    type: System.Object
+    description: Array of instances of the component to mirror
+  -
+    name: ComponentsToMirror
+    type: System.Object
+    description: Array of components to mirror
+  -
+    name: MirroredComponentFilenames
+    type: System.Object
+    description: Array of filenames for the newly created mirrored assemblies or parts
+  -
+    name: RecreateMates
+    type: System.Boolean
+    description: True to preserve any mates between the selected components if more than one component is to be mirrored, false to not
+  -
+    name: ComponentModifier
+    type: System.Int32
+    description: Prefix or suffix for the newly mirrored components if MirroredComponentFilenames is not specified, as defined by swMirrorComponentNameModifier_e
+  -
+    name: ComponentNameModifier
+    type: System.String
+    description: String to add to the prefix or suffix of the name of the newly mirrored component if MirroredComponentFilenames is not specified
+  -
+    name: MirroredFileLocation
+    type: System.String
+    description: Name of the folder where to store the file of the newly created mirrored components
+  -
+    name: CopyCustomProperties
+    type: System.Boolean
+    description: True to copy the custom properties from the selected components to the mirrored components, false to not
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - assemblies
+  - core
+  - ui
+related: []
+keywords:
+  - mirrorcomponents
+  - iassemblydoc
+  - assembly
+  - doc
+  - mirror
+  - components
+  - plane
+  - object
+  - instance
+  - mirrored
+  - component
+  - filenames
+  - recreate
+  - mates
+  - boolean
+  - modifier
+  - int32
+  - name
+  - string
+  - file
+  - location
+  - copy
+  - custom
+  - properties
+---
+
+# IAssemblyDoc.MirrorComponents
+
+Obsolete. Superseded by IAssemblyDoc::MirrorComponents2.
+
+## Signature
+
+```csharp
+System.Object MirrorComponents( 
+   System.Object
+Plane
+,
+   System.Object
+ComponentsToInstance
+,
+   System.Object
+ComponentsToMirror
+,
+   System.Object
+MirroredComponentFilenames
+,
+   System.Boolean
+RecreateMates
+,
+   System.Int32
+ComponentModifier
+,
+   System.String
+ComponentNameModifier
+,
+   System.String
+MirroredFileLocation
+,
+   System.Boolean
+CopyCustomProperties
+)
+```
+## Parameters
+
+- `Plane` (System.Object): Plane or planar face about which to mirror the components
+- `ComponentsToInstance` (System.Object): Array of instances of the component to mirror
+- `ComponentsToMirror` (System.Object): Array of components to mirror
+- `MirroredComponentFilenames` (System.Object): Array of filenames for the newly created mirrored assemblies or parts
+- `RecreateMates` (System.Boolean): True to preserve any mates between the selected components if more than one component is to be mirrored, false to not
+- `ComponentModifier` (System.Int32): Prefix or suffix for the newly mirrored components if MirroredComponentFilenames is not specified, as defined by swMirrorComponentNameModifier_e
+- `ComponentNameModifier` (System.String): String to add to the prefix or suffix of the name of the newly mirrored component if MirroredComponentFilenames is not specified
+- `MirroredFileLocation` (System.String): Name of the folder where to store the file of the newly created mirrored components
+- `CopyCustomProperties` (System.Boolean): True to copy the custom properties from the selected components to the mirrored components, false to not
+
+## Return Value
+
+Array of the newly created components

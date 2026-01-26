@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swBlockingStates_e",
+    "description": "Blocking states.",
+    "member_count": 9,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swBlockingStates_e",
+  "description": "Blocking states.",
+  "values": [
+    {
+      "member": "swEditorBlock",
+      "value": "4",
+      "description": "= A valid return value for IModelDoc2::GetBlockingState , but it is not a valid input for IModelDoc2::SetBlockingState ; editing or inserting blocks are blocked"
+    },
+    {
+      "member": "swEditSketchAllowExitBlock",
+      "value": "8",
+      "description": "= Block model changes but allow sketching and exiting sketch edit mode"
+    },
+    {
+      "member": "swEditSketchBlock",
+      "value": "5",
+      "description": "= A block is being edited in the drawing"
+    },
+    {
+      "member": "swFullBlock",
+      "value": "1",
+      "description": "= Most actions are blocked; you cannot edit features, add features, change views (rotate, pan, and so on), exit the SOLIDWORKS software, or change a document; however, you can open a document"
+    },
+    {
+      "member": "swModifyBlock",
+      "value": "2",
+      "description": "= Similar to swFullBlock except that view-related (rotate, pan, and so on) operations are not blocked"
+    },
+    {
+      "member": "swNoBlock",
+      "value": "0",
+      "description": "= No actions are blocked"
+    },
+    {
+      "member": "swPartialModifyBlock",
+      "value": "3",
+      "description": "= Similar to swModifyBlock except that you can change documents"
+    },
+    {
+      "member": "swSystemBlock",
+      "value": "6",
+      "description": "= Similar to swFullBlock except that you cannot open a document"
+    },
+    {
+      "member": "swViewOnlyBlock",
+      "value": "7",
+      "description": "= A valid return value for IModelDoc2::GetBlockingState when a document is open in View only/Selective open mode; not a valid input for IModelDoc2::SetBlockingState"
+    }
+  ]
+}

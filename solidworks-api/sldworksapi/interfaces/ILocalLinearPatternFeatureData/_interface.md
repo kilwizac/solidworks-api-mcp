@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ILocalLinearPatternFeatureData
+inherits: null
+description: Allows access to a linear component pattern feature in an assembly.
+member_count: 54
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AlignToSeed
+  - D1Axis
+  - D1EndCondition
+  - D1EndRefOffset
+  - D1EndRefReverseOffset
+  - D1EndReference
+  - D1EndReferenceType
+---
+
+# ILocalLinearPatternFeatureData
+
+Allows access to a linear component pattern feature in an assembly.
+
+## Common Members
+
+- `AccessSelections`
+- `AlignToSeed`
+- `D1Axis`
+- `D1EndCondition`
+- `D1EndRefOffset`
+- `D1EndRefReverseOffset`
+- `D1EndReference`
+- `D1EndReferenceType`

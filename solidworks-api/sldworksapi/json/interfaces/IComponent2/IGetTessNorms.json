@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "IGetTessNorms",
+    "returns": "System.Single",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetTessNorms"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "components",
+      "icomponent2",
+      "igettessnorms",
+      "component2",
+      "tess",
+      "norms",
+      "single"
+    ]
+  },
+  "title": "IComponent2.IGetTessNorms",
+  "description": "Gets the normal vector for each of the triangles, which make up the shaded picture tessellation for the component.",
+  "signature": "System.Single IGetTessNorms()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of floats (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Tessellation information is available only when the component is loaded as lightweight.\nThe format of retval is:\nfloat x, y, z - first point's unit normal\nfloat x, y, z - second point's unit normal\nfloat x, y, z - third point's unit normal\nfor the set of triangles for the component.\nThe total size of the data is\n[\n9 x sizeof(\nfloat\n) x (\nnumber of triangles\n)\n]\n.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetTessNorms"
+  ]
+}

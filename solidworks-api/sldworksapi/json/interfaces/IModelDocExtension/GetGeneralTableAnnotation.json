@@ -1,0 +1,152 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetGeneralTableAnnotation",
+    "returns": "TableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "True to anchor the table by AnchorType and ignore any coordinates specified by X and Y, false to use the coordinates specified by X and Y"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of this table annotation; valid only if UseAnchorPoint is false"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of this table annotation; valid only if UseAnchorPoint is false"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Type of anchor as defined in swBOMConfigurationAnchorType_e ; valid only if UseAnchorPoint is true, and TableTemplate is empty (see Remarks )"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and file name of the general table template to use (see Remarks )"
+      },
+      {
+        "name": "Rows",
+        "type": "System.Int32",
+        "description": "Number of rows in the table annotation; valid only if TableTemplate is empty (see Remarks )"
+      },
+      {
+        "name": "Columns",
+        "type": "System.Int32",
+        "description": "Number of columns in the table annotation; valid only if TableTemplate is empty (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "ui"
+    ],
+    "related": [
+      "IMBD3DPdfData"
+    ],
+    "keywords": [
+      "table",
+      "annotations",
+      "see",
+      "also",
+      "itableannotation",
+      "general",
+      "tables",
+      "solidworks",
+      "mbd",
+      "3d",
+      "pdf",
+      "getgeneraltableannotation",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "annotation",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "template",
+      "string",
+      "rows",
+      "columns",
+      "create",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.GetGeneralTableAnnotation",
+  "description": "Creates a general table annotation for SOLIDWORKS MBD 3D PDF.",
+  "signature": "TableAnnotation GetGeneralTableAnnotation( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nTableTemplate\n,\n   System.Int32\nRows\n,\n   System.Int32\nColumns\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "True to anchor the table by AnchorType and ignore any coordinates specified by X and Y, false to use the coordinates specified by X and Y"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of this table annotation; valid only if UseAnchorPoint is false"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of this table annotation; valid only if UseAnchorPoint is false"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Type of anchor as defined in swBOMConfigurationAnchorType_e ; valid only if UseAnchorPoint is true, and TableTemplate is empty (see Remarks )"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and file name of the general table template to use (see Remarks )"
+    },
+    {
+      "name": "Rows",
+      "type": "System.Int32",
+      "description": "Number of rows in the table annotation; valid only if TableTemplate is empty (see Remarks )"
+    },
+    {
+      "name": "Columns",
+      "type": "System.Int32",
+      "description": "Number of columns in the table annotation; valid only if TableTemplate is empty (see Remarks )"
+    }
+  ],
+  "returns": "ITableAnnotation",
+  "remarks": "If TableTemplate is...\nThen this method..\nA valid path and file name\nIgnores AnchorType, Rows, and Columns and creates a general table annotation based on TableTemplate.\nEmpty\nCreates a general table annotation using the specified parameters except TableTemplate.\nThis method creates an object for the specified table annotation, but it does not insert the table annotation in the model.\nUse\nIModelDocExtension::InsertGeneralTableAnnotation\nto create and insert a table annotation in the model.",
+  "examples": [
+    {
+      "title": "Create General Table Annotation for SOLIDWORKS MBD 3D PDF (C#)",
+      "href": "Create_General_Table_for_SOLIDWORKS_3D_PDF_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create General Table Annotation for SOLIDWORKS MBD 3D PDF (VB.NET)",
+      "href": "Create_General_Table_for_SOLIDWORKS_3D_PDF_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create General Table Annotation for SOLIDWORKS MBD 3D PDF (VBA)",
+      "href": "Create_General_Table_for_SOLIDWORKS_3D_PDF_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMBD3DPdfData"
+  ]
+}

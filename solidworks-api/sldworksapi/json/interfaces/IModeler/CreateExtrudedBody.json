@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateExtrudedBody",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "SheetBody",
+        "type": "Body2",
+        "description": "Sheet body that defines the profile for the temporary extruded body (see Remarks )"
+      },
+      {
+        "name": "Direction",
+        "type": "MathVector",
+        "description": "Direction of the axis for the temporary extruded body"
+      },
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Length of the temporary extruded body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "extrude",
+      "see",
+      "also",
+      "iextrudefeaturedata2",
+      "bodies",
+      "ibody2",
+      "extruded",
+      "createextrudedbody",
+      "imodeler",
+      "modeler",
+      "create",
+      "body",
+      "sheet",
+      "body2",
+      "direction",
+      "math",
+      "vector",
+      "length",
+      "double",
+      "temporary",
+      "elliptical",
+      "extrusion",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CreateExtrudedBody",
+  "description": "Creates a temporary extruded body.",
+  "signature": "Body2 CreateExtrudedBody( \n   Body2\nSheetBody\n,\n   MathVector\nDirection\n,\n   System.Double\nLength\n)",
+  "parameters": [
+    {
+      "name": "SheetBody",
+      "type": "Body2",
+      "description": "Sheet body that defines the profile for the temporary extruded body (see Remarks )"
+    },
+    {
+      "name": "Direction",
+      "type": "MathVector",
+      "description": "Direction of the axis for the temporary extruded body"
+    },
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Length of the temporary extruded body"
+    }
+  ],
+  "returns": "Temporary extruded body",
+  "remarks": "Before calling this method:\nCall\nIModeler::CreateArc\n,\nIModeler::ICreateArc\n,\nIModeler::CreateEllipse\n,\nIModeler::ICreateEllipse\n,\nIModeler::CreateLine\n, or\nIModeler::ICreateLine\nto create curves that define the profile of the body that you want to extrude.\nCall\nICurve::CreateTrimmedCurve2\nto trim the curves of arcs and lines only.\nCall\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\nto create the profile body, passing in either trimmed arcs and lines or untrimmed elliptical curves.\nSet SheetBody to the profile body.\nAfter calling this method, call\nIBody2::Display3\nto display the extrusion.",
+  "examples": [
+    {
+      "title": "Create Temporary Elliptical Extrusion (C#)",
+      "href": "Create_Temporary_Elliptical_Extrusion_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Elliptical Extrusion (VB.NET)",
+      "href": "Create_Temporary_Elliptical_Extrusion_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Elliptical Extrusion (VBA)",
+      "href": "Create_Temporary_Elliptical_Extrusion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (C#)",
+      "href": "Create_Temporary_Extruded_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VB.NET)",
+      "href": "Create_Temporary_Extruded_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VBA)",
+      "href": "Create_Temporary_Extruded_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateWireBody"
+  ]
+}

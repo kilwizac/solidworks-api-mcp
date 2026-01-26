@@ -1,0 +1,253 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Unpacking and Packing Arrays in C#</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Unpacking arrays">
+<meta name=MS-HKWD content="Packing arrays">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1811>
+<meta name=layout-width content=651>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Unpacking and Packing Arrays in C#</h1>
+
+<p>Some of the arguments passed from and to SOLIDWORKS using the API 
+ contain arrays of doubles. In some functions, elements in these arrays 
+ contain two integers packed into a double array element. You can unpack 
+ the data from a double to two integers and vice versa.</p>
+<p>&nbsp;</p>
+
+<p class=apiCode>using System;</p>
+
+<p class=apiCode>using System.Runtime.InteropServices;</p>
+
+<p class=apiCode>namespace WindowsApplication2</p>
+
+<p class=apiCode><span style="margin-left: 49px;">{</span></p>
+
+<p class=apiCode
+	style="margin-left: 49px;">[StructLayout(LayoutKind.Explicit)]</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">public struct DoubleIntConv</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">// An 8-byte double contains 2 4-byte ints.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">[FieldOffset(0)] private int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int1;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">[FieldOffset(4)] private int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int2;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">[FieldOffset(0)] private double m_Double;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">private DoubleIntConv(double dValue)</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{ </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//C# wants these initialized in the constructor</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">m_Int1 = 0; m_Int2 = 0; </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">m_Double = dValue; </p>
+
+<p class=apiCode
+	style="margin-left: 49px;">}</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">private DoubleIntConv(int iValue1, int iValue2) 
+ </p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//C# wants this initialized in the constructor</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">m_Double = 0.0; </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">m_Int1 = iValue1; m_Int2 = iValue2;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">}</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">//Use<!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->out 
+ parameters, so client code can pass in an uninitialized variable</p>
+<p class=apiCode
+	style="margin-left: 49px;">//Unpack</p>
+<p class=apiCode
+	style="margin-left: 49px;">public static void Unpack (double dIn, out 
+ int iOut1, out int iOut2)</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">DoubleIntConv <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->cv;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">cv = new DoubleIntConv(dIn);</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">iOut1 = cv.m_Int1;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">iOut2 = cv.m_Int2;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">return;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">}</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">//Use an out parameter, so client code 
+ can pass in an uninitialized variable</p>
+<p class=apiCode
+	style="margin-left: 49px;">//Pack</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">public static void Pack (int iIn1, int iIn2, 
+ out double dOut)</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">DoubleIntConv <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->cv;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">cv = new DoubleIntConv(iIn1, iIn2);</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">dOut = cv.m_Double;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">return;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">}</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; class Program</p>
+
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp; [STAThread]</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp; static void Main() </p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp; { </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iValueIn1 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->= 65535; 
+ </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iValueIn2 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->= 0;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">double <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->dValueOut;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iValueOut1; 
+ </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">int <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iValueOut2;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">DoubleIntConv.Pack(iValueIn1, iValueIn2, 
+ out dValueOut);</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">DoubleIntConv.Unpack(dValueOut, out iValueOut1, 
+ out iValueOut2);</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">return;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp; }</p>
+
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=apiCode>}</p>
+<p class=apiCode><font face="Verdana" style="font-size: 8pt">See
+<a href="sldworksapi.chm::/Create_Reference_Curve_Example_CSharp.htm">Create 
+Reference Curve Example (C#)</a> for an example of packing an array.</font></p>
+
+</body>
+
+</html>

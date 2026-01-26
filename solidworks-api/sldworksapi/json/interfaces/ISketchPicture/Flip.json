@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchPicture",
+    "member": "Flip",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SideToSide",
+        "type": "System.Boolean",
+        "description": "True to flip the picture side to side, false to flip the picture top to bottom (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "flip",
+      "isketchpicture",
+      "sketch",
+      "picture",
+      "side",
+      "boolean"
+    ]
+  },
+  "title": "ISketchPicture.Flip",
+  "description": "Flips the picture, in its same position, either side to side or top to bottom.",
+  "signature": "System.Boolean Flip( \n   System.Boolean\nSideToSide\n)",
+  "parameters": [
+    {
+      "name": "SideToSide",
+      "type": "System.Boolean",
+      "description": "True to flip the picture side to side, false to flip the picture top to bottom (see Remarks )"
+    }
+  ],
+  "returns": "True if the picture is flipped, false if not",
+  "remarks": "If you flip the picture...\nThen the\nangle\n...\nside to side\nremains the same and the\nISketchPicture::Flipped\nproperty returns true.\ntop to bottom\nincrements by 180\nand the ISketchPicture::Flipped property returns true.\nside to side and top to bottom\nrotates 180\nand ISketchPicture::Flipped\nreturns false.",
+  "examples": [
+    {
+      "title": "ISketchPicture",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchPicture",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

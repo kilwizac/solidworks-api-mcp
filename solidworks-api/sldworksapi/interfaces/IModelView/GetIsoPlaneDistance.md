@@ -1,0 +1,60 @@
+---
+type: method
+interface: IModelView
+member: GetIsoPlaneDistance
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related:
+  - IModelView.AddPerspective
+  - IModelView.GetEyePoint
+  - IModelView.GetViewPlaneDistance
+  - IModelView.HasPerspective
+  - IModelView.IGetEyePoint
+  - IModelView.ISetEyePoint
+  - IModelView.RemovePerspective
+  - IModelView.SetEyePoint
+keywords:
+  - perspective
+  - model
+  - views
+  - getisoplanedistance
+  - imodelview
+  - view
+  - iso
+  - plane
+  - distance
+  - double
+---
+
+# IModelView.GetIsoPlaneDistance
+
+Gets the distance, in terms of screen space, from the eye position to the plane at which there is no scaling due to perspective.
+
+## Signature
+
+```csharp
+System.Double GetIsoPlaneDistance()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Distance
+
+## See Also
+
+- `IModelView.AddPerspective`
+- `IModelView.GetEyePoint`
+- `IModelView.GetViewPlaneDistance`
+- `IModelView.HasPerspective`
+- `IModelView.IGetEyePoint`
+- `IModelView.ISetEyePoint`
+- `IModelView.RemovePerspective`
+- `IModelView.SetEyePoint`

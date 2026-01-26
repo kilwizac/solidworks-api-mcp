@@ -1,0 +1,129 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CheckInterference3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TargetBodies",
+        "type": "System.Object",
+        "description": "Target bodies"
+      },
+      {
+        "name": "ToolBodies",
+        "type": "System.Object",
+        "description": "Tool bodies"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Check interference options as defined by swCheckInterferenceOption_e"
+      },
+      {
+        "name": "Body1InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that interfered from the first body with the second body"
+      },
+      {
+        "name": "Body2InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that interfered from the second body with the first body"
+      },
+      {
+        "name": "IntersectedBodyArray",
+        "type": "System.Object",
+        "description": "Array of interfering bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.IToolsCheckInterference3",
+      "IAssemblyDoc.ToolsCheckInterference2",
+      "IInterferenceDetectionMgr",
+      "IModeler.CheckInterferenceBetweenTwoBodies",
+      "IModeler.ICheckInterference3"
+    ],
+    "keywords": [
+      "check",
+      "interference",
+      "detection",
+      "checkinterference3",
+      "imodeler",
+      "modeler",
+      "interference3",
+      "target",
+      "bodies",
+      "object",
+      "tool",
+      "options",
+      "int32",
+      "body1",
+      "interfered",
+      "face",
+      "array",
+      "body2",
+      "intersected",
+      "body",
+      "boolean",
+      "among",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CheckInterference3",
+  "description": "Checks for interferences among the specified bodies in a part.",
+  "signature": "System.Boolean CheckInterference3( \n   System.Object\nTargetBodies\n,\n   System.Object\nToolBodies\n,\n   System.Int32\nOptions\n,\n   out System.Object\nBody1InterferedFaceArray\n,\n   out System.Object\nBody2InterferedFaceArray\n,\n   out System.Object\nIntersectedBodyArray\n)",
+  "parameters": [
+    {
+      "name": "TargetBodies",
+      "type": "System.Object",
+      "description": "Target bodies"
+    },
+    {
+      "name": "ToolBodies",
+      "type": "System.Object",
+      "description": "Tool bodies"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Check interference options as defined by swCheckInterferenceOption_e"
+    },
+    {
+      "name": "Body1InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that interfered from the first body with the second body"
+    },
+    {
+      "name": "Body2InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that interfered from the second body with the first body"
+    },
+    {
+      "name": "IntersectedBodyArray",
+      "type": "System.Object",
+      "description": "Array of interfering bodies"
+    }
+  ],
+  "returns": "True if an interference exists, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Check Interference Among Bodies (VBA)",
+      "href": "Check_Interference_Among_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IToolsCheckInterference3",
+    "IAssemblyDoc.ToolsCheckInterference2",
+    "IInterferenceDetectionMgr",
+    "IModeler.CheckInterferenceBetweenTwoBodies",
+    "IModeler.ICheckInterference3"
+  ]
+}

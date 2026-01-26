@@ -1,0 +1,193 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertCutBlend",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Closed",
+        "type": "System.Boolean",
+        "description": "True if you want the loft to be closed, false to leave it open (see Remarks )"
+      },
+      {
+        "name": "KeepTangency",
+        "type": "System.Boolean",
+        "description": "Controls whether the section curves are tangent (see Remarks)"
+      },
+      {
+        "name": "ForceNonRational",
+        "type": "System.Boolean",
+        "description": "True to force the resulting surface to be non-rational; false to not"
+      },
+      {
+        "name": "TessToleranceFactor",
+        "type": "System.Double",
+        "description": "A factor to control the number of intermediate sections used for loft with centerline; the default value is 1.0; the greater the variable, the more intermediate sections are created"
+      },
+      {
+        "name": "StartMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the start profile (see Remarks)"
+      },
+      {
+        "name": "EndMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type at the end profile (see Remarks)"
+      },
+      {
+        "name": "IsThinBody",
+        "type": "System.Boolean",
+        "description": "True if this feature is a thin body, false is not"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Thickness value for the first direction"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Thickness value for the second direction"
+      },
+      {
+        "name": "ThinType",
+        "type": "System.Int16",
+        "description": "Thin wall type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertProtrusionBlend",
+      "ILoftFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "loft",
+      "lofts",
+      "iloftfeaturedata",
+      "cuts",
+      "cut",
+      "insertcutblend",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "blend",
+      "closed",
+      "boolean",
+      "keep",
+      "tangency",
+      "force",
+      "non",
+      "rational",
+      "tess",
+      "tolerance",
+      "factor",
+      "double",
+      "start",
+      "matching",
+      "type",
+      "int16",
+      "end",
+      "thin",
+      "body",
+      "thickness1",
+      "thickness2",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select"
+    ]
+  },
+  "title": "IFeatureManager.InsertCutBlend",
+  "description": "Inserts a lofted cut based on the selected profiles, centerline, and guide curves.",
+  "signature": "Feature InsertCutBlend( \n   System.Boolean\nClosed\n,\n   System.Boolean\nKeepTangency\n,\n   System.Boolean\nForceNonRational\n,\n   System.Double\nTessToleranceFactor\n,\n   System.Int16\nStartMatchingType\n,\n   System.Int16\nEndMatchingType\n,\n   System.Boolean\nIsThinBody\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Int16\nThinType\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Closed",
+      "type": "System.Boolean",
+      "description": "True if you want the loft to be closed, false to leave it open (see Remarks )"
+    },
+    {
+      "name": "KeepTangency",
+      "type": "System.Boolean",
+      "description": "Controls whether the section curves are tangent (see Remarks)"
+    },
+    {
+      "name": "ForceNonRational",
+      "type": "System.Boolean",
+      "description": "True to force the resulting surface to be non-rational; false to not"
+    },
+    {
+      "name": "TessToleranceFactor",
+      "type": "System.Double",
+      "description": "A factor to control the number of intermediate sections used for loft with centerline; the default value is 1.0; the greater the variable, the more intermediate sections are created"
+    },
+    {
+      "name": "StartMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the start profile (see Remarks)"
+    },
+    {
+      "name": "EndMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type at the end profile (see Remarks)"
+    },
+    {
+      "name": "IsThinBody",
+      "type": "System.Boolean",
+      "description": "True if this feature is a thin body, false is not"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Thickness value for the first direction"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Thickness value for the second direction"
+    },
+    {
+      "name": "ThinType",
+      "type": "System.Int16",
+      "description": "Thin wall type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks)"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Selection of guide curves and centerline is optional; however, selection of the profiles must be in an order consistent with the desired direction of the loft.\nUse of guide curves is strongly recommended, especially when selection of profiles is done in the FeatureManager design tree.\nYou can use any number of profiles; however, if you selected only one profile, then any selected guide curves must be closed curves.\nIf Closed is True and you selected less that three profiles, then any selected guide curves must be closed curves.\nIf the section curves are tangent, then KeepTangency controls whether the resulting surfaces are also be tangent. Specify True to maintain the tangency as seen in the section curves; false to not. When generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics.\nUse\nIModelDocExtension::SelectById2\nto select the profiles and guide curves. The mark for the profile selections should be 1; the mark for any guide curve selection, if provided, should be a 2; the mark for the centerline selection, if provided, should be a 4; the mark for the start tangency vector selection, if provided, should be a 8; the mark for the start tangency faces selection, if provided, should be a 16 (not available); the mark for the end tangency vector selection, if provided, should be a 32; the mark for the end tangency faces selection, if provided, should be a 64 (not available); linear edge, sketch line, axis, plane and planar faces are qualified for tangency vector sections.\nThe tangency type arguments can take the following values:\n0 - none\n1 - tangent to the normal of the profile\n2 - tangent to a selected vector\n3 - tangency to all the adjacent faces sharing an edge with the start profile\n4 - tangent to some of the selected faces sharing an edge with the start profile (not currently available )\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertProtrusionBlend",
+    "ILoftFeatureData"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swAutodimStatus_e",
+    "description": "Statuses returned by ISketch::AutoDimension2 and IDrawingDoc::AutoDimension.",
+    "member_count": 19,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swAutodimStatus_e",
+  "description": "Statuses returned by ISketch::AutoDimension2 and IDrawingDoc::AutoDimension.",
+  "values": [
+    {
+      "member": "swAutodimStatus3DSketchNotSupported",
+      "value": "5",
+      "description": "= Cannot autodimension a 3D sketch"
+    },
+    {
+      "member": "swAutodimStatusAlgorithmFailed",
+      "value": "17",
+      "description": "= Unspecified algorithm failure"
+    },
+    {
+      "member": "swAutodimStatusBadOptionValue",
+      "value": "1",
+      "description": "= An option value for an argument is out of range"
+    },
+    {
+      "member": "swAutodimStatusCenterlineNotAllowed",
+      "value": "10",
+      "description": "= The centerline scheme is not valid for sketches that cannot be revolved to create valid features"
+    },
+    {
+      "member": "swAutodimStatusDatumLineNotCenterline",
+      "value": "14",
+      "description": "= The datum must be a centerline for the centerline scheme"
+    },
+    {
+      "member": "swAutodimStatusDatumLineNotHorizontal",
+      "value": "16",
+      "description": "= If the sketch line is a datum, it must be horizontal for horizontal dimensions"
+    },
+    {
+      "member": "swAutodimStatusDatumLineNotVertical",
+      "value": "15",
+      "description": "= If the sketch line is a datum, it must be vertical for vertical dimension"
+    },
+    {
+      "member": "swAutodimStatusDatumNotSupplied",
+      "value": "11",
+      "description": "= No datum was selected for either the horizontal or vertical dimensioning schemes"
+    },
+    {
+      "member": "swAutodimStatusDatumNotUnique",
+      "value": "12",
+      "description": "= More than one datum was selected for either the horizontal or vertical dimensioning schemes"
+    },
+    {
+      "member": "swAutodimStatusDatumNotValidType",
+      "value": "13",
+      "description": "= One of the selected datums is not valid. Valid types are sketch points and sketch lines"
+    },
+    {
+      "member": "swAutodimStatusDocTypeNotSupported",
+      "value": "3",
+      "description": "= Only part and assemblies documents are supported"
+    },
+    {
+      "member": "swAutodimStatusEntitiesNotValid",
+      "value": "9",
+      "description": "= The entitiesToDimension argument has the value of swAutodimEntitiesSelected , but the marked entities are not valid"
+    },
+    {
+      "member": "swAutodimStatusNoActiveDoc",
+      "value": "2",
+      "description": "= No active document"
+    },
+    {
+      "member": "swAutodimStatusNoActiveSketch",
+      "value": "4",
+      "description": "= Can only autodimension an active sketch"
+    },
+    {
+      "member": "swAutodimStatusNoEntities",
+      "value": "8",
+      "description": "= The entitiesToDimension argument has the value of swAutodimEntitiesSelected , but no entities were selected and marked with the value swAutodimMarkEntities"
+    },
+    {
+      "member": "swAutodimStatusSketchIsEmpty",
+      "value": "6",
+      "description": "= Cannot autodimension an empty sketch"
+    },
+    {
+      "member": "swAutodimStatusSketchIsOverDefined",
+      "value": "7",
+      "description": "= Cannot autodimension an over defined sketch"
+    },
+    {
+      "member": "swAutodimStatusSketchNoSolutionFound",
+      "value": "18",
+      "description": "= Cannot autodimension a sketch for which there is no solution"
+    },
+    {
+      "member": "swAutodimStatusSuccess",
+      "value": "0",
+      "description": "= Sketch successfully dimensioned"
+    }
+  ]
+}

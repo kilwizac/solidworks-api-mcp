@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldSymbol",
+    "member": "IGetArcAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arc where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IWeldSymbol.GetArcAtIndex",
+      "IWeldSymbol.GetArcCount"
+    ],
+    "keywords": [
+      "igetarcatindex",
+      "iweldsymbol",
+      "weld",
+      "symbol",
+      "arc",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IWeldSymbol.IGetArcAtIndex",
+  "description": "Gets information for the specified arc.",
+  "signature": "System.Double IGetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arc where the index begins at 0"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3],\ncenterPt\n[3],\nrotationDir\n]\nwhere:\nlineType\n= line type as defined in\nswLineTypes_e\n.\nstartPt[3]\n= XYZ arc start point.\nendPt[3]\n= XYZ arc end point.\ncenterPt[3]\n= XYZ arc center point.\nrotationDir\n= value is a boolean returned as a double and represents the rotation direction, where CCW = 1.0 and CW = 0.0.",
+  "examples": [],
+  "related": [
+    "IWeldSymbol.GetArcAtIndex",
+    "IWeldSymbol.GetArcCount"
+  ]
+}

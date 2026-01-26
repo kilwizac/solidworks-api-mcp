@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumLoops2",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number of loops for the loops enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "Loop2",
+        "description": "Pointer to an array of loops of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of loops returned from the list; this value can be less than celt if you ask for more loops than exist, or it can be NULL if no more loops exist"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienumloops2",
+      "loops2",
+      "celt",
+      "int32",
+      "rgelt",
+      "loop2",
+      "pcelt",
+      "fetched",
+      "void"
+    ]
+  },
+  "title": "IEnumLoops2.Next",
+  "description": "Gets the next loop in the loops enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out Loop2\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number of loops for the loops enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "Loop2",
+      "description": "Pointer to an array of loops of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of loops returned from the list; this value can be less than celt if you ask for more loops than exist, or it can be NULL if no more loops exist"
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [],
+  "related": []
+}

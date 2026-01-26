@@ -1,0 +1,45 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBaseFlangeFeatureData",
+    "member": "UseMaterialSheetMetalParameters",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "usematerialsheetmetalparameters",
+      "ibaseflangefeaturedata",
+      "base",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "material",
+      "sheet",
+      "metal",
+      "parameters",
+      "boolean"
+    ],
+    "readonly": true
+  },
+  "title": "IBaseFlangeFeatureData.UseMaterialSheetMetalParameters",
+  "description": "Gets whether the properties of the material applied are used when creating this base flange.",
+  "signature": "System.Boolean UseMaterialSheetMetalParameters {get;}",
+  "parameters": [],
+  "returns": "True uses the applied material's sheet metal parameters, false does not",
+  "remarks": "This property is valid only:\nwhen not creating the base flange on an existing sheet metal feature,\n- and -\nwhen\nIBaseFlangeFeatureData::UseGaugeTable\nis false.\nIf this property returns false, then specify sheet metal parameters using:\nIBaseFlangeFeatureData::BendRadius\nIBaseFlangeFeatureData::Thickness\nIBaseFlangeFeatureData::ReverseThickness\nWhether to use the applied material's sheet metal parameters was set during the\ninitialization\nof this base flange and cannot be changed.",
+  "examples": [
+    {
+      "title": "IBaseFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBaseFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

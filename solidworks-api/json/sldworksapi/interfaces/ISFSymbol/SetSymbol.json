@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "SetSymbol",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Symbol",
+        "type": "System.Int32",
+        "description": "Type of symbol as defined in swSFSymType_e"
+      },
+      {
+        "name": "SurfaceTexture",
+        "type": "System.Int32",
+        "description": "Symbol surface text type as defined in swSFSymType_e"
+      },
+      {
+        "name": "AllAround",
+        "type": "System.Boolean",
+        "description": "True if symbol is All Around, false if symbol is Local"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setsymbol",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "int32",
+      "surface",
+      "texture",
+      "all",
+      "around",
+      "boolean"
+    ]
+  },
+  "title": "ISFSymbol.SetSymbol",
+  "description": "Sets the type of symbol for this surface finish symbol.",
+  "signature": "System.Boolean SetSymbol( \n   System.Int32\nSymbol\n,\n   System.Int32\nSurfaceTexture\n,\n   System.Boolean\nAllAround\n)",
+  "parameters": [
+    {
+      "name": "Symbol",
+      "type": "System.Int32",
+      "description": "Type of symbol as defined in swSFSymType_e"
+    },
+    {
+      "name": "SurfaceTexture",
+      "type": "System.Int32",
+      "description": "Symbol surface text type as defined in swSFSymType_e"
+    },
+    {
+      "name": "AllAround",
+      "type": "System.Boolean",
+      "description": "True if symbol is All Around, false if symbol is Local"
+    }
+  ],
+  "returns": "True if symbol is set, false if it is not",
+  "remarks": "The Symbol argument must be one of the following values from the\nswSFSymType_e\nenumeration: swSFBasic, swSFMachining_Req, swSFDont_Machine, swSFJIS_No_Machining, swSFJIS_Basic, or swSFJIS_Machining_Req.\nISFSymbol::GetSymbol\nwill get this value.\nIf the symbol is...\nThen...\nswSFJIS_No_Machining or swSFJIS_Basic\nSurfaceTexture argument must be one of these values from the swSFSymType enumeration:\nswSFJIS_Surface_Texture_1, swSFJIS_Surface_Texture_2, swSFJIS_Surface_Texture_3,\nor swSFJIS_Surface_Texture_4.\nFor any other symbol types, this argument is ignored, and 0 should be passed in. The\nISFSymbol::GetSymbolSurfaceTexture\nmethod will get this value.\nswSFBasic, swSFMachining_Req, or swSFDont_Machine\nAllAround argument indicates whether this is an All Around or Local symbol.\nUse\nISFSymbol::GetSymbolAllAround\nto get this value.",
+  "examples": [],
+  "related": []
+}

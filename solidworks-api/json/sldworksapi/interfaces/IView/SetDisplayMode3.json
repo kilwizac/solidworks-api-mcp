@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "SetDisplayMode3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseParent",
+        "type": "System.Boolean",
+        "description": "True to use the parent's setting, false to use its own local settings"
+      },
+      {
+        "name": "Mode",
+        "type": "System.Int32",
+        "description": "Display mode of the drawing view as defined in swDisplayMode_e"
+      },
+      {
+        "name": "Facetted",
+        "type": "System.Boolean",
+        "description": "True if the geometry is displayed with draft quality, false if it is displayed with precision quality (see Remarks )"
+      },
+      {
+        "name": "Edges",
+        "type": "System.Boolean",
+        "description": "True if edges are displayed when this view is in shaded mode, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetUseParentDisplayMode",
+      "IView.SetDisplayTangentEdges2",
+      "IView.UpdateViewDisplayGeometry"
+    ],
+    "keywords": [
+      "setdisplaymode3",
+      "iview",
+      "view",
+      "display",
+      "mode3",
+      "use",
+      "parent",
+      "boolean",
+      "mode",
+      "int32",
+      "facetted",
+      "edges",
+      "change",
+      "draft",
+      "quality",
+      "vba",
+      "number",
+      "polylines",
+      "shaded",
+      "drawing"
+    ]
+  },
+  "title": "IView.SetDisplayMode3",
+  "description": "Obsolete. Superseded by IView::SetDisplayMode4.",
+  "signature": "System.Boolean SetDisplayMode3( \n   System.Boolean\nUseParent\n,\n   System.Int32\nMode\n,\n   System.Boolean\nFacetted\n,\n   System.Boolean\nEdges\n)",
+  "parameters": [
+    {
+      "name": "UseParent",
+      "type": "System.Boolean",
+      "description": "True to use the parent's setting, false to use its own local settings"
+    },
+    {
+      "name": "Mode",
+      "type": "System.Int32",
+      "description": "Display mode of the drawing view as defined in swDisplayMode_e"
+    },
+    {
+      "name": "Facetted",
+      "type": "System.Boolean",
+      "description": "True if the geometry is displayed with draft quality, false if it is displayed with precision quality (see Remarks )"
+    },
+    {
+      "name": "Edges",
+      "type": "System.Boolean",
+      "description": "True if edges are displayed when this view is in shaded mode, false if not"
+    }
+  ],
+  "returns": "True if the setting of the display mode was successful, false if not",
+  "remarks": "The contents of a drawing view can be displayed in different modes, including Wireframe, HLR (Hidden Lines Removed), and HLV (Hidden Lines Visible), and Shaded. This is what the Mode argument indicates, and these values are contained in swDisplayMode_e. To display a drawing view shaded with edges, set swDrawingsDefaultDisplayTypeHLREdgesWhenShaded to True and set Mode to swSHADED.\nThis enumeration also contains three other values, swFACETED_WIREFRAME, swFACETED_HIDDEN_GREY, and swFACETEDHIDDEN, which indicate faceted display of geometry. However, in this method, the Facetted argument is how faceted display is indicated, and if any of those three values are used in the Mode argument, they are treated the same as swWIREFRAME, sw_HIDDEN_GREY, and sw_HIDDEN, respectively.\nTo determine if...\nThen use...\nEdges are displayed when this view is in shaded mode\nIView::GetDisplayEdgesInShadedMode\nThis view is displayed with faceted geometry\nIView::GetFacettedHlrDisplay\nThe display mode of this drawing view\nIView::GetDisplayMode2\nAlthough you cannot switch a drawing view from precision quality to draft quality, the geometry can still be displayed in draft quality if that is how your user preferences indicate new drawings views should be created. Once the drawing view has precision quality, whether you created it that way or changed it to that after its creation, you cannot change it to draft quality.\nNOTE:\nDisplaying geometry precisely can increase display quality, but can decrease performance. Setting the Facetted argument to True can increase performance, but can decrease display quality.",
+  "examples": [
+    {
+      "title": "Set View Display Mode (C++)",
+      "href": "Set_View_Display_Mode_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Display Mode to Draft Quality (VBA)",
+      "href": "Change_Display_Mode_to_Draft_Quality_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Number of Polylines in Shaded Mode Drawing View (VBA)",
+      "href": "Get_Number_of_Polylines_in_Shaded_Mode_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetUseParentDisplayMode",
+    "IView.SetDisplayTangentEdges2",
+    "IView.UpdateViewDisplayGeometry"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "IGetBalloonInfo",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetBalloonInfo",
+      "INote.GetBalloonSize",
+      "INote.GetBalloonStack",
+      "INote.GetBalloonStyle",
+      "INote.GetBomBalloonText",
+      "INote.GetBomBalloonTextStyle",
+      "INote.HasBalloon",
+      "INote.IsBomBalloon",
+      "INote.IsStackedBalloon",
+      "INote.IsStackedBalloonMaster",
+      "INote.SetBalloon",
+      "INote.SetBomBalloonText"
+    ],
+    "keywords": [
+      "balloons",
+      "see",
+      "also",
+      "iballoonstack",
+      "notes",
+      "note",
+      "inote",
+      "igetballooninfo",
+      "balloon",
+      "info",
+      "double"
+    ]
+  },
+  "title": "INote.IGetBalloonInfo",
+  "description": "Gets information describing the geometry of the balloon, if any, that encloses the note text.",
+  "signature": "System.Double IGetBalloonInfo()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This consists of two points: center point and a point on the balloon circle.\nFormat of return information is the following array of doubles:\nreturn value\n[0] = x coordinate of balloon center point\nreturn value\n[1] = y coordinate of balloon center point\nreturn value\n[2] = z coordinate of balloon center point\nreturn value\n[3] = x coordinate of balloon arc point\nreturn value\n[4] = y coordinate of balloon arc point\nreturn value\n[5] = z coordinate of balloon arc point\nreturn value\n[6] = radius",
+  "examples": [],
+  "related": [
+    "INote.GetBalloonInfo",
+    "INote.GetBalloonSize",
+    "INote.GetBalloonStack",
+    "INote.GetBalloonStyle",
+    "INote.GetBomBalloonText",
+    "INote.GetBomBalloonTextStyle",
+    "INote.HasBalloon",
+    "INote.IsBomBalloon",
+    "INote.IsStackedBalloon",
+    "INote.IsStackedBalloonMaster",
+    "INote.SetBalloon",
+    "INote.SetBomBalloonText"
+  ]
+}

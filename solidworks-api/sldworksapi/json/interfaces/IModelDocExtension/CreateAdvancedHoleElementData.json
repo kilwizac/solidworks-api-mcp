@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "CreateAdvancedHoleElementData",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ElmType",
+        "type": "System.Int32",
+        "description": "Advanced Hole element type as defined in swAdvWzdGeneralHoleTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "advanced",
+      "hole",
+      "elements",
+      "see",
+      "also",
+      "iadvancedholeelementdata",
+      "create",
+      "createadvancedholeelementdata",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "element",
+      "data",
+      "elm",
+      "type",
+      "int32",
+      "object",
+      "feature",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.CreateAdvancedHoleElementData",
+  "description": "Creates an Advanced Hole element data object of the specified type.",
+  "signature": "System.Object CreateAdvancedHoleElementData( \n   System.Int32\nElmType\n)",
+  "parameters": [
+    {
+      "name": "ElmType",
+      "type": "System.Int32",
+      "description": "Advanced Hole element type as defined in swAdvWzdGeneralHoleTypes_e"
+    }
+  ],
+  "returns": "IAdvancedHoleElementData (see Remarks )",
+  "remarks": "After calling this method, use the IAdvancedHoleElementData object to get and set the properties common to all Advanced Hole elements. Cast the returned object using one of the following hole type-specific interfaces to set hole-specific properties:\nICounterboreElementData\nICountersinkElementData\nIStraightElementData\nIStraightTapElementData\nITaperedTapElementData\nTo create and Advanced Hole, see the\nIFeatureManager::AdvancedHole\nRemarks.",
+  "examples": [
+    {
+      "title": "Create Advanced Hole Feature (VBA)",
+      "href": "Create_Advanced_Hole_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Advanced Hole Feature (VB.NET)",
+      "href": "Create_Advanced_Hole_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Advanced Hole Feature (C#)",
+      "href": "Create_Advanced_Hole_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

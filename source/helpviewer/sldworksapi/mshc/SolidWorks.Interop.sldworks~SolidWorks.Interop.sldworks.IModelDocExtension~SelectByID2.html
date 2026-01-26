@@ -1,0 +1,510 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>SelectByID2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2" />
+    <meta name="Description" content="Selects the specified entity." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModelDocExtension.SelectByID2" />
+    <meta name="Microsoft.Help.Keywords" content="Selection (see also ISelectionMgr Interface), by ID" />
+    <meta name="Microsoft.Help.Keywords" content="Select, by ID" />
+    <meta name="Microsoft.Help.Keywords" content="ID, select by" />
+    <meta name="Microsoft.Help.Keywords" content="SelectByID2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                SelectByID2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension Interface</a> : SelectByID2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="NamePopupContent" class="i-popup-content">
+        <p>Name of object to select or an empty string</p>
+    </div>
+
+    <div id="TypePopupContent" class="i-popup-content">
+        <p>Type of object (uppercase) as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSelectType_e.html">swSelectType_e</a> or an empty string</p>
+    </div>
+
+    <div id="XPopupContent" class="i-popup-content">
+        <p>X selection location or 0</p>
+    </div>
+
+    <div id="YPopupContent" class="i-popup-content">
+        <p>Y selection location or 0</p>
+    </div>
+
+    <div id="ZPopupContent" class="i-popup-content">
+        <p>Z selection location or 0</p>
+    </div>
+
+    <div id="AppendPopupContent" class="i-popup-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>If...</th>
+
+                    <th>An, if entity is...</th>
+
+                    <th>Then...</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>True</td>
+
+                    <td>Not already selected</td>
+
+                    <td>Entity is appended to the current selection list</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+
+                    <td>Already selected</td>
+
+                    <td>Entity is removed from the current selection list</td>
+                </tr>
+
+                <tr>
+                    <td>False</td>
+
+                    <td>Not already selected</td>
+
+                    <td>Current selection is cleared and then the&#160;entity is put on the list</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+
+                    <td>Already selected</td>
+
+                    <td>Current selection list remains the same</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="MarkPopupContent" class="i-popup-content">
+        <p>Value that you want to use as a mark; this value is used by other functions that require ordered selection (see <strong>Remarks</strong>)</p>
+    </div>
+
+    <div id="CalloutPopupContent" class="i-popup-content">
+        <p>Pointer to the associated <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICallout">callout</a></p>
+    </div>
+
+    <div id="SelectOptionPopupContent" class="i-popup-content">
+        <p>Selection option as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSelectOption_e.html">swSelectOption_e</a> (see <strong>Remarks</strong>)</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Selects the specified entity.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function SelectByID2( _
+   ByVal <i><a class="i-popup-link" id="NamePopupLink" data-popup-contentsource="#NamePopupContent" data-popup-showevent="click mouseenter">Name</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="AppendPopupLink" data-popup-contentsource="#AppendPopupContent" data-popup-showevent="click mouseenter">Append</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="MarkPopupLink" data-popup-contentsource="#MarkPopupContent" data-popup-showevent="click mouseenter">Mark</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="CalloutPopupLink" data-popup-contentsource="#CalloutPopupContent" data-popup-showevent="click mouseenter">Callout</a></i> As Callout, _
+   ByVal <i><a class="i-popup-link" id="SelectOptionPopupLink" data-popup-contentsource="#SelectOptionPopupContent" data-popup-showevent="click mouseenter">SelectOption</a></i> As System.Integer _
+) As System.Boolean
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension</a>
+Dim Name As System.String
+Dim Type As System.String
+Dim X As System.Double
+Dim Y As System.Double
+Dim Z As System.Double
+Dim Append As System.Boolean
+Dim Mark As System.Integer
+Dim Callout As Callout
+Dim SelectOption As System.Integer
+Dim value As System.Boolean
+ 
+value = instance.SelectByID2(Name, Type, X, Y, Z, Append, Mark, Callout, SelectOption)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.bool SelectByID2( 
+   System.string <i><a class="i-popup-link" id="NamePopupLink" data-popup-contentsource="#NamePopupContent" data-popup-showevent="click mouseenter">Name</a></i>,
+   System.string <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>,
+   System.bool <i><a class="i-popup-link" id="AppendPopupLink" data-popup-contentsource="#AppendPopupContent" data-popup-showevent="click mouseenter">Append</a></i>,
+   System.int <i><a class="i-popup-link" id="MarkPopupLink" data-popup-contentsource="#MarkPopupContent" data-popup-showevent="click mouseenter">Mark</a></i>,
+   Callout <i><a class="i-popup-link" id="CalloutPopupLink" data-popup-contentsource="#CalloutPopupContent" data-popup-showevent="click mouseenter">Callout</a></i>,
+   System.int <i><a class="i-popup-link" id="SelectOptionPopupLink" data-popup-contentsource="#SelectOptionPopupContent" data-popup-showevent="click mouseenter">SelectOption</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.bool SelectByID2( 
+   System.String^ <i><a class="i-popup-link" id="NamePopupLink" data-popup-contentsource="#NamePopupContent" data-popup-showevent="click mouseenter">Name</a></i>,
+   System.String^ <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>,
+   System.bool <i><a class="i-popup-link" id="AppendPopupLink" data-popup-contentsource="#AppendPopupContent" data-popup-showevent="click mouseenter">Append</a></i>,
+   System.int <i><a class="i-popup-link" id="MarkPopupLink" data-popup-contentsource="#MarkPopupContent" data-popup-showevent="click mouseenter">Mark</a></i>,
+   Callout^ <i><a class="i-popup-link" id="CalloutPopupLink" data-popup-contentsource="#CalloutPopupContent" data-popup-showevent="click mouseenter">Callout</a></i>,
+   System.int <i><a class="i-popup-link" id="SelectOptionPopupLink" data-popup-contentsource="#SelectOptionPopupContent" data-popup-showevent="click mouseenter">SelectOption</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Name</i></dt>
+
+                <dd>
+                    <p>Name of object to select or an empty string</p>
+                </dd>
+
+                <dt><i>Type</i></dt>
+
+                <dd>
+                    <p>Type of object (uppercase) as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSelectType_e.html">swSelectType_e</a> or an empty string</p>
+                </dd>
+
+                <dt><i>X</i></dt>
+
+                <dd>
+                    <p>X selection location or 0</p>
+                </dd>
+
+                <dt><i>Y</i></dt>
+
+                <dd>
+                    <p>Y selection location or 0</p>
+                </dd>
+
+                <dt><i>Z</i></dt>
+
+                <dd>
+                    <p>Z selection location or 0</p>
+                </dd>
+
+                <dt><i>Append</i></dt>
+
+                <dd>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>If...</th>
+
+                                <th>An, if entity is...</th>
+
+                                <th>Then...</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>True</td>
+
+                                <td>Not already selected</td>
+
+                                <td>Entity is appended to the current selection list</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+
+                                <td>Already selected</td>
+
+                                <td>Entity is removed from the current selection list</td>
+                            </tr>
+
+                            <tr>
+                                <td>False</td>
+
+                                <td>Not already selected</td>
+
+                                <td>Current selection is cleared and then the&#160;entity is put on the list</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+
+                                <td>Already selected</td>
+
+                                <td>Current selection list remains the same</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </dd>
+
+                <dt><i>Mark</i></dt>
+
+                <dd>
+                    <p>Value that you want to use as a mark; this value is used by other functions that require ordered selection (see <strong>Remarks</strong>)</p>
+                </dd>
+
+                <dt><i>Callout</i></dt>
+
+                <dd>
+                    <p>Pointer to the associated <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICallout">callout</a></p>
+                </dd>
+
+                <dt><i>SelectOption</i></dt>
+
+                <dd>
+                    <p>Selection option as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSelectOption_e.html">swSelectOption_e</a> (see <strong>Remarks</strong>)</p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <p>True if item was successfully selected, false if not</p>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>Use this method instead of using the selection methods on the following objects:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotation">IAnnotation</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2">IComponent2</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">IFeature</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchHatch">ISketchHatch</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchPoint">ISketchPoint</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchSegment">ISketchSegment</a></p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchSpline">ISketchSpline</a></p>
+                </li>
+            </ul>
+
+            <p class="apiRemarksText">The previously listed objects' selection methods do not work well when a PropertyManager page is open or a command is running. This method, IModelDocExtension::SelectByID2, handles selection correctly regardless if a command is running.</p>
+
+            <p class="apiRemarksText">If your application already has an object handle (for example, IFace2), use the appropriate Select method to select the item directly using its handle.</p>
+
+            <p class="apiRemarksText">To filter the objects selected by this method, set the Type parameter. If no filtering is required, then pass an empty string for this parameter.</p>
+
+            <p class="apiRemarksText">For example, to select an object of type swSelDIMENSIONS, use the string that appears in the comment column, "DIMENSION". The objectType might change based on your current state. For example, to select a sketch point that was created in the active sketch, specify Type as "SKETCHPOINT". However, if you do not have an active sketch, or if the point was created in a sketch other than the active sketch, or the point is the origin point, then specify Type as "EXTSKETCHPOINT".</p>
+
+            <p class="apiRemarksText">If Type is specified, then this method returns false if it cannot find the matching object type.</p>
+
+            <p class="apiRemarksText">The Name parameter is not intended for selection of faces, edges, and so on. This is a case-sensitive string for objects that are automatically named by SOLIDWORKS during entity creation, such as dimensions, drawing views, and so on. This method tries to find and select an object whose name matches the Name parameter; however, the match needs to be exact for this method to return true.</p>
+
+            <p class="apiRemarksText">For example:</p>
+
+            <ul>
+                <li>
+                    <div class="apiRemarksText">
+                        If a string is passed that matches an object name but whose case does not match exactly, then this method could return false. For selection of dimensions, the Name parameter must be fully qualified.
+                    </div>
+                </li>
+
+                <li>
+                    <div class="apiRemarksText">
+                        Specify "D1@Sketch2@Part1.SLDPRT" rather than "D1@Sketch2"; otherwise, this method could return false. If you do not know the object name, or if it is an item that is not automatically named by SOLIDWORKS, you can pass an empty string.
+                    </div>
+                </li>
+            </ul>
+
+            <p class="apiRemarksText">If you are using the Name parameter, then specify the x, y, and z&#160; coordinates in terms of the context where the item was created. For example, if you want to select a sketch point using its name (for example, "Point1") in the Name parameter, then specify&#160;X,&#160;Y, and Z&#160;in terms of the sketch where the point was created. Even if the sketch is not active, specify the X, Y, and Z values in terms of sketch space when you use the Name parameter. In certain situations, you can also pass in the&#160;x, y, and z&#160;coordinates as (0,0,0). For example, to select a feature shown in the FeatureManager design tree, you do not need to specify&#160;x, y, and z&#160;coordinates. However, to select objects such as faces or when you need a point location picked, you must specify the x, y, and z coordinates. If you are not using the Name parameter as a filter, then specify the x, y, and z coordinates in terms of model space. The coordinates are used when the object name is not provided, and the coordinates&#160;are dependent on the view state.</p>
+
+            <p class="apiRemarksText">If you do not know the object name or the object type, pass empty strings for the Name and Type parameters. The selection routine makes the best attempt to select the correct object.</p>
+
+            <p class="apiRemarksText">To get <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">IFace2</a>, <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge">IEdge</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex">IVertex</a> objects by name, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartDoc~GetEntityByName">IPartDoc::GetEntityByName</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartDoc~IGetEntityByName">IPartDoc::IGetEntityByName</a>.</p>
+
+            <p class="apiRemarksText">For SelectOption, specify swSelectOption_e.swSelectOptionDefault to indicate that the Shift key is not used during selection or specify swSelectOption_e.swSelectOptionExtensive to indicate that the Shift key is used during selection.</p>
+
+            <p class="apiRemarksText">The <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">IModelDoc2</a> object used to call this method must be an open and visible document. For example, you cannot use the IModelDoc2 object returned from an assembly component (<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2~GetModelDoc">IComponent2::GetModelDoc</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2~IGetModelDoc">IComponent2::IGetModelDoc</a>) unless that SOLIDWORKS component part or subassembly is an open and visible document. In this case, you can select the item using the fully qualified name (for example, "Plane4@Part1-1@Assem1").</p>
+
+            <p class="apiRemarksText">When selecting IFace2 objects, this method uses the specified point as input to the normal user-interface selection routines to use the speed of ray tracing. As a result, if the view changes from the original recorded size or orientation, then the same IFace2 might not be selected next time. If your application has a pointer to the IFace2 object to be selected, then you can call the <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEntity~Select4">IEntity::Select4</a> method directly. Otherwise, you can call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByRay">IModelDocExtension::SelectByRay</a>. Calling either of these methods allows for tighter control over the starting point and the direction in which to search. IModelDocExtension::SelectByRay is recorded when&#160;IModelDocExtension::SelectByID2 relies on the selection coordinates and prone to failure if the model view is altered.&#160;</p>
+
+            <p class="apiRemarksText">Use:</p>
+
+            <ul>
+                <li>Mark of 4 when&#160;selecting&#160;multiple edges or sketch segments and grouping them into one object&#160;for the path&#160;for a sweep&#160;feature.&#160;See the <strong>Select Multiple Sketch Segments for Sweep Path</strong> examples.</li>
+
+                <li>Mark of 2 when selecting multiple&#160;edges, sketch segments, or curves and grouping them into one object for the guide curves for a loft feature. See the <strong>Select Multiple Splines for Loft Guide Curves</strong>&#160;examples.</li>
+
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectionMgr~AddSelectionListObject">ISelectionMgr::AddSelectionListObject</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectionMgr~AddSelectionListObjects">ISelectionMgr::AddSelectionListObjects</a> to add objects to a selection list without preselecting the objects in the user interface.</li>
+            </ul>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Access_Assembly_Example_CPlusPlus_COM.htm">Access Assembly (C++)</a><br />
+            <a href="Add_Component_and_Mate_Example_CPlusPlus_COM.htm">Add Component and Mate (C++)</a><br />
+            <a href="Create_Cylinder_Example_CPlusPlus_COM.htm">Create Cylinder (C++)</a><br />
+            <a href="Traverse_Bodies_Example_CPlusPlusCLI.htm">Traverse Bodies (C++)</a><br />
+            <a href="Add_Distance_Mates_Example_VB.htm">Add Distance Mates (VBA)</a><br />
+            <a href="Get_Names_of_Bodies_in_MultiBody_Part_Example_VB.htm">Get Names of Bodies in Multibody Part (VBA)</a><br />
+            <a href="Get_Selected_Object_Example_VB.htm">Get Selected Object (VBA)</a><br />
+            <a href="Insert_Wrap_Feature_Example_VB.htm">Insert Wrap Feature (VBA)</a><br />
+            <a href="Select_Bodies_Example_VB.htm">Select Bodies (VBA)</a><br />
+            <a href="Connect_to_SOLIDWORKS_Session_CSharp.htm">Connect to SOLIDWORKS Session (C#)</a><br />
+            <a href="Create_Equation-driven_Curve_Example_CSharp.htm">Create Equation-driven Curve (C#)</a><br />
+            <a href="Create_Equation-driven_Curve_Example_VBNET.htm">Create Equation-driven Curve (VB.NET)</a><br />
+            <a href="Create_Equation-driven_Curve_Example_VB.htm">Create Equation-driven Curve (VBA)</a><br />
+            <a href="Select_Multiple_Paths_for_Sweep_Path_Example_CSharp.htm">Select Multiple Sketch Segments for Sweep Path (C#)</a><br />
+            <a href="Select_Multiple_Paths_for_Sweep_Path_Example_VBNET.htm">Select Multiple Sketch Segments for Sweep Path (VB.NET)</a><br />
+            <a href="Select_Multiple_Paths_for_Sweep_Path_Example_VB.htm">Select Multiple Sketch Segments for Sweep Path (VBA)</a><br />
+            <a href="Select_Multiple_Splines_for_Loft_Guide_Curves_Example_CSharp.htm">Select Multiple Splines for Loft Guide Curves (C#)</a><br />
+            <a href="Select_Multiple_Splines_for_Loft_Guide_Curves_Example_VBNET.htm">Select Multiple Splines for Loft Guide Curves (VB.NET)</a><br />
+            <a href="Select_Multiple_Splines_for_Loft_Guide_Curves_Example_VB.htm">Select Multiple Splines for Loft Guide Curves (VBA)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension_members">IModelDocExtension Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~MultiSelect">IModelDocExtension::MultiSelect Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~IMultiSelect">IModelDocExtension::IMultiSelect Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectData">ISelectData Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectionMgr">ISelectionMgr Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature~GetNameForSelection">IFeature::GetNameForSelection Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectAll">IModelDocExtension::SelectAll Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~SelectComponentsBySize">IAssemblyDoc::SelectComponentsBySize Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectionMgr~GetSelectByIdSpecification">ISelectionMgr::GetSelectByIdSpecification Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISelectionMgr~GetSelectionSpecification">ISelectionMgr::GetSelectionSpecification Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

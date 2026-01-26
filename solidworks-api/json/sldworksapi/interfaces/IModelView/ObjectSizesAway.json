@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelView",
+    "member": "ObjectSizesAway",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.HasPerspective"
+    ],
+    "keywords": [
+      "perspective",
+      "model",
+      "views",
+      "objectsizesaway",
+      "imodelview",
+      "view",
+      "object",
+      "sizes",
+      "away",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IModelView.ObjectSizesAway",
+  "description": "Helps define the perspective of the current model view by relating the size of a displayed object with the distance of the object from the observer.",
+  "signature": "System.Double ObjectSizesAway {get; set;}",
+  "parameters": [],
+  "returns": "Distance of the object from the observer, relative to the size of the object",
+  "remarks": "This property controls the same value as the view, display, perspective information dialog box. It gives the ratio of the distance of the object from the observer to the size of the object. The smaller the value, the greater the amount of perspective distortion.\nYou can only modify or get this property when the current model view has the perspective display enabled. See\nIModelView::AddPerspective\nand\nIModelView::RemovePerspective\n. If perspective display is disabled, getting the property returns -1, and setting the property has no effect.",
+  "examples": [],
+  "related": [
+    "IModelView.HasPerspective"
+  ]
+}

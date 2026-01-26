@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "IMaterialPropertyValues",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetMaterialPropertyValues2",
+      "IComponent2.IGetMaterialPropertyValues2",
+      "IComponent2.IRemoveMaterialProperty2",
+      "IComponent2.ISetMaterialPropertyValues2",
+      "IComponent2.RemoveMaterialProperty2",
+      "IComponent2.SetMaterialPropertyValues2",
+      "IFace2.MaterialPropertyValues"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "properties",
+      "material",
+      "color",
+      "imaterialpropertyvalues",
+      "component2",
+      "values",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.IMaterialPropertyValues",
+  "description": "Gets or sets the material properties for the selected component in the active configuration.",
+  "signature": "System.Double IMaterialPropertyValues {get; set;}",
+  "parameters": [],
+  "returns": "Array of doubles describing the material's values on this component (see Remarks )",
+  "remarks": "The material values include the component color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency, and emission. Valid values are from 0 to 1 for all values.\nThe format of the parameters or return values is an array of doubles as follows:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after setting this property.\nThis method returns an S_false HRESULT for COM implementations if the user has not explicitly modified this component from the material property values of the underlying part document. For example, the user can right-click a component in the FeatureManager design tree and select\nComponent Properties\nto change the color. If the user has not done this, then this method returns NULL color information.\nThe default component color can be obtained from the component's\nIModelDoc2\nobject (\nIComponent2::IGetModelDoc\n) using IModelDoc2::MaterialPropertyValues.\nYou might also want to check for specific face colors using\nIFace2::IMaterialPropertyValues\n.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetMaterialPropertyValues2",
+    "IComponent2.IGetMaterialPropertyValues2",
+    "IComponent2.IRemoveMaterialProperty2",
+    "IComponent2.ISetMaterialPropertyValues2",
+    "IComponent2.RemoveMaterialProperty2",
+    "IComponent2.SetMaterialPropertyValues2",
+    "IFace2.MaterialPropertyValues"
+  ]
+}

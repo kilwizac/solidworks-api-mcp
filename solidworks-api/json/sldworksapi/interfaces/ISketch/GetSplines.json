@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "GetSplines",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketch.GetSplineCount",
+      "ISketch.GetSplineInterpolateCount",
+      "ISketch.GetSplineParams2",
+      "ISketch.GetSplineParamsCount2",
+      "ISketch.IGetSplineParams2",
+      "ISketch.IGetSplines",
+      "ISketchSpline"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "splines",
+      "entities",
+      "getsplines",
+      "object"
+    ]
+  },
+  "title": "ISketch.GetSplines",
+  "description": "Gets information for each spline by tessellation instead of by interpolation as is done by ISketch::GetSplinesInterpolate and ISketch::IGetSplinesInterpolate.",
+  "signature": "System.Object GetSplines()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "See\nISketch::GetSketchSegments\nor\nISketch::IEnumSketchSegments\nfor access to individual\nISketchSegment\nand\nISketchSpline\nobjects.\nThe returned array of doubles has the format:\n[\n[\nColor, LineType, NumSplinePoints, [x,y,z]\n]\n]\nThis complete set of data repeats itself for each spline found in the sketch. For each spline, the array returned contains the color, the line type, the number of spline points in the spline, and the X,Y,Z value for each of those points. Therefore, the [x,y,z] parameter is an array of\nNumSplinePoints\n, which may vary in size from spline to spline.\nThe\n[x,y,z]\npoints for each spline are not the same as the points used to generate the spline. This method\ntessellates the spline based on the display quality and places points along the spline appropriately.\nLineType\nmay take one of the values in\nswLineTypes_e\n.",
+  "examples": [],
+  "related": [
+    "ISketch.GetSplineCount",
+    "ISketch.GetSplineInterpolateCount",
+    "ISketch.GetSplineParams2",
+    "ISketch.GetSplineParamsCount2",
+    "ISketch.IGetSplineParams2",
+    "ISketch.IGetSplines",
+    "ISketchSpline"
+  ]
+}

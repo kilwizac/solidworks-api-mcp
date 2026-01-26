@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelViewManager",
+    "member": "CreateFeatureMgrWindowFromHandle",
+    "returns": "FeatMgrView",
+    "parameters": [
+      {
+        "name": "BitMapFile",
+        "type": "System.String",
+        "description": "Fully qualified path to the bitmap file that you want to use for the control"
+      },
+      {
+        "name": "WindowHandle",
+        "type": "System.Int32",
+        "description": "Handle of the .NET tab control"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "Text for the ToolTip"
+      },
+      {
+        "name": "WhichPane",
+        "type": "System.Int32",
+        "description": "Pane to use as defined in swFeatMgrPane_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IModelViewManager.DisplayWindowFromHandle"
+    ],
+    "keywords": [
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "net",
+      "controls",
+      "createfeaturemgrwindowfromhandle",
+      "imodelviewmanager",
+      "model",
+      "view",
+      "manager",
+      "create",
+      "feature",
+      "mgr",
+      "window",
+      "handle",
+      "bit",
+      "map",
+      "file",
+      "string",
+      "int32",
+      "tool",
+      "tip",
+      "which",
+      "pane",
+      "feat"
+    ]
+  },
+  "title": "IModelViewManager.CreateFeatureMgrWindowFromHandle",
+  "description": "Creates a new view in the FeatureManager design tree using the specified .NET tab control.",
+  "signature": "FeatMgrView CreateFeatureMgrWindowFromHandle( \n   System.String\nBitMapFile\n,\n   System.Int32\nWindowHandle\n,\n   System.String\nToolTip\n,\n   System.Int32\nWhichPane\n)",
+  "parameters": [
+    {
+      "name": "BitMapFile",
+      "type": "System.String",
+      "description": "Fully qualified path to the bitmap file that you want to use for the control"
+    },
+    {
+      "name": "WindowHandle",
+      "type": "System.Int32",
+      "description": "Handle of the .NET tab control"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "Text for the ToolTip"
+    },
+    {
+      "name": "WhichPane",
+      "type": "System.Int32",
+      "description": "Pane to use as defined in swFeatMgrPane_e"
+    }
+  ],
+  "returns": "IFeatMgrView",
+  "remarks": "If your application must be x64 compatible, then use\nIModelViewManager::CreateFeatureMgrWindowFromHandlex64\n.",
+  "examples": [],
+  "related": [
+    "IModelViewManager.DisplayWindowFromHandle"
+  ]
+}

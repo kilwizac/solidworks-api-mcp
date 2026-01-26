@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITableAnnotation",
+    "member": "Anchored",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.SetPosition",
+      "ITableAnnotation.AnchorType"
+    ],
+    "keywords": [
+      "anchors",
+      "see",
+      "also",
+      "itableanchor",
+      "tables",
+      "table",
+      "anchored",
+      "itableannotation",
+      "annotation",
+      "boolean",
+      "anchor",
+      "hole",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "ITableAnnotation.Anchored",
+  "description": "Gets or sets whether this table is attached to its anchor.",
+  "signature": "System.Boolean Anchored {get; set;}",
+  "parameters": [],
+  "returns": "True if the table is attached to the anchor, false if not",
+  "remarks": "If setting this property to TRUE, then the table origin is snapped to the anchor point, according to the anchor type of this table. Use:\nITableAnnotation::AnchorType\nto determine where the origin is on the table.\nIAnnotation::GetPosition\nto determine the position of the table.\nIf the drawing sheet format does not contain an anchor point for this type of table, then attempting to attach the table to the anchor point has no effect.",
+  "examples": [
+    {
+      "title": "Get and Set Table Anchor of Hole Table (C#)",
+      "href": "Get_and_Set_Table_Anchor_of_Hole_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Table Anchor of Hole Table (VB.NET)",
+      "href": "Get_and_Set_Table_Anchor_of_Hole_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Table Anchor of Hole Table (VBA)",
+      "href": "Get_and_Set_Table_Anchor_of_Hole_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.SetPosition",
+    "ITableAnnotation.AnchorType"
+  ]
+}

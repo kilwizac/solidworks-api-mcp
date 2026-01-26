@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "ISetConicRhoOrRadius",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "Vertex",
+        "description": "Fillet edge for which to set ConicRhoVal (see Remarks )"
+      },
+      {
+        "name": "ConicRhoVal",
+        "type": "System.Double",
+        "description": "Conic rho, conic radius, or circular radius (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.IGetConicRhoOrRadius",
+      "IVariableFilletFeatureData2.ISetRadius",
+      "IVariableFilletFeatureData2.SetConicRhoOrRadius"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "isetconicrhoorradius",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "rho",
+      "radius",
+      "item",
+      "vertex",
+      "val",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.ISetConicRhoOrRadius",
+  "description": "Sets the conic rho, conic radius, or circular radius of this fillet.",
+  "signature": "void ISetConicRhoOrRadius( \n   Vertex\nPFilletItem\n,\n   System.Double\nConicRhoVal\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "Vertex",
+      "description": "Fillet edge for which to set ConicRhoVal (see Remarks )"
+    },
+    {
+      "name": "ConicRhoVal",
+      "type": "System.Double",
+      "description": "Conic rho, conic radius, or circular radius (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIVariableFilletFeatureData2::IGetFilletEdgeAtIndex\nto specify PFilletItem.\nThe type of ConicRhoVal must match the\nIVariableFilletFeatureData2::ConicTypeForCrossSectionProfile\nsetting.\nIf setting the conic rho value, it must be in the range [0.05, 0.95].\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.IGetConicRhoOrRadius",
+    "IVariableFilletFeatureData2.ISetRadius",
+    "IVariableFilletFeatureData2.SetConicRhoOrRadius"
+  ]
+}

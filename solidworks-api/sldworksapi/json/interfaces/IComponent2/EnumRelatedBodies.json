@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "EnumRelatedBodies",
+    "returns": "EnumBodies2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "enumeration",
+      "enumerations",
+      "enumrelatedbodies",
+      "icomponent2",
+      "component2",
+      "related",
+      "bodies2"
+    ]
+  },
+  "title": "IComponent2.EnumRelatedBodies",
+  "description": "Creates an enumerated list of bodies.",
+  "signature": "EnumBodies2 EnumRelatedBodies()",
+  "parameters": [],
+  "returns": "Pointer to the enumerated list of bodies",
+  "remarks": "The list contains only those bodies associated with reference surfaces. You get a list of bodies that are related to the model, but the list does not include the part body itself.\nA reference surface feature might consist of one or more surfaces sewn together. SOLIDWORKS represents each reference surface feature with two bodies: one to represent the front faces and one to represent the back faces. Each IBody2 object has one or more faces depending on whether the reference surface feature is a set of sewn surfaces or a single underlying surface. The corresponding faces for each body pair should have normal vectors that are opposite.\nTo use the enumerated list, see\nIEnumBodies2::Next\n,\nIEnumBodies2::Skip\n,\nIEnumBodies2::Reset\n, and\nIEnumBodies2::Clone\n.\nIf a component is suppressed or lightweight, this method might return NULL because the component has not been loaded into memory by SOLIDWORKS. For more information on lightweight components, see\nWork With Lightweight Components\n.",
+  "examples": [],
+  "related": []
+}

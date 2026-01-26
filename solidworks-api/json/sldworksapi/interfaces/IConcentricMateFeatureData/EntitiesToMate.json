@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IConcentricMateFeatureData",
+    "member": "EntitiesToMate",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "entitiestomate",
+      "iconcentricmatefeaturedata",
+      "concentric",
+      "mate",
+      "feature",
+      "data",
+      "entities",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IConcentricMateFeatureData.EntitiesToMate",
+  "description": "Gets or sets the entities to mate in this concentric mate.",
+  "signature": "System.Object EntitiesToMate {get; set;}",
+  "parameters": [],
+  "returns": "Entities to mate (see Remarks )",
+  "remarks": "You can create concentric mates with the following mate entity combinations:\nMate entity/Mate entity\nIEdge\n(arc, circular edge)\nIRefAxis\n,\n(cone)\nIRefAxis,\n(cylinder)\nIEdge,\nIRefAxis,\nICenterLine\n,\nISketchLine\n(line)\nIRefPoint\n,\nIVertex\n,\nISketchPoint\nIRefAxis,\nISketchPoint,\nIRefPoint,\nIVertex\n(sphere)\nIEdge (arc, circular edge)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIRefAxis (cone)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIRefAxis (cylinder)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIEdge, IRefAxis, ICenterLine, ISketchLine (line)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIRefPoint, IVertex, ISketchPoint\n\u25cf\n\u25cf\n\u25cf\nIRefAxis, IRefPoint, ISketchPoint, IVertex (sphere)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nInstead of specifying this property, you can use\nIModelDocExtension::SelectByID2\nto pre-select the entities to mate using Mark = 1. You can pre-select mate entities during mate creation, but not during mate editing.",
+  "examples": [
+    {
+      "title": "IConcentricMateFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IConcentricMateFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

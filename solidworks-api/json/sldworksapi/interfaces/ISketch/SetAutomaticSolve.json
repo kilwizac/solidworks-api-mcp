@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "SetAutomaticSolve",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SolveFlag",
+        "type": "System.Boolean",
+        "description": "True if solving is on, false if it is off"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "IModelDoc2.AutoSolveToggle"
+    ],
+    "keywords": [
+      "automatic",
+      "solve",
+      "sketch",
+      "geometry",
+      "see",
+      "also",
+      "isketch",
+      "setautomaticsolve",
+      "flag",
+      "boolean"
+    ]
+  },
+  "title": "ISketch.SetAutomaticSolve",
+  "description": "Controls whether the computation to solve the sketch geometry of the part as modifications are automatically performed.",
+  "signature": "System.Boolean SetAutomaticSolve( \n   System.Boolean\nSolveFlag\n)",
+  "parameters": [
+    {
+      "name": "SolveFlag",
+      "type": "System.Boolean",
+      "description": "True if solving is on, false if it is off"
+    }
+  ],
+  "returns": "True if set, false if not",
+  "remarks": "If an application is making many changes in a sketch, then the\nAutomatic Solve\noption may be turned off temporarily. After changes are completed, this option should be restored to its previous value, which can be obtained by calling\nISketch::GetAutomaticSolve\nbefore calling this method.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AutoSolveToggle"
+  ]
+}

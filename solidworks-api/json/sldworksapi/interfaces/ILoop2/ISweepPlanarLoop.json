@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "ISweepPlanarLoop",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X component of the sweep vector"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y component of the sweep vector"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z component of the sweep vector"
+      },
+      {
+        "name": "DraftAngle",
+        "type": "System.Double",
+        "description": "Draft angle for the faces on the side of this swept body"
+      },
+      {
+        "name": "StopFacesOut",
+        "type": "Face2",
+        "description": "Array of two stop faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ILoop2.SweepPlanarLoop"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "isweepplanarloop",
+      "iloop2",
+      "loop2",
+      "sweep",
+      "planar",
+      "loop",
+      "double",
+      "draft",
+      "angle",
+      "stop",
+      "faces",
+      "out",
+      "face2",
+      "body2"
+    ]
+  },
+  "title": "ILoop2.ISweepPlanarLoop",
+  "description": "Creates a temporary body by sweeping a planar loop along a vector.",
+  "signature": "Body2 ISweepPlanarLoop( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Double\nDraftAngle\n,\n   ref Face2\nStopFacesOut\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X component of the sweep vector"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y component of the sweep vector"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z component of the sweep vector"
+    },
+    {
+      "name": "DraftAngle",
+      "type": "System.Double",
+      "description": "Draft angle for the faces on the side of this swept body"
+    },
+    {
+      "name": "StopFacesOut",
+      "type": "Face2",
+      "description": "Array of two stop faces"
+    }
+  ],
+  "returns": "New swept body",
+  "remarks": "This method requires simplification of the imported body.",
+  "examples": [],
+  "related": [
+    "ILoop2.SweepPlanarLoop"
+  ]
+}

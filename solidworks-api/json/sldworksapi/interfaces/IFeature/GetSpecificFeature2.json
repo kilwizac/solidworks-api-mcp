@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetSpecificFeature2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "getspecificfeature2",
+      "ifeature",
+      "feature",
+      "specific",
+      "feature2",
+      "object",
+      "spline",
+      "points",
+      "determine",
+      "sketch",
+      "suitable",
+      "vba",
+      "find",
+      "total",
+      "length",
+      "segments",
+      "parameters",
+      "reference",
+      "axis",
+      "constraints",
+      "insert",
+      "position",
+      "dxf",
+      "file",
+      "drawing",
+      "add",
+      "dimension",
+      "areas",
+      "midsurface",
+      "faces",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeature.GetSpecificFeature2",
+  "description": "Gets the more specific interface to a selected feature.",
+  "signature": "System.Object GetSpecificFeature2()",
+  "parameters": [],
+  "returns": "Specific interface (see Remarks )",
+  "remarks": "This method gets these interfaces to a corresponding selected feature:\nIAttribute\nIBodyFolder\nIBomFeature\nICamera\nICommentFolder\nICosmeticWeldBeadFolder\nIDetailCircle\nIDrSection\nIFeatureFolder\nIFlatPatternFolder\nILight\nIMate2\nIMateInPlace\nIMateReference\nIMidSurface3\nIProfileGroupFolder\nIRefAxis\nIReferenceCurve\nIRefPlane\nIRefPoint\nISelectionSetFolder\nISensor\nISheetMetalFolder\nISketch\nISketchBlockDefinition\nISketchBlockInstance\nISketchPicture\nIStructureSystemFolder\nIWeldmentCutListFeature\nIf...\nThen...\nYou start with an IFeature object and want to get a more specific object\nA call to IFeature::GetSpecificFeature2 is required. If you have the more specific object, then a call to QueryInterface in C++ or an assignment to a IFeature-typed variable allows an application to get back to the IFeature object.\nYou are writing a Dispatch application\nYou can use\nIFeature::GetTypeName\nor\nIFeature::GetTypeName2\nto identify the type of Dispatch object returned so that you can call the appropriate properties and methods for that object.\nYou are writing a COM application\nYou can use the return value with QueryInterface to determine the object returned.\nNo interface exists or there is no specific object for the type of feature\nThis method returns Nothing or null.\nFor some feature types, this method returns Nothing or null because there is no specific object for that type of feature (e.g., features such as extrusions, lofts, fillets, chamfers, etc.). For these types of features, call\nIFeature::GetDefinition\nto get their feature data objects.\nFor other entities selected in the FeatureManager design tree, you must know its interface in advance and cast the return value of\nISelectionMgr::GetSelectedObject6\nto the correct interface.\nFor all functions that return objects, always check whether the return value is Nothing or null before you try to use it.",
+  "examples": [
+    {
+      "title": "Get Spline Points (C++)",
+      "href": "Get_Spline_Points_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Determine if Sketch Suitable for Feature (VBA)",
+      "href": "Determine_If_Sketch_Suitable_for_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Total Length of Sketch Segments in Sketch (VBA)",
+      "href": "Find_Total_Length_of_Sketch_Segments_in_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Parameters for Reference Axis (VBA)",
+      "href": "Get_Parameters_for_Reference_Axis_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Constraints (VBA)",
+      "href": "Get_Sketch_Constraints_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF File in Drawing (VBA)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert DXF File and Add Dimension (VBA)",
+      "href": "Insert_DXF_File_and_Add_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Reference Points (VBA)",
+      "href": "Insert_Reference_Points_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of MidSurface Faces (C#)",
+      "href": "Get_Areas_of_MidSurface_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of MidSurface Faces (VB.NET)",
+      "href": "Get_Areas_of_MidSurface_FAces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of MidSurface Faces (VBA)",
+      "href": "Get_Areas_of_MidSurface_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

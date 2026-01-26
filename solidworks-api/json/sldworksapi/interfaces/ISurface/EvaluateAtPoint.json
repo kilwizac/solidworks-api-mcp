@@ -1,0 +1,126 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "EvaluateAtPoint",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "PositionX",
+        "type": "System.Double",
+        "description": "X position"
+      },
+      {
+        "name": "PositionY",
+        "type": "System.Double",
+        "description": "Y position"
+      },
+      {
+        "name": "PositionZ",
+        "type": "System.Double",
+        "description": "Z position"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.Evaluate",
+      "ISurface.IEvaluate",
+      "ISurface.IEvaluateAtPoint",
+      "ISurface.IParameterization",
+      "ISurface.IReverseEvaluate",
+      "ISurface.Parameterization",
+      "ISurface.ReverseEvaluate"
+    ],
+    "keywords": [
+      "evaluateatpoint",
+      "isurface",
+      "surface",
+      "evaluate",
+      "point",
+      "position",
+      "double",
+      "object",
+      "determine",
+      "type",
+      "face",
+      "vba",
+      "points",
+      "select",
+      "tangent",
+      "faces",
+      "edges",
+      "all",
+      "holes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISurface.EvaluateAtPoint",
+  "description": "Evaluates a surface at the specified XYZ point.",
+  "signature": "System.Object EvaluateAtPoint( \n   System.Double\nPositionX\n,\n   System.Double\nPositionY\n,\n   System.Double\nPositionZ\n)",
+  "parameters": [
+    {
+      "name": "PositionX",
+      "type": "System.Double",
+      "description": "X position"
+    },
+    {
+      "name": "PositionY",
+      "type": "System.Double",
+      "description": "Y position"
+    },
+    {
+      "name": "PositionZ",
+      "type": "System.Double",
+      "description": "Z position"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "This method calculates the normal, the principal directions, and the principal curvatures, of the surface at the specified point.\nUse\nIFace2::FaceInSurfaceSense\nto check the directions of the face normal and surface normal. IFace2::FaceInSurfaceSense returns true when the face normal and surface normal point in opposite directions, and false when they point in the same direction.\nThe return value is the following array of eleven doubles:\n[\nsurfNorm[i, j, k], principalDir1[i, j, k], principalDir2[I, j, k], principalCurvature1, principalCurvature2\n]\nwhere:\nsurfNorm[i, j, k] =\nnormalized vector describing the surface normal\nprincipalDir1[i, j, k\n] = normalized vector describing the first principal direction\nprincipalDir2[i, j, k\n] = normalized vector describing the second principal direction\nprincipalCurvature1 =\nfirst principal curvature\nprincipalCurvature2 =\nsecond principal curvature\nPrincipal Curvature 1 is the minimum normal curvature at the point (largest radius). Principal Curvature 2 is the maximum normal curvature at the point.\nThe tangent direction producing Principal Curvature 1 is called the first principal direction, and the tangent direction producing Principal Curvature 2 is called the second principal direction.\nIt is a property of differentiable surfaces that principalDir1 and principalDir2 are orthogonal.\nA positive curvature by convention implies a centre of curvature on the side pointed away from by the surface normal (convex).\nSee \"Faux and Pratt Computational Geometry for Design and Manufacture\" for more information.",
+  "examples": [
+    {
+      "title": "Determine Type of Face (VBA)",
+      "href": "Determine_Type_of_Face_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Evaluate Points on Surface (VBA)",
+      "href": "Evaluate_Points_on_Surface_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Tangent Faces (VBA)",
+      "href": "Select_Tangent_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (C#)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VB.NET)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VBA)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurface.Evaluate",
+    "ISurface.IEvaluate",
+    "ISurface.IEvaluateAtPoint",
+    "ISurface.IParameterization",
+    "ISurface.IReverseEvaluate",
+    "ISurface.Parameterization",
+    "ISurface.ReverseEvaluate"
+  ]
+}

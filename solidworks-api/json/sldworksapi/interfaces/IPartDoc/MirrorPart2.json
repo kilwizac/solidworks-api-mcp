@@ -1,0 +1,125 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "MirrorPart2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BreakLink",
+        "type": "System.Boolean",
+        "description": "True to break the link to the original part, false to not"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Insertion options as defined in swMirrorPartOptions_e"
+      },
+      {
+        "name": "ResultPart",
+        "type": "ModelDoc2",
+        "description": "IModelDoc2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.InsertMirrorFeature2",
+      "IMirrorPartFeatureData",
+      "IPartDoc.InsertMirrorAll",
+      "IPartDoc.MirrorFeature"
+    ],
+    "keywords": [
+      "mirror",
+      "parts",
+      "see",
+      "also",
+      "ipartdoc",
+      "mirrorpart2",
+      "part",
+      "doc",
+      "part2",
+      "break",
+      "link",
+      "boolean",
+      "options",
+      "int32",
+      "result",
+      "model",
+      "doc2",
+      "feature",
+      "information",
+      "vba",
+      "vb",
+      "net",
+      "sheet",
+      "metal"
+    ]
+  },
+  "title": "IPartDoc.MirrorPart2",
+  "description": "Creates a new part document that mirrors this part about a selected reference plane or planar face.",
+  "signature": "Feature MirrorPart2( \n   System.Boolean\nBreakLink\n,\n   System.Int32\nOptions\n,\n   out ModelDoc2\nResultPart\n)",
+  "parameters": [
+    {
+      "name": "BreakLink",
+      "type": "System.Boolean",
+      "description": "True to break the link to the original part, false to not"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Insertion options as defined in swMirrorPartOptions_e"
+    },
+    {
+      "name": "ResultPart",
+      "type": "ModelDoc2",
+      "description": "IModelDoc2"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method, you must select a reference plane or planar face about which to mirror this part.",
+  "examples": [
+    {
+      "title": "Get Mirror Part Information (VBA)",
+      "href": "Get_Mirror_Part_Information_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mirror Part Information (VB.NET)",
+      "href": "Get_Mirror_Part_Information_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mirror Part Information (C#)",
+      "href": "Get_Mirror_Part_Information_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Mirror Sheet-metal Part (C#)",
+      "href": "Mirror_Sheet-metal_Part_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Mirror Sheet-metal Part (VB.NET)",
+      "href": "Mirror_Sheet-metal_Part_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Mirror Sheet-metal Part (VBA)",
+      "href": "Mirror_Sheet-metal_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertMirrorFeature2",
+    "IMirrorPartFeatureData",
+    "IPartDoc.InsertMirrorAll",
+    "IPartDoc.MirrorFeature"
+  ]
+}

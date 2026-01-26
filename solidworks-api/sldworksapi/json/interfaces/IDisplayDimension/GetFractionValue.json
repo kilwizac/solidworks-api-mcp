@@ -1,0 +1,45 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetFractionValue",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetFractionBase",
+      "IDisplayDimension.GetRoundToFraction",
+      "IDisplayDimension.GetUnits",
+      "IDisplayDimension.GetUseDocUnits",
+      "IDisplayDimension.SetUnits"
+    ],
+    "keywords": [
+      "getfractionvalue",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "fraction",
+      "value",
+      "int32"
+    ]
+  },
+  "title": "IDisplayDimension.GetFractionValue",
+  "description": "Gets the largest fraction denominator to be used when this display dimension is displayed in fraction format.",
+  "signature": "System.Int32 GetFractionValue()",
+  "parameters": [],
+  "returns": "Denominator for fraction display (see Remarks )",
+  "remarks": "The unit display settings of a display dimension are controlled by a value that SOLIDWORKS stores in one of two places: on the owning document or on the individual display dimension. Use\nIDisplayDimension::GetUseDocUnits\nto determine whether this IDisplayDimension uses the document default or a specific value set for this IDisplayDimension.\nIf this display dimension uses the unit information stored locally, this method returns the largest fraction denominator to be used (for example, 4 for 1/4, or 32 for 1/32). This method returns -1 if this display dimension uses settings from the document.\nFraction display is valid only for unit types swINCHES or swFEETINCHES. In all other cases, this method returns -1. Use\nIDisplayDimension::SetUnits\nto set the units settings of a display dimension.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.GetFractionBase",
+    "IDisplayDimension.GetRoundToFraction",
+    "IDisplayDimension.GetUnits",
+    "IDisplayDimension.GetUseDocUnits",
+    "IDisplayDimension.SetUnits"
+  ]
+}

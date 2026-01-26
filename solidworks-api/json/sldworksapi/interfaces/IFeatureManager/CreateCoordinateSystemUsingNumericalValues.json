@@ -1,0 +1,132 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "CreateCoordinateSystemUsingNumericalValues",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "UseLocation",
+        "type": "System.Boolean",
+        "description": "True to define the position of the coordinate system using numerical values, false to not"
+      },
+      {
+        "name": "DeltaX",
+        "type": "System.Double",
+        "description": "Distance in meters along the x-axis of the global coordinate system; valid only if UseLocation is true"
+      },
+      {
+        "name": "DeltaY",
+        "type": "System.Double",
+        "description": "Distance in meters along the y-axis of the global coordinate system; valid only if UseLocation is true"
+      },
+      {
+        "name": "DeltaZ",
+        "type": "System.Double",
+        "description": "Distance in meters along the z-axis of the global coordinate system; valid only if UseLocation is true"
+      },
+      {
+        "name": "UseRotation",
+        "type": "System.Boolean",
+        "description": "True to define the orientation of the coordinate system using numerical values, false to not"
+      },
+      {
+        "name": "AngleX",
+        "type": "System.Double",
+        "description": "0 <= Rotation in radians from the x-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+      },
+      {
+        "name": "AngleY",
+        "type": "System.Double",
+        "description": "0 <= Rotation in radians from the y-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+      },
+      {
+        "name": "AngleZ",
+        "type": "System.Double",
+        "description": "0 <= Rotation in radians from the z-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICoordinateSystemFeatureData",
+      "IFeatureManager.CreateCoordinateSystem",
+      "IFeatureManager.InsertCoordinateSystem"
+    ],
+    "keywords": [
+      "coordinate",
+      "createcoordinatesystemusingnumericalvalues",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "create",
+      "using",
+      "numerical",
+      "values",
+      "use",
+      "location",
+      "boolean",
+      "delta",
+      "double",
+      "rotation",
+      "angle"
+    ]
+  },
+  "title": "IFeatureManager.CreateCoordinateSystemUsingNumericalValues",
+  "description": "Creates a coordinate system feature using the specified numerical values for position and orientation with respect to the global coordinate system.",
+  "signature": "Feature CreateCoordinateSystemUsingNumericalValues( \n   System.Boolean\nUseLocation\n,\n   System.Double\nDeltaX\n,\n   System.Double\nDeltaY\n,\n   System.Double\nDeltaZ\n,\n   System.Boolean\nUseRotation\n,\n   System.Double\nAngleX\n,\n   System.Double\nAngleY\n,\n   System.Double\nAngleZ\n)",
+  "parameters": [
+    {
+      "name": "UseLocation",
+      "type": "System.Boolean",
+      "description": "True to define the position of the coordinate system using numerical values, false to not"
+    },
+    {
+      "name": "DeltaX",
+      "type": "System.Double",
+      "description": "Distance in meters along the x-axis of the global coordinate system; valid only if UseLocation is true"
+    },
+    {
+      "name": "DeltaY",
+      "type": "System.Double",
+      "description": "Distance in meters along the y-axis of the global coordinate system; valid only if UseLocation is true"
+    },
+    {
+      "name": "DeltaZ",
+      "type": "System.Double",
+      "description": "Distance in meters along the z-axis of the global coordinate system; valid only if UseLocation is true"
+    },
+    {
+      "name": "UseRotation",
+      "type": "System.Boolean",
+      "description": "True to define the orientation of the coordinate system using numerical values, false to not"
+    },
+    {
+      "name": "AngleX",
+      "type": "System.Double",
+      "description": "0 <= Rotation in radians from the x-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+    },
+    {
+      "name": "AngleY",
+      "type": "System.Double",
+      "description": "0 <= Rotation in radians from the y-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+    },
+    {
+      "name": "AngleZ",
+      "type": "System.Double",
+      "description": "0 <= Rotation in radians from the z-axis of the global coordinate system <= 6.283 radians; valid only if UseRotation is true"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "This method is valid only for parts and assemblies.",
+  "examples": [],
+  "related": [
+    "ICoordinateSystemFeatureData",
+    "IFeatureManager.CreateCoordinateSystem",
+    "IFeatureManager.InsertCoordinateSystem"
+  ]
+}

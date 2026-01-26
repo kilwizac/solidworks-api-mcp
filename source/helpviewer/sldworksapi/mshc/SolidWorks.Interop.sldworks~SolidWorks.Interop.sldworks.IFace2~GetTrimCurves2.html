@@ -1,0 +1,474 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>GetTrimCurves2 Method (IFace2)</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurves2" />
+    <meta name="Description" content="Gets the definition of all of the entities that describe a trimmed face." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFace2.GetTrimCurves2" />
+    <meta name="Microsoft.Help.Keywords" content="Face (see also IFace2 Interface), trimmed" />
+    <meta name="Microsoft.Help.Keywords" content="" />
+    <meta name="Microsoft.Help.Keywords" content="GetTrimCurves2 Method (IFace2)" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                GetTrimCurves2 Method (IFace2)
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">IFace2 Interface</a> : GetTrimCurves2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="WantCubicPopupContent" class="i-popup-content">
+        <p style="TEXT-DECORATION: none; x-text-underline: off">True if the trim curves are to be cubic, false if not</p>
+    </div>
+
+    <div id="WantNRationalPopupContent" class="i-popup-content">
+        <p style="TEXT-DECORATION: none; x-text-underline: off">True if the trim curves are to be non-rational, false if not</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Gets the definition of all of the entities that describe a trimmed face.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function GetTrimCurves2( _
+   ByVal <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="WantNRationalPopupLink" data-popup-contentsource="#WantNRationalPopupContent" data-popup-showevent="click mouseenter">WantNRational</a></i> As System.Boolean _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">IFace2</a>
+Dim WantCubic As System.Boolean
+Dim WantNRational As System.Boolean
+Dim value As System.Object
+ 
+value = instance.GetTrimCurves2(WantCubic, WantNRational)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object GetTrimCurves2( 
+   System.bool <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i>,
+   System.bool <i><a class="i-popup-link" id="WantNRationalPopupLink" data-popup-contentsource="#WantNRationalPopupContent" data-popup-showevent="click mouseenter">WantNRational</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ GetTrimCurves2( 
+   System.bool <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i>,
+   System.bool <i><a class="i-popup-link" id="WantNRationalPopupLink" data-popup-contentsource="#WantNRationalPopupContent" data-popup-showevent="click mouseenter">WantNRational</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>WantCubic</i></dt>
+
+                <dd>
+                    <p style="TEXT-DECORATION: none; x-text-underline: off">True if the trim curves are to be cubic, false if not</p>
+                </dd>
+
+                <dt><i>WantNRational</i></dt>
+
+                <dd>
+                    <p style="TEXT-DECORATION: none; x-text-underline: off">True if the trim curves are to be non-rational, false if not</p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <p style="TEXT-DECORATION: none; x-text-underline: off">Array (see <strong>Remarks</strong>)</p>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method returns an array containing the definition of all of the entities that describe a trimmed face. The data is arranged in collections of surface curves (curves defined in the 2D parametric space of the surface, or SP-curves) organized into loops (closed composite curves).</p>
+
+            <p>All SP-curves are returned as b-splines. To control the tolerance of the SP-curves, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~GetToleranceValue">IModeler::GetToleranceValue</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~SetToleranceValue">IModeler::SetToleranceValue</a>.</p>
+
+            <p>A call to <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetTrimCurveSize2">IFace2::IGetTrimCurveSize2</a> must precede the call to IFace2::GetTrimCurves2 to get the size of the array required and pre-process the trim curve data.</p>
+
+            <p>The surface and trim curve parameterization returned by this method might be different from the parameterization returned by other methods, such as <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetUVBounds">IFace2::GetUVBounds</a>, <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Parameterization">ISurface::Parameterization</a>, <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~GetCurveParams2">IEdge::GetCurveParams2</a>, and so on.</p>
+
+            <p>If you set WantCubic to true, then this method returns the underlying Bsurface definition. If you want to use the Bsurface in combination with its trim curves, set WantCubic = True because it provides better alignment of the trim curves with the Bsurface as they are generated at the same time.</p>
+
+            <p>Each face typically has at least&#160;one outer loop and&#160;zero or more inner loops. Outer loops define the periphery of the face; inner loops define holes in the face. Outer loops are returned before inner loops when possible. If you need to be certain, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~IsOuter">ILoop2::IsOuter</a>.</p>
+
+            <h4>Periodic Faces</h4>
+
+            <p>Periodic faces present many obstacles in translation. As a general rule, it is best to chop up all periodic surfaces by making a call to <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~GetProcessedBody2">IBody2::GetProcessedBody2</a>. This method returns a new body to the caller with periodic faces chopped up into multiple faces. Processing this new body, instead of the original body, avoids many of the pitfalls associated with periodics.</p>
+
+            <p>If this face is periodic and crosses the "seam" (0 &amp; 360<!--begin!kadov{{--><!--}}end!kadov--> location), then this method splits the face into more than one trimmed surface for the purposes of returning this set of data. The first time that this method is called on any face, it returns data for the first trimmed surface on the face. Each subsequent call to this function on the same face returns data for the next trimmed surface, if one exists. The <span style="FONT-STYLE: italic">packedDouble8</span> parameter determines the number of surfaces for this face.</p>
+
+            <p>To avoid the return of multiple surfaces per face, process the body returned from IBody2::GetProcessedBody2.</p>
+
+            <p>Using the Body2 object returned from IBody2::GetProcessedBody2 usually prevents IFace2::GetTrimCurves2 from returning multiple outer loops when it encounters certain periodic surfaces. In other words, it can prevent IFace2::GetTrimCurves2 from generating multiple faces (each with an outer loop) for a particular periodic surface.</p>
+
+            <h4>Edges</h4>
+
+            <p>If your program uses calls to both <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetEdges">IFace2::GetEdges</a> and IFace2::GetTrimCurves2 or to both <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~EnumEdges">IFace2::EnumEdges</a> and Face2::GetTrimCurves2, then:</p>
+
+            <p style="MARGIN-LEFT: 21.3pt">IFace2::GetTrimCurves2 stores a temporary buffer containing the edges for this face. If this temporary buffer exists, then calls to IFace2::GetEdges or IFace2::EnumEdges access the buffer. This is beneficial if you are attempting to align the trim curves of the face with their corresponding edges.</p>
+
+            <p style="MARGIN-LEFT: 21.3pt">If your call to IFace2::GetEdges or IFace2::EnumEdges is made immediately following your call to IFace2::GetTrimCurves2, then the order of the trim curves aligns with the order of the edges. However, if you are processing all the trim curves and then processing all the edges, your first call to access the edges uses the temporary buffer of edges generated in your last call to IFace2::GetTrimCurves2.</p>
+
+            <p style="MARGIN-LEFT: 21.3pt">Because your last call to IFace2::GetTrimCurves2 and your current call to get the edges were probably made from different faces, you will see a mismatch of data. This mismatch of data might be seen when <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetEdgeCount">IFace2::GetEdgeCount</a> does not match the array size from IFace2::GetEdges or it might be seen when the edge data does not match the face being examined. Therefore, calls to IFace2::GetEdges or IFace2::EnumEdges should be made in the same loop and immediately following your call to IFace2::GetEdges. The temporary buffer of edges is destroyed after each call to IFace2::GetEdges or IFace2::EnumEdges.</p>
+
+            <p>A corresponding edge for each trim curve might not exist. This is true for periodic surfaces for which no edge exists along the seam (0 and 360<!--begin!kadov{{--><!--}}end!kadov-->), yet this method returns a trim curve. You can detect this situation by comparing the number of edges on the face, IFace2::GetEdgeCount , with the number of trim (SP) curves on the face, <span style="FONT-STYLE: italic">PackedDouble1</span>.</p>
+
+            <p style="FONT-STYLE: normal">To force edge generation along the seam of a periodic surface, use IBody2::GetProcessedBody. This method creates a copy of the body with faces and surfaces chopped up. However, there are still certain situations (poles of a surface, cusps on a surface, and so on) in which this method returns a trim curve where no edge exists. In this situation, the list of edges returned from IFace2::GetEdges or IFace2::EnumEdges does not align with the list of trim curves. Again, you can detect this by comparing the value returned by IFace2::GetEdgeCount with <span style="FONT-STYLE: italic">PackedDouble1</span>, but you must handle matching the edges with their corresponding trim curve.</p>
+
+            <h4>Return Values</h4>
+
+            <p>The data is returned in an array of doubles. Integer data is packed among the doubles in pairs.</p>
+
+            <p style="MARGIN-TOP: 12pt">The format of <span style="FONT-STYLE: italic">faceData</span>[] is as follows:</p>
+
+            <p class="apiCode" style="MARGIN-LEFT: 49px"><font size="1"><span style="FONT-WEIGHT: bold">[</span>&#160;<span style="FONT-SIZE: 8pt; FONT-STYLE: italic">packedDouble1, packedDouble2[ ], packedDouble3[ ], knotValues[ ], ctrlPointCoords[ ], packedDouble8</span>&#160;<span style="FONT-WEIGHT: bold">]</span></font></p>
+
+            <p class="apiCode" style="MARGIN-LEFT: 49px">&#160;</p><!--(Table)=========================================================-->
+
+            <table style="WIDTH: 732px; BORDER-SPACING: 0px" cellspacing="0" width="732" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 153px" />
+                    <col style="WIDTH: 571px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -92px">packedDouble1</p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p>An integer pair containing number of loops and total number of SP-curves (trim curves). The length of any edge list generated immediately after a call to IFace2::GetTrimCurves2 will be equal to the number of SP-curves.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -68px">packedDouble2[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p style="MARGIN-RIGHT: -68px">Series of integer pairs containing the number of SP-curves in each loop. The first integer in each<br />
+                            pair represents the number of curves in the odd loops; the second represents the even. The total<br />
+                            number of integer pairs is half the number of loops, rounded up</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -68px">packedDouble3[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p>For each SP-curve, a set of two integer pairs. The first contains the order of the curve and a Boolean indicating if it is periodic. If the curve is periodic, it is clamped (that is, knots of multiplicity = order exists at each end of the curve). The second contains the dimension of the curve and the number of control points in it. If the dimension is 2, then the <!--kadov_tag{{</spaces>}}-->curve is non-rational; if the dimension is 3, then the curve is rational.<br />
+                            <br />
+                            <strong>NOTE</strong>:&#160;An SP-curve might be treated as periodic if it is closed and G1 continuous even if the b-spline representation returned is not periodic. For example, the periodic flag returned for the boundary curve of a sheet body with a circle as the boundary loop is true, because the circle is closed and is tangent-continuous at the start/end point, but the data returned for the b-spline representation is in the clamped format, i.e., for a non-periodic b-spline.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -68px">knotValues[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p>Array of doubles containing the knot values for all the SP-curves in order. The number of knots for each curve is equal to the order of the curve plus the number of control points.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -68px">ctrlPointCoords[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p>Array of doubles containing the coordinates of the control points for all the SP-curves in order. These are given as a sequence of (U,V) pairs if non-rational, and (U,V,W) triples if rational, where W is the homogeneous coordinate known as the weight.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 153px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="153">
+                            <p class="Parameters" style="FONT-STYLE: italic; MARGIN-RIGHT: -68px">packedDouble8</p>
+                        </td>
+
+                        <td style="WIDTH: 571px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="571">
+                            <p>Integer pair as follows: the first integer is the total number of trimmed surfaces being output for the given face (the modeler sometimes outputs more than one trimmed surface for a face). The second integer indicates the index of the current trimmed surface being output. All the data in the <span style="FONT-STYLE: italic">faceData</span>[] array is for the current trimmed surface. Therefore, if <span style="FONT-STYLE: italic">packedDouble8</span> says there are two trim surfaces, you should use the same IFace2 pointer and call IFace2::GetTrimCurves2 again to get the data for the second trim surface.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="Parameters" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p style="MARGIN-TOP: 12pt; FONT-STYLE: normal">If b-splines were requested (WantCubic = True), then the underlying Bsurface is also returned. The <span style="FONT-STYLE: italic">faceData[ ]</span> array would be as follows:</p>
+
+            <p class="apiCode" style="MARGIN-LEFT: 49px"><span style="FONT-WEIGHT: bold">[</span>&#160;<span style="FONT-SIZE: 8pt; FONT-STYLE: italic">packedDouble1, packedDouble2[ ], packedDouble3[ ], knotValues[ ], ctrlPointCoords[ ], packedDouble4, packedDouble5, packedDouble6, packedDouble7, surfaceKnotValuesU[ ], surfaceKnotValuesV[ ], surfaceCtrlPointCoords[ ], packedDouble8</span>&#160;<span style="FONT-WEIGHT: bold">]</span></p>
+
+            <p class="apiCode" style="MARGIN-LEFT: 49px">&#160;</p><!--(Table)=========================================================-->
+
+            <table style="WIDTH: 738px; BORDER-SPACING: 0px; x-cell-content-align: Center" cellspacing="0" width="738" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 189px" />
+                    <col style="WIDTH: 541px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble1</p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble2[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble3[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">knotValues[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">ctrlPointCoords[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble4</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Integer pair containing the dimension of the surface (3 is non-rational and 4 is rational). The second member of the pair is not used and contains a 0.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">PackedDouble5</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Integer pair containing the U-order and the V-order of the surface.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">PackedDouble6</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Integer pair containing the number of control points in U and the number of control points in V.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble7</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Integer pair containing Booleans indicating if the surface is periodic in U and in V. If the surface is periodic, it is clamped (that is, knots of multiplicity = order exist at each end of the surface).</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">surfaceKnotValuesU[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Array of doubles containing the knot values in U for the surface. The number of knots in U is equal to the order in U plus the number of control points in U.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">surfaceKnotValuesV[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Array of doubles containing the knot values in V as above for U.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">surfaceCtrlPointCoords[ ]</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>Array of doubles containing the coordinates of the control points for the surface. These are given as a sequence of (X,Y,Z) triples if non-rational, and (X,Y,Z,W) tuples if rational, where W is the homogeneous coordinate known as the weight. The coordinates are given in row-wise order (U varying most quickly).</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 189px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-STYLE: italic">packedDouble8</p>
+                        </td>
+
+                        <td style="WIDTH: 541px; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="541">
+                            <p>See previous definition.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">IFace2 Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2_members">IFace2 Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurveTopology">IFace2::GetTrimCurveTopology Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurveTopologyCount">IFace2::GetTrimCurveTopologyCount Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurveTopologyTypes">IFace2::GetTrimCurveTopologyTypes Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetTrimCurveSize2">IFace2::IGetTrimCurveSize2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetTrimCurveTopology">IFace2::IGetTrimCurveTopology Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetTrimCurveTopologyTypes">IFace2::IGetTrimCurveTopologyTypes Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurves2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

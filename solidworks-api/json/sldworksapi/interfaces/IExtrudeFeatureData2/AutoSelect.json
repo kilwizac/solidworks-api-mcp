@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IExtrudeFeatureData2",
+    "member": "AutoSelect",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IExtrudeFeatureData2.GetFeatureScopeBodiesCount",
+      "IExtrudeFeatureData2.IGetFeatureScopeBodies"
+    ],
+    "keywords": [
+      "feature",
+      "scope",
+      "multibody",
+      "extrude",
+      "autoselect",
+      "iextrudefeaturedata2",
+      "data2",
+      "auto",
+      "select",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IExtrudeFeatureData2.AutoSelect",
+  "description": "Gets or sets whether to automatically select all or only specific bodies for the extrude feature to affect in the multibody part.",
+  "signature": "System.Boolean AutoSelect {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically select all bodies, false to select specific bodies for IExtrudeFeatureData2::FeatureScopeBodies and IExtrudeFeatureData2::ISetFeatureScopeBodies",
+  "remarks": "This property is only available when the\nIExtrudeFeatureData2::FeatureScope\nproperty is true.\nThe extrude feature is expanded along the plane on which the feature is created and selects all or only the specified bodies it intersects.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2.GetFeatureScopeBodiesCount",
+    "IExtrudeFeatureData2.IGetFeatureScopeBodies"
+  ]
+}

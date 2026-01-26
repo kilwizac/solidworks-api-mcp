@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IGetTessPtsSize",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ChordTolerance",
+        "type": "System.Double",
+        "description": "Chord tolerance to be used in tessellation (meters); this is the maximum permitted distance from a cord to the curve between the cord endpoints"
+      },
+      {
+        "name": "LengthTolerance",
+        "type": "System.Double",
+        "description": "Length tolerance to be used to filter out very short segments (meters); tessellated segments shorter than this value are not returned"
+      },
+      {
+        "name": "StartPoint",
+        "type": "System.Double",
+        "description": "Pointer to an array containing the start point of the curve"
+      },
+      {
+        "name": "EndPoint",
+        "type": "System.Double",
+        "description": "Pointer to an array containing the end point of the curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.GetTessPts"
+    ],
+    "keywords": [
+      "igettessptssize",
+      "icurve",
+      "curve",
+      "tess",
+      "pts",
+      "size",
+      "chord",
+      "tolerance",
+      "double",
+      "length",
+      "start",
+      "point",
+      "end",
+      "int32"
+    ]
+  },
+  "title": "ICurve.IGetTessPtsSize",
+  "description": "Gets the size of the array required by ICurve::IGetTessPts.",
+  "signature": "System.Int32 IGetTessPtsSize( \n   System.Double\nChordTolerance\n,\n   System.Double\nLengthTolerance\n,\n   ref System.Double\nStartPoint\n,\n   ref System.Double\nEndPoint\n)",
+  "parameters": [
+    {
+      "name": "ChordTolerance",
+      "type": "System.Double",
+      "description": "Chord tolerance to be used in tessellation (meters); this is the maximum permitted distance from a cord to the curve between the cord endpoints"
+    },
+    {
+      "name": "LengthTolerance",
+      "type": "System.Double",
+      "description": "Length tolerance to be used to filter out very short segments (meters); tessellated segments shorter than this value are not returned"
+    },
+    {
+      "name": "StartPoint",
+      "type": "System.Double",
+      "description": "Pointer to an array containing the start point of the curve"
+    },
+    {
+      "name": "EndPoint",
+      "type": "System.Double",
+      "description": "Pointer to an array containing the end point of the curve"
+    }
+  ],
+  "returns": "Number of doubles returned when ICurve::IGetTessPts is called",
+  "remarks": "To get the actual tessellation points, use\nICurve::IGetTessPts\n. Arguments passed to ICurve::IGetTessPts must match the arguments passed to this method.",
+  "examples": [],
+  "related": [
+    "ICurve.GetTessPts"
+  ]
+}

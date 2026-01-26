@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetAddInObject",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Clsid",
+        "type": "System.String",
+        "description": "GUID or ProgID of the add-in as registered with SOLIDWORKS (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.LoadAddIn",
+      "ISldWorks.UnloadAddIn"
+    ],
+    "keywords": [
+      "add",
+      "ins",
+      "objects",
+      "getaddinobject",
+      "isldworks",
+      "sld",
+      "works",
+      "object",
+      "clsid",
+      "string"
+    ]
+  },
+  "title": "ISldWorks.GetAddInObject",
+  "description": "Gets an add-in object for the specified SOLIDWORKS add-in.",
+  "signature": "System.Object GetAddInObject( \n   System.String\nClsid\n)",
+  "parameters": [
+    {
+      "name": "Clsid",
+      "type": "System.String",
+      "description": "GUID or ProgID of the add-in as registered with SOLIDWORKS (see Remarks )"
+    }
+  ],
+  "returns": "Your add-in object",
+  "remarks": "To specify Clsid with:\na ProgID, read\nAccessing SOLIDWORKS Add-in Objects\n.\na GUID, use curly brackets as in \"{\nGUID\n}\", or the string is interpreted as a ProgID.",
+  "examples": [],
+  "related": [
+    "ISldWorks.LoadAddIn",
+    "ISldWorks.UnloadAddIn"
+  ]
+}

@@ -1,0 +1,36 @@
+---
+type: interface
+interface: IPartialEdgeFilletData
+inherits: null
+description: Allows access to partial fillet/chamfer properties.
+member_count: 12
+docset: sldworksapi
+categories:
+  - features
+  - geometry
+  - parts
+common_members:
+  - AlongEdgeDirection
+  - DistanceOffsetEnd
+  - DistanceOffsetStart
+  - EndCondition
+  - PercentOffsetEnd
+  - PercentOffsetStart
+  - ReferenceOffsetEnd
+  - ReferenceOffsetEndType
+---
+
+# IPartialEdgeFilletData
+
+Allows access to partial fillet/chamfer properties.
+
+## Common Members
+
+- `AlongEdgeDirection`
+- `DistanceOffsetEnd`
+- `DistanceOffsetStart`
+- `EndCondition`
+- `PercentOffsetEnd`
+- `PercentOffsetStart`
+- `ReferenceOffsetEnd`
+- `ReferenceOffsetEndType`

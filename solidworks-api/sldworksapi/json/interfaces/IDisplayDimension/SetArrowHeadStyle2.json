@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetArrowHeadStyle2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True uses the document setting for arrowhead style, false uses the settings specified in Style1 and Style2"
+      },
+      {
+        "name": "Style1",
+        "type": "System.Int32",
+        "description": "Arrowhead style of first arrowhead as defined in swArrowStyle_e"
+      },
+      {
+        "name": "Style2",
+        "type": "System.Int32",
+        "description": "Arrowhead style of second arrowhead as defined in swArrowStyle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "arrows",
+      "dimensions",
+      "setarrowheadstyle2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "arrow",
+      "head",
+      "style2",
+      "use",
+      "doc",
+      "boolean",
+      "style1",
+      "int32"
+    ]
+  },
+  "title": "IDisplayDimension.SetArrowHeadStyle2",
+  "description": "Sets the arrowhead style of this display dimension.",
+  "signature": "System.Boolean SetArrowHeadStyle2( \n   System.Boolean\nUseDoc\n,\n   System.Int32\nStyle1\n,\n   System.Int32\nStyle2\n)",
+  "parameters": [
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True uses the document setting for arrowhead style, false uses the settings specified in Style1 and Style2"
+    },
+    {
+      "name": "Style1",
+      "type": "System.Int32",
+      "description": "Arrowhead style of first arrowhead as defined in swArrowStyle_e"
+    },
+    {
+      "name": "Style2",
+      "type": "System.Int32",
+      "description": "Arrowhead style of second arrowhead as defined in swArrowStyle_e"
+    }
+  ],
+  "returns": "True if the arrowhead styles are set, false if not",
+  "remarks": "The arrowhead style for a display dimension is controlled by a value stored in one of two places: on the owning document or on the individual display dimension. Use\nIDisplayDimension::GetUseDocArrowHeadStyle\nand\nIDisplayDimension::GetArrowHeadStyle2\nto get the current values for these settings.\nSetting UseDoc to True indicates that the document default setting for arrowhead style should be used, and Style1 and Style2 will be ignored.\nAfter using this method, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": []
+}

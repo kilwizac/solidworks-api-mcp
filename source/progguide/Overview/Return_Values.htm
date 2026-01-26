@@ -1,0 +1,503 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Return Values</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="05 23, 2002 11:36:51 AM">
+<meta name=MS-HKWD content="Return values">
+<meta name=MS-HKWD content="Return values,Visual Basic for Applications (VBA)">
+<meta name=MS-HKWD content="Return values,C++">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=3492>
+<meta name=layout-width content=910>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Return Values</h1>
+
+<p>If you are using unmanaged C++ COM, the SOLIDWORKS API function always 
+ returns an HRESULT. Any additional return values should be passed by reference 
+ as arguments. </p>
+
+<p>SOLIDWORKS uses HRESULT return values to indicate that the code was 
+ called successfully. It is not meant as an indication that your call achieved 
+ its objective. For example, calling <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~IGetFirstFace.html">IBody2::IGetFirstFace</a> 
+ will have an HRESULT return value of S_OK if the code for IBody2::IGetFirstFace 
+ was called successfully. It does not mean that the code succeeded in finding 
+ the first face. In this case, you should check the LPFACE2 return value 
+ for a NULL condition. </p>
+
+<h2>Object Return Values</h2>
+
+<p>If an API method returns an object, it is always a good idea to verify 
+ that the object returned is not NULL. This type of error checking is good 
+ programming practice and avoids crashes in your code for unexpected conditions. 
+ For example:</p>
+
+<p>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold;">// In unmanaged C++ (COM)</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">LPFACE m_Face = NULL;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">HRESULT hres = m_PartDoc-&gt;IBodyObject(&amp;m_Body);&nbsp;</font>// 
+ Get body object from the part</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">if (m_Body == NULL) return;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">hres = m_Body-&gt;IGetFirstFace(&amp;m_Face);&nbsp;&nbsp;</font>// 
+ Get first face object from the body</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">while (m_Face != NULL)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ While faces exist, traverse them</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">{</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">double theFaceArea = 0.0;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">hres = m_Face-&gt;GetArea(&amp;theFaceArea);&nbsp;&nbsp;</font>// 
+ Sample use of face object pointer</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">LPENTITY m_Entity = NULL;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Obtain pointer to Entity object</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">hres = m_Face-&gt;QueryInterface( 
+ IID_IEntity, (LPVOID*)&amp;m_Entity);</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">if (m_Entity != NULL)</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">{</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">VARIANT_BOOL boolres = FALSE;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">hres = m_Entity-&gt;Select(TRUE,&amp;boolres);&nbsp;</font>// 
+ Sample use of entity object pointer</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">m_Entity-&gt;Release();&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Release Entity object pointer</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">}</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">LPFACE pnextFace = NULL;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">m_Face-&gt;IGetNextFace(&amp;pnextFace);&nbsp;&nbsp;&nbsp;</font>// 
+ Get the next face object</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">m_Face-&gt;Release();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Release previous object pointer</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">m_Face= pnextFace;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ End while faces exist</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">m_PartDoc-&gt;Release();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Release all pointers when done</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">m_Body-&gt;Release();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Good idea to check for NULL if not certain</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold;">// In unmanaged C++ (Dispatch)</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">LPDISPATCH bodyDisp = m_PartDoc.Body();&nbsp;&nbsp;</font>// 
+ Get body object from the part</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">if (bodyDisp == NULL) return;</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">IBody m_Body(bodyDisp);</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">LPDISPATCH faceDisp = m_Body.GetFirstFace();&nbsp;</font>// 
+ Get Dispatch pointer to first face</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">while (faceDisp) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ While faces exist, traverse them</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">{</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">IFace m_Face(faceDisp);&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Get the Face member</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">double theFaceArea = m_Face.GetArea();&nbsp;&nbsp;</font>// 
+ Sample use of face object pointer</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">IEntity m_Entity(faceDisp); 
+ &nbsp;&nbsp;&nbsp;</font>// Obtain pointer to entity object</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">faceDisp-&gt;AddRef();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ Manually increment the reference count</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">boolean retval = m_Entity.Select(TRUE);</font> 
+ &nbsp;&nbsp;// Sample use of entity object pointer</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">faceDisp = m_Face.GetNextFace();&nbsp;&nbsp;&nbsp;</font>// 
+ Get the next face</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ End while faces exist</p>
+
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Objects go out 
+ of scope and ref count decremented in destructor</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold;">' In Visual Basic for Applications (VBA)</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Dim FaceObj,BodyObj As Object</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Dim theFaceArea As Double</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Dim ok As Boolean</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">Set BodyObj = PartObj.Body&nbsp;&nbsp;&nbsp;</font>' 
+ Get body object from the part</p>
+
+<p class=apiCode>' PartObj represents PartDoc interface - possibly obtained</p>
+
+<p class=apiCode>' using ActiveDoc, OpenDoc, NewPart, etc. functions</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">If (BodyObj Is Nothing) Then </p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">swApp.SendMsgToUser &quot;Error! 
+ Part has no body.&quot;</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Exit Sub</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">End If</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">Set FaceObj = BodyObj.GetFirstFace&nbsp;&nbsp;</font>' 
+ Get first face from the body object</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">While Not FaceObj Is Nothing&nbsp;&nbsp;&nbsp;</font>' 
+ While faces exist, traverse them</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">theFaceArea = FaceObj.GetArea&nbsp;&nbsp;</font>' 
+ Sample use of face object pointer</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">ok = FaceObj.Select(True)&nbsp;&nbsp;&nbsp;</font>' 
+ Sample use of entity object pointer</p>
+
+<p class=apiCode>' Face object can be used for entity object calls</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">Set FaceObj = FaceObj.GetNextFace&nbsp;</font>' 
+ Get the next face</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">Wend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>' 
+ End while faces exist</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">Set BodyObj = Nothing &nbsp;&nbsp;</font>' 
+ Clean up variables</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Set FaceObj = Nothing</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Set PartObj = Nothing</p>
+
+<p style="font-size: 10pt;">&nbsp;</p>
+
+<h2>VARIANT Return Values</h2>
+
+<p>SOLIDWORKS might also return an empty or NULL VARIANT. It is also good 
+ programming practice to check for this condition. The following unmanaged 
+ C++ and VBA examples show you one method of checking for an empty VARIANT:</p>
+
+<p style="margin-left: 36.00pt;">&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold;">// In unmanaged C++</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">VARIANT v = m_ModelDoc.GetMassProperties();</font>&nbsp;&nbsp;// 
+ Get the mass properties</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">If ((v.vt == VT_EMPTY) || (V_VT(&amp;v) 
+ == VT_NULL))&nbsp;</font>// Error occurred</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">return;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold;">' In Visual Basic for Applications (VBA)</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">PickPt = m_SelectionManager.GetSelectionPointInSketchSpace(1) 
+ &nbsp;</font>' Get the user's pick point </p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">If (IsEmpty(PickPt) Or IsNull(PickPt)) 
+ Then&nbsp;&nbsp;&nbsp;&nbsp;</font>' No pick point available</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Exit Sub</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">End If</p>
+
+<p>&nbsp;</p>
+
+<h2>SafeArray Return Values</h2>
+
+<p>The SOLIDWORKS API passes and returns all SafeArrays as a type VARIANT. 
+ In many instances, you might find it useful to know the length of a SafeArray 
+ returned by SOLIDWORKS. If SOLIDWORKS does not provide a function that 
+ counts, such as IFace2::GetEdgeCount, you can use standard MFC or VBA 
+ routines to determine the SafeArray length. The following unmanaged C++ 
+ and VBA examples show you one way for determining the number of elements 
+ in a SafeArray.</p>
+
+<p>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold; font-size: 10pt;">// In unmanaged C++</p>
+
+<p class=apiCode>// Get all of the children components from this m_Component 
+ object</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">VARIANT componentChildren = m_Component.GetChildren();</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">if ((componentChildren.vt == VT_EMPTY) 
+ ||</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">(V_VT(&amp;componentChildren) 
+ == VT_NULL))&nbsp;</font>// Error - array is empty or null</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">return;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">SafeArray* psa = V_ARRAY(&amp;componentChildren);</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">LPDISPATCH* componentChildrenArray; 
+ </p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">HRESULT hres = SafeArrayAccessData(psa, 
+ (void **)&amp;componentChildrenArray);<span style="font-size: 9pt;"> </span></p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">long highIndex;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">SafeArrayGetUBound(psa, 1, &amp;highIndex);&nbsp;</font>// 
+ Get index number of highest array element</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>// 
+ The array range is from 0 to highIndex</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">long childrenCount = highIndex 
+ + 1;&nbsp;&nbsp;</font>// Actual # of array elements is highIndex<span 
+ style="font-style: italic;"> </span>+<span style="font-style: italic;"> 
+ </span>1</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">for (int i = 0; i &lt; childrenCount; 
+ i++)&nbsp;</font>// For each child component</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">{</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">IComponent m_childComponent(componentChildrenArray[i]);</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">componentChildrenArray[i]-&gt;AddRef();&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">VARIANT_BOOL isSuppressed;&nbsp;&nbsp;&nbsp;</font>// 
+ Perform sample operation using the component</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">isSuppressed = m_childComponent.IsSuppressed();</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">}</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">hres = SafeArrayUnaccessData(psa);&nbsp;&nbsp;</font>// 
+ Release and destroy the<font style="font-family: 'Courier New';"
+								face="Courier New"> </font></p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">hres = SafeArrayDestroy(psa);&nbsp;&nbsp;&nbsp;</font>// 
+ component SafeArray</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode
+	style="font-weight: bold; font-size: 9pt;">' In VBA </p>
+
+<p class=apiCode
+	style="font-size: 9pt;">' Display the entire version history for the 
+ specified file </p>
+
+<p class=apiCode>' Show results in a list box control</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Dim fileHistory As Variant</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">fileHistory = swApp.VersionHistory(filename)</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">If Not (IsEmpty(fileHistory) Or 
+ IsNull(fileHistory)) Then&nbsp;</p>
+
+<p class=apiCode>For i = 0 To UBound(history)&nbsp;&nbsp;&nbsp;' For each 
+ string in the SafeArray,</p>
+
+<p class=apiCode><font style="font-family: 'Courier New';"
+						face="Courier New">myListBox.AddItem (fileHistory(i))&nbsp;&nbsp;</font>' 
+ Display it in the list box control</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New';">Next i</p>
+
+<p class=apiCode
+	style="font-family: 'Courier New'; font-size: 9pt;">End If</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

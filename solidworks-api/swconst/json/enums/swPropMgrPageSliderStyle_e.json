@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swPropMgrPageSliderStyle_e",
+    "description": "PropertyManager page slider styles. Bitmask.",
+    "member_count": 5,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swPropMgrPageSliderStyle_e",
+  "description": "PropertyManager page slider styles. Bitmask.",
+  "values": [
+    {
+      "member": "swPropMgrPageSliderStyle_AutoTicks",
+      "value": "2",
+      "description": "or 0x2; If set, then tick marks are created based on swPropMgrPageSliderStyle_BottomLeftTicks and swPropMgrPageSliderStyle_TopRightTicks"
+    },
+    {
+      "member": "swPropMgrPageSliderStyle_BottomLeftTicks",
+      "value": "4",
+      "description": "or 0x4; If set, then tick marks appear at the bottom (horizontal) or left (vertical) of the slider"
+    },
+    {
+      "member": "swPropMgrPageSliderStyle_NotifyWhileTracking",
+      "value": "16",
+      "description": "or 0x10; If set, then your application is notified when the user is dragging the slider, each time the value changes; if not set, then your application is not notified when the user is dragging the slider, only when the user is done dragging the slider; setting this bit allows your application to react immediately to changes, but it does generate many more callbacks, so it is less efficient"
+    },
+    {
+      "member": "swPropMgrPageSliderStyle_TopRightTicks",
+      "value": "8",
+      "description": "or 0x8; If set, then tick marks appear at the top (horizontal) or right (vertical) of the slider"
+    },
+    {
+      "member": "swPropMgrPageSliderStyle_Vertical",
+      "value": "1",
+      "description": "or 0x1; If set, then the slider is oriented vertically; if not set, then the slider is oriented horizontally"
+    }
+  ]
+}

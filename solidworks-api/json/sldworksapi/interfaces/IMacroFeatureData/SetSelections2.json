@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "SetSelections2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of objects as defined in swSelectType_e to select (see Remarks )"
+      },
+      {
+        "name": "SelMarks",
+        "type": "System.Object",
+        "description": "Array of selection marks (integers or longs) for the objects (see Remarks )"
+      },
+      {
+        "name": "DrViews",
+        "type": "System.Object",
+        "description": "Array of drawing views (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IMacroFeatureData.GetSelectionCount",
+      "IMacroFeatureData.GetSelections3",
+      "IMacroFeatureData.IGetSelections3",
+      "IMacroFeatureData.ISetSelections2"
+    ],
+    "keywords": [
+      "setselections2",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "selections2",
+      "objects",
+      "object",
+      "sel",
+      "marks",
+      "dr",
+      "views",
+      "void",
+      "cut",
+      "body",
+      "half",
+      "using",
+      "vba"
+    ]
+  },
+  "title": "IMacroFeatureData.SetSelections2",
+  "description": "Sets the selected objects for the macro feature.",
+  "signature": "void SetSelections2( \n   System.Object\nObjects\n,\n   System.Object\nSelMarks\n,\n   System.Object\nDrViews\n)",
+  "parameters": [
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of objects as defined in swSelectType_e to select (see Remarks )"
+    },
+    {
+      "name": "SelMarks",
+      "type": "System.Object",
+      "description": "Array of selection marks (integers or longs) for the objects (see Remarks )"
+    },
+    {
+      "name": "DrViews",
+      "type": "System.Object",
+      "description": "Array of drawing views (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Early bind the Objects, SelMarks, and DrViews arrays when declaring them to avoid possible problems when using other IMacroFeatureData methods.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "Cut Body in Half Using Macro Feature (VBA)",
+      "href": "Cut_Body_in_Half_using_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMacroFeatureData.GetSelectionCount",
+    "IMacroFeatureData.GetSelections3",
+    "IMacroFeatureData.IGetSelections3",
+    "IMacroFeatureData.ISetSelections2"
+  ]
+}

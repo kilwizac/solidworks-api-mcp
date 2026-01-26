@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetAppearanceSetting",
+    "returns": "AppearanceSetting",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "getappearancesetting",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "appearance",
+      "setting"
+    ]
+  },
+  "title": "IModelDocExtension.GetAppearanceSetting",
+  "description": "Gets the appearance setting for this document.",
+  "signature": "AppearanceSetting GetAppearanceSetting()",
+  "parameters": [],
+  "returns": "IAppearanceSetting",
+  "remarks": "After calling this method:\nSet the properties in the\nIAppearanceSetting\nobject.\nCall\nIModelDocExtension::GetDisplayStateSetting\nto obtain an\nIDisplayStateSetting\nobject.\nCall\nIDisplayStateSetting::Names\nor\nIDisplayStateSetting::ISetNames\nto specify the display states.\nCall\nIDisplayStateSetting::Entities\nor\nIDisplayStateSetting::ISetEntities\nto specify the components.\nCall\nIDisplayStateSetting::Option\nto specify the scope of the display state setting.\nGet or set the material properties for the specified display states, components, and scope using\nIModelDocExtension::DisplayStateSpecMaterialPropertyValues\n.",
+  "examples": [],
+  "related": []
+}

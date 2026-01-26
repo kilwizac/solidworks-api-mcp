@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FilletXpertMakeCorner",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "CornerType",
+        "type": "System.Int32",
+        "description": "See Remarks"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureFillet",
+      "IFeatureManager.FilletXpertChange",
+      "IFeatureManager.FilletXpertRemove",
+      "IFeatureManager.IFeatureFillet"
+    ],
+    "keywords": [
+      "fillets",
+      "corner",
+      "feature",
+      "filletxpert",
+      "filletxpertmakecorner",
+      "ifeaturemanager",
+      "manager",
+      "fillet",
+      "xpert",
+      "make",
+      "type",
+      "int32"
+    ]
+  },
+  "title": "IFeatureManager.FilletXpertMakeCorner",
+  "description": "Creates or changes a fillet corner feature.",
+  "signature": "Feature FilletXpertMakeCorner( \n   System.Int32\nCornerType\n)",
+  "parameters": [
+    {
+      "name": "CornerType",
+      "type": "System.Int32",
+      "description": "See Remarks"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "For the fillet corner, everything is dependent on the convexity of the three filleted edges adjacent.\nIf all three edges have the same convexity, then no corner substitution is possible. Otherwise, there will be two edges of one convexity, and one of the other. It does not matter if the two same edges are both convex or both concave, as long as the edges are the same.\nThe valid values for the CornerType argument are:\n1 = if the two edges with the same convexity have the same radius, make a triangular corner patch.\n2 = if the two edges with the same convexity have the same radius, make a quadrilateral corner patch.\n3 = if the two edges with the same convexity have different radii, make a triangular corner patch.\n4 = if the two edges with the same convexity have different radii, make two triangular corner patches (which together look like a split quadrilateral patch).\n5 = if the two edges with the same convexity have different radii, make a quadrilateral corner patch.\nNOTE\n: Types 1 and 3 relate to one another, as do types 2 and 5. This means that if the corner type is not consistent with the convexity/radius requirements, then the appropriate type will be mapped and substituted. Thus, specifying type 1 on a corner with two edges of the same convexity, but different radii, results in a type 3, automatically.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureFillet",
+    "IFeatureManager.FilletXpertChange",
+    "IFeatureManager.FilletXpertRemove",
+    "IFeatureManager.IFeatureFillet"
+  ]
+}

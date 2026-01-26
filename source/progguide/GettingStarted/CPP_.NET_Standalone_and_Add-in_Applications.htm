@@ -1,0 +1,189 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Visual C++/CLI Standalone and Add-in Applications</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Stand-alone applications">
+<meta name=MS-HKWD content=Add-ins>
+<meta name=MS-HKWD content="Add-ins,Visual C++/CLI">
+<meta name=MS-HKWD content="Stand-alone applications,Visual C++/CLI">
+<meta name=MS-HKWD content="Visual C++/CLI stand-alone and add-in applications">
+<meta name=MS-HKWD content="C++/CLI examples">
+<meta name=MS-HKWD content="C++/CLI examples,stand-alone and add-in applications">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=898>
+<meta name=layout-width content=1030>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Visual C++/CLI Standalone and Add-in Applications</h1>
+
+<h2>Standalone Applications (.exe files)</h2>
+
+<p>To create an instance of SOLIDWORKS , your executable project 
+ should contain lines of code similar to the following: </p>
+
+<p class=apiCode
+	style="margin-left: 49px;">//Import the SOLIDWORKS type library</p>
+
+<p class=apiCode
+	style="margin-left: 52px;">#import &quot;<a href="../Overview/Type_Libraries.htm">sldworks.tlb</a>&quot; 
+ raw_interfaces_only, raw_native_types, no_namespace, named_guids </p>
+
+<p class=apiCode
+	style="margin-left: 52px;">//Import the SOLIDWORKS constant type library 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 52px;">#import &quot;<a href="../Overview/Type_Libraries.htm">swconst.tlb</a>&quot; 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->raw_interfaces_only, 
+ raw_native_types, no_namespace, named_guids <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 52px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 52px;">int _tmain(int argc, _TCHAR* argv[]) <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 52px;">{<span style="margin-left: 89px;"> </span></p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//Initialize COM</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">CoInitialize(NULL);</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//Use <a href="../Overview/Smart_Pointers.htm" id="a1">ATL smart pointers</a> <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 89px;">CComPtr&lt;ISldWorks&gt; swApp; </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//Create an instance of SOLIDWORKS</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">HRESULT hres = swApp.CoCreateInstance(__uuidof(SldWorks), 
+ NULL, CLSCTX_LOCAL_SERVER); </p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">. <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->//Your 
+ code</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//Shut down SOLIDWORKS <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 89px;">swApp-&gt;<span style="font-weight: bold;">ExitApp</span>();</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">// Release COM reference</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">swApp = NULL;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">//Uninitialize COM</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">CoUninitialize();</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">return 0;</p>
+
+<p class=apiCode
+	style="margin-left: 52px;">}</p>
+
+<h2>Add-in Applications (.dll files)</h2>
+
+<p>You can create a Visual C++/CLI DLL add-in using the <span style="font-weight: bold;">
+SOLIDWORKS 
+ COM Add-In Wizard</span> included in the <a href="SolidWorks_API_Getting_Started_Overview.htm">
+SOLIDWORKS 
+ API SDK</a>. See <a href="../Overview/Using_SolidWorks_CPlusPlus_NET_Add-In_Wizard_to_Create.htm">
+SOLIDWORKS 
+ COM Addin Wizard</a> for details.</p>
+
+<p>&nbsp;</p>
+
+<!--kadov_tag{{<implicit_p>}}-->
+<!--Metadata type="DesignerControl" startspan
+<object id="RelatedTopic1" classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" dtcid="1" height="1" style="width: 1px; height: 1px;" type="application/x-oleobject" width="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="26">
+	<param name="_ExtentY" value="26">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="StandaloneApplicationsLibraries$$**$$VisualC++6StandaloneApplicationsLibraryFiles$$**$$">
+	<param name="Image" value="">
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\HELP\Cheryle_Working_Folder\SW2010\ROBOHELP\sldworksAPIProgGuide\GettingStarted\CPP_.NET_Standalone_and_Add-in_Applications.htm">
+	<param name="_ID" value="RelatedTopic1">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value="">
+	<param name="Window" value="">
+	<param name="ChmFile" value="">
+	<param name="DisableJump" value="0">
+</object>
+--><!--metadata endspan type="DesignerControl"-->
+ 
+
+</body>
+
+</html>

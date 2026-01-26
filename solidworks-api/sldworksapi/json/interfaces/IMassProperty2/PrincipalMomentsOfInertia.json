@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty2",
+    "member": "PrincipalMomentsOfInertia",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty2.GetMomentOfInertia",
+      "IMassProperty2.PrincipalAxesOfInertia",
+      "IMassPropertyOverrideOptions.GetOverrideMomentsOfInertiaValue",
+      "IMassPropertyOverrideOptions.GetOverridePrincipalMomentsOfInertia",
+      "IMassPropertyOverrideOptions.SetOverrideMomentsOfInertiaValue",
+      "IMassPropertyOverrideOptions.SetOverridePrincipalMomentsOfInertia"
+    ],
+    "keywords": [
+      "principalmomentsofinertia",
+      "imassproperty2",
+      "mass",
+      "property2",
+      "principal",
+      "moments",
+      "inertia",
+      "object"
+    ],
+    "readonly": true
+  },
+  "title": "IMassProperty2.PrincipalMomentsOfInertia",
+  "description": "Gets the principal moments of inertia.",
+  "signature": "System.Object PrincipalMomentsOfInertia {get;}",
+  "parameters": [],
+  "returns": "Array of size 3 (see Remarks )",
+  "remarks": "This property returns metric units unless explicitly specified otherwise.\nThe return value is a 0-based array of doubles:\n[\nPx, Py, Pz\n]\nIf\nIMassPropertyOverrideOptions::OverrideMomentsOfInertia\nis true or\nIMassProperty2::IncludeHiddenBodiesOrComponents\nis reset, then call\nIMassProperty2::Recalculate\nbefore using this property.",
+  "examples": [
+    {
+      "title": "IMassProperty2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMassProperty2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty2.GetMomentOfInertia",
+    "IMassProperty2.PrincipalAxesOfInertia",
+    "IMassPropertyOverrideOptions.GetOverrideMomentsOfInertiaValue",
+    "IMassPropertyOverrideOptions.GetOverridePrincipalMomentsOfInertia",
+    "IMassPropertyOverrideOptions.SetOverrideMomentsOfInertiaValue",
+    "IMassPropertyOverrideOptions.SetOverridePrincipalMomentsOfInertia"
+  ]
+}

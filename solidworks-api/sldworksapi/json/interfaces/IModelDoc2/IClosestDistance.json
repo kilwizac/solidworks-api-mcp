@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IClosestDistance",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Object1",
+        "type": "System.Object",
+        "description": "Pointer to first object"
+      },
+      {
+        "name": "Object2",
+        "type": "System.Object",
+        "description": "Pointer to second object"
+      },
+      {
+        "name": "Point1",
+        "type": "System.Double",
+        "description": "Array of x, y, z coordinates for the first point"
+      },
+      {
+        "name": "Point2",
+        "type": "System.Double",
+        "description": "Array of x, y, z coordinates for the second point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "distance",
+      "measure",
+      "iclosestdistance",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "closest",
+      "object1",
+      "object",
+      "object2",
+      "point1",
+      "double",
+      "point2"
+    ]
+  },
+  "title": "IModelDoc2.IClosestDistance",
+  "description": "Calculates the distance and closest points between two geometric objects.",
+  "signature": "System.Double IClosestDistance( \n   System.Object\nObject1\n,\n   System.Object\nObject2\n,\n   out System.Double\nPoint1\n,\n   out System.Double\nPoint2\n)",
+  "parameters": [
+    {
+      "name": "Object1",
+      "type": "System.Object",
+      "description": "Pointer to first object"
+    },
+    {
+      "name": "Object2",
+      "type": "System.Object",
+      "description": "Pointer to second object"
+    },
+    {
+      "name": "Point1",
+      "type": "System.Double",
+      "description": "Array of x, y, z coordinates for the first point"
+    },
+    {
+      "name": "Point2",
+      "type": "System.Double",
+      "description": "Array of x, y, z coordinates for the second point"
+    }
+  ],
+  "returns": "Minimum distance; -1.0 if no solution",
+  "remarks": "Supported input object types include:\nswSelFACES (face)\nswSelEDGES (edge)\nswSelVERTICES (vertex)\nswSelSKETCHSEGS (sketch segments)\nswSelDATUMPLANES (reference plane)\nswSelEXTSKETCHPOINTS (point on origin)\nswSelDATUMAXES\n(reference axis)\nswSelCOMPONENTS (component)\nswSelREFCURVES (reference curves)\nThis method includes these restrictions for drawings:\nCannot measure between a sketch entity and a model entity\nMeasured sketch entities have to belong to the same sheet\nModel entity measurements are based on the model origin\nMeasured object cannot be a temporary geometric entity",
+  "examples": [],
+  "related": []
+}

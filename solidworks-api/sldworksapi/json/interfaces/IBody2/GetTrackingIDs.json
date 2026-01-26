@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "GetTrackingIDs",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      },
+      {
+        "name": "TrackingIDs",
+        "type": "System.Object",
+        "description": "Array of tracking IDs on this body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IGetTrackingIDs",
+      "IBody2.RemoveTrackingID",
+      "IBody2.SetTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "gettrackingids",
+      "body2",
+      "ds",
+      "cookie",
+      "int32",
+      "object",
+      "remove",
+      "body",
+      "vba"
+    ]
+  },
+  "title": "IBody2.GetTrackingIDs",
+  "description": "Gets the tracking IDs assigned to this body.",
+  "signature": "System.Int32 GetTrackingIDs( \n   System.Int32\nTrackingCookie\n,\n   out System.Object\nTrackingIDs\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    },
+    {
+      "name": "TrackingIDs",
+      "type": "System.Object",
+      "description": "Array of tracking IDs on this body"
+    }
+  ],
+  "returns": "Status as defined by swTrackingIDError_e",
+  "remarks": "See\nTracking IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get, Set, and Remove Tracking IDs on Body (VBA)",
+      "href": "Get_Set_And_Remove_Tracking_IDs_On_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IGetTrackingIDs",
+    "IBody2.RemoveTrackingID",
+    "IBody2.SetTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

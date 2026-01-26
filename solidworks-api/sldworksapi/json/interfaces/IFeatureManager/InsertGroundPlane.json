@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertGroundPlane",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "ReverseDirection",
+        "type": "System.Boolean",
+        "description": "True to reverse the alignment of ground faces relative to the ground plane, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IAssemblyDoc.GetActiveGroundPlane"
+    ],
+    "keywords": [
+      "insertgroundplane",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "ground",
+      "plane",
+      "reverse",
+      "direction",
+      "boolean",
+      "activate",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertGroundPlane",
+  "description": "Obsolete. See IFeatureManager::CreateDefinition and IGroundPlaneFeatureData.",
+  "signature": "Feature InsertGroundPlane( \n   System.Boolean\nReverseDirection\n)",
+  "parameters": [
+    {
+      "name": "ReverseDirection",
+      "type": "System.Boolean",
+      "description": "True to reverse the alignment of ground faces relative to the ground plane, false to not"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method, select the entity to use as the ground plane using\nIModelDocExtension::SelectByRay\nor\nIModelDocExtension::SelectByID2\n.\nCall this method to insert a ground plane at each level of a plant assembly. Ground planes are used as reference geometry when inserting published assets at each level.\nCall\nIAssemblyDoc::ActivateGroundPlane\nto activate the ground plane on the level where you want to insert a published asset; the asset's ground face snaps to the assembly's activated ground plane. Components with magnetic mates snap only to components that are also on the active ground plane.\nOnly one ground plane can be active at a given time in each assembly configuration.\nSee\nLarge Assemblies > Facility Layout\nin the SOLIDWORKS Design user-interface help.",
+  "examples": [
+    {
+      "title": "Insert and Activate Ground Plane (VBA)",
+      "href": "Insert_Ground_Plane_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetActiveGroundPlane"
+  ]
+}

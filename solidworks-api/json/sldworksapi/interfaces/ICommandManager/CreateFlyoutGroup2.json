@@ -1,0 +1,162 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "CreateFlyoutGroup2",
+    "returns": "FlyoutGroup",
+    "parameters": [
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "Unique user-defined ID for the new flyout"
+      },
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Name of the flyout to create"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "ToolTip for the new flyout"
+      },
+      {
+        "name": "Hint",
+        "type": "System.String",
+        "description": "Text displayed in SOLIDWORKS Design status bar when a user's mouse pointer is over the flyout"
+      },
+      {
+        "name": "MainIconList",
+        "type": "System.Object",
+        "description": "Array of strings for the paths to the image files for this flyout button (see Remarks )"
+      },
+      {
+        "name": "IconList",
+        "type": "System.Object",
+        "description": "Array of strings for the paths to the image files containing all of the flyout toolbar buttons and separators (see Remarks )"
+      },
+      {
+        "name": "CallbackFunction",
+        "type": "System.String",
+        "description": "Function to call when the flyout is selected"
+      },
+      {
+        "name": "UpdateCallbackFunction",
+        "type": "System.String",
+        "description": "Optional update function that controls the state of the item; if specified, then SOLIDWORKS calls this function before displaying the item (see Remarks ) If the update function returns... Then SOLIDWORKS... 0 Disables the item 1 Enables the item; this is the default state if no update function is specified"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.GetFlyoutGroup",
+      "ICommandManager.GetFlyoutGroups",
+      "ICommandManager.NumberOfFlyoutGroups",
+      "ICommandManager.RemoveFlyoutGroup",
+      "ISldWorks.GetImageSize"
+    ],
+    "keywords": [
+      "flyoutgroup",
+      "see",
+      "iflyoutgroup",
+      "command",
+      "manager",
+      "also",
+      "icommandmanager",
+      "flyouts",
+      "createflyoutgroup2",
+      "create",
+      "flyout",
+      "group2",
+      "user",
+      "id",
+      "int32",
+      "title",
+      "string",
+      "tool",
+      "tip",
+      "hint",
+      "main",
+      "icon",
+      "list",
+      "object",
+      "callback",
+      "function",
+      "update",
+      "group",
+      "commandmanager",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICommandManager.CreateFlyoutGroup2",
+  "description": "Creates a new flyout in the CommandManager and context-sensitive menus.",
+  "signature": "FlyoutGroup CreateFlyoutGroup2( \n   System.Int32\nUserID\n,\n   System.String\nTitle\n,\n   System.String\nToolTip\n,\n   System.String\nHint\n,\n   System.Object\nMainIconList\n,\n   System.Object\nIconList\n,\n   System.String\nCallbackFunction\n,\n   System.String\nUpdateCallbackFunction\n)",
+  "parameters": [
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "Unique user-defined ID for the new flyout"
+    },
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Name of the flyout to create"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "ToolTip for the new flyout"
+    },
+    {
+      "name": "Hint",
+      "type": "System.String",
+      "description": "Text displayed in SOLIDWORKS Design status bar when a user's mouse pointer is over the flyout"
+    },
+    {
+      "name": "MainIconList",
+      "type": "System.Object",
+      "description": "Array of strings for the paths to the image files for this flyout button (see Remarks )"
+    },
+    {
+      "name": "IconList",
+      "type": "System.Object",
+      "description": "Array of strings for the paths to the image files containing all of the flyout toolbar buttons and separators (see Remarks )"
+    },
+    {
+      "name": "CallbackFunction",
+      "type": "System.String",
+      "description": "Function to call when the flyout is selected"
+    },
+    {
+      "name": "UpdateCallbackFunction",
+      "type": "System.String",
+      "description": "Optional update function that controls the state of the item; if specified, then SOLIDWORKS calls this function before displaying the item (see Remarks ) If the update function returns... Then SOLIDWORKS... 0 Disables the item 1 Enables the item; this is the default state if no update function is specified"
+    }
+  ],
+  "returns": "IFlyoutGroup",
+  "remarks": "After creating the flyout, display it on a CommandManager tab by calling\nICommandTabBox::AddCommands\n. Call:\nIFlyoutGroup::AddContextMenuFlyout\nto add the flyout to context menus.\nIFlyoutGroup::AddCommandItem\nto add menu items to the flyout group.\nIf any flyout menu items are enabled, then the flyout button cannot be disabled by the flyout group's UpdateCallbackFunction. The sensitivity of the top-level flyout button is always determined by its enabled menu items. Disabled flyout menu items do not appear in the flyout menu. If there are no flyout menu items, then control of the top-level flyout button is returned to the flyout group's UpdateCallbackFunction.\nThis method supports scaling for high resolution screens with high resolution operating system scaling options.\nThe array of strings for the paths to the image files for MainIconList and IconList can contain images of the following sizes:\n20 x 20 pixels\n32 x 32 pixels\n40 x 40 pixels\n64 x 64 pixels\n96 x 96 pixels\n128 x128 pixels\nThe order in which you specify the image files must be the same for MainIconList and IconList. For example, if you specify an array of paths to 20 x 20 pixels, 32 x 32 pixels, and 40 x 40 pixels images for MainIconList, then you must specify an array of paths to 20 x 20 pixels, 32 x 32 pixels, and 40 x 40 pixels images for IconList. The images should use a 256-color palette.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandManager.GetFlyoutGroup",
+    "ICommandManager.GetFlyoutGroups",
+    "ICommandManager.NumberOfFlyoutGroups",
+    "ICommandManager.RemoveFlyoutGroup",
+    "ISldWorks.GetImageSize"
+  ]
+}

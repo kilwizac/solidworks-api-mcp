@@ -1,0 +1,121 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "ISetComponentState",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SuppressionState",
+        "type": "System.Int32",
+        "description": "Component suppression state as defined in swComponentSuppressionState_e (see Remarks )"
+      },
+      {
+        "name": "NumComps",
+        "type": "System.Int32",
+        "description": "Number of components to change"
+      },
+      {
+        "name": "CompArr",
+        "type": "Component2",
+        "description": "Array of components to change of size numComps"
+      },
+      {
+        "name": "ConfigOption",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "WhichConfig",
+        "type": "System.String",
+        "description": "Name of the configuration to change"
+      },
+      {
+        "name": "SaveClosedDocs",
+        "type": "System.Boolean",
+        "description": "True saves closed documents, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.SetComponentState"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "state",
+      "assemblies",
+      "iassemblydoc",
+      "suppress",
+      "isetcomponentstate",
+      "assembly",
+      "doc",
+      "component",
+      "suppression",
+      "int32",
+      "num",
+      "comps",
+      "comp",
+      "arr",
+      "component2",
+      "config",
+      "option",
+      "which",
+      "string",
+      "save",
+      "closed",
+      "docs",
+      "boolean"
+    ]
+  },
+  "title": "IAssemblyDoc.ISetComponentState",
+  "description": "Sets the suppression state for the specified components.",
+  "signature": "System.Boolean ISetComponentState( \n   System.Int32\nSuppressionState\n,\n   System.Int32\nNumComps\n,\n   ref Component2\nCompArr\n,\n   System.Int32\nConfigOption\n,\n   System.String\nWhichConfig\n,\n   System.Boolean\nSaveClosedDocs\n)",
+  "parameters": [
+    {
+      "name": "SuppressionState",
+      "type": "System.Int32",
+      "description": "Component suppression state as defined in swComponentSuppressionState_e (see Remarks )"
+    },
+    {
+      "name": "NumComps",
+      "type": "System.Int32",
+      "description": "Number of components to change"
+    },
+    {
+      "name": "CompArr",
+      "type": "Component2",
+      "description": "Array of components to change of size numComps"
+    },
+    {
+      "name": "ConfigOption",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "WhichConfig",
+      "type": "System.String",
+      "description": "Name of the configuration to change"
+    },
+    {
+      "name": "SaveClosedDocs",
+      "type": "System.Boolean",
+      "description": "True saves closed documents, false does not"
+    }
+  ],
+  "returns": "True if the components were changed, false if not",
+  "remarks": "You cannot set a component to lightweight using this method. Instead, use\nIComponent::SetSuppression2\n.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.SetComponentState"
+  ]
+}

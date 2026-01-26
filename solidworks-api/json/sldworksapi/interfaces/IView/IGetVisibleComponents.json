@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetVisibleComponents",
+    "returns": "Component2",
+    "parameters": [
+      {
+        "name": "ViewComponentCount",
+        "type": "System.Int32",
+        "description": "Number of visible components"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.EnumHiddenComponents2",
+      "IView.GetHiddenComponents",
+      "IView.GetVisibleComponents",
+      "IView.GetVisibleEntities",
+      "IView.GetVisibleEntityCount",
+      "IView.IGetVisibleEntities"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "drawing",
+      "views",
+      "iview",
+      "view",
+      "igetvisiblecomponents",
+      "visible",
+      "component",
+      "count",
+      "int32",
+      "component2"
+    ]
+  },
+  "title": "IView.IGetVisibleComponents",
+  "description": "Gets the visible components in this drawing view.",
+  "signature": "Component2 IGetVisibleComponents( \n   System.Int32\nViewComponentCount\n)",
+  "parameters": [
+    {
+      "name": "ViewComponentCount",
+      "type": "System.Int32",
+      "description": "Number of visible components"
+    }
+  ],
+  "returns": "Visible components in this drawing view",
+  "remarks": "Visible components are only those components not completely obscured by other components in the view.\nCall\nIView::GetVisibleComponentCount\nbefore calling this method to get the value of ViewComponentCount.",
+  "examples": [],
+  "related": [
+    "IView.EnumHiddenComponents2",
+    "IView.GetHiddenComponents",
+    "IView.GetVisibleComponents",
+    "IView.GetVisibleEntities",
+    "IView.GetVisibleEntityCount",
+    "IView.IGetVisibleEntities"
+  ]
+}

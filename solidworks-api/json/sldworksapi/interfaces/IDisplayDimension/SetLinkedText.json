@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetLinkedText",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "BstrLinkedText",
+        "type": "System.String",
+        "description": "Text to link to this display dimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetLinkedText",
+      "IDisplayDimension.IsLinked",
+      "IDisplayDimension.Unlink"
+    ],
+    "keywords": [
+      "link",
+      "dimensions",
+      "setlinkedtext",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "linked",
+      "text",
+      "bstr",
+      "string",
+      "int32"
+    ]
+  },
+  "title": "IDisplayDimension.SetLinkedText",
+  "description": "Sets the text to link to this display dimension.",
+  "signature": "System.Int32 SetLinkedText( \n   System.String\nBstrLinkedText\n)",
+  "parameters": [
+    {
+      "name": "BstrLinkedText",
+      "type": "System.String",
+      "description": "Text to link to this display dimension"
+    }
+  ],
+  "returns": "Error code as defined in swLinkDimensionError_e",
+  "remarks": "Dimension types must be the same, for example: linear to linea , angular to angular, and so on.\nAngular dimensions must be in the same quadrant.\nDimensions cannot shared by another named group.\nDimensions with dissimilar ranges cannot be shared.\nDimensions cannot driven by equations, read-only, driven sketch dimensions, or reference dimensions.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.GetLinkedText",
+    "IDisplayDimension.IsLinked",
+    "IDisplayDimension.Unlink"
+  ]
+}

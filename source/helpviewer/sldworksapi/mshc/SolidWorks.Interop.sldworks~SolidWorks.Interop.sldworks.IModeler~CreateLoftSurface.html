@@ -1,0 +1,502 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>CreateLoftSurface Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftSurface" />
+    <meta name="Description" content="Creates a loft surface." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModeler.CreateLoftSurface" />
+    <meta name="Microsoft.Help.Keywords" content="Lofts (see also ILoftFeatureData Interface), surfaces" />
+    <meta name="Microsoft.Help.Keywords" content="Surface (see also ISurface Interface), loft" />
+    <meta name="Microsoft.Help.Keywords" content="CreateLoftSurface Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                CreateLoftSurface Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a> : CreateLoftSurface Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="CurveArrayPopupContent" class="i-popup-content">
+        Array of b-spline <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a>
+    </div>
+
+    <div id="BBlendClosedPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">True if blend closed, false if not<!--ParamDesc--></p>
+    </div>
+
+    <div id="BForceCubicPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">True if force surface is cubic, false if not<!--ParamDesc--></p>
+    </div>
+
+    <div id="GuideCrvArrayPopupContent" class="i-popup-content">
+        Array of guide <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a>
+    </div>
+
+    <div id="StartMatchingTypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Start matching type:</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">0 = MATCH_NONE (default)</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">1 = MATCH_NORMAL</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">2 = MATCH_VECTOR</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">3 = MATCH_ALL_FACES or MATCH_FACE_G1</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">4 = MATCH_FACE_G2</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="EndMatchingTypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">End matching type:</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">0 = MATCH_NONE (default)</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">1 = MATCH_NORMAL</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">2 = MATCH_VECTOR</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">3 = MATCH_ALL_FACES or MATCH_FACE_G1</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">4 = MATCH_FACE_G2</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="NormalAtStartSectionPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">Normal at start section</a> when StartMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+    </div>
+
+    <div id="NormalAtEndSectionPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">Normal at start section</a>&#160;when EndMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+    </div>
+
+    <div id="StartMatchingFaceListPopupContent" class="i-popup-content">
+        Array of matching&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">faces</a> at start section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing<!--ParamDesc-->
+    </div>
+
+    <div id="EndMatchingFaceListPopupContent" class="i-popup-content">
+        Array of matching&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">faces</a> at end section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing<!--ParamDesc-->
+    </div>
+
+    <div id="DegeneratedStartPopupContent" class="i-popup-content">
+        True to degenerate at start, false to not
+    </div>
+
+    <div id="DegeneratedEndPopupContent" class="i-popup-content">
+        True to degenerate at end, false to not
+    </div>
+
+    <div id="StartPointOfStartSectionPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathPoint">Start point</a> of start section
+    </div>
+
+    <div id="StartPointOfEndSectionPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathPoint">Start point</a> of end section
+    </div>
+
+    <div id="SectionIndexStartPopupContent" class="i-popup-content">
+        Index of start section; default is -1
+    </div>
+
+    <div id="SectionIndexEndPopupContent" class="i-popup-content">
+        Index of end section; default is -1
+    </div>
+
+    <div id="GuideIndexStartPopupContent" class="i-popup-content">
+        Index of start guide curve; default is -1
+    </div>
+
+    <div id="GuideIndexEndPopupContent" class="i-popup-content">
+        Index of end guide curve; default is -1
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates a loft surface.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function CreateLoftSurface( _
+   ByVal <i><a class="i-popup-link" id="CurveArrayPopupLink" data-popup-contentsource="#CurveArrayPopupContent" data-popup-showevent="click mouseenter">CurveArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="BBlendClosedPopupLink" data-popup-contentsource="#BBlendClosedPopupContent" data-popup-showevent="click mouseenter">BBlendClosed</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="BForceCubicPopupLink" data-popup-contentsource="#BForceCubicPopupContent" data-popup-showevent="click mouseenter">BForceCubic</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="GuideCrvArrayPopupLink" data-popup-contentsource="#GuideCrvArrayPopupContent" data-popup-showevent="click mouseenter">GuideCrvArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="NormalAtStartSectionPopupLink" data-popup-contentsource="#NormalAtStartSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtStartSection</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="NormalAtEndSectionPopupLink" data-popup-contentsource="#NormalAtEndSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtEndSection</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="StartMatchingFaceListPopupLink" data-popup-contentsource="#StartMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">StartMatchingFaceList</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="EndMatchingFaceListPopupLink" data-popup-contentsource="#EndMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">EndMatchingFaceList</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="DegeneratedStartPopupLink" data-popup-contentsource="#DegeneratedStartPopupContent" data-popup-showevent="click mouseenter">DegeneratedStart</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="DegeneratedEndPopupLink" data-popup-contentsource="#DegeneratedEndPopupContent" data-popup-showevent="click mouseenter">DegeneratedEnd</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="StartPointOfStartSectionPopupLink" data-popup-contentsource="#StartPointOfStartSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfStartSection</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="StartPointOfEndSectionPopupLink" data-popup-contentsource="#StartPointOfEndSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfEndSection</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SectionIndexStartPopupLink" data-popup-contentsource="#SectionIndexStartPopupContent" data-popup-showevent="click mouseenter">SectionIndexStart</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="SectionIndexEndPopupLink" data-popup-contentsource="#SectionIndexEndPopupContent" data-popup-showevent="click mouseenter">SectionIndexEnd</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="GuideIndexStartPopupLink" data-popup-contentsource="#GuideIndexStartPopupContent" data-popup-showevent="click mouseenter">GuideIndexStart</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="GuideIndexEndPopupLink" data-popup-contentsource="#GuideIndexEndPopupContent" data-popup-showevent="click mouseenter">GuideIndexEnd</a></i> As System.Integer _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler</a>
+Dim CurveArray As System.Object
+Dim BBlendClosed As System.Boolean
+Dim BForceCubic As System.Boolean
+Dim GuideCrvArray As System.Object
+Dim StartMatchingType As System.Integer
+Dim EndMatchingType As System.Integer
+Dim NormalAtStartSection As System.Object
+Dim NormalAtEndSection As System.Object
+Dim StartMatchingFaceList As System.Object
+Dim EndMatchingFaceList As System.Object
+Dim DegeneratedStart As System.Boolean
+Dim DegeneratedEnd As System.Boolean
+Dim StartPointOfStartSection As System.Object
+Dim StartPointOfEndSection As System.Object
+Dim SectionIndexStart As System.Integer
+Dim SectionIndexEnd As System.Integer
+Dim GuideIndexStart As System.Integer
+Dim GuideIndexEnd As System.Integer
+Dim value As System.Object
+ 
+value = instance.CreateLoftSurface(CurveArray, BBlendClosed, BForceCubic, GuideCrvArray, StartMatchingType, EndMatchingType, NormalAtStartSection, NormalAtEndSection, StartMatchingFaceList, EndMatchingFaceList, DegeneratedStart, DegeneratedEnd, StartPointOfStartSection, StartPointOfEndSection, SectionIndexStart, SectionIndexEnd, GuideIndexStart, GuideIndexEnd)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object CreateLoftSurface( 
+   System.object <i><a class="i-popup-link" id="CurveArrayPopupLink" data-popup-contentsource="#CurveArrayPopupContent" data-popup-showevent="click mouseenter">CurveArray</a></i>,
+   System.bool <i><a class="i-popup-link" id="BBlendClosedPopupLink" data-popup-contentsource="#BBlendClosedPopupContent" data-popup-showevent="click mouseenter">BBlendClosed</a></i>,
+   System.bool <i><a class="i-popup-link" id="BForceCubicPopupLink" data-popup-contentsource="#BForceCubicPopupContent" data-popup-showevent="click mouseenter">BForceCubic</a></i>,
+   System.object <i><a class="i-popup-link" id="GuideCrvArrayPopupLink" data-popup-contentsource="#GuideCrvArrayPopupContent" data-popup-showevent="click mouseenter">GuideCrvArray</a></i>,
+   System.int <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i>,
+   System.int <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i>,
+   System.object <i><a class="i-popup-link" id="NormalAtStartSectionPopupLink" data-popup-contentsource="#NormalAtStartSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtStartSection</a></i>,
+   System.object <i><a class="i-popup-link" id="NormalAtEndSectionPopupLink" data-popup-contentsource="#NormalAtEndSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtEndSection</a></i>,
+   System.object <i><a class="i-popup-link" id="StartMatchingFaceListPopupLink" data-popup-contentsource="#StartMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">StartMatchingFaceList</a></i>,
+   System.object <i><a class="i-popup-link" id="EndMatchingFaceListPopupLink" data-popup-contentsource="#EndMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">EndMatchingFaceList</a></i>,
+   System.bool <i><a class="i-popup-link" id="DegeneratedStartPopupLink" data-popup-contentsource="#DegeneratedStartPopupContent" data-popup-showevent="click mouseenter">DegeneratedStart</a></i>,
+   System.bool <i><a class="i-popup-link" id="DegeneratedEndPopupLink" data-popup-contentsource="#DegeneratedEndPopupContent" data-popup-showevent="click mouseenter">DegeneratedEnd</a></i>,
+   System.object <i><a class="i-popup-link" id="StartPointOfStartSectionPopupLink" data-popup-contentsource="#StartPointOfStartSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfStartSection</a></i>,
+   System.object <i><a class="i-popup-link" id="StartPointOfEndSectionPopupLink" data-popup-contentsource="#StartPointOfEndSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfEndSection</a></i>,
+   System.int <i><a class="i-popup-link" id="SectionIndexStartPopupLink" data-popup-contentsource="#SectionIndexStartPopupContent" data-popup-showevent="click mouseenter">SectionIndexStart</a></i>,
+   System.int <i><a class="i-popup-link" id="SectionIndexEndPopupLink" data-popup-contentsource="#SectionIndexEndPopupContent" data-popup-showevent="click mouseenter">SectionIndexEnd</a></i>,
+   System.int <i><a class="i-popup-link" id="GuideIndexStartPopupLink" data-popup-contentsource="#GuideIndexStartPopupContent" data-popup-showevent="click mouseenter">GuideIndexStart</a></i>,
+   System.int <i><a class="i-popup-link" id="GuideIndexEndPopupLink" data-popup-contentsource="#GuideIndexEndPopupContent" data-popup-showevent="click mouseenter">GuideIndexEnd</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ CreateLoftSurface( 
+   System.Object^ <i><a class="i-popup-link" id="CurveArrayPopupLink" data-popup-contentsource="#CurveArrayPopupContent" data-popup-showevent="click mouseenter">CurveArray</a></i>,
+   System.bool <i><a class="i-popup-link" id="BBlendClosedPopupLink" data-popup-contentsource="#BBlendClosedPopupContent" data-popup-showevent="click mouseenter">BBlendClosed</a></i>,
+   System.bool <i><a class="i-popup-link" id="BForceCubicPopupLink" data-popup-contentsource="#BForceCubicPopupContent" data-popup-showevent="click mouseenter">BForceCubic</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="GuideCrvArrayPopupLink" data-popup-contentsource="#GuideCrvArrayPopupContent" data-popup-showevent="click mouseenter">GuideCrvArray</a></i>,
+   System.int <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i>,
+   System.int <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="NormalAtStartSectionPopupLink" data-popup-contentsource="#NormalAtStartSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtStartSection</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="NormalAtEndSectionPopupLink" data-popup-contentsource="#NormalAtEndSectionPopupContent" data-popup-showevent="click mouseenter">NormalAtEndSection</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="StartMatchingFaceListPopupLink" data-popup-contentsource="#StartMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">StartMatchingFaceList</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="EndMatchingFaceListPopupLink" data-popup-contentsource="#EndMatchingFaceListPopupContent" data-popup-showevent="click mouseenter">EndMatchingFaceList</a></i>,
+   System.bool <i><a class="i-popup-link" id="DegeneratedStartPopupLink" data-popup-contentsource="#DegeneratedStartPopupContent" data-popup-showevent="click mouseenter">DegeneratedStart</a></i>,
+   System.bool <i><a class="i-popup-link" id="DegeneratedEndPopupLink" data-popup-contentsource="#DegeneratedEndPopupContent" data-popup-showevent="click mouseenter">DegeneratedEnd</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="StartPointOfStartSectionPopupLink" data-popup-contentsource="#StartPointOfStartSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfStartSection</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="StartPointOfEndSectionPopupLink" data-popup-contentsource="#StartPointOfEndSectionPopupContent" data-popup-showevent="click mouseenter">StartPointOfEndSection</a></i>,
+   System.int <i><a class="i-popup-link" id="SectionIndexStartPopupLink" data-popup-contentsource="#SectionIndexStartPopupContent" data-popup-showevent="click mouseenter">SectionIndexStart</a></i>,
+   System.int <i><a class="i-popup-link" id="SectionIndexEndPopupLink" data-popup-contentsource="#SectionIndexEndPopupContent" data-popup-showevent="click mouseenter">SectionIndexEnd</a></i>,
+   System.int <i><a class="i-popup-link" id="GuideIndexStartPopupLink" data-popup-contentsource="#GuideIndexStartPopupContent" data-popup-showevent="click mouseenter">GuideIndexStart</a></i>,
+   System.int <i><a class="i-popup-link" id="GuideIndexEndPopupLink" data-popup-contentsource="#GuideIndexEndPopupContent" data-popup-showevent="click mouseenter">GuideIndexEnd</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>CurveArray</i></dt>
+
+                <dd>Array of b-spline <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a></dd>
+
+                <dt><i>BBlendClosed</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">True if blend closed, false if not<!--ParamDesc--></p>
+                </dd>
+
+                <dt><i>BForceCubic</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">True if force surface is cubic, false if not<!--ParamDesc--></p>
+                </dd>
+
+                <dt><i>GuideCrvArray</i></dt>
+
+                <dd>Array of guide <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a></dd>
+
+                <dt><i>StartMatchingType</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Start matching type:</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">0 = MATCH_NONE (default)</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">1 = MATCH_NORMAL</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">2 = MATCH_VECTOR</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">3 = MATCH_ALL_FACES or MATCH_FACE_G1</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">4 = MATCH_FACE_G2</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>EndMatchingType</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">End matching type:</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">0 = MATCH_NONE (default)</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">1 = MATCH_NORMAL</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">2 = MATCH_VECTOR</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">3 = MATCH_ALL_FACES or MATCH_FACE_G1</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">4 = MATCH_FACE_G2</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>NormalAtStartSection</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">Normal at start section</a> when StartMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing</dd>
+
+                <dt><i>NormalAtEndSection</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">Normal at start section</a>&#160;when EndMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing</dd>
+
+                <dt><i>StartMatchingFaceList</i></dt>
+
+                <dd>Array of matching&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">faces</a> at start section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing<!--ParamDesc--></dd>
+
+                <dt><i>EndMatchingFaceList</i></dt>
+
+                <dd>Array of matching&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2">faces</a> at end section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing<!--ParamDesc--></dd>
+
+                <dt><i>DegeneratedStart</i></dt>
+
+                <dd>True to degenerate at start, false to not</dd>
+
+                <dt><i>DegeneratedEnd</i></dt>
+
+                <dd>True to degenerate at end, false to not</dd>
+
+                <dt><i>StartPointOfStartSection</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathPoint">Start point</a> of start section</dd>
+
+                <dt><i>StartPointOfEndSection</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathPoint">Start point</a> of end section</dd>
+
+                <dt><i>SectionIndexStart</i></dt>
+
+                <dd>Index of start section; default is -1</dd>
+
+                <dt><i>SectionIndexEnd</i></dt>
+
+                <dd>Index of end section; default is -1</dd>
+
+                <dt><i>GuideIndexStart</i></dt>
+
+                <dd>Index of start guide curve; default is -1</dd>
+
+                <dt><i>GuideIndexEnd</i></dt>
+
+                <dd>Index of end guide curve; default is -1</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Newly created loft <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surface</a>
+            </div>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_members">IModeler Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBsplineSurface">IModeler::CreateBsplineSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateCoonsBSurface">IModeler::CreateCoonsBSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateCylindricalSurface2">IModeler::CreateCylindricalSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateExtrusionSurface">IModeler::CreateExtrusionSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftSurface">IModeler::CreateLoftSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateOffsetSurface">IModeler::CreateOffsetSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreatePlanarSurface2">IModeler::CreatePlanarSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateRuledSurface">IModeler:::CreateRuledSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateSphericalSurface2">IModeler::CreateSphericalSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateSweptSurface">IModeler::CreateSweptSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateToroidalSurface">IModeler::CreateToroidalSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBsplineSurface">IModeler::ICreateBsplineSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateConicalSurface2">IModeler::ICreateConicalSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateCylindricalSurface2">IModeler::ICreateCylindricalSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateExtrusionSurface">IModeler::ICreateExtrusionSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateLoftSurface">IModeler::ICreateLoftSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateOffsetSurface">IModeler::ICreateOffsetSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreatePlanarSurface2">IModeler::ICreatePlanarSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateRuledSurface">IModeler::ICreateRuledSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateSphericalSurface2">IModeler::ICreateSphericalSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateSweptSurface">IModeler::ICreateSweptSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateToroidalSurface">IModeler::ICreateToroidalSurface Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftSurface.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

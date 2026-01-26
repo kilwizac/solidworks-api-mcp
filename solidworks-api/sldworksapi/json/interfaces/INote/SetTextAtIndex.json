@@ -1,0 +1,109 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "SetTextAtIndex",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index position of the text within the compound note; an invalid index value causes false to be returned"
+      },
+      {
+        "name": "Txt",
+        "type": "System.String",
+        "description": "Text to replace the current note text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.AddText",
+      "INote.GetText",
+      "INote.GetTextAngleAtIndex",
+      "INote.GetTextAtIndex",
+      "INote.GetTextCount",
+      "INote.GetTextFontAtIndex",
+      "INote.GetTextHeightAtIndex",
+      "INote.GetTextInvertAtIndex",
+      "INote.GetTextJustification",
+      "INote.GetTextJustificationAtIndex",
+      "INote.GetTextLineSpacingAtIndex",
+      "INote.GetTextOffsetAtIndex",
+      "INote.GetTextPoint2",
+      "INote.GetTextPositionAtIndex",
+      "INote.GetTextRefPositionAtIndex",
+      "INote.IGetTextOffsetAtIndex",
+      "INote.IGetTextPoint2",
+      "INote.IGetTextPositionAtIndex",
+      "INote.PropertyLinkedText",
+      "INote.SetText",
+      "INote.SetTextJustification",
+      "INote.SetTextJustificationAtIndex",
+      "INote.SetTextOffsetAtIndex",
+      "INote.SetTextPoint",
+      "INote.TextRightToLeft"
+    ],
+    "keywords": [
+      "settextatindex",
+      "inote",
+      "note",
+      "text",
+      "index",
+      "int32",
+      "txt",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "INote.SetTextAtIndex",
+  "description": "Obsolete for documents created in SOLIDWORKS 2016 and later. Sets the text value at the specified index within the compound note.",
+  "signature": "System.Boolean SetTextAtIndex( \n   System.Int32\nIndex\n,\n   System.String\nTxt\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index position of the text within the compound note; an invalid index value causes false to be returned"
+    },
+    {
+      "name": "Txt",
+      "type": "System.String",
+      "description": "Text to replace the current note text"
+    }
+  ],
+  "returns": "True if the text change is made successfully, false if not",
+  "remarks": "Because a compound note can have multiple pieces of text, many of the compound note methods require you to specify the index value of the desired text. For example, the first piece of text added to the compound note using\nINote::AddText\nhas an index number of 1, the second text added has an index number of 2, and so on.\nAfter completing any note changes, you must perform an\nIModelDoc2::EditRebuild3\n.\nIf you use this method on a standard note (not a compound note), then the index value should be set to 1. Use\nINote::SetText\nfor modifying text in a standard note.",
+  "examples": [],
+  "related": [
+    "INote.AddText",
+    "INote.GetText",
+    "INote.GetTextAngleAtIndex",
+    "INote.GetTextAtIndex",
+    "INote.GetTextCount",
+    "INote.GetTextFontAtIndex",
+    "INote.GetTextHeightAtIndex",
+    "INote.GetTextInvertAtIndex",
+    "INote.GetTextJustification",
+    "INote.GetTextJustificationAtIndex",
+    "INote.GetTextLineSpacingAtIndex",
+    "INote.GetTextOffsetAtIndex",
+    "INote.GetTextPoint2",
+    "INote.GetTextPositionAtIndex",
+    "INote.GetTextRefPositionAtIndex",
+    "INote.IGetTextOffsetAtIndex",
+    "INote.IGetTextPoint2",
+    "INote.IGetTextPositionAtIndex",
+    "INote.PropertyLinkedText",
+    "INote.SetText",
+    "INote.SetTextJustification",
+    "INote.SetTextJustificationAtIndex",
+    "INote.SetTextOffsetAtIndex",
+    "INote.SetTextPoint",
+    "INote.TextRightToLeft"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IThreadFeatureData",
+    "member": "SetEndConditionReference",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Value",
+        "type": "System.Object",
+        "description": "Vertex , edge , plane , or planar surface (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IThreadFeatureData.GetEndConditionReference"
+    ],
+    "keywords": [
+      "setendconditionreference",
+      "ithreadfeaturedata",
+      "thread",
+      "feature",
+      "data",
+      "end",
+      "condition",
+      "reference",
+      "value",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IThreadFeatureData.SetEndConditionReference",
+  "description": "Sets the Up To Selection end condition reference of this thread feature.",
+  "signature": "void SetEndConditionReference( \n   System.Object\nValue\n)",
+  "parameters": [
+    {
+      "name": "Value",
+      "type": "System.Object",
+      "description": "Vertex , edge , plane , or planar surface (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is valid only if\nIThreadFeatureData::EndCondition\nis set to\nswEndConditions_e\n.swEndCondUpToSelection.\nUse\nIModelDocExtension::SelectByRay\nwith Mark = 1 to select the end condition reference.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "IThreadFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IThreadFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IThreadFeatureData.GetEndConditionReference"
+  ]
+}

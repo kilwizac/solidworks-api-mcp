@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "WhichText",
+        "type": "System.Int32",
+        "description": "Aspect of the text to get as defined in swDimensionTextParts_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetLowerText",
+      "IDisplayDimension.SetLowerText",
+      "IDisplayDimension.SetText"
+    ],
+    "keywords": [
+      "display",
+      "dimensions",
+      "see",
+      "also",
+      "idisplaydimension",
+      "text",
+      "gettext",
+      "dimension",
+      "which",
+      "int32",
+      "string",
+      "block",
+      "information",
+      "vba",
+      "values",
+      "drawing",
+      "whether",
+      "hole",
+      "callout"
+    ]
+  },
+  "title": "IDisplayDimension.GetText",
+  "description": "Gets the text above the dimension line in a display dimension.",
+  "signature": "System.String GetText( \n   System.Int32\nWhichText\n)",
+  "parameters": [
+    {
+      "name": "WhichText",
+      "type": "System.Int32",
+      "description": "Aspect of the text to get as defined in swDimensionTextParts_e (see Remarks )"
+    }
+  ],
+  "returns": "Text above the dimension line",
+  "remarks": "swDimensionTextParts_e.swDimensionTextAll is not a valid value for the WhichText parameter for this method.\nNOTE:\nThis method does not support\nhole callouts\n.",
+  "examples": [
+    {
+      "title": "Get Block Information (VBA)",
+      "href": "Get_Block_Information_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Dimension Values in Drawing (VBA)",
+      "href": "Get_Dimension_Values_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Whether Display Dimension is a Hole Callout (VBA)",
+      "href": "Get_Whether_Display_Dimension_is_a_Hole_Callout_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetLowerText",
+    "IDisplayDimension.SetLowerText",
+    "IDisplayDimension.SetText"
+  ]
+}

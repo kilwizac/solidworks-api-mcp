@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHealEdgesFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component in which the feature is to be modified (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "ihealedgesfeaturedata",
+      "heal",
+      "edges",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean",
+      "modify",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IHealEdgesFeatureData.AccessSelections",
+  "description": "Gains access to the selections that describe this heal edges feature.",
+  "signature": "System.Boolean AccessSelections( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component in which the feature is to be modified (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections are accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is Nothing or null\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefintion\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nIHealEdgesFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Modify Heal Edges Feature (VBA)",
+      "href": "Modify_Heal_Edges_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Heal Edges Feature Data (C#)",
+      "href": "Get_Heal_Edges_Feature_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Heal Edges Feature Data (VB.NET)",
+      "href": "Get_Heal_Edges_Feature_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Heal Edges Feature Data (VBA)",
+      "href": "Get_Heal_Edges_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

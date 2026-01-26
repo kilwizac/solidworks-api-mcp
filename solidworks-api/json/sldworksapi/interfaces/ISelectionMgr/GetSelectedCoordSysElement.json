@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "GetSelectedCoordSysElement",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index position within the current list of selected items, where Index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "getselectedcoordsyselement",
+      "iselectionmgr",
+      "selection",
+      "mgr",
+      "selected",
+      "coord",
+      "sys",
+      "element",
+      "index",
+      "int32",
+      "mark",
+      "object",
+      "icoordinatesystemelement"
+    ]
+  },
+  "title": "ISelectionMgr.GetSelectedCoordSysElement",
+  "description": "Gets the selected coordinate system element.",
+  "signature": "System.Object GetSelectedCoordSysElement( \n   System.Int32\nIndex\n,\n   System.Int32\nMark\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index position within the current list of selected items, where Index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+    }
+  ],
+  "returns": "ICoordinateSystemElement",
+  "remarks": "After calling this method, call\nISelectionMgr::IsCoordSysElementSelected\n.",
+  "examples": [
+    {
+      "title": "ICoordinateSystemElement",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICoordinateSystemElement",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

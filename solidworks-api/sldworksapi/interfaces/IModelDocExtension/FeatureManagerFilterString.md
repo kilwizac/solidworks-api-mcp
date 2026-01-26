@@ -1,0 +1,52 @@
+---
+type: property
+interface: IModelDocExtension
+member: FeatureManagerFilterString
+returns: System.String
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - features
+  - ui
+related: []
+keywords:
+  - filters
+  - featuremanager
+  - design
+  - tree
+  - see
+  - also
+  - ifeaturemanager
+  - ifeatmgrview
+  - interfaces
+  - filter
+  - featuremanagerfilterstring
+  - imodeldocextension
+  - model
+  - doc
+  - extension
+  - feature
+  - manager
+  - string
+readonly: null
+---
+
+# IModelDocExtension.FeatureManagerFilterString
+
+Gets or sets the string in the FeatureManager design tree filter.
+
+## Signature
+
+```csharp
+System.String FeatureManagerFilterString {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+String in FeatureManager design tree filter

@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface3",
+    "member": "GetNextFace",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FromFace1Disp",
+        "type": "System.Object",
+        "description": "Face on the original part body used in generating the neutral face"
+      },
+      {
+        "name": "FromFace2Disp",
+        "type": "System.Object",
+        "description": "Face on the original part body used in generating the neutral face"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Distance between the two parallel faces, FromFace1Disp and FromFace2Disp"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface3.GetFaceCount",
+      "IMidSurface3.IGetFirstFace",
+      "IMidSurface3.IGetNextFace"
+    ],
+    "keywords": [
+      "getnextface",
+      "imidsurface3",
+      "mid",
+      "surface3",
+      "next",
+      "face",
+      "face1",
+      "disp",
+      "object",
+      "face2",
+      "thickness",
+      "double"
+    ]
+  },
+  "title": "IMidSurface3.GetNextFace",
+  "description": "Gets the next neutral face in this midsurface feature.",
+  "signature": "System.Object GetNextFace( \n   out System.Object\nFromFace1Disp\n,\n   out System.Object\nFromFace2Disp\n,\n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "FromFace1Disp",
+      "type": "System.Object",
+      "description": "Face on the original part body used in generating the neutral face"
+    },
+    {
+      "name": "FromFace2Disp",
+      "type": "System.Object",
+      "description": "Face on the original part body used in generating the neutral face"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Distance between the two parallel faces, FromFace1Disp and FromFace2Disp"
+    }
+  ],
+  "returns": "Face in this midsurface feature",
+  "remarks": "Call\nIMidSurface3::GetFirstFace\nbefore calling this method to get the first neutral face.\nThis method returns the next neutral face in this midsurface feature along with three other items.\nThe first two return values are the two faces from the original part body that were used to generate this neutral midsurface face.\nThe next return value is the thickness (in meters) between the two parallel faces from the original part body.\nThe last return value is the neutral face in this midsurface feature.",
+  "examples": [],
+  "related": [
+    "IMidSurface3.GetFaceCount",
+    "IMidSurface3.IGetFirstFace",
+    "IMidSurface3.IGetNextFace"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "ILightSourcePropertyValues",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Light source ID"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddLightSource",
+      "IModelDoc2.AddLightSourceExtProperty",
+      "IModelDoc2.DeleteLightSource",
+      "IModelDoc2.GetLightSourceExtProperty",
+      "IModelDoc2.GetLightSourceIdFromName",
+      "IModelDoc2.GetLightSourceName",
+      "IModelDoc2.LightSourcePropertyValues",
+      "IModelDoc2.LightSourceUserName",
+      "IModelDoc2.ResetLightSourceExtProperty",
+      "IModelDoc2.SetLightSourceName",
+      "IModelDoc2.SetLightSourcePropertyValuesVB"
+    ],
+    "keywords": [
+      "lighting",
+      "source",
+      "properties",
+      "ilightsourcepropertyvalues",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "light",
+      "values",
+      "id",
+      "int32",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.ILightSourcePropertyValues",
+  "description": "Gets and sets the light source property values.",
+  "signature": "System.Double ILightSourcePropertyValues( \n   System.Int32\nID\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Light source ID"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of 19 doubles containing the light source properties (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported",
+  "remarks": "The light source ID ranges from 0 to\nn\n, where\nn\n= (the total number of light sources - 1). To get the total number of light sources, use\nIModelDoc2::GetLightSourceCount\n.\nThe return values for this property is the following array of 19 doubles:\n[\ntype, Intensity, Color[3], Position[3], Direction[3], coneAngle, falloff[3], Ambient, Specular, isDisabled, SpotExponent\n]\nwhere:\ntype\n=  an integer packed into a double that represents the light source type where valid types are taken from openGL definitions (LIGHT_EYE, LIGHT_AMBIENT, LIGHT_SPOT, LIGHT_POINT, LIGHT_DISTANT)\nIntensity\n= Light-source intensity (diffuseness) where values range from 0 to 1.\nColor[3] =\nLight-source color in the form of an array of 3 doubles (R, G, B) where values range from 0 to 1.\nPosition[3] =\nLight-source position for spot lights in the form of an array of 3 doubles (X, Y, Z) in model space.\nDirection[3] =\nLight-source direction in the form of an array of 3 doubles (i, j, k)\nconeAngle\n= Light-source cone half angle in degrees where valid values are from 0 to 90 and 180.\nfalloff[3] =\nLight-source falloff in the form of an array of 3 doubles (Kc, Kl, Kq). These values result in changes in light intensity as the distance between the light position and the vertex change.\nNOTE:\nThe falloff[3] values are not supported in SOLIDWORKS 2011 and later.\nThe result is driven by the following equation:\n[ 1 / (Kc + D*Kl + D*D*Kq ) ]\nwhere:\nD =\nthe distance.between the light's position and the vertex\nKc = constant attenuation\nKl = linear attenuation\nKq = quadratic attenuation\nAmbient =\nlight-source ambient Intensity\nSpecular =\nlight-source specular Intensity\nisDisabled\n= an integer packed into a double. True means that the light is disabled and false means the light is not disabled.\nSpotExponent =\nspot exponent\nNOTE:\nThe SpotExponent value is not supported in SOLIDWORKS 2011 and later.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AddLightSource",
+    "IModelDoc2.AddLightSourceExtProperty",
+    "IModelDoc2.DeleteLightSource",
+    "IModelDoc2.GetLightSourceExtProperty",
+    "IModelDoc2.GetLightSourceIdFromName",
+    "IModelDoc2.GetLightSourceName",
+    "IModelDoc2.LightSourcePropertyValues",
+    "IModelDoc2.LightSourceUserName",
+    "IModelDoc2.ResetLightSourceExtProperty",
+    "IModelDoc2.SetLightSourceName",
+    "IModelDoc2.SetLightSourcePropertyValuesVB"
+  ]
+}

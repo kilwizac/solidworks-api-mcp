@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "GetProperties",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.GetSize",
+      "ISheet.GetTemplateName",
+      "ISheet.IGetProperties",
+      "ISheet.IPageSetup",
+      "ISheet.PageSetup",
+      "ISheet.SetProperties",
+      "ISheet.SetScale",
+      "ISheet.SetSize",
+      "ISheet.SetTemplateName"
+    ],
+    "keywords": [
+      "getproperties",
+      "isheet",
+      "sheet",
+      "properties",
+      "object",
+      "number",
+      "lines",
+      "flat",
+      "pattern",
+      "drawing",
+      "view",
+      "boundary",
+      "box",
+      "sketch",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISheet.GetProperties",
+  "description": "Obsolete. Superseded by ISheet::GetProperties2.",
+  "signature": "System.Object GetProperties()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of seven doubles:\n[\npaperSize, templateIn, scale1, scale2, firstAngle, width, height, sameCustomPrp\n]\nwhere:\npaperSize\n= Paper size; this value is a long or integer packed into a double and is represented by the\nswDwgPaperSizes_e\nenumeration\ntemplateIn\n= Template index; this value is a long or integer packed into a double and is represented by the\nswDwgTemplates_e\nenumeration\nscale1\n= Scale numerator\nscale2\n= Scale denominator\nfirstAngle\n= Value is a boolean packed into a double and returns true if the sheet is using first angle projection and false if not\nwidth\n= Paper width\nheight\n= Paper height\nNOTE\n:\nTo ensure a correct return value, open the document as read-write or read-only. Insufficient information is available if you open the document as view-only.\nYou can also use\nISheet::GetSize\nto get the size of the sheet and the standard sheet size.",
+  "examples": [
+    {
+      "title": "Get the Number of Lines in Flat-pattern Drawing View's Boundary-box Sketch (C#)",
+      "href": "Get_Number_of_Lines_Flat-pattern_Drawing_View_Boundary-box_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get the Number of Lines in Flat-pattern Drawing View's Boundary-box Sketch (VB.NET)",
+      "href": "Get_Number_of_Lines_Flat-pattern_Drawing_View_Boundary-box_Sketch_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get the Number of Lines in Flat-pattern Drawing View's Boundary-box Sketch (VBA)",
+      "href": "Get_Number_of_Lines_Flat-pattern_Drawing_View_Boundary-box_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheet.GetSize",
+    "ISheet.GetTemplateName",
+    "ISheet.IGetProperties",
+    "ISheet.IPageSetup",
+    "ISheet.PageSetup",
+    "ISheet.SetProperties",
+    "ISheet.SetScale",
+    "ISheet.SetSize",
+    "ISheet.SetTemplateName"
+  ]
+}

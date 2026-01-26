@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentBeadFeatureData",
+    "member": "ISetFaces",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Side",
+        "type": "System.Int32",
+        "description": "Side as defined in swWeldBeadSide_e"
+      },
+      {
+        "name": "Count1",
+        "type": "System.Int32",
+        "description": "Number of faces in the first set of faces"
+      },
+      {
+        "name": "FaceSet1",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of the first set of faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "Count2",
+        "type": "System.Int32",
+        "description": "Number of faces in the second set of faces"
+      },
+      {
+        "name": "FaceSet2",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of the second set of faces VBA, VB.NET, C#, and C++/CLI: Not supported"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IWeldmentBeadFeatureData.GetFaces",
+      "IWeldmentBeadFeatureData.GetFacesCount",
+      "IWeldmentBeadFeatureData.IGetFaces",
+      "IWeldmentBeadFeatureData.SetFaces"
+    ],
+    "keywords": [
+      "isetfaces",
+      "iweldmentbeadfeaturedata",
+      "weldment",
+      "bead",
+      "feature",
+      "data",
+      "faces",
+      "side",
+      "int32",
+      "count1",
+      "face",
+      "set1",
+      "face2",
+      "count2",
+      "set2",
+      "boolean"
+    ]
+  },
+  "title": "IWeldmentBeadFeatureData.ISetFaces",
+  "description": "Sets the faces to which to apply the weld bead.",
+  "signature": "System.Boolean ISetFaces( \n   System.Int32\nSide\n,\n   System.Int32\nCount1\n,\n   ref Face2\nFaceSet1\n,\n   System.Int32\nCount2\n,\n   ref Face2\nFaceSet2\n)",
+  "parameters": [
+    {
+      "name": "Side",
+      "type": "System.Int32",
+      "description": "Side as defined in swWeldBeadSide_e"
+    },
+    {
+      "name": "Count1",
+      "type": "System.Int32",
+      "description": "Number of faces in the first set of faces"
+    },
+    {
+      "name": "FaceSet1",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of the first set of faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "Count2",
+      "type": "System.Int32",
+      "description": "Number of faces in the second set of faces"
+    },
+    {
+      "name": "FaceSet2",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of the second set of faces VBA, VB.NET, C#, and C++/CLI: Not supported"
+    }
+  ],
+  "returns": "True if the weld bead is applied to the specified faces, false if not",
+  "remarks": "Although you must select planar faces for the face sets, fillet weld beads can follow non-planar, tangent contours when you set\nIWeldmentBeadFeatureData::TangentPropagation\nto TRUE.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IWeldmentBeadFeatureData.GetFaces",
+    "IWeldmentBeadFeatureData.GetFacesCount",
+    "IWeldmentBeadFeatureData.IGetFaces",
+    "IWeldmentBeadFeatureData.SetFaces"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFlattenSurface",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "AccuracyFactor",
+        "type": "System.Int32",
+        "description": "10 >= Accuracy of flattened triangle mesh >= 1; 1 is highest accuracy"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISurfaceFlattenFeatureData"
+    ],
+    "keywords": [
+      "insertflattensurface",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "flatten",
+      "surface",
+      "accuracy",
+      "factor",
+      "int32"
+    ]
+  },
+  "title": "IFeatureManager.InsertFlattenSurface",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertFlattenSurface2.",
+  "signature": "Feature InsertFlattenSurface( \n   System.Int32\nAccuracyFactor\n)",
+  "parameters": [
+    {
+      "name": "AccuracyFactor",
+      "type": "System.Int32",
+      "description": "10 >= Accuracy of flattened triangle mesh >= 1; 1 is highest accuracy"
+    }
+  ],
+  "returns": "Surface-flatten feature",
+  "remarks": "Before calling this method, select...\nBy calling\nIModelDocExtension::SelectByID2\nwith Mark...\nFaces or surfaces to flatten\n1\nAnchor point from which to flatten\n16\nEdges to guide the shape and length of the flattened surface\n2",
+  "examples": [],
+  "related": [
+    "ISurfaceFlattenFeatureData"
+  ]
+}

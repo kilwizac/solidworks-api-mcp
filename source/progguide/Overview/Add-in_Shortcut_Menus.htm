@@ -1,0 +1,138 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Add-in Shortcut Menus</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Add-ins,shortcut menus">
+<meta name=MS-HKWD content="Add-in shortcut menus">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=459>
+<meta name=layout-width content=955>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Add-in Shortcut Menus</h1>
+
+<p>To create and display a shortcut (pop-up) menu in a SOLIDWORKS add-in, create 
+a SOLIDWORKS C++, VB.NET, or C# add-in project in Visual Studio and do the 
+following:</p>
+<p>&nbsp;</p>
+<ol style="list-style: decimal;"
+	type=1>	<li class=kadov-p>
+	<p style="line-height: 150%">In SwAddin.AddCommandManager(): 
+	<ol type="a">
+		<li>
+		<p style="line-height: 150%">Add a menu and menu item to the SOLIDWORKS main menu by calling 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~AddMenu.html">ISldWorks::AddMenu</a> 
+		and 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~AddMenuItem4.html">ISldWorks::AddMenuItem4</a> (C++ add-ins only). 
+		When selected, the menu item will launch the shortcut menu.</li>
+		<li>
+		<p style="line-height: 150%">Add a third-party 
+icon to a context-sensitive menu by calling 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFrame~AddMenuPopupIcon.html">IFrame::AddMenuPopupIcon</a> (C++ 
+		add-ins) or 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFrame~AddMenuPopupIcon2.html">IFrame::AddMenuPopupIcon2</a> (VB.NET 
+		or C# add-ins). 
+		When clicked, the icon will launch the shortcut menu.</li>
+		<li>
+		<p style="line-height: 150%">Create and register your shortcut menu by 
+calling <a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RegisterThirdPartyPopupMenu.html">ISldWorks::RegisterThirdPartyPopupMenu</a>.</li>
+		<li>
+		<p style="line-height: 150%">Call 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~AddItemToThirdPartyPopupMenu.html">ISldWorks::AddItemToThirdPartyPopupMenu</a> (C++ 
+		add-ins) or
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~AddItemToThirdPartyPopupMenu2.html">ISldWorks::AddItemToThirdPartyPopupMenu2</a> 
+		(VB.NET or C# add-ins) one or more times to create one or more menu items in the 
+		shortcut menu. Uniquely specify the item argument for each menu item, 
+		menu break, and separator bar in the menu. Do not specify the item 
+		argument for menu bar icons.</li>
+	</ol>
+	</li>
+	<li class=kadov-p>
+	<p style="line-height: 150%">In the menu and toolbar callback region of SwAddin:<ol type="a">
+		<li>
+		<p style="line-height: 150%">Implement the callback and enable functions 
+		for each shortcut menu item and each menu bar icon that was created in 
+		step 1d. See <a href="Add-in_Callbacks.htm">Add-in Callback and Enable 
+		Methods</a>.</li>
+		<li>
+		<p style="line-height: 150%">Implement the callback and enable functions for the menu 
+		item and third-party icon that were created in steps 1a and 1b. From the callback functions 
+		of the icon and menu item, call 
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ShowThirdPartyPopupMenu.html">ISldWorks::ShowThirdPartyPopupMenu</a> to display the shortcut menu at a specific 
+location in the SOLIDWORKS graphics area. See <a href="Add-in_Callbacks.htm">
+		Add-in Callback and Enable Methods</a>.</li>
+	</ol>
+	</li>
+	<li class=kadov-p>
+	<p style="line-height: 150%">Remove menu items from the shortcut menu at runtime by calling 
+	<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RemoveItemFromThirdPartyPopupMenu.html">ISldWorks::RemoveItemFromThirdPartyPopupMenu</a> from an event 
+	handler of the add-in.</li>
+	<li class=kadov-p>
+	<p style="line-height: 150%">In SwAddin.DisconnectFromSW():<ol type="a">
+		<li>
+		<p style="line-height: 150%">Call
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RemoveMenu.html">
+		ISldWorks::RemoveMenu</a> to remove the menu from the SOLIDWORKS main menu bar, if added in step 
+		1a (C++ add-ins only).</li>
+		<li>
+		<p style="line-height: 150%">Call
+		<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFrame~RemoveMenuPopupIcon.html">
+		IFrame::RemoveMenuPopupIcon</a> to remove the third-party icon from the context-sensitive menu, if 
+		added in step 1b.</li>
+	</ol>
+	</li>
+</ol>
+
+<p>To learn more about add-ins and their menu items and toolbars:</p>
+<ul>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Icons.htm">Add-in Icons</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Toolbars.htm">Add-in Toolbars</a></p>
+	</li>
+	<li class=kadov-p>
+	<p style="line-height: 150%">
+	<a href="Using_SwAddin_to_Create_a_SolidWorks_Addin.htm">Using SwAddin to Create a 
+	SOLIDWORKS Add-in</a></p>
+	</li>
+	<li class=kadov-p>
+	<p style="line-height: 150%">
+	<a href="SolidWorks_API_Add-Ins,_Project_Templates,_and_Wizards.htm">
+	SOLIDWORKS API Add-in Templates and Wizards</a></p>
+	</li>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAdvancedSaveAsOptions",
+    "member": "SaveAsPreviousVersion",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io"
+    ],
+    "related": [],
+    "keywords": [
+      "saveaspreviousversion",
+      "iadvancedsaveasoptions",
+      "advanced",
+      "save",
+      "options",
+      "previous",
+      "version",
+      "int32"
+    ],
+    "readonly": false
+  },
+  "title": "IAdvancedSaveAsOptions.SaveAsPreviousVersion",
+  "description": "Sets the SOLIDWORKS version to save to.",
+  "signature": "System.Int32 SaveAsPreviousVersion {set;}",
+  "parameters": [],
+  "returns": "SOLIDWORKS version to save to (see Remarks )",
+  "remarks": "Examine the Remarks of\nISldWorks::VersionHistory\nto find the SOLIDWORKS version to save to.\nFor this property to save a model as a previous version, you must also use\nIAdvancedSaveAsOptions::ModifyItemsNameAndPath\nto change the name/path of all of the model's references. You must provide a different name/path than the current name/path, otherwise the SaveAs operation may fail because overwriting the same file is not supported.",
+  "examples": [
+    {
+      "title": "IAdvancedSaveAsOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedSaveAsOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

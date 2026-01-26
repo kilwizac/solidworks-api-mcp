@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RunMacro2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FilePathName",
+        "type": "System.String",
+        "description": "Path and filename of the project file containing the macro"
+      },
+      {
+        "name": "ModuleName",
+        "type": "System.String",
+        "description": "Name of the module in the macro"
+      },
+      {
+        "name": "ProcedureName",
+        "type": "System.String",
+        "description": "Name of the procedure in the module"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option as defined swRunMacroOption_e (supports VBA macros only)"
+      },
+      {
+        "name": "Error",
+        "type": "System.Int32",
+        "description": "Error as defined by swRunMacroError_e (supports VBA macros only)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetCurrentMacroPathFolder",
+      "ISldWorks.GetCurrentMacroPathName",
+      "ISldWorks.GetMacroMethods",
+      "ISldWorks.RecordLine",
+      "ISldWorks.RecordLineCSharp",
+      "ISldWorks.RecordLineVBnet",
+      "ISldWorks.RunAttachedMacro"
+    ],
+    "keywords": [
+      "macros",
+      "run",
+      "runmacro2",
+      "isldworks",
+      "sld",
+      "works",
+      "macro2",
+      "file",
+      "path",
+      "name",
+      "string",
+      "module",
+      "procedure",
+      "options",
+      "int32",
+      "error",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.RunMacro2",
+  "description": "Runs a macro from a project file.",
+  "signature": "System.Boolean RunMacro2( \n   System.String\nFilePathName\n,\n   System.String\nModuleName\n,\n   System.String\nProcedureName\n,\n   System.Int32\nOptions\n,\n   out System.Int32\nError\n)",
+  "parameters": [
+    {
+      "name": "FilePathName",
+      "type": "System.String",
+      "description": "Path and filename of the project file containing the macro"
+    },
+    {
+      "name": "ModuleName",
+      "type": "System.String",
+      "description": "Name of the module in the macro"
+    },
+    {
+      "name": "ProcedureName",
+      "type": "System.String",
+      "description": "Name of the procedure in the module"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option as defined swRunMacroOption_e (supports VBA macros only)"
+    },
+    {
+      "name": "Error",
+      "type": "System.Int32",
+      "description": "Error as defined by swRunMacroError_e (supports VBA macros only)"
+    }
+  ],
+  "returns": "True if macro runs, false if not",
+  "remarks": "If you specify swRunMacroUnloadAfterRun for Options, then the macro is unloaded from the VBA IDE after running.\nUse the path and filename of the compiled DLL for the FilePathName argument for a .NET macro. By default, the procedure is called\nMain\nin a C# macro. Because C# is case sensitive, you must specify\nMain\nfor ProcedureName in this method.. See\nRunning a C# DLL from VBA\nin the\nExample\nsection.\nRunning a macro from an add-in application, standalone .\nexe\n, or VBA macro is supported. Running a .NET macro from a .NET macro is also supported, but only if both .NET macros were created using the same VSTA version.\nSee\nSOLIDWORKS Macros\nfor details.",
+  "examples": [],
+  "related": [
+    "ISldWorks.GetCurrentMacroPathFolder",
+    "ISldWorks.GetCurrentMacroPathName",
+    "ISldWorks.GetMacroMethods",
+    "ISldWorks.RecordLine",
+    "ISldWorks.RecordLineCSharp",
+    "ISldWorks.RecordLineVBnet",
+    "ISldWorks.RunAttachedMacro"
+  ]
+}

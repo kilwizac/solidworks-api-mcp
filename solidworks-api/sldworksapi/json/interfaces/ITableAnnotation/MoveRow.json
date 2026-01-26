@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "MoveRow",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Source",
+        "type": "System.Int32",
+        "description": "Index of row to move"
+      },
+      {
+        "name": "Where",
+        "type": "System.Int32",
+        "description": "Position where to move Source relative to Destination as defined by swTableItemInsertPosition_e"
+      },
+      {
+        "name": "Destination",
+        "type": "System.Int32",
+        "description": "Index of row where to move Source, which is either 1 greater than the Source or 1 less than Source"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.DeleteRow",
+      "ITableAnnotation.GetLockRowHeight",
+      "ITableAnnotation.GetRowHeight",
+      "ITableAnnotation.GetRowVerticalGap",
+      "ITableAnnotation.InsertRow",
+      "ITableAnnotation.RowCount",
+      "ITableAnnotation.RowHidden",
+      "ITableAnnotation.SetLockRowHeight",
+      "ITableAnnotation.SetRowHeight",
+      "ITableAnnotation.SetRowVerticalGap",
+      "ITableAnnotation.TotalRowCount"
+    ],
+    "keywords": [
+      "table",
+      "rows",
+      "moverow",
+      "itableannotation",
+      "annotation",
+      "move",
+      "row",
+      "source",
+      "int32",
+      "where",
+      "destination",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.MoveRow",
+  "description": "Moves a row in this table either up one row or down one row.",
+  "signature": "System.Boolean MoveRow( \n   System.Int32\nSource\n,\n   System.Int32\nWhere\n,\n   System.Int32\nDestination\n)",
+  "parameters": [
+    {
+      "name": "Source",
+      "type": "System.Int32",
+      "description": "Index of row to move"
+    },
+    {
+      "name": "Where",
+      "type": "System.Int32",
+      "description": "Position where to move Source relative to Destination as defined by swTableItemInsertPosition_e"
+    },
+    {
+      "name": "Destination",
+      "type": "System.Int32",
+      "description": "Index of row where to move Source, which is either 1 greater than the Source or 1 less than Source"
+    }
+  ],
+  "returns": "True if a row is moved, false if not",
+  "remarks": "The index for both rows and columns is 0-based.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.DeleteRow",
+    "ITableAnnotation.GetLockRowHeight",
+    "ITableAnnotation.GetRowHeight",
+    "ITableAnnotation.GetRowVerticalGap",
+    "ITableAnnotation.InsertRow",
+    "ITableAnnotation.RowCount",
+    "ITableAnnotation.RowHidden",
+    "ITableAnnotation.SetLockRowHeight",
+    "ITableAnnotation.SetRowHeight",
+    "ITableAnnotation.SetRowVerticalGap",
+    "ITableAnnotation.TotalRowCount"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IGetTrackingIDs",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      },
+      {
+        "name": "TrackingIDs",
+        "type": "System.Int32",
+        "description": "Number of tracking IDs"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetTrackingIDs",
+      "IBody2.RemoveTrackingID",
+      "IBody2.SetTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "tracking",
+      "ids",
+      "igettrackingids",
+      "body2",
+      "ds",
+      "cookie",
+      "int32",
+      "count"
+    ]
+  },
+  "title": "IBody2.IGetTrackingIDs",
+  "description": "Gets the tracking IDs assigned to this body.",
+  "signature": "System.Int32 IGetTrackingIDs( \n   System.Int32\nTrackingCookie\n,\n   System.Int32\nCount\n,\n   out System.Int32\nTrackingIDs\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    },
+    {
+      "name": "TrackingIDs",
+      "type": "System.Int32",
+      "description": "Number of tracking IDs"
+    }
+  ],
+  "returns": "Status as defined by swTrackingIDError_e",
+  "remarks": "Before calling this method, call\nIBody2::GetTrackingIDsCount\nto determine Count.\nSee\nTracking IDs\nfor more information.",
+  "examples": [],
+  "related": [
+    "IBody2.GetTrackingIDs",
+    "IBody2.RemoveTrackingID",
+    "IBody2.SetTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

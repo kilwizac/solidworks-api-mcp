@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "GetTangentLength",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetTangentApplyToAll",
+      "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.GetTangentInfluence",
+      "IBoundaryBossFeatureData.MergeTangentFaces",
+      "IBoundaryBossFeatureData.SetGuideTangencyType",
+      "IBoundaryBossFeatureData.SetTangentApplyToAll",
+      "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.SetTangentInfluence",
+      "IBoundaryBossFeatureData.SetTangentLength"
+    ],
+    "keywords": [
+      "gettangentlength",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "tangent",
+      "length",
+      "direction",
+      "int32",
+      "guide",
+      "index",
+      "double"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.GetTangentLength",
+  "description": "Gets the tangent length, which controls the amount of influence for the specified curve in the specified direction in this boundary feature.",
+  "signature": "System.Double GetTangentLength( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    }
+  ],
+  "returns": "Tangent length",
+  "remarks": "This method is not available when the type of tangency is\nswBoundaryBossTangencyType_e\n.swBoundaryBossTangency_None. Call\nIBoundaryBossFeatureData::GetGuideTangencyType\nto determine the type of tangency.\nTo get a valid range of values for GuideIndex, call\nIBoundaryBossFeatureData::GetCurvesCount\n.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetTangentApplyToAll",
+    "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.GetTangentInfluence",
+    "IBoundaryBossFeatureData.MergeTangentFaces",
+    "IBoundaryBossFeatureData.SetGuideTangencyType",
+    "IBoundaryBossFeatureData.SetTangentApplyToAll",
+    "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.SetTangentInfluence",
+    "IBoundaryBossFeatureData.SetTangentLength"
+  ]
+}

@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ICallout
+inherits: null
+description: Allows add-in applications to manipulate single and multi-row callouts.
+member_count: 20
+docset: sldworksapi
+categories:
+  - ui
+common_members:
+  - Display
+  - EnablePushPin
+  - FontSize
+  - GetLeader
+  - GetTargetPoint
+  - IgnoreValue
+  - Label2
+  - MultipleLeaders
+---
+
+# ICallout
+
+Allows add-in applications to manipulate single and multi-row callouts.
+
+## Common Members
+
+- `Display`
+- `EnablePushPin`
+- `FontSize`
+- `GetLeader`
+- `GetTargetPoint`
+- `IgnoreValue`
+- `Label2`
+- `MultipleLeaders`

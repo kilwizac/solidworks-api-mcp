@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetAlternatePrecision2",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetPrimaryPrecision2",
+      "IDisplayDimension.GetPrimaryTolPrecision2"
+    ],
+    "keywords": [
+      "getalternateprecision2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "alternate",
+      "precision2",
+      "int32",
+      "precisions",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetAlternatePrecision2",
+  "description": "Gets the displayed precision for the dual portion of this dimension.",
+  "signature": "System.Int32 GetAlternatePrecision2()",
+  "parameters": [],
+  "returns": "Precision setting as defined in swDimensionPrecisionSettings_e",
+  "remarks": "If the return value equals swPrecisionFollowsDocumentSetting, then the precision used is the document default for dual dimension values. You can retrieve the value using\nIModelDocExtension::GetUserPreferenceInteger\nwith swDetailingAltLinearDimPrecision. Otherwise, the return value is the precision in the dimensions dual units.\nUse\nIDisplayDimension::SetPrecision2\nto set precision values on this display dimension.",
+  "examples": [
+    {
+      "title": "Get Precisions for a Dimension (VBA)",
+      "href": "Get_Precisions_for_a_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetPrimaryPrecision2",
+    "IDisplayDimension.GetPrimaryTolPrecision2"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMateReference",
+    "member": "ReferenceType",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Mate reference entity as defined by swMateReferenceIndex_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "referencetype",
+      "imatereference",
+      "mate",
+      "reference",
+      "type",
+      "index",
+      "int32",
+      "properties",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IMateReference.ReferenceType",
+  "description": "Gets the mate type for the specified entity in this mate reference.",
+  "signature": "System.Int32 ReferenceType( \n   System.Int32\nIndex\n) {get;}",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Mate reference entity as defined by swMateReferenceIndex_e"
+    }
+  ],
+  "returns": "Mate reference type as defined by swMateReferenceType_e",
+  "remarks": "Before calling this property, call\nIMateReference::ReferenceEntityCount\nto determine the number of mate reference entities for the mate reference.\nThis method returns -1 if there is no reference entity. See\nIMateReference::ReferenceEntity\nfor details.",
+  "examples": [
+    {
+      "title": "Get Mate Reference Properties (VBA)",
+      "href": "Get_Mate_Reference_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mate Reference Properties (VB.NET)",
+      "href": "Get_Mate_Reference_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mate Reference Properties (C#)",
+      "href": "Get_Mate_Reference_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

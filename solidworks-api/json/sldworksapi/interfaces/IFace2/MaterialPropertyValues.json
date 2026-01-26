@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFace2",
+    "member": "MaterialPropertyValues",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IMaterialPropertyValues2",
+      "IBody2.MaterialPropertyValues2",
+      "IComponent2.IMaterialPropertyValues",
+      "IComponent2.MaterialPropertyValues",
+      "IFace2.HasMaterialPropertyValues",
+      "IFace2.IMaterialPropertyValues",
+      "IFace2.IRemoveMaterialProperty2",
+      "IFace2.ISetMaterialPropertyValues2",
+      "IFace2.RemoveMaterialProperty2",
+      "IFace2.SetMaterialPropertyValues2",
+      "IModelDoc2.IMaterialPropertyValues",
+      "IModelDoc2.MaterialPropertyValues",
+      "IPartDoc.IMaterialPropertyValues",
+      "IPartDoc.MaterialPropertyValues"
+    ],
+    "keywords": [
+      "material",
+      "properties",
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "faces",
+      "color",
+      "materialpropertyvalues",
+      "face2",
+      "values",
+      "object",
+      "associated",
+      "feature",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IFace2.MaterialPropertyValues",
+  "description": "Gets or sets the material properties for the selected face in the active configuration.",
+  "signature": "System.Object MaterialPropertyValues {get; set;}",
+  "parameters": [],
+  "returns": "Array of doubles describing the material values on this face (see Remarks )",
+  "remarks": "The material values include the face color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency and emission. All values can be from 0 to 1.\nThis method returns a NULL VARIANT (or an S_false HRESULT for COM implementations) if this face has not been explicitly modified from the material property values of the body. If you create a body and change the body color to red, then\nIFace2::IGetMaterialPropertyValues2\nand\nIFace2::GetMaterialPropertyValues2\nreturn a NULL array because you did not specifically change the values of the face.\nThe format of the parameters or return values is an array of doubles as follows:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after setting this property.\nTo reset the face to use the default part material properties, use\nIModelDoc2::SelectedFaceProperties\n.\nThis method does not support faces obtained from reference surface bodies.",
+  "examples": [
+    {
+      "title": "Get Faces Associated with Feature (C#)",
+      "href": "Get_Faces_Associated_with_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VB.NET)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IMaterialPropertyValues2",
+    "IBody2.MaterialPropertyValues2",
+    "IComponent2.IMaterialPropertyValues",
+    "IComponent2.MaterialPropertyValues",
+    "IFace2.HasMaterialPropertyValues",
+    "IFace2.IMaterialPropertyValues",
+    "IFace2.IRemoveMaterialProperty2",
+    "IFace2.ISetMaterialPropertyValues2",
+    "IFace2.RemoveMaterialProperty2",
+    "IFace2.SetMaterialPropertyValues2",
+    "IModelDoc2.IMaterialPropertyValues",
+    "IModelDoc2.MaterialPropertyValues",
+    "IPartDoc.IMaterialPropertyValues",
+    "IPartDoc.MaterialPropertyValues"
+  ]
+}

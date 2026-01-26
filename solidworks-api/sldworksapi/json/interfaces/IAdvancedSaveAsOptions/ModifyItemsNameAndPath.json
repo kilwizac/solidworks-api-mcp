@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAdvancedSaveAsOptions",
+    "member": "ModifyItemsNameAndPath",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "IdsList",
+        "type": "System.Object",
+        "description": "Array of reference component IDs (see Remarks )"
+      },
+      {
+        "name": "NamesList",
+        "type": "System.Object",
+        "description": "Array of new reference component names"
+      },
+      {
+        "name": "PathsList",
+        "type": "System.Object",
+        "description": "Array of new reference component paths"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io"
+    ],
+    "related": [
+      "IAdvancedSaveAsOptions.SaveAsPreviousVersion"
+    ],
+    "keywords": [
+      "modifyitemsnameandpath",
+      "iadvancedsaveasoptions",
+      "advanced",
+      "save",
+      "options",
+      "modify",
+      "items",
+      "name",
+      "path",
+      "ids",
+      "list",
+      "object",
+      "names",
+      "paths",
+      "int32"
+    ]
+  },
+  "title": "IAdvancedSaveAsOptions.ModifyItemsNameAndPath",
+  "description": "Modifies the specified reference components with the specified names and paths.",
+  "signature": "System.Int32 ModifyItemsNameAndPath( \n   System.Object\nIdsList\n,\n   System.Object\nNamesList\n,\n   System.Object\nPathsList\n)",
+  "parameters": [
+    {
+      "name": "IdsList",
+      "type": "System.Object",
+      "description": "Array of reference component IDs (see Remarks )"
+    },
+    {
+      "name": "NamesList",
+      "type": "System.Object",
+      "description": "Array of new reference component names"
+    },
+    {
+      "name": "PathsList",
+      "type": "System.Object",
+      "description": "Array of new reference component paths"
+    }
+  ],
+  "returns": "Return code as defined in swSaveItemsPathError_e",
+  "remarks": "Before calling this method call:\nIAdvancedSaveAsOptions::SetPrefixSuffixToAll\nIAdvancedSaveAsOptions::GetItemsNameAndPath\nto populate IDsList.\nIdsList, NamesList, and PathsList are the same array size and map one to one. Use Nothing or null to specify no change to an individual reference in each array.\nIf you use this method to change the name or path of the top-level document, then it overrides the name or path passed in the Name parameter of\nIModelDocExtension::SaveAs3\n.",
+  "examples": [
+    {
+      "title": "IAdvancedSaveAsOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedSaveAsOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAdvancedSaveAsOptions.SaveAsPreviousVersion"
+  ]
+}

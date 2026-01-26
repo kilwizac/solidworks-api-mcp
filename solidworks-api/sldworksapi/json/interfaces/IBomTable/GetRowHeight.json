@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "GetRowHeight",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Row number; this is a 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IBomTable.GetTotalRowCount"
+    ],
+    "keywords": [
+      "getrowheight",
+      "ibomtable",
+      "bom",
+      "table",
+      "row",
+      "height",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IBomTable.GetRowHeight",
+  "description": "Gets the specified row height in meters.",
+  "signature": "System.Double GetRowHeight( \n   System.Int32\nRow\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Row number; this is a 0-based index"
+    }
+  ],
+  "returns": "Height of the specified row in meters",
+  "remarks": "Before you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": [
+    "IBomTable.GetTotalRowCount"
+  ]
+}

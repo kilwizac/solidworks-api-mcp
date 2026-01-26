@@ -1,0 +1,183 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureLocalCurveDrivenPattern",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FlipDir1",
+        "type": "System.Boolean",
+        "description": "True flips the direction of the first direction, false does not"
+      },
+      {
+        "name": "Num1",
+        "type": "System.Int32",
+        "description": "Number of instances in the first direction, including the original instance"
+      },
+      {
+        "name": "EqualSpacing1",
+        "type": "System.Boolean",
+        "description": "True uses equal spacing between instances in the first direction, false does not"
+      },
+      {
+        "name": "Spacing1",
+        "type": "System.Double",
+        "description": "Distance between pattern instances along the curve in the first direction when EqualSpacing1 is set to false"
+      },
+      {
+        "name": "ReferencePoint",
+        "type": "System.Int32",
+        "description": "Type of selected reference point as defined in swLocalCurvePatternReferencePoint_e (see Remarks )"
+      },
+      {
+        "name": "CurveMethod",
+        "type": "System.Int32",
+        "description": "Curve method as defined in swLocalCurvePatternCurveMethod_e"
+      },
+      {
+        "name": "AlignMethod",
+        "type": "System.Int32",
+        "description": "Alignment method as defined in swLocalCurvePatternAlignment_e"
+      },
+      {
+        "name": "Direction2",
+        "type": "System.Boolean",
+        "description": "True creates the pattern in the second direction, false does not"
+      },
+      {
+        "name": "FlipDir2",
+        "type": "System.Boolean",
+        "description": "True flips the direction of the second direction, false does not"
+      },
+      {
+        "name": "Num2",
+        "type": "System.Int32",
+        "description": "Number of instances in the second direction"
+      },
+      {
+        "name": "EqualSpacing2",
+        "type": "System.Boolean",
+        "description": "True uses equal spacing between instances in the second direction, false does not"
+      },
+      {
+        "name": "Spacing2",
+        "type": "System.Double",
+        "description": "Distance between pattern instances along the curve in the second direction when EqualSpacing2 is set to false"
+      },
+      {
+        "name": "PatternSeedOnly",
+        "type": "System.Boolean",
+        "description": "True replicates only the seed pattern, which was created under Direction 1, under Direction 2; false replicates all instances of the curve pattern, which was created under Direction 1, under Direction 2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featurelocalcurvedrivenpattern",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "local",
+      "curve",
+      "driven",
+      "pattern",
+      "flip",
+      "dir1",
+      "boolean",
+      "num1",
+      "int32",
+      "equal",
+      "spacing1",
+      "double",
+      "reference",
+      "point",
+      "align",
+      "direction2",
+      "dir2",
+      "num2",
+      "spacing2",
+      "seed",
+      "only"
+    ]
+  },
+  "title": "IFeatureManager.FeatureLocalCurveDrivenPattern",
+  "description": "Obsolete. See IFeatureManager::CreateFeature and the Remarks in ILocalCurvePatternFeatureData.",
+  "signature": "Feature FeatureLocalCurveDrivenPattern( \n   System.Boolean\nFlipDir1\n,\n   System.Int32\nNum1\n,\n   System.Boolean\nEqualSpacing1\n,\n   System.Double\nSpacing1\n,\n   System.Int32\nReferencePoint\n,\n   System.Int32\nCurveMethod\n,\n   System.Int32\nAlignMethod\n,\n   System.Boolean\nDirection2\n,\n   System.Boolean\nFlipDir2\n,\n   System.Int32\nNum2\n,\n   System.Boolean\nEqualSpacing2\n,\n   System.Double\nSpacing2\n,\n   System.Boolean\nPatternSeedOnly\n)",
+  "parameters": [
+    {
+      "name": "FlipDir1",
+      "type": "System.Boolean",
+      "description": "True flips the direction of the first direction, false does not"
+    },
+    {
+      "name": "Num1",
+      "type": "System.Int32",
+      "description": "Number of instances in the first direction, including the original instance"
+    },
+    {
+      "name": "EqualSpacing1",
+      "type": "System.Boolean",
+      "description": "True uses equal spacing between instances in the first direction, false does not"
+    },
+    {
+      "name": "Spacing1",
+      "type": "System.Double",
+      "description": "Distance between pattern instances along the curve in the first direction when EqualSpacing1 is set to false"
+    },
+    {
+      "name": "ReferencePoint",
+      "type": "System.Int32",
+      "description": "Type of selected reference point as defined in swLocalCurvePatternReferencePoint_e (see Remarks )"
+    },
+    {
+      "name": "CurveMethod",
+      "type": "System.Int32",
+      "description": "Curve method as defined in swLocalCurvePatternCurveMethod_e"
+    },
+    {
+      "name": "AlignMethod",
+      "type": "System.Int32",
+      "description": "Alignment method as defined in swLocalCurvePatternAlignment_e"
+    },
+    {
+      "name": "Direction2",
+      "type": "System.Boolean",
+      "description": "True creates the pattern in the second direction, false does not"
+    },
+    {
+      "name": "FlipDir2",
+      "type": "System.Boolean",
+      "description": "True flips the direction of the second direction, false does not"
+    },
+    {
+      "name": "Num2",
+      "type": "System.Int32",
+      "description": "Number of instances in the second direction"
+    },
+    {
+      "name": "EqualSpacing2",
+      "type": "System.Boolean",
+      "description": "True uses equal spacing between instances in the second direction, false does not"
+    },
+    {
+      "name": "Spacing2",
+      "type": "System.Double",
+      "description": "Distance between pattern instances along the curve in the second direction when EqualSpacing2 is set to false"
+    },
+    {
+      "name": "PatternSeedOnly",
+      "type": "System.Boolean",
+      "description": "True replicates only the seed pattern, which was created under Direction 1, under Direction 2; false replicates all instances of the curve pattern, which was created under Direction 1, under Direction 2"
+    }
+  ],
+  "returns": "Local curve pattern feature",
+  "remarks": "To\nselect\n...\nUse a mark of...\nComponents to pattern\n1\nCurve, edge, sketch, or sketch entity for Direction 1\n2\nCurve, edge, sketch, or sketch entity for Direction 2\n4\nReference point for ReferencePoint\nNOTE:\nIf ReferencePoint is set to swLocalSketchPatternReferencePoint_e.swLocalSketchPatternSelectedPoint, then the selected reference point must be a vertex.\n32\nFace on which a 3D curve lies\n64",
+  "examples": [],
+  "related": []
+}

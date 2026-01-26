@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBody2",
+    "member": "IRemoveMaterialProperty",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_count",
+        "type": "System.Int32",
+        "description": "Number of configurations in the part or assembly"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.String",
+        "description": "Array of configuration names"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetMaterialIdName2",
+      "IBody2.GetMaterialPropertyName",
+      "IBody2.GetMaterialUserName2",
+      "IBody2.IGetMaterialPropertyValuesForFace",
+      "IBody2.IMaterialPropertyValues2",
+      "IBody2.MaterialPropertyValues2",
+      "IBody2.RemoveMaterialProperty",
+      "IBody2.SetMaterialIdName2",
+      "IBody2.SetMaterialProperty",
+      "IBody2.SetMaterialUserName2"
+    ],
+    "keywords": [
+      "material",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "iremovematerialproperty",
+      "body2",
+      "remove",
+      "config",
+      "opt",
+      "int32",
+      "count",
+      "names",
+      "string",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IBody2.IRemoveMaterialProperty",
+  "description": "Removes the material property values (e.g., color) from the body in the specified configurations in parts and assemblies.",
+  "signature": "System.Boolean IRemoveMaterialProperty( \n   System.Int32\nConfig_opt\n,\n   System.Int32\nConfig_count\n,\n   ref System.String\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_count",
+      "type": "System.Int32",
+      "description": "Number of configurations in the part or assembly"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.String",
+      "description": "Array of configuration names"
+    }
+  ],
+  "returns": "True if the material is removed from the body, false if not",
+  "remarks": "Before calling this method, call\nIModelDoc2::GetConfigurationCount\nto get the value for Config_Count.",
+  "examples": [],
+  "related": [
+    "IBody2.GetMaterialIdName2",
+    "IBody2.GetMaterialPropertyName",
+    "IBody2.GetMaterialUserName2",
+    "IBody2.IGetMaterialPropertyValuesForFace",
+    "IBody2.IMaterialPropertyValues2",
+    "IBody2.MaterialPropertyValues2",
+    "IBody2.RemoveMaterialProperty",
+    "IBody2.SetMaterialIdName2",
+    "IBody2.SetMaterialProperty",
+    "IBody2.SetMaterialUserName2"
+  ]
+}

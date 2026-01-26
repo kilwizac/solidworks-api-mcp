@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRenderMaterial",
+    "member": "SetVDirection",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "VDir",
+        "type": "System.Double",
+        "description": "Array of doubles representing the V direction of the texture-based appearance (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IRenderMaterial.GetUDirection",
+      "IRenderMaterial.GetVDirection"
+    ],
+    "keywords": [
+      "setvdirection",
+      "irendermaterial",
+      "render",
+      "material",
+      "direction",
+      "dir",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IRenderMaterial.SetVDirection",
+  "description": "Obsolete. Superseded by IRenderMaterial::SetVDirection2.",
+  "signature": "void SetVDirection( \n   ref System.Double\nVDir\n)",
+  "parameters": [
+    {
+      "name": "VDir",
+      "type": "System.Double",
+      "description": "Array of doubles representing the V direction of the texture-based appearance (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "To specify the V direction in the Y direction, set VDir to {0,1,0}.\nThe\nmapping type\n(surface, projection, automatic, etc.) indirectly determines the V direction. This vector is perpendicular to the U direction.\nCall\nIRenderMaterial::SetUDirection\nto set the U direction.",
+  "examples": [],
+  "related": [
+    "IRenderMaterial.GetUDirection",
+    "IRenderMaterial.GetVDirection"
+  ]
+}

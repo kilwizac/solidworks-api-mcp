@@ -1,0 +1,139 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateRegionHatch",
+    "returns": "SketchHatch",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate anywhere within the closed sketch profile"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate anywhere within the closed sketch profile"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate anywhere within the closed sketch profile"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of the hatch if the hatch is not solid"
+      },
+      {
+        "name": "Scale",
+        "type": "System.Double",
+        "description": "Scale factor for the hatch if the hatch is not solid"
+      },
+      {
+        "name": "Color",
+        "type": "System.Int32",
+        "description": "COLORREF value describing the color used for the hatch"
+      },
+      {
+        "name": "Hatchname",
+        "type": "System.String",
+        "description": "Type or name of the hatch from the Sldwks.ptn file"
+      },
+      {
+        "name": "Layername",
+        "type": "System.String",
+        "description": "Layer name for the hatch if a drawing document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "IModelDoc2.InsertHatchedFace",
+      "ISketchManager.CreateBoundaryHatch"
+    ],
+    "keywords": [
+      "area",
+      "hatch",
+      "see",
+      "isketchhatch",
+      "crosshatch",
+      "also",
+      "ifacehatch",
+      "sketches",
+      "sketch",
+      "tools",
+      "fill",
+      "isketch",
+      "createregionhatch",
+      "isketchmanager",
+      "manager",
+      "create",
+      "region",
+      "double",
+      "angle",
+      "scale",
+      "color",
+      "int32",
+      "hatchname",
+      "string",
+      "layername"
+    ]
+  },
+  "title": "ISketchManager.CreateRegionHatch",
+  "description": "Creates an area hatch/fill region hatch using a closed sketch profile.",
+  "signature": "SketchHatch CreateRegionHatch( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Double\nAngle\n,\n   System.Double\nScale\n,\n   System.Int32\nColor\n,\n   System.String\nHatchname\n,\n   System.String\nLayername\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate anywhere within the closed sketch profile"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate anywhere within the closed sketch profile"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate anywhere within the closed sketch profile"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of the hatch if the hatch is not solid"
+    },
+    {
+      "name": "Scale",
+      "type": "System.Double",
+      "description": "Scale factor for the hatch if the hatch is not solid"
+    },
+    {
+      "name": "Color",
+      "type": "System.Int32",
+      "description": "COLORREF value describing the color used for the hatch"
+    },
+    {
+      "name": "Hatchname",
+      "type": "System.String",
+      "description": "Type or name of the hatch from the Sldwks.ptn file"
+    },
+    {
+      "name": "Layername",
+      "type": "System.String",
+      "description": "Layer name for the hatch if a drawing document"
+    }
+  ],
+  "returns": "Sketch hatch",
+  "remarks": "This method creates a single area hatch/fill region hatch. All three point coordinates are important. This point is compared to all sketch contours to determine one unique external sketch region that contains the point.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.InsertHatchedFace",
+    "ISketchManager.CreateBoundaryHatch"
+  ]
+}

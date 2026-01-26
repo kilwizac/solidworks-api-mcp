@@ -1,0 +1,304 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "SetupSheet6",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the sheet to set up"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Size of paper as defined in swDwgPaperSizes_e ; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone"
+      },
+      {
+        "name": "TemplateIn",
+        "type": "System.Int32",
+        "description": "Template as defined in swDwgTemplates_e"
+      },
+      {
+        "name": "Scale1",
+        "type": "System.Double",
+        "description": "Scale numerator"
+      },
+      {
+        "name": "Scale2",
+        "type": "System.Double",
+        "description": "Scale denominator"
+      },
+      {
+        "name": "FirstAngle",
+        "type": "System.Boolean",
+        "description": "True for first angle projection, false for third angle projection"
+      },
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Name of custom template with full directory path; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateCustom"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Paper width; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Paper height; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+      },
+      {
+        "name": "PropertyViewName",
+        "type": "System.String",
+        "description": "Name of view containing the model from which to get custom property values"
+      },
+      {
+        "name": "RemoveModifiedNotes",
+        "type": "System.Boolean",
+        "description": "True to delete modified notes, false to not"
+      },
+      {
+        "name": "ZoneLeftMargin",
+        "type": "System.Double",
+        "description": "Zone area left margin; distance from drawing sheet's left edge"
+      },
+      {
+        "name": "ZoneRightMargin",
+        "type": "System.Double",
+        "description": "Zone area right margin; distance from drawing sheet's right edge"
+      },
+      {
+        "name": "ZoneTopMargin",
+        "type": "System.Double",
+        "description": "Zone area top margin; distance from drawing sheet's top edge"
+      },
+      {
+        "name": "ZoneBottomMargin",
+        "type": "System.Double",
+        "description": "Zone area bottom margin; distance from drawing sheet's bottom edge"
+      },
+      {
+        "name": "ZoneRow",
+        "type": "System.Int32",
+        "description": "Number of zone rows in the zone area of this sheet (see Remarks )"
+      },
+      {
+        "name": "ZoneCol",
+        "type": "System.Int32",
+        "description": "Number of zone columns in the zone area of this sheet (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.ActivateSheet",
+      "IDrawingDoc.EditSheet",
+      "IDrawingDoc.GetEditSheet",
+      "IDrawingDoc.GetSheetCount",
+      "IDrawingDoc.GetSheetNames",
+      "IDrawingDoc.NewSheet4",
+      "IDrawingDoc.PasteSheet",
+      "IDrawingDoc.ReorderSheets",
+      "IDrawingDoc.SheetNext",
+      "IDrawingDoc.SheetPrevious",
+      "ISheet",
+      "ISheet.GetDrawingZone"
+    ],
+    "keywords": [
+      "drawing",
+      "sheets",
+      "see",
+      "also",
+      "isheet",
+      "up",
+      "drawings",
+      "idrawingdoc",
+      "sheet",
+      "zones",
+      "setupsheet6",
+      "doc",
+      "setup",
+      "sheet6",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "int32",
+      "template",
+      "scale1",
+      "double",
+      "scale2",
+      "first",
+      "angle",
+      "boolean",
+      "width",
+      "height",
+      "view",
+      "remove",
+      "modified",
+      "notes",
+      "zone",
+      "left",
+      "margin",
+      "right",
+      "top",
+      "bottom",
+      "row",
+      "col",
+      "create",
+      "vba",
+      "vb",
+      "net",
+      "modify",
+      "multiple",
+      "setups"
+    ]
+  },
+  "title": "IDrawingDoc.SetupSheet6",
+  "description": "Sets up the specified drawing sheet.",
+  "signature": "System.Boolean SetupSheet6( \n   System.String\nName\n,\n   System.Int32\nPaperSize\n,\n   System.Int32\nTemplateIn\n,\n   System.Double\nScale1\n,\n   System.Double\nScale2\n,\n   System.Boolean\nFirstAngle\n,\n   System.String\nTemplateName\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n,\n   System.String\nPropertyViewName\n,\n   System.Boolean\nRemoveModifiedNotes\n,\n   System.Double\nZoneLeftMargin\n,\n   System.Double\nZoneRightMargin\n,\n   System.Double\nZoneTopMargin\n,\n   System.Double\nZoneBottomMargin\n,\n   System.Int32\nZoneRow\n,\n   System.Int32\nZoneCol\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the sheet to set up"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Size of paper as defined in swDwgPaperSizes_e ; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone"
+    },
+    {
+      "name": "TemplateIn",
+      "type": "System.Int32",
+      "description": "Template as defined in swDwgTemplates_e"
+    },
+    {
+      "name": "Scale1",
+      "type": "System.Double",
+      "description": "Scale numerator"
+    },
+    {
+      "name": "Scale2",
+      "type": "System.Double",
+      "description": "Scale denominator"
+    },
+    {
+      "name": "FirstAngle",
+      "type": "System.Boolean",
+      "description": "True for first angle projection, false for third angle projection"
+    },
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Name of custom template with full directory path; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateCustom"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Paper width; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Paper height; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+    },
+    {
+      "name": "PropertyViewName",
+      "type": "System.String",
+      "description": "Name of view containing the model from which to get custom property values"
+    },
+    {
+      "name": "RemoveModifiedNotes",
+      "type": "System.Boolean",
+      "description": "True to delete modified notes, false to not"
+    },
+    {
+      "name": "ZoneLeftMargin",
+      "type": "System.Double",
+      "description": "Zone area left margin; distance from drawing sheet's left edge"
+    },
+    {
+      "name": "ZoneRightMargin",
+      "type": "System.Double",
+      "description": "Zone area right margin; distance from drawing sheet's right edge"
+    },
+    {
+      "name": "ZoneTopMargin",
+      "type": "System.Double",
+      "description": "Zone area top margin; distance from drawing sheet's top edge"
+    },
+    {
+      "name": "ZoneBottomMargin",
+      "type": "System.Double",
+      "description": "Zone area bottom margin; distance from drawing sheet's bottom edge"
+    },
+    {
+      "name": "ZoneRow",
+      "type": "System.Int32",
+      "description": "Number of zone rows in the zone area of this sheet (see Remarks )"
+    },
+    {
+      "name": "ZoneCol",
+      "type": "System.Int32",
+      "description": "Number of zone columns in the zone area of this sheet (see Remarks )"
+    }
+  ],
+  "returns": "True if drawing sheet setup is successful, false if not",
+  "remarks": "After calling this method, call\nIModelDoc2::ForceRebuild3\nto update any changes to first angle/third angle projections in the drawing views.\nIf you specify a different filename for TemplateName than what is currently being used by SOLIDWORKS, then SOLIDWORKS updates the sheet format.\nThe drawing sheet can be set up with zones that annotations in other views can reference. Each zone is referenced by an alphanumeric label that is defined using the Zone Editor. See the SOLIDWORKS Help for more information about drawing sheet zones.\nMultiplying ZoneRow by ZoneCol equals the total number of zones in the zone area of this drawing sheet. The zone area is specified by ZoneLeftMargin, ZoneRightMargin, ZoneTopMargin, and ZoneBottomMargin.\nTo modify the setups of multiple drawing sheets with just one call to IDrawingDoc::SetupSheet6, call\nIDrawingDoc::SetSelectedSheets\nbefore calling IDrawingDoc::SetupSheet6.",
+  "examples": [
+    {
+      "title": "Create Drawing Sheet Zones (VBA)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (VB.NET)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (C#)",
+      "href": "Create_Drawing_Sheet_Zones_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (C#)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (VB.NET)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Multiple Drawing Sheets Setups (VBA)",
+      "href": "Modify_Multiple_Drawing_Sheets_Setups_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.ActivateSheet",
+    "IDrawingDoc.EditSheet",
+    "IDrawingDoc.GetEditSheet",
+    "IDrawingDoc.GetSheetCount",
+    "IDrawingDoc.GetSheetNames",
+    "IDrawingDoc.NewSheet4",
+    "IDrawingDoc.PasteSheet",
+    "IDrawingDoc.ReorderSheets",
+    "IDrawingDoc.SheetNext",
+    "IDrawingDoc.SheetPrevious",
+    "ISheet",
+    "ISheet.GetDrawingZone"
+  ]
+}

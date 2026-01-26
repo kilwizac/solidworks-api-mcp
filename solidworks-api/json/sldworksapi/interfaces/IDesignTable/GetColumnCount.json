@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "GetColumnCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.ColumnHidden",
+      "IDesignTable.GetHeaderText",
+      "IDesignTable.GetStartColumnNumber",
+      "IDesignTable.GetVisibleColumnCount",
+      "IDesignTable.GetVisibleLeftColumnNumber"
+    ],
+    "keywords": [
+      "getcolumncount",
+      "idesigntable",
+      "design",
+      "table",
+      "column",
+      "count",
+      "int32",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDesignTable.GetColumnCount",
+  "description": "Gets the number of columns in the design table that are currently visible in the model view.",
+  "signature": "System.Int32 GetColumnCount()",
+  "parameters": [],
+  "returns": "Number of columns in the design table",
+  "remarks": "Before using any of the\nIDesignTable\nmethods, you must use\nIDesignTable::Attach\nto activate the design table. After you finish getting design table data, use\nIDesignTable::Detach\nto deactivate the table.\nUse\nIDesignTable::GetTotalColumnCount\nto get the total number of columns in the design table.\nTo obtain information outside the visible region of the design table, get the Microsoft Excel worksheet that\nIDesignTable::Attach\nactivated. You can then use the Microsoft Excel API to make additional queries.",
+  "examples": [
+    {
+      "title": "Get Design Table (VBA)",
+      "href": "Get_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VB.NET)",
+      "href": "Get_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (C#)",
+      "href": "Get_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDesignTable.ColumnHidden",
+    "IDesignTable.GetHeaderText",
+    "IDesignTable.GetStartColumnNumber",
+    "IDesignTable.GetVisibleColumnCount",
+    "IDesignTable.GetVisibleLeftColumnNumber"
+  ]
+}

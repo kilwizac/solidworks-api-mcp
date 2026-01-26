@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchManager",
+    "member": "InferenceMode",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "inferencemode",
+      "isketchmanager",
+      "sketch",
+      "manager",
+      "inference",
+      "mode",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchManager.InferenceMode",
+  "description": "Obsolete. Superseded by ISldWorks::GetUserPreferenceToggle or ISldWorks::SetUserPreferenceToggle and swUserPreferenceToggle_e.swSketchInference.",
+  "signature": "System.Boolean InferenceMode {get; set;}",
+  "parameters": [],
+  "returns": "True if sketch inference mode is on, false if off",
+  "remarks": "This property affects sketch entity snapping and inferring constraints to other geometry during creation.\nSetting inference mode to...\nAllows...\nTrue\nInferencing during sketch operations, subject to other settings that may disable inferencing such as\nISketchManager::AutoInference\n,\nISketchManager::AddToDB\n, and\nIDrawingDoc::StartDrawing\n.\nFalse\nFaster sketching without inferencing, similar to SketchManager::AddToDB, except that using this method does not disable undo operations.",
+  "examples": [],
+  "related": []
+}

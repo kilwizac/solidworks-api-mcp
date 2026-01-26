@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateFillet",
+    "returns": "SketchSegment",
+    "parameters": [
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Radius of the fillet in meters"
+      },
+      {
+        "name": "ConstrainedCorners",
+        "type": "System.Int32",
+        "description": "Action to take as defined in swConstrainedCornerAction_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "fillets",
+      "sketch",
+      "tools",
+      "fillet",
+      "see",
+      "also",
+      "isketch",
+      "createfillet",
+      "isketchmanager",
+      "manager",
+      "create",
+      "radius",
+      "double",
+      "constrained",
+      "corners",
+      "int32",
+      "segment",
+      "edit",
+      "radial",
+      "dimension",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.CreateFillet",
+  "description": "Creates a sketch fillet using the selected sketch entities.",
+  "signature": "SketchSegment CreateFillet( \n   System.Double\nRadius\n,\n   System.Int32\nConstrainedCorners\n)",
+  "parameters": [
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Radius of the fillet in meters"
+    },
+    {
+      "name": "ConstrainedCorners",
+      "type": "System.Int32",
+      "description": "Action to take as defined in swConstrainedCornerAction_e (see Remarks )"
+    }
+  ],
+  "returns": "Sketch segment for the fillet",
+  "remarks": "The ConstrainedCorners parameter indicates what action to take if the corner to fillet is constrained or dimensioned. If the corner is not constrained or dimensioned, then this parameter is ignored.",
+  "examples": [
+    {
+      "title": "Edit Radial Dimension (C#)",
+      "href": "Edit_Radial_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Radial Dimension (VB.NET)",
+      "href": "Edit_Radial_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Radial Dimension (VBA)",
+      "href": "Edit_Radial_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

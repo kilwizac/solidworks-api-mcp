@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetPolyLinesAndCurves",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "CrossHatchOption",
+        "type": "System.Int16",
+        "description": "0 = include crosshatch lines 1 = exclude crosshatch lines 2 = include only crosshatch lines"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDisplayMode2",
+      "IView.GetPolyLineCount5",
+      "IView.IGetPolyLinesAndCurves"
+    ],
+    "keywords": [
+      "polylines",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "curves",
+      "curve",
+      "icurve",
+      "getpolylinesandcurves",
+      "poly",
+      "lines",
+      "cross",
+      "hatch",
+      "option",
+      "int16",
+      "object"
+    ]
+  },
+  "title": "IView.GetPolyLinesAndCurves",
+  "description": "Gets the arcs, ellipses, splines, and polylines in the view with an option to include or exclude crosshatch lines.",
+  "signature": "System.Object GetPolyLinesAndCurves( \n   System.Int16\nCrossHatchOption\n)",
+  "parameters": [
+    {
+      "name": "CrossHatchOption",
+      "type": "System.Int16",
+      "description": "0 = include crosshatch lines 1 = exclude crosshatch lines 2 = include only crosshatch lines"
+    }
+  ],
+  "returns": "Array of lines and parameters in the view (see Remarks )",
+  "remarks": "The difference between this method and\nIView::GetPolylines7\nis that splines and ellipses returned by this method are returned as equation parameters, which are more precise definitions.\nThis method returns data for all visible solid model edges in the drawing view. This includes these types of edges:\n1= arcs: Returned using a center point, radius, and start and stop location.\n1 = circles: Returned using a center point, radius, and start and stop location.\n2 = ellipses: Returned as equation parameters.\n3 = splines: Returned as equation parameters.\n0 = straight lines: Returned as tessellated polylines, but because the edges are straight, there is no loss of data in the approximation.\nThis method returns data for all visible solid model edges in the drawing view. This includes these types of edges:\n1= arcs: Returned using a center point, radius, and start and stop location.\n1 = circles: Returned using a center point, radius, and start and stop location.\n2 = ellipses: Returned as tessellated polylines.\n3 = splines: Returned as tessellated polylines.\n0 = straight lines: Returned as tessellated polylines, but because the edges are straight, there is no loss of data in the approximation.\nFor each arc:\nfirst double gives the type\nnext double gives the number of doubles required to hold arc geometry ( center, startPt, endPt, normal ) == 12\nnext three doubles give the coordinates of center\nnext three doubles give the coordinates of startPt\nnext three doubles give the coordinates of endPt\nnext three doubles give the coordinates of the normal\nnext six doubles are line attributes:\nLineColor\n= polyline color. This value is determined either by the explicitly set value or by the layer that the polyline is on.\nLineStyle\n= value combines polyline font and weight information. This value can be used as an input to GetLineFontInfo and GetLineFontName. If this value is -1, then the user has probably modified the line display manually in the drawing and you should use the LineFont and LineWeight return values to recreate the exact polyline style.\nLineFont\n= value is used for polyline font information. This value can be used as an input to the GetLineFontInfo2 and GetLineFontName2 functions. This value will only be valid if LineStyle is -1.\nLineWeight\n= polyline weight where Thin = 0.0, Normal = 1.0, Thick = 2.0. This value will only be valid if LineStyle is -1.\nLayerID\n= integer value indicating which layer holds this polyline. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\n.\nLayerOverride\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nnext double is the number of points lying on the arc\nnext ( numPoints * 3 ) doubles are the coordinates of points lying on the arc\nFor each ellipse:\nfirst double gives the type\nnext double gives the number of doubles required to hold ellipse geometry ( center, unit vector along majorAxis, unit vector along minor axis, major radius, minor radius, startPt, endPt, normal ) == 17\nnext three doubles give the coordinates of center\nnext three doubles give the coordinates of unit vector along major axis\nnext three doubles give the coordinates of unit vector along minor axis\nnext doubles gives the major radius\nnext double gives the minor radius\nnext three doubles give the coordinates of startPt\nnext three doubles give the coordinates of endPt\nnext six doubles are line attributes (see description of line attributes in previous bulleted item)\nnext double is the number of points lying on the ellipse\nnext ( numPoints * 3 ) doubles are the coordinates of points lying on the ellipse\nFor each spline\nfirst double gives the type\nnext double gives the number of doubles required to hold the information about the spline geometry ( 5 + numCtrlPts* numDims + numKnot ); if the spline is rational, numDims ==4 otherwise numDims ==3\nnext double gives degree = order -1\nnext double gives whether the spline is rational (1) or non-rational (0)\nnext double gives numDims ( i.e., number of coordinates associated with each control point; if the spline is rational , these are four, else three)\nnext double gives the number of control points of the spline\nnext double gives the number of knots on the spline\nnext ( numCtlPoints*numDims ) number of doubles are the coordinates of control points; each control point has numDims number of coordinates\nnext \"numKnots\" number of doubles; the knots on the spline\nnext six doubles are line attributes (see description of line attributes in previous bulleted item)\nnext double is the number of points lying on the spline\nnext ( numPoints * 3 ) doubles are the coordinates of points lying on the spline\nFor each polyline\nfirst double gives the type\nnext double holds value 0.0 as there is no geometry information for a polyline\nnext six doubles are line attributes (see description of line attributes in previous bulleted item)\nnext double is the number of points lying on the polyline\nnext ( numPoints * 3 ) doubles are the coordinates of points lying on the polyline\nThis method also lets you include or exclude crosshatch lines. This method does not return data for sketch segments added by a user in the drawing view.\nTo get...\nCall...\nSize of array needed to hold this data\nIView::GetPolyLinesAndCurvesCount\nItems that were sketched in this drawing view\nIView::GetArcs4\nIView::GetLines4\nIView::GetSplines3\nIView::GetEllipses5\nIf...\nThen...\nDisplay mode of the view is:\nShaded\nShaded with Edges\nDraft Quality\nFast HLR/HLV\nA value is not returned.\nUse\nIView::SetDisplayMode3\nto change Shaded or Shaded with Edges mode to Wireframe, Hidden Lines Removed (HLR), or Hidden Lines Visible (HLV), and then get the polylines.\nChanges are made to the parts or assemblies shown in this drawing\nPolylines are only generated that are in the visible viewing bounds when the drawing is opened.\nDrawing is already open\nAll polylines in the drawing are generated. If you open a drawing that is zoomed in to a particular region, then the polylines that are outside the zoomed region do not exist if the parts or assemblies shown in this drawing have been changed. To force the generation of all possible polyline data, call\nIModelDoc2::ViewZoomtofit2\n.",
+  "examples": [],
+  "related": [
+    "IView.GetDisplayMode2",
+    "IView.GetPolyLineCount5",
+    "IView.IGetPolyLinesAndCurves"
+  ]
+}

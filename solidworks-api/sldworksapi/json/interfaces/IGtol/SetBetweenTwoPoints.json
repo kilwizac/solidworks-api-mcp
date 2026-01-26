@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "SetBetweenTwoPoints",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Between",
+        "type": "System.Boolean",
+        "description": "True to enable the between two points symbol, or false to disable it"
+      },
+      {
+        "name": "TextFrom",
+        "type": "System.String",
+        "description": "Text on the left end of the symbol"
+      },
+      {
+        "name": "TextTo",
+        "type": "System.String",
+        "description": "Text on the right end of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setbetweentwopoints",
+      "igtol",
+      "gtol",
+      "between",
+      "two",
+      "points",
+      "boolean",
+      "text",
+      "string",
+      "void",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IGtol.SetBetweenTwoPoints",
+  "description": "Enables or disables the between two points symbol and its texts.",
+  "signature": "void SetBetweenTwoPoints( \n   System.Boolean\nBetween\n,\n   System.String\nTextFrom\n,\n   System.String\nTextTo\n)",
+  "parameters": [
+    {
+      "name": "Between",
+      "type": "System.Boolean",
+      "description": "True to enable the between two points symbol, or false to disable it"
+    },
+    {
+      "name": "TextFrom",
+      "type": "System.String",
+      "description": "Text on the left end of the symbol"
+    },
+    {
+      "name": "TextTo",
+      "type": "System.String",
+      "description": "Text on the right end of the symbol"
+    }
+  ],
+  "returns": "",
+  "remarks": "The TextFrom and TextTo values might be set to empty strings.\nThis method ignores TextFrom and TextTo if the between value is false (the symbol is being disabled).\nUse:\nIGtol::GetBetweenTwoPoints\nto determine if this symbol is currently in use\nIGtol::GetBetweenTwoPointsText\nto determine the texts that are part of this symbol",
+  "examples": [
+    {
+      "title": "Insert GTol (C#)",
+      "href": "Insert_GTol_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VB.NET)",
+      "href": "Insert_GTol_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VBA)",
+      "href": "Insert_GTol_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

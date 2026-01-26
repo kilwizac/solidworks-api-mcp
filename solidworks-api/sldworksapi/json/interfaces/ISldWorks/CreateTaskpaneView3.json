@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "CreateTaskpaneView3",
+    "returns": "TaskpaneView",
+    "parameters": [
+      {
+        "name": "ImageList",
+        "type": "System.Object",
+        "description": "Array of strings of paths to six image files for the tab of this Task Pane view (see Remarks )"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "Tool tip for this Task Pane view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActivateTaskPane",
+      "ISldWorks.GetImageSize",
+      "ISldWorks.RefreshTaskpaneContent",
+      "ISldWorks.TaskPaneIsPinned"
+    ],
+    "keywords": [
+      "task",
+      "pane",
+      "see",
+      "also",
+      "itaskpaneview",
+      "create",
+      "createtaskpaneview3",
+      "isldworks",
+      "sld",
+      "works",
+      "taskpane",
+      "view3",
+      "image",
+      "list",
+      "object",
+      "tool",
+      "tip",
+      "string",
+      "view",
+      "add",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.CreateTaskpaneView3",
+  "description": "Creates an application-level Task Pane view.",
+  "signature": "TaskpaneView CreateTaskpaneView3( \n   System.Object\nImageList\n,\n   System.String\nToolTip\n)",
+  "parameters": [
+    {
+      "name": "ImageList",
+      "type": "System.Object",
+      "description": "Array of strings of paths to six image files for the tab of this Task Pane view (see Remarks )"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "Tool tip for this Task Pane view"
+    }
+  ],
+  "returns": "Task Pane view",
+  "remarks": "This method supports high resolution screens with high resolution operating system scaling options.\nImageList contains paths to PNG or BMP images in six pixel sizes:\n20 X 20\n32 X 32\n40 X 40\n64 X 64\n96 X 96\n128 X 128\nThe SOLIDWORKS Design user interface displays icons in three sizes: small, medium and large. After using this method to specify an image in six sizes, SOLIDWORKS selects the appropriate images to display as required by the current screen resolution or operating system scale.\nIf OS scale is...\nThen SOLIDWORKS icon...\nUses image pixel size...\n100%\nSmall\n20X20\nMedium\n32X32\nLarge\n40X40\n150%\nSmall\n32X32\nMedium\n40X40\nLarge\n64X64\n200%\nSmall\n40X40\nMedium\n64X64\nLarge\n96X96\n250%\nSmall\n64X64\nMedium\n96X96\nLarge\n128X128\nThe images should use a 256-color palette and gray (192, 192, 192) for transparent areas.",
+  "examples": [
+    {
+      "title": "Add Task Pane View (VBA)",
+      "href": "Add_Task_Pane_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Task Pane View (VB.NET)",
+      "href": "Add_Task_Pane_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Task Pane View (C#)",
+      "href": "Add_Task_Pane_View_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ActivateTaskPane",
+    "ISldWorks.GetImageSize",
+    "ISldWorks.RefreshTaskpaneContent",
+    "ISldWorks.TaskPaneIsPinned"
+  ]
+}

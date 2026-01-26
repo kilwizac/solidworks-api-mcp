@@ -1,0 +1,446 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>InsertGussetFeature3 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertGussetFeature3" />
+    <meta name="Description" content="Inserts a gusset feature for pre-selected faces of a weldment." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.InsertGussetFeature3" />
+    <meta name="Microsoft.Help.Keywords" content="Feature (see also IFeature Interface), gusset" />
+    <meta name="Microsoft.Help.Keywords" content="Gussets. See IGussetFeatureData Interface" />
+    <meta name="Microsoft.Help.Keywords" content="Weldments, gussets" />
+    <meta name="Microsoft.Help.Keywords" content="InsertGussetFeature3 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                InsertGussetFeature3 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : InsertGussetFeature3 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="DepthPopupContent" class="i-popup-content">
+        Thickness of the gusset
+    </div>
+
+    <div id="DirTypePopupContent" class="i-popup-content">
+        <p>Thickness direction of the gusset as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swGussetThicknessType_e.html">swGussetThicknessType_e</a></p>
+    </div>
+
+    <div id="LocTypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Location of the reference plane for the sketch of the gusset as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swGussetProfileLocationType_e.html">swGussetProfileLocationType_e</a></p>
+    </div>
+
+    <div id="BIsProfilePopupContent" class="i-popup-content">
+        True to use a polygon profile, false to use a triangle profile
+    </div>
+
+    <div id="ProfileD1PopupContent" class="i-popup-content">
+        Profile Distance1 (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="ProfileD2PopupContent" class="i-popup-content">
+        Profile Distance2 (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="ProfileD3PopupContent" class="i-popup-content">
+        Profile Distance3 (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="ProfileAnglePopupContent" class="i-popup-content">
+        Profile Angle (see <strong>Remarks</strong>); valid only if BUseLenDim is false
+    </div>
+
+    <div id="ProfileD4PopupContent" class="i-popup-content">
+        Profile Distance4 (see <strong>Remarks</strong>); valid only if BUseLenDim is true
+    </div>
+
+    <div id="BOffsetPopupContent" class="i-popup-content">
+        True to offset the reference plane for the sketch, false to not
+    </div>
+
+    <div id="DProfileOffsetPopupContent" class="i-popup-content">
+        Value by which to offset the reference plane for the sketch
+    </div>
+
+    <div id="CrvIndexPopupContent" class="i-popup-content">
+        Index of the edge to use if multiple intersecting edges exist
+    </div>
+
+    <div id="BReverseDirPopupContent" class="i-popup-content">
+        If BOffset set to true, then true to reverse direction, false to not
+    </div>
+
+    <div id="BReverseFacePopupContent" class="i-popup-content">
+        <p>Reverse ProfileD1 and ProfileD2 if triangle profile</p>
+
+        <p>- or -</p>
+
+        <p>Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile</p>
+    </div>
+
+    <div id="BUseLenDimPopupContent" class="i-popup-content">
+        True to use ProfileD4, false to use ProfileAngle
+    </div>
+
+    <div id="ProfileD5PopupContent" class="i-popup-content">
+        Chamfer Distance5 (see <strong>Remarks</strong>); valid only if BNeedChamferInGusset is true
+    </div>
+
+    <div id="ProfileD6PopupContent" class="i-popup-content">
+        Chamfer Distance6 (see <strong>Remarks</strong>); valid only if BNeedChamferInGusset and BUseLenDimForChamber are both true
+    </div>
+
+    <div id="ProfileChamferAnglePopupContent" class="i-popup-content">
+        Chamfer Angle (see <strong>Remarks</strong>); valid only if BUseLenDimForChamfer is false and BNeedChamferInGusset is true
+    </div>
+
+    <div id="BUseLenDimForChamferPopupContent" class="i-popup-content">
+        True to use ProfileD6, false to use ProfileChamferAngle; valid only if BNeedChamferInGusset is true
+    </div>
+
+    <div id="BNeedChamferInGussetPopupContent" class="i-popup-content">
+        True to create a chamfer to allow room for a weld bead under the gusset, false to not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Inserts a gusset feature for pre-selected faces of a weldment.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function InsertGussetFeature3( _
+   ByVal <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DirTypePopupLink" data-popup-contentsource="#DirTypePopupContent" data-popup-showevent="click mouseenter">DirType</a></i> As System.Short, _
+   ByVal <i><a class="i-popup-link" id="LocTypePopupLink" data-popup-contentsource="#LocTypePopupContent" data-popup-showevent="click mouseenter">LocType</a></i> As System.Short, _
+   ByVal <i><a class="i-popup-link" id="BIsProfilePopupLink" data-popup-contentsource="#BIsProfilePopupContent" data-popup-showevent="click mouseenter">BIsProfile</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ProfileD1PopupLink" data-popup-contentsource="#ProfileD1PopupContent" data-popup-showevent="click mouseenter">ProfileD1</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileD2PopupLink" data-popup-contentsource="#ProfileD2PopupContent" data-popup-showevent="click mouseenter">ProfileD2</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileD3PopupLink" data-popup-contentsource="#ProfileD3PopupContent" data-popup-showevent="click mouseenter">ProfileD3</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileAnglePopupLink" data-popup-contentsource="#ProfileAnglePopupContent" data-popup-showevent="click mouseenter">ProfileAngle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileD4PopupLink" data-popup-contentsource="#ProfileD4PopupContent" data-popup-showevent="click mouseenter">ProfileD4</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="BOffsetPopupLink" data-popup-contentsource="#BOffsetPopupContent" data-popup-showevent="click mouseenter">BOffset</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="DProfileOffsetPopupLink" data-popup-contentsource="#DProfileOffsetPopupContent" data-popup-showevent="click mouseenter">DProfileOffset</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="CrvIndexPopupLink" data-popup-contentsource="#CrvIndexPopupContent" data-popup-showevent="click mouseenter">CrvIndex</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="BReverseDirPopupLink" data-popup-contentsource="#BReverseDirPopupContent" data-popup-showevent="click mouseenter">BReverseDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="BReverseFacePopupLink" data-popup-contentsource="#BReverseFacePopupContent" data-popup-showevent="click mouseenter">BReverseFace</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="BUseLenDimPopupLink" data-popup-contentsource="#BUseLenDimPopupContent" data-popup-showevent="click mouseenter">BUseLenDim</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ProfileD5PopupLink" data-popup-contentsource="#ProfileD5PopupContent" data-popup-showevent="click mouseenter">ProfileD5</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileD6PopupLink" data-popup-contentsource="#ProfileD6PopupContent" data-popup-showevent="click mouseenter">ProfileD6</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ProfileChamferAnglePopupLink" data-popup-contentsource="#ProfileChamferAnglePopupContent" data-popup-showevent="click mouseenter">ProfileChamferAngle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="BUseLenDimForChamferPopupLink" data-popup-contentsource="#BUseLenDimForChamferPopupContent" data-popup-showevent="click mouseenter">BUseLenDimForChamfer</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="BNeedChamferInGussetPopupLink" data-popup-contentsource="#BNeedChamferInGussetPopupContent" data-popup-showevent="click mouseenter">BNeedChamferInGusset</a></i> As System.Boolean _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim Depth As System.Double
+Dim DirType As System.Short
+Dim LocType As System.Short
+Dim BIsProfile As System.Boolean
+Dim ProfileD1 As System.Double
+Dim ProfileD2 As System.Double
+Dim ProfileD3 As System.Double
+Dim ProfileAngle As System.Double
+Dim ProfileD4 As System.Double
+Dim BOffset As System.Boolean
+Dim DProfileOffset As System.Double
+Dim CrvIndex As System.Integer
+Dim BReverseDir As System.Boolean
+Dim BReverseFace As System.Boolean
+Dim BUseLenDim As System.Boolean
+Dim ProfileD5 As System.Double
+Dim ProfileD6 As System.Double
+Dim ProfileChamferAngle As System.Double
+Dim BUseLenDimForChamfer As System.Boolean
+Dim BNeedChamferInGusset As System.Boolean
+Dim value As Feature
+ 
+value = instance.InsertGussetFeature3(Depth, DirType, LocType, BIsProfile, ProfileD1, ProfileD2, ProfileD3, ProfileAngle, ProfileD4, BOffset, DProfileOffset, CrvIndex, BReverseDir, BReverseFace, BUseLenDim, ProfileD5, ProfileD6, ProfileChamferAngle, BUseLenDimForChamfer, BNeedChamferInGusset)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature InsertGussetFeature3( 
+   System.double <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i>,
+   System.short <i><a class="i-popup-link" id="DirTypePopupLink" data-popup-contentsource="#DirTypePopupContent" data-popup-showevent="click mouseenter">DirType</a></i>,
+   System.short <i><a class="i-popup-link" id="LocTypePopupLink" data-popup-contentsource="#LocTypePopupContent" data-popup-showevent="click mouseenter">LocType</a></i>,
+   System.bool <i><a class="i-popup-link" id="BIsProfilePopupLink" data-popup-contentsource="#BIsProfilePopupContent" data-popup-showevent="click mouseenter">BIsProfile</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD1PopupLink" data-popup-contentsource="#ProfileD1PopupContent" data-popup-showevent="click mouseenter">ProfileD1</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD2PopupLink" data-popup-contentsource="#ProfileD2PopupContent" data-popup-showevent="click mouseenter">ProfileD2</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD3PopupLink" data-popup-contentsource="#ProfileD3PopupContent" data-popup-showevent="click mouseenter">ProfileD3</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileAnglePopupLink" data-popup-contentsource="#ProfileAnglePopupContent" data-popup-showevent="click mouseenter">ProfileAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD4PopupLink" data-popup-contentsource="#ProfileD4PopupContent" data-popup-showevent="click mouseenter">ProfileD4</a></i>,
+   System.bool <i><a class="i-popup-link" id="BOffsetPopupLink" data-popup-contentsource="#BOffsetPopupContent" data-popup-showevent="click mouseenter">BOffset</a></i>,
+   System.double <i><a class="i-popup-link" id="DProfileOffsetPopupLink" data-popup-contentsource="#DProfileOffsetPopupContent" data-popup-showevent="click mouseenter">DProfileOffset</a></i>,
+   System.int <i><a class="i-popup-link" id="CrvIndexPopupLink" data-popup-contentsource="#CrvIndexPopupContent" data-popup-showevent="click mouseenter">CrvIndex</a></i>,
+   System.bool <i><a class="i-popup-link" id="BReverseDirPopupLink" data-popup-contentsource="#BReverseDirPopupContent" data-popup-showevent="click mouseenter">BReverseDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="BReverseFacePopupLink" data-popup-contentsource="#BReverseFacePopupContent" data-popup-showevent="click mouseenter">BReverseFace</a></i>,
+   System.bool <i><a class="i-popup-link" id="BUseLenDimPopupLink" data-popup-contentsource="#BUseLenDimPopupContent" data-popup-showevent="click mouseenter">BUseLenDim</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD5PopupLink" data-popup-contentsource="#ProfileD5PopupContent" data-popup-showevent="click mouseenter">ProfileD5</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD6PopupLink" data-popup-contentsource="#ProfileD6PopupContent" data-popup-showevent="click mouseenter">ProfileD6</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileChamferAnglePopupLink" data-popup-contentsource="#ProfileChamferAnglePopupContent" data-popup-showevent="click mouseenter">ProfileChamferAngle</a></i>,
+   System.bool <i><a class="i-popup-link" id="BUseLenDimForChamferPopupLink" data-popup-contentsource="#BUseLenDimForChamferPopupContent" data-popup-showevent="click mouseenter">BUseLenDimForChamfer</a></i>,
+   System.bool <i><a class="i-popup-link" id="BNeedChamferInGussetPopupLink" data-popup-contentsource="#BNeedChamferInGussetPopupContent" data-popup-showevent="click mouseenter">BNeedChamferInGusset</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ InsertGussetFeature3( 
+   System.double <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i>,
+   System.short <i><a class="i-popup-link" id="DirTypePopupLink" data-popup-contentsource="#DirTypePopupContent" data-popup-showevent="click mouseenter">DirType</a></i>,
+   System.short <i><a class="i-popup-link" id="LocTypePopupLink" data-popup-contentsource="#LocTypePopupContent" data-popup-showevent="click mouseenter">LocType</a></i>,
+   System.bool <i><a class="i-popup-link" id="BIsProfilePopupLink" data-popup-contentsource="#BIsProfilePopupContent" data-popup-showevent="click mouseenter">BIsProfile</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD1PopupLink" data-popup-contentsource="#ProfileD1PopupContent" data-popup-showevent="click mouseenter">ProfileD1</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD2PopupLink" data-popup-contentsource="#ProfileD2PopupContent" data-popup-showevent="click mouseenter">ProfileD2</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD3PopupLink" data-popup-contentsource="#ProfileD3PopupContent" data-popup-showevent="click mouseenter">ProfileD3</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileAnglePopupLink" data-popup-contentsource="#ProfileAnglePopupContent" data-popup-showevent="click mouseenter">ProfileAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD4PopupLink" data-popup-contentsource="#ProfileD4PopupContent" data-popup-showevent="click mouseenter">ProfileD4</a></i>,
+   System.bool <i><a class="i-popup-link" id="BOffsetPopupLink" data-popup-contentsource="#BOffsetPopupContent" data-popup-showevent="click mouseenter">BOffset</a></i>,
+   System.double <i><a class="i-popup-link" id="DProfileOffsetPopupLink" data-popup-contentsource="#DProfileOffsetPopupContent" data-popup-showevent="click mouseenter">DProfileOffset</a></i>,
+   System.int <i><a class="i-popup-link" id="CrvIndexPopupLink" data-popup-contentsource="#CrvIndexPopupContent" data-popup-showevent="click mouseenter">CrvIndex</a></i>,
+   System.bool <i><a class="i-popup-link" id="BReverseDirPopupLink" data-popup-contentsource="#BReverseDirPopupContent" data-popup-showevent="click mouseenter">BReverseDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="BReverseFacePopupLink" data-popup-contentsource="#BReverseFacePopupContent" data-popup-showevent="click mouseenter">BReverseFace</a></i>,
+   System.bool <i><a class="i-popup-link" id="BUseLenDimPopupLink" data-popup-contentsource="#BUseLenDimPopupContent" data-popup-showevent="click mouseenter">BUseLenDim</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD5PopupLink" data-popup-contentsource="#ProfileD5PopupContent" data-popup-showevent="click mouseenter">ProfileD5</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileD6PopupLink" data-popup-contentsource="#ProfileD6PopupContent" data-popup-showevent="click mouseenter">ProfileD6</a></i>,
+   System.double <i><a class="i-popup-link" id="ProfileChamferAnglePopupLink" data-popup-contentsource="#ProfileChamferAnglePopupContent" data-popup-showevent="click mouseenter">ProfileChamferAngle</a></i>,
+   System.bool <i><a class="i-popup-link" id="BUseLenDimForChamferPopupLink" data-popup-contentsource="#BUseLenDimForChamferPopupContent" data-popup-showevent="click mouseenter">BUseLenDimForChamfer</a></i>,
+   System.bool <i><a class="i-popup-link" id="BNeedChamferInGussetPopupLink" data-popup-contentsource="#BNeedChamferInGussetPopupContent" data-popup-showevent="click mouseenter">BNeedChamferInGusset</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Depth</i></dt>
+
+                <dd>Thickness of the gusset</dd>
+
+                <dt><i>DirType</i></dt>
+
+                <dd>
+                    <p>Thickness direction of the gusset as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swGussetThicknessType_e.html">swGussetThicknessType_e</a></p>
+                </dd>
+
+                <dt><i>LocType</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Location of the reference plane for the sketch of the gusset as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swGussetProfileLocationType_e.html">swGussetProfileLocationType_e</a></p>
+                </dd>
+
+                <dt><i>BIsProfile</i></dt>
+
+                <dd>True to use a polygon profile, false to use a triangle profile</dd>
+
+                <dt><i>ProfileD1</i></dt>
+
+                <dd>Profile Distance1 (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>ProfileD2</i></dt>
+
+                <dd>Profile Distance2 (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>ProfileD3</i></dt>
+
+                <dd>Profile Distance3 (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>ProfileAngle</i></dt>
+
+                <dd>Profile Angle (see <strong>Remarks</strong>); valid only if BUseLenDim is false</dd>
+
+                <dt><i>ProfileD4</i></dt>
+
+                <dd>Profile Distance4 (see <strong>Remarks</strong>); valid only if BUseLenDim is true</dd>
+
+                <dt><i>BOffset</i></dt>
+
+                <dd>True to offset the reference plane for the sketch, false to not</dd>
+
+                <dt><i>DProfileOffset</i></dt>
+
+                <dd>Value by which to offset the reference plane for the sketch</dd>
+
+                <dt><i>CrvIndex</i></dt>
+
+                <dd>Index of the edge to use if multiple intersecting edges exist</dd>
+
+                <dt><i>BReverseDir</i></dt>
+
+                <dd>If BOffset set to true, then true to reverse direction, false to not</dd>
+
+                <dt><i>BReverseFace</i></dt>
+
+                <dd>
+                    <p>Reverse ProfileD1 and ProfileD2 if triangle profile</p>
+
+                    <p>- or -</p>
+
+                    <p>Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile</p>
+                </dd>
+
+                <dt><i>BUseLenDim</i></dt>
+
+                <dd>True to use ProfileD4, false to use ProfileAngle</dd>
+
+                <dt><i>ProfileD5</i></dt>
+
+                <dd>Chamfer Distance5 (see <strong>Remarks</strong>); valid only if BNeedChamferInGusset is true</dd>
+
+                <dt><i>ProfileD6</i></dt>
+
+                <dd>Chamfer Distance6 (see <strong>Remarks</strong>); valid only if BNeedChamferInGusset and BUseLenDimForChamber are both true</dd>
+
+                <dt><i>ProfileChamferAngle</i></dt>
+
+                <dd>Chamfer Angle (see <strong>Remarks</strong>); valid only if BUseLenDimForChamfer is false and BNeedChamferInGusset is true</dd>
+
+                <dt><i>BUseLenDimForChamfer</i></dt>
+
+                <dd>True to use ProfileD6, false to use ProfileChamferAngle; valid only if BNeedChamferInGusset is true</dd>
+
+                <dt><i>BNeedChamferInGusset</i></dt>
+
+                <dd>True to create a chamfer to allow room for a weld bead under the gusset, false to not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">IFeature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>See the SOLIDWORKS Help for more information about&#160;profile and chamfer distances and angles in weldment gussets.&#160;</p>
+
+            <p>Before calling this method, you must call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">IModelDocExtension::SelectByID2</a> to select two faces that are the supporting legs of this gusset with a Mark of 1.</p>
+
+            <p>Instead of using this method, you can pass an array of faces to&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertGussetFeature2">IFeatureManager::InsertGussetFeature2</a>.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Insert_Gusset_Feature_Example_VB.htm">Insert Gusset Feature (VBA)</a><br />
+            <a href="Insert_Gusset_Feature_Example_VBNET.htm">Insert Gusset Feature (VB.NET)</a><br />
+            <a href="Insert_Gusset_Feature_Example_CSharp.htm">Insert Gusset Feature (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IGussetFeatureData">IGussetFeatureData Interface</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertGussetFeature3.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

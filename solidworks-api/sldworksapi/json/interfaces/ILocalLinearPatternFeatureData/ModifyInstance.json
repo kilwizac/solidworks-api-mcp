@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILocalLinearPatternFeatureData",
+    "member": "ModifyInstance",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Instance",
+        "type": "System.Int32",
+        "description": "Pattern instance number (see Remarks )"
+      },
+      {
+        "name": "D1Distance",
+        "type": "System.Double",
+        "description": "Distance from the pattern seed in Direction 1"
+      },
+      {
+        "name": "IsD1OffsetFromNominal",
+        "type": "System.Boolean",
+        "description": "True if D1Distance is the offset from the nominal position of Instance, false if not"
+      },
+      {
+        "name": "D2Distance",
+        "type": "System.Double",
+        "description": "Distance from the pattern seed in Direction 2"
+      },
+      {
+        "name": "IsD2OffsetFromNominal",
+        "type": "System.Boolean",
+        "description": "True if D2Distance is the offset from the nominal position of Instance, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "modifyinstance",
+      "ilocallinearpatternfeaturedata",
+      "local",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "modify",
+      "instance",
+      "int32",
+      "d1",
+      "distance",
+      "double",
+      "offset",
+      "nominal",
+      "boolean",
+      "d2"
+    ]
+  },
+  "title": "ILocalLinearPatternFeatureData.ModifyInstance",
+  "description": "Modifies the specified pattern instance with the specified distances in Directions 1 and 2 in this linear component pattern feature.",
+  "signature": "System.Boolean ModifyInstance( \n   System.Int32\nInstance\n,\n   System.Double\nD1Distance\n,\n   System.Boolean\nIsD1OffsetFromNominal\n,\n   System.Double\nD2Distance\n,\n   System.Boolean\nIsD2OffsetFromNominal\n)",
+  "parameters": [
+    {
+      "name": "Instance",
+      "type": "System.Int32",
+      "description": "Pattern instance number (see Remarks )"
+    },
+    {
+      "name": "D1Distance",
+      "type": "System.Double",
+      "description": "Distance from the pattern seed in Direction 1"
+    },
+    {
+      "name": "IsD1OffsetFromNominal",
+      "type": "System.Boolean",
+      "description": "True if D1Distance is the offset from the nominal position of Instance, false if not"
+    },
+    {
+      "name": "D2Distance",
+      "type": "System.Double",
+      "description": "Distance from the pattern seed in Direction 2"
+    },
+    {
+      "name": "IsD2OffsetFromNominal",
+      "type": "System.Boolean",
+      "description": "True if D2Distance is the offset from the nominal position of Instance, false if not"
+    }
+  ],
+  "returns": "True if the pattern instance is modified successfully, false if not",
+  "remarks": "To calculate Instance:\nEnsure that\nILocalLinearPatternFeatureData::D2PatternSeedOnly\nis set to false.\nCalculate:\nFor a bi-directional pattern:\nI\n=\nn2\n* (\ni\n- 1) + (\nj\n- 1)\nFor a uni-directional pattern:\nI\n=\ni\n- 1\nwhere:\nI\n= pattern instance number\nn2\n= number of instances in Direction 2\ni\n= index for Direction 1\nj\n= index for Direction 2\nIn the pattern's PropertyManager, find\nn2\nin the\nDirection 2\n> Spacing and Instances > Number of instances\nfield and find [\ni,j\n] in the\nModified Instances\nsection.",
+  "examples": [],
+  "related": []
+}

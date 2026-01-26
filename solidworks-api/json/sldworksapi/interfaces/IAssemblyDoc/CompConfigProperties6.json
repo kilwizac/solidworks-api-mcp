@@ -1,0 +1,176 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "CompConfigProperties6",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Suppression",
+        "type": "System.Int32",
+        "description": "Suppression state of the selected component as defined in swComponentSuppressionState_e"
+      },
+      {
+        "name": "Solving",
+        "type": "System.Int32",
+        "description": "Solving state of the selected component as defined in swComponentSolvingOption_e"
+      },
+      {
+        "name": "Visibility",
+        "type": "System.Boolean",
+        "description": "True if you want to show the selected component in the graphics area, false if not"
+      },
+      {
+        "name": "UseNamedRefConfig",
+        "type": "System.Boolean",
+        "description": "Not used"
+      },
+      {
+        "name": "RefConfigName",
+        "type": "System.String",
+        "description": "If a non-empty string is specified, then the referenced configuration of the selected component is changed to this named configuration If an empty string is specified, then the default referenced configuration is used"
+      },
+      {
+        "name": "ExcludeFromBOM",
+        "type": "System.Boolean",
+        "description": "True to exclude the configuration from the BOM, false to not"
+      },
+      {
+        "name": "IsEnvelope",
+        "type": "System.Boolean",
+        "description": "True if the selected component is an envelope, false if not"
+      },
+      {
+        "name": "SaveAssemblyAsPartOption",
+        "type": "System.Int32",
+        "description": "Option for the selected component when saving this assembly as a part as defined in swASMSLDPRTCompPref_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IComponent2.ExcludeFromBOM",
+      "IComponent2.IsEnvelope",
+      "IComponent2.ReferencedConfiguration",
+      "IComponent2.SetSuppression2",
+      "IComponent2.Solving",
+      "IComponent2.Visible"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "properties",
+      "rigid",
+      "sub",
+      "assemblies",
+      "compconfigproperties6",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "comp",
+      "config",
+      "properties6",
+      "suppression",
+      "int32",
+      "solving",
+      "visibility",
+      "boolean",
+      "use",
+      "named",
+      "ref",
+      "name",
+      "string",
+      "exclude",
+      "bom",
+      "envelope",
+      "save",
+      "part",
+      "option",
+      "change",
+      "component",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAssemblyDoc.CompConfigProperties6",
+  "description": "Sets the properties for the selected component in the specified configuration.",
+  "signature": "System.Boolean CompConfigProperties6( \n   System.Int32\nSuppression\n,\n   System.Int32\nSolving\n,\n   System.Boolean\nVisibility\n,\n   System.Boolean\nUseNamedRefConfig\n,\n   System.String\nRefConfigName\n,\n   System.Boolean\nExcludeFromBOM\n,\n   System.Boolean\nIsEnvelope\n,\n   System.Int32\nSaveAssemblyAsPartOption\n)",
+  "parameters": [
+    {
+      "name": "Suppression",
+      "type": "System.Int32",
+      "description": "Suppression state of the selected component as defined in swComponentSuppressionState_e"
+    },
+    {
+      "name": "Solving",
+      "type": "System.Int32",
+      "description": "Solving state of the selected component as defined in swComponentSolvingOption_e"
+    },
+    {
+      "name": "Visibility",
+      "type": "System.Boolean",
+      "description": "True if you want to show the selected component in the graphics area, false if not"
+    },
+    {
+      "name": "UseNamedRefConfig",
+      "type": "System.Boolean",
+      "description": "Not used"
+    },
+    {
+      "name": "RefConfigName",
+      "type": "System.String",
+      "description": "If a non-empty string is specified, then the referenced configuration of the selected component is changed to this named configuration If an empty string is specified, then the default referenced configuration is used"
+    },
+    {
+      "name": "ExcludeFromBOM",
+      "type": "System.Boolean",
+      "description": "True to exclude the configuration from the BOM, false to not"
+    },
+    {
+      "name": "IsEnvelope",
+      "type": "System.Boolean",
+      "description": "True if the selected component is an envelope, false if not"
+    },
+    {
+      "name": "SaveAssemblyAsPartOption",
+      "type": "System.Int32",
+      "description": "Option for the selected component when saving this assembly as a part as defined in swASMSLDPRTCompPref_e"
+    }
+  ],
+  "returns": "True if setting the properties of the selected component in the specified configuration is successful, false if not",
+  "remarks": "You can use configurations to save certain display characteristics with each of the assembly components and retrieve that configuration in the future. SOLIDWORKS Design applies the settings that you specify with this method to the active configuration.\nYou cannot set the selected component to lightweight using this method.\nKnown reasons for failure of this method include:\nInvalid suppression state specified in Suppression.\nNot pre-selecting the component.",
+  "examples": [
+    {
+      "title": "Change Component to Envelope (VBA)",
+      "href": "Change_Component_to_Envelope_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Component to Envelope (VB.NET)",
+      "href": "Change_Component_to_Envelope_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Component to Envelope (C#)",
+      "href": "Change_Component_to_Envelope_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.ExcludeFromBOM",
+    "IComponent2.IsEnvelope",
+    "IComponent2.ReferencedConfiguration",
+    "IComponent2.SetSuppression2",
+    "IComponent2.Solving",
+    "IComponent2.Visible"
+  ]
+}

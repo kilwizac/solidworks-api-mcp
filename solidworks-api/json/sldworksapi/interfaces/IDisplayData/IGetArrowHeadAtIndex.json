@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "IGetArrowHeadAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired arrow head where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetArrowHeadAtIndex",
+      "IDisplayData.GetArrowHeadCount"
+    ],
+    "keywords": [
+      "igetarrowheadatindex",
+      "idisplaydata",
+      "display",
+      "data",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IDisplayData.IGetArrowHeadAtIndex",
+  "description": "Gets information on the specified arrow head.",
+  "signature": "System.Double IGetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired arrow head where the index begins at zero"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\narrowHeadPt[3], arrowHeadDir[3], arrowHeadWidth, arrowHeadHeight, arrowHeadStyle\n]\nwhere:\narrowHeadPt[3]\nXYZ arrow head tip location\narrowHeadDir[3]\nXYZ arrow head direction\narrowHeadWidth\nArrow head width measured along the arrow head direction\narrowHeadHeight\nArrow head height\narrowHeadStyle\nArrow head style as defined in\nswArrowStyle_e",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetArrowHeadAtIndex",
+    "IDisplayData.GetArrowHeadCount"
+  ]
+}

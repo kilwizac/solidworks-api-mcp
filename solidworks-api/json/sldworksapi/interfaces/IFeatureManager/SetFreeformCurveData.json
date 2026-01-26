@@ -1,0 +1,125 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "SetFreeformCurveData",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int16",
+        "description": "Direction of the curve; valid values are either 0 or 1"
+      },
+      {
+        "name": "CurveParameter",
+        "type": "System.Double",
+        "description": "Where on the face to add the curve ; valid values are between 0 and 1"
+      },
+      {
+        "name": "Tangent0X",
+        "type": "System.Double",
+        "description": "Tangent vector at one end of curve"
+      },
+      {
+        "name": "Tangent0Y",
+        "type": "System.Double",
+        "description": "Tangent vector at one end of curve"
+      },
+      {
+        "name": "Tangent0Z",
+        "type": "System.Double",
+        "description": "Tangent vector at one end of curve"
+      },
+      {
+        "name": "Tangent1X",
+        "type": "System.Double",
+        "description": "Tangent vector at other end of curve"
+      },
+      {
+        "name": "Tangent1Y",
+        "type": "System.Double",
+        "description": "Tangent vector at other end of curve"
+      },
+      {
+        "name": "Tangent1Z",
+        "type": "System.Double",
+        "description": "Tangent vector at other end of curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "freeform",
+      "setfreeformcurvedata",
+      "ifeaturemanager",
+      "manager",
+      "curve",
+      "data",
+      "direction",
+      "int16",
+      "parameter",
+      "double",
+      "tangent0",
+      "tangent1",
+      "void"
+    ]
+  },
+  "title": "IFeatureManager.SetFreeformCurveData",
+  "description": "Adds a curve to the pre-selected face for a Freeform feature.",
+  "signature": "void SetFreeformCurveData( \n   System.Int16\nDirection\n,\n   System.Double\nCurveParameter\n,\n   System.Double\nTangent0X\n,\n   System.Double\nTangent0Y\n,\n   System.Double\nTangent0Z\n,\n   System.Double\nTangent1X\n,\n   System.Double\nTangent1Y\n,\n   System.Double\nTangent1Z\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int16",
+      "description": "Direction of the curve; valid values are either 0 or 1"
+    },
+    {
+      "name": "CurveParameter",
+      "type": "System.Double",
+      "description": "Where on the face to add the curve ; valid values are between 0 and 1"
+    },
+    {
+      "name": "Tangent0X",
+      "type": "System.Double",
+      "description": "Tangent vector at one end of curve"
+    },
+    {
+      "name": "Tangent0Y",
+      "type": "System.Double",
+      "description": "Tangent vector at one end of curve"
+    },
+    {
+      "name": "Tangent0Z",
+      "type": "System.Double",
+      "description": "Tangent vector at one end of curve"
+    },
+    {
+      "name": "Tangent1X",
+      "type": "System.Double",
+      "description": "Tangent vector at other end of curve"
+    },
+    {
+      "name": "Tangent1Y",
+      "type": "System.Double",
+      "description": "Tangent vector at other end of curve"
+    },
+    {
+      "name": "Tangent1Z",
+      "type": "System.Double",
+      "description": "Tangent vector at other end of curve"
+    }
+  ],
+  "returns": "",
+  "remarks": "The SOLIDWORKS API Freeform-related methods are intended to journal the actions performed by an interactive user while creating the feature. Because user interaction is required to create a Freeform feature, fully automating the creation of it is not possible using the SOLIDWORKS API.\nThe typical steps performed by an interactive user to create a Freeform feature are:\nSelect the face to form.\nAdd curves on the selected face. Corresponds to IFeatureManager::SetFreeformCurveData.\nAdd points on the curves. Corresponds to\nIFeatureManager::SetFreeformPointData\n.\nSpecify boundary continuity. Corresponds to\nIFeatureManager::SetFreeformBoundaryContinuity\n.\nInteractively pull or push the points to change the shape of the selected face.\nInsert the Freeform feature. Corresponds to this method,\nIFeatureManager::InsertFreeform2\n.\nRecord a macro while interactively creating a Freeform feature, then examine the macro to see the order in which the Freeform-related methods are recorded.",
+  "examples": [],
+  "related": []
+}

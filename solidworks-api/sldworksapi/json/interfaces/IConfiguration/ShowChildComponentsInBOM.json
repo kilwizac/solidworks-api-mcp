@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IConfiguration",
+    "member": "ShowChildComponentsInBOM",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "showchildcomponentsinbom",
+      "iconfiguration",
+      "configuration",
+      "show",
+      "child",
+      "components",
+      "bom",
+      "boolean",
+      "change",
+      "properties",
+      "vba",
+      "traverse",
+      "hierarchy",
+      "configurations"
+    ],
+    "readonly": null
+  },
+  "title": "IConfiguration.ShowChildComponentsInBOM",
+  "description": "Obsolete. Superseded by IConfiguration::ChildComponentDisplayInBOM.",
+  "signature": "System.Boolean ShowChildComponentsInBOM {get; set;}",
+  "parameters": [],
+  "returns": "True displays child components in a BOM, false does not",
+  "remarks": "This property applies only to assembly configurations. SOLIDWORKS always returns false when you get this property on a part configuration. Setting this property on a part configuration has no effect.\nHow the components appear in the report is mainly controlled by the display format of a BOM. However, this property does affect the output format. Specifically, if this property is set to false, the report includes only the subassembly, not the component parts of this model configuration (even if the BOM report requests that all parts be displayed).",
+  "examples": [
+    {
+      "title": "Change Configuration Properties (VBA)",
+      "href": "Change_Configuration_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Hierarchy of Configurations (VBA)",
+      "href": "Traverse_Hierarchy_of_Configurations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

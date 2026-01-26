@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISurface",
+    "member": "ITorusParams",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IsTorus",
+      "ISurface.TorusParams"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "toroidal",
+      "surfaces",
+      "itorusparams",
+      "torus",
+      "params",
+      "double"
+    ],
+    "readonly": true
+  },
+  "title": "ISurface.ITorusParams",
+  "description": "Gets the parameters of a toroidal surface.",
+  "signature": "System.Double ITorusParams {get;}",
+  "parameters": [],
+  "returns": "Array of doubles describing the parameters of a toroidal surface",
+  "remarks": "Returns an array of 8 double values:\ncenter.x\ncenter.y\ncenter.z\naxis.x\naxis.y\naxis.z\nmajor radius\n- the distance between the center of torus and the center of revolved circle\nminor radius\n- the radius of the revolved circle\nNOTES:\nThe real major radius (the outer radius) of the torus is major radius + minor radius.\nThe center, major radius, and minor radius are in meters.\nPossible values that indicate a type of self-intersecting torus:\nApple - when the major radius is positive and less than or equal to the minor radius.\nLemon - when the major radius is negative and the sum of the radii is positive.",
+  "examples": [],
+  "related": [
+    "ISurface.IsTorus",
+    "ISurface.TorusParams"
+  ]
+}

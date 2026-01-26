@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "OffsetPlanarWireBody",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance by which to offset the planar wire body"
+      },
+      {
+        "name": "Normal",
+        "type": "MathVector",
+        "description": "Plane normal"
+      },
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "How to fill the gap between edges as defined in swOffsetPlanarWireBodyOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "offsetplanarwirebody",
+      "ibody2",
+      "body2",
+      "offset",
+      "planar",
+      "wire",
+      "body",
+      "distance",
+      "double",
+      "normal",
+      "math",
+      "vector",
+      "option",
+      "int32"
+    ]
+  },
+  "title": "IBody2.OffsetPlanarWireBody",
+  "description": "Offsets a planar wire body in the normal plane by the specified distance.",
+  "signature": "Body2 OffsetPlanarWireBody( \n   System.Double\nDistance\n,\n   MathVector\nNormal\n,\n   System.Int32\nOption\n)",
+  "parameters": [
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance by which to offset the planar wire body"
+    },
+    {
+      "name": "Normal",
+      "type": "MathVector",
+      "description": "Plane normal"
+    },
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "How to fill the gap between edges as defined in swOffsetPlanarWireBodyOptions_e"
+    }
+  ],
+  "returns": "Pointer to the IBody2 object",
+  "remarks": "The offset direction is determined by the direction of the first edge and the normal. For example, imagine that you are standing on the plane with normal pointing upwards and you are looking along the first edge, then the offset is to your right.",
+  "examples": [],
+  "related": []
+}

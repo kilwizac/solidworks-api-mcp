@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetHeightAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index position of the text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.AddText",
+      "INote.BeginSketchEdit",
+      "INote.EndSketchEdit",
+      "INote.GetCompoundTextAtIndex",
+      "INote.GetCompoundTextCount",
+      "INote.GetExtent",
+      "INote.GetExtentAtIndex",
+      "INote.GetHeight",
+      "INote.GetHeightInPoints",
+      "INote.GetSketch",
+      "INote.IGetExtent",
+      "INote.IGetExtentAtIndex",
+      "INote.IGetSketch",
+      "INote.IsCompoundNote",
+      "INote.SetHeight",
+      "INote.SetHeightInPoints",
+      "INote.SetTextAtIndex",
+      "INote.SetTextJustificationAtIndex",
+      "INote.SetTextOffsetAtIndex",
+      "INote.SetTextPoint",
+      "INote.SetZeroLengthLeader"
+    ],
+    "keywords": [
+      "getheightatindex",
+      "inote",
+      "note",
+      "height",
+      "index",
+      "int32",
+      "double",
+      "create",
+      "compound",
+      "vba"
+    ]
+  },
+  "title": "INote.GetHeightAtIndex",
+  "description": "Obsolete for documents created in SOLIDWORKS 2016 and later. Gets the specified text item's height in a compound note.",
+  "signature": "System.Double GetHeightAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index position of the text"
+    }
+  ],
+  "returns": "Text height",
+  "remarks": "Because a compound note can have multiple pieces of text, many of the compound note methods require you to specify the index value of the desired text. For example, the first piece of text added to the compound note using\nINote::AddText\nhas an index number of 1, the second text added has index number of 2, and so on.\nIf you use this method on a standard note (not a compound note), then the index value must be set to 1.\nTo set the specified text's height, use\nIAnnotation::SetTextFormat\nor\nIAnnotation::ISetTextFormat\n.",
+  "examples": [
+    {
+      "title": "Create Compound Note (VBA)",
+      "href": "Create_Compound_Note_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "INote.AddText",
+    "INote.BeginSketchEdit",
+    "INote.EndSketchEdit",
+    "INote.GetCompoundTextAtIndex",
+    "INote.GetCompoundTextCount",
+    "INote.GetExtent",
+    "INote.GetExtentAtIndex",
+    "INote.GetHeight",
+    "INote.GetHeightInPoints",
+    "INote.GetSketch",
+    "INote.IGetExtent",
+    "INote.IGetExtentAtIndex",
+    "INote.IGetSketch",
+    "INote.IsCompoundNote",
+    "INote.SetHeight",
+    "INote.SetHeightInPoints",
+    "INote.SetTextAtIndex",
+    "INote.SetTextJustificationAtIndex",
+    "INote.SetTextOffsetAtIndex",
+    "INote.SetTextPoint",
+    "INote.SetZeroLengthLeader"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageNumberbox",
+    "member": "DisplayedUnit",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "displayedunit",
+      "ipropertymanagerpagenumberbox",
+      "manager",
+      "page",
+      "numberbox",
+      "displayed",
+      "unit",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageNumberbox.DisplayedUnit",
+  "description": "Gets or sets the unit type to display in this PropertyManager page number box.",
+  "signature": "System.Int32 DisplayedUnit {get; set;}",
+  "parameters": [],
+  "returns": "Unit type to display in this PropertyManager page number box (see Remarks )",
+  "remarks": "This property depends on the unit type specified for the\nIPropertyManagerPageNumberbox::SetRange2\n's Units parameter, which is a value from\nswNumberboxUnitType_e\n.\nIf IPropertyManagerPageNumberbox::SetRange2's Units parameter is...\nThen specifiy an enumerator from this enumeration for IPropertyManagerPageNumber::DisplayedUnit...\nswNumberBox_Length\nswLengthUnit_e\nswNumberBox_Angle\nswAngleUnit_e\nswNumberBox_Force\nswUnitsForce_e\nswNumberBox_Time\nswUnitsTimeUnit_e\nFor example, IPropertyManagerPageNumberbox::DisplayedUnit allows an add-in to have a number box that shows length values in inches, even though the system default units are meters. Remember that the values specified for both\nIPropertyManagerPageNumberbox::Value\nand IPropertyManagerPageNumberbox::SetRange2 are in system units; IPropertyManagerPageNumberbox::DisplayedUnits simply controls how that value is displayed in the PropertyManager page number box.\nYou can call IPropertyManagerPageNumberbox::DisplayedUnit and change the units displayed in a number box while a Propertymanager page is displayed.",
+  "examples": [],
+  "related": []
+}

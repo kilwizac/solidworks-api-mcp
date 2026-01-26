@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "IGetChildren",
+    "returns": "Configuration",
+    "parameters": [
+      {
+        "name": "NumChildren",
+        "type": "System.Int32",
+        "description": "Number of children configurations of this configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetChildren",
+      "IConfiguration.GetParent",
+      "IConfiguration.GetRootComponent3"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "derived",
+      "configurations",
+      "children",
+      "igetchildren",
+      "num",
+      "int32"
+    ]
+  },
+  "title": "IConfiguration.IGetChildren",
+  "description": "Gets all of the children configurations of this derived configuration.",
+  "signature": "Configuration IGetChildren( \n   System.Int32\nNumChildren\n)",
+  "parameters": [
+    {
+      "name": "NumChildren",
+      "type": "System.Int32",
+      "description": "Number of children configurations of this configuration"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array containing the children configurations of this configuration VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "To determine if this configuration is derived, call\nIConfiguration::IsDerived\n.\nBefore calling this method, call\nIConfiguration::GetChildrenCount\n.",
+  "examples": [],
+  "related": [
+    "IConfiguration.GetChildren",
+    "IConfiguration.GetParent",
+    "IConfiguration.GetRootComponent3"
+  ]
+}

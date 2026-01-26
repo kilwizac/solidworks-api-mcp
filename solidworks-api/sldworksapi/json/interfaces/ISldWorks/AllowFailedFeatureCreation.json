@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "AllowFailedFeatureCreation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "YesNo",
+        "type": "System.Boolean",
+        "description": "True if features are to be created regardless of rebuild errors, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "rebuild",
+      "errors",
+      "features",
+      "allowfailedfeaturecreation",
+      "isldworks",
+      "sld",
+      "works",
+      "allow",
+      "failed",
+      "creation",
+      "yes",
+      "no",
+      "boolean",
+      "create",
+      "invalid",
+      "geometry",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.AllowFailedFeatureCreation",
+  "description": "Sets whether to allow the creation of a feature that has rebuild errors.",
+  "signature": "System.Boolean AllowFailedFeatureCreation( \n   System.Boolean\nYesNo\n)",
+  "parameters": [
+    {
+      "name": "YesNo",
+      "type": "System.Boolean",
+      "description": "True if features are to be created regardless of rebuild errors, false if not"
+    }
+  ],
+  "returns": "The previous value, which is now replaced by the value for YesNo",
+  "remarks": "By default, features are not created when invalid geometry is specified; however, after calling this method with YesNo set to True, the features are created but with rebuild errors.",
+  "examples": [
+    {
+      "title": "Create Feature With Invalid Geometry (VBA)",
+      "href": "Create_Feature_with_Invalid_Geometry_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,127 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IExtendSurface",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "EdgeCount",
+        "type": "System.Int32",
+        "description": "Number of edges to extend"
+      },
+      {
+        "name": "EdgesToExtend",
+        "type": "Edge",
+        "description": "Array of the selected edges to extend"
+      },
+      {
+        "name": "ExtendLinear",
+        "type": "System.Boolean",
+        "description": "True to extend the selected edges linearly along the tangent of the face at the edges; false to extend the selected edges in the same direction as the face"
+      },
+      {
+        "name": "EndCondition",
+        "type": "System.Int32",
+        "description": "0 = Extend selected edges per value specified for Dist 1 = Extend selected edges to PUpToVtx 2 = Extend selected edges to PpUpToFace"
+      },
+      {
+        "name": "Dist",
+        "type": "System.Double",
+        "description": "Distance by which to extend the selected edges (see Remarks )"
+      },
+      {
+        "name": "PUpToVtx",
+        "type": "Vertex",
+        "description": "Vertex up to which to extend the selected edges (see Remarks)"
+      },
+      {
+        "name": "PUpToFace",
+        "type": "Face",
+        "description": "Face up to which to extend the selected edges (see Remarks)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.ExtendSurface"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "extend",
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "iextendsurface",
+      "ibody2",
+      "body2",
+      "edge",
+      "count",
+      "int32",
+      "edges",
+      "linear",
+      "boolean",
+      "end",
+      "condition",
+      "dist",
+      "double",
+      "up",
+      "vtx",
+      "vertex",
+      "face"
+    ]
+  },
+  "title": "IBody2.IExtendSurface",
+  "description": "Creates a new temporary body by extending the selected edges.",
+  "signature": "Body2 IExtendSurface( \n   System.Int32\nEdgeCount\n,\n   ref Edge\nEdgesToExtend\n,\n   System.Boolean\nExtendLinear\n,\n   System.Int32\nEndCondition\n,\n   System.Double\nDist\n,\n   Vertex\nPUpToVtx\n,\n   Face\nPUpToFace\n)",
+  "parameters": [
+    {
+      "name": "EdgeCount",
+      "type": "System.Int32",
+      "description": "Number of edges to extend"
+    },
+    {
+      "name": "EdgesToExtend",
+      "type": "Edge",
+      "description": "Array of the selected edges to extend"
+    },
+    {
+      "name": "ExtendLinear",
+      "type": "System.Boolean",
+      "description": "True to extend the selected edges linearly along the tangent of the face at the edges; false to extend the selected edges in the same direction as the face"
+    },
+    {
+      "name": "EndCondition",
+      "type": "System.Int32",
+      "description": "0 = Extend selected edges per value specified for Dist 1 = Extend selected edges to PUpToVtx 2 = Extend selected edges to PpUpToFace"
+    },
+    {
+      "name": "Dist",
+      "type": "System.Double",
+      "description": "Distance by which to extend the selected edges (see Remarks )"
+    },
+    {
+      "name": "PUpToVtx",
+      "type": "Vertex",
+      "description": "Vertex up to which to extend the selected edges (see Remarks)"
+    },
+    {
+      "name": "PUpToFace",
+      "type": "Face",
+      "description": "Face up to which to extend the selected edges (see Remarks)"
+    }
+  ],
+  "returns": "Pointer to the newly created IBody2 object",
+  "remarks": "This method supports surface bodies only.\nYou can extend the edges by a specified distance or up to a vertex or up to a face.",
+  "examples": [],
+  "related": [
+    "IBody2.ExtendSurface"
+  ]
+}

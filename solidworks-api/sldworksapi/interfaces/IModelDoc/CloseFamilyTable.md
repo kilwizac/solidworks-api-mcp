@@ -1,0 +1,39 @@
+---
+type: method
+interface: IModelDoc
+member: CloseFamilyTable
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - documents
+related: []
+keywords:
+  - closefamilytable
+  - imodeldoc
+  - model
+  - doc
+  - close
+  - family
+  - table
+  - void
+---
+
+# IModelDoc.CloseFamilyTable
+
+Obsolete. Superseded by IModelDoc2::CloseFamilyTable.
+
+## Signature
+
+```csharp
+void CloseFamilyTable()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

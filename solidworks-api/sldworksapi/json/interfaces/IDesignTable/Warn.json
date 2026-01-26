@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDesignTable",
+    "member": "Warn",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.UpdateTable"
+    ],
+    "keywords": [
+      "warn",
+      "idesigntable",
+      "design",
+      "table",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDesignTable.Warn",
+  "description": "Gets or sets whether to display a warning when invalid information is encountered in the design table when updating the design table.",
+  "signature": "System.Boolean Warn {get; set;}",
+  "parameters": [],
+  "returns": "True to display a warning when invalid information is encountered in the design table when updating the design table, false to not EndOLEPropertyRow",
+  "remarks": "If information is entered to the left of the parameters row or below the configuration name column, then the SOLIDWORKS Design software warns of an invalid value and stops processing the design table without completing the remaining rows and columns. If this happens, some configurations do not update properly.\nYou must call:\nIDesignTable::EditFeature\nbefore setting this property.\nIDesignTable::UpdateFeature\nafter setting this property.",
+  "examples": [],
+  "related": [
+    "IDesignTable.UpdateTable"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "IFeatureFillet2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Feature fillet options as defined in swFeatureFilletOptions_e"
+      },
+      {
+        "name": "R1",
+        "type": "System.Double",
+        "description": "Unifiorm radius of the fillet; valid only if: Ftyp != swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+      },
+      {
+        "name": "Rho",
+        "type": "System.Double",
+        "description": "Value that determines the conic shape of the fillet: Conic rho value, if ConicRhoType = swFeatureFilletProfileType_e .swFeatureFilletConicRho Conic radius value, if ConicRhoType = swFeatureFilletProfileType_e.swFeatureFilletConicRadius Circular radius value, if ConicRhoType = swFeatureFilletProfileType_e.swFeatureFilletCircular"
+      },
+      {
+        "name": "Ftyp",
+        "type": "System.Int32",
+        "description": "Type of fillet as defined in swFeatureFilletType_e (see Remarks )"
+      },
+      {
+        "name": "OverflowType",
+        "type": "System.Int32",
+        "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+      },
+      {
+        "name": "ConicRhoType",
+        "type": "System.Int32",
+        "description": "Conic fillet profile type as defined in swFeatureFilletProfileType_e"
+      },
+      {
+        "name": "NRadii",
+        "type": "System.Int32",
+        "description": "Number of elements in the Radii array"
+      },
+      {
+        "name": "Radii",
+        "type": "System.Double",
+        "description": "In-process, unmanaged C++: Pointer to an array containing the radii for the variable radius fillet; valid only if: Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options do not include swFeatureFilletOptions_e .swFeatureFilletUniformRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "RhoArr",
+        "type": "System.Double",
+        "description": "In-process, unmanaged C++: Pointer to an array of conic shape values for the specified ConicRhoType for the variable radius fillet ; valid only if: Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options do not include swFeatureFilletOptions_e .swFeatureFilletUniformRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "SetbackDistCount",
+        "type": "System.Int32",
+        "description": "Number of elements in the SetBackDistances array"
+      },
+      {
+        "name": "SetBackDistances",
+        "type": "System.Double",
+        "description": "In-process, unmanaged C++: Pointer to an array containing setback distances along the fillet edge VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "PointCount",
+        "type": "System.Int32",
+        "description": "Number of elements in the PointRadiusArray and PointRhoArray arrays"
+      },
+      {
+        "name": "PointRadiusArray",
+        "type": "System.Double",
+        "description": "In-process, unmanaged C++: Pointer to an array containing radii at various control points along the length of the edge; valid only if Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "PointRhoArray",
+        "type": "System.Double",
+        "description": "In-process, unmanaged C++: Pointer to an array containing conic shape values for the specified ConicRhoType at various control points along the length of the edge; valid only if Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureFillet2",
+      "IFeatureManager.FilletXpertChange",
+      "IFeatureManager.FilletXpertMakeCorner",
+      "IFeatureManager.FilletXpertRemove",
+      "ISimpleFilletFeatureData2",
+      "IVariableFilletFeatureData2"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "ifeaturefillet2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "fillet2",
+      "options",
+      "int32",
+      "r1",
+      "double",
+      "rho",
+      "ftyp",
+      "overflow",
+      "type",
+      "radii",
+      "arr",
+      "setback",
+      "dist",
+      "count",
+      "back",
+      "distances",
+      "point",
+      "radius",
+      "array"
+    ]
+  },
+  "title": "IFeatureManager.IFeatureFillet2",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureFillet3.",
+  "signature": "Feature IFeatureFillet2( \n   System.Int32\nOptions\n,\n   System.Double\nR1\n,\n   System.Double\nRho\n,\n   System.Int32\nFtyp\n,\n   System.Int32\nOverflowType\n,\n   System.Int32\nConicRhoType\n,\n   System.Int32\nNRadii\n,\n   ref System.Double\nRadii\n,\n   ref System.Double\nRhoArr\n,\n   System.Int32\nSetbackDistCount\n,\n   ref System.Double\nSetBackDistances\n,\n   System.Int32\nPointCount\n,\n   ref System.Double\nPointRadiusArray\n,\n   ref System.Double\nPointRhoArray\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Feature fillet options as defined in swFeatureFilletOptions_e"
+    },
+    {
+      "name": "R1",
+      "type": "System.Double",
+      "description": "Unifiorm radius of the fillet; valid only if: Ftyp != swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+    },
+    {
+      "name": "Rho",
+      "type": "System.Double",
+      "description": "Value that determines the conic shape of the fillet: Conic rho value, if ConicRhoType = swFeatureFilletProfileType_e .swFeatureFilletConicRho Conic radius value, if ConicRhoType = swFeatureFilletProfileType_e.swFeatureFilletConicRadius Circular radius value, if ConicRhoType = swFeatureFilletProfileType_e.swFeatureFilletCircular"
+    },
+    {
+      "name": "Ftyp",
+      "type": "System.Int32",
+      "description": "Type of fillet as defined in swFeatureFilletType_e (see Remarks )"
+    },
+    {
+      "name": "OverflowType",
+      "type": "System.Int32",
+      "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+    },
+    {
+      "name": "ConicRhoType",
+      "type": "System.Int32",
+      "description": "Conic fillet profile type as defined in swFeatureFilletProfileType_e"
+    },
+    {
+      "name": "NRadii",
+      "type": "System.Int32",
+      "description": "Number of elements in the Radii array"
+    },
+    {
+      "name": "Radii",
+      "type": "System.Double",
+      "description": "In-process, unmanaged C++: Pointer to an array containing the radii for the variable radius fillet; valid only if: Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options do not include swFeatureFilletOptions_e .swFeatureFilletUniformRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "RhoArr",
+      "type": "System.Double",
+      "description": "In-process, unmanaged C++: Pointer to an array of conic shape values for the specified ConicRhoType for the variable radius fillet ; valid only if: Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options include swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options do not include swFeatureFilletOptions_e .swFeatureFilletUniformRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "SetbackDistCount",
+      "type": "System.Int32",
+      "description": "Number of elements in the SetBackDistances array"
+    },
+    {
+      "name": "SetBackDistances",
+      "type": "System.Double",
+      "description": "In-process, unmanaged C++: Pointer to an array containing setback distances along the fillet edge VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "PointCount",
+      "type": "System.Int32",
+      "description": "Number of elements in the PointRadiusArray and PointRhoArray arrays"
+    },
+    {
+      "name": "PointRadiusArray",
+      "type": "System.Double",
+      "description": "In-process, unmanaged C++: Pointer to an array containing radii at various control points along the length of the edge; valid only if Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "PointRhoArray",
+      "type": "System.Double",
+      "description": "In-process, unmanaged C++: Pointer to an array containing conic shape values for the specified ConicRhoType at various control points along the length of the edge; valid only if Ftyp = swFeatureFilletType_e .swFeatureFilletType_VariableRadius VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "IFeature pointer",
+  "remarks": "See the\nIFeatureManager::FeatureFillet2\nRemarks.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureFillet2",
+    "IFeatureManager.FilletXpertChange",
+    "IFeatureManager.FilletXpertMakeCorner",
+    "IFeatureManager.FilletXpertRemove",
+    "ISimpleFilletFeatureData2",
+    "IVariableFilletFeatureData2"
+  ]
+}

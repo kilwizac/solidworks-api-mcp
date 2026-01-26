@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumModelViews",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number of model views for the model views enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "ModelView",
+        "description": "Pointer to an array of model views of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of model views returned from the list; this value can be less than celt if you ask for more model views than exist, or it can be NULL if no more model views exist"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienummodelviews",
+      "model",
+      "views",
+      "celt",
+      "int32",
+      "rgelt",
+      "view",
+      "pcelt",
+      "fetched",
+      "void"
+    ]
+  },
+  "title": "IEnumModelViews.Next",
+  "description": "Gets the next model view in the model views enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out ModelView\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number of model views for the model views enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "ModelView",
+      "description": "Pointer to an array of model views of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of model views returned from the list; this value can be less than celt if you ask for more model views than exist, or it can be NULL if no more model views exist"
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [],
+  "related": []
+}

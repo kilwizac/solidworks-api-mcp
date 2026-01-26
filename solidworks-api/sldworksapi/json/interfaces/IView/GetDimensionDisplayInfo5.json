@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDimensionDisplayInfo5",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDimensionCount4",
+      "IView.GetDimensionDisplayInfoSize2",
+      "IView.GetDimensionDisplayString4",
+      "IView.GetDimensionIds4",
+      "IView.GetDimensionInfo6",
+      "IView.GetDimensionString4",
+      "IView.GetFirstDisplayDimension5",
+      "IView.IGetDimensionDisplayInfo5",
+      "IView.IGetDimensionDisplayString4",
+      "IView.IGetDimensionIds4",
+      "IView.IGetDimensionInfo6",
+      "IView.IGetDimensionString4",
+      "IView.ProjectedDimensions"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "drawing",
+      "sheets",
+      "views",
+      "view",
+      "iview",
+      "dimensions",
+      "sheet",
+      "isheet",
+      "getdimensiondisplayinfo5",
+      "display",
+      "info5",
+      "object"
+    ]
+  },
+  "title": "IView.GetDimensionDisplayInfo5",
+  "description": "Gets the display dimension information for the current drawing sheet or the current drawing view.",
+  "signature": "System.Object GetDimensionDisplayInfo5()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The data returned is an array of doubles as follows:\ndimensionCount\n,\n[\nlineCount\n,\n[\nlineSegmentCount\n[\nStartPt\n[3],\nendPt\n[3]\n] ]\n,\narcCount\n,\n[\narcSegmentCount,\n[\narcCenter\n[\n3], [\nStartPt\n[3],\nEndPt\n[3]\n] ]\n,\narrowCount\n,\n[\narrowTipPt\n[3],\narrowVector\n[3],\narrowWidth\n,\narrowHeight\n]\n,\ntolType\n,\nisDual\n,\nshowParens\n,\ntextAngle, value1Pos\n[3],\ntolmax1Pos\n[3],\ntolmin1Pos\n[3],\nvalue2Pos\n[3],\ntolmax2Pos\n[3],\ntolmin2Pos\n[3],\nprefixPos\n[3],\nsuffixPos\n[3],\ntolbox1Corner1\n[3],\ntolbox1Corner2\n[3],\ntolbox2Corner1\n[3],\ntolbox2Corner2\n[3],\nparenArc1Start\n[3],\nparenArc1End\n[3],\nparenArc1Center\n[3],\nparenArc1Vector\n[3],\nparenArc2Start\n[3],\nparenArc2End\n[3],\nparenArc2Center\n[3],\nparenArc2Vector\n[3],\ncallout1TextPos\n[3],\ncallout2TextPos\n[3]\n]\nwhere:\ndimensionCount\n= number of dimensions found in the drawing sheet or drawing view\nFor each dimension:\nlineCount\n= number of extension and leader lines for this dimension\nFor each line:\nStartPt\n[3] = array of three doubles representing the line start point\nEndPt\n[3] = array of three doubles representing the line end point\nRepeating the\nStartPt\n[3] and\nEndPt\n[3] pair up to\nlineSegmentCount\narcCount\n= number of leader lines which are arcs for this dimension\nFor each arc:\narcCenter\n[3] = array of three doubles representing the arc center point\nStartPt\n[3] = array of three doubles representing the arc start point\nEndPt\n[3] = array of three doubles representing the arc end point\nRepeating the\narcCenter\n[3],\nStartPt\n[3], and\nEndPt\n[3] group up to\narcSegmentCount\narrowCount\n= number of arrowheads for this dimension\narrowTipPt\n[3] = array of three doubles representing the arrowhead tip location\narrowVector\n[3] = array of three doubles representing the arrow direction\narrowWidth\n= arrowhead width\narrowHeight\n= arrowhead height\nRepeating the\narrowTipPt\n[3],\narrowVector\n[3],\narrowWidth\nand\narrowHeight\ngroup up to\narrowCount\narrowheads\ntolType\n= tolerance type as defined in\nswTolType_e\nisDual\n= True if this dimension is a dual dimension, false otherwise\nshowParens\n= True if parenthesis are shown, false otherwise\nThe next 25 values represent text angle and positioning. All text positions are the upper-left corner of the string.\ntextAngle\n= text angle in radians (counter clockwise from +ve x-axis)\nvalue1Pos\n[3] = XYZ position of text 1; the position is the upper-left corner of the actual string\ntolmax1Pos\n[3] = XYZ position of maximum tolerance text 1\ntolmin1Pos\n[3]  = XYZ position of minimum tolerance text 1\nvalue2Pos\n[3] = XYZ position of text 2; data returned is only valid if\nisDual\nis true\ntolmax2Pos\n[3]  = XYZ position of maximum tolerance text 2; data returned is valid when\nisDual\nis true\ntolmin2Pos\n[3]  = XYZ position of minimum tolerance text 2; data returned is valid when\nisDual\nis true\nprefixPos\n[3] = XYZ position of prefix text\nsuffixPos\n[3] = XYZ position of suffix text\nThe next 12 values represent the box corners for dimensions with swTolBASIC tolerance types:\ntolbox1Corner1\n[3] = XYZ corner 1 of tolerance box 1\ntolbox1Corner2\n[3] = XYZ corner 2 of tolerance box 1\ntolbox2Corner1\n[3] = XYZ corner 1 of tolerance box 2; data returned is valid when\nisDual\nis true\ntolbox2corner2\n[3]  = XYZ corner 2 of tolerance box 2; data returned is valid when\nisDual\nis true\nThe next 24 values are valid when\nshowParens\nis True; for example, when this is a reference dimension.\nparenArc1Start\n[3] = XYZ start point of the arc representing parenthesis 1\nparenArc1End\n[3]  = XYZ end point of the arc representing parenthesis 1\nparenArc1Center\n[3]  = XYZ center point of the arc representing parenthesis 1\nparenArc1Vector\n[3]  = XYZ reference direction for the arc representing parenthesis 1\nparenArc2Start\n[3]  = XYZ start point of the arc representing parenthesis 2\nparenArc2End\n[3]  = XYZ end point of the arc representing parenthesis 2\nparenArc2Center\n[3]  = XYZ center point of the arc representing parenthesis 2\nparenArc2Vector\n[3]  = XYZ reference direction for the arc representing parenthesis 2\ncallout1TextPos\n[3] = XYZ position of first callout text (text above)\ncallout2TextPos\n[3] = XYZ position of second callout text (text below)\nRepeating the entire\nlineCount callout2TextPos\ngroup up to\ndimensionCount\ndimensions\nFor example, if a particular sheet or view had two dimensions, and the first dimension had three lines, zero arcs, and two arrows, and the second dimension had two lines, one arc, and two arrows, then array returned would be as follows:\n[\n2,\n3\n, line1StartPtx, y, z, line1EndPtx, y, z, line2StartPtx, y, z, line2EndPtx, y, z, line3StartPtx, y, z, line3EndPtx, y, z,\n0\n,\n2\n, arrow1TipPtx, y, z, arrow1Vectorx, y, z, arrow1Width, arrow1Height, arrow2TipPtx, y, z, arrow2Vectorx, y, z, arrow2Width, arrow2Height, tolType, isDual, showParens, textAngle, value1Posx, y, z, tolmax1Posx, y, z, tolmin1Posx, y, z, value2Posx, y, z, tolmax2Posx, y, z, tolmin2Posx, y, z, prefixPosx, y, z, suffixPosx, y, z, tolbox1Corner1x, y, z, tolbox1Corner2x, y, z, tolbox2Corner1x, y, z, tolbox2Corner2x, y, z, parenArc1Startx, y, z, parenArc1Endx, y, z, parenArc1Centerx, y, z, parenArc1Vectorx, y, z, parenArc2Startx, y, z, parenArc2Endx, y, z, parenArc2Centerx, y, z, parenArc2Vectorx, y, z, callout1TextPosx, y, z, callout2TextPosx, y, z,\n2\n,\nline1StartPtx, y, z, line1EndPtx, y, z, line2StartPtx, y, z, line2EndPtx, y, z,\n1\n, arc1Vertexx, y, z, arc1StartPtx, y, z, arc1EndPtx, y, z,\n2\n, arrow1TipPtx, y, z, arrow1Vectorx, y, z, arrow1Width, arrow1Height, arrow2TipPtx, y, z, arrow2Vectorx, y, z, arrow2Width, arrow2Height, tolType, isDual, showParens, textAngle, value1Posx, y, z, tolmax1Posx, y, z, tolmin1Posx, y, z, value2Posx, y, z, tolmax2Posx, y, z, tolmin2Posx, y, z, prefixPosx, y, z, suffixPosx, y, z, tolbox1Corner1x, y, z, tolbox1Corner2x, y, z\n, tolbox2Corner1x, y, z, tolbox2Corner2x, y, z, parenArc1Startx, y, z, parenArc1Endx, y, z, parenArc1Centerx, y, z, parenArc1Vectorx,\ny, z, parenArc2Startx, y, z, parenArc2Endx, y, z, parenArc2Centerx, y, z, parenArc2Vectorx, y, z, callout1TextPosx, y, z, callout2TextPosx, y, z\n]\nwhere the\n3, 0,\n2\nand\n2\n,\n1\n,\n2\nrepresent the number of lines, arcs and arrows for each of the two dimensions. The information for the second dimension is underlined to distinguish it from information returned for the first dimension.\nThis method does not support\nhole callouts\n.",
+  "examples": [],
+  "related": [
+    "IView.GetDimensionCount4",
+    "IView.GetDimensionDisplayInfoSize2",
+    "IView.GetDimensionDisplayString4",
+    "IView.GetDimensionIds4",
+    "IView.GetDimensionInfo6",
+    "IView.GetDimensionString4",
+    "IView.GetFirstDisplayDimension5",
+    "IView.IGetDimensionDisplayInfo5",
+    "IView.IGetDimensionDisplayString4",
+    "IView.IGetDimensionIds4",
+    "IView.IGetDimensionInfo6",
+    "IView.IGetDimensionString4",
+    "IView.ProjectedDimensions"
+  ]
+}

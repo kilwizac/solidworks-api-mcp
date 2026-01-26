@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "GetHeaderText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Col",
+        "type": "System.Int32",
+        "description": "Column number with the desired header text; this is a 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "getheadertext",
+      "ibomtable",
+      "bom",
+      "table",
+      "header",
+      "text",
+      "col",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IBomTable.GetHeaderText",
+  "description": "Gets the header text for the specified column.",
+  "signature": "System.String GetHeaderText( \n   System.Int32\nCol\n)",
+  "parameters": [
+    {
+      "name": "Col",
+      "type": "System.Int32",
+      "description": "Column number with the desired header text; this is a 0-based index"
+    }
+  ],
+  "returns": "Text string from the column header",
+  "remarks": "Before you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetTessellationQuality",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "image",
+      "quality",
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "gettessellationquality",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "int32"
+    ]
+  },
+  "title": "IModelDoc2.GetTessellationQuality",
+  "description": "Gets the shaded-display image quality number for the current document.",
+  "signature": "System.Int32 GetTessellationQuality()",
+  "parameters": [],
+  "returns": "0 < Shaded-display image quality number < 106 (see Remarks )",
+  "remarks": "This method returns a number (\nQualityNum\n) that corresponds to the degree of tessellation of curved surfaces for shaded rendering output.\nTools > Options > Document Properties > Image Quality\nincludes a field that sets the maximum chordal deviation.\nQualityNum\nand the maximum chordal deviation (in meters) are coupled and inversely proportional as follows:\nvar\n=\nTessMin\n+\nQualityNum\n*((\nTessMax\n-\nTessMin\n)/100)\nDeviation\n= 0.025 * (\nBodyDiameter\n* 2) /\nvar\n;\nwhere:\nTessMin\n= 6\nTessMax\n= 166\n0 <\nQualityNum\n(returned by this method) < 106\nBodyDiameter\nis the diagonal distance across the bounds of the part box. See\nIPartDoc::GetPartBox\nor\nIPartDoc::IGetPartBox\nfor more information.\nYou can also get the maximum chordal deviation using\nswUserPreferencesDouble_e\n.swImageQualityShadedDeviation.\nTo get the image quality number, use\nswUserPreferenceInteger_e\n.swImageQualityShaded.\nNOTE:\nSetting the degree of tessellation\nto a higher value results in:\nfiner tessellation,\nincreased file size,\nslower graphics performance, and\nincreased memory usage.",
+  "examples": [],
+  "related": []
+}

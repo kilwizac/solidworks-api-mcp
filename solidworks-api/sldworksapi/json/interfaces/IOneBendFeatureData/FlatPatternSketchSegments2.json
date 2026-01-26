@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IOneBendFeatureData",
+    "member": "FlatPatternSketchSegments2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [
+      "IOneBendFeatureData.GetFlatPatternSketchSegmentCount2",
+      "IOneBendFeatureData.IFlatPatternSketchSegments2"
+    ],
+    "keywords": [
+      "bends",
+      "flat",
+      "pattern",
+      "flatpatternsketchsegments2",
+      "ionebendfeaturedata",
+      "one",
+      "bend",
+      "feature",
+      "data",
+      "sketch",
+      "segments2",
+      "object",
+      "names",
+      "segments",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "IOneBendFeatureData.FlatPatternSketchSegments2",
+  "description": "Gets the sketch segments and bend lines for this bend.",
+  "signature": "System.Object FlatPatternSketchSegments2 {get;}",
+  "parameters": [],
+  "returns": "Array of ISketchSegment s",
+  "remarks": "The sketch segments are calculated in the flattened model. Before calling this method, flatten the model either by unsuppressing the flat pattern in the FeatureManager design tree or by calling\nIModelDoc2::SetBendState\nto set BendState to\nswSMBendState_e\n.swSMBendStateFlattened.\nThis property returns the bend lines for older parts that do not have flat patterns.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "Get Names of Sketch Segments (VBA)",
+      "href": "Get_Names_of_Sketch_Segments_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IOneBendFeatureData.GetFlatPatternSketchSegmentCount2",
+    "IOneBendFeatureData.IFlatPatternSketchSegments2"
+  ]
+}

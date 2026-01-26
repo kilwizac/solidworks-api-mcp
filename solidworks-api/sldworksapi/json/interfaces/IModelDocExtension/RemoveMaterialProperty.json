@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDocExtension",
+    "member": "RemoveMaterialProperty",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration options as defined by swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of configurations"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetMaterialPropertyValues",
+      "IModelDocExtension.HasMaterialPropertyValues",
+      "IModelDocExtension.IGetMaterialPropertyValues",
+      "IModelDocExtension.IRemoveMaterialProperty",
+      "IModelDocExtension.ISetMaterialPropertyValues",
+      "IModelDocExtension.SetMaterialPropertyValues"
+    ],
+    "keywords": [
+      "material",
+      "properties",
+      "removematerialproperty",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "remove",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "object",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDocExtension.RemoveMaterialProperty",
+  "description": "Removes material properties from this model.",
+  "signature": "System.Boolean RemoveMaterialProperty( \n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration options as defined by swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of configurations"
+    }
+  ],
+  "returns": "True if material properties successfully removed, false if not",
+  "remarks": "This method:\nis intended to be used on features that have a changed material property value, for example, color.\ndoes not remove material. To remove material, call\nIPartDoc::SetMaterialPropertyName2\n, passing an empty string to the Name parameter.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetMaterialPropertyValues",
+    "IModelDocExtension.HasMaterialPropertyValues",
+    "IModelDocExtension.IGetMaterialPropertyValues",
+    "IModelDocExtension.IRemoveMaterialProperty",
+    "IModelDocExtension.ISetMaterialPropertyValues",
+    "IModelDocExtension.SetMaterialPropertyValues"
+  ]
+}

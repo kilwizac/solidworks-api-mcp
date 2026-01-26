@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDetailCircle",
+    "member": "SetName",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of this detail circle"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IDetailCircle.GetName"
+    ],
+    "keywords": [
+      "setname",
+      "idetailcircle",
+      "detail",
+      "circle",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IDetailCircle.SetName",
+  "description": "Sets the name of this detail circle, as displayed in the FeatureManager design tree.",
+  "signature": "System.Boolean SetName( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of this detail circle"
+    }
+  ],
+  "returns": "True if setting the detail circle name is successful, false if not",
+  "remarks": "If setting the name of a feature, then the new name must be unique in the FeatureManager design tree. If the name is not unique, then the name is not changed. Also, the name cannot contain any of the SOLIDWORKS reserved special characters.",
+  "examples": [],
+  "related": [
+    "IDetailCircle.GetName"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFrame",
+    "member": "IGetSubMenus",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "DocType",
+        "type": "System.Int32",
+        "description": "Type of document as defined by swDocumentTypes_e"
+      },
+      {
+        "name": "FullMenuName",
+        "type": "System.String",
+        "description": "Full name of menu"
+      },
+      {
+        "name": "NumSubMenus",
+        "type": "System.Int32",
+        "description": "Number of submenus"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IFrame.AddMenu",
+      "IFrame.AddMenuItem2",
+      "IFrame.AddMenuPopupItem",
+      "IFrame.GetSubMenus"
+    ],
+    "keywords": [
+      "menus",
+      "frames",
+      "igetsubmenus",
+      "iframe",
+      "frame",
+      "sub",
+      "doc",
+      "type",
+      "int32",
+      "full",
+      "menu",
+      "name",
+      "string",
+      "num"
+    ]
+  },
+  "title": "IFrame.IGetSubMenus",
+  "description": "Gets the submenus for this frame.",
+  "signature": "System.String IGetSubMenus( \n   System.Int32\nDocType\n,\n   System.String\nFullMenuName\n,\n   System.Int32\nNumSubMenus\n)",
+  "parameters": [
+    {
+      "name": "DocType",
+      "type": "System.Int32",
+      "description": "Type of document as defined by swDocumentTypes_e"
+    },
+    {
+      "name": "FullMenuName",
+      "type": "System.String",
+      "description": "Full name of menu"
+    },
+    {
+      "name": "NumSubMenus",
+      "type": "System.Int32",
+      "description": "Number of submenus"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of the names of the submenus of size NumSubMenus VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Call\nIFrame::GetSubMenuCount\nbefore calling this method to get the size of the array.",
+  "examples": [],
+  "related": [
+    "IFrame.AddMenu",
+    "IFrame.AddMenuItem2",
+    "IFrame.AddMenuPopupItem",
+    "IFrame.GetSubMenus"
+  ]
+}

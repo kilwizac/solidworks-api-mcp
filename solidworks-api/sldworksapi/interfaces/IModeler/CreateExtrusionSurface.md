@@ -1,0 +1,125 @@
+---
+type: method
+interface: IModeler
+member: CreateExtrusionSurface
+returns: System.Object
+parameters:
+  -
+    name: ProfileCurve
+    type: System.Object
+    description: Profile curve
+  -
+    name: AxisDirection
+    type: System.Object
+    description: Array of 3 doubles (x,y,z)
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related:
+  - IBody2.CreateExtrusionSurface
+  - IBody2.ICreateExtrusionSurface
+  - IModeler.CreateBsplineSurface
+  - IModeler.CreateConicalSurface2
+  - IModeler.CreateCoonsBSurface
+  - IModeler.CreateCylindricalSurface2
+  - IModeler.CreateLoftSurface
+  - IModeler.CreateOffsetSurface
+  - IModeler.CreatePlanarSurface2
+  - IModeler.CreateRuledSurface
+  - IModeler.CreateSphericalSurface2
+  - IModeler.CreateSweptSurface
+  - IModeler.CreateToroidalSurface
+  - IModeler.ICreateBsplineSurface
+  - IModeler.ICreateConicalSurface2
+  - IModeler.ICreateCylindricalSurface2
+  - IModeler.ICreateExtrusionSurface
+  - IModeler.ICreateLoftSurface
+  - IModeler.ICreateOffsetSurface
+  - IModeler.ICreatePlanarSurface2
+  - IModeler.ICreateRuledSurface
+  - IModeler.ICreateSphericalSurface2
+  - IModeler.ICreateSweptSurface
+  - IModeler.ICreateToroidalSurface
+keywords:
+  - extrude
+  - see
+  - also
+  - iextrudefeaturedata2
+  - surfaces
+  - surface
+  - isurface
+  - extruded
+  - createextrusionsurface
+  - imodeler
+  - modeler
+  - create
+  - extrusion
+  - profile
+  - curve
+  - object
+  - axis
+  - direction
+---
+
+# IModeler.CreateExtrusionSurface
+
+Creates an extruded surface.
+
+## Signature
+
+```csharp
+System.Object CreateExtrusionSurface( 
+   System.Object
+ProfileCurve
+,
+   System.Object
+AxisDirection
+)
+```
+## Parameters
+
+- `ProfileCurve` (System.Object): Profile curve
+- `AxisDirection` (System.Object): Array of 3 doubles (x,y,z)
+
+## Return Value
+
+Extruded surface
+
+## Remarks
+
+You can use this method with:
+A set of related functions that construct a body from trimmed surfaces. The profile curve is extruded along the direction vector of axis direction, the new surface being the envelope of the curve. The profile curve must be of type line, circle, or b-spline curve.
+Trimming curve creation routines (for example,
+ISurface::AddTrimmingLoop2
+or
+ISurface::IAddTrimmingLoop2
+) to construct a trimmed tabulated cylinder.
+
+## See Also
+
+- `IBody2.CreateExtrusionSurface`
+- `IBody2.ICreateExtrusionSurface`
+- `IModeler.CreateBsplineSurface`
+- `IModeler.CreateConicalSurface2`
+- `IModeler.CreateCoonsBSurface`
+- `IModeler.CreateCylindricalSurface2`
+- `IModeler.CreateLoftSurface`
+- `IModeler.CreateOffsetSurface`
+- `IModeler.CreatePlanarSurface2`
+- `IModeler.CreateRuledSurface`
+- `IModeler.CreateSphericalSurface2`
+- `IModeler.CreateSweptSurface`
+- `IModeler.CreateToroidalSurface`
+- `IModeler.ICreateBsplineSurface`
+- `IModeler.ICreateConicalSurface2`
+- `IModeler.ICreateCylindricalSurface2`
+- `IModeler.ICreateExtrusionSurface`
+- `IModeler.ICreateLoftSurface`
+- `IModeler.ICreateOffsetSurface`
+- `IModeler.ICreatePlanarSurface2`
+- `IModeler.ICreateRuledSurface`
+- `IModeler.ICreateSphericalSurface2`
+- `IModeler.ICreateSweptSurface`
+- `IModeler.ICreateToroidalSurface`

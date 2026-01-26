@@ -1,0 +1,37 @@
+---
+type: method
+interface: IBody
+member: IGetProcessedBodyWithSelFace
+returns: Body
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - geometry
+related: []
+keywords:
+  - igetprocessedbodywithselface
+  - ibody
+  - body
+  - processed
+  - sel
+  - face
+---
+
+# IBody.IGetProcessedBodyWithSelFace
+
+Obsolete. Superseded by IBody2::IGetProcessedBodyWithSelFace.
+
+## Signature
+
+```csharp
+Body IGetProcessedBodyWithSelFace()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

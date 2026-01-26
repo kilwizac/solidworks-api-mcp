@@ -1,0 +1,148 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "IImprintingFacesCount2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NTargetFaces",
+        "type": "System.Int32",
+        "description": "Number of faces in the target body"
+      },
+      {
+        "name": "TargetFaceArray",
+        "type": "Face2",
+        "description": "Array of the faces that describe the target body"
+      },
+      {
+        "name": "NToolFaces",
+        "type": "System.Int32",
+        "description": "Number of faces in the tool body"
+      },
+      {
+        "name": "ToolFaceArray",
+        "type": "Face2",
+        "description": "Array of the faces that describe the tool body"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options for this operation as defined in swImprintingFacesOpts_e"
+      },
+      {
+        "name": "NTargetEdges",
+        "type": "System.Int32",
+        "description": "Number of edges returned from this operation"
+      },
+      {
+        "name": "NtoolEdges",
+        "type": "System.Int32",
+        "description": "Number of tool edges returned from this operation"
+      },
+      {
+        "name": "NtargetVertices",
+        "type": "System.Int32",
+        "description": "Number of target vertices returned from this operation"
+      },
+      {
+        "name": "ToolVertices",
+        "type": "System.Int32",
+        "description": "Number of tool vertices returned from this operation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.ImprintingFaces"
+    ],
+    "keywords": [
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "imprinted",
+      "edges",
+      "vertices",
+      "vertex",
+      "ivertex",
+      "iimprintingfacescount2",
+      "imodeler",
+      "modeler",
+      "imprinting",
+      "faces",
+      "count2",
+      "target",
+      "int32",
+      "face",
+      "array",
+      "face2",
+      "tool",
+      "options",
+      "ntool",
+      "ntarget",
+      "boolean"
+    ]
+  },
+  "title": "IModeler.IImprintingFacesCount2",
+  "description": "Gets the number of imprinted edges and vertices in the model.",
+  "signature": "System.Boolean IImprintingFacesCount2( \n   System.Int32\nNTargetFaces\n,\n   ref Face2\nTargetFaceArray\n,\n   System.Int32\nNToolFaces\n,\n   ref Face2\nToolFaceArray\n,\n   System.Int32\nOptions\n,\n   out System.Int32\nNTargetEdges\n,\n   out System.Int32\nNtoolEdges\n,\n   out System.Int32\nNtargetVertices\n,\n   out System.Int32\nToolVertices\n)",
+  "parameters": [
+    {
+      "name": "NTargetFaces",
+      "type": "System.Int32",
+      "description": "Number of faces in the target body"
+    },
+    {
+      "name": "TargetFaceArray",
+      "type": "Face2",
+      "description": "Array of the faces that describe the target body"
+    },
+    {
+      "name": "NToolFaces",
+      "type": "System.Int32",
+      "description": "Number of faces in the tool body"
+    },
+    {
+      "name": "ToolFaceArray",
+      "type": "Face2",
+      "description": "Array of the faces that describe the tool body"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options for this operation as defined in swImprintingFacesOpts_e"
+    },
+    {
+      "name": "NTargetEdges",
+      "type": "System.Int32",
+      "description": "Number of edges returned from this operation"
+    },
+    {
+      "name": "NtoolEdges",
+      "type": "System.Int32",
+      "description": "Number of tool edges returned from this operation"
+    },
+    {
+      "name": "NtargetVertices",
+      "type": "System.Int32",
+      "description": "Number of target vertices returned from this operation"
+    },
+    {
+      "name": "ToolVertices",
+      "type": "System.Int32",
+      "description": "Number of tool vertices returned from this operation"
+    }
+  ],
+  "returns": "True if the operation is successful, false if not",
+  "remarks": "Call this method before calling\nIModeler::IImprintingFaces\n.",
+  "examples": [],
+  "related": [
+    "IModeler.ImprintingFaces"
+  ]
+}

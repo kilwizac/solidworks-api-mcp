@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetBendLineValues2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Up",
+        "type": "System.Boolean",
+        "description": "True if the bend is up, false if the bend is down"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of the bend"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Radius of the bend"
+      },
+      {
+        "name": "Points",
+        "type": "System.Object",
+        "description": "Array of doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IMathPoint"
+    ],
+    "keywords": [
+      "bend",
+      "line",
+      "notes",
+      "note",
+      "see",
+      "also",
+      "inote",
+      "sheet",
+      "metal",
+      "isheetmetalfeaturedata",
+      "getbendlinevalues2",
+      "values2",
+      "up",
+      "boolean",
+      "angle",
+      "double",
+      "radius",
+      "points",
+      "object"
+    ]
+  },
+  "title": "INote.GetBendLineValues2",
+  "description": "Gets the values of a bend line note.",
+  "signature": "System.Boolean GetBendLineValues2( \n   out System.Boolean\nUp\n,\n   out System.Double\nAngle\n,\n   out System.Double\nRadius\n,\n   out System.Object\nPoints\n)",
+  "parameters": [
+    {
+      "name": "Up",
+      "type": "System.Boolean",
+      "description": "True if the bend is up, false if the bend is down"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of the bend"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Radius of the bend"
+    },
+    {
+      "name": "Points",
+      "type": "System.Object",
+      "description": "Array of doubles (see Remarks )"
+    }
+  ],
+  "returns": "True if the note is a bend note, false if not",
+  "remarks": "Points will contain six (6) doubles (three (3) each for the start point and endpoint), one set for each segment in the bend line:\n[\nx, y, z,\nx, y, z\n]",
+  "examples": [],
+  "related": [
+    "IMathPoint"
+  ]
+}

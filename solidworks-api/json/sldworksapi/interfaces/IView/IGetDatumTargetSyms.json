@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetDatumTargetSyms",
+    "returns": "DatumTargetSym",
+    "parameters": [
+      {
+        "name": "NumDatumTargetSym",
+        "type": "System.Int32",
+        "description": "Total number of datum target symbols on the drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDatumTargetSyms"
+    ],
+    "keywords": [
+      "datum",
+      "targets",
+      "see",
+      "idatumtargetsym",
+      "annotation",
+      "also",
+      "iannotation",
+      "view",
+      "iview",
+      "igetdatumtargetsyms",
+      "target",
+      "syms",
+      "num",
+      "sym",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetDatumTargetSyms",
+  "description": "Gets all of the datum target symbols on this drawing view.",
+  "signature": "DatumTargetSym IGetDatumTargetSyms( \n   System.Int32\nNumDatumTargetSym\n)",
+  "parameters": [
+    {
+      "name": "NumDatumTargetSym",
+      "type": "System.Int32",
+      "description": "Total number of datum target symbols on the drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of datum target symbols VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of datum target symbols all at once instead of calling\nIView::GetFirstDatumTargetSym\nand then repeatedly calling\nIDatumTargetSym::GetNext\nto obtain the remaining datum target symbols on this drawing view.\nBefore calling this method, call\nIView::GetDatumTargetSymCount\nto get the value for numDatumTargetSym.",
+  "examples": [],
+  "related": [
+    "IView.GetDatumTargetSyms"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPrimaryMemberPointLengthFeatureData",
+    "member": "UnChainPointsAndLength",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "unchainpointsandlength",
+      "iprimarymemberpointlengthfeaturedata",
+      "primary",
+      "member",
+      "point",
+      "length",
+      "feature",
+      "data",
+      "un",
+      "chain",
+      "points",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IPrimaryMemberPointLengthFeatureData.UnChainPointsAndLength",
+  "description": "Gets and sets whether to chain points to create this primary structure system member.",
+  "signature": "System.Boolean UnChainPointsAndLength {get; set;}",
+  "parameters": [],
+  "returns": "True to pair each point passed in IPrimaryMemberPointLengthFeatureData::SetPoints to the previous point in the list, false to pair consecutive points only",
+  "remarks": "This property is valid only if\nIPrimaryMemberPointLengthFeatureData::EndCondition\nis\nswPrimaryMemberPointLengthEndCondition_e\n.swPrimaryMemberPointLengthEndCondition_Point.\nIf this property is set to true, each point passed to\nIPrimaryMemberPointLengthFeatureData::SetPoints\npairs with the previous point in the list to create a new member.\nFor the list of points A,B,C,D,E,F:\nIf this property is set to true, then 5 members are created:\nA -- B\nB -- C\nC -- D\nD -- E\nE -- F\nIf this property is set to false, then only 3 members are created:\nA -- B\nC -- D\nE -- F",
+  "examples": [],
+  "related": []
+}

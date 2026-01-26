@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetClosestPointOn",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X value of the input point"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y value of the input point"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z value of the input point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEdge.GetClosestPointOn",
+      "IEdge.IGetClosestPointOn",
+      "IFace2.GetClosestPointOn",
+      "IFace2.IGetClosestPointOn",
+      "ISurface.GetClosestPointOn",
+      "ISurface.IGetClosestPointOn",
+      "IVertex.GetClosestPointOn",
+      "IVertex.IGetClosestPointOn"
+    ],
+    "keywords": [
+      "points",
+      "closest",
+      "getclosestpointon",
+      "icurve",
+      "curve",
+      "point",
+      "double",
+      "object"
+    ]
+  },
+  "title": "ICurve.GetClosestPointOn",
+  "description": "Determines the closest point on the curve using the x,y,z input point.",
+  "signature": "System.Object GetClosestPointOn( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X value of the input point"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y value of the input point"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z value of the input point"
+    }
+  ],
+  "returns": "Array of 5 doubles (see Remarks )",
+  "remarks": "This method returns only one point, regardless of the number of valid minimum distance points.\nThe array return contains the following values:\n[\nPointX, PointY, PointZ, ParamU, NotUsed\n]\nwhere:\nPointX\n,\nPointY\n,and\nPointZ\nrepresent the point on the curve\nParamU\nis the parameter on the curve that is closest to the input point\nNotUsed\nis unused",
+  "examples": [],
+  "related": [
+    "IEdge.GetClosestPointOn",
+    "IEdge.IGetClosestPointOn",
+    "IFace2.GetClosestPointOn",
+    "IFace2.IGetClosestPointOn",
+    "ISurface.GetClosestPointOn",
+    "ISurface.IGetClosestPointOn",
+    "IVertex.GetClosestPointOn",
+    "IVertex.IGetClosestPointOn"
+  ]
+}

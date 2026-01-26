@@ -1,0 +1,572 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>CreateLoftBody2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftBody2" />
+    <meta name="Description" content="Creates a loft body using the specified profiles, guide curves, and centerline." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModeler.CreateLoftBody2" />
+    <meta name="Microsoft.Help.Keywords" content="Bodies (see also IBody2 Interface), loft" />
+    <meta name="Microsoft.Help.Keywords" content="Lofts (see also ILoftFeatureData Interface), body" />
+    <meta name="Microsoft.Help.Keywords" content="Lofts (see also ILoftFeatureData Interface), surfaces" />
+    <meta name="Microsoft.Help.Keywords" content="Surface (see also ISurface Interface), loft" />
+    <meta name="Microsoft.Help.Keywords" content="CreateLoftBody2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                CreateLoftBody2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a> : CreateLoftBody2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="PModDocPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">Model document</a> in which to create the loft body
+    </div>
+
+    <div id="ProfilePopupContent" class="i-popup-content">
+        Array of sketches representing the profiles of the loft body
+    </div>
+
+    <div id="GuideCurvePopupContent" class="i-popup-content">
+        Array of sketches representing the guide curves of the loft body
+    </div>
+
+    <div id="CenterlinePopupContent" class="i-popup-content">
+        Sketch representing a centerline of the loft body
+    </div>
+
+    <div id="IsThinBodyPopupContent" class="i-popup-content">
+        True if the loft body is to be a thin body, false if not
+    </div>
+
+    <div id="ThinTypePopupContent" class="i-popup-content">
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p">
+                <p>0 = One direction</p>
+            </li>
+
+            <li class="kadov-p">
+                <p>1 = One direction reverse</p>
+            </li>
+
+            <li class="kadov-p">
+                <p>2 = Midplane</p>
+            </li>
+
+            <li class="kadov-p">
+                <p>3 = Two direction</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="Thickness1PopupContent" class="i-popup-content">
+        Value for thickness for first direction if a thin body
+    </div>
+
+    <div id="Thickness2PopupContent" class="i-popup-content">
+        Value for thickness for second direction if a thin body
+    </div>
+
+    <div id="FeatureScopePopupContent" class="i-popup-content">
+        <p>True if the loft body only affects selected bodies, false if the loft body affects all bodies</p>
+    </div>
+
+    <div id="IsBlendClosedPopupContent" class="i-popup-content">
+        True for a closed loft,&#160;false for an open loft; if&#160;true and you selected less that three profiles, then&#160;any selected guide curves must be closed curves
+    </div>
+
+    <div id="KeepTangencyPopupContent" class="i-popup-content">
+        <p>If the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; specify true to maintain the tangency as seen in the section curves, false to not</p>
+
+        <p><span style="FONT-WEIGHT: bold">NOTE:</span> When generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics.</p>
+    </div>
+
+    <div id="ForceNonRationalPopupContent" class="i-popup-content">
+        True to force the resulting surface to be non-rational,&#160;false to not
+    </div>
+
+    <div id="IsSolidBodyPopupContent" class="i-popup-content">
+        True to return a solid loft body, false to return a surface loft body
+    </div>
+
+    <div id="TessTolFactorPopupContent" class="i-popup-content">
+        Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created
+    </div>
+
+    <div id="StartTangentLengthPopupContent" class="i-popup-content">
+        Start tangent length
+    </div>
+
+    <div id="EndTangentLengthPopupContent" class="i-popup-content">
+        End tangent length
+    </div>
+
+    <div id="StartTangentDirPopupContent" class="i-popup-content">
+        <p>True is one direction, false is the opposite direction</p>
+    </div>
+
+    <div id="EndTangentDirPopupContent" class="i-popup-content">
+        <p>True is one direction, false is the opposite direction</p>
+    </div>
+
+    <div id="StartMatchingTypePopupContent" class="i-popup-content">
+        <p>Tangency type at the start profile:</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">0 = none</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">1 = tangent to the normal of the profile</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">2 = tangent to the selected vector</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">3 = tangent to all adjacent faces sharing an edge with the start profile</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="EndMatchingTypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Tangency type as the end profile<!--ParamDesc-->:</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">0 = none</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">1 = tangent to the normal of the profile</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">2 = tangent to the selected vector</p>
+            </li>
+
+            <li class="kadov-p-CapiRemarksText">
+                <p class="apiRemarksText">3 = tangent to all adjacent faces sharing an edge with the start profile</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="MergePopupContent" class="i-popup-content">
+        True merges the results in a multibody part, false does not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates a loft body using the specified profiles, guide curves, and centerline.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function CreateLoftBody2( _
+   ByVal <i><a class="i-popup-link" id="PModDocPopupLink" data-popup-contentsource="#PModDocPopupContent" data-popup-showevent="click mouseenter">PModDoc</a></i> As ModelDoc2, _
+   ByVal <i><a class="i-popup-link" id="ProfilePopupLink" data-popup-contentsource="#ProfilePopupContent" data-popup-showevent="click mouseenter">Profile</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="GuideCurvePopupLink" data-popup-contentsource="#GuideCurvePopupContent" data-popup-showevent="click mouseenter">GuideCurve</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="CenterlinePopupLink" data-popup-contentsource="#CenterlinePopupContent" data-popup-showevent="click mouseenter">Centerline</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="IsThinBodyPopupLink" data-popup-contentsource="#IsThinBodyPopupContent" data-popup-showevent="click mouseenter">IsThinBody</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ThinTypePopupLink" data-popup-contentsource="#ThinTypePopupContent" data-popup-showevent="click mouseenter">ThinType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="Thickness1PopupLink" data-popup-contentsource="#Thickness1PopupContent" data-popup-showevent="click mouseenter">Thickness1</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Thickness2PopupLink" data-popup-contentsource="#Thickness2PopupContent" data-popup-showevent="click mouseenter">Thickness2</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="IsBlendClosedPopupLink" data-popup-contentsource="#IsBlendClosedPopupContent" data-popup-showevent="click mouseenter">IsBlendClosed</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="KeepTangencyPopupLink" data-popup-contentsource="#KeepTangencyPopupContent" data-popup-showevent="click mouseenter">KeepTangency</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ForceNonRationalPopupLink" data-popup-contentsource="#ForceNonRationalPopupContent" data-popup-showevent="click mouseenter">ForceNonRational</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="IsSolidBodyPopupLink" data-popup-contentsource="#IsSolidBodyPopupContent" data-popup-showevent="click mouseenter">IsSolidBody</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="TessTolFactorPopupLink" data-popup-contentsource="#TessTolFactorPopupContent" data-popup-showevent="click mouseenter">TessTolFactor</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="StartTangentLengthPopupLink" data-popup-contentsource="#StartTangentLengthPopupContent" data-popup-showevent="click mouseenter">StartTangentLength</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="EndTangentLengthPopupLink" data-popup-contentsource="#EndTangentLengthPopupContent" data-popup-showevent="click mouseenter">EndTangentLength</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="StartTangentDirPopupLink" data-popup-contentsource="#StartTangentDirPopupContent" data-popup-showevent="click mouseenter">StartTangentDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="EndTangentDirPopupLink" data-popup-contentsource="#EndTangentDirPopupContent" data-popup-showevent="click mouseenter">EndTangentDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="MergePopupLink" data-popup-contentsource="#MergePopupContent" data-popup-showevent="click mouseenter">Merge</a></i> As System.Boolean _
+) As Body2
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler</a>
+Dim PModDoc As ModelDoc2
+Dim Profile As System.Object
+Dim GuideCurve As System.Object
+Dim Centerline As System.Object
+Dim IsThinBody As System.Boolean
+Dim ThinType As System.Integer
+Dim Thickness1 As System.Double
+Dim Thickness2 As System.Double
+Dim FeatureScope As System.Boolean
+Dim IsBlendClosed As System.Boolean
+Dim KeepTangency As System.Boolean
+Dim ForceNonRational As System.Boolean
+Dim IsSolidBody As System.Boolean
+Dim TessTolFactor As System.Double
+Dim StartTangentLength As System.Double
+Dim EndTangentLength As System.Double
+Dim StartTangentDir As System.Boolean
+Dim EndTangentDir As System.Boolean
+Dim StartMatchingType As System.Integer
+Dim EndMatchingType As System.Integer
+Dim Merge As System.Boolean
+Dim value As Body2
+ 
+value = instance.CreateLoftBody2(PModDoc, Profile, GuideCurve, Centerline, IsThinBody, ThinType, Thickness1, Thickness2, FeatureScope, IsBlendClosed, KeepTangency, ForceNonRational, IsSolidBody, TessTolFactor, StartTangentLength, EndTangentLength, StartTangentDir, EndTangentDir, StartMatchingType, EndMatchingType, Merge)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Body2 CreateLoftBody2( 
+   ModelDoc2 <i><a class="i-popup-link" id="PModDocPopupLink" data-popup-contentsource="#PModDocPopupContent" data-popup-showevent="click mouseenter">PModDoc</a></i>,
+   System.object <i><a class="i-popup-link" id="ProfilePopupLink" data-popup-contentsource="#ProfilePopupContent" data-popup-showevent="click mouseenter">Profile</a></i>,
+   System.object <i><a class="i-popup-link" id="GuideCurvePopupLink" data-popup-contentsource="#GuideCurvePopupContent" data-popup-showevent="click mouseenter">GuideCurve</a></i>,
+   System.object <i><a class="i-popup-link" id="CenterlinePopupLink" data-popup-contentsource="#CenterlinePopupContent" data-popup-showevent="click mouseenter">Centerline</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsThinBodyPopupLink" data-popup-contentsource="#IsThinBodyPopupContent" data-popup-showevent="click mouseenter">IsThinBody</a></i>,
+   System.int <i><a class="i-popup-link" id="ThinTypePopupLink" data-popup-contentsource="#ThinTypePopupContent" data-popup-showevent="click mouseenter">ThinType</a></i>,
+   System.double <i><a class="i-popup-link" id="Thickness1PopupLink" data-popup-contentsource="#Thickness1PopupContent" data-popup-showevent="click mouseenter">Thickness1</a></i>,
+   System.double <i><a class="i-popup-link" id="Thickness2PopupLink" data-popup-contentsource="#Thickness2PopupContent" data-popup-showevent="click mouseenter">Thickness2</a></i>,
+   System.bool <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsBlendClosedPopupLink" data-popup-contentsource="#IsBlendClosedPopupContent" data-popup-showevent="click mouseenter">IsBlendClosed</a></i>,
+   System.bool <i><a class="i-popup-link" id="KeepTangencyPopupLink" data-popup-contentsource="#KeepTangencyPopupContent" data-popup-showevent="click mouseenter">KeepTangency</a></i>,
+   System.bool <i><a class="i-popup-link" id="ForceNonRationalPopupLink" data-popup-contentsource="#ForceNonRationalPopupContent" data-popup-showevent="click mouseenter">ForceNonRational</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsSolidBodyPopupLink" data-popup-contentsource="#IsSolidBodyPopupContent" data-popup-showevent="click mouseenter">IsSolidBody</a></i>,
+   System.double <i><a class="i-popup-link" id="TessTolFactorPopupLink" data-popup-contentsource="#TessTolFactorPopupContent" data-popup-showevent="click mouseenter">TessTolFactor</a></i>,
+   System.double <i><a class="i-popup-link" id="StartTangentLengthPopupLink" data-popup-contentsource="#StartTangentLengthPopupContent" data-popup-showevent="click mouseenter">StartTangentLength</a></i>,
+   System.double <i><a class="i-popup-link" id="EndTangentLengthPopupLink" data-popup-contentsource="#EndTangentLengthPopupContent" data-popup-showevent="click mouseenter">EndTangentLength</a></i>,
+   System.bool <i><a class="i-popup-link" id="StartTangentDirPopupLink" data-popup-contentsource="#StartTangentDirPopupContent" data-popup-showevent="click mouseenter">StartTangentDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="EndTangentDirPopupLink" data-popup-contentsource="#EndTangentDirPopupContent" data-popup-showevent="click mouseenter">EndTangentDir</a></i>,
+   System.int <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i>,
+   System.int <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i>,
+   System.bool <i><a class="i-popup-link" id="MergePopupLink" data-popup-contentsource="#MergePopupContent" data-popup-showevent="click mouseenter">Merge</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Body2^ CreateLoftBody2( 
+   ModelDoc2^ <i><a class="i-popup-link" id="PModDocPopupLink" data-popup-contentsource="#PModDocPopupContent" data-popup-showevent="click mouseenter">PModDoc</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ProfilePopupLink" data-popup-contentsource="#ProfilePopupContent" data-popup-showevent="click mouseenter">Profile</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="GuideCurvePopupLink" data-popup-contentsource="#GuideCurvePopupContent" data-popup-showevent="click mouseenter">GuideCurve</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="CenterlinePopupLink" data-popup-contentsource="#CenterlinePopupContent" data-popup-showevent="click mouseenter">Centerline</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsThinBodyPopupLink" data-popup-contentsource="#IsThinBodyPopupContent" data-popup-showevent="click mouseenter">IsThinBody</a></i>,
+   System.int <i><a class="i-popup-link" id="ThinTypePopupLink" data-popup-contentsource="#ThinTypePopupContent" data-popup-showevent="click mouseenter">ThinType</a></i>,
+   System.double <i><a class="i-popup-link" id="Thickness1PopupLink" data-popup-contentsource="#Thickness1PopupContent" data-popup-showevent="click mouseenter">Thickness1</a></i>,
+   System.double <i><a class="i-popup-link" id="Thickness2PopupLink" data-popup-contentsource="#Thickness2PopupContent" data-popup-showevent="click mouseenter">Thickness2</a></i>,
+   System.bool <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsBlendClosedPopupLink" data-popup-contentsource="#IsBlendClosedPopupContent" data-popup-showevent="click mouseenter">IsBlendClosed</a></i>,
+   System.bool <i><a class="i-popup-link" id="KeepTangencyPopupLink" data-popup-contentsource="#KeepTangencyPopupContent" data-popup-showevent="click mouseenter">KeepTangency</a></i>,
+   System.bool <i><a class="i-popup-link" id="ForceNonRationalPopupLink" data-popup-contentsource="#ForceNonRationalPopupContent" data-popup-showevent="click mouseenter">ForceNonRational</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsSolidBodyPopupLink" data-popup-contentsource="#IsSolidBodyPopupContent" data-popup-showevent="click mouseenter">IsSolidBody</a></i>,
+   System.double <i><a class="i-popup-link" id="TessTolFactorPopupLink" data-popup-contentsource="#TessTolFactorPopupContent" data-popup-showevent="click mouseenter">TessTolFactor</a></i>,
+   System.double <i><a class="i-popup-link" id="StartTangentLengthPopupLink" data-popup-contentsource="#StartTangentLengthPopupContent" data-popup-showevent="click mouseenter">StartTangentLength</a></i>,
+   System.double <i><a class="i-popup-link" id="EndTangentLengthPopupLink" data-popup-contentsource="#EndTangentLengthPopupContent" data-popup-showevent="click mouseenter">EndTangentLength</a></i>,
+   System.bool <i><a class="i-popup-link" id="StartTangentDirPopupLink" data-popup-contentsource="#StartTangentDirPopupContent" data-popup-showevent="click mouseenter">StartTangentDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="EndTangentDirPopupLink" data-popup-contentsource="#EndTangentDirPopupContent" data-popup-showevent="click mouseenter">EndTangentDir</a></i>,
+   System.int <i><a class="i-popup-link" id="StartMatchingTypePopupLink" data-popup-contentsource="#StartMatchingTypePopupContent" data-popup-showevent="click mouseenter">StartMatchingType</a></i>,
+   System.int <i><a class="i-popup-link" id="EndMatchingTypePopupLink" data-popup-contentsource="#EndMatchingTypePopupContent" data-popup-showevent="click mouseenter">EndMatchingType</a></i>,
+   System.bool <i><a class="i-popup-link" id="MergePopupLink" data-popup-contentsource="#MergePopupContent" data-popup-showevent="click mouseenter">Merge</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>PModDoc</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">Model document</a> in which to create the loft body</dd>
+
+                <dt><i>Profile</i></dt>
+
+                <dd>Array of sketches representing the profiles of the loft body</dd>
+
+                <dt><i>GuideCurve</i></dt>
+
+                <dd>Array of sketches representing the guide curves of the loft body</dd>
+
+                <dt><i>Centerline</i></dt>
+
+                <dd>Sketch representing a centerline of the loft body</dd>
+
+                <dt><i>IsThinBody</i></dt>
+
+                <dd>True if the loft body is to be a thin body, false if not</dd>
+
+                <dt><i>ThinType</i></dt>
+
+                <dd>
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p>0 = One direction</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p>1 = One direction reverse</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p>2 = Midplane</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p>3 = Two direction</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>Thickness1</i></dt>
+
+                <dd>Value for thickness for first direction if a thin body</dd>
+
+                <dt><i>Thickness2</i></dt>
+
+                <dd>Value for thickness for second direction if a thin body</dd>
+
+                <dt><i>FeatureScope</i></dt>
+
+                <dd>
+                    <p>True if the loft body only affects selected bodies, false if the loft body affects all bodies</p>
+                </dd>
+
+                <dt><i>IsBlendClosed</i></dt>
+
+                <dd>True for a closed loft,&#160;false for an open loft; if&#160;true and you selected less that three profiles, then&#160;any selected guide curves must be closed curves</dd>
+
+                <dt><i>KeepTangency</i></dt>
+
+                <dd>
+                    <p>If the section curves are tangent, then you have the option to specify whether the resulting faces are also tangent; specify true to maintain the tangency as seen in the section curves, false to not</p>
+
+                    <p><span style="FONT-WEIGHT: bold">NOTE:</span> When generating tangent surfaces, SOLIDWORKS maintains planar and cylindrical surface shapes if the section curves exhibit these characteristics.</p>
+                </dd>
+
+                <dt><i>ForceNonRational</i></dt>
+
+                <dd>True to force the resulting surface to be non-rational,&#160;false to not</dd>
+
+                <dt><i>IsSolidBody</i></dt>
+
+                <dd>True to return a solid loft body, false to return a surface loft body</dd>
+
+                <dt><i>TessTolFactor</i></dt>
+
+                <dd>Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the variable, the more intermediate sections created</dd>
+
+                <dt><i>StartTangentLength</i></dt>
+
+                <dd>Start tangent length</dd>
+
+                <dt><i>EndTangentLength</i></dt>
+
+                <dd>End tangent length</dd>
+
+                <dt><i>StartTangentDir</i></dt>
+
+                <dd>
+                    <p>True is one direction, false is the opposite direction</p>
+                </dd>
+
+                <dt><i>EndTangentDir</i></dt>
+
+                <dd>
+                    <p>True is one direction, false is the opposite direction</p>
+                </dd>
+
+                <dt><i>StartMatchingType</i></dt>
+
+                <dd>
+                    <p>Tangency type at the start profile:</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">0 = none</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">1 = tangent to the normal of the profile</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">2 = tangent to the selected vector</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">3 = tangent to all adjacent faces sharing an edge with the start profile</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>EndMatchingType</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Tangency type as the end profile<!--ParamDesc-->:</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">0 = none</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">1 = tangent to the normal of the profile</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">2 = tangent to the selected vector</p>
+                        </li>
+
+                        <li class="kadov-p-CapiRemarksText">
+                            <p class="apiRemarksText">3 = tangent to all adjacent faces sharing an edge with the start profile</p>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>Merge</i></dt>
+
+                <dd>True merges the results in a multibody part, false does not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Loft <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">body</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText">Specifying guide curves and a centerline are optional. It is best to use guide curves, especially when you select profiles in the FeatureManager design tree.</p>
+
+            <p class="apiRemarksText">You&#160;must specify the profiles in an order consistent with the desired direction of the loft.&#160;If creating a solid loft body, then the&#160;profiles must be closed. You can use any number of profiles.&#160;However, if you specify only one profile, then any specified guide curves must be closed curves.</p>
+
+            <p class="apiRemarksText">Linear edge, sketch line, axis, plane and planar faces are qualified for tangency vector sections.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Create_Loft_Surface_Body_and_Change_Into_Feature_Example_VB.htm">Create Loft Surface Body and Change Into Feature (VBA)</a><br />
+            <a href="Create_Loft_Body_Example_VBNET.htm">Create Loft Body (VB.NET)</a><br />
+            <a href="Create_Loft_Body_Example_VB.htm">Create Loft Body (VBA)</a><br />
+            <a href="Create_Loft_Body_Example_CSharp.htm">Create Loft Body (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_members">IModeler Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertCutBlend">IFeatureManager::InsertCutBlend Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertProtrusionBlend">IFeatureManager::InsertProtrusionBlend Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~InsertLoftRefSurface2">IModelDoc2::InsertLoftRefSurface2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftSurface">IModeler::CreateLoftSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateLoftSurface">IModeler::ICreateLoftSurface Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateLoftBody2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

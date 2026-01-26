@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetSymCircles",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymEdgeCounts",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.GetSymText",
+      "IGtol.GetSymTextPoints",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymEdgeCounts",
+      "IGtol.IGetSymLines",
+      "IGtol.IGetSymText",
+      "IGtol.IGetSymTextPoints"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymcircles",
+      "igtol",
+      "gtol",
+      "sym",
+      "circles",
+      "idx",
+      "int16",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetSymCircles",
+  "description": "Gets an array that defines all circles in the symbol.",
+  "signature": "System.Double IGetSymCircles( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Each circle in the symbol is defined by its radius and center point.\nFormat of return information is the following array of doubles.\nFor the\ni\nth circle:\nretval\n[4 *\ni\n] = radius\nretval\n[4 *\ni\n+ 1] = X-coordinate of center point\nretval\n[4 *\ni\n+ 2] = Y-coordinate of center point\nretval\n[4 *\ni\n+ 3] = Z-coordinate of center point",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymEdgeCounts",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.GetSymText",
+    "IGtol.GetSymTextPoints",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymEdgeCounts",
+    "IGtol.IGetSymLines",
+    "IGtol.IGetSymText",
+    "IGtol.IGetSymTextPoints"
+  ]
+}

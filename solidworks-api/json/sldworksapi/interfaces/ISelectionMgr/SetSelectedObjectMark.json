@@ -1,0 +1,129 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "SetSelectedObjectMark",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "AtIndex",
+        "type": "System.Int32",
+        "description": "1 <= Index position within the current list of selected items <= ISelectionMgr::GetSelectedObjectCount2"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "Number to use as a mark for the selected item; this number is used by certain API functions that require ordered entity selection"
+      },
+      {
+        "name": "Action",
+        "type": "System.Int32",
+        "description": "Action to take as defined in swSelectionMarkAction_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectionMgr.DeSelect2",
+      "ISelectionMgr.GetSelectByIdSpecification",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectedObjectCount2",
+      "ISelectionMgr.GetSelectedObjectLoop2",
+      "ISelectionMgr.GetSelectedObjectMark",
+      "ISelectionMgr.GetSelectedObjectType3",
+      "ISelectionMgr.GetSelectedObjectsComponent3",
+      "ISelectionMgr.GetSelectedObjectsDrawingView2",
+      "ISelectionMgr.GetSelectionPoint2",
+      "ISelectionMgr.GetSelectionPointInSketchSpace2",
+      "ISelectionMgr.GetSelectionSpecification",
+      "ISelectionMgr.IDeSelect2",
+      "ISelectionMgr.IGetSelectedObjectsComponent2",
+      "ISelectionMgr.IGetSelectionPointInSketchSpace2",
+      "ISelectionMgr.SetSelectionPoint2"
+    ],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "mark",
+      "setselectedobjectmark",
+      "mgr",
+      "selected",
+      "object",
+      "index",
+      "int32",
+      "action",
+      "boolean",
+      "thicken",
+      "surface",
+      "generate",
+      "boss",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISelectionMgr.SetSelectedObjectMark",
+  "description": "Sets the mark value for the specified selection.",
+  "signature": "System.Boolean SetSelectedObjectMark( \n   System.Int32\nAtIndex\n,\n   System.Int32\nMark\n,\n   System.Int32\nAction\n)",
+  "parameters": [
+    {
+      "name": "AtIndex",
+      "type": "System.Int32",
+      "description": "1 <= Index position within the current list of selected items <= ISelectionMgr::GetSelectedObjectCount2"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "Number to use as a mark for the selected item; this number is used by certain API functions that require ordered entity selection"
+    },
+    {
+      "name": "Action",
+      "type": "System.Int32",
+      "description": "Action to take as defined in swSelectionMarkAction_e"
+    }
+  ],
+  "returns": "True if the selection is successfully set, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Thicken Surface and Generate Boss (VBA)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Thicken Surface and Generate Boss (VB.NET)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Thicken Surface and Generate Boss (C#)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISelectionMgr.DeSelect2",
+    "ISelectionMgr.GetSelectByIdSpecification",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectedObjectCount2",
+    "ISelectionMgr.GetSelectedObjectLoop2",
+    "ISelectionMgr.GetSelectedObjectMark",
+    "ISelectionMgr.GetSelectedObjectType3",
+    "ISelectionMgr.GetSelectedObjectsComponent3",
+    "ISelectionMgr.GetSelectedObjectsDrawingView2",
+    "ISelectionMgr.GetSelectionPoint2",
+    "ISelectionMgr.GetSelectionPointInSketchSpace2",
+    "ISelectionMgr.GetSelectionSpecification",
+    "ISelectionMgr.IDeSelect2",
+    "ISelectionMgr.IGetSelectedObjectsComponent2",
+    "ISelectionMgr.IGetSelectionPointInSketchSpace2",
+    "ISelectionMgr.SetSelectionPoint2"
+  ]
+}

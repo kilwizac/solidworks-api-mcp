@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICommandGroup",
+    "member": "MenuPosition",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Context",
+        "type": "System.Int32",
+        "description": "Context as defined in swDocTemplateTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.HasMenu"
+    ],
+    "keywords": [
+      "menuposition",
+      "icommandgroup",
+      "command",
+      "group",
+      "menu",
+      "position",
+      "context",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ICommandGroup.MenuPosition",
+  "description": "Gets or sets the position of the CommandGroup for the specified document templates.",
+  "signature": "System.Int32 MenuPosition( \n   System.Int32\nContext\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Context",
+      "type": "System.Int32",
+      "description": "Context as defined in swDocTemplateTypes_e"
+    }
+  ],
+  "returns": "Position of the CommandGroup in the CommandManager NOTE: Specify 0 to add the CommandGroup to the beginning of the CommandMananger, or specify -1 to add it to the end of the CommandManager.",
+  "remarks": "If setting the position of the CommandGroup using this property, you must use it before using\nICommandGroup::Activate\n. If you use this property after using ICommandGroup::Activate, then this property has no effect.\nIf you do not use this property to set the position of the ICommandGroup, then the position specified in\nICommandManager::CreateCommandGroup\nis used.\nCalling this property to get the position of the CommandGroup returns the position of the CommandGroup set by either this property or ICommandManager::CreateCommandGroup.",
+  "examples": [],
+  "related": [
+    "ICommandGroup.HasMenu"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "ICreateTrimmedSheet4",
+    "returns": "Body",
+    "parameters": [
+      {
+        "name": "NCurves",
+        "type": "System.Int32",
+        "description": "Number of curves in the array of curves"
+      },
+      {
+        "name": "Curves",
+        "type": "Curve",
+        "description": "Array of curves that represent the boundary of the sheet"
+      },
+      {
+        "name": "PreserveAnalyticCurves",
+        "type": "System.Boolean",
+        "description": "True to preserve analytic curves, false to store all trimming curves as SP-curves"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.CreateTrimmedSheet4"
+    ],
+    "keywords": [
+      "icreatetrimmedsheet4",
+      "isurface",
+      "surface",
+      "create",
+      "trimmed",
+      "sheet4",
+      "curves",
+      "int32",
+      "curve",
+      "preserve",
+      "analytic",
+      "boolean",
+      "body"
+    ]
+  },
+  "title": "ISurface.ICreateTrimmedSheet4",
+  "description": "Obsolete. Superseded by ISurface::CreateTrimmedSheet5.",
+  "signature": "Body ICreateTrimmedSheet4( \n   System.Int32\nNCurves\n,\n   ref Curve\nCurves\n,\n   System.Boolean\nPreserveAnalyticCurves\n)",
+  "parameters": [
+    {
+      "name": "NCurves",
+      "type": "System.Int32",
+      "description": "Number of curves in the array of curves"
+    },
+    {
+      "name": "Curves",
+      "type": "Curve",
+      "description": "Array of curves that represent the boundary of the sheet"
+    },
+    {
+      "name": "PreserveAnalyticCurves",
+      "type": "System.Boolean",
+      "description": "True to preserve analytic curves, false to store all trimming curves as SP-curves"
+    }
+  ],
+  "returns": "Newly created sheet body",
+  "remarks": "The array of curves represents all of the curves required to add the appropriate trimming loops to the surface. A NULL entry in the array represents the separation between loops.\nThe curves supplied are assumed to lie on the surface. If the curves are 2D curves, then they should be created using this surface.\nIf your application is creating a trimmed sheet body from an input periodical surface without trimming curves, then the curve array may be empty.\nBefore calling this method, trim the curves created by\nIModeler::ICreateArc\nand\nIModeler::ICreateLine\nby calling\nICurve::CreateTrimmedCurve2\n. Elliptical curves created by\nIModeler::ICreateEllipse\ndo not need to be trimmed before calling this method.",
+  "examples": [],
+  "related": [
+    "ISurface.CreateTrimmedSheet4"
+  ]
+}

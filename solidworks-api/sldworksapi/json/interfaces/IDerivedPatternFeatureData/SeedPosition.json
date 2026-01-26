@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDerivedPatternFeatureData",
+    "member": "SeedPosition",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "seedposition",
+      "iderivedpatternfeaturedata",
+      "derived",
+      "pattern",
+      "feature",
+      "data",
+      "seed",
+      "position",
+      "int32",
+      "create",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IDerivedPatternFeatureData.SeedPosition",
+  "description": "Gets or sets which pattern instance to use as the seed feature for this derived pattern feature.",
+  "signature": "System.Int32 SeedPosition {get; set;}",
+  "parameters": [],
+  "returns": "Pattern instance to use as the seed feature (see Remarks )",
+  "remarks": "The seed position is the index of a pattern instance, feature, or component that is part of an existing pattern and is used to drive the derived pattern feature.\nThe total number of seed positions = total number of pattern instances in the pattern used to create the derived pattern feature.\nIf the pattern used to create the derived pattern has pattern instances in Direction 1 and Direction 2, then the total number of seed positions = ((Number pattern instances in Direction 1) * (Number pattern instances in Direction 2) - 1).\nSetting the seed position outside of the range of pattern instances is silently rejected, and the seed position remains unchanged.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.",
+  "examples": [
+    {
+      "title": "Create Derived Pattern Feature (C#)",
+      "href": "Create_Derived_Pattern_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Derived Pattern Feature (VB.NET)",
+      "href": "Create_Derived_Pattern_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Derived Pattern Feature (VBA)",
+      "href": "Create_Derived_Pattern_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

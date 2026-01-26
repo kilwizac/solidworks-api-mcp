@@ -1,0 +1,140 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartialEdgeFilletData",
+    "member": "SetPartialFilletParameters",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "AlongEdgeDirection",
+        "type": "System.Boolean",
+        "description": "True to start the fillet at the start point of the edge, false to start the fillet at the end point of the edge"
+      },
+      {
+        "name": "StartCondition",
+        "type": "System.Int32",
+        "description": "Start condition as defined in swSimpleFilletPartialEdgeCondition_e (see Remarks )"
+      },
+      {
+        "name": "StartValue",
+        "type": "System.Double",
+        "description": "Distance or percent offset from the start point (see Remarks )"
+      },
+      {
+        "name": "StartReference",
+        "type": "System.Object",
+        "description": "Offset reference (2D/3D sketch point , reference point , planar face ); valid only if StartCondition is swPartialEdgeReferenceOffset"
+      },
+      {
+        "name": "EndCondition",
+        "type": "System.Int32",
+        "description": "End condition as defined in swSimpleFilletPartialEdgeCondition_e (see Remarks )"
+      },
+      {
+        "name": "EndValue",
+        "type": "System.Double",
+        "description": "Distance or percent offset from the end point (see Remarks )"
+      },
+      {
+        "name": "EndReference",
+        "type": "System.Object",
+        "description": "Offset reference (2D/3D sketch point , reference point , planar face ); valid only if EndCondition is swPartialEdgeReferenceOffset"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "parts"
+    ],
+    "related": [
+      "IPartialEdgeFilletData.AlongEdgeDirection",
+      "IPartialEdgeFilletData.DistanceOffsetEnd",
+      "IPartialEdgeFilletData.DistanceOffsetStart",
+      "IPartialEdgeFilletData.PercentOffsetEnd",
+      "IPartialEdgeFilletData.PercentOffsetStart",
+      "IPartialEdgeFilletData.ReferenceOffsetEnd",
+      "IPartialEdgeFilletData.ReferenceOffsetStart"
+    ],
+    "keywords": [
+      "setpartialfilletparameters",
+      "ipartialedgefilletdata",
+      "partial",
+      "edge",
+      "fillet",
+      "data",
+      "parameters",
+      "along",
+      "direction",
+      "boolean",
+      "start",
+      "condition",
+      "int32",
+      "value",
+      "double",
+      "reference",
+      "object",
+      "end"
+    ]
+  },
+  "title": "IPartialEdgeFilletData.SetPartialFilletParameters",
+  "description": "Sets the properties of this partial edge fillet.",
+  "signature": "System.Int32 SetPartialFilletParameters( \n   System.Boolean\nAlongEdgeDirection\n,\n   System.Int32\nStartCondition\n,\n   System.Double\nStartValue\n,\n   System.Object\nStartReference\n,\n   System.Int32\nEndCondition\n,\n   System.Double\nEndValue\n,\n   System.Object\nEndReference\n)",
+  "parameters": [
+    {
+      "name": "AlongEdgeDirection",
+      "type": "System.Boolean",
+      "description": "True to start the fillet at the start point of the edge, false to start the fillet at the end point of the edge"
+    },
+    {
+      "name": "StartCondition",
+      "type": "System.Int32",
+      "description": "Start condition as defined in swSimpleFilletPartialEdgeCondition_e (see Remarks )"
+    },
+    {
+      "name": "StartValue",
+      "type": "System.Double",
+      "description": "Distance or percent offset from the start point (see Remarks )"
+    },
+    {
+      "name": "StartReference",
+      "type": "System.Object",
+      "description": "Offset reference (2D/3D sketch point , reference point , planar face ); valid only if StartCondition is swPartialEdgeReferenceOffset"
+    },
+    {
+      "name": "EndCondition",
+      "type": "System.Int32",
+      "description": "End condition as defined in swSimpleFilletPartialEdgeCondition_e (see Remarks )"
+    },
+    {
+      "name": "EndValue",
+      "type": "System.Double",
+      "description": "Distance or percent offset from the end point (see Remarks )"
+    },
+    {
+      "name": "EndReference",
+      "type": "System.Object",
+      "description": "Offset reference (2D/3D sketch point , reference point , planar face ); valid only if EndCondition is swPartialEdgeReferenceOffset"
+    }
+  ],
+  "returns": "Result code as defined in swFeatureError_e",
+  "remarks": "StartValue (or EndValue) is a:\nDistance if StartCondition (or EndCondition) is swSimpleFilletPartialEdgeCondition_e.swPartialEdgeDistanceOffset.\nPercent value if StartCondition (or EndCondition) is swSimpleFilletPartialEdgeCondition_e.swPartialEdgePercentOffset.",
+  "examples": [
+    {
+      "title": "IPartialEdgeFilletData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartialEdgeFilletData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartialEdgeFilletData.AlongEdgeDirection",
+    "IPartialEdgeFilletData.DistanceOffsetEnd",
+    "IPartialEdgeFilletData.DistanceOffsetStart",
+    "IPartialEdgeFilletData.PercentOffsetEnd",
+    "IPartialEdgeFilletData.PercentOffsetStart",
+    "IPartialEdgeFilletData.ReferenceOffsetEnd",
+    "IPartialEdgeFilletData.ReferenceOffsetStart"
+  ]
+}

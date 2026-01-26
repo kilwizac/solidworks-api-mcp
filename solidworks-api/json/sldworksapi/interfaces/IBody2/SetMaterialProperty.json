@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBody2",
+    "member": "SetMaterialProperty",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of configuration"
+      },
+      {
+        "name": "Database",
+        "type": "System.String",
+        "description": "\"solidworks material.sldmat\" or \"\" or \"custom materials.sldmat\" (see Remarks )"
+      },
+      {
+        "name": "MaterialName",
+        "type": "System.String",
+        "description": "Name of the SOLIDWORKS material to apply to the body (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetMaterialIdName2",
+      "IBody2.GetMaterialPropertyName",
+      "IBody2.GetMaterialUserName2",
+      "IBody2.HasMaterialPropertyValues",
+      "IBody2.IGetMaterialPropertyValuesForFace",
+      "IBody2.IMaterialPropertyValues2",
+      "IBody2.IRemoveMaterialProperty",
+      "IBody2.MaterialPropertyValues2",
+      "IBody2.RemoveMaterialProperty",
+      "IBody2.SetMaterialIdName2",
+      "IBody2.SetMaterialUserName2"
+    ],
+    "keywords": [
+      "material",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "setmaterialproperty",
+      "body2",
+      "config",
+      "name",
+      "string",
+      "database",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IBody2.SetMaterialProperty",
+  "description": "Sets the material for this body.",
+  "signature": "System.Int32 SetMaterialProperty( \n   System.String\nConfigName\n,\n   System.String\nDatabase\n,\n   System.String\nMaterialName\n)",
+  "parameters": [
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of configuration"
+    },
+    {
+      "name": "Database",
+      "type": "System.String",
+      "description": "\"solidworks material.sldmat\" or \"\" or \"custom materials.sldmat\" (see Remarks )"
+    },
+    {
+      "name": "MaterialName",
+      "type": "System.String",
+      "description": "Name of the SOLIDWORKS material to apply to the body (see Remarks )"
+    }
+  ],
+  "returns": "Return status as defined by swBodyMaterialApplicationError_e",
+  "remarks": "Click\nTools > Options > System Options > File Locations > Material Databases\nto verify that a folder for Database is specified.\nYou can only use materials from a valid SOLIDWORKS materials database. You can specify either \"solidworks materials.sldmat\" or \"\" for the SOLIDWORKS Materials database or \"custom materials.sldmat\" for the Custom Materials database.\nYou can also find out the names of the materials in the materials database by opening the database as an XML stream and work with the XML API to get the data.",
+  "examples": [
+    {
+      "title": "Set Material (C#)",
+      "href": "Set_Material_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Material (VB.NET)",
+      "href": "Set_Material_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Material (VBA)",
+      "href": "Set_Material_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetMaterialIdName2",
+    "IBody2.GetMaterialPropertyName",
+    "IBody2.GetMaterialUserName2",
+    "IBody2.HasMaterialPropertyValues",
+    "IBody2.IGetMaterialPropertyValuesForFace",
+    "IBody2.IMaterialPropertyValues2",
+    "IBody2.IRemoveMaterialProperty",
+    "IBody2.MaterialPropertyValues2",
+    "IBody2.RemoveMaterialProperty",
+    "IBody2.SetMaterialIdName2",
+    "IBody2.SetMaterialUserName2"
+  ]
+}

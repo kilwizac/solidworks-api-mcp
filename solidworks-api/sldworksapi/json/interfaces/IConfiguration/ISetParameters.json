@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "ISetParameters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NParamCount",
+        "type": "System.Int32",
+        "description": "Number of parameters"
+      },
+      {
+        "name": "Params",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of the names of the parameters of size NParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "Values",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointe to an array of the values for the parameters of size NParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetParameterCount",
+      "IConfiguration.GetParameters",
+      "IConfiguration.IGetParameters",
+      "IConfiguration.SetParameters",
+      "IConfigurationManager.GetConfigurationParams",
+      "IConfigurationManager.GetConfigurationParamsCount",
+      "IConfigurationManager.IGetConfigurationParams",
+      "IConfigurationManager.ISetConfigurationParams",
+      "IConfigurationManager.SetConfigurationParams"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "configurations",
+      "isetparameters",
+      "iconfiguration",
+      "configuration",
+      "param",
+      "count",
+      "int32",
+      "params",
+      "string",
+      "values",
+      "void"
+    ]
+  },
+  "title": "IConfiguration.ISetParameters",
+  "description": "Sets the parameters (suppression state of features, suppression state or visibility of components, dimensions, and so on) for this configuration.",
+  "signature": "void ISetParameters( \n   System.Int32\nNParamCount\n,\n   ref System.String\nParams\n,\n   ref System.String\nValues\n)",
+  "parameters": [
+    {
+      "name": "NParamCount",
+      "type": "System.Int32",
+      "description": "Number of parameters"
+    },
+    {
+      "name": "Params",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of the names of the parameters of size NParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "Values",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointe to an array of the values for the parameters of size NParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "To get the number of parameters to set for this configuration, call\nIConfiguration::GetParameterCount\n.\nYou can control these parameters in a part document:\nDimension values. Specify the dimension name in params for example, D1@Sketch1) and the value in values (for example, 60.0mm).\nSuppression state of features. Specify the feature name in params (for example, $STATE@Extrude2) and the suppression state in values (S=suppressed or U=Unsuppressed).",
+  "examples": [],
+  "related": [
+    "IConfiguration.GetParameterCount",
+    "IConfiguration.GetParameters",
+    "IConfiguration.IGetParameters",
+    "IConfiguration.SetParameters",
+    "IConfigurationManager.GetConfigurationParams",
+    "IConfigurationManager.GetConfigurationParamsCount",
+    "IConfigurationManager.IGetConfigurationParams",
+    "IConfigurationManager.ISetConfigurationParams",
+    "IConfigurationManager.SetConfigurationParams"
+  ]
+}

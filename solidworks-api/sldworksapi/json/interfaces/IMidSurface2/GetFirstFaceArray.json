@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface2",
+    "member": "GetFirstFaceArray",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness between the faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.GetFaceCount",
+      "IMidSurface2.IGetFirstFaceArray",
+      "IMidSurface2.IGetNextFaceArray"
+    ],
+    "keywords": [
+      "getfirstfacearray",
+      "imidsurface2",
+      "mid",
+      "surface2",
+      "first",
+      "face",
+      "array",
+      "thickness",
+      "double",
+      "object"
+    ]
+  },
+  "title": "IMidSurface2.GetFirstFaceArray",
+  "description": "Obsolete. Superseded by IMidSurface3::GetFirstFaceArray.",
+  "signature": "System.Object GetFirstFaceArray( \n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness between the faces"
+    }
+  ],
+  "returns": "First face",
+  "remarks": "A separator is needed between the front faces and back faces. Thus, a NULL always exists between the front faces and the back faces.\nFor example, if there are five faces in the model, then the mid-surface has five faces. To get the five faces:\nCall IMidSurface2::GetGetFirstFaceArray once.\nCall\nIMidSurface2::GetNextFaceArray\nfour times.\nAt each call, the data is arranged as follows if there is one front face in the array:\n[\nNeutral face\n]\n,\n[\nfront face\n]\n, NULL,\n[\nback face\n]\nIf there are more than one front face in the array, then the data is arranged as follows:\n[\nNeutral face\n]\n,\n[\nfront face1, front face2\n]\n, NULL,\n[\nback face1, back face2\n]\nTo get the next face from the original paired faces, call\nIMidSurface2::GetNextFaceArray\n.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetFaceCount",
+    "IMidSurface2.IGetFirstFaceArray",
+    "IMidSurface2.IGetNextFaceArray"
+  ]
+}

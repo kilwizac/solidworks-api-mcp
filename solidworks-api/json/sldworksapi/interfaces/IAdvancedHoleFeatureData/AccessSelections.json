@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAdvancedHoleFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "IModelDoc2 for the part"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Null or Nothing"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "iadvancedholefeaturedata",
+      "advanced",
+      "hole",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean"
+    ]
+  },
+  "title": "IAdvancedHoleFeatureData.AccessSelections",
+  "description": "Gains access to the selections used to define the Advanced Hole feature.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "IModelDoc2 for the part"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Null or Nothing"
+    }
+  ],
+  "returns": "True if the selections are successfully accessed, false if not",
+  "remarks": "This method puts the model into a rollback state to allow access to the selections that define this feature.\nYou must use either of the following methods to restore the original state of the model:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\n, if you modified the feature\nIAdvancedHoleFeatureData::ReleaseSelectionAccess\n, if you did not modify the feature",
+  "examples": [
+    {
+      "title": "IAdvancedHoleFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "GetCreateFeatureErrors",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Msgs",
+        "type": "System.Object",
+        "description": "Array of errors as defined by swCreateFeatureError_e"
+      },
+      {
+        "name": "FeatureTypeName",
+        "type": "System.String",
+        "description": "Feature type name"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "getcreatefeatureerrors",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "create",
+      "errors",
+      "msgs",
+      "object",
+      "type",
+      "name",
+      "string",
+      "int32"
+    ]
+  },
+  "title": "IFeatureManager.GetCreateFeatureErrors",
+  "description": "Gets the errors that occurred during the last call to IFeatureManager::CreateFeature.",
+  "signature": "System.Int32 GetCreateFeatureErrors( \n   out System.Object\nMsgs\n,\n   out System.String\nFeatureTypeName\n)",
+  "parameters": [
+    {
+      "name": "Msgs",
+      "type": "System.Object",
+      "description": "Array of errors as defined by swCreateFeatureError_e"
+    },
+    {
+      "name": "FeatureTypeName",
+      "type": "System.String",
+      "description": "Feature type name"
+    }
+  ],
+  "returns": "0 <= Number of messages issued at the time of last call to IFeatureManager::CreateFeature <= 20",
+  "remarks": "This method is valid only after attempting to create\nMate Controller\nfeatures using IFeatureManager::CreateFeature.",
+  "examples": [],
+  "related": []
+}

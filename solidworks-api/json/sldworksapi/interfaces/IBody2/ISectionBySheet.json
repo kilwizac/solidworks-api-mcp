@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ISectionBySheet",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "Body2",
+        "description": "Pointer to the sheet body used to perform the section"
+      },
+      {
+        "name": "NumMaxSections",
+        "type": "System.Int32",
+        "description": "Maximum number of sections to create"
+      },
+      {
+        "name": "SectionedBodies",
+        "type": "Body2",
+        "description": "Pointer to an array of bodies created during the section operation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "sheet",
+      "bodies",
+      "isectionbysheet",
+      "ibody2",
+      "body2",
+      "section",
+      "num",
+      "max",
+      "sections",
+      "int32",
+      "sectioned"
+    ]
+  },
+  "title": "IBody2.ISectionBySheet",
+  "description": "Sections a body using a sheet (surface) body.",
+  "signature": "System.Int32 ISectionBySheet( \n   Body2\nSheet\n,\n   System.Int32\nNumMaxSections\n,\n   ref Body2\nSectionedBodies\n)",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "Body2",
+      "description": "Pointer to the sheet body used to perform the section"
+    },
+    {
+      "name": "NumMaxSections",
+      "type": "System.Int32",
+      "description": "Maximum number of sections to create"
+    },
+    {
+      "name": "SectionedBodies",
+      "type": "Body2",
+      "description": "Pointer to an array of bodies created during the section operation"
+    }
+  ],
+  "returns": "Number of bodies created during the operation",
+  "remarks": "Before using this method,\nmake a copy of the body\nbecause the sheet body becomes invalid after using this method. COM applications should release all bodies after calling this method.",
+  "examples": [],
+  "related": []
+}

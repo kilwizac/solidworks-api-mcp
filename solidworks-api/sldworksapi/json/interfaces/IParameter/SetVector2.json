@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParameter",
+    "member": "SetVector2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x value to store for the named configuration option"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y value to store for the named configuration option"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z value to store for the named configuration option"
+      },
+      {
+        "name": "ConfigurationOption",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IParameter.GetVector",
+      "IParameter.GetVectorVB"
+    ],
+    "keywords": [
+      "setvector2",
+      "iparameter",
+      "parameter",
+      "vector2",
+      "double",
+      "configuration",
+      "option",
+      "int32",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IParameter.SetVector2",
+  "description": "Sets the vector values of a named configuration option parameter.",
+  "signature": "System.Boolean SetVector2( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Int32\nConfigurationOption\n,\n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x value to store for the named configuration option"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y value to store for the named configuration option"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z value to store for the named configuration option"
+    },
+    {
+      "name": "ConfigurationOption",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The ConfigurationName argument is:\nNot required if ConfigurationOption is set to swThisConfiguration = 1 or swAllConfiguration = 2.\nR\nequired if ConfigurationOption is set to swSpecifyConfiguration = 3.\nSet the C\nonfigurationOption argument to swAllConfiguration = 2 for Drawing Docs as they do not have configurations.",
+  "examples": [],
+  "related": [
+    "IParameter.GetVector",
+    "IParameter.GetVectorVB"
+  ]
+}

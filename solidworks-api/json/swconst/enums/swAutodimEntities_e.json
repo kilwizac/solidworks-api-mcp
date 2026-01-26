@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swAutodimEntities_e",
+    "description": "Entities to dimension ISketch::AutoDimension2 and IDrawingDoc::AutoDimension.",
+    "member_count": 3,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swAutodimEntities_e",
+  "description": "Entities to dimension ISketch::AutoDimension2 and IDrawingDoc::AutoDimension.",
+  "values": [
+    {
+      "member": "swAutodimEntitiesAll",
+      "value": "1",
+      "description": "= Autodimensions all of the supported entities in the sketch"
+    },
+    {
+      "member": "swAutodimEntitiesBasedOnPreselect",
+      "value": "0",
+      "description": "= SOLIDWORKS to figure out what to do based on the selected supported entities marked with swAutodimMarkEntities . If any exist, then autodimension them, just like swAutodimEntitiesSelected. If none exist, then autodimension all supported entities, just like swAutodimEntitiesAll"
+    },
+    {
+      "member": "swAutodimEntitiesSelected",
+      "value": "2",
+      "description": "= Autodimensions selected supported entities marked with swAutodimMarkEntities . If none exist, then autodimensions all supported entities, just like swAutodimEntitiesAll"
+    }
+  ]
+}

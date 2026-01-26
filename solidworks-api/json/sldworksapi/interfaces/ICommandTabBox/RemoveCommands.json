@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandTabBox",
+    "member": "RemoveCommands",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CommandIDs",
+        "type": "System.Object",
+        "description": "Array of command IDs for the buttons you want removed from this CommandManager tab box (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandTabBox.IRemoveCommands"
+    ],
+    "keywords": [
+      "removecommands",
+      "icommandtabbox",
+      "command",
+      "tab",
+      "box",
+      "remove",
+      "commands",
+      "ds",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "ICommandTabBox.RemoveCommands",
+  "description": "Removes the specified buttons from this CommandManager tab box.",
+  "signature": "System.Boolean RemoveCommands( \n   System.Object\nCommandIDs\n)",
+  "parameters": [
+    {
+      "name": "CommandIDs",
+      "type": "System.Object",
+      "description": "Array of command IDs for the buttons you want removed from this CommandManager tab box (see Remarks )"
+    }
+  ],
+  "returns": "True if the specified buttons are removed, false if not",
+  "remarks": "You can get the CommandID values using\nICommandGroup::CommandID\nor\nICommandGroup::ToolbarId\nafter calling\nICommandGroup::Activate\n.",
+  "examples": [],
+  "related": [
+    "ICommandTabBox.IRemoveCommands"
+  ]
+}

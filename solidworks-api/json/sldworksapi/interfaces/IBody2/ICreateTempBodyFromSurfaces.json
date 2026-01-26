@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateTempBodyFromSurfaces",
+    "returns": "Body2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.CreateTempBodyFromSurfaces"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "icreatetempbodyfromsurfaces",
+      "ibody2",
+      "body2",
+      "create",
+      "temp",
+      "body",
+      "surfaces"
+    ]
+  },
+  "title": "IBody2.ICreateTempBodyFromSurfaces",
+  "description": "Creates a temporary body from a list of existing trimmed surfaces.",
+  "signature": "Body2 ICreateTempBodyFromSurfaces()",
+  "parameters": [],
+  "returns": "Temporary body",
+  "remarks": "This method is the final call to a set of related functions (same as\nIBody2::CreateBodyFromSurfaces\n) that are designed to construct a temporary body from trimmed surfaces.\nThe first call in this process should be to\nIPartDoc::CreateNewBody2\n, so as to arrange for a placeholder for all the trimmed surfaces.",
+  "examples": [],
+  "related": [
+    "IBody2.CreateTempBodyFromSurfaces"
+  ]
+}

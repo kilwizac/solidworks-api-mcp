@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DPartDocEvents_AddItemNotifyEventHandler
+inherits: null
+description: Fired when an item is added to one of the SOLIDWORKS tree structures such as the FeatureManager design tree and the ConfigurationManager.
+member_count: 0
+docset: sldworksapi
+categories:
+  - parts
+common_members: []
+---
+
+# DPartDocEvents_AddItemNotifyEventHandler
+
+Fired when an item is added to one of the SOLIDWORKS tree structures such as the FeatureManager design tree and the ConfigurationManager.

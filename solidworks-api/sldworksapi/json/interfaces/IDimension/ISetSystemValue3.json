@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimension",
+    "member": "ISetSystemValue3",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "NewValue",
+        "type": "System.Double",
+        "description": "Dimension value in meters"
+      },
+      {
+        "name": "WhichConfigurations",
+        "type": "System.Int32",
+        "description": "Configuration in which to set this value as defined in swSetValueInConfiguration_e (see Remarks )"
+      },
+      {
+        "name": "Config_count",
+        "type": "System.Int32",
+        "description": "Names of the configurations (see Remarks )"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.String",
+        "description": "Names of the configurations (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "documents"
+    ],
+    "related": [
+      "IDimension.GetSystemValue3",
+      "IDimension.GetUserValueIn",
+      "IDimension.GetValue3",
+      "IDimension.IGetUserValueIn2",
+      "IDimension.ISetUserValueIn2",
+      "IDimension.ISetValue3",
+      "IDimension.SetSystemValue3",
+      "IDimension.SetUserValueIn2",
+      "IDimension.SetValue3"
+    ],
+    "keywords": [
+      "isetsystemvalue3",
+      "idimension",
+      "dimension",
+      "value3",
+      "new",
+      "value",
+      "double",
+      "which",
+      "configurations",
+      "int32",
+      "config",
+      "count",
+      "names",
+      "string"
+    ]
+  },
+  "title": "IDimension.ISetSystemValue3",
+  "description": "Sets the value of this dimension in system units (meters) in the specified configuration.",
+  "signature": "System.Int32 ISetSystemValue3( \n   System.Double\nNewValue\n,\n   System.Int32\nWhichConfigurations\n,\n   System.Int32\nConfig_count\n,\n   ref System.String\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "NewValue",
+      "type": "System.Double",
+      "description": "Dimension value in meters"
+    },
+    {
+      "name": "WhichConfigurations",
+      "type": "System.Int32",
+      "description": "Configuration in which to set this value as defined in swSetValueInConfiguration_e (see Remarks )"
+    },
+    {
+      "name": "Config_count",
+      "type": "System.Int32",
+      "description": "Names of the configurations (see Remarks )"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.String",
+      "description": "Names of the configurations (see Remarks )"
+    }
+  ],
+  "returns": "Success indicator value as defined in swSetValueReturnStatus_e",
+  "remarks": "The WhichConfigurations argument is equivalent to the\nChange Parameter\ndialog in the SOLIDWORKS Design user interface, which gives the user the option of having the value set in all configurations or the current configuration. If there is one configuration in the part, SOLIDWORKS ignores this argument.\nThe Config_count and Config_names arguments are only used if WhichConfigurations is set to swSetValue_InSpecificConfigurations.\nConfig_names can contain either a BSTR array or a single BSTR.\nThis method allows you to change the value of a read-only dimension. You can use\nIDimension::ReadOnly\nto determine if a dimension is read-only.",
+  "examples": [],
+  "related": [
+    "IDimension.GetSystemValue3",
+    "IDimension.GetUserValueIn",
+    "IDimension.GetValue3",
+    "IDimension.IGetUserValueIn2",
+    "IDimension.ISetUserValueIn2",
+    "IDimension.ISetValue3",
+    "IDimension.SetSystemValue3",
+    "IDimension.SetUserValueIn2",
+    "IDimension.SetValue3"
+  ]
+}

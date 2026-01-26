@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FilletXpertChange",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Feature fillet option as defined in swFeatureFilletOptions_e"
+      },
+      {
+        "name": "R1",
+        "type": "System.Double",
+        "description": "Radius for uniform radius edge fillet"
+      },
+      {
+        "name": "Ftyp",
+        "type": "System.Int32",
+        "description": "Type of fillet as defined in swFeatureFilletType_e"
+      },
+      {
+        "name": "OverflowType",
+        "type": "System.Int32",
+        "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureFillet",
+      "IFeatureManager.FilletXpertRemove"
+    ],
+    "keywords": [
+      "fillets",
+      "filletxpert",
+      "filletxpertchange",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "fillet",
+      "xpert",
+      "change",
+      "options",
+      "int32",
+      "r1",
+      "double",
+      "ftyp",
+      "overflow",
+      "type"
+    ]
+  },
+  "title": "IFeatureManager.FilletXpertChange",
+  "description": "Changes the parameters on the selected filleted faces, regardless of whether the filleted faces were created manually or with FilletXpert, provided that FilletXpert can process them.",
+  "signature": "Feature FilletXpertChange( \n   System.Int32\nOptions\n,\n   System.Double\nR1\n,\n   System.Int32\nFtyp\n,\n   System.Int32\nOverflowType\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Feature fillet option as defined in swFeatureFilletOptions_e"
+    },
+    {
+      "name": "R1",
+      "type": "System.Double",
+      "description": "Radius for uniform radius edge fillet"
+    },
+    {
+      "name": "Ftyp",
+      "type": "System.Int32",
+      "description": "Type of fillet as defined in swFeatureFilletType_e"
+    },
+    {
+      "name": "OverflowType",
+      "type": "System.Int32",
+      "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureFillet",
+    "IFeatureManager.FilletXpertRemove"
+  ]
+}

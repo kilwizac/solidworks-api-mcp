@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetHiddenUnloadedChildrenCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.HasUnloadedComponents",
+      "ITreeControlItem"
+    ],
+    "keywords": [
+      "hidden",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "unloaded",
+      "gethiddenunloadedchildrencount",
+      "component2",
+      "children",
+      "count",
+      "int32"
+    ]
+  },
+  "title": "IComponent2.GetHiddenUnloadedChildrenCount",
+  "description": "Gets the number of hidden children components of this component that were not loaded when an assembly was opened selectively.",
+  "signature": "System.Int32 GetHiddenUnloadedChildrenCount()",
+  "parameters": [],
+  "returns": "Number of hidden children components of this component that were not loaded when an assembly was opened selectively",
+  "remarks": "You can open an assembly with all components hidden except those that you select. The selected components are loaded lightweight. All other components become hidden and are not loaded into memory. This method returns the number of unloaded hidden children of this component. This method does not return the number of suppressed unloaded children components. Call\nIComponent2::GetUnloadedComponentNames\nfor that type of related information.",
+  "examples": [],
+  "related": [
+    "IComponent2.HasUnloadedComponents",
+    "ITreeControlItem"
+  ]
+}

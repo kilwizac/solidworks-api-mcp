@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "InsertRevisionCloud",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "CloudShape",
+        "type": "System.Int32",
+        "description": "Revision cloud annotation shape as defined in swRevisionCloudShape_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.IInsertRevisionCloud"
+    ],
+    "keywords": [
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "revision",
+      "clouds",
+      "irevisioncloud",
+      "insert",
+      "insertrevisioncloud",
+      "drawing",
+      "doc",
+      "cloud",
+      "shape",
+      "int32",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.InsertRevisionCloud",
+  "description": "Inserts a revision cloud annotation with the specified shape into a view or sheet.",
+  "signature": "System.Object InsertRevisionCloud( \n   System.Int32\nCloudShape\n)",
+  "parameters": [
+    {
+      "name": "CloudShape",
+      "type": "System.Int32",
+      "description": "Revision cloud annotation shape as defined in swRevisionCloudShape_e"
+    }
+  ],
+  "returns": "IRevisionCloud",
+  "remarks": "After calling this method:\nCall\nIRevisionCloud::GetAnnotation\nto get the annotation object for the revision cloud.\nCall\nIAnnotation::SetPosition\nto set the revision cloud position point on the drawing. If you eliminate this step, the revision cloud is rendered starting at the drawing origin of x=0, y=0, z=0. Set the revision cloud position point as follows:\nFor revision cloud shape...\nSet the revision cloud position point to...\nEllipse\nThe center of the revision cloud.\nRectangle\nA corner of the revision cloud.\nPolygon\nOne of the points on the revision cloud.\nFreehand\nOne of the points on the revision cloud.\nCall\nIRevisionCloud::ArcRadius\nto set the arc radius of the revision cloud.\nCall\nIRevisionCloud::SetPathPointAtIndex\nwith Index = -1 to create points on the revision cloud as follows:\nFor revision cloud shape...\nCall IRevisionCloud::SetPathPointAtIndex...\nEllipse\nOnce, specifying the coordinates of a corner of the ellipse-inscribed rectangle.\nRectangle\nOnce, specifying the coordinates of a corner opposite the revision cloud position point.\nPolygon\n(Number of polygon sides + 1) times, such that the first and last points coincide with the revision cloud position point.\nFreehand\nIndefinite number of times, such that the first and last points coincide with the revision cloud position point.\nCall\nIRevisionCloud::Finalize\nto close the revision cloud path. Once the revision cloud path is closed, you can no longer add points to it.\nCall IRevisionCloud::SetPathPointAtIndex to modify the position of an existing point on the revision cloud.",
+  "examples": [
+    {
+      "title": "Insert Revision Cloud into a Drawing (VBA)",
+      "href": "Insert_Revision_Cloud_into_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Revision Cloud into a Drawing (VB.NET)",
+      "href": "Insert_Revision_Cloud_into_Drawing_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Revision Cloud into a Drawing (C#)",
+      "href": "Insert_Revision_Cloud_into_Drawing_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.IInsertRevisionCloud"
+  ]
+}

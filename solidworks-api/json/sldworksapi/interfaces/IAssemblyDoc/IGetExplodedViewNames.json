@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "IGetExplodedViewNames",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of exploded views in the active configuration (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "igetexplodedviewnames",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "exploded",
+      "view",
+      "names",
+      "count",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IAssemblyDoc.IGetExplodedViewNames",
+  "description": "Obsolete. Superseded by IAssemblyDoc::GetExplodedViewNames2.",
+  "signature": "System.String IGetExplodedViewNames( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of exploded views in the active configuration (see Remarks )"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of strings of the names of the exploded views in the active configuration VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIAssemblyDoc::GetExplodedViewCount\nto get the value of Count.\nTo take advantage of the explode mechanism, see\nIAssemblyDoc::CreateExplodedView\n,\nIAssemblyDoc::GetExplodedViewNames\n,\nIAssemblyDoc::GetExplodedViewCount\n,\nIAssemblyDoc::AutoExplode\n,\nIAssemblyDoc::ShowExploded2\n,\nIAssemblyDoc::ViewExplodeAssembly\n,\nIAssemblyDoc::ViewCollapseAssembly\n,\nIView::ShowExploded\n,\nIView::IsExploded\n, and\nIModelDoc2::IsExploded\n.",
+  "examples": [],
+  "related": []
+}

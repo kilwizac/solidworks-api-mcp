@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertJoin2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "HideParts",
+        "type": "System.Boolean",
+        "description": "True hides the original components after the join is complete, false shows them"
+      },
+      {
+        "name": "ForceContact",
+        "type": "System.Boolean",
+        "description": "True joins any coincident faces and intruding volumes, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IJoinFeatureData"
+    ],
+    "keywords": [
+      "joined",
+      "parts",
+      "see",
+      "also",
+      "ijoinfeaturedata",
+      "create",
+      "insertjoin2",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "insert",
+      "join2",
+      "hide",
+      "boolean",
+      "force",
+      "contact",
+      "join",
+      "feature",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertJoin2",
+  "description": "Constructs a feature from merged selected components.",
+  "signature": "System.Boolean InsertJoin2( \n   System.Boolean\nHideParts\n,\n   System.Boolean\nForceContact\n)",
+  "parameters": [
+    {
+      "name": "HideParts",
+      "type": "System.Boolean",
+      "description": "True hides the original components after the join is complete, false shows them"
+    },
+    {
+      "name": "ForceContact",
+      "type": "System.Boolean",
+      "description": "True joins any coincident faces and intruding volumes, false does not"
+    }
+  ],
+  "returns": "True if feature creation was successful, false if it was not",
+  "remarks": "When you use this method, SOLIDWORKS must be in Edit Part mode for the target part. You must also preselect the component parts to be merged into the edited part.",
+  "examples": [
+    {
+      "title": "Insert Join Feature (C#)",
+      "href": "Insert_Join_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Join Feature (VB.NET)",
+      "href": "Insert_Join_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Join Feature (VBA)",
+      "href": "Insert_Join_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IJoinFeatureData"
+  ]
+}

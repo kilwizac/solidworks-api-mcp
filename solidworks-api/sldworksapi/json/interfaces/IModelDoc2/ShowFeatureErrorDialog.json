@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "ShowFeatureErrorDialog",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ForceRebuild3"
+    ],
+    "keywords": [
+      "errors",
+      "features",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "error",
+      "dialog",
+      "showfeatureerrordialog",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "show",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.ShowFeatureErrorDialog",
+  "description": "Gets or sets whether to display the feature error dialog.",
+  "signature": "System.Boolean ShowFeatureErrorDialog {get; set;}",
+  "parameters": [],
+  "returns": "True displays an error dialog, false does not",
+  "remarks": "This property controls the display of error dialogs generated when an error occurs during a rebuild of a specific feature in the current SOLIDWORKS Design session. Use\nISldWorks::GetUserPreferenceToggle\nor\nISldWorks::SetUserPreferenceToggle\nto get or set swShowErrorsEveryRebuild, which controls the display of error dialogs generated when a rebuild warning error message is generated.\nYou can wrap the rebuild API call with the following code to suppress rebuild warning dialogs:\nbValue = swApp.GetUserPreferenceToggle(swShowErrorsEveryRebuild)\nswApp.SetUserPreferenceToggle swShowErrorsEveryRebuild, false\nswModel.ForceRebuild3\nswApp.SetUserPreferenceToggle swShowErrorsEveryRebuild, bValue",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ForceRebuild3"
+  ]
+}

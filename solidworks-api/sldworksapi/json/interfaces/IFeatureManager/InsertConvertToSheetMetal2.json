@@ -1,0 +1,163 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertConvertToSheetMetal2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Sheet thickness"
+      },
+      {
+        "name": "ReverseThickDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the sheet thickness, false to not"
+      },
+      {
+        "name": "FindBends",
+        "type": "System.Boolean",
+        "description": "True to find pre-made bends and part thickness, false to not"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Radius for the bends"
+      },
+      {
+        "name": "Gap",
+        "type": "System.Double",
+        "description": "Gap for all rips"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Relief type as defined by swSheetMetalReliefTypes_e"
+      },
+      {
+        "name": "ReliefRatio",
+        "type": "System.Double",
+        "description": "Relief ratio"
+      },
+      {
+        "name": "OverlapType",
+        "type": "System.Int32",
+        "description": "Overlap type for all rips 1=Open butt 2=Overlap 3=Underlap"
+      },
+      {
+        "name": "OverlapRatio",
+        "type": "System.Double",
+        "description": "Overlap ratio for all rips"
+      },
+      {
+        "name": "KeepBody",
+        "type": "System.Boolean",
+        "description": "True to keep bodies, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "solid",
+      "bodies",
+      "surface",
+      "ibody2",
+      "isurface",
+      "parts",
+      "insertconverttosheetmetal2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "convert",
+      "metal2",
+      "thickness",
+      "double",
+      "reverse",
+      "thick",
+      "dir",
+      "boolean",
+      "find",
+      "bends",
+      "radius",
+      "gap",
+      "relief",
+      "type",
+      "int32",
+      "ratio",
+      "overlap",
+      "keep",
+      "body"
+    ]
+  },
+  "title": "IFeatureManager.InsertConvertToSheetMetal2",
+  "description": "Obsolete. Superseded by IFeatureManager::CreateDefinition and IFeatureManager::CreateFeature.",
+  "signature": "System.Boolean InsertConvertToSheetMetal2( \n   System.Double\nThickness\n,\n   System.Boolean\nReverseThickDir\n,\n   System.Boolean\nFindBends\n,\n   System.Double\nRadius\n,\n   System.Double\nGap\n,\n   System.Int32\nReliefType\n,\n   System.Double\nReliefRatio\n,\n   System.Int32\nOverlapType\n,\n   System.Double\nOverlapRatio\n,\n   System.Boolean\nKeepBody\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Sheet thickness"
+    },
+    {
+      "name": "ReverseThickDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the sheet thickness, false to not"
+    },
+    {
+      "name": "FindBends",
+      "type": "System.Boolean",
+      "description": "True to find pre-made bends and part thickness, false to not"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Radius for the bends"
+    },
+    {
+      "name": "Gap",
+      "type": "System.Double",
+      "description": "Gap for all rips"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Relief type as defined by swSheetMetalReliefTypes_e"
+    },
+    {
+      "name": "ReliefRatio",
+      "type": "System.Double",
+      "description": "Relief ratio"
+    },
+    {
+      "name": "OverlapType",
+      "type": "System.Int32",
+      "description": "Overlap type for all rips 1=Open butt 2=Overlap 3=Underlap"
+    },
+    {
+      "name": "OverlapRatio",
+      "type": "System.Double",
+      "description": "Overlap ratio for all rips"
+    },
+    {
+      "name": "KeepBody",
+      "type": "System.Boolean",
+      "description": "True to keep bodies, false to not"
+    }
+  ],
+  "returns": "True if a Convert-Solid sheet metal feature is created, false if not",
+  "remarks": "Read the SOLIDWORKS Help to learn more about converting to sheet metal.",
+  "examples": [],
+  "related": []
+}

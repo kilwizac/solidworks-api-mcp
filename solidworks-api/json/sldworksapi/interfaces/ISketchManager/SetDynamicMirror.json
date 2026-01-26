@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SetDynamicMirror",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DynamicMirror",
+        "type": "System.Boolean",
+        "description": "True to enable dynamic sketch mirroring, false to disable it"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.GetDynamicMirror"
+    ],
+    "keywords": [
+      "automatic",
+      "sketch",
+      "mirroring",
+      "mirror",
+      "entities",
+      "dynamic",
+      "see",
+      "also",
+      "isketch",
+      "setdynamicmirror",
+      "isketchmanager",
+      "manager",
+      "boolean",
+      "dynamically",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.SetDynamicMirror",
+  "description": "Enables or disables dynamic sketch mirroring, which is the automatic mirroring of newly created sketch entities about a selected centerline.",
+  "signature": "System.Boolean SetDynamicMirror( \n   System.Boolean\nDynamicMirror\n)",
+  "parameters": [
+    {
+      "name": "DynamicMirror",
+      "type": "System.Boolean",
+      "description": "True to enable dynamic sketch mirroring, false to disable it"
+    }
+  ],
+  "returns": "True if setting this option to succeeds, false if fails",
+  "remarks": "If enabling dynamic sketch mirroring, then:\na sketch must be in edit mode.\na line segment or linear edge of a model must be selected before calling this method.",
+  "examples": [
+    {
+      "title": "Dynamically Mirror Sketch Entities (VBA)",
+      "href": "Dynamically_Mirror_Sketch_Entities_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.GetDynamicMirror"
+  ]
+}

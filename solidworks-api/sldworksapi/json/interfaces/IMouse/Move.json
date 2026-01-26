@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMouse",
+    "member": "Move",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Int32",
+        "description": "x coordinate where to move the pointer"
+      },
+      {
+        "name": "Y",
+        "type": "System.Int32",
+        "description": "y coordinate where to move the pointer"
+      },
+      {
+        "name": "Flags",
+        "type": "System.Int32",
+        "description": "Mouse command as defined in swMouse_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "move",
+      "imouse",
+      "mouse",
+      "int32",
+      "flags",
+      "boolean",
+      "run",
+      "solidworks",
+      "commands",
+      "synthesize",
+      "events",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IMouse.Move",
+  "description": "Moves the mouse pointer in the window space.",
+  "signature": "System.Boolean Move( \n   System.Int32\nX\n,\n   System.Int32\nY\n,\n   System.Int32\nFlags\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Int32",
+      "description": "x coordinate where to move the pointer"
+    },
+    {
+      "name": "Y",
+      "type": "System.Int32",
+      "description": "y coordinate where to move the pointer"
+    },
+    {
+      "name": "Flags",
+      "type": "System.Int32",
+      "description": "Mouse command as defined in swMouse_e (see Remarks )"
+    }
+  ],
+  "returns": "True if the pointer moves to the specified position, false if not",
+  "remarks": "To use this method and access SOLIDWORKS commands, you must add a reference to\nSOLIDWORKS\nversion\nCommands type library\n(substitute the actual SOLIDWORKS version number for\nversion\n) or\nSolidWorks.Interop.swcommands.dll\n, typically installed in\ninstall_dir\n\\api\\redist.\nIn window space, the origin of the coordinate system is the upper-left corner of the window. Positive x is to the right; positive y is down.",
+  "examples": [
+    {
+      "title": "Run SOLIDWORKS Commands and Synthesize Mouse Events (VBA)",
+      "href": "Run_SOLIDWORKS_Commands_and_Synthesize_Mouse_Events_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Run SOLIDWORKS Commands and Synthesize Mouse Events (C#)",
+      "href": "Run_SolidWorks_Commands_and_Synthesize_Mouse_Events_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Run SOLIDWORKS Commands and Synthesize Mouse Events (VB.NET)",
+      "href": "Run_SolidWorks_Commands_and_Synthesize_Mouse_Events_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "CloseAndReopen2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Doc",
+        "type": "System.Object",
+        "description": "IModelDoc2 ; drawing document to close and reopen"
+      },
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "Reopen options as defined in swCloseReopenOption_e"
+      },
+      {
+        "name": "NewDoc",
+        "type": "System.Object",
+        "description": "IModelDoc2 ; reopened drawing document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.QuitDoc"
+    ],
+    "keywords": [
+      "document",
+      "close",
+      "reopen",
+      "closeandreopen2",
+      "isldworks",
+      "sld",
+      "works",
+      "reopen2",
+      "doc",
+      "object",
+      "option",
+      "int32",
+      "new"
+    ]
+  },
+  "title": "ISldWorks.CloseAndReopen2",
+  "description": "Closes and reopens the specified drawing document without unloading its references from memory.",
+  "signature": "System.Int32 CloseAndReopen2( \n   System.Object\nDoc\n,\n   System.Int32\nOption\n,\n   out System.Object\nNewDoc\n)",
+  "parameters": [
+    {
+      "name": "Doc",
+      "type": "System.Object",
+      "description": "IModelDoc2 ; drawing document to close and reopen"
+    },
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "Reopen options as defined in swCloseReopenOption_e"
+    },
+    {
+      "name": "NewDoc",
+      "type": "System.Object",
+      "description": "IModelDoc2 ; reopened drawing document"
+    }
+  ],
+  "returns": "Error code as defined in swCloseReopenError_e",
+  "remarks": "Before a third-party application can process a drawing document that is open in SOLIDWORKS, it must close the document. Usually when a drawing document is closed, its references are unloaded from memory, and reopening the drawing document takes a lot of time. This method closes a drawing document, keeps its references in memory, and quickly reopens it.\nAfter the drawing document is closed and before it is reopened, SOLIDWORKS fires a\nFileCloseNotify\nevent with reason\nswFileCloseNotifyReason_e.swFileCloseNotifyReason_CloseForReload\n. In the handler of this event, a third-party application can call\nISldWorks::SetPromptFileName2\nto open a different file, or it can process the specified document before it is reopened in SOLIDWORKS.\nSee\nIModelDoc2::ReloadOrReplace\nto perform a similar function with part and assembly documents.",
+  "examples": [],
+  "related": [
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.QuitDoc"
+  ]
+}

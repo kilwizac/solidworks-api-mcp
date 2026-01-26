@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateBodyFromBox2",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "BoxDimArray",
+        "type": "System.Double",
+        "description": "Array of 9 doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateToroidalSurface",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateToroidalSurface",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "box",
+      "dimensions",
+      "icreatebodyfrombox2",
+      "imodeler",
+      "modeler",
+      "create",
+      "body",
+      "box2",
+      "dim",
+      "array",
+      "double",
+      "body2"
+    ]
+  },
+  "title": "IModeler.ICreateBodyFromBox2",
+  "description": "Obsolete. Superseded by IModeler::CreateBodyFromBox3.",
+  "signature": "Body2 ICreateBodyFromBox2( \n   ref System.Double\nBoxDimArray\n)",
+  "parameters": [
+    {
+      "name": "BoxDimArray",
+      "type": "System.Double",
+      "description": "Array of 9 doubles (see Remarks )"
+    }
+  ],
+  "returns": "Body",
+  "remarks": "The input parameter is the following array of doubles:\n[\nboxFaceCenter\n[3],\nboxAxis\n[3],\nboxWidth, boxLength\n,\nboxHeight\n]\nwhere:\nboxFaceCenter\n[3]\nXYZ location that represents the center of one of the box faces.\nboxAxis\n[3]\nXYZ direction. The box will be extruded along this vector from the\nboxFaceCenter\nlocation\n,\na distance of\nboxHeight.\nboxWidth\nBox width. If\nboxAxis\nis parallel to the Z axis (0,0,1), then this value represents the dimension that is parallel to the X-axis; otherwise, the orientation is not defined.\nboxLength\nBox length. If\nboxAxis\nis parallel to the Z axis (0,0,1), then this value represents the dimension that is parallel to the Y axis; otherwise, the orientation is not defined.\nboxHeight\nHeight to extrude along the\nboxAxis\ndirection. If\nboxHeight\nis 0, a sheet body will be created of dimension\nboxWidth\nx\nboxLength\nand whose normal is defined by\nboxAxis\n.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateToroidalSurface",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateToroidalSurface",
+    "IModeler.ICreateWireBody"
+  ]
+}

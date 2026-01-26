@@ -1,0 +1,47 @@
+---
+type: property
+interface: IStructuralMemberFeatureData
+member: RotationAngle
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related: []
+keywords:
+  - rotationangle
+  - istructuralmemberfeaturedata
+  - structural
+  - member
+  - feature
+  - data
+  - rotation
+  - angle
+  - double
+readonly: null
+---
+
+# IStructuralMemberFeatureData.RotationAngle
+
+Gets or sets the angle by which the structural member turns relative to the adjacent structural member.
+
+## Signature
+
+```csharp
+System.Double RotationAngle {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Angle
+
+## Remarks
+
+See
+Accessing Selections that Define Features
+for additional details.

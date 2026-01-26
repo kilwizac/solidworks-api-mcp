@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICommandGroup",
+    "member": "CustomNames",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.AddContextMenu"
+    ],
+    "keywords": [
+      "customnames",
+      "icommandgroup",
+      "command",
+      "group",
+      "custom",
+      "names",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "ICommandGroup.CustomNames",
+  "description": "Gets or sets the custom names in the CommandGroup.",
+  "signature": "System.String CustomNames {get; set;}",
+  "parameters": [],
+  "returns": "String containing the custom names in the CommandGroup (see Remarks )",
+  "remarks": "Format CustomNames as a semicolon-separated list of the names of the custom feature types.\nThis method is applicable only if\nICommandGruop::SelectType\nis a custom feature type, like swSelATTRIBUTES.\nFor example, if you want a context-sensitive, pop-up menu to appear for an attribute when the user right-clicks the attribute in the FeatureManager design tree, then:\nCreate the attribute (see\nIAttributeDef::CreateInstance5\n)\nSet the name of the attribute in\nICommandGroup::SelectType\n.\nSet the name of the attribute definition in ICommandGroup::CustomNames.",
+  "examples": [],
+  "related": [
+    "ICommandManager.AddContextMenu"
+  ]
+}

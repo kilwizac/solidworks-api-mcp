@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPage2",
+    "member": "SetTitleBitmapx64",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ModuleHandle",
+        "type": "System.Int64",
+        "description": "Module handle of the application instance that contains the bitmap resource (see Remarks )"
+      },
+      {
+        "name": "Identifier",
+        "type": "System.Int32",
+        "description": "Resource ID of the bitmap (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "settitlebitmapx64",
+      "ipropertymanagerpage2",
+      "manager",
+      "page2",
+      "title",
+      "bitmapx64",
+      "module",
+      "handle",
+      "int64",
+      "identifier",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IPropertyManagerPage2.SetTitleBitmapx64",
+  "description": "Sets the bitmap to display in the title of this PropertyManager page.",
+  "signature": "System.Boolean SetTitleBitmapx64( \n   System.Int64\nModuleHandle\n,\n   System.Int32\nIdentifier\n)",
+  "parameters": [
+    {
+      "name": "ModuleHandle",
+      "type": "System.Int64",
+      "description": "Module handle of the application instance that contains the bitmap resource (see Remarks )"
+    },
+    {
+      "name": "Identifier",
+      "type": "System.Int32",
+      "description": "Resource ID of the bitmap (see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This method is only available through early binding and with 64-bit versions of the SOLIDWORKS Design software. Its intended use is for SOLIDWORKS PropertyManager .NET add-ins. For VBA PropertyManager pages, use\nIPropertyManagerPage2::SetTitleBitmap2\n.\nYou can only use this method to set properties on the PropertyManager page before it is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\nfor details.\nThe bitmap:\nmust have less than 256 colors. Its recommended size is 18 - 22 cells wide. However, the bitmap can be any size, as long as it fits on the title bar.\nappears transparent by mapping any white (RGB(255,255,255)) cells to the current PropertyManager page title bar background color. Remember the special use of this color as you design your bitmap.\nmust be a resource in your Visual Studio application.  You must discover its resource ID before you can specify Identifier.\nSpecify ModuleHandle using the add-in ID.\nIf this method is...\nThen the title bar contains...\nUsed\nSpecified bitmap starting at the left edge of the PropertyManager title bar, followed by the title bar text (see\nISldWorks::CreatePropertyManagerPage\nor\nISldWorks::ICreatePropertyManagerPage\n).\nNot used\nOnly the text, centered on the title bar.",
+  "examples": [],
+  "related": []
+}

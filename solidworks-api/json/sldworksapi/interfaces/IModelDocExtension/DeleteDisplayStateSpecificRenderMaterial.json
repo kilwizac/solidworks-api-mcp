@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "DeleteDisplayStateSpecificRenderMaterial",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PWMaterialId1",
+        "type": "System.Object",
+        "description": "Array of the first IDs of the appearances to delete"
+      },
+      {
+        "name": "PWMaterialId2",
+        "type": "System.Object",
+        "description": "Array of the first IDs of the appearances to delete"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.AddDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IAddDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+      "IRenderMaterial"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "material",
+      "render",
+      "appearances",
+      "delete",
+      "deletedisplaystatespecificrendermaterial",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "state",
+      "specific",
+      "pw",
+      "id1",
+      "object",
+      "id2",
+      "boolean",
+      "add",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+  "description": "Deletes the specified appearances, using the IDs of the appearances, from the active configuration.",
+  "signature": "System.Boolean DeleteDisplayStateSpecificRenderMaterial( \n   System.Object\nPWMaterialId1\n,\n   System.Object\nPWMaterialId2\n)",
+  "parameters": [
+    {
+      "name": "PWMaterialId1",
+      "type": "System.Object",
+      "description": "Array of the first IDs of the appearances to delete"
+    },
+    {
+      "name": "PWMaterialId2",
+      "type": "System.Object",
+      "description": "Array of the first IDs of the appearances to delete"
+    }
+  ],
+  "returns": "True if the appearances are deleted, false if not",
+  "remarks": "Call\nIRenderMaterial::GetMaterialIds\nto the get IDs of the appearances added to the model, then call IModelDocExtension::DeleteDisplayStateSpecificRenderMaterial to delete the appearances.",
+  "examples": [
+    {
+      "title": "Add and Delete Appearances from Specific Display States (C#)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VB.NET)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VBA)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.AddDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IAddDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+    "IRenderMaterial"
+  ]
+}

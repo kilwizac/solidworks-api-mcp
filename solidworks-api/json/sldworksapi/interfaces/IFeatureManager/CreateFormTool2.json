@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "CreateFormTool2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "OriginX",
+        "type": "System.Double",
+        "description": "x coordinate of insertion point"
+      },
+      {
+        "name": "OriginY",
+        "type": "System.Double",
+        "description": "y coordinate of insertion point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "forming",
+      "tools",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "createformtool2",
+      "ifeaturemanager",
+      "manager",
+      "create",
+      "form",
+      "tool2",
+      "origin",
+      "double",
+      "tool",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.CreateFormTool2",
+  "description": "Creates a forming tool feature with the specified point of insertion in a sheet metal part.",
+  "signature": "Feature CreateFormTool2( \n   System.Double\nOriginX\n,\n   System.Double\nOriginY\n)",
+  "parameters": [
+    {
+      "name": "OriginX",
+      "type": "System.Double",
+      "description": "x coordinate of insertion point"
+    },
+    {
+      "name": "OriginY",
+      "type": "System.Double",
+      "description": "y coordinate of insertion point"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method, call\nIModelDocExtension::SelectByID2\n:\nwith Append = True and Mark = 1 to select the stopping face.\n(optional) one or more times with Append = True and Mark = 2 to select the faces to remove.\nTo insert a forming tool from the Design Library, call\nIFeatureManager::InsertFormToolFeature\n.",
+  "examples": [
+    {
+      "title": "Create Forming Tool (VBA)",
+      "href": "Create_Forming_Tool_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Forming Tool (VB.NET)",
+      "href": "Create_Forming_Tool_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Forming Tool (C#)",
+      "href": "Create_Forming_Tool_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

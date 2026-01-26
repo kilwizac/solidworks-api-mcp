@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "IGetLeaderAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line where the index begins at 0"
+      },
+      {
+        "name": "PointCount",
+        "type": "System.Int32",
+        "description": "Number of (x,y,z) points returned in the array"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.GetLeaderAtIndex"
+    ],
+    "keywords": [
+      "igetleaderatindex",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "leader",
+      "index",
+      "int32",
+      "point",
+      "count",
+      "double"
+    ]
+  },
+  "title": "ISFSymbol.IGetLeaderAtIndex",
+  "description": "Gets information about the specified leader on this surface finish symbol.",
+  "signature": "System.Double IGetLeaderAtIndex( \n   System.Int32\nIndex\n,\n   out System.Int32\nPointCount\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line where the index begins at 0"
+    },
+    {
+      "name": "PointCount",
+      "type": "System.Int32",
+      "description": "Number of (x,y,z) points returned in the array"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "There can be 0, 1 or 2 lines used with the leader line. If the surface-finish sysmbol is not attached then, there are 0 lines; otherwise, you can have a straight leaderline (1 line) or a bent leaderline (2 lines). You must infer the number of leader lines based on\nISFSymbol::IsAttached\nand\nISFSymbol::HasExtraLeader\n.\nISFSymbol::IsAttached == false implies no leaderline and no leaderline points (\nPointCount\n=0).\nISFSymbol::HasExtraLeader == false means that this is a straight leaderline and 1 line (\nPointCount\n=2)\nISFSymbol::HasExtraLeader == true means that this is a bent leaderline and 2 lines (\nPointCount\n=3)\nFormat of return information is the following array of doubles:\nretval\n[0] = x-coordinate of first leader point\nretval\n[1] = y-coordinate of first leader point\nretval\n[2] = z-coordinate of first leader point\nretval\n[3] = x-coordinate of second leader point\nretval\n[4] = y-coordinate of second leader point\nretval\n[5] = z-coordinate of second leader point\nretval\n[6] = x-coordinate of third leader point\nretval\n[7] = y-coordinate of third leader point\nretval\n[8] = z-coordinate of third leader point\nUse\nISFSymbol::GetLeaderCount\nto see how many leaders there are on the\nISFSymbol\nobject.",
+  "examples": [],
+  "related": [
+    "ISFSymbol.GetLeaderAtIndex"
+  ]
+}

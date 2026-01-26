@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "ShowExploded",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ShowIt",
+        "type": "System.Boolean",
+        "description": "True to show ExplodeViewName in its exploded state, false to show it in its collapsed state"
+      },
+      {
+        "name": "ExplodeViewName",
+        "type": "System.String",
+        "description": "Name of the explode view to show"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetExplodedViewConfigurationName",
+      "IPartDoc.GetExplodedViewNames"
+    ],
+    "keywords": [
+      "showexploded",
+      "ipartdoc",
+      "part",
+      "doc",
+      "show",
+      "exploded",
+      "it",
+      "boolean",
+      "explode",
+      "view",
+      "name",
+      "string",
+      "ipartexplodestep"
+    ]
+  },
+  "title": "IPartDoc.ShowExploded",
+  "description": "Displays the specified explode view for this multibody part.",
+  "signature": "System.Boolean ShowExploded( \n   System.Boolean\nShowIt\n,\n   System.String\nExplodeViewName\n)",
+  "parameters": [
+    {
+      "name": "ShowIt",
+      "type": "System.Boolean",
+      "description": "True to show ExplodeViewName in its exploded state, false to show it in its collapsed state"
+    },
+    {
+      "name": "ExplodeViewName",
+      "type": "System.String",
+      "description": "Name of the explode view to show"
+    }
+  ],
+  "returns": "True if the explode view displays correctly, false if not",
+  "remarks": "This method only works with explode views in the current, active configuration.",
+  "examples": [
+    {
+      "title": "IPartExplodeStep",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.GetExplodedViewConfigurationName",
+    "IPartDoc.GetExplodedViewNames"
+  ]
+}

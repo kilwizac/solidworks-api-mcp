@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetTableAnnotations",
+    "returns": "TableAnnotation",
+    "parameters": [
+      {
+        "name": "NumTableAnnotation",
+        "type": "System.Int32",
+        "description": "Total number of table annotations in this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetTableAnnotations"
+    ],
+    "keywords": [
+      "table",
+      "annotations",
+      "see",
+      "also",
+      "itableannotation",
+      "drawing",
+      "views",
+      "annotation",
+      "iannotation",
+      "view",
+      "iview",
+      "tables",
+      "igettableannotations",
+      "num",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetTableAnnotations",
+  "description": "Gets all of the table annotations in this drawing view.",
+  "signature": "TableAnnotation IGetTableAnnotations( \n   System.Int32\nNumTableAnnotation\n)",
+  "parameters": [
+    {
+      "name": "NumTableAnnotation",
+      "type": "System.Int32",
+      "description": "Total number of table annotations in this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of table annotations VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of table annotations all at once instead of calling\nIView::GetFirstTableAnnotation\nand then repeatedly calling\nITableAnnotation::GetNext\nto obtain the table annotations in the drawing view.\nBefore calling this method, call\nIView::GetTableAnnotationCount\nto get the value for numTableAnnotations.",
+  "examples": [],
+  "related": [
+    "IView.GetTableAnnotations"
+  ]
+}

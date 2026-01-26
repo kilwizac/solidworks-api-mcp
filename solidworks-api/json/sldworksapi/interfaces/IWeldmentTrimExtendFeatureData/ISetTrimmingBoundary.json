@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentTrimExtendFeatureData",
+    "member": "ISetTrimmingBoundary",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of trimming boundaries"
+      },
+      {
+        "name": "TrimBoundArr",
+        "type": "System.Object",
+        "description": "in-process, unmanaged C++: Pointer to an array of entities that define the trimming boundaries (see Remarks ) Solid bodies created by weldment members - or - Planar faces on non-weldment members, or planar faces on weldment members, or both VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWeldmentTrimExtendFeatureData.GetTrimmingBoundary",
+      "IWeldmentTrimExtendFeatureData.GetTrimmingBoundaryCount",
+      "IWeldmentTrimExtendFeatureData.IGetTrimmingBoundary",
+      "IWeldmentTrimExtendFeatureData.SetTrimmingBoundary"
+    ],
+    "keywords": [
+      "isettrimmingboundary",
+      "iweldmenttrimextendfeaturedata",
+      "weldment",
+      "trim",
+      "extend",
+      "feature",
+      "data",
+      "trimming",
+      "boundary",
+      "count",
+      "int32",
+      "bound",
+      "arr",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IWeldmentTrimExtendFeatureData.ISetTrimmingBoundary",
+  "description": "Gets the entities used to define the trimming boundaries.",
+  "signature": "void ISetTrimmingBoundary( \n   System.Int32\nCount\n,\n   ref System.Object\nTrimBoundArr\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of trimming boundaries"
+    },
+    {
+      "name": "TrimBoundArr",
+      "type": "System.Object",
+      "description": "in-process, unmanaged C++: Pointer to an array of entities that define the trimming boundaries (see Remarks ) Solid bodies created by weldment members - or - Planar faces on non-weldment members, or planar faces on weldment members, or both VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "Entities that define the trimming boundaries",
+  "remarks": "Faces are valid for end-trim corner types only. You can only specify multiple trimming boundaries for end-trim corner types. Use\nIWeldmentTrimExtendFeatureData::CornerType\nto determine the type of corner.\nYou must set the\nbodies to trim\nand set the trimming boundary if changing a corner type.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IWeldmentTrimExtendFeatureData.GetTrimmingBoundary",
+    "IWeldmentTrimExtendFeatureData.GetTrimmingBoundaryCount",
+    "IWeldmentTrimExtendFeatureData.IGetTrimmingBoundary",
+    "IWeldmentTrimExtendFeatureData.SetTrimmingBoundary"
+  ]
+}

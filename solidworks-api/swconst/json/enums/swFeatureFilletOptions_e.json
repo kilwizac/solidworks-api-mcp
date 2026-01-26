@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFeatureFilletOptions_e",
+    "description": "Fillet/chamfer options. Bitmask.",
+    "member_count": 15,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFeatureFilletOptions_e",
+  "description": "Fillet/chamfer options. Bitmask.",
+  "values": [
+    {
+      "member": "swFeatureFilletAsymmetric",
+      "value": "16384",
+      "description": "or 0x4000; requires that you specify Direction 1 and Direction 2 radii for the asymmetric sides of the fillet/chamfer"
+    },
+    {
+      "member": "swFeatureFilletAttachEdges",
+      "value": "64",
+      "description": "or 0x40; set to fillet attached edges between intersecting features; you must pre-select the features"
+    },
+    {
+      "member": "swFeatureFilletConstantWidth",
+      "value": "512",
+      "description": "or 0x200; set to create a face fillet of constant width"
+    },
+    {
+      "member": "swFeatureFilletCornerType",
+      "value": "32",
+      "description": "or 0x20"
+    },
+    {
+      "member": "swFeatureFilletCurvatureContinuous",
+      "value": "256",
+      "description": "or 0x100; set to create a smoother curvature between adjacent surfaces; overrides any other cross-sectional profile setting"
+    },
+    {
+      "member": "swFeatureFilletKeepFeatures",
+      "value": "128",
+      "description": "or 0x80; set to keep cut or boss features visible if you apply a fillet radius large enough to cover them"
+    },
+    {
+      "member": "swFeatureFilletNoTrimNoAttached",
+      "value": "1024",
+      "description": "or 0x400; set to trim the filleted faces and knit the surfaces into one surface body"
+    },
+    {
+      "member": "swFeatureFilletPropagate",
+      "value": "1",
+      "description": "or 0x1; set to extend the fillet to all faces that are tangent to the selected face"
+    },
+    {
+      "member": "swFeatureFilletPropagateFeatToParts",
+      "value": "8192",
+      "description": "or 0x2000"
+    },
+    {
+      "member": "swFeatureFilletReverseFace1Dir",
+      "value": "2048",
+      "description": "or 0x800"
+    },
+    {
+      "member": "swFeatureFilletReverseFace2Dir",
+      "value": "4096",
+      "description": "or 0x1000"
+    },
+    {
+      "member": "swFeatureFilletUniformRadius",
+      "value": "2",
+      "description": "or 0x2; set for a uniform radius; do not set for multiple radii"
+    },
+    {
+      "member": "swFeatureFilletUseHelpPoint",
+      "value": "8",
+      "description": "or 0x8; valid only for face fillets/chamfers, set to disambiguate placement of the face fillet/chamfer; requires that you specify a vertex close to where the face blend should occur"
+    },
+    {
+      "member": "swFeatureFilletUseTangentHoldLine",
+      "value": "16",
+      "description": "or 0x10; set to create a face hold line fillet whose shape is to be determined by a specified part edge or a face projected split line; the radius of the fillet is driven by the distance between the hold line and edge fo fillet"
+    },
+    {
+      "member": "swFeatureFilletVarRadiusType",
+      "value": "4",
+      "description": "or 0x4; set to create a straight transition fillet that changes from one radius to another linearly while matching edge tangency to an adjacent fillet; do not set to create a smooth transition fillet that changes smoothly from one radius to another when matching edge tangency to an adjacent fillet"
+    }
+  ]
+}

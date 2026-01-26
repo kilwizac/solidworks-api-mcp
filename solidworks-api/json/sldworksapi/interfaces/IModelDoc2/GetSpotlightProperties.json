@@ -1,0 +1,209 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetSpotlightProperties",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Light name used internally (returned by IModelDoc2::GetLightSourceName )"
+      },
+      {
+        "name": "Ambient",
+        "type": "System.Double",
+        "description": "Light source ambient value"
+      },
+      {
+        "name": "Diffuse",
+        "type": "System.Double",
+        "description": "Light source diffuse value"
+      },
+      {
+        "name": "Specular",
+        "type": "System.Double",
+        "description": "Light source specular value"
+      },
+      {
+        "name": "Colour",
+        "type": "System.Int32",
+        "description": "COLORREF color value"
+      },
+      {
+        "name": "Enabled",
+        "type": "System.Boolean",
+        "description": "True if a light is enabled, false if not"
+      },
+      {
+        "name": "Fixed",
+        "type": "System.Boolean",
+        "description": "True if a light is fixed, false if not"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x location of the spot light"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y location of the spot light"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "location of the spot light target"
+      },
+      {
+        "name": "Targetx",
+        "type": "System.Double",
+        "description": "x location of the spot light target"
+      },
+      {
+        "name": "Targety",
+        "type": "System.Double",
+        "description": "y location of the spot light target"
+      },
+      {
+        "name": "Targetz",
+        "type": "System.Double",
+        "description": "z location of the spot light target"
+      },
+      {
+        "name": "ConeAngle",
+        "type": "System.Double",
+        "description": "Cone angle through which the beam spreads in degrees"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetAmbientLightProperties",
+      "IModelDoc2.GetDirectionLightProperties",
+      "IModelDoc2.GetPointLightProperties",
+      "IModelDoc2.SetAmbientLightProperties",
+      "IModelDoc2.SetDirectionLightProperties",
+      "IModelDoc2.SetPointLightProperties"
+    ],
+    "keywords": [
+      "lighting",
+      "properties",
+      "spot",
+      "lights",
+      "getspotlightproperties",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "spotlight",
+      "name",
+      "string",
+      "ambient",
+      "double",
+      "diffuse",
+      "specular",
+      "colour",
+      "int32",
+      "enabled",
+      "boolean",
+      "fixed",
+      "targetx",
+      "targety",
+      "targetz",
+      "cone",
+      "angle"
+    ]
+  },
+  "title": "IModelDoc2.GetSpotlightProperties",
+  "description": "Gets the spotlight properties.",
+  "signature": "System.Boolean GetSpotlightProperties( \n   System.String\nName\n,\n   ref System.Double\nAmbient\n,\n   ref System.Double\nDiffuse\n,\n   ref System.Double\nSpecular\n,\n   ref System.Int32\nColour\n,\n   ref System.Boolean\nEnabled\n,\n   ref System.Boolean\nFixed\n,\n   ref System.Double\nX\n,\n   ref System.Double\nY\n,\n   ref System.Double\nZ\n,\n   ref System.Double\nTargetx\n,\n   ref System.Double\nTargety\n,\n   ref System.Double\nTargetz\n,\n   ref System.Double\nConeAngle\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Light name used internally (returned by IModelDoc2::GetLightSourceName )"
+    },
+    {
+      "name": "Ambient",
+      "type": "System.Double",
+      "description": "Light source ambient value"
+    },
+    {
+      "name": "Diffuse",
+      "type": "System.Double",
+      "description": "Light source diffuse value"
+    },
+    {
+      "name": "Specular",
+      "type": "System.Double",
+      "description": "Light source specular value"
+    },
+    {
+      "name": "Colour",
+      "type": "System.Int32",
+      "description": "COLORREF color value"
+    },
+    {
+      "name": "Enabled",
+      "type": "System.Boolean",
+      "description": "True if a light is enabled, false if not"
+    },
+    {
+      "name": "Fixed",
+      "type": "System.Boolean",
+      "description": "True if a light is fixed, false if not"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x location of the spot light"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y location of the spot light"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "location of the spot light target"
+    },
+    {
+      "name": "Targetx",
+      "type": "System.Double",
+      "description": "x location of the spot light target"
+    },
+    {
+      "name": "Targety",
+      "type": "System.Double",
+      "description": "y location of the spot light target"
+    },
+    {
+      "name": "Targetz",
+      "type": "System.Double",
+      "description": "z location of the spot light target"
+    },
+    {
+      "name": "ConeAngle",
+      "type": "System.Double",
+      "description": "Cone angle through which the beam spreads in degrees"
+    }
+  ],
+  "returns": "True if light properties determined without a problem, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetAmbientLightProperties",
+    "IModelDoc2.GetDirectionLightProperties",
+    "IModelDoc2.GetPointLightProperties",
+    "IModelDoc2.SetAmbientLightProperties",
+    "IModelDoc2.SetDirectionLightProperties",
+    "IModelDoc2.SetPointLightProperties"
+  ]
+}

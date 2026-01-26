@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetArcAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the arc"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetArcCount",
+      "IGtol.IGetArcAtIndex"
+    ],
+    "keywords": [
+      "arcs",
+      "geometric",
+      "tolerancing",
+      "getarcatindex",
+      "igtol",
+      "gtol",
+      "arc",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetArcAtIndex",
+  "description": "Gets information about the specified arc.",
+  "signature": "System.Object GetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the arc"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType, startPt[3], endPt[3], centerPt[3], rotationDir\n]\nwhere:\nlineType\nLine type\nstartPt[3]\nXYZ arc start point\nendPt[3]\nXYZ arc end point\ncenterPt[3]\nXYZ arc center point\nrotationDir\nBoolean returned as a double and represents the rotation direction, where CCW returns True and CW returns false",
+  "examples": [],
+  "related": [
+    "IGtol.GetArcCount",
+    "IGtol.IGetArcAtIndex"
+  ]
+}

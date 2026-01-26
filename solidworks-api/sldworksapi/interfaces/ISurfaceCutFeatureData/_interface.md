@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ISurfaceCutFeatureData
+inherits: null
+description: Allows access to a surface-cut feature.
+member_count: 12
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AutoSelect
+  - FeatureScope
+  - FeatureScopeBodies
+  - Flip
+  - GetBodyIndexKept
+  - GetFeatureScopeBodiesCount
+  - IAccessSelections
+---
+
+# ISurfaceCutFeatureData
+
+Allows access to a surface-cut feature.
+
+## Common Members
+
+- `AccessSelections`
+- `AutoSelect`
+- `FeatureScope`
+- `FeatureScopeBodies`
+- `Flip`
+- `GetBodyIndexKept`
+- `GetFeatureScopeBodiesCount`
+- `IAccessSelections`

@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCSYSXYZAngularRotation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "XAngle",
+        "type": "System.Double",
+        "description": "Angle of rotation between x axes"
+      },
+      {
+        "name": "YAngle",
+        "type": "System.Double",
+        "description": "Angle of rotation between y axes"
+      },
+      {
+        "name": "ZAngle",
+        "type": "System.Double",
+        "description": "Angle of rotation between z axes"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetCSYSDistances",
+      "IModelDocExtension.GetCSYSEulersAngularRotation"
+    ],
+    "keywords": [
+      "coordinate",
+      "transform",
+      "getcsysxyzangularrotation",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "csysxyz",
+      "angular",
+      "rotation",
+      "angle",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.GetCSYSXYZAngularRotation",
+  "description": "Gets the specified Tait-Bryan angular rotation values that transform one selected coordinate system into another.",
+  "signature": "System.Boolean GetCSYSXYZAngularRotation( \n   out System.Double\nXAngle\n,\n   out System.Double\nYAngle\n,\n   out System.Double\nZAngle\n)",
+  "parameters": [
+    {
+      "name": "XAngle",
+      "type": "System.Double",
+      "description": "Angle of rotation between x axes"
+    },
+    {
+      "name": "YAngle",
+      "type": "System.Double",
+      "description": "Angle of rotation between y axes"
+    },
+    {
+      "name": "ZAngle",
+      "type": "System.Double",
+      "description": "Angle of rotation between z axes"
+    }
+  ],
+  "returns": "True if rotation values successfully retrieved, false if not",
+  "remarks": "This method corresponds to the SOLIDWORKS measure tool's calculation of angular rotation between two coordinate systems. See\nSOLIDWORKS online help > Fundamentals > Measure Tool\nfor more information.\nUse Wikipedia to learn about Tait-Bryan or Cardan angles.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetCSYSDistances",
+    "IModelDocExtension.GetCSYSEulersAngularRotation"
+  ]
+}

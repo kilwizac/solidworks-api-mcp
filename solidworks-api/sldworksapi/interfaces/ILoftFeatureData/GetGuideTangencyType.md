@@ -1,0 +1,93 @@
+---
+type: method
+interface: ILoftFeatureData
+member: GetGuideTangencyType
+returns: System.Int16
+parameters:
+  -
+    name: GuideIndex
+    type: System.Int16
+    description: Index of the guide tangency type
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - ILoftFeatureData.EndConstraintApplyToAll
+  - ILoftFeatureData.EndConstraintDraftAngle
+  - ILoftFeatureData.EndConstraintDraftAngleDirection
+  - ILoftFeatureData.EndTangencyType
+  - ILoftFeatureData.EndTangentLength
+  - ILoftFeatureData.GetGuideCurvesCount
+  - ILoftFeatureData.GetGuideCurvesType
+  - ILoftFeatureData.GuideCurveInfluence
+  - ILoftFeatureData.GuideCurves
+  - ILoftFeatureData.IGetGuideCurves
+  - ILoftFeatureData.IGetGuideCurvesType
+  - ILoftFeatureData.ISetGuideCurves
+  - ILoftFeatureData.MaintainTangency
+  - ILoftFeatureData.SetGuideTangencyType
+  - ILoftFeatureData.StartConstraintApplyToAll
+  - ILoftFeatureData.StartConstraintDraftAngle
+  - ILoftFeatureData.StartConstraintDraftAngleDirection
+  - ILoftFeatureData.StartTangencyType
+  - ILoftFeatureData.StartTangentLength
+keywords:
+  - guide
+  - curves
+  - lofts
+  - see
+  - also
+  - iloftfeaturedata
+  - getguidetangencytype
+  - loft
+  - feature
+  - data
+  - tangency
+  - type
+  - index
+  - int16
+---
+
+# ILoftFeatureData.GetGuideTangencyType
+
+Gets the tangency type of the guide curve (i.e., controls the tangency where the loft meets the guide curves) for this loft feature.
+
+## Signature
+
+```csharp
+System.Int16 GetGuideTangencyType( 
+   System.Int16
+GuideIndex
+)
+```
+## Parameters
+
+- `GuideIndex` (System.Int16): Index of the guide tangency type
+
+## Return Value
+
+Tangency type of the guide curve as defined in swTangencyType_e
+
+## See Also
+
+- `ILoftFeatureData.EndConstraintApplyToAll`
+- `ILoftFeatureData.EndConstraintDraftAngle`
+- `ILoftFeatureData.EndConstraintDraftAngleDirection`
+- `ILoftFeatureData.EndTangencyType`
+- `ILoftFeatureData.EndTangentLength`
+- `ILoftFeatureData.GetGuideCurvesCount`
+- `ILoftFeatureData.GetGuideCurvesType`
+- `ILoftFeatureData.GuideCurveInfluence`
+- `ILoftFeatureData.GuideCurves`
+- `ILoftFeatureData.IGetGuideCurves`
+- `ILoftFeatureData.IGetGuideCurvesType`
+- `ILoftFeatureData.ISetGuideCurves`
+- `ILoftFeatureData.MaintainTangency`
+- `ILoftFeatureData.SetGuideTangencyType`
+- `ILoftFeatureData.StartConstraintApplyToAll`
+- `ILoftFeatureData.StartConstraintDraftAngle`
+- `ILoftFeatureData.StartConstraintDraftAngleDirection`
+- `ILoftFeatureData.StartTangencyType`
+- `ILoftFeatureData.StartTangentLength`

@@ -1,0 +1,167 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SelectedFaceProperties",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RgbColor",
+        "type": "System.Int32",
+        "description": "Face color (see Remarks )"
+      },
+      {
+        "name": "Ambient",
+        "type": "System.Double",
+        "description": "0.0 <= Face ambient light value <= 1.0"
+      },
+      {
+        "name": "Diffuse",
+        "type": "System.Double",
+        "description": "0.0 < Face diffuse value <= 1.0"
+      },
+      {
+        "name": "Specular",
+        "type": "System.Double",
+        "description": "0.0 < Face specular value <= 1.0"
+      },
+      {
+        "name": "Shininess",
+        "type": "System.Double",
+        "description": "0.0 < Face shininess value <= 1.0"
+      },
+      {
+        "name": "Transparency",
+        "type": "System.Double",
+        "description": "0.0 <= Face transparency value <= 1.0"
+      },
+      {
+        "name": "Emission",
+        "type": "System.Double",
+        "description": "0.0 <= Face emission value <= 1.0"
+      },
+      {
+        "name": "UsePartProps",
+        "type": "System.Boolean",
+        "description": "True if the face inherits the Part properties, false if not"
+      },
+      {
+        "name": "FaceName",
+        "type": "System.String",
+        "description": "Name of the face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "geometry",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IFace2",
+      "IModelDoc2.EntityProperties",
+      "IModelDoc2.SelectedEdgeProperties",
+      "IModelDoc2.SelectedFeatureProperties"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "properties",
+      "faces",
+      "selectedfaceproperties",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "selected",
+      "rgb",
+      "color",
+      "int32",
+      "ambient",
+      "double",
+      "diffuse",
+      "specular",
+      "shininess",
+      "transparency",
+      "emission",
+      "use",
+      "part",
+      "props",
+      "boolean",
+      "name",
+      "string",
+      "change",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.SelectedFaceProperties",
+  "description": "Sets the material property values of the selected face.",
+  "signature": "System.Boolean SelectedFaceProperties( \n   System.Int32\nRgbColor\n,\n   System.Double\nAmbient\n,\n   System.Double\nDiffuse\n,\n   System.Double\nSpecular\n,\n   System.Double\nShininess\n,\n   System.Double\nTransparency\n,\n   System.Double\nEmission\n,\n   System.Boolean\nUsePartProps\n,\n   System.String\nFaceName\n)",
+  "parameters": [
+    {
+      "name": "RgbColor",
+      "type": "System.Int32",
+      "description": "Face color (see Remarks )"
+    },
+    {
+      "name": "Ambient",
+      "type": "System.Double",
+      "description": "0.0 <= Face ambient light value <= 1.0"
+    },
+    {
+      "name": "Diffuse",
+      "type": "System.Double",
+      "description": "0.0 < Face diffuse value <= 1.0"
+    },
+    {
+      "name": "Specular",
+      "type": "System.Double",
+      "description": "0.0 < Face specular value <= 1.0"
+    },
+    {
+      "name": "Shininess",
+      "type": "System.Double",
+      "description": "0.0 < Face shininess value <= 1.0"
+    },
+    {
+      "name": "Transparency",
+      "type": "System.Double",
+      "description": "0.0 <= Face transparency value <= 1.0"
+    },
+    {
+      "name": "Emission",
+      "type": "System.Double",
+      "description": "0.0 <= Face emission value <= 1.0"
+    },
+    {
+      "name": "UsePartProps",
+      "type": "System.Boolean",
+      "description": "True if the face inherits the Part properties, false if not"
+    },
+    {
+      "name": "FaceName",
+      "type": "System.String",
+      "description": "Name of the face"
+    }
+  ],
+  "returns": "True if face properties successfully changed, false if not",
+  "remarks": "To see a color change, you must:\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after calling this method.\nYou can use the FaceName argument to set the name for this face.\nIf the face has a name, then this method does not change the name and returns false. This behavior is intended to prevent a program from renaming a face that is referenced in some other location.\nFor example, if an assembly contains a mate to a face on a part, then a name is automatically assigned to that face. If you change that name, then there is no guarantee that the mate will still be valid. Therefore, when using entity names, you should first check to see if the entity is already named, and, if so, use the existing name. If no name exists for the face, then you can assign the face a name.",
+  "examples": [
+    {
+      "title": "Change Color of Face (VBA)",
+      "href": "Change_Color_of_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFace2",
+    "IModelDoc2.EntityProperties",
+    "IModelDoc2.SelectedEdgeProperties",
+    "IModelDoc2.SelectedFeatureProperties"
+  ]
+}

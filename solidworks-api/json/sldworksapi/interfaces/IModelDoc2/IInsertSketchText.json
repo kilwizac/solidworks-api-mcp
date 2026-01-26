@@ -1,0 +1,151 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IInsertSketchText",
+    "returns": "SketchText",
+    "parameters": [
+      {
+        "name": "Ptx",
+        "type": "System.Double",
+        "description": "X coordinate of text"
+      },
+      {
+        "name": "Pty",
+        "type": "System.Double",
+        "description": "Y coordinate of text"
+      },
+      {
+        "name": "Ptz",
+        "type": "System.Double",
+        "description": "Z coordinate of text"
+      },
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text to insert (see Remarks )"
+      },
+      {
+        "name": "Alignment",
+        "type": "System.Int32",
+        "description": "Alignment: 0 = Left 1 = Center 2 = Right 3 = Fully justified (see Remarks )"
+      },
+      {
+        "name": "FlipDirection",
+        "type": "System.Int32",
+        "description": "1 to flip text vertically about the selected entity, 0 to not (see Remarks )"
+      },
+      {
+        "name": "HorizontalMirror",
+        "type": "System.Int32",
+        "description": "1 to flip text horizontally, 0 to not"
+      },
+      {
+        "name": "WidthFactor",
+        "type": "System.Int32",
+        "description": "6 <= Percentage by which to evenly widen each character in the text block < = 1667"
+      },
+      {
+        "name": "SpaceBetweenChars",
+        "type": "System.Int32",
+        "description": "1 <= Percentage of space between each character in the text block <= 10000; valid only if Alignment != 3"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.DissolveSketchText"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "text",
+      "iinsertsketchtext",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "ptx",
+      "double",
+      "pty",
+      "ptz",
+      "string",
+      "alignment",
+      "int32",
+      "flip",
+      "direction",
+      "horizontal",
+      "mirror",
+      "width",
+      "factor",
+      "space",
+      "between",
+      "chars"
+    ]
+  },
+  "title": "IModelDoc2.IInsertSketchText",
+  "description": "Obsolete. Superseded by IModelDoc2::InsertSketchText.",
+  "signature": "SketchText IInsertSketchText( \n   System.Double\nPtx\n,\n   System.Double\nPty\n,\n   System.Double\nPtz\n,\n   System.String\nText\n,\n   System.Int32\nAlignment\n,\n   System.Int32\nFlipDirection\n,\n   System.Int32\nHorizontalMirror\n,\n   System.Int32\nWidthFactor\n,\n   System.Int32\nSpaceBetweenChars\n)",
+  "parameters": [
+    {
+      "name": "Ptx",
+      "type": "System.Double",
+      "description": "X coordinate of text"
+    },
+    {
+      "name": "Pty",
+      "type": "System.Double",
+      "description": "Y coordinate of text"
+    },
+    {
+      "name": "Ptz",
+      "type": "System.Double",
+      "description": "Z coordinate of text"
+    },
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text to insert (see Remarks )"
+    },
+    {
+      "name": "Alignment",
+      "type": "System.Int32",
+      "description": "Alignment: 0 = Left 1 = Center 2 = Right 3 = Fully justified (see Remarks )"
+    },
+    {
+      "name": "FlipDirection",
+      "type": "System.Int32",
+      "description": "1 to flip text vertically about the selected entity, 0 to not (see Remarks )"
+    },
+    {
+      "name": "HorizontalMirror",
+      "type": "System.Int32",
+      "description": "1 to flip text horizontally, 0 to not"
+    },
+    {
+      "name": "WidthFactor",
+      "type": "System.Int32",
+      "description": "6 <= Percentage by which to evenly widen each character in the text block < = 1667"
+    },
+    {
+      "name": "SpaceBetweenChars",
+      "type": "System.Int32",
+      "description": "1 <= Percentage of space between each character in the text block <= 10000; valid only if Alignment != 3"
+    }
+  ],
+  "returns": "Sketch text",
+  "remarks": "Alignment and FlipDirection are valid only when a curve, edge, or sketch segment is selected. Text appears along the selected entity. If an entity is not selected, Text appears horizontally starting at the origin.\nSelect\nthe curve, edge, or sketch segment with Mark = 1.\nSee the SOLIDWORKS Design user\n-interface help > Sketching > Sketch Entities > Sketch Text > SketchText PropertyManager\ntopic for more information about this functionality.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.DissolveSketchText"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertCavity4",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ScaleFactor_x",
+        "type": "System.Double",
+        "description": "Scaling factor in the x direction"
+      },
+      {
+        "name": "ScaleFactor_y",
+        "type": "System.Double",
+        "description": "Scaling factor in the y direction"
+      },
+      {
+        "name": "ScaleFactor_z",
+        "type": "System.Double",
+        "description": "Scaling factor in the z direction"
+      },
+      {
+        "name": "IsUniform",
+        "type": "System.Boolean",
+        "description": "True to use the first scale argument as the uniform scale, false to not"
+      },
+      {
+        "name": "ScaleType",
+        "type": "System.Int32",
+        "description": "Type of scaling as defined in swCavityScaleType_e"
+      },
+      {
+        "name": "KeepPieceIndex",
+        "type": "System.Int32",
+        "description": "Piece to keep if there is ambiguity"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "ICavityFeatureData"
+    ],
+    "keywords": [
+      "cavities",
+      "see",
+      "also",
+      "icavityfeaturedata",
+      "insert",
+      "insertcavity4",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "cavity4",
+      "scale",
+      "factor",
+      "double",
+      "uniform",
+      "boolean",
+      "type",
+      "int32",
+      "keep",
+      "piece",
+      "index",
+      "void",
+      "cavity",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertCavity4",
+  "description": "Inserts a cavity to the active part using a selected component.",
+  "signature": "void InsertCavity4( \n   System.Double\nScaleFactor_x\n,\n   System.Double\nScaleFactor_y\n,\n   System.Double\nScaleFactor_z\n,\n   System.Boolean\nIsUniform\n,\n   System.Int32\nScaleType\n,\n   System.Int32\nKeepPieceIndex\n)",
+  "parameters": [
+    {
+      "name": "ScaleFactor_x",
+      "type": "System.Double",
+      "description": "Scaling factor in the x direction"
+    },
+    {
+      "name": "ScaleFactor_y",
+      "type": "System.Double",
+      "description": "Scaling factor in the y direction"
+    },
+    {
+      "name": "ScaleFactor_z",
+      "type": "System.Double",
+      "description": "Scaling factor in the z direction"
+    },
+    {
+      "name": "IsUniform",
+      "type": "System.Boolean",
+      "description": "True to use the first scale argument as the uniform scale, false to not"
+    },
+    {
+      "name": "ScaleType",
+      "type": "System.Int32",
+      "description": "Type of scaling as defined in swCavityScaleType_e"
+    },
+    {
+      "name": "KeepPieceIndex",
+      "type": "System.Int32",
+      "description": "Piece to keep if there is ambiguity"
+    }
+  ],
+  "returns": "",
+  "remarks": "This operation is performed in the context of an assembly document. The component being edited in the context of the assembly receives the new cavity feature.\nSet the scaleFactor argument as appropriate for your casting material. The scaling factor is expressed as a percentage (+/- 20%) of the size of the cavity part. Pass it in as a value within the range of -20 to +20.\nSOLIDWORKS uses the following formula to determine the size of the cavity:\ncavitysize = partsize * (1 + scaleFactor/100)\nWhen there is ambiguity in the result of a cut, SOLIDWORKS uses KeepPieceIndex to determine which result to use. You can set this parameter to -1 if there is no ambiguity; otherwise, you should use the index of the result, in the range between 0 and 1 less than the possible number of outcomes.",
+  "examples": [
+    {
+      "title": "Insert Cavity (C#)",
+      "href": "Insert_Cavity_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Cavity (VB.NET)",
+      "href": "Insert_Cavity_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Cavity (VBA)",
+      "href": "Insert_Cavity_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICavityFeatureData"
+  ]
+}

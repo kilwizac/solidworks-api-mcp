@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IGetDesignTable",
+    "returns": "DesignTable",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IDesignTable",
+      "IModelDoc2.CloseFamilyTable",
+      "IModelDoc2.DeleteDesignTable",
+      "IModelDoc2.GetDesignTable",
+      "IModelDoc2.InsertFamilyTableEdit",
+      "IModelDoc2.InsertFamilyTableNew",
+      "IModelDoc2.InsertFamilyTableOpen",
+      "IModelDocExtension.HasDesignTable"
+    ],
+    "keywords": [
+      "design",
+      "tables",
+      "see",
+      "also",
+      "idesigntable",
+      "igetdesigntable",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "table"
+    ]
+  },
+  "title": "IModelDoc2.IGetDesignTable",
+  "description": "Gets the design table associated with this part or assembly document.",
+  "signature": "DesignTable IGetDesignTable()",
+  "parameters": [],
+  "returns": "Design table",
+  "remarks": "If you call this method from a drawing document, NULL is returned.\nTo access design tables from a drawing document you must get the\nIModelDoc2\nobject associated with a particular drawing view and then call this method from that IModelDoc2 object. To determine if a drawing view has a design table associated with it, use\nIView::HasDesignTable\n.",
+  "examples": [],
+  "related": [
+    "IDesignTable",
+    "IModelDoc2.CloseFamilyTable",
+    "IModelDoc2.DeleteDesignTable",
+    "IModelDoc2.GetDesignTable",
+    "IModelDoc2.InsertFamilyTableEdit",
+    "IModelDoc2.InsertFamilyTableNew",
+    "IModelDoc2.InsertFamilyTableOpen",
+    "IModelDocExtension.HasDesignTable"
+  ]
+}

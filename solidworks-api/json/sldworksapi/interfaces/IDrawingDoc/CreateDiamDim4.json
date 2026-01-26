@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateDiamDim4",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "P0",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z); location of dimension point"
+      },
+      {
+        "name": "P1",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z); nearest point on circle"
+      },
+      {
+        "name": "P2",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z); farthest point on circle diametrically opposite to P1"
+      },
+      {
+        "name": "P3",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z); plane normal"
+      },
+      {
+        "name": "TextPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z); position of text"
+      },
+      {
+        "name": "Val",
+        "type": "System.Double",
+        "description": "Dimension value in meters"
+      },
+      {
+        "name": "TextHeight",
+        "type": "System.Double",
+        "description": "Text height in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.CreateAngDim4",
+      "IDrawingDoc.CreateLinearDim4",
+      "IDrawingDoc.CreateOrdinateDim4",
+      "IDrawingDoc.ICreateAngDim4",
+      "IDrawingDoc.ICreateDiamDim4",
+      "IDrawingDoc.ICreateLinearDim4",
+      "IDrawingDoc.ICreateOrdinateDim4"
+    ],
+    "keywords": [
+      "diameter",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "creatediamdim4",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "create",
+      "diam",
+      "dim4",
+      "p0",
+      "object",
+      "p1",
+      "p2",
+      "p3",
+      "text",
+      "point",
+      "val",
+      "double",
+      "height",
+      "non",
+      "associative",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.CreateDiamDim4",
+  "description": "Creates a non-associative diameter dimension.",
+  "signature": "System.Object CreateDiamDim4( \n   System.Object\nP0\n,\n   System.Object\nP1\n,\n   System.Object\nP2\n,\n   System.Object\nP3\n,\n   System.Object\nTextPoint\n,\n   System.Double\nVal\n,\n   System.Double\nTextHeight\n)",
+  "parameters": [
+    {
+      "name": "P0",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z); location of dimension point"
+    },
+    {
+      "name": "P1",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z); nearest point on circle"
+    },
+    {
+      "name": "P2",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z); farthest point on circle diametrically opposite to P1"
+    },
+    {
+      "name": "P3",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z); plane normal"
+    },
+    {
+      "name": "TextPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z); position of text"
+    },
+    {
+      "name": "Val",
+      "type": "System.Double",
+      "description": "Dimension value in meters"
+    },
+    {
+      "name": "TextHeight",
+      "type": "System.Double",
+      "description": "Text height in meters"
+    }
+  ],
+  "returns": "Newly created display dimension",
+  "remarks": "SOLIDWORKS creates this type of dimension between the two points you specify. It has no relation to your geometry.",
+  "examples": [
+    {
+      "title": "Create Non-associative Diameter Dimension (VBA)",
+      "href": "Create_Non-associative_Diameter_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.CreateAngDim4",
+    "IDrawingDoc.CreateLinearDim4",
+    "IDrawingDoc.CreateOrdinateDim4",
+    "IDrawingDoc.ICreateAngDim4",
+    "IDrawingDoc.ICreateDiamDim4",
+    "IDrawingDoc.ICreateLinearDim4",
+    "IDrawingDoc.ICreateOrdinateDim4"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetConfigurationByName",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Configuration name"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.ConfigurationManager",
+      "IModelDoc2.DeleteConfiguration2",
+      "IModelDoc2.GetConfigurationCount",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IAddConfiguration3",
+      "IModelDoc2.IGetConfigurationByName",
+      "IModelDoc2.IGetConfigurationNames",
+      "IModelDoc2.ShowConfiguration2"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "name",
+      "getconfigurationbyname",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "string",
+      "object",
+      "add",
+      "derived",
+      "configurations",
+      "vba",
+      "change",
+      "properties",
+      "custom",
+      "save",
+      "data",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.GetConfigurationByName",
+  "description": "Gets the specified configuration.",
+  "signature": "System.Object GetConfigurationByName( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Configuration name"
+    }
+  ],
+  "returns": "Configuration or NULL if the operation fails",
+  "remarks": "If the specified configuration has not been activated, then some data may be unavailable. For example, attempting to traverse assembly components for a configuration that has not been activated results in a NULL root component being returned from\nIConfiguration::GetRootComponent\n. However, the IConfiguration object returned is useful for obtaining data that is stored with the IConfiguration object, such as the\nIConfiguration::AlternateName\nvalue. The specified configuration does not have to be activated to obtain this type of stored information.",
+  "examples": [
+    {
+      "title": "Add Derived Configurations (VBA)",
+      "href": "Add_Derived_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Configuration Properties (VBA)",
+      "href": "Change_Configuration_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Custom Properties (VBA)",
+      "href": "Get_Custom_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (C#)",
+      "href": "Save_Configuration_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (VB.NET)",
+      "href": "Save_Configuration_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (VBA)",
+      "href": "Save_Configuration_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.ConfigurationManager",
+    "IModelDoc2.DeleteConfiguration2",
+    "IModelDoc2.GetConfigurationCount",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IAddConfiguration3",
+    "IModelDoc2.IGetConfigurationByName",
+    "IModelDoc2.IGetConfigurationNames",
+    "IModelDoc2.ShowConfiguration2"
+  ]
+}

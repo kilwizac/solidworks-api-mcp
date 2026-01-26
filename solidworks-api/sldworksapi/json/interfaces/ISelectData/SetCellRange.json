@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectData",
+    "member": "SetCellRange",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FirstRow",
+        "type": "System.Int32",
+        "description": "0-based row number at the beginning of the selection range"
+      },
+      {
+        "name": "LastRow",
+        "type": "System.Int32",
+        "description": "0-based row number at the end of the selection range"
+      },
+      {
+        "name": "FirstColumn",
+        "type": "System.Int32",
+        "description": "0-based row column at the beginning of the selection range"
+      },
+      {
+        "name": "LastColumn",
+        "type": "System.Int32",
+        "description": "0-based row column at the end of the selection range"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectData.GetCellRange"
+    ],
+    "keywords": [
+      "setcellrange",
+      "iselectdata",
+      "select",
+      "data",
+      "cell",
+      "range",
+      "first",
+      "row",
+      "int32",
+      "last",
+      "column",
+      "void"
+    ]
+  },
+  "title": "ISelectData.SetCellRange",
+  "description": "Sets the specified range of table cells for this selection.",
+  "signature": "void SetCellRange( \n   System.Int32\nFirstRow\n,\n   System.Int32\nLastRow\n,\n   System.Int32\nFirstColumn\n,\n   System.Int32\nLastColumn\n)",
+  "parameters": [
+    {
+      "name": "FirstRow",
+      "type": "System.Int32",
+      "description": "0-based row number at the beginning of the selection range"
+    },
+    {
+      "name": "LastRow",
+      "type": "System.Int32",
+      "description": "0-based row number at the end of the selection range"
+    },
+    {
+      "name": "FirstColumn",
+      "type": "System.Int32",
+      "description": "0-based row column at the beginning of the selection range"
+    },
+    {
+      "name": "LastColumn",
+      "type": "System.Int32",
+      "description": "0-based row column at the end of the selection range"
+    }
+  ],
+  "returns": "",
+  "remarks": "The range of table cells are only used for a selection made in a table. For all other types of selections, these values are ignored.\nBy default, the value for FirstRow, LastRow, FirstColumn, and LastColumn is -1, which indicates that the entire table is selected.\nTo select an entire...\nSet...\nRow\nFirstColumn and LastColumn to value values\nFirstRow LastRow to -1\nColumn\nFirstRow and LastRow to valid values\nFirstColumn and LastColumn to -1",
+  "examples": [],
+  "related": [
+    "ISelectData.GetCellRange"
+  ]
+}

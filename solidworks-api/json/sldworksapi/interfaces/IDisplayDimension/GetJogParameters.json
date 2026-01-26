@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetJogParameters",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "WitnessIndex",
+        "type": "System.Int16",
+        "description": "Index of linear dimension extension line whose jog to get"
+      },
+      {
+        "name": "Jogged",
+        "type": "System.Boolean",
+        "description": "True if the linear dimension extension line is jogged, false if not"
+      },
+      {
+        "name": "Offset1",
+        "type": "System.Double",
+        "description": "First line segment of the linear dimension extension line"
+      },
+      {
+        "name": "Offset2",
+        "type": "System.Double",
+        "description": "Second line segment of the linear dimension extension line; this is the line segment that is jogged"
+      },
+      {
+        "name": "Offset1to2",
+        "type": "System.Double",
+        "description": "Third line segment of the linear dimension extension line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.SetJogParameters",
+      "IModelDocExtension.JogDimension"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "jogged",
+      "jog",
+      "ijogfeaturedata",
+      "linear",
+      "extension",
+      "lines",
+      "getjogparameters",
+      "idisplaydimension",
+      "display",
+      "parameters",
+      "witness",
+      "index",
+      "int16",
+      "boolean",
+      "offset1",
+      "double",
+      "offset2",
+      "offset1to2",
+      "add",
+      "offset",
+      "jogs",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetJogParameters",
+  "description": "Gets the jog in a linear dimension extension line.",
+  "signature": "System.Boolean GetJogParameters( \n   System.Int16\nWitnessIndex\n,\n   out System.Boolean\nJogged\n,\n   out System.Double\nOffset1\n,\n   out System.Double\nOffset2\n,\n   out System.Double\nOffset1to2\n)",
+  "parameters": [
+    {
+      "name": "WitnessIndex",
+      "type": "System.Int16",
+      "description": "Index of linear dimension extension line whose jog to get"
+    },
+    {
+      "name": "Jogged",
+      "type": "System.Boolean",
+      "description": "True if the linear dimension extension line is jogged, false if not"
+    },
+    {
+      "name": "Offset1",
+      "type": "System.Double",
+      "description": "First line segment of the linear dimension extension line"
+    },
+    {
+      "name": "Offset2",
+      "type": "System.Double",
+      "description": "Second line segment of the linear dimension extension line; this is the line segment that is jogged"
+    },
+    {
+      "name": "Offset1to2",
+      "type": "System.Double",
+      "description": "Third line segment of the linear dimension extension line"
+    }
+  ],
+  "returns": "True if the operation succeeds, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Add and Offset Dimension Extension Lines Jogs (VBA)",
+      "href": "Add_and_Offset_Dimension_Extension_Lines_Jogs_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.SetJogParameters",
+    "IModelDocExtension.JogDimension"
+  ]
+}

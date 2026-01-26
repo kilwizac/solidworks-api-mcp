@@ -1,0 +1,124 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateArc",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Center",
+        "type": "System.Object",
+        "description": "Array containing 3 doubles for location of the center of the arc (x,y,z )"
+      },
+      {
+        "name": "Axis",
+        "type": "System.Object",
+        "description": "Array containing 3 doubles (x,y,z)"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Arc radius"
+      },
+      {
+        "name": "StartPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "EndPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBody2.AddProfileArc",
+      "IBody2.IAddProfileArc",
+      "IModeler.CreateEllipse",
+      "IModeler.ICreateEllipse"
+    ],
+    "keywords": [
+      "arcs",
+      "create",
+      "createarc",
+      "imodeler",
+      "modeler",
+      "arc",
+      "center",
+      "object",
+      "axis",
+      "radius",
+      "double",
+      "start",
+      "point",
+      "end",
+      "temporary",
+      "extruded",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CreateArc",
+  "description": "Creates an arc.",
+  "signature": "System.Object CreateArc( \n   System.Object\nCenter\n,\n   System.Object\nAxis\n,\n   System.Double\nRadius\n,\n   System.Object\nStartPoint\n,\n   System.Object\nEndPoint\n)",
+  "parameters": [
+    {
+      "name": "Center",
+      "type": "System.Object",
+      "description": "Array containing 3 doubles for location of the center of the arc (x,y,z )"
+    },
+    {
+      "name": "Axis",
+      "type": "System.Object",
+      "description": "Array containing 3 doubles (x,y,z)"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Arc radius"
+    },
+    {
+      "name": "StartPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "EndPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "Curve",
+  "remarks": "If your application uses\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\n, then your application must also use\nICurve::CreateTrimmedCurve2\nfor the curves created by IModeler::CreateArc or\nIModeler::ICreateArc\nand\nIModeler::CreateLine\nor\nIModeler::ICreateLine\n.",
+  "examples": [
+    {
+      "title": "Create Temporary Extruded Body (C#)",
+      "href": "Create_Temporary_Extruded_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VB.NET)",
+      "href": "Create_Temporary_Extruded_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VBA)",
+      "href": "Create_Temporary_Extruded_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.AddProfileArc",
+    "IBody2.IAddProfileArc",
+    "IModeler.CreateEllipse",
+    "IModeler.ICreateEllipse"
+  ]
+}

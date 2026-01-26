@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "IGetSetbackVertexDistance",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of edges and setback distances for this vertex"
+      },
+      {
+        "name": "Vtx",
+        "type": "Vertex",
+        "description": "Vertex for which to get setback distance"
+      },
+      {
+        "name": "EdgeArr",
+        "type": "Edge",
+        "description": "in-process, unmanaged C++: Pointer to an array of edges at the specified vertex (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetSetbackVertexDistance",
+      "IVariableFilletFeatureData2.GetSetbackVertices",
+      "IVariableFilletFeatureData2.IGetSetbackVertices",
+      "IVariableFilletFeatureData2.ISetSetbackVertexDistance",
+      "IVariableFilletFeatureData2.ISetSetbackVertices",
+      "IVariableFilletFeatureData2.SetSetbackVertexDistance",
+      "IVariableFilletFeatureData2.SetSetbackVertices"
+    ],
+    "keywords": [
+      "igetsetbackvertexdistance",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "setback",
+      "vertex",
+      "distance",
+      "count",
+      "int32",
+      "vtx",
+      "edge",
+      "arr",
+      "double"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.IGetSetbackVertexDistance",
+  "description": "Gets the setback distance for the specified vertex on this variable fillet feature.",
+  "signature": "System.Double IGetSetbackVertexDistance( \n   System.Int32\nCount\n,\n   Vertex\nVtx\n,\n   out Edge\nEdgeArr\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of edges and setback distances for this vertex"
+    },
+    {
+      "name": "Vtx",
+      "type": "Vertex",
+      "description": "Vertex for which to get setback distance"
+    },
+    {
+      "name": "EdgeArr",
+      "type": "Edge",
+      "description": "in-process, unmanaged C++: Pointer to an array of edges at the specified vertex (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of setback distances at the specified VBA, VB.NET, C#, and C++/CLI: Not supported",
+  "remarks": "There is a one-to-one correspondence between the edge array and the setback distance array.\nBefore calling this method, call\nIVariableFilletFeatureData2::GetSetbackDistanceCount\nto get the number of edges and setback distances at the specified vertex.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetSetbackVertexDistance",
+    "IVariableFilletFeatureData2.GetSetbackVertices",
+    "IVariableFilletFeatureData2.IGetSetbackVertices",
+    "IVariableFilletFeatureData2.ISetSetbackVertexDistance",
+    "IVariableFilletFeatureData2.ISetSetbackVertices",
+    "IVariableFilletFeatureData2.SetSetbackVertexDistance",
+    "IVariableFilletFeatureData2.SetSetbackVertices"
+  ]
+}

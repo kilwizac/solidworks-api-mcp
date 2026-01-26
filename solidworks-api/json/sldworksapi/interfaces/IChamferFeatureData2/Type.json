@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IChamferFeatureData2",
+    "member": "Type",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "type",
+      "ichamferfeaturedata2",
+      "chamfer",
+      "feature",
+      "data2",
+      "int32",
+      "distances",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IChamferFeatureData2.Type",
+  "description": "Gets or sets the type of chamfer feature.",
+  "signature": "System.Int32 Type {get; set;}",
+  "parameters": [],
+  "returns": "Type of chamfer as defined in swChamferType_e",
+  "remarks": "Both swChamferType_e.swChamferAngleDistance and swChamferType_e.swChamferDistanceDistance are edge chamfers. This means that all measurements are from edges. An angle-distance chamfer requires an angle and a distance; a distance-distance chamfer requires two distances, one for each side of the chamfered edge.\nA swChamferType_e.swChamferVertex chamfer only works on a vertex with three adjacent edges of the same convexity. A vertex chamfer requires three distances along three adjacent edges. For non-linear edges, this value is an arc length value; it is not a chordal value. See\nIVertex::EnumEdgesOriented\nto determine the edge order used by this method.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.",
+  "examples": [
+    {
+      "title": "Get Chamfer Distances (VB.NET)",
+      "href": "Get_Chamfer_Distances_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Distances (C#)",
+      "href": "Get_Chamfer_Distances_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Distances (VBA)",
+      "href": "Get_Chamfer_Distances_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

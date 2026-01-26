@@ -1,0 +1,284 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureLinearPattern4",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Num1",
+        "type": "System.Int32",
+        "description": "Number of instances of the linear pattern in Direction 1, including the original"
+      },
+      {
+        "name": "Spacing1",
+        "type": "System.Double",
+        "description": "Spacing in meters between each instance of the linear pattern in Direction 1"
+      },
+      {
+        "name": "Num2",
+        "type": "System.Int32",
+        "description": "Number of instances of the linear pattern in Direction 2, including the original"
+      },
+      {
+        "name": "Spacing2",
+        "type": "System.Double",
+        "description": "Spacing in meters between each instance of the linear pattern in Direction 2"
+      },
+      {
+        "name": "FlipDir1",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the linear pattern in Direction 1, false to not"
+      },
+      {
+        "name": "FlipDir2",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the linear pattern in Direction 2, false to not"
+      },
+      {
+        "name": "DName1",
+        "type": "System.String",
+        "description": "Name of the dimension defining Direction 1"
+      },
+      {
+        "name": "DName2",
+        "type": "System.String",
+        "description": "Name of the dimension defining Direction 2"
+      },
+      {
+        "name": "GeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to use geometry pattern, false to not"
+      },
+      {
+        "name": "VaryInstance",
+        "type": "System.Boolean",
+        "description": "True to vary the dimensions and spacing of individual pattern instances, false to not; valid only if GeometryPattern = false (see Remarks )"
+      },
+      {
+        "name": "HasOffset1",
+        "type": "System.Boolean",
+        "description": "True if using Offset1 to specify an offset of the pattern seed from a selected reference in Direction 1, false if not"
+      },
+      {
+        "name": "HasOffset2",
+        "type": "System.Boolean",
+        "description": "True if using Offset2 to specify an offset of the pattern seed from a selected reference in Direction 2, false if not"
+      },
+      {
+        "name": "CtrlByNum1",
+        "type": "System.Boolean",
+        "description": "True to control pattern spacing using Num1, false to control it using Spacing1; valid only if HasOffset1 is true"
+      },
+      {
+        "name": "CtrlByNum2",
+        "type": "System.Boolean",
+        "description": "True to control pattern spacing using Num2, false to control it using Spacing2; valid only if HasOffset2 is true"
+      },
+      {
+        "name": "FromCentroid1",
+        "type": "System.Boolean",
+        "description": "True if Offset1 is measured from the centroid of the seed instance, false if it is measured from a selected reference on the seed instance; valid only if HasOffset1 is true (see Remarks )"
+      },
+      {
+        "name": "FromCentroid2",
+        "type": "System.Boolean",
+        "description": "True if Offset2 is measured from the centroid of the seed instance, false if it is measured from a selected reference on the seed instance; valid only if HasOffset2 is true (see Remarks )"
+      },
+      {
+        "name": "RevOffset1",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of Offset1, false to not; valid only if HasOffset1 is true"
+      },
+      {
+        "name": "RevOffset2",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of Offset2, false to not; valid only if HasOffset2 is true"
+      },
+      {
+        "name": "Offset1",
+        "type": "System.Double",
+        "description": "Offset in meters from a selected reference in Direction 1 (see Remarks ); valid only if HasOffset1 is true"
+      },
+      {
+        "name": "Offset2",
+        "type": "System.Double",
+        "description": "Offset in meters from a selected reference in Direction 2 (see Remarks ); valid only if HasOffset2 is true"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ILinearPatternFeatureData",
+      "ILocalLinearPatternFeatureData"
+    ],
+    "keywords": [
+      "featurelinearpattern4",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "linear",
+      "pattern4",
+      "num1",
+      "int32",
+      "spacing1",
+      "double",
+      "num2",
+      "spacing2",
+      "flip",
+      "dir1",
+      "boolean",
+      "dir2",
+      "name1",
+      "string",
+      "name2",
+      "geometry",
+      "pattern",
+      "vary",
+      "instance",
+      "has",
+      "offset1",
+      "offset2",
+      "ctrl",
+      "centroid1",
+      "centroid2",
+      "rev",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.FeatureLinearPattern4",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureLinearPattern5.",
+  "signature": "Feature FeatureLinearPattern4( \n   System.Int32\nNum1\n,\n   System.Double\nSpacing1\n,\n   System.Int32\nNum2\n,\n   System.Double\nSpacing2\n,\n   System.Boolean\nFlipDir1\n,\n   System.Boolean\nFlipDir2\n,\n   System.String\nDName1\n,\n   System.String\nDName2\n,\n   System.Boolean\nGeometryPattern\n,\n   System.Boolean\nVaryInstance\n,\n   System.Boolean\nHasOffset1\n,\n   System.Boolean\nHasOffset2\n,\n   System.Boolean\nCtrlByNum1\n,\n   System.Boolean\nCtrlByNum2\n,\n   System.Boolean\nFromCentroid1\n,\n   System.Boolean\nFromCentroid2\n,\n   System.Boolean\nRevOffset1\n,\n   System.Boolean\nRevOffset2\n,\n   System.Double\nOffset1\n,\n   System.Double\nOffset2\n)",
+  "parameters": [
+    {
+      "name": "Num1",
+      "type": "System.Int32",
+      "description": "Number of instances of the linear pattern in Direction 1, including the original"
+    },
+    {
+      "name": "Spacing1",
+      "type": "System.Double",
+      "description": "Spacing in meters between each instance of the linear pattern in Direction 1"
+    },
+    {
+      "name": "Num2",
+      "type": "System.Int32",
+      "description": "Number of instances of the linear pattern in Direction 2, including the original"
+    },
+    {
+      "name": "Spacing2",
+      "type": "System.Double",
+      "description": "Spacing in meters between each instance of the linear pattern in Direction 2"
+    },
+    {
+      "name": "FlipDir1",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the linear pattern in Direction 1, false to not"
+    },
+    {
+      "name": "FlipDir2",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the linear pattern in Direction 2, false to not"
+    },
+    {
+      "name": "DName1",
+      "type": "System.String",
+      "description": "Name of the dimension defining Direction 1"
+    },
+    {
+      "name": "DName2",
+      "type": "System.String",
+      "description": "Name of the dimension defining Direction 2"
+    },
+    {
+      "name": "GeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to use geometry pattern, false to not"
+    },
+    {
+      "name": "VaryInstance",
+      "type": "System.Boolean",
+      "description": "True to vary the dimensions and spacing of individual pattern instances, false to not; valid only if GeometryPattern = false (see Remarks )"
+    },
+    {
+      "name": "HasOffset1",
+      "type": "System.Boolean",
+      "description": "True if using Offset1 to specify an offset of the pattern seed from a selected reference in Direction 1, false if not"
+    },
+    {
+      "name": "HasOffset2",
+      "type": "System.Boolean",
+      "description": "True if using Offset2 to specify an offset of the pattern seed from a selected reference in Direction 2, false if not"
+    },
+    {
+      "name": "CtrlByNum1",
+      "type": "System.Boolean",
+      "description": "True to control pattern spacing using Num1, false to control it using Spacing1; valid only if HasOffset1 is true"
+    },
+    {
+      "name": "CtrlByNum2",
+      "type": "System.Boolean",
+      "description": "True to control pattern spacing using Num2, false to control it using Spacing2; valid only if HasOffset2 is true"
+    },
+    {
+      "name": "FromCentroid1",
+      "type": "System.Boolean",
+      "description": "True if Offset1 is measured from the centroid of the seed instance, false if it is measured from a selected reference on the seed instance; valid only if HasOffset1 is true (see Remarks )"
+    },
+    {
+      "name": "FromCentroid2",
+      "type": "System.Boolean",
+      "description": "True if Offset2 is measured from the centroid of the seed instance, false if it is measured from a selected reference on the seed instance; valid only if HasOffset2 is true (see Remarks )"
+    },
+    {
+      "name": "RevOffset1",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of Offset1, false to not; valid only if HasOffset1 is true"
+    },
+    {
+      "name": "RevOffset2",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of Offset2, false to not; valid only if HasOffset2 is true"
+    },
+    {
+      "name": "Offset1",
+      "type": "System.Double",
+      "description": "Offset in meters from a selected reference in Direction 1 (see Remarks ); valid only if HasOffset1 is true"
+    },
+    {
+      "name": "Offset2",
+      "type": "System.Double",
+      "description": "Offset in meters from a selected reference in Direction 2 (see Remarks ); valid only if HasOffset2 is true"
+    }
+  ],
+  "returns": "Linear pattern feature",
+  "remarks": "If...\nTo select a feature, use...\nTo select a component, use...\nUsing\nIModelDocExtension::SelectByID2\nto select features and components, ordered selection of the features and components is required\n1 to mark Direction 1, and 2 to mark Direction 2\n4 to mark the features to pattern\n2097152 to mark references for Offset1 and Offset2\n8388608 to mark a seed instance reference when FromCentroid1 or FromCentroid2 is false\n1 to mark the components to pattern\n2 and 4 to mark the directions\nDirectly selecting a feature or component using\nIFeature::Select2\n1 to mark Direction 1, and 2 to mark Direction 2\n4 to mark the features to pattern\n2097152 to mark references for Offset1 and Offset2\n8388608 to mark a seed instance reference when FromCentroid1 or FromCentroid2 is false\nISelectData::Mark\nand\nIComponent2::Select4\n1 to mark the components to pattern\n2 and 4 to mark the directions\nIf VaryInstance = true, then to indicate how to vary the individual pattern instances, decide on the type of pattern and call its corresponding method before calling this method:\nType\nMethod\nIncrement\nIFeatureManager::InsertVaryInstanceIncrement\nOverride\nIFeatureManager::InsertVaryInstanceOverride",
+  "examples": [
+    {
+      "title": "Create Linear Pattern (VBA)",
+      "href": "Create_Linear_Pattern_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Linear Pattern (VB.NET)",
+      "href": "Create_Linear_Pattern_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Linear Pattern (C#)",
+      "href": "Create_Linear_Pattern_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ILinearPatternFeatureData",
+    "ILocalLinearPatternFeatureData"
+  ]
+}

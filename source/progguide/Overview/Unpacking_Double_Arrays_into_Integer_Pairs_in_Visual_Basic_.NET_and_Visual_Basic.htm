@@ -1,0 +1,302 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Unpacking and Packing Arrays in Visual Basic .NET and Visual Basic</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="05 23, 2002 11:37:28 AM">
+<meta name=MS-HKWD content="Unpacking arrays">
+<meta name=MS-HKWD content="Packing arrays">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2563>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1><a name=Top></a>Unpacking and Packing Arrays in Visual 
+ Basic .NET and Visual Basic</h1>
+
+<p>Some of the arguments passed from and to SOLIDWORKS using the API contain 
+arrays of doubles. In some functions, elements in these arrays contain two 
+integers packed into a double array element. You can unpack the data from a 
+double to two integers and vice versa.</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="#NET">Visual Basic .NET</a></p></li>
+	
+	<li class=kadov-p><p><a href="#6">Visual Basic for Applications (VBA)</a></p></li>
+</ul>
+
+<h2><a name=NET></a>Visual Basic .NET</h2>
+
+<p class=apiCode>Imports System.Runtime.InteropServices</p>
+
+<p class=apiCode>Module Module1</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Sub 
+ Main()</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ iValueIn1 As Integer = 65535</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ iValueIn2 As Integer = 345</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ dValueOut As Double</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ iValueOut1 As Integer</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ iValueOut2 As Integer</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->DoubleIntConv.Pack(iValueIn1, 
+ iValueIn2, dValueOut)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->DoubleIntConv.Unpack(dValueOut, 
+ iValueOut1, iValueOut2)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Sub</p>
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;System.Runtime.InteropServices.StructLayout(LayoutKind.Explicit)&gt; 
+ _</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->&nbsp;&nbsp; Public 
+ Class DoubleIntConv</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->'An 8-byte double contains 2 4-byte ints.</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;System.Runtime.InteropServices.FieldOffset(0)&gt; 
+ Private m_Int1 As Integer</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;System.Runtime.InteropServices.FieldOffset(4)&gt; 
+ Private m_Int2 As Integer</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;System.Runtime.InteropServices.FieldOffset(0)&gt; 
+ Private m_Double As Double</p>
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Private 
+ Sub New(ByVal dValue As Double)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->'VB.NET 
+wants these initialized in the constructor</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int1 
+ = 0</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int2 
+ = 0</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Double 
+ = dValue</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Sub</p>
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Private 
+ Sub New(ByVal iValue1 As Integer, ByVal iValue2 As Integer)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->'VB.NET 
+wants these initialized in the constructor</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Double 
+ = 0.0</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int1 
+ = iValue1</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->m_Int2 
+ = iValue2</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Sub</p>
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->'Use&nbsp;<!--kadov_tag{{</spaces>}}-->out 
+ parameters, so client code can pass in an uninitialized variable </p>
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Unpack</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Public 
+ Shared Sub Unpack(ByVal dIn As Double, ByRef iOut1 As Integer, ByRef iOut2 
+ As Integer)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ cv As DoubleIntConv</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->cv 
+ = New DoubleIntConv(dIn)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iOut1 
+ = cv.m_Int1</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iOut2 
+ = cv.m_Int2</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Sub</p>
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->'Use an out parameter, so client code can pass in 
+an uninitialized variable</p>
+<p class=apiCode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Pack</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Public 
+ Shared Sub Pack(ByVal iIn1 As Integer, ByVal iIn2 As Integer, ByRef dOut 
+ As Double)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ cv As DoubleIntConv</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->cv 
+ = New DoubleIntConv(iIn1, iIn2)</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->dOut 
+ = cv.m_Double</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Sub</p>
+
+<p class=apiCode><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->End 
+ Class</p>
+
+<p class=apiCode>End Module</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p style="text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+
+<h2><a name=6></a>Visual Basic for Applications (VBA)</h2>
+
+<p class=apiCode>' Define two types</p>
+
+<p class=apiCode>Type DoubleRec</p>
+
+<p class=apiCode>&nbsp;&nbsp;&nbsp; dValue As Double&nbsp;</p>
+
+<p class=apiCode>End Type</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>Type Int2Rec</p>
+
+<blockquote>
+	<p class=apiCode>iLower As Long 'Assuming that a C int has 4 bytes&nbsp;</p>
+	<p class=apiCode>iUpper As Long&nbsp;</p>
+</blockquote>
+
+<p class=apiCode>End Type</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>' Extract two integer values out of a single double value</p>
+
+<p class=apiCode>' by assigning a DoubleRec to the double value and then</p>
+
+<p class=apiCode>' copying the value over to an Int2Rec and</p>
+
+<p class=apiCode>' extracting the integer values</p>
+
+<p class=apiCode>Function ExtractFields(dValue As Double, iLower As Integer, 
+ iUpper As Integer)</p>
+
+<blockquote>
+	<p class=apiCode>Dim dr As DoubleRec, i2r As Int2Rec</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>' Set the double value</p>
+	<p class=apiCode>dr.dValue = dValue</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>' Copy the values</p>
+	<p class=apiCode>LSet i2r = dr</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>' Extract the values</p>
+	<p class=apiCode>iLower = i2r.iLower</p>
+	<p class=apiCode>iUpper = i2r.iUpper</p>
+</blockquote>
+
+<p class=apiCode>End Function</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p class=apiCode>Private Sub main()</p>
+
+<blockquote>
+	<p class=apiCode>Dim Params As Variant</p>
+	<p class=apiCode>Dim dElement As Double</p>
+	<p class=apiCode>Dim SplineDim As Integer</p>
+	<p class=apiCode>Dim SplineOrder As Integer</p>
+	<p class=apiCode>Dim SplineNCtrls As Integer</p>
+	<p class=apiCode>Dim SplinePeriodic As Integer</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>Set swApp = CreateObject(&quot;SldWorks.Application&quot;)</p>
+	<p class=apiCode>Set Part = swApp.ActiveDoc()</p>
+	<p class=apiCode>Set Sketch = Part.GetActiveSketch()</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>Params = Sketch.GetSplineParams</p>
+	<p class=apiCode>&nbsp;</p>
+	<p class=apiCode>dElement = Params(0)</p>
+	<p class=apiCode>ExtractFields dElement, SplineDim, SplineOrder</p>
+	<p class=apiCode>dElement = Params(1)</p>
+	<p class=apiCode>ExtractFields dElement, SplineNCtrls, SplinePeriodic</p>
+</blockquote>
+
+<p class=apiCode>End Sub</p>
+<p class=apiCode>&nbsp;</p>
+<p class=apiCode><font face="Verdana" style="font-size: 8pt">See:</font></p>
+<ul>
+	<li>
+	<p class=apiCode><font face="Verdana" style="font-size: 8pt">
+	<a href="sldworksapi.chm::/Create_Reference_Curve_Example_VBNET.htm">Create 
+	Reference Curve Example (VB.NET) </a></font></p></li>
+	<li>
+	<p class=apiCode><font face="Verdana" style="font-size: 8pt">
+	<a href="sldworksapi.chm::/Create_Reference_Curve_Example_VB.htm">Create 
+	Reference Curve Example (VBA)</a></font></p></li>
+</ul>
+
+<p style="text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

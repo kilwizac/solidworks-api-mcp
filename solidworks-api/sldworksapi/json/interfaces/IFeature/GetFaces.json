@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetFaces",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFeature.GetFaceCount",
+      "IFeature.IGetFaces2"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "feature",
+      "getfaces",
+      "ifeature",
+      "faces",
+      "object",
+      "associated",
+      "vba",
+      "part",
+      "corresponding",
+      "component",
+      "add",
+      "attribute",
+      "include",
+      "library",
+      "vb",
+      "net",
+      "roll",
+      "back",
+      "model"
+    ]
+  },
+  "title": "IFeature.GetFaces",
+  "description": "Gets the faces in this feature.",
+  "signature": "System.Object GetFaces()",
+  "parameters": [],
+  "returns": "Array of faces",
+  "remarks": "A face:\nis the result of evaluating a feature.\ncan be owned by several features.\nThis method returns all of the faces owned by a feature. This is different from the faces highlighted in the user interface when the feature is selected. The user interface filters out multiple feature faces. This filter is only for display purposes.\nNOTES\n:\nThis method does not return any faces for draft features because draft features do not create any new faces. Drafting only modifies existing faces.\nThe number of faces for rolled hems is 0 because all of the faces belong to the children bends.\nTo filter out multiple feature faces, call\nIFace2::GetFeature\nor\nIFace2::IGetFeature\n. Only the oldest feature from the face is returned; that is, the first owning feature in the FeatureManager design tree.",
+  "examples": [
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Part for Corresponding Component (VBA)",
+      "href": "Get_Part_for_Corresponding_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VB.NET)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (C#)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VBA)",
+      "href": "Add_Attribute_to_Feature_and_Include_In_Library_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (C#)",
+      "href": "Roll_Back_Model_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (VB.NET)",
+      "href": "Roll_Back_Model_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (VBA)",
+      "href": "Roll_Back_Model_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetFaceCount",
+    "IFeature.IGetFaces2"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFace2",
+    "member": "AddPropertyExtension",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "PropertyExtension",
+        "type": "System.Object",
+        "description": "Value of the property extension to add to this face (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetPropertyExtension",
+      "IFace2.ResetPropertyExtension"
+    ],
+    "keywords": [
+      "extension",
+      "addpropertyextension",
+      "iface2",
+      "face2",
+      "add",
+      "object",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IFace2.AddPropertyExtension",
+  "description": "Adds a property extension to this face.",
+  "signature": "System.Int32 AddPropertyExtension( \n   System.Object\nPropertyExtension\n)",
+  "parameters": [
+    {
+      "name": "PropertyExtension",
+      "type": "System.Object",
+      "description": "Value of the property extension to add to this face (see Remarks )"
+    }
+  ],
+  "returns": "1 if the property extension is added to the face, -1 if not",
+  "remarks": "This method does not support:\nadding multiple property extensions to the same face.\nfaces obtained from reference surface bodies.\nTo use this method:\nDeclare the variable.\nAssign the variable a value: float, integer, or string.\nCall this method to add the value to the face.\nNOTE\n: SOLIDWORKS recommends that you use the\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninterfaces instead of this method. These interfaces provide more flexibility.",
+  "examples": [],
+  "related": [
+    "IFace2.GetPropertyExtension",
+    "IFace2.ResetPropertyExtension"
+  ]
+}

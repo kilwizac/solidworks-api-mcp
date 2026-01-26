@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetID",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "id",
+      "component",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "getid",
+      "component2",
+      "int32",
+      "state",
+      "vb",
+      "net",
+      "vba",
+      "ids",
+      "top",
+      "level",
+      "using"
+    ]
+  },
+  "title": "IComponent2.GetID",
+  "description": "Gets the component ID for this component.",
+  "signature": "System.Int32 GetID()",
+  "parameters": [],
+  "returns": "ID for this component",
+  "remarks": "A component ID:\nis unique within the context of the assembly to which it belongs.\nNOTE:\nA component ID might not be unique across subassemblies within the assembly. For example, a component in subassembly A might have a component ID of 1, and a component in subassembly B might also have a component ID of 1.\nis persistent across SOLIDWORKS Design sessions and never changes, even if you\nchange the name of the component\n.\ncan be used to identify a specific component in an assembly. Use the component ID returned by this method with\nIAssemblyDoc::GetComponentByID\nto get a top-level assembly component.\ncannot be assigned by applications or users.\nis not the same as a\npersistent reference ID\n. You can get any component using its persistent reference ID.",
+  "examples": [
+    {
+      "title": "Get Component State (C#)",
+      "href": "Get_Component_State_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component State (VB.NET)",
+      "href": "Get_Component_State_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component State (VBA)",
+      "href": "Get_Component_State_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component IDs (C#)",
+      "href": "Get_Component_IDs_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component IDs (VB.NET)",
+      "href": "Get_Component_IDs_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component IDs (VBA)",
+      "href": "Get_Component_IDs_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Top-level Components Using Component IDs (C#)",
+      "href": "Get_Top-level_Component_Using_Component_IDs_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Top-level Components Using Component IDs (VB.NET)",
+      "href": "Get_Top-level_Component_Using_Component_IDs_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Top-level Components Using Component IDs (VBA)",
+      "href": "Get_Top-level_Component_Using_Component_IDs_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

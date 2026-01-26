@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertNewPart2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FilePathIn",
+        "type": "System.String",
+        "description": "Path and filename for the new part"
+      },
+      {
+        "name": "Face_or_Plane_to_select",
+        "type": "System.Object",
+        "description": "Face or reference plane where to insert the new part"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc"
+    ],
+    "keywords": [
+      "parts",
+      "see",
+      "also",
+      "ipartdoc",
+      "assemblies",
+      "insertnewpart2",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "insert",
+      "new",
+      "part2",
+      "file",
+      "path",
+      "string",
+      "face",
+      "plane",
+      "select",
+      "object",
+      "int32",
+      "join",
+      "feature",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertNewPart2",
+  "description": "Inserts a new part on the specified face or plane.",
+  "signature": "System.Int32 InsertNewPart2( \n   System.String\nFilePathIn\n,\n   System.Object\nFace_or_Plane_to_select\n)",
+  "parameters": [
+    {
+      "name": "FilePathIn",
+      "type": "System.String",
+      "description": "Path and filename for the new part"
+    },
+    {
+      "name": "Face_or_Plane_to_select",
+      "type": "System.Object",
+      "description": "Face or reference plane where to insert the new part"
+    }
+  ],
+  "returns": "Error code as defined by swInsertNewPartErrorCode_e",
+  "remarks": "The Face_or_Plane_to_select argument can be a\nface\nor\nreference plane\n, which means that you have to call\nIFeature::GetSpecificFeature2\nfirst.",
+  "examples": [
+    {
+      "title": "Insert Join Feature (C#)",
+      "href": "Insert_Join_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Join Feature (VB.NET)",
+      "href": "Insert_Join_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Join Feature (VBA)",
+      "href": "Insert_Join_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc"
+  ]
+}

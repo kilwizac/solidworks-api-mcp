@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertAlternateView",
+    "returns": "View",
+    "parameters": [
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "alternate",
+      "position",
+      "views",
+      "drawing",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "insertalternateview",
+      "insert",
+      "configuration",
+      "name",
+      "string",
+      "vba"
+    ]
+  },
+  "title": "IView.InsertAlternateView",
+  "description": "Inserts an Alternate Position View of the currently selected drawing view.",
+  "signature": "View InsertAlternateView( \n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration (see Remarks )"
+    }
+  ],
+  "returns": "Alternate drawing view",
+  "remarks": "Before using this method, you must select a drawing view on which to superimpose the\nAlternate Position View\n.\nIf you specify a non-existent configuration for ConfigurationName, then it is created using all default settings. The new configuration is identical to\nthe currently selected configuration. The user can then open the assembly, edit the configuration, and update the drawing view",
+  "examples": [
+    {
+      "title": "Insert Alternate Position View (VBA)",
+      "href": "Insert_Alternate_Position_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

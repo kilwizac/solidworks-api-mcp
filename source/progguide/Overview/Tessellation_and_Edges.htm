@@ -1,0 +1,87 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Tessellation and Edges</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HKWD CONTENT="Tessellation (see also ITessellation Interface),edges">
+<meta NAME=MS-HKWD CONTENT="Edge (see also IEdge Interface),tessellation">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=634>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Tessellation and Edges</h1>
+
+<p>A couple of approaches are available for finding tessellations for edges. 
+ </p>
+
+<ul>
+	
+	<li style="list-style: disc;"
+		type=disc
+		class=kadov-p><p>Get the range of the curve and tessellate the 
+ curve along that range.</p></li>
+	
+	<ol style="list-style: decimal;"
+		type=1>
+		
+		<li class=kadov-p><p>Use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IEdge~GetCurve.html">IEdge::GetCurve</a> 
+ to get the curve.</p></li>
+		
+		<li class=kadov-p><p>Use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IEdge~GetCurveParams2.html">IEdge::GetCurveParams2</a> 
+ to determine the range of the curve used by the edge. </p></li>
+		
+		<li class=kadov-p><p>Use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurve~GetTessPts.html">ICurve::GetTessPts</a> 
+ to tessellate the curve along the range.</p></li>
+	</ol>
+</ul>
+
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ or -</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFace2~GetTessTriStripEdges.html">IFace2::GetTessTriStripEdges</a> 
+ to get the indices into the tessellation that represents the edges of 
+ the face.<br>&nbsp;</p></li>
+</ul>
+
+<p>The first approach gives you better control over the edge. The second 
+ approach gives you a tight boundary if you are rendering edges and faces 
+ at the same time. </p>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertWeldTable",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "If true and the appropriate sheet format anchor point exists, then insert the table at the anchor point; if false, then use the values specified for the X and Y arguments as the insertion point"
+      },
+      {
+        "name": "IncludeAnnotations",
+        "type": "System.Boolean",
+        "description": "True to include weld symbols not attached to cosmetic weld features, false to not"
+      },
+      {
+        "name": "CombineSameType",
+        "type": "System.Boolean",
+        "description": "True to group welds having the same weld symbol and weld size, false to not"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate in meters for the placement of the weld table; valid only if UseAnchorPoint = False"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate in meters for the placement of the weld table; valid only if UseAnchorPoint = False"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "Configuration",
+        "type": "System.String",
+        "description": "Name of the part configuration for which to insert the weld table"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "table",
+      "weld",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "tables",
+      "view",
+      "insertweldtable",
+      "insert",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "include",
+      "annotations",
+      "combine",
+      "same",
+      "type",
+      "double",
+      "int32",
+      "configuration",
+      "string",
+      "template",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IView.InsertWeldTable",
+  "description": "Inserts a weld table into this drawing view.",
+  "signature": "System.Boolean InsertWeldTable( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Boolean\nIncludeAnnotations\n,\n   System.Boolean\nCombineSameType\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nConfiguration\n,\n   System.String\nTableTemplate\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "If true and the appropriate sheet format anchor point exists, then insert the table at the anchor point; if false, then use the values specified for the X and Y arguments as the insertion point"
+    },
+    {
+      "name": "IncludeAnnotations",
+      "type": "System.Boolean",
+      "description": "True to include weld symbols not attached to cosmetic weld features, false to not"
+    },
+    {
+      "name": "CombineSameType",
+      "type": "System.Boolean",
+      "description": "True to group welds having the same weld symbol and weld size, false to not"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate in meters for the placement of the weld table; valid only if UseAnchorPoint = False"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate in meters for the placement of the weld table; valid only if UseAnchorPoint = False"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "Configuration",
+      "type": "System.String",
+      "description": "Name of the part configuration for which to insert the weld table"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The weld table template installed with SOLIDWORKS is <\nSOLIDWORKS_\ninstall_dir\n>\\\nlang\n\\<\nlanguage\n>\\\nweldtable-standard.sldwldtbt\n.",
+  "examples": [
+    {
+      "title": "Insert Weld Table (VBA)",
+      "href": "Insert_Weld_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weld Table (VB.NET)",
+      "href": "Insert_Weld_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weld Table (C#)",
+      "href": "Insert_Weld_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

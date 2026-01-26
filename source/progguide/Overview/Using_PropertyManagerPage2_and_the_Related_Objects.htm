@@ -1,0 +1,232 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Using PropertyManagerPage2</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="09 23, 2002 2:45:20 PM">
+<meta NAME=MS-HAID CONTENT=Using_PropertyManagerPage2>
+<meta NAME=MS-HKWD CONTENT="PropertyManager page (see also IPropertyManagerPage2 Interface)">
+<meta NAME=MS-HKWD CONTENT=Use>
+<meta NAME=MS-HKWD CONTENT=Create>
+<meta NAME=MS-HKWD CONTENT="Create,PropertyManager page">
+<meta NAME=MS-HKWD CONTENT="Use,PropertyManagerPage2">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1383>
+<meta name=layout-width content=750>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Using IPropertyManagerPage2 and the Related Objects</h1>
+
+<p class=apiDescriptionText><a name=top></a><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPage2.html">IPropertyManagerPage2</a> 
+ and related objects provide an add-in application with the ability to 
+ create a PropertyManager page with the same look and feel as SOLIDWORKS 
+ PropertyManager pages. The SOLIDWORKS API provides a series of standard 
+ controls that are managed by SOLIDWORKS Design. </p>
+
+<p class=apiDescriptionText>This topic explains:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p-CapiDescriptionText><p class=apiDescriptionText><a 
+ href="#available">What is available?</a></p></li>
+	
+	<li class=kadov-p-CapiDescriptionText><p class=apiDescriptionText><a 
+ href="#add_in">What does the add-in have to do?</a></p></li>
+	
+	<li class=kadov-p-CapiDescriptionText><p class=apiDescriptionText><a 
+ href="#application">What does the SOLIDWORKS application do?</a></p></li>
+	
+	<li class=kadov-p-CapiDescriptionText><p class=apiDescriptionText><a 
+ href="#states">IPropertyManagerPage2 states</a></p></li>
+</ul>
+
+<h2><a name=available></a>What is available?</h2>
+
+<p class=apiDescriptionText>The SOLIDWORKS API provides:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Standard buttons for 
+ <span style="font-weight: bold;">OK</span>, <span style="font-weight: bold;">Cancel</span>, 
+ <span style="font-weight: bold;">Next Page</span>, <span style="font-weight: bold;">Previous 
+ Page</span>, and <span style="font-weight: bold;">Help</span></p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Confirmation corner 
+ display in the model view</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Bitmaps (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageBitmap.html">IPropertyManagerPageBitmap</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Buttons (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageButton.html">IPropertyManagerPageButton</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageBitmapButton.html">IPropertyManagerPageBitmapButton</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Pull-down groups with 
+ check boxes (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageGroup.html">IPropertyManagerPageGroup</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Check boxes (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageCheckbox.html">IPropertyManagerPageCheckbox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Radio buttons (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageOption.html">IPropertyManagerPageOption</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Number input boxes 
+ with application-defined spin control (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageNumberbox.html">IPropertyManagerPageNumberbox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Text boxes (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageTextbox.html">IPropertyManagerPageTextbox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>List boxes (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageListbox.html">IPropertyManagerPageListbox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Combo boxes (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageCombobox.html">IPropertyManagerPageCombobox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Selection list boxes 
+ (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageSelectionbox.html">IPropertyManagerPageSelectionbox</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Labels (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageLabel.html">IPropertyManagerPageLabel</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Sliders (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageSlider.html">IPropertyManagerPageSlider</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>Tabs (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageTab.html">IPropertyManagerPageTab</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>ActiveX controls (<a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageActiveX.html">IPropertyManagerPageActiveX</a>)</p></li>
+	<li class=kadov-p-CapiBullet>
+	<p class=apiBullet>.NET controls (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageWindowFromHandle.html">IPropertyManagerPageWindowFromHandle</a>)</p></li>
+	
+	<li class=kadov-p-CapiBullet><p class=apiBullet>A set of methods and 
+ properties common to all controls (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageControl.html">IPropertyManagerPageControl</a>)</p></li>
+</ul>
+
+<p class=apiDescriptionText>See <a href="Controls_on_Multipage_PropertyManager_Page.htm">Controls 
+ on Multipage PropertyManager Page</a> for details about programming controls 
+ on a multipage PropertyManager page.</p>
+
+<p class=apidescriptiontext
+	style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<h2><a name=add_in></a>What does the add-in have to do?</h2>
+
+<p class=apiDescriptionText>To take advantage of this functionality, the 
+ add-in application must:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-P><p>Implement an object that supports 
+	<a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.IPropertyManagerPage2Handler8.html">
+	IPropertyManagerPage2Handler8</a>.</p></li>
+	
+	<li class=kadov-P><p>Call <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~CreatePropertyManagerPage.html"
+								style="font-size: 8pt;">ISldWorks::CreatePropertyManagerPage</a> 
+ to create the new page, including a pointer to the IPropertyManagerPage2Handler8 
+ for that page.</p></li>
+	
+	<li class=kadov-P><p>Use the pointer returned by ISldWorks::CreatePropertyManagerPage 
+ to add group boxes and controls to the new page using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPage2~AddControl.html"
+															style="font-size: 8pt;">IPropertyManagerPage2::AddControl</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPage2~AddGroupBox.html"
+	style="font-size: 8pt;">IPropertyManagerPage2::AddGroupBox</a>, and 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageGroup~AddControl.html"
+	style="font-size: 8pt;">IPropertyManagerPageGroup::AddControl.</a></p></li>
+	
+	<li class=kadov-P><p>Call <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPage2~Show.html"
+								style="font-size: 8pt;">IPropertyManagerPage2::Show</a> 
+ to display the PropertyManager page in the user interface.</p></li>
+	
+	<li class=kadov-P><p>Respond to events generated by the SOLIDWORKS 
+    Design application (such as
+	<a style="font-size: 8pt;" href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.IPropertyManagerPage2Handler8~OnButtonPress.html">
+	IPropertyManagerPage2Handler8::OnButtonPress</a> 
+ or <a style="font-size: 8pt;" href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.IPropertyManagerPage2Handler8~OnClose.html">
+	IPropertyManagerPage2Handler8::OnClose</a>) 
+ to collect data <!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->that your 
+ user typed in the PropertyManager page and take action based on that data, 
+ if necessary.</p></li>
+	
+	<li class=kadov-P><p>Destroy the IPropertyManagerPage2 object.</p></li>
+</ol>
+
+<p style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<h2><a name=application></a>What does the SOLIDWORKS Design application do?</h2>
+
+<p>When you create a IPropertyManagerPage2 object, SOLIDWORKS Design:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-P><p>Creates the PropertyManager page (not visible) 
+ and associates it with the specified IPropertyManagerPage2Handler8 in 
+ the add-in application.</p></li>
+	
+	<li class=kadov-P><p>Makes calls to the IPropertyManagerPage2Handler8 
+ based on end-user-initiated events.</p></li>
+	
+	<li class=kadov-P><p>Closes the PropertyManager page in the user interface 
+ when the end-user clicks <span style="font-weight: bold;">OK</span> or 
+ <span style="font-weight: bold;">Cancel</span>, but does not destroy the 
+ IPropertyManagerPage2 object.</p></li>
+</ol>
+
+<p style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<h2><a name=states></a>IPropertyManagerPage2 states</h2>
+
+<p>The controls associated with IPropertyManagerPage2 have two distinct 
+ states: not visible and visible.</p>
+
+<p>When the PropertyManager is not visible, the window does not exist. 
+ The only items that exist are the API objects. These objects hold onto 
+ only the default values that are set by the application before it displays 
+ the PropertyManager.</p>
+
+<p>When the PropertyManager is visible, the objects represent the controls 
+ displayed in the PropertyManager window. When a given control is queried, 
+ the value represents the current setting of the control.</p>
+
+<p>These states are important because if the end-user closes a PropertyManager 
+ page, you cannot <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->determine 
+ the user-specified value for the control. It is up to you to provide data 
+ exchange between your application and the controls while they are visible 
+ and before the PropertyManager page goes away. </p>
+
+<p style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

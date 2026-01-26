@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetSilhoutteEdgesVB",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Xroot",
+        "type": "System.Double",
+        "description": "X component of the root point"
+      },
+      {
+        "name": "Yroot",
+        "type": "System.Double",
+        "description": "Y component of the root point"
+      },
+      {
+        "name": "Zroot",
+        "type": "System.Double",
+        "description": "Z component of the root point"
+      },
+      {
+        "name": "Xnormal",
+        "type": "System.Double",
+        "description": "X component of the direction vector"
+      },
+      {
+        "name": "Ynormal",
+        "type": "System.Double",
+        "description": "Y component of the direction vector"
+      },
+      {
+        "name": "Znormal",
+        "type": "System.Double",
+        "description": "Z component of the direction vector"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.IGetSilhoutteEdgeCount",
+      "IFace2.IGetSilhoutteEdges",
+      "IModelDoc2.InsertSplitLineSil"
+    ],
+    "keywords": [
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "silhouette",
+      "edges",
+      "getsilhoutteedgesvb",
+      "iface2",
+      "face2",
+      "silhoutte",
+      "vb",
+      "xroot",
+      "double",
+      "yroot",
+      "zroot",
+      "xnormal",
+      "ynormal",
+      "znormal",
+      "object"
+    ]
+  },
+  "title": "IFace2.GetSilhoutteEdgesVB",
+  "description": "Gets the silhouette edges.",
+  "signature": "System.Object GetSilhoutteEdgesVB( \n   System.Double\nXroot\n,\n   System.Double\nYroot\n,\n   System.Double\nZroot\n,\n   System.Double\nXnormal\n,\n   System.Double\nYnormal\n,\n   System.Double\nZnormal\n)",
+  "parameters": [
+    {
+      "name": "Xroot",
+      "type": "System.Double",
+      "description": "X component of the root point"
+    },
+    {
+      "name": "Yroot",
+      "type": "System.Double",
+      "description": "Y component of the root point"
+    },
+    {
+      "name": "Zroot",
+      "type": "System.Double",
+      "description": "Z component of the root point"
+    },
+    {
+      "name": "Xnormal",
+      "type": "System.Double",
+      "description": "X component of the direction vector"
+    },
+    {
+      "name": "Ynormal",
+      "type": "System.Double",
+      "description": "Y component of the direction vector"
+    },
+    {
+      "name": "Znormal",
+      "type": "System.Double",
+      "description": "Z component of the direction vector"
+    }
+  ],
+  "returns": "Array of edges",
+  "remarks": "The return array has two elements for each edge: the first is the silhouette edge and the second is unused. To iterate through the edges, an application needs to step through every second element.\nThe returned edges are transient and cannot be selected.",
+  "examples": [],
+  "related": [
+    "IFace2.IGetSilhoutteEdgeCount",
+    "IFace2.IGetSilhoutteEdges",
+    "IModelDoc2.InsertSplitLineSil"
+  ]
+}

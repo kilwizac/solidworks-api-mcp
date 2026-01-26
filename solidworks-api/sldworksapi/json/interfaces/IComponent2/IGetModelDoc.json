@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "IGetModelDoc",
+    "returns": "ModelDoc2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetModelDoc"
+    ],
+    "keywords": [
+      "igetmodeldoc",
+      "icomponent2",
+      "component2",
+      "model",
+      "doc",
+      "doc2"
+    ]
+  },
+  "title": "IComponent2.IGetModelDoc",
+  "description": "Obsolete. Superseded by IComponent2::GetModelDoc2.",
+  "signature": "ModelDoc2 IGetModelDoc()",
+  "parameters": [],
+  "returns": "Pointer to the model document",
+  "remarks": "This method might return NULL if:\na component is suppressed or lightweight.\nthe component ID is not loaded into memory by SOLIDWORKS.\nFor more information on lightweight components, see\nWork With Lightweight Components\n.\nWhen you use the IModelDoc2 object of a component, you do not have access to whatever uniqueness might exist for this instance of the assembly IComponent2. This occurs because the IModelDoc2 object goes back to the saved part file. By comparison, the IComponent2 object gathers information at the assembly level. This allows IComponent2 objects to recognize assembly-level changes made to a component instance (for example, assembly-level features and material changes).\nIn addition, the IModelDoc2 object returned from this method represents the last-saved state. If the component part is currently open, then the IModelDoc2 object represents the state of the opened document. For example, if the component part is not open and it was last saved in the default configuration, then IComponent2::GetModelDoc\nreturns a IModelDoc2 pointer representing that state. To get access to other configuration information (such as features and configuration properties), you must activate the part and show the desired configuration using\nIModelDoc2::ShowConfiguration2\n.\nIf this component is the root component, then this method returns a NULL pointer. For more information, see\nIConfiguration::IGetRootComponent2.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetModelDoc"
+  ]
+}

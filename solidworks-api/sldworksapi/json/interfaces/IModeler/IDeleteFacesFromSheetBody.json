@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "IDeleteFacesFromSheetBody",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of faces to delete"
+      },
+      {
+        "name": "FaceVar",
+        "type": "Face2",
+        "description": "Array of faces to delete from the sheet (surface) body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.DeleteFacesFromSheetBody"
+    ],
+    "keywords": [
+      "sheet",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "ideletefacesfromsheetbody",
+      "imodeler",
+      "modeler",
+      "delete",
+      "faces",
+      "body",
+      "count",
+      "int32",
+      "face",
+      "var",
+      "face2",
+      "boolean"
+    ]
+  },
+  "title": "IModeler.IDeleteFacesFromSheetBody",
+  "description": "Deletes the unused faces of the sheet body.",
+  "signature": "System.Boolean IDeleteFacesFromSheetBody( \n   System.Int32\nCount\n,\n   ref Face2\nFaceVar\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of faces to delete"
+    },
+    {
+      "name": "FaceVar",
+      "type": "Face2",
+      "description": "Array of faces to delete from the sheet (surface) body"
+    }
+  ],
+  "returns": "True if all of the faces are deleted, false if not",
+  "remarks": "Use this method to remove the unused faces from the sheet body created by\nIModeler::CreateBrepBody3\nand\nIModeler::ICreateBrepBody3\n.",
+  "examples": [],
+  "related": [
+    "IModeler.DeleteFacesFromSheetBody"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "SetPartialEdgeFilletData",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FilletItem",
+        "type": "System.Object",
+        "description": "IEdge"
+      },
+      {
+        "name": "PartialEdgeFilletData",
+        "type": "System.Object",
+        "description": "IPartialEdgeFilletData ; null to remove existing partial edge fillet data from FilletItem"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "parts"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.GetPartialEdgeFilletData"
+    ],
+    "keywords": [
+      "setpartialedgefilletdata",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "partial",
+      "edge",
+      "data",
+      "item",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.SetPartialEdgeFilletData",
+  "description": "Sets the partial edge fillet data for the specified edge.",
+  "signature": "System.Boolean SetPartialEdgeFilletData( \n   System.Object\nFilletItem\n,\n   System.Object\nPartialEdgeFilletData\n)",
+  "parameters": [
+    {
+      "name": "FilletItem",
+      "type": "System.Object",
+      "description": "IEdge"
+    },
+    {
+      "name": "PartialEdgeFilletData",
+      "type": "System.Object",
+      "description": "IPartialEdgeFilletData ; null to remove existing partial edge fillet data from FilletItem"
+    }
+  ],
+  "returns": "True if partial edge fillet data successfully set, false if not",
+  "remarks": "This method is valid only if\nISimpleFilletFeatureData2::EnablePartialEdgeParameters\nis true.",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.GetPartialEdgeFilletData"
+  ]
+}

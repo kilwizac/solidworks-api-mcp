@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTargetSym",
+    "member": "GetTriangleAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the triangle; index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTargetSym.GetTriangleCount",
+      "IDatumTargetSym.IGetTriangleAtIndex"
+    ],
+    "keywords": [
+      "gettriangleatindex",
+      "idatumtargetsym",
+      "datum",
+      "target",
+      "sym",
+      "triangle",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDatumTargetSym.GetTriangleAtIndex",
+  "description": "Gets the triangle at the specified index.",
+  "signature": "System.Object GetTriangleAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the triangle; index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nvertexPt1\n[3],\nvertexPt2\n[3],\nvertexPt3\n[3],\nisFilled\n,\nlineType\n]\nwhere:\nvertexPt1\n[3]\nFirst XYZ vertex point\nvertexPt2\n[3]\nSecond XYZ vertex point\nvertexPt3\n[3]\nThird XYZ vertex point\nisFilled\nBoolean returned as a double and is True if the triangle is filled, false if it is not\nlineType\nLine type as defined in\nswLineTypes_e",
+  "examples": [],
+  "related": [
+    "IDatumTargetSym.GetTriangleCount",
+    "IDatumTargetSym.IGetTriangleAtIndex"
+  ]
+}

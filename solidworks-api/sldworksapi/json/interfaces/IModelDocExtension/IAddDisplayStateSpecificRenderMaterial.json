@@ -1,0 +1,121 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IAddDisplayStateSpecificRenderMaterial",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PRenderMaterial",
+        "type": "RenderMaterial",
+        "description": "Material to add"
+      },
+      {
+        "name": "DisplayStateOption",
+        "type": "System.Int32",
+        "description": "Display states as defined in swDisplayStateOpts_e"
+      },
+      {
+        "name": "DisplayStateCount",
+        "type": "System.Int32",
+        "description": "Number of display states (see Remarks )"
+      },
+      {
+        "name": "DisplayStateNames",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of the names of the display states to which to add material VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "PWMaterialId1",
+        "type": "System.Int32",
+        "description": "First ID of material"
+      },
+      {
+        "name": "PWMaterialId2",
+        "type": "System.Int32",
+        "description": "Second ID of material"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.AddDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+      "IRenderMaterial"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "material",
+      "appearances",
+      "add",
+      "render",
+      "iadddisplaystatespecificrendermaterial",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "state",
+      "specific",
+      "option",
+      "int32",
+      "count",
+      "names",
+      "string",
+      "pw",
+      "id1",
+      "id2",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.IAddDisplayStateSpecificRenderMaterial",
+  "description": "Adds the specified material to the specified display states in the active configuration and returns the IDs assigned to that material.",
+  "signature": "System.Boolean IAddDisplayStateSpecificRenderMaterial( \n   RenderMaterial\nPRenderMaterial\n,\n   System.Int32\nDisplayStateOption\n,\n   System.Int32\nDisplayStateCount\n,\n   ref System.String\nDisplayStateNames\n,\n   out System.Int32\nPWMaterialId1\n,\n   out System.Int32\nPWMaterialId2\n)",
+  "parameters": [
+    {
+      "name": "PRenderMaterial",
+      "type": "RenderMaterial",
+      "description": "Material to add"
+    },
+    {
+      "name": "DisplayStateOption",
+      "type": "System.Int32",
+      "description": "Display states as defined in swDisplayStateOpts_e"
+    },
+    {
+      "name": "DisplayStateCount",
+      "type": "System.Int32",
+      "description": "Number of display states (see Remarks )"
+    },
+    {
+      "name": "DisplayStateNames",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of the names of the display states to which to add material VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "PWMaterialId1",
+      "type": "System.Int32",
+      "description": "First ID of material"
+    },
+    {
+      "name": "PWMaterialId2",
+      "type": "System.Int32",
+      "description": "Second ID of material"
+    }
+  ],
+  "returns": "True if material is added, false if not",
+  "remarks": "Before calling this method, call\nIConfiguration::GetDisplayStatesCount\nto get DisplayStateCount.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.AddDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial",
+    "IRenderMaterial"
+  ]
+}

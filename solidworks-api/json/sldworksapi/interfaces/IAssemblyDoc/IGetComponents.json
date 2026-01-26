@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "IGetComponents",
+    "returns": "Component2",
+    "parameters": [
+      {
+        "name": "ToplevelOnly",
+        "type": "System.Boolean",
+        "description": "True to get only the number of components at the top level of the FeatureManager design tree, false to get the number of top level and all child components in the FeatureManager design tree"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of components"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.GetComponentByID",
+      "IAssemblyDoc.GetComponents",
+      "IComponent2.GetChildren",
+      "IComponent2.GetParent",
+      "IConfiguration.GetRootComponent3",
+      "IConfiguration.IGetRootComponent2",
+      "IConfigurationManager.ActiveConfiguration"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "assemblies",
+      "iassemblydoc",
+      "igetcomponents",
+      "assembly",
+      "doc",
+      "toplevel",
+      "only",
+      "boolean",
+      "count",
+      "int32",
+      "component2"
+    ]
+  },
+  "title": "IAssemblyDoc.IGetComponents",
+  "description": "Gets all of the components in the active configuration of this assembly.",
+  "signature": "Component2 IGetComponents( \n   System.Boolean\nToplevelOnly\n,\n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "ToplevelOnly",
+      "type": "System.Boolean",
+      "description": "True to get only the number of components at the top level of the FeatureManager design tree, false to get the number of top level and all child components in the FeatureManager design tree"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of components"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of IComponent2 VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before using this method, use\nIAssemblyDoc::GetComponentCount\nto determine the size of the array to pass to this method.\nThe components returned by this method can be in any order. You should not rely on the order to indicate anything about children or parents. If the hierarchy and order are important, then use\nIModelDoc2::FirstFeature\n,\nIFeature::GetTypeName2\n,\nIFeature::GetSpecificFeature2\n,\nIComponent2::FirstFeature\n, and\nIFeature::GetNextFeature\nto retrieve your information.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.GetComponentByID",
+    "IAssemblyDoc.GetComponents",
+    "IComponent2.GetChildren",
+    "IComponent2.GetParent",
+    "IConfiguration.GetRootComponent3",
+    "IConfiguration.IGetRootComponent2",
+    "IConfigurationManager.ActiveConfiguration"
+  ]
+}

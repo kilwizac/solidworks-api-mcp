@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "SetFaceId",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "IdIn",
+        "type": "System.Int32",
+        "description": "Face ID"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.RemoveFaceId"
+    ],
+    "keywords": [
+      "id",
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "setfaceid",
+      "face2",
+      "int32",
+      "void"
+    ]
+  },
+  "title": "IFace2.SetFaceId",
+  "description": "Sets the face ID on an imported body.",
+  "signature": "void SetFaceId( \n   System.Int32\nIdIn\n)",
+  "parameters": [
+    {
+      "name": "IdIn",
+      "type": "System.Int32",
+      "description": "Face ID"
+    }
+  ],
+  "returns": "",
+  "remarks": "SOLIDWORKS uses face IDs to track specific faces of imported bodies (for example, IGES imports).\nPrior to setting a face ID, you should examine all faces in the model to\nget their face IDs\n, if any, to ensure that the face ID you are setting is unique to the model.\nFace IDs are saved with the document, but face IDs are removed whenever the document is rebuilt. Typically you assign face IDs to a read-only copy of the finalized model.\nAny third-party application can change a face ID. The intent is that you assign face IDs so that you can refer to those faces within your application.\nTo store data with a face, use the\nIAttribute\nobject.",
+  "examples": [],
+  "related": [
+    "IFace2.RemoveFaceId"
+  ]
+}

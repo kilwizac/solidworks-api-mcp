@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "SummaryInfo",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FieldId",
+        "type": "System.Int32",
+        "description": "Identifier for field as defined in swSummInfoField_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.FileSummaryInfo"
+    ],
+    "keywords": [
+      "document",
+      "summary",
+      "info",
+      "files",
+      "summaryinfo",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "field",
+      "id",
+      "int32",
+      "string",
+      "file",
+      "information",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.SummaryInfo",
+  "description": "Gets or sets file summary information for the SOLIDWORKS document.",
+  "signature": "System.String SummaryInfo( \n   System.Int32\nFieldId\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "FieldId",
+      "type": "System.Int32",
+      "description": "Identifier for field as defined in swSummInfoField_e"
+    }
+  ],
+  "returns": "Text in field",
+  "remarks": "In line with Microsoft recommendations for OLE support, the file summary information for SOLIDWORKS documents is written as an OLE property set into a stream named \"\\005Summary Information\" off the root storage of the SOLIDWORKS document's compound file.\nNOTES:\nMFC does not currently provide classes that manage summary information. However, the DRAWCLI application shipped with Visual C++ does include a sample implementation, in the form of the class CSummInfo, which you can use as an example when implementing your own. This class is used by the document class CDrawDoc. DRAWCLI also includes property pages for displaying and modifying Summary Information.\nSome dates are localized.\nOption Explicit\nSub main()\nDim swApp           As SldWorks.SldWorks\nDim swModel         As SldWorks.ModelDoc2\nDim Text1           As String\nDim Text2           As String\nDim Text3           As String\nDim Text4           As String\nSet swApp = CreateObject(\"SldWorks.Application\")\nSet swModel = swApp.ActiveDoc\n' All of these date strings will be localized according to\n' the current regional settings\n' These two dates (day, month, and year)\n' will be in numeric format and localized\nText1 = swModel.SummaryInfo(swSumInfoCreateDate)\nText2 = swModel.SummaryInfo(swSumInfoSaveDate)\n' These two dates will be the same as displayed in the\n'\nFile, Properties\nmenu in text format\nText3 = swModel.SummaryInfo(swSumInfoCreateDate2)\nText4 = swModel.SummaryInfo(swSumInfoSaveDate2)\nDebug.Print \"CreateDate = \" + Text1\nDebug.Print \"SaveDate = \" + Text2\nDebug.Print \"CreateDate2 = \" + Text3\nDebug.Print \"SaveDate2 = \" + Text4\nEnd Sub",
+  "examples": [
+    {
+      "title": "Get File Summary Information (VBA)",
+      "href": "Get_File_Summary_Information_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.FileSummaryInfo"
+  ]
+}

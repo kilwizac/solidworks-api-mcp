@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "ShowConfiguration2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration to display"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfigurationManager.AddConfiguration",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.EditConfiguration3"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "activate",
+      "show",
+      "configurations",
+      "showconfiguration2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "configuration2",
+      "name",
+      "string",
+      "boolean",
+      "custom",
+      "values",
+      "cut",
+      "list",
+      "folders",
+      "vba",
+      "iterate",
+      "through",
+      "all",
+      "rebuild",
+      "work",
+      "save",
+      "data",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.ShowConfiguration2",
+  "description": "Shows the named configuration by switching to that configuration and making it the active configuration.",
+  "signature": "System.Boolean ShowConfiguration2( \n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration to display"
+    }
+  ],
+  "returns": "True if the configuration is activated successfully, false if not",
+  "remarks": "Configurations allow you to save certain display characteristics with each of the assembly components. This method allows you to retrieve a previously saved configuration.\nIf you made changes to the model and the configuration to which you are switching needs to be updated to reflect those changes, then you must rebuild the model using\nIModelDoc2::EditRebuild3\n. Otherwise, the FeatureManager design tree will show the model as needing to be rebuilt.",
+  "examples": [
+    {
+      "title": "Get Custom Property Values on Cut List Folders (VBA)",
+      "href": "Get_Custom_Property_Values_On_Cut_List_Folders_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Iterate Through All Configurations (VBA)",
+      "href": "Iterate_Through_All_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rebuild All Configurations (VBA)",
+      "href": "Rebuild_All_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Work With Configurations (VBA)",
+      "href": "Work_with_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (C#)",
+      "href": "Save_Configuration_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (VB.NET)",
+      "href": "Save_Configuration_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Configuration Data (VBA)",
+      "href": "Save_Configuration_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfigurationManager.AddConfiguration",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.EditConfiguration3"
+  ]
+}

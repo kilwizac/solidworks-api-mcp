@@ -1,0 +1,56 @@
+---
+type: method
+interface: IModelDoc2
+member: UnlockAllExternalReferences
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - IModelDoc2.IListAuxiliaryExternalFileReferences
+  - IModelDoc2.ListAuxiliaryExternalFileReferences
+  - IModelDoc2.LockAllExternalReferences
+  - IModelDocExtension.IListExternalFileReferences
+  - IModelDocExtension.ListExternalFileReferences
+keywords:
+  - unlock
+  - external
+  - references
+  - lock
+  - unlockallexternalreferences
+  - imodeldoc2
+  - model
+  - doc2
+  - all
+  - void
+---
+
+# IModelDoc2.UnlockAllExternalReferences
+
+Unlocks all external references.
+
+## Signature
+
+```csharp
+void UnlockAllExternalReferences()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IModelDoc2.IListAuxiliaryExternalFileReferences`
+- `IModelDoc2.ListAuxiliaryExternalFileReferences`
+- `IModelDoc2.LockAllExternalReferences`
+- `IModelDocExtension.IListExternalFileReferences`
+- `IModelDocExtension.ListExternalFileReferences`

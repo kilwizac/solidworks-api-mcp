@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "SaveAs3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )"
+      },
+      {
+        "name": "Version",
+        "type": "System.Int32",
+        "description": "Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )"
+      },
+      {
+        "name": "ExportData",
+        "type": "System.Object",
+        "description": "IExportPdfData object for exporting drawing sheets to PDF (see Remarks )"
+      },
+      {
+        "name": "AdvancedSaveAsOptions",
+        "type": "System.Object",
+        "description": "IAdvancedSaveAsOptions (see Remarks )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )"
+      },
+      {
+        "name": "Warnings",
+        "type": "System.Int32",
+        "description": "Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.SaveDeFeaturedFile",
+      "ISldWorks.CheckpointConvertedDocument",
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.CopyDocument",
+      "ISldWorks.ExitApp",
+      "ISldWorks.LoadFile4",
+      "ISldWorks.OpenDoc7",
+      "ISldWorks.QuitDoc"
+    ],
+    "keywords": [
+      "document",
+      "save",
+      "saveas3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "as3",
+      "name",
+      "string",
+      "version",
+      "int32",
+      "options",
+      "export",
+      "data",
+      "object",
+      "advanced",
+      "errors",
+      "warnings",
+      "boolean",
+      "iadvancedsaveasoptions"
+    ]
+  },
+  "title": "IModelDocExtension.SaveAs3",
+  "description": "Saves the active document to the specified name with advanced options.",
+  "signature": "System.Boolean SaveAs3( \n   System.String\nName\n,\n   System.Int32\nVersion\n,\n   System.Int32\nOptions\n,\n   System.Object\nExportData\n,\n   System.Object\nAdvancedSaveAsOptions\n,\n   out System.Int32\nErrors\n,\n   out System.Int32\nWarnings\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )"
+    },
+    {
+      "name": "Version",
+      "type": "System.Int32",
+      "description": "Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )"
+    },
+    {
+      "name": "ExportData",
+      "type": "System.Object",
+      "description": "IExportPdfData object for exporting drawing sheets to PDF (see Remarks )"
+    },
+    {
+      "name": "AdvancedSaveAsOptions",
+      "type": "System.Object",
+      "description": "IAdvancedSaveAsOptions (see Remarks )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )"
+    },
+    {
+      "name": "Warnings",
+      "type": "System.Int32",
+      "description": "Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )"
+    }
+  ],
+  "returns": "True if the save is successful, false if not",
+  "remarks": "The difference between this method and the now obsolete\nIModelDocExtension::SaveAs2\nis that this method uses an IAdvancedSaveAsOptions object to specify advanced options. For example:\nSaving a subset of configurations\nRenaming and/or relocating individual component references\nSpecifying the prefix and/or suffix for all component reference names\nTo specify the AdvancedSaveAsOptions parameter of this method, call\nIModelDocExtension::GetAdvancedSaveAsOptions\nto create an IAdvancedSaveAsOptions object.\nTo save as an IGES, STL, or STEP file, the document to convert must be the active document. Before calling this method:\nCall\nISldWorks::ActivateDoc3\nto make the document to convert the active document.\nCall\nISldWorks::ActiveDoc\nto get the active document.\nThis method:\nExports the entire model, unless faces or bodies are selected, in which case, it exports only those. Call\nIModelDoc2::ClearSelection2\nbefore calling this method to clear the selection list and export the entire model.\nOverwrites existing files unless they are read only.\nResults in the FileSaveNotify event being sent to any application listening.\nRemoves any configuration-specific bitmap previews, except the current configuration's.\nUse Name to specify the full pathname of the saved document. If you specify only the file name, then it is saved in the active document's directory. The filename extension indicates the conversion that should be performed (for example,\nPart1.igs\nto save to IGES). If the filename extension does not uniquely indicate how the file should be formatted, use Version to specify how to save the file. For example, to save:\nA standard drawing document as a detached drawing, specify swSaveAsDetachedDrawing for Version.\nA detached drawing as a standard drawing, specify swSaveAsStandardDrawing for Version.\nA standard or detached drawing document in the same format, specify swSaveAsCurrentVersion for Version.\nUse ExportData to specify which drawings sheets to save to PDF. If ExportData is Nothing or null, then all sheets are saved to PDF. Saving a document as PDF when the document is open as view-only is not supported.\nUse Options to specify save options. You can specify additional options using\nISldWorks::SetUserPreferenceIntegerValue\n. For example:\n' Save assembly as multibody part and save exterior faces as surface bodies\nswApp.SetUserPreferenceIntegerValue swSaveAssemblyAsPartOptions, _\nswSaveAsmAsPart_ExteriorFaces\nswModelDocExt.SaveAs \"H:\\Assem1.SLDPRT\", swSaveAsCurrentVersion, _\nswSaveAsOptions_Silent, Nothing, nErrors, nWarnings\n- or -\n' Save all drawing sheets in active drawing document as an eDrawings file\nswApp.SetUserPreferenceIntegerValue swEdrawingsSaveAsSelectionOption, swEdrawingSaveAll\nswModelDocExt.SaveAs \"H:\\Grid.edrw\", swSaveAsCurrentVersion, _\nswSaveAsOptions_Silent, Nothing, nErrors, nWarnings\nIf the file is saved successfully, then the returned value is true and Errors is 0. If the save is not successful, then the returned value is false and Errors contains a bitwise OR of the error codes that were generated in saving the document. Check the masks against the Errors enumeration. If you do not want SOLIDWORKS to return error information, set Errors to Nothing or null.\nEven if the file is saved successfully, there might be warnings or information that occur during the save operation in which you might be interested. Warnings contains a bitwise OR of the warning codes that were generated when saving the document. Check the masks against the Warnings enumeration. If you do not want warning information returned, set Warnings to Nothing or null.\nUse\nIModelDoc2::Save3\nto save a file using its current name.",
+  "examples": [
+    {
+      "title": "IAdvancedSaveAsOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedSaveAsOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.SaveDeFeaturedFile",
+    "ISldWorks.CheckpointConvertedDocument",
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.CopyDocument",
+    "ISldWorks.ExitApp",
+    "ISldWorks.LoadFile4",
+    "ISldWorks.OpenDoc7",
+    "ISldWorks.QuitDoc"
+  ]
+}

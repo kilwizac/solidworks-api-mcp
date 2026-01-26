@@ -1,0 +1,221 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateSketchSlot",
+    "returns": "SketchSlot",
+    "parameters": [
+      {
+        "name": "SlotCreationType",
+        "type": "System.Int32",
+        "description": "Type of sketch slot as defined in swSketchSlotCreationType_e"
+      },
+      {
+        "name": "SlotLengthType",
+        "type": "System.Int32",
+        "description": "Type of length of sketch slot as defined in swSketchSlotLengthType_e"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width of sketch slot"
+      },
+      {
+        "name": "X1",
+        "type": "System.Double",
+        "description": "x coordinate of point 1"
+      },
+      {
+        "name": "Y1",
+        "type": "System.Double",
+        "description": "y coordinate of point 1"
+      },
+      {
+        "name": "Z1",
+        "type": "System.Double",
+        "description": "z coordinate of point 2"
+      },
+      {
+        "name": "X2",
+        "type": "System.Double",
+        "description": "x coordinate of point 2"
+      },
+      {
+        "name": "Y2",
+        "type": "System.Double",
+        "description": "y coordinate of point 2"
+      },
+      {
+        "name": "Z2",
+        "type": "System.Double",
+        "description": "z coordinate of point 2"
+      },
+      {
+        "name": "X3",
+        "type": "System.Double",
+        "description": "x coordinate of point 3"
+      },
+      {
+        "name": "Y3",
+        "type": "System.Double",
+        "description": "y coordinate of point 3"
+      },
+      {
+        "name": "Z3",
+        "type": "System.Double",
+        "description": "z coordinate of point 3"
+      },
+      {
+        "name": "CenterArcDirection",
+        "type": "System.Int32",
+        "description": "-1 = Clockwise (CW) 1 = Counterclockwise (CCW)"
+      },
+      {
+        "name": "AddDimension",
+        "type": "System.Boolean",
+        "description": "True to automatically add dimensions, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketchslot",
+      "see",
+      "isketchslot",
+      "sketch",
+      "also",
+      "isketch",
+      "slot",
+      "createsketchslot",
+      "isketchmanager",
+      "manager",
+      "create",
+      "creation",
+      "type",
+      "int32",
+      "length",
+      "width",
+      "double",
+      "x1",
+      "y1",
+      "z1",
+      "x2",
+      "y2",
+      "z2",
+      "x3",
+      "y3",
+      "z3",
+      "center",
+      "arc",
+      "direction",
+      "add",
+      "dimension",
+      "boolean",
+      "insert",
+      "resize",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.CreateSketchSlot",
+  "description": "Creates a sketch slot.",
+  "signature": "SketchSlot CreateSketchSlot( \n   System.Int32\nSlotCreationType\n,\n   System.Int32\nSlotLengthType\n,\n   System.Double\nWidth\n,\n   System.Double\nX1\n,\n   System.Double\nY1\n,\n   System.Double\nZ1\n,\n   System.Double\nX2\n,\n   System.Double\nY2\n,\n   System.Double\nZ2\n,\n   System.Double\nX3\n,\n   System.Double\nY3\n,\n   System.Double\nZ3\n,\n   System.Int32\nCenterArcDirection\n,\n   System.Boolean\nAddDimension\n)",
+  "parameters": [
+    {
+      "name": "SlotCreationType",
+      "type": "System.Int32",
+      "description": "Type of sketch slot as defined in swSketchSlotCreationType_e"
+    },
+    {
+      "name": "SlotLengthType",
+      "type": "System.Int32",
+      "description": "Type of length of sketch slot as defined in swSketchSlotLengthType_e"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width of sketch slot"
+    },
+    {
+      "name": "X1",
+      "type": "System.Double",
+      "description": "x coordinate of point 1"
+    },
+    {
+      "name": "Y1",
+      "type": "System.Double",
+      "description": "y coordinate of point 1"
+    },
+    {
+      "name": "Z1",
+      "type": "System.Double",
+      "description": "z coordinate of point 2"
+    },
+    {
+      "name": "X2",
+      "type": "System.Double",
+      "description": "x coordinate of point 2"
+    },
+    {
+      "name": "Y2",
+      "type": "System.Double",
+      "description": "y coordinate of point 2"
+    },
+    {
+      "name": "Z2",
+      "type": "System.Double",
+      "description": "z coordinate of point 2"
+    },
+    {
+      "name": "X3",
+      "type": "System.Double",
+      "description": "x coordinate of point 3"
+    },
+    {
+      "name": "Y3",
+      "type": "System.Double",
+      "description": "y coordinate of point 3"
+    },
+    {
+      "name": "Z3",
+      "type": "System.Double",
+      "description": "z coordinate of point 3"
+    },
+    {
+      "name": "CenterArcDirection",
+      "type": "System.Int32",
+      "description": "-1 = Clockwise (CW) 1 = Counterclockwise (CCW)"
+    },
+    {
+      "name": "AddDimension",
+      "type": "System.Boolean",
+      "description": "True to automatically add dimensions, false to not"
+    }
+  ],
+  "returns": "Sketch slot",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Insert and Resize Sketch Slot (C#)",
+      "href": "Insert_and_Resize_Sketch_Slot_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Resize Sketch Slot (VB.NET)",
+      "href": "Insert_and_Resize_Sketch_Slot_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Resize Sketch Slot (VBA)",
+      "href": "Insert_and_Resize_Sketch_Slot_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILinearPatternFeatureData",
+    "member": "VarySketch",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "varysketch",
+      "ilinearpatternfeaturedata",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "vary",
+      "sketch",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ILinearPatternFeatureData.VarySketch",
+  "description": "Gets or sets whether to allow the pattern instances of a seed sketch to vary in relation to enclosing geometry in this linear pattern feature.",
+  "signature": "System.Boolean VarySketch {get; set;}",
+  "parameters": [],
+  "returns": "True to allow the pattern instances of a seed sketch to vary in relation to enclosing geomtry, false to not",
+  "remarks": "This property is valid only when creating a pattern from a seed sketch.\nThe seed sketch has:\nAn enclosing boundary of base geometry.\nFully defined relations.\nDimensions only for measurements that will not vary in the pattern instances.\nA driving dimension that is used to specify the direction of the linear pattern.\nIf this property is true:\nSpecify\nILinearPatternFeatureData::D1Axis\nwith a driving dimension of the seed sketch.\nPattern instances vary with and are constrained by the enclosing geometry.\nSee the\nSOLIDWORKS Help > Parts and Features > Features > Patterns and Mirroring > Control and Modify Patterns >\nVary Sketch\ntopic.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.",
+  "examples": [
+    {
+      "title": "ILinearPatternFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILinearPatternFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

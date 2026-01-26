@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetAddToDB",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Setting",
+        "type": "System.Boolean",
+        "description": "True to add items directly to the SOLIDWORKS database, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetAddToDB"
+    ],
+    "keywords": [
+      "setaddtodb",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "add",
+      "db",
+      "setting",
+      "boolean",
+      "void",
+      "tessellate",
+      "body",
+      "calculate",
+      "closest",
+      "distance",
+      "between",
+      "faces",
+      "vba",
+      "components",
+      "create",
+      "plane",
+      "thru",
+      "points",
+      "context",
+      "intersecting",
+      "face",
+      "edge"
+    ]
+  },
+  "title": "IModelDoc2.SetAddToDB",
+  "description": "Obsolete. Superseded by ISketchManager::AddToDB.",
+  "signature": "void SetAddToDB( \n   System.Boolean\nSetting\n)",
+  "parameters": [
+    {
+      "name": "Setting",
+      "type": "System.Boolean",
+      "description": "True to add items directly to the SOLIDWORKS database, false if not"
+    }
+  ],
+  "returns": "",
+  "remarks": "One of the benefits of adding sketch entities directly to the database is that you can avoid grid and entity snapping. For example, if you create a sketch line whose endpoint is near another entity or near a grid point, the new line endpoint snaps to the other item or grid point. Setting ModelDoc2::SetAddToDB to True avoids this behavior during sketch entity creation.\nIModelDoc2::SetAddToDb and\nIModelDoc2::SetDisplayWhenAdded\nalso increase performance during sketch entity creation. IModelDoc2::SetDisplayWhenAdded requires that IModelDoc2::SetAddToDB is True.\nIf you want to constrain all the sketch entities after creation, use\nISketch::ConstrainAll\n.\nAfter setting IModelDoc2::SetAddToDB to True, you must set it back to false to restore SOLIDWORKS to its normal operating mode.",
+  "examples": [
+    {
+      "title": "Tessellate a Body (C#)",
+      "href": "Tessellate_a_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Calculate Closest Distance Between Faces (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Calculate Closest Distance Between Model Components (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Model_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Plane Thru 3 Points In-context (VBA)",
+      "href": "Create_Plane_Thru_3_Points_In-context_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersecting Face and Edge (VBA)",
+      "href": "Get_Intersecting_Face_and_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersecting Faces (VBA)",
+      "href": "Get_Intersecting_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.GetAddToDB"
+  ]
+}

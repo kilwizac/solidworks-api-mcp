@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IGetFeatures",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "NumberOfFeatures",
+        "type": "System.Int32",
+        "description": "Number of features in this body in a multibody sheet metal part"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetFeatures",
+      "IBodyFolder",
+      "IBodyFolder.GetBodies",
+      "IBodyFolder.GetBodyCount",
+      "IBodyFolder.IGetBodies"
+    ],
+    "keywords": [
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "feature",
+      "ifeature",
+      "bodies",
+      "ibody2",
+      "igetfeatures",
+      "body2",
+      "features",
+      "number",
+      "int32"
+    ]
+  },
+  "title": "IBody2.IGetFeatures",
+  "description": "Gets the features in this body in a multibody sheet metal part.",
+  "signature": "Feature IGetFeatures( \n   System.Int32\nNumberOfFeatures\n)",
+  "parameters": [
+    {
+      "name": "NumberOfFeatures",
+      "type": "System.Int32",
+      "description": "Number of features in this body in a multibody sheet metal part"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of features in this body in a multibody sheet metal part VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIBody2::GetFeatureCount\nto get NumberOfFeatures.\nThe features of a body in a multibody sheet metal part are located in the solid bodies folder in the FeatureManager design tree.",
+  "examples": [],
+  "related": [
+    "IBody2.GetFeatures",
+    "IBodyFolder",
+    "IBodyFolder.GetBodies",
+    "IBodyFolder.GetBodyCount",
+    "IBodyFolder.IGetBodies"
+  ]
+}

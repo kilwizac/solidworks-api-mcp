@@ -1,0 +1,944 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>System Options and Document Properties</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="User preferences">
+<meta name=MS-HKWD content="System options">
+<meta name=MS-HKWD content="Document properties">
+<meta name=MS-HKWD content="Document,properties">
+<meta name=MS-HKWD content="Properties,document">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=4243>
+<meta name=layout-width content=736>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>System Options and Document Properties</h1>
+
+<p><a name=Top></a>You can get and set SOLIDWORKS Design system options and document 
+ properties (also called user preferences) using SOLIDWORKS API enumerators 
+ and methods. </p>
+<p>As of SOLIDWORKS 2020 SP03.1, SOLIDWORKS Design can also run on the <strong>3D</strong>EXPERIENCE 
+platform as <a href="SOLIDWORKS_Connected.htm">SOLIDWORKS Design Augmented</a>. 
+User preferences that are specific to or not supported in SOLIDWORKS Design 
+Augmented are 
+annotated as such. If you try to set a user preference that is unsupported in 
+SOLIDWORKS Design Augmented, the action is blocked. To find these user 
+preferences, enter SOLIDWORKS Design Augmented (in double quotes) in the Search tab.</p>
+
+<p>To determine which enumerator corresponds with which system option or 
+ document property, you can:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>change a system or document setting in the user 
+ interface while <a href="../GettingStarted/SolidWorks_Macros.htm">recording 
+ a macro</a>. Then edit the macro to identify the name and value of the 
+ enumerator that corresponds to the setting you just changed and to also 
+ identify the name of the method used to change (i.e., set) it. See the 
+ <a href="#Get_Set">System Options and Document Properties Get/Set Methods</a> 
+    table at the end of this topic for a list of methods that get and set system-option 
+ and document-property enumerators.<br>
+	<br>
+	- or -</p></li>
+	
+	<li class=kadov-p><p>locate the system option or document property 
+ in the SOLIDWORKS Design user interface and click the link that corresponds to 
+ it in the <a href="#System">Settings and Enumerators</a> table in this topic. Each link opens a topic that 
+ contains a:</p></li>
+	
+	<ul style="list-style: disc;"
+		type=disc>
+		
+		<li class=kadov-p><p>screen shot of the user-interface dialog or 
+ menu corresponding to that system option or document property.</p></li>
+		
+		<li class=kadov-p><p>table containing all of the settings for that 
+ system option or document property and the enumerator and methods that 
+ get or set it.</p></li>
+	</ul>
+</ul>
+
+<p>Remember to reset any option or property back to its original state 
+ after the operation completes. System-option settings persist across SOLIDWORKS 
+ sessions.</p>
+
+<p style="font-weight: bold;"><a name=System></a>Settings and Enumerators</p>
+
+<p style="font-weight: bold;">NOTE: <span style="font-weight: normal;">Unlinked 
+ text indicates that an enumerator does not exist for that system option, 
+ document property, manager pane option, or menu item. Unlinked text is shown to help you more 
+ easily map the text in the table with the text shown on the specified 
+ tabs, manager panes, toolbars, and menus in the user interface.</span> <br>
+&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 100%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=100%>
+<col style="width: 18.274%;">
+<col style="width: 18.355%;">
+<col style="width: 24.124%;">
+<col style="width: 22.95%;">
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 18.274%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-top-color: #000000;
+			border-top-style: Solid;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-right-width: 1px;
+			border-left-width: 1px;
+			border-top-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	valign=bottom
+	width=18.274%>
+<p style="font-weight: bold;" align="center">Tools &gt; Options &gt; <span style="font-weight: bold;">System 
+ Options tab</span></td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 11%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+<p style="font-weight: bold;" align="center"><span style="font-weight: bold;">Tools &gt; 
+ Options &gt; Document Properties tab</span></td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 25%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+<p style="font-weight: bold;" align="center">File menu</td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 8%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+<p style="font-weight: bold;" align="center"><span style="font-weight: bold;">View menu</span></td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 6%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+&nbsp;<p align="center"><b>Insert menu</b></td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 19%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+&nbsp;<p align="center"><b>Tools menu</b></td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 7%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+&nbsp;<p align="center"><b>Window menu</b></td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-top:1px Solid #000000; border-bottom:1px Solid #000000; width: 7%;
+			padding-right: 10px;
+			padding-left: 10px;
+			x-cell-content-align: bottom;
+			background-color: #dbdbdb"
+	bgcolor=#DBDBDB
+	valign=bottom>
+<p align="center"><b>Toolbars</b></td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 18.274%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-left-width: 1px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=18.274%>
+<p>Appears on tab:</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_General.htm">General</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_3DEXP_Integration.htm">
+3DEXPERIENCE Integration</a> (SOLIDWORKS Design Augmented only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_MBD.htm">MBD</a> 
+(SOLIDWORKS Design only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Drawings.htm">Drawings</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/SO_Drawings-DisplayStyle.htm">Display Style</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/SO_Drawings-AreaHatchFill.htm">Area Hatch/Fill</a></p>
+<p style="margin-left: 24px;">&nbsp;-
+<a href="swconst.chm::/SO_Drawings-Performance.htm">Performance</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Colors.htm">Colors</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Sketch.htm">Sketch</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/SO_SketchRelationsSnaps.htm">Relations/Snaps</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Display.htm">Display</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Selection.htm">Selection</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Performance.htm">Performance</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Assemblies.htm">Assemblies</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_ExternalReferences.htm">External 
+ References</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_DefaultTemplates.htm">Default 
+ Templates</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_FileLocations.htm">File 
+ Locations</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_FeatureManager.htm">FeatureManager</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_SpinBoxIncrements.htm">Spin 
+ Box Increments</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_View.htm">View</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_BackupRecover.htm">Backup/Recover</a> 
+(Backup for SOLIDWORKS Design only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Touch.htm">Touch</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_HoleWizardToolbox.htm">Hole 
+ Wizard/Toolbox</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_FileExplorer.htm">File 
+ Explorer</a> (SOLIDWORKS Design only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Search.htm">Search</a> 
+(SOLIDWORKS Design only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Collaboration.htm">Collaboration</a> 
+(SOLIDWORKS Design only)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Messages.htm">Messages/Errors/Warnings</a></p>
+<p style="margin-left: 24px;">
+<a href="swconst.chm::/SO_SynchronizeSettings.htm">Synchronize Settings</a> 
+(SOLIDWORKS Design Augmented only)</p>
+<p style="margin-left: 24px;">
+<a href="swconst.chm::/SO_Import.htm">Import</a> </p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Export.htm">Export</a> </p>
+<p>&nbsp;</p>
+<p>Does not appear on tab:</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/SO_Miscellaneous.htm">Miscellaneous</a></td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 11%;
+			padding-right: 10px;
+			padding-left: 10px;
+			">
+<p>Appears on tab:</p>
+<p><a href="swconst.chm::/DP_DraftingStandard.htm">Drafting 
+ Standard</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_Annotations.htm">Annotations</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_Annotations-Balloons.htm">Balloons</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_Annotations-Datums.htm">Datums</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Annotations-GeometricTolerances.htm">Geometric</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+ href="swconst.chm::/DP_Annotations-GeometricTolerances.htm"><!--kadov_tag{{</spaces>}}-->Tolerances</a></p>
+<p style="margin-left: 24px;">&nbsp; -
+<a href="swconst.chm::/DP_Annotations-LocationLabel.htm">Location Label</a><br>
+&nbsp;&nbsp;&nbsp; <i>(drawings only)</i></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Annotations-Notes.htm">Notes</a></p>
+<p style="margin-left: 24px;">&nbsp; -
+<a href="swconst.chm::/DP_Annotations-RevisionClouds.htm">Revision Clouds</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Annotations-SurfaceFinishes.htm">Surface</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+ href="swconst.chm::/DP_Annotations-SurfaceFinishes.htm"><!--kadov_tag{{</spaces>}}-->Finishes</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Annotations-WeldSymbols.htm">Weld 
+ Symbols</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_Borders.htm">Borders</a> 
+(<i>drawings only</i>)</p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_Dimensions.htm">Dimensions</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-Angle.htm">Angle</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp; -
+<a href="swconst.chm::/DP_Dimensions-AngularRunning.htm">Angular Running</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-ArcLength.htm">Arc 
+ Length</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-Chamfer.htm">Chamfer</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-Diameter.htm">Diameter</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-HoleCallout.htm">Hole 
+ Callout</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-Linear.htm">Linear</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- 
+<a href="swconst.chm::/DP_Dimensions-Ordinate.htm">Ordinate</a></p>
+<p style="margin-left: 24px;">&nbsp;&nbsp;- <a href="swconst.chm::/DP_Dimensions-Radius.htm">Radius</a></p>
+<p style="margin-left: 24px;">
+<a href="swconst.chm::/DP_CenterlinesCenterMarks.htm">Centerlines/Center 
+ Marks</a> <i>(drawings only)</i></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_DraftingDimXpert.htm">DimXpert</a> 
+ <i>(drawings only)</i></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_Tables.htm">Tables</a></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-Bend.htm">
+Bend</a> (parts and drawings only)</p>
+<p style="margin-left: 24px;">&nbsp;-
+<a href="swconst.chm::/DP_Tables-BillOfMaterials.htm">Bill 
+ of Materials</a></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-General.htm">General</a></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-Hole.htm">Hole</a> 
+ <i>(drawings only)</i></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-Punch.htm">
+Punch</a> <i>(drawings only)</i></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-Revision.htm">Revision</a> 
+ <i>(drawings only)</i></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_Tables-TitleBlock.htm">Title Block Table</a> 
+ <i>(parts and assemblies only)</i></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_Tables-Weld.htm">Weld</a>
+<i>(drawings only)</i></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_DimXpert.htm">DimXpert 
+ </a><i>(parts and assemblies only)</i></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_DimXpert-SizeDimension.htm">Size Dimension</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_DimXpert-LocationDimension.htm">Location Dimension</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_DimXpert-ChainDimension.htm">Chain Dimension</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_DimXpert-GeometricTolerance.htm">Geometric Tolerance</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->-<a 
+ href="swconst.chm::/DP_DimXpert-ChamferControls.htm"> Chamfer Controls</a></p>
+<p style="margin-left: 24px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->- 
+ <a href="swconst.chm::/DP_DimXpert-DisplayOptions.htm">Display Options</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_ViewLabels.htm">Views</a> <i>(drawings only)</i></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_ViewLabels-Auxiliary.htm">Auxiliary</a></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_ViewLabels-Detail.htm">Detail</a></p>
+<p style="margin-left: 24px;">&nbsp;- <a href="swconst.chm::/DP_ViewLabels-Section.htm">Section</a></p>
+<p style="margin-left: 24px;">&nbsp;- 
+<a href="swconst.chm::/DP_ViewLabels-Orthographic.htm">Orthographic</a></p>
+<p style="margin-left: 24px;">&nbsp;-
+<a href="swconst.chm::/DP_ViewLabels-Other.htm">Other</a></p>
+<p style="margin-left: 24px;"><a href="swconst.chm::/DP_VirtualSharps.htm">Virtual 
+ Sharps</a></p>
+<p ><a href="swconst.chm::/DP_Detailing.htm">Detailing</a></p>
+<p ><a href="swconst.chm::/DP_DrawingSheets.htm">
+Drawing Sheets</a> (<i>drawings only</i>)</p>
+<p ><a href="swconst.chm::/DP_GridSnap.htm">Grid/Snap</a></p>
+<p ><a href="swconst.chm::/DP_Units.htm">Units</a></p>
+<p ><a href="swconst.chm::/DP_LineFont.htm">Line 
+ Font</a> <i>(drawings only)</i></p>
+<p >Line Style <i>(drawings only)</i></p>
+<p ><a href="swconst.chm::/DP_LineThickness.htm">Line 
+ Thickness</a> <i>(drawings only)</i></p>
+<p ><a href="swconst.chm::/DP_Colors.htm">Model 
+ Display</a> <i>(parts and assemblies only)</i></p>
+<p ><a href="swconst.chm::/DP_MaterialProperties.htm">Material 
+ Properties</a> <i>(parts only)</i></p>
+<p ><a href="swconst.chm::/DP_ImageQuality.htm">Image 
+ Quality</a></p>
+<p ><a href="swconst.chm::/DP_SheetMetalMBD.htm">Sheet Metal MBD</a> (parts only)</p>
+<p ><a href="swconst.chm::/DP_SheetMetal.htm">Sheet 
+ Metal</a></p>
+<p ><a href="swconst.chm::/DP_Weldments.htm">Weldments</a></p>
+<p ><a href="swconst.chm::/DP_PlaneDisplay.htm">Plane 
+ Display</a> <i>(parts and assemblies only)</i></p>
+<p ><a href="swconst.chm::/DP_Configurations.htm">Configurations</a> 
+(parts and assemblies only)</p>
+<p><a href="swconst.chm::/DP_Mates.htm">Mates</a> 
+(assemblies only)</p>
+<p><a href="swconst.chm::/DP_Performance.htm">Performance</a> (drawings only)</p>
+<p>&nbsp;</p>
+<p>Does not appear on tab:</p>
+<p style="margin-left: 24px;">- <a href="swconst.chm::/DP_Miscellaneous.htm">Miscellaneous</a></td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 25%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p>&gt; <a href="swconst.chm::/FileOpenNonNative.htm">Open</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<b><!--kadov_tag{{</spaces>}}--></b>&gt;<b>
+</b>Files of type</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;<!--kadov_tag{{</spaces>}}--></b>&gt; Mesh 
+Files</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+ Options</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+ System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+<a href="swconst.chm::/SO_Import.htm">Import</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileOpenOptionsSTLVRML.htm">STL/OBJ/OFF/PLY/PLY2</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+ VRML</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileOpenOptionsVRML.htm">VRML</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+ 3D Manufacturing Format</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileOpenOptions3MF.htm">3MF</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ IDF</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileOpenOptionsIDF.htm">IDF</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Inventor, Catia V5, ProE/Creo, Unigraphics/NX, 
+or Solid Edge</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileOpenOptionsInventorCatiaCreoNXSE.htm">
+Inventor/Catia V5/Creo/NX/Solid Edge</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; STEP AP203/214/242, IGES, or ACIS</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileOpenOptionsSTEPIGESACIS.htm">STEP/IGES/ACIS</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; SLDXML</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Import</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileOpenOptionsSLDXML.htm">SLDXML</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+ <i>other type of file</i></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><!--kadov_tag{{</spaces>}}--> </b>&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+System Options</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+ Import </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileOpenOptionsGeneral.htm">General</a></p>
+<p>&gt; <a href="swconst.chm::/FileSaveAs.htm">Save As</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+Save as type</p>
+<p style="margin-left: 0px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ Parasolid or Parasolid Binary</p>
+<p style="margin-left: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Options</p>
+<p style="margin-left: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p style="margin-left: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/SO_Export.htm">Export</a> </p>
+<p style="margin-left: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsParasolidOptions.htm">Parasolid</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&nbsp;&nbsp;&nbsp; 
+ &gt; Save</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ &gt; <a href="swconst.chm::/FileSaveAsParasolidSheetMetalOptions.htm">Export</a> 
+ <i>(sheet </i></p>
+<p><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metal parts only)</i></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; IGES</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsIGESOptions.htm">IGES 5.3</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ STEP AP203 or STEP AP214</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAsSTEPOptions.htm">STEP</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ IFC 2x3 or IFC 4</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsIFCOptions.htm">IFC</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; ACIS</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAsACISOptions.htm">ACIS</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ VRML</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAsVRMLOptions.htm">VRML</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ STL</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsSTLOptions.htm">STL</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; VDAFS</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; VDA</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 3D Manufacturing Format (*.3mf)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAs3MFOptions.htm">3MF</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--> &gt; 
+ Additive Manufacturing File (*.amf)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsAMFOptions.htm">AMF</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Polygon File Format (*.ply)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsPlyOptions.htm">PLY</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; eDrawings</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--kadov_tag{{</spaces>}}-->&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAseDrawingsOptions.htm">EDRW/<!--kadov_tag{{</spaces>}}-->EPRT/<!--kadov_tag{{</spaces>}}-->EASM</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--> &gt; 
+ Adobe <!--kadov_tag{{</spaces>}}-->Portable 
+ Document <!--kadov_tag{{</spaces>}}-->Format</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Save as 
+3D PDF</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAs3DPDFOptions.htm">3DPDF</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--kadov_tag{{</spaces>}}-->&gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAsPDFOptions.htm">PDF</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--> &gt; 
+ Adobe Photoshop Files, Portable Network Graphics, JPEG, or Tif</p>
+<p>&nbsp;&nbsp; <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--> &gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; 
+ <a href="swconst.chm::/FileSaveAsTIFPSDOptions.htm">TIF/PSD/JPG/PNG</a></p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--> &gt; 
+ Dwg or Dxf </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<span style="font-style: italic;">parts 
+and drawings 
+only</span>)</p>
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+ Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsDXFOptions.htm">DXF/DWG</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; Part (assemblies 
+only)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt; 
+Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; System Options</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; Export</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&gt; <a href="swconst.chm::/FileSaveAsPartFrmAsmOptions.htm">SLDPRT from assembly</a></p>
+<p>&nbsp;</p>
+<p>&gt; <a href="swconst.chm::/FilePageSetup.htm">Page Setup</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&gt; <a href="swconst.chm::/FilePrint.htm">Print</a></p>
+<p style="margin-left: 0px;">&nbsp;&nbsp;&nbsp; &gt; 
+ <a href="swconst.chm::/FilePageSetupPrintSystemOptionsMargins.htm">Margins</a><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+<p style="margin-left: 0px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&gt; <a 
+ href="swconst.chm::/FilePageSetupPrintLineThickness.htm"><!--kadov_tag{{</spaces>}}-->Line 
+ Thickness</a></p>
+<p style="margin-left: 0px;">&gt; <a href="swconst.chm::/FilePrint3D.htm">Print3D</a></p>
+<p style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></td>
+<td colspan=1
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 8%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p>&gt; <a href="swconst.chm::/ViewDisplay.htm">Display</a></p>
+<p>&gt; Modify</p>
+<p>&nbsp;&nbsp; &gt; <a href="swconst.chm::/ViewModifyQuickViewTransparency.htm">
+Filter Modified Components</a> (<i>only for assemblies opened in Large Design 
+Review mode with one or more modified components</i>)</p>
+<p>&gt; <a href="swconst.chm::/ViewHideShow.htm">Hide / Show</a></p>
+<p>&gt; <a href="swconst.chm::/ViewUserInterface.htm">User Interface</a></p>
+</td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 6%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p>&gt; <a href="swconst.chm::/InsertMate.htm">Mate</a> (<i>assemblies only</i>)</p>
+<p>&nbsp;</td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 19%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p>&gt; Component Selection (<i>assemblies only</i>)</p>
+<p>&nbsp;&nbsp; &gt; 
+<a href="swconst.chm::/ToolsCompSelectIdenticalCompMatchConfig.htm">Select Identical Components</a></p>
+<p>&gt; Sketch Entities</p>
+<p>&nbsp;&nbsp; &gt; <a href="swconst.chm::/ToolsSketchEntitiesRectangle.htm">Corner 
+Rectangle or Center Rectangle or 3 Point Corner Rectangle or 3 Point Center 
+Rectangle or Parallelogram</a></p>
+<p>&gt; Sketch Tools</p>
+<p>&nbsp;&nbsp;&nbsp; &gt; <a href="swconst.chm::/ToolsSketchToolsTrim.htm">Trim</a></p>
+<p>&gt; Evaluate</p>
+<p>&nbsp;&nbsp; &gt; <a href="swconst.chm::/ToolsEvaluateMassProperties.htm">Mass 
+Properties</a>&nbsp;</p>
+<p>&gt; Customize</p>
+<p>&nbsp;&nbsp; &gt; <a href="swconst.chm::/ToolsCustomizeToolbars.htm">Toolbars</a></p>
+<p>&nbsp;&nbsp; &gt; <a href="swconst.chm::/ToolsCustomizeMouseGestures.htm">Mouse Gestures</a><p>&nbsp;</td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 7%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p>&gt; <a href="swconst.chm::/DP_WindowToolbarMenu.htm">Viewport</a></td>
+<td
+	rowspan=1
+	style="border-right:1px Solid #000000; border-bottom:1px Solid #000000; width: 7%;
+			padding-right: 10px;
+			padding-left: 10px">
+<p><a href="swconst.chm::/ToolbarSketchInk.htm">Sketch Ink</a></td></tr>
+</table>
+
+<p style="text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+
+<p><span style="font-weight: bold;"><a name=Get_Set></a>System Options 
+ and Document Properties Get/Set Methods</span> </p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 58.191%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=58.191%>
+<col style="width: 28.154%;">
+<col style="width: 71.847%;">
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 28.154%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;
+			border-left-style: Solid;
+			border-left-width: 1px;
+			border-left-color: #000000;
+			border-top-style: Solid;
+			border-top-width: 1px;
+			border-top-color: #000000;
+			border-right-style: Solid;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			border-bottom-style: Solid;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=28.154%>
+<p class=apiTableColHeading
+	style="font-weight: bold; text-align: center;"
+	align=center>System Options</td>
+<td colspan=1
+	rowspan=1
+	style="width: 71.847%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;
+			border-top-color: #000000;
+			border-top-width: 1px;
+			border-top-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-right-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			border-bottom-style: Solid;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=71.847%>
+<p class=apiTableColHeading
+	style="font-weight: bold; text-align: center;"
+	align=center>Document Properties</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 28.154%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-width: 1px;
+			border-left-color: #000000;
+			border-right-style: Solid;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-bottom-style: Solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;"
+	width=28.154%>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetUserPreferenceDoubleValue.html">ISldWorks::GetUserPreferenceDoubleValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldworks~SetUserPreferenceDoubleValue.html">ISldWorks::SetUserPreferenceDoubleValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetUserPreferenceIntegerValue.html">ISldWorks::GetUserPreferenceIntegerValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetUserPreferenceIntegerValue.html">ISldWorks::SetUserPreferenceIntegerValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetUserPreferenceStringListValue.html">ISldWorks::GetUserPreferenceStringListValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetUserPreferenceStringListValue.html">ISldWorks::SetUserPreferenceStringListValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetUserPreferenceStringValue.html">ISldWorks::GetUserPreferenceStringValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetUserPreferenceStringValue.html">ISldWorks::SetUserPreferenceStringValue</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetUserPreferenceToggle.html">ISldWorks::GetUserPreferenceToggle</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetUserPreferenceToggle.html">ISldWorks::SetUserPreferenceToggle</a></p>
+	</li>
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified>
+	<p class=apiBulletLeftJustified>
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~DownloadFromMySolidWorksSettings.html">
+	ISldWorks::DownloadFromMySolidWorksSettings</a> (download settings from 
+	SOLIDWORKS Design Augmented)</p>
+	</li>
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified>
+	<p class=apiBulletLeftJustified>
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~UploadToMySolidWorksSettings.html">
+	ISldWorks::UploadToMySolidWorksSettings </a>(Upload settings to SOLIDWORKS 
+	Design Augmented)</p></li>
+</ul>
+<p>&nbsp;</td>
+<td colspan=1
+	rowspan=1
+	style="width: 71.847%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-right-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			border-bottom-style: Solid;"
+	width=71.847%>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceDouble.html">IModelDocExtension::GetUserPreferenceDouble</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~SetUserPreferenceDouble.html">IModelDocExtension::SetUserPreferenceDouble</a> 
+ </p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceDoubleValueRange.html">IModelDocExtension::GetUserPreferenceDoubleValueRange</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceInteger.html">IModelDocExtension::GetUserPreferenceInteger</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~SetUserPreferenceInteger.html">IModelDocExtension::SetUserPreferenceInteger</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceString.html">IModelDocExtension::GetUserPreferenceString</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~SetUserPreferenceString.html">IModelDocExtension::SetUserPreferenceString</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceTextFormat.html">IModelDocExtension::GetUserPreferenceTextFormat</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~SetUserPreferenceTextFormat.html">IModelDocExtension::SetUserPreferenceTextFormat</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~GetUserPreferenceToggle.html">IModelDocExtension::GetUserPreferenceToggle</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified><a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDocExtension~SetUserPreferenceToggle.html">IModelDocExtension::SetUserPreferenceToggle</a></p></li>
+</ul></td></tr>
+</table>
+
+<p style="text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+
+</body>
+
+</html>

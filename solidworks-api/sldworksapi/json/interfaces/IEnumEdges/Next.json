@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumEdges",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number edges for the edges enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "Edge",
+        "description": "Pointer to an array of edges of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of edges returned from the list; this value can be less than Celt if you ask for more edges than exist, or it can be NULL if no more edges exist."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienumedges",
+      "edges",
+      "celt",
+      "int32",
+      "rgelt",
+      "edge",
+      "pcelt",
+      "fetched",
+      "void"
+    ]
+  },
+  "title": "IEnumEdges.Next",
+  "description": "Gets the next edge in the edges enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out Edge\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number edges for the edges enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "Edge",
+      "description": "Pointer to an array of edges of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of edges returned from the list; this value can be less than Celt if you ask for more edges than exist, or it can be NULL if no more edges exist."
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [],
+  "related": []
+}

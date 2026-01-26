@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "DeleteBlends3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FaceList",
+        "type": "System.Object",
+        "description": "List of faces to delete"
+      },
+      {
+        "name": "DoLocalCheck",
+        "type": "System.Boolean",
+        "description": "True to perform a local check, false to not"
+      },
+      {
+        "name": "UsePlanarCap",
+        "type": "System.Boolean",
+        "description": "True to use planar caps, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.DeleteFaces5",
+      "IBody2.IDeleteBlends3"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "delete",
+      "blended",
+      "faces",
+      "bodies",
+      "ibody2",
+      "blends",
+      "deleteblends3",
+      "body2",
+      "blends3",
+      "list",
+      "object",
+      "do",
+      "local",
+      "check",
+      "boolean",
+      "use",
+      "planar",
+      "cap",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBody2.DeleteBlends3",
+  "description": "Removes a set of fillet faces from a temporary body and heals the body.",
+  "signature": "System.Boolean DeleteBlends3( \n   System.Object\nFaceList\n,\n   System.Boolean\nDoLocalCheck\n,\n   System.Boolean\nUsePlanarCap\n)",
+  "parameters": [
+    {
+      "name": "FaceList",
+      "type": "System.Object",
+      "description": "List of faces to delete"
+    },
+    {
+      "name": "DoLocalCheck",
+      "type": "System.Boolean",
+      "description": "True to perform a local check, false to not"
+    },
+    {
+      "name": "UsePlanarCap",
+      "type": "System.Boolean",
+      "description": "True to use planar caps, false to not (see Remarks )"
+    }
+  ],
+  "returns": "True if the set of fillet faces are removed, false if not",
+  "remarks": "Typically when deleting blends, an entire chain of blends is deleted. However, if only a few blends are deleted from a chain of blends and the UsePlanarCap parameter is not set to true, then the resultant body might be invalid.",
+  "examples": [
+    {
+      "title": "Delete Blended Faces (C#)",
+      "href": "Delete_Blended_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VB.NET)",
+      "href": "Delete_Blended_Faces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VBA)",
+      "href": "Delete_Blended_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.DeleteFaces5",
+    "IBody2.IDeleteBlends3"
+  ]
+}

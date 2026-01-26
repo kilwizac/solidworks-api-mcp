@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetMassProperties",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Accuracy",
+        "type": "System.Int32",
+        "description": "0 = as is 1 = default 2 = maximum"
+      },
+      {
+        "name": "Status",
+        "type": "System.Int32",
+        "description": "Status of the mass property results as defined in swMassPropertiesStatus_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IMassProperty",
+      "IModelDocExtension.CreateMassProperty",
+      "IModelDocExtension.GetMassProperties2",
+      "IModelDocExtension.IGetMassProperties"
+    ],
+    "keywords": [
+      "getmassproperties",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "mass",
+      "properties",
+      "accuracy",
+      "int32",
+      "status",
+      "object"
+    ]
+  },
+  "title": "IModelDocExtension.GetMassProperties",
+  "description": "Obsolete. Superseded by IModelDocExtension::GetMassProperties2.",
+  "signature": "System.Object GetMassProperties( \n   System.Int32\nAccuracy\n,\n   out System.Int32\nStatus\n)",
+  "parameters": [
+    {
+      "name": "Accuracy",
+      "type": "System.Int32",
+      "description": "0 = as is 1 = default 2 = maximum"
+    },
+    {
+      "name": "Status",
+      "type": "System.Int32",
+      "description": "Status of the mass property results as defined in swMassPropertiesStatus_e"
+    }
+  ],
+  "returns": "Array of size 13 (see Remarks )",
+  "remarks": "The return value is a 0-based array of doubles as follows:\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Volume, Area, Mass, MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ, Accuracy\n]\nYou can use\nISldWorks::GetUserPreferenceDoubleValue\nand swMaterialPropertyDensity to get the density of the SOLIDWORKS part. If the user did not explicitly set the density, then SOLIDWORKS uses a value of 1.0. You can also derive the density of the body by calculating:\nDensity = ( Mass / Volume )\nThis method returns metric units unless specified otherwise.\nIf this object is...\nThen...\nAn assembly\nSOLIDWORKS does not include any suppressed components in the mass property analysis. See\nIComponent2::GetSuppression\nto determine the state of each assembly component.\nThis method returns the moments of inertia (MOI) about the assembly center-of-gravity coordinate system aligned with the assembly axes.\nA part\nThe calculated origin for the returned values are based on the default coordinate systems of the model document. They are not based on the selected coordinate system.\nThis method supports multibody parts.",
+  "examples": [],
+  "related": [
+    "IMassProperty",
+    "IModelDocExtension.CreateMassProperty",
+    "IModelDocExtension.GetMassProperties2",
+    "IModelDocExtension.IGetMassProperties"
+  ]
+}

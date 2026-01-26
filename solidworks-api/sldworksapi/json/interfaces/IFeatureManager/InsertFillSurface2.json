@@ -1,0 +1,153 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFillSurface2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Resolutions",
+        "type": "System.Int32",
+        "description": "Controls the resolution or quality of the surface (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swFeatureFillSurfaceOptions_e"
+      },
+      {
+        "name": "VPatchBoundaries",
+        "type": "System.Object",
+        "description": "Array of edges or sketches for the patch boundaries"
+      },
+      {
+        "name": "VCurvatureControlType",
+        "type": "System.Object",
+        "description": "Array of curve control methods as defined in swContactType_e"
+      },
+      {
+        "name": "VFaces",
+        "type": "System.Object",
+        "description": "Array of faces to use for direction"
+      },
+      {
+        "name": "VConstraintCurves",
+        "type": "System.Object",
+        "description": "Array of constraint curves ( edges or sketches )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFillSurfaceFeatureData"
+    ],
+    "keywords": [
+      "fillsurfacefeaturedata",
+      "see",
+      "ifillsurfacefeaturedata",
+      "feature",
+      "also",
+      "ifeature",
+      "fill",
+      "surface",
+      "insertfillsurface2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "surface2",
+      "resolutions",
+      "int32",
+      "options",
+      "patch",
+      "boundaries",
+      "object",
+      "curvature",
+      "control",
+      "type",
+      "faces",
+      "constraint",
+      "curves",
+      "vb",
+      "net",
+      "vba",
+      "gaps",
+      "body"
+    ]
+  },
+  "title": "IFeatureManager.InsertFillSurface2",
+  "description": "Inserts a fill-surface feature in the model.",
+  "signature": "Feature InsertFillSurface2( \n   System.Int32\nResolutions\n,\n   System.Int32\nOptions\n,\n   System.Object\nVPatchBoundaries\n,\n   System.Object\nVCurvatureControlType\n,\n   System.Object\nVFaces\n,\n   System.Object\nVConstraintCurves\n)",
+  "parameters": [
+    {
+      "name": "Resolutions",
+      "type": "System.Int32",
+      "description": "Controls the resolution or quality of the surface (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swFeatureFillSurfaceOptions_e"
+    },
+    {
+      "name": "VPatchBoundaries",
+      "type": "System.Object",
+      "description": "Array of edges or sketches for the patch boundaries"
+    },
+    {
+      "name": "VCurvatureControlType",
+      "type": "System.Object",
+      "description": "Array of curve control methods as defined in swContactType_e"
+    },
+    {
+      "name": "VFaces",
+      "type": "System.Object",
+      "description": "Array of faces to use for direction"
+    },
+    {
+      "name": "VConstraintCurves",
+      "type": "System.Object",
+      "description": "Array of constraint curves ( edges or sketches )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "You must use\nIModelDocExtension::SelectByID2\nand the following Mark values to select edges that bound the surface to be filled:\nBoundary curves = 1\nBoundary with contact curvature control = 257\nBoundary with tangent curvature control = 513\nConstraint curves or internal curves = 4\nThe resolution argument can be set to 1, 2, or 3. The higher the value, the better the resolution.\nUse the\nIBody2::Diagnose\nand the\nIDiagnoseResult\nAPIs to get the gaps to fill.",
+  "examples": [
+    {
+      "title": "Insert Fill-surface Feature (C#)",
+      "href": "Insert_Fill-surface_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VB.NET)",
+      "href": "Insert_Fill-surface_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VBA)",
+      "href": "Insert_Fill-surface_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Fill Gaps in Body (C#)",
+      "href": "Get_and_Fill_Gaps_in_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Fill Gaps in Body (VB.NET)",
+      "href": "Get_and_Fill_Gaps_in_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Fill Gaps in Body (VBA)",
+      "href": "Get_and_Fill_Gaps_in_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFillSurfaceFeatureData"
+  ]
+}

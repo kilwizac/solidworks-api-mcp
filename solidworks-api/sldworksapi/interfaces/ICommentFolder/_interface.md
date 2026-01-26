@@ -1,0 +1,28 @@
+---
+type: interface
+interface: ICommentFolder
+inherits: null
+description: Allows access to the Comment folder in the FeatureManager design tree.
+member_count: 5
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AddComment
+  - GetCommentCount
+  - GetComments
+  - GetFeature
+  - IGetComments
+---
+
+# ICommentFolder
+
+Allows access to the Comment folder in the FeatureManager design tree.
+
+## Common Members
+
+- `AddComment`
+- `GetCommentCount`
+- `GetComments`
+- `GetFeature`
+- `IGetComments`

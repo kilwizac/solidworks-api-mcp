@@ -1,0 +1,153 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "InsertRevisionTable2",
+    "returns": "RevisionTableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "True to insert the revision table at the existing revision table anchor point, false to anchor the table at the point specified by X and Y"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate for the placement of the revision table annotation"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate for the placement of this revision table annotation"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBOMConfigurationAnchorType_e"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+      },
+      {
+        "name": "Shape",
+        "type": "System.Int32",
+        "description": "Revision symbol shape as defined in swRevisionTableSymbolShape_e"
+      },
+      {
+        "name": "AutoUpdateZoomCells",
+        "type": "System.Boolean",
+        "description": "True to automatically update zone cells, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.RevisionTable"
+    ],
+    "keywords": [
+      "revision",
+      "tables",
+      "see",
+      "also",
+      "irevisiontableannotation",
+      "irevisiontablefeature",
+      "interfaces",
+      "sheets",
+      "sheet",
+      "isheet",
+      "table",
+      "annotation",
+      "insertrevisiontable2",
+      "insert",
+      "table2",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "template",
+      "string",
+      "shape",
+      "auto",
+      "update",
+      "zoom",
+      "cells",
+      "create",
+      "drawing",
+      "zones",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISheet.InsertRevisionTable2",
+  "description": "Inserts a revision table in this drawing sheet.",
+  "signature": "RevisionTableAnnotation InsertRevisionTable2( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nTableTemplate\n,\n   System.Int32\nShape\n,\n   System.Boolean\nAutoUpdateZoomCells\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "True to insert the revision table at the existing revision table anchor point, false to anchor the table at the point specified by X and Y"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate for the placement of the revision table annotation"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate for the placement of this revision table annotation"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBOMConfigurationAnchorType_e"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+    },
+    {
+      "name": "Shape",
+      "type": "System.Int32",
+      "description": "Revision symbol shape as defined in swRevisionTableSymbolShape_e"
+    },
+    {
+      "name": "AutoUpdateZoomCells",
+      "type": "System.Boolean",
+      "description": "True to automatically update zone cells, false to not"
+    }
+  ],
+  "returns": "Revision table or null if a revision table already exists",
+  "remarks": "By default, the revision table templates are in\ninstall_dir\n\\\nlang\n\\\nlanguage\nand have a filename extension of\n.sldrevtbt\n. The template and table must be of the same type. For example, you must specify TableTemplate with\ninstall_dir\n\\lang\\English\\standard revision block.sldrevtbt\nif you want to insert the English version of a revision block table.",
+  "examples": [
+    {
+      "title": "Create Drawing Sheet Zones (VBA)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (VB.NET)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (C#)",
+      "href": "Create_Drawing_Sheet_Zones_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheet.RevisionTable"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITangentMateFeatureData",
+    "member": "EntitiesToMate",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "entitiestomate",
+      "itangentmatefeaturedata",
+      "tangent",
+      "mate",
+      "feature",
+      "data",
+      "entities",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ITangentMateFeatureData.EntitiesToMate",
+  "description": "Gets or sets the entities to mate in this tangent mate.",
+  "signature": "System.Object EntitiesToMate {get; set;}",
+  "parameters": [],
+  "returns": "Entities to mate (see Remarks )",
+  "remarks": "You can create tangent mates with the following mate entity combinations:\nMate entity/Mate entity\nISurface\n,\nIFace2\n(cone, cylinder)\nIFace2\n(extrusion face, draft is not allowed)\nIEdge\n,\nIRefAxis,\nICenterLine\n,\nISketchLine\n(line)\nIRefPlane\nISurface,\nIFace2\n(sphere)\nISurface\nISurface, IFace2 (cone, cylinder)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIFace2 (extrusion face; draft is not allowed)\n\u25cf\n\u25cf\nIEdge, IRefAxis, ICenterLine, ISketchLine (line)\n\u25cf\n\u25cf\nIRefPlane\n\u25cf\n\u25cf\nISurface, IFace2 (sphere)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nISurface\n\u25cf\n\u25cf\nInstead of specifying this property, you can use\nIModelDocExtension::SelectByID2\nto pre-select the entities to mate using Mark = 1. You can pre-select mate entities during mate creation, but not during mate editing.",
+  "examples": [
+    {
+      "title": "ITangentMateFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ITangentMateFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SketchConstraintsDel",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ConstrInd",
+        "type": "System.Int32",
+        "description": "Constraint number on the selected entity; 0-based index"
+      },
+      {
+        "name": "IdStr",
+        "type": "System.String",
+        "description": "Constraint to delete (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.SkToolsAutoConstr",
+      "IModelDoc2.SketchAddConstraints",
+      "IModelDoc2.SketchConstrainCoincident",
+      "IModelDoc2.SketchConstrainConcentric",
+      "IModelDoc2.SketchConstrainParallel",
+      "IModelDoc2.SketchConstrainPerp",
+      "IModelDoc2.SketchConstrainTangent",
+      "IModelDoc2.SketchConstraintsDelAll"
+    ],
+    "keywords": [
+      "constraints",
+      "relations",
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "entities",
+      "sketchconstraintsdel",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "del",
+      "constr",
+      "ind",
+      "int32",
+      "id",
+      "str",
+      "string",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SketchConstraintsDel",
+  "description": "Deletes the specified relationship (constraint) on the currently selected sketch item.",
+  "signature": "void SketchConstraintsDel( \n   System.Int32\nConstrInd\n,\n   System.String\nIdStr\n)",
+  "parameters": [
+    {
+      "name": "ConstrInd",
+      "type": "System.Int32",
+      "description": "Constraint number on the selected entity; 0-based index"
+    },
+    {
+      "name": "IdStr",
+      "type": "System.String",
+      "description": "Constraint to delete (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "To delete a tangency relation, which is the third relation on the selected arc, specify:\nPart.SketchConstraintsDel 2, \"sgTANGENT\"\nThe available constraints are as follows. Pass them as strings embedded in quotes:\nSOLIDWORKS 2005 and earlier\nSOLIDWORKS 2006 and later\nsgHORIZONTAL (2D sketch)\nsgHORIZONTAL2D\nsgHORIZONTAL (3D sketch)\nsgALONGX3D\nsgHORIZPOINTS (2D sketch)\nsgHORIZONTALPOINTS2D\nsgHORIZPOINTS (3D sketch)\nsgALONGXPOINTS3D\nsgVERTICAL (2D sketch)\nsgVERTICAL2D\nsgVERTICAL (3D sketch)\nsgALONGY3D\nsgVERTPOINTS (2D sketch)\nsgVERTICALPOINTS2D\nsgVERTPOINTS (3D sketch)\nsgALONGYPOINTS3D\nsgALONGZPOINTS\nsgALONGZ\nsgCOLINEAR\nsgCORADIAL\nsgPERPENDICULAR\nsgPARALLEL\nsgTANGENT\nsgCONCENTRIC\nsgCOINCIDENT\nsgSYMMETRIC\nsgATMIDDLE\nsgATINTERSECT\nsgATPIERCE\nsgFIXED\nsgANGLE\nsgARCANG180\nsgARCANG270\nsgARCANG90\nsgARCANGBOTTOM\nsgARCANGLEFT\nsgARCANGRIGHT\nsgARCANGTOP\nsgDIAMETER\nsgDISTANCE\nsgSAMELENGTH\nsgOFFSETEDGE\nsgSNAPANGLE\nsgSNAPGRID\nsgSNAPLENGTH\nsgUSEEDGE\nsgALONGZPOINTS3D\nsgALONGZ3D\nsgCOLINEAR\nsgCORADIAL\nsgPERPENDICULAR\nsgPARALLEL\nsgTANGENT\nsgCONCENTRIC\nsgCOINCIDENT\nsgSYMMETRIC\nsgATMIDDLE\nsgATINTERSECT\nsgATPIERCE\nsgFIXED\nsgANGLE\nsgARCANG180\nsgARCANG270\nsgARCANG90\nsgARCANGBOTTOM\nsgARCANGLEFT\nsgARCANGRIGHT\nsgARCANGTOP\nsgDIAMETER\nsgDISTANCE\nsgSAMELENGTH\nsgOFFSETEDGE\nsgSNAPANGLE\nsgSNAPGRID\nsgSNAPLENGTH\nsgUSEEDGE\nsgMERGEPOINTS\nNOTE:\nAlthough SOLIDWORKS 2006 and later accepts the constraints shown in the first column, you are encouraged to use the constraints shown in the second column.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.SkToolsAutoConstr",
+    "IModelDoc2.SketchAddConstraints",
+    "IModelDoc2.SketchConstrainCoincident",
+    "IModelDoc2.SketchConstrainConcentric",
+    "IModelDoc2.SketchConstrainParallel",
+    "IModelDoc2.SketchConstrainPerp",
+    "IModelDoc2.SketchConstrainTangent",
+    "IModelDoc2.SketchConstraintsDelAll"
+  ]
+}

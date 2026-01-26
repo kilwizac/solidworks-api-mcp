@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumDisplayDimensions",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number of display dimensions for the display dimension enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "DisplayDimension",
+        "description": "Pointer to an array of display dimensions in of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of display dimensions from the list; this value can be less than Celt if you ask for more display dimensions than exist, or it can be NULL if no more display dimensions exist"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienumdisplaydimensions",
+      "display",
+      "dimensions",
+      "celt",
+      "int32",
+      "rgelt",
+      "dimension",
+      "pcelt",
+      "fetched",
+      "void"
+    ]
+  },
+  "title": "IEnumDisplayDimensions.Next",
+  "description": "Gets the next display dimension in the display dimensions enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out DisplayDimension\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number of display dimensions for the display dimension enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "DisplayDimension",
+      "description": "Pointer to an array of display dimensions in of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of display dimensions from the list; this value can be less than Celt if you ask for more display dimensions than exist, or it can be NULL if no more display dimensions exist"
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [],
+  "related": []
+}

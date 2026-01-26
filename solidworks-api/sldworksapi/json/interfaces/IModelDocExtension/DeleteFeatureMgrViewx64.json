@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "DeleteFeatureMgrViewx64",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "AppView",
+        "type": "System.Int64",
+        "description": "View handle of the FeatureManager design tree view to delete"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IFeatMgrView.GetFeatMgrViewWndx64",
+      "IModelDoc2.DeleteFeatureMgrView",
+      "IModelViewManager.GetFeatureMgrViewHWndx64"
+    ],
+    "keywords": [
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "tabs",
+      "deletefeaturemgrviewx64",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "delete",
+      "feature",
+      "mgr",
+      "viewx64",
+      "app",
+      "view",
+      "int64",
+      "void"
+    ]
+  },
+  "title": "IModelDocExtension.DeleteFeatureMgrViewx64",
+  "description": "Removes the specified tab in the FeatureManager design tree in 64-bit applications.",
+  "signature": "void DeleteFeatureMgrViewx64( \n   ref System.Int64\nAppView\n)",
+  "parameters": [
+    {
+      "name": "AppView",
+      "type": "System.Int64",
+      "description": "View handle of the FeatureManager design tree view to delete"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is only available through early binding and with 64-bit versions of the SOLIDWORKS Design software.\nOn the appropriate notification, you can call this method to clean up and delete your FeatureManager design tree view.\nUse this method with\nIModelViewManager::CreateFeatureMgrView2\nor\nIModelDoc2::AddFeatureMgrView3\n.\nIf you created the FeatureManager design tree view using...\nThen...\nIModelViewManager::CreateFeatureMgrView2\nCalling IModelDocExtension::DeleteFeatureMgrViewx64 destroys the CView object used for the FeatureManager design tree view.\nIModelDoc2::AddFeatureMgrView3\nYour application allocated the CView object and calling IModelDocExtension::DeleteFeatureMgrViewx64 does not destroy the CView object. In this case, you must destroy the CView object using the appropriate destructor. Never use the delete operator directly on the CView object. Always use one of the appropriate MFC view destructors.",
+  "examples": [],
+  "related": [
+    "IFeatMgrView.GetFeatMgrViewWndx64",
+    "IModelDoc2.DeleteFeatureMgrView",
+    "IModelViewManager.GetFeatureMgrViewHWndx64"
+  ]
+}

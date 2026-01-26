@@ -1,0 +1,132 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "InsertColumn2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Where",
+        "type": "System.Int32",
+        "description": "Where to insert the column as specified in swTableItemInsertPosition_e"
+      },
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the column where to insert the new column"
+      },
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Column name"
+      },
+      {
+        "name": "WidthStyle",
+        "type": "System.Int32",
+        "description": "Style of the width of the column as defined in swInsertTableColumnWidthStyle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.ColumnCount",
+      "ITableAnnotation.ColumnHidden",
+      "ITableAnnotation.DeleteColumn",
+      "ITableAnnotation.GetColumnTitle",
+      "ITableAnnotation.GetColumnType",
+      "ITableAnnotation.GetColumnWidth",
+      "ITableAnnotation.GetLockColumnWidth",
+      "ITableAnnotation.MoveColumn",
+      "ITableAnnotation.SetColumnTitle",
+      "ITableAnnotation.SetColumnType",
+      "ITableAnnotation.SetColumnWidth",
+      "ITableAnnotation.SetLockColumnWidth",
+      "ITableAnnotation.TotalColumnCount"
+    ],
+    "keywords": [
+      "table",
+      "columns",
+      "insertcolumn2",
+      "itableannotation",
+      "annotation",
+      "insert",
+      "column2",
+      "where",
+      "int32",
+      "index",
+      "name",
+      "string",
+      "width",
+      "style",
+      "boolean",
+      "column",
+      "bom",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ITableAnnotation.InsertColumn2",
+  "description": "Inserts a column into this table.",
+  "signature": "System.Boolean InsertColumn2( \n   System.Int32\nWhere\n,\n   System.Int32\nIndex\n,\n   System.String\nName\n,\n   System.Int32\nWidthStyle\n)",
+  "parameters": [
+    {
+      "name": "Where",
+      "type": "System.Int32",
+      "description": "Where to insert the column as specified in swTableItemInsertPosition_e"
+    },
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the column where to insert the new column"
+    },
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Column name"
+    },
+    {
+      "name": "WidthStyle",
+      "type": "System.Int32",
+      "description": "Style of the width of the column as defined in swInsertTableColumnWidthStyle_e"
+    }
+  ],
+  "returns": "True if column is inserted successfully, false if not",
+  "remarks": "Index:\nis 0-based.\nis valid only if Where is set to swTableItemInsertPosition_e.swTableItemInsertPosition_After or swTableItemInsertPosition_e.swTableItemInsertPosition_Before.",
+  "examples": [
+    {
+      "title": "Insert Column in BOM Table (C#)",
+      "href": "Insert_Column_in_BOM_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Column in BOM Table (VB.NET)",
+      "href": "Insert_Column_in_BOM_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Column in BOM Table (VBA)",
+      "href": "Insert_Column_in_BOM_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.ColumnCount",
+    "ITableAnnotation.ColumnHidden",
+    "ITableAnnotation.DeleteColumn",
+    "ITableAnnotation.GetColumnTitle",
+    "ITableAnnotation.GetColumnType",
+    "ITableAnnotation.GetColumnWidth",
+    "ITableAnnotation.GetLockColumnWidth",
+    "ITableAnnotation.MoveColumn",
+    "ITableAnnotation.SetColumnTitle",
+    "ITableAnnotation.SetColumnType",
+    "ITableAnnotation.SetColumnWidth",
+    "ITableAnnotation.SetLockColumnWidth",
+    "ITableAnnotation.TotalColumnCount"
+  ]
+}

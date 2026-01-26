@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IAddConfiguration3",
+    "returns": "Configuration",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the new configuration"
+      },
+      {
+        "name": "Comment",
+        "type": "System.String",
+        "description": "Comment displayed in Configuration Properties"
+      },
+      {
+        "name": "AlternateName",
+        "type": "System.String",
+        "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to True"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.GetConfigurationByName",
+      "IModelDoc2.GetConfigurationCount",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IGetConfigurationByName",
+      "IModelDoc2.IGetCustomInfoNames2",
+      "IModelDoc2.ShowConfiguration2"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "add",
+      "iaddconfiguration3",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "configuration3",
+      "name",
+      "string",
+      "comment",
+      "alternate",
+      "options",
+      "int32"
+    ]
+  },
+  "title": "IModelDoc2.IAddConfiguration3",
+  "description": "Adds a new configuration to this model document.",
+  "signature": "Configuration IAddConfiguration3( \n   System.String\nName\n,\n   System.String\nComment\n,\n   System.String\nAlternateName\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the new configuration"
+    },
+    {
+      "name": "Comment",
+      "type": "System.String",
+      "description": "Comment displayed in Configuration Properties"
+    },
+    {
+      "name": "AlternateName",
+      "type": "System.String",
+      "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to True"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "The Options argument can be a combination of any of the following values:\nswConfigOption_SuppressByDefault\nTrue if you want to suppress newly added features and mates in this configuration, false if not\nswConfigOption_HideByDefault - True if you want newly added components to be hidden, false if not\nswConfigOption_MinFeatureManager\nTrue if you want newly added components to only display their component name in the FeatureManager design tree, false if you want newly added components to display their name and each of their features in the FeatureManager design tree\nswConfigOption_DontActivate - True if you do not want the new configuration activated, false if not",
+  "examples": [],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.GetConfigurationByName",
+    "IModelDoc2.GetConfigurationCount",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IGetConfigurationByName",
+    "IModelDoc2.IGetCustomInfoNames2",
+    "IModelDoc2.ShowConfiguration2"
+  ]
+}

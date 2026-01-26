@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateCenterLine",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "P1",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x1, y1, z1) in meters that describe the first point of the line"
+      },
+      {
+        "name": "P2",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x2, y2, z2) in meters that describe the second point of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ICreateCenterLine"
+    ],
+    "keywords": [
+      "createcenterline",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "center",
+      "line",
+      "p1",
+      "object",
+      "p2",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.CreateCenterLine",
+  "description": "Obsolete. Superseded by ISketchManager::CreateCenterLine.",
+  "signature": "System.Boolean CreateCenterLine( \n   System.Object\nP1\n,\n   System.Object\nP2\n)",
+  "parameters": [
+    {
+      "name": "P1",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x1, y1, z1) in meters that describe the first point of the line"
+    },
+    {
+      "name": "P2",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x2, y2, z2) in meters that describe the second point of the line"
+    }
+  ],
+  "returns": "True if success, false if not",
+  "remarks": "Use\nIModelDoc2::CreateCenterLineVB\nfor Visual Basic for Applications (VBA) and other forms of Basic that do not support SafeArrays.\nYou can also create centerline construction geometry using\nIModelDoc2::CreateLine2\nand\nISketchSegment::ConstructionGeometry\n.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ICreateCenterLine"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swCustomInfoAddResult_e",
+    "description": "Result codes when adding custom properties.",
+    "member_count": 5,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swCustomInfoAddResult_e",
+  "description": "Result codes when adding custom properties.",
+  "values": [
+    {
+      "member": "swCustomInfoAddResult_AddedOrChanged",
+      "value": "0",
+      "description": "= Success"
+    },
+    {
+      "member": "swCustomInfoAddResult_GenericFail",
+      "value": "1",
+      "description": "= Failed to add the custom property"
+    },
+    {
+      "member": "swCustomInfoAddResult_MismatchAgainstExistingType",
+      "value": "2",
+      "description": "= Existing custom property with the same name has a different type"
+    },
+    {
+      "member": "swCustomInfoAddResult_MismatchAgainstLegacyTypes",
+      "value": "4",
+      "description": "= Cannot add the specified custom property to legacy architecture"
+    },
+    {
+      "member": "swCustomInfoAddResult_MismatchAgainstSpecifiedType",
+      "value": "3",
+      "description": "= Specified value of the custom property does not match the specified type"
+    }
+  ]
+}

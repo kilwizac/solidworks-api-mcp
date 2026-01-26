@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface3",
+    "member": "GetFirstNeutralSheet",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMidSurface2.GetNeutralSheetCount",
+      "IMidSurface2.IGetNextNeutralSheet"
+    ],
+    "keywords": [
+      "getfirstneutralsheet",
+      "imidsurface3",
+      "mid",
+      "surface3",
+      "first",
+      "neutral",
+      "sheet",
+      "object"
+    ]
+  },
+  "title": "IMidSurface3.GetFirstNeutralSheet",
+  "description": "Gets the first reference surface in this midsurface }}-->feature.",
+  "signature": "System.Object GetFirstNeutralSheet()",
+  "parameters": [],
+  "returns": "First reference surface sheet body in this midsurface feature",
+  "remarks": "Each reference surface in the midsurface feature is considered to be a sheet body. If the reference surfaces are sewn together during the creation of the midsurface feature (\nIModelDoc2::InsertMidSurfaceExt\n), then the midsurface feature contains only one reference surface sheet body.\nThe sheet body returned from this method has the normal topology that you would expect to find on a body (for example, faces, edges, and so on). See the\nIBody2\nobject for methods that provide access to this topology.\nCall\nIMidSurface3::GetNextNeutralSheet\nto get the next reference surface in this midsurface feature.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetNeutralSheetCount",
+    "IMidSurface2.IGetNextNeutralSheet"
+  ]
+}

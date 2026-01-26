@@ -1,0 +1,43 @@
+---
+type: property
+interface: IPropertyManagerPageSelectionbox
+member: AllowSelectInMultipleBoxes
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - selections
+  - ui
+related: []
+keywords:
+  - allowselectinmultipleboxes
+  - ipropertymanagerpageselectionbox
+  - manager
+  - page
+  - selectionbox
+  - allow
+  - select
+  - multiple
+  - boxes
+  - boolean
+readonly: null
+---
+
+# IPropertyManagerPageSelectionbox.AllowSelectInMultipleBoxes
+
+Gets or sets whether an entity can be selected in this selection box if the entity is selected elsewhere.
+
+## Signature
+
+```csharp
+System.Boolean AllowSelectInMultipleBoxes {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+If... Then... true When an entity is selected while this selection box is active and that entity is selected in a different selection box, then the entity is added to this selection box. If the entity is already selected in this selection box, then the entity is removed from the selection box. false When an entity is selected while this selection box is active and that entity is already selected, then the entity is removed from the selection box. This is the default behavior of a selection box.

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExplodeStep",
+    "member": "GetRotationAxis",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "RotAxisIndex",
+        "type": "System.Int32",
+        "description": "Rotation manipulator index as defined in swRotationAxisIndex_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IExplodeStep.SetRotationAxis"
+    ],
+    "keywords": [
+      "getrotationaxis",
+      "iexplodestep",
+      "explode",
+      "step",
+      "rotation",
+      "axis",
+      "rot",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IExplodeStep.GetRotationAxis",
+  "description": "Gets the rotation axis (manipulator index and entity) for this regular explode step.",
+  "signature": "System.Object GetRotationAxis( \n   out System.Int32\nRotAxisIndex\n)",
+  "parameters": [
+    {
+      "name": "RotAxisIndex",
+      "type": "System.Int32",
+      "description": "Rotation manipulator index as defined in swRotationAxisIndex_e"
+    }
+  ],
+  "returns": "Rotation axis entity; Nothing or null if a rotation axis entity was not selected during creation of this explode step",
+  "remarks": "This method is not valid for subassembly explode steps.",
+  "examples": [],
+  "related": [
+    "IExplodeStep.SetRotationAxis"
+  ]
+}

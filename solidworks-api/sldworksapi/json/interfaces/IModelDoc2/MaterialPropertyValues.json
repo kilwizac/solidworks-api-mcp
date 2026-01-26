@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "MaterialPropertyValues",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IMaterialPropertyValues",
+      "IModelDoc2.MaterialIdName",
+      "IModelDoc2.MaterialUserName",
+      "IModelDocExtension.GetMaterialPropertyValues",
+      "IModelDocExtension.IGetMaterialPropertyValues",
+      "IModelDocExtension.IRemoveMaterialProperty",
+      "IModelDocExtension.ISetMaterialPropertyValues",
+      "IModelDocExtension.RemoveMaterialProperty",
+      "IModelDocExtension.SetMaterialPropertyValues"
+    ],
+    "keywords": [
+      "material",
+      "properties",
+      "materialpropertyvalues",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "values",
+      "object",
+      "change",
+      "color",
+      "face",
+      "vba",
+      "faces",
+      "associated",
+      "feature",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.MaterialPropertyValues",
+  "description": "Gets or sets a material's properties in the active configuration.",
+  "signature": "System.Object MaterialPropertyValues {get; set;}",
+  "parameters": [],
+  "returns": "Array of 9 doubles describing the material's values (see Remarks )",
+  "remarks": "The format of the return values is an array of doubles:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess,  Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after setting this property.",
+  "examples": [
+    {
+      "title": "Change Color of Face (VBA)",
+      "href": "Change_Color_of_Face_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Material Properties (VBA)",
+      "href": "Get_Material_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (C#)",
+      "href": "Get_Faces_Associated_with_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VB.NET)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IMaterialPropertyValues",
+    "IModelDoc2.MaterialIdName",
+    "IModelDoc2.MaterialUserName",
+    "IModelDocExtension.GetMaterialPropertyValues",
+    "IModelDocExtension.IGetMaterialPropertyValues",
+    "IModelDocExtension.IRemoveMaterialProperty",
+    "IModelDocExtension.ISetMaterialPropertyValues",
+    "IModelDocExtension.RemoveMaterialProperty",
+    "IModelDocExtension.SetMaterialPropertyValues"
+  ]
+}

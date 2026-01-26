@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "GetCommandTab",
+    "returns": "CommandTab",
+    "parameters": [
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Document type as defined in swDocumentTypes_e"
+      },
+      {
+        "name": "TabName",
+        "type": "System.String",
+        "description": "Name of CommandManager tab"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.AddCommandTab",
+      "ICommandManager.CommandTabs",
+      "ICommandManager.GetCommandTabCount",
+      "ICommandManager.IGetCommandTabs",
+      "ICommandManager.RemoveCommandTab"
+    ],
+    "keywords": [
+      "getcommandtab",
+      "icommandmanager",
+      "command",
+      "manager",
+      "tab",
+      "document",
+      "type",
+      "int32",
+      "name",
+      "string",
+      "create",
+      "commandmanager",
+      "boxes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICommandManager.GetCommandTab",
+  "description": "Gets the specified CommandManager tab for the specified document type.",
+  "signature": "CommandTab GetCommandTab( \n   System.Int32\nDocumentType\n,\n   System.String\nTabName\n)",
+  "parameters": [
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Document type as defined in swDocumentTypes_e"
+    },
+    {
+      "name": "TabName",
+      "type": "System.String",
+      "description": "Name of CommandManager tab"
+    }
+  ],
+  "returns": "CommandManager tab",
+  "remarks": "The names of CommandManager tabs are not unique. If multiple CommandManager tabs exists with the same name for the specified document type, then the first matching tab is returned. If no tabs match the specified name for the specified document type, then NULL is returned.",
+  "examples": [
+    {
+      "title": "Create CommandManager Tab and Tab Boxes (VB.NET)",
+      "href": "Create_CommandManager_Tab_and_Tab_Boxes_Example_VB.NET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandManager.AddCommandTab",
+    "ICommandManager.CommandTabs",
+    "ICommandManager.GetCommandTabCount",
+    "ICommandManager.IGetCommandTabs",
+    "ICommandManager.RemoveCommandTab"
+  ]
+}

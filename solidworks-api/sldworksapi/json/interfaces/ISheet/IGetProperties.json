@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "IGetProperties",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.GetProperties",
+      "ISheet.GetSize",
+      "ISheet.GetTemplateName",
+      "ISheet.IPageSetup",
+      "ISheet.PageSetup",
+      "ISheet.SetProperties",
+      "ISheet.SetScale",
+      "ISheet.SetSize",
+      "ISheet.SetTemplateName"
+    ],
+    "keywords": [
+      "properties",
+      "sheets",
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "igetproperties",
+      "double"
+    ]
+  },
+  "title": "ISheet.IGetProperties",
+  "description": "Obsolete. Superseded by ISheet::GetProperties2.",
+  "signature": "System.Double IGetProperties()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of seven doubles:\n[\npaperSize, templateIn, scale1, scale2, firstAngle, width, height\n]\nwhere:\npaperSize\n= Paper size. This value is a long or integer packed into a double and is represented by the\nswDwgPaperSizes_e\nenumeration.\ntemplateIn\n= Template index. This value is a long or integer packed into a double and is represented by the\nswDwgTemplates_e\nenumeration.\nscale1\n= Scale numerator.\nscale2\n= Scale denominator.\nfirstAngle\n= Value is a Boolean packed into a double and returns true if the sheet is using first angle projection and false if not.\nwidth\n= Paper width.\nheight\n= Paper height.\nNOTE\n:\nTo ensure a correct return value, open the document as read-write or read-only. Insufficient information is available if you open the document as view-only.\nYou can also use\nISheet::GetSize\nto get the size of the sheet and the standard sheet size.",
+  "examples": [],
+  "related": [
+    "ISheet.GetProperties",
+    "ISheet.GetSize",
+    "ISheet.GetTemplateName",
+    "ISheet.IPageSetup",
+    "ISheet.PageSetup",
+    "ISheet.SetProperties",
+    "ISheet.SetScale",
+    "ISheet.SetSize",
+    "ISheet.SetTemplateName"
+  ]
+}

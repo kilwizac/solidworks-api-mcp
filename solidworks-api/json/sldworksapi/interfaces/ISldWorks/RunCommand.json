@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RunCommand",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CommandID",
+        "type": "System.Int32",
+        "description": "SOLIDWORKS command as defined in swCommands_e (see Remarks )"
+      },
+      {
+        "name": "NewTitle",
+        "type": "System.String",
+        "description": "Your title for the SOLIDWORKS PropertyManager page, if invoked by this command"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "DSldWorksEvents_CommandCloseNotifyEventHandler",
+      "DSldWorksEvents_CommandOpenPreNotifyEventHandler",
+      "IModelDocExtension.RunCommand",
+      "ISldWorks.GetRunningCommandInfo",
+      "ISldWorks.IsCommandEnabled",
+      "ISldWorks.RecordLine",
+      "ISldWorks.RecordLineCSharp",
+      "ISldWorks.RecordLineVBnet"
+    ],
+    "keywords": [
+      "commands",
+      "solidworks",
+      "runcommand",
+      "isldworks",
+      "sld",
+      "works",
+      "run",
+      "command",
+      "id",
+      "int32",
+      "new",
+      "title",
+      "string",
+      "boolean",
+      "fire",
+      "events",
+      "when",
+      "propertymanager",
+      "page",
+      "opened",
+      "canceled",
+      "vba",
+      "record",
+      "macros",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.RunCommand",
+  "description": "Runs the specified SOLIDWORKS command.",
+  "signature": "System.Boolean RunCommand( \n   System.Int32\nCommandID\n,\n   System.String\nNewTitle\n)",
+  "parameters": [
+    {
+      "name": "CommandID",
+      "type": "System.Int32",
+      "description": "SOLIDWORKS command as defined in swCommands_e (see Remarks )"
+    },
+    {
+      "name": "NewTitle",
+      "type": "System.String",
+      "description": "Your title for the SOLIDWORKS PropertyManager page, if invoked by this command"
+    }
+  ],
+  "returns": "True if the SOLIDWORKS command ran, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Fire Events When PropertyManager Page Opened and Canceled (VBA)",
+      "href": "Fire_Events_When_PropertyManager_Page_Opened_and_Canceled_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Record Macros (C#)",
+      "href": "Record_Macros_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Record Macros (VB.NET)",
+      "href": "Record_Macros_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Record Macros (VBA)",
+      "href": "Record_Macros_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "DSldWorksEvents_CommandCloseNotifyEventHandler",
+    "DSldWorksEvents_CommandOpenPreNotifyEventHandler",
+    "IModelDocExtension.RunCommand",
+    "ISldWorks.GetRunningCommandInfo",
+    "ISldWorks.IsCommandEnabled",
+    "ISldWorks.RecordLine",
+    "ISldWorks.RecordLineCSharp",
+    "ISldWorks.RecordLineVBnet"
+  ]
+}

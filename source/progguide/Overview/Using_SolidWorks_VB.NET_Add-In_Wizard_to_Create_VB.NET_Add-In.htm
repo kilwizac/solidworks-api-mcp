@@ -1,0 +1,186 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Inspecting the SOLIDWORKS VB.NET Add-In Template</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Use,SOLIDWORKS VB.NET Add-In Template">
+<meta name=MS-HKWD content="Create,VB.NET add-in">
+<meta name=MS-HKWD content="VB.NET add-ins, template ">
+<meta name=MS-HKWD content=Create>
+<meta name=MS-HKWD content=Use>
+<meta name=MS-HKWD content="Add-ins,VB.NET">
+<meta name=MS-HKWD content="Templates,SOLIDWORKS VB.NET Add-In">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1125>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+
+
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Inspecting the SOLIDWORKS VB.NET Add-in Template</h1>
+
+<p><a name=Top></a>This topic identifies and describes 
+ the classes provided by the 
+<a href="SolidWorks_CSharp_and_VB.NET__Project_Templates.htm">SOLIDWORKS VB.NET add-in template</a>. </p>
+
+<h2><a name=Examining></a>Examining Visual Basic .NET Add-In Classes</h2>
+
+<p>Inspect the add-in in Visual Studio's Solution Explorer. These classes are 
+copied to the add-in from the <span style="font-weight: bold;">SOLIDWORKS 
+ VB.NET Add-in Template</span>:</p>
+<table border="1" width="92%">
+	<tr>
+		<th width="138">&nbsp;<p>Class</th>
+		<th>&nbsp;<p>Description</th>
+	</tr>
+	<tr>
+		<td width="138">&nbsp;<p>AssemblyInfo.vb</td>
+		<td>&nbsp;<p>This file provides a means to organize and publish assembly-specific 
+		information.</td>
+		</tr>
+		<tr>
+			<td width="138">&nbsp;<p>EventHandling.vb</td>
+			<td>&nbsp;<p>This file contains the event handling objects for 
+			documents and model views. The DocumentEventHandler object is a base 
+			class that exposes the interface and contains code for dealing with 
+			ModelView events.<br>
+			<br>
+			PartEventHandler, AssemblyEventHandler, and DrawingEventHandler are 
+			the three object types that can listen for document events. There 
+			must be one instance of each class for each open document of that 
+			type. <br>
+			<br>
+			The ModelViewEventHandler object listens for ModelView events. 
+			There should be one instance of ModelViewEventHandler for each 
+			ModelView in each open document.<br>
+&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="138">&nbsp;<p>PMPHandler.vb</td>
+			<td>&nbsp;<p>This file contains the class that implements the 
+			PropertyManager page handler interface. An instance of this object 
+			is passed to SOLIDWORKS when creating a PropertyManager page. When a 
+			control on the page is manipulated, the corresponding function or 
+			subroutine in 
+			this object is called.</td>
+		</tr>
+		<tr>
+			<td width="138">&nbsp;<p>SwAddin<i>n</i>.vb</td>
+		<td>&nbsp;<p>This file contains the main add-in class. Visual Studio 
+		adds the letter <i>n</i> to the default name SwAddin, if more than one project 
+		by that name exists in the same 
+		location. Examine the code in 
+		each region of this file:</p>
+		<table border="1" width="100%">
+			<tr>
+				<th>&nbsp;<p>Region</th>
+				<th>&nbsp;<p>Description</th>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>Local Variables</td>
+				<td>&nbsp;<p>Contains the definitions of this class's 
+				variables</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>SOLIDWORKS Registration</td>
+				<td>&nbsp;<p>Contains functions to register and unregister the 
+				add-in</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>ISwAddin Implementation</td>
+				<td>&nbsp;<p>Contains ConnectToSW() and DisconnectFromSW() which 
+				are the entry and exit points for the add-in</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>UI Methods</td>
+				<td>&nbsp;<p>Contains functions and subroutines that define how 
+				the add-in behaves within the SOLIDWORKS 
+				application</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>Event Methods</td>
+				<td>&nbsp;<p>Contains SOLIDWORKS event handling functions and 
+				subroutines</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>Event Handlers</td>
+				<td>&nbsp;<p>Contains the event callbacks for the SOLIDWORKS 
+				object</td>
+			</tr>
+			<tr>
+				<td>&nbsp;<p>UI Callbacks</td>
+				<td>&nbsp;<p>Contains functions and subroutines that are called 
+				from the add-in user interface</td>
+			</tr>
+		</table>
+		</td>
+		</tr>
+		<tr>
+			<td width="138">&nbsp;<p>UserPMPage.vb</td>
+			<td>&nbsp;<p>This file contains the wrapper class and layout methods 
+			for the add-in's PropertyManager page. To modify the controls on the 
+			PropertyManager page, change the code in the AddControls() 
+			subroutine.<br>
+			<br>
+			Add all controls to group boxes. Group boxes are displayed top to 
+			bottom in the order in which they are added to the page. Controls 
+			are displayed top to bottom in the order in which they are added to 
+			the group box.</td>
+		</tr>
+	</table>
+
+<p style="text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+ 
+
+
+
+<p>To learn more about add-ins and their menu items and toolbars:</p>
+<ul>
+	<li class=kadov-p><p style="line-height: 150%">
+	<a href="Add-in_Callbacks.htm">Add-in Callbacks</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Icons.htm">Add-in Icons</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Shortcut_Menus.htm">Add-in Shortcut Menus</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Add-in_Toolbars.htm">Add-in Toolbars</a></p></li>
+</ul>
+ 
+
+
+
+</body>
+
+</html>

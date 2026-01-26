@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISafeArrayUtility",
+    "member": "PackVariant",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "VariantArray",
+        "type": "System.Object",
+        "description": "Packed Variant SafeArray"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of native SOLIDWORKS Dispatch-based objects of Type"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Data type as defined in swSafeArrayType_e"
+      },
+      {
+        "name": "Data",
+        "type": "System.Int32",
+        "description": "Native SOLIDWORKS Dispatch-based objects of Type"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISafeArrayUtility.GetInfo",
+      "ISafeArrayUtility.UnPackVariant"
+    ],
+    "keywords": [
+      "packvariant",
+      "isafearrayutility",
+      "safe",
+      "array",
+      "utility",
+      "pack",
+      "variant",
+      "object",
+      "count",
+      "int32",
+      "type",
+      "data",
+      "void",
+      "scale",
+      "factor",
+      "each",
+      "model",
+      "view"
+    ]
+  },
+  "title": "ISafeArrayUtility.PackVariant",
+  "description": "Packs the specified native SOLIDWORKS Dispatch-based objects of the same data type into a Variant SafeArray and returns that packed Variant SafeArray to use in methods requiring passing a packed Variant SafeArray.",
+  "signature": "void PackVariant( \n   out System.Object\nVariantArray\n,\n   System.Int32\nCount\n,\n   System.Int32\nType\n,\n   ref System.Int32\nData\n)",
+  "parameters": [
+    {
+      "name": "VariantArray",
+      "type": "System.Object",
+      "description": "Packed Variant SafeArray"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of native SOLIDWORKS Dispatch-based objects of Type"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Data type as defined in swSafeArrayType_e"
+    },
+    {
+      "name": "Data",
+      "type": "System.Int32",
+      "description": "Native SOLIDWORKS Dispatch-based objects of Type"
+    }
+  ],
+  "returns": "",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Scale Factor of Each Model View (C++)",
+      "href": "Get_Scale_of_Each_Model_View_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISafeArrayUtility.GetInfo",
+    "ISafeArrayUtility.UnPackVariant"
+  ]
+}

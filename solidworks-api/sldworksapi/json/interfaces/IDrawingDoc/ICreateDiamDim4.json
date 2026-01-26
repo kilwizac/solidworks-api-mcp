@@ -1,0 +1,138 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "ICreateDiamDim4",
+    "returns": "DisplayDimension",
+    "parameters": [
+      {
+        "name": "P0",
+        "type": "System.Double",
+        "description": "Pointer to an array of 3 doubles (x,y,z); location of dimension point"
+      },
+      {
+        "name": "P1",
+        "type": "System.Double",
+        "description": "Pointer to an array of 3 doubles (x,y,z); nearest point on circle"
+      },
+      {
+        "name": "P2",
+        "type": "System.Double",
+        "description": "Pointer to an array of 3 doubles (x,y,z); farthest point on circle diametrically opposite to P1"
+      },
+      {
+        "name": "P3",
+        "type": "System.Double",
+        "description": "Pointer to an array of 3 doubles (x,y,z); plane normal"
+      },
+      {
+        "name": "TextPoint",
+        "type": "System.Double",
+        "description": "Pointer to an array of 3 doubles (x,y,z); position of text"
+      },
+      {
+        "name": "Val",
+        "type": "System.Double",
+        "description": "Dimension value in meters"
+      },
+      {
+        "name": "TextHeight",
+        "type": "System.Double",
+        "description": "Text height in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.CreateAngDim4",
+      "IDrawingDoc.CreateDiamDim4",
+      "IDrawingDoc.CreateLinearDim4",
+      "IDrawingDoc.CreateOrdinateDim4",
+      "IDrawingDoc.ICreateAngDim4",
+      "IDrawingDoc.ICreateLinearDim4",
+      "IDrawingDoc.ICreateOrdinateDim4"
+    ],
+    "keywords": [
+      "diameter",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "icreatediamdim4",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "create",
+      "diam",
+      "dim4",
+      "p0",
+      "double",
+      "p1",
+      "p2",
+      "p3",
+      "text",
+      "point",
+      "val",
+      "height",
+      "display"
+    ]
+  },
+  "title": "IDrawingDoc.ICreateDiamDim4",
+  "description": "Creates a non-associative diameter dimension.",
+  "signature": "DisplayDimension ICreateDiamDim4( \n   ref System.Double\nP0\n,\n   ref System.Double\nP1\n,\n   ref System.Double\nP2\n,\n   ref System.Double\nP3\n,\n   ref System.Double\nTextPoint\n,\n   System.Double\nVal\n,\n   System.Double\nTextHeight\n)",
+  "parameters": [
+    {
+      "name": "P0",
+      "type": "System.Double",
+      "description": "Pointer to an array of 3 doubles (x,y,z); location of dimension point"
+    },
+    {
+      "name": "P1",
+      "type": "System.Double",
+      "description": "Pointer to an array of 3 doubles (x,y,z); nearest point on circle"
+    },
+    {
+      "name": "P2",
+      "type": "System.Double",
+      "description": "Pointer to an array of 3 doubles (x,y,z); farthest point on circle diametrically opposite to P1"
+    },
+    {
+      "name": "P3",
+      "type": "System.Double",
+      "description": "Pointer to an array of 3 doubles (x,y,z); plane normal"
+    },
+    {
+      "name": "TextPoint",
+      "type": "System.Double",
+      "description": "Pointer to an array of 3 doubles (x,y,z); position of text"
+    },
+    {
+      "name": "Val",
+      "type": "System.Double",
+      "description": "Dimension value in meters"
+    },
+    {
+      "name": "TextHeight",
+      "type": "System.Double",
+      "description": "Text height in meters"
+    }
+  ],
+  "returns": "Pointer to the new IDisplayDimension",
+  "remarks": "SOLIDWORKS creates this type of dimension between the two points you specify. It has no relation to your geometry.",
+  "examples": [],
+  "related": [
+    "IDrawingDoc.CreateAngDim4",
+    "IDrawingDoc.CreateDiamDim4",
+    "IDrawingDoc.CreateLinearDim4",
+    "IDrawingDoc.CreateOrdinateDim4",
+    "IDrawingDoc.ICreateAngDim4",
+    "IDrawingDoc.ICreateLinearDim4",
+    "IDrawingDoc.ICreateOrdinateDim4"
+  ]
+}

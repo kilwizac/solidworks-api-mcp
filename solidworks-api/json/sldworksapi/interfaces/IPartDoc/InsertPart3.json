@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "InsertPart3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of the part file to insert"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Insertion options as defined in swInsertPartOptions_e"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of FileName's configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IDerivedPartFeatureData"
+    ],
+    "keywords": [
+      "derived",
+      "parts",
+      "see",
+      "also",
+      "ipartdoc",
+      "insert",
+      "insertpart3",
+      "part",
+      "doc",
+      "part3",
+      "file",
+      "name",
+      "string",
+      "options",
+      "int32",
+      "configuration",
+      "feature",
+      "modify",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IPartDoc.InsertPart3",
+  "description": "Inserts the specified part in the specified configuration into this part.",
+  "signature": "Feature InsertPart3( \n   System.String\nFileName\n,\n   System.Int32\nOptions\n,\n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of the part file to insert"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Insertion options as defined in swInsertPartOptions_e"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of FileName's configuration"
+    }
+  ],
+  "returns": "Inserted feature",
+  "remarks": "This method inserts the specified part at the origin of this part. To position the inserted part at a different location or orientation or both, use\nIFeatureManager::InsertMoveCopyBody2\n.",
+  "examples": [
+    {
+      "title": "Modify Derived Part (VBA)",
+      "href": "Modify_Derived_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Derived Part (VB.NET)",
+      "href": "Modify_Derived_Part_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Derived Part (C#)",
+      "href": "Modify_Derived_Part_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDerivedPartFeatureData"
+  ]
+}

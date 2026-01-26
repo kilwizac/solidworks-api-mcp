@@ -1,0 +1,549 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>IGetPolyLinesAndCurves Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetPolyLinesAndCurves" />
+    <meta name="Description" content="Gets the arcs, ellipses, splines, and polylines in the view with an option to include or exclude crosshatch lines." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IView.IGetPolyLinesAndCurves" />
+    <meta name="Microsoft.Help.Keywords" content="Polylines" />
+    <meta name="Microsoft.Help.Keywords" content="Drawing views (see also IView Interface), polylines" />
+    <meta name="Microsoft.Help.Keywords" content="View (see also IView Interface), polylines" />
+    <meta name="Microsoft.Help.Keywords" content="View (see also IView Interface), curves" />
+    <meta name="Microsoft.Help.Keywords" content="Drawing views (see also IView Interface), curves" />
+    <meta name="Microsoft.Help.Keywords" content="Curve (see also ICurve Interface), drawing views" />
+    <meta name="Microsoft.Help.Keywords" content="IGetPolyLinesAndCurves Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                IGetPolyLinesAndCurves Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView Interface</a> : IGetPolyLinesAndCurves Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="CrossHatchOptionPopupContent" class="i-popup-content">
+        <ul>
+            <li>0 = include crosshatch lines</li>
+        </ul>
+
+        <p class="apiBulletLeftJustified">1 = exclude crosshatch lines</p>
+
+        <p class="apiBulletLeftJustified">2 = include only crosshatch lines</p>
+    </div>
+
+    <div id="ArraySizePopupContent" class="i-popup-content">
+        Size of the array of lines and parameters in the view
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Gets the arcs, ellipses, splines, and polylines in the view with an option to include or exclude crosshatch lines.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function IGetPolyLinesAndCurves( _
+   ByVal <i><a class="i-popup-link" id="CrossHatchOptionPopupLink" data-popup-contentsource="#CrossHatchOptionPopupContent" data-popup-showevent="click mouseenter">CrossHatchOption</a></i> As System.Short, _
+   ByVal <i><a class="i-popup-link" id="ArraySizePopupLink" data-popup-contentsource="#ArraySizePopupContent" data-popup-showevent="click mouseenter">ArraySize</a></i> As System.Integer _
+) As System.Double
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView</a>
+Dim CrossHatchOption As System.Short
+Dim ArraySize As System.Integer
+Dim value As System.Double
+ 
+value = instance.IGetPolyLinesAndCurves(CrossHatchOption, ArraySize)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.double IGetPolyLinesAndCurves( 
+   System.short <i><a class="i-popup-link" id="CrossHatchOptionPopupLink" data-popup-contentsource="#CrossHatchOptionPopupContent" data-popup-showevent="click mouseenter">CrossHatchOption</a></i>,
+   System.int <i><a class="i-popup-link" id="ArraySizePopupLink" data-popup-contentsource="#ArraySizePopupContent" data-popup-showevent="click mouseenter">ArraySize</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.double IGetPolyLinesAndCurves( 
+   System.short <i><a class="i-popup-link" id="CrossHatchOptionPopupLink" data-popup-contentsource="#CrossHatchOptionPopupContent" data-popup-showevent="click mouseenter">CrossHatchOption</a></i>,
+   System.int <i><a class="i-popup-link" id="ArraySizePopupLink" data-popup-contentsource="#ArraySizePopupContent" data-popup-showevent="click mouseenter">ArraySize</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>CrossHatchOption</i></dt>
+
+                <dd>
+                    <ul>
+                        <li>0 = include crosshatch lines</li>
+                    </ul>
+
+                    <p class="apiBulletLeftJustified">1 = exclude crosshatch lines</p>
+
+                    <p class="apiBulletLeftJustified">2 = include only crosshatch lines</p>
+                </dd>
+
+                <dt><i>ArraySize</i></dt>
+
+                <dd>Size of the array of lines and parameters in the view</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <ul>
+                    <li>in-process, unmanaged C++: Pointer to an array of lines and parameters in the view (see <span style="FONT-WEIGHT: bold">Remarks</span>)</li>
+                </ul>
+
+                <ul>
+                    <li>VBA, VB.NET, C#,&#160;and C++/CLI: Not supported</li>
+                </ul>
+
+                <p>See <a href="sldworksapiprogguide.chm::/OVERVIEW/In-process_Methods.htm">In-process Methods</a>&#160;for details about this type of method.</p>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">The difference between this method and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetPolylines6">IView::GetPolylines6</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetPolylines6">IView::IGetPolylines6</a> is that splines and ellipses returned by this method are returned as equation parameters, which are more precise definitions.</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p class="apiRemarksText">This method returns data for all visible solid model edges in the drawing view. This includes these types of edges:</p>
+
+            <ul>
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">arcs: Returned using a center point, radius, and start and stop location.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">circles: Returned using a center point, radius, and start and stop location.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">ellipses: Returned as equation parameters.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">splines: Returned as equation parameters.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">straight lines: Returned as tessellated polylines, but because the edges are straight, there is no loss of data in the approximation.</p>
+                </li>
+
+                <li class="kadov-p-CapiBulletLeftJustified">
+                    <p class="apiBulletLeftJustified">For each arc:</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">first double gives the type</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the number of doubles required to hold arc geometry ( center, startPt, endPt, normal ) == 12</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of center</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of startPt</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of endPt</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of the normal</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next six doubles are line attributes</p>
+                </li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LineColor</span>&#160;= polyline color. This value is determined either by the explicitly set value or by the layer that the polyline is on.</li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LineStyle</span>&#160;= value combines polyline font and weight information. This value can be used as an input to GetLineFontInfo and GetLineFontName. If this value is -1, then the user has probably modified the line display manually in the drawing and you should use the LineFont and LineWeight return values to recreate the exact polyline style.</li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LineFont</span>&#160;= value is used for polyline font information. This value can be used as an input to the GetLineFontInfo2 and GetLineFontName2 functions. This value will only be valid if LineStyle is -1.</li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LineWeight</span>&#160;= polyline weight where Thin = 0.0, Normal = 1.0, Thick = 2.0. This value will only be valid if LineStyle is -1.</li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LayerID</span>&#160;= integer value indicating which layer holds this polyline. The <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILayer">ILayer</a> object can be obtained by passing this integer value to <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILayerMgr~GetLayerById">ILayerMgr::GetLayerById</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILayerMgr~IGetLayerById">ILayerMgr::IGetLayerById</a>.</li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">LayerOverride</span>&#160;= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.</li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double is the number of points lying on the arc</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next ( numPoints * 3 ) doubles are the coordinates of points lying on the arc</p>
+                </li>
+
+                <li class="kadov-p-CapiBulletLeftJustified">
+                    <p class="apiBulletLeftJustified"><!--kadov_tag{{<spaces>}}-->&#160;<!--kadov_tag{{</spaces>}}-->For each ellipse:</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">first double gives the type</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the number of doubles required to hold ellipse geometry ( center, unit vector along majorAxis, unit vector along minor axis, major radius, minor radius, startPt, endPt, normal ) == 17</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of center</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of unit vector along major axis</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of unit vector along minor axis</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next doubles gives the major radius</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the minor radius</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of startPt</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next three doubles give the coordinates of endPt</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next six doubles are line attributes</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double is the number of points lying on the ellipse</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next ( numPoints * 3 ) doubles are the coordinates of points lying on the ellipse</p>
+                </li>
+
+                <li class="kadov-p-CapiBulletLeftJustified">
+                    <p class="apiBulletLeftJustified">For each spline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">first double gives the type</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the number of doubles required to hold the information about the spline geometry ( 5 + numCtrlPts* numDims + numKnot ); if the spline is rational, numDims ==4 otherwise numDims ==3</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives degree = order -1</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives numDims ( i.e., number of coordinates associated with each control point; if the spline is rational , these are four, else three)</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the number of control points of the spline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double gives the number of knots on the spline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next ( numCtlPoints*numDims ) number of doubles are the coordinates of control points; each control point has numDims number of coordinates</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next "numKnots" number of doubles; the knots on the spline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next six doubles are line attributes</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double is the number of points lying on the spline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next ( numPoints * 3 ) doubles are the coordinates of points lying on the spline</p>
+                </li>
+
+                <li class="kadov-p-CapiBulletLeftJustified">
+                    <p class="apiBulletLeftJustified">For each polyline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">first double gives the type</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double holds value 0.0 as there is no geometry information for a polyline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next six doubles are line attributes</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next double is the number of points lying on the polyline</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">next ( numPoints * 3 ) doubles are the coordinates of points lying on the polyline</p>
+                </li>
+            </ul>
+
+            <p class="apiRemarksText">This method also lets you include or exclude crosshatch lines. This method does not return data for sketch segments added by a user in the drawing view.</p><!--(Table)=========================================================-->
+
+            <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 44.23%" />
+                    <col style="WIDTH: 55.76%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>To get...</strong></p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>Call...</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Size of array needed to hold this data</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetPolyLinesAndCurvesCount">IView::GetPolyLinesAndCurvesCount</a>&#160;</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Items that were sketched in this drawing view</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetArcs4">IView::GetArcs4</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetArcs4">IView::IGetArcs4</a></p>
+
+                            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetLines4">IView::GetLines4</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetLines4">IView::IGetLines4</a></p>
+
+                            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetSplines3">IView::GetSplines3</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetSplines3">IView::IGetSplines3</a></p>
+
+                            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetEllipses5">IView::GetEllipses5</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetEllipses5">IView::IGetEllipses5</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="apiTableColHeading">&#160;</p><!--(Table)=========================================================-->
+
+            <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 29.22%" />
+                    <col style="WIDTH: 70.77%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>If...</strong></p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>Then...</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Display mode of the view is:</p>
+
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p">
+                                    <p>Shaded</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Shaded with Edges</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Draft Quality</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p>Fast HLR/HLV</p>
+                                </li>
+                            </ul>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>A value is not returned.</p>
+
+                            <p>Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~SetDisplayMode3">IView::SetDisplayMode3</a> to change Shaded or Shaded with Edges mode to Wireframe, Hidden Lines Removed (HLR), or Hidden Lines Visible (HLV), and then get the polylines. <!--kadov_tag{{<spaces>}}-->&#160;<!--kadov_tag{{</spaces>}}--></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Changes are made to the parts or assemblies shown in this drawing</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Polylines are only generated that are in the visible viewing bounds when the drawing is opened.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Drawing is already open</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>All polylines in the drawing are generated. If you open a drawing that is zoomed in to a particular region, then the polylines that are outside the zoomed region do not exist if the parts or assemblies shown in this drawing have been changed. To force the generation of all possible polyline data, call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~ViewZoomtofit2">IModelDoc2::ViewZoomtofit2</a>.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView_members">IView Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetPolyLinesAndCurves">IView::GetPolyLinesAndCurves Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetPolyLineCount5">IView::GetPolyLineCount5 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetDisplayMode2">IView::GetDisplayMode2 Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~IGetPolyLinesAndCurves.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

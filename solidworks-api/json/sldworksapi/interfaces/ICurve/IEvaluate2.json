@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IEvaluate2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Parameter",
+        "type": "System.Double",
+        "description": "Curve parameter"
+      },
+      {
+        "name": "NumberOfDerivatives",
+        "type": "System.Int32",
+        "description": "Number of derivatives"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.Evaluate2"
+    ],
+    "keywords": [
+      "ievaluate2",
+      "icurve",
+      "curve",
+      "evaluate2",
+      "parameter",
+      "double",
+      "number",
+      "derivatives",
+      "int32"
+    ]
+  },
+  "title": "ICurve.IEvaluate2",
+  "description": "Evaluates the curve at the specified parameter of the curve.",
+  "signature": "System.Double IEvaluate2( \n   System.Double\nParameter\n,\n   System.Int32\nNumberOfDerivatives\n)",
+  "parameters": [
+    {
+      "name": "Parameter",
+      "type": "System.Double",
+      "description": "Curve parameter"
+    },
+    {
+      "name": "NumberOfDerivatives",
+      "type": "System.Int32",
+      "description": "Number of derivatives"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "To determine a valid parameter range, use\nICurve::GetEndParams\nor\nIEdge::GetCurveParams2\n.\nThe format of the return value is an array of (NumberOfDerivatives + 1) * 3 doubles:\n[\nevaluated point\n]\n,\n[\nevaluated derivative 1\n]\n,...\n[\nevaluated derivative NumberOfDerivatives\n]\nIn pseudo mathematical notation, this could be written as:\nP(t)\nP(t)/dt\nP(t)/dtdt ..........\nIn terms of the number of derivatives that can be returned for a curve type, you could write:\nCurve type\nMaximum number of derivatives\nLine/circle/ellipse\n2\nIntersection curve\n2\nConstant parameter line\nDetermined by underlying surface\nSP-curve\n2\nB-curve\nAny number\nwhere the curve type is from\nICurve::Identity\n.\nFor a curve of type swCurveTypes_e::TRIMMED_TYPE, the number of derivatives is determined by the base curve as obtained from\nICurve::GetBaseCurve\n.",
+  "examples": [],
+  "related": [
+    "ICurve.Evaluate2"
+  ]
+}

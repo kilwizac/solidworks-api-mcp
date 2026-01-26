@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetAttachedEntities2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetAttachedEntityCount2",
+      "IAnnotation.GetAttachedEntityTypes",
+      "IAnnotation.GetNext3",
+      "IAnnotation.GetType",
+      "IAnnotation.ISetAttachedEntities",
+      "IAnnotation.SetAttachedEntities",
+      "IAttribute.GetEntity",
+      "IAttribute.GetEntityState",
+      "IAttribute.IGetEntity2",
+      "IEntity",
+      "IEntity.GetSafeEntity",
+      "IFaultEntity.Entity2",
+      "IModelDocExtension.GetCorrespondingEntity",
+      "IPartDoc.GetEntityName",
+      "IPartDoc.GetNamedEntities",
+      "IView.GetVisibleEntities"
+    ],
+    "keywords": [
+      "getattachedentities2",
+      "iannotation",
+      "annotation",
+      "attached",
+      "entities2",
+      "object",
+      "types",
+      "entities",
+      "selected",
+      "dimension",
+      "vba",
+      "bom",
+      "balloon",
+      "properties",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAnnotation.GetAttachedEntities2",
+  "description": "Obsolete. Superseded by IAnnotation::GetAttachedEntities3.",
+  "signature": "System.Object GetAttachedEntities2()",
+  "parameters": [],
+  "returns": "Array of objects",
+  "remarks": "This method now supports all annotation types. See\nIAnnotation::GetType\nto determine the type of annotation.\nThe array returned by this function may contain one or more objects of varying type. To determine the corresponding object type in the IAnnotation::GetAttachedEntites2 array, see\nIAnnotation::GetAttachedEntityTypes\n. COM applications can use QueryInterface to obtain the specific object from the LPUNKNOWN pointer.\nObject Type\nObject Returned\nswSelFACES\nIFace2\nswSelEDGES\nIEdge\nswSelVERTICES\nIVertex\nswSelSKETCHSEGS\nISketchSegment\nswSelSKETCHPOINTS\nISketchPoint\nswSelNOTHING\nNULL (annotation is dangling or unsupported)\nYou can associate annotations with some items not listed in the previous table (for example, origins). If this annotation is attached to one or more of those entities, then SOLIDWORKS returns a corresponding NULL in one of the array positions and IAnnotation::GetAttachedEntityTypes indicates the unsupported entity by returning a corresponding swSelNOTHING value. COM applications that call\nIAnnotation::GetAttachedEntityCount2\ninclude the NULL value in the total count of associated entities.\nLikewise, if an annotation has become disassociated from its geometry, then SOLIDWORKS returns a corresponding NULL in one of the array positions and\nIAnnotation::GetAttachedEntityTypes\nindicates the dangling item by returning a corresponding swSelNOTHING value.\nIf this annotation is not associated with any geometry (for example, a note without a leaderline), then SOLIDWORKS returns an empty array.",
+  "examples": [
+    {
+      "title": "Get Types of Entities for Selected Dimension (VBA)",
+      "href": "Get_Types_of_Entities_for_Selected_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (C#)",
+      "href": "Get_BOM_Balloon_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VB.NET)",
+      "href": "Get_BOM_Balloon_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VBA)",
+      "href": "Get_BOM_Balloon_Properties_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.GetAttachedEntityCount2",
+    "IAnnotation.GetAttachedEntityTypes",
+    "IAnnotation.GetNext3",
+    "IAnnotation.GetType",
+    "IAnnotation.ISetAttachedEntities",
+    "IAnnotation.SetAttachedEntities",
+    "IAttribute.GetEntity",
+    "IAttribute.GetEntityState",
+    "IAttribute.IGetEntity2",
+    "IEntity",
+    "IEntity.GetSafeEntity",
+    "IFaultEntity.Entity2",
+    "IModelDocExtension.GetCorrespondingEntity",
+    "IPartDoc.GetEntityName",
+    "IPartDoc.GetNamedEntities",
+    "IView.GetVisibleEntities"
+  ]
+}

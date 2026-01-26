@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "ResumeSelectionList2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Append",
+        "type": "System.Boolean",
+        "description": "True to append the new selection list to the suspended selection list and resume the combined selection list, false to just resume the suspended selection list"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "objects",
+      "resumeselectionlist2",
+      "mgr",
+      "resume",
+      "list2",
+      "append",
+      "boolean",
+      "void",
+      "add",
+      "list",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISelectionMgr.ResumeSelectionList2",
+  "description": "Reinstates the previously suspended selection list.",
+  "signature": "void ResumeSelectionList2( \n   System.Boolean\nAppend\n)",
+  "parameters": [
+    {
+      "name": "Append",
+      "type": "System.Boolean",
+      "description": "True to append the new selection list to the suspended selection list and resume the combined selection list, false to just resume the suspended selection list"
+    }
+  ],
+  "returns": "",
+  "remarks": "To add objects to a selection list without pre-selecting the objects in the user interface:\nCall\nISelectionMgr::SuspendSelectionList\nto suspend the current selection list, preserving its contents and starting a new selection list.\nTo populate the new selection list, call\nISelectionMgr::AddSelectionListObject\n,\nISelectionMgr::AddSelectionListObjects\n, or\nIModelDocExtension::SelectByID2\n.\nNOTE\n: To add objects in a\nselection set\nto a new selection list, call\nISelectionSet::Select\n.\nProcess the objects in the new selection list.\nCall this method to reinstate the suspended selection list, setting Append to true to append the new selection list.",
+  "examples": [
+    {
+      "title": "Add Objects to Selection List (VBA)",
+      "href": "Add_Objects_to_Selection_List_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (VB.NET)",
+      "href": "Add_Objects_to_Selection_List_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (C#)",
+      "href": "Add_Objects_to_Selection_List_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

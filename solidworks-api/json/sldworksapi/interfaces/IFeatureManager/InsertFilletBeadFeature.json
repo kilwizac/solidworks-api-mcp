@@ -1,0 +1,178 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFilletBeadFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type1",
+        "type": "System.Int16",
+        "description": "First side: 0 = Full length 1 = Intermittent 2 = Staggered"
+      },
+      {
+        "name": "Size1",
+        "type": "System.Double",
+        "description": "Size of fillet on first side"
+      },
+      {
+        "name": "Length1",
+        "type": "System.Double",
+        "description": "Length of fillet on first side"
+      },
+      {
+        "name": "Pitch",
+        "type": "System.Double",
+        "description": "Pitch, if Intermittent or Staggered on both sides"
+      },
+      {
+        "name": "Type2",
+        "type": "System.Int16",
+        "description": "Second side: 0= Full length 1 = Intermittent 2= Staggered"
+      },
+      {
+        "name": "Size2",
+        "type": "System.Double",
+        "description": "Size of fillet on second side"
+      },
+      {
+        "name": "Length2",
+        "type": "System.Double",
+        "description": "Length of fillet on second side"
+      },
+      {
+        "name": "Flag",
+        "type": "System.Int32",
+        "description": "0 = One-sided and no tangent propagation 1 = Two-sided 2 = Tangent propagation 3 = Two-sided and tangent propagation"
+      },
+      {
+        "name": "EdgeNum1",
+        "type": "System.Int32",
+        "description": "Number of intersecting edges on first side"
+      },
+      {
+        "name": "DeSelEdge1",
+        "type": "System.Object",
+        "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on first side"
+      },
+      {
+        "name": "EdgeNum2",
+        "type": "System.Int32",
+        "description": "Number of intersecting edges on second side"
+      },
+      {
+        "name": "DeSelEdge2",
+        "type": "System.Object",
+        "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on second side"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWeldmentBeadFeatureData"
+    ],
+    "keywords": [
+      "insertfilletbeadfeature",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "fillet",
+      "bead",
+      "type1",
+      "int16",
+      "size1",
+      "double",
+      "length1",
+      "pitch",
+      "type2",
+      "size2",
+      "length2",
+      "flag",
+      "int32",
+      "edge",
+      "num1",
+      "de",
+      "sel",
+      "edge1",
+      "object",
+      "num2",
+      "edge2"
+    ]
+  },
+  "title": "IFeatureManager.InsertFilletBeadFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertFilletBeadFeature2.",
+  "signature": "Feature InsertFilletBeadFeature( \n   System.Int16\nType1\n,\n   System.Double\nSize1\n,\n   System.Double\nLength1\n,\n   System.Double\nPitch\n,\n   System.Int16\nType2\n,\n   System.Double\nSize2\n,\n   System.Double\nLength2\n,\n   System.Int32\nFlag\n,\n   System.Int32\nEdgeNum1\n,\n   System.Object\nDeSelEdge1\n,\n   System.Int32\nEdgeNum2\n,\n   System.Object\nDeSelEdge2\n)",
+  "parameters": [
+    {
+      "name": "Type1",
+      "type": "System.Int16",
+      "description": "First side: 0 = Full length 1 = Intermittent 2 = Staggered"
+    },
+    {
+      "name": "Size1",
+      "type": "System.Double",
+      "description": "Size of fillet on first side"
+    },
+    {
+      "name": "Length1",
+      "type": "System.Double",
+      "description": "Length of fillet on first side"
+    },
+    {
+      "name": "Pitch",
+      "type": "System.Double",
+      "description": "Pitch, if Intermittent or Staggered on both sides"
+    },
+    {
+      "name": "Type2",
+      "type": "System.Int16",
+      "description": "Second side: 0= Full length 1 = Intermittent 2= Staggered"
+    },
+    {
+      "name": "Size2",
+      "type": "System.Double",
+      "description": "Size of fillet on second side"
+    },
+    {
+      "name": "Length2",
+      "type": "System.Double",
+      "description": "Length of fillet on second side"
+    },
+    {
+      "name": "Flag",
+      "type": "System.Int32",
+      "description": "0 = One-sided and no tangent propagation 1 = Two-sided 2 = Tangent propagation 3 = Two-sided and tangent propagation"
+    },
+    {
+      "name": "EdgeNum1",
+      "type": "System.Int32",
+      "description": "Number of intersecting edges on first side"
+    },
+    {
+      "name": "DeSelEdge1",
+      "type": "System.Object",
+      "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on first side"
+    },
+    {
+      "name": "EdgeNum2",
+      "type": "System.Int32",
+      "description": "Number of intersecting edges on second side"
+    },
+    {
+      "name": "DeSelEdge2",
+      "type": "System.Object",
+      "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on second side"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IWeldmentBeadFeatureData"
+  ]
+}

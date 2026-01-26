@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetAttachedEntityTypes",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.SetAttachedEntities"
+    ],
+    "keywords": [
+      "getattachedentitytypes",
+      "iannotation",
+      "annotation",
+      "attached",
+      "entity",
+      "types",
+      "object",
+      "attach",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAnnotation.GetAttachedEntityTypes",
+  "description": "Gets the types of entities attached to this annotation.",
+  "signature": "System.Object GetAttachedEntityTypes()",
+  "parameters": [],
+  "returns": "Array of longs or integers (see Long vs. Integer ) that indicate the attached entity types as defined in swSelectType_e",
+  "remarks": "This method supports all annotation types. Use\nIAnnotation::GetType\nto determine the annotation type.\nThis method returns an array of longs or integers\nindicating object types. The list of object types corresponds to the list of objects returned by\nIAnnotation::GetAttachedEntities3\n.\nYou can associate annotations with additional items not listed in\nswSelectType_e\n. If this annotation is attached to one or more entities not listed in swSelectType_e, then this method and\nIAnnotation::IGetAttachedEntityTypes\nreturn swSelNOTHING in a position in the array corresponding to the unlisted item.\nIAnnotation::GetAttachedEntities3 indicates an unsupported entity by returning a null value in the position in the array corresponding to the unsupported entity. COM applications that call\nIAnnotation::GetAttachedEntityCount3\ninclude the null value in the total count of associated entities.\nIf an annotation is disassociated from its geometry (i.e., dangling), then IAnnotation::GetAttachedEntities3 returns a null value in the position in the array corresponding to the dangling item, and this method returns swSelNOTHING in the position in the array corresponding to the dangling item.\nNOTE:\nIf this annotation is not associated with any geometry, then this method and IAnnotation::GetAttachedEntities3 return empty arrays.",
+  "examples": [
+    {
+      "title": "Attach Annotation to Entity (C#)",
+      "href": "Attach_Annotation_to_Entity_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation to Entity (VB.NET)",
+      "href": "Attach_Annotation_to_Entity_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation to Entity (VBA)",
+      "href": "Attach_Annotation_to_Entity_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.SetAttachedEntities"
+  ]
+}

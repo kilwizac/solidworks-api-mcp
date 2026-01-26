@@ -1,0 +1,137 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "GetSelectedObjectsComponent3",
+    "returns": "Component2",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index position within the current list of selected items, where the index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "-1 = All selections regardless of marks 0 = Only the selections without marks Any other value = Value that was used to mark and select an object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "IComponent2.Select3",
+      "ISelectionMgr.DeSelect2",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectedObjectLoop2",
+      "ISelectionMgr.GetSelectedObjectMark",
+      "ISelectionMgr.GetSelectedObjectType3",
+      "ISelectionMgr.GetSelectedObjectsDrawingView2",
+      "ISelectionMgr.GetSelectionPoint2",
+      "ISelectionMgr.GetSelectionPointInSketchSpace2",
+      "ISelectionMgr.IDeSelect2",
+      "ISelectionMgr.IGetSelectionPoint2",
+      "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+    ],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "component",
+      "components",
+      "icomponent2",
+      "select",
+      "getselectedobjectscomponent3",
+      "mgr",
+      "selected",
+      "objects",
+      "component3",
+      "index",
+      "int32",
+      "mark",
+      "component2",
+      "access",
+      "selections",
+      "vba",
+      "add",
+      "comment",
+      "assembly",
+      "align",
+      "origin",
+      "planes",
+      "display",
+      "temporary",
+      "body",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISelectionMgr.GetSelectedObjectsComponent3",
+  "description": "Obsolete. Superseded by ISelectionMgr::GetSelectedObjectsComponent4.",
+  "signature": "Component2 GetSelectedObjectsComponent3( \n   System.Int32\nIndex\n,\n   System.Int32\nMark\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index position within the current list of selected items, where the index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "-1 = All selections regardless of marks 0 = Only the selections without marks Any other value = Value that was used to mark and select an object"
+    }
+  ],
+  "returns": "Component",
+  "remarks": "The index starts at 1, even when using C++. However, if you specify -1 for the Index argument, then the Mark argument is ignored and the dynamically highlighted component is selected if dynamic highlighting is turned on. See also IAssemblyDoc event\nDynamicHighlightNotify\n.\nThe difference between this obsolete method and\nISelectionMgr::GetSelectedObjectsComponent4\nis that ISelectionMgr::GetSelectedObjectsComponent4 can return an\nIDrawingComponent\nand ISelectionMgr::GetSelectedObjectsComponent3 cannot.",
+  "examples": [
+    {
+      "title": "Access Selections (VBA)",
+      "href": "Access_Selections_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Comment to Assembly Component (VBA)",
+      "href": "Add_Comment_to_Assembly_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Align Assembly Component to Assembly Origin and Planes (VBA)",
+      "href": "Align_Assembly_Component_to_Assembly_Origin_and_Planes_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (C#)",
+      "href": "Display_Temporary_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (VB.NET)",
+      "href": "Display_Temporary_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (VBA)",
+      "href": "Display_Temporary_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.Select3",
+    "ISelectionMgr.DeSelect2",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectedObjectLoop2",
+    "ISelectionMgr.GetSelectedObjectMark",
+    "ISelectionMgr.GetSelectedObjectType3",
+    "ISelectionMgr.GetSelectedObjectsDrawingView2",
+    "ISelectionMgr.GetSelectionPoint2",
+    "ISelectionMgr.GetSelectionPointInSketchSpace2",
+    "ISelectionMgr.IDeSelect2",
+    "ISelectionMgr.IGetSelectionPoint2",
+    "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+  ]
+}

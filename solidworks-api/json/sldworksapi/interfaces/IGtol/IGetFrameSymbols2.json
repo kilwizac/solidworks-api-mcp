@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetFrameSymbols2",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameSymbols2",
+      "IGtol.GetFrameValues",
+      "IGtol.IGetFrameDiameterSymbols",
+      "IGtol.IGetFrameValues",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues"
+    ],
+    "keywords": [
+      "igetframesymbols2",
+      "igtol",
+      "gtol",
+      "frame",
+      "symbols2",
+      "number",
+      "int16",
+      "string"
+    ]
+  },
+  "title": "IGtol.IGetFrameSymbols2",
+  "description": "Obsolete. Superseded by IGtol::GetFrameSymbols3.",
+  "signature": "System.String IGetFrameSymbols2( \n   System.Int16\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of strings (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return array is an array of six strings in the following format:\nretval\n[0] = Geometric characteristic symbol\nretval\n[1] = Material condition symbol for first tolerance value\nretval\n[2] = Material condition symbol for second tolerance value\nretval\n[3] = Material condition symbol for datum1\nretval\n[4] = Material condition symbol for datum2\nretval\n[5] = Material condition symbol for datum3\nThe character strings returned in the array correspond to symbols defined in\nC:\\ProgramData\\SolidWorks\\SolidWorks\n20\nnn\n\\lang\\english\\gtol.sym\n. The format of each string is <\nLibraryName-SymbolName\n> (for example,\n<GTOL-ANGULAR>,\nwhich is the angularity symbol from the ASME Geometric Tolerancing Symbols library).\nUse this method with\nIGtol::IGetFrameDiameterSymbols\n, which determines whether diameter symbols are displayed.",
+  "examples": [],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameSymbols2",
+    "IGtol.GetFrameValues",
+    "IGtol.IGetFrameDiameterSymbols",
+    "IGtol.IGetFrameValues",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues"
+  ]
+}

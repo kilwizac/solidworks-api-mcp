@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFaceCoincidentResult_e",
+    "description": "Face coincidence results.",
+    "member_count": 9,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFaceCoincidentResult_e",
+  "description": "Face coincidence results.",
+  "values": [
+    {
+      "member": "swFaceCoincident_FalseBoundary1",
+      "value": "3",
+      "description": "= The two faces are not coincident. At least one point on the boundary of face 1 is not coincident with the boundary of face 2."
+    },
+    {
+      "member": "swFaceCoincident_FalseBoundary2",
+      "value": "4",
+      "description": "= The two faces are not coincident. At least one point on the boundary of face 2 is not coincident with the boundary of face 1."
+    },
+    {
+      "member": "swFaceCoincident_FalseFace1",
+      "value": "5",
+      "description": "= The two faces are not coincident. At least one point on face 1 is not coincident with face 2."
+    },
+    {
+      "member": "swFaceCoincident_FalseFace2",
+      "value": "6",
+      "description": "= The two faces are not coincident. At least one point on face 2 is not coincident with face 1."
+    },
+    {
+      "member": "swFaceCoincident_FalseSurface",
+      "value": "7",
+      "description": "= At least one of the faces does not have a surface attached."
+    },
+    {
+      "member": "swFaceCoincident_FalseTopology",
+      "value": "2",
+      "description": "= The two faces are not coincident. The number of holes are different."
+    },
+    {
+      "member": "swFaceCoincident_True",
+      "value": "0",
+      "description": "= The faces are coincident to the specified tolerance."
+    },
+    {
+      "member": "swFaceCoincident_TrueReversed",
+      "value": "1",
+      "description": "= The two faces are coincident to the specified tolerance, but their normals are reversed."
+    },
+    {
+      "member": "swFaceCoincidentUnknownResult",
+      "value": "-1",
+      "description": "= Unknown"
+    }
+  ]
+}

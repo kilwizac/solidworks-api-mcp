@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHoleStandardsData",
+    "member": "GetFastenerTableTypes",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "StandardName",
+        "type": "System.String",
+        "description": "Standard name (see Remarks )"
+      },
+      {
+        "name": "FastenerID",
+        "type": "System.Int32",
+        "description": "Fastener ID (see Remarks )"
+      },
+      {
+        "name": "FastenerTableTypeIDs",
+        "type": "System.Object",
+        "description": "Array of three fastener table type IDs (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "getfastenertabletypes",
+      "iholestandardsdata",
+      "hole",
+      "standards",
+      "data",
+      "fastener",
+      "table",
+      "types",
+      "standard",
+      "name",
+      "string",
+      "id",
+      "int32",
+      "type",
+      "ds",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IHoleStandardsData.GetFastenerTableTypes",
+  "description": "Gets the array of three fastener table type IDs for the given fastener in the given Hole Wizard standard.",
+  "signature": "System.Boolean GetFastenerTableTypes( \n   System.String\nStandardName\n,\n   System.Int32\nFastenerID\n,\n   out System.Object\nFastenerTableTypeIDs\n)",
+  "parameters": [
+    {
+      "name": "StandardName",
+      "type": "System.String",
+      "description": "Standard name (see Remarks )"
+    },
+    {
+      "name": "FastenerID",
+      "type": "System.Int32",
+      "description": "Fastener ID (see Remarks )"
+    },
+    {
+      "name": "FastenerTableTypeIDs",
+      "type": "System.Object",
+      "description": "Array of three fastener table type IDs (see Remarks )"
+    }
+  ],
+  "returns": "True if the fastener table type IDs are successfully retrieved, false if not",
+  "remarks": "Each fastener in a given standard has three tables associated with it: size, thread data, and screw clearances. This method retrieves internal IDs of all three table types as defined in\nswFastenerTableTypes_e\nfor FastenerID in StandardName.\nTo set:\nStandardName, use\nIHoleStandardsData::GetHoleStandards\n.\nFastenerID, use\nIHoleStandardsData::GetFastenerTypes\n.",
+  "examples": [
+    {
+      "title": "IHoleStandardsData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IHoleStandardsData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

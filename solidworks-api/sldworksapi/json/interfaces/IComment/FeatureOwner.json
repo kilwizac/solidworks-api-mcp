@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComment",
+    "member": "FeatureOwner",
+    "returns": "Feature",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featureowner",
+      "icomment",
+      "comment",
+      "feature",
+      "owner"
+    ],
+    "readonly": true
+  },
+  "title": "IComment.FeatureOwner",
+  "description": "Gets the feature that owns this comment.",
+  "signature": "Feature FeatureOwner {get;}",
+  "parameters": [],
+  "returns": "Pointer to the IFeature object that owns this comment",
+  "remarks": "If the comment is not owned by a feature, then NULL is returned.\nBecause you cannot set the name of comment owned by a feature, use this property before using\nIComment::Name\nto determine if the comment is owned by a feature.",
+  "examples": [],
+  "related": []
+}

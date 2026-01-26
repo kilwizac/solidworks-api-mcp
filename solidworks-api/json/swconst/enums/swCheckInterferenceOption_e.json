@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swCheckInterferenceOption_e",
+    "description": "Check interference options. Bitmask.",
+    "member_count": 3,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swCheckInterferenceOption_e",
+  "description": "Check interference options. Bitmask.",
+  "values": [
+    {
+      "member": "swBodyInterference_IncludeCoincidentFaces",
+      "value": "2",
+      "description": "or 0x2; Abutment (i.e., faces touching each other) type of clash"
+    },
+    {
+      "member": "swBodyInterference_OptionDefault",
+      "value": "1",
+      "description": "or 0x1; If this option specified, then swBodyInterference_IncludeCoincidentFaces and swBodyInterference_ReturnInterferingObject are set to false"
+    },
+    {
+      "member": "swBodyInterference_ReturnInterferingObject",
+      "value": "4",
+      "description": "or 0x4; Return face and body arrays"
+    }
+  ]
+}

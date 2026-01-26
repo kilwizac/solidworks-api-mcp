@@ -1,0 +1,37 @@
+---
+type: property
+interface: IRenderMaterial
+member: Emission
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related: []
+keywords:
+  - emission
+  - irendermaterial
+  - render
+  - material
+  - double
+readonly: null
+---
+
+# IRenderMaterial.Emission
+
+Gets or sets how much light is projected from the appearance.
+
+## Signature
+
+```csharp
+System.Double Emission {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Amount of kadov_tag{{<spaces>}} kadov_tag{{</spaces>}} light projected from the appearance

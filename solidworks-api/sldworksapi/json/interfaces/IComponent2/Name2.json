@@ -1,0 +1,130 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "Name2",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.GetComponentByName",
+      "IAssemblyDoc.GetUnloadedComponentNames",
+      "IComponent2.GetSelectByIDString"
+    ],
+    "keywords": [
+      "name",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "names",
+      "name2",
+      "component2",
+      "string",
+      "add",
+      "component",
+      "mate",
+      "change",
+      "material",
+      "properties",
+      "vba",
+      "check",
+      "interference",
+      "using",
+      "assemblydoc",
+      "toolscheckinterference2",
+      "types",
+      "inplace",
+      "via",
+      "display",
+      "dimension",
+      "traverse",
+      "assembly",
+      "level",
+      "feature",
+      "levels",
+      "recursion",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.Name2",
+  "description": "Gets or sets the name of the selected component. }}-->",
+  "signature": "System.String Name2 {get; set;}",
+  "parameters": [],
+  "returns": "Name of this component",
+  "remarks": "This property returns a name that includes an instance number. For example:\nPart1-1\nindicates that this is the first instance of the Part1 Component2. If you are examining a component that is within a subassembly, then this property returns a name that includes the full hierarchical path of component names. For example:\nsubAssem1-2/Part1-1\nindicates that this component (Part1) is the first instance within the subAssem1 Component2. It also shows that the second instance of subAssem1 is referenced.\nIf you are setting the name of a component:\nBefore executing a name change, this property checks the swExtRefUpdateCompNames setting. If swExtRefUpdateCompNames is true, then the name change fails; if swExtRefUpdateCompNames is false, then the name change succeeds. Use\nISldWorks::GetUserPreferenceToggle\nto change the swExtRefUpdateCompNames setting. Also, remember that some special characters are reserved by SOLIDWORKS, so be sure to use valid characters in the new name.\nThe component must be selected.",
+  "examples": [
+    {
+      "title": "Add Component and Mate (C++)",
+      "href": "Add_Component_and_Mate_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Material Properties (VBA)",
+      "href": "Change_Material_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Check Interference Using AssemblyDoc::ToolsCheckInterference2 (VBA)",
+      "href": "Check_Interference_using_AssemblyDoc_ToolsCheckInterference2_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component Names and Types for Inplace Mate (VBA)",
+      "href": "Get_Component_Names_and_Types_for_Inplace_Mate_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component via Display Dimension (VBA)",
+      "href": "Get_Component_Via_Display_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component Level (VBA)",
+      "href": "Traverse_Assembly_at_Component_Level_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VBA)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VB.NET)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (C#)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Name of Component (C#)",
+      "href": "Change_Name_of_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Name of Component (VB.NET)",
+      "href": "Change_Name_of_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Name of Component (VBA)",
+      "href": "Change_Name_of_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetComponentByName",
+    "IAssemblyDoc.GetUnloadedComponentNames",
+    "IComponent2.GetSelectByIDString"
+  ]
+}

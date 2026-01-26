@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IGetAttachments",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "NumAttachments",
+        "type": "System.Int32",
+        "description": "Number of attachments for this document"
+      },
+      {
+        "name": "LinkedArr",
+        "type": "System.Boolean",
+        "description": "in-process, unmanaged C++: Pointer to an array of VARIANT_BOOL values indicating if a document is linked or not VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.DeleteAttachment",
+      "IModelDocExtension.GetAttachments",
+      "IModelDocExtension.InsertAttachment"
+    ],
+    "keywords": [
+      "attachments",
+      "design",
+      "binder",
+      "igetattachments",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "num",
+      "int32",
+      "linked",
+      "arr",
+      "boolean",
+      "string"
+    ]
+  },
+  "title": "IModelDocExtension.IGetAttachments",
+  "description": "Gets the attachments for this document.",
+  "signature": "System.String IGetAttachments( \n   System.Int32\nNumAttachments\n,\n   out System.Boolean\nLinkedArr\n)",
+  "parameters": [
+    {
+      "name": "NumAttachments",
+      "type": "System.Int32",
+      "description": "Number of attachments for this document"
+    },
+    {
+      "name": "LinkedArr",
+      "type": "System.Boolean",
+      "description": "in-process, unmanaged C++: Pointer to an array of VARIANT_BOOL values indicating if a document is linked or not VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of strings of the names of the attachments for this document VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method is supported by SOLIDWORKS 2005 and later.\nCall\nIModelDocExtension::GetAttachmentCoun\nt before calling this method to determine the size of the array.\nThere is a one-to-one correspondence between the output arrays.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.DeleteAttachment",
+    "IModelDocExtension.GetAttachments",
+    "IModelDocExtension.InsertAttachment"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "MakeAssemblyFromSelectedComponents",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Path and filename of the new assembly"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "components",
+      "makeassemblyfromselectedcomponents",
+      "assembly",
+      "doc",
+      "make",
+      "selected",
+      "file",
+      "name",
+      "string",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.MakeAssemblyFromSelectedComponents",
+  "description": "Creates a new assembly comprised of the selected components of this assembly.",
+  "signature": "System.Boolean MakeAssemblyFromSelectedComponents( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Path and filename of the new assembly"
+    }
+  ],
+  "returns": "True if a new assembly is created, false if not",
+  "remarks": "If\nTools > Options > System Options > Assemblies >  Save new components to external files\nis selected, then a virtual sub-assembly is created and saved to an external file. Be sure to save the parent assembly before calling this method.\nIf\nTools > Options > System Options > Assemblies >  Save new components to external files\nis not selected, then the\nFileName\ninput parameter is ignored, and only a virtual sub-assembly is created.",
+  "examples": [
+    {
+      "title": "Make Assembly From Selected Components (VB.NET)",
+      "href": "Make_Assembly_From_Selected_Components_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Make Assembly From Selected Components (VBA)",
+      "href": "Make_Assembly_From_Selected_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Make Assembly From Selected Components (C#)",
+      "href": "Make_Assembly_From_Selected_Components_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

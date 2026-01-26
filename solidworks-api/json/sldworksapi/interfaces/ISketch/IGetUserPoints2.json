@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "IGetUserPoints2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Number of user points in the sketch"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "ISketch.GetUserPoints2"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "points",
+      "isketchpoint",
+      "user",
+      "entities",
+      "igetuserpoints2",
+      "points2",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "ISketch.IGetUserPoints2",
+  "description": "Gets all of the user points in this sketch.",
+  "signature": "System.Double IGetUserPoints2( \n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Number of user points in the sketch"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is an array of doubles with this format:\n[\nColor, Line Font, Line Width, Layer ID, Layer Override,\np\ntLoc[3]\n]\nwhere:\nColor\n= COLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLine Font\n= line style. Valid line styles can be found in the\nswLineStyles_e\nenumeration.\nLine Width\n= integer value defining the line width. Valid width values can be found in the\nswLineWeights_e\nenumeration.\nLayer ID\n= integer value indicating which layer holds this entity. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayer Override\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\np\ntLoc[3]\n= an array of doubles (x, y, z) describing the point location\nThis set of data repeats for each user point in the sketch. The size of the array is (NumPts * 8). To determine the number of points in the sketch, use\nISketch::GetUserPointsCount\n.\nSee\nISketch::GetSketchPoints2\n,\nISketch::IGetSketchPoints2\n, or\nISketch::IEnumSketchPoints\nfor access to individual\nISketchPoint\nobjects.",
+  "examples": [],
+  "related": [
+    "ISketch.GetUserPoints2"
+  ]
+}

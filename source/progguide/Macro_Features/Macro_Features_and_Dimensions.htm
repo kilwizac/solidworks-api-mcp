@@ -1,0 +1,203 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Macro Features and Dimensions</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=MacroFeatureDimensions>
+<meta name=MS-HKWD content="Macro feature (see also IMacroFeatureData Interface),dimensions">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1079>
+<meta name=layout-width content=837>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Macro Features and Dimensions</h1>
+
+<p>The following sample code shows how you might create a dimension for 
+ a macro feature. </p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>In C++, create containers for the dimension types 
+ and values before inserting the macro feature:</p></li>
+</ol>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->//Create 
+ dimension containers</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->long 
+ dimType[MBossDimNum] =</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->{</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swLinearDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swAngularDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swAngularDimension,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swAngularDimension</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->};</p>
+
+<p class=apiCode
+	style="margin-left: 40px;">double dimValue[MBossDimNum] =</p>
+
+<p class=apiCode
+	style="margin-left: 40px;">{</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_BaseRadius*2,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_BaseHeight,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_FinHeight,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_FinLength,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_FinWidth,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_InsideRadius*2,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_InsideHeight,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_BaseDraft,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_FinDraft,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pData-&gt;m_InsideDraft</p>
+
+<p class=apiCode
+	style="margin-left: 40px;">};</p>
+
+<p class=apiCode
+	style="margin-left: 40px;">&nbsp;</p>
+
+<ol start=2
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Insert the macro feature.</p></li>
+</ol>
+
+<p class=apiCode
+	style="margin-left: 40px;">pFeatMan-&gt;<span style="font-weight: bold;">IInsertMacroFeature2</span>(_bstr_t(baseName), 
+ </p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->_bstr_t(&quot;SldFuncFeat.MBossFeature&quot;),</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->macroMethods, 
+ MBossParamNum, MBossParamName,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->MBossParamType, 
+ paramVal, MBossDimNum, dimType, dimValue, pEditBody,3,</p>
+
+<p class=apiCode
+	style="margin-left: 40px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->icons, 
+ swMacroFeatureIsPatternable, &amp;pFeat);</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<ol start=3
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Set the lines for the dimensions in your rebuild 
+ function: </p></li>
+</ol>
+
+<p class=apiCode
+	style="margin-left: 49px;">dim-&gt;put_<span style="font-weight: bold;">DimensionLineDirection</span>(transformedVectLineDir);</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">dim-&gt;put_<span style="font-weight: bold;">ExtensionLineDirection</span>(transformedVectExtDir);</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">dim-&gt;<span style="font-weight: bold;">ISetReferencePoints</span>(2, 
+ refPoints);</p>
+
+<p class=apiCode>&nbsp;</p>
+
+<p><span style="font-weight: bold;">NOTE:</span> When regenerating a macro 
+ feature, <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDimension~ReferencePoints.html">IDimension::ReferencePoints 
+ </a>gets and sets the reference points of a display dimension (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDisplayDimension.html">IDisplayDimension</a> 
+ object). <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->In 
+ all other cases, this property gets and sets the reference points of a 
+ dimension (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDimension.html">IDimension</a> 
+ object).</p>
+
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+</body>
+
+</html>

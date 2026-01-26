@@ -1,0 +1,117 @@
+---
+type: method
+interface: IModelDoc2
+member: IMultiSelectByRay
+returns: System.Boolean
+parameters:
+  -
+    name: PointIn
+    type: System.Double
+    description: Array containing 3 doubles that define the start point of the ray
+  -
+    name: VectorIn
+    type: System.Double
+    description: Array containing 3 doubles that define the direction of the ray
+  -
+    name: RadiusIn
+    type: System.Double
+    description: Radius of the ray in meters
+  -
+    name: TypeWanted
+    type: System.Int32
+    description: Type of objects to select as defined in swSelectType_e
+  -
+    name: Append
+    type: System.Boolean
+    description: True to append the selections to the current selection list, false to not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - selections
+  - ui
+related:
+  - IModelDoc2.GetRayIntersectionsPoints
+  - IModelDoc2.GetRayIntersectionsTopology
+  - IModelDoc2.IGetRayIntersectionsPoints
+  - IModelDoc2.IGetRayIntersectionsTopology
+  - IModelDoc2.IRayIntersections
+  - IModelDoc2.ISelectByRay
+  - IModelDoc2.MultiSelectByRay
+  - IModelDoc2.RayIntersections
+  - IModelDoc2.SelectByRay
+keywords:
+  - ray
+  - intersections
+  - imultiselectbyray
+  - imodeldoc2
+  - model
+  - doc2
+  - multi
+  - select
+  - point
+  - double
+  - vector
+  - radius
+  - type
+  - wanted
+  - int32
+  - append
+  - boolean
+---
+
+# IModelDoc2.IMultiSelectByRay
+
+Selects multiple objects of the specified type that are intersected by a ray from point (x,y,z in meters) in direction vector (x,y,z) within a distance radius.
+
+## Signature
+
+```csharp
+System.Boolean IMultiSelectByRay( 
+   ref System.Double
+PointIn
+,
+   ref System.Double
+VectorIn
+,
+   System.Double
+RadiusIn
+,
+   System.Int32
+TypeWanted
+,
+   System.Boolean
+Append
+)
+```
+## Parameters
+
+- `PointIn` (System.Double): Array containing 3 doubles that define the start point of the ray
+- `VectorIn` (System.Double): Array containing 3 doubles that define the direction of the ray
+- `RadiusIn` (System.Double): Radius of the ray in meters
+- `TypeWanted` (System.Int32): Type of objects to select as defined in swSelectType_e
+- `Append` (System.Boolean): True to append the selections to the current selection list, false to not
+
+## Return Value
+
+True if an object is selected, false if not
+
+## Remarks
+
+This method:
+Defines a cylindrical region of infinite length that begins at PointIn, runs parallel to VectorIn, and has a radius of RadiusIn. If you specified edges or vertices, then any edge or vertex found within the selection cylinder is selected.
+Selects only entity objects, which include faces, edges, and vertices. You cannot use this function to select sketches. When selecting face entities, RadiusIn is ignored and a cylinder of infinitely small radius is used.
+
+## See Also
+
+- `IModelDoc2.GetRayIntersectionsPoints`
+- `IModelDoc2.GetRayIntersectionsTopology`
+- `IModelDoc2.IGetRayIntersectionsPoints`
+- `IModelDoc2.IGetRayIntersectionsTopology`
+- `IModelDoc2.IRayIntersections`
+- `IModelDoc2.ISelectByRay`
+- `IModelDoc2.MultiSelectByRay`
+- `IModelDoc2.RayIntersections`
+- `IModelDoc2.SelectByRay`

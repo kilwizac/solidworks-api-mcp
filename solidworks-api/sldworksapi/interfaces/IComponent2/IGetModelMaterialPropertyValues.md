@@ -1,0 +1,66 @@
+---
+type: property
+interface: IComponent2
+member: IGetModelMaterialPropertyValues
+returns: System.Double
+parameters:
+  -
+    name: ConfigName
+    type: System.String
+    description: Name of the configuration
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+related:
+  - IComponent2.GetMaterialPropertyValues2
+  - IComponent2.GetModelMaterialPropertyValues
+keywords:
+  - properties
+  - components
+  - igetmodelmaterialpropertyvalues
+  - icomponent2
+  - component2
+  - model
+  - material
+  - values
+  - config
+  - name
+  - string
+  - double
+readonly: null
+---
+
+# IComponent2.IGetModelMaterialPropertyValues
+
+Gets the material properties of this lightweight component in the specified configuration.
+
+## Signature
+
+```csharp
+System.Double IGetModelMaterialPropertyValues( 
+   System.String
+ConfigName
+)
+```
+## Parameters
+
+- `ConfigName` (System.String): Name of the configuration
+
+## Return Value
+
+in-process, unmanaged C++: Pointer to an array of 9 doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## Remarks
+
+The contents of the returned array:
+[
+R, G, B, Ambient, Diffuse, Specularity, Shininess, Transparency, Emission
+]
+Valid values are between 0.0 and 1.0, inclusive. Multiply the R, G, and B values by 255 to obtain the red, green, and blue component values. Multiply the other values in the array by 100 to obtain percentages. If all values in the array are -1, then material property values were not assigned to this component, and the component has the same default properties as the user interface.
+
+## See Also
+
+- `IComponent2.GetMaterialPropertyValues2`
+- `IComponent2.GetModelMaterialPropertyValues`

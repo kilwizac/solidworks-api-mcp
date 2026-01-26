@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "GetBodyOutline",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "BodyVar",
+        "type": "System.Object",
+        "description": "Array of bodies"
+      },
+      {
+        "name": "Direction",
+        "type": "MathVector",
+        "description": "Direction of view"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance (Parasolid default 0.00001)"
+      },
+      {
+        "name": "CurvesOut",
+        "type": "System.Object",
+        "description": "Array of 3D trimmed curves that form the outline"
+      },
+      {
+        "name": "TopolEntities",
+        "type": "System.Object",
+        "description": "Array of topological entities associated with the outline"
+      },
+      {
+        "name": "Outline",
+        "type": "System.Object",
+        "description": "Array of integers indicating which curves belong to which outline"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "getbodyoutline",
+      "imodeler",
+      "modeler",
+      "body",
+      "outline",
+      "var",
+      "object",
+      "direction",
+      "math",
+      "vector",
+      "tolerance",
+      "double",
+      "curves",
+      "out",
+      "topol",
+      "entities",
+      "int32"
+    ]
+  },
+  "title": "IModeler.GetBodyOutline",
+  "description": "Obsolete. Superseded by IModeler::GetBodyOutline2.",
+  "signature": "System.Int32 GetBodyOutline( \n   System.Object\nBodyVar\n,\n   MathVector\nDirection\n,\n   System.Double\nTolerance\n,\n   out System.Object\nCurvesOut\n,\n   out System.Object\nTopolEntities\n,\n   out System.Object\nOutline\n)",
+  "parameters": [
+    {
+      "name": "BodyVar",
+      "type": "System.Object",
+      "description": "Array of bodies"
+    },
+    {
+      "name": "Direction",
+      "type": "MathVector",
+      "description": "Direction of view"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance (Parasolid default 0.00001)"
+    },
+    {
+      "name": "CurvesOut",
+      "type": "System.Object",
+      "description": "Array of 3D trimmed curves that form the outline"
+    },
+    {
+      "name": "TopolEntities",
+      "type": "System.Object",
+      "description": "Array of topological entities associated with the outline"
+    },
+    {
+      "name": "Outline",
+      "type": "System.Object",
+      "description": "Array of integers indicating which curves belong to which outline"
+    }
+  ],
+  "returns": "Number of curves that form the outline of a body",
+  "remarks": "See Parasolid's documentation of PK_BODY_make_curves_outline for more information about the output.",
+  "examples": [],
+  "related": []
+}

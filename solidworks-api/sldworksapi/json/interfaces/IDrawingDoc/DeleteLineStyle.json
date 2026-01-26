@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "DeleteLineStyle",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "StyleName",
+        "type": "System.String",
+        "description": "Name of line style to delete"
+      },
+      {
+        "name": "ReplaceName",
+        "type": "System.String",
+        "description": "Name of line style to replace deleted StyleName"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.AddLineStyle",
+      "IDrawingDoc.GetLineStyles",
+      "IDrawingDoc.LoadLineStyles",
+      "IDrawingDoc.SaveLineStyles",
+      "ISldWorks.GetLineStyles"
+    ],
+    "keywords": [
+      "line",
+      "styles",
+      "delete",
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "deletelinestyle",
+      "drawing",
+      "doc",
+      "style",
+      "name",
+      "string",
+      "replace",
+      "boolean",
+      "manage",
+      "document",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.DeleteLineStyle",
+  "description": "Deletes the specified line style from the current drawing.",
+  "signature": "System.Boolean DeleteLineStyle( \n   System.String\nStyleName\n,\n   System.String\nReplaceName\n)",
+  "parameters": [
+    {
+      "name": "StyleName",
+      "type": "System.String",
+      "description": "Name of line style to delete"
+    },
+    {
+      "name": "ReplaceName",
+      "type": "System.String",
+      "description": "Name of line style to replace deleted StyleName"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The following line styles cannot be deleted:\nSolid\nDashed\nPhantom\nChain\nCenter\nStitch\nThin/Thick Chain",
+  "examples": [
+    {
+      "title": "Manage Drawing Document Line Styles (C#)",
+      "href": "Manage_Drawing_Document_Line_Styles_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Manage Drawing Document Line Styles (VB.NET)",
+      "href": "Manage_Drawing_Document_Line_Styles_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Manage Drawing Document Line Styles (VBA)",
+      "href": "Manage_Drawing_Document_Line_Styles_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.AddLineStyle",
+    "IDrawingDoc.GetLineStyles",
+    "IDrawingDoc.LoadLineStyles",
+    "IDrawingDoc.SaveLineStyles",
+    "ISldWorks.GetLineStyles"
+  ]
+}

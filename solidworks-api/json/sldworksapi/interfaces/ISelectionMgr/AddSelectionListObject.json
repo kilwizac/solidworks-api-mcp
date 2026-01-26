@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "AddSelectionListObject",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Object",
+        "type": "System.Object",
+        "description": "Object to add to the selection list (see Remarks )"
+      },
+      {
+        "name": "SelectData",
+        "type": "System.Object",
+        "description": "ISelectData"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectionSetItem.GetCorrespondingItem"
+    ],
+    "keywords": [
+      "select",
+      "objects",
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "addselectionlistobject",
+      "mgr",
+      "add",
+      "list",
+      "object",
+      "data",
+      "boolean",
+      "insert",
+      "indent",
+      "feature",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISelectionMgr.AddSelectionListObject",
+  "description": "Adds the specified object to the selection list.",
+  "signature": "System.Boolean AddSelectionListObject( \n   System.Object\nObject\n,\n   System.Object\nSelectData\n)",
+  "parameters": [
+    {
+      "name": "Object",
+      "type": "System.Object",
+      "description": "Object to add to the selection list (see Remarks )"
+    },
+    {
+      "name": "SelectData",
+      "type": "System.Object",
+      "description": "ISelectData"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Call\nISelectionMgr::CreateSelectData\nto specify SelectData.\nTo add objects to a selection list without pre-selecting the objects in the user interface:\nCall\nISelectionMgr::SuspendSelectionList\nto suspend the current selection list, preserving its contents and starting a new selection list.\nCall ISelectionMgr::AddSelectionListObject or\nISelectionMgr::AddSelectionListObjects\nto populate the new selection list.\nProcess the objects in the new selection list.\nCall\nISelectionMgr::ResumeSelectionList\nto reinstate the suspended selection list.\nTo programmatically pre-select objects in the user interface and add them to a selection list, use\nIModelDocExtension::SelectByID2\n.",
+  "examples": [
+    {
+      "title": "Insert Indent Feature (C#)",
+      "href": "Insert_Indent_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Indent Feature (VB.NET)",
+      "href": "Insert_Indent_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Indent Feature (VBA)",
+      "href": "Insert_Indent_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISelectionSetItem.GetCorrespondingItem"
+  ]
+}

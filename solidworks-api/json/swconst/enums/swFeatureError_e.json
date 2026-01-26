@@ -1,0 +1,292 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFeatureError_e",
+    "description": "Feature error codes.",
+    "member_count": 55,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFeatureError_e",
+  "description": "Feature error codes.",
+  "values": [
+    {
+      "member": "swFeatureErrorCutNotIntersectModel",
+      "value": "71",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorExtrusionBadGeometricConditions",
+      "value": "32",
+      "description": "= Unable to create this extruded feature due to geometric conditions"
+    },
+    {
+      "member": "swFeatureErrorExtrusionBossContourInvalid",
+      "value": "37",
+      "description": "= Bosses require one or more closed contours that do not self-intersect"
+    },
+    {
+      "member": "swFeatureErrorExtrusionBossContourOpenAndClosed",
+      "value": "36",
+      "description": "= Bosses cannot have both open and closed contours"
+    },
+    {
+      "member": "swFeatureErrorExtrusionCutContourInvalid",
+      "value": "34",
+      "description": "= Extruded cuts require at least one closed or open contour that does not self-intersect"
+    },
+    {
+      "member": "swFeatureErrorExtrusionCutContourOpenAndClosed",
+      "value": "33",
+      "description": "= Extruded cuts cannot have both open and closed contours"
+    },
+    {
+      "member": "swFeatureErrorExtrusionDisjoint",
+      "value": "30",
+      "description": "= Feature would create a disjoint body; direction may be wrong"
+    },
+    {
+      "member": "swFeatureErrorExtrusionNoEndFound",
+      "value": "31",
+      "description": "= Cannot locate end of feature"
+    },
+    {
+      "member": "swFeatureErrorExtrusionOpenCutContourInvalid",
+      "value": "35",
+      "description": "= Open extruded cuts require a single open contour that does not self-intersect"
+    },
+    {
+      "member": "swFeatureErrorFeatureDeprecated",
+      "value": "49",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorFeatureObsolete",
+      "value": "50",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorFilletCannotExtend",
+      "value": "16",
+      "description": "= Selected elements cannot be extended to intersect"
+    },
+    {
+      "member": "swFeatureErrorFilletInvalidRadius",
+      "value": "12",
+      "description": "= Invalid fillet radius or a face blend fillet recommended"
+    },
+    {
+      "member": "swFeatureErrorFilletModelGeometry",
+      "value": "14",
+      "description": "= Failed to create fillet due to model geometry"
+    },
+    {
+      "member": "swFeatureErrorFilletNoEdge",
+      "value": "13",
+      "description": "= Edge for fillet/chamfer does not exist"
+    },
+    {
+      "member": "swFeatureErrorFilletNoFace",
+      "value": "11",
+      "description": "= Face for fillet/chamfer does not exist"
+    },
+    {
+      "member": "swFeatureErrorFilletNoLoop",
+      "value": "10",
+      "description": "= Loop for fillet/chamfer does not exist"
+    },
+    {
+      "member": "swFeatureErrorFilletRadiusEliminateElement",
+      "value": "17",
+      "description": "= Specified radius would eliminate one of the elements"
+    },
+    {
+      "member": "swFeatureErrorFilletRadiusTooBig",
+      "value": "18",
+      "description": "= Radius is too big or the elements are tangent or nearly tangent"
+    },
+    {
+      "member": "swFeatureErrorFilletRadiusTooBig2",
+      "value": "19",
+      "description": "= Not used"
+    },
+    {
+      "member": "swFeatureErrorFilletRadiusTooSmall",
+      "value": "15",
+      "description": "= Radius too small"
+    },
+    {
+      "member": "swFeatureErrorMateBroken",
+      "value": "48",
+      "description": "= One or more mate entities were suppressed"
+    },
+    {
+      "member": "swFeatureErrorMateDanglingGeometry",
+      "value": "43",
+      "description": "= Mate points to dangling geometry"
+    },
+    {
+      "member": "swFeatureErrorMateEntityFailed",
+      "value": "45",
+      "description": "= Mating is not supported for one of the components or one of the components cannot currently be modified"
+    },
+    {
+      "member": "swFeatureErrorMateEntityNotLinear",
+      "value": "44",
+      "description": "= Non-linear edges cannot be used for mating"
+    },
+    {
+      "member": "swFeatureErrorMateFailedCreatingSurface",
+      "value": "40",
+      "description": "= Mating surface type is not supported"
+    },
+    {
+      "member": "swFeatureErrorMateIlldefined",
+      "value": "47",
+      "description": "= This mate cannot be solved. Consider: Deleting this mate. Moving the assembly closer to the desired solution with dragging. Adding more mates to further define the assembly. Changing the mating scheme"
+    },
+    {
+      "member": "swFeatureErrorMateInvalidEdge",
+      "value": "38",
+      "description": "= One of the edges of this mate is suppressed, invalid, or no longer present"
+    },
+    {
+      "member": "swFeatureErrorMateInvalidEntity",
+      "value": "41",
+      "description": "= One of the entities of this mate is suppressed, invalid, or no longer present"
+    },
+    {
+      "member": "swFeatureErrorMateInvalidFace",
+      "value": "39",
+      "description": "= One of the faces of this mate is suppressed, invalid, or no longer present"
+    },
+    {
+      "member": "swFeatureErrorMateOverdefined",
+      "value": "46",
+      "description": "= This mate is over-defining the assembly; consider deleting some of the over-defining mates"
+    },
+    {
+      "member": "swFeatureErrorMateUnknownTangent",
+      "value": "42",
+      "description": "= Tangent not satisfied"
+    },
+    {
+      "member": "swFeatureErrorNone",
+      "value": "0",
+      "description": "= No error"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletCrossOverEndCondition",
+      "value": "62",
+      "description": "= End points cross over and result in a zero thickness fillet"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletFailedToRepair",
+      "value": "68",
+      "description": "= There are no references to repair"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletInvalidOffsetValue",
+      "value": "61",
+      "description": "= Total offset from start point and end point must be less than 100%"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletInvalidReferenceEntity",
+      "value": "64",
+      "description": "= Reference entity is invalid"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletMissingReferenceEntity",
+      "value": "63",
+      "description": "= Reference entity is missing"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletMultiProjectionPoint",
+      "value": "67",
+      "description": "= Failed to find a unique point for projection of reference offset"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoEndEdge",
+      "value": "56",
+      "description": "= Failed to find end edge"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoIntersection",
+      "value": "52",
+      "description": "= No intersection between reference entity and fillet edge"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoMainEdge",
+      "value": "57",
+      "description": "= Failed to find the fillet/chamfer edge"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoPropagateEdges",
+      "value": "54",
+      "description": "= Failed to find propagate edges"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoReferenceEntity",
+      "value": "59",
+      "description": "= Select a sketch point, reference point, reference plane, or planar face"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNoStartEdge",
+      "value": "55",
+      "description": "= Failed to find a start edge"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNotSupported",
+      "value": "65",
+      "description": "= Partial edge fillet is not supported"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletNotSupportedForClosedLoop",
+      "value": "66",
+      "description": "= Some edges form closed loops; partial edge fillet does not support closed loops"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletOffsetTooBig",
+      "value": "58",
+      "description": "= The fillet offset is too large"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletTooManyRefEntities",
+      "value": "60",
+      "description": "= Too many reference entities selected"
+    },
+    {
+      "member": "swFeatureErrorPartialEdgeFilletUpdateFailed",
+      "value": "53",
+      "description": "= Failed to update the partial edge data"
+    },
+    {
+      "member": "swFeatureErrorSketchContainsSelfIntersectingContour",
+      "value": "72",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorSweptFlangeInvalidProfileOrPath",
+      "value": "69",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorSweptFlangeSelfIntersectingGeometry",
+      "value": "70",
+      "description": ""
+    },
+    {
+      "member": "swFeatureErrorUnknown",
+      "value": "1",
+      "description": "= Unknown error"
+    },
+    {
+      "member": "swSketchErrorExtRefFail",
+      "value": "51",
+      "description": "= Sketch error"
+    }
+  ]
+}

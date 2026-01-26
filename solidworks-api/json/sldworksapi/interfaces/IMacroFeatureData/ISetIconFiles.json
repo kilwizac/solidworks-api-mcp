@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "ISetIconFiles",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "IconCount",
+        "type": "System.Int32",
+        "description": "Number of files for the icons"
+      },
+      {
+        "name": "IconFiles",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of the file names for the icons (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "file-io"
+    ],
+    "related": [
+      "IMacroFeatureData.IGetIconFiles",
+      "IMacroFeatureData.IconFiles"
+    ],
+    "keywords": [
+      "iseticonfiles",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "icon",
+      "files",
+      "count",
+      "int32",
+      "string",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.ISetIconFiles",
+  "description": "Sets the file names for the icons for this macro feature.",
+  "signature": "void ISetIconFiles( \n   System.Int32\nIconCount\n,\n   ref System.String\nIconFiles\n)",
+  "parameters": [
+    {
+      "name": "IconCount",
+      "type": "System.Int32",
+      "description": "Number of files for the icons"
+    },
+    {
+      "name": "IconFiles",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of the file names for the icons (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "The array of the file names for IconFiles can contain either three or nine strings.\nNumber of strings in array\nTypes of images in this order\nImage format and sizes\nThree\nRegular\nSuppressed\nHighlighted\nWindows bitmap (\n*.bmp\n) format\n16 pixels wide X 18 pixels high\nNine\nNOTES:\nThis size array is only valid for macro features created in parts, assemblies, and drawings in SOLIDWORKS 2017 and later.\nSOLIDWORKS displays the appropriate images based on the current DPI setting of the display device.\nRegular small\nSuppressed small\nHighlighted small\nRegular medium\nSuppressed medium\nHighlighted medium\nRegular large\nSuppressed large\nHighlighted large\nWindows bitmap (\n*.bmp\n) format\nRecommended sizes are:\nSmall: 20 pixels wide X 20 pixels high\nMedium: 32 pixels wide X 32 pixels high\nLarge: 40 pixels wide X 40 pixels high\nYou can specify either the full path name or just the file name for the strings; for example,\nc:\n\\\nbitmaps\n\\\nicon1.bmp\nor\nicon1.bmp\n.\nIf you change the bitmaps after inserting them with a macro feature into a SOLIDWORKS document, then the new bitmaps are not displayed until you exit and restart SOLIDWORKS.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.IGetIconFiles",
+    "IMacroFeatureData.IconFiles"
+  ]
+}

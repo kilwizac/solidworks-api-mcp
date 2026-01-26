@@ -1,0 +1,107 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "SelectiveOpen",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SelectedComponents",
+        "type": "System.Boolean",
+        "description": "True to open only the components in the current selection list, false to open all of the components in the assembly"
+      },
+      {
+        "name": "OpenLightWeight",
+        "type": "System.Boolean",
+        "description": "True to open the components in lightweight mode, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "file-io",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.GetComponents",
+      "IAssemblyDoc.GetLightWeightComponentCount",
+      "IAssemblyDoc.MakeLightWeight",
+      "IAssemblyDoc.ResolveAllLightWeightComponents",
+      "IAssemblyDoc.ResolveAllLightweight",
+      "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+      "ISldWorks.OpenDoc6"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "selective",
+      "open",
+      "assemblies",
+      "iassemblydoc",
+      "lightweight",
+      "large",
+      "design",
+      "review",
+      "mode",
+      "selectiveopen",
+      "assembly",
+      "doc",
+      "selected",
+      "boolean",
+      "light",
+      "weight",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAssemblyDoc.SelectiveOpen",
+  "description": "Selectively opens the components of an assembly that is opened in Large Design Review mode.",
+  "signature": "System.Boolean SelectiveOpen( \n   System.Boolean\nSelectedComponents\n,\n   System.Boolean\nOpenLightWeight\n)",
+  "parameters": [
+    {
+      "name": "SelectedComponents",
+      "type": "System.Boolean",
+      "description": "True to open only the components in the current selection list, false to open all of the components in the assembly"
+    },
+    {
+      "name": "OpenLightWeight",
+      "type": "System.Boolean",
+      "description": "True to open the components in lightweight mode, false to not"
+    }
+  ],
+  "returns": "True if successful, false if not (see Remarks )",
+  "remarks": "This method only works for assemblies that are opened in Large Design Review mode.\nTo open an assembly in Large Design Review mode:\nCall\nISldWorks::GetOpenDocSpec\nto create an instance of\nIDocumentSpecification\n.\nSet\nIDocumentSpecification::ViewOnly\nto true.\nCall\nISldWorks::OpenDoc7\n, passing it the instance of IDocumentSpecification.\nBefore calling this method, call\nIModelDocExtension::SelectByID2\nto select the components that you want to open.",
+  "examples": [
+    {
+      "title": "Open Assembly in Large Design Review Mode (VBA)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Assembly in Large Design Review Mode (VB.NET)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Assembly in Large Design Review Mode (C#)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetComponents",
+    "IAssemblyDoc.GetLightWeightComponentCount",
+    "IAssemblyDoc.MakeLightWeight",
+    "IAssemblyDoc.ResolveAllLightWeightComponents",
+    "IAssemblyDoc.ResolveAllLightweight",
+    "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+    "ISldWorks.OpenDoc6"
+  ]
+}

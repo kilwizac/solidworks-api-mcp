@@ -1,0 +1,253 @@
+---
+type: method
+interface: IModeler
+member: CreateLoftSurface
+returns: System.Object
+parameters:
+  -
+    name: CurveArray
+    type: System.Object
+    description: Array of b-spline curves
+  -
+    name: BBlendClosed
+    type: System.Boolean
+    description: True if blend closed, false if not
+  -
+    name: BForceCubic
+    type: System.Boolean
+    description: True if force surface is cubic, false if not
+  -
+    name: GuideCrvArray
+    type: System.Object
+    description: Array of guide curves
+  -
+    name: StartMatchingType
+    type: System.Int32
+    description: Start matching type: 0 = MATCH_NONE (default) 1 = MATCH_NORMAL 2 = MATCH_VECTOR 3 = MATCH_ALL_FACES or MATCH_FACE_G1 4 = MATCH_FACE_G2
+  -
+    name: EndMatchingType
+    type: System.Int32
+    description: End matching type: 0 = MATCH_NONE (default) 1 = MATCH_NORMAL 2 = MATCH_VECTOR 3 = MATCH_ALL_FACES or MATCH_FACE_G1 4 = MATCH_FACE_G2
+  -
+    name: NormalAtStartSection
+    type: System.Object
+    description: Normal at start section when StartMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+  -
+    name: NormalAtEndSection
+    type: System.Object
+    description: Normal at start section when EndMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+  -
+    name: StartMatchingFaceList
+    type: System.Object
+    description: Array of matching faces at start section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing
+  -
+    name: EndMatchingFaceList
+    type: System.Object
+    description: Array of matching faces at end section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing
+  -
+    name: DegeneratedStart
+    type: System.Boolean
+    description: True to degenerate at start, false to not
+  -
+    name: DegeneratedEnd
+    type: System.Boolean
+    description: True to degenerate at end, false to not
+  -
+    name: StartPointOfStartSection
+    type: System.Object
+    description: Start point of start section
+  -
+    name: StartPointOfEndSection
+    type: System.Object
+    description: Start point of end section
+  -
+    name: SectionIndexStart
+    type: System.Int32
+    description: Index of start section; default is -1
+  -
+    name: SectionIndexEnd
+    type: System.Int32
+    description: Index of end section; default is -1
+  -
+    name: GuideIndexStart
+    type: System.Int32
+    description: Index of start guide curve; default is -1
+  -
+    name: GuideIndexEnd
+    type: System.Int32
+    description: Index of end guide curve; default is -1
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related:
+  - IModeler.CreateBsplineSurface
+  - IModeler.CreateCoonsBSurface
+  - IModeler.CreateCylindricalSurface2
+  - IModeler.CreateExtrusionSurface
+  - IModeler.CreateOffsetSurface
+  - IModeler.CreatePlanarSurface2
+  - IModeler.CreateRuledSurface
+  - IModeler.CreateSphericalSurface2
+  - IModeler.CreateSweptSurface
+  - IModeler.CreateToroidalSurface
+  - IModeler.ICreateBsplineSurface
+  - IModeler.ICreateConicalSurface2
+  - IModeler.ICreateCylindricalSurface2
+  - IModeler.ICreateExtrusionSurface
+  - IModeler.ICreateLoftSurface
+  - IModeler.ICreateOffsetSurface
+  - IModeler.ICreatePlanarSurface2
+  - IModeler.ICreateRuledSurface
+  - IModeler.ICreateSphericalSurface2
+  - IModeler.ICreateSweptSurface
+  - IModeler.ICreateToroidalSurface
+keywords:
+  - lofts
+  - see
+  - also
+  - iloftfeaturedata
+  - surfaces
+  - surface
+  - isurface
+  - loft
+  - createloftsurface
+  - imodeler
+  - modeler
+  - create
+  - curve
+  - array
+  - object
+  - blend
+  - closed
+  - boolean
+  - force
+  - cubic
+  - guide
+  - crv
+  - start
+  - matching
+  - type
+  - int32
+  - end
+  - normal
+  - section
+  - face
+  - list
+  - degenerated
+  - point
+  - index
+---
+
+# IModeler.CreateLoftSurface
+
+Creates a loft surface.
+
+## Signature
+
+```csharp
+System.Object CreateLoftSurface( 
+   System.Object
+CurveArray
+,
+   System.Boolean
+BBlendClosed
+,
+   System.Boolean
+BForceCubic
+,
+   System.Object
+GuideCrvArray
+,
+   System.Int32
+StartMatchingType
+,
+   System.Int32
+EndMatchingType
+,
+   System.Object
+NormalAtStartSection
+,
+   System.Object
+NormalAtEndSection
+,
+   System.Object
+StartMatchingFaceList
+,
+   System.Object
+EndMatchingFaceList
+,
+   System.Boolean
+DegeneratedStart
+,
+   System.Boolean
+DegeneratedEnd
+,
+   System.Object
+StartPointOfStartSection
+,
+   System.Object
+StartPointOfEndSection
+,
+   System.Int32
+SectionIndexStart
+,
+   System.Int32
+SectionIndexEnd
+,
+   System.Int32
+GuideIndexStart
+,
+   System.Int32
+GuideIndexEnd
+)
+```
+## Parameters
+
+- `CurveArray` (System.Object): Array of b-spline curves
+- `BBlendClosed` (System.Boolean): True if blend closed, false if not
+- `BForceCubic` (System.Boolean): True if force surface is cubic, false if not
+- `GuideCrvArray` (System.Object): Array of guide curves
+- `StartMatchingType` (System.Int32): Start matching type: 0 = MATCH_NONE (default) 1 = MATCH_NORMAL 2 = MATCH_VECTOR 3 = MATCH_ALL_FACES or MATCH_FACE_G1 4 = MATCH_FACE_G2
+- `EndMatchingType` (System.Int32): End matching type: 0 = MATCH_NONE (default) 1 = MATCH_NORMAL 2 = MATCH_VECTOR 3 = MATCH_ALL_FACES or MATCH_FACE_G1 4 = MATCH_FACE_G2
+- `NormalAtStartSection` (System.Object): Normal at start section when StartMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+- `NormalAtEndSection` (System.Object): Normal at start section when EndMatchingType is MATCH_NORMAL or MATCH_VECTOR; otherwise, can be Nothing
+- `StartMatchingFaceList` (System.Object): Array of matching faces at start section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing
+- `EndMatchingFaceList` (System.Object): Array of matching faces at end section when startMatchingType is MATCH_ALL_FACES, MATCH_FACE_G1, or MATCH_FACE_G2; otherwise, can be Nothing
+- `DegeneratedStart` (System.Boolean): True to degenerate at start, false to not
+- `DegeneratedEnd` (System.Boolean): True to degenerate at end, false to not
+- `StartPointOfStartSection` (System.Object): Start point of start section
+- `StartPointOfEndSection` (System.Object): Start point of end section
+- `SectionIndexStart` (System.Int32): Index of start section; default is -1
+- `SectionIndexEnd` (System.Int32): Index of end section; default is -1
+- `GuideIndexStart` (System.Int32): Index of start guide curve; default is -1
+- `GuideIndexEnd` (System.Int32): Index of end guide curve; default is -1
+
+## Return Value
+
+Newly created loft surface
+
+## See Also
+
+- `IModeler.CreateBsplineSurface`
+- `IModeler.CreateCoonsBSurface`
+- `IModeler.CreateCylindricalSurface2`
+- `IModeler.CreateExtrusionSurface`
+- `IModeler.CreateOffsetSurface`
+- `IModeler.CreatePlanarSurface2`
+- `IModeler.CreateRuledSurface`
+- `IModeler.CreateSphericalSurface2`
+- `IModeler.CreateSweptSurface`
+- `IModeler.CreateToroidalSurface`
+- `IModeler.ICreateBsplineSurface`
+- `IModeler.ICreateConicalSurface2`
+- `IModeler.ICreateCylindricalSurface2`
+- `IModeler.ICreateExtrusionSurface`
+- `IModeler.ICreateLoftSurface`
+- `IModeler.ICreateOffsetSurface`
+- `IModeler.ICreatePlanarSurface2`
+- `IModeler.ICreateRuledSurface`
+- `IModeler.ICreateSphericalSurface2`
+- `IModeler.ICreateSweptSurface`
+- `IModeler.ICreateToroidalSurface`

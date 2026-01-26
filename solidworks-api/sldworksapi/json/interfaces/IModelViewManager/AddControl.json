@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelViewManager",
+    "member": "AddControl",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "User-defined label that appears on the tab"
+      },
+      {
+        "name": "ControlName",
+        "type": "System.String",
+        "description": "Name or class ID for the ActiveX control"
+      },
+      {
+        "name": "BstrLicKey",
+        "type": "System.String",
+        "description": "Optional license key; this data is needed to create ActiveX controls that require a runtime license key; if the ActiveX control supports licensing, then provide a license key for the creation of the ActiveX control; default value is NULL"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelViewManager.ActivateControlTab",
+      "IModelViewManager.ActivateModelTab",
+      "IModelViewManager.DeleteControlTab",
+      "IModelViewManager.GetControl",
+      "IModelViewManager.IGetControl",
+      "IModelViewManager.IsControlTabActive",
+      "IModelViewManager.IsModelTabActive"
+    ],
+    "keywords": [
+      "model",
+      "views",
+      "see",
+      "also",
+      "imodelview",
+      "imodelviewmanager",
+      "interfaces",
+      "controls",
+      "addcontrol",
+      "view",
+      "manager",
+      "add",
+      "control",
+      "name",
+      "string",
+      "bstr",
+      "lic",
+      "key",
+      "object",
+      "activex",
+      "tabs",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelViewManager.AddControl",
+  "description": "Adds a tab to this model view using the specified ActiveX control.",
+  "signature": "System.Object AddControl( \n   System.String\nName\n,\n   System.String\nControlName\n,\n   System.String\nBstrLicKey\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "User-defined label that appears on the tab"
+    },
+    {
+      "name": "ControlName",
+      "type": "System.String",
+      "description": "Name or class ID for the ActiveX control"
+    },
+    {
+      "name": "BstrLicKey",
+      "type": "System.String",
+      "description": "Optional license key; this data is needed to create ActiveX controls that require a runtime license key; if the ActiveX control supports licensing, then provide a license key for the creation of the ActiveX control; default value is NULL"
+    }
+  ],
+  "returns": "Pointer to the new ActiveX control",
+  "remarks": "If your ActiveX control needs tab traversal support, then use\nIModelViewManager::AddControl3\n.\nThis method sets the class ID and license key information for the ActiveX control when the API PropertyManager page is shown and the ActiveX control is created. The controlName argument can be either the name of the control (ProgID) or the class ID (CLSID), for example, \"MSCAL.calendar\" or \"{8E27C92B-1264-101C-8A2F-040224009C02}\". Both provide the calendar protocol. You can obtain these strings using a combination of the Microsoft OLE/COM Object Viewer and the registry editor.\nFor example:\n' ProgID\nbRet = m_pActiveXControl.SetClass(\"MSCAL.Calendar\", \"\")\nbRet = m_pActiveXControl2.SetClass(\"MSComctlLib.ListViewCtrl\", \"\")\n' CLSID\nbRet = m_pActiveXControl.SetClass(\"{8E27C92B-1264-101C-8A2F-040224009C02}\", \"\")\nbRet = m_pActiveXControl2.SetClass(\"{BDD1F04B-858B-11D1-B16A-00C0F0283628}\", \"\")\nTo delete a tab created by this method, use\nIModelViewManager::DeleteControlTab\n.\nSee also\nKeystrokes and Accelerator Keys in ActiveX Modeless Dialogs and PropertyManager Pages\n.",
+  "examples": [
+    {
+      "title": "Add ActiveX Tabs to Model View (C#)",
+      "href": "Add_ActiveX_Tabs_to_Model_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add ActiveX Tabs to Model View (VB.NET)",
+      "href": "Add_ActiveX_Tabs_to_Model_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add ActiveX Tabs to Model View (VBA)",
+      "href": "Add_ActiveX_Tabs_to_Model_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelViewManager.ActivateControlTab",
+    "IModelViewManager.ActivateModelTab",
+    "IModelViewManager.DeleteControlTab",
+    "IModelViewManager.GetControl",
+    "IModelViewManager.IGetControl",
+    "IModelViewManager.IsControlTabActive",
+    "IModelViewManager.IsModelTabActive"
+  ]
+}

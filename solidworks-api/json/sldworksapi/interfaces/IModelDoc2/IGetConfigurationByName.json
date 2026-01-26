@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IGetConfigurationByName",
+    "returns": "Configuration",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Specified configuration name"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.ConfigurationManager",
+      "IModelDoc2.DeleteConfiguration",
+      "IModelDoc2.GetConfigurationByName",
+      "IModelDoc2.GetConfigurationCount",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IAddConfiguration3",
+      "IModelDoc2.IGetConfigurationNames",
+      "IModelDoc2.ShowConfiguration2"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "name",
+      "igetconfigurationbyname",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "string"
+    ]
+  },
+  "title": "IModelDoc2.IGetConfigurationByName",
+  "description": "Gets the specified configuration.",
+  "signature": "Configuration IGetConfigurationByName( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Specified configuration name"
+    }
+  ],
+  "returns": "Configuration or NULL if the operation fails",
+  "remarks": "If the specified configuration has not been activated, then some data may be unavailable. For example, attempting to traverse assembly components for a configuration that has not been activated results in a NULL root component being returned from\nIConfiguration::IGetRootComponent2\n. However, the IConfiguration object returned is useful for obtaining data that is stored with the IConfiguration object, such as the\nIConfiguration::AlternateName\nvalue. The specified configuration does not have to be activated to obtain this type of stored information.",
+  "examples": [],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.ConfigurationManager",
+    "IModelDoc2.DeleteConfiguration",
+    "IModelDoc2.GetConfigurationByName",
+    "IModelDoc2.GetConfigurationCount",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IAddConfiguration3",
+    "IModelDoc2.IGetConfigurationNames",
+    "IModelDoc2.ShowConfiguration2"
+  ]
+}

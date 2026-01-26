@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICommandGroup",
+    "member": "CommandID",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "CommandIndex",
+        "type": "System.Int32",
+        "description": "Index of the item in the CommandGroup"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.NumberOfGroupItems",
+      "ISldWorks.GetCommandID"
+    ],
+    "keywords": [
+      "id",
+      "command",
+      "commandid",
+      "icommandgroup",
+      "group",
+      "index",
+      "int32",
+      "create",
+      "flyouts",
+      "commandmanager",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "ICommandGroup.CommandID",
+  "description": "Gets the command ID for the specified item in the CommandGroup.",
+  "signature": "System.Int32 CommandID( \n   System.Int32\nCommandIndex\n) {get;}",
+  "parameters": [
+    {
+      "name": "CommandIndex",
+      "type": "System.Int32",
+      "description": "Index of the item in the CommandGroup"
+    }
+  ],
+  "returns": "Command ID of the specified item",
+  "remarks": "The value of CommandIndex is the value returned by\nICommandGroup::AddCommandItem2\n.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandGroup.NumberOfGroupItems",
+    "ISldWorks.GetCommandID"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IImportDxfDwgData",
+    "member": "GetSheetScale",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+      },
+      {
+        "name": "Numerator",
+        "type": "System.Double",
+        "description": "Numerator of the scale"
+      },
+      {
+        "name": "Denominator",
+        "type": "System.Double",
+        "description": "Denominator of the scale"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io"
+    ],
+    "related": [
+      "IImportDxfDwgData.SetSheetScale"
+    ],
+    "keywords": [
+      "getsheetscale",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "sheet",
+      "scale",
+      "string",
+      "numerator",
+      "double",
+      "denominator",
+      "void"
+    ]
+  },
+  "title": "IImportDxfDwgData.GetSheetScale",
+  "description": "Gets the sheet scale for the drawing.",
+  "signature": "void GetSheetScale( \n   System.String\nSheet\n,\n   out System.Double\nNumerator\n,\n   out System.Double\nDenominator\n)",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+    },
+    {
+      "name": "Numerator",
+      "type": "System.Double",
+      "description": "Numerator of the scale"
+    },
+    {
+      "name": "Denominator",
+      "type": "System.Double",
+      "description": "Denominator of the scale"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method only supports importing to a drawing; it does not support importing to a part sketch.",
+  "examples": [],
+  "related": [
+    "IImportDxfDwgData.SetSheetScale"
+  ]
+}

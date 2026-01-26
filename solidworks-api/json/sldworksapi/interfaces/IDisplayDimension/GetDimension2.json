@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetDimension2",
+    "returns": "Dimension",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0 to get the first chamfer display dimension 1 to get the second chamfer display dimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "getdimension2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "dimension2",
+      "index",
+      "int32",
+      "sensor",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetDimension2",
+  "description": "Gets the model dimension used to create this display dimension.",
+  "signature": "Dimension GetDimension2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0 to get the first chamfer display dimension 1 to get the second chamfer display dimension"
+    }
+  ],
+  "returns": "Dimension",
+  "remarks": "The Index argument is valid for chamfer display dimensions only. If the display dimension is not a chamfer display dimension, then Index is ignored. To get both chamfer display dimensions, you must call this property twice; specify 0 for Index in the first call and 1 for Index in the second call.\nSOLIDWORKS can display a dimension more than once. For example, a base-extrude dimension can be brought into three different views on a drawing. These three dimensions are referred to as display dimensions and are represented by the DisplayDimension object in the SOLIDWORKS API. The original base-extrude dimension is represented by the Dimension object in the SOLIDWORKS API.",
+  "examples": [
+    {
+      "title": "Get and Set Sensor (C#)",
+      "href": "Get_and_Set_Sensor_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Sensor (VB.NET)",
+      "href": "Get_and_Set_Sensor_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Sensor (VBA)",
+      "href": "Get_and_Set_Sensor_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

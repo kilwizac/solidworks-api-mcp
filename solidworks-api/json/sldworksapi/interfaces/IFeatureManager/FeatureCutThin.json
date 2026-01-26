@@ -1,0 +1,342 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureCutThin",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Sd",
+        "type": "System.Boolean",
+        "description": "True for single ended, false for double ended"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "Flip side to cut; true to remove material outside of the profile, false to not"
+      },
+      {
+        "name": "Dir",
+        "type": "System.Boolean",
+        "description": "Reverse direction; true if you want Direction1 to be opposite the default direction (see Remarks )"
+      },
+      {
+        "name": "T1",
+        "type": "System.Int32",
+        "description": "Termination type for first end as defined in swEndConditions_e"
+      },
+      {
+        "name": "T2",
+        "type": "System.Int32",
+        "description": "Termination type for second end as defined in swEndConditions_e"
+      },
+      {
+        "name": "D1",
+        "type": "System.Double",
+        "description": "Depth of extrusion for first end in meters"
+      },
+      {
+        "name": "D2",
+        "type": "System.Double",
+        "description": "Depth of extrusion for second end in meters"
+      },
+      {
+        "name": "Dchk1",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in first direction, false does not allow drafting"
+      },
+      {
+        "name": "Dchk2",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in second direction, false does not allow drafting"
+      },
+      {
+        "name": "Ddir1",
+        "type": "System.Boolean",
+        "description": "True for first draft angle to be inward, false to be outward"
+      },
+      {
+        "name": "Ddir2",
+        "type": "System.Boolean",
+        "description": "True for second draft angle to be inward, false to be outward"
+      },
+      {
+        "name": "Dang1",
+        "type": "System.Double",
+        "description": "First draft angle"
+      },
+      {
+        "name": "Dang2",
+        "type": "System.Double",
+        "description": "Second draft angle"
+      },
+      {
+        "name": "OffsetReverse1",
+        "type": "System.Boolean",
+        "description": "If you chose to offset the first end condition from another face or plane, then true specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+      },
+      {
+        "name": "OffsetReverse2",
+        "type": "System.Boolean",
+        "description": "If you chose to offset the second end condition from another face or plane, then true specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+      },
+      {
+        "name": "TranslateSurface1",
+        "type": "System.Boolean",
+        "description": "When you choose swEndcondOffsetFromSurface as the termination type for the first end, then true specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+      },
+      {
+        "name": "TranslateSurface2",
+        "type": "System.Boolean",
+        "description": "When you choose swEndcondOffsetFromSurface as the termination type for the second end, then true specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+      },
+      {
+        "name": "Thk1",
+        "type": "System.Double",
+        "description": "Wall thickness 1 (Mid-plane type uses (Thk1)/2 for each direction)"
+      },
+      {
+        "name": "Thk2",
+        "type": "System.Double",
+        "description": "Wall thickness 2 (only used when RevThinDir=3 )"
+      },
+      {
+        "name": "EndThk",
+        "type": "System.Double",
+        "description": "End cap thickness (Only used when CapEnds=1)"
+      },
+      {
+        "name": "RevThinDir",
+        "type": "System.Int32",
+        "description": "Thin feature type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+      },
+      {
+        "name": "CapEnds",
+        "type": "System.Int32",
+        "description": "Cap the ends: 0 = no cap 1 = cap (base features only)"
+      },
+      {
+        "name": "AddBends",
+        "type": "System.Boolean",
+        "description": "True to add auto bends (open profile base features only), false to not"
+      },
+      {
+        "name": "BendRad",
+        "type": "System.Double",
+        "description": "Fillet radii if AddBends = True"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IExtrudeFeatureData2",
+      "IFeatureManager.FeatureCut2",
+      "IFeatureManager.FeatureCutThicken",
+      "IFeatureManager.FeatureExtrusionThin2"
+    ],
+    "keywords": [
+      "featurecutthin",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "cut",
+      "thin",
+      "sd",
+      "boolean",
+      "flip",
+      "dir",
+      "t1",
+      "int32",
+      "t2",
+      "d1",
+      "double",
+      "d2",
+      "dchk1",
+      "dchk2",
+      "ddir1",
+      "ddir2",
+      "dang1",
+      "dang2",
+      "offset",
+      "reverse1",
+      "reverse2",
+      "translate",
+      "surface1",
+      "surface2",
+      "thk1",
+      "thk2",
+      "end",
+      "thk",
+      "rev",
+      "cap",
+      "ends",
+      "add",
+      "bends",
+      "bend",
+      "rad",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select"
+    ]
+  },
+  "title": "IFeatureManager.FeatureCutThin",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureCutThin2.",
+  "signature": "Feature FeatureCutThin( \n   System.Boolean\nSd\n,\n   System.Boolean\nFlip\n,\n   System.Boolean\nDir\n,\n   System.Int32\nT1\n,\n   System.Int32\nT2\n,\n   System.Double\nD1\n,\n   System.Double\nD2\n,\n   System.Boolean\nDchk1\n,\n   System.Boolean\nDchk2\n,\n   System.Boolean\nDdir1\n,\n   System.Boolean\nDdir2\n,\n   System.Double\nDang1\n,\n   System.Double\nDang2\n,\n   System.Boolean\nOffsetReverse1\n,\n   System.Boolean\nOffsetReverse2\n,\n   System.Boolean\nTranslateSurface1\n,\n   System.Boolean\nTranslateSurface2\n,\n   System.Double\nThk1\n,\n   System.Double\nThk2\n,\n   System.Double\nEndThk\n,\n   System.Int32\nRevThinDir\n,\n   System.Int32\nCapEnds\n,\n   System.Boolean\nAddBends\n,\n   System.Double\nBendRad\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Sd",
+      "type": "System.Boolean",
+      "description": "True for single ended, false for double ended"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "Flip side to cut; true to remove material outside of the profile, false to not"
+    },
+    {
+      "name": "Dir",
+      "type": "System.Boolean",
+      "description": "Reverse direction; true if you want Direction1 to be opposite the default direction (see Remarks )"
+    },
+    {
+      "name": "T1",
+      "type": "System.Int32",
+      "description": "Termination type for first end as defined in swEndConditions_e"
+    },
+    {
+      "name": "T2",
+      "type": "System.Int32",
+      "description": "Termination type for second end as defined in swEndConditions_e"
+    },
+    {
+      "name": "D1",
+      "type": "System.Double",
+      "description": "Depth of extrusion for first end in meters"
+    },
+    {
+      "name": "D2",
+      "type": "System.Double",
+      "description": "Depth of extrusion for second end in meters"
+    },
+    {
+      "name": "Dchk1",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in first direction, false does not allow drafting"
+    },
+    {
+      "name": "Dchk2",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in second direction, false does not allow drafting"
+    },
+    {
+      "name": "Ddir1",
+      "type": "System.Boolean",
+      "description": "True for first draft angle to be inward, false to be outward"
+    },
+    {
+      "name": "Ddir2",
+      "type": "System.Boolean",
+      "description": "True for second draft angle to be inward, false to be outward"
+    },
+    {
+      "name": "Dang1",
+      "type": "System.Double",
+      "description": "First draft angle"
+    },
+    {
+      "name": "Dang2",
+      "type": "System.Double",
+      "description": "Second draft angle"
+    },
+    {
+      "name": "OffsetReverse1",
+      "type": "System.Boolean",
+      "description": "If you chose to offset the first end condition from another face or plane, then true specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+    },
+    {
+      "name": "OffsetReverse2",
+      "type": "System.Boolean",
+      "description": "If you chose to offset the second end condition from another face or plane, then true specifies offset in direction away from the sketch, false specifies offset from the face or plane in direction toward the sketch"
+    },
+    {
+      "name": "TranslateSurface1",
+      "type": "System.Boolean",
+      "description": "When you choose swEndcondOffsetFromSurface as the termination type for the first end, then true specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+    },
+    {
+      "name": "TranslateSurface2",
+      "type": "System.Boolean",
+      "description": "When you choose swEndcondOffsetFromSurface as the termination type for the second end, then true specifies that the end of the extrusion is a translation of the reference surface, false specifies to use a true offset"
+    },
+    {
+      "name": "Thk1",
+      "type": "System.Double",
+      "description": "Wall thickness 1 (Mid-plane type uses (Thk1)/2 for each direction)"
+    },
+    {
+      "name": "Thk2",
+      "type": "System.Double",
+      "description": "Wall thickness 2 (only used when RevThinDir=3 )"
+    },
+    {
+      "name": "EndThk",
+      "type": "System.Double",
+      "description": "End cap thickness (Only used when CapEnds=1)"
+    },
+    {
+      "name": "RevThinDir",
+      "type": "System.Int32",
+      "description": "Thin feature type: 0 = One direction 1 = One direction reverse 2 = Mid-plane 3 = Two direction"
+    },
+    {
+      "name": "CapEnds",
+      "type": "System.Int32",
+      "description": "Cap the ends: 0 = no cap 1 = cap (base features only)"
+    },
+    {
+      "name": "AddBends",
+      "type": "System.Boolean",
+      "description": "True to add auto bends (open profile base features only), false to not"
+    },
+    {
+      "name": "BendRad",
+      "type": "System.Double",
+      "description": "Fillet radii if AddBends = True"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "The default direction for cut operations is opposite the sketch normal. The default direction for boss operations is along the sketch normal. Setting the Dir argument to True reverses the default direction. For double-ended extrusions, Direction 2 is always opposite of Direction 1.\nThe default sketch normal is the same as the face or plane normal where the sketch was placed. To determine this normal vector, see\nIFace2::Normal\nand\nIRefPlane::Transform\n, respectively.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2",
+    "IFeatureManager.FeatureCut2",
+    "IFeatureManager.FeatureCutThicken",
+    "IFeatureManager.FeatureExtrusionThin2"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertDwgOrDxfFile",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of the DXF or DWG image file"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "file-io"
+    ],
+    "related": [],
+    "keywords": [
+      "insertdwgordxffile",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "dwg",
+      "dxf",
+      "file",
+      "name",
+      "string"
+    ]
+  },
+  "title": "IFeatureManager.InsertDwgOrDxfFile",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertDwgOrDxfFile2.",
+  "signature": "Feature InsertDwgOrDxfFile( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of the DXF or DWG image file"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "This method returns:\nNothing or null if the file contains solid bodies data.\nis not supported for use in assembly documents.\nYou must also select a plane or planar surface before calling this method.",
+  "examples": [],
+  "related": []
+}

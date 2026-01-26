@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMateLoadReference",
+    "member": "Delete",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "delete",
+      "imateloadreference",
+      "mate",
+      "load",
+      "reference",
+      "boolean"
+    ]
+  },
+  "title": "IMateLoadReference.Delete",
+  "description": "Deletes this mate load reference.",
+  "signature": "System.Boolean Delete()",
+  "parameters": [],
+  "returns": "True if the mate load reference is deleted, false if not",
+  "remarks": "This method rebuilds the FeatureManager design tree, which can be a time-consuming operation if it is large. If using this method to delete many load references at once, use\nIFeatureManager::EnableFeatureTree\nbefore and after using IAssemblyDoc::InsertLoadReference to disable and then re-enable rebuilding the FeatureManager design tree.",
+  "examples": [],
+  "related": []
+}

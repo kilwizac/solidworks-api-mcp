@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISwPEClassFactory",
+    "member": "SetPartnerKey",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StrPartnerEntitlement",
+        "type": "System.String",
+        "description": "License key string (see Remarks )"
+      },
+      {
+        "name": "TokenObject",
+        "type": "System.Object",
+        "description": "ISwPEToken ( for future use only - see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "parts"
+    ],
+    "related": [],
+    "keywords": [
+      "setpartnerkey",
+      "iswpeclassfactory",
+      "sw",
+      "pe",
+      "factory",
+      "partner",
+      "key",
+      "str",
+      "entitlement",
+      "string",
+      "token",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "ISwPEClassFactory.SetPartnerKey",
+  "description": "Sets the license key which SOLIDWORKS uses to verify SOLIDWORKS Partner entitlement.",
+  "signature": "System.Int32 SetPartnerKey( \n   System.String\nStrPartnerEntitlement\n,\n   out System.Object\nTokenObject\n)",
+  "parameters": [
+    {
+      "name": "StrPartnerEntitlement",
+      "type": "System.String",
+      "description": "License key string (see Remarks )"
+    },
+    {
+      "name": "TokenObject",
+      "type": "System.Object",
+      "description": "ISwPEToken ( for future use only - see Remarks )"
+    }
+  ],
+  "returns": "Return code as defined by swPartnerEntitlementStatus_e",
+  "remarks": "When this method is called, SOLIDWORKS compares the registry against these values in the license key specified in StrPartnerEntitlement:\nSOLIDWORKS Partner entitlement\nSOLIDWORKS version\nAdd-in name\nAdd-in GUID\nExpiration date\nSee\nSOLIDWORKS Partner Program\n.\nTokenObject is for future use only.",
+  "examples": [],
+  "related": []
+}

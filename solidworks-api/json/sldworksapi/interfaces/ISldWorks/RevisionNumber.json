@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RevisionNumber",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "Accessing SOLIDWORKS Add-in Objects",
+      "IModelDoc2.IVersionHistory",
+      "IModelDoc2.VersionHistory",
+      "ISldWorks.GetBuildNumbers2",
+      "ISldWorks.IVersionHistory",
+      "ISldWorks.VersionHistory"
+    ],
+    "keywords": [
+      "version",
+      "number",
+      "solidworks",
+      "revisionnumber",
+      "isldworks",
+      "sld",
+      "works",
+      "revision",
+      "string",
+      "create",
+      "infinite",
+      "plane",
+      "vba",
+      "material",
+      "names",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.RevisionNumber",
+  "description": "Gets the version number of this SOLIDWORKS Design installation.",
+  "signature": "System.String RevisionNumber()",
+  "parameters": [],
+  "returns": "SOLIDWORKS Design version number (See Remarks )",
+  "remarks": "This method returns a string in the form \"\nmajor\n.\nminor\n\", where\nmajor\nis an integer (e.g., 1), and\nminor\nis a decimal number (e.g., 0.0).\nFor all SOLIDWORKS Design executables prior to the initial public release of SOLIDWORKS 2000, this method returns\n1.0.0\n(major = 1, minor = 0.0).\nFor the initial public release of SOLIDWORKS 2000, this method returns\n8.0.0\n(major = 8, minor = 0.0). For SOLIDWORKS 2000 SP1, this method returns\n8.1.0\n, and each successive service pack or service pack hot fix of SOLIDWORKS 2000 increments the minor decimal number (e.g., SP1.1 returns\n8.1.1\n, SP2 returns\n8.2.0\n, SP3 returns\n8.3.0\n, etc.).\nFor the inital public release of SOLIDWORKS 2005, this method returns\n13.0.0\n. For SOLIDWORKS 2005 SP0.1, it returns\n13.0.1\n. For SOLIDWORKS 2005 SP1, it returns\n13.1.0\n.\nIn general, each successive major public release increments the major number by one, each service pack increments the minor decimal number by 1.0, and each service pack hot fix increments the minor decimal number by 0.1. For the initial public release, the minor decimal number is always\n0.0\n.\nAlpha, beta, and pre-release versions return negative minor decimal numbers:\na1:\n-1.0\nb1:\n-2.0\nb2:\n-3.0\nb3:\n-4.0\nPR1:\n-5.0\n(This value might be lower or higher depending on the number of beta releases.)\nFor SOLIDWORKS 2015 b2, this method returns\n23.-3.0\n.",
+  "examples": [
+    {
+      "title": "Create Infinite Plane (VBA)",
+      "href": "Create_Infinite_Plane_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Material Property Names (VBA)",
+      "href": "Get_Material_Property_Names_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Version Number (C#)",
+      "href": "Get_Version_Number_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Version Number (VB.NET)",
+      "href": "Get_Version_Number_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Version Number (VBA)",
+      "href": "Get_Version_Number_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "Accessing SOLIDWORKS Add-in Objects",
+    "IModelDoc2.IVersionHistory",
+    "IModelDoc2.VersionHistory",
+    "ISldWorks.GetBuildNumbers2",
+    "ISldWorks.IVersionHistory",
+    "ISldWorks.VersionHistory"
+  ]
+}

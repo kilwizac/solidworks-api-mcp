@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetGTols",
+    "returns": "Gtol",
+    "parameters": [
+      {
+        "name": "NumGTol",
+        "type": "System.Int32",
+        "description": "Total number of geometric tolerances on this drawing view."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetGTols"
+    ],
+    "keywords": [
+      "gtol",
+      "see",
+      "also",
+      "igtol",
+      "drawing",
+      "views",
+      "annotation",
+      "iannotation",
+      "view",
+      "iview",
+      "gtols",
+      "igetgtols",
+      "tols",
+      "num",
+      "tol",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetGTols",
+  "description": "Gets all of the geometric tolerances on this drawing view.",
+  "signature": "Gtol IGetGTols( \n   System.Int32\nNumGTol\n)",
+  "parameters": [
+    {
+      "name": "NumGTol",
+      "type": "System.Int32",
+      "description": "Total number of geometric tolerances on this drawing view."
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of geometric tolerances VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of geometric tolerances all at once instead of calling\nIView::GetFirstGTOL\nand then repeatedly calling\nIGtol::GetNextGTOL\nto obtain the remaining geometric tolerances in the drawing view.\nBefore calling this method, call\nIView::GetGTolCount\nto get the value for numGTol.",
+  "examples": [],
+  "related": [
+    "IView.GetGTols"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "SetArrowHeadStyleAtIndex",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of leader within this annotation (see Remarks )"
+      },
+      {
+        "name": "ArrowHeadStyle",
+        "type": "System.Int32",
+        "description": "Arrowhead style as defined in swArrowStyle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetArrowHeadCount",
+      "IAnnotation.GetArrowHeadSizeAtIndex",
+      "IAnnotation.GetArrowHeadStyleAtIndex",
+      "IAnnotation.SetArrowHeadSizeAtIndex"
+    ],
+    "keywords": [
+      "leaders",
+      "arrows",
+      "setarrowheadstyleatindex",
+      "iannotation",
+      "annotation",
+      "arrow",
+      "head",
+      "style",
+      "index",
+      "int32"
+    ]
+  },
+  "title": "IAnnotation.SetArrowHeadStyleAtIndex",
+  "description": "Sets the arrow head style of a specific leader on this annotation.",
+  "signature": "System.Int32 SetArrowHeadStyleAtIndex( \n   System.Int32\nIndex\n,\n   System.Int32\nArrowHeadStyle\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of leader within this annotation (see Remarks )"
+    },
+    {
+      "name": "ArrowHeadStyle",
+      "type": "System.Int32",
+      "description": "Arrowhead style as defined in swArrowStyle_e"
+    }
+  ],
+  "returns": "Return status (see Remarks )",
+  "remarks": "A valid index value is greater than or equal to 0, but less than the number of leaders on this annotation. Use\nIAnnotation::GetArrowHeadCount\nto find out how many leaders are on this annotation. An index value of -1 is also valid, and indicates that this arrowhead style should be applied to all leaders on this annotation. If the index value is\ninvalid, SOLIDWORKS returns a retval of -2.\nIf smart arrowhead style is enabled on this annotation, then this method cannot change\nthe arrowhead style of individual leaders, and retval is -3. Use\nIAnnotation::GetSmartArrowHeadStyle\nto determine if this flag is enabled or disabled.\nThe return status of this method can have the following values:\nIf value equals...\nThen the arrowhead style was...\n0\nSuccessfully set\n-1\nNot set because of an unknown error\n-2\nNot set because of an invalid index value\n-3\nNot set because of smart arrowhead styles being enabled\n-4\nNot set because of an invalid arrowhead style value\nIf leader display is enabled, then this method changes the visible model. To see those\nchanges, use\nIModelDoc2::GraphicsRedraw2\nto reddraw the graphics window.\nUse\nIAnnotation::GetArrowHeadStyleAtIndex\nto get the arrow head style of a specific leader.",
+  "examples": [],
+  "related": [
+    "IAnnotation.GetArrowHeadCount",
+    "IAnnotation.GetArrowHeadSizeAtIndex",
+    "IAnnotation.GetArrowHeadStyleAtIndex",
+    "IAnnotation.SetArrowHeadSizeAtIndex"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "SetFont",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDimension",
+        "type": "System.Boolean",
+        "description": "True if the tolerance font should be the same size as the dimension font, false if not"
+      },
+      {
+        "name": "UseScale",
+        "type": "System.Boolean",
+        "description": "True if the tolerance font size should be scaled based on the dimension font size, false if the tolerance font size is an absolute height value"
+      },
+      {
+        "name": "Value",
+        "type": "System.Double",
+        "description": "Scale ratio if UseScale is true or height value if UseScale is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setfont",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "font",
+      "use",
+      "boolean",
+      "scale",
+      "value",
+      "double"
+    ]
+  },
+  "title": "IDimensionTolerance.SetFont",
+  "description": "Sets the tolerance font values.",
+  "signature": "System.Boolean SetFont( \n   System.Boolean\nUseDimension\n,\n   System.Boolean\nUseScale\n,\n   System.Double\nValue\n)",
+  "parameters": [
+    {
+      "name": "UseDimension",
+      "type": "System.Boolean",
+      "description": "True if the tolerance font should be the same size as the dimension font, false if not"
+    },
+    {
+      "name": "UseScale",
+      "type": "System.Boolean",
+      "description": "True if the tolerance font size should be scaled based on the dimension font size, false if the tolerance font size is an absolute height value"
+    },
+    {
+      "name": "Value",
+      "type": "System.Double",
+      "description": "Scale ratio if UseScale is true or height value if UseScale is false"
+    }
+  ],
+  "returns": "True if the tolerance font is set, false if not",
+  "remarks": "If UseDimension is...\nThen...\nTrue\nThe other arguments are ignored.\nUseScale is True.\nValue is 1.0.\nfalse\nUseScale determines how Value is interpreted.\nIf UseScale is...\nThen Value is assumed to be the...\nTrue\nscale value to use, and the height value is not changed.\nfalse\nheight value to use, and the scale value is not changed.\nTo get the tolerance font information, use\nIDimensionTolerance::GetFontUseDimension\n,\nIDimensionTolerance::GetFontUseScale\n,\nIDimensionTolerance::GetFontScale\n, and\nIDimensionTolerance::GetFontHeight\n.\nThis method deals with the tolerance font information, not the fit tolerance font information. To get or set fit tolerance information, use\nIDimensionTolerance::GetFitFontUseDimension\n,\nIDimensionTolerance::GetFitFontUseScale\n,\nIDimensionTolerance::GetFitFontScale\n,\nIDimensionTolerance::GetFitFontHeight\n, and\nIDimensionTolerance::SetFitFont\n.\nTo see the effects of changing the tolerance font information, use\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [],
+  "related": []
+}

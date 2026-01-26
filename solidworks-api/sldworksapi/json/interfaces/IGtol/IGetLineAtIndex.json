@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetLineAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetLineAtIndex",
+      "IGtol.GetLineCount"
+    ],
+    "keywords": [
+      "lines",
+      "geometric",
+      "tolerancing",
+      "igetlineatindex",
+      "igtol",
+      "gtol",
+      "line",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetLineAtIndex",
+  "description": "Gets the start and end information for the specified line.",
+  "signature": "System.Double IGetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the line"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType, startPt[3], endPt[3]\n]\nwhere:\nlineType\n= the\nline type\nstartPt\n[3] = the XYZ line start point\nendPt\n[3] = the XYZ line end point",
+  "examples": [],
+  "related": [
+    "IGtol.GetLineAtIndex",
+    "IGtol.GetLineCount"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertCoordinateSystem",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "XFlippedIn",
+        "type": "System.Boolean",
+        "description": "True to flip the x direction, false to not"
+      },
+      {
+        "name": "YFlippedIn",
+        "type": "System.Boolean",
+        "description": "True to flip the y direction, false to not"
+      },
+      {
+        "name": "ZFlippedIn",
+        "type": "System.Boolean",
+        "description": "True to flip the z direction, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetCurrentCoordinateSystemName",
+      "IModelDocExtension.GetCoordinateSystemTransformByName"
+    ],
+    "keywords": [
+      "insertcoordinatesystem",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "coordinate",
+      "flipped",
+      "boolean",
+      "center",
+      "mass",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.InsertCoordinateSystem",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertCoordinateSystem.",
+  "signature": "System.Boolean InsertCoordinateSystem( \n   System.Boolean\nXFlippedIn\n,\n   System.Boolean\nYFlippedIn\n,\n   System.Boolean\nZFlippedIn\n)",
+  "parameters": [
+    {
+      "name": "XFlippedIn",
+      "type": "System.Boolean",
+      "description": "True to flip the x direction, false to not"
+    },
+    {
+      "name": "YFlippedIn",
+      "type": "System.Boolean",
+      "description": "True to flip the y direction, false to not"
+    },
+    {
+      "name": "ZFlippedIn",
+      "type": "System.Boolean",
+      "description": "True to flip the z direction, false to not"
+    }
+  ],
+  "returns": "True if coordinate system is added successfully, false if not",
+  "remarks": "Make the selections using\nIModelDocExtension::SelectByID2\nwith a mark of:\n1 - Origin\n2 - X axis\n4 - Y axis\n8 - Z axis\nThis method:\ndoes not require all three axis to be selected. The behavior is the same as interactively creating a coordinate system. See the SOLIDWORKS Help for more information.\nworks in section-view mode, but not if temporary geometry that only exists in section-view mode is selected.",
+  "examples": [
+    {
+      "title": "Insert Coordinate System at Center of Mass (VBA)",
+      "href": "Insert_Coordinate_System_at_Center_of_Mass_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.GetCurrentCoordinateSystemName",
+    "IModelDocExtension.GetCoordinateSystemTransformByName"
+  ]
+}

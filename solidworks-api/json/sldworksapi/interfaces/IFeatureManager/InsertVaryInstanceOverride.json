@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertVaryInstanceOverride",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DName",
+        "type": "System.String",
+        "description": "If OverrideType is... Then set DName to... 1 Name of the pattern instance dimension to override 2 \"Spacing Increment\""
+      },
+      {
+        "name": "PatternType",
+        "type": "System.Int32",
+        "description": "Type of pattern (see Remarks ): 2 = linear 4 = circular 256 = variable"
+      },
+      {
+        "name": "OverrideType",
+        "type": "System.Int32",
+        "description": "Type of increment override: 1 = dimension 2 = spacing"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction in which to apply the spacing override. If OverrideType is ... Then set Direction to ... 2 0 = direction 1 1 = direction 2 1 -1"
+      },
+      {
+        "name": "InstanceRowIndex",
+        "type": "System.Int32",
+        "description": "0 < row index of the instance to modify < number of instances per row"
+      },
+      {
+        "name": "InstanceColumnIndex",
+        "type": "System.Int32",
+        "description": "0 < column index of the instance to modify < number of instances per column; valid only for PatternType = 2"
+      },
+      {
+        "name": "OverrideValue",
+        "type": "System.Double",
+        "description": "Value to override the current value of the dimension or spacing of the specified instance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "insertvaryinstanceoverride",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "vary",
+      "instance",
+      "override",
+      "name",
+      "string",
+      "pattern",
+      "type",
+      "int32",
+      "direction",
+      "row",
+      "index",
+      "column",
+      "value",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.InsertVaryInstanceOverride",
+  "description": "Obsolete. Superseded by IInstanceToVaryOptions.",
+  "signature": "System.Boolean InsertVaryInstanceOverride( \n   System.String\nDName\n,\n   System.Int32\nPatternType\n,\n   System.Int32\nOverrideType\n,\n   System.Int32\nDirection\n,\n   System.Int32\nInstanceRowIndex\n,\n   System.Int32\nInstanceColumnIndex\n,\n   System.Double\nOverrideValue\n)",
+  "parameters": [
+    {
+      "name": "DName",
+      "type": "System.String",
+      "description": "If OverrideType is... Then set DName to... 1 Name of the pattern instance dimension to override 2 \"Spacing Increment\""
+    },
+    {
+      "name": "PatternType",
+      "type": "System.Int32",
+      "description": "Type of pattern (see Remarks ): 2 = linear 4 = circular 256 = variable"
+    },
+    {
+      "name": "OverrideType",
+      "type": "System.Int32",
+      "description": "Type of increment override: 1 = dimension 2 = spacing"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction in which to apply the spacing override. If OverrideType is ... Then set Direction to ... 2 0 = direction 1 1 = direction 2 1 -1"
+    },
+    {
+      "name": "InstanceRowIndex",
+      "type": "System.Int32",
+      "description": "0 < row index of the instance to modify < number of instances per row"
+    },
+    {
+      "name": "InstanceColumnIndex",
+      "type": "System.Int32",
+      "description": "0 < column index of the instance to modify < number of instances per column; valid only for PatternType = 2"
+    },
+    {
+      "name": "OverrideValue",
+      "type": "System.Double",
+      "description": "Value to override the current value of the dimension or spacing of the specified instance"
+    }
+  ],
+  "returns": "True if the override is applied successfully, false if not",
+  "remarks": "To vary the dimensions or spacings of pattern instances:\nCall this method multiple times to override multiple dimensions or spacings of pattern instances.\nCall\nIFeatureManager::InsertVaryInstanceIncrement\nmultiple times to increment multiple dimensions or spacings of pattern instances.\nIf PatternType is...\nCall IFeatureManager::CreateFeature(...)\n2\nLinearPatternFeatureData object\n4\nCircularPatternFeatureData object\n256\nDimPatternFeatureData object",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "GetCurveParams2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICoEdge.GetCurveParams",
+      "ICoEdge.IGetCurveParams",
+      "IEdge.IGetCurveParams2",
+      "IEdge.IsParamReversed"
+    ],
+    "keywords": [
+      "getcurveparams2",
+      "iedge",
+      "edge",
+      "curve",
+      "params2",
+      "object",
+      "dimension",
+      "drawing",
+      "vba",
+      "parameterization",
+      "intersecting",
+      "face",
+      "length",
+      "select",
+      "tangent",
+      "edges",
+      "via",
+      "iteration"
+    ]
+  },
+  "title": "IEdge.GetCurveParams2",
+  "description": "Obsolete. Superseded by IEdge::GetCurveParams3.",
+  "signature": "System.Object GetCurveParams2()",
+  "parameters": [],
+  "returns": "Array values describing the parameterization of the edge",
+  "remarks": "Calls to this method must be preceded by a call to\nIEdge::GetCurve\nor\nIEdge::IGetCurve\nbecause SOLIDWORKS does not keep the underlying curve information. Edge::GetCurve generates this information so that you can extract the curve parameters.\nYou can use the data returned by this method to determine if a circular edge is a complete circle or an arc.\nThe return value is the following array of 11 doubles:\n[\nStartPtX, StartPtY, StartPtZ, EndPtX, EndPtY, EndPtZ, StartUParam, EndUParam, PackDouble1, PackDouble2, PackDouble3\n]\nwhere\nPackDouble1,\nPackDouble2,\nand\nPackDouble3\nare each a set of two integers packed into a double. These variables hold the following pair of integers:\nPackDouble1\nTwo packed integers:\nUnused\ncurveType as documented in\nICurve::Identity\nPackDouble2\nTwo packed integers:\nUnused\ncurveTag\nPackDouble3\nTwo packed integers:\nUnused\nSenseFlag (indicates whether the curve and edge are in the same direction)\nIf SenseFlag is True, then the curve and edge are in the same direction. If SenseFlag is false, then the curve and edge are in opposite directions. In this case, this method returns the start parameter (point) that corresponds to the end of the edge and the end parameter (point) that corresponds to the end of the edge.\nThe start parameter is always smaller than the end parameter. If the curve and edge are in opposite directions, then the start and end parameters are along the negative portion of the parameter space. For example, if the start parameter of the edge is 10 and the end parameter is 5, then the parameter range returned is -10, -5. This ensures that the start parameter is smaller than the end parameter. To correct the values for the edge, swap the two values between the start and end parameters and then negate both values so that the value of the start parameter is 5 and the end parameter is 10.\nIf the curve is closed and the curve starts and ends at the same point, then\nStartUParam\nand\nEndUParam\nare a period apart.",
+  "examples": [
+    {
+      "title": "Dimension Edge in Drawing (VBA)",
+      "href": "Dimension_Edge_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Edge Curve Parameterization (VBA)",
+      "href": "Get_Edge_Curve_Parameterization_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersecting Face and Edge (VBA)",
+      "href": "Get_Intersecting_Face_and_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Length of Edge (VBA)",
+      "href": "Get_Length_of_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Tangent Edges Via Iteration (VBA)",
+      "href": "Select_Tangent_Edges_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICoEdge.GetCurveParams",
+    "ICoEdge.IGetCurveParams",
+    "IEdge.IGetCurveParams2",
+    "IEdge.IsParamReversed"
+  ]
+}

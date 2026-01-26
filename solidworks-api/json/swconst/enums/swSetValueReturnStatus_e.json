@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSetValueReturnStatus_e",
+    "description": "Return values for attempting to set the value of a parameter.",
+    "member_count": 6,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSetValueReturnStatus_e",
+  "description": "Return values for attempting to set the value of a parameter.",
+  "values": [
+    {
+      "member": "swSetValue_DrivenDimension",
+      "value": "3",
+      "description": "= Cannot be done on a dimension driven by geometry"
+    },
+    {
+      "member": "swSetValue_Failure",
+      "value": "1",
+      "description": "= Failed for an unknown reason"
+    },
+    {
+      "member": "swSetValue_FrozenFeatureOwner",
+      "value": "5",
+      "description": "= Owner of the dimension is frozen"
+    },
+    {
+      "member": "swSetValue_InvalidValue",
+      "value": "2",
+      "description": "= Not a valid value for change parameter"
+    },
+    {
+      "member": "swSetValue_ModelNotLoaded",
+      "value": "4",
+      "description": "= Model must be loaded in order to set this value"
+    },
+    {
+      "member": "swSetValue_Successful",
+      "value": "0",
+      "description": "= Successful"
+    }
+  ]
+}

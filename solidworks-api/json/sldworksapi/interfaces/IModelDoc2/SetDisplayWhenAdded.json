@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetDisplayWhenAdded",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Setting",
+        "type": "System.Boolean",
+        "description": "True to display new sketch entities when added, false to note"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetDisplayWhenAdded"
+    ],
+    "keywords": [
+      "setdisplaywhenadded",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "display",
+      "when",
+      "added",
+      "setting",
+      "boolean",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SetDisplayWhenAdded",
+  "description": "Obsolete. Superseded by ISketchManager::DisplayWhenAdded.",
+  "signature": "void SetDisplayWhenAdded( \n   System.Boolean\nSetting\n)",
+  "parameters": [
+    {
+      "name": "Setting",
+      "type": "System.Boolean",
+      "description": "True to display new sketch entities when added, false to note"
+    }
+  ],
+  "returns": "",
+  "remarks": "The sketch entities appear on the screen after performing\nIModelDoc2::GraphicsRedraw2\nor\nIModelDoc2::EditRebuild3\nis performed. Also,\nIModelDoc2::SetAddToDB\nmust be True to use this method's settings.\nThis display setting remains even after your program run has ended. Therefore, it is recommended that you reset this parameter to True at the end of your program. For example, if you have ended your program and the display is set to false, then the user would have difficulty performing selections and newly created entities would not be seen until a redraw or a rebuild.\nNOTES:\nIModelDoc2::GraphicsRedraw2 is much faster than ModelDoc2::EditRebuild3.\nIModelDoc2::SetAddToDB and\nIModelDoc2::SetDisplayWhenAdded\nalso increase performance during sketch entity creation.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetDisplayWhenAdded"
+  ]
+}

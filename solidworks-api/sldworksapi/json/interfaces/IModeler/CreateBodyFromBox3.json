@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateBodyFromBox3",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "BoxDimArray",
+        "type": "System.Object",
+        "description": "Array of 9 doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFeature.ISetBody3",
+      "IFeature.SetBody2"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "createbodyfrombox3",
+      "imodeler",
+      "modeler",
+      "create",
+      "body",
+      "box3",
+      "box",
+      "dim",
+      "array",
+      "object",
+      "body2",
+      "multibody",
+      "macro",
+      "feature",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModeler.CreateBodyFromBox3",
+  "description": "Creates a temporary body from the specified box dimensions.",
+  "signature": "Body2 CreateBodyFromBox3( \n   System.Object\nBoxDimArray\n)",
+  "parameters": [
+    {
+      "name": "BoxDimArray",
+      "type": "System.Object",
+      "description": "Array of 9 doubles (see Remarks )"
+    }
+  ],
+  "returns": "Body",
+  "remarks": "The input parameter is the following array of doubles:\n[\nboxFaceCenter\n[3],\nboxAxis\n[3],\nboxWidth, boxLength\n,\nboxHeight\n]\nwhere:\nboxFaceCenter\n[3]\nXYZ location that represents the center of one of the box faces.\nboxAxis\n[3]\nXYZ direction. The box will be extruded along this vector from the\nboxFaceCenter\nlocation\n,\na distance of\nboxHeight.\nboxWidth\nBox width. If\nboxAxis\nis parallel to the Z axis (0,0,1), then this value represents the dimension that is parallel to the X-axis; the new body is rotated to the input\nboxAxis\ndirection and translates it to the\nboxFaceCenter\n.\nboxLength\nBox length. If\nboxAxis\nis parallel to the Z axis (0,0,1), then this value represents the dimension that is parallel to the Y axis; the new body is rotated to the input\nboxAxis\ndirection and translates it to the\nboxFaceCenter\n.\nboxHeight\nHeight to extrude along the\nboxAxis\ndirection. If\nboxHeight\nis 0, a sheet body and whose normal is defined by\nboxAxis\n.",
+  "examples": [
+    {
+      "title": "Create Multibody Macro Feature (VBA)",
+      "href": "Create_Multibody_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (VB.NET)",
+      "href": "Create_Multibody_Macro_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (C#)",
+      "href": "Create_Multibody_Macro_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.ISetBody3",
+    "IFeature.SetBody2"
+  ]
+}

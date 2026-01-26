@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBodyFolder",
+    "member": "SortCutList",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CutListSortOptions",
+        "type": "System.Object",
+        "description": "ICutListSortOptions"
+      },
+      {
+        "name": "IgnoreInvalidFacesOrFeatures",
+        "type": "System.Boolean",
+        "description": "True to sort bodies ignoring any invalid excluded faces/features, false to not sort the bodies if there are invalid excluded faces/features (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "sortcutlist",
+      "ibodyfolder",
+      "body",
+      "folder",
+      "sort",
+      "cut",
+      "list",
+      "options",
+      "object",
+      "ignore",
+      "invalid",
+      "faces",
+      "features",
+      "boolean"
+    ]
+  },
+  "title": "IBodyFolder.SortCutList",
+  "description": "Sorts the cut list.",
+  "signature": "System.Boolean SortCutList( \n   System.Object\nCutListSortOptions\n,\n   System.Boolean\nIgnoreInvalidFacesOrFeatures\n)",
+  "parameters": [
+    {
+      "name": "CutListSortOptions",
+      "type": "System.Object",
+      "description": "ICutListSortOptions"
+    },
+    {
+      "name": "IgnoreInvalidFacesOrFeatures",
+      "type": "System.Boolean",
+      "description": "True to sort bodies ignoring any invalid excluded faces/features, false to not sort the bodies if there are invalid excluded faces/features (see Remarks )"
+    }
+  ],
+  "returns": "True if sorting is successful, false if not",
+  "remarks": "Use\nIBodyFolder::GetCutListSortOptions\nto populate CutListSortOptions.\nThis method applies the CutListSortOptions settings, sorts the cut list, and refreshes the cut list in the FeatureManager design tree.\nIn the Cut List Sorting Options PropertyManager you select faces/features to exclude from sorting. If some of those selected faces/features to exclude are invalid, i.e., they are not of selection type BODYFEATURE or FACE or they cannot be excluded (see the end of this\nRemark\n), a dialog box pops up during the sort operation with:\n----------------------------------------------------------------------\nFailed to exclude some of the selected faces in cut list sorting. Try selecting the corresponding features instead.\nWould you like to continue:\nYes (Bodies will be sorted ignoring some of the excluded faces.)\nNo (Bodies will not be sorted.)\n----------------------------------------------------------\nIgnoreInvalidFacesOrFeatures handles the situation when some of the body faces/features selected for exclusion (\nICutListSortOptions::SetFacesOrFeaturesToExclude\n) can not be excluded.\nSet IgnoreInvalidFacesOrFeatures to:\nTrue, to sort bodies ignoring any invalid excluded faces/features.\nFalse, to not sort the bodies if there are invalid excluded faces/features.\nIf you set IgnoreInvalidFacesOrFeatures to false and there are invalid faces/features in the exclusion list, then this method will not sort the cut list.\nOther examples of faces and features that are invalid for exclusion:\nChamfers that remove an entire face.\nSuppressed features.\nFeatures that create new bodies from sketches, such as boss-extrude, revolve, and sweep.\nCertain sheet metal features.\nFor more information, see the\nSorting Cut Lists\ntopics in the SOLIDWORKS Design user-interface help.",
+  "examples": [
+    {
+      "title": "IBodyFolder",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

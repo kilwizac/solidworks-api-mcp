@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "ISetParents",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ParentCount",
+        "type": "System.Int32",
+        "description": "Number of parent features for this macro feature"
+      },
+      {
+        "name": "PFeatures",
+        "type": "Feature",
+        "description": "in-process, unmanaged C++: Pointer to an array of parent features VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.GetParentsCount",
+      "IMacroFeatureData.IGetParents",
+      "IMacroFeatureData.Parents"
+    ],
+    "keywords": [
+      "isetparents",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "parents",
+      "parent",
+      "count",
+      "int32",
+      "features",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.ISetParents",
+  "description": "Sets the parent features for this macro feature.",
+  "signature": "void ISetParents( \n   System.Int32\nParentCount\n,\n   ref Feature\nPFeatures\n)",
+  "parameters": [
+    {
+      "name": "ParentCount",
+      "type": "System.Int32",
+      "description": "Number of parent features for this macro feature"
+    },
+    {
+      "name": "PFeatures",
+      "type": "Feature",
+      "description": "in-process, unmanaged C++: Pointer to an array of parent features VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Parent features set by this method are not persistent when the macro feature is regenerated. Reset the parent features in the\nSwComFeature::Regenerate\nhandler.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetParentsCount",
+    "IMacroFeatureData.IGetParents",
+    "IMacroFeatureData.Parents"
+  ]
+}

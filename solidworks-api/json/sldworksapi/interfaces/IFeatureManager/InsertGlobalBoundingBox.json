@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertGlobalBoundingBox",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "BBoxType",
+        "type": "System.Int32",
+        "description": "Bounding Box fit type as defined in swGlobalBoundingBoxFitOptions_e (see Remarks )"
+      },
+      {
+        "name": "IncludeHiddenBodies",
+        "type": "System.Boolean",
+        "description": "True to include hidden bodies, false to not"
+      },
+      {
+        "name": "IncludeSurfaceBodies",
+        "type": "System.Boolean",
+        "description": "True to include surfaces, false to not"
+      },
+      {
+        "name": "Status",
+        "type": "System.Int32",
+        "description": "Status as defined by swGlobalBoundingBoxResult_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "insertglobalboundingbox",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "global",
+      "bounding",
+      "box",
+      "type",
+      "int32",
+      "include",
+      "hidden",
+      "bodies",
+      "boolean",
+      "surface",
+      "status",
+      "object"
+    ]
+  },
+  "title": "IFeatureManager.InsertGlobalBoundingBox",
+  "description": "Obsolete. See IFeatureManager::CreateDefinition and IBoundingBoxFeatureData.",
+  "signature": "System.Object InsertGlobalBoundingBox( \n   System.Int32\nBBoxType\n,\n   System.Boolean\nIncludeHiddenBodies\n,\n   System.Boolean\nIncludeSurfaceBodies\n,\n   out System.Int32\nStatus\n)",
+  "parameters": [
+    {
+      "name": "BBoxType",
+      "type": "System.Int32",
+      "description": "Bounding Box fit type as defined in swGlobalBoundingBoxFitOptions_e (see Remarks )"
+    },
+    {
+      "name": "IncludeHiddenBodies",
+      "type": "System.Boolean",
+      "description": "True to include hidden bodies, false to not"
+    },
+    {
+      "name": "IncludeSurfaceBodies",
+      "type": "System.Boolean",
+      "description": "True to include surfaces, false to not"
+    },
+    {
+      "name": "Status",
+      "type": "System.Int32",
+      "description": "Status as defined by swGlobalBoundingBoxResult_e"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "If BBoxType is set to swGlobalBoundingBoxFitOptions_e.swBoundingBoxType_CustomPlane, then select a face or plane using\nIModelDocExtension::SelectByRay\nwith TypeWanted set to\nswSelectType_e\n.swSelFACES before calling this method.\nTo display or hide the Bounding Box sketch, call\nIModelDoc2::SetUserPreferenceToggle\nto set\nswUserPreferenceToggle_e\n.swViewDispGlobalBBox to true or false, respectively.\nAfter calling this method, use\nIModelDoc2::ClearSelection2\nto clear the selection made when the Bounding Box is created.",
+  "examples": [],
+  "related": []
+}

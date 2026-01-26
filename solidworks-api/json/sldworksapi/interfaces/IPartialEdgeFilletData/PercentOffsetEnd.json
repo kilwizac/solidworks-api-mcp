@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPartialEdgeFilletData",
+    "member": "PercentOffsetEnd",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "parts"
+    ],
+    "related": [
+      "IPartialEdgeFilletData.PercentOffsetStart"
+    ],
+    "keywords": [
+      "percentoffsetend",
+      "ipartialedgefilletdata",
+      "partial",
+      "edge",
+      "fillet",
+      "data",
+      "percent",
+      "offset",
+      "end",
+      "double"
+    ],
+    "readonly": true
+  },
+  "title": "IPartialEdgeFilletData.PercentOffsetEnd",
+  "description": "Gets the percentage offset from the end point for this partial edge fillet.",
+  "signature": "System.Double PercentOffsetEnd {get;}",
+  "parameters": [],
+  "returns": "0.0 <= percentage offset from the end point < 100.0",
+  "remarks": "This property is valid only if\nIPartialEdgeFilletData::EndCondition\nis  swSimpleFilletPartialEdgeCondition_e.PartialEdgePercentOffset.\nTo modify the end percent offset of the fillet after creation, you must call\nIPartialEdgeFilletData::SetPartialFilletParameters\n.",
+  "examples": [],
+  "related": [
+    "IPartialEdgeFilletData.PercentOffsetStart"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "Identity",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.IsBcurve",
+      "ICurve.IsCircle",
+      "ICurve.IsEllipse",
+      "ICurve.IsLine",
+      "ICurve.IsTrimmedCurve"
+    ],
+    "keywords": [
+      "identity",
+      "icurve",
+      "curve",
+      "int32",
+      "length",
+      "edge",
+      "vba",
+      "spline",
+      "elliptical"
+    ]
+  },
+  "title": "ICurve.Identity",
+  "description": "Gets the type of curve.",
+  "signature": "System.Int32 Identity()",
+  "parameters": [],
+  "returns": "Type of curve as defined in swCurveTypes_e",
+  "remarks": "If the return value is TRIMMED_TYPE, then the original untrimmed curve type may be established by calling\nICurve::IsLine\n,\nICurve::IsBcurve\nor\nICurve::IsCircle\n.\nTo determine if a circular edge is a complete circle or an arc, see\nIEdge::GetCurveParams2\nor\nIEdge::IGetCurveParams2\n.",
+  "examples": [
+    {
+      "title": "Get Length of Edge (VBA)",
+      "href": "Get_Length_of_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Length of Spline or Elliptical Edge (VBA)",
+      "href": "Get_Length_of_Spline_or_Elliptical_Edge_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.IsBcurve",
+    "ICurve.IsCircle",
+    "ICurve.IsEllipse",
+    "ICurve.IsLine",
+    "ICurve.IsTrimmedCurve"
+  ]
+}

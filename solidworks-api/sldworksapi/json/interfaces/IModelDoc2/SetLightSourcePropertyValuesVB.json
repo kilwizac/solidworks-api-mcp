@@ -1,0 +1,302 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "SetLightSourcePropertyValuesVB",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "IdName",
+        "type": "System.String",
+        "description": "Light source ID name"
+      },
+      {
+        "name": "LType",
+        "type": "System.Int32",
+        "description": "Light source type; valid types are taken from openGL definitions (LIGHT_EYE, LIGHT_AMBIENT, LIGHT_SPOT, LIGHT_POINT, LIGHT_DISTANT)"
+      },
+      {
+        "name": "Diff",
+        "type": "System.Double",
+        "description": "Light source diffuseness where values range from 0 to 1"
+      },
+      {
+        "name": "RgbColor",
+        "type": "System.Int32",
+        "description": "Color value"
+      },
+      {
+        "name": "Dist",
+        "type": "System.Double",
+        "description": "Distance between the light source position and the vertex"
+      },
+      {
+        "name": "DirX",
+        "type": "System.Double",
+        "description": "X unit vector value describing the lights position"
+      },
+      {
+        "name": "DirY",
+        "type": "System.Double",
+        "description": "Y unit vector value describing the lights po"
+      },
+      {
+        "name": "DirZ",
+        "type": "System.Double",
+        "description": "Z unit vector value describing the lights position"
+      },
+      {
+        "name": "SpotDirX",
+        "type": "System.Double",
+        "description": "Spot X direction"
+      },
+      {
+        "name": "SpotDirY",
+        "type": "System.Double",
+        "description": "Spot Y direction"
+      },
+      {
+        "name": "SpotDirZ",
+        "type": "System.Double",
+        "description": "Spot Z direction"
+      },
+      {
+        "name": "SpotAngle",
+        "type": "System.Double",
+        "description": "Spot angle"
+      },
+      {
+        "name": "FallOff0",
+        "type": "System.Double",
+        "description": "Light source falloff - constant attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+      },
+      {
+        "name": "FallOff1",
+        "type": "System.Double",
+        "description": "Light source falloff - linear attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+      },
+      {
+        "name": "FallOff2",
+        "type": "System.Double",
+        "description": "Light source falloff - quadratic attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+      },
+      {
+        "name": "Ambient",
+        "type": "System.Double",
+        "description": "Light source ambient intensity"
+      },
+      {
+        "name": "Specular",
+        "type": "System.Double",
+        "description": "Light source specular intensity"
+      },
+      {
+        "name": "SpotExponent",
+        "type": "System.Double",
+        "description": "Spot exponent NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+      },
+      {
+        "name": "BDisable",
+        "type": "System.Boolean",
+        "description": "Light source disabled"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddLightSource",
+      "IModelDoc2.AddLightSourceExtProperty",
+      "IModelDoc2.AddLightToScene",
+      "IModelDoc2.AddSceneExtProperty",
+      "IModelDoc2.DeleteLightSource",
+      "IModelDoc2.GetLightSourceCount",
+      "IModelDoc2.GetLightSourceExtProperty",
+      "IModelDoc2.GetLightSourceIdFromName",
+      "IModelDoc2.GetLightSourceName",
+      "IModelDoc2.Lights",
+      "IModelDoc2.ResetLightSourceExtProperty",
+      "IModelDoc2.ResetSceneExtProperty",
+      "IModelDoc2.SetLightSourceName"
+    ],
+    "keywords": [
+      "lighting",
+      "properties",
+      "setlightsourcepropertyvaluesvb",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "light",
+      "source",
+      "values",
+      "vb",
+      "id",
+      "name",
+      "string",
+      "type",
+      "int32",
+      "diff",
+      "double",
+      "rgb",
+      "color",
+      "dist",
+      "dir",
+      "spot",
+      "angle",
+      "fall",
+      "off0",
+      "off1",
+      "off2",
+      "ambient",
+      "specular",
+      "exponent",
+      "disable",
+      "boolean",
+      "add",
+      "spotlight",
+      "feature",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.SetLightSourcePropertyValuesVB",
+  "description": "Sets the light source property values.",
+  "signature": "System.Boolean SetLightSourcePropertyValuesVB( \n   System.String\nIdName\n,\n   System.Int32\nLType\n,\n   System.Double\nDiff\n,\n   System.Int32\nRgbColor\n,\n   System.Double\nDist\n,\n   System.Double\nDirX\n,\n   System.Double\nDirY\n,\n   System.Double\nDirZ\n,\n   System.Double\nSpotDirX\n,\n   System.Double\nSpotDirY\n,\n   System.Double\nSpotDirZ\n,\n   System.Double\nSpotAngle\n,\n   System.Double\nFallOff0\n,\n   System.Double\nFallOff1\n,\n   System.Double\nFallOff2\n,\n   System.Double\nAmbient\n,\n   System.Double\nSpecular\n,\n   System.Double\nSpotExponent\n,\n   System.Boolean\nBDisable\n)",
+  "parameters": [
+    {
+      "name": "IdName",
+      "type": "System.String",
+      "description": "Light source ID name"
+    },
+    {
+      "name": "LType",
+      "type": "System.Int32",
+      "description": "Light source type; valid types are taken from openGL definitions (LIGHT_EYE, LIGHT_AMBIENT, LIGHT_SPOT, LIGHT_POINT, LIGHT_DISTANT)"
+    },
+    {
+      "name": "Diff",
+      "type": "System.Double",
+      "description": "Light source diffuseness where values range from 0 to 1"
+    },
+    {
+      "name": "RgbColor",
+      "type": "System.Int32",
+      "description": "Color value"
+    },
+    {
+      "name": "Dist",
+      "type": "System.Double",
+      "description": "Distance between the light source position and the vertex"
+    },
+    {
+      "name": "DirX",
+      "type": "System.Double",
+      "description": "X unit vector value describing the lights position"
+    },
+    {
+      "name": "DirY",
+      "type": "System.Double",
+      "description": "Y unit vector value describing the lights po"
+    },
+    {
+      "name": "DirZ",
+      "type": "System.Double",
+      "description": "Z unit vector value describing the lights position"
+    },
+    {
+      "name": "SpotDirX",
+      "type": "System.Double",
+      "description": "Spot X direction"
+    },
+    {
+      "name": "SpotDirY",
+      "type": "System.Double",
+      "description": "Spot Y direction"
+    },
+    {
+      "name": "SpotDirZ",
+      "type": "System.Double",
+      "description": "Spot Z direction"
+    },
+    {
+      "name": "SpotAngle",
+      "type": "System.Double",
+      "description": "Spot angle"
+    },
+    {
+      "name": "FallOff0",
+      "type": "System.Double",
+      "description": "Light source falloff - constant attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+    },
+    {
+      "name": "FallOff1",
+      "type": "System.Double",
+      "description": "Light source falloff - linear attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+    },
+    {
+      "name": "FallOff2",
+      "type": "System.Double",
+      "description": "Light source falloff - quadratic attenuation NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+    },
+    {
+      "name": "Ambient",
+      "type": "System.Double",
+      "description": "Light source ambient intensity"
+    },
+    {
+      "name": "Specular",
+      "type": "System.Double",
+      "description": "Light source specular intensity"
+    },
+    {
+      "name": "SpotExponent",
+      "type": "System.Double",
+      "description": "Spot exponent NOTE: This parameter is not supported in SOLIDWORKS 2011 and later."
+    },
+    {
+      "name": "BDisable",
+      "type": "System.Boolean",
+      "description": "Light source disabled"
+    }
+  ],
+  "returns": "True if setting the light source properties is successful, false if not",
+  "remarks": "This method is similar to\nIModelDoc2::LightSourcePropertyValues\nand\nIModelDoc2::ILightSourcePropertyValues\n, except using this method you can pass each argument individually.",
+  "examples": [
+    {
+      "title": "Add Spotlight and Get Light Feature (C#)",
+      "href": "Add_Spotlight_and_Get_Light_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Spotlight and Get Light Feature (VB.NET)",
+      "href": "Add_Spotlight_and_Get_Light_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Spotlight and Get Light Feature (VBA)",
+      "href": "Add_Spotlight_and_Get_Light_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.AddLightSource",
+    "IModelDoc2.AddLightSourceExtProperty",
+    "IModelDoc2.AddLightToScene",
+    "IModelDoc2.AddSceneExtProperty",
+    "IModelDoc2.DeleteLightSource",
+    "IModelDoc2.GetLightSourceCount",
+    "IModelDoc2.GetLightSourceExtProperty",
+    "IModelDoc2.GetLightSourceIdFromName",
+    "IModelDoc2.GetLightSourceName",
+    "IModelDoc2.Lights",
+    "IModelDoc2.ResetLightSourceExtProperty",
+    "IModelDoc2.ResetSceneExtProperty",
+    "IModelDoc2.SetLightSourceName"
+  ]
+}

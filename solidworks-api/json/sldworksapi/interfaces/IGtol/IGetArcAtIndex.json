@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetArcAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the arc"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetArcAtIndex",
+      "IGtol.GetArcCount"
+    ],
+    "keywords": [
+      "arcs",
+      "geometric",
+      "tolerancing",
+      "igetarcatindex",
+      "igtol",
+      "gtol",
+      "arc",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetArcAtIndex",
+  "description": "Gets information for the specified arc.",
+  "signature": "System.Double IGetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the arc"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType, startPt[3], endPt[3], centerPt[3], rotationDir\n]\nwhere:\nlineType\nLine type\nstartPt[3]\nXYZ arc start point\nendPt[3]\nXYZ arc end point\ncenterPt[3]\nXYZ arc center point\nrotationDir\nBoolean returned as a double and represents the rotation direction, where CCW returns True and CW returns false",
+  "examples": [],
+  "related": [
+    "IGtol.GetArcAtIndex",
+    "IGtol.GetArcCount"
+  ]
+}

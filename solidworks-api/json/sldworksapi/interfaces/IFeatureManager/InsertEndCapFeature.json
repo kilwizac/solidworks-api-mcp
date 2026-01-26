@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertEndCapFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Depth",
+        "type": "System.Double",
+        "description": "Thickness of the end cap"
+      },
+      {
+        "name": "BIsGivenOffset",
+        "type": "System.Boolean",
+        "description": "True to provide an offset value, false to provide a thickness ratio"
+      },
+      {
+        "name": "BIsChamfer",
+        "type": "System.Boolean",
+        "description": "True if end cap feature is chamfered, false if end cap is filleted"
+      },
+      {
+        "name": "OffsetValue",
+        "type": "System.Double",
+        "description": "Edge offset value; valid only if BIsGivenOffset is true"
+      },
+      {
+        "name": "WallThicknessRatio",
+        "type": "System.Double",
+        "description": "Wall thickness ratio; valid only if BIsGivenOffset is false"
+      },
+      {
+        "name": "ChamferValue",
+        "type": "System.Double",
+        "description": "Chamfer distance if BIsChamfer is true, fillet radius if BIsChamfer is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "insertendcapfeature",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "end",
+      "cap",
+      "depth",
+      "double",
+      "given",
+      "offset",
+      "boolean",
+      "chamfer",
+      "value",
+      "wall",
+      "thickness",
+      "ratio"
+    ]
+  },
+  "title": "IFeatureManager.InsertEndCapFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertEndCapFeature3.",
+  "signature": "Feature InsertEndCapFeature( \n   System.Double\nDepth\n,\n   System.Boolean\nBIsGivenOffset\n,\n   System.Boolean\nBIsChamfer\n,\n   System.Double\nOffsetValue\n,\n   System.Double\nWallThicknessRatio\n,\n   System.Double\nChamferValue\n)",
+  "parameters": [
+    {
+      "name": "Depth",
+      "type": "System.Double",
+      "description": "Thickness of the end cap"
+    },
+    {
+      "name": "BIsGivenOffset",
+      "type": "System.Boolean",
+      "description": "True to provide an offset value, false to provide a thickness ratio"
+    },
+    {
+      "name": "BIsChamfer",
+      "type": "System.Boolean",
+      "description": "True if end cap feature is chamfered, false if end cap is filleted"
+    },
+    {
+      "name": "OffsetValue",
+      "type": "System.Double",
+      "description": "Edge offset value; valid only if BIsGivenOffset is true"
+    },
+    {
+      "name": "WallThicknessRatio",
+      "type": "System.Double",
+      "description": "Wall thickness ratio; valid only if BIsGivenOffset is false"
+    },
+    {
+      "name": "ChamferValue",
+      "type": "System.Double",
+      "description": "Chamfer distance if BIsChamfer is true, fillet radius if BIsChamfer is false"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "",
+  "examples": [],
+  "related": []
+}

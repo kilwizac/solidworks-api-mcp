@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swLeaderStyle_e",
+    "description": "Leader styles.",
+    "member_count": 11,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swLeaderStyle_e",
+  "description": "Leader styles.",
+  "values": [
+    {
+      "member": "swAlwaysAttachToBalloon",
+      "value": "0",
+      "description": "x1004 or 4100 = Bitmask ; applies only to balloon annotations; specifies that the balloon's Always Attach to Balloon leader option is enabled and the leader is always attached to the balloon when quantity is specified, and the balloon's Break Around leader option is disabled; if not specified, then the balloon's Always Attach to Balloon leader option is disabled, and the balloon's Break Around leader option is enabled and the balloon's leader is set to break around quantity; AND with one of the following options: swBENT swSTRAIGHT swUNDERLINED (parts only) swSPLINE (drawings only) swVDA"
+    },
+    {
+      "member": "swAttachLeaderBottom",
+      "value": "0",
+      "description": "x400 or 1024 = Bitmask; in part's multiline note, attaches leader to bottom of note; AND with one of the following options: swBENT swSTRAIGHT swUNDERLINED"
+    },
+    {
+      "member": "swAttachLeaderCenter",
+      "value": "0",
+      "description": "x200 or 512 = Bitmask; in a part's multiline note, attaches leader to center of note; AND with one of the following options: swBENT swSTRAIGHT swUNDERLINED"
+    },
+    {
+      "member": "swAttachLeaderNearest",
+      "value": "0",
+      "description": "x800 or 2048 = Bitmask; in a part's multiline note, left leader attaches to the top of note and right leader attaches to the bottom of note; AND with one of the following options: swBENT swSTRAIGHT swUNDERLINED"
+    },
+    {
+      "member": "swAttachLeaderTop",
+      "value": "0",
+      "description": "x100 or 256 = Bitmask; in a part's multiline note, attaches leader to top of note; AND with one of the following options: swBENT swSTRAIGHT swUNDERLINED"
+    },
+    {
+      "member": "swBENT",
+      "value": "2",
+      "description": "= Creates a bent leader"
+    },
+    {
+      "member": "swNO_LEADER",
+      "value": "0",
+      "description": "= No leader"
+    },
+    {
+      "member": "swSPLINE",
+      "value": "4",
+      "description": "= Creates a spline leader from a note; for drawings only"
+    },
+    {
+      "member": "swSTRAIGHT",
+      "value": "1",
+      "description": "= Creates a straight leader"
+    },
+    {
+      "member": "swUNDERLINED",
+      "value": "3",
+      "description": "= Creates an underlined leader; for parts only"
+    },
+    {
+      "member": "swVDA",
+      "value": "8",
+      "description": "= Creates an inspection leader"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureRevolveThinCut",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True reverses the angle direction, false does not"
+      },
+      {
+        "name": "Angle2",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "RevType",
+        "type": "System.Int32",
+        "description": "Type of revolution as defined in swRevolveType_e (see Remarks )"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Wall thickness1 (ReverseThinDir = 2 uses (thickness1)/2 for each direction)"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Wall thickness 2 (only used when reverseThinDir= 3)"
+      },
+      {
+        "name": "ReverseThinDir",
+        "type": "System.Int32",
+        "description": "Type and direction as defined in swThinWallType_e"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureRevolve",
+      "IFeatureManager.FeatureRevolveCut2",
+      "IRevolveFeatureData2"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "revolve",
+      "revolves",
+      "irevolvefeaturedata2",
+      "cuts",
+      "features",
+      "featurerevolvethincut",
+      "ifeaturemanager",
+      "manager",
+      "thin",
+      "cut",
+      "angle",
+      "double",
+      "reverse",
+      "dir",
+      "boolean",
+      "angle2",
+      "rev",
+      "type",
+      "int32",
+      "thickness1",
+      "thickness2",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select"
+    ]
+  },
+  "title": "IFeatureManager.FeatureRevolveThinCut",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureRevolve2.",
+  "signature": "Feature FeatureRevolveThinCut( \n   System.Double\nAngle\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nAngle2\n,\n   System.Int32\nRevType\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Int32\nReverseThinDir\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True reverses the angle direction, false does not"
+    },
+    {
+      "name": "Angle2",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "RevType",
+      "type": "System.Int32",
+      "description": "Type of revolution as defined in swRevolveType_e (see Remarks )"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Wall thickness1 (ReverseThinDir = 2 uses (thickness1)/2 for each direction)"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Wall thickness 2 (only used when reverseThinDir= 3)"
+    },
+    {
+      "name": "ReverseThinDir",
+      "type": "System.Int32",
+      "description": "Type and direction as defined in swThinWallType_e"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "A constant thickness is given to the profile when revolving.\nThe ReverseDir argument has no effect if a mid-plane revolution is specified.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureRevolve",
+    "IFeatureManager.FeatureRevolveCut2",
+    "IRevolveFeatureData2"
+  ]
+}

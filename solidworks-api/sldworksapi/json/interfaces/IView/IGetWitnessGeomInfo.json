@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetWitnessGeomInfo",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Size of the virtual sharp witness line geometry data array (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetWitnessGeomInfo"
+    ],
+    "keywords": [
+      "virtual",
+      "sharps",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "igetwitnessgeominfo",
+      "witness",
+      "geom",
+      "info",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IView.IGetWitnessGeomInfo",
+  "description": "Gets the geometry data for all of the virtual sharp witness lines in this drawing view.",
+  "signature": "System.Double IGetWitnessGeomInfo( \n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Size of the virtual sharp witness line geometry data array (see Remarks )"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method returns an array containing the following data for each virtual sharp in the view:\n[\ncolor_value\n,\nswLineStyles_e\noption (-1 if no line style is specified),\nswLineWeights_e\noption (-1 if no line weight is specified),\nlayer ID (-1 if no layer is specified),\nswLayerOverride_e\noption,\n0 (\nNOTE:\n0 = witness line data),\nnumber (m) of witness lines,\nwitness line 1[start_point[x,y,z], end_point[x,y,z&cd;\n...\nwitness line m[start_point[x,y,z], end_point[x,y,z&cd;,\n1 (\nNOTE:\n1 = witness arc data),\nnumber (n) of witness arcs,\nwitness arc 1[start_point[x,y,z], end_point[x,y,z], center_point[x,y,z], normal_point[x,y,z&cd;\n...\nwitness arc n[start_point[x,y,z], end_point[x,y,z], center_point[x,y,z], normal_point[x,y,z&cd;]\nWhere:\ncolor_value =\nMAX(MIN(\nred_rgb_value\n,255),0)\n+\nMAX(MIN(\ngreen_rgb_value\n,255),0)*16*16\n+\nMAX(MIN(\nblue_rgb_value\n,255),0)*16*16*16*16\nBefore calling this method, call\nIView::GetWitnessEntitiesCount\nto get the size of the array returned by this method.",
+  "examples": [],
+  "related": [
+    "IView.GetWitnessGeomInfo"
+  ]
+}

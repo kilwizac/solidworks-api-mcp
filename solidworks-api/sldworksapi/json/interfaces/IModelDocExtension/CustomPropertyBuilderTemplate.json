@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDocExtension",
+    "member": "CustomPropertyBuilderTemplate",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "WeldmentTemplate",
+        "type": "System.Boolean",
+        "description": "True if a weldment part, false if not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "custom",
+      "properties",
+      "see",
+      "also",
+      "icustompropertymanager",
+      "custompropertybuildertemplate",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "builder",
+      "template",
+      "weldment",
+      "boolean",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDocExtension.CustomPropertyBuilderTemplate",
+  "description": "Gets or sets the custom property builder template for this part.",
+  "signature": "System.String CustomPropertyBuilderTemplate( \n   System.Boolean\nWeldmentTemplate\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "WeldmentTemplate",
+      "type": "System.Boolean",
+      "description": "True if a weldment part, false if not (see Remarks )"
+    }
+  ],
+  "returns": "File name of the custom property builder template (see Remarks )",
+  "remarks": "If WeldmentTemplate is:\nTrue, then this property gets or sets\n*.wldprp\n.\nFalse, then this property gets or sets\n*.prtprp\n.\nAll custom property builder templates are stored in the file location specified in\nTools > Options > File Locations > Custom Property Files\n.\nThis property corresponds to the setting in the Template Options dialog that appears when you click on the button next to More Properties in the Custom Properties task pane. When you create a custom property layout, a template is created. The button is activated for parts and weldments only after a custom properties tab layout is created. The weldment custom property template (\n*.wldprp\n) can be created or modified only if a cut list item is selected in the Cut list folder.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,123 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IMakeIsoCurves",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UvRange",
+        "type": "System.Double",
+        "description": "Array of 4 doubles indicating the range of the surface to use (see Remarks )"
+      },
+      {
+        "name": "Dir",
+        "type": "System.Double",
+        "description": "Array of 3 doubles indicating the direction of projection on the surface (see Remarks)"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle relative to dir where to create the curves"
+      },
+      {
+        "name": "Tol",
+        "type": "System.Double",
+        "description": "Tolerance of the curves"
+      },
+      {
+        "name": "CurveCount",
+        "type": "System.Int32",
+        "description": "Number of curves to create (see Remarks )"
+      },
+      {
+        "name": "Curves",
+        "type": "Curve",
+        "description": "Array of curves of size CurveCount"
+      },
+      {
+        "name": "CurveBounds",
+        "type": "System.Double",
+        "description": "Array of doubles of size 2*Curves indicating the parametric bounds of the curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IMakeIsoCurve",
+      "ISurface.MakeIsoCurve",
+      "ISurface.MakeIsoCurves"
+    ],
+    "keywords": [
+      "imakeisocurves",
+      "isurface",
+      "surface",
+      "make",
+      "iso",
+      "curves",
+      "uv",
+      "range",
+      "double",
+      "dir",
+      "angle",
+      "tol",
+      "curve",
+      "count",
+      "int32",
+      "bounds",
+      "boolean"
+    ]
+  },
+  "title": "ISurface.IMakeIsoCurves",
+  "description": "Creates curves on a surface.",
+  "signature": "System.Boolean IMakeIsoCurves( \n   ref System.Double\nUvRange\n,\n   ref System.Double\nDir\n,\n   System.Double\nAngle\n,\n   System.Double\nTol\n,\n   System.Int32\nCurveCount\n,\n   out Curve\nCurves\n,\n   out System.Double\nCurveBounds\n)",
+  "parameters": [
+    {
+      "name": "UvRange",
+      "type": "System.Double",
+      "description": "Array of 4 doubles indicating the range of the surface to use (see Remarks )"
+    },
+    {
+      "name": "Dir",
+      "type": "System.Double",
+      "description": "Array of 3 doubles indicating the direction of projection on the surface (see Remarks)"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle relative to dir where to create the curves"
+    },
+    {
+      "name": "Tol",
+      "type": "System.Double",
+      "description": "Tolerance of the curves"
+    },
+    {
+      "name": "CurveCount",
+      "type": "System.Int32",
+      "description": "Number of curves to create (see Remarks )"
+    },
+    {
+      "name": "Curves",
+      "type": "Curve",
+      "description": "Array of curves of size CurveCount"
+    },
+    {
+      "name": "CurveBounds",
+      "type": "System.Double",
+      "description": "Array of doubles of size 2*Curves indicating the parametric bounds of the curve"
+    }
+  ],
+  "returns": "True if curves are created on the surface, false if not",
+  "remarks": "The UvRange argument is an array of 4 doubles indicating the minimum and maximum U and V values:\n[\nu_min, u_max, v_min, v_max\n]\nThe dir argument is an array of 3 doubles representing the unit vector:\n[\nx, y, z\n]\nBefore calling this method, call\nISurface::IGetMakeIsoCurvesCount\n.",
+  "examples": [],
+  "related": [
+    "ISurface.IMakeIsoCurve",
+    "ISurface.MakeIsoCurve",
+    "ISurface.MakeIsoCurves"
+  ]
+}

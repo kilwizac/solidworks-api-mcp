@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DSldWorksEvents_End3DInterconnectTranslationNotifyEventHandler
+inherits: null
+description: Notifies the user program when the SOLIDWORKS application is finished importing or exporting a third-party native CAD file.
+member_count: 0
+docset: sldworksapi
+categories:
+  - documents
+common_members: []
+---
+
+# DSldWorksEvents_End3DInterconnectTranslationNotifyEventHandler
+
+Notifies the user program when the SOLIDWORKS application is finished importing or exporting a third-party native CAD file.

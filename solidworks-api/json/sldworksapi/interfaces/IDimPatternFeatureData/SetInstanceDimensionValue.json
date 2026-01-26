@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "SetInstanceDimensionValue",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "TableRowIndex",
+        "type": "System.Int32",
+        "description": "Index of the pattern instance in the pattern table (see Remarks )"
+      },
+      {
+        "name": "ControlDimName",
+        "type": "System.String",
+        "description": "Name of the controlling dimension of the pattern instance (see Remarks )"
+      },
+      {
+        "name": "NewValue",
+        "type": "System.Double",
+        "description": "New value for the pattern dimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.GetInstanceDimensionName"
+    ],
+    "keywords": [
+      "setinstancedimensionvalue",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "instance",
+      "dimension",
+      "value",
+      "table",
+      "row",
+      "index",
+      "int32",
+      "control",
+      "name",
+      "string",
+      "new",
+      "double",
+      "delete",
+      "insert",
+      "instances",
+      "variable",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimPatternFeatureData.SetInstanceDimensionValue",
+  "description": "Sets a new value for the pattern dimension of the specified pattern instance in this variable pattern feature.",
+  "signature": "System.String SetInstanceDimensionValue( \n   System.Int32\nTableRowIndex\n,\n   System.String\nControlDimName\n,\n   System.Double\nNewValue\n)",
+  "parameters": [
+    {
+      "name": "TableRowIndex",
+      "type": "System.Int32",
+      "description": "Index of the pattern instance in the pattern table (see Remarks )"
+    },
+    {
+      "name": "ControlDimName",
+      "type": "System.String",
+      "description": "Name of the controlling dimension of the pattern instance (see Remarks )"
+    },
+    {
+      "name": "NewValue",
+      "type": "System.Double",
+      "description": "New value for the pattern dimension"
+    }
+  ],
+  "returns": "If a new value for the pattern dimension is... Then Return Value is an... Set Empty string indicating success Not set Error string",
+  "remarks": "Use:\nIDimPatternFeatureData::GetTableRowIndex\nto get TableRowIndex.\nIDimPatternFeatureData::GetControllingDimensionName\nto get ControlDimName.",
+  "examples": [
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (C#)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (VB.NET)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (VBA)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimPatternFeatureData.GetInstanceDimensionName"
+  ]
+}

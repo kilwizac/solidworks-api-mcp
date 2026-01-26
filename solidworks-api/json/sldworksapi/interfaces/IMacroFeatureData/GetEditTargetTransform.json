@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "GetEditTargetTransform",
+    "returns": "MathTransform",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.FeatureTransform",
+      "IMacroFeatureData.PatternTransform"
+    ],
+    "keywords": [
+      "getedittargettransform",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "edit",
+      "target",
+      "transform",
+      "math"
+    ]
+  },
+  "title": "IMacroFeatureData.GetEditTargetTransform",
+  "description": "Gets the transform of the component where the macro feature resides if at least one selection in the macro feature belongs to a different component.",
+  "signature": "MathTransform GetEditTargetTransform()",
+  "parameters": [],
+  "returns": "Math transform of the component where the macro feature resides if at least one selection in the macro feature belongs to a different component, or NULL if all of the selections in the macro feature belong to the component where the macro feature resides",
+  "remarks": "When\nregenerating a macro feature\nin a part that is a component in an assembly, you cannot get the component's transform where the macro feature resides because you cannot get the component using\nIEntity::GetComponent\nor\nIEntity::IGetComponent2\nin a part document. However, you may need the component's transform because references from other components to it often need to be transformed.\nThis method provides this transform. If there are no external references among the macro feature selections (\nIMacroFeatureData::GetSelections3\nor\nIMacroFeatureData::IGetSelections3\n), then this method returns NULL. If there are external references among the macro feature selections, then this method returns the transform of the component where the macro feature resides.\nFor example, if the macro feature includes a selection box in which the user can select a face, and the user selects a face on a different component, then this method can get the component's transform where the macro feature resides. However, if all of the selections in the macro feature belong to the component where the macro feature resides, then this method returns NULL because you probably will not need the transform. See also\nMacro Features and Component Transforms\n.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.FeatureTransform",
+    "IMacroFeatureData.PatternTransform"
+  ]
+}

@@ -1,0 +1,169 @@
+---
+type: method
+interface: IFeatureManager
+member: AddCornerReliefType
+returns: System.Boolean
+parameters:
+  -
+    name: CornerIndex
+    type: System.Int32
+    description: Index of corner to which to apply the corner relief; -1 to apply it to the corner last added with IFeatureManager::AddCornerReliefCorner
+  -
+    name: ReliefType
+    type: System.Int32
+    description: Type of corner relief as defined by swCornerReliefType_e
+  -
+    name: Length1
+    type: System.Double
+    description: Not used
+  -
+    name: Length2
+    type: System.Double
+    description: If ReliefType is swCornerReliefType_e... Then Length2 is the slot... swCornerSquareRelief Length of the corner relief swCornerObroundRelief Length of the corner relief swCornerCircularRelief Radius of the corner relief
+  -
+    name: Length3
+    type: System.Double
+    description: If ReliefType is swCornerReliefType_e... Then Length3 is... swCornerObroundRelief Slot width of the corner relief swCornerSquareRelief and FilletedCorners = true Radius of filleted corner
+  -
+    name: CenterOnBendLines
+    type: System.Boolean
+    description: True to center the corner relief relative to the bend lines, false to not; valid only if ReliefType is one of the following: swCornerReliefType_e.swCornerSquareRelief swCornerReliefType_e.swCornerCircularRelief swCornerReliefType_e.swCornerObroundRelief
+  -
+    name: RatioToThickness
+    type: System.Boolean
+    description: True to use a ratio value to cut the bend area so that the body can be folded, false to not; the ratios for valid relief types are calculated as follows where t = thickness of sheet metal: If ReliefType is swCornerReliefType_e... Then ratios are... swCornerSquareRelief Length2/t swCornerCircularRelief Length2/t swCornerObroundRelief Length2/t and Length3/t
+  -
+    name: TangentToBend
+    type: System.Boolean
+    description: True to make the corner relief tangent to the inside bend edges, false to not
+  -
+    name: AddFilletedCorners
+    type: System.Boolean
+    description: True to fillet the corner relief corners, false to not; valid only if ReliefType = swCornerReliefType_e.swCornerSquareRelief
+  -
+    name: NarrowCorner
+    type: System.Boolean
+    description: True to use the algorithm for large bend radii to narrow the corner relief in the bend area, false to not; valid only if ReliefType is one of the following: swCornerReliefType_e.swCornerSquareRelief swCornerReliefType_e.swCornerCircularRelief swCornerReliefType_e.swCornerObroundRelief
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IFlatPatternFeatureData
+keywords:
+  - corner
+  - relief
+  - flat
+  - pattern
+  - see
+  - iflatpatternfeaturedata
+  - addcornerrelieftype
+  - ifeaturemanager
+  - feature
+  - manager
+  - add
+  - type
+  - index
+  - int32
+  - length1
+  - double
+  - length2
+  - length3
+  - center
+  - bend
+  - lines
+  - boolean
+  - ratio
+  - thickness
+  - tangent
+  - filleted
+  - corners
+  - narrow
+  - create
+  - vba
+  - vb
+  - net
+---
+
+# IFeatureManager.AddCornerReliefType
+
+Specifies the type of corner relief to apply to the specified corner of the selected sheet metal body.
+
+## Signature
+
+```csharp
+System.Boolean AddCornerReliefType( 
+   System.Int32
+CornerIndex
+,
+   System.Int32
+ReliefType
+,
+   System.Double
+Length1
+,
+   System.Double
+Length2
+,
+   System.Double
+Length3
+,
+   System.Boolean
+CenterOnBendLines
+,
+   System.Boolean
+RatioToThickness
+,
+   System.Boolean
+TangentToBend
+,
+   System.Boolean
+AddFilletedCorners
+,
+   System.Boolean
+NarrowCorner
+)
+```
+## Parameters
+
+- `CornerIndex` (System.Int32): Index of corner to which to apply the corner relief; -1 to apply it to the corner last added with IFeatureManager::AddCornerReliefCorner
+- `ReliefType` (System.Int32): Type of corner relief as defined by swCornerReliefType_e
+- `Length1` (System.Double): Not used
+- `Length2` (System.Double): If ReliefType is swCornerReliefType_e... Then Length2 is the slot... swCornerSquareRelief Length of the corner relief swCornerObroundRelief Length of the corner relief swCornerCircularRelief Radius of the corner relief
+- `Length3` (System.Double): If ReliefType is swCornerReliefType_e... Then Length3 is... swCornerObroundRelief Slot width of the corner relief swCornerSquareRelief and FilletedCorners = true Radius of filleted corner
+- `CenterOnBendLines` (System.Boolean): True to center the corner relief relative to the bend lines, false to not; valid only if ReliefType is one of the following: swCornerReliefType_e.swCornerSquareRelief swCornerReliefType_e.swCornerCircularRelief swCornerReliefType_e.swCornerObroundRelief
+- `RatioToThickness` (System.Boolean): True to use a ratio value to cut the bend area so that the body can be folded, false to not; the ratios for valid relief types are calculated as follows where t = thickness of sheet metal: If ReliefType is swCornerReliefType_e... Then ratios are... swCornerSquareRelief Length2/t swCornerCircularRelief Length2/t swCornerObroundRelief Length2/t and Length3/t
+- `TangentToBend` (System.Boolean): True to make the corner relief tangent to the inside bend edges, false to not
+- `AddFilletedCorners` (System.Boolean): True to fillet the corner relief corners, false to not; valid only if ReliefType = swCornerReliefType_e.swCornerSquareRelief
+- `NarrowCorner` (System.Boolean): True to use the algorithm for large bend radii to narrow the corner relief in the bend area, false to not; valid only if ReliefType is one of the following: swCornerReliefType_e.swCornerSquareRelief swCornerReliefType_e.swCornerCircularRelief swCornerReliefType_e.swCornerObroundRelief
+
+## Return Value
+
+True if successful, false if not
+
+## Remarks
+
+To create a corner relief feature:
+Call
+IModelDocExtension::SelectByID2
+with Mark = 0 and Append = true to select the sheet metal body in which to create a corner relief feature.
+Call IModelDocExtension::SelectByID2 with Mark = 4 and Append = true to select two faces that form a bend corner.
+Call
+IFeatureManager::AddCornerReliefCorner
+to add the corner to the corner relief feature.
+Call this method to specify the corner relief for the corner.
+Repeat steps 2 - 4 to add another corner to the corner relief feature.
+Call
+IFeatureManager::FinishCornerRelief
+.
+
+## Examples
+
+- Create Corner Relief Feature (C#) (Create_Corner_Relief_Feature_Example_CSharp.htm)
+- Create Corner Relief Feature (VBA) (Create_Corner_Relief_Feature_Example_VB.htm)
+- Create Corner Relief Feature (VB.NET) (Create_Corner_Relief_Feature_Example_VBNET.htm)
+
+## See Also
+
+- `IFlatPatternFeatureData`

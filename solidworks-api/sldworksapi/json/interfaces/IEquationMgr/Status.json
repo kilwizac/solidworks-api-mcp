@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IEquationMgr",
+    "member": "Status",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEquationMgr.Add2",
+      "IEquationMgr.Add3",
+      "IEquationMgr.ChangeSuppressionForAllConfigurations",
+      "IEquationMgr.ChangeSuppressionForConfiguration",
+      "IEquationMgr.Delete",
+      "IEquationMgr.Equation",
+      "IEquationMgr.EvaluateAll",
+      "IEquationMgr.GetCount"
+    ],
+    "keywords": [
+      "status",
+      "iequationmgr",
+      "equation",
+      "mgr",
+      "int32",
+      "values",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "IEquationMgr.Status",
+  "description": "Gets the status of the last equation that was executed.",
+  "signature": "System.Int32 Status {get;}",
+  "parameters": [],
+  "returns": "0-based index of the last equation to successfully execute; -1 if there was an error (see Remarks )",
+  "remarks": "If you call an IEquationMgr method or property that takes the index of an equation as an argument (e.g.,\nIEquationMgr::Value\n) and call IEquationMgr::Status, then the return value is:\nindex of the equation if the call is successful.\n-1 if there is an error.",
+  "examples": [
+    {
+      "title": "Get Equation Values (C#)",
+      "href": "Get_Equation_Values_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Equation Values (VB.NET)",
+      "href": "Get_Equation_Values_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Equation Values (VBA)",
+      "href": "Get_Equation_Values_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEquationMgr.Add2",
+    "IEquationMgr.Add3",
+    "IEquationMgr.ChangeSuppressionForAllConfigurations",
+    "IEquationMgr.ChangeSuppressionForConfiguration",
+    "IEquationMgr.Delete",
+    "IEquationMgr.Equation",
+    "IEquationMgr.EvaluateAll",
+    "IEquationMgr.GetCount"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "SetDisplayMode4",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseParent",
+        "type": "System.Boolean",
+        "description": "True to use the parent's settings, false to use this drawing view's local settings (see Remarks )"
+      },
+      {
+        "name": "Mode",
+        "type": "System.Int32",
+        "description": "Display mode of the drawing view as defined in swDisplayMode_e (see Remarks )"
+      },
+      {
+        "name": "Faceted",
+        "type": "System.Boolean",
+        "description": "True for draft quality, false for precision quality (see Remarks )"
+      },
+      {
+        "name": "Edges",
+        "type": "System.Boolean",
+        "description": "True if edges are displayed when this view is in shaded mode, false if not"
+      },
+      {
+        "name": "CThreadHighQuality",
+        "type": "System.Boolean",
+        "description": "True for precision quality cosmetic threads, false for draft quality"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "view",
+      "see",
+      "also",
+      "iview",
+      "display",
+      "mode",
+      "drawing",
+      "views",
+      "setdisplaymode4",
+      "mode4",
+      "use",
+      "parent",
+      "boolean",
+      "int32",
+      "faceted",
+      "edges",
+      "thread",
+      "high",
+      "quality"
+    ]
+  },
+  "title": "IView.SetDisplayMode4",
+  "description": "Sets the display mode of this drawing view.",
+  "signature": "System.Boolean SetDisplayMode4( \n   System.Boolean\nUseParent\n,\n   System.Int32\nMode\n,\n   System.Boolean\nFaceted\n,\n   System.Boolean\nEdges\n,\n   System.Boolean\nCThreadHighQuality\n)",
+  "parameters": [
+    {
+      "name": "UseParent",
+      "type": "System.Boolean",
+      "description": "True to use the parent's settings, false to use this drawing view's local settings (see Remarks )"
+    },
+    {
+      "name": "Mode",
+      "type": "System.Int32",
+      "description": "Display mode of the drawing view as defined in swDisplayMode_e (see Remarks )"
+    },
+    {
+      "name": "Faceted",
+      "type": "System.Boolean",
+      "description": "True for draft quality, false for precision quality (see Remarks )"
+    },
+    {
+      "name": "Edges",
+      "type": "System.Boolean",
+      "description": "True if edges are displayed when this view is in shaded mode, false if not"
+    },
+    {
+      "name": "CThreadHighQuality",
+      "type": "System.Boolean",
+      "description": "True for precision quality cosmetic threads, false for draft quality"
+    }
+  ],
+  "returns": "True if the display mode is reset, false if not",
+  "remarks": "If UseParent is true and a parent view:\nExists, then this method's Mode, Faceted, and Edges parameters are ignored.\nDoes not exist, then this method does not change the current display mode of this drawing view.\nMode specifies the drawing view display as defined by swDisplayMode_e.:\nswWIREFRAME\nswHIDDEN (Hidden Lines Removed)\nswHIDDEN_GREYED (Hidden Lines Visible)\nswSHADED\nswSHADED_EDGES\nswDisplayMode_e also contains three other values that seem to indicate faceted (draft) geometry:\nswFACETED_WIREFRAME\nswFACETED_HIDDEN_GREYED\nswFACETED_HIDDEN\nHowever in this method, you must use the Faceted parameter (not the Mode parameter) to specify draft or precision quality. If you specify Mode with swFACETED_WIREFRAME, swFACETED_HIDDEN_GREYED, or swFACETED_HIDDEN, then SOLIDWORKS instead uses swWIREFRAME, swHIDDEN_GREYED, or swHIDDEN.\nNOTE:\nJust as d\nisplaying geometry precisely can decrease performance, setting the Faceted argument to true (draft quality) can increase performance.\nTo determine for this view...\nUse...\nWhether its edges are displayed when it's in shaded mode\nIView::GetDisplayEdgesInShadedMode\nWhether its geometry is faceted\nIView::GetFacettedHlrDisplay\nIts current display mode\nIView::GetDisplayMode2\nWhether its parent's display mode is being used\nIView::GetUseParentDisplayMode\nIts cosmetic thread display quality\nIView::GetCThreadQuality",
+  "examples": [],
+  "related": []
+}

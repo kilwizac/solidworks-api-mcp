@@ -1,0 +1,144 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateLine2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "P1x",
+        "type": "System.Double",
+        "description": "X value of the line start point"
+      },
+      {
+        "name": "P1y",
+        "type": "System.Double",
+        "description": "Y value of the line start point"
+      },
+      {
+        "name": "P1z",
+        "type": "System.Double",
+        "description": "Z value of the line start point"
+      },
+      {
+        "name": "P2x",
+        "type": "System.Double",
+        "description": "X value of the line end point"
+      },
+      {
+        "name": "P2y",
+        "type": "System.Double",
+        "description": "Y value of the line end point"
+      },
+      {
+        "name": "P2z",
+        "type": "System.Double",
+        "description": "Z value of the line end point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ICreateLine2"
+    ],
+    "keywords": [
+      "createline2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "line2",
+      "p1x",
+      "double",
+      "p1y",
+      "p1z",
+      "p2x",
+      "p2y",
+      "p2z",
+      "object",
+      "calculate",
+      "closest",
+      "distance",
+      "between",
+      "faces",
+      "vba",
+      "components",
+      "section",
+      "view",
+      "specified",
+      "location",
+      "find",
+      "outside",
+      "edges",
+      "face"
+    ]
+  },
+  "title": "IModelDoc2.CreateLine2",
+  "description": "Obsolete. Superseded by SketchManager::CreateLine.",
+  "signature": "System.Object CreateLine2( \n   System.Double\nP1x\n,\n   System.Double\nP1y\n,\n   System.Double\nP1z\n,\n   System.Double\nP2x\n,\n   System.Double\nP2y\n,\n   System.Double\nP2z\n)",
+  "parameters": [
+    {
+      "name": "P1x",
+      "type": "System.Double",
+      "description": "X value of the line start point"
+    },
+    {
+      "name": "P1y",
+      "type": "System.Double",
+      "description": "Y value of the line start point"
+    },
+    {
+      "name": "P1z",
+      "type": "System.Double",
+      "description": "Z value of the line start point"
+    },
+    {
+      "name": "P2x",
+      "type": "System.Double",
+      "description": "X value of the line end point"
+    },
+    {
+      "name": "P2y",
+      "type": "System.Double",
+      "description": "Y value of the line end point"
+    },
+    {
+      "name": "P2z",
+      "type": "System.Double",
+      "description": "Z value of the line end point"
+    }
+  ],
+  "returns": "Newly created sketch line",
+  "remarks": "If a sketch is not active, then the line is not created and NULL is returned. You can check for an active sketch using\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\n.\nFor COM applications, the underlying\nISketchLine\nobject can be obtained using QueryInterface on the\nISketchSegment\nobject returned. C++ Dispatch applications can define a new ISketchLine or ISketchSegment object that uses this Dispatch pointer. Visual Basic applications interpret the pointer for you automatically so you can use the returned object to call ISketchSegment or ISketchLine functions.\nIModelDoc2::SetAddToDB\nand\nIModelDoc2::SetDisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database. IModelDoc2::SetAddToDB also avoids inferencing.\nWhen this method is used with a drawing document, this method creates the line relative to the active drawing view,\nIDrawingDoc::ActiveDrawingView\nor\nIDrawingDoc::IActiveDrawingView\n.",
+  "examples": [
+    {
+      "title": "Calculate Closest Distance Between Faces (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Calculate Closest Distance Between Model Components (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Model_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Section View at Specified Location (VBA)",
+      "href": "Create_Section_View_at_Specified_Location_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Outside Edges of Face (VBA)",
+      "href": "Find_Outside_Edges_of_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.ICreateLine2"
+  ]
+}

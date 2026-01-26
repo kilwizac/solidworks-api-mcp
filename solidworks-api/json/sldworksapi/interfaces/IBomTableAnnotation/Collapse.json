@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTableAnnotation",
+    "member": "Collapse",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "CollapseType",
+        "type": "System.Int32",
+        "description": "Type of item to collapse as defined in swBOMTableObjectType_e (see Remarks )"
+      },
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Row index; valid only if CollapseType is swBOMTableObjectType_e.swBOMTableObjectType_RowIndex"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IBomTableAnnotation.Dissolve",
+      "IBomTableAnnotation.Expand"
+    ],
+    "keywords": [
+      "bill",
+      "materials",
+      "collapse",
+      "ibomtableannotation",
+      "bom",
+      "table",
+      "annotation",
+      "type",
+      "int32",
+      "index",
+      "void",
+      "expand",
+      "dissolve",
+      "subassembly",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBomTableAnnotation.Collapse",
+  "description": "Collapses the specified item.",
+  "signature": "void Collapse( \n   System.Int32\nCollapseType\n,\n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "CollapseType",
+      "type": "System.Int32",
+      "description": "Type of item to collapse as defined in swBOMTableObjectType_e (see Remarks )"
+    },
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Row index; valid only if CollapseType is swBOMTableObjectType_e.swBOMTableObjectType_RowIndex"
+    }
+  ],
+  "returns": "",
+  "remarks": "If CollapseType is swBOMTableObjectType_e.swBOMTableObjectType_CutList, then all cut lists in the table collapse.",
+  "examples": [
+    {
+      "title": "Expand, Collapse, and Dissolve a Subassembly in a BOM Table (VBA)",
+      "href": "Dissolve_Subassembly_in_a_BOM_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Expand, Collapse, and Dissolve a Subassembly in a BOM Table (VB.NET)",
+      "href": "Dissolve_Subassembly_in_a_BOM_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Expand, Collapse, and Dissolve a Subassembly in a BOM Table (C#)",
+      "href": "Dissolve_Subassembly_in_a_BOM_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBomTableAnnotation.Dissolve",
+    "IBomTableAnnotation.Expand"
+  ]
+}

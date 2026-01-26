@@ -1,0 +1,982 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>HoleWizard5 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~HoleWizard5" />
+    <meta name="Description" content="Creates customized holes of various kinds." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.HoleWizard5" />
+    <meta name="Microsoft.Help.Keywords" content="HoleWizard5 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                HoleWizard5 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : HoleWizard5 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="GenericHoleTypePopupContent" class="i-popup-content">
+        Type of hole or&#160;slot as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdGeneralHoleTypes_e.html">swWzdGeneralHoleTypes_e</a>
+    </div>
+
+    <div id="StandardIndexPopupContent" class="i-popup-content">
+        Hole or slot standard property as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleStandards_e.html">swWzdHoleStandards_e</a>&#160;(see <strong>Remarks</strong> for legacy holes)
+    </div>
+
+    <div id="FastenerTypeIndexPopupContent" class="i-popup-content">
+        Hole or slot fastener&#160;type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleStandardFastenerTypes_e.html">swWzdHoleStandardFastenerTypes_e</a>&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="SSizePopupContent" class="i-popup-content">
+        Size of the hole or slot (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="EndTypePopupContent" class="i-popup-content">
+        Hole or slot end type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swEndConditions_e.html">swEndConditions_e</a>&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="DiameterPopupContent" class="i-popup-content">
+        Diameter of the hole or slot
+    </div>
+
+    <div id="DepthPopupContent" class="i-popup-content">
+        Depth of the hole or slot
+    </div>
+
+    <div id="LengthPopupContent" class="i-popup-content">
+        <p>Length of&#160;slot; valid only if GenericHoleType set to:</p>
+
+        <ul>
+            <li>swWzdGeneralHoleTypes_e.swWzdCounterBoreSlot</li>
+
+            <li>swWzdGeneralHoleTypes_e.swWzdCounterSinkSlot</li>
+
+            <li>swWzdGeneralHoleTypes_e.swWzdHoleSlot</li>
+        </ul>
+
+        <p>For both straight/pipe and tapered tap holes, the macro recorder fails to properly record this parameter. Before running a macro recording, you must add -1&#160;at this position and delete a&#160;-1 before ThreadClass.</p>
+    </div>
+
+    <div id="Value1PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value2PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value3PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value4PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value5PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value6PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value7PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value8PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value9PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value10PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value11PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="Value12PopupContent" class="i-popup-content">
+        Hole or slot parameter
+    </div>
+
+    <div id="ThreadClassPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">One of the following thread classes:</p>
+
+        <ul style="LIST-STYLE-TYPE: disc" type="disc">
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">1B</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">2B</p>
+            </li>
+
+            <li class="kadov-p-CapiParametersOLE">
+                <p class="apiParametersOLE">3B</p>
+            </li>
+        </ul>
+
+        <p class="apiParametersOLE"><strong>NOTE</strong>: Applies to ANSI inch standard only.</p>
+    </div>
+
+    <div id="RevDirPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">True to reverse the direction of the hole or slot, false to not</p>
+    </div>
+
+    <div id="FeatureScopePopupContent" class="i-popup-content">
+        True if the feature only affects selected bodies, false if the feature affects all bodies
+    </div>
+
+    <div id="AutoSelectPopupContent" class="i-popup-content">
+        True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects
+    </div>
+
+    <div id="AssemblyFeatureScopePopupContent" class="i-popup-content">
+        True if the assembly feature only affects selected components in the assembly, false if the assembly feature affects all components in the assembly
+    </div>
+
+    <div id="AutoSelectComponentsPopupContent" class="i-popup-content">
+        True to automatically select all affected components, false to only use the selected components
+    </div>
+
+    <div id="PropagateFeatureToPartsPopupContent" class="i-popup-content">
+        True to propagate the assembly feature to the components that&#160;the assembly feature&#160;affects in the model, false to not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <span style="COLOR: #000000"><font style="COLOR: #000000" color="red">Creates customized holes of various kinds.</font></span>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function HoleWizard5( _
+   ByVal <i><a class="i-popup-link" id="GenericHoleTypePopupLink" data-popup-contentsource="#GenericHoleTypePopupContent" data-popup-showevent="click mouseenter">GenericHoleType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="StandardIndexPopupLink" data-popup-contentsource="#StandardIndexPopupContent" data-popup-showevent="click mouseenter">StandardIndex</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="FastenerTypeIndexPopupLink" data-popup-contentsource="#FastenerTypeIndexPopupContent" data-popup-showevent="click mouseenter">FastenerTypeIndex</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="SSizePopupLink" data-popup-contentsource="#SSizePopupContent" data-popup-showevent="click mouseenter">SSize</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="EndTypePopupLink" data-popup-contentsource="#EndTypePopupContent" data-popup-showevent="click mouseenter">EndType</a></i> As System.Short, _
+   ByVal <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value1PopupLink" data-popup-contentsource="#Value1PopupContent" data-popup-showevent="click mouseenter">Value1</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value2PopupLink" data-popup-contentsource="#Value2PopupContent" data-popup-showevent="click mouseenter">Value2</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value3PopupLink" data-popup-contentsource="#Value3PopupContent" data-popup-showevent="click mouseenter">Value3</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value4PopupLink" data-popup-contentsource="#Value4PopupContent" data-popup-showevent="click mouseenter">Value4</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value5PopupLink" data-popup-contentsource="#Value5PopupContent" data-popup-showevent="click mouseenter">Value5</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value6PopupLink" data-popup-contentsource="#Value6PopupContent" data-popup-showevent="click mouseenter">Value6</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value7PopupLink" data-popup-contentsource="#Value7PopupContent" data-popup-showevent="click mouseenter">Value7</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value8PopupLink" data-popup-contentsource="#Value8PopupContent" data-popup-showevent="click mouseenter">Value8</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value9PopupLink" data-popup-contentsource="#Value9PopupContent" data-popup-showevent="click mouseenter">Value9</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value10PopupLink" data-popup-contentsource="#Value10PopupContent" data-popup-showevent="click mouseenter">Value10</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value11PopupLink" data-popup-contentsource="#Value11PopupContent" data-popup-showevent="click mouseenter">Value11</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="Value12PopupLink" data-popup-contentsource="#Value12PopupContent" data-popup-showevent="click mouseenter">Value12</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ThreadClassPopupLink" data-popup-contentsource="#ThreadClassPopupContent" data-popup-showevent="click mouseenter">ThreadClass</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="RevDirPopupLink" data-popup-contentsource="#RevDirPopupContent" data-popup-showevent="click mouseenter">RevDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="AutoSelectPopupLink" data-popup-contentsource="#AutoSelectPopupContent" data-popup-showevent="click mouseenter">AutoSelect</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="AssemblyFeatureScopePopupLink" data-popup-contentsource="#AssemblyFeatureScopePopupContent" data-popup-showevent="click mouseenter">AssemblyFeatureScope</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="AutoSelectComponentsPopupLink" data-popup-contentsource="#AutoSelectComponentsPopupContent" data-popup-showevent="click mouseenter">AutoSelectComponents</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="PropagateFeatureToPartsPopupLink" data-popup-contentsource="#PropagateFeatureToPartsPopupContent" data-popup-showevent="click mouseenter">PropagateFeatureToParts</a></i> As System.Boolean _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim GenericHoleType As System.Integer
+Dim StandardIndex As System.Integer
+Dim FastenerTypeIndex As System.Integer
+Dim SSize As System.String
+Dim EndType As System.Short
+Dim Diameter As System.Double
+Dim Depth As System.Double
+Dim Length As System.Double
+Dim Value1 As System.Double
+Dim Value2 As System.Double
+Dim Value3 As System.Double
+Dim Value4 As System.Double
+Dim Value5 As System.Double
+Dim Value6 As System.Double
+Dim Value7 As System.Double
+Dim Value8 As System.Double
+Dim Value9 As System.Double
+Dim Value10 As System.Double
+Dim Value11 As System.Double
+Dim Value12 As System.Double
+Dim ThreadClass As System.String
+Dim RevDir As System.Boolean
+Dim FeatureScope As System.Boolean
+Dim AutoSelect As System.Boolean
+Dim AssemblyFeatureScope As System.Boolean
+Dim AutoSelectComponents As System.Boolean
+Dim PropagateFeatureToParts As System.Boolean
+Dim value As Feature
+ 
+value = instance.HoleWizard5(GenericHoleType, StandardIndex, FastenerTypeIndex, SSize, EndType, Diameter, Depth, Length, Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9, Value10, Value11, Value12, ThreadClass, RevDir, FeatureScope, AutoSelect, AssemblyFeatureScope, AutoSelectComponents, PropagateFeatureToParts)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature HoleWizard5( 
+   System.int <i><a class="i-popup-link" id="GenericHoleTypePopupLink" data-popup-contentsource="#GenericHoleTypePopupContent" data-popup-showevent="click mouseenter">GenericHoleType</a></i>,
+   System.int <i><a class="i-popup-link" id="StandardIndexPopupLink" data-popup-contentsource="#StandardIndexPopupContent" data-popup-showevent="click mouseenter">StandardIndex</a></i>,
+   System.int <i><a class="i-popup-link" id="FastenerTypeIndexPopupLink" data-popup-contentsource="#FastenerTypeIndexPopupContent" data-popup-showevent="click mouseenter">FastenerTypeIndex</a></i>,
+   System.string <i><a class="i-popup-link" id="SSizePopupLink" data-popup-contentsource="#SSizePopupContent" data-popup-showevent="click mouseenter">SSize</a></i>,
+   System.short <i><a class="i-popup-link" id="EndTypePopupLink" data-popup-contentsource="#EndTypePopupContent" data-popup-showevent="click mouseenter">EndType</a></i>,
+   System.double <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i>,
+   System.double <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i>,
+   System.double <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i>,
+   System.double <i><a class="i-popup-link" id="Value1PopupLink" data-popup-contentsource="#Value1PopupContent" data-popup-showevent="click mouseenter">Value1</a></i>,
+   System.double <i><a class="i-popup-link" id="Value2PopupLink" data-popup-contentsource="#Value2PopupContent" data-popup-showevent="click mouseenter">Value2</a></i>,
+   System.double <i><a class="i-popup-link" id="Value3PopupLink" data-popup-contentsource="#Value3PopupContent" data-popup-showevent="click mouseenter">Value3</a></i>,
+   System.double <i><a class="i-popup-link" id="Value4PopupLink" data-popup-contentsource="#Value4PopupContent" data-popup-showevent="click mouseenter">Value4</a></i>,
+   System.double <i><a class="i-popup-link" id="Value5PopupLink" data-popup-contentsource="#Value5PopupContent" data-popup-showevent="click mouseenter">Value5</a></i>,
+   System.double <i><a class="i-popup-link" id="Value6PopupLink" data-popup-contentsource="#Value6PopupContent" data-popup-showevent="click mouseenter">Value6</a></i>,
+   System.double <i><a class="i-popup-link" id="Value7PopupLink" data-popup-contentsource="#Value7PopupContent" data-popup-showevent="click mouseenter">Value7</a></i>,
+   System.double <i><a class="i-popup-link" id="Value8PopupLink" data-popup-contentsource="#Value8PopupContent" data-popup-showevent="click mouseenter">Value8</a></i>,
+   System.double <i><a class="i-popup-link" id="Value9PopupLink" data-popup-contentsource="#Value9PopupContent" data-popup-showevent="click mouseenter">Value9</a></i>,
+   System.double <i><a class="i-popup-link" id="Value10PopupLink" data-popup-contentsource="#Value10PopupContent" data-popup-showevent="click mouseenter">Value10</a></i>,
+   System.double <i><a class="i-popup-link" id="Value11PopupLink" data-popup-contentsource="#Value11PopupContent" data-popup-showevent="click mouseenter">Value11</a></i>,
+   System.double <i><a class="i-popup-link" id="Value12PopupLink" data-popup-contentsource="#Value12PopupContent" data-popup-showevent="click mouseenter">Value12</a></i>,
+   System.string <i><a class="i-popup-link" id="ThreadClassPopupLink" data-popup-contentsource="#ThreadClassPopupContent" data-popup-showevent="click mouseenter">ThreadClass</a></i>,
+   System.bool <i><a class="i-popup-link" id="RevDirPopupLink" data-popup-contentsource="#RevDirPopupContent" data-popup-showevent="click mouseenter">RevDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="AutoSelectPopupLink" data-popup-contentsource="#AutoSelectPopupContent" data-popup-showevent="click mouseenter">AutoSelect</a></i>,
+   System.bool <i><a class="i-popup-link" id="AssemblyFeatureScopePopupLink" data-popup-contentsource="#AssemblyFeatureScopePopupContent" data-popup-showevent="click mouseenter">AssemblyFeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="AutoSelectComponentsPopupLink" data-popup-contentsource="#AutoSelectComponentsPopupContent" data-popup-showevent="click mouseenter">AutoSelectComponents</a></i>,
+   System.bool <i><a class="i-popup-link" id="PropagateFeatureToPartsPopupLink" data-popup-contentsource="#PropagateFeatureToPartsPopupContent" data-popup-showevent="click mouseenter">PropagateFeatureToParts</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ HoleWizard5( 
+   System.int <i><a class="i-popup-link" id="GenericHoleTypePopupLink" data-popup-contentsource="#GenericHoleTypePopupContent" data-popup-showevent="click mouseenter">GenericHoleType</a></i>,
+   System.int <i><a class="i-popup-link" id="StandardIndexPopupLink" data-popup-contentsource="#StandardIndexPopupContent" data-popup-showevent="click mouseenter">StandardIndex</a></i>,
+   System.int <i><a class="i-popup-link" id="FastenerTypeIndexPopupLink" data-popup-contentsource="#FastenerTypeIndexPopupContent" data-popup-showevent="click mouseenter">FastenerTypeIndex</a></i>,
+   System.String^ <i><a class="i-popup-link" id="SSizePopupLink" data-popup-contentsource="#SSizePopupContent" data-popup-showevent="click mouseenter">SSize</a></i>,
+   System.short <i><a class="i-popup-link" id="EndTypePopupLink" data-popup-contentsource="#EndTypePopupContent" data-popup-showevent="click mouseenter">EndType</a></i>,
+   System.double <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i>,
+   System.double <i><a class="i-popup-link" id="DepthPopupLink" data-popup-contentsource="#DepthPopupContent" data-popup-showevent="click mouseenter">Depth</a></i>,
+   System.double <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i>,
+   System.double <i><a class="i-popup-link" id="Value1PopupLink" data-popup-contentsource="#Value1PopupContent" data-popup-showevent="click mouseenter">Value1</a></i>,
+   System.double <i><a class="i-popup-link" id="Value2PopupLink" data-popup-contentsource="#Value2PopupContent" data-popup-showevent="click mouseenter">Value2</a></i>,
+   System.double <i><a class="i-popup-link" id="Value3PopupLink" data-popup-contentsource="#Value3PopupContent" data-popup-showevent="click mouseenter">Value3</a></i>,
+   System.double <i><a class="i-popup-link" id="Value4PopupLink" data-popup-contentsource="#Value4PopupContent" data-popup-showevent="click mouseenter">Value4</a></i>,
+   System.double <i><a class="i-popup-link" id="Value5PopupLink" data-popup-contentsource="#Value5PopupContent" data-popup-showevent="click mouseenter">Value5</a></i>,
+   System.double <i><a class="i-popup-link" id="Value6PopupLink" data-popup-contentsource="#Value6PopupContent" data-popup-showevent="click mouseenter">Value6</a></i>,
+   System.double <i><a class="i-popup-link" id="Value7PopupLink" data-popup-contentsource="#Value7PopupContent" data-popup-showevent="click mouseenter">Value7</a></i>,
+   System.double <i><a class="i-popup-link" id="Value8PopupLink" data-popup-contentsource="#Value8PopupContent" data-popup-showevent="click mouseenter">Value8</a></i>,
+   System.double <i><a class="i-popup-link" id="Value9PopupLink" data-popup-contentsource="#Value9PopupContent" data-popup-showevent="click mouseenter">Value9</a></i>,
+   System.double <i><a class="i-popup-link" id="Value10PopupLink" data-popup-contentsource="#Value10PopupContent" data-popup-showevent="click mouseenter">Value10</a></i>,
+   System.double <i><a class="i-popup-link" id="Value11PopupLink" data-popup-contentsource="#Value11PopupContent" data-popup-showevent="click mouseenter">Value11</a></i>,
+   System.double <i><a class="i-popup-link" id="Value12PopupLink" data-popup-contentsource="#Value12PopupContent" data-popup-showevent="click mouseenter">Value12</a></i>,
+   System.String^ <i><a class="i-popup-link" id="ThreadClassPopupLink" data-popup-contentsource="#ThreadClassPopupContent" data-popup-showevent="click mouseenter">ThreadClass</a></i>,
+   System.bool <i><a class="i-popup-link" id="RevDirPopupLink" data-popup-contentsource="#RevDirPopupContent" data-popup-showevent="click mouseenter">RevDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="FeatureScopePopupLink" data-popup-contentsource="#FeatureScopePopupContent" data-popup-showevent="click mouseenter">FeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="AutoSelectPopupLink" data-popup-contentsource="#AutoSelectPopupContent" data-popup-showevent="click mouseenter">AutoSelect</a></i>,
+   System.bool <i><a class="i-popup-link" id="AssemblyFeatureScopePopupLink" data-popup-contentsource="#AssemblyFeatureScopePopupContent" data-popup-showevent="click mouseenter">AssemblyFeatureScope</a></i>,
+   System.bool <i><a class="i-popup-link" id="AutoSelectComponentsPopupLink" data-popup-contentsource="#AutoSelectComponentsPopupContent" data-popup-showevent="click mouseenter">AutoSelectComponents</a></i>,
+   System.bool <i><a class="i-popup-link" id="PropagateFeatureToPartsPopupLink" data-popup-contentsource="#PropagateFeatureToPartsPopupContent" data-popup-showevent="click mouseenter">PropagateFeatureToParts</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>GenericHoleType</i></dt>
+
+                <dd>Type of hole or&#160;slot as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdGeneralHoleTypes_e.html">swWzdGeneralHoleTypes_e</a></dd>
+
+                <dt><i>StandardIndex</i></dt>
+
+                <dd>Hole or slot standard property as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleStandards_e.html">swWzdHoleStandards_e</a>&#160;(see <strong>Remarks</strong> for legacy holes)</dd>
+
+                <dt><i>FastenerTypeIndex</i></dt>
+
+                <dd>Hole or slot fastener&#160;type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleStandardFastenerTypes_e.html">swWzdHoleStandardFastenerTypes_e</a>&#160;(see <strong>Remarks</strong>)</dd>
+
+                <dt><i>SSize</i></dt>
+
+                <dd>Size of the hole or slot (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>EndType</i></dt>
+
+                <dd>Hole or slot end type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swEndConditions_e.html">swEndConditions_e</a>&#160;(see <strong>Remarks</strong>)</dd>
+
+                <dt><i>Diameter</i></dt>
+
+                <dd>Diameter of the hole or slot</dd>
+
+                <dt><i>Depth</i></dt>
+
+                <dd>Depth of the hole or slot</dd>
+
+                <dt><i>Length</i></dt>
+
+                <dd>
+                    <p>Length of&#160;slot; valid only if GenericHoleType set to:</p>
+
+                    <ul>
+                        <li>swWzdGeneralHoleTypes_e.swWzdCounterBoreSlot</li>
+
+                        <li>swWzdGeneralHoleTypes_e.swWzdCounterSinkSlot</li>
+
+                        <li>swWzdGeneralHoleTypes_e.swWzdHoleSlot</li>
+                    </ul>
+
+                    <p>For both straight/pipe and tapered tap holes, the macro recorder fails to properly record this parameter. Before running a macro recording, you must add -1&#160;at this position and delete a&#160;-1 before ThreadClass.</p>
+                </dd>
+
+                <dt><i>Value1</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value2</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value3</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value4</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value5</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value6</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value7</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value8</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value9</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value10</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value11</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>Value12</i></dt>
+
+                <dd>Hole or slot parameter</dd>
+
+                <dt><i>ThreadClass</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">One of the following thread classes:</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">1B</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">2B</p>
+                        </li>
+
+                        <li class="kadov-p-CapiParametersOLE">
+                            <p class="apiParametersOLE">3B</p>
+                        </li>
+                    </ul>
+
+                    <p class="apiParametersOLE"><strong>NOTE</strong>: Applies to ANSI inch standard only.</p>
+                </dd>
+
+                <dt><i>RevDir</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">True to reverse the direction of the hole or slot, false to not</p>
+                </dd>
+
+                <dt><i>FeatureScope</i></dt>
+
+                <dd>True if the feature only affects selected bodies, false if the feature affects all bodies</dd>
+
+                <dt><i>AutoSelect</i></dt>
+
+                <dd>True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects</dd>
+
+                <dt><i>AssemblyFeatureScope</i></dt>
+
+                <dd>True if the assembly feature only affects selected components in the assembly, false if the assembly feature affects all components in the assembly</dd>
+
+                <dt><i>AutoSelectComponents</i></dt>
+
+                <dd>True to automatically select all affected components, false to only use the selected components</dd>
+
+                <dt><i>PropagateFeatureToParts</i></dt>
+
+                <dd>True to propagate the assembly feature to the components that&#160;the assembly feature&#160;affects in the model, false to not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">Feature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>To create simple holes and slots, read&#160;<a href="sldworksapiprogguide.chm::/OVERVIEW/Hole_Wizard_Features_and_WizardHoleFeatureData2_Objects.htm">Hole Wizard Features and WizardHoleFeatureData2 Objects</a>. To create Advanced Holes of stacked hole elements, use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~AdvancedHole">IFeatureManager::AdvancedHole</a>.</p>
+
+            <p>Valid types of slots are counterbore, countersink, or straight.</p>
+
+            <p>To add a hole or slot at one or more locations, call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByRay">IModelDocExtension::SelectByRay</a> with Mark = 0 for each location.</p>
+
+            <p>Before creating a hole or slot using a reference plane and this method, determine the value of the RevDir parameter as follows:</p>
+
+            <ul>
+                <li>If the material is on one side of the reference plane, then RevDir is false.</li>
+
+                <li>If the material is on both sides of the reference plane, then compare the distances between the reference plane and the material on both sides. If the distance between the reference plane and the material along its normal direction is bigger, then RevDir is true; otherwise, RevDir is false.</li>
+            </ul>
+
+            <p>You can also use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~RayIntersections">IModelDoc2::RayIntersections</a> and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~GetRayIntersectionsPoints">IModelDoc2::GetRayIntersectionsPoints</a> to find out if the material is on one side or both sides and to compare the distances.</p>
+
+            <p class="apiRemarksText"><strong>Parameters for this method:</strong></p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">The FastenerTypeIndex parameter has to match the standard and be valid for that hole or&#160;slot&#160;type, or an error occurs.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">The SSize parameter must be a valid size for the fastener type, or an error occurs.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">If EndType is 10 = swEndCondUpToSelection (supersedes swEndCondUpToSurface and swEndCondUpToVertex), then you must use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">IModelDocExtension::SelectByID2</a> with Mark =&#160;2 to pre-select the surface or vertex. The macro recorder fails to properly record EndType for&#160;Up To Surface and Up To Vertex end conditions. Instead of swEndCondUpToSelection=10, it records 4 and 3. Before running an Up to Surface or Vertex macro recording, you must change EndType to 10. The macro recorder also fails to properly record the Up To Next end condition. Instead of swEndCondUpToNext=11, it records swEndCondThroughNext=2. It is advisable to record only Blind or Through All end conditions.</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">Screw fit is defined as <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleScrewClearanceTypes_e.html">swWzdHoleScrewClearanceTypes_e</a> and is only used if a hole or slot diameter is not specified; default value is NORMAL_FIT.</li>
+
+                <li class="kadov-p-CapiRemarksText">Drill angle defaults to 118 degrees (2.05948851735331 radians)<!--begin!kadov{{-->,<!--}}end!kadov--> if not specified.</li>
+
+                <li class="kadov-p-CapiRemarksText">Input angles are in radians; input values are in meters.</li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText">The Value1 through Value12 parameters are different for each type of hole or slot. The possible values are as follows, organized by hole and slot&#160;type. SOLIDWORKS ignores parameters set to -1.</p>
+                </li>
+            </ul>
+
+            <blockquote>
+                <h4>Counterbore Holes and Slots</h4>
+
+                <p><span style="FONT-WEIGHT: bold">Head Clearance</span> - Added to either the input counterbore depth or the counterbore depth in the standard.</p>
+
+                <p><strong>Screw Fit</strong> - Value from swWzdHoleScrewClearanceTypes_e</p>
+
+                <p>Parameters for all counterbore holes and counterbore slots:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">CounterBore Diameter</li>
+
+                        <li type="1">CounterBore Depth</li>
+
+                        <li type="1">Head Clearance</li>
+
+                        <li type="1">Screw Fit</li>
+
+                        <li type="1">Drill Angle at Bottom&#160;(valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)</li>
+
+                        <li type="1">Near Csink Diameter</li>
+
+                        <li type="1">Near Csink Angle</li>
+
+                        <li type="1">Underhead&#160;Csink Diameter</li>
+
+                        <li type="1">Underhead&#160;Csink Angle</li>
+
+                        <li type="1">Far Csink Diameter</li>
+
+                        <li type="1">Far Csink Angle</li>
+
+                        <li type="1">Offset (valid only&#160;if EndType is&#160;swEndCondOffsetFromSurface)</li>
+                    </ol>
+                </div>
+
+                <h4>Countersink Holes and Slots</h4>
+
+                <p><span style="FONT-WEIGHT: bold">Head Clearance Type</span> - Value from <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleCounterSinkHeadClearanceTypes_e.html">swWzdHoleCounterSinkHeadClearanceTypes_e</a>, which represents how to add the head clearance values to the hole or slot.</p>
+
+                <p><strong>Screw Fit</strong> - Value from <strong>swWzdHoleScrewClearanceTypes_e</strong></p>
+
+                <p>Parameters for all countersink holes and countersink slots:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Near Csink Diameter</li>
+
+                        <li type="1">Near Csink Angle</li>
+
+                        <li type="1">Head Clearance</li>
+
+                        <li type="1">Screw Fit</li>
+
+                        <li type="1">Drill Angle at Bottom&#160;(valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)</li>
+
+                        <li type="1">Far Csink Diameter</li>
+
+                        <li type="1">Far Csink Angle</li>
+
+                        <li type="1">Offset (valid only&#160;if EndType is&#160;swEndCondOffsetFromSurface)</li>
+
+                        <li type="1">Head Clearance Type</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+                    </ol>
+                </div>
+
+                <h4>Regular Holes and Straight Slots</h4>
+
+                <p><strong>Screw Fit</strong> - Value from <strong>swWzdHoleScrewClearanceTypes_e</strong></p>
+
+                <p>Parameters for all regular holes and straight slots:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Screw Fit</li>
+
+                        <li type="1">Drill Angle at Bottom&#160;(valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)</li>
+
+                        <li type="1">Near Csink Diameter</li>
+
+                        <li type="1">Near Csink Angle</li>
+
+                        <li type="1">Far Csink Diameter</li>
+
+                        <li type="1">Far Csink Angle</li>
+
+                        <li type="1">Offset (valid only&#160;if EndType is&#160;swEndCondOffsetFromSurface)</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+                    </ol>
+                </div>
+
+                <h4>Pipe/Straight Tap Holes</h4>
+
+                <p><span style="FONT-WEIGHT: bold">Tap Thread Depth</span> - If the user specifies thread depth, SOLIDWORKS always uses this depth. Tap&#160;thread depths can be calculated:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ul>
+                        <li type="1">
+                            <p>Helicoil holes: calculated based on a constant (determined by hole type; i.e., insert = 1.0 * diameter) + thread depth from the standard * thread major diameter.</p>
+                        </li>
+
+                        <li type="1">
+                            <p>Tapped holes: calculated based on 2 * thread diameter.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <p><span style="FONT-WEIGHT: bold">Cosmetic Thread Type</span> - Value from <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleCosmeticThreadTypes_e.html">swWzdHoleCosmeticThreadTypes_e</a>; defaults to swCosmeticThreadNone</p>
+
+                <p><span style="FONT-WEIGHT: bold">Near Countersink Angle</span> - Can be calculated from standard data as a default</p>
+
+                <p><span style="FONT-WEIGHT: bold">Hcoil Tap Type</span> -&#160;Value&#160;from <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleHcoilTapTypes_e.html">swWzdHoleHcoilTapTypes_e</a>;&#160;defaults to swTapTypePlug</p>
+
+                <p><span style="FONT-WEIGHT: bold">Thread End Condition</span> - Value from&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swWzdHoleThreadEndCondition_e.html">swWzdHoleThreadEndCondition_e</a>; defaults to swEndThreadTypeBLIND</p>
+
+                <p>Parameters for all pipe/straight tap holes:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Tap Thread Depth</li>
+
+                        <li type="1">Near Csink Diameter</li>
+
+                        <li type="1">Near Csink Angle</li>
+
+                        <li type="1">Far Csink Diameter</li>
+
+                        <li type="1">Far Csink Angle</li>
+
+                        <li type="1">Drill Angle at Bottom&#160;(valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)</li>
+
+                        <li type="1">Cosmetic Thread Type</li>
+
+                        <li type="1">Thread End Condition (not valid if StandardIndex is swStandardHelicoilInch or swStandardHelicoilMetric)</li>
+
+                        <li type="1">Helicoil Tap Type (valid only if StandardIndex is swStandardHelicoilInch or swStandardHelicoilMetric)</li>
+
+                        <li type="1">Offset (valid only&#160;if EndType is&#160;swEndCondOffsetFromSurface)</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+                    </ol>
+                </div>
+
+                <h4>Tapered Tap&#160;Holes</h4>
+
+                <p><span style="FONT-WEIGHT: bold">NOTE: The macro recorder fails to properly record tapered tap hole parameters. Follow the instructions in this help to correct recordings before playing them.</span></p>
+
+                <p><span style="FONT-WEIGHT: bold">Cosmetic Thread Type</span> - Specified as defined in swWzdHoleCosmeticThreadTypes_e; defaults to swCosmeticThreadNone</p>
+
+                <p>Parameters for all tapered tap holes:</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Tap Thread Depth</li>
+
+                        <li type="1">Near Csink Diameter</li>
+
+                        <li type="1">Near Csink Angle</li>
+
+                        <li type="1">Far Csink Diameter</li>
+
+                        <li type="1">Far Csink Angle</li>
+
+                        <li type="1">Drill Angle at Bottom&#160;(valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)</li>
+
+                        <li type="1">Cosmetic Thread Type</li>
+
+                        <li type="1">Offset (valid only&#160;if EndType is&#160;swEndCondOffsetFromSurface)</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+
+                        <li type="1">-1</li>
+                    </ol>
+                </div>
+
+                <h4>Legacy Holes</h4>
+
+                <p>StandardIndex, FastenerTypeIndex, and&#160;SSize are:</p>
+
+                <ul>
+                    <li>Not relevant</li>
+
+                    <li>SOLIDWORKS ignores them</li>
+                </ul>
+
+                <p>Value1 - Value12 for different types of legacy holes. Use -1 for unused values:</p>
+
+                <p style="FONT-WEIGHT: bold">Simple</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Tapered</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Minor Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">Major Diameter</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Counterbored</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Bore Diameter</li>
+
+                        <li type="1">C-Bore Depth</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Countersunk</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Sink Angle</li>
+
+                        <li type="1">C-Sink Diameter</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Counterdrilled</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Drill Diameter</li>
+
+                        <li type="1">C-Drill Depth</li>
+
+                        <li type="1">C-Drill Angle</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Simple Drilled</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">Drill Angle</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">Tapered Drilled</p>
+
+                <div style="LIST-STYLE-TYPE: decimal; MARGIN-LEFT: 2em" type="1">
+                    <ol>
+                        <li type="1">Minor Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">Major Diameter</li>
+
+                        <li type="1">Drill Angle</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">C-Bored Drilled</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Bore Diameter</li>
+
+                        <li type="1">C-Bore Depth</li>
+
+                        <li type="1">Drill Angle</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">C-Sunk Drilled</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Sink Diameter</li>
+
+                        <li type="1">C-Sink Angle</li>
+
+                        <li type="1">Drill Angle</li>
+                    </ol>
+                </div>
+
+                <p style="FONT-WEIGHT: bold">C-Drilled Drilled</p>
+
+                <div style="MARGIN-LEFT: 2em">
+                    <ol>
+                        <li type="1">Diameter</li>
+
+                        <li type="1">Depth</li>
+
+                        <li type="1">Sketch ID</li>
+
+                        <li type="1">C-Drill Diameter</li>
+
+                        <li type="1">C-Drill Depth</li>
+
+                        <li type="1">Drill Angle</li>
+
+                        <li type="1">C-Drill Angle</li>
+                    </ol>
+                </div>
+            </blockquote>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Create_Hole_Wizard_Hole_Example_CSharp.htm">Create Hole Wizard Hole (C#)</a><br />
+            <a href="Create_Hole_Wizard_Hole_Example_VBNET.htm">Create Hole Wizard Hole (VB.NET)</a><br />
+            <a href="Create_Hole_Wizard_Hole_Example_VB.htm">Create Hole Wizard Hole (VBA)</a><br />
+            <a href="Insert_Hole_Wizard_Slot_and_Hole_Example_CSharp.htm">Insert Hole Wizard Slot and Hole (C#)</a><br />
+            <a href="Insert_Hole_Wizard_Slot_and_Hole_Example_VBNET.htm">Insert Hole Wizard Slot and Hole (VB.NET)</a><br />
+            <a href="Insert_Hole_Wizard_Slot_and_Hole_Example_VB.htm">Insert Hole Wizard Slot and Hole (VBA)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData2">IWizardHoleFeatureData2 Interface</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~HoleWizard5.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

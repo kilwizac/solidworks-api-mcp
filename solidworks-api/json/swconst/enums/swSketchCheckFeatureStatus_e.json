@@ -1,0 +1,142 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSketchCheckFeatureStatus_e",
+    "description": "Statuses after checking to see if this sketch is valid for use in creating the specified feature",
+    "member_count": 25,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSketchCheckFeatureStatus_e",
+  "description": "Statuses after checking to see if this sketch is valid for use in creating the specified feature",
+  "values": [
+    {
+      "member": "swSketchCheckFeatureStatus_ClosedWantOpen",
+      "value": "15",
+      "description": "= The contour is closed"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_ContourIntersectsCenterLine",
+      "value": "23",
+      "description": "= The revolution contour cannot cross the centerline or touch it in an isolated point"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_CturXCtur",
+      "value": "12",
+      "description": "= The sketch has intersecting contours"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_DisjCturs",
+      "value": "13",
+      "description": "= The sketch contains disjoint contours"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_DoubleContainment",
+      "value": "16",
+      "description": "= The sketch contains a doubly nested contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_EmptySketch",
+      "value": "5",
+      "description": ""
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_EntUnspecBad",
+      "value": "3",
+      "description": "= The sketch contains a self-intersecting entity"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_EntXEnt",
+      "value": "1",
+      "description": "= The sketch contains a self-intersecting contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_EntXSelf",
+      "value": "2",
+      "description": "= The sketch contains a self-intersecting entity"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_ManyOpen",
+      "value": "9",
+      "description": "= The sketch has more than one open contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_MixedContours",
+      "value": "11",
+      "description": "= The sketch has both open and closed contours"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_MoreThanOneContour",
+      "value": "17",
+      "description": "= The sketch contains more than one contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_NeedsAxis",
+      "value": "21",
+      "description": "= The sketch should contain a centerline"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_NoOpen",
+      "value": "10",
+      "description": "= The sketch has no more open contours"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_OK",
+      "value": "0",
+      "description": "= No problems found, the sketch can be used to create the specified feature."
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_OneClosedContourExpected",
+      "value": "19",
+      "description": "= The sketch should contain a single closed contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_OneOpenContourExpected",
+      "value": "18",
+      "description": "= The sketch should contain a single open contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_OpenOrUnclear",
+      "value": "22",
+      "description": "= Selected contours are open or ambiguous"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_OpenWantClosed",
+      "value": "14",
+      "description": "= The contour is open"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_ThreeEnts",
+      "value": "4",
+      "description": "= The sketch cannot be used for a feature because an endpoint is wrongly shared by multiple entities"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_UnknownError",
+      "value": "-1",
+      "description": "= Unknown error"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_WantSingleOpenOrMultiClosedDisjoint",
+      "value": "20",
+      "description": "= The sketch should contain either one open contour or multiple closed disjoint contours"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_WrongManyContours",
+      "value": "7",
+      "description": "= The sketch has more than one contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_WrongOpen",
+      "value": "6",
+      "description": "= The sketch contains an open contour"
+    },
+    {
+      "member": "swSketchCheckFeatureStatus_ZeroLengthEnt",
+      "value": "8",
+      "description": "= The sketch contains a zero-length entity"
+    }
+  ]
+}

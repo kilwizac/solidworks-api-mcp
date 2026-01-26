@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddComponents3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Names",
+        "type": "System.Object",
+        "description": "Array of full path names of components"
+      },
+      {
+        "name": "Transforms",
+        "type": "System.Object",
+        "description": "Array of transformation matrix doubles"
+      },
+      {
+        "name": "CoordinateSystemNames",
+        "type": "System.Object",
+        "description": "Array of coordinate system names"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.IAddComponents3"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "components",
+      "icomponent2",
+      "addcomponents3",
+      "assembly",
+      "doc",
+      "add",
+      "components3",
+      "names",
+      "object",
+      "transforms",
+      "coordinate",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.AddComponents3",
+  "description": "Adds multiple components to the assembly.",
+  "signature": "System.Object AddComponents3( \n   System.Object\nNames\n,\n   System.Object\nTransforms\n,\n   System.Object\nCoordinateSystemNames\n)",
+  "parameters": [
+    {
+      "name": "Names",
+      "type": "System.Object",
+      "description": "Array of full path names of components"
+    },
+    {
+      "name": "Transforms",
+      "type": "System.Object",
+      "description": "Array of transformation matrix doubles"
+    },
+    {
+      "name": "CoordinateSystemNames",
+      "type": "System.Object",
+      "description": "Array of coordinate system names"
+    }
+  ],
+  "returns": "Array of IComponent2 objects",
+  "remarks": "Transforms contains an array of [(Names count) x 16] doubles. This parameter stores one transformation matrix of 16 doubles for each component in Names. If a component's transformation matrix is null, then the component is placed in the assembly such that the component's user-defined coordinate system coincides exactly with the default coordinate system of the assembly (no transformation). See\nIMathTransform\nfor details about transformation matrices.\nCoordinateSystemNames contains a user-defined coordinate system name for each component in Names. If a component's user-defined coordinate system is an empty string, then the component is placed in the assembly with respect to the default coordinate system of the component.\nTIP\n: See\nISldWorks::OpenDoc6\nfor tips on how to avoid using large amounts of memory when opening up multiple parts to add to an assembly",
+  "examples": [
+    {
+      "title": "Add Components (C#)",
+      "href": "Add_Components_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Components (VB.NET)",
+      "href": "Add_Components_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Components (VBA)",
+      "href": "Add_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IAddComponents3"
+  ]
+}

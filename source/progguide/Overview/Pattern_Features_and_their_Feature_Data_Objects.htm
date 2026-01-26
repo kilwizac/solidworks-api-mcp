@@ -1,0 +1,178 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Pattern Features and their Feature Data Objects</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=MS-HKWD content="Thread features">
+<meta name=MS-HKWD content="Thread features, ThreadFeatureData">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=634>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Pattern Features and their Feature Data Objects</h1>
+
+<h3>To create a pattern&nbsp;feature:</h3>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p>
+	<p>Open a part (or an assembly for a local pattern). </p></li>
+	<li class=kadov-p>
+	<p>Pre-selection of entities may be supported for some pattern features. 
+	Refer to the remarks and 
+	examples in the pattern-specific feature data interfaces.<br>
+&nbsp;</p>
+	<table border="1" width="34%">
+		<tr>
+			<th><b><span style="font-size: 8pt">To create an instance of...</span></b></th>
+			<th><b><span style="font-size: 8pt">Call
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeatureManager~CreateDefinition.html">IFeatureManager::CreateDefinition</a>(<a href="swconst.chm::/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swFeatureNameID_e.html">swFeatureNameID_e</a>...)</span></b></th>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IChainPatternFeatureData.html">
+			IChainPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLocalChainPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICircularPatternFeatureData.html">
+			ICircularPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmCirPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILocalCircularPatternFeatureData.html">
+			ILocalCircularPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLocalCirPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurveDrivenPatternFeatureData.html">
+			ICurveDrivenPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmCurvePattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILocalCurvePatternFeatureData.html">
+			ILocalCurvePatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLocalCurvePattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDerivedPatternFeatureData.html">
+			IDerivedPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmDerivedLPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDimPatternFeatureData.html">
+			IDimPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmDimPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFillPatternFeatureData.html">
+			IFillPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmFillPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILinearPatternFeatureData.html">
+			ILinearPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILocalLinearPatternFeatureData.html">
+			ILocalLinearPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLocalLPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchPatternFeatureData.html">
+			ISketchPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmSketchPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILocalSketchPatternFeatureData.html">
+			ILocalSketchPatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmLocalSketchPattern</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 8pt">
+			<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ITablePatternFeatureData.html">
+			ITablePatternFeatureData</a></span></td>
+			<td><span style="font-size: 8pt">swFmTablePattern</span></td>
+		</tr>
+	</table>
+	<p>&nbsp;</p></li>
+	<li class=kadov-p>
+	<p>Modify properties on the pattern-specific feature data object.</p></li>
+	<li class=kadov-p>
+	<p>Create the pattern-specific feature by calling
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeatureManager~CreateFeature.html">IFeatureManager::CreateFeature</a>.<br>&nbsp;</p>
+	</li>
+</ol>
+<p><b><font color="#A52A2A" face="Arial">To edit a pattern feature:<br>
+&nbsp;</font></b></p>
+<ol style="list-style: decimal;"
+	type=1>
+	<li class=kadov-p>Call 
+		<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~GetDefinition.html">IFeature::GetDefinition</a> 
+	to get the pattern-specific feature data object.<br>
+&nbsp;</li>
+	<li class=kadov-p>Call AccessSelections on the pattern-specific feature data 
+	object.<br>
+&nbsp;</li>
+	<li class=kadov-p>Modify properties on the pattern-specific feature data object.<br>
+&nbsp;</li>
+	<li class=kadov-p>Call 
+		<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~ModifyDefinition.html">IFeature::ModifyDefinition</a> if you modified the 
+		feature or
+		ReleaseSelectionAccess on the pattern-specific feature data object if you did not modify 
+	the feature.</li>
+</ol>
+<p>&nbsp;</p>
+
+<p style="font-weight: normal;">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

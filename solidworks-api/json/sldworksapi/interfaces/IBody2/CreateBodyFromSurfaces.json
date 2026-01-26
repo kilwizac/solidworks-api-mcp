@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "CreateBodyFromSurfaces",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "createbodyfromsurfaces",
+      "ibody2",
+      "body2",
+      "create",
+      "body",
+      "surfaces",
+      "boolean",
+      "using",
+      "trimmed",
+      "vba",
+      "imported",
+      "sketch",
+      "solid",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBody2.CreateBodyFromSurfaces",
+  "description": "Creates a body from a list of trimmed surfaces.",
+  "signature": "System.Boolean CreateBodyFromSurfaces()",
+  "parameters": [],
+  "returns": "True if solid body is created False if: solid body is not created - or - surface body is created",
+  "remarks": "To create a body using trimmed surfaces:\nCreate a new temporary body in a part using\nIPartDoc::CreateNewBody\n.\nCreate the trimmed surfaces in the shape of the new body (for example, six square surfaces that intersect at the edges to form a cube).\nCreate a planar surface based on a root point and normal (two, three cell VARIANT arrays) using IBody2::CreatePlanarSurface(RootPoint, Normal).\nAdd a trimming loop to the planar surface using\nISurface::AddTrimmingLoop2(Numcurves, _\nOrder, _\nDimen, _\nPeriodic, _\nNumKnots, _\nNumCtrlPoints, _\nKnots, _\nCtrlPointDbls, _\nUVRange)\nCreate a trimmed surface on the body based on the trimming loop that was just created. The arguments for Surface::AddTrimmingLoop2 and their values for a square are:\nArgument\nDescription\nNumCurves\nNumber of curves that make up the loop (4 Long)\nOrder\nOrders for the spline curves ({2, 2, 2, 2} Array of Longs)\nDimen\nDimension of the control points for the spline curves ({2, 2, 2, 2} Array of Longs)\nPeriodic\nPeriodicity of the spline curves ({0, 0, 0, 0} Array of Longs)\nNumKnots\nNumber of Knots of the spline curves ({4, 4, 4, 4} Array of Longs)\nNumCtrlPoints\nNumber of Control points for the spline curves ({2, 2, 2, 2} Array of Longs)\nKnots\nDescribes the locations of the knots ({0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1} Array of Doubles. Each knot represented by four numbers 0, 0, 1, 1)\nCtrlPointDbls\nControl points for the TrimmingLoop ({0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0} Array of Doubles. Describes the corners of the square)\nUVRange\nMin and max for the U and V values ({0, 1, 0, 1} Array of Doubles)\nSew the surfaces together into a new body using this method.",
+  "examples": [
+    {
+      "title": "Create Body Using Trimmed Surfaces (VBA)",
+      "href": "Create_Body_using_Trimmed_Surfaces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Imported Surface Body from Sketch (C#)",
+      "href": "Create_Imported_Surface_Body_from_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Imported Solid Body (C#)",
+      "href": "Create_Imported_Solid_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Imported Solid Body (VB.NET)",
+      "href": "Create_Imported_Solid_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Imported Solid Body (VBA)",
+      "href": "Create_Imported_Solid_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

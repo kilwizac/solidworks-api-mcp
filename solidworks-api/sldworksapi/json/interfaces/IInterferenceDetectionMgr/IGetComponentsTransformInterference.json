@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInterferenceDetectionMgr",
+    "member": "IGetComponentsTransformInterference",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NumOfComponent",
+        "type": "System.Int32",
+        "description": "Number of components in array specified by Component"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "in-process, unmanaged C++: Pointer to an array of components VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "Transform",
+        "type": "MathTransform",
+        "description": "IMathTransform"
+      },
+      {
+        "name": "NumOfIntComponent",
+        "type": "System.Int32",
+        "description": "Number of interfering components in array returned by this method (see Remarks )"
+      },
+      {
+        "name": "InterferingComponent",
+        "type": "Component2",
+        "description": "in-process, unmanaged C++: Pointer to an array of interfering components VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IInterferenceDetectionMgr.CreateFastenersFolder",
+      "IInterferenceDetectionMgr.GetComponentsTransformInterference",
+      "IInterferenceDetectionMgr.IGetInterferenceComponents",
+      "IInterferenceDetectionMgr.IgnoreHiddenBodies",
+      "IInterferenceDetectionMgr.IncludeMultibodyPartInterferences",
+      "IInterferenceDetectionMgr.MakeInterferingPartsTransparent",
+      "IInterferenceDetectionMgr.NonInterferingComponentDisplay",
+      "IInterferenceDetectionMgr.ShowIgnoredInterferences",
+      "IInterferenceDetectionMgr.TreatCoincidenceAsInterference",
+      "IInterferenceDetectionMgr.TreatSubAssembliesAsComponents"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "interfering",
+      "igetcomponentstransforminterference",
+      "iinterferencedetectionmgr",
+      "interference",
+      "detection",
+      "mgr",
+      "transform",
+      "num",
+      "component",
+      "int32",
+      "component2",
+      "math",
+      "int",
+      "boolean"
+    ]
+  },
+  "title": "IInterferenceDetectionMgr.IGetComponentsTransformInterference",
+  "description": "Calculates and gets the interfering components for the specified components and math transform.",
+  "signature": "System.Boolean IGetComponentsTransformInterference( \n   System.Int32\nNumOfComponent\n,\n   ref Component2\nComponent\n,\n   ref MathTransform\nTransform\n,\n   System.Int32\nNumOfIntComponent\n,\n   out Component2\nInterferingComponent\n)",
+  "parameters": [
+    {
+      "name": "NumOfComponent",
+      "type": "System.Int32",
+      "description": "Number of components in array specified by Component"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "in-process, unmanaged C++: Pointer to an array of components VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "Transform",
+      "type": "MathTransform",
+      "description": "IMathTransform"
+    },
+    {
+      "name": "NumOfIntComponent",
+      "type": "System.Int32",
+      "description": "Number of interfering components in array returned by this method (see Remarks )"
+    },
+    {
+      "name": "InterferingComponent",
+      "type": "Component2",
+      "description": "in-process, unmanaged C++: Pointer to an array of interfering components VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, call\nIInterferenceDetectionMgr::GetComponentsTransformInterferenceCount\nto populate NumOfIntComponent.",
+  "examples": [],
+  "related": [
+    "IInterferenceDetectionMgr.CreateFastenersFolder",
+    "IInterferenceDetectionMgr.GetComponentsTransformInterference",
+    "IInterferenceDetectionMgr.IGetInterferenceComponents",
+    "IInterferenceDetectionMgr.IgnoreHiddenBodies",
+    "IInterferenceDetectionMgr.IncludeMultibodyPartInterferences",
+    "IInterferenceDetectionMgr.MakeInterferingPartsTransparent",
+    "IInterferenceDetectionMgr.NonInterferingComponentDisplay",
+    "IInterferenceDetectionMgr.ShowIgnoredInterferences",
+    "IInterferenceDetectionMgr.TreatCoincidenceAsInterference",
+    "IInterferenceDetectionMgr.TreatSubAssembliesAsComponents"
+  ]
+}

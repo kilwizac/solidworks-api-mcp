@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddComponent4",
+    "returns": "Component2",
+    "parameters": [
+      {
+        "name": "CompName",
+        "type": "System.String",
+        "description": "Path name of a loaded part or assembly to add as a component (see Remarks )"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of the configuration from which to load the component (see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of the component center"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the component center"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the component center"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.InsertEnvelope",
+      "IAssemblyDoc.ReplaceComponents"
+    ],
+    "keywords": [
+      "addcomponent4",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "add",
+      "component4",
+      "comp",
+      "name",
+      "string",
+      "config",
+      "double",
+      "component2",
+      "component",
+      "mate"
+    ]
+  },
+  "title": "IAssemblyDoc.AddComponent4",
+  "description": "Obsolete. Superseded by IAssemblyDoc::AddComponent5.",
+  "signature": "Component2 AddComponent4( \n   System.String\nCompName\n,\n   System.String\nConfigName\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "CompName",
+      "type": "System.String",
+      "description": "Path name of a loaded part or assembly to add as a component (see Remarks )"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of the configuration from which to load the component (see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of the component center"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the component center"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the component center"
+    }
+  ],
+  "returns": "IComponent2",
+  "remarks": "The specified file must be loaded in memory. A file is loaded into memory when you load the file in your SOLIDWORKS Design session (\nISldWorks::OpenDoc6\n) or open an assembly that already contains the file.\nIf configName is empty or specifies a configuration that does not exist, then the current configuration\nis used.\nIf you want to add the component at a position relative to the root component, use\nIComponent2::Transform2\nto reposition the component immediately after calling this method. Or, you can use\nIAssemblyDoc::AddComponents\nor\nIAssemblyDoc::AddComponents2\nto specify the transform when inserting a component, insert as many components as you want at once, and rotate and scale the component through the transform matrix.\nIMPORTANT:\nThe x, y, and z parameters of this method are relative to the bounding box of the component. Only use this method if you want to approximately position the component. Use IComponent2::Transform2 if you want to more precisely position the component.",
+  "examples": [
+    {
+      "title": "Add Component and Mate (C++)",
+      "href": "Add_Component_and_Mate_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.InsertEnvelope",
+    "IAssemblyDoc.ReplaceComponents"
+  ]
+}

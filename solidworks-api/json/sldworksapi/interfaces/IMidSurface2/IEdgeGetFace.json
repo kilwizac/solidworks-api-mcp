@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface2",
+    "member": "IEdgeGetFace",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "EdgeInDisp",
+        "type": "Edge",
+        "description": "Midsurface edge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.EdgeGetFace"
+    ],
+    "keywords": [
+      "iedgegetface",
+      "imidsurface2",
+      "mid",
+      "surface2",
+      "edge",
+      "face",
+      "disp",
+      "face2"
+    ]
+  },
+  "title": "IMidSurface2.IEdgeGetFace",
+  "description": "Obsolete. Superseded by IMidSurface3::IEdgeGetFace.",
+  "signature": "Face2 IEdgeGetFace( \n   Edge\nEdgeInDisp\n)",
+  "parameters": [
+    {
+      "name": "EdgeInDisp",
+      "type": "Edge",
+      "description": "Midsurface edge"
+    }
+  ],
+  "returns": "Face on the original solid body",
+  "remarks": "This condition occurs when a reference surface extends to meet one of the faces on the original part body. If the edge specified does not lie on one of the original part body faces, then a NULL is returned.\nThis edge is not topologically related to the face returned.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.EdgeGetFace"
+  ]
+}

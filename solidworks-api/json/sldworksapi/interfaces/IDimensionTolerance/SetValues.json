@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "SetValues",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "MinValue",
+        "type": "System.Double",
+        "description": "Tolerance minimum value"
+      },
+      {
+        "name": "MaxValue",
+        "type": "System.Double",
+        "description": "Tolerance maximum value"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setvalues",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "values",
+      "min",
+      "value",
+      "double",
+      "max",
+      "boolean"
+    ]
+  },
+  "title": "IDimensionTolerance.SetValues",
+  "description": "Obsolete. Superseded by IDimensionTolerance::SetValues2.",
+  "signature": "System.Boolean SetValues( \n   System.Double\nMinValue\n,\n   System.Double\nMaxValue\n)",
+  "parameters": [
+    {
+      "name": "MinValue",
+      "type": "System.Double",
+      "description": "Tolerance minimum value"
+    },
+    {
+      "name": "MaxValue",
+      "type": "System.Double",
+      "description": "Tolerance maximum value"
+    }
+  ],
+  "returns": "True if the minimum and maximum tolerance values are set, false if not",
+  "remarks": "You cannot set the dimension tolerance values if the\ntolerance type\nis\nswTolType_e.swTolNONE\n. Depending on the tolerance type, the dimension tolerance minimum and maximum values might not be visible.\nTo get tolerance...\nUse...\nMinimum value\nIDimensionTolerance::GetMinValue\nMaximum value\nIDimensionTolerance::GetMaxValue\nTo see the effects of changing the tolerance values, call\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [],
+  "related": []
+}

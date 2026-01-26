@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "SetMaterialVisualProperties",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Properties",
+        "type": "MaterialVisualPropertiesData",
+        "description": "Material visual properties"
+      },
+      {
+        "name": "ConfigOption",
+        "type": "System.Int32",
+        "description": "Configurations as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "ConfigNames",
+        "type": "System.Object",
+        "description": "Array of strings of the names of the configurations whose material visual properties to set"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetMaterialPropertyName2",
+      "IPartDoc.GetMaterialVisualProperties",
+      "IPartDoc.IMaterialPropertyValues",
+      "IPartDoc.MaterialIdName",
+      "IPartDoc.MaterialPropertyValues",
+      "IPartDoc.MaterialUserName",
+      "IPartDoc.SetMaterialPropertyName2"
+    ],
+    "keywords": [
+      "properties",
+      "material",
+      "visual",
+      "parts",
+      "see",
+      "also",
+      "ipartdoc",
+      "materials",
+      "setmaterialvisualproperties",
+      "part",
+      "doc",
+      "data",
+      "config",
+      "option",
+      "int32",
+      "names",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IPartDoc.SetMaterialVisualProperties",
+  "description": "Sets the material visual properties for the active configuration and any specified configurations of this part.",
+  "signature": "System.Int32 SetMaterialVisualProperties( \n   MaterialVisualPropertiesData\nProperties\n,\n   System.Int32\nConfigOption\n,\n   System.Object\nConfigNames\n)",
+  "parameters": [
+    {
+      "name": "Properties",
+      "type": "MaterialVisualPropertiesData",
+      "description": "Material visual properties"
+    },
+    {
+      "name": "ConfigOption",
+      "type": "System.Int32",
+      "description": "Configurations as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "ConfigNames",
+      "type": "System.Object",
+      "description": "Array of strings of the names of the configurations whose material visual properties to set"
+    }
+  ],
+  "returns": "0 on success, non-0 on failure",
+  "remarks": "ConfigNames is used only when ConfigOption is set to swSpecifyConfiguration. If a different value is specified for ConfigOption, then ConfigNames is ignored.\nThis method always affects the active configuration, regardless of the value specified for ConfigNames.",
+  "examples": [
+    {
+      "title": "Get and Set Material Visual Properties (VBA)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Material Visual Properties (VB.NET)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Material Visual Properties (C#)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.GetMaterialPropertyName2",
+    "IPartDoc.GetMaterialVisualProperties",
+    "IPartDoc.IMaterialPropertyValues",
+    "IPartDoc.MaterialIdName",
+    "IPartDoc.MaterialPropertyValues",
+    "IPartDoc.MaterialUserName",
+    "IPartDoc.SetMaterialPropertyName2"
+  ]
+}

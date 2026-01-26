@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetNext3",
+    "returns": "Annotation",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IView.GetFirstAnnotation3"
+    ],
+    "keywords": [
+      "traverse",
+      "annotations",
+      "getnext3",
+      "iannotation",
+      "annotation",
+      "next3",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "vba",
+      "entities",
+      "attached",
+      "cosmetic",
+      "thread",
+      "show",
+      "drawing",
+      "sheet",
+      "dimxpert",
+      "feature",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAnnotation.GetNext3",
+  "description": "Gets the next annotation.",
+  "signature": "Annotation GetNext3()",
+  "parameters": [],
+  "returns": "IAnnotation",
+  "remarks": "This method:\nretrieves all display dimensions, including suppressed, hidden, and dangling dimensions, on the sheet and on the sheet format if it is visible. See\nISheet::SheetFormatVisible\nfor details.\nretrieves all instances of a dimension. For example, if a (4X) instance dimension is visible in the user interface, this method gets the 4X dimension and each of its four dimension instances.\nretrieves an annotation, even if it is on a layer that is not displayed.\nA dimension is suppressed or hidden when you:\nspecifically select a dimension and hide it.\n- or -\nselect a feature and hide all dimensions.\nIf you need to filter out suppressed or hidden dimensions, use\nIAnnotation::Visible\nto check the visibility status.\nTo get the first annotation on the sheet, call\nIView::GetFirstAnnotation3\nbefore calling this method.",
+  "examples": [
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Entities Attached to Cosmetic Thread (VBA)",
+      "href": "Get_Entities_Attached_To_Cosmetic_Thread_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Show Dimensions in Drawing Sheet (VBA)",
+      "href": "Show_Dimensions_in_Drawing_Sheet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (C#)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VB.NET)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VBA)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetFirstAnnotation3"
+  ]
+}

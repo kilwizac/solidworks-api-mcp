@@ -1,0 +1,220 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "OpenDoc6",
+    "returns": "ModelDoc2",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Document name or full path if not in current directory, including extension"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Document type as defined in swDocumentTypes_e"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Mode in which to open the document as defined in swOpenDocOptions_e"
+      },
+      {
+        "name": "Configuration",
+        "type": "System.String",
+        "description": "Model configuration in which to open this document Applies to parts and assemblies, not drawings If this argument is empty or the specified configuration is not present in the model, the model is opened in the last-used configuration"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Load errors as defined in swFileLoadError_e ( See Remarks )"
+      },
+      {
+        "name": "Warnings",
+        "type": "System.Int32",
+        "description": "Warnings or extra information generated during the open operation as defined in swFileLoadWarning_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.CopyDocument",
+      "ISldWorks.EnableBackgroundProcessing",
+      "ISldWorks.EnumDocuments2",
+      "ISldWorks.GetCurrentWorkingDirectory",
+      "ISldWorks.GetDataFolder",
+      "ISldWorks.GetDocumentDependencies2",
+      "ISldWorks.GetFirstDocument",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.GetOpenFileName",
+      "ISldWorks.GetOpenedFileInfo",
+      "ISldWorks.GetRecentFiles",
+      "ISldWorks.ICopyDocument",
+      "ISldWorks.IGetDocumentDependencies2",
+      "ISldWorks.IGetFirstDocument2",
+      "ISldWorks.IGetOpenDocumentByName2",
+      "ISldWorks.IMoveDocument",
+      "ISldWorks.IsBackgroundProcessingCompleted",
+      "ISldWorks.PreviewDoc",
+      "ISldWorks.PreviewDocx64",
+      "ISldWorks.QuitDoc",
+      "ISldWorks.SetPromptFilename"
+    ],
+    "keywords": [
+      "document",
+      "open",
+      "parents",
+      "documents",
+      "opendoc6",
+      "isldworks",
+      "sld",
+      "works",
+      "doc6",
+      "file",
+      "name",
+      "string",
+      "type",
+      "int32",
+      "options",
+      "configuration",
+      "errors",
+      "warnings",
+      "model",
+      "doc2",
+      "add",
+      "component",
+      "mate",
+      "vba",
+      "silently",
+      "assembly",
+      "large",
+      "design",
+      "review",
+      "mode",
+      "vb",
+      "net",
+      "switch"
+    ]
+  },
+  "title": "ISldWorks.OpenDoc6",
+  "description": "Opens an existing document and returns a pointer to the document object.",
+  "signature": "ModelDoc2 OpenDoc6( \n   System.String\nFileName\n,\n   System.Int32\nType\n,\n   System.Int32\nOptions\n,\n   System.String\nConfiguration\n,\n   out System.Int32\nErrors\n,\n   out System.Int32\nWarnings\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Document name or full path if not in current directory, including extension"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Document type as defined in swDocumentTypes_e"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Mode in which to open the document as defined in swOpenDocOptions_e"
+    },
+    {
+      "name": "Configuration",
+      "type": "System.String",
+      "description": "Model configuration in which to open this document Applies to parts and assemblies, not drawings If this argument is empty or the specified configuration is not present in the model, the model is opened in the last-used configuration"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Load errors as defined in swFileLoadError_e ( See Remarks )"
+    },
+    {
+      "name": "Warnings",
+      "type": "System.Int32",
+      "description": "Warnings or extra information generated during the open operation as defined in swFileLoadWarning_e"
+    }
+  ],
+  "returns": "Newly loaded model document or NULL if document failed to open",
+  "remarks": "As of SOLIDWORKS 2020 SP03.1, SOLIDWORKS Design works on the\n3D\nEXPERIENCE platform as\nSOLIDWORKS Design Augmented\n. Use\nISldWorks::OpenDoc7\nto open documents with SOLIDWORKS Design Augmented.\nAs of SOLIDWORKS 2012 SP5, loading future file versions is supported, and\nISldWorks::OpenDoc6\nno longer throws a\nswFileLoadError_e\n.swFutureVersion error. Use\nIModelDocExtension::IsFutureVersion\nto determine whether a component is for a future version of SOLIDWORKS.\nAs of SOLIDWORKS 2008,\nISldWorks::OpenDoc7\nperforms the same work as this method, but also:\nAllows you to open a document with a specified display state.\nUses\nIDocumentSpecification\nto specify input parameters.\nThis method also allows control over whether to:\nSuppress displaying dialog boxes\nOpen the document read-only\nOpen the document in Large Design Review mode\nConvert a drawing to a detached drawing\nWhen opening a parent document (assembly, drawing, and so on):\nSOLIDWORKS Design also opens any additional documents that are referenced in the parent document (parts, subassemblies, and so on).\nSOLIDWORKS Design follows certain rules in trying to locate its referenced documents. If explicit Search Folders have not been set using\nTools, Options, System Options, ExternalReferences\n, then the first place SOLIDWORKS Design looks for the referenced documents is in the current working directory. If SOLIDWORKS Design finds the referenced file in the current working directory, then it is loaded from that directory.\nCalling ISldWorks::OpenDoc6 does not change the current working directory to that of the opened file, whereas, interactively using the File Open dialog box does. This may affect documents with references.\nBecause the user may have interactively opened files from some random directory, you cannot be certain that the current working directory is pointing to the desired location. This may affect the referenced documents that ultimately get loaded when using ISldWorks::OpenDoc6 versus performing File Open interactively. You may want to set the current working directory before calling ISldWorks::OpenDoc6. This can be done using the\nISldWorks::SetCurrentWorkingDirectory\nmethod. To mimic the behavior of the File Open dialog, you set the current working directory to that of the file being opened.\nWhen opening files that contain references, you may also want to consider the current Search Folder settings because they may affect the references that ultimately get loaded. This can be done using\nISldWorks::GetSearchFolders\nand\nISldWorks::SetSearchFolders\n. If Search Folders are currently in use, SOLIDWORKS Design looks for references in the Search Folders before trying to locate references in the current working directory.\nIf this method successfully opens an assembly, it still returns swFileLoadError_e.swFileNotFoundError in Errors if a referenced component file cannot be located.\nISldWorks::OpenDoc6 does not activate and display the document if the file is already open in memory in an assembly or drawing. However, ISldWorks::OpenDoc6 should return a valid\nIModelDoc2\npointer that is usable with functions that do not require a document to be displayed. If you want,\nISldWorks::ActivateDoc2\nor\nISldWorks::IActivateDoc3\nwill activate and display the document. Because calling ISldWorks::OpenDoc6 does not activate nor display the file, calling the\nISldWorks::ActiveDoc\nor\nISldWorks::IActiveDoc2\nproperty will not return a pointer to this document.\nThis method fires the the SOLIDWORKS event\nFileOpenNotify2\nevent. Also, the SOLIDWORKS event\nActiveDocChangeNotify\nand\nActiveModelDocChangeNotify\nevents are sent if the file being loaded is not already open as the active document.\nTIPS\nTo...\nThen...\nOpen an assembly in Large Design Review mode\nSet the Options argument to swOpenDocOptions_LDR_EditAssembly. This option opens large assemblies in edit mode without actually loading them. This is useful for conducting a quick walk-through of a large assembly. Call\nIAssemblyDoc::SelectiveOpen\nto open selected components after an assembly has been opened in Large Design Review mode.\nAvoid warnings when opening the document\nSet the Options argument to swOpenDocOptions_Silent. The software uses the last-displayed configuration if it discovers missing configurations or component references.\nOpen a library feature part\nSet the Type argument to swDocPART.\nOpen foreign files (IGES, STEP, and so on)\nUse\nISldWorks::LoadFile4\n.\nAvoid a warning when opening shaded models in views\nSet the Options argument to swOpenDocOptions_LoadModel. This option loads the model so that the view comes in shaded automatically.\nAvoid large increases in memory usage caused when adding parts to assemblies\nOpening a model causes SceneGraph to display the model. SceneGraph uses maps with defaults sizes of 2MB - 3MB for even the simplest model. And, assemblies and parts do not share the same SceneGraph buffer. To avoid large increases in your memory usage:\nSet the document to invisible.\nOpen the parts.\nSet the document to visible.\nAdd the part to the assembly.\nSee\nISldWorks::DocumentVisible\nfor details.\nOpen a document with a specified display state\nUse ISldWorks::OpenDoc7.\nA warning is displayed if you\nopen a Detached drawing\nwithout loading the model, and the model was saved since the drawing was last saved.\nThis method honors:\nISldWorks::GetUserPreferenceToggle\nswLargeAsmModeEnabled\n- and -\nISldWorks::SetUserPreferenceToggle\nswLargeAsmModeEnabled, true/false (NOTE: if this toggle is set to true, then the file opens in lightweight mode)",
+  "examples": [
+    {
+      "title": "Add Component and Mate (C++)",
+      "href": "Add_Component_and_Mate_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Document (VBA)",
+      "href": "Open_Document_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Document Silently (VBA)",
+      "href": "Open_Document_Silently_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Assembly in Large Design Review Mode (VBA)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Assembly in Large Design Review Mode (VB.NET)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Assembly in Large Design Review Mode (C#)",
+      "href": "Open_Assembly_in_Large_Design_Review_Mode_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Switch Documents (C#)",
+      "href": "Switch_Documents_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Switch Documents (VB.NET)",
+      "href": "Switch_Documents_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Switch Documents (VBA)",
+      "href": "Switch_Documents_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.CopyDocument",
+    "ISldWorks.EnableBackgroundProcessing",
+    "ISldWorks.EnumDocuments2",
+    "ISldWorks.GetCurrentWorkingDirectory",
+    "ISldWorks.GetDataFolder",
+    "ISldWorks.GetDocumentDependencies2",
+    "ISldWorks.GetFirstDocument",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.GetOpenFileName",
+    "ISldWorks.GetOpenedFileInfo",
+    "ISldWorks.GetRecentFiles",
+    "ISldWorks.ICopyDocument",
+    "ISldWorks.IGetDocumentDependencies2",
+    "ISldWorks.IGetFirstDocument2",
+    "ISldWorks.IGetOpenDocumentByName2",
+    "ISldWorks.IMoveDocument",
+    "ISldWorks.IsBackgroundProcessingCompleted",
+    "ISldWorks.PreviewDoc",
+    "ISldWorks.PreviewDocx64",
+    "ISldWorks.QuitDoc",
+    "ISldWorks.SetPromptFilename"
+  ]
+}

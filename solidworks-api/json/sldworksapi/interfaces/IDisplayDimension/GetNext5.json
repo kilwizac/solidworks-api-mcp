@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetNext5",
+    "returns": "DisplayDimension",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IView.GetFirstDisplayDimension5"
+    ],
+    "keywords": [
+      "getnext5",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "next5",
+      "values",
+      "drawing",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetNext5",
+  "description": "Gets the next display dimension.",
+  "signature": "DisplayDimension GetNext5()",
+  "parameters": [],
+  "returns": "Pointer to the next IDisplayDimension object",
+  "remarks": "A dimension can be displayed multiple times. For example, a base-extrude dimension can be brought into three different views on a drawing. These three dimensions are referred to as display dimensions and are represented by the DisplayDimension object in the SOLIDWORKS API. The original base-extrude dimension is represented by the\nIDimension\nobject in the SOLIDWORKS API.\nCall this method after calling\nIView::GetFirstDisplayDimension5\n.\nThis method displays:\ndimensions on both the sheet and sheet format.\nsuppressed dimensions.",
+  "examples": [
+    {
+      "title": "Get Dimension Values in Drawing (VBA)",
+      "href": "Get_Dimension_Values_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetFirstDisplayDimension5"
+  ]
+}

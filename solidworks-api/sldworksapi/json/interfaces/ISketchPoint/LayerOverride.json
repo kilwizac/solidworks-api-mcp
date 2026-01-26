@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchPoint",
+    "member": "LayerOverride",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "layeroverride",
+      "isketchpoint",
+      "sketch",
+      "point",
+      "layer",
+      "override",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchPoint.LayerOverride",
+  "description": "Gets or sets whether the sketch point has properties that override the default properties of the layer.",
+  "signature": "System.Int32 LayerOverride {get; set;}",
+  "parameters": [],
+  "returns": "Properties that have been overridden or should be overridden as defined in swLayerOverride_e (see Remarks )",
+  "remarks": "Layers are supported only in drawing documents.\nIn drawing documents, sketch points can be created on a layer that has specific visual properties. By default, the sketch point inherits the visual properties defined by the layer. However, for a specific sketch point, these visual properties can be overridden.\nWhen the sketch point is not on any layer, the value this property returns is undefined. You can use the\nISketchPoint::Layer\nproperty to determine the name of the layer, if any, that this sketch point is on. If an empty string is returned by the ISketchPoint::Layer property, then this\nproperty is not used.\nSketch points currently support only the color visual property. Therefore, the only bit value that is currently used by this function is 0x1, which indicates a color override. If this property returns 0x1, this indicates that the color of this sketch point has been specifically set by the end-user and may not match the default color value associated with this sketch point's layer. If you pass 0 to this property, then you are indicating that the color should be reset to use the default color associated with this item's layer.\nOnly set this property to reset specific visual properties back to the default visual properties of the owning layer. If you want to change or set specific values for the visual property for this item, use\nISketchPoint::Color\n.",
+  "examples": [],
+  "related": []
+}

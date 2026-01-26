@@ -1,0 +1,107 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertUntrimSurface2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FaceUntrimType",
+        "type": "System.Int32",
+        "description": "Untrim face edge type as defined by swFaceUntrimType_e ; valid only if a face is selected"
+      },
+      {
+        "name": "EdgeUntrimType",
+        "type": "System.Int32",
+        "description": "Connect endpoints or extend edges as defined by swEdgeUntrimType_e ; valid only of one or more edges are selected"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance by which to untrim the surface"
+      },
+      {
+        "name": "BMerge",
+        "type": "System.Boolean",
+        "description": "True to create a surface extension that merges with the original surface, false to create a new, separate surface body"
+      },
+      {
+        "name": "BTrimOppositeSide",
+        "type": "System.Boolean",
+        "description": "True to remove the surface outside the selected surface edges or interior surface holes, false to not; valid only if BMerge is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISurfaceExtendFeatureData"
+    ],
+    "keywords": [
+      "extend",
+      "surface",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "untrimmed",
+      "isurface",
+      "insertuntrimsurface2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "untrim",
+      "surface2",
+      "face",
+      "type",
+      "int32",
+      "edge",
+      "distance",
+      "double",
+      "merge",
+      "boolean",
+      "trim",
+      "opposite",
+      "side"
+    ]
+  },
+  "title": "IFeatureManager.InsertUntrimSurface2",
+  "description": "Extends a surface along its natural boundaries or fills interior surface holes, optionally trimming outside these boundaries or holes.",
+  "signature": "Feature InsertUntrimSurface2( \n   System.Int32\nFaceUntrimType\n,\n   System.Int32\nEdgeUntrimType\n,\n   System.Double\nDistance\n,\n   System.Boolean\nBMerge\n,\n   System.Boolean\nBTrimOppositeSide\n)",
+  "parameters": [
+    {
+      "name": "FaceUntrimType",
+      "type": "System.Int32",
+      "description": "Untrim face edge type as defined by swFaceUntrimType_e ; valid only if a face is selected"
+    },
+    {
+      "name": "EdgeUntrimType",
+      "type": "System.Int32",
+      "description": "Connect endpoints or extend edges as defined by swEdgeUntrimType_e ; valid only of one or more edges are selected"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance by which to untrim the surface"
+    },
+    {
+      "name": "BMerge",
+      "type": "System.Boolean",
+      "description": "True to create a surface extension that merges with the original surface, false to create a new, separate surface body"
+    },
+    {
+      "name": "BTrimOppositeSide",
+      "type": "System.Boolean",
+      "description": "True to remove the surface outside the selected surface edges or interior surface holes, false to not; valid only if BMerge is false"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "This method:\nis valid only for surface parts.\nrequires preselection of the face or edges you want to untrim.\nFor learn more about Untrim Surfaces, see the\nSOLIDWORKS Help > Parts and Features > Features > Surfaces > Surface Controls > Untrim Surface\ntopic.",
+  "examples": [],
+  "related": [
+    "ISurfaceExtendFeatureData"
+  ]
+}

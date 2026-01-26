@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParagraphs",
+    "member": "SetTextSegmentFormat",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Segment",
+        "type": "System.Int32",
+        "description": "0-based index of the text segment whose format to set"
+      },
+      {
+        "name": "Format",
+        "type": "System.Object",
+        "description": "ITextFormat"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IParagraphs.GetTextSegmentFormat"
+    ],
+    "keywords": [
+      "settextsegmentformat",
+      "iparagraphs",
+      "paragraphs",
+      "text",
+      "segment",
+      "format",
+      "int32",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IParagraphs.SetTextSegmentFormat",
+  "description": "Sets the text format for the specified text segment in the current paragraph.",
+  "signature": "System.Boolean SetTextSegmentFormat( \n   System.Int32\nSegment\n,\n   System.Object\nFormat\n)",
+  "parameters": [
+    {
+      "name": "Segment",
+      "type": "System.Int32",
+      "description": "0-based index of the text segment whose format to set"
+    },
+    {
+      "name": "Format",
+      "type": "System.Object",
+      "description": "ITextFormat"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Paragraphs contain one or more text segments. Each text segment has a different format.\nBefore calling this method:\nset the current paragraph using\nIParagraphs::CurrentParagraph\n.\ncall\nIParagraphs::GetTextSegmentCount\nto get the total number of text segments and a valid value for Segment.\nAfter calling this method, call\nIParagraphs::UpdateParagraph\nto update the model.",
+  "examples": [
+    {
+      "title": "IParagraphs",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IParagraphs",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IParagraphs.GetTextSegmentFormat"
+  ]
+}

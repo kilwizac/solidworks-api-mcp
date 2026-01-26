@@ -1,0 +1,450 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>GetBSurfParams2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~GetBSurfParams2" />
+    <meta name="Description" content="Obsolete. Superseded by ISurface::GetBSurfParams3." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISurface.GetBSurfParams2" />
+    <meta name="Microsoft.Help.Keywords" content="GetBSurfParams2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                GetBSurfParams2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a> : GetBSurfParams2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="WantCubicPopupContent" class="i-popup-content">
+        True if cubic is needed, false if not; specifying true converts any surface type to a cubic Bsurface
+    </div>
+
+    <div id="WantNonRationalPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">True if non-rational is needed, false if not; specifying true converts any surface type to a non-rational Bsurface; if you specify true, then you should only use this method for surfaces that are Bsurface or blend surface; otherwise, the underlying call is not made and the values returned from this are not initialized or contain the values from the last call</p>
+    </div>
+
+    <div id="VP0PopupContent" class="i-popup-content">
+        Array of values describing the UV range of the surface to be output; you can obtain these values by using <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Parameterization">ISurface::Parameterization</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IParameterization">ISurface::IParameterization</a>
+    </div>
+
+    <div id="TolerancePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Tolerance, in meters, between the approximated b-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired</p>
+    </div>
+
+    <div id="SensePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Approximated b-spline surface is not always in the same direction as the original surface; if sense is true, then the underlying surface and the b-spline surface are in the same direction</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <font color="red">Obsolete. Superseded by</font>&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~GetBSurfParams3">ISurface::GetBSurfParams3</a><font color="red">.</font>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function GetBSurfParams2( _
+   ByVal <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="WantNonRationalPopupLink" data-popup-contentsource="#WantNonRationalPopupContent" data-popup-showevent="click mouseenter">WantNonRational</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="VP0PopupLink" data-popup-contentsource="#VP0PopupContent" data-popup-showevent="click mouseenter">VP0</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="TolerancePopupLink" data-popup-contentsource="#TolerancePopupContent" data-popup-showevent="click mouseenter">Tolerance</a></i> As System.Double, _
+   ByRef <i><a class="i-popup-link" id="SensePopupLink" data-popup-contentsource="#SensePopupContent" data-popup-showevent="click mouseenter">Sense</a></i> As System.Boolean _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface</a>
+Dim WantCubic As System.Boolean
+Dim WantNonRational As System.Boolean
+Dim VP0 As System.Object
+Dim Tolerance As System.Double
+Dim Sense As System.Boolean
+Dim value As System.Object
+ 
+value = instance.GetBSurfParams2(WantCubic, WantNonRational, VP0, Tolerance, Sense)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object GetBSurfParams2( 
+   System.bool <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i>,
+   System.bool <i><a class="i-popup-link" id="WantNonRationalPopupLink" data-popup-contentsource="#WantNonRationalPopupContent" data-popup-showevent="click mouseenter">WantNonRational</a></i>,
+   System.object <i><a class="i-popup-link" id="VP0PopupLink" data-popup-contentsource="#VP0PopupContent" data-popup-showevent="click mouseenter">VP0</a></i>,
+   System.double <i><a class="i-popup-link" id="TolerancePopupLink" data-popup-contentsource="#TolerancePopupContent" data-popup-showevent="click mouseenter">Tolerance</a></i>,
+   out System.bool <i><a class="i-popup-link" id="SensePopupLink" data-popup-contentsource="#SensePopupContent" data-popup-showevent="click mouseenter">Sense</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ GetBSurfParams2( 
+   System.bool <i><a class="i-popup-link" id="WantCubicPopupLink" data-popup-contentsource="#WantCubicPopupContent" data-popup-showevent="click mouseenter">WantCubic</a></i>,
+   System.bool <i><a class="i-popup-link" id="WantNonRationalPopupLink" data-popup-contentsource="#WantNonRationalPopupContent" data-popup-showevent="click mouseenter">WantNonRational</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="VP0PopupLink" data-popup-contentsource="#VP0PopupContent" data-popup-showevent="click mouseenter">VP0</a></i>,
+   System.double <i><a class="i-popup-link" id="TolerancePopupLink" data-popup-contentsource="#TolerancePopupContent" data-popup-showevent="click mouseenter">Tolerance</a></i>,
+   [Out] System.bool <i><a class="i-popup-link" id="SensePopupLink" data-popup-contentsource="#SensePopupContent" data-popup-showevent="click mouseenter">Sense</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>WantCubic</i></dt>
+
+                <dd>True if cubic is needed, false if not; specifying true converts any surface type to a cubic Bsurface</dd>
+
+                <dt><i>WantNonRational</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">True if non-rational is needed, false if not; specifying true converts any surface type to a non-rational Bsurface; if you specify true, then you should only use this method for surfaces that are Bsurface or blend surface; otherwise, the underlying call is not made and the values returned from this are not initialized or contain the values from the last call</p>
+                </dd>
+
+                <dt><i>VP0</i></dt>
+
+                <dd>Array of values describing the UV range of the surface to be output; you can obtain these values by using <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Parameterization">ISurface::Parameterization</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IParameterization">ISurface::IParameterization</a></dd>
+
+                <dt><i>Tolerance</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Tolerance, in meters, between the approximated b-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired</p>
+                </dd>
+
+                <dt><i>Sense</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Approximated b-spline surface is not always in the same direction as the original surface; if sense is true, then the underlying surface and the b-spline surface are in the same direction</p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Array of values giving the b-spline surface parameters
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText" style="MARGIN-LEFT: 12px">The VP0 parameter contains the following values, which you can obtain by using <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Parameterization">ISurface::Parameterization</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IParameterization">ISurface::IParameterization</a>:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 12px">vP0[0] &amp; vP0[2]&#160;are the lower bounds of the U &amp; V surface parameters, respectively</p>
+                </li>
+
+                <li class="kadov-p-CapiRemarksText">
+                    <p class="apiRemarksText" style="MARGIN-LEFT: 12px">vP0[1]&#160;&amp; <span style="MARGIN-LEFT: 8px">vP0[3]&#160;are the upper bounds of the U &amp; V surface parameters, respectively</span></p>
+                </li>
+            </ul>
+
+            <p style="MARGIN-LEFT: 12px">If you want to use the Bsurface in combination with its trim curves, you should use the <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrimCurves2">IFace2::GetTrimCurves2</a> method to extract the trim curves and the Bsurface. The IFace2::GetTrimCurves2 method provides much better alignment of the trim curves with the Bsurface because they are both generated at the same time.</p>
+
+            <p style="MARGIN-LEFT: 12px">Evaluation is as follows:</p>
+
+            <p style="MARGIN-LEFT: 12px">Number of returned double elements is (4 + NumUKnots + NumVKnots + NumControlPointDoubles), where NumUKnots = (NumColumnsControlPoints + Uorder) and NumVKnots = (NumRowsControlPoints + Vorder).</p>
+
+            <p style="MARGIN-LEFT: 12px">The returned data are arranged in this order:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">Uorder, Vorder - These are two ints packed into a double</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">Uorder - Order of surface in U direction</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">Vorder - Order of surface in V direction</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">NumColumnsControlPoints, NumRowsControlPoints - These are two integers packed into a double</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">NumColumnsControlPoints - Number of columns for the control points</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">NumRowsControlPoints - Number of rows for the control points</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">Uperiodicity, Vperiodicity - These are two integers packed into a double. Since you may be generating a Bsurface with this function, the U,V periodicity values may be opposite from the original surface. Refer to ISurface::Parameterization or ISurface::IParameterization.</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">Uperiodicity - True if surface is periodic in U direction</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">Vperiodicity - True if surface is periodic in V direction</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">DimensionControlPoints, dummy - These are two integers packed into a double</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">DimensionControlPoints - Dimension for control points.</p>
+
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p">
+                                    <p style="MARGIN-LEFT: 12px">DimensionControlPoints = 3 for non-rational surfaces and control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].</p>
+                                </li>
+
+                                <li class="kadov-p">
+                                    <p style="MARGIN-LEFT: 12px">DimensionControlPoints = 4 for rational surfaces and control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">dummy - a system-used filler.</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">UKnots - Knot vector in the u direction.</p>
+                </li>
+            </ul>
+
+            <p style="MARGIN-LEFT: 52px">There will be (NumColumnsControlPoints + Uorder) knot values. If the surface is periodic in the U direction, then data is converted and returned in a non-periodic form with additional knots added to the surface ends.</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">VKnots - Knot vector in the v direction.</p>
+                </li>
+            </ul>
+
+            <p style="MARGIN-LEFT: 52px">There will be (NumRowsControlPoints + Vorder) knot values. If the surface is periodic in the V direction, then data is converted and returned in a non-periodic form with additional knots added to the surface ends.</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 12px">ControlPoints - This is a list of control points output in (NumColumnsControlPoints*NumRowsControlPoints) vectors of dimension DimensionControlPoints. The vectors are output row by row. The U direction of surface is in the row direction. The V direction of surface is in the column direction.</p>
+
+                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">For non-rational surfaces, control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">For rational surfaces, control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].</p>
+                        </li>
+
+                        <li class="kadov-p">
+                            <p style="MARGIN-LEFT: 12px">For example:</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p class="kadov-p" style="MARGIN-LEFT: 12px"></p>
+
+            <table style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" cellspacing="0" cols="2" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="122">Row1, Column1</td>
+
+                        <td width="136">Row1, Column2</td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td width="122">x0, y0, z0</td>
+
+                        <td width="136">x1, y1, z1</td>
+
+                        <td>= 6</td>
+                    </tr>
+
+                    <tr>
+                        <td width="122"></td>
+
+                        <td width="136"></td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td width="122">Row2, Column1</td>
+
+                        <td width="136">Row2, Column2</td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td width="122">x2, y2, z2</td>
+
+                        <td width="136">x3, y3, z3</td>
+
+                        <td>= 6</td>
+                    </tr>
+
+                    <tr>
+                        <td width="122"></td>
+
+                        <td width="136"></td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>Row3, Column1</td>
+
+                        <td>Row3, Column2</td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>x4, y4, z4</td>
+
+                        <td>x5, y5, z5</td>
+
+                        <td>= 6</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+
+                        <td></td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+
+                        <td></td>
+
+                        <td>= 18</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p></p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_members">ISurface Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IGetBSurfParams">ISurface::IGetBSurfParams Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IGetBSurfParamsSize3">ISurface::IGetBSurfParamsSize3 Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~GetBSurfParams2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

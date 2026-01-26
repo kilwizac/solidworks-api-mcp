@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetFrameSymbols3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int32",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameValues",
+      "IGtol.IGetFrameDiameterSymbols",
+      "IGtol.IGetFrameValues",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues2"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "getframesymbols3",
+      "igtol",
+      "gtol",
+      "symbols3",
+      "number",
+      "int32",
+      "object",
+      "text",
+      "items",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IGtol.GetFrameSymbols3",
+  "description": "Gets the symbols for the specified frame.",
+  "signature": "System.Object GetFrameSymbols3( \n   System.Int32\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int32",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "Array of six strings (see Remarks )",
+  "remarks": "This method is valid only if this Gtol was created in a version of SOLIDWORKS earlier than 2022.\nThe return array is an array of six strings in the following format:\nretval\n[0] = Geometric tolerance symbol\nretval\n[1] = Material condition symbol for first tolerance value\nretval\n[2] = Material condition symbol for second tolerance value\nretval\n[3] = Material condition symbol for datum1\nretval\n[4] = Material condition symbol for datum2\nretval\n[5] = Material condition symbol for datum3\nThe character strings returned in the array correspond to symbols defined in\nC:\\ProgramData\\SolidWorks\\SolidWorks\n20\nnn\n\\lang\\english\\gtol.sym\n. The format of each string is <\nLibraryName-SymbolName\n> (for example,\n<GTOL-ANGULAR>,\nwhich is the angularity symbol from the ASME Geometric Tolerancing Symbols library).\nUse this method with\nIGtol::GetFrameDiameterSymbols\n, which determines whether diameter symbols are displayed.",
+  "examples": [
+    {
+      "title": "Get Text Items in GTol Frame (C#)",
+      "href": "Get_Text_Items_in_GTol_Frame_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Text Items in GTol Frame (VB.NET)",
+      "href": "Get_Text_Items_in_GTol_Frame_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Text Items in GTol Frame (VBA)",
+      "href": "Get_Text_Items_in_GTol_Frame_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameValues",
+    "IGtol.IGetFrameDiameterSymbols",
+    "IGtol.IGetFrameValues",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues2"
+  ]
+}

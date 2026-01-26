@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMathUtility",
+    "member": "ICreateTransform",
+    "returns": "MathTransform",
+    "parameters": [
+      {
+        "name": "ArrayDataIn",
+        "type": "System.Double",
+        "description": "in-process, unmanaged C++: Pointer to sixteen (16) components of the transform (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMathUtility.ComposeTransform",
+      "IMathUtility.CreatePoint",
+      "IMathUtility.CreateTransformRotateAxis",
+      "IMathUtility.ICreateTransformRotateAxis"
+    ],
+    "keywords": [
+      "transform",
+      "create",
+      "icreatetransform",
+      "imathutility",
+      "math",
+      "utility",
+      "array",
+      "data",
+      "double"
+    ]
+  },
+  "title": "IMathUtility.ICreateTransform",
+  "description": "Creates a new math transform.",
+  "signature": "MathTransform ICreateTransform( \n   ref System.Double\nArrayDataIn\n)",
+  "parameters": [
+    {
+      "name": "ArrayDataIn",
+      "type": "System.Double",
+      "description": "in-process, unmanaged C++: Pointer to sixteen (16) components of the transform (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "Newly created math transform or null if the operation fails",
+  "remarks": "Transformation matrix data:\n|a b c . n |\n|d e f . o |\n|g h i . p |\n|j k l . m |\nThe SOLIDWORKS transformation matrix is stored as a homogeneous matrix of 16 elements, ordered as shown. The first 9 elements\n(a to i)\nare elements of a 3x3 rotational sub-matrix, the next 3 elements\n(j,k,l)\ndefine a translation vector, and the next 1 element\n(m)\nis a scaling factor. The last 3 elements\n(n,o,p)\nare unused in this context.\nThe 3x3 rotational sub-matrix represents 3 axis sets:\nrow 1 for x-axis components of rotation\nrow 2 for y-axis components of rotation\nrow 3 for z-axis components of rotation\nThe 3 axes are constrained to be orthogonal and unified so that they produce a pure rotational transformation. Reflections can also be added to these axes by setting the components to negative. The rotation sub-matrix coupled with the lower-left translation vector and the lower-right corner scaling factor creates an affine transformation, which is a transformation that preserves lines and parallelism; i.e., maps parallel lines to parallel lines.\nIf the 3 axis sets of the 3x3 rotational sub-matrix are not orthogonal or unified, then they are automatically corrected according to the following rules:\nIf any axis is 0, or any two axes are parallel, or all axes are coplanar, then an identity matrix replaces the rotational sub-matrix.\nAll axes are corrected to be of unit length.\nThe axes are built to be orthogonal to each other in the prioritized order of Z, X, Y (X is orthogonal to Z, Y is orthogonal to Z and X).",
+  "examples": [],
+  "related": [
+    "IMathUtility.ComposeTransform",
+    "IMathUtility.CreatePoint",
+    "IMathUtility.CreateTransformRotateAxis",
+    "IMathUtility.ICreateTransformRotateAxis"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFlyoutGroup",
+    "member": "AddContextMenuFlyout",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Type of document as defined in swDocumentTypes_e"
+      },
+      {
+        "name": "SelectionType",
+        "type": "System.Int32",
+        "description": "Type of object as defined in swSelectType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "addcontextmenuflyout",
+      "iflyoutgroup",
+      "flyout",
+      "group",
+      "add",
+      "context",
+      "menu",
+      "document",
+      "type",
+      "int32",
+      "selection",
+      "boolean",
+      "create",
+      "flyouts",
+      "commandmanager",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFlyoutGroup.AddContextMenuFlyout",
+  "description": "Adds this flyout to the context menus of the specified documents and selections.",
+  "signature": "System.Boolean AddContextMenuFlyout( \n   System.Int32\nDocumentType\n,\n   System.Int32\nSelectionType\n)",
+  "parameters": [
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Type of document as defined in swDocumentTypes_e"
+    },
+    {
+      "name": "SelectionType",
+      "type": "System.Int32",
+      "description": "Type of object as defined in swSelectType_e"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Call this method once for each set of DocumentType and SelectionType parameters.\nContext-sensitive menus support only the standard flyout style (\nswCommandFlyoutStyle_e\n.swCommandFlyoutStyle_Simple), in which there is no immediate action on the main flyout button.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IInstanceToVaryOptions
+inherits: null
+description: Allows access to options for varying the dimensions and locations of instances in patterns for parts.
+member_count: 13
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - D1SpacingIncrement
+  - D2SpacingIncrement
+  - GetD1IncrementDimensions
+  - GetD1ModifiedSpacingValue
+  - GetD2IncrementDimensions
+  - GetD2ModifiedSpacingValue
+  - GetModifiedDimensions
+  - GetModifiedInstances
+---
+
+# IInstanceToVaryOptions
+
+Allows access to options for varying the dimensions and locations of instances in patterns for parts.
+
+## Common Members
+
+- `D1SpacingIncrement`
+- `D2SpacingIncrement`
+- `GetD1IncrementDimensions`
+- `GetD1ModifiedSpacingValue`
+- `GetD2IncrementDimensions`
+- `GetD2ModifiedSpacingValue`
+- `GetModifiedDimensions`
+- `GetModifiedInstances`

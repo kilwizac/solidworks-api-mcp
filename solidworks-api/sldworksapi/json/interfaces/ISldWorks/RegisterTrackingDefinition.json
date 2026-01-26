@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RegisterTrackingDefinition",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Prefixed name that uniquely identifies tracking definitions"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IBody2.GetTrackingIDs",
+      "IBody2.RemoveTrackingID",
+      "IBody2.SetTrackingID",
+      "IEdge.GetTrackingIDs",
+      "IEdge.RemoveTrackingID",
+      "IEdge.SetTrackingID",
+      "IFace2.GetTrackingIDs",
+      "IFace2.RemoveTrackingID",
+      "IFace2.SetTrackingID",
+      "ILoop2.GetTrackingIDs",
+      "ILoop2.RemoveTrackingID",
+      "ILoop2.SetTrackingID",
+      "IVertex.GetTrackingIDs",
+      "IVertex.RemoveTrackingID",
+      "IVertex.SetTrackingID"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "register",
+      "definitions",
+      "registertrackingdefinition",
+      "isldworks",
+      "sld",
+      "works",
+      "definition",
+      "name",
+      "string",
+      "int32",
+      "remove",
+      "body",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.RegisterTrackingDefinition",
+  "description": "Registers a tracking definition.",
+  "signature": "System.Int32 RegisterTrackingDefinition( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Prefixed name that uniquely identifies tracking definitions"
+    }
+  ],
+  "returns": "Cookie that represents the tracking definition for use in other methods; a return value of -1 indicates that a tracking cookie was not generated; if a cookie has already been registered for this tracking definition, then that cookie is returned",
+  "remarks": "Applications can use the same prefix as for an\nIAttribute\n,\nIAttributeDef\n, and third-party storage. The same application can register mutiple tracking definitions; for example,\nabcMyTrackingDefinition1\nand\nabcMyTrackingDefinition2\n.\nThis method should typically be called when an application is starting up. See\nTracking IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get, Set, and Remove Tracking IDs on Body (VBA)",
+      "href": "Get_Set_And_Remove_Tracking_IDs_On_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetTrackingIDs",
+    "IBody2.RemoveTrackingID",
+    "IBody2.SetTrackingID",
+    "IEdge.GetTrackingIDs",
+    "IEdge.RemoveTrackingID",
+    "IEdge.SetTrackingID",
+    "IFace2.GetTrackingIDs",
+    "IFace2.RemoveTrackingID",
+    "IFace2.SetTrackingID",
+    "ILoop2.GetTrackingIDs",
+    "ILoop2.RemoveTrackingID",
+    "ILoop2.SetTrackingID",
+    "IVertex.GetTrackingIDs",
+    "IVertex.RemoveTrackingID",
+    "IVertex.SetTrackingID"
+  ]
+}

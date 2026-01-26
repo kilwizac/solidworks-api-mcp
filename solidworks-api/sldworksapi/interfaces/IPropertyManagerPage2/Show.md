@@ -1,0 +1,37 @@
+---
+type: property
+interface: IPropertyManagerPage2
+member: Show
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - ui
+related: []
+keywords:
+  - show
+  - ipropertymanagerpage2
+  - manager
+  - page2
+  - int32
+readonly: null
+---
+
+# IPropertyManagerPage2.Show
+
+Obsolete. Superseded by IPropertyManagerPage2::Show2.
+
+## Signature
+
+```csharp
+System.Int32 Show()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetSectionLineInfo2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.EnumSectionLines",
+      "IView.GetSection",
+      "IView.GetSectionLines",
+      "IView.IGetSection",
+      "IView.IGetSectionLineInfo2",
+      "IView.IGetSectionLines"
+    ],
+    "keywords": [
+      "section",
+      "lines",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "getsectionlineinfo2",
+      "line",
+      "info2",
+      "object"
+    ]
+  },
+  "title": "IView.GetSectionLineInfo2",
+  "description": "Gets all of the information about the section lines in the view.",
+  "signature": "System.Object GetSectionLineInfo2()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "This method gets all of the information on section lines in the view. Before using this method, you can use\nIView::GetSectionLineCount2\nto determine the size of the data being returned.\nThe return value is the following array of doubles:\n[\nnumSectionLines\n,\nlayer,\n[\nnumSegments,\n[\nlineType, startPt[3], endPt[3]\n]\n,\narrowStart1\n[3],\narrowEnd1\n[3],\narrowWidth1\n,\narrowHeight1\n,\narrowStyle1\n,\narrowStart2\n[3],\narrowEnd2\n[3],\narrowWidth2\n,\narrowHeight2\n,\narrowStyle2\n,\ntextPt1\n[3],\ntextPt2\n[3],\ntextHeight\n]\n]\nwhere:\nnumSectionLines\n= number of section lines in this view. See also\nIView::GetSectionLineCount2\n.\nlayer\n= layer information.\nThe following set of data repeats itself for each section line in the view. The number of times the information is given is numSectionLines:\nnumSegments\n= number of line segments in this section line\nThe following three variables repeat themselves for each segment in the current section line. The number of times the information is given is numSegments:\nlineType\n= linetype for this line segment. See\nswLineTypes_e\n.\nstartPt[3]\n= X,Y,Z start point for the current segment of this section line.\nendPt[3]\n= X,Y,Z end point for the current segment of this section line.\narrowStart1[3]\n= X,Y,Z start point for arrow head 1 on this section line.\narrowEnd1[3]\n= X,Y,Z end point for arrow head 1 on this section line.\narrowWidth1\n= width of arrow 1 on this section line.\narrowHeight1\n= height of arrow 1 on this section line.\narrowStyle1\n= style of arrow 1 on this section line.\narrowStart2[3]\n= X,Y,Z start point for arrow head 2 on this section line.\narrowEnd2[3]\n= X,Y,Z end point for arrow head 2 on this section line.\narrowWidth2\n= width of arrow 2 on this section line.\narrowHeight2\n= height of arrow 2 on this section line.\narrowStyle2\n= style of arrow 2 on this section line.\ntextPt1[3]\n= X,Y,Z point for the text location near arrow 1.\ntextPt2[3]\n= X,Y,Z point for the text location near arrow 2.\ntextHeight\n= text height in meters.\nTo get the actual text value, use\nIView::GetSectionLineStrings\nor\nIView::IGetSectionLineStrings\n.\nThe number of line segments, line segment geometry, and line type returned depend on the drawing's display standard.",
+  "examples": [],
+  "related": [
+    "IView.EnumSectionLines",
+    "IView.GetSection",
+    "IView.GetSectionLines",
+    "IView.IGetSection",
+    "IView.IGetSectionLineInfo2",
+    "IView.IGetSectionLines"
+  ]
+}

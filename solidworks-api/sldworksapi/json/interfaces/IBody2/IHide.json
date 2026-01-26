@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IHide",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Part",
+        "type": "PartDoc",
+        "description": "IPartDoc"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.Hide"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "ihide",
+      "ibody2",
+      "body2",
+      "hide",
+      "part",
+      "doc",
+      "void"
+    ]
+  },
+  "title": "IBody2.IHide",
+  "description": "Hides a temporary body using the specified part's context.",
+  "signature": "void IHide( \n   PartDoc\nPart\n)",
+  "parameters": [
+    {
+      "name": "Part",
+      "type": "PartDoc",
+      "description": "IPartDoc"
+    }
+  ],
+  "returns": "",
+  "remarks": "While SOLIDWORKS is displaying your IBody2 object using\nIBody2::Display3\n, you cannot release it explicitly or implicitly. Before releasing or allowing your IBody2 object to be released, you must call this method to prevent it from being displayed.\nCOM applications should avoid explicitly releasing the IBody2 object by calling IBody2->Release() while it is being displayed by SOLIDWORKS.",
+  "examples": [],
+  "related": [
+    "IBody2.Hide"
+  ]
+}

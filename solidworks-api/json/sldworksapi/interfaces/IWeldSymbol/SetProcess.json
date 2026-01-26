@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldSymbol",
+    "member": "SetProcess",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Process",
+        "type": "System.Boolean",
+        "description": "True to set the indication of welding process flag, false to not"
+      },
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text related to the indication of welding process"
+      },
+      {
+        "name": "Reference",
+        "type": "System.Boolean",
+        "description": "True to place a reference box around the process text, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IWeldSymbol.SetText"
+    ],
+    "keywords": [
+      "setprocess",
+      "iweldsymbol",
+      "weld",
+      "symbol",
+      "process",
+      "boolean",
+      "text",
+      "string",
+      "reference"
+    ]
+  },
+  "title": "IWeldSymbol.SetProcess",
+  "description": "Sets the values related to the indication of welding process for this weld symbol.",
+  "signature": "System.Boolean SetProcess( \n   System.Boolean\nProcess\n,\n   System.String\nText\n,\n   System.Boolean\nReference\n)",
+  "parameters": [
+    {
+      "name": "Process",
+      "type": "System.Boolean",
+      "description": "True to set the indication of welding process flag, false to not"
+    },
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text related to the indication of welding process"
+    },
+    {
+      "name": "Reference",
+      "type": "System.Boolean",
+      "description": "True to place a reference box around the process text, false to not"
+    }
+  ],
+  "returns": "True if the indication of welding process is set, false if not",
+  "remarks": "Get:\nFlag that indicates whether the indication of welding process flag is set on this weld symbol using\nIWeldSymbol::GetProcess\n.\nText related to the indication of welding process using\nIWeldSymbol::GetText\n.\nFlag that indicates whether a reference box exists around this text using\nIWeldSymbol::GetProcessReference\n.\nThe text and reference box are visible if Process is true.",
+  "examples": [
+    {
+      "title": "IWeldSymbol",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWeldSymbol",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWeldSymbol.SetText"
+  ]
+}

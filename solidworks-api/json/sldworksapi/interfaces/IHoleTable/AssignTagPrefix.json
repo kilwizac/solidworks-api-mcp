@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHoleTable",
+    "member": "AssignTagPrefix",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of row to which to apply TagPrefix"
+      },
+      {
+        "name": "TagPrefix",
+        "type": "System.String",
+        "description": "Prefix to apply"
+      },
+      {
+        "name": "ApplyTo",
+        "type": "System.Int32",
+        "description": "Apply to other holes as defined in swHoleTableTagPrefixApply_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "assigntagprefix",
+      "iholetable",
+      "hole",
+      "table",
+      "assign",
+      "tag",
+      "prefix",
+      "index",
+      "int32",
+      "string",
+      "apply",
+      "boolean"
+    ]
+  },
+  "title": "IHoleTable.AssignTagPrefix",
+  "description": "Prefixes the manual datum tags of specified holes with specified text.",
+  "signature": "System.Boolean AssignTagPrefix( \n   System.Int32\nIndex\n,\n   System.String\nTagPrefix\n,\n   System.Int32\nApplyTo\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of row to which to apply TagPrefix"
+    },
+    {
+      "name": "TagPrefix",
+      "type": "System.String",
+      "description": "Prefix to apply"
+    },
+    {
+      "name": "ApplyTo",
+      "type": "System.Int32",
+      "description": "Apply to other holes as defined in swHoleTableTagPrefixApply_e (see Remarks )"
+    }
+  ],
+  "returns": "True if prefix successfully assigned, false if not",
+  "remarks": "This method:\nis valid only if\nIHoleTable::TagStyle\nis set to\nswHoleTableTagStyle_e\n.swHoleTable_ManualTags.\ncorresponds to the functionality of the\nAssign Tag Prefix\ndialog that pops up when you right-click on a hole table row of a manual tag.\nIf ApplyTo is specified with swHoleTableTagPrefixApply_e:\nswHoleTableTagPrefixApply_OnlySpecifiedHole, then only the hole as specified by Index is assigned TagPrefix.\nswHoleTableTagPrefixApply_AllHolesOfSameSize, then all holes that are the same size as the hole specified by Index are assigned TagPrefix.\nWhen TagPrefix is assigned to only the hole as specified by Index, the numbering of all holes of the same size changes.\nFor example, if:\nA model view has six holes of two different sizes, and the hole table manual tags are initially labeled:\nAA1, AA2, AA3, AA4, BB1, BB2\nSpecify Index with the row index of AA1.\nSpecify TagPrefix with \"AB\".\nSpecify ApplyTo with swHoleTableTagPrefixApply_e.swHoleTableTagPrefixApply_OnlySpecifiedHole.\nAfter calling this method:\nThe hole table manual tags are re-labeled:\nAB1, AA1, AA2, AA3, BB1, BB2\nNotice that AA1 is re-labeled to AB1, and AA2 - AA4 are re-numbered to AA1 - AA3. BB1 and BB2 are unchanged.",
+  "examples": [],
+  "related": []
+}

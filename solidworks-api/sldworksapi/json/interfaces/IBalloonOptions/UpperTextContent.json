@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBalloonOptions",
+    "member": "UpperTextContent",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "uppertextcontent",
+      "iballoonoptions",
+      "balloon",
+      "options",
+      "upper",
+      "text",
+      "content",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IBalloonOptions.UpperTextContent",
+  "description": "Gets and sets the style of the upper text of the balloon.",
+  "signature": "System.Int32 UpperTextContent {get; set;}",
+  "parameters": [],
+  "returns": "Style of the upper text as defined in swBalloonTextContent_e ; specify -1 to use the document default upper text style (see Remarks )",
+  "remarks": "To get or set document default values...\nUse...\nGet\nIModelDocExtension::GetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMUpperText, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\nSet\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMUpperText, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonTextContent_e.<\nValue\n>)\nSee:\nINote::PropertyLinkedText\nfor examples of link strings usable with swBalloonTextContent_e.swBalloonTextCustomProperties.\nSOLIDWORKS Help for additional details about balloons.",
+  "examples": [
+    {
+      "title": "IBalloonOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBalloonOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

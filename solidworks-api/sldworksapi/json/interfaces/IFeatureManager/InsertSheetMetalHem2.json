@@ -1,0 +1,251 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalHem2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type as defined in swHemTypes_e"
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position as defined in swHemPositionTypes_e"
+      },
+      {
+        "name": "Reverse",
+        "type": "System.Boolean",
+        "description": "True reverses the direction, false does not"
+      },
+      {
+        "name": "DLength",
+        "type": "System.Double",
+        "description": "Hem length; valid only for open or closed hems"
+      },
+      {
+        "name": "DGap",
+        "type": "System.Double",
+        "description": "Gap distance; valid only for open hems"
+      },
+      {
+        "name": "DAngle",
+        "type": "System.Double",
+        "description": "Hem angle; valid only for tear-drop or rolled hems"
+      },
+      {
+        "name": "DRad",
+        "type": "System.Double",
+        "description": "Hem radius; valid only for tear-drop or rolled hems"
+      },
+      {
+        "name": "DMiterGap",
+        "type": "System.Double",
+        "description": "Hem miter gap"
+      },
+      {
+        "name": "PCBA",
+        "type": "CustomBendAllowance",
+        "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+      },
+      {
+        "name": "UseDefaultRelief",
+        "type": "System.Boolean",
+        "description": "True to use the default relief, false to use the relief specified by ReliefType"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Type of relief as defined in swSheetMetalReliefTypes_e ; valid only if UseDefaultRelief is false"
+      },
+      {
+        "name": "ReliefTearTypes",
+        "type": "System.Int32",
+        "description": "Type of relief tear as defined in swReliefTearTypes_e ; valid only when: UseDefaultRelief is false - and - ReliefType is swSheetMetalReliefTypes_e .swSheetMetalReliefTear"
+      },
+      {
+        "name": "UseReliefRatio",
+        "type": "System.Boolean",
+        "description": "True to use ReliefRatio, false to use ReliefWidth/ReliefDepth; valid only when: UseDefaultRelief is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+      },
+      {
+        "name": "ReliefRatio",
+        "type": "System.Double",
+        "description": "Relief ratio; valid only when: UseDefaultRelief is false - and - UseReliefRatio is true - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+      },
+      {
+        "name": "ReliefWidth",
+        "type": "System.Double",
+        "description": "Width of the relief; valid only when: UseDefaultRelief is false - and - UseReliefRatio is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+      },
+      {
+        "name": "ReliefDepth",
+        "type": "System.Double",
+        "description": "Depth of the relief; valid only when: UseDefaultRelief is false - and - UseReliefRatio is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IHemFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "hems",
+      "see",
+      "ihemfeaturedata",
+      "sheet",
+      "metal",
+      "also",
+      "isheetmetalfeaturedata",
+      "feature",
+      "ifeature",
+      "hem",
+      "insertsheetmetalhem2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "hem2",
+      "type",
+      "int32",
+      "position",
+      "reverse",
+      "boolean",
+      "length",
+      "double",
+      "gap",
+      "angle",
+      "rad",
+      "miter",
+      "pcba",
+      "custom",
+      "bend",
+      "allowance",
+      "use",
+      "default",
+      "relief",
+      "tear",
+      "types",
+      "ratio",
+      "width",
+      "depth",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalHem2",
+  "description": "Inserts a hem of the specified relief type at the selected edges of the current sheet metal part.",
+  "signature": "Feature InsertSheetMetalHem2( \n   System.Int32\nType\n,\n   System.Int32\nPosition\n,\n   System.Boolean\nReverse\n,\n   System.Double\nDLength\n,\n   System.Double\nDGap\n,\n   System.Double\nDAngle\n,\n   System.Double\nDRad\n,\n   System.Double\nDMiterGap\n,\n   CustomBendAllowance\nPCBA\n,\n   System.Boolean\nUseDefaultRelief\n,\n   System.Int32\nReliefType\n,\n   System.Int32\nReliefTearTypes\n,\n   System.Boolean\nUseReliefRatio\n,\n   System.Double\nReliefRatio\n,\n   System.Double\nReliefWidth\n,\n   System.Double\nReliefDepth\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type as defined in swHemTypes_e"
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position as defined in swHemPositionTypes_e"
+    },
+    {
+      "name": "Reverse",
+      "type": "System.Boolean",
+      "description": "True reverses the direction, false does not"
+    },
+    {
+      "name": "DLength",
+      "type": "System.Double",
+      "description": "Hem length; valid only for open or closed hems"
+    },
+    {
+      "name": "DGap",
+      "type": "System.Double",
+      "description": "Gap distance; valid only for open hems"
+    },
+    {
+      "name": "DAngle",
+      "type": "System.Double",
+      "description": "Hem angle; valid only for tear-drop or rolled hems"
+    },
+    {
+      "name": "DRad",
+      "type": "System.Double",
+      "description": "Hem radius; valid only for tear-drop or rolled hems"
+    },
+    {
+      "name": "DMiterGap",
+      "type": "System.Double",
+      "description": "Hem miter gap"
+    },
+    {
+      "name": "PCBA",
+      "type": "CustomBendAllowance",
+      "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+    },
+    {
+      "name": "UseDefaultRelief",
+      "type": "System.Boolean",
+      "description": "True to use the default relief, false to use the relief specified by ReliefType"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Type of relief as defined in swSheetMetalReliefTypes_e ; valid only if UseDefaultRelief is false"
+    },
+    {
+      "name": "ReliefTearTypes",
+      "type": "System.Int32",
+      "description": "Type of relief tear as defined in swReliefTearTypes_e ; valid only when: UseDefaultRelief is false - and - ReliefType is swSheetMetalReliefTypes_e .swSheetMetalReliefTear"
+    },
+    {
+      "name": "UseReliefRatio",
+      "type": "System.Boolean",
+      "description": "True to use ReliefRatio, false to use ReliefWidth/ReliefDepth; valid only when: UseDefaultRelief is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+    },
+    {
+      "name": "ReliefRatio",
+      "type": "System.Double",
+      "description": "Relief ratio; valid only when: UseDefaultRelief is false - and - UseReliefRatio is true - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+    },
+    {
+      "name": "ReliefWidth",
+      "type": "System.Double",
+      "description": "Width of the relief; valid only when: UseDefaultRelief is false - and - UseReliefRatio is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+    },
+    {
+      "name": "ReliefDepth",
+      "type": "System.Double",
+      "description": "Depth of the relief; valid only when: UseDefaultRelief is false - and - UseReliefRatio is false - and - ReliefType is either swSheetMetalReliefTypes_e .swSheetMetalReliefObround or swSheetMetalReliefTypes_e .swSheetMetalReliefRectangular"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method:\nCall\nIFeatureManager::CreateCustomBendAllowance\nto create an instance of ICustomBendAllowance.\nInitialize the CustomBendAllowance object.\nAssign PCBA to the initialized CustomBendAllowance object.\nSelect one or more edges in the sheet metal model to which to add the specified hem.",
+  "examples": [
+    {
+      "title": "Insert Sheet Metal Hem (VBA)",
+      "href": "Insert_Sheet_Metal_Hem_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Sheet Metal Hem (VB.NET)",
+      "href": "Insert_Sheet_Metal_Hem_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Sheet Metal Hem (C#)",
+      "href": "Insert_Sheet_Metal_Hem_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IHemFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

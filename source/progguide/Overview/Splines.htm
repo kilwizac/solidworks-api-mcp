@@ -1,0 +1,132 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Splines</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 16, 2002 1:52:32 PM">
+<meta name=MS-HKWD content="Splines">
+<meta name=MS-HKWD content="Splines, b-">
+<meta name=MS-HKWD content="Splines, p-">
+<meta name=MS-HKWD content="B-spline">
+<meta name=MS-HKWD content="P-spline">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2124>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+<style>
+<!--
+p.MsoPlainText
+	{margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black; margin-left:0in; margin-right:0in; margin-top:0in}
+-->
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Splines</h1>
+
+<p>Some common questions and answers about SOLIDWORKS Design and splines are 
+presented in this help topic.&nbsp; </p>
+<p>&nbsp;</p>
+<p><b>What are the different types of splines used in SOLIDWORKS Design?</b></p>
+<p>Any curve in SOLIDWORKS Design that is not an analytic curve, such as a line, arc, 
+conic, or a composite curve, is represented as a b-spline. SOLIDWORKS Design uses 
+standard b-splines as defined in computer-aided design 
+literature.<br>
+&nbsp;</p>
+<p><b>What are the mathematical names for b-spline and&nbsp;p-spline?&nbsp;What is 
+the difference between ICurve::GetPCurveParams2 and ICurve::GetBCurveParams5?&nbsp;Do these methods return parameters for two different kinds of splines, or do 
+they return parameters formatted in two different ways for a single spline type?</b></p>
+<p>Names such as p-spline, or p-curve, are used for b-splines in a particular 
+context. If you are unsure of the context, then you might find the names 
+confusing. For example, p-curves, as in <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModeler~CreatePCurve.html">IModeler::CreatePCurve</a>, are b-splines 
+that lie on a surface and are created from b-splines in the parameter space of 
+the surface. </p>
+<p>Any b-spline is a piecewise polynomial curve, and a p-spline is a b-spline 
+represented as the polynomial coefficients that define the polynomials in each 
+segment of the b-spline.</p>
+<ul>
+	<li>
+	<p style="margin-right: 4px"><font face="Verdana, sans-serif" style="font-size: 8pt"><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurve~GetBCurveParams5.html">ICurve::GetBCurveParams5</a> gets 
+	the control point/knot standard b-spline representation for the input curve.</font></li>
+	<li>
+	<p style="margin-right: 4px"><font face="Verdana, sans-serif" style="font-size: 8pt"><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurve~GetPCurveParams.html">ICurve::GetPCurveParams</a> 
+	gets the polynomial coefficients for the segments of a b-spline for the 
+	input curve.</font></li>
+	<li>
+	<p style="margin-right: 4px">
+	<font face="Verdana, sans-serif" style="font-size: 8pt">
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurve~GetPCurveParams2.html">ICurve::GetPCurveParams2</a> 
+	is a hybrid of ICurve::GetBCurveParams5 and ICurve::GetPCurveParms. You 
+	can use either the control point/knot representation, which it returns in 
+	the <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISplineParamData.html">SplineParamData object</a>, or the polynomial coefficient representation for 
+	the individual segments.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>When can you edit the control points of a b-spline?</b></p>
+<p>You can edit control points 
+when creating a b-spline; however, you currently cannot replace control points 
+of an existing b-spline.</p>
+<p><br>
+<b>What kind of spline is returned by 
+ISketchManager::CreateSpline2, IModelDoc2::SketchSpline, and IFeatureManager::MakeStyledCurves2?</b>&nbsp;</p>
+<p>All three 
+methods create b-splines.</p>
+<ul>
+	<li>
+	<p>
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchManager~CreateSpline2.html">ISketchManager::CreateSpline2</a> creates a b-spline using the input points as 
+	through points, or interpolation points, with some control over the curve’s 
+	end conditions.</li>
+	<li>
+	<p>
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDoc2~SketchSpline.html">IModelDoc2::SketchSpline</a> is an attempt to simulate the way you create a b-spline 
+	in the SOLIDWORKS Design user interface, one point at a time.</li>
+	<li>
+	<p>
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeatureManager~MakeStyledCurves2.html">IFeatureManager::MakeStyledCurves2</a> fits a b-spline that approximates a 
+	composite curve of sketch segments.</li>
+</ul>
+<p>&nbsp;</p>
+<p >
+<b>What b-spline points for the curve does ICurve::GetSplinePts return?&nbsp;</b></p>
+<p>
+<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICurve~GetSplinePts.html">ICurve::GetSplinePts</a> gets a spline's through/interpolation points, i.e., the end 
+points of its individual spline segments, as opposed to its representation by 
+knots and control points.</p>
+
+</body>
+
+</html>

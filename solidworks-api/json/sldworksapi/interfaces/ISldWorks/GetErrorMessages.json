@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetErrorMessages",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Msgs",
+        "type": "System.Object",
+        "description": "Array of the last 20 messages issued in this SOLIDWORKS Design session"
+      },
+      {
+        "name": "MsgIDs",
+        "type": "System.Object",
+        "description": "Array of the resource IDs of the last 20 messages issued in this SOLIDWORKS Design session"
+      },
+      {
+        "name": "MsgTypes",
+        "type": "System.Object",
+        "description": "Array of the types of the last 20 messages issued in this SOLIDWORKS Design session (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetLastSaveError"
+    ],
+    "keywords": [
+      "errors",
+      "solidworks",
+      "geterrormessages",
+      "isldworks",
+      "sld",
+      "works",
+      "error",
+      "messages",
+      "msgs",
+      "object",
+      "msg",
+      "ds",
+      "types",
+      "int32",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetErrorMessages",
+  "description": "Gets the last 20 messages issued in the current SOLIDWORKS Design session.",
+  "signature": "System.Int32 GetErrorMessages( \n   out System.Object\nMsgs\n,\n   out System.Object\nMsgIDs\n,\n   out System.Object\nMsgTypes\n)",
+  "parameters": [
+    {
+      "name": "Msgs",
+      "type": "System.Object",
+      "description": "Array of the last 20 messages issued in this SOLIDWORKS Design session"
+    },
+    {
+      "name": "MsgIDs",
+      "type": "System.Object",
+      "description": "Array of the resource IDs of the last 20 messages issued in this SOLIDWORKS Design session"
+    },
+    {
+      "name": "MsgTypes",
+      "type": "System.Object",
+      "description": "Array of the types of the last 20 messages issued in this SOLIDWORKS Design session (see Remarks )"
+    }
+  ],
+  "returns": "Number of messages issued in this SOLIDWORKS Design session NOTE: The stack is cleared after calling this method.",
+  "remarks": "The elements of the MsgTypes array are bitmasks of the Microsoft message-box system constants.",
+  "examples": [
+    {
+      "title": "Get Messages (VBA)",
+      "href": "Get_Messages_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetLastSaveError"
+  ]
+}

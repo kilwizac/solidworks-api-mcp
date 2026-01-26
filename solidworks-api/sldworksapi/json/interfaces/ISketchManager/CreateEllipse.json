@@ -1,0 +1,159 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateEllipse",
+    "returns": "SketchSegment",
+    "parameters": [
+      {
+        "name": "XC",
+        "type": "System.Double",
+        "description": "X coordinate of the ellipse center point"
+      },
+      {
+        "name": "YC",
+        "type": "System.Double",
+        "description": "Y coordinate of the ellipse center point"
+      },
+      {
+        "name": "Zc",
+        "type": "System.Double",
+        "description": "Z coordinate of the ellipse center point"
+      },
+      {
+        "name": "XMajor",
+        "type": "System.Double",
+        "description": "X coordinate of the point on the ellipse that is on the major axis"
+      },
+      {
+        "name": "YMajor",
+        "type": "System.Double",
+        "description": "Y coordinate of the point on the ellipse that is on the major axis"
+      },
+      {
+        "name": "ZMajor",
+        "type": "System.Double",
+        "description": "Z coordinate of the point on the ellipse that is on the major axis"
+      },
+      {
+        "name": "XMinor",
+        "type": "System.Double",
+        "description": "X coordinate of the point on the ellipse that is on the minor axis"
+      },
+      {
+        "name": "YMinor",
+        "type": "System.Double",
+        "description": "Y coordinate of the point on the ellipse that is on the minor axis"
+      },
+      {
+        "name": "ZMinor",
+        "type": "System.Double",
+        "description": "Z coordinate of the point on the ellipse that is on the minor axis"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.CreateConic"
+    ],
+    "keywords": [
+      "sketch",
+      "entities",
+      "ellipses",
+      "see",
+      "also",
+      "isketch",
+      "createellipse",
+      "isketchmanager",
+      "manager",
+      "create",
+      "ellipse",
+      "xc",
+      "double",
+      "yc",
+      "zc",
+      "major",
+      "minor",
+      "segment",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchManager.CreateEllipse",
+  "description": "Creates an ellipse using the specified center, major-axis, and minor-axis points.",
+  "signature": "SketchSegment CreateEllipse( \n   System.Double\nXC\n,\n   System.Double\nYC\n,\n   System.Double\nZc\n,\n   System.Double\nXMajor\n,\n   System.Double\nYMajor\n,\n   System.Double\nZMajor\n,\n   System.Double\nXMinor\n,\n   System.Double\nYMinor\n,\n   System.Double\nZMinor\n)",
+  "parameters": [
+    {
+      "name": "XC",
+      "type": "System.Double",
+      "description": "X coordinate of the ellipse center point"
+    },
+    {
+      "name": "YC",
+      "type": "System.Double",
+      "description": "Y coordinate of the ellipse center point"
+    },
+    {
+      "name": "Zc",
+      "type": "System.Double",
+      "description": "Z coordinate of the ellipse center point"
+    },
+    {
+      "name": "XMajor",
+      "type": "System.Double",
+      "description": "X coordinate of the point on the ellipse that is on the major axis"
+    },
+    {
+      "name": "YMajor",
+      "type": "System.Double",
+      "description": "Y coordinate of the point on the ellipse that is on the major axis"
+    },
+    {
+      "name": "ZMajor",
+      "type": "System.Double",
+      "description": "Z coordinate of the point on the ellipse that is on the major axis"
+    },
+    {
+      "name": "XMinor",
+      "type": "System.Double",
+      "description": "X coordinate of the point on the ellipse that is on the minor axis"
+    },
+    {
+      "name": "YMinor",
+      "type": "System.Double",
+      "description": "Y coordinate of the point on the ellipse that is on the minor axis"
+    },
+    {
+      "name": "ZMinor",
+      "type": "System.Double",
+      "description": "Z coordinate of the point on the ellipse that is on the minor axis"
+    }
+  ],
+  "returns": "Sketch segment for the ellipse",
+  "remarks": "This method creates a full ellipse in the active 2D sketch. If a sketch is not active, then a new sketch is created. You can check for an active sketch using\nISketchManager::ActiveSketch\n.\nISketchManager::AddToDB\nand\nISketchManager::DisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database.\nISketchManager::AddToDB also avoids some of the peculiarities involved with creating entities via the user interface, such as inferencing, automatic relations, and snapping to the grid. Adding entities directly to the database also significantly increases the performance of this method. When you are done creating entities, it is important to ISketchManager::AddToDB(False), to restore SOLIDWORKS to its normal operating mode.\nThis method also works with ISketchManager::DisplayWhenAdded. If you have called ISketchManager::AddToDB(True), additional performance can be gained by calling ISketchManager::DisplayWhenAdded(False) to disable immediate display of entities as they are added to the database. When you are done creating all of your sketch entities, you must redraw your document window (see\nIModelView::GraphicsRedraw\nor\nIModelView::IGraphicsRedraw\n) to see the entities you added. You should also restore the original display settings by calling ISketchManager::DisplayWhenAdded(True).\nTo create a partial ellipse, use\nISketchManager::CreateEllipticalArc\n.",
+  "examples": [
+    {
+      "title": "Create Ellipse (VBA)",
+      "href": "Create_Ellipse_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Ellipse (VB.NET)",
+      "href": "Create_Ellipse_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Ellipse (C#)",
+      "href": "Create_Ellipse_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.CreateConic"
+  ]
+}

@@ -1,0 +1,22 @@
+---
+type: interface
+interface: ICenterLine
+inherits: null
+description: Allows access to a centerline.
+member_count: 2
+docset: sldworksapi
+categories:
+  - dimensions
+common_members:
+  - GetAnnotation
+  - GetNext
+---
+
+# ICenterLine
+
+Allows access to a centerline.
+
+## Common Members
+
+- `GetAnnotation`
+- `GetNext`

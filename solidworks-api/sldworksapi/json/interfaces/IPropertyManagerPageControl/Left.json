@@ -1,0 +1,33 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageControl",
+    "member": "Left",
+    "returns": "System.Int16",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "left",
+      "ipropertymanagerpagecontrol",
+      "manager",
+      "page",
+      "control",
+      "int16"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageControl.Left",
+  "description": "Gets or sets the left edge of the control on a PropertyManager page.",
+  "signature": "System.Int16 Left {get; set;}",
+  "parameters": [],
+  "returns": "Left edge of the control",
+  "remarks": "This property must be set before the control is displayed.\nIf you do not specify the position and size of the controls on the PropertyManager page, the controls are created using a default size and placed in a computed default position so that your page matches the look-and-feel of a SOLIDWORKS PropertyManager page. This is generally the best way to go, whenever possible. However, while there are no limitations on how you create the layout of your page, it is recommended that you only use this method if you want to place controls on the page.\nBy default, the left edge of a control is either the left edge of its group box or indented a certain distance. This is determined by the LeftAlign argument of the\nIPropertyManagerPage2::AddControl\nor\nIPropertyManagerPage2::IAddControl\nmethod. Using IPropertyManagerPage2::AddControl  or IPropertyManagerPage2::IAddControl overrides that default. The value is in dialog units relative to the group box that the control is in. The left edge of the group box is 0; the right edge of the group box is 100.",
+  "examples": [],
+  "related": []
+}

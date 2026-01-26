@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "DisplayAsChain",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.AutoJogOrdinate",
+      "IDisplayDimension.Elevation",
+      "IDisplayDimension.EndSymbol",
+      "IDisplayDimension.ExtensionLineExtendsFromCenterOfSet",
+      "IDisplayDimension.ExtensionLineSameAsLeaderStyle",
+      "IDisplayDimension.ExtensionLineUseDocumentDisplay",
+      "IDisplayDimension.GetOrdinateDimensionArrowSize",
+      "IDisplayDimension.GridBubble",
+      "IDisplayDimension.Jogged",
+      "IDisplayDimension.ResetExtensionLineStyle",
+      "IDisplayDimension.RunBidirectionally",
+      "IDisplayDimension.SetOrdinateDimensionArrowSize",
+      "IModelDocExtension.AddOrdinateDimension"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "ordinate",
+      "dimensions",
+      "angular",
+      "running",
+      "displayaschain",
+      "idisplaydimension",
+      "display",
+      "chain",
+      "boolean",
+      "insert",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.DisplayAsChain",
+  "description": "Gets or sets whether the extension lines of every dimension in this set of angular running or ordinate dimensions are chained together.",
+  "signature": "System.Boolean DisplayAsChain {get; set;}",
+  "parameters": [],
+  "returns": "True if extension lines are chained together, false if not",
+  "remarks": "This property applies only to ordinate and angular running dimensions. This method does not affect other types of dimensions.\nThis property corresponds to:\nDisplay as chain dimension\ncheck box in the\nWitness/Leader Display\npanel of the\nLeaders\ntab of the\nDimension\nPropertyManager page that appears when you right-click in a drawing and select\nMore Dimensions > Angular Running Dimension\n.\nOrdinate chain\ncheck box in the\nWitness/Leader Display\npanel of the\nLeaders\ntab of the\nDimension\nPropertyManager page that appears when you right-click in a drawing and select\nMore Dimensions > Ordinate\n.\nAfter using this property, use\nIModelView::GraphicsRedraw\nto redraw the graphics window to see your changes.",
+  "examples": [
+    {
+      "title": "Insert Angular Running Dimension (VBA)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (VB.NET)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (C#)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.AutoJogOrdinate",
+    "IDisplayDimension.Elevation",
+    "IDisplayDimension.EndSymbol",
+    "IDisplayDimension.ExtensionLineExtendsFromCenterOfSet",
+    "IDisplayDimension.ExtensionLineSameAsLeaderStyle",
+    "IDisplayDimension.ExtensionLineUseDocumentDisplay",
+    "IDisplayDimension.GetOrdinateDimensionArrowSize",
+    "IDisplayDimension.GridBubble",
+    "IDisplayDimension.Jogged",
+    "IDisplayDimension.ResetExtensionLineStyle",
+    "IDisplayDimension.RunBidirectionally",
+    "IDisplayDimension.SetOrdinateDimensionArrowSize",
+    "IModelDocExtension.AddOrdinateDimension"
+  ]
+}

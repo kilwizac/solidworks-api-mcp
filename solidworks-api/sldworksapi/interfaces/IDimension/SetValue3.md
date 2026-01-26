@@ -1,0 +1,102 @@
+---
+type: method
+interface: IDimension
+member: SetValue3
+returns: System.Int32
+parameters:
+  -
+    name: NewValue
+    type: System.Double
+    description: Value for this dimension in the units of owning document
+  -
+    name: WhichConfigurations
+    type: System.Int32
+    description: Configurations in which to set this value as defined in swSetValueInConfiguration_e (see Remarks )
+  -
+    name: Config_names
+    type: System.Object
+    description: Names of the configurations for which to set dimension values (see Remarks )
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+  - documents
+related:
+  - IDimension.GetSystemValue3
+  - IDimension.GetUserValueIn
+  - IDimension.GetValue3
+  - IDimension.IGetSystemValue3
+  - IDimension.IGetUserValueIn2
+  - IDimension.IGetValue3
+  - IDimension.ISetSystemValue3
+  - IDimension.ISetUserValueIn3
+  - IDimension.ISetValue3
+  - IDimension.SetSystemValue3
+  - IDimension.SetUserValueIn2
+keywords:
+  - configuration
+  - see
+  - also
+  - iconfiguration
+  - dimensions
+  - dimension
+  - idimension
+  - configurations
+  - setvalue3
+  - value3
+  - new
+  - value
+  - double
+  - which
+  - int32
+  - config
+  - names
+  - object
+---
+
+# IDimension.SetValue3
+
+Sets the values of the dimensions in the specified configurations.
+
+## Signature
+
+```csharp
+System.Int32 SetValue3( 
+   System.Double
+NewValue
+,
+   System.Int32
+WhichConfigurations
+,
+   System.Object
+Config_names
+)
+```
+## Parameters
+
+- `NewValue` (System.Double): Value for this dimension in the units of owning document
+- `WhichConfigurations` (System.Int32): Configurations in which to set this value as defined in swSetValueInConfiguration_e (see Remarks )
+- `Config_names` (System.Object): Names of the configurations for which to set dimension values (see Remarks )
+
+## Return Value
+
+Error code as defined in swSetValueReturnStatus_e
+
+## Remarks
+
+The Config_names argument is only used if WhichConfigurations is set to swSetValue_InSpecificConfigurations and can contain either a BSTR array or a single BSTR.
+
+## See Also
+
+- `IDimension.GetSystemValue3`
+- `IDimension.GetUserValueIn`
+- `IDimension.GetValue3`
+- `IDimension.IGetSystemValue3`
+- `IDimension.IGetUserValueIn2`
+- `IDimension.IGetValue3`
+- `IDimension.ISetSystemValue3`
+- `IDimension.ISetUserValueIn3`
+- `IDimension.ISetValue3`
+- `IDimension.SetSystemValue3`
+- `IDimension.SetUserValueIn2`

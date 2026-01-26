@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "SetCallout",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index number of the selected object"
+      },
+      {
+        "name": "PCallout",
+        "type": "Callout",
+        "description": "Callout (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "callout",
+      "see",
+      "also",
+      "icallout",
+      "add",
+      "objects",
+      "callouts",
+      "setcallout",
+      "iselectionmgr",
+      "selection",
+      "mgr",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "ISelectionMgr.SetCallout",
+  "description": "Adds a callout to the currently selected object.",
+  "signature": "System.Boolean SetCallout( \n   System.Int32\nIndex\n,\n   Callout\nPCallout\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index number of the selected object"
+    },
+    {
+      "name": "PCallout",
+      "type": "Callout",
+      "description": "Callout (see Remarks )"
+    }
+  ],
+  "returns": "True if the callout is added to the selected object, false if not",
+  "remarks": "Use\nISelectionMgr::CreateCallout2\nto set the properties of the callout. Then use ISelectionMgr::SetCallout to add the callout to an already selected object.",
+  "examples": [],
+  "related": []
+}

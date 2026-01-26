@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "Evaluate",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Parameter",
+        "type": "System.Double",
+        "description": "Value of the edge parameter"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.IEvaluate"
+    ],
+    "keywords": [
+      "evaluate",
+      "iedge",
+      "edge",
+      "parameter",
+      "double",
+      "object",
+      "select",
+      "tangent",
+      "edges",
+      "via",
+      "iteration",
+      "vba"
+    ]
+  },
+  "title": "IEdge.Evaluate",
+  "description": "Obsolete. Superseded by IEdge::Evaluate2.",
+  "signature": "System.Object Evaluate( \n   System.Double\nParameter\n)",
+  "parameters": [
+    {
+      "name": "Parameter",
+      "type": "System.Double",
+      "description": "Value of the edge parameter"
+    }
+  ],
+  "returns": "Array values containing the x,y,z value and derivative of the edge (see Remarks )",
+  "remarks": "Use\nIEdge::GetCurveParams2\nor\nIEdge::IGetCurveParams2\nto determine the valid parameter range for this method.\nThis OLE implementation of this method returns an array of doubles as follows:\n[\nPointX, PointY, PointZ, TangentX, TangentY, TangentZ, Success\n]\nwhere the point values are in meters and\nSuccess\nis True if successful and false if not.\nThe return value for the COM implementation is different. To determine success, check the HRESULT return value. The array is as follows:\n[\nPointX, PointY, PointZ, TangentX, TangentY, TangentZ\n]\nwhere the point values are specified in meters.",
+  "examples": [
+    {
+      "title": "Select Tangent Edges Via Iteration (VBA)",
+      "href": "Select_Tangent_Edges_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdge.IEvaluate"
+  ]
+}

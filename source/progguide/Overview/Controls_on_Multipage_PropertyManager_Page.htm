@@ -1,0 +1,74 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Controls on Multipage PropertyManager Page</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HKWD CONTENT="PropertyManager page (see also IPropertyManagerPage2 Interface)">
+<meta NAME=MS-HKWD CONTENT="Controls,multipage PropertyManager page">
+<meta NAME=MS-HKWD CONTENT=Controls>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=543>
+<meta name=layout-width content=784>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Controls on Multipage PropertyManager Page</h1>
+
+<p>All of the controls for a multipage PropertyManager page must be contained 
+ on a single page. </p>
+
+<p>Your add-in must simulate the appearance of multipage controls by showing 
+ and hiding the appropriate controls (the add-in must know which controls 
+ to show on each page) as the user moves from page to page. This means 
+ that your implementation of <a href="swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler8.html">IPropertyManagerPage2Handler8</a> 
+ must know which page is currently in use and act accordingly within the 
+ <a href="swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler8~OnNextPage.html">IPropertyManagerPage2Handler8::OnNextPage</a> 
+ and <a href="swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler8~OnPreviousPage.html">IPropertyManagerPage2Handler8::OnPreviousPage</a> 
+ callbacks. </p>
+
+<p>Your add-in must not respond to the next page handler by trying to show 
+ a second page because:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>The first page will close.</p></li>
+	
+	<li class=kadov-p><p>When the next page handler returns control to 
+ the SOLIDWORKS Design application and your code, the first page is gone and a 
+ memory error occurs.</p></li>
+</ul>
+
+</body>
+
+</html>

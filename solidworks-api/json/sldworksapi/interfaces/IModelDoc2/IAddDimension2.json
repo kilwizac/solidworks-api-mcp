@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IAddDimension2",
+    "returns": "DisplayDimension",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddDiameterDimension2",
+      "IModelDoc2.AddDimension2",
+      "IModelDoc2.AddHorizontalDimension2",
+      "IModelDoc2.AddRadialDimension2",
+      "IModelDoc2.AddVerticalDimension2",
+      "IModelDoc2.IAddDiameterDimension2",
+      "IModelDoc2.IAddHorizontalDimension2",
+      "IModelDoc2.IAddRadialDimension2",
+      "IModelDoc2.IAddVerticalDimension2"
+    ],
+    "keywords": [
+      "iadddimension2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "add",
+      "dimension2",
+      "double",
+      "display",
+      "dimension"
+    ]
+  },
+  "title": "IModelDoc2.IAddDimension2",
+  "description": "Obsolete. Superseded by IModelDocExtension::AddDimension.",
+  "signature": "DisplayDimension IAddDimension2( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    }
+  ],
+  "returns": "Newly created dimension",
+  "remarks": "You should only use this method on the visible document. Before using this method, you can check to see if the document is visible by using\nISldWorks::Visible\n.\nDimensions are created based on selection location. For example, creating an angular dimension between two lines gets different results based on which line endpoints are selected. Therefore, if you are using\nIModelDocExtension::SelectByID2\nto select the entities for dimensioning, then you should specify the XYZ selection coordinates. You must also leave the object name argument empty, because if you pass the object name to IModelDocExtension::SelectByID2, then the selection routines tries to locate that item without using the coordinates.\nBecause coordinates are ignored when the object name is passed, the dimensioning routines are not able to use a specific selection location for the dimension. This causes unpredictable results in your dimension creation because you cannot be sure which line endpoint is selected by IModelDocExtension::SelectByID2.\nWhen you use this method, you might also want to use\nISldWorks::SetUserPreferenceToggle\nswInputDimValOnCreate to suppress the dialog box that lets the user enter the dimension value.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AddDiameterDimension2",
+    "IModelDoc2.AddDimension2",
+    "IModelDoc2.AddHorizontalDimension2",
+    "IModelDoc2.AddRadialDimension2",
+    "IModelDoc2.AddVerticalDimension2",
+    "IModelDoc2.IAddDiameterDimension2",
+    "IModelDoc2.IAddHorizontalDimension2",
+    "IModelDoc2.IAddRadialDimension2",
+    "IModelDoc2.IAddVerticalDimension2"
+  ]
+}

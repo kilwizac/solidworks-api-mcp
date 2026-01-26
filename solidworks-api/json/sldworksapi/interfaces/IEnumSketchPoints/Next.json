@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumSketchPoints",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number of sketch points for the sketch points enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "SketchPoint",
+        "description": "Pointer to an array of sketch points of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of sketch points returned from the list; this value can be less than celt if you ask for more sketch points than exist, or it can be NULL if no more sketch points exist"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienumsketchpoints",
+      "sketch",
+      "points",
+      "celt",
+      "int32",
+      "rgelt",
+      "point",
+      "pcelt",
+      "fetched",
+      "void"
+    ]
+  },
+  "title": "IEnumSketchPoints.Next",
+  "description": "Gets the next sketch point in the sketch points enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out SketchPoint\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number of sketch points for the sketch points enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "SketchPoint",
+      "description": "Pointer to an array of sketch points of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of sketch points returned from the list; this value can be less than celt if you ask for more sketch points than exist, or it can be NULL if no more sketch points exist"
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [],
+  "related": []
+}

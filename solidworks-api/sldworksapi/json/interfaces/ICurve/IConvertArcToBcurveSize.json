@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IConvertArcToBcurveSize",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Center",
+        "type": "System.Double",
+        "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc center"
+      },
+      {
+        "name": "Axis",
+        "type": "System.Double",
+        "description": "Pointer to an array of doubles (x, y, z), the normal vector of the arc"
+      },
+      {
+        "name": "Start",
+        "type": "System.Double",
+        "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc start point"
+      },
+      {
+        "name": "End",
+        "type": "System.Double",
+        "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc end point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.ConvertArcToBcurve",
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.ExtentCurve",
+      "ICurve.GetBCurveParams",
+      "ICurve.IConvertLineToBcurveSize",
+      "ICurve.IConvertPcurveToBcurveSize",
+      "ICurve.IGetBCurveParams",
+      "ICurve.IGetBCurveParamsSize2",
+      "ICurve.IsBcurve",
+      "ICurve.MakeBsplineCurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "iconvertarctobcurvesize",
+      "icurve",
+      "curve",
+      "convert",
+      "arc",
+      "bcurve",
+      "size",
+      "center",
+      "double",
+      "axis",
+      "start",
+      "end",
+      "int32"
+    ]
+  },
+  "title": "ICurve.IConvertArcToBcurveSize",
+  "description": "Gets the b-curve size for the arc's conversion given the coordinates of the two end points of a line.",
+  "signature": "System.Int32 IConvertArcToBcurveSize( \n   ref System.Double\nCenter\n,\n   ref System.Double\nAxis\n,\n   ref System.Double\nStart\n,\n   ref System.Double\nEnd\n)",
+  "parameters": [
+    {
+      "name": "Center",
+      "type": "System.Double",
+      "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc center"
+    },
+    {
+      "name": "Axis",
+      "type": "System.Double",
+      "description": "Pointer to an array of doubles (x, y, z), the normal vector of the arc"
+    },
+    {
+      "name": "Start",
+      "type": "System.Double",
+      "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc start point"
+    },
+    {
+      "name": "End",
+      "type": "System.Double",
+      "description": "Pointer to an array of doubles (x, y, z), the coordinates of the arc end point"
+    }
+  ],
+  "returns": "Size of the data necessary for the conversion to a b-curve",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "ICurve.ConvertArcToBcurve",
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.ExtentCurve",
+    "ICurve.GetBCurveParams",
+    "ICurve.IConvertLineToBcurveSize",
+    "ICurve.IConvertPcurveToBcurveSize",
+    "ICurve.IGetBCurveParams",
+    "ICurve.IGetBCurveParamsSize2",
+    "ICurve.IsBcurve",
+    "ICurve.MakeBsplineCurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

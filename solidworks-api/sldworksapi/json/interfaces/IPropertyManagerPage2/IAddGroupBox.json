@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPage2",
+    "member": "IAddGroupBox",
+    "returns": "PropertyManagerPageGroup",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Resource ID of the group box"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Title of the group box"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swAddGroupBoxOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPage2.AddGroupBox"
+    ],
+    "keywords": [
+      "propertymanager",
+      "page",
+      "see",
+      "also",
+      "ipropertymanagerpage2",
+      "group",
+      "boxes",
+      "iaddgroupbox",
+      "manager",
+      "page2",
+      "add",
+      "box",
+      "id",
+      "int32",
+      "caption",
+      "string",
+      "options"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPage2.IAddGroupBox",
+  "description": "Adds a group box to a PropertyManager page.",
+  "signature": "PropertyManagerPageGroup IAddGroupBox( \n   System.Int32\nID\n,\n   System.String\nCaption\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Resource ID of the group box"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Title of the group box"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swAddGroupBoxOptions_e"
+    }
+  ],
+  "returns": "Newly created PropertyManager page group box",
+  "remarks": "Use this method to set properties on the PropertyManager page before the page is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nPropertyManagerPage2::Close\nfor details.\nTo change the title of an existing group box, use\nIPropertyManagerPageGroup::Caption\n.",
+  "examples": [],
+  "related": [
+    "IPropertyManagerPage2.AddGroupBox"
+  ]
+}

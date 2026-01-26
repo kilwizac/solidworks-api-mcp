@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "SetTwistAngle",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of twist in radians"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.D1ReverseTwistDir",
+      "ISweepFeatureData.GetTwistAngle",
+      "ISweepFeatureData.SetD2TwistAngle"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "twist",
+      "settwistangle",
+      "sweep",
+      "feature",
+      "data",
+      "angle",
+      "double",
+      "void"
+    ]
+  },
+  "title": "ISweepFeatureData.SetTwistAngle",
+  "description": "Sets the angle at which to twist this sweep feature.",
+  "signature": "void SetTwistAngle( \n   System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of twist in radians"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is valid only if\nISweepFeatureData::TwistControlType\nis set to\nswTwistControlType_e\n.swTwistControlConstantTwistAlongPath.\nIn the Sweep PropertyManager, you can specify revolutions, degrees, or radians. To specify Angle, you must convert revolutions and degrees to radians:\n1 revolution = 360 degrees = 2*pi = 6.28319 radians\nThis method sets the angle of twist in radians in Direction 1 of a bidirectional sweep.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.D1ReverseTwistDir",
+    "ISweepFeatureData.GetTwistAngle",
+    "ISweepFeatureData.SetD2TwistAngle"
+  ]
+}

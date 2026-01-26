@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetDisplayDimensions",
+    "returns": "DisplayDimension",
+    "parameters": [
+      {
+        "name": "NumDisplayDim",
+        "type": "System.Int32",
+        "description": "Total number of display dimensions on this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDisplayDimensions"
+    ],
+    "keywords": [
+      "display",
+      "dimensions",
+      "see",
+      "also",
+      "idisplaydimension",
+      "annotations",
+      "annotation",
+      "iannotation",
+      "view",
+      "iview",
+      "igetdisplaydimensions",
+      "num",
+      "dim",
+      "int32",
+      "dimension"
+    ]
+  },
+  "title": "IView.IGetDisplayDimensions",
+  "description": "Gets all of the display dimensions on this drawing view.",
+  "signature": "DisplayDimension IGetDisplayDimensions( \n   System.Int32\nNumDisplayDim\n)",
+  "parameters": [
+    {
+      "name": "NumDisplayDim",
+      "type": "System.Int32",
+      "description": "Total number of display dimensions on this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of display dimensions VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of display dimensions all at once instead of calling\nIView::GetFirstDisplayDimension5\nand then repeatedly calling\nIDisplayDimension::GetNext5\nto obtain the remaining display dimensions on this drawing view.\nBefore calling this method, call\nIView::GetDisplayDimensionCount\nto get the value for numDisplayDim.\nNOTE:\nDisplay dimensions are not the same as\nactual model dimensions\n.",
+  "examples": [],
+  "related": [
+    "IView.GetDisplayDimensions"
+  ]
+}

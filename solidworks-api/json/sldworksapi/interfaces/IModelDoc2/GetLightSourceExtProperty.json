@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "GetLightSourceExtProperty",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "ID of the light source"
+      },
+      {
+        "name": "PropertyId",
+        "type": "System.Int32",
+        "description": "ID of the property extension (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddLightSource",
+      "IModelDoc2.AddLightSourceExtProperty",
+      "IModelDoc2.DeleteLightSource",
+      "IModelDoc2.GetLightSourceCount",
+      "IModelDoc2.GetLightSourceIdFromName",
+      "IModelDoc2.GetLightSourceName",
+      "IModelDoc2.ILightSourcePropertyValues",
+      "IModelDoc2.LightSourcePropertyValues",
+      "IModelDoc2.LightSourceUserName",
+      "IModelDoc2.SetLightSourceName",
+      "IModelDoc2.SetLightSourcePropertyValuesVB"
+    ],
+    "keywords": [
+      "lighting",
+      "extension",
+      "getlightsourceextproperty",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "light",
+      "source",
+      "ext",
+      "id",
+      "int32",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.GetLightSourceExtProperty",
+  "description": "Gets a float, string, or integer value stored for the light source.",
+  "signature": "System.Object GetLightSourceExtProperty( \n   System.Int32\nID\n,\n   System.Int32\nPropertyId\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "ID of the light source"
+    },
+    {
+      "name": "PropertyId",
+      "type": "System.Int32",
+      "description": "ID of the property extension (see Remarks )"
+    }
+  ],
+  "returns": "Value stored for the light source",
+  "remarks": "The type returned is based on the how the data was placed. See\nIModelDoc2::AddLightSourceExtProperty\nfor details.\nValues for Id can range from 0 to\nn\n, where\nn\n= (the total number of light sources - 1). To get the total number of light sources, use\nIModelDoc2::GetLightSourceCount\n.\nThe PropertyId parameter takes a 0-based index of the property. Values returned from IModelDoc2::AddLightSourceExtProperty must be decremented by 1 when used as input to IModelDoc2::GetLightSourceExtProperty. However, do not decrement the error value of -1.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AddLightSource",
+    "IModelDoc2.AddLightSourceExtProperty",
+    "IModelDoc2.DeleteLightSource",
+    "IModelDoc2.GetLightSourceCount",
+    "IModelDoc2.GetLightSourceIdFromName",
+    "IModelDoc2.GetLightSourceName",
+    "IModelDoc2.ILightSourcePropertyValues",
+    "IModelDoc2.LightSourcePropertyValues",
+    "IModelDoc2.LightSourceUserName",
+    "IModelDoc2.SetLightSourceName",
+    "IModelDoc2.SetLightSourcePropertyValuesVB"
+  ]
+}

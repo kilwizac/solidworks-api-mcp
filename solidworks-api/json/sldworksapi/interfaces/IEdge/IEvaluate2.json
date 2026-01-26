@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IEvaluate2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Parameter",
+        "type": "System.Double",
+        "description": "Curve parameter U value (see Remarks )"
+      },
+      {
+        "name": "NumberOfDerivatives",
+        "type": "System.Int32",
+        "description": "Number of derivatives (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetCurveParams2"
+    ],
+    "keywords": [
+      "ievaluate2",
+      "iedge",
+      "edge",
+      "evaluate2",
+      "parameter",
+      "double",
+      "number",
+      "derivatives",
+      "int32"
+    ]
+  },
+  "title": "IEdge.IEvaluate2",
+  "description": "Evaluates the edge for the specified U parameter.",
+  "signature": "System.Double IEvaluate2( \n   System.Double\nParameter\n,\n   System.Int32\nNumberOfDerivatives\n)",
+  "parameters": [
+    {
+      "name": "Parameter",
+      "type": "System.Double",
+      "description": "Curve parameter U value (see Remarks )"
+    },
+    {
+      "name": "NumberOfDerivatives",
+      "type": "System.Int32",
+      "description": "Number of derivatives (see Remarks )"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Use\nIEdge::IGetCurveParams2\nto determine the valid range of U parameter values for Parameter.\nThe returned array contains ((NumberOfDerivatives + 1) * 3) + 1 doubles:\n[\nevaluated_point\n]\n,\n[\nevaluated_derivative_1\n]\n,...\n[\nevaluated_derivative_NumberOfDerivatives\n,\n[\nstatus_code\n]\nwhere\nstatus_code\nis a packed double. After unpacking\nstatus_code\ninto two longs, the lower long value is 1 for success or 0 for error. See the Example in\nIEdge::Evaluate2\n.\nIf curve type\nICurve::Identity\nis...\nThen the maximum number of derivatives is...\nLine/circle/ellipse\n2\nIntersection curve\n2\nConstant parameter line\nDetermined by underlying surface\nSP-curve\n2\nB-curve\nAny number\nFor a curve of type swCurveTypes_e::TRIMMED_TYPE, the number of derivatives is determined by the base curve as obtained from\nICurve::GetBaseCurve\n.",
+  "examples": [],
+  "related": [
+    "IEdge.GetCurveParams2"
+  ]
+}

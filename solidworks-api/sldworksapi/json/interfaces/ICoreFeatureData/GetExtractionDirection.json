@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICoreFeatureData",
+    "member": "GetExtractionDirection",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Type1",
+        "type": "System.Int32",
+        "description": "Type of entity as defined in swSelectType_e"
+      },
+      {
+        "name": "PDir1",
+        "type": "System.Object",
+        "description": "Entity that defines the extraction direction (see Remarks )"
+      },
+      {
+        "name": "Type2",
+        "type": "System.Int32",
+        "description": "Type of entity as defined in swSelectType_e"
+      },
+      {
+        "name": "PDir2",
+        "type": "System.Object",
+        "description": "Entity that defines the extraction direction (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICoreFeatureData.SetExtractionDirection"
+    ],
+    "keywords": [
+      "getextractiondirection",
+      "icorefeaturedata",
+      "core",
+      "feature",
+      "data",
+      "extraction",
+      "direction",
+      "type1",
+      "int32",
+      "dir1",
+      "object",
+      "type2",
+      "dir2",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ICoreFeatureData.GetExtractionDirection",
+  "description": "Gets the entities that define the extraction direction of this core feature.",
+  "signature": "System.Int32 GetExtractionDirection( \n   out System.Int32\nType1\n,\n   out System.Object\nPDir1\n,\n   out System.Int32\nType2\n,\n   out System.Object\nPDir2\n)",
+  "parameters": [
+    {
+      "name": "Type1",
+      "type": "System.Int32",
+      "description": "Type of entity as defined in swSelectType_e"
+    },
+    {
+      "name": "PDir1",
+      "type": "System.Object",
+      "description": "Entity that defines the extraction direction (see Remarks )"
+    },
+    {
+      "name": "Type2",
+      "type": "System.Int32",
+      "description": "Type of entity as defined in swSelectType_e"
+    },
+    {
+      "name": "PDir2",
+      "type": "System.Object",
+      "description": "Entity that defines the extraction direction (see Remarks )"
+    }
+  ],
+  "returns": "Number of entities that define the extraction direction",
+  "remarks": "The types of entities that define the extraction direction are:\nFace\nPlane\nEdge\nVertex\nSketch line\nSketch point\nThere can be two entities because two sketch points can specify a direction.",
+  "examples": [
+    {
+      "title": "Get Core Feature Data (C#)",
+      "href": "Get_Core_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Core Feature Data (VB.NET)",
+      "href": "Get_Core_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Core Feature Data (VBA)",
+      "href": "Get_Core_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICoreFeatureData.SetExtractionDirection"
+  ]
+}

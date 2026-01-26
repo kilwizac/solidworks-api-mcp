@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SketchOffset2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Offset",
+        "type": "System.Double",
+        "description": "Offset value; negative value offsets in opposite direction"
+      },
+      {
+        "name": "BothDirections",
+        "type": "System.Boolean",
+        "description": "True to offset in both directions, false to not"
+      },
+      {
+        "name": "Chain",
+        "type": "System.Boolean",
+        "description": "True if you want the entire chain of entities offset, false if you want only the selected sketch entities offset (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.SketchOffsetEdges",
+      "IModelDoc2.SketchOffsetEntities2"
+    ],
+    "keywords": [
+      "sketchoffset2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "sketch",
+      "offset2",
+      "offset",
+      "double",
+      "both",
+      "directions",
+      "boolean",
+      "chain"
+    ]
+  },
+  "title": "IModelDoc2.SketchOffset2",
+  "description": "Obsolete. Superseded by ISketchManager::SketchOffset.",
+  "signature": "System.Boolean SketchOffset2( \n   System.Double\nOffset\n,\n   System.Boolean\nBothDirections\n,\n   System.Boolean\nChain\n)",
+  "parameters": [
+    {
+      "name": "Offset",
+      "type": "System.Double",
+      "description": "Offset value; negative value offsets in opposite direction"
+    },
+    {
+      "name": "BothDirections",
+      "type": "System.Boolean",
+      "description": "True to offset in both directions, false to not"
+    },
+    {
+      "name": "Chain",
+      "type": "System.Boolean",
+      "description": "True if you want the entire chain of entities offset, false if you want only the selected sketch entities offset (see Remarks )"
+    }
+  ],
+  "returns": "True if the offset is successful, false if not",
+  "remarks": "Specifying true for the Chain argument offsets the selected entity and any other entities that belong to the same contour or chain (contiguous, geometric entities like edges).",
+  "examples": [],
+  "related": [
+    "IModelDoc2.SketchOffsetEdges",
+    "IModelDoc2.SketchOffsetEntities2"
+  ]
+}

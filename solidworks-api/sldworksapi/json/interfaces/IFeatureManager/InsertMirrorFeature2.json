@@ -1,0 +1,110 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMirrorFeature2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BMirrorBody",
+        "type": "System.Boolean",
+        "description": "True to mirror solid bodies; false to mirror a feature or face"
+      },
+      {
+        "name": "BGeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to mirror only the feature geometry, false to solve the entire feature; applies to mirroring features only"
+      },
+      {
+        "name": "BMerge",
+        "type": "System.Boolean",
+        "description": "True to merge any mirrored solid bodies, false to not; applies to mirroring solid bodies only"
+      },
+      {
+        "name": "BKnit",
+        "type": "System.Boolean",
+        "description": "True to knit surfaces, false to not; applies to mirroring surfaces only"
+      },
+      {
+        "name": "ScopeOptions",
+        "type": "System.Int32",
+        "description": "Feature scope as defined by swFeatureScope_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMirrorPatternFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "mirror",
+      "features",
+      "pattern",
+      "insertmirrorfeature2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature2",
+      "body",
+      "boolean",
+      "geometry",
+      "merge",
+      "knit",
+      "scope",
+      "options",
+      "int32",
+      "imirrorsolidfeaturedata",
+      "structuresystemtopatternarray"
+    ]
+  },
+  "title": "IFeatureManager.InsertMirrorFeature2",
+  "description": "Mirrors selected features, faces, bodies, and structure systems about a selected plane or planar face.",
+  "signature": "Feature InsertMirrorFeature2( \n   System.Boolean\nBMirrorBody\n,\n   System.Boolean\nBGeometryPattern\n,\n   System.Boolean\nBMerge\n,\n   System.Boolean\nBKnit\n,\n   System.Int32\nScopeOptions\n)",
+  "parameters": [
+    {
+      "name": "BMirrorBody",
+      "type": "System.Boolean",
+      "description": "True to mirror solid bodies; false to mirror a feature or face"
+    },
+    {
+      "name": "BGeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to mirror only the feature geometry, false to solve the entire feature; applies to mirroring features only"
+    },
+    {
+      "name": "BMerge",
+      "type": "System.Boolean",
+      "description": "True to merge any mirrored solid bodies, false to not; applies to mirroring solid bodies only"
+    },
+    {
+      "name": "BKnit",
+      "type": "System.Boolean",
+      "description": "True to knit surfaces, false to not; applies to mirroring surfaces only"
+    },
+    {
+      "name": "ScopeOptions",
+      "type": "System.Int32",
+      "description": "Feature scope as defined by swFeatureScope_e"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "This method attempts to create the mirror feature without displaying a dialog box to get information from the user. It relies on preselected and marked entities and arguments.\nStructure systems 134217728\nAny of these entities to be mirrored...\nMust be preselected and marked with a value of...\nFeatures\n1\nFaces\n128\nBodies\n256\nStructure systems\n134217728\nPlanes or planar faces\n2\nFor information on selecting and marking entities, see\nIModelDocExtension::SelectByID2\n.",
+  "examples": [
+    {
+      "title": "IMirrorSolidFeatureData::StructureSystemToPatternArray",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorSolidFeatureData~StructureSystemToPatternArray",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMirrorPatternFeatureData"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IImportDxfDwgData",
+    "member": "AddSketchConstraints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "addsketchconstraints",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "add",
+      "sketch",
+      "constraints",
+      "sheet",
+      "string",
+      "boolean",
+      "file",
+      "part",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IImportDxfDwgData.AddSketchConstraints",
+  "description": "Gets or sets whether constraints are added to the geometry in the part sketch after importing the entities.",
+  "signature": "System.Boolean AddSketchConstraints( \n   System.String\nSheet\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+    }
+  ],
+  "returns": "True to add constraints, false to not",
+  "remarks": "This property only supports importing to a part sketch; it does not support importing to a drawing.\nBy default, constraints are not added.",
+  "examples": [
+    {
+      "title": "Import DXF File into Part Sketch (VBA)",
+      "href": "Import_DXF_File_into_Part_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

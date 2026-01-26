@@ -1,0 +1,76 @@
+---
+type: property
+interface: ILoftFeatureData
+member: ReverseStartTangentDirection
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - ILoftFeatureData.EndConstraintApplyToAll
+  - ILoftFeatureData.EndConstraintDraftAngle
+  - ILoftFeatureData.EndConstraintDraftAngleDirection
+  - ILoftFeatureData.EndTangencyType
+  - ILoftFeatureData.EndTangentLength
+  - ILoftFeatureData.GetGuideTangencyType
+  - ILoftFeatureData.MaintainTangency
+  - ILoftFeatureData.ReverseEndTangentDirection
+  - ILoftFeatureData.SetGuideTangencyType
+  - ILoftFeatureData.StartConstraintApplyToAll
+  - ILoftFeatureData.StartConstraintDraftAngle
+  - ILoftFeatureData.StartConstraintDraftAngleDirection
+  - ILoftFeatureData.StartTangencyType
+  - ILoftFeatureData.StartTangentLength
+keywords:
+  - lofts
+  - see
+  - also
+  - iloftfeaturedata
+  - tangent
+  - reversestarttangentdirection
+  - loft
+  - feature
+  - data
+  - reverse
+  - start
+  - direction
+  - boolean
+readonly: null
+---
+
+# ILoftFeatureData.ReverseStartTangentDirection
+
+Reverses the tangent direction for the start point of this loft feature.
+
+## Signature
+
+```csharp
+System.Boolean ReverseStartTangentDirection {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True reverses the tangent direction for the start point, false does not
+
+## See Also
+
+- `ILoftFeatureData.EndConstraintApplyToAll`
+- `ILoftFeatureData.EndConstraintDraftAngle`
+- `ILoftFeatureData.EndConstraintDraftAngleDirection`
+- `ILoftFeatureData.EndTangencyType`
+- `ILoftFeatureData.EndTangentLength`
+- `ILoftFeatureData.GetGuideTangencyType`
+- `ILoftFeatureData.MaintainTangency`
+- `ILoftFeatureData.ReverseEndTangentDirection`
+- `ILoftFeatureData.SetGuideTangencyType`
+- `ILoftFeatureData.StartConstraintApplyToAll`
+- `ILoftFeatureData.StartConstraintDraftAngle`
+- `ILoftFeatureData.StartConstraintDraftAngleDirection`
+- `ILoftFeatureData.StartTangencyType`
+- `ILoftFeatureData.StartTangentLength`

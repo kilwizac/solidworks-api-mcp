@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "ImportDiagnosis",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "CloseAllGaps",
+        "type": "System.Boolean",
+        "description": "True to repair any gaps, false to not"
+      },
+      {
+        "name": "RemoveFaces",
+        "type": "System.Boolean",
+        "description": "True to remove any bad faces and create gaps in the feature, false to not"
+      },
+      {
+        "name": "FixFaces",
+        "type": "System.Boolean",
+        "description": "True to fix the bad faces, false to not"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Not used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IBody2.Diagnose",
+      "IDiagnoseResult",
+      "IPartDoc.ImportDiagnosisGapCloser"
+    ],
+    "keywords": [
+      "diagnostic",
+      "tools",
+      "import",
+      "diagnostics",
+      "importdiagnosis",
+      "ipartdoc",
+      "part",
+      "doc",
+      "diagnosis",
+      "close",
+      "all",
+      "gaps",
+      "boolean",
+      "remove",
+      "faces",
+      "fix",
+      "options",
+      "int32",
+      "step",
+      "file",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IPartDoc.ImportDiagnosis",
+  "description": "Diagnoses and repairs any gaps or bad faces on imported features.",
+  "signature": "System.Int32 ImportDiagnosis( \n   System.Boolean\nCloseAllGaps\n,\n   System.Boolean\nRemoveFaces\n,\n   System.Boolean\nFixFaces\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "CloseAllGaps",
+      "type": "System.Boolean",
+      "description": "True to repair any gaps, false to not"
+    },
+    {
+      "name": "RemoveFaces",
+      "type": "System.Boolean",
+      "description": "True to remove any bad faces and create gaps in the feature, false to not"
+    },
+    {
+      "name": "FixFaces",
+      "type": "System.Boolean",
+      "description": "True to fix the bad faces, false to not"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Not used"
+    }
+  ],
+  "returns": ">= 0 if import diagnosis is successful, -1 if an error occurred",
+  "remarks": "Use this method for an imported solid body that has rebuild errors or for an imported surface that did not knit into a solid body.",
+  "examples": [
+    {
+      "title": "Import STEP File (C#)",
+      "href": "Import_STEP_File_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Import STEP File (VB.NET)",
+      "href": "Import_STEP_File_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Import STEP File (VBA)",
+      "href": "Import_STEP_File_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.Diagnose",
+    "IDiagnoseResult",
+    "IPartDoc.ImportDiagnosisGapCloser"
+  ]
+}

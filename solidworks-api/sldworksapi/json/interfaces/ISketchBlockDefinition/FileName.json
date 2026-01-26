@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchBlockDefinition",
+    "member": "FileName",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io",
+      "sketches"
+    ],
+    "related": [
+      "ISketchBlockDefinition.Save"
+    ],
+    "keywords": [
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "file",
+      "files",
+      "filename",
+      "sketch",
+      "block",
+      "definition",
+      "name",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchBlockDefinition.FileName",
+  "description": "Gets or sets the name of the file to which }}-->the block definition is linked.",
+  "signature": "System.String FileName {get; set;}",
+  "parameters": [],
+  "returns": "Path and filename of the block definition file",
+  "remarks": "The file can be either a native SOLIDWORKS block file (.\nsldblk\n) or a non-native SOLIDWORKS file (.\ndxf\nor .\ndwg\n).\nThis method gets the name of the file with which this block definition is associated, regardless of whether or not the link is enabled. SOLIDWORKS continues to store the name of the file if the link is disabled. Use\nISketchBlockDefintion::LinkToFile\nto determine if the block definition is linked to a file.",
+  "examples": [],
+  "related": [
+    "ISketchBlockDefinition.Save"
+  ]
+}

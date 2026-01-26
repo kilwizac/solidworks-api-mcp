@@ -1,0 +1,128 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateTangentArc2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "P1x",
+        "type": "System.Double",
+        "description": "x coordinate of start point in meters"
+      },
+      {
+        "name": "P1y",
+        "type": "System.Double",
+        "description": "y coordinate of start point in meters"
+      },
+      {
+        "name": "P1z",
+        "type": "System.Double",
+        "description": "Always 0"
+      },
+      {
+        "name": "P2x",
+        "type": "System.Double",
+        "description": "x coordinate of end point in meters"
+      },
+      {
+        "name": "P2y",
+        "type": "System.Double",
+        "description": "y coordinate of end point in meters"
+      },
+      {
+        "name": "P2z",
+        "type": "System.Double",
+        "description": "Always 0"
+      },
+      {
+        "name": "ArcTypeIn",
+        "type": "System.Int32",
+        "description": "Type of tangent arc as defined in swTangentArcTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.Create3PointArc",
+      "IModelDoc2.CreateArc2",
+      "IModelDoc2.CreateArcByCenter",
+      "IModelDoc2.ICreateArc2"
+    ],
+    "keywords": [
+      "createtangentarc2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "tangent",
+      "arc2",
+      "p1x",
+      "double",
+      "p1y",
+      "p1z",
+      "p2x",
+      "p2y",
+      "p2z",
+      "arc",
+      "type",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.CreateTangentArc2",
+  "description": "Obsolete. Superseded by ISketchManager::CreateTangentArc.",
+  "signature": "System.Boolean CreateTangentArc2( \n   System.Double\nP1x\n,\n   System.Double\nP1y\n,\n   System.Double\nP1z\n,\n   System.Double\nP2x\n,\n   System.Double\nP2y\n,\n   System.Double\nP2z\n,\n   System.Int32\nArcTypeIn\n)",
+  "parameters": [
+    {
+      "name": "P1x",
+      "type": "System.Double",
+      "description": "x coordinate of start point in meters"
+    },
+    {
+      "name": "P1y",
+      "type": "System.Double",
+      "description": "y coordinate of start point in meters"
+    },
+    {
+      "name": "P1z",
+      "type": "System.Double",
+      "description": "Always 0"
+    },
+    {
+      "name": "P2x",
+      "type": "System.Double",
+      "description": "x coordinate of end point in meters"
+    },
+    {
+      "name": "P2y",
+      "type": "System.Double",
+      "description": "y coordinate of end point in meters"
+    },
+    {
+      "name": "P2z",
+      "type": "System.Double",
+      "description": "Always 0"
+    },
+    {
+      "name": "ArcTypeIn",
+      "type": "System.Int32",
+      "description": "Type of tangent arc as defined in swTangentArcTypes_e"
+    }
+  ],
+  "returns": "1 = success, 0 = failure",
+  "remarks": "This method can only create 2D tangent arcs. Use\nISketchManager::CreateTangentArc\nto create 3D tangent arcs.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.Create3PointArc",
+    "IModelDoc2.CreateArc2",
+    "IModelDoc2.CreateArcByCenter",
+    "IModelDoc2.ICreateArc2"
+  ]
+}

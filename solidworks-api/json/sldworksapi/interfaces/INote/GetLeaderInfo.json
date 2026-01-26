@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetLeaderInfo",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetLeaderAtIndex",
+      "INote.GetLeaderCount",
+      "INote.GetLeaderNumPointsAt",
+      "INote.HasExtraLeader",
+      "INote.IGetLeaderAtIndex",
+      "INote.IGetLeaderInfo",
+      "INote.IsAttached",
+      "INote.SetZeroLengthLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "notes",
+      "note",
+      "see",
+      "also",
+      "inote",
+      "getleaderinfo",
+      "leader",
+      "info",
+      "object"
+    ]
+  },
+  "title": "INote.GetLeaderInfo",
+  "description": "Gets information describing the layout of the note leader lines.",
+  "signature": "System.Object GetLeaderInfo()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "There can be 0, 1, or 2 lines used with the leader line. If the note is not attached, then there are 0 lines;\notherwise, you have a straight leaderline (1 line) or a bent leaderline (2 lines). You must infer the number of leader lines based on IsAttached() and HasExtraLeader().\nIsAttached() == false implies no leaderline and\nno leaderline points (PointCount=0).\nHasExtraLeader() == false implies a straight leaderline and1 line (PointCount=2)\nHasExtraLeader() == True implies a bent leaderline and 2 lines (\nPointCount\n=3)\nFormat of return information is the following array of doubles:\nreturn value\n[0] = x coordinate of first leader point\nreturn value\n[1] = y coordinate\nof first leader point\nreturn value\n[2] = z coordinate\nof first leader point\nreturn value\n[3] = x coordinate\nof second leader point\nreturn value\n[4] = y coordinate\nof second leader point\nreturn value\n[5] = z coordinate\nof second leader point\nreturn value\n[6] = x coordinate\nof third leader point\nreturn value\n[7] = y coordinate\nof third leader point\nreturn value\n[8] = z coordinate\nof third leader point",
+  "examples": [],
+  "related": [
+    "INote.GetLeaderAtIndex",
+    "INote.GetLeaderCount",
+    "INote.GetLeaderNumPointsAt",
+    "INote.HasExtraLeader",
+    "INote.IGetLeaderAtIndex",
+    "INote.IGetLeaderInfo",
+    "INote.IsAttached",
+    "INote.SetZeroLengthLeader"
+  ]
+}

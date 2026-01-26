@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDependentViewCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "AllViews",
+        "type": "System.Boolean",
+        "description": "True to get the number of all of the dependent views in this view, false to get the number of SpecificViewType views in this view"
+      },
+      {
+        "name": "SpecificViewType",
+        "type": "System.Int32",
+        "description": "Type of dependent view as defined in swDrawingViewTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDependentViews"
+    ],
+    "keywords": [
+      "dependent",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "getdependentviewcount",
+      "count",
+      "all",
+      "boolean",
+      "specific",
+      "type",
+      "int32"
+    ]
+  },
+  "title": "IView.GetDependentViewCount",
+  "description": "Gets the number of all, or only the specified, dependent views (i.e., alternate position, detail, section, etc.) in this view.",
+  "signature": "System.Int32 GetDependentViewCount( \n   System.Boolean\nAllViews\n,\n   System.Int32\nSpecificViewType\n)",
+  "parameters": [
+    {
+      "name": "AllViews",
+      "type": "System.Boolean",
+      "description": "True to get the number of all of the dependent views in this view, false to get the number of SpecificViewType views in this view"
+    },
+    {
+      "name": "SpecificViewType",
+      "type": "System.Int32",
+      "description": "Type of dependent view as defined in swDrawingViewTypes_e"
+    }
+  ],
+  "returns": "Number of dependent views",
+  "remarks": "Call this method before calling\nIView::IGetDependentViews\nto get the size of the array for that method.",
+  "examples": [],
+  "related": [
+    "IView.GetDependentViews"
+  ]
+}

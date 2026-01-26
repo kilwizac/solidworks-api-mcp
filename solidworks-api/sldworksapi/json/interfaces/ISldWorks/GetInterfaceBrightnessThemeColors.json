@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetInterfaceBrightnessThemeColors",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Colors",
+        "type": "System.Object",
+        "description": "Array of nine RGB (Red, Green, Blue) decimal values corresponding to the nine color types of the SOLIDWORKS background as defined in swInterfaceBrightnessColor_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISwHtmlInterface::GetInterfaceBrightnessTheme"
+    ],
+    "keywords": [
+      "color",
+      "solidworks",
+      "backgrounds",
+      "background",
+      "colors",
+      "themes",
+      "getinterfacebrightnessthemecolors",
+      "isldworks",
+      "sld",
+      "works",
+      "brightness",
+      "theme",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.GetInterfaceBrightnessThemeColors",
+  "description": "Gets the theme and colors of the SOLIDWORKS background.",
+  "signature": "System.Int32 GetInterfaceBrightnessThemeColors( \n   out System.Object\nColors\n)",
+  "parameters": [
+    {
+      "name": "Colors",
+      "type": "System.Object",
+      "description": "Array of nine RGB (Red, Green, Blue) decimal values corresponding to the nine color types of the SOLIDWORKS background as defined in swInterfaceBrightnessColor_e"
+    }
+  ],
+  "returns": "SOLIDWORKS background theme as defined in swInterfaceBrightnessTheme_e",
+  "remarks": "A SOLIDWORKS add-in can:\nuse this method to determine the current theme and colors of the SOLIDWORKS background.\nbe notified when the theme and colors in the SOLIDWORKS background change by registering for the\nDSldWorksEvents_InterfaceBrightnessThemeChangeNotifyEventHandler\nevent.",
+  "examples": [],
+  "related": [
+    "ISwHtmlInterface::GetInterfaceBrightnessTheme"
+  ]
+}

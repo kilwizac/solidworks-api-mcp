@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTag",
+    "member": "SetText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "WhichText",
+        "type": "System.Int32",
+        "description": "Text to set as defined in swDatumTagTextParts_e"
+      },
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "New content for the specified WhichText"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "settext",
+      "idatumtag",
+      "datum",
+      "tag",
+      "text",
+      "which",
+      "int32",
+      "string",
+      "boolean",
+      "tags",
+      "gtols",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDatumTag.SetText",
+  "description": "Sets the text of this datum tag.",
+  "signature": "System.Boolean SetText( \n   System.Int32\nWhichText\n,\n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "WhichText",
+      "type": "System.Int32",
+      "description": "Text to set as defined in swDatumTagTextParts_e"
+    },
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "New content for the specified WhichText"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "After calling this method, call\nIModelView::GraphicsRedraw\nto see the new text.",
+  "examples": [
+    {
+      "title": "Set Text in Datum Tags and GTols (VBA)",
+      "href": "Set_Text_in_Datum_Tags_and_GTols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Text in Datum Tags and GTols (VB.NET)",
+      "href": "Set_Text_in_Datum_Tags_and_GTols_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Text in Datum Tags and GTols (C#)",
+      "href": "Set_Text_in_Datum_Tags_and_GTols_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

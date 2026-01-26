@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCameraById",
+    "returns": "Camera",
+    "parameters": [
+      {
+        "name": "CameraId",
+        "type": "System.Int32",
+        "description": "Camera ID (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetCameraDefinition",
+      "IModelDocExtension.InsertCamera"
+    ],
+    "keywords": [
+      "camera",
+      "see",
+      "also",
+      "icamera",
+      "id",
+      "getcamerabyid",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "int32",
+      "turn",
+      "cameras",
+      "off",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.GetCameraById",
+  "description": "Gets a camera using the specified camera ID.",
+  "signature": "Camera GetCameraById( \n   System.Int32\nCameraId\n)",
+  "parameters": [
+    {
+      "name": "CameraId",
+      "type": "System.Int32",
+      "description": "Camera ID (see Remarks )"
+    }
+  ],
+  "returns": "Camera",
+  "remarks": "A valid ID is 0 <= ID <= (\nIModelDocExtension::GetCameraCount\n-1).\nCameraId is reassigned if there are multiple cameras and one of those cameras is deleted. For example:\nIf...\nAnd Camera2 is deleted, then...\nCameraId = 1 for Camera1\nCameraId = 1 for Camera1\nCameraId = 2 for Camera2\nDeleted\nCameraId = 3 for Camera3\nCameraId = 2 for Camera3",
+  "examples": [
+    {
+      "title": "Turn Cameras On and Off (VBA)",
+      "href": "Turn_Cameras_On_and_Off_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.GetCameraDefinition",
+    "IModelDocExtension.InsertCamera"
+  ]
+}

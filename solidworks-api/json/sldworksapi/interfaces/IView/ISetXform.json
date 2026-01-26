@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "ISetXform",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Transform",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetViewXform",
+      "IView.IGetViewXform",
+      "IView.ModelToViewTransform",
+      "IView.SetXform"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "transforms",
+      "view",
+      "transform",
+      "isetxform",
+      "xform",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IView.ISetXform",
+  "description": "Sets the matrix used for display of this drawing view.",
+  "signature": "System.Boolean ISetXform( \n   ref System.Double\nTransform\n)",
+  "parameters": [
+    {
+      "name": "Transform",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (see Remarks )"
+    }
+  ],
+  "returns": "True if transform successfully set, false if not",
+  "remarks": "The 3 doubles are the X and Y position of the view, relative to the sheet origin, and the scale of the view.\nAny view alignments that might affect this view are handled the same way as if you were using the user interface to draw the view to move it. If it is aligned with another view, then it will only move along the alignment vector. If it has child views that are aligned with it, then those views will also be moved along with this view.\nCalling this method is equivalent to setting the\nIView::Position\nor\nIView::IPosition\nproperty (to set X and Y), and the\nIView::ScaleDecimal\nproperty (to set the scale).\nTo get the view matrix, use\nIView::GetXform\nor\nIView::IGetXform\nmethod.\nUsing this method may cause changes to the graphics of the drawing. Once all the view-related changes have been made, the user should call\nIModelDoc2::EditRebuild3\nto regenerate the drawing, in order to see these changes.",
+  "examples": [],
+  "related": [
+    "IView.GetViewXform",
+    "IView.IGetViewXform",
+    "IView.ModelToViewTransform",
+    "IView.SetXform"
+  ]
+}

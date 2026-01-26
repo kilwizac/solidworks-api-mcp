@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISlotMateFeatureData",
+    "member": "Constraint",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "constraint",
+      "islotmatefeaturedata",
+      "slot",
+      "mate",
+      "feature",
+      "data",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISlotMateFeatureData.Constraint",
+  "description": "Gets or sets how to constrain the component in the slot of this slot mate.",
+  "signature": "System.Int32 Constraint {get; set;}",
+  "parameters": [],
+  "returns": "Constraint option as defined in swSlotMateConstraintOptions_e",
+  "remarks": "If this property is set to swSlotMateConstraintOptions_e:\nswSlotMateConstraintOption_Distance, specify the\nISlotMateFeatureData::Distance\nfrom the end of the slot where to place the component axis.\nswSlotMateConstraintOption_Percent, specify the distance as a\nISlotMateFeatureData::Percent\nof the slot length where to place the component axis.\nIf this is a slot-to-slot mate, the only valid constraints are:\nswSlotMateConstraintOptions_e.swSlotMateConstraintOption_Free\nswSlotMateConstraintOptions_e.swSlotMateConstraintOption_Centered\nTo change the endpoint from which the distance is measured, set\nISlotMateFeatureData::FlipDirection\nto true.",
+  "examples": [
+    {
+      "title": "ISlotMateFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISlotMateFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "SetHyperlinkText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text for hyperlink"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetHyperlinkText"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "hyperlinks",
+      "sethyperlinktext",
+      "hyperlink",
+      "text",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "INote.SetHyperlinkText",
+  "description": "Sets the hyperlink in a note.",
+  "signature": "System.Boolean SetHyperlinkText( \n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text for hyperlink"
+    }
+  ],
+  "returns": "True if the hyperlink is successfully set, false if not",
+  "remarks": "You can retrieve the hyperlink text using\nINote::GetHyperlinkText\n.\nThe input text can be a URL address or the name of a document on the local network or on your local system. You must specify the full address for a URL address, starting with the\nhttp://\n. You can specify a file name on your local network or system either as a full pathname or pathname relative to the current document, for example,\nD:\\parts\\drawing1.slddrw\n, or\ndrawing1.slddrw\n.\nTo remove the hyperlink from a note, use this method and specify non-hyperlinked text.",
+  "examples": [],
+  "related": [
+    "INote.GetHyperlinkText"
+  ]
+}

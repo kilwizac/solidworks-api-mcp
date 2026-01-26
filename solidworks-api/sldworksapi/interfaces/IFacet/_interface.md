@@ -1,0 +1,27 @@
+---
+type: interface
+interface: IFacet
+inherits: null
+description: Allows access to a triangular facet of a mesh or graphics body.
+member_count: 4
+docset: sldworksapi
+categories:
+  - documents
+  - geometry
+common_members:
+  - GetBody
+  - GetFacetEdges
+  - GetFacetVertices
+  - Select
+---
+
+# IFacet
+
+Allows access to a triangular facet of a mesh or graphics body.
+
+## Common Members
+
+- `GetBody`
+- `GetFacetEdges`
+- `GetFacetVertices`
+- `Select`

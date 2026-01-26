@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertCurveFile",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Path and file name containing the point data"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.InsertCurveFileBegin",
+      "IModelDoc2.InsertCurveFileEnd",
+      "IModelDoc2.InsertCurveFilePoint"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "reference",
+      "geometry",
+      "insertcurvefile",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "file",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.InsertCurveFile",
+  "description": "Creates a curve.",
+  "signature": "System.Boolean InsertCurveFile( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Path and file name containing the point data"
+    }
+  ],
+  "returns": "True if the curve is created successfully, false if not",
+  "remarks": "The curve goes through the points in the specified file.The points in the specified input file can have the X, Y, Z values separated by commas, spaces, or tabs. There should be one point per line.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.InsertCurveFileBegin",
+    "IModelDoc2.InsertCurveFileEnd",
+    "IModelDoc2.InsertCurveFilePoint"
+  ]
+}

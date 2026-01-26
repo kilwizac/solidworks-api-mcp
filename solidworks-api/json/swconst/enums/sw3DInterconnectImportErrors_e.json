@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "sw3DInterconnectImportErrors_e",
+    "description": "3D Interconnect import errors.",
+    "member_count": 7,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "sw3DInterconnectImportErrors_e",
+  "description": "3D Interconnect import errors.",
+  "values": [
+    {
+      "member": "sw3DInterconnectImportErrors_AssemblyNotSaved",
+      "value": "3",
+      "description": ""
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_BreakLinkUnavailable",
+      "value": "4",
+      "description": "= Break link is not available for the selected 3D Interconnect feature; break link is only available for top-level assemblies"
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_Disabled",
+      "value": "1",
+      "description": "= 3D Interconnect is not enabled; to enable set Tools > Options > System Options > Import > Enable 3D Interconnect or call calling ISldWorks::SetUserPreferenceToggle ( swUserPreferenceToggle_e .swMultiCAD_Enable3DInterconnect, True)"
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_IncompatibleType",
+      "value": "2",
+      "description": "= Specified file type is not correct"
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_None",
+      "value": "0",
+      "description": ""
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_ParametersUnavailable",
+      "value": "5",
+      "description": "= Only top-level 3D Interconnect features can be edited"
+    },
+    {
+      "member": "sw3DInterconnectImportErrors_TransferOptionNeeded",
+      "value": "6",
+      "description": "= One or more import options need to be specified for this import"
+    }
+  ]
+}

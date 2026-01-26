@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMirrorPatternFeatureData",
+    "member": "FeatureScopeBodies",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMirrorPatternFeatureData.FeatureScope",
+      "IMirrorPatternFeatureData.GetFeatureScopeBodiesCount",
+      "IMirrorPatternFeatureData.IGetFeatureScopeBodies",
+      "IMirrorPatternFeatureData.ISetFeatureScopeBodies"
+    ],
+    "keywords": [
+      "feature",
+      "scope",
+      "featurescopebodies",
+      "imirrorpatternfeaturedata",
+      "mirror",
+      "pattern",
+      "data",
+      "bodies",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMirrorPatternFeatureData.FeatureScopeBodies",
+  "description": "Gets or sets the solid bodies that the mirror pattern feature affects in a multibody part.",
+  "signature": "System.Object FeatureScopeBodies {get; set;}",
+  "parameters": [],
+  "returns": "Array of solid bodies that the feature affects",
+  "remarks": "This property is valid only if:\nIMirrorPatternFeatureData::GeometryPattern\nis true, and\nIMirrorPatternFeatureData::FeatureScope\nis not\nswFeatureScope_e\n.swFeatureScope_AllBodies.\nYou cannot edit this property to null or Nothing after the feature is created with feature scope bodies. If you try,\nIFeature::ModifyDefinition\nreturns true but this property does not change.\nFor more information, see the\nMirror Feature PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IMirrorPatternFeatureData.FeatureScope",
+    "IMirrorPatternFeatureData.GetFeatureScopeBodiesCount",
+    "IMirrorPatternFeatureData.IGetFeatureScopeBodies",
+    "IMirrorPatternFeatureData.ISetFeatureScopeBodies"
+  ]
+}

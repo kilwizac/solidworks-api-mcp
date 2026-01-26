@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetLines",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetLineCount",
+      "IModelDoc2.IGetLines"
+    ],
+    "keywords": [
+      "lines",
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "getlines",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.GetLines",
+  "description": "Gets all of the lines in the current sketch.",
+  "signature": "System.Object GetLines()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nLineType, StartPtX, StartPtY, StartPtZ, EndPtX, EndPtY, EndPtZ\n,\n... ]\nwhere this array of 7 values repeats itself for each line in the current sketch. The number of doubles returned is (\nlineCount\n* 7). To determine the number of lines in the current sketch, use\nIModelDoc2::GetLineCount\n.\nSee\nswLineTypes_e\nfor valid line types.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetLineCount",
+    "IModelDoc2.IGetLines"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "IGetFaces2",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "FaceCount",
+        "type": "System.Int32",
+        "description": "Number of faces in this feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFeature.GetFaces"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "feature",
+      "igetfaces2",
+      "ifeature",
+      "faces2",
+      "count",
+      "int32",
+      "face2"
+    ]
+  },
+  "title": "IFeature.IGetFaces2",
+  "description": "Gets the faces in this feature.",
+  "signature": "Face2 IGetFaces2( \n   out System.Int32\nFaceCount\n)",
+  "parameters": [
+    {
+      "name": "FaceCount",
+      "type": "System.Int32",
+      "description": "Number of faces in this feature"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of pointers to the faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "To determine the size of the array, call\nIFeature::GetFaceCount\nbefore calling this method.\nIFeature::IGetFaces2 compares the number of faces in this feature with FaceCount. If the actual number of faces is larger than the specified FaceCount, then this method returns no faces and a status of S_ERROR. If the actual number of faces is smaller than the specified in FaceCount, then this method returns all of the faces in the return array, and changes FaceCount to reflect the correct number of faces.\nIn SOLIDWORKS, a face:\nis the result of evaluating a feature.\ncan be owned by several features.\nIFeature::IGetFaces2 returns all of the faces owned by a feature. This is different from the faces highlighted in the user interface when the feature is selected. The user interface filters out multiple feature faces. This filter is only for display purposes.\nNOTES\n:\nThis method does not return any faces for draft features because draft features do not create any new faces. Drafting only modifies existing faces.\nThe number of faces for rolled hems is 0 because all of the faces belong to the children bends.\nTo filter out multiple feature faces using the SOLIDWORKS API, you must call\nIFace2::IGetFeature\n. Only the oldest feature from the face is returned, that is, the first owning feature in the FeatureManager design tree.\nExample\nHRESULT\nhr = S_OK;\nlong\nlNumFaces = 0;\nhr = feat->GetFaceCount(&lNumFaces);\nLPFACE2*\naFaces = new LPFACE2[lNumFaces];\nhr = feat->IGetFaces2(&lNumFaces, aFaces);\n...\ndelete [] aFaces;\naFaces = 0;",
+  "examples": [],
+  "related": [
+    "IFeature.GetFaces"
+  ]
+}

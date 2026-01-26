@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IIntersectSurface",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "OtherSurf",
+        "type": "Surface",
+        "description": "Intersecting surface"
+      },
+      {
+        "name": "CurveCount",
+        "type": "System.Int32",
+        "description": "Number of curves"
+      },
+      {
+        "name": "CurveArray",
+        "type": "Curve",
+        "description": "Array of curves of size CurveCount"
+      },
+      {
+        "name": "BoundsArray",
+        "type": "System.Double",
+        "description": "Array of curve bounds of size CurveCount*2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IntersectSurface"
+    ],
+    "keywords": [
+      "iintersectsurface",
+      "isurface",
+      "surface",
+      "intersect",
+      "other",
+      "surf",
+      "curve",
+      "count",
+      "int32",
+      "array",
+      "bounds",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISurface.IIntersectSurface",
+  "description": "Gets a surface-surface intersection.",
+  "signature": "System.Boolean IIntersectSurface( \n   Surface\nOtherSurf\n,\n   System.Int32\nCurveCount\n,\n   out Curve\nCurveArray\n,\n   out System.Double\nBoundsArray\n)",
+  "parameters": [
+    {
+      "name": "OtherSurf",
+      "type": "Surface",
+      "description": "Intersecting surface"
+    },
+    {
+      "name": "CurveCount",
+      "type": "System.Int32",
+      "description": "Number of curves"
+    },
+    {
+      "name": "CurveArray",
+      "type": "Curve",
+      "description": "Array of curves of size CurveCount"
+    },
+    {
+      "name": "BoundsArray",
+      "type": "System.Double",
+      "description": "Array of curve bounds of size CurveCount*2"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, call\nISurface::GetIntersectSurfaceCount\nto get the curve count for this surface-surface intersection.",
+  "examples": [],
+  "related": [
+    "ISurface.IntersectSurface"
+  ]
+}

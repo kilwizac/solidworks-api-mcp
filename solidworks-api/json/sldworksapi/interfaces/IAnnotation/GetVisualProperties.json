@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetVisualProperties",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.IGetVisualProperties"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "properties",
+      "getvisualproperties",
+      "visual",
+      "object"
+    ]
+  },
+  "title": "IAnnotation.GetVisualProperties",
+  "description": "Gets the visual properties of this annotation.",
+  "signature": "System.Object GetVisualProperties()",
+  "parameters": [],
+  "returns": "Array of five longs or five integers (see Long vs. Integer and see Remarks )",
+  "remarks": "The return value is the following array:\n[\ncolor, style, width, layerID, layerOverride\n]\nwhere:\ncolor\nCOLORREF returned as an integer. Return value can be 0 or -1 for default color.\nstyle\nLine style as defined in\nswLineStyles_e\n.\nwidth\nLine width as defined in\nswLineWeights_e\n.\nlayerID\nInteger value indicating which layer holds this entity. The Layer object can be obtained\nby passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nlayerOverride\nInteger with bit flags set to determine which properties, if any, have been overridden\nwith respect to the layer default properties. If the bit value is set, then the specific\nproperty or properties have been overridden. The bit indicators are: color = 0x1,\nstyle = 0x2, and width = 0x4. Therefore, if\nlayerOverride\nwas returned as 3, we know\nthe color and style have been specifically set for this annotation and might not\nmatch the default values associated with this annotations layer.",
+  "examples": [],
+  "related": [
+    "IAnnotation.IGetVisualProperties"
+  ]
+}

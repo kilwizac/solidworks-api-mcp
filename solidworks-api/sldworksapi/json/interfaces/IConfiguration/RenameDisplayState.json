@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "RenameDisplayState",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "OldDisplayStateName",
+        "type": "System.String",
+        "description": "Existing name of the display state"
+      },
+      {
+        "name": "NewDisplayStateName",
+        "type": "System.String",
+        "description": "New name for the display state"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.ApplyDisplayState",
+      "IConfiguration.CopyDisplayStateFromConfiguration",
+      "IConfiguration.CreateDisplayState",
+      "IConfiguration.DeleteDisplayState"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "renamedisplaystate",
+      "iconfiguration",
+      "configuration",
+      "rename",
+      "state",
+      "old",
+      "name",
+      "string",
+      "new",
+      "boolean"
+    ]
+  },
+  "title": "IConfiguration.RenameDisplayState",
+  "description": "Renames a display state of this configuration.",
+  "signature": "System.Boolean RenameDisplayState( \n   System.String\nOldDisplayStateName\n,\n   System.String\nNewDisplayStateName\n)",
+  "parameters": [
+    {
+      "name": "OldDisplayStateName",
+      "type": "System.String",
+      "description": "Existing name of the display state"
+    },
+    {
+      "name": "NewDisplayStateName",
+      "type": "System.String",
+      "description": "New name for the display state"
+    }
+  ],
+  "returns": "True if the display state is renamed, false if not",
+  "remarks": "Use\nIConfiguration::GetDisplayStates\nor\nIConfiguration::IGetDisplayStates\nto get a list of the names of the existing display states for this configuration.",
+  "examples": [],
+  "related": [
+    "IConfiguration.ApplyDisplayState",
+    "IConfiguration.CopyDisplayStateFromConfiguration",
+    "IConfiguration.CreateDisplayState",
+    "IConfiguration.DeleteDisplayState"
+  ]
+}

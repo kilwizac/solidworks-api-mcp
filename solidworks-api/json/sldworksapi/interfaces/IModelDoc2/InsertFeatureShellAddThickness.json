@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertFeatureShellAddThickness",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Shell thickness in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "shell",
+      "ishellfeaturedata",
+      "thickness",
+      "insertfeatureshelladdthickness",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "add",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertFeatureShellAddThickness",
+  "description": "Adds thickness to a face in a multi-thickness shell feature.",
+  "signature": "void InsertFeatureShellAddThickness( \n   System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Shell thickness in meters"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method works with\nIModelDoc2::InsertFeatureShell\nto create a multi-thickness shell as follows:\nSelect the faces to remove to create the shell feature by calling\nIModelDocExtension::SelectByID2\nwith Marks of 1.\nSelect faces with alternate thicknesses using Marks of 2.\nCall this method once for each of the faces selected in step 2.\nCall IModelDoc2::InsertFeatureShell.",
+  "examples": [],
+  "related": []
+}

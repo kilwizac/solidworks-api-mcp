@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILinearPatternFeatureData",
+    "member": "GeometryPattern",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "geometrypattern",
+      "ilinearpatternfeaturedata",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "geometry",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ILinearPatternFeatureData.GeometryPattern",
+  "description": "Gets or sets whether to create the pattern using only the geometry (faces and edges) of the feature.",
+  "signature": "System.Boolean GeometryPattern {get; set;}",
+  "parameters": [],
+  "returns": "True to use only the geometry of the feature to create the pattern (faster), false to pattern and solve each instance of the feature in its entirety (slower)",
+  "remarks": "This property is valid only if\nILinearPatternFeatureData::BodyPattern\nis false.\nIIf this property is set to true, you can call\nILinearPatternFeatureData::SetFeatureScope\n.\nFor more information, see the\nLinear Patterns and the Linear Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [
+    {
+      "title": "ILinearPatternFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILinearPatternFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

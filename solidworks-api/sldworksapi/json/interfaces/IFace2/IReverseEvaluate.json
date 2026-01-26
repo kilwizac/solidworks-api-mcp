@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IReverseEvaluate",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PositionX",
+        "type": "System.Double",
+        "description": "X coordinate of this location on the face"
+      },
+      {
+        "name": "PositionY",
+        "type": "System.Double",
+        "description": "Y coordinate of this location on the face"
+      },
+      {
+        "name": "PositionZ",
+        "type": "System.Double",
+        "description": "Z coordinate of this location on the face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICurve.ReverseEvaluate"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "uv",
+      "parameters",
+      "ireverseevaluate",
+      "face2",
+      "reverse",
+      "evaluate",
+      "position",
+      "double"
+    ]
+  },
+  "title": "IFace2.IReverseEvaluate",
+  "description": "Gets the UV parameters for the given XYZ location on this face.",
+  "signature": "System.Double IReverseEvaluate( \n   System.Double\nPositionX\n,\n   System.Double\nPositionY\n,\n   System.Double\nPositionZ\n)",
+  "parameters": [
+    {
+      "name": "PositionX",
+      "type": "System.Double",
+      "description": "X coordinate of this location on the face"
+    },
+    {
+      "name": "PositionY",
+      "type": "System.Double",
+      "description": "Y coordinate of this location on the face"
+    },
+    {
+      "name": "PositionZ",
+      "type": "System.Double",
+      "description": "Z coordinate of this location on the face"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles for the U and V parameters VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method returns corrected UV parameters for periodic surfaces; thus, you should use this method when dealing with periodic surfaces.\nFor example, you can have a cylindrical surface that extends from 0 to 2pi in the Udir. The face related to this surface in some cases extends from 0 to pi, then from 0 to pi again. In this case, neither\nISurface::IReverseEvaluate\nnor\nISurface::ReverseEvaluate\nwill work for values greater than pi (the returned U value will be greater than Maximum U for the face). However, IFace2::IReverseEvaluate, and\nIFace2::ReverseEvaluate\n, will return the correct values.",
+  "examples": [],
+  "related": [
+    "ICurve.ReverseEvaluate"
+  ]
+}

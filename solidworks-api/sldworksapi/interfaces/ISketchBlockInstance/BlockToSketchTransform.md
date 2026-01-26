@@ -1,0 +1,50 @@
+---
+type: property
+interface: ISketchBlockInstance
+member: BlockToSketchTransform
+returns: MathTransform
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - sketches
+related:
+  - ISketchBlockInstance.GetSketch
+keywords:
+  - blocks
+  - see
+  - also
+  - isketchblockdefinition
+  - isketchblockinstance
+  - interfaces
+  - coordinates
+  - transform
+  - block
+  - blocktosketchtransform
+  - sketch
+  - instance
+  - math
+readonly: true
+---
+
+# ISketchBlockInstance.BlockToSketchTransform
+
+Gets the MathTransform required to transform coordinates from the sketch block space to the host sketch space.
+
+## Signature
+
+```csharp
+MathTransform BlockToSketchTransform {get;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Math transform
+
+## See Also
+
+- `ISketchBlockInstance.GetSketch`

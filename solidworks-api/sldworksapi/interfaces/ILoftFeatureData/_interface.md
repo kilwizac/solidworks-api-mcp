@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ILoftFeatureData
+inherits: null
+description: Allows access to a loft feature.
+member_count: 48
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AdvancedSmoothing
+  - AutoSelect
+  - Centerline
+  - Close
+  - EndConstraintApplyToAll
+  - EndConstraintDraftAngle
+  - EndConstraintDraftAngleDirection
+---
+
+# ILoftFeatureData
+
+Allows access to a loft feature.
+
+## Common Members
+
+- `AccessSelections`
+- `AdvancedSmoothing`
+- `AutoSelect`
+- `Centerline`
+- `Close`
+- `EndConstraintApplyToAll`
+- `EndConstraintDraftAngle`
+- `EndConstraintDraftAngleDirection`

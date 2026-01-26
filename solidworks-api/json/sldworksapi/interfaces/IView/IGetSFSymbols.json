@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetSFSymbols",
+    "returns": "SFSymbol",
+    "parameters": [
+      {
+        "name": "NumSFSymbol",
+        "type": "System.Int32",
+        "description": "Total number of surface finish symbols this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetSFSymbols"
+    ],
+    "keywords": [
+      "surface",
+      "finish",
+      "symbols",
+      "see",
+      "isfsymbol",
+      "annotation",
+      "also",
+      "iannotation",
+      "view",
+      "iview",
+      "igetsfsymbols",
+      "sf",
+      "num",
+      "symbol",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetSFSymbols",
+  "description": "Gets all of the surface finish symbols in this drawing view.",
+  "signature": "SFSymbol IGetSFSymbols( \n   System.Int32\nNumSFSymbol\n)",
+  "parameters": [
+    {
+      "name": "NumSFSymbol",
+      "type": "System.Int32",
+      "description": "Total number of surface finish symbols this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of surface finish symbols VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of multi-jog leaders all at once instead of calling\nIView::GetFirstSFSymbol\nand then repeatedly calling\nISFSymbol::GetNext\nto obtain the remaining multi-jog leaders in the drawing view.\nBefore calling this method, call\nIView::GetSFSymbolCount\nto get the value for numSFSymbol.",
+  "examples": [],
+  "related": [
+    "IView.GetSFSymbols"
+  ]
+}

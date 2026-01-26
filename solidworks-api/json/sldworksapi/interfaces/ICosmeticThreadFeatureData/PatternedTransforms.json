@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICosmeticThreadFeatureData",
+    "member": "PatternedTransforms",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICosmeticThreadFeatureData.IGetPatternedTransforms"
+    ],
+    "keywords": [
+      "patternedtransforms",
+      "icosmeticthreadfeaturedata",
+      "cosmetic",
+      "thread",
+      "feature",
+      "data",
+      "patterned",
+      "transforms",
+      "object",
+      "threads",
+      "features",
+      "part",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "ICosmeticThreadFeatureData.PatternedTransforms",
+  "description": "Gets the transforms from this cosmetic thread for all of the instances of this cosmetic thread that are patterns of this feature.",
+  "signature": "System.Object PatternedTransforms {get;}",
+  "parameters": [],
+  "returns": "Array of the transforms of the instances of this cosmetic thread",
+  "remarks": "The value returned by this property does not include this cosmetic thread, which is the seed feature and not a pattern instance. Therefore, if this cosmetic thread is not used in a pattern feature, then\nICosmeticThreadFeatureData::GetPatternedTransformsCount\nreturns 0 and this property returns an empty array.",
+  "examples": [
+    {
+      "title": "Get Cosmetic Threads Features in a Part (VBA)",
+      "href": "Get_Cosmetic_Threads_in_a_Part_Document_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICosmeticThreadFeatureData.IGetPatternedTransforms"
+  ]
+}

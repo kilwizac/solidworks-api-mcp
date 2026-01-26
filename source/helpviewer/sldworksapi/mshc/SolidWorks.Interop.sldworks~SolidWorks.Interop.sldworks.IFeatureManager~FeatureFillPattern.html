@@ -1,0 +1,674 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>FeatureFillPattern Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureFillPattern" />
+    <meta name="Description" content="Obsolete. See IFeatureManager::CreateFeature and the Remarks in IFillPatternFeatureData." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.FeatureFillPattern" />
+    <meta name="Microsoft.Help.Keywords" content="FeatureFillPattern Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                FeatureFillPattern Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : FeatureFillPattern Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="PatternLayoutTypePopupContent" class="i-popup-content">
+        Pattern layout type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swPatternLayoutType_e.html">swPatternLayoutType_e</a>
+    </div>
+
+    <div id="LayoutSpacingTypePopupContent" class="i-popup-content">
+        Pattern layout spacing as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swPatternLayoutSpacingType_e.html">swPatternLayoutSpacingType_e</a>
+    </div>
+
+    <div id="InstanceSpacingPopupContent" class="i-popup-content">
+        Distance between pattern instance centers; valid always for PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation; valid for all other PatternLayoutTypes only if LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutTargetSpacing
+    </div>
+
+    <div id="StaggerAnglePopupContent" class="i-popup-content">
+        Angle by which to stagger rows of pattern instances; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation
+    </div>
+
+    <div id="MarginsPopupContent" class="i-popup-content">
+        Distance between the fill boundary and the outermost instance in the pattern layout; 0 for no margin
+    </div>
+
+    <div id="LoopSpacingPopupContent" class="i-popup-content">
+        Distance between instance centers of adjacent pattern loops;&#160;valid for all&#160;PatternLayoutTypes except&#160;swPatternLayoutType_e.swPatternLayoutPerforation
+    </div>
+
+    <div id="NoOfInstancesPopupContent" class="i-popup-content">
+        <p>Number of pattern instances per loop or side of the pattern layout; valid only if both are true:</p>
+
+        <ul>
+            <li>LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutInstances</li>
+
+            <li>PatternLayoutType is set to one of the following:
+
+                <ul>
+                    <li>swPatternLayoutType_e.swPatternLayoutCircular</li>
+
+                    <li>swPatternLayoutType_e.swPatternLayoutPolygon</li>
+
+                    <li>swPatternLayoutType_e.swPatternLayoutSquare</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="PatternLayoutPolygonSidesPopupContent" class="i-popup-content">
+        Number of sides in the polygonal layout of the pattern; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPolygon
+    </div>
+
+    <div id="FeaturesToPatternTypePopupContent" class="i-popup-content">
+        Type of objects to pattern as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeaturesToPatternType_e.html">swFeaturesToPatternType_e</a>
+    </div>
+
+    <div id="CreateSeedCutTypePopupContent" class="i-popup-content">
+        Pattern seed cut types as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swCreateSeedCutType_e.html">swCreateSeedCutType_e</a>
+    </div>
+
+    <div id="DiameterPopupContent" class="i-popup-content">
+        <p>Diameter of the circle-cut seed instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType&#160;= swCreateSeedCutType_e.swCreateSeedCutCircle</li>
+        </ul>
+    </div>
+
+    <div id="DimensionPopupContent" class="i-popup-content">
+        <p>Length of the side of a diamond-cut or square-cut seed instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType is set to one of the following:&#160;</li>
+        </ul>
+
+        <div style="margin-left: 2em">
+            <ul>
+                <li>swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+
+                <li>swCreateSeedCutType_e.swCreateSeedCutSquare</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="RotationPopupContent" class="i-popup-content">
+        <p>Counterclockwise rotation of the seed instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType is set to one of the following:&#160;</li>
+        </ul>
+
+        <div style="margin-left: 2em">
+            <ul>
+                <li>swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+
+                <li>swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+
+                <li>swCreateSeedCutType_e.swCreateSeedCutSquare</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="DiagonalPopupContent" class="i-popup-content">
+        <p>Length of the diagonal&#160;in the diamond-cut seed&#160;instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType&#160;= swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+        </ul>
+    </div>
+
+    <div id="CreateSeedCutPolygonSidesPopupContent" class="i-popup-content">
+        <p>Number of sides in the polygon-cut seed instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+        </ul>
+    </div>
+
+    <div id="OuterRadiusPopupContent" class="i-popup-content">
+        <p>Radius of circle that circumscribes the polygon-cut seed instance; valid only if both are ture:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+        </ul>
+    </div>
+
+    <div id="InnerRadiusPopupContent" class="i-popup-content">
+        <p>Radius of circle that inscribes the polygon-cut seed instance; valid only if both are true:</p>
+
+        <ul>
+            <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+            <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+        </ul>
+    </div>
+
+    <div id="FlipShapeDirectionPopupContent" class="i-popup-content">
+        True to reverse the direction of the pattern seed cut; valid only if FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut
+    </div>
+
+    <div id="GeometryPatternPopupContent" class="i-popup-content">
+        True to create the pattern using an exact copy of the seed instance, false to not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <span style="COLOR: #ff0000">Obsolete.</span> See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~CreateFeature">IFeatureManager::CreateFeature</a> and the Remarks in&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFillPatternFeatureData">IFillPatternFeatureData</a>.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function FeatureFillPattern( _
+   ByVal <i><a class="i-popup-link" id="PatternLayoutTypePopupLink" data-popup-contentsource="#PatternLayoutTypePopupContent" data-popup-showevent="click mouseenter">PatternLayoutType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="LayoutSpacingTypePopupLink" data-popup-contentsource="#LayoutSpacingTypePopupContent" data-popup-showevent="click mouseenter">LayoutSpacingType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="InstanceSpacingPopupLink" data-popup-contentsource="#InstanceSpacingPopupContent" data-popup-showevent="click mouseenter">InstanceSpacing</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="StaggerAnglePopupLink" data-popup-contentsource="#StaggerAnglePopupContent" data-popup-showevent="click mouseenter">StaggerAngle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="MarginsPopupLink" data-popup-contentsource="#MarginsPopupContent" data-popup-showevent="click mouseenter">Margins</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="LoopSpacingPopupLink" data-popup-contentsource="#LoopSpacingPopupContent" data-popup-showevent="click mouseenter">LoopSpacing</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="NoOfInstancesPopupLink" data-popup-contentsource="#NoOfInstancesPopupContent" data-popup-showevent="click mouseenter">NoOfInstances</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="PatternLayoutPolygonSidesPopupLink" data-popup-contentsource="#PatternLayoutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">PatternLayoutPolygonSides</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="FeaturesToPatternTypePopupLink" data-popup-contentsource="#FeaturesToPatternTypePopupContent" data-popup-showevent="click mouseenter">FeaturesToPatternType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="CreateSeedCutTypePopupLink" data-popup-contentsource="#CreateSeedCutTypePopupContent" data-popup-showevent="click mouseenter">CreateSeedCutType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DimensionPopupLink" data-popup-contentsource="#DimensionPopupContent" data-popup-showevent="click mouseenter">Dimension</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="RotationPopupLink" data-popup-contentsource="#RotationPopupContent" data-popup-showevent="click mouseenter">Rotation</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DiagonalPopupLink" data-popup-contentsource="#DiagonalPopupContent" data-popup-showevent="click mouseenter">Diagonal</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="CreateSeedCutPolygonSidesPopupLink" data-popup-contentsource="#CreateSeedCutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">CreateSeedCutPolygonSides</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="OuterRadiusPopupLink" data-popup-contentsource="#OuterRadiusPopupContent" data-popup-showevent="click mouseenter">OuterRadius</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="InnerRadiusPopupLink" data-popup-contentsource="#InnerRadiusPopupContent" data-popup-showevent="click mouseenter">InnerRadius</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="FlipShapeDirectionPopupLink" data-popup-contentsource="#FlipShapeDirectionPopupContent" data-popup-showevent="click mouseenter">FlipShapeDirection</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="GeometryPatternPopupLink" data-popup-contentsource="#GeometryPatternPopupContent" data-popup-showevent="click mouseenter">GeometryPattern</a></i> As System.Boolean _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim PatternLayoutType As System.Integer
+Dim LayoutSpacingType As System.Integer
+Dim InstanceSpacing As System.Double
+Dim StaggerAngle As System.Double
+Dim Margins As System.Double
+Dim LoopSpacing As System.Double
+Dim NoOfInstances As System.Integer
+Dim PatternLayoutPolygonSides As System.Integer
+Dim FeaturesToPatternType As System.Integer
+Dim CreateSeedCutType As System.Integer
+Dim Diameter As System.Double
+Dim Dimension As System.Double
+Dim Rotation As System.Double
+Dim Diagonal As System.Double
+Dim CreateSeedCutPolygonSides As System.Integer
+Dim OuterRadius As System.Double
+Dim InnerRadius As System.Double
+Dim FlipShapeDirection As System.Boolean
+Dim GeometryPattern As System.Boolean
+Dim value As Feature
+ 
+value = instance.FeatureFillPattern(PatternLayoutType, LayoutSpacingType, InstanceSpacing, StaggerAngle, Margins, LoopSpacing, NoOfInstances, PatternLayoutPolygonSides, FeaturesToPatternType, CreateSeedCutType, Diameter, Dimension, Rotation, Diagonal, CreateSeedCutPolygonSides, OuterRadius, InnerRadius, FlipShapeDirection, GeometryPattern)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature FeatureFillPattern( 
+   System.int <i><a class="i-popup-link" id="PatternLayoutTypePopupLink" data-popup-contentsource="#PatternLayoutTypePopupContent" data-popup-showevent="click mouseenter">PatternLayoutType</a></i>,
+   System.int <i><a class="i-popup-link" id="LayoutSpacingTypePopupLink" data-popup-contentsource="#LayoutSpacingTypePopupContent" data-popup-showevent="click mouseenter">LayoutSpacingType</a></i>,
+   System.double <i><a class="i-popup-link" id="InstanceSpacingPopupLink" data-popup-contentsource="#InstanceSpacingPopupContent" data-popup-showevent="click mouseenter">InstanceSpacing</a></i>,
+   System.double <i><a class="i-popup-link" id="StaggerAnglePopupLink" data-popup-contentsource="#StaggerAnglePopupContent" data-popup-showevent="click mouseenter">StaggerAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="MarginsPopupLink" data-popup-contentsource="#MarginsPopupContent" data-popup-showevent="click mouseenter">Margins</a></i>,
+   System.double <i><a class="i-popup-link" id="LoopSpacingPopupLink" data-popup-contentsource="#LoopSpacingPopupContent" data-popup-showevent="click mouseenter">LoopSpacing</a></i>,
+   System.int <i><a class="i-popup-link" id="NoOfInstancesPopupLink" data-popup-contentsource="#NoOfInstancesPopupContent" data-popup-showevent="click mouseenter">NoOfInstances</a></i>,
+   System.int <i><a class="i-popup-link" id="PatternLayoutPolygonSidesPopupLink" data-popup-contentsource="#PatternLayoutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">PatternLayoutPolygonSides</a></i>,
+   System.int <i><a class="i-popup-link" id="FeaturesToPatternTypePopupLink" data-popup-contentsource="#FeaturesToPatternTypePopupContent" data-popup-showevent="click mouseenter">FeaturesToPatternType</a></i>,
+   System.int <i><a class="i-popup-link" id="CreateSeedCutTypePopupLink" data-popup-contentsource="#CreateSeedCutTypePopupContent" data-popup-showevent="click mouseenter">CreateSeedCutType</a></i>,
+   System.double <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i>,
+   System.double <i><a class="i-popup-link" id="DimensionPopupLink" data-popup-contentsource="#DimensionPopupContent" data-popup-showevent="click mouseenter">Dimension</a></i>,
+   System.double <i><a class="i-popup-link" id="RotationPopupLink" data-popup-contentsource="#RotationPopupContent" data-popup-showevent="click mouseenter">Rotation</a></i>,
+   System.double <i><a class="i-popup-link" id="DiagonalPopupLink" data-popup-contentsource="#DiagonalPopupContent" data-popup-showevent="click mouseenter">Diagonal</a></i>,
+   System.int <i><a class="i-popup-link" id="CreateSeedCutPolygonSidesPopupLink" data-popup-contentsource="#CreateSeedCutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">CreateSeedCutPolygonSides</a></i>,
+   System.double <i><a class="i-popup-link" id="OuterRadiusPopupLink" data-popup-contentsource="#OuterRadiusPopupContent" data-popup-showevent="click mouseenter">OuterRadius</a></i>,
+   System.double <i><a class="i-popup-link" id="InnerRadiusPopupLink" data-popup-contentsource="#InnerRadiusPopupContent" data-popup-showevent="click mouseenter">InnerRadius</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipShapeDirectionPopupLink" data-popup-contentsource="#FlipShapeDirectionPopupContent" data-popup-showevent="click mouseenter">FlipShapeDirection</a></i>,
+   System.bool <i><a class="i-popup-link" id="GeometryPatternPopupLink" data-popup-contentsource="#GeometryPatternPopupContent" data-popup-showevent="click mouseenter">GeometryPattern</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ FeatureFillPattern( 
+   System.int <i><a class="i-popup-link" id="PatternLayoutTypePopupLink" data-popup-contentsource="#PatternLayoutTypePopupContent" data-popup-showevent="click mouseenter">PatternLayoutType</a></i>,
+   System.int <i><a class="i-popup-link" id="LayoutSpacingTypePopupLink" data-popup-contentsource="#LayoutSpacingTypePopupContent" data-popup-showevent="click mouseenter">LayoutSpacingType</a></i>,
+   System.double <i><a class="i-popup-link" id="InstanceSpacingPopupLink" data-popup-contentsource="#InstanceSpacingPopupContent" data-popup-showevent="click mouseenter">InstanceSpacing</a></i>,
+   System.double <i><a class="i-popup-link" id="StaggerAnglePopupLink" data-popup-contentsource="#StaggerAnglePopupContent" data-popup-showevent="click mouseenter">StaggerAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="MarginsPopupLink" data-popup-contentsource="#MarginsPopupContent" data-popup-showevent="click mouseenter">Margins</a></i>,
+   System.double <i><a class="i-popup-link" id="LoopSpacingPopupLink" data-popup-contentsource="#LoopSpacingPopupContent" data-popup-showevent="click mouseenter">LoopSpacing</a></i>,
+   System.int <i><a class="i-popup-link" id="NoOfInstancesPopupLink" data-popup-contentsource="#NoOfInstancesPopupContent" data-popup-showevent="click mouseenter">NoOfInstances</a></i>,
+   System.int <i><a class="i-popup-link" id="PatternLayoutPolygonSidesPopupLink" data-popup-contentsource="#PatternLayoutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">PatternLayoutPolygonSides</a></i>,
+   System.int <i><a class="i-popup-link" id="FeaturesToPatternTypePopupLink" data-popup-contentsource="#FeaturesToPatternTypePopupContent" data-popup-showevent="click mouseenter">FeaturesToPatternType</a></i>,
+   System.int <i><a class="i-popup-link" id="CreateSeedCutTypePopupLink" data-popup-contentsource="#CreateSeedCutTypePopupContent" data-popup-showevent="click mouseenter">CreateSeedCutType</a></i>,
+   System.double <i><a class="i-popup-link" id="DiameterPopupLink" data-popup-contentsource="#DiameterPopupContent" data-popup-showevent="click mouseenter">Diameter</a></i>,
+   System.double <i><a class="i-popup-link" id="DimensionPopupLink" data-popup-contentsource="#DimensionPopupContent" data-popup-showevent="click mouseenter">Dimension</a></i>,
+   System.double <i><a class="i-popup-link" id="RotationPopupLink" data-popup-contentsource="#RotationPopupContent" data-popup-showevent="click mouseenter">Rotation</a></i>,
+   System.double <i><a class="i-popup-link" id="DiagonalPopupLink" data-popup-contentsource="#DiagonalPopupContent" data-popup-showevent="click mouseenter">Diagonal</a></i>,
+   System.int <i><a class="i-popup-link" id="CreateSeedCutPolygonSidesPopupLink" data-popup-contentsource="#CreateSeedCutPolygonSidesPopupContent" data-popup-showevent="click mouseenter">CreateSeedCutPolygonSides</a></i>,
+   System.double <i><a class="i-popup-link" id="OuterRadiusPopupLink" data-popup-contentsource="#OuterRadiusPopupContent" data-popup-showevent="click mouseenter">OuterRadius</a></i>,
+   System.double <i><a class="i-popup-link" id="InnerRadiusPopupLink" data-popup-contentsource="#InnerRadiusPopupContent" data-popup-showevent="click mouseenter">InnerRadius</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipShapeDirectionPopupLink" data-popup-contentsource="#FlipShapeDirectionPopupContent" data-popup-showevent="click mouseenter">FlipShapeDirection</a></i>,
+   System.bool <i><a class="i-popup-link" id="GeometryPatternPopupLink" data-popup-contentsource="#GeometryPatternPopupContent" data-popup-showevent="click mouseenter">GeometryPattern</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>PatternLayoutType</i></dt>
+
+                <dd>Pattern layout type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swPatternLayoutType_e.html">swPatternLayoutType_e</a></dd>
+
+                <dt><i>LayoutSpacingType</i></dt>
+
+                <dd>Pattern layout spacing as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swPatternLayoutSpacingType_e.html">swPatternLayoutSpacingType_e</a></dd>
+
+                <dt><i>InstanceSpacing</i></dt>
+
+                <dd>Distance between pattern instance centers; valid always for PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation; valid for all other PatternLayoutTypes only if LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutTargetSpacing</dd>
+
+                <dt><i>StaggerAngle</i></dt>
+
+                <dd>Angle by which to stagger rows of pattern instances; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation</dd>
+
+                <dt><i>Margins</i></dt>
+
+                <dd>Distance between the fill boundary and the outermost instance in the pattern layout; 0 for no margin</dd>
+
+                <dt><i>LoopSpacing</i></dt>
+
+                <dd>Distance between instance centers of adjacent pattern loops;&#160;valid for all&#160;PatternLayoutTypes except&#160;swPatternLayoutType_e.swPatternLayoutPerforation</dd>
+
+                <dt><i>NoOfInstances</i></dt>
+
+                <dd>
+                    <p>Number of pattern instances per loop or side of the pattern layout; valid only if both are true:</p>
+
+                    <ul>
+                        <li>LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutInstances</li>
+
+                        <li>PatternLayoutType is set to one of the following:
+
+                            <ul>
+                                <li>swPatternLayoutType_e.swPatternLayoutCircular</li>
+
+                                <li>swPatternLayoutType_e.swPatternLayoutPolygon</li>
+
+                                <li>swPatternLayoutType_e.swPatternLayoutSquare</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>PatternLayoutPolygonSides</i></dt>
+
+                <dd>Number of sides in the polygonal layout of the pattern; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPolygon</dd>
+
+                <dt><i>FeaturesToPatternType</i></dt>
+
+                <dd>Type of objects to pattern as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeaturesToPatternType_e.html">swFeaturesToPatternType_e</a></dd>
+
+                <dt><i>CreateSeedCutType</i></dt>
+
+                <dd>Pattern seed cut types as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swCreateSeedCutType_e.html">swCreateSeedCutType_e</a></dd>
+
+                <dt><i>Diameter</i></dt>
+
+                <dd>
+                    <p>Diameter of the circle-cut seed instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType&#160;= swCreateSeedCutType_e.swCreateSeedCutCircle</li>
+                    </ul>
+                </dd>
+
+                <dt><i>Dimension</i></dt>
+
+                <dd>
+                    <p>Length of the side of a diamond-cut or square-cut seed instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType is set to one of the following:&#160;</li>
+                    </ul>
+
+                    <div style="margin-left: 2em">
+                        <ul>
+                            <li>swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+
+                            <li>swCreateSeedCutType_e.swCreateSeedCutSquare</li>
+                        </ul>
+                    </div>
+                </dd>
+
+                <dt><i>Rotation</i></dt>
+
+                <dd>
+                    <p>Counterclockwise rotation of the seed instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType is set to one of the following:&#160;</li>
+                    </ul>
+
+                    <div style="margin-left: 2em">
+                        <ul>
+                            <li>swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+
+                            <li>swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+
+                            <li>swCreateSeedCutType_e.swCreateSeedCutSquare</li>
+                        </ul>
+                    </div>
+                </dd>
+
+                <dt><i>Diagonal</i></dt>
+
+                <dd>
+                    <p>Length of the diagonal&#160;in the diamond-cut seed&#160;instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType&#160;= swCreateSeedCutType_e.swCreateSeedCutDiamond</li>
+                    </ul>
+                </dd>
+
+                <dt><i>CreateSeedCutPolygonSides</i></dt>
+
+                <dd>
+                    <p>Number of sides in the polygon-cut seed instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+                    </ul>
+                </dd>
+
+                <dt><i>OuterRadius</i></dt>
+
+                <dd>
+                    <p>Radius of circle that circumscribes the polygon-cut seed instance; valid only if both are ture:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+                    </ul>
+                </dd>
+
+                <dt><i>InnerRadius</i></dt>
+
+                <dd>
+                    <p>Radius of circle that inscribes the polygon-cut seed instance; valid only if both are true:</p>
+
+                    <ul>
+                        <li>FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</li>
+
+                        <li>CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon</li>
+                    </ul>
+                </dd>
+
+                <dt><i>FlipShapeDirection</i></dt>
+
+                <dd>True to reverse the direction of the pattern seed cut; valid only if FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut</dd>
+
+                <dt><i>GeometryPattern</i></dt>
+
+                <dd>True to create the pattern using an exact copy of the seed instance, false to not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">Feature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p><strong>Insert &gt; Pattern/Mirror &gt; Fill Pattern</strong> in the SOLIDWORKS menu opens the Fill Pattern PropertyManager. The parameters in this method correspond to the options in the Fill Pattern PropertyManager.</p>
+
+            <p>For all pattern layouts except <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swPatternLayoutType_e.html">swPatternLayoutType_e</a>.swPatternLayoutPerforation, the fill pattern is created by positioning a pattern seed&#160;instance within the fill boundary and copying the pattern in concentric loops about the seed instance.</p>
+
+            <p>See the SOLIDWORKS Help for more information about fill pattern features.</p>
+
+            <p>To create a fill pattern:</p>
+
+            <ol>
+                <li>Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">IModelDocExtension::SelectByID2</a>&#160;or another selection method to select the&#160;entities required to create a fill pattern&#160;feature.</li>
+            </ol>
+
+            <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+                <p></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="VERTICAL-ALIGN: bottom" width="267">Select...</th>
+
+                            <th style="VERTICAL-ALIGN: bottom" width="292">For the Fill Pattern's...</th>
+
+                            <th>Using Mark...</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td width="267">Sketch, face, planar curve on a face, or coplanar faces</td>
+
+                            <td width="292">Fill boundary</td>
+
+                            <td>
+                                <p align="left">1</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="267">Direction reference (e.g., edge or axis)</td>
+
+                            <td width="292">Pattern direction (if not selected, SOLIDWORKS chooses a direction reference appropriate for the specified layout)</td>
+
+                            <td>
+                                <p align="left">2</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="267">Vertex or sketch point</td>
+
+                            <td width="292">Location of the pattern seed instance (if a point is not selected, the pattern seed instance is placed at the center of the fill boundary region)</td>
+
+                            <td>
+                                <p align="left">3</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Features</td>
+
+                            <td width="292">Pattern objects</td>
+
+                            <td>4</td>
+                        </tr>
+
+                        <tr>
+                            <td width="267">Faces</td>
+
+                            <td width="292">Pattern objects</td>
+
+                            <td>
+                                <p align="left">5</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Bodies</td>
+
+                            <td width="292">Pattern objects</td>
+
+                            <td>6</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p></p>
+            </blockquote>
+
+            <ol style="COUNTER-RESET: item 1" start="2">
+                <li>Call this method, specifying the following parameters:</li>
+            </ol>
+
+            <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+                <ul>
+                    <li>PatternLayoutType</li>
+
+                    <li>LayoutSpacingType</li>
+
+                    <li>FeaturesToPatternType</li>
+
+                    <li>GeometryPattern</li>
+
+                    <li>LoopSpacing (for all PatternLayoutTypes except swPatternLayoutType_e.swPatternLayoutPerforation)</li>
+                </ul>
+
+                <p>Depending on the settings above, other parameters might need to be specified.</p>
+            </blockquote>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureFillPattern.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

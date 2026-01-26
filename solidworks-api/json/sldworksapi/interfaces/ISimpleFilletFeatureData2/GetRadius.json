@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "GetRadius",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "System.Object",
+        "description": "Item at which to get the radius"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.AsymmetricFillet",
+      "ISimpleFilletFeatureData2.DefaultRadius",
+      "ISimpleFilletFeatureData2.IGetRadius",
+      "ISimpleFilletFeatureData2.ISetRadius",
+      "ISimpleFilletFeatureData2.IsMultipleRadius",
+      "ISimpleFilletFeatureData2.SetRadius"
+    ],
+    "keywords": [
+      "getradius",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "radius",
+      "item",
+      "object",
+      "double"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.GetRadius",
+  "description": "Gets the radius at the specified fillet/chamfer item.",
+  "signature": "System.Double GetRadius( \n   System.Object\nPFilletItem\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "System.Object",
+      "description": "Item at which to get the radius"
+    }
+  ],
+  "returns": "Radius of the symmetric fillet at PFilletItem; Distance 1 radius of the asymmetric fillet/chamfer",
+  "remarks": "Before calling this method, call\nISimpleFilletFeatureData2::GetFilletItemAtIndex\nto get the pointer with which to specify PFilletItem.\nCall\nISimpleFilletFeatureData2::GetDistance\nto get the Distance 2 radius of the asymmetric fillet/chamfer.",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.AsymmetricFillet",
+    "ISimpleFilletFeatureData2.DefaultRadius",
+    "ISimpleFilletFeatureData2.IGetRadius",
+    "ISimpleFilletFeatureData2.ISetRadius",
+    "ISimpleFilletFeatureData2.IsMultipleRadius",
+    "ISimpleFilletFeatureData2.SetRadius"
+  ]
+}

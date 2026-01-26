@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetCenterMarkCount2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Size",
+        "type": "System.Int32",
+        "description": "Not used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "ICenterMark",
+      "IView.AutoInsertCenterMarks",
+      "IView.GetCenterMarkInfo",
+      "IView.GetCenterMarks",
+      "IView.GetFirstCenterMark",
+      "IView.IGetCenterMarkInfo",
+      "IView.IGetCenterMarks"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "center",
+      "marks",
+      "view",
+      "feature",
+      "ifeature",
+      "getcentermarkcount2",
+      "mark",
+      "count2",
+      "size",
+      "int32"
+    ]
+  },
+  "title": "IView.GetCenterMarkCount2",
+  "description": "Gets the number of center marks that are features in the view.",
+  "signature": "System.Int32 GetCenterMarkCount2( \n   out System.Int32\nSize\n)",
+  "parameters": [
+    {
+      "name": "Size",
+      "type": "System.Int32",
+      "description": "Not used"
+    }
+  ],
+  "returns": "Number of center marks in the view",
+  "remarks": "Center marks are now annotations. Previously, center marks were features. This method is only valid for center marks that are features.\nOne difference between this method and the now obsolete\nIView::GetCenterMarkCount\nis that this method also works if this view represents the drawing sheet. The original method always returns 0 if this view is the drawing sheet.\nCall this method before calling\nIView::IGetCenterMarks\nto get the size of the array for that method.",
+  "examples": [],
+  "related": [
+    "ICenterMark",
+    "IView.AutoInsertCenterMarks",
+    "IView.GetCenterMarkInfo",
+    "IView.GetCenterMarks",
+    "IView.GetFirstCenterMark",
+    "IView.IGetCenterMarkInfo",
+    "IView.IGetCenterMarks"
+  ]
+}

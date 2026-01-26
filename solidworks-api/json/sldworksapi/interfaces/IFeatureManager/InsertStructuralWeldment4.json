@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertStructuralWeldment4",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Path",
+        "type": "System.String",
+        "description": "Full path name of the type of structural member (see Remarks )"
+      },
+      {
+        "name": "ConnectedSegmentsOption",
+        "type": "System.Int32",
+        "description": "Option as defined in swConnectedSegmentsOption_e"
+      },
+      {
+        "name": "AllowProtrusion",
+        "type": "System.Boolean",
+        "description": "True to allow protrusion, false to not"
+      },
+      {
+        "name": "Groups",
+        "type": "System.Object",
+        "description": "Array of IStructuralMemberGroup"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IStructuralMemberFeatureData",
+      "IStructuralMemberGroup"
+    ],
+    "keywords": [
+      "insertstructuralweldment4",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "structural",
+      "weldment4",
+      "path",
+      "string",
+      "connected",
+      "segments",
+      "option",
+      "int32",
+      "allow",
+      "protrusion",
+      "boolean",
+      "groups",
+      "object",
+      "weldment",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertStructuralWeldment4",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertStructuralWeldment5.",
+  "signature": "Feature InsertStructuralWeldment4( \n   System.String\nPath\n,\n   System.Int32\nConnectedSegmentsOption\n,\n   System.Boolean\nAllowProtrusion\n,\n   System.Object\nGroups\n)",
+  "parameters": [
+    {
+      "name": "Path",
+      "type": "System.String",
+      "description": "Full path name of the type of structural member (see Remarks )"
+    },
+    {
+      "name": "ConnectedSegmentsOption",
+      "type": "System.Int32",
+      "description": "Option as defined in swConnectedSegmentsOption_e"
+    },
+    {
+      "name": "AllowProtrusion",
+      "type": "System.Boolean",
+      "description": "True to allow protrusion, false to not"
+    },
+    {
+      "name": "Groups",
+      "type": "System.Object",
+      "description": "Array of IStructuralMemberGroup"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Populate Path using a weldment profile (*.\nsldlfp\n) from\ninstall_dir\n\\\nlang\n\\\nlang\n\\\nweldment profiles\n.\nUse\nIFeatureManager::CreateStructuralMemberGroup\n,\nIStructuralMemberFeatureData::Groups\n, or\nIStructuralMemberFeatureData::IGetGroups\nto populate the Groups parameter.",
+  "examples": [
+    {
+      "title": "Insert Structural Weldment (C#)",
+      "href": "Insert_Structural_Weldment_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldment (VB.NET)",
+      "href": "Insert_Structural_Weldment_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldment (VBA)",
+      "href": "Insert_Structural_Weldment_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IStructuralMemberFeatureData",
+    "IStructuralMemberGroup"
+  ]
+}

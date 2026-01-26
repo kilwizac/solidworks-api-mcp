@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DAssemblyDocEvents_DeleteItemNotifyEventHandler
+inherits: null
+description: Notifies the user program when an item is deleted from one of the SOLIDWORKS Design tree structures (for example, the FeatureManager design tree or the ConfigurationManager tree).
+member_count: 0
+docset: sldworksapi
+categories:
+  - assemblies
+common_members: []
+---
+
+# DAssemblyDocEvents_DeleteItemNotifyEventHandler
+
+Notifies the user program when an item is deleted from one of the SOLIDWORKS Design tree structures (for example, the FeatureManager design tree or the ConfigurationManager tree).

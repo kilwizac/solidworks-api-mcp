@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweptFlangeFeatureData",
+    "member": "UseGaugeTable",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "usegaugetable",
+      "isweptflangefeaturedata",
+      "swept",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "gauge",
+      "table",
+      "boolean",
+      "isheetmetalgaugetableparameters"
+    ],
+    "readonly": null
+  },
+  "title": "ISweptFlangeFeatureData.UseGaugeTable",
+  "description": "Gets or sets whether to use an Excel gauge table for this swept flange feature.",
+  "signature": "System.Boolean UseGaugeTable {get; set;}",
+  "parameters": [],
+  "returns": "True to use an Excel gauge table, false to not",
+  "remarks": "This property is valid only:\nif\nISweptFlangeFeatureData::UseMaterialSheetMetalParameters\nis false,\n- and -\nwhen not creating the swept flange on an existing sheet metal feature.\nIf this property is true, then use\nISweptFlangeFeatureData::GetGaugeTableParameters\nand\nISweptFlangeFeatureData::SetGaugeTableParameters\nto get and set the gauge table.",
+  "examples": [
+    {
+      "title": "ISheetMetalGaugeTableParameters",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheetMetalGaugeTableParameters",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

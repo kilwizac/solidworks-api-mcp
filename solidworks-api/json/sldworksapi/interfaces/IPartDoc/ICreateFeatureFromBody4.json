@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "ICreateFeatureFromBody4",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Body",
+        "type": "Body2",
+        "description": "Temporary body"
+      },
+      {
+        "name": "MakeRefSurface",
+        "type": "System.Boolean",
+        "description": "If the body cannot be knit to a solid or if a solid body already exists in this model, then True creates of a reference surface feature"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option as defined by swCreateFeatureBodyOpts_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "geometry",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.CreateFeatureFromBody3"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "imported",
+      "icreatefeaturefrombody4",
+      "ipartdoc",
+      "part",
+      "doc",
+      "create",
+      "body4",
+      "body",
+      "body2",
+      "make",
+      "ref",
+      "surface",
+      "boolean",
+      "options",
+      "int32"
+    ]
+  },
+  "title": "IPartDoc.ICreateFeatureFromBody4",
+  "description": "Creates a new imported feature from the specified temporary body.",
+  "signature": "Feature ICreateFeatureFromBody4( \n   Body2\nBody\n,\n   System.Boolean\nMakeRefSurface\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Body",
+      "type": "Body2",
+      "description": "Temporary body"
+    },
+    {
+      "name": "MakeRefSurface",
+      "type": "System.Boolean",
+      "description": "If the body cannot be knit to a solid or if a solid body already exists in this model, then True creates of a reference surface feature"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option as defined by swCreateFeatureBodyOpts_e"
+    }
+  ],
+  "returns": "Newly created imported feature or NULL if the operation fails",
+  "remarks": "This method:\nIs intended as the final call in a knitting operation. The body that results from your knitting efforts can be converted into an imported body feature in the SOLIDWORKS model.\nIs not limited to\nIBody2\nobjects obtained from knitting operations.\nAllows the application to decide how much additional work must be done to the model before creating the feature. The options listed in the swCreateFeatureBodyOpts_e enumeration can be OR'd together to provide additional checking or simplification of the model. If you specify swCreateFeatureBodySimplify for Options, then swCreateFeatureBodyCheck is implied.\nIf the application passes 0 for the options argument, then the options are disabled and the model is passed without any checking. It is up to the application to ensure that the model is a valid model.\nIf this method fails, the error might be caused by creating a sheet (surface) body from a multiple shells body. If so, replace this method with\nIPartDoc::CreateSurfaceFeatureFromBody\nand\nIPartDoc::ICreateSurfaceFeatureFromBodyCount2\n.",
+  "examples": [],
+  "related": [
+    "IPartDoc.CreateFeatureFromBody3"
+  ]
+}

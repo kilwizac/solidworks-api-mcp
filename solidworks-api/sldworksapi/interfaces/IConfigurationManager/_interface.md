@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IConfigurationManager
+inherits: null
+description: Allows access to a configuration in a model.
+member_count: 21
+docset: sldworksapi
+categories:
+  - documents
+common_members:
+  - ActiveConfiguration
+  - AddCADFamilyConfiguration
+  - AddConfiguration
+  - AddConfiguration2
+  - AddRebuildSaveMark
+  - AddSpeedPak
+  - AddSpeedPak2
+  - Document
+---
+
+# IConfigurationManager
+
+Allows access to a configuration in a model.
+
+## Common Members
+
+- `ActiveConfiguration`
+- `AddCADFamilyConfiguration`
+- `AddConfiguration`
+- `AddConfiguration2`
+- `AddRebuildSaveMark`
+- `AddSpeedPak`
+- `AddSpeedPak2`
+- `Document`

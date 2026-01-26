@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface2",
+    "member": "IGetNextFaceArray",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "FromFrontFaceListDisp",
+        "type": "Face2",
+        "description": "List of front faces"
+      },
+      {
+        "name": "SizeOfFrontFaceList",
+        "type": "System.Int32",
+        "description": "Number of front faces"
+      },
+      {
+        "name": "FromFaceBackListDisp",
+        "type": "Face2",
+        "description": "List of back faces"
+      },
+      {
+        "name": "SizeOfBackFaceList",
+        "type": "System.Int32",
+        "description": "Number of back faces"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness between the faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.GetFaceCount",
+      "IMidSurface2.GetFirstFaceArray",
+      "IMidSurface2.GetNextFaceArray"
+    ],
+    "keywords": [
+      "igetnextfacearray",
+      "imidsurface2",
+      "mid",
+      "surface2",
+      "next",
+      "face",
+      "array",
+      "front",
+      "list",
+      "disp",
+      "face2",
+      "size",
+      "int32",
+      "back",
+      "thickness",
+      "double"
+    ]
+  },
+  "title": "IMidSurface2.IGetNextFaceArray",
+  "description": "Obsolete. Superseded by IMidSurface3::IGetNextFaceArray.",
+  "signature": "Face2 IGetNextFaceArray( \n   out Face2\nFromFrontFaceListDisp\n,\n   out System.Int32\nSizeOfFrontFaceList\n,\n   out Face2\nFromFaceBackListDisp\n,\n   out System.Int32\nSizeOfBackFaceList\n,\n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "FromFrontFaceListDisp",
+      "type": "Face2",
+      "description": "List of front faces"
+    },
+    {
+      "name": "SizeOfFrontFaceList",
+      "type": "System.Int32",
+      "description": "Number of front faces"
+    },
+    {
+      "name": "FromFaceBackListDisp",
+      "type": "Face2",
+      "description": "List of back faces"
+    },
+    {
+      "name": "SizeOfBackFaceList",
+      "type": "System.Int32",
+      "description": "Number of back faces"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness between the faces"
+    }
+  ],
+  "returns": "Next face",
+  "remarks": "A separator is needed between the front faces and back faces. Thus, a NULL always exists between the front faces and the back faces.\nFor example, if there are five faces in the model, then the mid-surface has five faces. To get the five faces:\nCall\nIMidSurface2::IGetGetFirstFaceArray\nonce.\nCall IMidSurface2::IGetNextFaceArray four times.\nAt each call, the data is arranged as follows if there is one front face in the array:\n[\nNeutral face\n]\n,\n[\nfront face\n]\n, NULL,\n[\nback face\n]\nIf there are more than one front face in the array, then the data is arranged as follows:\n[\nNeutral face\n]\n,\n[\nfront face1, front face2\n]\n, NULL,\n[\nback face1, back face2\n]\nCall\nIMidSurface2::IGetFirstFaceArray\nto get the first face from the original paired faces.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetFaceCount",
+    "IMidSurface2.GetFirstFaceArray",
+    "IMidSurface2.GetNextFaceArray"
+  ]
+}

@@ -1,0 +1,36 @@
+---
+type: method
+interface: IFeature
+member: IGetBody2
+returns: Body2
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - features
+  - geometry
+related: []
+keywords:
+  - igetbody2
+  - ifeature
+  - feature
+  - body2
+---
+
+# IFeature.IGetBody2
+
+Obsolete. Superseded by IFeatures::GetFaces, IFeatures::IGetFaces2, IFace2::GetBody, and IFace2::IGetBody.
+
+## Signature
+
+```csharp
+Body2 IGetBody2()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

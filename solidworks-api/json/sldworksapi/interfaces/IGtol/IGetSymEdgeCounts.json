@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetSymEdgeCounts",
+    "returns": "System.Int16",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "geometry"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymEdgeCounts",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.GetSymText",
+      "IGtol.GetSymTextPoints",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymLines"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymedgecounts",
+      "igtol",
+      "gtol",
+      "sym",
+      "edge",
+      "counts",
+      "idx",
+      "int16"
+    ]
+  },
+  "title": "IGtol.IGetSymEdgeCounts",
+  "description": "Gets an array of the number of lines, arcs and circles in the specified symbol.",
+  "signature": "System.Int16 IGetSymEdgeCounts( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of shorts (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Format of return information is the following array of short integers:\nretval\n[0] = Line count\nretval\n[1] = Arc count\nretval\n[2] = Circle count\nretval\n[3] = Text count\nFor more information, see\nIGtol::IGetSymText\nand\nIGtol::IGetSymTextPoints\n.",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymEdgeCounts",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.GetSymText",
+    "IGtol.GetSymTextPoints",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymLines"
+  ]
+}

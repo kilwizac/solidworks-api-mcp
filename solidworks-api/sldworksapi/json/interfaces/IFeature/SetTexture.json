@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "SetTexture",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "BAllConfig",
+        "type": "System.Boolean",
+        "description": "True to apply texture to this feature all configurations, false to apply texture to this feature in the configuration specified in config_name only"
+      },
+      {
+        "name": "Config_name",
+        "type": "System.String",
+        "description": "Name of configuration"
+      },
+      {
+        "name": "TextureIn",
+        "type": "Texture",
+        "description": "Pointer to the ITexture object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetTexture",
+      "IFeature.RemoveTexture",
+      "IFeature.RemoveTextureByDisplayState",
+      "IFeature.SetTextureByDisplayState",
+      "IModelDocExtension.CreateTexture"
+    ],
+    "keywords": [
+      "texture",
+      "see",
+      "also",
+      "itexture",
+      "features",
+      "feature",
+      "ifeature",
+      "settexture",
+      "all",
+      "config",
+      "boolean",
+      "name",
+      "string"
+    ]
+  },
+  "title": "IFeature.SetTexture",
+  "description": "Applies texture to this feature in either all configurations or only the specified configuration.",
+  "signature": "System.Boolean SetTexture( \n   System.Boolean\nBAllConfig\n,\n   System.String\nConfig_name\n,\n   Texture\nTextureIn\n)",
+  "parameters": [
+    {
+      "name": "BAllConfig",
+      "type": "System.Boolean",
+      "description": "True to apply texture to this feature all configurations, false to apply texture to this feature in the configuration specified in config_name only"
+    },
+    {
+      "name": "Config_name",
+      "type": "System.String",
+      "description": "Name of configuration"
+    },
+    {
+      "name": "TextureIn",
+      "type": "Texture",
+      "description": "Pointer to the ITexture object"
+    }
+  ],
+  "returns": "True if texture is applied, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IFeature.GetTexture",
+    "IFeature.RemoveTexture",
+    "IFeature.RemoveTextureByDisplayState",
+    "IFeature.SetTextureByDisplayState",
+    "IModelDocExtension.CreateTexture"
+  ]
+}

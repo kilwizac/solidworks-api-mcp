@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IIsCoincident",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FaceIn",
+        "type": "Face2",
+        "description": "Face located on a different body"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.IsCoincident"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "coincident",
+      "iiscoincident",
+      "face2",
+      "tolerance",
+      "double",
+      "int32"
+    ]
+  },
+  "title": "IFace2.IIsCoincident",
+  "description": "Gets whether this face and the specified face, which is located on a different body, are coincident.",
+  "signature": "System.Int32 IIsCoincident( \n   Face2\nFaceIn\n,\n   System.Double\nTolerance\n)",
+  "parameters": [
+    {
+      "name": "FaceIn",
+      "type": "Face2",
+      "description": "Face located on a different body"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance"
+    }
+  ],
+  "returns": "Result as defined in swFaceCoincidentResult_e (see Remarks )",
+  "remarks": "For two faces to be considered coincident, they must have similar corresponding loops and all points on one face must be within the specified tolerance of the other face, and vice versa.",
+  "examples": [],
+  "related": [
+    "IFace2.IsCoincident"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSlider",
+    "member": "Height",
+    "returns": "System.Int16",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "height",
+      "ipropertymanagerpageslider",
+      "manager",
+      "page",
+      "slider",
+      "int16",
+      "up",
+      "propertymanager",
+      "control"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageSlider.Height",
+  "description": "Gets or sets the height of the slider control.",
+  "signature": "System.Int16 Height {get; set;}",
+  "parameters": [],
+  "returns": "Height of slider control",
+  "remarks": "You can only set this property before the PropertyManager page is displayed.\nNormally you should not use this property because SOLIDWORKS will size the slider appropriately based on its orientation and display properties. However, the complexity of the PropertyManager page's layout may make it necessary to use this property with\nIPropertyManagerPageControl::Left\n,\nIPropertyManagerPageControl::Top\n, and\nIPropertyManagerPageControl::Width\nto get the desired look.\nThis property is also for creating a small slider by clearing the\nIPropertyManagerPageSlider::Style\nswPropMgrPageSliderStyle_AutoTicks bit and setting Height to a value less than the default. A horizontal slider without tick marks has a default height of 16. This height is in dialog-box units. You can convert this value to screen units (pixels) by using the Windows MapDialogRect function.",
+  "examples": [
+    {
+      "title": "Set Up PropertyManager Page Slider Control (C++)",
+      "href": "Set_Up_PropertyManager_Page_Slider_Control_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetHoleStandardsData",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "HoleTypeID",
+        "type": "System.Int32",
+        "description": "Hole Wizard hole type as defined in swWzdGeneralHoleTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IHoleDataTable"
+    ],
+    "keywords": [
+      "getholestandardsdata",
+      "isldworks",
+      "sld",
+      "works",
+      "hole",
+      "standards",
+      "data",
+      "type",
+      "id",
+      "int32",
+      "object",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetHoleStandardsData",
+  "description": "Gets the hole standards for the specified hole type.",
+  "signature": "System.Object GetHoleStandardsData( \n   System.Int32\nHoleTypeID\n)",
+  "parameters": [
+    {
+      "name": "HoleTypeID",
+      "type": "System.Int32",
+      "description": "Hole Wizard hole type as defined in swWzdGeneralHoleTypes_e"
+    }
+  ],
+  "returns": "IHoleStandardsData ; null if HoleTypeID is 5 (swWzdLegacy)",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Hole Standards Data (VBA)",
+      "href": "Get_Wizard_Hole_Standards_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Hole Standards Data (C#)",
+      "href": "Get_Wizard_Hole_Standards_Data_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IHoleDataTable"
+  ]
+}

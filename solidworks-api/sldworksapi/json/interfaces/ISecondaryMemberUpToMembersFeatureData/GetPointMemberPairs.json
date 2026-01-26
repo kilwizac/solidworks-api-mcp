@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISecondaryMemberUpToMembersFeatureData",
+    "member": "GetPointMemberPairs",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Points",
+        "type": "System.Object",
+        "description": "Array of IVertex es or ISketchPoint s"
+      },
+      {
+        "name": "Members",
+        "type": "System.Object",
+        "description": "Array of IStructureSystemMemberFeatureData s"
+      },
+      {
+        "name": "PointTypes",
+        "type": "System.Object",
+        "description": "Array of Points types as defined by swSelectType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "getpointmemberpairs",
+      "isecondarymemberuptomembersfeaturedata",
+      "secondary",
+      "member",
+      "up",
+      "members",
+      "feature",
+      "data",
+      "point",
+      "pairs",
+      "points",
+      "object",
+      "types",
+      "void"
+    ]
+  },
+  "title": "ISecondaryMemberUpToMembersFeatureData.GetPointMemberPairs",
+  "description": "Gets the point-member pair(s) used to create one or more secondary structure system up-to members.",
+  "signature": "void GetPointMemberPairs( \n   out System.Object\nPoints\n,\n   out System.Object\nMembers\n,\n   out System.Object\nPointTypes\n)",
+  "parameters": [
+    {
+      "name": "Points",
+      "type": "System.Object",
+      "description": "Array of IVertex es or ISketchPoint s"
+    },
+    {
+      "name": "Members",
+      "type": "System.Object",
+      "description": "Array of IStructureSystemMemberFeatureData s"
+    },
+    {
+      "name": "PointTypes",
+      "type": "System.Object",
+      "description": "Array of Points types as defined by swSelectType_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "Points and Members arrays are ordered to create point-member pairs.\nThis method is valid only if\nISecondaryMemberUpToMembersFeatureData::MemberPointParametersType\nis set to\nswSecondaryMemberUpToMembersMemberPointParameters_e\n.swSecondaryMemberUpToMembersMemberPointParameters_PointMemberPair.",
+  "examples": [],
+  "related": []
+}

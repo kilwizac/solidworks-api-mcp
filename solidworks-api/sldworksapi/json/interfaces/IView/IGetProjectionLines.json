@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetProjectionLines",
+    "returns": "ProjectionArrow",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of projection lines"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetBaseView",
+      "IView.GetProjectionArrow",
+      "IView.GetProjectionLines",
+      "IView.IGetBaseView",
+      "IView.IGetProjectionArrow"
+    ],
+    "keywords": [
+      "projection",
+      "lines",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "igetprojectionlines",
+      "count",
+      "int32",
+      "arrow"
+    ]
+  },
+  "title": "IView.IGetProjectionLines",
+  "description": "Gets the projection lines (arrows) in this drawing view.",
+  "signature": "ProjectionArrow IGetProjectionLines( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of projection lines"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of projection lines VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method only works for base drawing views; it does not work for projected or auxiliary views.\nMultiple projection lines can exist in a view. This method returns the interface for each projection line so that an application such as DXF/DWG translation can create the projection lines with the base drawing view rather than creating those lines when cycling through the views and finding a projected or auxiliary view.\nBefore calling this method, call\nIView::GetProjectionLineCount\nto get the value for Count.",
+  "examples": [],
+  "related": [
+    "IView.GetBaseView",
+    "IView.GetProjectionArrow",
+    "IView.GetProjectionLines",
+    "IView.IGetBaseView",
+    "IView.IGetProjectionArrow"
+  ]
+}

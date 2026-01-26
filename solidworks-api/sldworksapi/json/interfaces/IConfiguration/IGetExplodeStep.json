@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "IGetExplodeStep",
+    "returns": "ExplodeStep",
+    "parameters": [
+      {
+        "name": "ExplodeStepIndex",
+        "type": "System.Int32",
+        "description": "Index number of the explode step in the explode step sequence"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.AddExplodeStep",
+      "IConfiguration.DeleteExplodeStep",
+      "IConfiguration.GetExplodeStep",
+      "IConfiguration.IAddExplodeStep"
+    ],
+    "keywords": [
+      "igetexplodestep",
+      "iconfiguration",
+      "configuration",
+      "explode",
+      "step",
+      "index",
+      "int32"
+    ]
+  },
+  "title": "IConfiguration.IGetExplodeStep",
+  "description": "Gets a pointer to the specified explode step in the configuration explode step sequence.",
+  "signature": "ExplodeStep IGetExplodeStep( \n   System.Int32\nExplodeStepIndex\n)",
+  "parameters": [
+    {
+      "name": "ExplodeStepIndex",
+      "type": "System.Int32",
+      "description": "Index number of the explode step in the explode step sequence"
+    }
+  ],
+  "returns": "Pointer to the explode step",
+  "remarks": "Before calling this method, call\nIConfiguration::GetNumberOfExplodeSteps\nto get the number of explode steps in the sequence.",
+  "examples": [],
+  "related": [
+    "IConfiguration.AddExplodeStep",
+    "IConfiguration.DeleteExplodeStep",
+    "IConfiguration.GetExplodeStep",
+    "IConfiguration.IAddExplodeStep"
+  ]
+}

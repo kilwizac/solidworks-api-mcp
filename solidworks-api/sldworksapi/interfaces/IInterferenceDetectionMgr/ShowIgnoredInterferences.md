@@ -1,0 +1,58 @@
+---
+type: property
+interface: IInterferenceDetectionMgr
+member: ShowIgnoredInterferences
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+related: []
+keywords:
+  - showignoredinterferences
+  - iinterferencedetectionmgr
+  - interference
+  - detection
+  - mgr
+  - show
+  - ignored
+  - interferences
+  - boolean
+  - run
+  - vb
+  - net
+  - vba
+readonly: null
+---
+
+# IInterferenceDetectionMgr.ShowIgnoredInterferences
+
+Gets or sets whether to show ignored interferences.
+
+## Signature
+
+```csharp
+System.Boolean ShowIgnoredInterferences {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to show ignored interferences, false to not
+
+## Remarks
+
+Currently, the value set for this property:
+exists only while the InterferenceDetectionMgr object is in scope; i.e., setting this property is temporary.
+does not persist across SOLIDWORKS Design sessions.
+does not persist into the next invocation of interference detection in the user interface.
+
+## Examples
+
+- Run Interference Detection (C#) (Run_Interference_Detection_Example_CSharp.htm)
+- Run Interference Detection (VB.NET) (Run_Interference_Detection_Example_VBNET.htm)
+- Run Interference Detection (VBA) (Run_Interference_Detection_Example_VB.htm)

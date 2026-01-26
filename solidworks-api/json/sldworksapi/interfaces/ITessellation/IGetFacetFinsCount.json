@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "IGetFacetFinsCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FacetId",
+        "type": "System.Int32",
+        "description": "Facet for which to count fins"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ITessellation.GetFacetFins"
+    ],
+    "keywords": [
+      "igetfacetfinscount",
+      "itessellation",
+      "tessellation",
+      "facet",
+      "fins",
+      "count",
+      "id",
+      "int32"
+    ]
+  },
+  "title": "ITessellation.IGetFacetFinsCount",
+  "description": "Gets the number of fins corresponding to a facet.",
+  "signature": "System.Int32 IGetFacetFinsCount( \n   System.Int32\nFacetId\n)",
+  "parameters": [
+    {
+      "name": "FacetId",
+      "type": "System.Int32",
+      "description": "Facet for which to count fins"
+    }
+  ],
+  "returns": "Number of fins corresponding to FacetId",
+  "remarks": "A cache is created when you use this method. This cache is released when you use\nITessellation::IGetFacetFins\n. If you use ITessellation::IGetFacetFinsCount again, then the cache is refilled. Alternatively, you can use ITessellation::IGetFacetFins repeatedly.",
+  "examples": [],
+  "related": [
+    "ITessellation.GetFacetFins"
+  ]
+}

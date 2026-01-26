@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "AttachAnnotation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "Annotation attachment option as defined in swAttachAnnotationOption_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.InsertModelAnnotations3"
+    ],
+    "keywords": [
+      "attach",
+      "annotations",
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "annotation",
+      "iannotation",
+      "drawing",
+      "views",
+      "attachannotation",
+      "doc",
+      "option",
+      "int32",
+      "boolean",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.AttachAnnotation",
+  "description": "Attaches an existing annotation to a drawing sheet or view.",
+  "signature": "System.Boolean AttachAnnotation( \n   System.Int32\nOption\n)",
+  "parameters": [
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "Annotation attachment option as defined in swAttachAnnotationOption_e"
+    }
+  ],
+  "returns": "True if attachment is successful, false if not",
+  "remarks": "To attach an annotation to a drawing view:\nMulti-select the annotation and drawing view.\nCall this method with Option set to swAttachAnnotationOption_e.swAttachAnnotationOption_View.\nTo attach an annotation to a drawing sheet:\nSelect the annotation.\nCall this method with Option set to swAttachAnnotationOption_e.swAttachAnnotationOption_Sheet.",
+  "examples": [
+    {
+      "title": "Attach Annotation (VBA)",
+      "href": "Attach_Annotation_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation (VB.NET)",
+      "href": "Attach_Annotation_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation (C#)",
+      "href": "Attach_Annotation_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.InsertModelAnnotations3"
+  ]
+}

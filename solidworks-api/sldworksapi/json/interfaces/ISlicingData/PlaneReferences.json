@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISlicingData",
+    "member": "PlaneReferences",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "planereferences",
+      "islicingdata",
+      "slicing",
+      "data",
+      "plane",
+      "references",
+      "object"
+    ],
+    "readonly": false
+  },
+  "title": "ISlicingData.PlaneReferences",
+  "description": "Sets the reference entities of the first slicing plane.",
+  "signature": "System.Object PlaneReferences {set;}",
+  "parameters": [],
+  "returns": "Array of reference entities (see Remarks )",
+  "remarks": "Use this property to specify either:\na planar entity (e.g.,\nIFace2\n,\nIRefPlane\n) to produce a linear pattern of parallel slices\n- or -\na linear entity (e.g.,\nIEdge\n,\nIRefAxis\n,\nISketchLine\n) and a vertex (\nIRefPoint\n,\nIVertex\n) to produce a radial pattern of slices whose axis is the linear entity.\nUse\nISlicingData::NumberOfPlanes\nto specify the number of slices and\nISlicingData::Offset\nto specify the linear or radial spacing of the slices.",
+  "examples": [],
+  "related": []
+}

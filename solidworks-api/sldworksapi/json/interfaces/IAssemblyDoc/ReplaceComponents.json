@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "ReplaceComponents",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Path and new file name"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of configuration"
+      },
+      {
+        "name": "ReplaceAllInstance",
+        "type": "System.Boolean",
+        "description": "True to replace all instances, false to not"
+      },
+      {
+        "name": "ReAttachMates",
+        "type": "System.Boolean",
+        "description": "True to reattach all of the mates if the component is found in the subassembly component, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddComponent5",
+      "IAssemblyDoc.AddComponents",
+      "IAssemblyDoc.IAddComponents2",
+      "IModelDoc2.ReloadOrReplace"
+    ],
+    "keywords": [
+      "replacecomponents",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "replace",
+      "components",
+      "file",
+      "name",
+      "string",
+      "config",
+      "all",
+      "instance",
+      "boolean",
+      "re",
+      "attach",
+      "mates"
+    ]
+  },
+  "title": "IAssemblyDoc.ReplaceComponents",
+  "description": "Obsolete. Superseded by IAssemblyDoc::ReplaceComponents2.",
+  "signature": "System.Boolean ReplaceComponents( \n   System.String\nFileName\n,\n   System.String\nConfigName\n,\n   System.Boolean\nReplaceAllInstance\n,\n   System.Boolean\nReAttachMates\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Path and new file name"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of configuration"
+    },
+    {
+      "name": "ReplaceAllInstance",
+      "type": "System.Boolean",
+      "description": "True to replace all instances, false to not"
+    },
+    {
+      "name": "ReAttachMates",
+      "type": "System.Boolean",
+      "description": "True to reattach all of the mates if the component is found in the subassembly component, false to not"
+    }
+  ],
+  "returns": "True if the component is successfully replaced, false if not",
+  "remarks": "You cannot replace a selected component with a component of the same name even if the components are in different folders.\nThe component must be a top-level component. It cannot be a component of a sub-assembly. If the application needs to replace a component of the sub-assembly, then it should open the sub-assembly and get the component from that assembly.\nThis method closes any component files when called in an assembly. If the components were modified, then those modifications are not automatically saved. You must save any modifications before closing the files.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.AddComponent5",
+    "IAssemblyDoc.AddComponents",
+    "IAssemblyDoc.IAddComponents2",
+    "IModelDoc2.ReloadOrReplace"
+  ]
+}

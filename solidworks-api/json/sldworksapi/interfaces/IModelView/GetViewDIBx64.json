@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "GetViewDIBx64",
+    "returns": "System.Int64",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.GetViewDIB"
+    ],
+    "keywords": [
+      "device",
+      "independent",
+      "bitmap",
+      "dib",
+      "model",
+      "views",
+      "getviewdibx64",
+      "imodelview",
+      "view",
+      "di",
+      "bx64",
+      "int64",
+      "names",
+      "components",
+      "window",
+      "handles",
+      "dibsections",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelView.GetViewDIBx64",
+  "description": "Gets an image of the document as it looks in Normal view or in the print preview in 64-bit applications.",
+  "signature": "System.Int64 GetViewDIBx64()",
+  "parameters": [],
+  "returns": "Pointer to DIBSECTION for image",
+  "remarks": "The image type and resolution can be controlled interactively under TIFF export options.\nIf TIFF export is set to screen, then the output from this method is based on the current screen resolution. If it's set to print, then the output is based on the DPI specified in the TIFF options dialog.\nThe memory for the image bits (DIBSECTION.dsBm.bmBits) and this structure are allocated by the SOLIDWORKS Design application and must be deleted by the caller. For more information, see the description of Bitmap structures and DIBSECTION in Microsoft Help.\nNOTE:\nThis method is only available through early binding and with 64-bit versions of the SOLIDWORKS Design software.",
+  "examples": [
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (C#)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (VB.NET)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (VBA)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelView.GetViewDIB"
+  ]
+}

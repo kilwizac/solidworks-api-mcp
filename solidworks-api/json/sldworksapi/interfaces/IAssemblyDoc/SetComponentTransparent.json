@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "SetComponentTransparent",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "State",
+        "type": "System.Boolean",
+        "description": "True to set the components transparent, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "transparency",
+      "setcomponenttransparent",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "component",
+      "transparent",
+      "state",
+      "boolean",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.SetComponentTransparent",
+  "description": "Enables or disables transparency on the selected components.",
+  "signature": "System.Boolean SetComponentTransparent( \n   System.Boolean\nState\n)",
+  "parameters": [
+    {
+      "name": "State",
+      "type": "System.Boolean",
+      "description": "True to set the components transparent, false to not"
+    }
+  ],
+  "returns": "True if components are transparent, false if not",
+  "remarks": "If you set the transparent state to True, then the components are automatically assigned a transparency value of 75%.\nIf you want transparency (and other optical properties) set to specific values, then use the\nIComponent2::GetMaterialPropertyValues2\nand\nISetMaterialPropertyValues2 Method\nSetMaterialPropertyValues2 Method\nIComponent2::SetMaterialPropertyValues2\n.\nTo set other component transparencies, set these user preferences:\nswEdgesInContextEditTransparencyType and swEdgesInContextEditTransparency\n. You should set these preferences before editing the part to see their effect while editing the part.",
+  "examples": [
+    {
+      "title": "Set Components Transparent (VBA)",
+      "href": "Set_Components_Transparent_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

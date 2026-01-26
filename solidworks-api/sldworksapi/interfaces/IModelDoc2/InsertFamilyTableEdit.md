@@ -1,0 +1,67 @@
+---
+type: method
+interface: IModelDoc2
+member: InsertFamilyTableEdit
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - IDesignTable
+  - IModelDoc2.CloseFamilyTable
+  - IModelDoc2.DeleteDesignTable
+  - IModelDoc2.GetDesignTable
+  - IModelDoc2.IGetDesignTable
+  - IModelDoc2.InsertFamilyTableNew
+  - IModelDoc2.InsertFamilyTableOpen
+  - IModelDocExtension.HasDesignTable
+keywords:
+  - design
+  - tables
+  - see
+  - also
+  - idesigntable
+  - excel
+  - table
+  - insertfamilytableedit
+  - imodeldoc2
+  - model
+  - doc2
+  - insert
+  - family
+  - edit
+  - void
+---
+
+# IModelDoc2.InsertFamilyTableEdit
+
+Edits an open design table from Microsoft Excel.
+
+## Signature
+
+```csharp
+void InsertFamilyTableEdit()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IDesignTable`
+- `IModelDoc2.CloseFamilyTable`
+- `IModelDoc2.DeleteDesignTable`
+- `IModelDoc2.GetDesignTable`
+- `IModelDoc2.IGetDesignTable`
+- `IModelDoc2.InsertFamilyTableNew`
+- `IModelDoc2.InsertFamilyTableOpen`
+- `IModelDocExtension.HasDesignTable`

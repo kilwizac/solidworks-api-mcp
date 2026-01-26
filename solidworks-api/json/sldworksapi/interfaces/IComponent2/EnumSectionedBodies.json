@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "EnumSectionedBodies",
+    "returns": "EnumBodies2",
+    "parameters": [
+      {
+        "name": "ViewIn",
+        "type": "ModelView",
+        "description": "Pointer to the model view displaying the sectioned view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "enumeration",
+      "enumerations",
+      "enumsectionedbodies",
+      "icomponent2",
+      "component2",
+      "sectioned",
+      "view",
+      "model",
+      "bodies2"
+    ]
+  },
+  "title": "IComponent2.EnumSectionedBodies",
+  "description": "Gets the sectioned bodies seen in the specified view and returns them in an enumerated list.",
+  "signature": "EnumBodies2 EnumSectionedBodies( \n   ModelView\nViewIn\n)",
+  "parameters": [
+    {
+      "name": "ViewIn",
+      "type": "ModelView",
+      "description": "Pointer to the model view displaying the sectioned view"
+    }
+  ],
+  "returns": "Pointer to the enumerated list of bodies",
+  "remarks": "To determine if the model view you want is currently displaying a sectioned view, use\nIModelView::GetDisplayState\n.\nIf you need the full body representation, use\nIComponent2::GetBody\n,\nIPartDoc::GetBodies2\n, or\nIPartDoc::EnumBodies3\n, which ignore the sectioning operation.\nFor Dispatch implementations, see\nIComponent2::GetSectionedBodies\n.\nIf a component is suppressed or lightweight, this method returns NULL because the component is not loaded into memory by SOLIDWORKS. For more information on lightweight components, see\nWork With Lightweight Components\n.",
+  "examples": [],
+  "related": []
+}

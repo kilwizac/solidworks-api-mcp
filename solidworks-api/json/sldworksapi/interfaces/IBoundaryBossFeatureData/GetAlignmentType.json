@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "GetAlignmentType",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.SetAlignmentType"
+    ],
+    "keywords": [
+      "getalignmenttype",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "alignment",
+      "type",
+      "direction",
+      "int32",
+      "guide",
+      "index"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.GetAlignmentType",
+  "description": "Gets the type of alignment for the specified curve in the specified direction for this boundary feature.",
+  "signature": "System.Int32 GetAlignmentType( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    }
+  ],
+  "returns": "Type of alignment as defined in swBoundaryBossAlignment_e",
+  "remarks": "This method is only available for a single-direction boundary feature.\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.SetAlignmentType"
+  ]
+}

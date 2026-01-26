@@ -1,0 +1,72 @@
+---
+type: method
+interface: IBreakCornerFeatureData
+member: ISetEntities
+returns: void
+parameters:
+  -
+    name: EntCount
+    type: System.Int32
+    description: Number of faces or edges
+  -
+    name: EntArray
+    type: System.Object
+    description: in-process, unmanaged C++: Pointer to an array of faces or edges of size entCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IBreakCornerFeatureData.Entities
+  - IBreakCornerFeatureData.IGetEntities
+keywords:
+  - isetentities
+  - ibreakcornerfeaturedata
+  - break
+  - corner
+  - feature
+  - data
+  - entities
+  - ent
+  - count
+  - int32
+  - array
+  - object
+  - void
+---
+
+# IBreakCornerFeatureData.ISetEntities
+
+Sets the faces or edges to which this break corner is applied.
+
+## Signature
+
+```csharp
+void ISetEntities( 
+   System.Int32
+EntCount
+,
+   ref System.Object
+EntArray
+)
+```
+## Parameters
+
+- `EntCount` (System.Int32): Number of faces or edges
+- `EntArray` (System.Object): in-process, unmanaged C++: Pointer to an array of faces or edges of size entCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+See
+Accessing Selections that Define Features
+for additional details on using this method.
+
+## See Also
+
+- `IBreakCornerFeatureData.Entities`
+- `IBreakCornerFeatureData.IGetEntities`

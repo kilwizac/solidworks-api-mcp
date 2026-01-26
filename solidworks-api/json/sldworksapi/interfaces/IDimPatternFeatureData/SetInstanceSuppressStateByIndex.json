@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "SetInstanceSuppressStateByIndex",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "TableRowIndex",
+        "type": "System.Int32",
+        "description": "Index of the pattern instance in the pattern table to suppress (see Remarks )"
+      },
+      {
+        "name": "SuppressState",
+        "type": "System.Boolean",
+        "description": "True to suppress the pattern instance, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.GetInstanceSuppressStateByIndex",
+      "IDimPatternFeatureData.GetInstanceSuppressStateByName",
+      "IDimPatternFeatureData.SetInstanceSuppressStateByName"
+    ],
+    "keywords": [
+      "setinstancesuppressstatebyindex",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "instance",
+      "suppress",
+      "state",
+      "index",
+      "table",
+      "row",
+      "int32",
+      "boolean",
+      "string"
+    ]
+  },
+  "title": "IDimPatternFeatureData.SetInstanceSuppressStateByIndex",
+  "description": "Sets whether the pattern instance with the specified index in the pattern table is suppressed in this variable pattern feature.",
+  "signature": "System.String SetInstanceSuppressStateByIndex( \n   System.Int32\nTableRowIndex\n,\n   System.Boolean\nSuppressState\n)",
+  "parameters": [
+    {
+      "name": "TableRowIndex",
+      "type": "System.Int32",
+      "description": "Index of the pattern instance in the pattern table to suppress (see Remarks )"
+    },
+    {
+      "name": "SuppressState",
+      "type": "System.Boolean",
+      "description": "True to suppress the pattern instance, false to not"
+    }
+  ],
+  "returns": "If the pattern instance is... Then Return Value is an... Suppressed Empty string indicating success Not suppressed Error string",
+  "remarks": "Use\nIDimPatternFeatureData::GetTableRowIndex\nto get TableRowIndex.",
+  "examples": [],
+  "related": [
+    "IDimPatternFeatureData.GetInstanceSuppressStateByIndex",
+    "IDimPatternFeatureData.GetInstanceSuppressStateByName",
+    "IDimPatternFeatureData.SetInstanceSuppressStateByName"
+  ]
+}

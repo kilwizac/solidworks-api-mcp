@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISFSymbol",
+    "member": "Orientation",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "orientation",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISFSymbol.Orientation",
+  "description": "Gets whether the orientation of this surface finish symbol is relative to the model or entity to which it is attached.",
+  "signature": "System.Int32 Orientation {get; set;}",
+  "parameters": [],
+  "returns": "Orientation as defined in swSurfaceFinishSymbolOrientation_e",
+  "remarks": "If setting the value to swSFOrientation_UserDefined, then the angle at which the symbol is displayed does not change. Instead, use\nISFSymbol::SetAngle\nto set the symbol to a user-specified angle, which automatically sets the orientation to swSFOrientation_UserDefined.\nUse\nISFSymbol::GetAngle\nto get the angle of the symbol.",
+  "examples": [],
+  "related": []
+}

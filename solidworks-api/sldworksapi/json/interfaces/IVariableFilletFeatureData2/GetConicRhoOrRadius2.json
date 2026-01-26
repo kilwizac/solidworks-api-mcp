@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "GetConicRhoOrRadius2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "Vertex",
+        "description": "Vertex for which to get a value (see Remarks )"
+      },
+      {
+        "name": "IsAssigned",
+        "type": "System.Boolean",
+        "description": "True if the conic value is assigned to each control point, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetRadius2",
+      "IVariableFilletFeatureData2.IGetConicRhoOrRadius",
+      "IVariableFilletFeatureData2.SetConicRhoOrRadius"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "getconicrhoorradius2",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "rho",
+      "radius2",
+      "item",
+      "vertex",
+      "assigned",
+      "boolean",
+      "double"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+  "description": "Gets the conic rho or radius at the specified vertex.",
+  "signature": "System.Double GetConicRhoOrRadius2( \n   Vertex\nPFilletItem\n,\n   out System.Boolean\nIsAssigned\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "Vertex",
+      "description": "Vertex for which to get a value (see Remarks )"
+    },
+    {
+      "name": "IsAssigned",
+      "type": "System.Boolean",
+      "description": "True if the conic value is assigned to each control point, false if not"
+    }
+  ],
+  "returns": "Conic rho or radius",
+  "remarks": "Before calling this method, call\nIVariableFilletFeatureData2::GetFilletEdgeAtIndex\nto specify PFilletItem.\nIf\nIVariableFilletFeatureData2::ConicTypeForCrossSectionProfile\nis set to\nswFeatureFilletProfileType_e\n.:\nswFeatureFilletConicRadius (symmetric fillet only), then this method returns a radius.\nswFeatureFilletConicRho (symmetric or asymmetric fillet), then this method returns a conic rho value in the range [0.05, 0.95].\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetRadius2",
+    "IVariableFilletFeatureData2.IGetConicRhoOrRadius",
+    "IVariableFilletFeatureData2.SetConicRhoOrRadius"
+  ]
+}

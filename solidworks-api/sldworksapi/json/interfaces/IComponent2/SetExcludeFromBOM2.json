@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "SetExcludeFromBOM2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Exclude",
+        "type": "System.Boolean",
+        "description": "True to exclude it, false to not"
+      },
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of the names of configurations for which to set Exclude; null or Nothing if Config_opt is set to swInConfigurationOpts.swAllConfiguration or swInConfigurationOpts.swThisConfiguration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.CompConfigProperties6",
+      "IComponent2.GetExcludeFromBOM2"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "bill",
+      "materials",
+      "setexcludefrombom2",
+      "component2",
+      "exclude",
+      "bom2",
+      "boolean",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "object"
+    ]
+  },
+  "title": "IComponent2.SetExcludeFromBOM2",
+  "description": "Sets whether to exclude this component from the bills of materials (BOMs) in the specified configurations.",
+  "signature": "System.Int32 SetExcludeFromBOM2( \n   System.Boolean\nExclude\n,\n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Exclude",
+      "type": "System.Boolean",
+      "description": "True to exclude it, false to not"
+    },
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of the names of configurations for which to set Exclude; null or Nothing if Config_opt is set to swInConfigurationOpts.swAllConfiguration or swInConfigurationOpts.swThisConfiguration"
+    }
+  ],
+  "returns": "Return code as defined in swExcludeFromBOMError_e",
+  "remarks": "This method is valid only for\ntable-based bills of materials\n; it does not work for Microsoft Excel-based bills of materials.\nIf you set Exclude to true, the name of the component changes in the FeatureManager design tree of the specified configuration;\n(Excluded from BOM)\nis appended. To update the FeatureManager design tree, call\nIFeatureManager::UpdateFeatureTree\n.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.CompConfigProperties6",
+    "IComponent2.GetExcludeFromBOM2"
+  ]
+}

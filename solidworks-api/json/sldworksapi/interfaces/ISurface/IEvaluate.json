@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IEvaluate",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "UParam",
+        "type": "System.Double",
+        "description": "Value of u parameter"
+      },
+      {
+        "name": "VParam",
+        "type": "System.Double",
+        "description": "Value of v parameter"
+      },
+      {
+        "name": "NumUDeriv",
+        "type": "System.Int32",
+        "description": "Number of u derivatives required"
+      },
+      {
+        "name": "NumVDeriv",
+        "type": "System.Int32",
+        "description": "Number of v derivatives required"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.Evaluate",
+      "ISurface.EvaluateAtPoint",
+      "ISurface.IEvaluateAtPoint",
+      "ISurface.IReverseEvaluate",
+      "ISurface.ReverseEvaluate"
+    ],
+    "keywords": [
+      "ievaluate",
+      "isurface",
+      "surface",
+      "evaluate",
+      "param",
+      "double",
+      "num",
+      "deriv",
+      "int32"
+    ]
+  },
+  "title": "ISurface.IEvaluate",
+  "description": "Evaluates the surface, given the u and v parameters of the surface.",
+  "signature": "System.Double IEvaluate( \n   System.Double\nUParam\n,\n   System.Double\nVParam\n,\n   System.Int32\nNumUDeriv\n,\n   System.Int32\nNumVDeriv\n)",
+  "parameters": [
+    {
+      "name": "UParam",
+      "type": "System.Double",
+      "description": "Value of u parameter"
+    },
+    {
+      "name": "VParam",
+      "type": "System.Double",
+      "description": "Value of v parameter"
+    },
+    {
+      "name": "NumUDeriv",
+      "type": "System.Int32",
+      "description": "Number of u derivatives required"
+    },
+    {
+      "name": "NumVDeriv",
+      "type": "System.Int32",
+      "description": "Number of v derivatives required"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method returns the evaluated point, normal, and derivatives with respect to u and v up to order NumUDerivs and NumVDerivs, respectively. If NumUDerivs and NumVDerivs are 0, then no derivatives are returned.\nFor more information on the valid u and v parameters of the surface, see\nISurface::Parameterization\nor\nISurface::IParameterization\n.\nAlso, use\nIFace2::FaceInSurfaceSense\nto check to see if the normal of the face is in the same direction or in the opposite direction of the surface normal.\nThe evaluation returns the following array of (3 *(((\nNumUDerivs\n+1) * (N\numVDerivs\n+ 1)) + 1 )) doubles:\n[\nevaluatedPoint\n[\n3\n]\n,\nevaluatedDerivatives\n[\nxx\n]\n,\nevaluatedNormal\n[\n3\n]\n]\nwhere:\nevaluatedPoint\n[\n3\n]\n= point representing the evaluated X,Y,Z point in meters\nevaluatedDerivatives\n[\nxx\n]\n= array of vectors representing the derivatives\nwhere the\nn\nth derivative\nwrt\nu (i <=\nN\numUDerivs\n)\nand the\nn\nth derivative\nwrt\nv (j <=\nNumVDerivs\n)\nwould be vector number ( i + (\nNumUDerivs\n+ 1) * j ) - 1 in the\nevaluatedDerivatives\narray.\nIf\nNumUDerivs\nand\nN\numVDerivs\nare 0, then no derivatives are returned.\nevaluatedNormal\n[\n3\n]\n= a vector representing the evaluated normal\nThe following table describes the number of derivatives that can be requested based on the surface type. If you request more derivatives than allowed, then this method returns all data as zeros. To determine the surface type, see\nISurface::Identity\n.\nU Derivatives\n0\n1\n2\n0\na\na\nb\nV Derivatives\n1\na\na\nc\n2\nb\nc\nd\nwhere\n:\na - All surface types\nb - All surface types except blend surfaces\nc - All surface types except blend surfaces and offset surfaces\nd - All surface types except blend surfaces but offset surfaces will only return 0th, 1st, and 2nd derivatives (the uncalculated 3rd and 4th derivatives are returned as 0 vectors).\nFor example, if you specified 2 derivatives in both u and v, then an array containing 10 vectors is returned. The returned data is in model space coordinates.\n[P(u,v)\nP(u,v)/du\nP(u,v)/\ndudu\n]\n[P(u,v)/\ndv\nP(u,v)/\ndudv\nP(u,v)/\ndududv\n]\n[P(u,v)/\ndvdv\nP(u,v)/\ndudvdv\nP(u,v)/\ndududvdv\n]\n[N(u,v)]\nwhere:\ndu the partial derivative in the u direction\ndv\nthe partial derivative in the v direction\nN(u,v) the normal vector\nEach P() represents a model space point or vector depending on the entry in the array\nIf you request 2 derivatives for u and 1 for v, then an array containing 7 vectors is returned:\n[P(u,v)\nP(u,v)/du\nP(u,v)/\ndudu\n]\n[P(u,v)/\ndv\nP(u,v)/\ndudv\nP(u,v)/\ndududv\n]\n[N(u,v)]\nIf u = 1 and v = 2, then:\n[P(u,v)\nP(u,v)/du]\n[P(u,v)/\ndv\nP(u,v)/\ndudv\n]\n[P(u,v)/\ndvdv\nP(u,v)/\ndudvdv\n]\n[N(u,v)]",
+  "examples": [],
+  "related": [
+    "ISurface.Evaluate",
+    "ISurface.EvaluateAtPoint",
+    "ISurface.IEvaluateAtPoint",
+    "ISurface.IReverseEvaluate",
+    "ISurface.ReverseEvaluate"
+  ]
+}

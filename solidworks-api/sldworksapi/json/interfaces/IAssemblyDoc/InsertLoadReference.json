@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertLoadReference",
+    "returns": "MateLoadReference",
+    "parameters": [
+      {
+        "name": "Mate",
+        "type": "Mate2",
+        "description": "Mate to which to add a mate load reference; if NULL passed in, then the mate must already be selected"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "mates",
+      "see",
+      "also",
+      "imate2",
+      "load",
+      "reference",
+      "insertloadreference",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "insert",
+      "mate",
+      "mate2",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertLoadReference",
+  "description": "Creates a mate load reference to the specified or selected mate.",
+  "signature": "MateLoadReference InsertLoadReference( \n   Mate2\nMate\n)",
+  "parameters": [
+    {
+      "name": "Mate",
+      "type": "Mate2",
+      "description": "Mate to which to add a mate load reference; if NULL passed in, then the mate must already be selected"
+    }
+  ],
+  "returns": "IMateLoadReference",
+  "remarks": "The supplemental faces for the mate load reference must be selected before using this method. SOLIDWORKS determines which components own the selected supplemental faces and matches them to the components associated with the specified or selected mate.\nIf the component of a selected supplemental face does not match either of the components of the mate, then that face is ignored.\nThis method rebuilds the FeatureManager design tree, which can be a time-consuming operation if the FeatureManage design tree is large. If using this method to add many load references at once, use\nIFeatureManager::EnableFeatureTree\nbefore and after using IAssemblyDoc::InsertLoadReference to disable and then re-enable rebuilding the FeatureManager design tree.",
+  "examples": [
+    {
+      "title": "Insert Mate Load Reference (C#)",
+      "href": "Insert_Mate_Load_Reference_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Mate Load Reference (VB.NET)",
+      "href": "Insert_Mate_Load_Reference_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Mate Load Reference (VBA)",
+      "href": "Insert_Mate_Load_Reference_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

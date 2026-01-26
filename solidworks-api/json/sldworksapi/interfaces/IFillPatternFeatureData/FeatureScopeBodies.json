@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFillPatternFeatureData",
+    "member": "FeatureScopeBodies",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featurescopebodies",
+      "ifillpatternfeaturedata",
+      "fill",
+      "pattern",
+      "feature",
+      "data",
+      "scope",
+      "bodies",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IFillPatternFeatureData.FeatureScopeBodies",
+  "description": "Gets or sets the solid bodies that the fill pattern feature affects in a multibody part.",
+  "signature": "System.Object FeatureScopeBodies {get; set;}",
+  "parameters": [],
+  "returns": "Array of bodies that the fill pattern feature affects",
+  "remarks": "This property is valid only if:\nIFillPatternFeatureData::GeometryPattern\nis true,\nIFillPatternFeatureData::FeatureScope\nis true,\n- and -\nIFillPatternFeatureData::AutoSelect\nis false.\nYou cannot edit this property to null or Nothing after the feature is created with feature scope bodies. If you try,\nIFeature::ModifyDefinition\nreturns true but this property does not change.\nFor more information, see the\nFill Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": []
+}

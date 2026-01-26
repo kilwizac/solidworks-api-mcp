@@ -1,0 +1,68 @@
+---
+type: property
+interface: ISketchBlockDefinition
+member: InsertionPoint
+returns: MathPoint
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - sketches
+related:
+  - ISketchBlockInstance.Angle
+  - ISketchBlockInstance.InstancePosition
+  - ISketchBlockInstance.LockAngle
+keywords:
+  - points
+  - blocks
+  - see
+  - also
+  - isketchblockdefinition
+  - isketchblockinstance
+  - interfaces
+  - insertion
+  - point
+  - insertionpoint
+  - sketch
+  - block
+  - definition
+  - math
+  - any
+  - document
+  - vba
+readonly: null
+---
+
+# ISketchBlockDefinition.InsertionPoint
+
+Gets or sets the insertion point for the block definition.
+
+## Signature
+
+```csharp
+MathPoint InsertionPoint {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Insertion point for this block definition
+
+## Remarks
+
+The insertion point of a block definition is the point around which instances of the block rotate or scale. It is the origin of the sketch containing the geometry that is part of the block definition. This implies that the base point of a block definition is always (0,0,0), because the sketch origin is (0,0). Therefore, get version of SketchBlockDefinition::InsertionPoint always returns (0,0,0).
+The BlockDefinition::InsertionPoint values are specified relative to the current base point. However, when the insertion point is changed, it must become the sketch origin again, that is, it must become the (0,0,0) point again. So, if you use the this set/put version of this property and then immediately use get version of this property, it returns (0,0,0).
+Changing the insertion point does not affect how instances of the block look in a drawing, so when the base point changes, the sketch geometry in the definition is adjusted to allow for that behavior. This means that if you get the block definition sketch and sketch geometry, the sketch geometry coordinates will be different after the insertion point is changed.
+
+## Examples
+
+- Get and Set Blocks in Any Document (VBA) (Get_and_Set_Blocks_Data_in_Any_Document_Example_VB.htm)
+
+## See Also
+
+- `ISketchBlockInstance.Angle`
+- `ISketchBlockInstance.InstancePosition`
+- `ISketchBlockInstance.LockAngle`

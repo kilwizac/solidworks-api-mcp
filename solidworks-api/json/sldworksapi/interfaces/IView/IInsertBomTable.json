@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IInsertBomTable",
+    "returns": "BomTable",
+    "parameters": [
+      {
+        "name": "Template",
+        "type": "System.String",
+        "description": "File name of the template to use to create this BOM"
+      },
+      {
+        "name": "Xloc",
+        "type": "System.Double",
+        "description": "X coordinate of the location of the BOM"
+      },
+      {
+        "name": "Yloc",
+        "type": "System.Double",
+        "description": "Y coordinate of the location of the BOM"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Status of the BOM creation operation as defined in swBOMConfigurationCreationErrors_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetKeepLinkedToBOM",
+      "IView.GetKeepLinkedToBOMName",
+      "IView.InsertBomTable",
+      "IView.SetKeepLinkedToBOM"
+    ],
+    "keywords": [
+      "bill",
+      "materials",
+      "drawing",
+      "views",
+      "excel",
+      "based",
+      "insert",
+      "templates",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "table",
+      "bom",
+      "iinsertbomtable",
+      "template",
+      "string",
+      "xloc",
+      "double",
+      "yloc",
+      "errors",
+      "int32"
+    ]
+  },
+  "title": "IView.IInsertBomTable",
+  "description": "Inserts a Bill of Materials (BOM) table for this drawing view using Microsoft Excel.",
+  "signature": "BomTable IInsertBomTable( \n   System.String\nTemplate\n,\n   System.Double\nXloc\n,\n   System.Double\nYloc\n,\n   out System.Int32\nErrors\n)",
+  "parameters": [
+    {
+      "name": "Template",
+      "type": "System.String",
+      "description": "File name of the template to use to create this BOM"
+    },
+    {
+      "name": "Xloc",
+      "type": "System.Double",
+      "description": "X coordinate of the location of the BOM"
+    },
+    {
+      "name": "Yloc",
+      "type": "System.Double",
+      "description": "Y coordinate of the location of the BOM"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Status of the BOM creation operation as defined in swBOMConfigurationCreationErrors_e"
+    }
+  ],
+  "returns": "BOM table",
+  "remarks": "This method creates a default BOM table at the specified location, using the given template. There are some user preferences that control the default appearance of the table; set them before calling this method to create a BOM that looks like you want it to look. See:\nISldWorks::SetUserPreferenceToggle\nvalues swBOMConfigurationLocked, swBOMConfigurationUseDocumentFont, swBOMConfigurationUseSummaryInfo, swBOMConfigurationAlignBottom, swBOMContentsDisplayAtTop, swBOMControlIdFromAssembly, swBOMControlMissingRows, and swBOMControlSplitTable\nISldWorks::SetUserPreferenceIntegerValue\nvalues swBOMConfigurationAnchorType, swBOMConfigurationWhatToShow, swBOMControlMissingRowDisplay, and swBOMControlSplitDirection\nISldWorks::SetUserPreferenceDoubleValue\nvalue swBOMControlSplitHeight\nThe Template argument is the full path name of the BOM template to use in creating this BOM. If you specify only a file name with no directory, SOLIDWORKS looks for it in\ninstall_dir\n\\\nlang\n\\\nlocal language\n. If the file name is blank, the template uses the\nbomtemp.xls\nfile in that directory.\nThe Xloc and Yloc arguments are the (X,Y) drawing location where the BOM is anchored. To get the drawing origin from the drawing view origin, use\nIView::GetXform\nor\nIView::IGetXform\n. To get the drawing view extents on the drawing, use\nIView::GetOutline\nor\nIView::IGetOutline\n.\nIf the BOM creation fails, the Dispatch pointer that is returned is null. If you want more information about why the operation failed, use the Errors argument. You can pass in null as the Errors argument if you are not interested in the specific information.\nNOTE:\nUse\nIView::InsertBomTable2\nto insert a BOM using SOLIDWORKS table functionality.",
+  "examples": [],
+  "related": [
+    "IView.GetKeepLinkedToBOM",
+    "IView.GetKeepLinkedToBOMName",
+    "IView.InsertBomTable",
+    "IView.SetKeepLinkedToBOM"
+  ]
+}

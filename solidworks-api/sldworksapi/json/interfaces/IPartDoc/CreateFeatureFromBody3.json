@@ -1,0 +1,167 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "CreateFeatureFromBody3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Body",
+        "type": "System.Object",
+        "description": "Temporary body"
+      },
+      {
+        "name": "MakeRefSurface",
+        "type": "System.Boolean",
+        "description": "If the body cannot be knitted to a solid or if a solid body already exists in this model, then True creates a reference surface feature"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swCreateFeatureBodyOpts_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "geometry",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.ICreateFeatureFromBody4"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "imported",
+      "createfeaturefrombody3",
+      "ipartdoc",
+      "part",
+      "doc",
+      "create",
+      "body3",
+      "body",
+      "object",
+      "make",
+      "ref",
+      "surface",
+      "boolean",
+      "options",
+      "int32",
+      "combine",
+      "assembly",
+      "components",
+      "vba",
+      "delete",
+      "faces",
+      "differences",
+      "between",
+      "parts",
+      "sectioned",
+      "save",
+      "rollbacked",
+      "parasolid",
+      "file",
+      "sheet",
+      "process",
+      "vb",
+      "net",
+      "blended"
+    ]
+  },
+  "title": "IPartDoc.CreateFeatureFromBody3",
+  "description": "Creates a new imported feature from the specified temporary body.",
+  "signature": "System.Object CreateFeatureFromBody3( \n   System.Object\nBody\n,\n   System.Boolean\nMakeRefSurface\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Body",
+      "type": "System.Object",
+      "description": "Temporary body"
+    },
+    {
+      "name": "MakeRefSurface",
+      "type": "System.Boolean",
+      "description": "If the body cannot be knitted to a solid or if a solid body already exists in this model, then True creates a reference surface feature"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swCreateFeatureBodyOpts_e"
+    }
+  ],
+  "returns": "Newly created imported feature or Nothing or NULL if the operation fails",
+  "remarks": "This method is intended to be the final call in a knitting operation. The body that results from your knitting efforts can be converted into an imported body feature in the SOLIDWORKS model. This method is not limited to body objects obtained from knitting operations.\nThis method allows the application to decide how much additional work needs to be done to the model before creating the feature. The options listed in the swCreateFeatureBodyOpts_e enumeration can be OR'd together to provide additional checking or simplification of the model. If you specify swCreateFeatureBodySimplify for Options, then swCreateFeatureBodyCheck is implied.\nIf the application passes 0 for the options argument, then the options are disabled and the model is passed without any checking. If so, it is up to the application to ensure that the model is a valid model.\nIf this method fails, the error might be caused by creating a sheet (surface) body from a multiple shells body. If so, replace this method with\nIPartDoc::CreateSurfaceFeatureFromBody\nor\nIPartDoc::ICreateSurfaceFeatureFromBody\n.",
+  "examples": [
+    {
+      "title": "Combine Assembly Components Into Part (VBA)",
+      "href": "Combine_Assembly_Components_into_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Faces (VBA)",
+      "href": "Delete_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Differences Between Parts (VBA)",
+      "href": "Get_Differences_Between_Parts_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sectioned Bodies (VBA)",
+      "href": "Get_Sectioned_Bodies_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Rollbacked Part as Parasolid File (VBA)",
+      "href": "Save_Roll_Backed_Part_as_Parasolid_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Sheet Body From Faces and Feature From Sheet Body (VBA)",
+      "href": "Create_Sheet_Body_From_Faces_and_Feature_from_Sheet_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (C#)",
+      "href": "Process_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VB.NET)",
+      "href": "Process_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VBA)",
+      "href": "Process_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (C#)",
+      "href": "Delete_Blended_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VB.NET)",
+      "href": "Delete_Blended_Faces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VBA)",
+      "href": "Delete_Blended_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.ICreateFeatureFromBody4"
+  ]
+}

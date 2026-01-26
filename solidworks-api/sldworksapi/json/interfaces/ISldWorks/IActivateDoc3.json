@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "IActivateDoc3",
+    "returns": "ModelDoc2",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of document to activate"
+      },
+      {
+        "name": "Silent",
+        "type": "System.Boolean",
+        "description": "True if dialogs and warning messages should be avoided; false if dialogs and warning messages should be displayed to the end-user"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Status of the document activate operation as defined in swActivateDocError_e ; if no errors or warnings are encountered, this value is set to 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActivateDoc2",
+      "ISldWorks.ActiveDoc",
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.GetFirstDocument",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.GetOpenFileName",
+      "ISldWorks.IActiveDoc2",
+      "ISldWorks.IGetFirstDocument2",
+      "ISldWorks.IGetOpenDocumentByName2"
+    ],
+    "keywords": [
+      "document",
+      "activate",
+      "iactivatedoc3",
+      "isldworks",
+      "sld",
+      "works",
+      "doc3",
+      "name",
+      "string",
+      "silent",
+      "boolean",
+      "errors",
+      "int32",
+      "model",
+      "doc2",
+      "access",
+      "assembly",
+      "add",
+      "component",
+      "mate"
+    ]
+  },
+  "title": "ISldWorks.IActivateDoc3",
+  "description": "Activates a document that has already been loaded. This file becomes the active document, and this method returns a pointer to that document object.",
+  "signature": "ModelDoc2 IActivateDoc3( \n   System.String\nName\n,\n   System.Boolean\nSilent\n,\n   out System.Int32\nErrors\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of document to activate"
+    },
+    {
+      "name": "Silent",
+      "type": "System.Boolean",
+      "description": "True if dialogs and warning messages should be avoided; false if dialogs and warning messages should be displayed to the end-user"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Status of the document activate operation as defined in swActivateDocError_e ; if no errors or warnings are encountered, this value is set to 0"
+    }
+  ],
+  "returns": "Model document",
+  "remarks": "This file becomes the active document, and this method returns a pointer to that document object.\nIf you do not specify a file extension in the name parameter, the document activated is based on its name and ignores the file extension. This can cause problems if you have two different document types with the same name loaded; for example, 12345.sldprt and 12345.sldasm.\nIf you do not specify the filename extension in your call to this method, then you cannot be sure which document is activated. To avoid this problem, you can specify the file name extension in the name parameter or you can check the document type after it is activated using\nIModelDoc2::GetType\n.\nIn some instances, a document requires a rebuild when it is activated. If this is the case and you have passed True for the silent argument, then the activated document is not rebuilt and swDocNeedsRebuildWarning is returned in the errors argument. You can then programmatically rebuild the document using the\nIModelDoc2::EditRebuild3\nmethod.\nIf the document needs a rebuild upon activation and you have passed false for the Silent argument, then a dialog is displayed to the users asking them if they want to rebuild the document.\nIf the user answers...\nThen the activated document is...\nNo\nNot rebuilt and swDocNeedsRebuildWarning is returned in the errors argument.\nYes\nRebuilt immediately and this warning is not returned.",
+  "examples": [
+    {
+      "title": "Access Assembly (C++)",
+      "href": "Access_Assembly_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Component and Mate (C++)",
+      "href": "Add_Component_and_Mate_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ActivateDoc2",
+    "ISldWorks.ActiveDoc",
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.GetFirstDocument",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.GetOpenFileName",
+    "ISldWorks.IActiveDoc2",
+    "ISldWorks.IGetFirstDocument2",
+    "ISldWorks.IGetOpenDocumentByName2"
+  ]
+}

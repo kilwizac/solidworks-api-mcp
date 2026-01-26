@@ -1,0 +1,142 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "FirstFeature",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IComponent2.FirstFeature",
+      "IModelDoc2.FeatureByPositionReverse",
+      "IModelDoc2.GetFeatureCount",
+      "IModelDoc2.IFeatureByPositionReverse",
+      "IModelDoc2.IFirstFeature",
+      "IPartDoc.FirstFeature",
+      "IPartDoc.IFirstFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "first",
+      "traverse",
+      "features",
+      "firstfeature",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "object",
+      "all",
+      "sheet",
+      "metal",
+      "data",
+      "vba",
+      "iterate",
+      "through",
+      "dimensions",
+      "select",
+      "plane",
+      "mid",
+      "tolerance",
+      "cosmetic",
+      "threads",
+      "assembly",
+      "hide",
+      "sketches",
+      "insert",
+      "change",
+      "deleteface",
+      "vb",
+      "net",
+      "roll",
+      "back"
+    ]
+  },
+  "title": "IModelDoc2.FirstFeature",
+  "description": "Gets the first feature in the document.",
+  "signature": "System.Object FirstFeature()",
+  "parameters": [],
+  "returns": "First feature in the document",
+  "remarks": "This method:\nis identical to\nIPartDoc::FirstFeature\n, but is available on the IModelDoc2 interface to include access to assemblies and drawings.\ncan access the first feature even if it is suppressed.\nreturns features in the current order for the model, and this order changes when the model is edited.\nYour application should not assume that:\nfeatures retain the same relative or absolute position throughout the model\u2019s lifetime. For example, you should not assume that Sketch1 always appears before Sketch2.\nany feature has a specific name. Because features can be renamed, you cannot assume that the first reference plane feature is named Plane1.\nWhen traversing the FeatureManager design tree, your application should use\nIFeature::GetTypeName2\nand\nIFeature::GetSpecificFeature2\nto identify specific features instead of relying solely on\nIFeature::Name\n.\nThis method returns features in the model definition order, which is not the same as the order displayed in the user interface. See\nITreeControlItem\nfor details.\nTo access the next feature in the FeatureManager design tree and subfeatures, use\nIFeature::GetNextFeature\nor\nIFeature::IGetNextFeature\nand\nIFeature::GetFirstSubFeature\nor\nIFeature::IGetFirstSubFeature\nmethods, respectively.",
+  "examples": [
+    {
+      "title": "Get All Sheet Metal Feature Data (VBA)",
+      "href": "Get_All_Sheet_Metal_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Iterate Through Dimensions in Model (VBA)",
+      "href": "Iterate_Through_Dimensions_in_Model_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Plane (VBA)",
+      "href": "Select_Plane_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Dimensions to Mid-Tolerance (VBA)",
+      "href": "Set_Dimensions_to_Mid-Tolerance_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse All Cosmetic Threads (VBA)",
+      "href": "Traverse_All_Cosmetic_Threads_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly and Hide All Sketches (VBA)",
+      "href": "Traverse_Assembly_and_Hide_All_Sketches_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (C#)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VB.NET)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VBA)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (C#)",
+      "href": "Roll_Back_Model_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (VB.NET)",
+      "href": "Roll_Back_Model_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Roll Back Model (VBA)",
+      "href": "Roll_Back_Model_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.FirstFeature",
+    "IModelDoc2.FeatureByPositionReverse",
+    "IModelDoc2.GetFeatureCount",
+    "IModelDoc2.IFeatureByPositionReverse",
+    "IModelDoc2.IFirstFeature",
+    "IPartDoc.FirstFeature",
+    "IPartDoc.IFirstFeature"
+  ]
+}

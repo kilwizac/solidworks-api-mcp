@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateArc",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "Center",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles for location of the center of the arc (x,y,z )"
+      },
+      {
+        "name": "Axis",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (x,y,z)"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Arc radius"
+      },
+      {
+        "name": "StartPoint",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "EndPoint",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBody2.AddProfileArc",
+      "IBody2.IAddProfileArc",
+      "IModeler.CreateEllipse",
+      "IModeler.ICreateEllipse"
+    ],
+    "keywords": [
+      "arcs",
+      "create",
+      "icreatearc",
+      "imodeler",
+      "modeler",
+      "arc",
+      "center",
+      "double",
+      "axis",
+      "radius",
+      "start",
+      "point",
+      "end",
+      "curve"
+    ]
+  },
+  "title": "IModeler.ICreateArc",
+  "description": "Creates an arc.",
+  "signature": "Curve ICreateArc( \n   ref System.Double\nCenter\n,\n   ref System.Double\nAxis\n,\n   System.Double\nRadius\n,\n   ref System.Double\nStartPoint\n,\n   ref System.Double\nEndPoint\n)",
+  "parameters": [
+    {
+      "name": "Center",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles for location of the center of the arc (x,y,z )"
+    },
+    {
+      "name": "Axis",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (x,y,z)"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Arc radius"
+    },
+    {
+      "name": "StartPoint",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "EndPoint",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    }
+  ],
+  "returns": "Curve",
+  "remarks": "If your application uses\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\n, then your application must also use\nICurve::CreateTrimmedCurve2\nfor the curves created by\nIModeler::CreateArc\nor IModeler::ICreateArc and\nIModeler::CreateLine\nor\nIModeler::ICreateLine\n.",
+  "examples": [],
+  "related": [
+    "IBody2.AddProfileArc",
+    "IBody2.IAddProfileArc",
+    "IModeler.CreateEllipse",
+    "IModeler.ICreateEllipse"
+  ]
+}

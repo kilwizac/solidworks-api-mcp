@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetSaveFlag",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration.IsDirty",
+      "IModelDoc2.SetSaveFlag"
+    ],
+    "keywords": [
+      "save",
+      "document",
+      "dirty",
+      "getsaveflag",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "flag",
+      "boolean",
+      "determine",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.GetSaveFlag",
+  "description": "Gets whether the document is currently dirty and needs to be saved.",
+  "signature": "System.Boolean GetSaveFlag()",
+  "parameters": [],
+  "returns": "True if this document needs to be saved, false if not",
+  "remarks": "This flag:\ndetermines if the\nDo you wish to save changes?\ndialog is displayed when the user tries to close the document. Many operations cause this flag to be set, and you can use\nIModelDoc2::SetSaveFlag\nto set this flag.\nis set to true if the document was created in an older version of SOLIDWORKS.\nis set to true for assemblies only when a subassembly has been saved. If this flag is set to true for a subassembly, then the assembly is not marked as dirty until the subassembly is saved.\nis reset to false after an end-user has saved the file.\nNOTE:\nThis method returns true if the model is opened read-only, the system option\nDon't prompt to save read-only referenced documents\nis not selected, and the model is dirty and visible.",
+  "examples": [
+    {
+      "title": "Determine If Document Is Dirty (VBA)",
+      "href": "Determine_if_Document_is_Dirty_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.IsDirty",
+    "IModelDoc2.SetSaveFlag"
+  ]
+}

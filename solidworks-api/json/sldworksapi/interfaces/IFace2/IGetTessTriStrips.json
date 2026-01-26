@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IGetTessTriStrips",
+    "returns": "System.Single",
+    "parameters": [
+      {
+        "name": "NoConversion",
+        "type": "System.Boolean",
+        "description": "True prohibits conversion to user units from system units, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetTessNorms",
+      "IFace2.GetTessTextures",
+      "IFace2.GetTessTriStripEdges",
+      "IFace2.GetTessTriStripNorms",
+      "IFace2.GetTessTriStripSize",
+      "IFace2.GetTessTriStrips",
+      "IFace2.GetTessTriangleCount",
+      "IFace2.GetTessTriangles",
+      "IFace2.IGetTessNorms",
+      "IFace2.IGetTessTextures",
+      "IFace2.IGetTessTriStripEdgeSize",
+      "IFace2.IGetTessTriStripEdges",
+      "IFace2.IGetTessTriStripNorms",
+      "IFace2.IGetTessTriangles"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "faces",
+      "face",
+      "iface2",
+      "igettesstristrips",
+      "face2",
+      "tess",
+      "tri",
+      "strips",
+      "no",
+      "conversion",
+      "boolean",
+      "single"
+    ]
+  },
+  "title": "IFace2.IGetTessTriStrips",
+  "description": "Gets the vertices that make up the shaded picture tessellation for this face.",
+  "signature": "System.Single IGetTessTriStrips( \n   System.Boolean\nNoConversion\n)",
+  "parameters": [
+    {
+      "name": "NoConversion",
+      "type": "System.Boolean",
+      "description": "True prohibits conversion to user units from system units, false does not"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of floats (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "These triangles are intended for graphics display purposes and do not represent a tessellation that can be used, for example, by a machining application. If you need the level of accuracy associated with a machining product, traverse the body faces and extract the topology and geometry data to create your own faceting.\nThis method returns an array of float values in the form of:\n[\nNumStrips\n,\nVertexPerStrip\n1,\nVertexPerStrip\n2,...,\nVertexPerStripN\n,\nVertexPoints\n1[\nVertexPerStrip\n1 elements]*3,\nVertexPoints\n2[\nVertexPerStrip\n2 elements]*3,...,\nVertexPointsN\n[\nVertexPerStripN\nelements]*3]\nwhere:\nNumStrips\n= number of triangle strips on a particular face.\nVertexPerStripN\n= number of vertex points for the\nN\nth triangle strip.\nVertexPointsN\n= a sub-array of vertices consisting of three float values representing the x,y,z coordinate of the vertex; the sub-array's length is defined by the\nVertexPerStripN\nelement in the array.\nBecause the values\nNumStrips\nand the elements of\nVertexPerStrip\nare long values\npacked into single values,\nyou must\nunpack\nthem before using them.",
+  "examples": [],
+  "related": [
+    "IFace2.GetTessNorms",
+    "IFace2.GetTessTextures",
+    "IFace2.GetTessTriStripEdges",
+    "IFace2.GetTessTriStripNorms",
+    "IFace2.GetTessTriStripSize",
+    "IFace2.GetTessTriStrips",
+    "IFace2.GetTessTriangleCount",
+    "IFace2.GetTessTriangles",
+    "IFace2.IGetTessNorms",
+    "IFace2.IGetTessTextures",
+    "IFace2.IGetTessTriStripEdgeSize",
+    "IFace2.IGetTessTriStripEdges",
+    "IFace2.IGetTessTriStripNorms",
+    "IFace2.IGetTessTriangles"
+  ]
+}

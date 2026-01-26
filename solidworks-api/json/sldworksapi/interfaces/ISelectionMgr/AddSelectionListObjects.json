@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "AddSelectionListObjects",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of objects to add to the selection list (see Remarks )"
+      },
+      {
+        "name": "SelectData",
+        "type": "System.Object",
+        "description": "ISelectData"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectionSetItem.GetCorrespondingItem"
+    ],
+    "keywords": [
+      "objects",
+      "select",
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "addselectionlistobjects",
+      "mgr",
+      "add",
+      "list",
+      "object",
+      "data",
+      "int32",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISelectionMgr.AddSelectionListObjects",
+  "description": "Adds the specified objects to the selection list.",
+  "signature": "System.Int32 AddSelectionListObjects( \n   System.Object\nObjects\n,\n   System.Object\nSelectData\n)",
+  "parameters": [
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of objects to add to the selection list (see Remarks )"
+    },
+    {
+      "name": "SelectData",
+      "type": "System.Object",
+      "description": "ISelectData"
+    }
+  ],
+  "returns": "Number of objects added to the selection list",
+  "remarks": "For VB.NET and C# applications, specify Objects as an array of System.Runtime.InteropServices.DispatchWrappers. See the examples and\nIDispatch Object Arrays as Input in .NET\nfor more information.\nCall\nISelectionMgr::CreateSelectData\nto specify SelectData.\nTo add objects to a selection list without preselecting the objects in the user interface:\nCall\nISelectionMgr::SuspendSelectionList\nto suspend the current selection list, preserving its contents and starting a new selection list.\nCall\nISelectionMgr::AddSelectionListObject\nor ISelectionMgr::AddSelectionListObjects to populate a new selection list.\nProcess the objects in the new selection list.\nCall\nISelectionMgr::ResumeSelectionList\nto reinstate the suspended selection list.\nTo programmatically preselect objects in the user interface and add them to a selection list, use\nIModelDocExtension::SelectByID2\n.",
+  "examples": [
+    {
+      "title": "Add Objects to Selection List (VBA)",
+      "href": "Add_Objects_to_Selection_List_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (VB.NET)",
+      "href": "Add_Objects_to_Selection_List_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Objects to Selection List (C#)",
+      "href": "Add_Objects_to_Selection_List_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISelectionSetItem.GetCorrespondingItem"
+  ]
+}

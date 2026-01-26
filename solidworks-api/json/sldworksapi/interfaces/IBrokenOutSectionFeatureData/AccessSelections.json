@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBrokenOutSectionFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component in which the feature is to be modified"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IBrokenOutSectionFeatureData.IAccessSelections"
+    ],
+    "keywords": [
+      "accessselections",
+      "ibrokenoutsectionfeaturedata",
+      "broken",
+      "out",
+      "section",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBrokenOutSectionFeatureData.AccessSelections",
+  "description": "Gains access to the selections that define this broken-out section feature.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component in which the feature is to be modified"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc argument is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nif you modified the feature\nIBrokenOutSectionFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Get Broken-Out Section Feature Data (C#)",
+      "href": "Get_Broken_Out_Section_Feature_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Broken-Out Section Feature Data (VB.NET)",
+      "href": "Get_Broken_Out_Section_Feature_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Broken-Out Section Feature Data (VBA)",
+      "href": "Get_Broken_Out_Section_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBrokenOutSectionFeatureData.IAccessSelections"
+  ]
+}

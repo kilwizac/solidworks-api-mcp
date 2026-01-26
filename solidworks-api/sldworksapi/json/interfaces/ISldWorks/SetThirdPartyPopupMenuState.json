@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetThirdPartyPopupMenuState",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RegisterId",
+        "type": "System.Int32",
+        "description": "ID of shortcut menu from ISldWorks::RegisterThirdPartyPopupMenu"
+      },
+      {
+        "name": "IsActive",
+        "type": "System.Boolean",
+        "description": "True to show the shortcut menu, false to hide it"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "parts",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "popup",
+      "menus",
+      "shortcut",
+      "add",
+      "ins",
+      "setthirdpartypopupmenustate",
+      "isldworks",
+      "sld",
+      "works",
+      "third",
+      "party",
+      "menu",
+      "state",
+      "register",
+      "id",
+      "int32",
+      "active",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.SetThirdPartyPopupMenuState",
+  "description": "Sets whether to show or hide a third-party popup (shortcut) menu.",
+  "signature": "System.Boolean SetThirdPartyPopupMenuState( \n   System.Int32\nRegisterId\n,\n   System.Boolean\nIsActive\n)",
+  "parameters": [
+    {
+      "name": "RegisterId",
+      "type": "System.Int32",
+      "description": "ID of shortcut menu from ISldWorks::RegisterThirdPartyPopupMenu"
+    },
+    {
+      "name": "IsActive",
+      "type": "System.Boolean",
+      "description": "True to show the shortcut menu, false to hide it"
+    }
+  ],
+  "returns": "True if shortcut menu is shown, false if it is hidden",
+  "remarks": "This method is supported in C++ applications only.\nTypical steps in creating and displaying your shortcut menu:\nAdd menu\nand\nadd menu items\nto the SOLIDWORKS main menu bar for your shortcut menu, or\nadd an icon to a context-sensitive menu\nthat displays your shortcut menu, or both.\nRegister\nyour shortcut menu.\nAdd\nyour shortcut menu items.\nShow\nyour shortcut menu at a specific location in the SOLIDWORKS graphics area, typically from a mouse event handler.\nRemove\na menu item from your shortcut menu, if desired.\nToggle the visibility of your shortcut menu.\nRemove the shortcut menu\nfrom the SOLIDWORKS main menu bar and\nremove the icon from the context-sensitive menu\n, if  added.",
+  "examples": [],
+  "related": []
+}

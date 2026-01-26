@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IStructuralMemberGroup",
+    "member": "ISetSegments",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of sketch segments"
+      },
+      {
+        "name": "SegArr",
+        "type": "SketchSegment",
+        "description": "in-process, unmanaged C++: Pointer to an array of sketch segments VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IStructuralMemberGroup.IGetSegments",
+      "IStructuralMemberGroup.Segments"
+    ],
+    "keywords": [
+      "isetsegments",
+      "istructuralmembergroup",
+      "structural",
+      "member",
+      "group",
+      "segments",
+      "count",
+      "int32",
+      "seg",
+      "arr",
+      "sketch",
+      "segment",
+      "void"
+    ]
+  },
+  "title": "IStructuralMemberGroup.ISetSegments",
+  "description": "Sets the sketch segments to use in this structural-member group.",
+  "signature": "void ISetSegments( \n   System.Int32\nCount\n,\n   ref SketchSegment\nSegArr\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of sketch segments"
+    },
+    {
+      "name": "SegArr",
+      "type": "SketchSegment",
+      "description": "in-process, unmanaged C++: Pointer to an array of sketch segments VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Before using this method, call\nIStructuralMemberGroup::GetSegmentsCount\nto populate the\nCount\nparameter.",
+  "examples": [],
+  "related": [
+    "IStructuralMemberGroup.IGetSegments",
+    "IStructuralMemberGroup.Segments"
+  ]
+}

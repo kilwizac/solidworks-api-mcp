@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchBlockDefinition",
+    "member": "GetEllipses",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchBlockDefinition.GetEllipseCount",
+      "ISketchBlockDefinition.IGetEllipses"
+    ],
+    "keywords": [
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "ellipses",
+      "getellipses",
+      "sketch",
+      "block",
+      "definition",
+      "object"
+    ]
+  },
+  "title": "ISketchBlockDefinition.GetEllipses",
+  "description": "Gets the information about all of the ellipses in this block definition.",
+  "signature": "System.Object GetEllipses()",
+  "parameters": [],
+  "returns": "Array containing an array of doubles (see Remarks )",
+  "remarks": "The return values are in an array of doubles:\n[\nColor, LineType, LineFont, LineWidth, LayerID, LayerOverride, StartPt[3], EndPt[3], CenterPt[3], MajorPt[3], MinorPt[3],Direction ...\n]\nwhere:\nColor :\nCOLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLineType :\nLine type. Valid returns are defined in\nswLineTypes_e\n. A lineType is a combination of a lineStyle and lineWeight.\nLineFont :\nValue is used for polyline font information. This value can be used as an input to the GetLineFontInfo2 and GetLineFontName2.\nLineWidth :\nInteger value defining the line width. Valid width values as defined in\nswLineWeights_e\n.\nLayerID:\nInteger value indicating which layer holds this entity. Obtain the\nILayer\nobject by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayerOverride:\nInteger with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nStartPt[3] :\nArray of 3 doubles (X,Y,Z) describing the ellipse start point\nEndPt[3] :\nArray of 3 doubles (X,Y,Z) describing the ellipse end point. If the ellipse is closed, then this will be the same point as the StartPt.\nCenterPt[3] :\nArray of 3 doubles (X,Y,Z) describing the ellipse center point.\nMajorPt[3] :\nArray of 3 doubles (X,Y,Z) describing a point on the ellipse and on the major axis.\nMinorPt[3] :\nArray of 3 doubles (X,Y,Z) describing a point on the ellipse and on the minor axis.\nDirection :\n-1 for clockwise, +1 for counterclockwise\nThis set of data repeats for each ellipse in the sketch. The size of the array is (NumEllipses * 22).",
+  "examples": [],
+  "related": [
+    "ISketchBlockDefinition.GetEllipseCount",
+    "ISketchBlockDefinition.IGetEllipses"
+  ]
+}

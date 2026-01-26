@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "IGetSelectedItems",
+    "returns": "System.Int16",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of items selected"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "igetselecteditems",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "selected",
+      "items",
+      "count",
+      "int32",
+      "int16"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageSelectionbox.IGetSelectedItems",
+  "description": "Gets the items selected in a PropertyManager selection box.",
+  "signature": "System.Int16 IGetSelectedItems( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of items selected"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of shorts of the indices of the currently selected items VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Each item is a 0-based index into the list of items. For example, if there are five (5) items in the selection box and the first and last items are selected, then this method will return an array containing 0, 4.\nBefore calling:\nthis method, call\nIPropertyManagerPageSelectionbox::Style\nand set the style to swPropMgrPageSelectionBoxStyle_MultipleItemSelect to enable multiple selections.\nIPropertyManagerPageSelectionbox::GetSelectedItemsCount\nto ge the value of Count.",
+  "examples": [],
+  "related": []
+}

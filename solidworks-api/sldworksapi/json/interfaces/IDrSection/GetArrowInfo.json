@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrSection",
+    "member": "GetArrowInfo",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IDrSection.IGetArrowInfo"
+    ],
+    "keywords": [
+      "arrows",
+      "section",
+      "views",
+      "see",
+      "also",
+      "idrsection",
+      "getarrowinfo",
+      "dr",
+      "arrow",
+      "info",
+      "object"
+    ]
+  },
+  "title": "IDrSection.GetArrowInfo",
+  "description": "Gets the position of the arrows for the section line.",
+  "signature": "System.Object GetArrowInfo()",
+  "parameters": [],
+  "returns": "Array of objects (see Remarks )",
+  "remarks": "The section line in a drawing view has arrows at each end of the line. This method returns an array that consists of 12 doubles, the (X, Y, Z) of the start and end point of one arrow followed by the (X, Y, Z) of the start and end point of the other arrow.\nThese values are the same as some of the information in the array returned by\nIView::GetSectionLineInfo2\n. The arrow information in that array also contains the arrow width, height and style. That information is not included in the array returned by this method, but you can get it from the document preference settings because these values are controlled only at the document level, not on an individual section line basis.\nSee:\nIModelDocExtension::GetUserPreferenceDouble\nwith swDetailingSectionArrowHeight, swDetailingSectionArrowWidth, or swDetailingSectionArrowLength\nIModelDocExtension::GetUserPreferenceInteger\nwith swDetailingArrowStyleForDimensions",
+  "examples": [],
+  "related": [
+    "IDrSection.IGetArrowInfo"
+  ]
+}

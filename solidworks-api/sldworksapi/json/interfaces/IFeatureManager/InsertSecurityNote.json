@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSecurityNote",
+    "returns": "Note",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text for note"
+      },
+      {
+        "name": "FeatureOwner",
+        "type": "Feature",
+        "description": "Macro feature for this note"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "macro",
+      "feature",
+      "see",
+      "also",
+      "imacrofeaturedata",
+      "note",
+      "inote",
+      "insertsecuritynote",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "security",
+      "text",
+      "string",
+      "owner"
+    ]
+  },
+  "title": "IFeatureManager.InsertSecurityNote",
+  "description": "Inserts a note for the specified macro feature.",
+  "signature": "Note InsertSecurityNote( \n   System.String\nText\n,\n   Feature\nFeatureOwner\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text for note"
+    },
+    {
+      "name": "FeatureOwner",
+      "type": "Feature",
+      "description": "Macro feature for this note"
+    }
+  ],
+  "returns": "Point to INote object",
+  "remarks": "The note is for display purposes only and cannot be modified by the end user. For example, you could display the note to inform an end user that editing or deleting the macro feature is prohibited.\nYou associate the note with the specified macro feature in:\nVB by using this method in the code that generates the macro feature and by setting swMacroFeatureSecurityEnableNote in the\nmacro feature's security function\n. You should also include the conditions under which to display the note.\nC++ by using this method in the code that generates the macro feature and by setting swMacroFeatureSecurityEnableNote for the Options argument of\nISwComFeature::Security\nin the\nmacro feature's security function\n. You should also include the conditions under which to display the note.",
+  "examples": [],
+  "related": []
+}

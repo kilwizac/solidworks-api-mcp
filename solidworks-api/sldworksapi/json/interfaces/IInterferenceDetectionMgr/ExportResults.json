@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInterferenceDetectionMgr",
+    "member": "ExportResults",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path name of the file ( *.xlsx or *.csv ) (see Remarks )"
+      },
+      {
+        "name": "IncludeThumbnail",
+        "type": "System.Boolean",
+        "description": "True to include thumbnail images of interfering components in the Microsoft Excel results, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "file-io"
+    ],
+    "related": [],
+    "keywords": [
+      "exportresults",
+      "iinterferencedetectionmgr",
+      "interference",
+      "detection",
+      "mgr",
+      "export",
+      "results",
+      "file",
+      "name",
+      "string",
+      "include",
+      "thumbnail",
+      "boolean",
+      "run",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IInterferenceDetectionMgr.ExportResults",
+  "description": "Saves interference detection results to a file.",
+  "signature": "System.Boolean ExportResults( \n   System.String\nFileName\n,\n   System.Boolean\nIncludeThumbnail\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path name of the file ( *.xlsx or *.csv ) (see Remarks )"
+    },
+    {
+      "name": "IncludeThumbnail",
+      "type": "System.Boolean",
+      "description": "True to include thumbnail images of interfering components in the Microsoft Excel results, false to not (see Remarks )"
+    }
+  ],
+  "returns": "True if the export is successful, false if not",
+  "remarks": "This method corresponds to the\nSave Results\nbutton in the Interference Detection PropertyManager.\nFilename is a Microsoft Excel file or a\n*.csv\nfile that contains the information presented in the Results list box of the Interference Detection PropertyManager:\nA\nB\nC\nD\nE\nF\nG\nInterference ID\nInterference Preview\nInterference volume (mm^3)\nComponent 1 name\nComponent 2 name\nComponent 1 full reference\nComponent 2 full reference\nIncludeThumbnail is only valid if Filename is a Microsoft Excel file.\nIf IncludeThumbnail is true, then:\nA thumbnail is created in each row of Column B (Interference Preview).\nEach thumbnail has:\n128X128 pixel resolution\nWhite background\nIsometric orientation",
+  "examples": [
+    {
+      "title": "Run Interference Detection (VBA)",
+      "href": "Run_Interference_Detection_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Run Interference Detection (VB.NET)",
+      "href": "Run_Interference_Detection_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Run Interference Detection (C#)",
+      "href": "Run_Interference_Detection_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

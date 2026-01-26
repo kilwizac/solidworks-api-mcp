@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "GetBodies2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "BodyType",
+        "type": "System.Int32",
+        "description": "Type of body as defined in swBodyType_e"
+      },
+      {
+        "name": "BVisibleOnly",
+        "type": "System.Boolean",
+        "description": "True gets only the visible bodies, false gets all of the bodies in the part"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IBodyFolder.GetBodies",
+      "IBodyFolder.IGetBodies",
+      "IComponent2.GetBodies2"
+    ],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "parts",
+      "ipartdoc",
+      "getbodies2",
+      "part",
+      "doc",
+      "bodies2",
+      "body",
+      "type",
+      "int32",
+      "visible",
+      "only",
+      "boolean",
+      "object",
+      "traverse",
+      "view",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IPartDoc.GetBodies2",
+  "description": "Gets the bodies in this part.",
+  "signature": "System.Object GetBodies2( \n   System.Int32\nBodyType\n,\n   System.Boolean\nBVisibleOnly\n)",
+  "parameters": [
+    {
+      "name": "BodyType",
+      "type": "System.Int32",
+      "description": "Type of body as defined in swBodyType_e"
+    },
+    {
+      "name": "BVisibleOnly",
+      "type": "System.Boolean",
+      "description": "True gets only the visible bodies, false gets all of the bodies in the part"
+    }
+  ],
+  "returns": "Array of bodies",
+  "remarks": "This method:\nOnly supports solid and sheet (surface) body types.\nMay vary the order in which bodies are returned.",
+  "examples": [
+    {
+      "title": "Get Bodies (C++)",
+      "href": "Get_Bodies_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Bodies (C++)",
+      "href": "Traverse_Bodies_Example_CPlusPlusCLI.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for View (C#)",
+      "href": "Set_Body_for_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for Part (VB.NET)",
+      "href": "Set_Body_for_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for Part (VBA)",
+      "href": "Set_Body_for_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBodyFolder.GetBodies",
+    "IBodyFolder.IGetBodies",
+    "IComponent2.GetBodies2"
+  ]
+}

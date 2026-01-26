@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "SetUIState",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "StateType",
+        "type": "System.Int32",
+        "description": "User interface state type as defined in swUIStates_e"
+      },
+      {
+        "name": "Flag",
+        "type": "System.Boolean",
+        "description": "True to set the user-interface state, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetUIState",
+      "IFeature.Visible"
+    ],
+    "keywords": [
+      "hidden",
+      "feature",
+      "hide",
+      "features",
+      "show",
+      "setuistate",
+      "ifeature",
+      "ui",
+      "state",
+      "type",
+      "int32",
+      "flag",
+      "boolean",
+      "void",
+      "display",
+      "item",
+      "featuremanager",
+      "design",
+      "tree",
+      "vba"
+    ]
+  },
+  "title": "IFeature.SetUIState",
+  "description": "Sets the user-interface state of the current feature.",
+  "signature": "void SetUIState( \n   System.Int32\nStateType\n,\n   System.Boolean\nFlag\n)",
+  "parameters": [
+    {
+      "name": "StateType",
+      "type": "System.Int32",
+      "description": "User interface state type as defined in swUIStates_e"
+    },
+    {
+      "name": "Flag",
+      "type": "System.Boolean",
+      "description": "True to set the user-interface state, false to not"
+    }
+  ],
+  "returns": "",
+  "remarks": "If you pass in StateType of swIsHiddenInFeatureMgr and flag of True, then this method hides the display of the feature in the FeatureManager design tree. To see your changes in the FeatureManager design tree , use\nIModelDoc2::EditRebuild3\n.\nFeatures are initialized with all user-interface state type values set to false. However, in the case of attributes, you can use\nIAttributeDef::CreateInstance5\nto set the desired display state of the attribute at the time of creation.\nA change in a the state setting of a feature causes all its dependents to inherit the same behavior, without actually setting the state type values of those dependents. Therefore, to get the actual user-interface state value of a feature, you can query its owner.\nThe user-interface state is not a property.",
+  "examples": [
+    {
+      "title": "Display of Item in FeatureManager Design Tree (C++)",
+      "href": "Display_of_Item_in_Feature_Manager_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Hide Feature in FeatureManager Design Tree (VBA)",
+      "href": "Hide_Feature_in_FeatureManager_Design_Tree_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetUIState",
+    "IFeature.Visible"
+  ]
+}

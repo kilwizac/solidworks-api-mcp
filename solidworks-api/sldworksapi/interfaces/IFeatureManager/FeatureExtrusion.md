@@ -1,0 +1,223 @@
+---
+type: method
+interface: IFeatureManager
+member: FeatureExtrusion
+returns: Feature
+parameters:
+  -
+    name: Sd
+    type: System.Boolean
+    description: 
+  -
+    name: Flip
+    type: System.Boolean
+    description: 
+  -
+    name: Dir
+    type: System.Boolean
+    description: 
+  -
+    name: T1
+    type: System.Int32
+    description: 
+  -
+    name: T2
+    type: System.Int32
+    description: 
+  -
+    name: D1
+    type: System.Double
+    description: 
+  -
+    name: D2
+    type: System.Double
+    description: 
+  -
+    name: Dchk1
+    type: System.Boolean
+    description: 
+  -
+    name: Dchk2
+    type: System.Boolean
+    description: 
+  -
+    name: Ddir1
+    type: System.Boolean
+    description: 
+  -
+    name: Ddir2
+    type: System.Boolean
+    description: 
+  -
+    name: Dang1
+    type: System.Double
+    description: 
+  -
+    name: Dang2
+    type: System.Double
+    description: 
+  -
+    name: OffsetReverse1
+    type: System.Boolean
+    description: 
+  -
+    name: OffsetReverse2
+    type: System.Boolean
+    description: 
+  -
+    name: TranslateSurface1
+    type: System.Boolean
+    description: 
+  -
+    name: TranslateSurface2
+    type: System.Boolean
+    description: 
+  -
+    name: Merge
+    type: System.Boolean
+    description: 
+  -
+    name: UseFeatScope
+    type: System.Boolean
+    description: 
+  -
+    name: UseAutoSelect
+    type: System.Boolean
+    description: 
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - features
+related: []
+keywords:
+  - featureextrusion
+  - ifeaturemanager
+  - feature
+  - manager
+  - extrusion
+  - sd
+  - boolean
+  - flip
+  - dir
+  - t1
+  - int32
+  - t2
+  - d1
+  - double
+  - d2
+  - dchk1
+  - dchk2
+  - ddir1
+  - ddir2
+  - dang1
+  - dang2
+  - offset
+  - reverse1
+  - reverse2
+  - translate
+  - surface1
+  - surface2
+  - merge
+  - use
+  - feat
+  - scope
+  - auto
+  - select
+---
+
+# IFeatureManager.FeatureExtrusion
+
+Obsolete. Superseded by IFeatureManager::FeatureExtrusion2.
+
+## Signature
+
+```csharp
+Feature FeatureExtrusion( 
+   System.Boolean
+Sd
+,
+   System.Boolean
+Flip
+,
+   System.Boolean
+Dir
+,
+   System.Int32
+T1
+,
+   System.Int32
+T2
+,
+   System.Double
+D1
+,
+   System.Double
+D2
+,
+   System.Boolean
+Dchk1
+,
+   System.Boolean
+Dchk2
+,
+   System.Boolean
+Ddir1
+,
+   System.Boolean
+Ddir2
+,
+   System.Double
+Dang1
+,
+   System.Double
+Dang2
+,
+   System.Boolean
+OffsetReverse1
+,
+   System.Boolean
+OffsetReverse2
+,
+   System.Boolean
+TranslateSurface1
+,
+   System.Boolean
+TranslateSurface2
+,
+   System.Boolean
+Merge
+,
+   System.Boolean
+UseFeatScope
+,
+   System.Boolean
+UseAutoSelect
+)
+```
+## Parameters
+
+- `Sd` (System.Boolean): 
+- `Flip` (System.Boolean): 
+- `Dir` (System.Boolean): 
+- `T1` (System.Int32): 
+- `T2` (System.Int32): 
+- `D1` (System.Double): 
+- `D2` (System.Double): 
+- `Dchk1` (System.Boolean): 
+- `Dchk2` (System.Boolean): 
+- `Ddir1` (System.Boolean): 
+- `Ddir2` (System.Boolean): 
+- `Dang1` (System.Double): 
+- `Dang2` (System.Double): 
+- `OffsetReverse1` (System.Boolean): 
+- `OffsetReverse2` (System.Boolean): 
+- `TranslateSurface1` (System.Boolean): 
+- `TranslateSurface2` (System.Boolean): 
+- `Merge` (System.Boolean): 
+- `UseFeatScope` (System.Boolean): 
+- `UseAutoSelect` (System.Boolean): 
+
+## Return Value
+
+Unknown.

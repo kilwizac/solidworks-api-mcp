@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTag",
+    "member": "GetArrowHeadAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arrow head; index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTag.GetArrowHeadCount",
+      "IDatumTag.IGetArrowHeadAtIndex"
+    ],
+    "keywords": [
+      "getarrowheadatindex",
+      "idatumtag",
+      "datum",
+      "tag",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDatumTag.GetArrowHeadAtIndex",
+  "description": "Gets information on the specified arrow head in this datum tag.",
+  "signature": "System.Object GetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arrow head; index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\narrowHeadPt[3], arrowHeadDir[3], arrowHeadWidth, arrowHeadHeight, arrowHeadStyle\n]\nwhere:\narrowHeadPt[3]\nXYZ arrow head tip location\narrowHeadDir[3]\nXYZ arrow head direction\narrowHeadWidth\nArrow head width where the width is measured along the arrow head direction\narrowHeadHeight\nArrow head height\narrowHeadStyle\nArrow head style as defined in\nswArrowStyle_e",
+  "examples": [],
+  "related": [
+    "IDatumTag.GetArrowHeadCount",
+    "IDatumTag.IGetArrowHeadAtIndex"
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "AddMenuItem5",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Document type to which to add the menu item as defined by swDocumentTypes_e"
+      },
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Cookie as defined in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "MenuItem",
+        "type": "System.String",
+        "description": "Menu item string ( e.g., \"menuItem@menuString\"); SOLIDWORKS Design creates menu items only if they do not already exist NOTES: Specify the name of the menu for menuString (e.g., File, View, etc.) where you want your menu item to appear. If you do not specify menu string, then the menu item appears on the Tools menu below the Xpress Products menu item. To add your own menu to which to add this menu item, call ISldWorks::AddMenu and substitute the name of your menu for menuString. Use the & symbol to include an accelerator key, e.g., MyItem@, adds MyItem to the File menu with an accelerator key. To display the accelerator key, press the Alt key. The accelerator key is underlined."
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position where to add the new menu item; the first item is position 0; if -1 is specified for Position, then the new menu item is added to the bottom of the list; this argument specifies the position of the menu item in relation to its immediate parent menu"
+      },
+      {
+        "name": "MenuCallback",
+        "type": "System.String",
+        "description": "Function to call when this menu item is selected (see Remarks )"
+      },
+      {
+        "name": "MenuEnableMethod",
+        "type": "System.String",
+        "description": "Optional function that controls the state of the menu item (See Remarks ) If specified: SOLIDWORKS Design calls this function before displaying the menu item display of the menu item is controlled by the return value of MenuEnableMethod If MenuEnableMethod returns... Then SOLIDWORKS Design... 0 Deselects and disables the menu item 1 Deselects and enables the menu item; this is the default menu state if no update function is specified 2 Selects and disables the menu item 3 Selects and enables the menu item"
+      },
+      {
+        "name": "HintString",
+        "type": "System.String",
+        "description": "Text to show in the SOLIDWORKS Design status bar when the user moves the pointer over this menu item; if you specify HintString, then it must be preceded by a comma"
+      },
+      {
+        "name": "ImageList",
+        "type": "System.Object",
+        "description": "Array of strings for the paths for the image files for the menu item (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddMenuPopupItem4",
+      "ISldWorks.AddToolbar5",
+      "ISldWorks.GetImageSize",
+      "ISldWorks.GetLocalizedMenuName",
+      "ISldWorks.RemoveFromMenu",
+      "ISldWorks.RemoveFromPopupMenu",
+      "ISldWorks.RemoveItemFromThirdPartyPopupMenu",
+      "ISldWorks.RemoveMenu",
+      "ISldWorks.RemoveMenuPopupItem2",
+      "ISldWorks.RemoveToolbar2"
+    ],
+    "keywords": [
+      "menus",
+      "bitmaps",
+      "items",
+      "addmenuitem5",
+      "isldworks",
+      "sld",
+      "works",
+      "add",
+      "menu",
+      "item5",
+      "document",
+      "type",
+      "int32",
+      "cookie",
+      "item",
+      "string",
+      "position",
+      "callback",
+      "enable",
+      "hint",
+      "image",
+      "list",
+      "object",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.AddMenuItem5",
+  "description": "Adds a menu item and image to the SOLIDWORKS Design user interface.",
+  "signature": "System.Int32 AddMenuItem5( \n   System.Int32\nDocumentType\n,\n   System.Int32\nCookie\n,\n   System.String\nMenuItem\n,\n   System.Int32\nPosition\n,\n   System.String\nMenuCallback\n,\n   System.String\nMenuEnableMethod\n,\n   System.String\nHintString\n,\n   System.Object\nImageList\n)",
+  "parameters": [
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Document type to which to add the menu item as defined by swDocumentTypes_e"
+    },
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Cookie as defined in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "MenuItem",
+      "type": "System.String",
+      "description": "Menu item string ( e.g., \"menuItem@menuString\"); SOLIDWORKS Design creates menu items only if they do not already exist NOTES: Specify the name of the menu for menuString (e.g., File, View, etc.) where you want your menu item to appear. If you do not specify menu string, then the menu item appears on the Tools menu below the Xpress Products menu item. To add your own menu to which to add this menu item, call ISldWorks::AddMenu and substitute the name of your menu for menuString. Use the & symbol to include an accelerator key, e.g., MyItem@, adds MyItem to the File menu with an accelerator key. To display the accelerator key, press the Alt key. The accelerator key is underlined."
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position where to add the new menu item; the first item is position 0; if -1 is specified for Position, then the new menu item is added to the bottom of the list; this argument specifies the position of the menu item in relation to its immediate parent menu"
+    },
+    {
+      "name": "MenuCallback",
+      "type": "System.String",
+      "description": "Function to call when this menu item is selected (see Remarks )"
+    },
+    {
+      "name": "MenuEnableMethod",
+      "type": "System.String",
+      "description": "Optional function that controls the state of the menu item (See Remarks ) If specified: SOLIDWORKS Design calls this function before displaying the menu item display of the menu item is controlled by the return value of MenuEnableMethod If MenuEnableMethod returns... Then SOLIDWORKS Design... 0 Deselects and disables the menu item 1 Deselects and enables the menu item; this is the default menu state if no update function is specified 2 Selects and disables the menu item 3 Selects and enables the menu item"
+    },
+    {
+      "name": "HintString",
+      "type": "System.String",
+      "description": "Text to show in the SOLIDWORKS Design status bar when the user moves the pointer over this menu item; if you specify HintString, then it must be preceded by a comma"
+    },
+    {
+      "name": "ImageList",
+      "type": "System.Object",
+      "description": "Array of strings for the paths for the image files for the menu item (see Remarks )"
+    }
+  ],
+  "returns": "Runtime command ID if successful or -1 if unsuccessful",
+  "remarks": "See\nAdd-in Callback and Enable Methods\nto learn how to specify MenuCallback and MenuEnableMethod.\nFor information about using this method with the\nISwAddin\nobject, see\nUsing ISwAddin to Create a SOLIDWORKS Add-in\n.\nYou can add a new menu item to any one of the four frames (main, part, assembly, or drawing). To do this, call this method with the appropriate argument in the swDocumentTypes_e.DocumentType parameter. For example, if you want your menu item to be available when a part document is active, then call this method and pass swDocumentTypes_e.swDocPART as the first argument. After you adding your menu item to the part frame, you do not need to do it again during the current SOLIDWORKS Design session. Once a part document is activated by the user, SOLIDWORKS Design automatically displays your menu item.\nThis method supports scaling for high resolution screens with high resolution operating system scaling options.\nImageList images can be:\n20 x 20 pixels\n32 x 32 pixels\n40 x 40 pixels\n64 x 64 pixels\n96 x 96 pixels\n128 x128 pixels\nImages should use 256-color palette.\nTo add a menu item separator:\nleave the text for the menu item blank, so that the menu string for the MenuItem argument starts with the at-sign symbol (@):\n\"@subMenuString@menuString\"\nspecify an existing method for the MenuCallback argument. This method is never called, so its implementation can be empty.\nspecify empty strings for MenuEnableMethod and HintString.\nspecify Nothing or null for ImageList.\nRead\nAdd-in Shortcut Menus\nfor more information.",
+  "examples": [
+    {
+      "title": "Add Menu and Menu Item (C#)",
+      "href": "Add_Menu_and_Menu_Item_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Menu and Menu Item (VB.NET)",
+      "href": "Add_Menu_and_Menu_Item_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.AddMenuPopupItem4",
+    "ISldWorks.AddToolbar5",
+    "ISldWorks.GetImageSize",
+    "ISldWorks.GetLocalizedMenuName",
+    "ISldWorks.RemoveFromMenu",
+    "ISldWorks.RemoveFromPopupMenu",
+    "ISldWorks.RemoveItemFromThirdPartyPopupMenu",
+    "ISldWorks.RemoveMenu",
+    "ISldWorks.RemoveMenuPopupItem2",
+    "ISldWorks.RemoveToolbar2"
+  ]
+}

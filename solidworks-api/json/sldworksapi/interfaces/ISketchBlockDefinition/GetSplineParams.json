@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchBlockDefinition",
+    "member": "GetSplineParams",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchBlockDefinition.GetSplineCount",
+      "ISketchBlockDefinition.GetSplineInterpolateCount",
+      "ISketchBlockDefinition.GetSplineParamsCount",
+      "ISketchBlockDefinition.GetSplines2",
+      "ISketchBlockDefinition.GetSplinesInterpolate",
+      "ISketchBlockDefinition.IGetSplineParams",
+      "ISketchBlockDefinition.IGetSplines2",
+      "ISketchBlockDefinition.IGetSplinesInterpolate"
+    ],
+    "keywords": [
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "splines",
+      "parameters",
+      "iparameter",
+      "getsplineparams",
+      "sketch",
+      "block",
+      "definition",
+      "spline",
+      "params",
+      "object"
+    ]
+  },
+  "title": "ISketchBlockDefinition.GetSplineParams",
+  "description": "Gets all the parameters of the splines in the sketch block definition.",
+  "signature": "System.Object GetSplineParams()",
+  "parameters": [],
+  "returns": "Array of doubles, containing spline parameters (see Remarks )",
+  "remarks": "The return value is an array of doubles containing data for all the splines in the sketch block definitioni.\nThe first two array elements for each spline contain 4 integer values holding information that describes the rest of the data in that splines parameters:\nSpline Element\nPacked Data\nlow part\nhigh part\n0\nDim\nOrder\n1\nnCtrlPoints\nPeriodic\nwhere\n:\nDim\nis the number of dimensions the spline is defined in\nOrder\nis the order of the spline\nnCtrlPoints\nis the number of control points\nPeriodic\nis 1 for a closed spline or 0 for an open spline\nThe number of knots depends on whether the spline is periodic or not:\nPeriodic:\nnumKnots = nCtrlPoints + 1\nNon-Periodic:\nnumKnots = nCtrlPoints + Order\nThe last three array elements for each spline contain 5 integer values holding style and layer information:\nSpline Element\nPacked Data\nlow part\nhigh part\ni\nColor\nlineStyle\ni+1\nlineWidth\nLayer\ni+2\nlayerOverride\nNot used\nwhere:\ni is the index following the last Knot or [2 + numKnots + numControlPointDoubles * Dim]\nColor\nis the COLORREF value describing the color used for the\nith\nspline\nlineStyle\nis the line style used for the\nith\nspline. Valid values can be found in the\nswLineStyles_e\nenumeration\nlineWidth\nis line width used for the\nith\nspline. Valid values can be found in the\nswLineWeights_e\nenumeration\nLayer\nis an integer index to the layer that the\nith\nspline is on\nlayerOverride\nis integer with bit flags set to determine which properties, if any, have been overridden or should be overridden.\nTherefore, the size of the data for each spline is given by:\n2 + numKnots + numControlPointDoubles * Dim + 3\nThe ControlPoint data (in the sketch coordinate system) follows the 2 packed data elements, the Knot points, and, finally, the last 3 packed data elements. Subsequent splines follow one another in the array.\n[\npackedDouble1, packedDouble2, ControlPoint1[Dimension elements], ControlPoint2[Dimension elements],... knot1, knot2,..., packedDouble3, packedDouble4, packedDouble5,\n]\nFor information about unpacking double arrays into integer pairs, see:\nUnpacking Double Arrays into Integer Paris in Visual Basic.NET and Visual Basic\nUnpacking Double Arrays into Integer Pairs in C++\nUnpacking Double Arrays into Integer Pairs in C#",
+  "examples": [],
+  "related": [
+    "ISketchBlockDefinition.GetSplineCount",
+    "ISketchBlockDefinition.GetSplineInterpolateCount",
+    "ISketchBlockDefinition.GetSplineParamsCount",
+    "ISketchBlockDefinition.GetSplines2",
+    "ISketchBlockDefinition.GetSplinesInterpolate",
+    "ISketchBlockDefinition.IGetSplineParams",
+    "ISketchBlockDefinition.IGetSplines2",
+    "ISketchBlockDefinition.IGetSplinesInterpolate"
+  ]
+}

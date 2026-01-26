@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateSplinesByEqnParams",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Parameters",
+        "type": "System.Object",
+        "description": "Array containing an array of doubles to use in creating the spline (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.CreateSpline",
+      "ISketchManager.CreateSplineByEqnParams",
+      "ISketchManager.ICreateSpline",
+      "ISketchManager.ICreateSplineByEqnParams",
+      "ISketchManager.ICreateSplinesByEqnParams"
+    ],
+    "keywords": [
+      "createsplinesbyeqnparams",
+      "isketchmanager",
+      "sketch",
+      "manager",
+      "create",
+      "splines",
+      "eqn",
+      "params",
+      "parameters",
+      "object"
+    ]
+  },
+  "title": "ISketchManager.CreateSplinesByEqnParams",
+  "description": "Obsolete. Superseded by ISketchManager::CreateSplinesByEqnParams2.",
+  "signature": "System.Object CreateSplinesByEqnParams( \n   System.Object\nParameters\n)",
+  "parameters": [
+    {
+      "name": "Parameters",
+      "type": "System.Object",
+      "description": "Array containing an array of doubles to use in creating the spline (see Remarks )"
+    }
+  ],
+  "returns": "Array of sketch segments of the newly created splines",
+  "remarks": "The Properties array contains four longs (placed in the first four doubles in the array):\nDimension\nOrder\nNumber of Control Points\nPeriodicity ( true or false)\nThe Knots array contains doubles with (Number of Control Points + Order) elements.\nThe size of the ControlPoints array is based upon the curve dimension.\nDimension = 2 then each Control Point is an array of 2 doubles ( x, y )\nDimension = 3 then each Control Point is an array of 3 doubles ( x, y, z)\nDimension = 4 then each Control Point is an array of 4 doubles ( x, y, z, w ) where w = weight\nThe parameters are provided as three arrays.\nPass the control point coordinates to this routine in sketch space. The Z value is\ninterpreted as 0. In certain situations, you must transform your B-curve parameters to sketch space using\nISketch::ModelToSketchTransform\n.\nNOTE:\nIf the spline being generated is a closed spline, then it must be flagged as periodic. If the data passed to this method does not generate a G1 continuous spline, then it creates multiple G1 continuous spline segments.\nThis method does not work with\nISketchManager::AddToDB\nor\nISketchManager::DisplayWhenAdded\n. It always adds the spline directly to the database (as if ISketchManager::AddToDB(True) is in effect), and you must redraw your document window to see the entities that you added (as if ISketchManager::DisplayWhenAdded(False) is in effect).\nTo create 3D splines, see\nIModelDoc2::InsertCurveFilePoint\nand related functions.",
+  "examples": [],
+  "related": [
+    "ISketchManager.CreateSpline",
+    "ISketchManager.CreateSplineByEqnParams",
+    "ISketchManager.ICreateSpline",
+    "ISketchManager.ICreateSplineByEqnParams",
+    "ISketchManager.ICreateSplinesByEqnParams"
+  ]
+}

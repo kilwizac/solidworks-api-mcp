@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "AddPathLengthDim",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of display dimension"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of display dimension"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of display dimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "path",
+      "length",
+      "dimensions",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "lengths",
+      "addpathlengthdim",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "add",
+      "dim",
+      "double",
+      "object",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.AddPathLengthDim",
+  "description": "Inserts a path length dimension at the specified coordinates for a selected path.",
+  "signature": "System.Object AddPathLengthDim( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of display dimension"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of display dimension"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of display dimension"
+    }
+  ],
+  "returns": "IDisplayDimension",
+  "remarks": "Before calling this method to create a path length dimension:\nIf a path...\nThen...\nExists\nCall\nIModelDocExtension::SelectByID2\nto select one sketch segment on the existing path.\nDoes not exist\nCall IModelDocExtension::SelectByID2 to select two or more sketch segments that are end-to-end coincident and form a single chain.\nCall\nISketchManager::MakeSketchChain\nto create a path with the selected sketch segments.\nCall IModelDocExtension::SelectByID2 to select one sketch segment on the path.",
+  "examples": [
+    {
+      "title": "Create Path Length Dimension (VBA)",
+      "href": "Create_Path_Length_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Path Length Dimension (VB.NET)",
+      "href": "Create_Path_Length_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Path Length Dimension (C#)",
+      "href": "Create_Path_Length_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

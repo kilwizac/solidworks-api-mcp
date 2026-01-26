@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetCenterLines",
+    "returns": "Centerline",
+    "parameters": [
+      {
+        "name": "NumCenterLine",
+        "type": "System.Int32",
+        "description": "Total number of centerlines on this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetCenterLines"
+    ],
+    "keywords": [
+      "centerlines",
+      "see",
+      "also",
+      "icenterline",
+      "annotations",
+      "annotation",
+      "iannotation",
+      "view",
+      "iview",
+      "igetcenterlines",
+      "center",
+      "lines",
+      "num",
+      "line",
+      "int32",
+      "centerline"
+    ]
+  },
+  "title": "IView.IGetCenterLines",
+  "description": "Gets all of the centerlines on this drawing view.",
+  "signature": "Centerline IGetCenterLines( \n   System.Int32\nNumCenterLine\n)",
+  "parameters": [
+    {
+      "name": "NumCenterLine",
+      "type": "System.Int32",
+      "description": "Total number of centerlines on this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of centerlines VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of centerlines all at once instead of calling\nIView::GetFirstCenterLine\nand then repeatedly calling\nICenterLine::GetNext\nto obtain the remaining centerlines on the drawing view.\nBefore calling this method, call\nIView::GetCenterLineCount\nto get the value for numCenterLine.",
+  "examples": [],
+  "related": [
+    "IView.GetCenterLines"
+  ]
+}

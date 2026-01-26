@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swConfigurationOptions2_e",
+    "description": "Option bits used when setting configuration options. Bitmask.",
+    "member_count": 10,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swConfigurationOptions2_e",
+  "description": "Option bits used when setting configuration options. Bitmask.",
+  "values": [
+    {
+      "member": "swConfigOption_DoDisolveInBOM",
+      "value": "256",
+      "description": "or 0x100; True to dissolve the configuration in the BOM and promote all of its child components up one level, false to not"
+    },
+    {
+      "member": "swConfigOption_DontActivate",
+      "value": "128",
+      "description": "or 0x80; True to not activate the configuration, false to activate the configuration"
+    },
+    {
+      "member": "swConfigOption_DontShowPartsInBOM",
+      "value": "2",
+      "description": "or 0x2; True to show sub-assemblies in the Bill of Materials, false to list child components in the Bill of Materials"
+    },
+    {
+      "member": "swConfigOption_HideByDefault",
+      "value": "8",
+      "description": "or 0x8; True to hide newly added components, false to not"
+    },
+    {
+      "member": "swConfigOption_InheritProperties",
+      "value": "",
+      "description": "Obsolete"
+    },
+    {
+      "member": "swConfigOption_LinkToParent",
+      "value": "64",
+      "description": "or 0x40; True to link component to parent configuration, false to not"
+    },
+    {
+      "member": "swConfigOption_MinFeatureManager",
+      "value": "16",
+      "description": "or 0x10; True to suppress new components, false to not"
+    },
+    {
+      "member": "swConfigOption_SuppressByDefault",
+      "value": "4",
+      "description": "or 0x4; True to suppress newly added features and mates in this configuration, false to not"
+    },
+    {
+      "member": "swConfigOption_UseAlternateName",
+      "value": "1",
+      "description": "or 0x1; True to use an alternate configuration name, false to not"
+    },
+    {
+      "member": "swConfigOption_UseDescriptionInBOM",
+      "value": "512",
+      "description": "or 0x200; True to use the description in the BOM, false to not"
+    }
+  ]
+}

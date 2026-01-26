@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAppearanceSetting",
+    "member": "SpecularColor",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "specularcolor",
+      "iappearancesetting",
+      "appearance",
+      "setting",
+      "specular",
+      "color",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAppearanceSetting.SpecularColor",
+  "description": "Gets or sets the color of reflected highlights for a specular component.",
+  "signature": "System.Int32 SpecularColor {get; set;}",
+  "parameters": [],
+  "returns": "Color of reflected highlights; valid only when IAppearanceSetting::SpecularSpread > 0 and IAppearanceSetting::Specular > 0 (see Remarks )",
+  "remarks": "specular_color\n= MAX(MIN(\nred_rgb_value\n,255),0) + MAX(MIN(\ngreen_rgb_value\n,255),0)*16*16 + MAX(MIN(\nblue_rgb_value\n,255),0)*16*16*16*16\nSee SOLIDWORKS Help for more information about appearances.",
+  "examples": [],
+  "related": []
+}

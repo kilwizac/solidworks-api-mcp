@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "IGetEntitiesNeedUserId",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Body",
+        "type": "Body2",
+        "description": "Body containing the faces and edges"
+      },
+      {
+        "name": "FaceCount",
+        "type": "System.Int32",
+        "description": "Number of faces"
+      },
+      {
+        "name": "Faces",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "EdgeCount",
+        "type": "System.Int32",
+        "description": "Number of edges"
+      },
+      {
+        "name": "Edges",
+        "type": "Edge",
+        "description": "in-process, unmanaged C++: Pointer to an array of edges VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IMacroFeatureData.GetEdgeIdType",
+      "IMacroFeatureData.GetEdgeUserId",
+      "IMacroFeatureData.GetEntitiesNeedUserId",
+      "IMacroFeatureData.GetFaceIdType",
+      "IMacroFeatureData.GetFaceUserId",
+      "IMacroFeatureData.SetEdgeUserId",
+      "IMacroFeatureData.SetFaceUserId"
+    ],
+    "keywords": [
+      "igetentitiesneeduserid",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "entities",
+      "need",
+      "user",
+      "id",
+      "body",
+      "body2",
+      "face",
+      "count",
+      "int32",
+      "faces",
+      "face2",
+      "edge",
+      "edges",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.IGetEntitiesNeedUserId",
+  "description": "Gets a list of faces and edges that need be assigned user IDs for the macro feature.",
+  "signature": "void IGetEntitiesNeedUserId( \n   Body2\nBody\n,\n   System.Int32\nFaceCount\n,\n   out Face2\nFaces\n,\n   System.Int32\nEdgeCount\n,\n   out Edge\nEdges\n)",
+  "parameters": [
+    {
+      "name": "Body",
+      "type": "Body2",
+      "description": "Body containing the faces and edges"
+    },
+    {
+      "name": "FaceCount",
+      "type": "System.Int32",
+      "description": "Number of faces"
+    },
+    {
+      "name": "Faces",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "EdgeCount",
+      "type": "System.Int32",
+      "description": "Number of edges"
+    },
+    {
+      "name": "Edges",
+      "type": "Edge",
+      "description": "in-process, unmanaged C++: Pointer to an array of edges VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIMacroFeatureData::GetEntitiesNeedUserIdCount\nto determine the size of the arrays.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetEdgeIdType",
+    "IMacroFeatureData.GetEdgeUserId",
+    "IMacroFeatureData.GetEntitiesNeedUserId",
+    "IMacroFeatureData.GetFaceIdType",
+    "IMacroFeatureData.GetFaceUserId",
+    "IMacroFeatureData.SetEdgeUserId",
+    "IMacroFeatureData.SetFaceUserId"
+  ]
+}

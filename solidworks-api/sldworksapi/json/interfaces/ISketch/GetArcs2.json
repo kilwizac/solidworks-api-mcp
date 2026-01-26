@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "GetArcs2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketch.IGetArcs2",
+      "ISketchArc"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "arcs",
+      "entities",
+      "getarcs2",
+      "arcs2",
+      "object",
+      "vba"
+    ]
+  },
+  "title": "ISketch.GetArcs2",
+  "description": "Gets all of the arcs in the sketch.",
+  "signature": "System.Object GetArcs2()",
+  "parameters": [],
+  "returns": "Array of doubles containing the arcs in the sketch (see Remarks )",
+  "remarks": "To determine the number of arcs, use\nISketch::GetArcCount\n.\nReturn value is an array of doubles with the format:\n[\nColor, Type, Line Font, Line Width, Layer ID, Layer Override, [Start], [End], [Center] Rotation Dir\n]\nwhere\nColor\n- COLORREF returned as an integer. Return value could be 0 or -1 for default color.\nType\n- Line type. Valid returns as defined in\nswLineTypes_e\n. A line type is a combination of a line style and line weight.\nLine Font\n- Line style. Valid line styles as defined in\nswLineStyles_e\nenumeration.\nLine Width\n- Integer value defining the line width. Valid width values as defined in\nswLineWeights_e\n.\nLayer ID\n- Integer value indicating which layer holds this entity. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayer Override\n- Integer with bit flags set to determine which properties, if any, have been overridden with respect to the layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if Layer Override was returned as 3, the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nStart[3]\n- An array of 3 doubles (X,Y,Z) describing the start point.\nEnd[3]\n- An array of 3 doubles (X,Y,Z) describing the end point. If the arc is closed, then End[3] is the same point as the Start.\nCenter[3]\n- An array of 3 doubles (X,Y,Z) describing the center point.\nRotation Dir\n- Rotational direction (CW = -1, CCW = 1)\nThis set of data repeats for each arc in the sketch. The size of the array is (NumArcs * 16).",
+  "examples": [
+    {
+      "title": "Get Arcs in Sketch (VBA)",
+      "href": "Get_Arcs_in_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketch.IGetArcs2",
+    "ISketchArc"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectData",
+    "member": "GetCellRange",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FirstRow",
+        "type": "System.Int32",
+        "description": "0-based row number at the beginning of the selection range"
+      },
+      {
+        "name": "LastRow",
+        "type": "System.Int32",
+        "description": "0-based row number at the end of the selection range"
+      },
+      {
+        "name": "FirstColumn",
+        "type": "System.Int32",
+        "description": "0-based column number at the beginning of the selection range"
+      },
+      {
+        "name": "LastColumn",
+        "type": "System.Int32",
+        "description": "0-based column number at the end of the selection range"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectData.SetCellRange"
+    ],
+    "keywords": [
+      "cells",
+      "tables",
+      "select",
+      "table",
+      "getcellrange",
+      "iselectdata",
+      "data",
+      "cell",
+      "range",
+      "first",
+      "row",
+      "int32",
+      "last",
+      "column",
+      "void"
+    ]
+  },
+  "title": "ISelectData.GetCellRange",
+  "description": "Gets the specified range of table cells for this selection.",
+  "signature": "void GetCellRange( \n   out System.Int32\nFirstRow\n,\n   out System.Int32\nLastRow\n,\n   out System.Int32\nFirstColumn\n,\n   out System.Int32\nLastColumn\n)",
+  "parameters": [
+    {
+      "name": "FirstRow",
+      "type": "System.Int32",
+      "description": "0-based row number at the beginning of the selection range"
+    },
+    {
+      "name": "LastRow",
+      "type": "System.Int32",
+      "description": "0-based row number at the end of the selection range"
+    },
+    {
+      "name": "FirstColumn",
+      "type": "System.Int32",
+      "description": "0-based column number at the beginning of the selection range"
+    },
+    {
+      "name": "LastColumn",
+      "type": "System.Int32",
+      "description": "0-based column number at the end of the selection range"
+    }
+  ],
+  "returns": "",
+  "remarks": "The range of table cells are only used for a selection made in a table. For all other types of selections, these values are ignored.\nBy default, the value for FirstRow, LastRow, FirstColumn, and LastColumn is -1, which indicates that the entire table is selected.",
+  "examples": [],
+  "related": [
+    "ISelectData.SetCellRange"
+  ]
+}

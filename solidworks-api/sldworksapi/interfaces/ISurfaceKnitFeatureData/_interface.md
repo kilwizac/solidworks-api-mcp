@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ISurfaceKnitFeatureData
+inherits: null
+description: Allows access to a Surface-Knit feature.
+member_count: 14
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - Entities
+  - GetEntitiesCount
+  - IAccessSelections
+  - IGetEntities
+  - ISetEntities
+  - KnitTolerance
+  - MaxValueForGapRange
+---
+
+# ISurfaceKnitFeatureData
+
+Allows access to a Surface-Knit feature.
+
+## Common Members
+
+- `AccessSelections`
+- `Entities`
+- `GetEntitiesCount`
+- `IAccessSelections`
+- `IGetEntities`
+- `ISetEntities`
+- `KnitTolerance`
+- `MaxValueForGapRange`

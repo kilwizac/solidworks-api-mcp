@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IThreadFeatureData",
+    "member": "MultipleStart",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IThreadFeatureData.RightHanded",
+      "IThreadFeatureData.TrimEndFace",
+      "IThreadFeatureData.TrimStartFace"
+    ],
+    "keywords": [
+      "multiplestart",
+      "ithreadfeaturedata",
+      "thread",
+      "feature",
+      "data",
+      "multiple",
+      "start",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IThreadFeatureData.MultipleStart",
+  "description": "Gets or sets whether the thread has multiple starts in this thread feature.",
+  "signature": "System.Boolean MultipleStart {get; set;}",
+  "parameters": [],
+  "returns": "True if the thread has multiple starts, false if not (default)",
+  "remarks": "If this property is set to true, use\nIThreadFeatureData::NumberOfStarts\nto set the number of times the thread is created in an evenly-spaced circular pattern around the hole or shaft.\nIThreadFeatureData::Pitch\nmust permit multiple starts without causing crossing or self-intersecting threads. For example, the pitch of one thread must be wide enough to allow the nesting of other threads of different pitch.",
+  "examples": [
+    {
+      "title": "IThreadFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IThreadFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IThreadFeatureData.RightHanded",
+    "IThreadFeatureData.TrimEndFace",
+    "IThreadFeatureData.TrimStartFace"
+  ]
+}

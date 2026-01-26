@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "MakeLightWeight",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.LightweightAllResolved",
+      "IAssemblyDoc.ResolveAllLightWeightComponents",
+      "IAssemblyDoc.ResolveAllLightweight",
+      "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+      "IAssemblyDoc.SelectiveOpen",
+      "IAssemblyDoc.SetComponentState",
+      "IComponent2.GetSuppression",
+      "IComponent2.SetSuppression2"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "lightweight",
+      "components",
+      "icomponent2",
+      "makelightweight",
+      "assembly",
+      "doc",
+      "make",
+      "light",
+      "weight",
+      "void",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.MakeLightWeight",
+  "description": "Sets the selected components to lightweight.",
+  "signature": "void MakeLightWeight()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "The purpose of this method is to support recording macros. You should use\nIComponent2::GetSuppression\nor\nIComponent2::SetSuppression2\nto get or set a component to lightweight.\nThis method sets the current selected components to lightweight, which is suitable for recording and running macros. IComponent2::GetSuppression and IComponent2::SetSuppression2 operate on the component itself.",
+  "examples": [
+    {
+      "title": "Make Assembly Components Lightweight (VBA)",
+      "href": "Make_Assembly_Components_Lightweight_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.LightweightAllResolved",
+    "IAssemblyDoc.ResolveAllLightWeightComponents",
+    "IAssemblyDoc.ResolveAllLightweight",
+    "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+    "IAssemblyDoc.SelectiveOpen",
+    "IAssemblyDoc.SetComponentState",
+    "IComponent2.GetSuppression",
+    "IComponent2.SetSuppression2"
+  ]
+}

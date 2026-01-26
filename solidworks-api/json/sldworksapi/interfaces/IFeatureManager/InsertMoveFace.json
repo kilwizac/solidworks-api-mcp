@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMoveFace",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "MoveType",
+        "type": "System.Int32",
+        "description": "Type of move: 0 = Offset 1 = Translate 2 = Rotate"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction, false to not"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "If MoveType is Rotate, then specify the angle at which to draft the faces"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance to offset or translate the faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IMoveFaceFeatureData"
+    ],
+    "keywords": [
+      "insertmoveface",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "move",
+      "face",
+      "type",
+      "int32",
+      "reverse",
+      "dir",
+      "boolean",
+      "angle",
+      "double",
+      "distance",
+      "selected",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertMoveFace",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertMoveFace2 and IFeatureManager::IInsertMoveFace2.",
+  "signature": "Feature InsertMoveFace( \n   System.Int32\nMoveType\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nAngle\n,\n   System.Double\nDistance\n)",
+  "parameters": [
+    {
+      "name": "MoveType",
+      "type": "System.Int32",
+      "description": "Type of move: 0 = Offset 1 = Translate 2 = Rotate"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction, false to not"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "If MoveType is Rotate, then specify the angle at which to draft the faces"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance to offset or translate the faces"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Use the following marks with\nIModelDocExtension::SelectByID2\n:\n1 = face\n2 = direction reference (plane, planar face, linear edge, or reference axis) for translate\n4 = axis reference (linear edge or reference axis) for rotate",
+  "examples": [
+    {
+      "title": "Move Selected Face (VBA)",
+      "href": "Move_Selected_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMoveFaceFeatureData"
+  ]
+}

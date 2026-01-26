@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "IGetDisplayDimensions",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "DimCount",
+        "type": "System.Int32",
+        "description": "Number of display dimensions"
+      },
+      {
+        "name": "Dims",
+        "type": "DisplayDimension",
+        "description": "in-process, unmanaged C++: Pointer to an array of display dimensions VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.GetDisplayDimensions"
+    ],
+    "keywords": [
+      "igetdisplaydimensions",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "display",
+      "dimensions",
+      "dim",
+      "count",
+      "int32",
+      "dims",
+      "dimension",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.IGetDisplayDimensions",
+  "description": "Gets the display dimensions for this macro feature.",
+  "signature": "void IGetDisplayDimensions( \n   System.Int32\nDimCount\n,\n   out DisplayDimension\nDims\n)",
+  "parameters": [
+    {
+      "name": "DimCount",
+      "type": "System.Int32",
+      "description": "Number of display dimensions"
+    },
+    {
+      "name": "Dims",
+      "type": "DisplayDimension",
+      "description": "in-process, unmanaged C++: Pointer to an array of display dimensions VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIMacroFeatureData::GetDisplayDimensionCount\nto determine the size of the array.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetDisplayDimensions"
+  ]
+}

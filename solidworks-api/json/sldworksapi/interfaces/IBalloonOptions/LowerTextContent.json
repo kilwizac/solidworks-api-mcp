@@ -1,0 +1,35 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBalloonOptions",
+    "member": "LowerTextContent",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "lowertextcontent",
+      "iballoonoptions",
+      "balloon",
+      "options",
+      "lower",
+      "text",
+      "content",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IBalloonOptions.LowerTextContent",
+  "description": "Gets and sets the style of the lower text of the balloon.",
+  "signature": "System.Int32 LowerTextContent {get; set;}",
+  "parameters": [],
+  "returns": "Style of the lower text as defined in swBalloonTextContent_e ; specify -1 to use the document default lower text style (See Remarks )",
+  "remarks": "This property is valid only when\nIBalloonOptions::Style\nis set to\nswBalloonStyle_e\n.swBS_SplitCirc.\nTo get or set document default values...\nUse...\nGet\nIModelDocExtension::GetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\nSet\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonTextContent_e.<\nValue\n>)\nSee:\nINote::PropertyLinkedText\nfor examples of link strings usable with swBalloonTextContent_e.swBalloonTextCustomProperties.\nSOLIDWORKS Help for additional details about balloons.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,161 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "AddExplodeStep2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ExplDist",
+        "type": "System.Double",
+        "description": "Distance in meters to move the components in this explode step"
+      },
+      {
+        "name": "ExplDirIndex",
+        "type": "System.Int32",
+        "description": "Explode direction manipulator index as defined in swExplodeDirectionIndex_e (see Remarks )"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the explode direction, false to not"
+      },
+      {
+        "name": "ExplAng",
+        "type": "System.Double",
+        "description": "Angle in radians of component rotation (see Remarks )"
+      },
+      {
+        "name": "RotAxisIndex",
+        "type": "System.Int32",
+        "description": "Rotation manipulator index as defined in swRotationAxisIndex_e (see Remarks )"
+      },
+      {
+        "name": "ReverseAng",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of ExplAng, false to not"
+      },
+      {
+        "name": "RotateAboutOrigin",
+        "type": "System.Boolean",
+        "description": "True if each component rotates about its origin, false if not (see Remarks )"
+      },
+      {
+        "name": "AutoSpaceComponentsOnDrag",
+        "type": "System.Boolean",
+        "description": "True to automatically space components on drag, false to not (see Remarks )"
+      },
+      {
+        "name": "Error",
+        "type": "System.Int32",
+        "description": "Error code as defined in swCreateExplodeStepError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.AddRadialExplodeStep",
+      "IConfiguration.DeleteExplodeStep",
+      "IConfiguration.GetExplodeStep",
+      "IConfiguration.GetNumberOfExplodeSteps"
+    ],
+    "keywords": [
+      "addexplodestep2",
+      "iconfiguration",
+      "configuration",
+      "add",
+      "explode",
+      "step2",
+      "expl",
+      "dist",
+      "double",
+      "dir",
+      "index",
+      "int32",
+      "reverse",
+      "boolean",
+      "ang",
+      "rot",
+      "axis",
+      "rotate",
+      "about",
+      "origin",
+      "auto",
+      "space",
+      "components",
+      "drag",
+      "error",
+      "object",
+      "iexplodestep"
+    ]
+  },
+  "title": "IConfiguration.AddExplodeStep2",
+  "description": "Adds a regular (translate and rotate) explode step to the explode view of the active configuration.",
+  "signature": "System.Object AddExplodeStep2( \n   System.Double\nExplDist\n,\n   System.Int32\nExplDirIndex\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nExplAng\n,\n   System.Int32\nRotAxisIndex\n,\n   System.Boolean\nReverseAng\n,\n   System.Boolean\nRotateAboutOrigin\n,\n   System.Boolean\nAutoSpaceComponentsOnDrag\n,\n   out System.Int32\nError\n)",
+  "parameters": [
+    {
+      "name": "ExplDist",
+      "type": "System.Double",
+      "description": "Distance in meters to move the components in this explode step"
+    },
+    {
+      "name": "ExplDirIndex",
+      "type": "System.Int32",
+      "description": "Explode direction manipulator index as defined in swExplodeDirectionIndex_e (see Remarks )"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the explode direction, false to not"
+    },
+    {
+      "name": "ExplAng",
+      "type": "System.Double",
+      "description": "Angle in radians of component rotation (see Remarks )"
+    },
+    {
+      "name": "RotAxisIndex",
+      "type": "System.Int32",
+      "description": "Rotation manipulator index as defined in swRotationAxisIndex_e (see Remarks )"
+    },
+    {
+      "name": "ReverseAng",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of ExplAng, false to not"
+    },
+    {
+      "name": "RotateAboutOrigin",
+      "type": "System.Boolean",
+      "description": "True if each component rotates about its origin, false if not (see Remarks )"
+    },
+    {
+      "name": "AutoSpaceComponentsOnDrag",
+      "type": "System.Boolean",
+      "description": "True to automatically space components on drag, false to not (see Remarks )"
+    },
+    {
+      "name": "Error",
+      "type": "System.Int32",
+      "description": "Error code as defined in swCreateExplodeStepError_e"
+    }
+  ],
+  "returns": "Explode step",
+  "remarks": "This method:\nIs valid only for an active current explode view. To create an explode view, call\nIAssemblyDoc::AutoExplode\nor\nIAssemblyDoc::CreateExplodedView\n.\nAlways clears the selection list.\nDoes not work if the Explode PropertyManager is open.\nDoes not work if any component is being edited in the context of the assembly.\nIf AutoSpaceComponentsOnDrag is set to true, then RotateAboutOrigin is false and ExplAng is 0.0. Set AutoSpaceComponentsOnDrag to false to specify other values for RotateAboutOrigin and ExplAng.\nBefore calling this method, you must:\nUse\nIConfigurationManager::ActiveConfiguration\nto get the active configuration for the assembly.\nCall\nIAssemblyDoc::ShowExploded2\nto activate an explode view.\nCall\nIModelDocExtension::SelectByID2\nto select:\nComponents to move with Mark = 1.\n(Optionally) An explode direction entity (cylindrical\nface\n, conical face, linear\nedge\n, or\naxis\n) with Mark = 2. Either, both, or neither of the direction entity and ExplDirIndex can be set. If neither, then the Z-direction manipulator index is used.\n(Optionally) A rotation axis with Mark = 32. Valid only if RotateAboutOrigin is set to false. Either, both, or neither of the rotation axis and RotAxisIndex can be set. If neither, then the XY ring index is used.\nAfter calling this method, call\nIModelDoc2::EditRebuild3\n.\nFor C++, specify VARIANT_TRUE or VARIANT_FALSE for ReverseDir, ReverseAng, and RotateAboutOrigin.\nTo edit a regular explode step, see the\nIExplodeStep\nremarks.\nTo create an explode step for the explode view of a multibody part, see\nIConfiguration::AddPartExplodeStep\n.",
+  "examples": [
+    {
+      "title": "IExplodeStep",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IExplodeStep",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.AddRadialExplodeStep",
+    "IConfiguration.DeleteExplodeStep",
+    "IConfiguration.GetExplodeStep",
+    "IConfiguration.GetNumberOfExplodeSteps"
+  ]
+}

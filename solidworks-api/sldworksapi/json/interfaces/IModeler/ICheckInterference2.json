@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICheckInterference2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Body1InterferedFaceArray",
+        "type": "Face2",
+        "description": "Array of faces that interfered from the first body with the second body"
+      },
+      {
+        "name": "Body2InterferedFaceArray",
+        "type": "Face2",
+        "description": "Array of faces that interfered from the second body with the first body"
+      },
+      {
+        "name": "IntersectedBodyArray",
+        "type": "Body2",
+        "description": "Bodies generated from the intersection of the input bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.IToolsCheckInterference3",
+      "IAssemblyDoc.ToolsCheckInterference2",
+      "IModeler.CheckInterference"
+    ],
+    "keywords": [
+      "icheckinterference2",
+      "imodeler",
+      "modeler",
+      "check",
+      "interference2",
+      "body1",
+      "interfered",
+      "face",
+      "array",
+      "face2",
+      "body2",
+      "intersected",
+      "body",
+      "void"
+    ]
+  },
+  "title": "IModeler.ICheckInterference2",
+  "description": "Obsolete. Superseded by IModeler::ICheckInterference3.",
+  "signature": "void ICheckInterference2( \n   out Face2\nBody1InterferedFaceArray\n,\n   out Face2\nBody2InterferedFaceArray\n,\n   out Body2\nIntersectedBodyArray\n)",
+  "parameters": [
+    {
+      "name": "Body1InterferedFaceArray",
+      "type": "Face2",
+      "description": "Array of faces that interfered from the first body with the second body"
+    },
+    {
+      "name": "Body2InterferedFaceArray",
+      "type": "Face2",
+      "description": "Array of faces that interfered from the second body with the first body"
+    },
+    {
+      "name": "IntersectedBodyArray",
+      "type": "Body2",
+      "description": "Bodies generated from the intersection of the input bodies"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIModeler::ICheckInterferenceCount2\nto allocate memory for the arrays returned from this method.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.IToolsCheckInterference3",
+    "IAssemblyDoc.ToolsCheckInterference2",
+    "IModeler.CheckInterference"
+  ]
+}

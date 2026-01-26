@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "IsNameUsed",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of entity or entities whose names to check as defined by swNameType_e"
+      },
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of entity"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "names",
+      "name",
+      "isnameused",
+      "feature",
+      "manager",
+      "used",
+      "type",
+      "int32",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.IsNameUsed",
+  "description": "Checks to see whether the specified name is unique in the FeatureManager design tree and valid to use.",
+  "signature": "System.Boolean IsNameUsed( \n   System.Int32\nType\n,\n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of entity or entities whose names to check as defined by swNameType_e"
+    },
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of entity"
+    }
+  ],
+  "returns": "True if name is in use (i.e., not valid to use again); false if the name is not in use (i.e., valid to use)",
+  "remarks": "Call this method before calling\nIBody2::Name\nto check to see if the new name specified for the selected body is valid.",
+  "examples": [],
+  "related": []
+}

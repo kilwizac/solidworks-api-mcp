@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "GetMassProperties",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Density",
+        "type": "System.Double",
+        "description": "Density to use for the mass property calculations on this body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IGetMassProperties"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "mass",
+      "properties",
+      "see",
+      "imassproperty",
+      "getmassproperties",
+      "ibody2",
+      "body2",
+      "density",
+      "double",
+      "object",
+      "cut",
+      "body",
+      "half",
+      "using",
+      "macro",
+      "feature",
+      "vba",
+      "assembly",
+      "component"
+    ]
+  },
+  "title": "IBody2.GetMassProperties",
+  "description": "Gets the mass properties of this body.",
+  "signature": "System.Object GetMassProperties( \n   System.Double\nDensity\n)",
+  "parameters": [
+    {
+      "name": "Density",
+      "type": "System.Double",
+      "description": "Density to use for the mass property calculations on this body"
+    }
+  ],
+  "returns": "Array of objects (see Remarks )",
+  "remarks": "This method is intended for obtaining the mass properties of temporary objects but may also be used with the SOLIDWORKS\nIBody2\nobject that is created by the user. To get the mass properties of the SOLIDWORKS IBody2 object created by the user, you can also use\nIModelDocExtension::GetMassProperties\n, which uses the density currently set for the body's material.\nThe return value is an array of doubles as follows:\nSolid body\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Volume, Area, Mass(Volume*density), MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ\n]\nSheet body\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Area, Circumference, Mass(Area*density), MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ\n]\nWire body\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Length, 0, Mass(Length*density), MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ\n]\nYou can use\nISldWorks::GetUserPreferenceDoubleValue\nand swMaterialPropertyDensity to get the density used by the SOLIDWORKS part. Consistent with all other SOLIDWORKS API functions, units are metric unless otherwise specified.\nSOLIDWORKS returns information (such as the center of mass) in relation to where the body was created. For example, if you create a block in a part file that is centered at (0,0,0), then SOLIDWORKS returns the center of mass as (0,0,0). If you then use this part at some random location within an assembly, and the body is obtained from the assembly component object using\nIComponent2::GetBody\n, then SOLIDWORKS still returns the center of mass as (0,0,0). If you need to determine the body's center of mass in relation to the assembly coordinate system, you need to multiply the component transform and the center of mass coordinates (see\nIComponent2::Transform2\n).",
+  "examples": [
+    {
+      "title": "Cut Body in Half Using Macro Feature (VBA)",
+      "href": "Cut_Body_in_Half_using_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Assembly Component (VBA)",
+      "href": "Get_Mass_Properties_of_Assembly_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IGetMassProperties"
+  ]
+}

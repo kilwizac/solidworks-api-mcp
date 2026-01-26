@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITableAnnotation",
+    "member": "DisplayedText2",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Index of the row"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "Index of the column"
+      },
+      {
+        "name": "IncludeHidden",
+        "type": "System.Boolean",
+        "description": "True to get the text displayed in the hidden cell, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "cells",
+      "tables",
+      "table",
+      "text",
+      "displayedtext2",
+      "itableannotation",
+      "annotation",
+      "displayed",
+      "text2",
+      "row",
+      "int32",
+      "column",
+      "include",
+      "hidden",
+      "boolean",
+      "string",
+      "contents",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "ITableAnnotation.DisplayedText2",
+  "description": "Gets the actual text displayed in the specified cell in this table.",
+  "signature": "System.String DisplayedText2( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n,\n   System.Boolean\nIncludeHidden\n) {get;}",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Index of the row"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "Index of the column"
+    },
+    {
+      "name": "IncludeHidden",
+      "type": "System.Boolean",
+      "description": "True to get the text displayed in the hidden cell, false to not"
+    }
+  ],
+  "returns": "Actual text displayed in the specified cell",
+  "remarks": "Index for both rows and columns is 0-based.\nTo get the parameterized string that drives this displayed text, use\nITableAnnotation::Text2\n.",
+  "examples": [
+    {
+      "title": "Get Table Annotation and Contents (VBA)",
+      "href": "Get_Table_Annotation_and_Contents_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

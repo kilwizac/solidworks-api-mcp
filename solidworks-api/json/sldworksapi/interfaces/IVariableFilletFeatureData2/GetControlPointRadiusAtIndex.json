@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "GetControlPointRadiusAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Zero-based index of the control point"
+      },
+      {
+        "name": "Location",
+        "type": "System.Double",
+        "description": "Location of the control point"
+      },
+      {
+        "name": "PEdge",
+        "type": "Edge",
+        "description": "Edge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetControlPointConicRhoOrRadiusAtIndex",
+      "IVariableFilletFeatureData2.SetControlPointRadiusAtIndex"
+    ],
+    "keywords": [
+      "getcontrolpointradiusatindex",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "control",
+      "point",
+      "radius",
+      "index",
+      "int32",
+      "location",
+      "double",
+      "edge"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.GetControlPointRadiusAtIndex",
+  "description": "Gets the radius at the specified control point.",
+  "signature": "System.Double GetControlPointRadiusAtIndex( \n   System.Int32\nIndex\n,\n   out System.Double\nLocation\n,\n   out Edge\nPEdge\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Zero-based index of the control point"
+    },
+    {
+      "name": "Location",
+      "type": "System.Double",
+      "description": "Location of the control point"
+    },
+    {
+      "name": "PEdge",
+      "type": "Edge",
+      "description": "Edge"
+    }
+  ],
+  "returns": "Value of the radius at the specified control point for the symmetric fillet; value of the Distance 1 radius at the specified control point for the asymmetric fillet (see Remarks )",
+  "remarks": "Call\nIVariableFilletFeatureData2::GetControlPointsCount\nbefore calling this method.\nCall\nIVariableFilletFeatureData2::GetControlPointDistanceAtIndex\nto get the Distance 2 radius for the control point of the asymmetric fillet.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetControlPointConicRhoOrRadiusAtIndex",
+    "IVariableFilletFeatureData2.SetControlPointRadiusAtIndex"
+  ]
+}

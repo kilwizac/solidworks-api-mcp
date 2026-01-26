@@ -1,0 +1,172 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureBossThicken",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Wall thickness"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swThickenThicknessType_e"
+      },
+      {
+        "name": "FaceIndex",
+        "type": "System.Int32",
+        "description": "Not used"
+      },
+      {
+        "name": "FillVolume",
+        "type": "System.Boolean",
+        "description": "True if you want to make a solid from the knitted surface, false if not (see Remarks )"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True if you want to merge the results in a multibody part, false if not"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureCutThicken",
+      "IThickenFeatureData"
+    ],
+    "keywords": [
+      "boss",
+      "thicken",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "featurebossthicken",
+      "ifeaturemanager",
+      "manager",
+      "thickness",
+      "double",
+      "direction",
+      "int32",
+      "face",
+      "index",
+      "fill",
+      "volume",
+      "boolean",
+      "merge",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select",
+      "create",
+      "vba",
+      "holes",
+      "part",
+      "vb",
+      "net",
+      "surface",
+      "generate"
+    ]
+  },
+  "title": "IFeatureManager.FeatureBossThicken",
+  "description": "Thickens the selected reference surface, and then generates a boss.",
+  "signature": "Feature FeatureBossThicken( \n   System.Double\nThickness\n,\n   System.Int32\nDirection\n,\n   System.Int32\nFaceIndex\n,\n   System.Boolean\nFillVolume\n,\n   System.Boolean\nMerge\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Wall thickness"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swThickenThicknessType_e"
+    },
+    {
+      "name": "FaceIndex",
+      "type": "System.Int32",
+      "description": "Not used"
+    },
+    {
+      "name": "FillVolume",
+      "type": "System.Boolean",
+      "description": "True if you want to make a solid from the knitted surface, false if not (see Remarks )"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True if you want to merge the results in a multibody part, false if not"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "This method generates a boss feature by thickening a selected reference surface.  The surface must be selected with a mark of 1. See\nIModelDocExtension::SelectByID2\nfor details.\nIf FillVolume is true, other arguments are ignored. A closed surface is required when FillVolume is true.\nIf UseAutoSelect is false, the user must select the bodies that the feature will affect.",
+  "examples": [
+    {
+      "title": "Create Thicken Feature (VBA)",
+      "href": "Create_Thicken_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (C#)",
+      "href": "Fill_Holes_in_Part_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (VB.NET)",
+      "href": "Fill_Holes_in_Part_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (VBA)",
+      "href": "Fill_Holes_in_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Thicken Surface and Generate Boss (VBA)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Thicken Surface and Generate Boss (VB.NET)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Thicken Surface and Generate Boss (C#)",
+      "href": "Thicken_Surface_and_Generate_Boss_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.FeatureCutThicken",
+    "IThickenFeatureData"
+  ]
+}

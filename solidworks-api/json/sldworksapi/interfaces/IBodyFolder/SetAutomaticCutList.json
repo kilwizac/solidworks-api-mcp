@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBodyFolder",
+    "member": "SetAutomaticCutList",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CutList",
+        "type": "System.Boolean",
+        "description": "True to automatically generate a cut list, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IBodyFolder.GetCutListType",
+      "IBodyFolder.UpdateCutList"
+    ],
+    "keywords": [
+      "cut",
+      "lists",
+      "setautomaticcutlist",
+      "ibodyfolder",
+      "body",
+      "folder",
+      "automatic",
+      "list",
+      "boolean"
+    ]
+  },
+  "title": "IBodyFolder.SetAutomaticCutList",
+  "description": "Sets whether to automatically generate a cut list when the first weldment feature is inserted in a part.",
+  "signature": "System.Boolean SetAutomaticCutList( \n   System.Boolean\nCutList\n)",
+  "parameters": [
+    {
+      "name": "CutList",
+      "type": "System.Boolean",
+      "description": "True to automatically generate a cut list, false to not"
+    }
+  ],
+  "returns": "True if enabled, false if not (see Remarks )",
+  "remarks": "Use\nIBodyFolder::GetAutomaticCutList\nto find out if automatic generation of a cut list is enabled.\nThis method returns false if:\nthe part does not contain a weldment feature. Use\nIPartDoc::IsWeldment\nto find out\nif the part contains this feature.\na cut list folder already exists in the part. You must delete the cut list before\nyou can enable automatic generation.",
+  "examples": [
+    {
+      "title": "IBodyFolder",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBodyFolder.GetCutListType",
+    "IBodyFolder.UpdateCutList"
+  ]
+}

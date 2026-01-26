@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface3",
+    "member": "GetFirstFacePair",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Distance between these two parallel faces"
+      },
+      {
+        "name": "PartnerFaceDisp",
+        "type": "System.Object",
+        "description": "Face on the original part body used in generating the neutral face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.GetFacePairCount",
+      "IMidSurface2.GetNextFacePair",
+      "IMidSurface2.IGetFirstFacePair",
+      "IMidSurface2.IGetNextFacePair"
+    ],
+    "keywords": [
+      "getfirstfacepair",
+      "imidsurface3",
+      "mid",
+      "surface3",
+      "first",
+      "face",
+      "pair",
+      "thickness",
+      "double",
+      "partner",
+      "disp",
+      "object"
+    ]
+  },
+  "title": "IMidSurface3.GetFirstFacePair",
+  "description": "Gets the first pair of parallel faces in this midsurface feature and the thickness (in meters) between the two faces.",
+  "signature": "System.Object GetFirstFacePair( \n   out System.Double\nThickness\n,\n   out System.Object\nPartnerFaceDisp\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Distance between these two parallel faces"
+    },
+    {
+      "name": "PartnerFaceDisp",
+      "type": "System.Object",
+      "description": "Face on the original part body used in generating the neutral face"
+    }
+  ],
+  "returns": "Face on the original part body used in generating the neutral face",
+  "remarks": "The two faces returned by this method are the two parallel faces from the original part body that were used to generate the first neutral face in this midsurface feature.\nThis method is similar to\nIMidSurface3::GetFirstFace\n, except this method does not return the neutral face.\nCall\nIMidSurface3::GetNextFacePair\nto get the next pair of faces in this midsurface feature.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetFacePairCount",
+    "IMidSurface2.GetNextFacePair",
+    "IMidSurface2.IGetFirstFacePair",
+    "IMidSurface2.IGetNextFacePair"
+  ]
+}

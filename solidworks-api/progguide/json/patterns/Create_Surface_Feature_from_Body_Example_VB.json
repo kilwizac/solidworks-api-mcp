@@ -1,0 +1,29 @@
+{
+  "frontmatter": {
+    "type": "pattern",
+    "title": "Create Surface Feature from Body Example (VBA)",
+    "keywords": [
+      "create",
+      "surface",
+      "feature",
+      "body",
+      "example",
+      "vba"
+    ],
+    "categories": [
+      "documents"
+    ],
+    "related": []
+  },
+  "title": "Create Surface Feature from Body Example (VBA)",
+  "body": [
+    "This example shows how to create a surface feature from a body.",
+    "",
+    "## Code",
+    "",
+    "```vb",
+    "'---------------------------------------\n'\n' Preconditions: Part document is open and contains one solid body.\n'\n' Postconditions: A new part document is created and a surface feature\n' is created using the body in the open part document.\n'\n'----------------------------------------\n \nOption Explicit\n \nPublic Enum swCreateFacesBodyAction_e\n    swCreateFacesBodyActionCap = 1\n    swCreateFacesBodyActionGrow = 2\n    swCreateFacesBodyActionGrowFromParent = 3\n    swCreateFacesBodyActionLeaveRubber = 4\nEnd Enum\n \nPublic Enum swCreateFeatureBodyOpts_e\n    swCreateFeatureBodyCheck = &H1\n    swCreateFeatureBodySimplify = &H2\nEnd Enum\n \nSub main()\n \n    Dim swApp As SldWorks.SldWorks\n    Dim swModeler As SldWorks.Modeler\n    Dim swModel As SldWorks.ModelDoc2\n    Dim swPart As SldWorks.PartDoc\n    Dim swNewPart As SldWorks.PartDoc\n    Dim swNewModel As SldWorks.ModelDoc2\n    Dim swBody As SldWorks.Body2\n    Dim swTempBody As SldWorks.Body2\n    Dim swFace() As SldWorks.Face2\n    Dim swDelFace() As SldWorks.Face2\n    Dim swFirstFace As SldWorks.Face2\n    Dim vFace As Variant\n    Dim vFeatArr As Variant\n    Dim vFeat As Variant\n    Dim swFeat As SldWorks.Feature\n    Dim bLocChk As Boolean\n    Dim bRet As Boolean\n \n    Set swApp = Application.SldWorks\n    Set swModeler = swApp.GetModeler\n    Set swModel = swApp.ActiveDoc\n    Set swPart = swModel\n    Set swBody = swPart.Body\n    Set swNewPart = swApp.NewPart\n    Set swNewModel = swNewPart\n    \n    ReDim swFace(0)\n    Set swFace(0) = swBody.GetFirstFace\n    \n    Do While Not swFace(UBound(swFace)) Is Nothing\n        ReDim Preserve swFace(UBound(swFace) + 1)\n        Set swFace(UBound(swFace)) = swFace(UBound(swFace) - 1).GetNextFace\n    Loop\n    \n    ReDim Preserve swFace(UBound(swFace))\n    vFace = swFace\n    \n    Set swTempBody = swModeler.CreateBodyFromFaces2(UBound(vFace), vFace, swCreateFacesBodyActionCap, True, bLocChk): Debug.Assert bLocChk\n    \n    vFeatArr = swNewPart.CreateSurfaceFeatureFromBody(swTempBody, swCreateFeatureBodyCheck)\n    For Each vFeat In vFeatArr\n        Set swFeat = vFeat\n        \n        bRet = swFeat.Select2(False, 0): Debug.Assert bRet\n        bRet = swNewModel.EditSuppress2: Debug.Assert bRet\n        \n        bRet = swFeat.Select2(False, 0): Debug.Assert bRet\n        bRet = swNewModel.EditUnsuppress2: Debug.Assert bRet\n        \n    Next vFeat\n    \nEnd Sub\n'---------------------------------",
+    "```",
+    ""
+  ]
+}

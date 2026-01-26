@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IGetPersistReference3",
+    "returns": "System.Byte",
+    "parameters": [
+      {
+        "name": "DipsObj",
+        "type": "System.Object",
+        "description": "Object"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Size of returned array assigned to that object (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.IsSamePersistentID"
+    ],
+    "keywords": [
+      "persistent",
+      "reference",
+      "ids",
+      "objects",
+      "id",
+      "igetpersistreference3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "persist",
+      "reference3",
+      "dips",
+      "obj",
+      "object",
+      "count",
+      "int32",
+      "byte"
+    ]
+  },
+  "title": "IModelDocExtension.IGetPersistReference3",
+  "description": "Gets the persistent reference ID for the specified object in this model document.",
+  "signature": "System.byte IGetPersistReference3( \n   System.Object\nDipsObj\n,\n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "DipsObj",
+      "type": "System.Object",
+      "description": "Object"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Size of returned array assigned to that object (see Remarks )"
+    }
+  ],
+  "returns": "Array containing the persistent reference ID assigned to that object",
+  "remarks": "Persistent reference ID values obtained using the now obsolete IModelDocExtension::GetPersistReference and its related obsolete methods, IModelDocExtension::GetPersistReferenceCount and IModelDocExtension::GetObjectByPersistReference2, are not compatible with persistent reference IDs obtained using this method and its related methods,\nIModelDocExtension::GetPersistReferenceCount3\nand\nIModelDocExtension::GetObjectByPersistReference3\nor\nIModelDocExtension::IGetObjectByPersistReference3\n.\nIMPORTANT:\nSOLIDWORKS recommends not using IModelDocExtension::IGetPersistReference3 with ModelDocExtension::GetPersistReferenceCount3 because when ModelDocExtension::GetPersistReferenceCount3 is used with ModelDocExtension::IGetPersistReference3, you will experience a significant decrease in performance. Instead, use\nIModelDocExtension::GetPersistReference3\n.\nA persistent reference ID is related to a model. It is portable and can be saved within the model or in other places. Some persistent reference IDs are general to all models and can be instantiated from all models. Your application must handle persistent reference IDs and their relationships among models.\nThe internal representations of the return value array may change, possibly from rebuild to rebuild, or more likely, from one release of SOLIDWORKS to the next, but their usage in finding the correct entity will be consistent across rebuilds and SOLIDWORKS releases.\nTo compare the referenced entities, you could use the Visual Basic\nIs\noperator to find out if the entities are the same.\nSee\nPersistent Reference IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get Object's Persistent Reference ID (C++)",
+      "href": "Get_Object_s_Persistent_Reference_ID_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.IsSamePersistentID"
+  ]
+}

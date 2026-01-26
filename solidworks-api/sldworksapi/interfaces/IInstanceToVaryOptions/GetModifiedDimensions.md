@@ -1,0 +1,112 @@
+---
+type: method
+interface: IInstanceToVaryOptions
+member: GetModifiedDimensions
+returns: void
+parameters:
+  -
+    name: Instance
+    type: System.Int32
+    description: Pattern instance number (see Remarks )
+  -
+    name: Dimensions
+    type: System.Object
+    description: Array of modified dimensions
+  -
+    name: Values
+    type: System.Object
+    description: Array of dimension values
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+  - features
+related: []
+keywords:
+  - getmodifieddimensions
+  - iinstancetovaryoptions
+  - instance
+  - vary
+  - options
+  - modified
+  - dimensions
+  - int32
+  - object
+  - values
+  - void
+---
+
+# IInstanceToVaryOptions.GetModifiedDimensions
+
+Gets the modified dimensions of the specified pattern instance.
+
+## Signature
+
+```csharp
+void GetModifiedDimensions( 
+   System.Int32
+Instance
+,
+   out System.Object
+Dimensions
+,
+   out System.Object
+Values
+)
+```
+## Parameters
+
+- `Instance` (System.Int32): Pattern instance number (see Remarks )
+- `Dimensions` (System.Object): Array of modified dimensions
+- `Values` (System.Object): Array of dimension values
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+To specify Instance, you can use
+IInstanceToVaryOptions::GetModifiedInstances
+to learn which pattern instances are modified.
+To calculate Instance:
+Ensure that the D2PatternSeedOnly property in the pattern feature data object is set to false.
+Calculate:
+For a bi-directional pattern:
+I
+=
+n2
+* (
+i
+- 1) + (
+j
+- 1)
+For a uni-directional pattern:
+I
+=
+i
+- 1
+where:
+I
+= pattern instance number
+n2
+= number of instances in Direction 2
+i
+= index for Direction 1
+j
+= index for Direction 2
+In the pattern's PropertyManager, find
+n2
+in the
+Direction 2
+> Spacing and Instances > Number of instances
+field and find [
+i,j
+] in the
+Modified Instances
+section.
+
+## Examples
+
+- IInstanceToVaryOptions (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IInstanceToVaryOptions)

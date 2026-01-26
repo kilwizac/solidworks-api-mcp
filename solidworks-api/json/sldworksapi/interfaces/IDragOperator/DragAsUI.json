@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDragOperator",
+    "member": "DragAsUI",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PXform",
+        "type": "MathTransform",
+        "description": "Pointer to IMathTransform that specifies the desired motion for this step"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IDragOperator.CollisionDetection",
+      "IDragOperator.DynamicClearanceEnabled"
+    ],
+    "keywords": [
+      "drag",
+      "see",
+      "also",
+      "idragoperator",
+      "transform",
+      "dragasui",
+      "operator",
+      "ui",
+      "xform",
+      "math",
+      "boolean",
+      "rotate",
+      "assembly",
+      "component",
+      "axis",
+      "using",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDragOperator.DragAsUI",
+  "description": "Sets the transform matrix for this drag operation.",
+  "signature": "System.Boolean DragAsUI( \n   MathTransform\nPXform\n)",
+  "parameters": [
+    {
+      "name": "PXform",
+      "type": "MathTransform",
+      "description": "Pointer to IMathTransform that specifies the desired motion for this step"
+    }
+  ],
+  "returns": "True if the move was successful, false if not (see Remarks )",
+  "remarks": "This method returns false if the drag cannot be performed. This typically occurs because of a collision.\nThis method does not set\nIDragOperator::DragCorrected\n.\nThis method is not as precise as the\nIDragOperator::Drag\nor\nIDragOperator::IDrag\nmethod. IDragOperator::DragAsUI is more like an interactive drag operation performed in the SOLIDWORKS 2001Plus software. This method may give better graphics performance than IDragOperator::Drag.",
+  "examples": [
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::DragAsUI (VBA)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example2_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::DragAsUI (VB.NET)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example2_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::DragAsUI (C#)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example2_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDragOperator.CollisionDetection",
+    "IDragOperator.DynamicClearanceEnabled"
+  ]
+}

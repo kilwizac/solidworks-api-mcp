@@ -1,0 +1,49 @@
+---
+type: property
+interface: ITableAnnotation
+member: TextHorizontalJustification
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+related:
+  - ITableAnnotation.CellTextHorizontalJustification
+  - ITableAnnotation.CellTextVerticalJustification
+  - ITableAnnotation.TextVerticalJustification
+keywords:
+  - table
+  - text
+  - texthorizontaljustification
+  - itableannotation
+  - annotation
+  - horizontal
+  - justification
+  - int32
+readonly: null
+---
+
+# ITableAnnotation.TextHorizontalJustification
+
+Gets or sets the horizontal justification setting for the text in this table.
+
+## Signature
+
+```csharp
+System.Int32 TextHorizontalJustification {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Horizontal justification as defined in swTextJustification_e
+
+## See Also
+
+- `ITableAnnotation.CellTextHorizontalJustification`
+- `ITableAnnotation.CellTextVerticalJustification`
+- `ITableAnnotation.TextVerticalJustification`

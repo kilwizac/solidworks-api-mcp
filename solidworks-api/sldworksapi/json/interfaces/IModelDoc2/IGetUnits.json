@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IGetUnits",
+    "returns": "System.Int16",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetAngularUnits",
+      "IModelDoc2.GetUnits",
+      "IModelDoc2.GetUserUnit",
+      "IModelDoc2.IGetAngularUnits",
+      "IModelDoc2.IGetUserUnit",
+      "IModelDoc2.ISetAngularUnits",
+      "IModelDoc2.SetAngularUnits",
+      "IModelDoc2.SetUnits"
+    ],
+    "keywords": [
+      "units",
+      "igetunits",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "int16"
+    ]
+  },
+  "title": "IModelDoc2.IGetUnits",
+  "description": "Gets the current unit settings, fraction base, fraction value, and significant digits.",
+  "signature": "System.Int16 IGetUnits()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of 5 shorts (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The format of the returned data is an array of shorts:\n[\nLengthUnit, FractionBase, FractionValue, SignificantDigits, RoundToFraction\n]\nwhere:\nLengthUnit\n=  current model units as defined in\nswLengthUnit_e\n.\nFractionBase\n=  decimal or fraction as defined in\nswFractionDisplay_e\n; fractional units are only valid if the model units are set to swINCHES or swFEETINCHES.\nFractionValue\n= denominator value if using fractional units.\nSignificantDigits\n=  significant digits if using decimal units.\nRoundToFraction\n=  flag denoting whether or not to round to the fraction; for example, if 4 was the denominator value and the actual value was .27, it is\nrounded to .25\nYou can also use\nIModelDoc2::LengthUnit\n, which provides access to the LengthUnit parameter.",
+  "examples": [
+    {
+      "title": "Get and Set Units (C++)",
+      "href": "Get_and_Set_Units_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.GetAngularUnits",
+    "IModelDoc2.GetUnits",
+    "IModelDoc2.GetUserUnit",
+    "IModelDoc2.IGetAngularUnits",
+    "IModelDoc2.IGetUserUnit",
+    "IModelDoc2.ISetAngularUnits",
+    "IModelDoc2.SetAngularUnits",
+    "IModelDoc2.SetUnits"
+  ]
+}

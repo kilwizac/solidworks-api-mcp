@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICallout",
+    "member": "SetLeader",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Visible",
+        "type": "System.Boolean",
+        "description": "True to display the leader, false to not (see Remarks )"
+      },
+      {
+        "name": "Multiple",
+        "type": "System.Boolean",
+        "description": "True to display multiple leaders, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICallout.GetLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "callouts",
+      "setleader",
+      "icallout",
+      "callout",
+      "leader",
+      "visible",
+      "boolean",
+      "multiple",
+      "create",
+      "independent",
+      "selection",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ICallout.SetLeader",
+  "description": "Sets the leader properties of the callout.",
+  "signature": "System.Boolean SetLeader( \n   System.Boolean\nVisible\n,\n   System.Boolean\nMultiple\n)",
+  "parameters": [
+    {
+      "name": "Visible",
+      "type": "System.Boolean",
+      "description": "True to display the leader, false to not (see Remarks )"
+    },
+    {
+      "name": "Multiple",
+      "type": "System.Boolean",
+      "description": "True to display multiple leaders, false to not"
+    }
+  ],
+  "returns": "True if the operation is successful, false if not",
+  "remarks": "You can only use this method before the callout is shown or while the callout is hidden.\nIf Visible is set to false, then\nICallout::TargetStyle\nis automatically set to swCalloutTargetStyle_None.",
+  "examples": [
+    {
+      "title": "Create a Callout Independent of a Selection (C#)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Callout Independent of a Selection (VB.NET)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create a Callout Independent of a Selection (VBA)",
+      "href": "Create_a_Callout_Independent_of_a_Selection_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICallout.GetLeader"
+  ]
+}

@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IAdvancedHoleElementData
+inherits: null
+description: Allows access to Advanced Hole element data.
+member_count: 13
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - BlindDepth
+  - CalloutString
+  - Diameter
+  - DiameterOverride
+  - ElementType
+  - EndCondition
+  - FastenerType
+  - OffsetDistance
+---
+
+# IAdvancedHoleElementData
+
+Allows access to Advanced Hole element data.
+
+## Common Members
+
+- `BlindDepth`
+- `CalloutString`
+- `Diameter`
+- `DiameterOverride`
+- `ElementType`
+- `EndCondition`
+- `FastenerType`
+- `OffsetDistance`

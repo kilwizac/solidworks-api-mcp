@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalHem",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type as defined in swHemTypes_e"
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position as defined in swHemPositionTypes_e"
+      },
+      {
+        "name": "Reverse",
+        "type": "System.Boolean",
+        "description": "True reverses the direction, false does not"
+      },
+      {
+        "name": "DLength",
+        "type": "System.Double",
+        "description": "Hem length; valid only for open or closed hems"
+      },
+      {
+        "name": "DGap",
+        "type": "System.Double",
+        "description": "Gap distance; valid only for open hems"
+      },
+      {
+        "name": "DAngle",
+        "type": "System.Double",
+        "description": "Hem angle; valid only for tear-drop or rolled hems"
+      },
+      {
+        "name": "DRad",
+        "type": "System.Double",
+        "description": "Hem radius; valid only for tear-drop or rolled hems"
+      },
+      {
+        "name": "DMiterGap",
+        "type": "System.Double",
+        "description": "Hem miter gap"
+      },
+      {
+        "name": "PCBA",
+        "type": "CustomBendAllowance",
+        "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IHemFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "insertsheetmetalhem",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "sheet",
+      "metal",
+      "hem",
+      "type",
+      "int32",
+      "position",
+      "reverse",
+      "boolean",
+      "length",
+      "double",
+      "gap",
+      "angle",
+      "rad",
+      "miter",
+      "pcba",
+      "custom",
+      "bend",
+      "allowance"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalHem",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertSheetMetalHem2.",
+  "signature": "Feature InsertSheetMetalHem( \n   System.Int32\nType\n,\n   System.Int32\nPosition\n,\n   System.Boolean\nReverse\n,\n   System.Double\nDLength\n,\n   System.Double\nDGap\n,\n   System.Double\nDAngle\n,\n   System.Double\nDRad\n,\n   System.Double\nDMiterGap\n,\n   CustomBendAllowance\nPCBA\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type as defined in swHemTypes_e"
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position as defined in swHemPositionTypes_e"
+    },
+    {
+      "name": "Reverse",
+      "type": "System.Boolean",
+      "description": "True reverses the direction, false does not"
+    },
+    {
+      "name": "DLength",
+      "type": "System.Double",
+      "description": "Hem length; valid only for open or closed hems"
+    },
+    {
+      "name": "DGap",
+      "type": "System.Double",
+      "description": "Gap distance; valid only for open hems"
+    },
+    {
+      "name": "DAngle",
+      "type": "System.Double",
+      "description": "Hem angle; valid only for tear-drop or rolled hems"
+    },
+    {
+      "name": "DRad",
+      "type": "System.Double",
+      "description": "Hem radius; valid only for tear-drop or rolled hems"
+    },
+    {
+      "name": "DMiterGap",
+      "type": "System.Double",
+      "description": "Hem miter gap"
+    },
+    {
+      "name": "PCBA",
+      "type": "CustomBendAllowance",
+      "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IHemFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

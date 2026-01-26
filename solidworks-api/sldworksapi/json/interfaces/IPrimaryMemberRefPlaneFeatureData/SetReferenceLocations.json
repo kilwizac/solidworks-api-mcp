@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPrimaryMemberRefPlaneFeatureData",
+    "member": "SetReferenceLocations",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RetEntities",
+        "type": "System.Object",
+        "description": "Array of parallel IRefPlane s and/or IFace2 s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "setreferencelocations",
+      "iprimarymemberrefplanefeaturedata",
+      "primary",
+      "member",
+      "ref",
+      "plane",
+      "feature",
+      "data",
+      "reference",
+      "locations",
+      "ret",
+      "entities",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IPrimaryMemberRefPlaneFeatureData.SetReferenceLocations",
+  "description": "Gets the location reference(s) used to create this structure system member.",
+  "signature": "System.Boolean SetReferenceLocations( \n   System.Object\nRetEntities\n)",
+  "parameters": [
+    {
+      "name": "RetEntities",
+      "type": "System.Object",
+      "description": "Array of parallel IRefPlane s and/or IFace2 s"
+    }
+  ],
+  "returns": "True if location references successfully set, false if not",
+  "remarks": "The number of members created = (\nIPrimaryMemberRefPlaneFeatureData::GetReferenceAxes\n*\nIPrimaryMemberRefPlaneFeatureData::GetReferenceLocations\n)\nDuring:\ncreation, you can set any number of entities that are intersecting with the start and end references and at least one reference axis entity.\nediting, you can set only one entity that is intersecting with the start and end refereces and one reference axis entity.",
+  "examples": [
+    {
+      "title": "IPrimaryMemberRefPlaneFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPrimaryMemberRefPlaneFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

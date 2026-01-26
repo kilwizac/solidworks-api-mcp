@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchHatch",
+    "member": "IGetID",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchHatch.GetID"
+    ],
+    "keywords": [
+      "id",
+      "sketch",
+      "hatch",
+      "igetid",
+      "isketchhatch",
+      "int32"
+    ]
+  },
+  "title": "ISketchHatch.IGetID",
+  "description": "Gets the ID for this sketch hatch.",
+  "signature": "System.Int32 IGetID()",
+  "parameters": [],
+  "returns": "Array with two longs or integers (see Long vs. Integer ) identifying this sketch hatch ID (see Remarks )",
+  "remarks": "The ID of the sketch hatch:\nis an ordered pair (i1, i2). The combination of these two numbers is always unique within a specific sketch.\ncannot be assigned by applications or users.\nis not the same as a\npersistent reference ID\n.\nEach entity within a specific sketch has a unique ID. However, a sketch line can have the same ID values as a sketch arc within the same sketch. Likewise, in a second sketch, you may find a different sketch element with the same ID. Therefore, your application must keep track of:\nsketch element type (that is, point, line, arc, spline, and so on)\nowning sketch name\nsketch element ID to uniquely identify a sketched item\nYou can determine the sketch element type by using\nISketchSegment::GetType\n.",
+  "examples": [],
+  "related": [
+    "ISketchHatch.GetID"
+  ]
+}

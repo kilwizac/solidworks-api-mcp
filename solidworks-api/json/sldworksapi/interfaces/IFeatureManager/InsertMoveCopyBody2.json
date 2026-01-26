@@ -1,0 +1,200 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMoveCopyBody2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "TransX",
+        "type": "System.Double",
+        "description": "Value for delta X; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+      },
+      {
+        "name": "TransY",
+        "type": "System.Double",
+        "description": "Value for delta Y; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+      },
+      {
+        "name": "TransZ",
+        "type": "System.Double",
+        "description": "Value for delta Z; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+      },
+      {
+        "name": "TransDist",
+        "type": "System.Double",
+        "description": "Distance ; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+      },
+      {
+        "name": "RotPointX",
+        "type": "System.Double",
+        "description": "Value for X rotation origin; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "RotPointY",
+        "type": "System.Double",
+        "description": "Value for Y rotation origin; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "RotPointZ",
+        "type": "System.Double",
+        "description": "Value for Z rotation origin; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "RotAngleX",
+        "type": "System.Double",
+        "description": "Value for X rotation angle; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "RotAngleY",
+        "type": "System.Double",
+        "description": "Value for Y rotation angle; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "RotAngleZ",
+        "type": "System.Double",
+        "description": "Value for Z rotation angle; applies to rotation (see Remarks )"
+      },
+      {
+        "name": "BCopy",
+        "type": "System.Boolean",
+        "description": "True if a copy operation, false if a move operation"
+      },
+      {
+        "name": "NumCopies",
+        "type": "System.Int32",
+        "description": "Number of copies to create"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IMoveCopyBodyFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "move",
+      "copy",
+      "body",
+      "bodies",
+      "ibody2",
+      "rotate",
+      "surfaces",
+      "surface",
+      "isurface",
+      "insertmovecopybody2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "body2",
+      "trans",
+      "double",
+      "dist",
+      "rot",
+      "point",
+      "angle",
+      "boolean",
+      "num",
+      "copies",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertMoveCopyBody2",
+  "description": "Moves or makes copies of the selected solid bodies or surfaces.",
+  "signature": "Feature InsertMoveCopyBody2( \n   System.Double\nTransX\n,\n   System.Double\nTransY\n,\n   System.Double\nTransZ\n,\n   System.Double\nTransDist\n,\n   System.Double\nRotPointX\n,\n   System.Double\nRotPointY\n,\n   System.Double\nRotPointZ\n,\n   System.Double\nRotAngleX\n,\n   System.Double\nRotAngleY\n,\n   System.Double\nRotAngleZ\n,\n   System.Boolean\nBCopy\n,\n   System.Int32\nNumCopies\n)",
+  "parameters": [
+    {
+      "name": "TransX",
+      "type": "System.Double",
+      "description": "Value for delta X; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+    },
+    {
+      "name": "TransY",
+      "type": "System.Double",
+      "description": "Value for delta Y; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+    },
+    {
+      "name": "TransZ",
+      "type": "System.Double",
+      "description": "Value for delta Z; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+    },
+    {
+      "name": "TransDist",
+      "type": "System.Double",
+      "description": "Distance ; applies to translation and valid only if Rot* parameters are null or Nothing (see Remarks )"
+    },
+    {
+      "name": "RotPointX",
+      "type": "System.Double",
+      "description": "Value for X rotation origin; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "RotPointY",
+      "type": "System.Double",
+      "description": "Value for Y rotation origin; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "RotPointZ",
+      "type": "System.Double",
+      "description": "Value for Z rotation origin; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "RotAngleX",
+      "type": "System.Double",
+      "description": "Value for X rotation angle; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "RotAngleY",
+      "type": "System.Double",
+      "description": "Value for Y rotation angle; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "RotAngleZ",
+      "type": "System.Double",
+      "description": "Value for Z rotation angle; applies to rotation (see Remarks )"
+    },
+    {
+      "name": "BCopy",
+      "type": "System.Boolean",
+      "description": "True if a copy operation, false if a move operation"
+    },
+    {
+      "name": "NumCopies",
+      "type": "System.Int32",
+      "description": "Number of copies to create"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Specify either translation or rotation parameters. Translation and rotation cannot both be applied by a single move/copy body feature. If you specify both translation and rotation parameters, only the rotation parameters are applied.\nThis method requires selecting the body, surface, edge, and vertex using these marks:\nSelection\nMark\nBody or surface\n1\nRotation edge, vertex, coordinate system\n2\nTranslation edge, vertex, coordinate system\n4\nTranslation vertex\n8\nNOTE:\nTo add the move/copy body as a sub-feature of a derived part, you must select the move/copy body feature first.\nSee\nIModelDocExtension::SelectByID2\nfor details on selecting and marking bodies, surfaces, edges, vertices, and coordinate systems.",
+  "examples": [
+    {
+      "title": "Move Bodies (C#)",
+      "href": "Move_Bodies_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Bodies (VB.NET)",
+      "href": "Move_Bodies_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Bodies (VBA)",
+      "href": "Move_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMoveCopyBodyFeatureData"
+  ]
+}

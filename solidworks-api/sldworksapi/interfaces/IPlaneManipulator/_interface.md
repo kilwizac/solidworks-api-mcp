@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IPlaneManipulator
+inherits: null
+description: Allows access to a plane that has a manipulator.
+member_count: 9
+docset: sldworksapi
+categories:
+  - ui
+common_members:
+  - Color
+  - Distance
+  - Height
+  - Normal
+  - Origin
+  - Update
+  - Width
+  - XAngle
+---
+
+# IPlaneManipulator
+
+Allows access to a plane that has a manipulator.
+
+## Common Members
+
+- `Color`
+- `Distance`
+- `Height`
+- `Normal`
+- `Origin`
+- `Update`
+- `Width`
+- `XAngle`

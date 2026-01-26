@@ -1,0 +1,75 @@
+---
+type: method
+interface: IAssemblyDoc
+member: SetSpeedPakToParent
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+  - core
+  - ui
+related:
+  - IAssemblyDoc.CreateSpeedPak
+  - IAssemblyDoc.SetSpeedPakConfigurations
+  - IAssemblyDoc.UpdateSpeedPak
+  - IComponent2.IsSpeedPak
+keywords:
+  - speedpak
+  - assemblies
+  - see
+  - also
+  - iassemblydoc
+  - components
+  - icomponent2
+  - setspeedpaktoparent
+  - assembly
+  - doc
+  - speed
+  - pak
+  - parent
+  - boolean
+  - create
+  - subassemblies
+  - vb
+  - net
+  - vba
+---
+
+# IAssemblyDoc.SetSpeedPakToParent
+
+Switches the selected subassemblies from the SpeedPak configuration to the parent configuration of the SpeedPak configuration.
+
+## Signature
+
+```csharp
+System.Boolean SetSpeedPakToParent()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if the selected subassemblies switch from the SpeedPak configuration to the parent configuration of the SpeedPak configuration, false if not
+
+## Remarks
+
+To switch back to the SpeedPak configuration, use
+IAssemblyDoc::UseSpeedPak
+.
+
+## Examples
+
+- Create SpeedPak for Subassemblies (C#) (Create_SpeedPak_for_Subassemblies_Example_CSharp.htm)
+- Create SpeedPak for Subassemblies (VB.NET) (Create_SpeedPak_for_Subassemblies_Example_VBNET.htm)
+- Create SpeedPak for Subassemblies (VBA) (Create_SpeedPak_for_Subassemblies_Example_VB.htm)
+
+## See Also
+
+- `IAssemblyDoc.CreateSpeedPak`
+- `IAssemblyDoc.SetSpeedPakConfigurations`
+- `IAssemblyDoc.UpdateSpeedPak`
+- `IComponent2.IsSpeedPak`

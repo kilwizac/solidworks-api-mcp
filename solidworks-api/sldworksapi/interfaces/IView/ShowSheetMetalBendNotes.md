@@ -1,0 +1,49 @@
+---
+type: property
+interface: IView
+member: ShowSheetMetalBendNotes
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - drawings
+  - ui
+related: []
+keywords:
+  - note
+  - see
+  - also
+  - inote
+  - bend
+  - line
+  - notes
+  - drawing
+  - views
+  - iview
+  - view
+  - showsheetmetalbendnotes
+  - show
+  - sheet
+  - metal
+  - boolean
+readonly: null
+---
+
+# IView.ShowSheetMetalBendNotes
+
+Gets or sets whether to show sheet metal bend notes.
+
+## Signature
+
+```csharp
+System.Boolean ShowSheetMetalBendNotes {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to show sheet metal bend notes, false to not

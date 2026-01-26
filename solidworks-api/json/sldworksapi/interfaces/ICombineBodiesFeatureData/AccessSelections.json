@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICombineBodiesFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PTopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document"
+      },
+      {
+        "name": "PComponent",
+        "type": "Component2",
+        "description": "Component in which the feature is to be modified"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "icombinebodiesfeaturedata",
+      "combine",
+      "bodies",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ICombineBodiesFeatureData.AccessSelections",
+  "description": "Gains access to the selections that define this combine feature.",
+  "signature": "System.Boolean AccessSelections( \n   ModelDoc2\nPTopDoc\n,\n   Component2\nPComponent\n)",
+  "parameters": [
+    {
+      "name": "PTopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document"
+    },
+    {
+      "name": "PComponent",
+      "type": "Component2",
+      "description": "Component in which the feature is to be modified"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed",
+  "remarks": "Remarks\nTo modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifiyDefinition2\nif you modified the feature\nICombineBodiesFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Combine Bodies (C#)",
+      "href": "Combine_Bodies_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Combine Bodies (VB.NET)",
+      "href": "Combine_Bodies_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Combine Bodies (VBA)",
+      "href": "Combine_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

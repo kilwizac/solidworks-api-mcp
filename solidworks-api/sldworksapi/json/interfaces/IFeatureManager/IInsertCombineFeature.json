@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "IInsertCombineFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "OperationType",
+        "type": "System.Int32",
+        "description": "Operation as defined in swBodyOperationType_e"
+      },
+      {
+        "name": "MainBody",
+        "type": "Body2",
+        "description": "If OperationType is ... Then set MainBody to ... swBodyOperationType_e.SWBODYADD Nothing or null swBodyOperationType_e.SWBODYCUT Target body swBodyOperationType_e.SWBODYINTERSECT Nothing or null (See Remarks )"
+      },
+      {
+        "name": "ToolsCount",
+        "type": "System.Int32",
+        "description": "Number of bodies to combine"
+      },
+      {
+        "name": "ToolsArr",
+        "type": "Body2",
+        "description": "in-process, unmanaged C++: Pointer to an array of bodies to combine of size ToolsCount (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICombineBodiesFeatureData",
+      "IFeatureManager.InsertCombineFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "combine",
+      "parts",
+      "icombinebodiesfeaturedata",
+      "iinsertcombinefeature",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "operation",
+      "type",
+      "int32",
+      "main",
+      "body",
+      "body2",
+      "tools",
+      "count",
+      "arr"
+    ]
+  },
+  "title": "IFeatureManager.IInsertCombineFeature",
+  "description": "Combines the specified bodies in the multibody part to create a combine feature.",
+  "signature": "Feature IInsertCombineFeature( \n   System.Int32\nOperationType\n,\n   Body2\nMainBody\n,\n   System.Int32\nToolsCount\n,\n   ref Body2\nToolsArr\n)",
+  "parameters": [
+    {
+      "name": "OperationType",
+      "type": "System.Int32",
+      "description": "Operation as defined in swBodyOperationType_e"
+    },
+    {
+      "name": "MainBody",
+      "type": "Body2",
+      "description": "If OperationType is ... Then set MainBody to ... swBodyOperationType_e.SWBODYADD Nothing or null swBodyOperationType_e.SWBODYCUT Target body swBodyOperationType_e.SWBODYINTERSECT Nothing or null (See Remarks )"
+    },
+    {
+      "name": "ToolsCount",
+      "type": "System.Int32",
+      "description": "Number of bodies to combine"
+    },
+    {
+      "name": "ToolsArr",
+      "type": "Body2",
+      "description": "in-process, unmanaged C++: Pointer to an array of bodies to combine of size ToolsCount (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "You can either call this method, directly passing in the bodies with MainBody and ToolVar, or you can:\nSelect the bodies using\nIModelDocExtension::SelectByID2\nas follows:\nTo select...\nUse Mark...\nMainBody\n1\nToolVar bodies\n2\nCall this method, setting MainBody to Nothing or null and ToolVar to an empty array.\nSee the SOLIDWORKS Help for more information about the combined feature.",
+  "examples": [],
+  "related": [
+    "ICombineBodiesFeatureData",
+    "IFeatureManager.InsertCombineFeature"
+  ]
+}

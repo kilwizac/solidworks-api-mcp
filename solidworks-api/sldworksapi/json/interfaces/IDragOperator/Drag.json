@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDragOperator",
+    "member": "Drag",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PXform",
+        "type": "System.Object",
+        "description": "Math transform that specifies the desired motion for this step"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IDragOperator.CollisionDetectionEnabled",
+      "IDragOperator.DragAsUI",
+      "IDragOperator.DynamicClearanceEnabled",
+      "IDragOperator.IDrag",
+      "IDragOperator.UseAbsoluteTransform"
+    ],
+    "keywords": [
+      "drag",
+      "see",
+      "also",
+      "idragoperator",
+      "transform",
+      "operator",
+      "xform",
+      "object",
+      "boolean",
+      "rotate",
+      "assembly",
+      "component",
+      "axis",
+      "using",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDragOperator.Drag",
+  "description": "Sets the transform matrix for this drag operation.",
+  "signature": "System.Boolean Drag( \n   System.Object\nPXform\n)",
+  "parameters": [
+    {
+      "name": "PXform",
+      "type": "System.Object",
+      "description": "Math transform that specifies the desired motion for this step"
+    }
+  ],
+  "returns": "True if the move was successful, false if not (see Remarks )",
+  "remarks": "This method is more precise than the\nIDragOperator::DragAsUI\nmethod. IDragOperator::DragAsUI is more like an interactive drag operation performed in the SOLIDWORKS 2001Plus software and it may give better graphics performance than IDragOperator::Drag.\nYou will see an improvement in performance when this method is used in the default state. If\ncollision detection\nor\nclearance\nis enabled, then the original mode is used. This method is more efficient than making multiple calls to\nIComponent2::SetTransformAndSolve\nbecause this method reuses the solver.\nUse\nIDragOperator::UseAbsoluteTransforms\nto set the transforms type to absolute or relative.\nIf the desired orientation set by this method was not honored and remedial action occurred, then the\nIDragOperation::DragCorrected\nproperty is set.\nThis method returns false if the drag cannot be performed. This typically occurs because of a collision.",
+  "examples": [
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::Drag (VBA)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::Drag (VB.NET)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate Assembly Component on Axis Using IDragOperator::Drag (C#)",
+      "href": "Rotate_Assembly_Component_on_Axis_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDragOperator.CollisionDetectionEnabled",
+    "IDragOperator.DragAsUI",
+    "IDragOperator.DynamicClearanceEnabled",
+    "IDragOperator.IDrag",
+    "IDragOperator.UseAbsoluteTransform"
+  ]
+}

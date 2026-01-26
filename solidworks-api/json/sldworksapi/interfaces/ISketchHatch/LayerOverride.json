@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchHatch",
+    "member": "LayerOverride",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "layeroverride",
+      "isketchhatch",
+      "sketch",
+      "hatch",
+      "layer",
+      "override",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchHatch.LayerOverride",
+  "description": "Gets or sets whether the sketch hatch has properties that override the default properties of the layer.",
+  "signature": "System.Int32 LayerOverride {get; set;}",
+  "parameters": [],
+  "returns": "Properties that have been overridden or should be overridden as defined in swLayerOverride_e (see Remarks )",
+  "remarks": "Only drawing documents support layers.\nSketch hatches can be created on a layer that has specific visual properties. By default, the sketch hatches take on the visual properties defined by the layer. However, for\nspecific sketch hatches, these visual properties can be overridden (see\nISketchHatch::Color\n). This property gets or sets whether the default visual properties of the layer should be used by this sketch hatch.\nWhen the sketch hatch is not on any layer, the value this property returns is undefined. You can use the\nISketchHatch::Layer\nproperty to determine the name of the layer, if any, that this sketch hatch is on. If an empty string is returned by the ISketchHatch::Layer property, then this\nproperty is not used.\nSketch hatches currently support only the color visual property. Therefore, the only bit value that will currently be used by this function would be 0x1 which indicates a color override. If this property returns 0x1, this indicates that the color of this sketch hatch has been specifically set by the user and may not match the default color value associated with this sketch hatch's layer. If you pass 0 to this property, then you are indicating that the color should be reset to use the default color associated with this item's layer.",
+  "examples": [
+    {
+      "title": "ISketchHatch",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchHatch",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

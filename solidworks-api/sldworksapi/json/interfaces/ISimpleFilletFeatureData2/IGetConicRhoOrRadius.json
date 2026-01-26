@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "IGetConicRhoOrRadius",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "System.Object",
+        "description": "Fillet item for which to get a value (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.GetConicRhoOrRadius",
+      "ISimpleFilletFeatureData2.ISetConicRhoOrRadius"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "igetconicrhoorradius",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "rho",
+      "radius",
+      "item",
+      "object",
+      "double"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.IGetConicRhoOrRadius",
+  "description": "Gets the conic rho, conic radius, or circular radius of this fillet.",
+  "signature": "System.Double IGetConicRhoOrRadius( \n   System.Object\nPFilletItem\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "System.Object",
+      "description": "Fillet item for which to get a value (see Remarks )"
+    }
+  ],
+  "returns": "Conic rho, conic radius, or circular radius",
+  "remarks": "Before calling this method, call\nISimpleFilletFeatureData2::IGetFilletItemAtIndex\nto get the pointer with which to specify PFilletItem.\nThe type of value returned by this method corresponds to the\nISimpleFilletFeatureData2::ConicTypeForCrossSectionProfile\nsetting.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.GetConicRhoOrRadius",
+    "ISimpleFilletFeatureData2.ISetConicRhoOrRadius"
+  ]
+}

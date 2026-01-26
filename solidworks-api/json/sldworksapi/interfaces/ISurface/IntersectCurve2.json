@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IntersectCurve2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "OtherCurve",
+        "type": "System.Object",
+        "description": "Curve"
+      },
+      {
+        "name": "CurveBound",
+        "type": "System.Object",
+        "description": "Array of 6 doubles representing the start and end points of the curve"
+      },
+      {
+        "name": "PointArray",
+        "type": "System.Object",
+        "description": "Array of points"
+      },
+      {
+        "name": "TArray",
+        "type": "System.Object",
+        "description": "Array of parameters on curve"
+      },
+      {
+        "name": "UvArray",
+        "type": "System.Object",
+        "description": "Array of parameters on surface"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IIntersectCurve2"
+    ],
+    "keywords": [
+      "intersection",
+      "curves",
+      "intersectcurve2",
+      "isurface",
+      "surface",
+      "intersect",
+      "curve2",
+      "other",
+      "curve",
+      "object",
+      "bound",
+      "point",
+      "array",
+      "uv",
+      "boolean"
+    ]
+  },
+  "title": "ISurface.IntersectCurve2",
+  "description": "Gets a surface-curve intersection.",
+  "signature": "System.Boolean IntersectCurve2( \n   System.Object\nOtherCurve\n,\n   System.Object\nCurveBound\n,\n   out System.Object\nPointArray\n,\n   out System.Object\nTArray\n,\n   out System.Object\nUvArray\n)",
+  "parameters": [
+    {
+      "name": "OtherCurve",
+      "type": "System.Object",
+      "description": "Curve"
+    },
+    {
+      "name": "CurveBound",
+      "type": "System.Object",
+      "description": "Array of 6 doubles representing the start and end points of the curve"
+    },
+    {
+      "name": "PointArray",
+      "type": "System.Object",
+      "description": "Array of points"
+    },
+    {
+      "name": "TArray",
+      "type": "System.Object",
+      "description": "Array of parameters on curve"
+    },
+    {
+      "name": "UvArray",
+      "type": "System.Object",
+      "description": "Array of parameters on surface"
+    }
+  ],
+  "returns": "True if getting the intersection succeeded, false if not",
+  "remarks": "The curves must be bounded.\nVisual Basic and C++ Dispatch applications should use this method instead of using\nISurface::GetIntersectCurveCount2\n.",
+  "examples": [],
+  "related": [
+    "ISurface.IIntersectCurve2"
+  ]
+}

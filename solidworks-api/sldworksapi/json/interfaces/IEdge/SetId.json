@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "SetId",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "IdIn",
+        "type": "System.Int32",
+        "description": "Edge ID of this edge of an imported body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetID",
+      "IEdge.RemoveId"
+    ],
+    "keywords": [
+      "id",
+      "edge",
+      "setid",
+      "iedge",
+      "int32",
+      "void"
+    ]
+  },
+  "title": "IEdge.SetId",
+  "description": "Sets the edge ID of this edge of an imported body.",
+  "signature": "void SetId( \n   System.Int32\nIdIn\n)",
+  "parameters": [
+    {
+      "name": "IdIn",
+      "type": "System.Int32",
+      "description": "Edge ID of this edge of an imported body"
+    }
+  ],
+  "returns": "",
+  "remarks": "SOLIDWORKS uses this ID to track edges of imported bodies.\nThe ID of the edge of an imported body:\nis not saved with the document.\nmust be unique.\ncan be changed by any third-party application. The intent is that if you\nassign an ID to an edge of an imported body\n, you can refer to that edge within your application.\nis not the same as a\npersistent reference ID\nor\ntracking ID\n.\nUse the\nIAttribute\nobject to store data with an edge.",
+  "examples": [],
+  "related": [
+    "IEdge.GetID",
+    "IEdge.RemoveId"
+  ]
+}

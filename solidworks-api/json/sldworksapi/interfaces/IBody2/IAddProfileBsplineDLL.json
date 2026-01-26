@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IAddProfileBsplineDLL",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "Properties",
+        "type": "System.Int32",
+        "description": "Contains 4 longs (see Remarks )"
+      },
+      {
+        "name": "KnotArray",
+        "type": "System.Double",
+        "description": "Pointer to an array of numKnots doubles (see Remarks )"
+      },
+      {
+        "name": "ControlPointCoordArray",
+        "type": "System.Double",
+        "description": "Pointer to an array of numCtrlPtCoord doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "iaddprofilebsplinedll",
+      "ibody2",
+      "body2",
+      "add",
+      "profile",
+      "bspline",
+      "dll",
+      "properties",
+      "int32",
+      "knot",
+      "array",
+      "double",
+      "control",
+      "point",
+      "coord",
+      "curve"
+    ]
+  },
+  "title": "IBody2.IAddProfileBsplineDLL",
+  "description": "Adds a profile B-spline.",
+  "signature": "Curve IAddProfileBsplineDLL( \n   ref System.Int32\nProperties\n,\n   ref System.Double\nKnotArray\n,\n   ref System.Double\nControlPointCoordArray\n)",
+  "parameters": [
+    {
+      "name": "Properties",
+      "type": "System.Int32",
+      "description": "Contains 4 longs (see Remarks )"
+    },
+    {
+      "name": "KnotArray",
+      "type": "System.Double",
+      "description": "Pointer to an array of numKnots doubles (see Remarks )"
+    },
+    {
+      "name": "ControlPointCoordArray",
+      "type": "System.Double",
+      "description": "Pointer to an array of numCtrlPtCoord doubles (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the profile B-spline curve",
+  "remarks": "You can use this method with\nIBody2::ICreateRevolutionSurface\nto generate any surface\nof revolution or with\nIBody2::ICreateExtrusionSurface\nto generate a tabulated cylinder.\nThe Properties argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nThe length of the KnotArray argument is:\nnumKnots = NumCtrlPoints + Order\nThe length of the ControlPointCoordArray is:\nnumCtrlPtCoord = NumCtrlPoints * DimensionControlPoints",
+  "examples": [],
+  "related": []
+}

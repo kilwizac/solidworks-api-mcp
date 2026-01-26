@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAutoBalloonOptions",
+    "member": "Layout",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "layout",
+      "iautoballoonoptions",
+      "auto",
+      "balloon",
+      "options",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAutoBalloonOptions.Layout",
+  "description": "Gets and sets the style of the layout of balloons.",
+  "signature": "System.Int32 Layout {get; set;}",
+  "parameters": [],
+  "returns": "Style of the balloon layout as defined in swBalloonLayoutType_e }}end!kadov ; specify -1 to use the document default layout style (see Remarks )",
+  "remarks": "To get or set the document default values for Layout...\nUse...\nGet\nIModelDocExtension::GetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingAutoBalloonLayout, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\nSet\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingAutoBalloonLayout, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonLayoutType_e.<\nValue\n>)\nSee the SOLIDWORKS Help for additional details about autoballoons.",
+  "examples": [
+    {
+      "title": "IAutoBalloonOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAutoBalloonOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetBreakLineInfo2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Number of break lines"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.BreakLineGap",
+      "IView.GetBreakLineInfo2",
+      "IView.GetBreakLines",
+      "IView.IGetBreakLines",
+      "IView.InsertBreak",
+      "IView.IsBroken"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "break",
+      "lines",
+      "view",
+      "ibreakline",
+      "information",
+      "igetbreaklineinfo2",
+      "line",
+      "info2",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IView.IGetBreakLineInfo2",
+  "description": "Gets information for all of the break lines in this view.",
+  "signature": "System.Double IGetBreakLineInfo2( \n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Number of break lines"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of break line information (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIView::GetBreakLineCount2\nto get the value for ArraySize.\nThe return value is a one-dimensional array consisting of the following data:\n[\nbreaklineStyle, color, lineType, lineStyleIndex, lineWeight, layerId,\nlayerOverride, numLines, numArcs, numSplines, [\nbreak line data]\n]\nwhere:\nbreaklineStyle\nBreak line style as defined in\nswBreakLineStyle_e\ncolor\nCOLORREF returned as an integer; 0 or -1 for default color\nlineType\nLine type as defined in\nswLineTypes_e\n; lineType is a combination of a lineStyle and lineWeight\nlineStyleIndex\nLine style as defined in\nswLineStyles_e\nlineWeight\nLine width as defined in\nswLineWeights_e\nlayerId\nAn integer value indicating which layer holds this entity;\nILayer\ncan be obtained by passing this integer value to\nILayerMgr::GetLayerById\nand\nILayerMgr::IGetLayerId\nlayerOverride\nAn integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. Valid bit values as defined in\nswLayerOverride_e\n:\ncolor = 0x1\nstyle = 0x2\nwidth = 0x4\nTherefore, if LayerOverride is returned as 3, then the color and style are specifically set for this item and may not match the default values associated with this item's layer.\nnumLines\nNumber of line segments if a straight or zig zag break\nnumArcs\nNumber of arc lines if a curve break\nnumSplines\nNumber of spline lines if a jagged break\nIf the break line style is swBreakLineStyle_e...\nThen [\nbreak line data\n] is packed with...\nswBreakLine_Straight\n12 doubles (2 lines * 1 segment * 2 points * 3 coordinates)\nswBreakLine_ZigZag\n60 doubles (2 lines * 5 segments * 2 points * 3 coordinates)\nswBreakLine_SmallZigZag\n60 doubles (2 lines * 5 segments * 2 points * 3 coordinates)\nswBreakLine_Curve\nfor each arc line in the break:\narc direction (1 double)\nstart point (3 doubles)\nend point (3 doubles)\ncenter point (3 doubles)\nswBreakLine_Jagged\nfor each spline line in the break:\nn\n(1 integer)\n3*\nn\ndoubles (\nn\npoints * 3 coordinates)\nwhere:\nn\nis the number of spline points generated based on the jagged cut shape intensity selected by the user in the Break View Property Manager",
+  "examples": [],
+  "related": [
+    "IView.BreakLineGap",
+    "IView.GetBreakLineInfo2",
+    "IView.GetBreakLines",
+    "IView.IGetBreakLines",
+    "IView.InsertBreak",
+    "IView.IsBroken"
+  ]
+}

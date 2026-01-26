@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetViewXform",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetViewXform",
+      "IView.ModelToViewTransform"
+    ],
+    "keywords": [
+      "transform",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "transforms",
+      "view",
+      "igetviewxform",
+      "xform",
+      "double"
+    ]
+  },
+  "title": "IView.IGetViewXform",
+  "description": "Gets the transform from model space origin to drawing space origin.",
+  "signature": "System.Double IGetViewXform()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is formatted as the following array of 13 doubles:\n[0-8] is a 3x3 matrix of the view rotation\n[9-11] is a 1x3 vector of translation\n[12] is the scaling of the transformation\nIView::GetXform\nand\nIView::IGetXform\nreturn the location of the drawing view center with respect to the drawing origin.",
+  "examples": [],
+  "related": [
+    "IView.GetViewXform",
+    "IView.ModelToViewTransform"
+  ]
+}

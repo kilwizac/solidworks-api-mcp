@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "EditSketch",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "ISketch"
+    ],
+    "keywords": [
+      "edit",
+      "sketches",
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "editsketch",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "void"
+    ]
+  },
+  "title": "IDrawingDoc.EditSketch",
+  "description": "Allows editing of a sketch in the selected drawing view or sheet.",
+  "signature": "void EditSketch()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "Creating subsequent geometry resides in this drawing view or sheet.\nIf you selected a drawing view and called IDrawingDoc::EditSketch, then you can resume editing the drawing sheet by calling\nIDrawingDoc::EditSheet\nor by selecting the sheet and calling IDrawingDoc::EditSketch again.\nTo determine the current state, use\nIDrawingDoc::GetEditSheet\n.",
+  "examples": [],
+  "related": [
+    "ISketch"
+  ]
+}

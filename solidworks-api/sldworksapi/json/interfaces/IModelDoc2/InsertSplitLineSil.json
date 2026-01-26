@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertSplitLineSil",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.InsertSplitLineIntersect",
+      "IModelDoc2.InsertSplitLineProject",
+      "ISplitLineFeatureData"
+    ],
+    "keywords": [
+      "split",
+      "lines",
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "insertsplitlinesil",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "line",
+      "sil",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertSplitLineSil",
+  "description": "Splits a face by creating split lines along the silhouette of the selected faces.",
+  "signature": "void InsertSplitLineSil()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "The silhouette curves differ based on your orientation. Therefore, this method requires a selection to specify the desired direction.\nValid items to select to specify the direction are:\nreference plane\nplanar face\nedge\naxis\ntwo points\nThe item selected for direction must be selected using\nIModelDocExtension::SelectByID2\nwith a mark value of 2. The faces to split must be selected using I\nModelDocExtension::SelectByID2\nwith mark values of 1.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertSplitLineIntersect",
+    "IModelDoc2.InsertSplitLineProject",
+    "ISplitLineFeatureData"
+  ]
+}

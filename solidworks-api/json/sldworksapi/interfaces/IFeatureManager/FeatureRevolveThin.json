@@ -1,0 +1,161 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureRevolveThin",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True reverses the angle direction, false does not"
+      },
+      {
+        "name": "Angle2",
+        "type": "System.Double",
+        "description": "Angle of revolution in radians"
+      },
+      {
+        "name": "RevType",
+        "type": "System.Int32",
+        "description": "Type of revolution as defined in swRevolveType_e (see Remarks )"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Wall thickness (ReverseThinDir = 2 uses (Thickness1)/2 for each direction)"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Wall thickness; use only ReverseThinDir=2"
+      },
+      {
+        "name": "ReverseThinDir",
+        "type": "System.Int32",
+        "description": "Type and direction as defined in swThinWallType_e"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to merge the results in a multibody part, false to not"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureRevolve",
+      "IFeatureManager.FeatureRevolveCut2",
+      "IFeatureManager.FeatureRevolveThinCut",
+      "IRevolveFeatureData2"
+    ],
+    "keywords": [
+      "featurerevolvethin",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "revolve",
+      "thin",
+      "angle",
+      "double",
+      "reverse",
+      "dir",
+      "boolean",
+      "angle2",
+      "rev",
+      "type",
+      "int32",
+      "thickness1",
+      "thickness2",
+      "merge",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select"
+    ]
+  },
+  "title": "IFeatureManager.FeatureRevolveThin",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureRevolve2.",
+  "signature": "Feature FeatureRevolveThin( \n   System.Double\nAngle\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nAngle2\n,\n   System.Int32\nRevType\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Int32\nReverseThinDir\n,\n   System.Boolean\nMerge\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True reverses the angle direction, false does not"
+    },
+    {
+      "name": "Angle2",
+      "type": "System.Double",
+      "description": "Angle of revolution in radians"
+    },
+    {
+      "name": "RevType",
+      "type": "System.Int32",
+      "description": "Type of revolution as defined in swRevolveType_e (see Remarks )"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Wall thickness (ReverseThinDir = 2 uses (Thickness1)/2 for each direction)"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Wall thickness; use only ReverseThinDir=2"
+    },
+    {
+      "name": "ReverseThinDir",
+      "type": "System.Int32",
+      "description": "Type and direction as defined in swThinWallType_e"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to merge the results in a multibody part, false to not"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "The ReverseDir argument has no effect if a mid-plane revolution is specified.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureRevolve",
+    "IFeatureManager.FeatureRevolveCut2",
+    "IFeatureManager.FeatureRevolveThinCut",
+    "IRevolveFeatureData2"
+  ]
+}

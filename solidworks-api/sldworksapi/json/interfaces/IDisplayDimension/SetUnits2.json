@@ -1,0 +1,132 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetUnits2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True to use the document settings for units, false to use the setting values passed to this method (see Remarks )"
+      },
+      {
+        "name": "UType",
+        "type": "System.Int32",
+        "description": "Unit display setting as defined in swLengthUnit_e or swAngleUnit_e ; valid only if UseDoc is false"
+      },
+      {
+        "name": "FractBase",
+        "type": "System.Int32",
+        "description": "Decimal or fraction display setting as defined in swFractionDisplay_e ; valid only if UseDoc is false"
+      },
+      {
+        "name": "FractDenom",
+        "type": "System.Int32",
+        "description": "Denominator for fraction display; valid only if UseDoc is false"
+      },
+      {
+        "name": "RoundToFraction",
+        "type": "System.Boolean",
+        "description": "True to round values to the nearest fraction, false to display fractions only if the values are exact; valid only if UseDoc is false"
+      },
+      {
+        "name": "DecimalRounding",
+        "type": "System.Int32",
+        "description": "Decimal rounding as defined by swUnitsDecimalRounding_e ; valid only if FractBase is swFractionDisplay_e.swDECIMAL and UseDoc is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetUnits",
+      "IDisplayDimension.GetUseDocUnits"
+    ],
+    "keywords": [
+      "setunits2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "units2",
+      "use",
+      "doc",
+      "boolean",
+      "type",
+      "int32",
+      "fract",
+      "base",
+      "denom",
+      "round",
+      "fraction",
+      "decimal",
+      "rounding",
+      "units",
+      "dimensions",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDisplayDimension.SetUnits2",
+  "description": "Sets the unit display characteristics of this display dimension.",
+  "signature": "System.Int32 SetUnits2( \n   System.Boolean\nUseDoc\n,\n   System.Int32\nUType\n,\n   System.Int32\nFractBase\n,\n   System.Int32\nFractDenom\n,\n   System.Boolean\nRoundToFraction\n,\n   System.Int32\nDecimalRounding\n)",
+  "parameters": [
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True to use the document settings for units, false to use the setting values passed to this method (see Remarks )"
+    },
+    {
+      "name": "UType",
+      "type": "System.Int32",
+      "description": "Unit display setting as defined in swLengthUnit_e or swAngleUnit_e ; valid only if UseDoc is false"
+    },
+    {
+      "name": "FractBase",
+      "type": "System.Int32",
+      "description": "Decimal or fraction display setting as defined in swFractionDisplay_e ; valid only if UseDoc is false"
+    },
+    {
+      "name": "FractDenom",
+      "type": "System.Int32",
+      "description": "Denominator for fraction display; valid only if UseDoc is false"
+    },
+    {
+      "name": "RoundToFraction",
+      "type": "System.Boolean",
+      "description": "True to round values to the nearest fraction, false to display fractions only if the values are exact; valid only if UseDoc is false"
+    },
+    {
+      "name": "DecimalRounding",
+      "type": "System.Int32",
+      "description": "Decimal rounding as defined by swUnitsDecimalRounding_e ; valid only if FractBase is swFractionDisplay_e.swDECIMAL and UseDoc is false"
+    }
+  ],
+  "returns": "Return status (see Remarks )",
+  "remarks": "The unit display settings of a display dimension are controlled by a value stored in one of two places: in the owning document or in the individual display dimension. This method allows you to determine which setting to use, the document default or the values specified by UType\n,\nFractBase\n,\nFractDenom\n,\nRoundToFraction, and DecimalRounding.\nIf UseDoc is true, then the display dimension unit information follows the document settings, and SOLIDWORKS ignores the remaining arguments. SOLIDWORKS also removes any local settings so that if you switch back to the local settings, they are set to default values.\nUType indicates the units. Depending on the type of dimension (angular or linear), this parameter takes a value from\nswLengthUnit_e\nor\nswAngleUnit_e\n. If the specified value is invalid, SOLIDWORKS does not change the existing setting, and this method returns an error.\nFractBase indicates whether the dimension is displayed as a fraction or a decimal. SOLIDWORKS displays the dimension as a fraction only if it can precisely represent the dimension as a fraction based on the FractDenom setting. However, if the RoundToFraction argument is true, then SOLIDWORKS displays the dimension rounded to the nearest fraction.\nFractDenom indicates the fraction precision by specifying the largest fraction denominator used (for example, 4 for 1/4 or 32 for 1/32). Fraction display is valid only if UType is swINCHES or swFEETINCHES.\nThe return value indicates the success or failure of this method as follows:\nIf Return Value is...\nThen this method...\n2\nFailed because UType is invalid\n1\nFailed for an unknown reason\n0\nSucceeded\nAfter using this method, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [
+    {
+      "title": "Set Rounding of Decimal Units in Display Dimensions (VBA)",
+      "href": "Set_Rounding_of_Decimal_Units_in_Display_Dimensions_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Rounding of Decimal Units in Display Dimensions (VB.NET)",
+      "href": "Set_Rounding_of_Decimal_Units_in_Display_Dimensions_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Rounding of Decimal Units in Display Dimensions (C#)",
+      "href": "Set_Rounding_of_Decimal_Units_in_Display_Dimensions_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetUnits",
+    "IDisplayDimension.GetUseDocUnits"
+  ]
+}

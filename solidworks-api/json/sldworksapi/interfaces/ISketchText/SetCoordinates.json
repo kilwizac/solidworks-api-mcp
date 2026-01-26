@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchText",
+    "member": "SetCoordinates",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of the sketch text position"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the sketch text position"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the sketch text position"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "setcoordinates",
+      "isketchtext",
+      "sketch",
+      "text",
+      "coordinates",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISketchText.SetCoordinates",
+  "description": "Sets the position of this sketch text.",
+  "signature": "System.Boolean SetCoordinates( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of the sketch text position"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the sketch text position"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the sketch text position"
+    }
+  ],
+  "returns": "True if the sketch text position is successfully set, false if not",
+  "remarks": "To set the sketch text position, you must be editing the sketch. See\nIModelDoc2::EditSketch\nor\nISketchManager::InsertSketch\n.\nTo get the position of this sketch text, use\nISketchText::GetCoordinates\nand\nISketchText::IGetCoordinates\n.",
+  "examples": [],
+  "related": []
+}

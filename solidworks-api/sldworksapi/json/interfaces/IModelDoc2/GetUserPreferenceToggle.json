@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetUserPreferenceToggle",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UserPreferenceToggle",
+        "type": "System.Int32",
+        "description": "Value as defined in swUserPreferenceToggle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "getuserpreferencetoggle",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "user",
+      "preference",
+      "toggle",
+      "int32",
+      "boolean",
+      "material",
+      "properties",
+      "vba",
+      "ignore",
+      "feature",
+      "colors"
+    ]
+  },
+  "title": "IModelDoc2.GetUserPreferenceToggle",
+  "description": "Obsolete. Superseded by IModelDocExtension::GetUserPreferenceToggle.",
+  "signature": "System.Boolean GetUserPreferenceToggle( \n   System.Int32\nUserPreferenceToggle\n)",
+  "parameters": [
+    {
+      "name": "UserPreferenceToggle",
+      "type": "System.Int32",
+      "description": "Value as defined in swUserPreferenceToggle_e"
+    }
+  ],
+  "returns": "True if the item specified by UserPreferenceToggle is currently toggled on, false if the item is currently toggled off",
+  "remarks": "This method is equivalent to interactively getting document properties in the SOLIDWORKS Design software.\nThe value returned is true if the item is currently turned on, and false if the item is currently turned off. For example:\nboolean curState = m_ModelDoc2.GetUserPreferenceToggle( swIgnoreFeatureColors )\nSee\nSystem Options and Document Properties\nfor details.",
+  "examples": [
+    {
+      "title": "Get Material Properties (VBA)",
+      "href": "Get_Material_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Ignore Feature Colors (VBA)",
+      "href": "Ignore_Feature_Colors_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

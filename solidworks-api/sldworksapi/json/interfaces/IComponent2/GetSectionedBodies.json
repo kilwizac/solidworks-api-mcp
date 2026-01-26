@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetSectionedBodies",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ViewIn",
+        "type": "System.Object",
+        "description": "Model view displaying the sectioned view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "getsectionedbodies",
+      "icomponent2",
+      "component2",
+      "sectioned",
+      "bodies",
+      "view",
+      "object",
+      "vba"
+    ]
+  },
+  "title": "IComponent2.GetSectionedBodies",
+  "description": "Gets the sectioned bodies in the specified section view.",
+  "signature": "System.Object GetSectionedBodies( \n   System.Object\nViewIn\n)",
+  "parameters": [
+    {
+      "name": "ViewIn",
+      "type": "System.Object",
+      "description": "Model view displaying the sectioned view"
+    }
+  ],
+  "returns": "Array of the sectioned bodies in the specified view",
+  "remarks": "To determine if the model view you want is currently displaying a sectioned view, use\nIModelView::GetDisplayState\n.\nIf you need the full body representation, use\nIComponent2::GetBody\n,\nIPartDoc::GetBodies2\n, or\nIPartDoc::EnumBodies3\n, which ignore the sectioning operation.\nFor COM implementations, see\nIComponent2::EnumSectionedBodies\n.\nIf a component is suppressed or lightweight, this method returns NULL because the component is not loaded into memory by SOLIDWORKS. For more information on lightweight components, see\nWork With Lightweight Components\n.",
+  "examples": [
+    {
+      "title": "Get Sectioned Bodies (VBA)",
+      "href": "Get_Sectioned_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "GetWallThickness",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Forward",
+        "type": "System.Boolean",
+        "description": "True for Direction 1, false for Direction 2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.IsThinFeature",
+      "ISweepFeatureData.SetWallThickness",
+      "ISweepFeatureData.ThinWallType"
+    ],
+    "keywords": [
+      "getwallthickness",
+      "isweepfeaturedata",
+      "sweep",
+      "feature",
+      "data",
+      "wall",
+      "thickness",
+      "forward",
+      "boolean",
+      "double"
+    ]
+  },
+  "title": "ISweepFeatureData.GetWallThickness",
+  "description": "Gets the wall thickness, forward (Direction 1) or reverse (Direction 2), of this thin-walled sweep feature.",
+  "signature": "System.Double GetWallThickness( \n   System.Boolean\nForward\n)",
+  "parameters": [
+    {
+      "name": "Forward",
+      "type": "System.Boolean",
+      "description": "True for Direction 1, false for Direction 2"
+    }
+  ],
+  "returns": "Wall thickness",
+  "remarks": "This method is:\nvalid only if\nISweepFeatureData::IsThinFeature\nis true.\nnot valid for swept-surface features.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.IsThinFeature",
+    "ISweepFeatureData.SetWallThickness",
+    "ISweepFeatureData.ThinWallType"
+  ]
+}

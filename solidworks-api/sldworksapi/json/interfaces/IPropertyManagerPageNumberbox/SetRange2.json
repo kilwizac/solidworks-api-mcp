@@ -1,0 +1,133 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPageNumberbox",
+    "member": "SetRange2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Units",
+        "type": "System.Int32",
+        "description": "Number box units as defined in swNumberboxUnitType_e (see Remarks )"
+      },
+      {
+        "name": "Minimum",
+        "type": "System.Double",
+        "description": "Minimum value"
+      },
+      {
+        "name": "Maximum",
+        "type": "System.Double",
+        "description": "Maximum value"
+      },
+      {
+        "name": "Inclusive",
+        "type": "System.Boolean",
+        "description": "True sets the range as inclusive, false sets it as exclusive"
+      },
+      {
+        "name": "Increment",
+        "type": "System.Double",
+        "description": "Increment value"
+      },
+      {
+        "name": "FastIncr",
+        "type": "System.Double",
+        "description": "Fast increment value for scrolling and mouse-wheel"
+      },
+      {
+        "name": "SlowIncr",
+        "type": "System.Double",
+        "description": "Slow increment value for scrolling and mouse-wheel"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageNumberbox.DisplayedUnit",
+      "IPropertyManagerPageNumberbox.SetSliderParameters"
+    ],
+    "keywords": [
+      "setrange2",
+      "ipropertymanagerpagenumberbox",
+      "manager",
+      "page",
+      "numberbox",
+      "range2",
+      "units",
+      "int32",
+      "minimum",
+      "double",
+      "maximum",
+      "inclusive",
+      "boolean",
+      "increment",
+      "fast",
+      "incr",
+      "slow",
+      "void",
+      "create",
+      "propertymanager",
+      "many",
+      "controls",
+      "vba"
+    ]
+  },
+  "title": "IPropertyManagerPageNumberbox.SetRange2",
+  "description": "Sets the range and increment for the slider.",
+  "signature": "void SetRange2( \n   System.Int32\nUnits\n,\n   System.Double\nMinimum\n,\n   System.Double\nMaximum\n,\n   System.Boolean\nInclusive\n,\n   System.Double\nIncrement\n,\n   System.Double\nFastIncr\n,\n   System.Double\nSlowIncr\n)",
+  "parameters": [
+    {
+      "name": "Units",
+      "type": "System.Int32",
+      "description": "Number box units as defined in swNumberboxUnitType_e (see Remarks )"
+    },
+    {
+      "name": "Minimum",
+      "type": "System.Double",
+      "description": "Minimum value"
+    },
+    {
+      "name": "Maximum",
+      "type": "System.Double",
+      "description": "Maximum value"
+    },
+    {
+      "name": "Inclusive",
+      "type": "System.Boolean",
+      "description": "True sets the range as inclusive, false sets it as exclusive"
+    },
+    {
+      "name": "Increment",
+      "type": "System.Double",
+      "description": "Increment value"
+    },
+    {
+      "name": "FastIncr",
+      "type": "System.Double",
+      "description": "Fast increment value for scrolling and mouse-wheel"
+    },
+    {
+      "name": "SlowIncr",
+      "type": "System.Double",
+      "description": "Slow increment value for scrolling and mouse-wheel"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method works while a PropertyManager page is displayed with these restrictions:\nYou cannot change Units once the page is displayed. The Units parameter is ignored if specified while the page is displayed.\nIf the range is changed to an invalid value by this method, then you must immediately call\nIPropertyManagerPageNumberbox::Value\nand set a valid value to prevent displaying the dialog that requests the user to enter a valid value.",
+  "examples": [
+    {
+      "title": "Create PropertyManager Page With Many Controls (VBA)",
+      "href": "Create_PropertyManager_Page_With_Many_Controls_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPropertyManagerPageNumberbox.DisplayedUnit",
+    "IPropertyManagerPageNumberbox.SetSliderParameters"
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "InsertSurfaceFinishSymbol3",
+    "returns": "SFSymbol",
+    "parameters": [
+      {
+        "name": "SymType",
+        "type": "System.Int32",
+        "description": "Type of symbol as defined in swSFSymType_e"
+      },
+      {
+        "name": "LeaderType",
+        "type": "System.Int32",
+        "description": "Type of leader as defined in swLeaderStyle_e"
+      },
+      {
+        "name": "LocX",
+        "type": "System.Double",
+        "description": "x location for symbol"
+      },
+      {
+        "name": "LocY",
+        "type": "System.Double",
+        "description": "y location for symbol"
+      },
+      {
+        "name": "LocZ",
+        "type": "System.Double",
+        "description": "z location for symbol"
+      },
+      {
+        "name": "LaySymbol",
+        "type": "System.Int32",
+        "description": "Type of lay direction as defined in swSFLaySym_e"
+      },
+      {
+        "name": "ArrowType",
+        "type": "System.Int32",
+        "description": "Type of arrow head as defined in swArrowStyle_e"
+      },
+      {
+        "name": "MachAllowance",
+        "type": "System.String",
+        "description": "Material removal allowance"
+      },
+      {
+        "name": "OtherVals",
+        "type": "System.String",
+        "description": "Other roughness values"
+      },
+      {
+        "name": "ProdMethod",
+        "type": "System.String",
+        "description": "Production method and treatment"
+      },
+      {
+        "name": "SampleLen",
+        "type": "System.String",
+        "description": "Sampling length"
+      },
+      {
+        "name": "MaxRoughness",
+        "type": "System.String",
+        "description": "Maximum roughness"
+      },
+      {
+        "name": "MinRoughness",
+        "type": "System.String",
+        "description": "Minimum roughness"
+      },
+      {
+        "name": "RoughnessSpacing",
+        "type": "System.String",
+        "description": "Roughness spacing"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "finish",
+      "symbols",
+      "see",
+      "isfsymbol",
+      "insertsurfacefinishsymbol3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "insert",
+      "symbol3",
+      "sym",
+      "type",
+      "int32",
+      "leader",
+      "loc",
+      "double",
+      "lay",
+      "symbol",
+      "arrow",
+      "mach",
+      "allowance",
+      "string",
+      "other",
+      "vals",
+      "prod",
+      "sample",
+      "len",
+      "max",
+      "roughness",
+      "min",
+      "spacing",
+      "sf",
+      "annotations",
+      "arrays",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.InsertSurfaceFinishSymbol3",
+  "description": "Creates a surface-finish symbol based on the last selection.",
+  "signature": "SFSymbol InsertSurfaceFinishSymbol3( \n   System.Int32\nSymType\n,\n   System.Int32\nLeaderType\n,\n   System.Double\nLocX\n,\n   System.Double\nLocY\n,\n   System.Double\nLocZ\n,\n   System.Int32\nLaySymbol\n,\n   System.Int32\nArrowType\n,\n   System.String\nMachAllowance\n,\n   System.String\nOtherVals\n,\n   System.String\nProdMethod\n,\n   System.String\nSampleLen\n,\n   System.String\nMaxRoughness\n,\n   System.String\nMinRoughness\n,\n   System.String\nRoughnessSpacing\n)",
+  "parameters": [
+    {
+      "name": "SymType",
+      "type": "System.Int32",
+      "description": "Type of symbol as defined in swSFSymType_e"
+    },
+    {
+      "name": "LeaderType",
+      "type": "System.Int32",
+      "description": "Type of leader as defined in swLeaderStyle_e"
+    },
+    {
+      "name": "LocX",
+      "type": "System.Double",
+      "description": "x location for symbol"
+    },
+    {
+      "name": "LocY",
+      "type": "System.Double",
+      "description": "y location for symbol"
+    },
+    {
+      "name": "LocZ",
+      "type": "System.Double",
+      "description": "z location for symbol"
+    },
+    {
+      "name": "LaySymbol",
+      "type": "System.Int32",
+      "description": "Type of lay direction as defined in swSFLaySym_e"
+    },
+    {
+      "name": "ArrowType",
+      "type": "System.Int32",
+      "description": "Type of arrow head as defined in swArrowStyle_e"
+    },
+    {
+      "name": "MachAllowance",
+      "type": "System.String",
+      "description": "Material removal allowance"
+    },
+    {
+      "name": "OtherVals",
+      "type": "System.String",
+      "description": "Other roughness values"
+    },
+    {
+      "name": "ProdMethod",
+      "type": "System.String",
+      "description": "Production method and treatment"
+    },
+    {
+      "name": "SampleLen",
+      "type": "System.String",
+      "description": "Sampling length"
+    },
+    {
+      "name": "MaxRoughness",
+      "type": "System.String",
+      "description": "Maximum roughness"
+    },
+    {
+      "name": "MinRoughness",
+      "type": "System.String",
+      "description": "Minimum roughness"
+    },
+    {
+      "name": "RoughnessSpacing",
+      "type": "System.String",
+      "description": "Roughness spacing"
+    }
+  ],
+  "returns": "Newly inserted surface finish symbol",
+  "remarks": "The SOLIDWORKS Design software uses the location parameters for this method only if the surface finish symbol has a leader\nleaderType != swNO_LEADER.",
+  "examples": [
+    {
+      "title": "Get Annotations Arrays (VBA)",
+      "href": "Get_Annotations_Array_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Annotations Arrays (VB.NET)",
+      "href": "Get_Annotations_Arrays_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Annotations Arrays (C#)",
+      "href": "Get_Annotations_Arrays_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

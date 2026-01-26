@@ -1,0 +1,33 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDragOperator",
+    "member": "IsDragByRay",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "isdragbyray",
+      "idragoperator",
+      "drag",
+      "operator",
+      "ray",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDragOperator.IsDragByRay",
+  "description": "Gets or sets the drag-by-ray setting.",
+  "signature": "System.Boolean IsDragByRay {get; set;}",
+  "parameters": [],
+  "returns": "True uses drag-by-ray, false uses drag-by-transform (see Remarks )",
+  "remarks": "Drag-by-ray\nTries to find a solution that keeps a specified geometry on, or close to, a ray (defined by a point on the ray and its direction).\nDrag-by-transform\nUses a transform matrix, which is any combination of translations and rotations.\nNOTE:\nIDragOperator does not define the drag ray; it only performs drag-by-transform. If this property is set to True, the user-interface component move honors this setting. The default mode for the user interface is drag-by-transform.",
+  "examples": [],
+  "related": []
+}

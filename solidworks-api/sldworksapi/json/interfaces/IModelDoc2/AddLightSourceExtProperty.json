@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "AddLightSourceExtProperty",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "ID of the light source"
+      },
+      {
+        "name": "PropertyExtension",
+        "type": "System.Object",
+        "description": "Value you want to store for the light source"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddLightSource",
+      "IModelDoc2.DeleteLightSource",
+      "IModelDoc2.GetLightSourceExtProperty",
+      "IModelDoc2.GetLightSourceIdFromName",
+      "IModelDoc2.GetLightSourceName",
+      "IModelDoc2.ILightSourcePropertyValues",
+      "IModelDoc2.LightSourcePropertyValues",
+      "IModelDoc2.LightSourceUserName",
+      "IModelDoc2.ResetLightSourceExtProperty",
+      "IModelDoc2.SetLightSourceName",
+      "IModelDoc2.SetLightSourcePropertyValuesVB"
+    ],
+    "keywords": [
+      "lighting",
+      "extension",
+      "addlightsourceextproperty",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "add",
+      "light",
+      "source",
+      "ext",
+      "id",
+      "int32",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.AddLightSourceExtProperty",
+  "description": "Stores a float, string, or integer value for the light source.",
+  "signature": "System.Int32 AddLightSourceExtProperty( \n   System.Int32\nID\n,\n   System.Object\nPropertyExtension\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "ID of the light source"
+    },
+    {
+      "name": "PropertyExtension",
+      "type": "System.Object",
+      "description": "Value you want to store for the light source"
+    }
+  ],
+  "returns": "ID of the extension property (see Remarks )",
+  "remarks": "This property extension is stored on the model document and is unique to the specified light source.\nTo add the property extension, you must first define the VARIANT type (float, string, or integer), give your variable a value, and then call this method to place the value on the light source for future reference.\nThis method returns a 1-based index of the added property. Values returned from IModelDoc2::AddLightSourceExtProperty must be decremented by 1 when used as input to\nIModelDoc2::GetLightSourceExtProperty\n. However, the error value of -1 should not be decremented.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AddLightSource",
+    "IModelDoc2.DeleteLightSource",
+    "IModelDoc2.GetLightSourceExtProperty",
+    "IModelDoc2.GetLightSourceIdFromName",
+    "IModelDoc2.GetLightSourceName",
+    "IModelDoc2.ILightSourcePropertyValues",
+    "IModelDoc2.LightSourcePropertyValues",
+    "IModelDoc2.LightSourceUserName",
+    "IModelDoc2.ResetLightSourceExtProperty",
+    "IModelDoc2.SetLightSourceName",
+    "IModelDoc2.SetLightSourcePropertyValuesVB"
+  ]
+}

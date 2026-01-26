@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITexture",
+    "member": "GetSystemTextureName",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FileNameIn",
+        "type": "System.String",
+        "description": "Path and filename of texture (see Remarks )"
+      },
+      {
+        "name": "Res",
+        "type": "System.Boolean",
+        "description": "True if the name of the texture that appears in the Texture PropertyManager is returned, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "getsystemtexturename",
+      "itexture",
+      "texture",
+      "name",
+      "file",
+      "string",
+      "res",
+      "boolean"
+    ]
+  },
+  "title": "ITexture.GetSystemTextureName",
+  "description": "Gets the name of the texture that appears in the Texture PropertyManager.",
+  "signature": "System.String GetSystemTextureName( \n   System.String\nFileNameIn\n,\n   out System.Boolean\nRes\n)",
+  "parameters": [
+    {
+      "name": "FileNameIn",
+      "type": "System.String",
+      "description": "Path and filename of texture (see Remarks )"
+    },
+    {
+      "name": "Res",
+      "type": "System.Boolean",
+      "description": "True if the name of the texture that appears in the Texture PropertyManager is returned, false if not"
+    }
+  ],
+  "returns": "Name of texture as it appears in the Texture PropertyManager (see Remarks )",
+  "remarks": "This method only supports SOLIDWORKS-supplied textures.\nCall\nITexture::MaterialName\nto get the value for FileNameIn before calling this method. ITexture::MaterialName\nreturns an abbreviated path and the name of the texture as it appears in the Texture PropertyManager. For example, if ITexture::MaterialName returns\ninstall_dir\n\\data\n\\images\\textures\\plastic\\brushed\\bred.jpg\n, then this method returns\nPlastic\\Brushed\\Red\n.",
+  "examples": [
+    {
+      "title": "ITexture",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ITexture",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

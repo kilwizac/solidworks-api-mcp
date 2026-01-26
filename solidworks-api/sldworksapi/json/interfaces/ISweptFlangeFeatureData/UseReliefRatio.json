@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweptFlangeFeatureData",
+    "member": "UseReliefRatio",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "usereliefratio",
+      "isweptflangefeaturedata",
+      "swept",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "relief",
+      "ratio",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweptFlangeFeatureData.UseReliefRatio",
+  "description": "Gets or sets whether to use the relief ratio in this swept flange feature.",
+  "signature": "System.Boolean UseReliefRatio {get; set;}",
+  "parameters": [],
+  "returns": "True to use the relief ratio, false to not",
+  "remarks": "This property is valid:\nIf\nISweptFlangeFeatureData::UseDefaultBendRelief\nis false,\n- and -\nFor regular swept flanges, but for cylindrical/conical swept flanges only during creation,\n- and -\nWhen\nISweptFlangeFeatureData::ReliefType\nis\nswSheetMetalReliefTypes_e\n.swSheetMetalReliefRectangular or swSheetMetalReliefTypes_e.swSheetMetalReliefObround.\nIf this property is:\nTrue, then use\nISweptFlangeFeatureData::ReliefRatio\nto set a ratio of bend relief width to bend relief depth.\nFalse, then specify\nISweptFlangeFeatureData::ReliefWidth\nand\nISweptFlangeFeatureData::ReliefDepth\n.",
+  "examples": [],
+  "related": []
+}

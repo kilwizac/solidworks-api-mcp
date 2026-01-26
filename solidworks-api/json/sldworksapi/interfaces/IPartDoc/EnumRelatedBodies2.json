@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "EnumRelatedBodies2",
+    "returns": "EnumBodies2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.EnumBodies3",
+      "IPartDoc.EnumRelatedSectionedBodies2",
+      "IPartDoc.GetRelatedBodies",
+      "IPartDoc.GetRelatedSectionedBodies"
+    ],
+    "keywords": [
+      "enumerations",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "enumeration",
+      "enumrelatedbodies2",
+      "ipartdoc",
+      "part",
+      "doc",
+      "related",
+      "bodies2"
+    ]
+  },
+  "title": "IPartDoc.EnumRelatedBodies2",
+  "description": "Creates an enumerated list of bodies.",
+  "signature": "EnumBodies2 EnumRelatedBodies2()",
+  "parameters": [],
+  "returns": "Enumerated list of bodies",
+  "remarks": "The list contains only those bodies associated with reference surfaces. The list does not include the part body itself.\nA reference surface feature can consist of one or more surfaces sewn together. Each reference surface feature has two\nIBody2\nobjects:\nOne represents the front face or faces\nOne\nrepresents the back face or faces\nEach IBody2 object has one or more faces depending on whether the reference surface feature is a set of knitted surfaces or a single underlying surface. The corresponding faces for each body pair should have normal vectors that are opposite.\nTo use the enumerated list, see\nIEnumBodies2\nfunctions.",
+  "examples": [],
+  "related": [
+    "IPartDoc.EnumBodies3",
+    "IPartDoc.EnumRelatedSectionedBodies2",
+    "IPartDoc.GetRelatedBodies",
+    "IPartDoc.GetRelatedSectionedBodies"
+  ]
+}

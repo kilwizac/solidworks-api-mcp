@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "GetReferenceEntity",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "LEntityType",
+        "type": "System.Int32",
+        "description": "Entity type as defined in swSelectType_e (only swSelFACES and swSelDATUMPLANES are valid values for this method)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "reference",
+      "entities",
+      "entity",
+      "ientity",
+      "getreferenceentity",
+      "type",
+      "int32",
+      "object",
+      "plane",
+      "which",
+      "created",
+      "vba",
+      "face"
+    ]
+  },
+  "title": "ISketch.GetReferenceEntity",
+  "description": "Gets the entity on which this sketch was created.",
+  "signature": "System.Object GetReferenceEntity( \n   out System.Int32\nLEntityType\n)",
+  "parameters": [
+    {
+      "name": "LEntityType",
+      "type": "System.Int32",
+      "description": "Entity type as defined in swSelectType_e (only swSelFACES and swSelDATUMPLANES are valid values for this method)"
+    }
+  ],
+  "returns": "Either a reference plane or a face , depending on the value of lEntityType",
+  "remarks": "If the sketch resides on a face that is consumed by subsequent features, then this method returns NULL and swSelNOTHING. To get to the face, edit the sketch using\nIModelDoc2::EditSketch\n.",
+  "examples": [
+    {
+      "title": "Get Plane On Which Sketch Created (VBA)",
+      "href": "Get_Plane_on_which_Sketch_Created_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Plane or Face for Sketch (VBA)",
+      "href": "Get_Plane_or_Face_for_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

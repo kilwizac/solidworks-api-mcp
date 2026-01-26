@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "IGetContourEdges",
+    "returns": "Edge",
+    "parameters": [
+      {
+        "name": "Xform",
+        "type": "System.Double",
+        "description": "Sketch entities, edges"
+      },
+      {
+        "name": "EdgeCount",
+        "type": "System.Int32",
+        "description": "Number of edges"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "geometry",
+      "sketches"
+    ],
+    "related": [
+      "ISketch.GetContourEdges",
+      "ISketchContour"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "edges",
+      "edge",
+      "iedge",
+      "entities",
+      "igetcontouredges",
+      "contour",
+      "xform",
+      "double",
+      "count",
+      "int32"
+    ]
+  },
+  "title": "ISketch.IGetContourEdges",
+  "description": "Gets the edges for a sketch that has one contour.",
+  "signature": "Edge IGetContourEdges( \n   ref System.Double\nXform\n,\n   System.Int32\nEdgeCount\n)",
+  "parameters": [
+    {
+      "name": "Xform",
+      "type": "System.Double",
+      "description": "Sketch entities, edges"
+    },
+    {
+      "name": "EdgeCount",
+      "type": "System.Int32",
+      "description": "Number of edges"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of edges VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method supports sketches with one contour only. For sketches with multiple contours, use\nISketch::GetSketchContours\nor\nISketch::IGetSketchContours\nand then\nISketchContour::GetEdges\nor\nISketchContour::IGetEdges\n.\nTo get the number of edges, call\nISketch::GetContourEdgesCount\nbefore calling this method.\nSpecifying the unit transform returns the edges in the space of the sketch.\nIf your application is expecting the returned edges to be in the context of the model's coordinate system, then xform should be the inverse of the transform returned by\nISketch::ModelToSketchTransform\n.",
+  "examples": [],
+  "related": [
+    "ISketch.GetContourEdges",
+    "ISketchContour"
+  ]
+}

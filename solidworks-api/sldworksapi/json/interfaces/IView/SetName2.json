@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "SetName2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetName2"
+    ],
+    "keywords": [
+      "name",
+      "drawing",
+      "view",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "names",
+      "setname2",
+      "name2",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IView.SetName2",
+  "description": "Sets the name of this drawing view, as displayed in the FeatureManager design tree.",
+  "signature": "System.Boolean SetName2( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of drawing view"
+    }
+  ],
+  "returns": "True if the name of the drawing view is set, false if not",
+  "remarks": "The drawing view name that you specify:\nmust be unique in the FeatureManager design tree.\nnot contain any of the SOLIDWORKS reserved special characters.\nIf either of these conditions is not met, then this method returns false and the name of the drawing view is not changed.\nYou cannot change the drawing view name for detail views and section views. If you attempt to do so, then false if returned and the drawing view name is not changed.",
+  "examples": [],
+  "related": [
+    "IView.GetName2"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFillPatternFeatureData",
+    "member": "LoopSpacing",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "loopspacing",
+      "ifillpatternfeaturedata",
+      "fill",
+      "pattern",
+      "feature",
+      "data",
+      "loop",
+      "spacing",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IFillPatternFeatureData.LoopSpacing",
+  "description": "Gets or sets the distance between loops of pattern instances in this fill pattern feature.",
+  "signature": "System.Double LoopSpacing {get; set;}",
+  "parameters": [],
+  "returns": "Distance between loops of pattern instances",
+  "remarks": "All fill patterns except those with perforated layouts are created by positioning a pattern seed instance within the fill boundary and copying the pattern in concentric loops about the seed instance. This property sets the spacing between the centers of instances in adjacent pattern loops.\nThis property is valid only if\nIFillPatternFeatureData::PatternLayoutType\nis set to one of the following:\nswPatternLayoutType_e\n.swPatternLayoutCircular\nswPatternLayoutType_e.swPatternLayoutPolygon\nswPatternLayoutType_e.swPatternLayoutSquare",
+  "examples": [
+    {
+      "title": "IFillPatternFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFillPatternFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

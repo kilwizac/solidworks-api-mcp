@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "Parameter",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "StringIn",
+        "type": "System.String",
+        "description": "Name of parameter (for example, \"D1@Base-Revolve\")"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IParameter",
+      "IModelDoc2.SetParamValue"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "dimension",
+      "idimension",
+      "parameter",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "string",
+      "object",
+      "change",
+      "vba",
+      "depth",
+      "extrusion",
+      "modify",
+      "plane",
+      "changing",
+      "value",
+      "recalculate",
+      "bounding",
+      "box",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.Parameter",
+  "description": "Gets the specified parameter.",
+  "signature": "System.Object Parameter( \n   System.String\nStringIn\n)",
+  "parameters": [
+    {
+      "name": "StringIn",
+      "type": "System.String",
+      "description": "Name of parameter (for example, \"D1@Base-Revolve\")"
+    }
+  ],
+  "returns": "Parameter (see Remarks )",
+  "remarks": "Most parameters are\ndimensions\n.\nThe StringIn argument must be the fully qualified dimension name (for example, \"D1@Base-Extrude\") for this method. However, the full dimension name is not needed if you use\nIFeature::IParameter\nor\nIFeature::Parameter\n.\nSome characters are recognized as special characters. The use of these characters in names or parts or features can cause this method to fail to return a dimension. These special characters are not recognized in names of parts or features:\nat sign ( @ )\nperiod ( . )\nbackslash ( / )",
+  "examples": [
+    {
+      "title": "Change Dimension (VBA)",
+      "href": "Change_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Depth of Extrusion (VBA)",
+      "href": "Get_Depth_of_Extrusion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Plane By Changing System Value (VBA)",
+      "href": "Modify_Plane_by_Changing_System_Value_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (C#)",
+      "href": "Recalculate_Bounding_Box_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (VB.NET)",
+      "href": "Recalculate_Bounding_Box_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (VBA)",
+      "href": "Recalculate_Bounding_Box_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IParameter",
+    "IModelDoc2.SetParamValue"
+  ]
+}

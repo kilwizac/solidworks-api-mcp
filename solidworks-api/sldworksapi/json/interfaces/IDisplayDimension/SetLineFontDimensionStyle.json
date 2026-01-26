@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetLineFontDimensionStyle",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True uses the document setting for the leader style, false uses the setting specified in Style"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Leader style as defined in swLineStyles_e ; valid only if UseDoc = false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.SetLineFontDimensionThickness"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "lines",
+      "setlinefontdimensionstyle",
+      "idisplaydimension",
+      "display",
+      "line",
+      "font",
+      "style",
+      "use",
+      "doc",
+      "boolean",
+      "int32"
+    ]
+  },
+  "title": "IDisplayDimension.SetLineFontDimensionStyle",
+  "description": "Sets the style of leader for this display dimension.",
+  "signature": "System.Boolean SetLineFontDimensionStyle( \n   System.Boolean\nUseDoc\n,\n   System.Int32\nStyle\n)",
+  "parameters": [
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True uses the document setting for the leader style, false uses the setting specified in Style"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Leader style as defined in swLineStyles_e ; valid only if UseDoc = false"
+    }
+  ],
+  "returns": "True if the leader style is set, false if not",
+  "remarks": "After calling this method, call\nIModelView::GraphicsRedraw\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.SetLineFontDimensionThickness"
+  ]
+}

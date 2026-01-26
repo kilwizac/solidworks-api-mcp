@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "HideToolbar2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Identifier of toolbar; this is the same Cookie you specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "ToolbarId",
+        "type": "System.Int32",
+        "description": "ID of the toolbar as defined in swToolbar_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddToolbarCommand2",
+      "ISldWorks.DragToolbarButton",
+      "ISldWorks.GetToolbarDock2",
+      "ISldWorks.GetToolbarState2",
+      "ISldWorks.RemoveToolbar2",
+      "ISldWorks.SetToolbarDock2"
+    ],
+    "keywords": [
+      "toolbars",
+      "hidetoolbar2",
+      "isldworks",
+      "sld",
+      "works",
+      "hide",
+      "toolbar2",
+      "cookie",
+      "int32",
+      "toolbar",
+      "id",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.HideToolbar2",
+  "description": "Hides a toolbar created with ISldWorks::AddToolbar5.",
+  "signature": "System.Boolean HideToolbar2( \n   System.Int32\nCookie\n,\n   System.Int32\nToolbarId\n)",
+  "parameters": [
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Identifier of toolbar; this is the same Cookie you specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "ToolbarId",
+      "type": "System.Int32",
+      "description": "ID of the toolbar as defined in swToolbar_e"
+    }
+  ],
+  "returns": "True if toolbar is hidden, false if not",
+  "remarks": "For information about using this method with the\nISwAddin\nobject, see\nUsing ISwAddin to Create a SOLIDWORKS Add-in\n.",
+  "examples": [],
+  "related": [
+    "ISldWorks.AddToolbarCommand2",
+    "ISldWorks.DragToolbarButton",
+    "ISldWorks.GetToolbarDock2",
+    "ISldWorks.GetToolbarState2",
+    "ISldWorks.RemoveToolbar2",
+    "ISldWorks.SetToolbarDock2"
+  ]
+}

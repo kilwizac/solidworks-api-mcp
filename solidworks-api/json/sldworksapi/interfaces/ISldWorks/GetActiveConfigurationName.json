@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetActiveConfigurationName",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FilePathName",
+        "type": "System.String",
+        "description": "Path for the SOLIDWORKS document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration.Name",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IGetConfigurationNames",
+      "ISldWorks.GetConfigurationCount",
+      "ISldWorks.GetConfigurationNames",
+      "ISldWorks.IGetConfigurationNames"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "active",
+      "getactiveconfigurationname",
+      "isldworks",
+      "sld",
+      "works",
+      "name",
+      "file",
+      "path",
+      "string",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetActiveConfigurationName",
+  "description": "Gets the name of the active configuration in the specified SOLIDWORKS document.",
+  "signature": "System.String GetActiveConfigurationName( \n   System.String\nFilePathName\n)",
+  "parameters": [
+    {
+      "name": "FilePathName",
+      "type": "System.String",
+      "description": "Path for the SOLIDWORKS document"
+    }
+  ],
+  "returns": "Name of the active configuration",
+  "remarks": "The SOLIDWORKS document does not need to be open. The configuration that was active when the SOLIDWORKS document was closed is returned. If the SOLIDWORKS document is open, then the name of the active configuration is returned.",
+  "examples": [
+    {
+      "title": "Get Name of Active Configuration (VBA)",
+      "href": "Get_Name_of_Active_Configuration_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.Name",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IGetConfigurationNames",
+    "ISldWorks.GetConfigurationCount",
+    "ISldWorks.GetConfigurationNames",
+    "ISldWorks.IGetConfigurationNames"
+  ]
+}

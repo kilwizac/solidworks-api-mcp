@@ -1,0 +1,27 @@
+---
+type: interface
+interface: IRackPinionMateFeatureData
+inherits: null
+description: Allows access to a rack and pinion mate feature.
+member_count: 4
+docset: sldworksapi
+categories:
+  - assemblies
+  - features
+common_members:
+  - DiameterType
+  - DiameterVal
+  - EntitiesToMate
+  - Reverse
+---
+
+# IRackPinionMateFeatureData
+
+Allows access to a rack and pinion mate feature.
+
+## Common Members
+
+- `DiameterType`
+- `DiameterVal`
+- `EntitiesToMate`
+- `Reverse`

@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAdvancedHoleElementData",
+    "member": "EndCondition",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IAdvancedHoleElementData.OffsetDistance",
+      "IAdvancedHoleElementData.OffsetReverseDirection",
+      "IStraightTapElementData.Equation"
+    ],
+    "keywords": [
+      "endcondition",
+      "iadvancedholeelementdata",
+      "advanced",
+      "hole",
+      "element",
+      "data",
+      "end",
+      "condition",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAdvancedHoleElementData.EndCondition",
+  "description": "Gets or sets the end condition for this Advanced Hole element.",
+  "signature": "System.Int32 EndCondition {get; set;}",
+  "parameters": [],
+  "returns": "End condition (see Remarks )",
+  "remarks": "Valid end conditions for the Advanced Hole as defined in\nswEndConditions_e\n:\nswEndCondBlind\nswEndCondThroughAll\nswEndCondUpToNext\nswEndCondOffsetFromSurface\nswEndCondUpToSelection\nThis property can be set for a given hole element only when its corresponding override property is set to true:\nICounterboreElementData::EndConditionOverride\nICountersinkElementData::EndConditionOverride\nITaperedTapElementData::EndConditionOverride\n- and -\nIAdvancedHoleFeatureData::UseBaselineDimensions\nis set to false.",
+  "examples": [
+    {
+      "title": "IAdvancedHoleElementData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleElementData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAdvancedHoleElementData.OffsetDistance",
+    "IAdvancedHoleElementData.OffsetReverseDirection",
+    "IStraightTapElementData.Equation"
+  ]
+}

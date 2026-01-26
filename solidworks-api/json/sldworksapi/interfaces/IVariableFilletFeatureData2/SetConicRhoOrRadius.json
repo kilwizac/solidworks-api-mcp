@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "SetConicRhoOrRadius",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "System.Object",
+        "description": "Fillet item for which to set ConicRhoVal (see Remarks )"
+      },
+      {
+        "name": "ConicRhoVal",
+        "type": "System.Double",
+        "description": "Conic rho or radius (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+      "IVariableFilletFeatureData2.ISetConicRhoOrRadius",
+      "IVariableFilletFeatureData2.SetRadius"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "setconicrhoorradius",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "rho",
+      "radius",
+      "item",
+      "object",
+      "val",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.SetConicRhoOrRadius",
+  "description": "Sets the conic rho or radius for the specified fillet item.",
+  "signature": "void SetConicRhoOrRadius( \n   System.Object\nPFilletItem\n,\n   System.Double\nConicRhoVal\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "System.Object",
+      "description": "Fillet item for which to set ConicRhoVal (see Remarks )"
+    },
+    {
+      "name": "ConicRhoVal",
+      "type": "System.Double",
+      "description": "Conic rho or radius (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIVariableFilletFeatureData2::GetFilletEdgeAtIndex\nto specify PFilletItem.\nIf\nIVariableFilletFeatureData2::ConicTypeForCrossSectionProfile\nis set to\nswFeatureFilletProfileType_e\n.:\nswFeatureFilletConicRadius (symmetric fillet only), then specify ConicRhoVal with a radius.\nswFeatureFilletConicRho (symmetric or asymmetric fillet), then specify ConicRhoVal with the conic rho value in the range [0.05, 0.95].\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+    "IVariableFilletFeatureData2.ISetConicRhoOrRadius",
+    "IVariableFilletFeatureData2.SetRadius"
+  ]
+}

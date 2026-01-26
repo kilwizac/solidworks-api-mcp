@@ -1,0 +1,469 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>ConvertToMeshBody Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ConvertToMeshBody" />
+    <meta name="Description" content="Converts a solid body to a mesh BREP (boundary representation) body." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IBody2.ConvertToMeshBody" />
+    <meta name="Microsoft.Help.Keywords" content="ConvertToMeshBody Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                ConvertToMeshBody Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">IBody2 Interface</a> : ConvertToMeshBody Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="GroupFacetsIntoFacesPopupContent" class="i-popup-content">
+        True to group facets into multiple faces, false to convert the mesh into a single face; valid only for graphics bodies
+    </div>
+
+    <div id="KeepOriginalBodyPopupContent" class="i-popup-content">
+        True to maintain a reference copy of the original solid or surface body; false to not
+    </div>
+
+    <div id="HideOriginalBodyPopupContent" class="i-popup-content">
+        True to hide the original body, false to not; valid only of KeepOriginalBody is true
+    </div>
+
+    <div id="MeshRefinementPopupContent" class="i-popup-content">
+        0.0 (larger&#160;mesh facets)&#160;&lt;= Percent&#160;refinement &lt;= 100.0 (smaller mesh facets); valid only if AdvancedMeshRefinement is false
+    </div>
+
+    <div id="AdvancedMeshRefinementPopupContent" class="i-popup-content">
+        True to specify maximum distance and angle, false to not
+    </div>
+
+    <div id="MaximumDistancePopupContent" class="i-popup-content">
+        Maximum distance deviation in meters
+    </div>
+
+    <div id="MaximumAnglePopupContent" class="i-popup-content">
+        Maximum angle deviation in radians
+    </div>
+
+    <div id="DefineMaxElementSizePopupContent" class="i-popup-content">
+        True to specify the maximum length of the fins, false to not
+    </div>
+
+    <div id="ElementSizePopupContent" class="i-popup-content">
+        Length of fins&#160;in meters; valid only if DefineMaxElementSize is true
+    </div>
+
+    <div id="ErrorCodePopupContent" class="i-popup-content">
+        0 if successful, -1 if errors
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Converts a solid body to a mesh BREP (boundary representation) body.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function ConvertToMeshBody( _
+   ByVal <i><a class="i-popup-link" id="GroupFacetsIntoFacesPopupLink" data-popup-contentsource="#GroupFacetsIntoFacesPopupContent" data-popup-showevent="click mouseenter">GroupFacetsIntoFaces</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="KeepOriginalBodyPopupLink" data-popup-contentsource="#KeepOriginalBodyPopupContent" data-popup-showevent="click mouseenter">KeepOriginalBody</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="HideOriginalBodyPopupLink" data-popup-contentsource="#HideOriginalBodyPopupContent" data-popup-showevent="click mouseenter">HideOriginalBody</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="MeshRefinementPopupLink" data-popup-contentsource="#MeshRefinementPopupContent" data-popup-showevent="click mouseenter">MeshRefinement</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="AdvancedMeshRefinementPopupLink" data-popup-contentsource="#AdvancedMeshRefinementPopupContent" data-popup-showevent="click mouseenter">AdvancedMeshRefinement</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="MaximumDistancePopupLink" data-popup-contentsource="#MaximumDistancePopupContent" data-popup-showevent="click mouseenter">MaximumDistance</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="MaximumAnglePopupLink" data-popup-contentsource="#MaximumAnglePopupContent" data-popup-showevent="click mouseenter">MaximumAngle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DefineMaxElementSizePopupLink" data-popup-contentsource="#DefineMaxElementSizePopupContent" data-popup-showevent="click mouseenter">DefineMaxElementSize</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ElementSizePopupLink" data-popup-contentsource="#ElementSizePopupContent" data-popup-showevent="click mouseenter">ElementSize</a></i> As System.Double, _
+   ByRef <i><a class="i-popup-link" id="ErrorCodePopupLink" data-popup-contentsource="#ErrorCodePopupContent" data-popup-showevent="click mouseenter">ErrorCode</a></i> As System.Integer _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">IBody2</a>
+Dim GroupFacetsIntoFaces As System.Boolean
+Dim KeepOriginalBody As System.Boolean
+Dim HideOriginalBody As System.Boolean
+Dim MeshRefinement As System.Double
+Dim AdvancedMeshRefinement As System.Boolean
+Dim MaximumDistance As System.Double
+Dim MaximumAngle As System.Double
+Dim DefineMaxElementSize As System.Boolean
+Dim ElementSize As System.Double
+Dim ErrorCode As System.Integer
+Dim value As System.Object
+ 
+value = instance.ConvertToMeshBody(GroupFacetsIntoFaces, KeepOriginalBody, HideOriginalBody, MeshRefinement, AdvancedMeshRefinement, MaximumDistance, MaximumAngle, DefineMaxElementSize, ElementSize, ErrorCode)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object ConvertToMeshBody( 
+   System.bool <i><a class="i-popup-link" id="GroupFacetsIntoFacesPopupLink" data-popup-contentsource="#GroupFacetsIntoFacesPopupContent" data-popup-showevent="click mouseenter">GroupFacetsIntoFaces</a></i>,
+   System.bool <i><a class="i-popup-link" id="KeepOriginalBodyPopupLink" data-popup-contentsource="#KeepOriginalBodyPopupContent" data-popup-showevent="click mouseenter">KeepOriginalBody</a></i>,
+   System.bool <i><a class="i-popup-link" id="HideOriginalBodyPopupLink" data-popup-contentsource="#HideOriginalBodyPopupContent" data-popup-showevent="click mouseenter">HideOriginalBody</a></i>,
+   System.double <i><a class="i-popup-link" id="MeshRefinementPopupLink" data-popup-contentsource="#MeshRefinementPopupContent" data-popup-showevent="click mouseenter">MeshRefinement</a></i>,
+   System.bool <i><a class="i-popup-link" id="AdvancedMeshRefinementPopupLink" data-popup-contentsource="#AdvancedMeshRefinementPopupContent" data-popup-showevent="click mouseenter">AdvancedMeshRefinement</a></i>,
+   System.double <i><a class="i-popup-link" id="MaximumDistancePopupLink" data-popup-contentsource="#MaximumDistancePopupContent" data-popup-showevent="click mouseenter">MaximumDistance</a></i>,
+   System.double <i><a class="i-popup-link" id="MaximumAnglePopupLink" data-popup-contentsource="#MaximumAnglePopupContent" data-popup-showevent="click mouseenter">MaximumAngle</a></i>,
+   System.bool <i><a class="i-popup-link" id="DefineMaxElementSizePopupLink" data-popup-contentsource="#DefineMaxElementSizePopupContent" data-popup-showevent="click mouseenter">DefineMaxElementSize</a></i>,
+   System.double <i><a class="i-popup-link" id="ElementSizePopupLink" data-popup-contentsource="#ElementSizePopupContent" data-popup-showevent="click mouseenter">ElementSize</a></i>,
+   out System.int <i><a class="i-popup-link" id="ErrorCodePopupLink" data-popup-contentsource="#ErrorCodePopupContent" data-popup-showevent="click mouseenter">ErrorCode</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ ConvertToMeshBody( 
+   System.bool <i><a class="i-popup-link" id="GroupFacetsIntoFacesPopupLink" data-popup-contentsource="#GroupFacetsIntoFacesPopupContent" data-popup-showevent="click mouseenter">GroupFacetsIntoFaces</a></i>,
+   System.bool <i><a class="i-popup-link" id="KeepOriginalBodyPopupLink" data-popup-contentsource="#KeepOriginalBodyPopupContent" data-popup-showevent="click mouseenter">KeepOriginalBody</a></i>,
+   System.bool <i><a class="i-popup-link" id="HideOriginalBodyPopupLink" data-popup-contentsource="#HideOriginalBodyPopupContent" data-popup-showevent="click mouseenter">HideOriginalBody</a></i>,
+   System.double <i><a class="i-popup-link" id="MeshRefinementPopupLink" data-popup-contentsource="#MeshRefinementPopupContent" data-popup-showevent="click mouseenter">MeshRefinement</a></i>,
+   System.bool <i><a class="i-popup-link" id="AdvancedMeshRefinementPopupLink" data-popup-contentsource="#AdvancedMeshRefinementPopupContent" data-popup-showevent="click mouseenter">AdvancedMeshRefinement</a></i>,
+   System.double <i><a class="i-popup-link" id="MaximumDistancePopupLink" data-popup-contentsource="#MaximumDistancePopupContent" data-popup-showevent="click mouseenter">MaximumDistance</a></i>,
+   System.double <i><a class="i-popup-link" id="MaximumAnglePopupLink" data-popup-contentsource="#MaximumAnglePopupContent" data-popup-showevent="click mouseenter">MaximumAngle</a></i>,
+   System.bool <i><a class="i-popup-link" id="DefineMaxElementSizePopupLink" data-popup-contentsource="#DefineMaxElementSizePopupContent" data-popup-showevent="click mouseenter">DefineMaxElementSize</a></i>,
+   System.double <i><a class="i-popup-link" id="ElementSizePopupLink" data-popup-contentsource="#ElementSizePopupContent" data-popup-showevent="click mouseenter">ElementSize</a></i>,
+   [Out] System.int <i><a class="i-popup-link" id="ErrorCodePopupLink" data-popup-contentsource="#ErrorCodePopupContent" data-popup-showevent="click mouseenter">ErrorCode</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>GroupFacetsIntoFaces</i></dt>
+
+                <dd>True to group facets into multiple faces, false to convert the mesh into a single face; valid only for graphics bodies</dd>
+
+                <dt><i>KeepOriginalBody</i></dt>
+
+                <dd>True to maintain a reference copy of the original solid or surface body; false to not</dd>
+
+                <dt><i>HideOriginalBody</i></dt>
+
+                <dd>True to hide the original body, false to not; valid only of KeepOriginalBody is true</dd>
+
+                <dt><i>MeshRefinement</i></dt>
+
+                <dd>0.0 (larger&#160;mesh facets)&#160;&lt;= Percent&#160;refinement &lt;= 100.0 (smaller mesh facets); valid only if AdvancedMeshRefinement is false</dd>
+
+                <dt><i>AdvancedMeshRefinement</i></dt>
+
+                <dd>True to specify maximum distance and angle, false to not</dd>
+
+                <dt><i>MaximumDistance</i></dt>
+
+                <dd>Maximum distance deviation in meters</dd>
+
+                <dt><i>MaximumAngle</i></dt>
+
+                <dd>Maximum angle deviation in radians</dd>
+
+                <dt><i>DefineMaxElementSize</i></dt>
+
+                <dd>True to specify the maximum length of the fins, false to not</dd>
+
+                <dt><i>ElementSize</i></dt>
+
+                <dd>Length of fins&#160;in meters; valid only if DefineMaxElementSize is true</dd>
+
+                <dt><i>ErrorCode</i></dt>
+
+                <dd>0 if successful, -1 if errors</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <p>Array of:</p>
+
+                <p>One&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">body</a> (if this is a solid body)</p>
+
+                <p>&#160;- or -</p>
+
+                <p>Multiple surface bodies (if this is a graphics body)</p>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>Call this method for each body you want to convert.</p>
+
+            <p>This&#160;method creates <strong>Body-Convert to Mesh Body</strong> in the FeatureManager design tree.</p>
+
+            <p>This method is analogous to the <strong>SOLIDWORKS menu Insert &gt; Mesh &gt; Convert To Mesh Body</strong>. For more information, see the <strong>SOLIDWORKS Design user-interface help &gt; Parts and Features &gt; Graphics Mesh and Mesh BREP Bodies &gt; Converting Solid, Surface or Graphics Bodies to Mesh</strong> topic.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>'===============================================================<br />
+            'Preconditions:<br />
+            '1. Open a part that contains a solid body, a graphics body, or a mesh body.<br />
+            '2. If you open a solid body, this macro converts it to a mesh body.<br />
+            '3. If you open a graphics body that is meshed or you open a mesh body, multi-select the mesh facets that<br />
+            '&#160;&#160; can be used to create a plane, cylinder, cone, or sphere.<br />
+            '4. Open an Immediate window.<br />
+            '<br />
+            'Postconditions:<br />
+            '1. Inspect the Immediate window.<br />
+            '2. If a solid body was opened, <strong>Body-Convert to Mesh Body</strong><em>X</em> is created in the FeatureManager design tree.<br />
+            '3. If a graphics body or a mesh body was opened and you selected facets,<br />
+            '&#160;&#160; this macro creates a <strong>Surface-From-Mesh</strong><em>X</em> feature from the selected mesh facets<br />
+            '&#160;&#160; using the specified facet tolerance and extend surface size.<br />
+            '&#160;&#160; If ErrorCodeSurfaceFromMesh is -1, then select more mesh facets and/or<br />
+            '&#160;&#160; change the IGraphicsBody/IMeshBody::SurfaceFromMesh parameters (SurfaceType/FacetTolerance/ExtendSurfaceSize).<br />
+            '===============================================================<br />
+            Option Explicit</p>
+
+            <p>Sub main()<br />
+            &#160;&#160;&#160; Dim swApp As SldWorks.SldWorks<br />
+            &#160;&#160;&#160; Dim swModelDoc As ModelDoc2<br />
+            &#160;&#160;&#160; Dim swFeatMgr As FeatureManager<br />
+            &#160;&#160;&#160; Dim swSelMgr As SelectionMgr<br />
+            &#160;&#160;&#160; Dim swSelData As SelectData</p>
+
+            <p>&#160;&#160;&#160; Dim boolstatus As Boolean<br />
+            &#160;&#160;&#160; Dim longstatus As Long, longwarnings As Long</p>
+
+            <p>&#160;&#160;&#160; Set swApp = Application.SldWorks<br />
+            &#160;&#160;&#160; Set swModelDoc = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; Set swSelMgr = swModelDoc.SelectionManager<br />
+            &#160;&#160;&#160; Set swSelData = swSelMgr.CreateSelectData<br />
+            &#160;&#160;&#160; swSelData.Mark = 1<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swPartDoc As PartDoc<br />
+            &#160;&#160;&#160; Set swPartDoc = swModelDoc<br />
+            &#160;&#160;&#160; Dim vAllBodies As Variant<br />
+            &#160;&#160;&#160; vAllBodies = swPartDoc.GetBodies2(swAllBodies, False)<br />
+            &#160;&#160;&#160; Dim swGenericBody As Body2<br />
+            &#160;&#160;&#160; Dim lBodyType As Long<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swBody As Body2<br />
+            &#160;&#160;&#160; Dim swGraphicsBody As GraphicsBody<br />
+            &#160;&#160;&#160; Dim swMeshBody As MeshBody<br />
+            &#160;&#160;&#160; Dim swBodyFeat As Feature</p>
+
+            <p>&#160;&#160;&#160; 'Use first body that is Solid, Mesh or Graphics Body<br />
+            &#160;&#160;&#160; Set swBody = Nothing<br />
+            &#160;&#160;&#160; Set swMeshBody = Nothing<br />
+            &#160;&#160;&#160; Set swGraphicsBody = Nothing<br />
+            &#160;&#160;&#160; Dim i As Integer<br />
+            &#160;&#160;&#160; For i = 0 To UBound(vAllBodies)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swGenericBody = vAllBodies(i)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; lBodyType = swGenericBody.GetType<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; If lBodyType = swBodyType_e.swSolidBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Body type is swSolidBody"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBody = swGenericBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Exit For<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lBodyType = swBodyType_e.swMeshBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Body type is swMeshBody"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBody = swGenericBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swMeshBody = swBody.GetMeshBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Exit For<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; ElseIf lBodyType = swBodyType_e.swGraphicsBody Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Body type is swGraphicsBody"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swBody = swGenericBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swGraphicsBody = swBody.GetGraphicsBody<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Exit For<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160; Next i<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim lSelObjType As Long<br />
+            &#160;&#160;&#160; Dim lSelObjCount As Long<br />
+            &#160;&#160;&#160; lSelObjType = swSelMgr.GetSelectedObjectType3(1, -1)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; If lSelObjType = swSelNOTHING Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Nothing is selected"<br />
+            &#160;&#160;&#160; ElseIf lSelObjType = swSelSOLIDBODIES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swSolidBody is selected"<br />
+            &#160;&#160;&#160; ElseIf lSelObjType = swSelGRAPHICSBODY Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swGraphicsBody is selected"<br />
+            &#160;&#160;&#160; ElseIf lSelObjType = swSelMESHSOLIDBODIES Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swMeshBody is selected"<br />
+            &#160;&#160;&#160; ElseIf lSelObjType = swSelFACETS Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "swSelFACETS is selected"<br />
+            &#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Nothing interesting is selected"<br />
+            &#160;&#160;&#160; End If</p>
+
+            <p>&#160;&#160;&#160; Dim swSurfaceBody As Body2<br />
+            &#160;&#160;&#160; Dim SurfaceType As Long<br />
+            &#160;&#160;&#160; Dim FacetTolerance As Double<br />
+            &#160;&#160;&#160; Dim ExtendSurfaceSize As Double<br />
+            &#160;&#160;&#160; Dim ErrorCodeSurfaceFromMesh As Long<br />
+            &#160;&#160;&#160; Set swSurfaceBody = Nothing<br />
+            &#160;&#160;&#160; SurfaceType = swSurfaceTypes_e.PLANE_TYPE<br />
+            &#160;&#160;&#160; FacetTolerance = 0<br />
+            &#160;&#160;&#160; ExtendSurfaceSize = 0.023<br />
+            &#160;&#160;&#160; ErrorCodeSurfaceFromMesh = 0</p>
+
+            <p>&#160;&#160;&#160; If Not swGraphicsBody Is Nothing Then&#160; 'And lSelObjType = swSelFACETS<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Testing GraphicsBody.SurfaceFromMesh"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swSurfaceBody = swGraphicsBody.<strong>SurfaceFromMesh</strong>(SurfaceType, FacetTolerance, ExtendSurfaceSize, ErrorCodeSurfaceFromMesh)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "ErrorCodeSurfaceFromMesh = " &amp; ErrorCodeSurfaceFromMesh<br />
+            &#160;&#160;&#160; ElseIf Not swMeshBody Is Nothing Then 'And lSelObjType = swSelFACETS<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Testing MeshBody.SurfaceFromMesh"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swSurfaceBody = swMeshBody.<strong>SurfaceFromMesh</strong>(SurfaceType, FacetTolerance, ExtendSurfaceSize, ErrorCodeSurfaceFromMesh)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "ErrorCodeSurfaceFromMesh = " &amp; ErrorCodeSurfaceFromMesh<br />
+            &#160;&#160;&#160; ElseIf Not swBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Testing ConvertToMeshBody"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; swBody.Select2 False, swSelData<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim outBodiesArray As Variant<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim GroupFacetsIntoFaces As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim KeepOriginalBody As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim HideOriginalBody As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim MeshRefinement As Double<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim AdvancedMeshRefinement As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim MaximumDistance As Double<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim MaximumAngle As Double<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim DefineMaxElementSize As Boolean<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim ElementSize As Double<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim ErrorCode As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; GroupFacetsIntoFaces = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; KeepOriginalBody = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; HideOriginalBody = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; MeshRefinement = 0.005<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; AdvancedMeshRefinement = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; MaximumDistance = 0.01<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; MaximumAngle = 0.05<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; DefineMaxElementSize = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; ElementSize = 0.01<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; ErrorCode = -1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; outBodiesArray = swBody.<strong>ConvertToMeshBody</strong>(GroupFacetsIntoFaces, KeepOriginalBody, HideOriginalBody, MeshRefinement, AdvancedMeshRefinement, MaximumDistance, MaximumAngle, DefineMaxElementSize, ElementSize, ErrorCode)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; If IsEmpty(outBodiesArray) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "outBodiesArray is Empty"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim lCount As Long<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; lCount = UBound(outBodiesArray) - LBound(outBodiesArray) + 1<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If lCount &gt; 0 Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "outBodiesArray has " &amp; lCount &amp; " elements."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Dim swNewBody As Body2<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set swNewBody = outBodiesArray(0)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not swNewBody Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Returned a Body"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "No Body Returned"<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Else<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "outBodiesArray has no elements."<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "ErrorCodeConvertToMesh = " &amp; ErrorCode<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            End Sub</p>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">IBody2 Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2_members">IBody2 Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ConvertToMeshBody.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

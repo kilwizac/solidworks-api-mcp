@@ -1,0 +1,72 @@
+---
+type: method
+interface: ISketchPicture
+member: SetSize
+returns: System.Boolean
+parameters:
+  -
+    name: Width
+    type: System.Double
+    description: Width of the picture in meters
+  -
+    name: Height
+    type: System.Double
+    description: Height of the picture in meters
+  -
+    name: AspectRatioLocked
+    type: System.Boolean
+    description: True to keep a fixed width and height aspect ratio, false to not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - sketches
+related:
+  - ISketchPicture.GetSize
+keywords:
+  - setsize
+  - isketchpicture
+  - sketch
+  - picture
+  - size
+  - width
+  - double
+  - height
+  - aspect
+  - ratio
+  - locked
+  - boolean
+---
+
+# ISketchPicture.SetSize
+
+Sets the size of the picture on the sketch.
+
+## Signature
+
+```csharp
+System.Boolean SetSize( 
+   System.Double
+Width
+,
+   System.Double
+Height
+,
+   System.Boolean
+AspectRatioLocked
+)
+```
+## Parameters
+
+- `Width` (System.Double): Width of the picture in meters
+- `Height` (System.Double): Height of the picture in meters
+- `AspectRatioLocked` (System.Boolean): True to keep a fixed width and height aspect ratio, false to not
+
+## Return Value
+
+True if the size of the picture is set, false if not
+
+## See Also
+
+- `ISketchPicture.GetSize`

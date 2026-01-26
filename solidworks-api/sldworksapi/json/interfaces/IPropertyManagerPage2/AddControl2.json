@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPage2",
+    "member": "AddControl2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Resource ID of this control whose value is passed back to the add-in through the IPropertyManagerPage2Handler9 interface"
+      },
+      {
+        "name": "ControlType",
+        "type": "System.Int16",
+        "description": "Type of control as defined in swPropertyManagerPageControlType_e"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Caption of this control"
+      },
+      {
+        "name": "LeftAlign",
+        "type": "System.Int16",
+        "description": "Left alignment of this control as defined in swPropertyManagerPageControlLeftAlign_e"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swAddControlOptions_e (see Remarks )"
+      },
+      {
+        "name": "Tip",
+        "type": "System.String",
+        "description": "ToolTip for this control"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "propertymanager",
+      "page",
+      "see",
+      "also",
+      "ipropertymanagerpage2",
+      "controls",
+      "addcontrol2",
+      "manager",
+      "page2",
+      "add",
+      "control2",
+      "id",
+      "int32",
+      "control",
+      "type",
+      "int16",
+      "caption",
+      "string",
+      "left",
+      "align",
+      "options",
+      "tip",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPage2.AddControl2",
+  "description": "Adds a control to this PropertyManager page.",
+  "signature": "System.Object AddControl2( \n   System.Int32\nID\n,\n   System.Int16\nControlType\n,\n   System.String\nCaption\n,\n   System.Int16\nLeftAlign\n,\n   System.Int32\nOptions\n,\n   System.String\nTip\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Resource ID of this control whose value is passed back to the add-in through the IPropertyManagerPage2Handler9 interface"
+    },
+    {
+      "name": "ControlType",
+      "type": "System.Int16",
+      "description": "Type of control as defined in swPropertyManagerPageControlType_e"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Caption of this control"
+    },
+    {
+      "name": "LeftAlign",
+      "type": "System.Int16",
+      "description": "Left alignment of this control as defined in swPropertyManagerPageControlLeftAlign_e"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swAddControlOptions_e (see Remarks )"
+    },
+    {
+      "name": "Tip",
+      "type": "System.String",
+      "description": "ToolTip for this control"
+    }
+  ],
+  "returns": "Newly created PropertyManager page control",
+  "remarks": "You can only use this method to set properties on the PropertyManager before the page is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\n.\nTo follow the SOLIDWORKS standards when designing a new PropertyManager page, it is a good idea to use\nIPropertyManagerPage2::AddGroupBox\nor\nIPropertyManagerPage2::IAddGroupBox\nand\nIPropertyManagerPageGroup::AddControl2\nto add controls for the page inside group boxes.\nWhen you specify swAddControlOptions_e.swControlOptions_SmallGapAbove for the Options parameter, the gap created between the new control and the previous control is smaller than a typical gap. Also, the control is hidden unless you specify swAddControlOptions_e.swControlOptions_Visible for the Options parameter. In the previous versions of this method, IPropertyManagerPage2::AddControl and IPropertyManagerPage2::IAddControl, the control was visible regardless if the Options parameter was set or not set to swAddControlOptions_e.swControlOptions_Visible.",
+  "examples": [
+    {
+      "title": "IPropertyManagerPage2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPage2",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

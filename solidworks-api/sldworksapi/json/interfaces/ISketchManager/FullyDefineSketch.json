@@ -1,0 +1,181 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "FullyDefineSketch",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "EntitiesToFullyDefine",
+        "type": "System.Boolean",
+        "description": "True to fully define all entities, false to fully define only the entities selected"
+      },
+      {
+        "name": "UseRelations",
+        "type": "System.Boolean",
+        "description": "True to use relations, false to not"
+      },
+      {
+        "name": "RelationsToApply",
+        "type": "System.Int32",
+        "description": "Relations to apply as defined in swSketchFullyDefineRelationType_e"
+      },
+      {
+        "name": "UseDimensions",
+        "type": "System.Boolean",
+        "description": "True to use dimensions, false to not"
+      },
+      {
+        "name": "HorizontalDimScheme",
+        "type": "System.Int32",
+        "description": "0 = Chain 1 = Baseline 2 = Ordinate"
+      },
+      {
+        "name": "HorizontalDatumDisp",
+        "type": "System.Object",
+        "description": "Horizontal datum (model edge, model vertex, sketch line, sketch point), or, if Nothing or null, use entity with selection mark = 6"
+      },
+      {
+        "name": "VerticalDimScheme",
+        "type": "System.Int32",
+        "description": "0 = Chain 1 = Baseline 2 = Ordinate"
+      },
+      {
+        "name": "VerticalDatumDisp",
+        "type": "System.Object",
+        "description": "Vertical datum (model edge, model vertex, sketch line, sketch point), or, if Nothing or null, use entity with selection mark = 6"
+      },
+      {
+        "name": "HorizontalDimPlacement",
+        "type": "System.Int32",
+        "description": "0 = Above sketch 1 = Below sketch"
+      },
+      {
+        "name": "VerticalDimPlacement",
+        "type": "System.Int32",
+        "description": "0 = Right of sketch 1 = Left of sketch"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.AddAlongXDimension",
+      "ISketchManager.AddAlongYDimension",
+      "ISketchManager.AddAlongZDimension"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "fully",
+      "define",
+      "fullydefinesketch",
+      "isketchmanager",
+      "manager",
+      "entities",
+      "boolean",
+      "use",
+      "relations",
+      "apply",
+      "int32",
+      "dimensions",
+      "horizontal",
+      "dim",
+      "scheme",
+      "datum",
+      "disp",
+      "object",
+      "vertical",
+      "placement",
+      "under",
+      "defined",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchManager.FullyDefineSketch",
+  "description": "Fully defines a sketch.",
+  "signature": "System.Int32 FullyDefineSketch( \n   System.Boolean\nEntitiesToFullyDefine\n,\n   System.Boolean\nUseRelations\n,\n   System.Int32\nRelationsToApply\n,\n   System.Boolean\nUseDimensions\n,\n   System.Int32\nHorizontalDimScheme\n,\n   System.Object\nHorizontalDatumDisp\n,\n   System.Int32\nVerticalDimScheme\n,\n   System.Object\nVerticalDatumDisp\n,\n   System.Int32\nHorizontalDimPlacement\n,\n   System.Int32\nVerticalDimPlacement\n)",
+  "parameters": [
+    {
+      "name": "EntitiesToFullyDefine",
+      "type": "System.Boolean",
+      "description": "True to fully define all entities, false to fully define only the entities selected"
+    },
+    {
+      "name": "UseRelations",
+      "type": "System.Boolean",
+      "description": "True to use relations, false to not"
+    },
+    {
+      "name": "RelationsToApply",
+      "type": "System.Int32",
+      "description": "Relations to apply as defined in swSketchFullyDefineRelationType_e"
+    },
+    {
+      "name": "UseDimensions",
+      "type": "System.Boolean",
+      "description": "True to use dimensions, false to not"
+    },
+    {
+      "name": "HorizontalDimScheme",
+      "type": "System.Int32",
+      "description": "0 = Chain 1 = Baseline 2 = Ordinate"
+    },
+    {
+      "name": "HorizontalDatumDisp",
+      "type": "System.Object",
+      "description": "Horizontal datum (model edge, model vertex, sketch line, sketch point), or, if Nothing or null, use entity with selection mark = 6"
+    },
+    {
+      "name": "VerticalDimScheme",
+      "type": "System.Int32",
+      "description": "0 = Chain 1 = Baseline 2 = Ordinate"
+    },
+    {
+      "name": "VerticalDatumDisp",
+      "type": "System.Object",
+      "description": "Vertical datum (model edge, model vertex, sketch line, sketch point), or, if Nothing or null, use entity with selection mark = 6"
+    },
+    {
+      "name": "HorizontalDimPlacement",
+      "type": "System.Int32",
+      "description": "0 = Above sketch 1 = Below sketch"
+    },
+    {
+      "name": "VerticalDimPlacement",
+      "type": "System.Int32",
+      "description": "0 = Right of sketch 1 = Left of sketch"
+    }
+  ],
+  "returns": "Not currently defined",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Fully Define Under Defined Sketch (VBA)",
+      "href": "Fully_Define_Underdefined_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fully Define Under Defined Sketch (VB.NET)",
+      "href": "Fully_Define_Underdefined_Sketch_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fully Define Under Defined Sketch (C#)",
+      "href": "Fully_Define_Underdefined_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.AddAlongXDimension",
+    "ISketchManager.AddAlongYDimension",
+    "ISketchManager.AddAlongZDimension"
+  ]
+}

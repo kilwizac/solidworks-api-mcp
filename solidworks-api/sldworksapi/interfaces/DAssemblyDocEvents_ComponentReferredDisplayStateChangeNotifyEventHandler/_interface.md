@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DAssemblyDocEvents_ComponentReferredDisplayStateChangeNotifyEventHandler
+inherits: null
+description: Fired when a component's referenced display state changes.
+member_count: 0
+docset: sldworksapi
+categories:
+  - assemblies
+common_members: []
+---
+
+# DAssemblyDocEvents_ComponentReferredDisplayStateChangeNotifyEventHandler
+
+Fired when a component's referenced display state changes.

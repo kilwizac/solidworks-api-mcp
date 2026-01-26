@@ -1,0 +1,44 @@
+---
+type: property
+interface: ISwScene
+member: AccurateEnvLighting
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related: []
+keywords:
+  - accurateenvlighting
+  - iswscene
+  - sw
+  - scene
+  - accurate
+  - env
+  - lighting
+  - boolean
+readonly: null
+---
+
+# ISwScene.AccurateEnvLighting
+
+Gets or sets whether to use the accurate environment lighting calculations from the high dynamic range imaging (HDRI) scene environment.
+
+## Signature
+
+```csharp
+System.Boolean AccurateEnvLighting {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to use the accurate environment lighting calculations from the HDRI scene environment, false to not
+
+## Remarks
+
+This property is valid only when a ray-trace rendering engine is active.

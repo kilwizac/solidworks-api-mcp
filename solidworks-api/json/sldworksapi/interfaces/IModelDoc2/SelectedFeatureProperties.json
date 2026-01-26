@@ -1,0 +1,173 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SelectedFeatureProperties",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RgbColor",
+        "type": "System.Int32",
+        "description": "Color of feature (see Remarks )"
+      },
+      {
+        "name": "Ambient",
+        "type": "System.Double",
+        "description": "0.0 <= Ambient value <= 1.0"
+      },
+      {
+        "name": "Diffuse",
+        "type": "System.Double",
+        "description": "0.0 < Diffuse value <= 1.0"
+      },
+      {
+        "name": "Specular",
+        "type": "System.Double",
+        "description": "0.0 < Specular value <= 1.0"
+      },
+      {
+        "name": "Shininess",
+        "type": "System.Double",
+        "description": "0.0 < Shininess value <= 1.0"
+      },
+      {
+        "name": "Transparency",
+        "type": "System.Double",
+        "description": "0.0 <= Transparency value <= 1.0"
+      },
+      {
+        "name": "Emission",
+        "type": "System.Double",
+        "description": "0.0 <= Emission value <= 1.0"
+      },
+      {
+        "name": "UsePartProps",
+        "type": "System.Boolean",
+        "description": "True if the feature inherits the properties from the part, false if not"
+      },
+      {
+        "name": "Suppressed",
+        "type": "System.Boolean",
+        "description": "True if the feature is suppressed, false if not"
+      },
+      {
+        "name": "FeatureName",
+        "type": "System.String",
+        "description": "Name of the feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IFeature"
+    ],
+    "keywords": [
+      "properties",
+      "features",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "selectedfeatureproperties",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "selected",
+      "rgb",
+      "color",
+      "int32",
+      "ambient",
+      "double",
+      "diffuse",
+      "specular",
+      "shininess",
+      "transparency",
+      "emission",
+      "use",
+      "part",
+      "props",
+      "boolean",
+      "suppressed",
+      "name",
+      "string",
+      "create",
+      "thicken",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.SelectedFeatureProperties",
+  "description": "Sets the property values of the selected feature.",
+  "signature": "System.Boolean SelectedFeatureProperties( \n   System.Int32\nRgbColor\n,\n   System.Double\nAmbient\n,\n   System.Double\nDiffuse\n,\n   System.Double\nSpecular\n,\n   System.Double\nShininess\n,\n   System.Double\nTransparency\n,\n   System.Double\nEmission\n,\n   System.Boolean\nUsePartProps\n,\n   System.Boolean\nSuppressed\n,\n   System.String\nFeatureName\n)",
+  "parameters": [
+    {
+      "name": "RgbColor",
+      "type": "System.Int32",
+      "description": "Color of feature (see Remarks )"
+    },
+    {
+      "name": "Ambient",
+      "type": "System.Double",
+      "description": "0.0 <= Ambient value <= 1.0"
+    },
+    {
+      "name": "Diffuse",
+      "type": "System.Double",
+      "description": "0.0 < Diffuse value <= 1.0"
+    },
+    {
+      "name": "Specular",
+      "type": "System.Double",
+      "description": "0.0 < Specular value <= 1.0"
+    },
+    {
+      "name": "Shininess",
+      "type": "System.Double",
+      "description": "0.0 < Shininess value <= 1.0"
+    },
+    {
+      "name": "Transparency",
+      "type": "System.Double",
+      "description": "0.0 <= Transparency value <= 1.0"
+    },
+    {
+      "name": "Emission",
+      "type": "System.Double",
+      "description": "0.0 <= Emission value <= 1.0"
+    },
+    {
+      "name": "UsePartProps",
+      "type": "System.Boolean",
+      "description": "True if the feature inherits the properties from the part, false if not"
+    },
+    {
+      "name": "Suppressed",
+      "type": "System.Boolean",
+      "description": "True if the feature is suppressed, false if not"
+    },
+    {
+      "name": "FeatureName",
+      "type": "System.String",
+      "description": "Name of the feature"
+    }
+  ],
+  "returns": "True if feature's properties are successfully set, false if not",
+  "remarks": "To see a color change, you must:\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after calling this method.\nThis method is different from\nIModelDodc2::SelectedEdgeProperties\nand\nIModelDoc2::SelectedFaceProperties\nin that it allows you to change the name of this feature. All features have names; however, a face or edge typically has a name only if it is being referenced. Because it is dangerous to change the name of a referenced object, you cannot programmatically change the names of faces or edges. See\nIFeature::Name\nand\nIPartDoc::SetEntityName\nfor additional information.\nThis method requires that the feature to be selected. To select the feature programmatically, you can use\nIModelDocExtension::SelectByID2\nand pass in the feature name and the appropriate object type (for example, \"BODYFEATURE\", \"ATTRIBUTE\", \"PLANE\", \"SKETCH\", and so on) and the selection coordinates 0,0,0. To determine the feature name and object type, use the\nIFeature::Name\nand\nIFeature::GetTypeName\nmethods, respectively.",
+  "examples": [
+    {
+      "title": "Create Thicken Feature (VBA)",
+      "href": "Create_Thicken_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature"
+  ]
+}

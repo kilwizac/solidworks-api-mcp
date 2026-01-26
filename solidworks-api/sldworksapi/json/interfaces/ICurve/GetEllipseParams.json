@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetEllipseParams",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.IGetEllipseParams",
+      "ICurve.Identity",
+      "ICurve.IsEllipse"
+    ],
+    "keywords": [
+      "getellipseparams",
+      "icurve",
+      "curve",
+      "ellipse",
+      "params",
+      "object"
+    ]
+  },
+  "title": "ICurve.GetEllipseParams",
+  "description": "Gets the parameters for this elliptical curve.",
+  "signature": "System.Object GetEllipseParams()",
+  "parameters": [],
+  "returns": "Object (see Remarks )",
+  "remarks": "Use\nICurve::IsEllipse\nto determine if a curve is an ellipse.\nThe return value is an array of doubles with the following format:\n[\ncenterptX, centerptY, centerptZ, majorRad, majorAxisX, majorAxisY, majorAxisZ,\nminorRad, minorAxisX, minorAxisY, minorAxisZ\n]\nwhere:\ncenterptX\n,\ncenterptY\n,\ncenterptZ\n= location of ellipse center\nmajorRad\n= major radius\nmajorAxisX\n,\nmajorAxisY\n,\nmajorAxisZ\n= major axis values\nminorRad\n= minor radius\nminorAxisX\n,\nminorAxisY\n,\nminorAxisZ\n= minor axis values\nFor Dispatch users, if this curve is not an ellipse, then SOLIDWORKS returns an empty\nVARIANT. Otherwise, SOLIDWORKS returns a SafeArray in Visual Basic for Applications (VBA).",
+  "examples": [],
+  "related": [
+    "ICurve.IGetEllipseParams",
+    "ICurve.Identity",
+    "ICurve.IsEllipse"
+  ]
+}

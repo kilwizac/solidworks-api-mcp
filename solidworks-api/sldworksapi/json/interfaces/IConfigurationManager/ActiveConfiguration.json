@@ -1,0 +1,136 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IConfigurationManager",
+    "member": "ActiveConfiguration",
+    "returns": "Configuration",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.AddComponentConfiguration",
+      "IConfiguration.GetParameterCount",
+      "IConfiguration.GetParameters",
+      "IConfiguration.IGetParameters",
+      "IConfiguration.ISetParameters",
+      "IConfiguration.SetParameters",
+      "IConfigurationManager.AddConfiguration",
+      "IConfigurationManager.GetConfigurationParams",
+      "IConfigurationManager.GetConfigurationParamsCount",
+      "IConfigurationManager.IGetConfigurationParams",
+      "IConfigurationManager.ISetConfigurationParams",
+      "IConfigurationManager.SetConfigurationParams",
+      "IModelDoc2.AddConfiguration3"
+    ],
+    "keywords": [
+      "activeconfiguration",
+      "iconfigurationmanager",
+      "configuration",
+      "manager",
+      "active",
+      "add",
+      "derived",
+      "configurations",
+      "vba",
+      "dimension",
+      "values",
+      "all",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "names",
+      "bodies",
+      "multibody",
+      "part",
+      "select",
+      "assembly",
+      "components",
+      "lightweight",
+      "resolved",
+      "traverse",
+      "component",
+      "feature",
+      "levels",
+      "using",
+      "recursion",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IConfigurationManager.ActiveConfiguration",
+  "description": "Gets the active configuration.",
+  "signature": "Configuration ActiveConfiguration {get;}",
+  "parameters": [],
+  "returns": "Pointer to the IConfiguration object",
+  "remarks": "If this document is an assembly, then you could use this property to begin your traversal of the assembly components by making a subsequent call to\nIConfiguration::GetRootComponent\nor\nIConfiguration::IGetRootComponent2\n.\nAn\nIComponent2\nobject is based on the currently active configuration; one assembly configuration might suppress the component, while another might display it. Therefore, your traversal of IComponent2 objects might vary if you switch to a different configuration.\nYou should use this method of assembly traversal to replace previous calls to the Member class.\nThe order of calls used in a typical assembly traversal is:\nIConfigurationManager::ActiveConfiguration (called only once)\nIConfiguration::GetRootComponent or IConfiguration::IGetRootComponent2 (called only once)\nIComponent2::GetChildren\nor\nIComponent::IGetChildren\n. (called recursively)\nFrom the SOLIDWORKS API, the I\nConfiguration\nand IComponent2 objects provide access to all the child components, their transforms, their bodies, as seen in a specific assembly configuration. The component body objects and component transforms can vary based on the configuration; therefore, you should traverse components for each configuration.\nYou can use\nIComponent2::GetBody\non each assembly component to get the body of each component with the hole feature that was applied in this configuration. If you switch to a configuration without the assembly-level hole and re-traverse the component objects, then IComponent2::IGetBody returns the body object without the hole feature.",
+  "examples": [
+    {
+      "title": "Add Derived Configurations (VBA)",
+      "href": "Add_Derived_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Dimension Values in All Configurations (VBA)",
+      "href": "Get_Dimension_Values_in_All_Configurations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Bodies in Multibody Part (VBA)",
+      "href": "Get_Names_of_Bodies_in_MultiBody_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Bodies (VBA)",
+      "href": "Select_Bodies_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set All Assembly Components Lightweight or Resolved (VBA)",
+      "href": "Set_All_Assembly_Components_Lightweight_or_Resolved_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VBA)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VB.NET)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (C#)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddComponentConfiguration",
+    "IConfiguration.GetParameterCount",
+    "IConfiguration.GetParameters",
+    "IConfiguration.IGetParameters",
+    "IConfiguration.ISetParameters",
+    "IConfiguration.SetParameters",
+    "IConfigurationManager.AddConfiguration",
+    "IConfigurationManager.GetConfigurationParams",
+    "IConfigurationManager.GetConfigurationParamsCount",
+    "IConfigurationManager.IGetConfigurationParams",
+    "IConfigurationManager.ISetConfigurationParams",
+    "IConfigurationManager.SetConfigurationParams",
+    "IModelDoc2.AddConfiguration3"
+  ]
+}

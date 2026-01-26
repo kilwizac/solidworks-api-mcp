@@ -1,0 +1,459 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Obsolete and New Block Objects, Methods, and Properties</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=ObsoleteNewBlocksInterfaces>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1562>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Obsolete and New Block Objects, Methods, and Properties</h1>
+
+<p>IBlockDefinition and IBlockInstance interfaces are obsolete and unsupported 
+ as of SOLIDWORKS 2007 and later. To create blocks in drawings, parts, 
+ and assemblies, use ISketchBlockDefinition and ISketchBlockInstance.</p>
+
+<p>The following list identifies the now obsolete and unsupported block-related 
+ objects, methods, and properties and their replacements. You must migrate 
+ any code that creates blocks using the now obsolete block interfaces to 
+ the new block interfaces.</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 100%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=100%>
+<col style="width: 50%;">
+<col style="width: 50%;">
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			border-bottom-style: None;
+			border-right-style: None;
+			border-left-style: None;
+			border-top-style: None;"
+	bgcolor=#DBDBDB
+	width=50%>
+<p style="font-weight: bold;">Obsolete API</td>
+<td style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			border-bottom-style: None;
+			border-top-style: None;
+			border-right-style: None;"
+	bgcolor=#DBDBDB
+	width=50%>
+<p style="font-weight: bold;">New API</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-left-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">IBlockDefinition APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetBasePoint</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetBlockInstanceCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetDimensionCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetDimensions</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetExternalFileName</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetNoteCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetNotes</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetSketch</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::GetUseExternalFileName</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::InsertInstance</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::Name</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::SetBasePoint</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::SetExternalFileName</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockDefinition::SetUseExternalFile</p></li>
+</ul></td>
+<td style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=50%>
+<p style="font-weight: normal;">ISketch APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketch::GetSketchBlockInstanceCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketch::GetSketchBlockInstances</p></li>
+</ul>
+<p style="font-weight: normal;">ISketchBlockDefinition APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::FileName</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetArcCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetArcs</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetDisplayDimensionCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetDisplayDimensions</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetEllipseCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetEllipses</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetFeature</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetInstanceCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetInstances</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetLineCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetLines</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetNoteCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetNotes</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetParabolaCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetSketch</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::InsertionPoint</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::LinkToFile</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetParabolaCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetParabolas</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetSplineCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetSplines2</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetUserPointsCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::GetUserPoints</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockDefinition::Save</p></li>
+</ul>
+<p style="font-weight: bold;">&nbsp;</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: None;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">IBlockInstance APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::Angle</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::Definition</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::GetAnnotation</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::GetAttributeCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::GetAttributes</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::GetAttributeValue</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::GetNext</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::SetAttributeValue</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::Scale2</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">IBlockInstance::TextDisplay</p></li>
+</ul></td>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">ISketchBlockInstance APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Angle</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::BlockToSketchTransform</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Definition</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::DisplayDimension</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetArrowheadStyle</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetAttributeCount</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetAttributes</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetAttributeValue</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetLeaderStyle</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::GetSketch</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::InstancePosition</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Layer</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Name</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Select</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::SetAttributeValue</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::SetLeader</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::Scale</p></li>
+	
+	<li class=kadov-p><p style="font-weight: normal;">ISketchBlockInstance::TextDisplay</p></li>
+</ul></td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: None;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">IDrawingDoc APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::CreateBlockDefinition</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::MakeBlockDefinition</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::ExplodeBlockInstance</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::GetBlockDefinition</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::GetBlockDefinitions</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::GetBlockDefinitionCount</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::GetEditBlock</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::InsertBlock</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">IDrawingDoc::SaveBlock</p></li>
+</ul>
+<p style="font-weight: bold;">&nbsp;</td>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">ISketchManager APIs</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::MakeSketchBlockFromFile</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::MakeSketchBlockFromSelected</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::MakeSketchBlockFromSketch</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::ExplodeSketchBlockInstance</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::GetSketchBlockDefinitions</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::GetSketchBlockDefinitionCount</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::EditSketchBlock</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::EndEditSketchBlock</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchManager::InsertSketchBlockInstance</p></li>
+	
+	<li class=kadov-p-CapiBulletLeftJustified><p class=apiBulletLeftJustified
+												style="font-weight: normal;">ISketchBlockDefinition::Save</p></li>
+</ul>
+<p style="font-weight: bold;">&nbsp;</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: None;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">INote::IsAttribute</td>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">None</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: None;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">IView::GetFirstBlockInstance</td>
+<td colspan=1
+	rowspan=1
+	style="width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=50%>
+<p style="font-weight: normal;">None</td></tr>
+</table>
+
+<!--kadov_tag{{<implicit_p>}}-->
+<!--Metadata type="DesignerControl" startspan
+<object classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" type="application/x-oleobject" id="RelatedTopic4" style="width: 1px; height: 1px;" width="1" height="1" dtcid="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="26">
+	<param name="_ExtentY" value="26">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="BlockDefinitionsBlockInstances$$**$$">
+	<param name="Image" value>
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\HELP\Cheryle_Working_Folder\SW2010\ROBOHELP\sldworksAPIProgGuide\Miscellaneous\Obsolete_and_New_Block_Objects,_Methods,_and_Properties.htm">
+	<param name="_ID" value="RelatedTopic4">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value>
+	<param name="Window" value>
+	<param name="ChmFile" value>
+	<param name="DisableJump" value="0">
+</object>
+-->
+<OBJECT
+  CLASSID="clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11"
+  ID="RelatedTopic4"  TYPE="application/x-oleobject">
+  <PARAM  NAME="Command"  VALUE="ALink">
+  <PARAM  NAME="Font"  VALUE="MS Sans Serif,8,0,,">
+  <PARAM  NAME="Frame"  VALUE="">
+  <PARAM  NAME="Item1"  VALUE="">
+  <PARAM  NAME="Item2"  VALUE="BlockDefinitionsBlockInstances">
+</OBJECT>
+
+<!--metadata type="DesignerControl" endspan-->
+ 
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

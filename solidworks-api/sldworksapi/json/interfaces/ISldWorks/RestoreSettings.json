@@ -1,0 +1,138 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RestoreSettings",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path and filename of the settings to restore ( *.sldreg ) (see Remarks )"
+      },
+      {
+        "name": "SystemOptions",
+        "type": "System.Boolean",
+        "description": "True to restore system options, false to not"
+      },
+      {
+        "name": "ToolbarLayout",
+        "type": "System.Boolean",
+        "description": "True to restore the toolbar layout, false to not"
+      },
+      {
+        "name": "KeyboardShortcuts",
+        "type": "System.Boolean",
+        "description": "True to restore keyboard shortcuts, false to not (see Remarks )"
+      },
+      {
+        "name": "MouseGestures",
+        "type": "System.Boolean",
+        "description": "True to restore mouse gestures, false to not"
+      },
+      {
+        "name": "MenuCustomization",
+        "type": "System.Boolean",
+        "description": "True to restore menu customizations, false to not"
+      },
+      {
+        "name": "SavedViews",
+        "type": "System.Boolean",
+        "description": "True to restore saved views, false to not (see Remarks )"
+      },
+      {
+        "name": "CreateBackup",
+        "type": "System.Boolean",
+        "description": "True to create a backup of the current settings, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.LoadAdminSettingsFile"
+    ],
+    "keywords": [
+      "restoresettings",
+      "isldworks",
+      "sld",
+      "works",
+      "restore",
+      "settings",
+      "file",
+      "name",
+      "string",
+      "options",
+      "boolean",
+      "toolbar",
+      "layout",
+      "keyboard",
+      "shortcuts",
+      "mouse",
+      "gestures",
+      "menu",
+      "customization",
+      "saved",
+      "views",
+      "create",
+      "backup",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.RestoreSettings",
+  "description": "Restores the specified SOLIDWORKS settings from the specified *.sldreg file.",
+  "signature": "System.Int32 RestoreSettings( \n   System.String\nFileName\n,\n   System.Boolean\nSystemOptions\n,\n   System.Boolean\nToolbarLayout\n,\n   System.Boolean\nKeyboardShortcuts\n,\n   System.Boolean\nMouseGestures\n,\n   System.Boolean\nMenuCustomization\n,\n   System.Boolean\nSavedViews\n,\n   System.Boolean\nCreateBackup\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path and filename of the settings to restore ( *.sldreg ) (see Remarks )"
+    },
+    {
+      "name": "SystemOptions",
+      "type": "System.Boolean",
+      "description": "True to restore system options, false to not"
+    },
+    {
+      "name": "ToolbarLayout",
+      "type": "System.Boolean",
+      "description": "True to restore the toolbar layout, false to not"
+    },
+    {
+      "name": "KeyboardShortcuts",
+      "type": "System.Boolean",
+      "description": "True to restore keyboard shortcuts, false to not (see Remarks )"
+    },
+    {
+      "name": "MouseGestures",
+      "type": "System.Boolean",
+      "description": "True to restore mouse gestures, false to not"
+    },
+    {
+      "name": "MenuCustomization",
+      "type": "System.Boolean",
+      "description": "True to restore menu customizations, false to not"
+    },
+    {
+      "name": "SavedViews",
+      "type": "System.Boolean",
+      "description": "True to restore saved views, false to not (see Remarks )"
+    },
+    {
+      "name": "CreateBackup",
+      "type": "System.Boolean",
+      "description": "True to create a backup of the current settings, false to not (see Remarks )"
+    }
+  ],
+  "returns": "Error code as defined in swSaveRestoreSettingsResults_e",
+  "remarks": "This method is valid only if\nISldWorks::SaveSettings\nwas called previously.\nKeyboardShortcuts and SavedViews are valid only if these settings were previously saved using ISldWorks::SaveSettings.\nIf CreateBackup is true, this method backs up the current settings to\nbackup_\nuserid\n_\nyyyymmdd\n_\nhhmms\ns\n.sldreg\nin the same location as specified in FileName.\nFor C++ only, specify all System.bool parameters using VARIANT_TRUE (-1) and VARIANT_FALSE (0).",
+  "examples": [],
+  "related": [
+    "ISldWorks.LoadAdminSettingsFile"
+  ]
+}

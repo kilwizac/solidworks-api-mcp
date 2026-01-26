@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IStructuralMemberFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component for the feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "istructuralmemberfeaturedata",
+      "structural",
+      "member",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean",
+      "insert",
+      "weldment",
+      "vb",
+      "net",
+      "vba",
+      "profile"
+    ]
+  },
+  "title": "IStructuralMemberFeatureData.AccessSelections",
+  "description": "Gains access to the selections that define this structural member.",
+  "signature": "System.Boolean AccessSelections( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component for the feature"
+    }
+  ],
+  "returns": "True if the selections where successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nIStructuralMemberFeatureData::ReleaseSelctionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Insert Structural Weldment (C#)",
+      "href": "Insert_Structural_Weldment_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldment (VB.NET)",
+      "href": "Insert_Structural_Weldment_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldment (VBA)",
+      "href": "Insert_Structural_Weldment_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Profile for Structural Member (VBA)",
+      "href": "Set_Profile_for_Structural_Member_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

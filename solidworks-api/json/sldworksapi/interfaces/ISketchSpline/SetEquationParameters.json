@@ -1,0 +1,163 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSpline",
+    "member": "SetEquationParameters",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "YExpression",
+        "type": "System.String",
+        "description": "Equation for y (see Remarks )"
+      },
+      {
+        "name": "RangeStart",
+        "type": "System.Double",
+        "description": "Start value of x (see Remarks )"
+      },
+      {
+        "name": "RangeEnd",
+        "type": "System.Double",
+        "description": "End value of x (see Remarks )"
+      },
+      {
+        "name": "IsAngleRange",
+        "type": "System.Boolean",
+        "description": "True if the range and x value represent an angle (in radians), false if not"
+      },
+      {
+        "name": "RotationAngle",
+        "type": "System.Double",
+        "description": "Rotation angle (in radians) for the curve"
+      },
+      {
+        "name": "XOffset",
+        "type": "System.Double",
+        "description": "Offset in x for f(x), where x = 0 (see Remarks )"
+      },
+      {
+        "name": "YOffset",
+        "type": "System.Double",
+        "description": "Offset in y for f(x), where x = 0 (see Remarks )"
+      },
+      {
+        "name": "LockStart",
+        "type": "System.Boolean",
+        "description": "True to lock the start point (RangeStart) of the curve, false to not"
+      },
+      {
+        "name": "LockEnd",
+        "type": "System.Boolean",
+        "description": "True to lock the end point (RangeEnd) of the curve, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.CreateEquationSpline",
+      "ISketchSpline.GetEquationParameters"
+    ],
+    "keywords": [
+      "setequationparameters",
+      "isketchspline",
+      "sketch",
+      "spline",
+      "equation",
+      "parameters",
+      "expression",
+      "string",
+      "range",
+      "start",
+      "double",
+      "end",
+      "angle",
+      "boolean",
+      "rotation",
+      "offset",
+      "lock",
+      "create",
+      "driven",
+      "curve",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchSpline.SetEquationParameters",
+  "description": "Obsolete. Superseded by ISketchSpline::SetEquationParameters2.",
+  "signature": "System.Boolean SetEquationParameters( \n   System.String\nYExpression\n,\n   System.Double\nRangeStart\n,\n   System.Double\nRangeEnd\n,\n   System.Boolean\nIsAngleRange\n,\n   System.Double\nRotationAngle\n,\n   System.Double\nXOffset\n,\n   System.Double\nYOffset\n,\n   System.Boolean\nLockStart\n,\n   System.Boolean\nLockEnd\n)",
+  "parameters": [
+    {
+      "name": "YExpression",
+      "type": "System.String",
+      "description": "Equation for y (see Remarks )"
+    },
+    {
+      "name": "RangeStart",
+      "type": "System.Double",
+      "description": "Start value of x (see Remarks )"
+    },
+    {
+      "name": "RangeEnd",
+      "type": "System.Double",
+      "description": "End value of x (see Remarks )"
+    },
+    {
+      "name": "IsAngleRange",
+      "type": "System.Boolean",
+      "description": "True if the range and x value represent an angle (in radians), false if not"
+    },
+    {
+      "name": "RotationAngle",
+      "type": "System.Double",
+      "description": "Rotation angle (in radians) for the curve"
+    },
+    {
+      "name": "XOffset",
+      "type": "System.Double",
+      "description": "Offset in x for f(x), where x = 0 (see Remarks )"
+    },
+    {
+      "name": "YOffset",
+      "type": "System.Double",
+      "description": "Offset in y for f(x), where x = 0 (see Remarks )"
+    },
+    {
+      "name": "LockStart",
+      "type": "System.Boolean",
+      "description": "True to lock the start point (RangeStart) of the curve, false to not"
+    },
+    {
+      "name": "LockEnd",
+      "type": "System.Boolean",
+      "description": "True to lock the end point (RangeEnd) of the curve, false to not"
+    }
+  ],
+  "returns": "True if the equation-driven curve's parameters are set, false if not",
+  "remarks": "YExpression:\nAny function that you can define as a 2D function in the following form:\ny-in-the-sketch = f(x-in-the-sketch)\nwill appear as a curve in the sketch. For example:\ny = sin(x)\nRangeStart\nand\nRangeEnd\nYou cannot specify string values for RangeStart and RangeEnd; you must specify double values.\nXOffset:\nIn the equation:\ny = sin(x) [x=0 to 2Pi]\nthe start point (0,0) is moved by XOffset in the x direction.\nYOffset:\nIn the equation:\ny = sin(x) [x=0 to 2Pi]\nthe start point (0,0) is moved by YOffset in the y direction.",
+  "examples": [
+    {
+      "title": "Create Equation-driven Curve (C#)",
+      "href": "Create_Equation-driven_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Equation-driven Curve (VB.NET)",
+      "href": "Create_Equation-driven_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Equation-driven Curve (VBA)",
+      "href": "Create_Equation-driven_Curve_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.CreateEquationSpline",
+    "ISketchSpline.GetEquationParameters"
+  ]
+}

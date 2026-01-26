@@ -1,0 +1,110 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreatePoint2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "PointX",
+        "type": "System.Double",
+        "description": "X location of the point"
+      },
+      {
+        "name": "PointY",
+        "type": "System.Double",
+        "description": "Y location of the point"
+      },
+      {
+        "name": "PointZ",
+        "type": "System.Double",
+        "description": "Z location of the point; ignored for 2D sketches"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ICreatePoint2"
+    ],
+    "keywords": [
+      "createpoint2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "point2",
+      "point",
+      "double",
+      "object",
+      "calculate",
+      "closest",
+      "distance",
+      "between",
+      "components",
+      "vba",
+      "plane",
+      "thru",
+      "points",
+      "context",
+      "intersecting",
+      "face",
+      "edge",
+      "length",
+      "spline",
+      "elliptical"
+    ]
+  },
+  "title": "IModelDoc2.CreatePoint2",
+  "description": "Obsolete. Superseded by ISketchManager::CreatePoint.",
+  "signature": "System.Object CreatePoint2( \n   System.Double\nPointX\n,\n   System.Double\nPointY\n,\n   System.Double\nPointZ\n)",
+  "parameters": [
+    {
+      "name": "PointX",
+      "type": "System.Double",
+      "description": "X location of the point"
+    },
+    {
+      "name": "PointY",
+      "type": "System.Double",
+      "description": "Y location of the point"
+    },
+    {
+      "name": "PointZ",
+      "type": "System.Double",
+      "description": "Z location of the point; ignored for 2D sketches"
+    }
+  ],
+  "returns": "Newly created sketch point ; this value is NULL if the operation fails",
+  "remarks": "This method creates a point in the active 2D or 3D sketch. If a sketch is not active, the point is not created and NULL is returned. Use\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\nto check to see if the sketch is active.\nIModelDoc2::SetAddToDB\nand\nIModelDoc2::SetDisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database. IModelDoc2::SetAddToDB also avoids inferencing.",
+  "examples": [
+    {
+      "title": "Calculate Closest Distance Between Model Components (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Model_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Plane Thru 3 Points In-context (VBA)",
+      "href": "Create_Plane_Thru_3_Points_In-context_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Intersecting Face and Edge (VBA)",
+      "href": "Get_Intersecting_Face_and_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Length of Spline or Elliptical Edge (VBA)",
+      "href": "Get_Length_of_Spline_or_Elliptical_Edge_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.ICreatePoint2"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetSolidHatchInfo",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Size of array to allocate for the boundary data as determined by IView::GetSolidHatchCount"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "ISketch.GetSketchHatches",
+      "IView.GetSolidHatchInfo"
+    ],
+    "keywords": [
+      "hatching",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "solid",
+      "fill",
+      "hatches",
+      "detail",
+      "views",
+      "break",
+      "crop",
+      "igetsolidhatchinfo",
+      "hatch",
+      "info",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IView.IGetSolidHatchInfo",
+  "description": "Gets the boundary data for all visible solid-fill hatches in a detail, break, or crop view.",
+  "signature": "System.Double IGetSolidHatchInfo( \n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Size of array to allocate for the boundary data as determined by IView::GetSolidHatchCount"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value, which is an array of doubles, describes the geometry for each hatch boundary loop in each visible solid-fill hatch in a detail or broken view. The first two array elements indicate:\n[0] 1 if the loop is an outer loop, which is the first loop in the boundary, or 0 if the loop is an inner loop in the boundary\n[1] Number of polylines in the loop\nThe remaining array elements describe the polyline data and include information about these types of boundary segments:\narcs: Returned using a center point, radius, and start and stop location\nellipses: Returned as equation parameters\nsplines: Returned as equation parameters\nstraight lines: Returned as tessellated polylines\nThe format of the remaining array elements ([2], [3], ...) of polyline data is as follows:\n[\nType, GeomDataSize, GeomData[ ], LineColor, LineStyle, LineFont, LineWeight, LayerID, LayerOverride, NumPolyPoints, [x,y,z]\n]\nwhere:\nType\n=\nunderlying geometry type, possible values are:\n0 = Polyline type\n1 = Arc or Circle type\nGeomDataSize\n= number of elements in the\nGeomData\narray, for Type = 0 this will be 0.\nGeomData[ ]\n= geometric data that can be used to represent the underlying geometry type. The data returned in this array is based on the underlying geometry type:\nType\n= 0. This array is empty\nType\n= 1.\n[\ncenterPtX, centerPtY, centerPtZ, startPtX, startPtY, startPtZ, endPtX, endPtY, endPtZ, normalX, normalY, normalZ\n]\nLineColor\n= polyline color. This value is determined either by the explicitly set value or by the layer that the polyline is on.\nLineStyle\n= value combines polyline font and weight information. This value can be used as an input to GetLineFontInfo and GetLineFontName. If this value is -1, then the user has probably modified the line display manually in the drawing and you should use the LineFont and LineWeight return values to recreate the exact polyline style.\nLineFont\n= value is used for polyline font information. This value can be used as an input to the GetLineFontInfo2 and GetLineFontName2 functions. This value will only be valid if LineStyle is -1.\nLineWeight\n= polyline weight where Thin = 0.0, Normal = 1.0, Thick = 2.0. This value will only be valid if LineStyle is -1.\nLayerID\n= integer value indicating which layer holds this polyline. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nand\nILayerMgr::IGetLayerById\n.\nLayerOverride\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nNumPolyPoints\n= number of XYZ points found in the [x,y,z] return value.\n[\nx,y,z]\n= array of points used to describe the polyline. This array has NumPolyPoints points. This data will be returned for every polyline regardless of\nType\n.\nTo get information about solid-fill hatches in drawing views, use\nIView::GetFaceHatchCount\n,\nIView::GetFaceHatches\n, and\nIView::IGetFaceHatches\n.",
+  "examples": [],
+  "related": [
+    "ISketch.GetSketchHatches",
+    "IView.GetSolidHatchInfo"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "SetSelectionFilters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Filters",
+        "type": "System.Object",
+        "description": "Array of filter values as defined in swSelectType_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageSelectionbox.ISetSelectionFilters"
+    ],
+    "keywords": [
+      "setselectionfilters",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "selection",
+      "filters",
+      "object",
+      "void",
+      "ipropertymanagerpage2"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageSelectionbox.SetSelectionFilters",
+  "description": "Defines the types of objects the user can select for this selection box.",
+  "signature": "void SetSelectionFilters( \n   System.Object\nFilters\n)",
+  "parameters": [
+    {
+      "name": "Filters",
+      "type": "System.Object",
+      "description": "Array of filter values as defined in swSelectType_e (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "You can only use this method to set properties on the PropertyManager page before it is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\n.\nWhen a user makes a selection in the graphics area, SOLIDWORKS must decide whether to select a face, body, or component. The following table shows what appears in a selection box created with the specifed filters after a selection occurs in the graphics area.\nFilters\nResult\nswSelFACES,  swSelSOLIDBODIES\nFace\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelFACES, swSelCOMPONENTS\nComponent\nIf you want a face to appear in the selection box, then use swSELCOMPSDONTOVERRIDE.\nswSelSOLIDBODIES, swSelCOMPONENTS\nComponent\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelFACES, swSelSOLIDBODIES, swSelCOMPONENTS\nComponent\nIf you want a face to appear in the selection box, then use swSelCOMPSDONTOVERRIDE.\n- or -\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelSURFACEBODIES and swSelSURFBODIESFIRST behave simliar to swSelSOLIDBODIES and swSelSOLIDBODIESFIRST. swSelEDGES and swSelVERTICES behave similar to swSelFACES. If the Filters is set to swSelNOTHING or swSelUNSUPPORTED, this the call to this method fails.",
+  "examples": [
+    {
+      "title": "IPropertyManagerPage2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPage2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPropertyManagerPageSelectionbox.ISetSelectionFilters"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchManager",
+    "member": "AddToDB",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketch",
+      "entities",
+      "database",
+      "solidworks",
+      "see",
+      "also",
+      "isketch",
+      "addtodb",
+      "isketchmanager",
+      "manager",
+      "add",
+      "db",
+      "boolean",
+      "assembly",
+      "bounding",
+      "box",
+      "using",
+      "components",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchManager.AddToDB",
+  "description": "Gets or sets whether sketch entities are added directly to the SOLIDWORKS database.",
+  "signature": "System.Boolean AddToDB {get; set;}",
+  "parameters": [],
+  "returns": "True to add items directly to the SOLIDWORKS database, false to not",
+  "remarks": "One of the benefits of adding sketch entities directly to the database is that you can avoid grid and entity snapping. For example, if you create a sketch line whose endpoint is near another entity or grid point, the new sketch line endpoint snaps to the other entity or grid point. Setting this property to true avoids this behavior during sketch entity creation.\nAfter setting this property to true:\nIt is not possible to undo the creation of some types of sketch entities.\nYou must reset it to false to restore SOLIDWORKS' normal operating mode.\nThis property and\nISketchManager::DisplayWhenAdded\nimprove performance during sketch entity creation. ISketchManager::DisplayWhenAdded requires that this property be set to true.\nIf you want to constrain all the sketch entities after creation, use\nISketch::ConstrainAll\n.",
+  "examples": [
+    {
+      "title": "Get Assembly Bounding Box Using Components (C#)",
+      "href": "Get_Assembly_Bounding_Box_Using_Components_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Assembly Bounding Box Using Components (VB.NET)",
+      "href": "Get_Assembly_Bounding_Box_Using_Components_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Assembly Bounding Box Using Components (VBA)",
+      "href": "Get_Assembly_Bounding_Box_using_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

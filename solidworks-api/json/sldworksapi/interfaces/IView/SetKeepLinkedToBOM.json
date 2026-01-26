@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "SetKeepLinkedToBOM",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Linked",
+        "type": "System.Boolean",
+        "description": "True to set a drawing view to the specified BOM or weldment cut-list table, false to not"
+      },
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the BOM or weldment cut-list table to which to link this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetKeepLinkedToBOM",
+      "IView.GetKeepLinkedToBOMName",
+      "IView.IInsertBomTable",
+      "IView.InsertBomTable",
+      "IView.InsertBomTable2",
+      "IView.InsertWeldmentTable"
+    ],
+    "keywords": [
+      "bill",
+      "materials",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "view",
+      "table",
+      "weldment",
+      "cut",
+      "list",
+      "tables",
+      "lists",
+      "iweldmentcutlistfeature",
+      "setkeeplinkedtobom",
+      "keep",
+      "linked",
+      "bom",
+      "boolean",
+      "name",
+      "string"
+    ]
+  },
+  "title": "IView.SetKeepLinkedToBOM",
+  "description": "Sets whether this drawing view is linked to the specified BOM or weldment cut-list table.",
+  "signature": "System.Boolean SetKeepLinkedToBOM( \n   System.Boolean\nLinked\n,\n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Linked",
+      "type": "System.Boolean",
+      "description": "True to set a drawing view to the specified BOM or weldment cut-list table, false to not"
+    },
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the BOM or weldment cut-list table to which to link this drawing view"
+    }
+  ],
+  "returns": "True if the BOM or weldment cut-list table is linked to this drawing view, false if not",
+  "remarks": "This method returns false if the string specified for Name does not correspond to the name of a BOM or weldment cut-list table feature created for the model in this drawing view.",
+  "examples": [],
+  "related": [
+    "IView.GetKeepLinkedToBOM",
+    "IView.GetKeepLinkedToBOMName",
+    "IView.IInsertBomTable",
+    "IView.InsertBomTable",
+    "IView.InsertBomTable2",
+    "IView.InsertWeldmentTable"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IGetCurveParams2",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICoEdge.GetCurveParams",
+      "ICoEdge.IGetCurveParams",
+      "IEdge.GetCurveParams2",
+      "IEdge.IsParamReversed"
+    ],
+    "keywords": [
+      "igetcurveparams2",
+      "iedge",
+      "edge",
+      "curve",
+      "params2",
+      "double",
+      "circular",
+      "holes",
+      "face"
+    ]
+  },
+  "title": "IEdge.IGetCurveParams2",
+  "description": "Returns the curve parameters for this edge, including the edge and curve direction (sense).",
+  "signature": "System.Double IGetCurveParams2()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Calls to this method must be preceded by a call to\nIEdge::GetCurve\nor\nIEdge::IGetCurve\nbecause SOLIDWORKS does not keep the underlying curve information. Edge::GetCurve generates this information so that you can extract the curve parameters.\nYou can use the data returned by this method to determine if a circular edge is a complete circle or an arc.\nThe return value is the following array of 11 doubles:\n[\nStartPtX, StartPtY, StartPtZ, EndPtX, EndPtY, EndPtZ, StartUParam, EndUParam, PackDouble1, PackDouble2, PackDouble3\n]\nwhere\nPackDouble1,\nPackDouble2,\nand\nPackDouble3\nare each a set of two integers packed into a double. These variables hold the following pair of integers:\nPackDouble1\nTwo packed integers:\nUnused\ncurveType as documented in\nICurve::Identity\nPackDouble2\nTwo packed integers:\nUnused\ncurveTag\nPackDouble3\nTwo packed integers:\nUnused\nSenseFlag (indicates whether the curve and edge are in the same direction)\nIf SenseFlag is True, then the curve and edge are in the same direction. If SenseFlag is false, then the curve and edge are in opposite directions. In this case, this method returns the start parameter (point) that corresponds to the end of the edge and the end parameter (point) that corresponds to the end of the edge.\nThe start parameter is always smaller than the end parameter. If the curve and edge are in opposite directions, then the start and end parameters are along the negative portion of the parameter space. For example, if the start parameter of the edge is 10 and the end parameter is 5, then the parameter range returned is -10, -5. This ensures that the start parameter is smaller than the end parameter. To correct the values for the edge, swap the two values between the start and end parameters and then negate both values so that the value of the start parameter is 5 and the end parameter is 10.\nIf the curve is closed and the curve starts and ends at the same point, then\nStartUParam\nand\nEndUParam\nare a period apart.",
+  "examples": [
+    {
+      "title": "Get Circular Holes in Face (C++)",
+      "href": "Get_Circular_Holes_In_Face_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICoEdge.GetCurveParams",
+    "ICoEdge.IGetCurveParams",
+    "IEdge.GetCurveParams2",
+    "IEdge.IsParamReversed"
+  ]
+}

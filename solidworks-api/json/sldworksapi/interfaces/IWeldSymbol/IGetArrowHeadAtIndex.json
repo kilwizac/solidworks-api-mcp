@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldSymbol",
+    "member": "IGetArrowHeadAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arrow head where the index begins at"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IWeldSymbol.GetArrowHeadAtIndex",
+      "IWeldSymbol.GetArrowHeadCount",
+      "IWeldSymbol.GetArrowHeadInfo",
+      "IWeldSymbol.IGetArrowHeadInfo"
+    ],
+    "keywords": [
+      "igetarrowheadatindex",
+      "iweldsymbol",
+      "weld",
+      "symbol",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IWeldSymbol.IGetArrowHeadAtIndex",
+  "description": "Gets information on the specified arrowhead in this weld symbol.",
+  "signature": "System.Double IGetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arrow head where the index begins at"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles :\n[\narrowHeadPt\n[3],\narrowHeadDir\n[3],\narrowHeadWidth\n,\narrowHeadHeight\n,\narrowHeadStyle\n]\nwhere:\narrowHeadPt\n[3]\n= XYZ arrow head tip location.\narrowHeadDir\n[3]\n= XYZ arrow head direction.\narrowHeadWidth\n= arrow head width where the width is measured along the arrow head direction.\narrowHeadHeight\n= arrow head height.\narrowHeadStyle\n= arrow head style (that is, open, closed, and so on) as defined in\nswArrowStyle_e\n.",
+  "examples": [],
+  "related": [
+    "IWeldSymbol.GetArrowHeadAtIndex",
+    "IWeldSymbol.GetArrowHeadCount",
+    "IWeldSymbol.GetArrowHeadInfo",
+    "IWeldSymbol.IGetArrowHeadInfo"
+  ]
+}

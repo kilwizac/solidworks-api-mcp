@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IOneBendFeatureData
+inherits: null
+description: Allows access to a bend feature (sharp bend, round bend, or flat bend).
+member_count: 33
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AutoReliefType
+  - BendAllowance
+  - BendAllowanceType
+  - BendAngle
+  - BendDirection
+  - BendDown
+  - BendOrder
+---
+
+# IOneBendFeatureData
+
+Allows access to a bend feature (sharp bend, round bend, or flat bend).
+
+## Common Members
+
+- `AccessSelections`
+- `AutoReliefType`
+- `BendAllowance`
+- `BendAllowanceType`
+- `BendAngle`
+- `BendDirection`
+- `BendDown`
+- `BendOrder`

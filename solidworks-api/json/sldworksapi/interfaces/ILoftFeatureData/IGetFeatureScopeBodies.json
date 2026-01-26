@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoftFeatureData",
+    "member": "IGetFeatureScopeBodies",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of solid bodies to affect"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ILoftFeatureData.AutoSelect",
+      "ILoftFeatureData.FeatureScope",
+      "ILoftFeatureData.FeatureScopeBodies",
+      "ILoftFeatureData.ISetFeatureScopeBodies"
+    ],
+    "keywords": [
+      "feature",
+      "scope",
+      "igetfeaturescopebodies",
+      "iloftfeaturedata",
+      "loft",
+      "data",
+      "bodies",
+      "count",
+      "int32",
+      "body2"
+    ]
+  },
+  "title": "ILoftFeatureData.IGetFeatureScopeBodies",
+  "description": "Gets the solid bodies that the loft feature affects in a multibody part.",
+  "signature": "Body2 IGetFeatureScopeBodies( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of solid bodies to affect"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of solid bodies of size count VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nILoftFeatureData::GetFeatureScopeBodiesCount\nto get the size of Count.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "ILoftFeatureData.AutoSelect",
+    "ILoftFeatureData.FeatureScope",
+    "ILoftFeatureData.FeatureScopeBodies",
+    "ILoftFeatureData.ISetFeatureScopeBodies"
+  ]
+}

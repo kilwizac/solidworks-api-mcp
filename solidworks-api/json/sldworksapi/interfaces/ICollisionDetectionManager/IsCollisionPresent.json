@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICollisionDetectionManager",
+    "member": "IsCollisionPresent",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TreatContactAsCollision",
+        "type": "System.Boolean",
+        "description": "True to treat touching faces/edges/vertices as colliding, false to require solid bodies to overlap in a finite volume"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "iscollisionpresent",
+      "icollisiondetectionmanager",
+      "collision",
+      "detection",
+      "manager",
+      "present",
+      "treat",
+      "contact",
+      "boolean",
+      "int32"
+    ]
+  },
+  "title": "ICollisionDetectionManager.IsCollisionPresent",
+  "description": "Performs collision detection analysis between all groups of components.",
+  "signature": "System.Int32 IsCollisionPresent( \n   System.Boolean\nTreatContactAsCollision\n)",
+  "parameters": [
+    {
+      "name": "TreatContactAsCollision",
+      "type": "System.Boolean",
+      "description": "True to treat touching faces/edges/vertices as colliding, false to require solid bodies to overlap in a finite volume"
+    }
+  ],
+  "returns": "Return code as defined in swCollisionDetectionResults_e",
+  "remarks": "This method takes less time to run than\nICollisionDetectionManager::GetCollisions\n.",
+  "examples": [
+    {
+      "title": "ICollisionDetectionManager",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICollisionDetectionManager",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

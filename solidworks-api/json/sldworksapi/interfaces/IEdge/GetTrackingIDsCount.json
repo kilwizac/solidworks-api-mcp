@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "GetTrackingIDsCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetTrackingIDs",
+      "IEdge.IGetTrackingIDs",
+      "IEdge.RemoveTrackingID",
+      "IEdge.SetTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "edges",
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "gettrackingidscount",
+      "ds",
+      "count",
+      "cookie",
+      "int32",
+      "remove",
+      "vba"
+    ]
+  },
+  "title": "IEdge.GetTrackingIDsCount",
+  "description": "Gets the number of tracking IDs on this edge.",
+  "signature": "System.Int32 GetTrackingIDsCount( \n   System.Int32\nTrackingCookie\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    }
+  ],
+  "returns": "NUmber of tracking IDs on this edge",
+  "remarks": "Call this method before calling\nIEdge::IGetTrackingIDs\nto determine the size for that array.\nSee\nTracking IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get, Set, and Remove Tracking IDs on Edge (VBA)",
+      "href": "Get_Set_And_Remove_Tracking_IDs_On_Edge_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdge.GetTrackingIDs",
+    "IEdge.IGetTrackingIDs",
+    "IEdge.RemoveTrackingID",
+    "IEdge.SetTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

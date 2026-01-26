@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheetMetalGaugeTableParameters",
+    "member": "SetRadius",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Bend radius"
+      },
+      {
+        "name": "Override",
+        "type": "System.Boolean",
+        "description": "True to override an existing value, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISheetMetalGaugeTableParameters.GetCurrentRadius",
+      "ISheetMetalGaugeTableParameters.GetRadiiCount",
+      "ISheetMetalGaugeTableParameters.OverrideRadius",
+      "ISheetMetalGaugeTableParameters.SetThickness"
+    ],
+    "keywords": [
+      "setradius",
+      "isheetmetalgaugetableparameters",
+      "sheet",
+      "metal",
+      "gauge",
+      "table",
+      "parameters",
+      "radius",
+      "double",
+      "override",
+      "boolean"
+    ]
+  },
+  "title": "ISheetMetalGaugeTableParameters.SetRadius",
+  "description": "Sets the bend radius in this gauge table.",
+  "signature": "System.Boolean SetRadius( \n   System.Double\nRadius\n,\n   System.Boolean\nOverride\n)",
+  "parameters": [
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Bend radius"
+    },
+    {
+      "name": "Override",
+      "type": "System.Boolean",
+      "description": "True to override an existing value, false to not (see Remarks )"
+    }
+  ],
+  "returns": "True if bend radius successfully set, false if not",
+  "remarks": "If Override is:\ntrue, then specify an override bend radius in Radius.\nfalse, then specify Radius using one of the default bend radii for the current gauge number from the gauge table. Use\nISheetMetalGaugeTableParameters::GetAvailableRadii\nto choose a value for Radius.",
+  "examples": [
+    {
+      "title": "ISheetMetalGaugeTableParameters",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheetMetalGaugeTableParameters",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheetMetalGaugeTableParameters.GetCurrentRadius",
+    "ISheetMetalGaugeTableParameters.GetRadiiCount",
+    "ISheetMetalGaugeTableParameters.OverrideRadius",
+    "ISheetMetalGaugeTableParameters.SetThickness"
+  ]
+}

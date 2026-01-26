@@ -1,0 +1,129 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "PostSplitBody2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "BodiesToMark",
+        "type": "System.Object",
+        "description": "Array of bodies to mark for the split operation"
+      },
+      {
+        "name": "ConsumeCut",
+        "type": "System.Boolean",
+        "description": "True to remove the bodies from the part, false to not"
+      },
+      {
+        "name": "Origins",
+        "type": "System.Object",
+        "description": "Array of origins of the bodies to save"
+      },
+      {
+        "name": "SavePaths",
+        "type": "System.Object",
+        "description": "Array of paths and filenames of the part documents to which to save BodiesToMark"
+      },
+      {
+        "name": "OverrideTemplateName",
+        "type": "System.String",
+        "description": "Path and filename of the part or assembly template that overrides the default (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "ISplitBodyFeatureData.GetSplitBodies",
+      "ISplitBodyFeatureData.SetSplitBodies2"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "split",
+      "isplitbodyfeaturedata",
+      "postsplitbody2",
+      "ifeaturemanager",
+      "manager",
+      "post",
+      "body2",
+      "bodies",
+      "mark",
+      "object",
+      "consume",
+      "cut",
+      "boolean",
+      "origins",
+      "save",
+      "paths",
+      "override",
+      "template",
+      "name",
+      "string",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.PostSplitBody2",
+  "description": "Creates a Split feature.",
+  "signature": "System.Object PostSplitBody2( \n   System.Object\nBodiesToMark\n,\n   System.Boolean\nConsumeCut\n,\n   System.Object\nOrigins\n,\n   System.Object\nSavePaths\n,\n   System.String\nOverrideTemplateName\n)",
+  "parameters": [
+    {
+      "name": "BodiesToMark",
+      "type": "System.Object",
+      "description": "Array of bodies to mark for the split operation"
+    },
+    {
+      "name": "ConsumeCut",
+      "type": "System.Boolean",
+      "description": "True to remove the bodies from the part, false to not"
+    },
+    {
+      "name": "Origins",
+      "type": "System.Object",
+      "description": "Array of origins of the bodies to save"
+    },
+    {
+      "name": "SavePaths",
+      "type": "System.Object",
+      "description": "Array of paths and filenames of the part documents to which to save BodiesToMark"
+    },
+    {
+      "name": "OverrideTemplateName",
+      "type": "System.String",
+      "description": "Path and filename of the part or assembly template that overrides the default (see Remarks )"
+    }
+  ],
+  "returns": "Split feature",
+  "remarks": "To create a Split feature:\nSelect the entities to use to split the part into multiple bodies.\nCall\nIFeatureManager::PreSplitBody\nto get all of the bodies created by splitting the part.\nCall this method to create the Split feature.\nThe size of the BodiesToMark, Origins, and SavePaths arrays must be equal and greater than 0. If you pass an empty path and filename for a body, then that body is only marked, is not saved to a separate part document, and remains with the original part.\nOverrideTemplateName overrides the default part or assembly template that is specified in\nTools > Options > System Options > File Locations\n. The template is applied to all new part or assembly files created during the split operation.\nTo find out whether the bodies in a Split feature are consumed, use\nISplitBodyFeatureData::Consume\n.\nIFeature::GetTypeName2\nand\nIFeature::GetTypeName\nreturn:\nSplit\nfor a feature that was created by splitting a part into multiple parts by using either this method or the\nSplit\nfeature in the user interface. You can access a split-body feature's data using\nISplitBodyFeatureData\n.\nSplitBody\nfor a body created by splitting a part and saving the body to a part. You cannot access the data of a split body saved to a part.",
+  "examples": [
+    {
+      "title": "Create Split Feature (VBA)",
+      "href": "Create_Split-body_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Split Feature (VB.NET)",
+      "href": "Create_Split-body_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Split Feature (C#)",
+      "href": "Create_Split-body_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISplitBodyFeatureData.GetSplitBodies",
+    "ISplitBodyFeatureData.SetSplitBodies2"
+  ]
+}

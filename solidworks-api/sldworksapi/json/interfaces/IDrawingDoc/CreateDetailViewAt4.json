@@ -1,0 +1,214 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateDetailViewAt4",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X position for the detail view"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y position for the detail view"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z position for the detail view"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Style for the detail view as defined in swDetViewStyle_e"
+      },
+      {
+        "name": "Scale1",
+        "type": "System.Double",
+        "description": "Scale numerator"
+      },
+      {
+        "name": "Scale2",
+        "type": "System.Double",
+        "description": "Scale denominator"
+      },
+      {
+        "name": "LabelIn",
+        "type": "System.String",
+        "description": "Detail view label"
+      },
+      {
+        "name": "Showtype",
+        "type": "System.Int32",
+        "description": "Type of sketch for the detail view as defined in swDetCircleShowType_e"
+      },
+      {
+        "name": "FullOutline",
+        "type": "System.Boolean",
+        "description": "True to show a full outline, false to not; valid only if NoOutline is false"
+      },
+      {
+        "name": "JaggedOutline",
+        "type": "System.Boolean",
+        "description": "True to show a jagged outline, false to not; only valid if NoOutline is false"
+      },
+      {
+        "name": "NoOutline",
+        "type": "System.Boolean",
+        "description": "True to not show an outline, false to show an outline"
+      },
+      {
+        "name": "ShapeIntensity",
+        "type": "System.Int32",
+        "description": "Intensity of jagged outline; valid range is 1 (most) to 5 (least) and only valid if JaggedOutline is true and NoOutline is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.Create1stAngleViews2",
+      "IDrawingDoc.Create3rdAngleViews2",
+      "IDrawingDoc.CreateAuxiliaryViewAt2",
+      "IDrawingDoc.CreateDrawViewFromModelView3",
+      "IDrawingDoc.CreateSectionViewAt5",
+      "IDrawingDoc.CreateUnfoldedViewAt3",
+      "IDrawingDoc.CreateViewport3"
+    ],
+    "keywords": [
+      "detail",
+      "views",
+      "drawing",
+      "see",
+      "also",
+      "iview",
+      "createdetailviewat4",
+      "idrawingdoc",
+      "doc",
+      "create",
+      "view",
+      "at4",
+      "double",
+      "style",
+      "int32",
+      "scale1",
+      "scale2",
+      "label",
+      "string",
+      "showtype",
+      "full",
+      "outline",
+      "boolean",
+      "jagged",
+      "no",
+      "shape",
+      "intensity",
+      "object",
+      "circle",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.CreateDetailViewAt4",
+  "description": "Creates a detail view in a drawing document.",
+  "signature": "System.Object CreateDetailViewAt4( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Int32\nStyle\n,\n   System.Double\nScale1\n,\n   System.Double\nScale2\n,\n   System.String\nLabelIn\n,\n   System.Int32\nShowtype\n,\n   System.Boolean\nFullOutline\n,\n   System.Boolean\nJaggedOutline\n,\n   System.Boolean\nNoOutline\n,\n   System.Int32\nShapeIntensity\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X position for the detail view"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y position for the detail view"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z position for the detail view"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Style for the detail view as defined in swDetViewStyle_e"
+    },
+    {
+      "name": "Scale1",
+      "type": "System.Double",
+      "description": "Scale numerator"
+    },
+    {
+      "name": "Scale2",
+      "type": "System.Double",
+      "description": "Scale denominator"
+    },
+    {
+      "name": "LabelIn",
+      "type": "System.String",
+      "description": "Detail view label"
+    },
+    {
+      "name": "Showtype",
+      "type": "System.Int32",
+      "description": "Type of sketch for the detail view as defined in swDetCircleShowType_e"
+    },
+    {
+      "name": "FullOutline",
+      "type": "System.Boolean",
+      "description": "True to show a full outline, false to not; valid only if NoOutline is false"
+    },
+    {
+      "name": "JaggedOutline",
+      "type": "System.Boolean",
+      "description": "True to show a jagged outline, false to not; only valid if NoOutline is false"
+    },
+    {
+      "name": "NoOutline",
+      "type": "System.Boolean",
+      "description": "True to not show an outline, false to show an outline"
+    },
+    {
+      "name": "ShapeIntensity",
+      "type": "System.Int32",
+      "description": "Intensity of jagged outline; valid range is 1 (most) to 5 (least) and only valid if JaggedOutline is true and NoOutline is false"
+    }
+  ],
+  "returns": "Detail view",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Create Detail Circle and Detail View (C#)",
+      "href": "Create_Detail_Circle_and_Detail_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Detail Circle and Detail View (VB.NET)",
+      "href": "Create_Detail_Circle_and_Detail_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Detail Circle and Detail View (VBA)",
+      "href": "Create_Detail_Circle_and_Detail_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.Create1stAngleViews2",
+    "IDrawingDoc.Create3rdAngleViews2",
+    "IDrawingDoc.CreateAuxiliaryViewAt2",
+    "IDrawingDoc.CreateDrawViewFromModelView3",
+    "IDrawingDoc.CreateSectionViewAt5",
+    "IDrawingDoc.CreateUnfoldedViewAt3",
+    "IDrawingDoc.CreateViewport3"
+  ]
+}

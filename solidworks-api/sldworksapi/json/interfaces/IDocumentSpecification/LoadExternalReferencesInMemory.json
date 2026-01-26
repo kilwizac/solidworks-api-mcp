@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDocumentSpecification",
+    "member": "LoadExternalReferencesInMemory",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "loadexternalreferencesinmemory",
+      "idocumentspecification",
+      "document",
+      "specification",
+      "load",
+      "external",
+      "references",
+      "memory",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDocumentSpecification.LoadExternalReferencesInMemory",
+  "description": "Gets or sets whether to load external references in memory when opening a document.",
+  "signature": "System.Boolean LoadExternalReferencesInMemory {get; set;}",
+  "parameters": [],
+  "returns": "True to load external references in memory, false (default) to not",
+  "remarks": "This property is:\nnot valid for opening\n3D\nEXPERIENCE files using\nSOLIDWORKS Design Augmented\n.\nvalid only if\nswUserPreferenceIntegerValue_e\n.swLoadExternalReferences is not set to\nswLoadExternalReferences_e\n.swLoadExternalReferences_None.\nNote: The\nSystem Options > External References > Load documents in memory only\nuser preference and\nswUserPreferenceToggle_e\n.swExtRefLoadRefDocsInMemory are ignored when opening documents through the API because this method and\nISldWorks::OpenDoc6\n(\nswOpenDocOptions_e\n.swOpenDocOptions_LoadExternalReferencesInMemory) have sole control of reference loading.",
+  "examples": [],
+  "related": []
+}

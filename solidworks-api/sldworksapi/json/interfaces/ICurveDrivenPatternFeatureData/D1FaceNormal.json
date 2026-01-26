@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICurveDrivenPatternFeatureData",
+    "member": "D1FaceNormal",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "d1facenormal",
+      "icurvedrivenpatternfeaturedata",
+      "curve",
+      "driven",
+      "pattern",
+      "feature",
+      "data",
+      "d1",
+      "face",
+      "normal",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ICurveDrivenPatternFeatureData.D1FaceNormal",
+  "description": "Gets or sets the face on which the 3D curve lies in Direction 1 of this curve driven pattern.",
+  "signature": "System.Object D1FaceNormal {get; set;}",
+  "parameters": [],
+  "returns": "IFace2",
+  "remarks": "This property is valid only when:\nediting the curve-driven pattern feature\nICurveDrivePatternFeatureData::D1AlignmentMethod is set to swCurveDrivenPatternAlignment_e.swCurvePatternTangentToCurve\nspecifying Direction 1 using a 3D curve\nTo create a curve-driven pattern feature that uses a 3D curve for Direction 1, you must pre-select the face normal with selection Mark = 1024 before creating the curve-driven pattern feature data object.\nIf you try to edit this property to null or Nothing,\nIFeature::ModifyDefinition\nreturns true but the property does not change.\nFor more information, see the\nCurve Driven Patterns and the\nCurve Driven Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": []
+}

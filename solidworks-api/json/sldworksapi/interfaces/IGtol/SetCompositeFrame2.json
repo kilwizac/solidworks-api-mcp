@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "SetCompositeFrame2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Composite",
+        "type": "System.Boolean",
+        "description": "True to create a composite frame, false to not (see Remarks )"
+      },
+      {
+        "name": "FrameNum",
+        "type": "System.Int16",
+        "description": "Index of GTol frame"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetCompositeFrame2"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "setcompositeframe2",
+      "igtol",
+      "gtol",
+      "composite",
+      "frame2",
+      "boolean",
+      "num",
+      "int16",
+      "void",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IGtol.SetCompositeFrame2",
+  "description": "Sets whether to create a composite frame containing the specified GTol frame.",
+  "signature": "void SetCompositeFrame2( \n   System.Boolean\nComposite\n,\n   System.Int16\nFrameNum\n)",
+  "parameters": [
+    {
+      "name": "Composite",
+      "type": "System.Boolean",
+      "description": "True to create a composite frame, false to not (see Remarks )"
+    },
+    {
+      "name": "FrameNum",
+      "type": "System.Int16",
+      "description": "Index of GTol frame"
+    }
+  ],
+  "returns": "",
+  "remarks": "If Composite is true, this method creates a composite frame containing adjacent GTol frames:\nFrame with index FrameNum.\nFrame directly below.\nBoth GTol frames must have the same symbol.",
+  "examples": [
+    {
+      "title": "Create GTol Composite Frame (VBA)",
+      "href": "Create_Gtol_Composite_Frame_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create GTol Composite Frame (VB.NET)",
+      "href": "Create_Gtol_Composite_Frame_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create GTol Composite Frame (C#)",
+      "href": "Create_Gtol_Composite_Frame_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGtol.GetCompositeFrame2"
+  ]
+}

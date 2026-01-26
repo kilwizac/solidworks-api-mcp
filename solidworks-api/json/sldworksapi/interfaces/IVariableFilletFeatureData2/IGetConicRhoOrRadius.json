@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "IGetConicRhoOrRadius",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "Vertex",
+        "description": "Fillet edge for which to get a value (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+      "IVariableFilletFeatureData2.IGetRadius",
+      "IVariableFilletFeatureData2.ISetConicRhoOrRadius"
+    ],
+    "keywords": [
+      "fillets",
+      "conic",
+      "igetconicrhoorradius",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "rho",
+      "radius",
+      "item",
+      "vertex",
+      "double"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.IGetConicRhoOrRadius",
+  "description": "Gets the conic rho, conic radius, or circular radius of this fillet.",
+  "signature": "System.Double IGetConicRhoOrRadius( \n   Vertex\nPFilletItem\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "Vertex",
+      "description": "Fillet edge for which to get a value (see Remarks )"
+    }
+  ],
+  "returns": "Conic rho, conic radius, or circular radius",
+  "remarks": "Before calling this method, call\nIVariableFilletFeatureData2::IGetFilletEdgeAtIndex\nto specify PFilletItem.\nThe type of value returned by this method corresponds to the\nIVariableFilletFeatureData2::ConicTypeForCrossSectionProfile\nsetting.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+    "IVariableFilletFeatureData2.IGetRadius",
+    "IVariableFilletFeatureData2.ISetConicRhoOrRadius"
+  ]
+}

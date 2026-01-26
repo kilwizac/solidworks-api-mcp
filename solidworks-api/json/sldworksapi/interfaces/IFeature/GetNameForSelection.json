@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetNameForSelection",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.String",
+        "description": "Type of feature as defined in swSelectType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IFeatureStatistics.FeatureNames",
+      "IFeatureStatistics.FeatureTypes",
+      "ISelectionMgr.GetSelectByIdSpecification",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectionSpecification"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "name",
+      "type",
+      "getnameforselection",
+      "selection",
+      "string",
+      "vb",
+      "net",
+      "vba",
+      "selections",
+      "reference",
+      "axis"
+    ]
+  },
+  "title": "IFeature.GetNameForSelection",
+  "description": "Gets the selected feature's type and name.",
+  "signature": "System.String GetNameForSelection( \n   out System.String\nType\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.String",
+      "description": "Type of feature as defined in swSelectType_e"
+    }
+  ],
+  "returns": "Name of feature",
+  "remarks": "Call this method before calling\nIModelDocExtension::SelectByID2\nto get the type and name to pass to that method.\nNOTE\n:\nIFeature::GetTypeName\n,\nIFeature::GetTypeName2\n, and\nIFeature::Name\ndo not return the type and name required by IModelDocExtension::SelectByID2.",
+  "examples": [
+    {
+      "title": "Get Feature Type and Name (C#)",
+      "href": "Get_Type_and_Name_of_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Feature Type and Name (VB.NET)",
+      "href": "Get_Feature_Type_and_Name_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Feature Type and Name (VBA)",
+      "href": "Get_Feature_Type_and_Name_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Selections for Reference Axis Feature (C#)",
+      "href": "Get_Selections_for_Reference_Axis_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Selections for Reference Axis Feature (VB.NET)",
+      "href": "Get_Selections_for_Reference_Axis_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Selections for Reference Axis Feature (VBA)",
+      "href": "Get_Selections_for_Reference_Axis_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureStatistics.FeatureNames",
+    "IFeatureStatistics.FeatureTypes",
+    "ISelectionMgr.GetSelectByIdSpecification",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectionSpecification"
+  ]
+}

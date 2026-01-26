@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetLines4",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "CrossHatchOption",
+        "type": "System.Int16",
+        "description": "Crosshatch option as defined in swCrossHatchFilter_e"
+      },
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Number of lines in the view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetLines4"
+    ],
+    "keywords": [
+      "view",
+      "see",
+      "also",
+      "iview",
+      "lines",
+      "drawing",
+      "views",
+      "igetlines4",
+      "lines4",
+      "cross",
+      "hatch",
+      "option",
+      "int16",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IView.IGetLines4",
+  "description": "Gets all of the lines in the view with an option to include or exclude crosshatch lines.",
+  "signature": "System.Double IGetLines4( \n   System.Int16\nCrossHatchOption\n,\n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "CrossHatchOption",
+      "type": "System.Int16",
+      "description": "Crosshatch option as defined in swCrossHatchFilter_e"
+    },
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Number of lines in the view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method only returns lines that were sketched in this drawing view. Use\nIView::GetPolylines6\nor\nIView::IGetPolylines6\nto access the solid model's projected display data in this view.\nCall\nIView::GetLineCount2\nbefore calling this method to get the value for ArraySize.\nThe return value is the following array of doubles:\n[\nColor, LineType, LineStyleIndex, LineWidth, LayerID, LayerOverride, StartPt[3], EndPt[3], ...\n]\nwhere all data values are returned as doubles:\nColor\n= COLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLineType\n= line type. Valid returns as defined in\nswLineTypes_e\n. A\nlineType\nis a combination of a lineStyle and lineWeight.\nLineStyleIndex\n= line style. Valid line styles as defined in\nswLineStyles_e\n.\nLineWidth\n= integer value defining the line width. Valid width values as defined in\nswLineWeights_e\n.\nLayerID\n= integer value indicating which layer holds this entity. Obtain the\nILayer\nobject by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayerOverride\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if\nLayerOverride\nis returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nStartPt[3]\n= array of 3 doubles (X,Y,Z) describing the line start point.\nEndPt[3]\n= array of 3 doubles (X,Y,Z) describing the line end point.\nThis set of data repeats for each line in the view. The number of doubles returned is (lineCount * 12).\nThe data returned from this method is in terms of view space. If you want the data in terms of sheet space (that is, the 0,0 origin being the lower-left corner of the sheet), then combine this data with the three return values from\nIView::GetXForm\nor\nIView::IGetXForm\n.\nThe sheet must be visible. See\nISheet::SheetFormatVisible\n.",
+  "examples": [],
+  "related": [
+    "IView.GetLines4"
+  ]
+}

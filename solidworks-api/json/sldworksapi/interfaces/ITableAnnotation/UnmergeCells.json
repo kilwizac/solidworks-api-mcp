@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "UnmergeCells",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Index of the row of the cell"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "Index of the column of the cell"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.GetSplitInformation",
+      "ITableAnnotation.IsCellMerged",
+      "ITableAnnotation.Merge",
+      "ITableAnnotation.MergeCells",
+      "ITableAnnotation.Split"
+    ],
+    "keywords": [
+      "merge",
+      "tables",
+      "table",
+      "unmergecells",
+      "itableannotation",
+      "annotation",
+      "unmerge",
+      "cells",
+      "row",
+      "int32",
+      "column",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.UnmergeCells",
+  "description": "Splits the specified previously merged cell in this table.",
+  "signature": "System.Boolean UnmergeCells( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Index of the row of the cell"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "Index of the column of the cell"
+    }
+  ],
+  "returns": "True if the cell splits successfully, false if not",
+  "remarks": "Index for both rows and columns is 0-based.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.GetSplitInformation",
+    "ITableAnnotation.IsCellMerged",
+    "ITableAnnotation.Merge",
+    "ITableAnnotation.MergeCells",
+    "ITableAnnotation.Split"
+  ]
+}

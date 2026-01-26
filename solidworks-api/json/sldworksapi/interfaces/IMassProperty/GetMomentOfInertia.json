@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty",
+    "member": "GetMomentOfInertia",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "WhereTaken",
+        "type": "System.Int32",
+        "description": "Coordinate system as defined in swMassPropertyMoment_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty.IGetMomentOfInertia",
+      "IMassProperty.IGetPrincipleAxesOfInertia",
+      "IMassProperty.IGetPrincipleMomentsOfInertia",
+      "IMassProperty.PrincipleAxesOfInertia",
+      "IMassProperty.PrincipleMomentsOfInertia"
+    ],
+    "keywords": [
+      "getmomentofinertia",
+      "imassproperty",
+      "mass",
+      "moment",
+      "inertia",
+      "where",
+      "taken",
+      "int32",
+      "object",
+      "override",
+      "properties",
+      "vba",
+      "vb",
+      "net",
+      "multibody",
+      "assembly",
+      "component"
+    ],
+    "readonly": null
+  },
+  "title": "IMassProperty.GetMomentOfInertia",
+  "description": "Gets the moment of inertia at the specified coordinate system for this model.",
+  "signature": "System.Object GetMomentOfInertia( \n   System.Int32\nWhereTaken\n)",
+  "parameters": [
+    {
+      "name": "WhereTaken",
+      "type": "System.Int32",
+      "description": "Coordinate system as defined in swMassPropertyMoment_e"
+    }
+  ],
+  "returns": "Array containing the moment of inertia calculations (see Remarks )",
+  "remarks": "This method returns metric units unless explicitly specified otherwise.\nThe return value is a 0-based array of doubles:\n[\nLxx, Lxy, Lxz, Lyx, Lyy, Lyz, Lzx, Lzy, Lzz\n]",
+  "examples": [
+    {
+      "title": "Get and Override Mass Properties (VBA)",
+      "href": "Get_Mass_Properties_using_MassProperty_Object_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Override Mass Properties (VB.NET)",
+      "href": "Get_Mass_Properties_Using_IMassProperty_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Override Mass Properties (C#)",
+      "href": "Get_Mass_Properties_Using_IMassProperty_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (C#)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (VB.NET)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mass Properties of Multibody Assembly Component (VBA)",
+      "href": "Get_Mass_Properties_of_Multibody_Assembly_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty.IGetMomentOfInertia",
+    "IMassProperty.IGetPrincipleAxesOfInertia",
+    "IMassProperty.IGetPrincipleMomentsOfInertia",
+    "IMassProperty.PrincipleAxesOfInertia",
+    "IMassProperty.PrincipleMomentsOfInertia"
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "HoleWizard5",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "GenericHoleType",
+        "type": "System.Int32",
+        "description": "Type of hole or slot as defined in swWzdGeneralHoleTypes_e"
+      },
+      {
+        "name": "StandardIndex",
+        "type": "System.Int32",
+        "description": "Hole or slot standard property as defined in swWzdHoleStandards_e (see Remarks for legacy holes)"
+      },
+      {
+        "name": "FastenerTypeIndex",
+        "type": "System.Int32",
+        "description": "Hole or slot fastener type as defined in swWzdHoleStandardFastenerTypes_e (see Remarks )"
+      },
+      {
+        "name": "SSize",
+        "type": "System.String",
+        "description": "Size of the hole or slot (see Remarks )"
+      },
+      {
+        "name": "EndType",
+        "type": "System.Int16",
+        "description": "Hole or slot end type as defined in swEndConditions_e (see Remarks )"
+      },
+      {
+        "name": "Diameter",
+        "type": "System.Double",
+        "description": "Diameter of the hole or slot"
+      },
+      {
+        "name": "Depth",
+        "type": "System.Double",
+        "description": "Depth of the hole or slot"
+      },
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Length of slot; valid only if GenericHoleType set to: swWzdGeneralHoleTypes_e.swWzdCounterBoreSlot swWzdGeneralHoleTypes_e.swWzdCounterSinkSlot swWzdGeneralHoleTypes_e.swWzdHoleSlot For both straight/pipe and tapered tap holes, the macro recorder fails to properly record this parameter. Before running a macro recording, you must add -1 at this position and delete a -1 before ThreadClass."
+      },
+      {
+        "name": "Value1",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value2",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value3",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value4",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value5",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value6",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value7",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value8",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value9",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value10",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value11",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "Value12",
+        "type": "System.Double",
+        "description": "Hole or slot parameter"
+      },
+      {
+        "name": "ThreadClass",
+        "type": "System.String",
+        "description": "One of the following thread classes: 1B 2B 3B NOTE : Applies to ANSI inch standard only."
+      },
+      {
+        "name": "RevDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the hole or slot, false to not"
+      },
+      {
+        "name": "FeatureScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "AutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+      },
+      {
+        "name": "AssemblyFeatureScope",
+        "type": "System.Boolean",
+        "description": "True if the assembly feature only affects selected components in the assembly, false if the assembly feature affects all components in the assembly"
+      },
+      {
+        "name": "AutoSelectComponents",
+        "type": "System.Boolean",
+        "description": "True to automatically select all affected components, false to only use the selected components"
+      },
+      {
+        "name": "PropagateFeatureToParts",
+        "type": "System.Boolean",
+        "description": "True to propagate the assembly feature to the components that the assembly feature affects in the model, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWizardHoleFeatureData2"
+    ],
+    "keywords": [
+      "holewizard5",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "hole",
+      "wizard5",
+      "generic",
+      "type",
+      "int32",
+      "standard",
+      "index",
+      "fastener",
+      "size",
+      "string",
+      "end",
+      "int16",
+      "diameter",
+      "double",
+      "depth",
+      "length",
+      "value1",
+      "value2",
+      "value3",
+      "value4",
+      "value5",
+      "value6",
+      "value7",
+      "value8",
+      "value9",
+      "value10",
+      "value11",
+      "value12",
+      "thread",
+      "rev",
+      "dir",
+      "boolean",
+      "scope",
+      "auto",
+      "select",
+      "assembly",
+      "components",
+      "propagate",
+      "parts",
+      "create",
+      "wizard",
+      "vb",
+      "net",
+      "vba",
+      "insert",
+      "slot"
+    ]
+  },
+  "title": "IFeatureManager.HoleWizard5",
+  "description": "Creates customized holes of various kinds.",
+  "signature": "Feature HoleWizard5( \n   System.Int32\nGenericHoleType\n,\n   System.Int32\nStandardIndex\n,\n   System.Int32\nFastenerTypeIndex\n,\n   System.String\nSSize\n,\n   System.Int16\nEndType\n,\n   System.Double\nDiameter\n,\n   System.Double\nDepth\n,\n   System.Double\nLength\n,\n   System.Double\nValue1\n,\n   System.Double\nValue2\n,\n   System.Double\nValue3\n,\n   System.Double\nValue4\n,\n   System.Double\nValue5\n,\n   System.Double\nValue6\n,\n   System.Double\nValue7\n,\n   System.Double\nValue8\n,\n   System.Double\nValue9\n,\n   System.Double\nValue10\n,\n   System.Double\nValue11\n,\n   System.Double\nValue12\n,\n   System.String\nThreadClass\n,\n   System.Boolean\nRevDir\n,\n   System.Boolean\nFeatureScope\n,\n   System.Boolean\nAutoSelect\n,\n   System.Boolean\nAssemblyFeatureScope\n,\n   System.Boolean\nAutoSelectComponents\n,\n   System.Boolean\nPropagateFeatureToParts\n)",
+  "parameters": [
+    {
+      "name": "GenericHoleType",
+      "type": "System.Int32",
+      "description": "Type of hole or slot as defined in swWzdGeneralHoleTypes_e"
+    },
+    {
+      "name": "StandardIndex",
+      "type": "System.Int32",
+      "description": "Hole or slot standard property as defined in swWzdHoleStandards_e (see Remarks for legacy holes)"
+    },
+    {
+      "name": "FastenerTypeIndex",
+      "type": "System.Int32",
+      "description": "Hole or slot fastener type as defined in swWzdHoleStandardFastenerTypes_e (see Remarks )"
+    },
+    {
+      "name": "SSize",
+      "type": "System.String",
+      "description": "Size of the hole or slot (see Remarks )"
+    },
+    {
+      "name": "EndType",
+      "type": "System.Int16",
+      "description": "Hole or slot end type as defined in swEndConditions_e (see Remarks )"
+    },
+    {
+      "name": "Diameter",
+      "type": "System.Double",
+      "description": "Diameter of the hole or slot"
+    },
+    {
+      "name": "Depth",
+      "type": "System.Double",
+      "description": "Depth of the hole or slot"
+    },
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Length of slot; valid only if GenericHoleType set to: swWzdGeneralHoleTypes_e.swWzdCounterBoreSlot swWzdGeneralHoleTypes_e.swWzdCounterSinkSlot swWzdGeneralHoleTypes_e.swWzdHoleSlot For both straight/pipe and tapered tap holes, the macro recorder fails to properly record this parameter. Before running a macro recording, you must add -1 at this position and delete a -1 before ThreadClass."
+    },
+    {
+      "name": "Value1",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value2",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value3",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value4",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value5",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value6",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value7",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value8",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value9",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value10",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value11",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "Value12",
+      "type": "System.Double",
+      "description": "Hole or slot parameter"
+    },
+    {
+      "name": "ThreadClass",
+      "type": "System.String",
+      "description": "One of the following thread classes: 1B 2B 3B NOTE : Applies to ANSI inch standard only."
+    },
+    {
+      "name": "RevDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the hole or slot, false to not"
+    },
+    {
+      "name": "FeatureScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "AutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+    },
+    {
+      "name": "AssemblyFeatureScope",
+      "type": "System.Boolean",
+      "description": "True if the assembly feature only affects selected components in the assembly, false if the assembly feature affects all components in the assembly"
+    },
+    {
+      "name": "AutoSelectComponents",
+      "type": "System.Boolean",
+      "description": "True to automatically select all affected components, false to only use the selected components"
+    },
+    {
+      "name": "PropagateFeatureToParts",
+      "type": "System.Boolean",
+      "description": "True to propagate the assembly feature to the components that the assembly feature affects in the model, false to not"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "To create simple holes and slots, read\nHole Wizard Features and WizardHoleFeatureData2 Objects\n. To create Advanced Holes of stacked hole elements, use\nIFeatureManager::AdvancedHole\n.\nValid types of slots are counterbore, countersink, or straight.\nTo add a hole or slot at one or more locations, call\nIModelDocExtension::SelectByRay\nwith Mark = 0 for each location.\nBefore creating a hole or slot using a reference plane and this method, determine the value of the RevDir parameter as follows:\nIf the material is on one side of the reference plane, then RevDir is false.\nIf the material is on both sides of the reference plane, then compare the distances between the reference plane and the material on both sides. If the distance between the reference plane and the material along its normal direction is bigger, then RevDir is true; otherwise, RevDir is false.\nYou can also use\nIModelDoc2::RayIntersections\nand\nIModelDoc2::GetRayIntersectionsPoints\nto find out if the material is on one side or both sides and to compare the distances.\nParameters for this method:\nThe FastenerTypeIndex parameter has to match the standard and be valid for that hole or slot type, or an error occurs.\nThe SSize parameter must be a valid size for the fastener type, or an error occurs.\nIf EndType is 10 = swEndCondUpToSelection (supersedes swEndCondUpToSurface and swEndCondUpToVertex), then you must use\nIModelDocExtension::SelectByID2\nwith Mark = 2 to pre-select the surface or vertex. The macro recorder fails to properly record EndType for Up To Surface and Up To Vertex end conditions. Instead of swEndCondUpToSelection=10, it records 4 and 3. Before running an Up to Surface or Vertex macro recording, you must change EndType to 10. The macro recorder also fails to properly record the Up To Next end condition. Instead of swEndCondUpToNext=11, it records swEndCondThroughNext=2. It is advisable to record only Blind or Through All end conditions.\nScrew fit is defined as\nswWzdHoleScrewClearanceTypes_e\nand is only used if a hole or slot diameter is not specified; default value is NORMAL_FIT.\nDrill angle defaults to 118 degrees (2.05948851735331 radians)\n,\nif not specified.\nInput angles are in radians; input values are in meters.\nThe Value1 through Value12 parameters are different for each type of hole or slot. The possible values are as follows, organized by hole and slot type. SOLIDWORKS ignores parameters set to -1.\nCounterbore Holes and Slots\nHead Clearance\n- Added to either the input counterbore depth or the counterbore depth in the standard.\nScrew Fit\n- Value from swWzdHoleScrewClearanceTypes_e\nParameters for all counterbore holes and counterbore slots:\nCounterBore Diameter\nCounterBore Depth\nHead Clearance\nScrew Fit\nDrill Angle at Bottom (valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)\nNear Csink Diameter\nNear Csink Angle\nUnderhead Csink Diameter\nUnderhead Csink Angle\nFar Csink Diameter\nFar Csink Angle\nOffset (valid only if EndType is swEndCondOffsetFromSurface)\nCountersink Holes and Slots\nHead Clearance Type\n- Value from\nswWzdHoleCounterSinkHeadClearanceTypes_e\n, which represents how to add the head clearance values to the hole or slot.\nScrew Fit\n- Value from\nswWzdHoleScrewClearanceTypes_e\nParameters for all countersink holes and countersink slots:\nNear Csink Diameter\nNear Csink Angle\nHead Clearance\nScrew Fit\nDrill Angle at Bottom (valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)\nFar Csink Diameter\nFar Csink Angle\nOffset (valid only if EndType is swEndCondOffsetFromSurface)\nHead Clearance Type\n-1\n-1\n-1\nRegular Holes and Straight Slots\nScrew Fit\n- Value from\nswWzdHoleScrewClearanceTypes_e\nParameters for all regular holes and straight slots:\nScrew Fit\nDrill Angle at Bottom (valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)\nNear Csink Diameter\nNear Csink Angle\nFar Csink Diameter\nFar Csink Angle\nOffset (valid only if EndType is swEndCondOffsetFromSurface)\n-1\n-1\n-1\n-1\n-1\nPipe/Straight Tap Holes\nTap Thread Depth\n- If the user specifies thread depth, SOLIDWORKS always uses this depth. Tap thread depths can be calculated:\nHelicoil holes: calculated based on a constant (determined by hole type; i.e., insert = 1.0 * diameter) + thread depth from the standard * thread major diameter.\nTapped holes: calculated based on 2 * thread diameter.\nCosmetic Thread Type\n- Value from\nswWzdHoleCosmeticThreadTypes_e\n; defaults to swCosmeticThreadNone\nNear Countersink Angle\n- Can be calculated from standard data as a default\nHcoil Tap Type\n- Value from\nswWzdHoleHcoilTapTypes_e\n; defaults to swTapTypePlug\nThread End Condition\n- Value from\nswWzdHoleThreadEndCondition_e\n; defaults to swEndThreadTypeBLIND\nParameters for all pipe/straight tap holes:\nTap Thread Depth\nNear Csink Diameter\nNear Csink Angle\nFar Csink Diameter\nFar Csink Angle\nDrill Angle at Bottom (valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)\nCosmetic Thread Type\nThread End Condition (not valid if StandardIndex is swStandardHelicoilInch or swStandardHelicoilMetric)\nHelicoil Tap Type (valid only if StandardIndex is swStandardHelicoilInch or swStandardHelicoilMetric)\nOffset (valid only if EndType is swEndCondOffsetFromSurface)\n-1\n-1\nTapered Tap Holes\nNOTE: The macro recorder fails to properly record tapered tap hole parameters. Follow the instructions in this help to correct recordings before playing them.\nCosmetic Thread Type\n- Specified as defined in swWzdHoleCosmeticThreadTypes_e; defaults to swCosmeticThreadNone\nParameters for all tapered tap holes:\nTap Thread Depth\nNear Csink Diameter\nNear Csink Angle\nFar Csink Diameter\nFar Csink Angle\nDrill Angle at Bottom (valid only if EndType is *not* swEndCondUpToNext or swEndCondThroughAll)\nCosmetic Thread Type\nOffset (valid only if EndType is swEndCondOffsetFromSurface)\n-1\n-1\n-1\n-1\nLegacy Holes\nStandardIndex, FastenerTypeIndex, and SSize are:\nNot relevant\nSOLIDWORKS ignores them\nValue1 - Value12 for different types of legacy holes. Use -1 for unused values:\nSimple\nDiameter\nDepth\nSketch ID\nTapered\nMinor Diameter\nDepth\nSketch ID\nMajor Diameter\nCounterbored\nDiameter\nDepth\nSketch ID\nC-Bore Diameter\nC-Bore Depth\nCountersunk\nDiameter\nDepth\nSketch ID\nC-Sink Angle\nC-Sink Diameter\nCounterdrilled\nDiameter\nDepth\nSketch ID\nC-Drill Diameter\nC-Drill Depth\nC-Drill Angle\nSimple Drilled\nDiameter\nDepth\nSketch ID\nDrill Angle\nTapered Drilled\nMinor Diameter\nDepth\nSketch ID\nMajor Diameter\nDrill Angle\nC-Bored Drilled\nDiameter\nDepth\nSketch ID\nC-Bore Diameter\nC-Bore Depth\nDrill Angle\nC-Sunk Drilled\nDiameter\nDepth\nSketch ID\nC-Sink Diameter\nC-Sink Angle\nDrill Angle\nC-Drilled Drilled\nDiameter\nDepth\nSketch ID\nC-Drill Diameter\nC-Drill Depth\nDrill Angle\nC-Drill Angle",
+  "examples": [
+    {
+      "title": "Create Hole Wizard Hole (C#)",
+      "href": "Create_Hole_Wizard_Hole_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Hole Wizard Hole (VB.NET)",
+      "href": "Create_Hole_Wizard_Hole_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Hole Wizard Hole (VBA)",
+      "href": "Create_Hole_Wizard_Hole_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Wizard Slot and Hole (C#)",
+      "href": "Insert_Hole_Wizard_Slot_and_Hole_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Wizard Slot and Hole (VB.NET)",
+      "href": "Insert_Hole_Wizard_Slot_and_Hole_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Wizard Slot and Hole (VBA)",
+      "href": "Insert_Hole_Wizard_Slot_and_Hole_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWizardHoleFeatureData2"
+  ]
+}

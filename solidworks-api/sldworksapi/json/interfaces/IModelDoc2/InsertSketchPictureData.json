@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertSketchPictureData",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Width",
+        "type": "System.Int16",
+        "description": "Width of the image"
+      },
+      {
+        "name": "Height",
+        "type": "System.Int16",
+        "description": "Height of the image"
+      },
+      {
+        "name": "PDataIn",
+        "type": "System.Int32",
+        "description": "Pointer to a raw bitmap (HBITMAP) cast as a long"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.InsertSketchPicture"
+    ],
+    "keywords": [
+      "pictures",
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "bitmaps",
+      "sketches",
+      "insertsketchpicturedata",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "picture",
+      "data",
+      "width",
+      "int16",
+      "height",
+      "int32",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertSketchPictureData",
+  "description": "Inserts a picture into the current sketch.",
+  "signature": "void InsertSketchPictureData( \n   System.Int16\nWidth\n,\n   System.Int16\nHeight\n,\n   System.Int32\nPDataIn\n)",
+  "parameters": [
+    {
+      "name": "Width",
+      "type": "System.Int16",
+      "description": "Width of the image"
+    },
+    {
+      "name": "Height",
+      "type": "System.Int16",
+      "description": "Height of the image"
+    },
+    {
+      "name": "PDataIn",
+      "type": "System.Int32",
+      "description": "Pointer to a raw bitmap (HBITMAP) cast as a long"
+    }
+  ],
+  "returns": "",
+  "remarks": "If your application must be x64 compatible, then use\nIModelDoc2::InsertSketchPictureDatax64\n.\nA copy of the specified bitmap data is created. The SOLIDWORKS Design software does not release your bitmap object.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.InsertSketchPicture"
+  ]
+}

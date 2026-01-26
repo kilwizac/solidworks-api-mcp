@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweepFeatureData",
+    "member": "ThinFeature",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.IsThinFeature",
+      "ISweepFeatureData.SetWallThickness",
+      "ISweepFeatureData.ThinWallType"
+    ],
+    "keywords": [
+      "thinfeature",
+      "isweepfeaturedata",
+      "sweep",
+      "feature",
+      "data",
+      "thin",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweepFeatureData.ThinFeature",
+  "description": "Gets or sets whether to make this sweep feature a thin-walled feature.",
+  "signature": "System.Boolean ThinFeature {get; set;}",
+  "parameters": [],
+  "returns": "True to make a thin-walled sweep feature, false to not",
+  "remarks": "To make a thin sweep, you must set this property before calling\nIFeatureManager::CreateFeature\n. You cannot make a thin-walled sweep feature after the sweep has been created, and you cannot edit a sweep feature to make it thin walled.\nThis property is not valid for swept-surface features.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.IsThinFeature",
+    "ISweepFeatureData.SetWallThickness",
+    "ISweepFeatureData.ThinWallType"
+  ]
+}

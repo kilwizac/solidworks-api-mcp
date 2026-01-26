@@ -1,0 +1,149 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "LoadFile4",
+    "returns": "ModelDoc2",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path and file name of the third-party native CAD part or assembly document to import (see Remarks )"
+      },
+      {
+        "name": "ArgString",
+        "type": "System.String",
+        "description": "Space-separated string that allows optional arguments to be specified when opening a third-party native CAD file; empty string if 3D Interconnect is enabled (see Remarks )"
+      },
+      {
+        "name": "ImportData",
+        "type": "System.Object",
+        "description": "IImportIgesData , IImportDxfDwgData , or IImportStepData object; null or Nothing if 3D Interconnect is not enabled (see Remarks )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Errors as defined in swFileLoadError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.InsertDwgOrDxfFile2",
+      "ISldWorks.OpenDoc6"
+    ],
+    "keywords": [
+      "dxf",
+      "dwg",
+      "files",
+      "load",
+      "iges",
+      "see",
+      "also",
+      "iimportigesdata",
+      "import",
+      "non",
+      "native",
+      "solidworks",
+      "file",
+      "loadfile4",
+      "isldworks",
+      "sld",
+      "works",
+      "file4",
+      "name",
+      "string",
+      "arg",
+      "data",
+      "object",
+      "errors",
+      "int32",
+      "model",
+      "doc2",
+      "part",
+      "sketch",
+      "vba",
+      "specify",
+      "levels",
+      "values",
+      "vb",
+      "net",
+      "use",
+      "3d",
+      "interconnect",
+      "third",
+      "party",
+      "cad"
+    ]
+  },
+  "title": "ISldWorks.LoadFile4",
+  "description": "Loads a third-party native CAD file into a new SOLIDWORKS document using 3D Interconnect.",
+  "signature": "ModelDoc2 LoadFile4( \n   System.String\nFileName\n,\n   System.String\nArgString\n,\n   System.Object\nImportData\n,\n   out System.Int32\nErrors\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path and file name of the third-party native CAD part or assembly document to import (see Remarks )"
+    },
+    {
+      "name": "ArgString",
+      "type": "System.String",
+      "description": "Space-separated string that allows optional arguments to be specified when opening a third-party native CAD file; empty string if 3D Interconnect is enabled (see Remarks )"
+    },
+    {
+      "name": "ImportData",
+      "type": "System.Object",
+      "description": "IImportIgesData , IImportDxfDwgData , or IImportStepData object; null or Nothing if 3D Interconnect is not enabled (see Remarks )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Errors as defined in swFileLoadError_e"
+    }
+  ],
+  "returns": "Model document",
+  "remarks": "This method:\nUses 3D Interconnect to load FileName into a new SOLIDWORKS document. Before calling this method, turn on 3D Interconnect by setting\nTools > Options > System Options > Import > Enable 3D Interconnect\nor calling\nISldWorks::SetUserPreferenceToggle\n(\nswUserPreferenceToggle_e\n.swMultiCAD_Enable3DInterconnect, True). With 3D Interconnect enabled, this method supports the following third-party native CAD formats and versions:\nACIS: .sat, .sab, .asat, .asab for r1 - 2018 1.0\nAutodesk\u00ae Inventor: .ipt for V6-V2018, .iam for V11 - V2018\nCATIA\u00ae V5: .CATPart, .CATProduct for V5R8 - V5-6R2017\nIGES: .igs, .iges for up to 5.3\nJT: .jt for JT 8.x, 9.x, and 10.x\nPTC\u00ae: .prt, .prt.*, .asm.* for Pro/ENGINEER\u00ae 16 - Creo 4.0\nSolid Edge\u00ae: .par, .asm, .psm for V18 - ST10\nSTEP: .stp, .step for AP203, AP214, AP24\nNX\u2122 software: .prt for UG 11 - NX 11\nImports FileName into the appropriate native SOLIDWORKS part or assembly.\nFor parts, the SOLIDWORKS file created is a copy of the original non-native file. The copy retains an external reference to the original CAD file. If the original third-party native file is modified in its orginal application, the SOLIDWORKS copy can be updated to import those changes. Changes to the SOLIDWORKS copy do not propagate back to the original file.\nFor assemblies, you must save the new SOLIDWORKS assembly in order for SOLIDWORKS to import the third-party native assembly and create the copy. Only after saving the new SOLIDWORKS assembly can you edit the imported top-level assembly or break its reference link. Editing lower-level components of the imported top-level assembly or individually breaking their reference links is not supported.\nSee the\nIImport3DInterconnectData\nRemarks for information about editing imported CAD data and breaking reference links to third-party native CAD parts and assemblies.\nImports the geometry as a featureless solid body.\nDoes not import FileName into any existing SOLIDWORKS file or the active document. To import a third-party native CAD file into an existing SOLIDWORKS:\nPart, use\nIPartDoc::InsertImportedFeature\n.\nAssembly, use\nIAssemblyDoc::InsertImportedComponent\n.\nImports third-party native CAD files using different behavior if 3D Interconnect is not enabled:\nIf 3D Interconnect is not enabled and you are importing...\nThen...\nThird-party native CAD files\nSet ArgString to\nFWNS\nto display a FeatureWorks dialog after opening.\nPro/E files\nTo import features, set ArgString to\nR\nTo import geometry, set ArgString to:\nB\nDirect geometry import with knitting\nC\nDirect geometry import without knitting\nD\nGeometry import with knitting\nE\nGeometry import without knitting\nS\nSurface geometry import with knitting\nThese arguments are case sensitive. Specifying one of these options suppresses dialog.\nNon DXF/DWG and Non Pro/E files\nTo import the foreign file into a new SOLIDWORKS document, set ArgString to\nr.\nFor example, to import an IGES file named\ncup.igs\ninto a new SOLIDWORKS document:\nSet swModel = swApp.LoadFile4 \"D:\\Samples\\cup.IGS\", \"r\", importData, Err.\nSee\nIImportIgesData\nfor details about importing IGES data.\nNOTES:\nWhether the result is a surface or solid depends on the import options. See\nImport and Export File Options\nfor details.\nIf ArgString is set to an empty string\n,\nthen dialogs may be presented to the end-user during translation.\nDXF/DWG files\nYou can:\nLet SOLIDWORKS determine the default values:\nPaper size and sheet scale are computed to fit the input data.\nLength unit is determined from the header of the input DXF/DWG file.\nSheet name is the same as the layout name in the input DXF/DWG file.\n- or -\nSet your own values by using:\nISldWorks::GetImportFileData\nto obtain the IImportDxfDwgData interface.\nUse the following methods with a Sheet argument of \"\" (an empty string) to set up your defaults before loading the file:\nIImportDxfDwgData::GetPaperSize\nIImportDxfDwgData::GetPosition\nIImportDxfDwgData::GetSheetScale\nIImportDxfDwgData::ImportMethod\nIImportDxfDwgData::LengthUnit\nIImportDxfDwgData::SetPaperSize\nIImportDxfDwgData::SetPosition\nIImportDxfDwgData::SetSheetScale\nIImportDxfDwgData::SheetName\nSee\nIImportDxfDwgData\nfor details about importing DXF/DWG data.\nNOTES:\nGetting the IImportDxfDwgData interface does not get default values from the input file. Any values not set by you are set to the values computed by SOLIDWORKS.\nIf the DWG/DXF file has multiple sheets, use these methods with a valid layout name in the Sheet argument to set up sheet specific settings, which overrides the default settings. If any of the individual items are not specified for a given layout name, the value used is from the defaults (layout name \"\"). If the default value is not specified, SOLIDWORKS computes and uses a meaningful value for that item.",
+  "examples": [
+    {
+      "title": "Import DXF File Into Part Sketch (VBA)",
+      "href": "Import_DXF_File_into_Part_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Import IGES File (VBA)",
+      "href": "Import_IGES_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (C#)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VB.NET)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VBA)",
+      "href": "Specify_IGES_Levels_and_Values,_Then_Import_IGES_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Use 3D Interconnect to Import Third-Party Native CAD Files (C#)",
+      "href": "Import3DInterconnect_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertDwgOrDxfFile2",
+    "ISldWorks.OpenDoc6"
+  ]
+}

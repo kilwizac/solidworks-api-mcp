@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDrawingDoc",
+    "member": "BackgroundProcessingOption",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "background",
+      "processing",
+      "backgroundprocessingoption",
+      "drawing",
+      "doc",
+      "option",
+      "int32",
+      "fire",
+      "notifications",
+      "events",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IDrawingDoc.BackgroundProcessingOption",
+  "description": "Gets or sets the background processing option for this drawing.",
+  "signature": "System.Int32 BackgroundProcessingOption {get; set;}",
+  "parameters": [],
+  "returns": "Background processing option as defined in swBackgroundProcessOption_e (see Remarks )",
+  "remarks": "SOLIDWORKS recommends that you only use this property with\nISldWorks::IsBackgroundProcessingCompleted\nand\nISldWorks::EnableBackgroundProcessing\nwhen you can quickly open a drawing document via the user interface, but that same drawing takes significantly more time to open programmatically.\nTo more efficiently and programmatically open a drawing document that requires a lot of CPU time and no user input:\nSet ISldWorks::EnableBackgroundProcessing to true.\nUse\nISldWorks Event BackgroundProcessingStartNotify\nto handle the background processing start event.\nOpen the drawing document by calling either\nISldWorks::OpenDoc6\nor\nISldWorks::OpenDoc7\n.\nSet IDrawingDoc::BackgroundProcessingOption to\nswBackgroundProcessOption_e\n.swBackgroundProcessing_DeferToApplication.\nCall ISldWorks::IsBackgroundProcessingCompleted repeatedly, which polls the status of the open operation\nUse\nISldWorks Event BackgroundProcessingEndNotify\nto handle the background processing end event.\nWhen the open operation is finished, set ISldWorks::EnableBackgroundProcessing to false.",
+  "examples": [
+    {
+      "title": "Fire Notifications for Background Processing Events (VBA)",
+      "href": "Fire_Notification_for_Background_Processing_Events_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Notifications for Background Processing Events (VB.NET)",
+      "href": "Fire_Notification_for_Background_Processing_Events_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Notifications for Background Processing Events (C#)",
+      "href": "Fire_Notification_for_Background_Processing_Events_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

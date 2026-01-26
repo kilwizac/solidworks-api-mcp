@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISectionViewData",
+    "member": "SectionTransparentItemsTransparent",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "section",
+      "views",
+      "see",
+      "also",
+      "idrsection",
+      "transparent",
+      "sectioning",
+      "sectiontransparentitemstransparent",
+      "isectionviewdata",
+      "view",
+      "data",
+      "items",
+      "boolean",
+      "selectively",
+      "transparently",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "ISectionViewData.SectionTransparentItemsTransparent",
+  "description": "Gets or sets whether the specified sectioned bodies in the multibody part or the specified sectioned components in the assembly are transparently sectioned in this section view.",
+  "signature": "System.Boolean SectionTransparentItemsTransparent {get; set;}",
+  "parameters": [],
+  "returns": "True if the specified sectioned bodies in the multibody part or the specified sectioned components in the assembly are transparently sectioned in this section view; false if all sectioned bodies in the multibody part or all sectioned components in the assembly, except for the specified sectioned bodies or the specified sectioned components, are transparently sectioned in this section view (see Remarks )",
+  "remarks": "Before calling this property, call\nISectionViewData::TransparentyList\nto specify the sectioned bodies in the multibody part or the sectioned components in the assembly to transparently section. Call\nISectionViewData::TransparencyValue\nto set the level of transparency of the sectioned bodies in the multibody part or the sectioned components in the assembly.\nThis property is only available if\nISectionViewData::ZonalSection\nand\nISectionViewData::TransparentSection\nare true.",
+  "examples": [
+    {
+      "title": "Selectively and Transparently Section a Section View (C#)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Selectively and Transparently Section a Section View (VB.NET)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Selectively and Transparently Section a Section View (VBA)",
+      "href": "Selectively_and_Transparently_Section_a_Section_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

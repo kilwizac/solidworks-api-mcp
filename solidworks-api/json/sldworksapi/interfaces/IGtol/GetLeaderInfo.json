@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetLeaderInfo",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetLeaderAtIndex2",
+      "IGtol.GetLeaderSide",
+      "IGtol.IGetLeaderAtIndex2",
+      "IGtol.IGetLeaderInfo",
+      "IGtol.SetLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "geometric",
+      "tolerancing",
+      "getleaderinfo",
+      "igtol",
+      "gtol",
+      "leader",
+      "info",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetLeaderInfo",
+  "description": "Gets information describing the layout of the GTol leader lines.",
+  "signature": "System.Object GetLeaderInfo()",
+  "parameters": [],
+  "returns": "Array (see Remarks )",
+  "remarks": "There can be 0, 1 or 2 lines with the leader line. If the GTol is not attached, then there are 0 lines. Otherwise, the GTol can have a straight leaderline (1 line) or a bent leaderline (2 lines). The caller must infer the number of leader lines based on\nIGtol::IsAttached\nand\nIGtol::HasExtraLeader\n.\nIGtol::IsAttached() == false implies no leaderline; therefore, there are no leaderline points (PointCount=0).\nIGtol::HasExtraLeader() == false means that this is a straight leaderline; therefore, there is 1 line (PointCount=2).\nIGtol::HasExtraLeader() == True means that this is a bent leaderline; therefore, there are 2 lines (PointCount=3).\nThe format of return information is the following array of doubles:\nretval\n[0] = X-coordinate of first leader point\nretval\n[1] = Y-coordinate of first leader point\nretval\n[2] = Z-coordinate of first leader point\nretval\n[3] = X-coordinate of second leader point\nretval\n[4] = Y-coordinate of second leader point\nretval\n[5] = Z-coordinate of second leader point\nretval\n[6] = X-coordinate of third leader point\nretval\n[7] = Y-coordinate of third leader point\nretval\n[8] = Z-coordinate of third leader point\nUse\nIGtol::GetLeaderCount\nto see how many leaders are on the\nIGTol\nobject.",
+  "examples": [],
+  "related": [
+    "IGtol.GetLeaderAtIndex2",
+    "IGtol.GetLeaderSide",
+    "IGtol.IGetLeaderAtIndex2",
+    "IGtol.IGetLeaderInfo",
+    "IGtol.SetLeader"
+  ]
+}

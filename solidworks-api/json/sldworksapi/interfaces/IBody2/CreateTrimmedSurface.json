@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "CreateTrimmedSurface",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "createtrimmedsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "trimmed",
+      "surface",
+      "boolean",
+      "body",
+      "using",
+      "surfaces",
+      "vba",
+      "imported",
+      "sketch"
+    ]
+  },
+  "title": "IBody2.CreateTrimmedSurface",
+  "description": "Creates a trimmed surface from a base surface and a list of existing trimming curves.",
+  "signature": "System.Boolean CreateTrimmedSurface()",
+  "parameters": [],
+  "returns": "True if trimmed surface creation is successful, false if not",
+  "remarks": "Before you call this method, you must call one of the base-surface creation methods (such as\nIBody2::CreatePlanarSurface\nor\nIBody2::ICreatePlanarSurface\n) and the trimming-curve creation method\nISurface::AddTrimmingLoop2\nor\nISurface::IAddTrimmingLoops\n.\nThis method serves as the final call in a set of related functions that are designed to construct a trimmed surface from a base surface (possibly infinite) and a set of trimming curves.\nIf you want to construct a solid body from trimmed surfaces, call\nIPartDoc::CreateNewBody\nor\nIPartDoc::ICreateNewBody2\nfirst, which arranges for a place-holder for this trimmed surface.",
+  "examples": [
+    {
+      "title": "Create Body Using Trimmed Surfaces (VBA)",
+      "href": "Create_Body_using_Trimmed_Surfaces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Imported Surface Body from Sketch (C#)",
+      "href": "Create_Imported_Surface_Body_from_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

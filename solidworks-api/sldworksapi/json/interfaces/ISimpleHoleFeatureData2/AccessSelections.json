@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleHoleFeatureData2",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component in which the feature is to be modified (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "ISimpleHoleFeatureData2.IAccessSelections"
+    ],
+    "keywords": [
+      "accessselections",
+      "isimpleholefeaturedata2",
+      "simple",
+      "hole",
+      "feature",
+      "data2",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean"
+    ]
+  },
+  "title": "ISimpleHoleFeatureData2.AccessSelections",
+  "description": "Gains access to the selections used to define the simple hole feature.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component in which the feature is to be modified (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nISimpleHoleFeatureData2::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "ISimpleHoleFeatureData2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISimpleHoleFeatureData2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISimpleHoleFeatureData2.IAccessSelections"
+  ]
+}

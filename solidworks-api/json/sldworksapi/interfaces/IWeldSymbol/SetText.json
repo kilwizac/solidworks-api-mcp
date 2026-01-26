@@ -1,0 +1,107 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldSymbol",
+    "member": "SetText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Top",
+        "type": "System.Boolean",
+        "description": "True to set the text in the portion of the symbol above the horizontal line, false to set the text in the portion of the symbol below the horizontal line"
+      },
+      {
+        "name": "Left",
+        "type": "System.String",
+        "description": "Text to the left of the weld symbol"
+      },
+      {
+        "name": "Symbol",
+        "type": "System.String",
+        "description": "Text representing the weld symbol (see Remarks )"
+      },
+      {
+        "name": "Right",
+        "type": "System.String",
+        "description": "Text to the right of the weld symbol"
+      },
+      {
+        "name": "Stagger",
+        "type": "System.String",
+        "description": "Text to the right of the stagger symbol (see Remarks )"
+      },
+      {
+        "name": "Contour",
+        "type": "System.Int32",
+        "description": "Contour setting as defined in swWeldSymbolContourTypes_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "settext",
+      "iweldsymbol",
+      "weld",
+      "symbol",
+      "text",
+      "top",
+      "boolean",
+      "left",
+      "string",
+      "right",
+      "stagger",
+      "contour",
+      "int32"
+    ]
+  },
+  "title": "IWeldSymbol.SetText",
+  "description": "Sets the text and symbols in the upper or lower portion of the weld symbol.",
+  "signature": "System.Boolean SetText( \n   System.Boolean\nTop\n,\n   System.String\nLeft\n,\n   System.String\nSymbol\n,\n   System.String\nRight\n,\n   System.String\nStagger\n,\n   System.Int32\nContour\n)",
+  "parameters": [
+    {
+      "name": "Top",
+      "type": "System.Boolean",
+      "description": "True to set the text in the portion of the symbol above the horizontal line, false to set the text in the portion of the symbol below the horizontal line"
+    },
+    {
+      "name": "Left",
+      "type": "System.String",
+      "description": "Text to the left of the weld symbol"
+    },
+    {
+      "name": "Symbol",
+      "type": "System.String",
+      "description": "Text representing the weld symbol (see Remarks )"
+    },
+    {
+      "name": "Right",
+      "type": "System.String",
+      "description": "Text to the right of the weld symbol"
+    },
+    {
+      "name": "Stagger",
+      "type": "System.String",
+      "description": "Text to the right of the stagger symbol (see Remarks )"
+    },
+    {
+      "name": "Contour",
+      "type": "System.Int32",
+      "description": "Contour setting as defined in swWeldSymbolContourTypes_e (see Remarks )"
+    }
+  ],
+  "returns": "True if the text and symbols are set, false if not",
+  "remarks": "To get the individual pieces of text for a weld symbol, use\nIWeldSymbol::GetText\n. To get the contour setting for a weld symbol, use\nIWeldSymbol::GetContour\n.\nThe stagger text that is specified is only visible if this option is enabled. See\nIWeldSymbol::GetStagger\nto see the current setting and\nIWeldSymbol::SetStagger\nto enable or disable that option.\nA list of weld symbol names can be found in the text file\ngtol.sym\n,\n, typically installed at\nC:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\\nlang\n\\\nenglish\n. Specify Symbol with one of the currently supported ISO weld symbols:\nBUTT\nBUSQ\nBUSV\nBUSB\nBUSVBR\nBUSBR\nBUSU\nBUSJ\nBACK\nFILL\nPLUG\nSPOT\nSEAM\nSEAMC\nJSPT\nJSM",
+  "examples": [
+    {
+      "title": "IWeldSymbol",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWeldSymbol",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

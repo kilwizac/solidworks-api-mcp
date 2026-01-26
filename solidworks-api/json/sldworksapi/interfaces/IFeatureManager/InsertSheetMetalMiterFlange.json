@@ -1,0 +1,214 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalMiterFlange",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "UseDefaultRadius",
+        "type": "System.Boolean",
+        "description": "True to use default bend radius, false to use GlobalRadius"
+      },
+      {
+        "name": "GlobalRadius",
+        "type": "System.Double",
+        "description": "Global bend radius"
+      },
+      {
+        "name": "RipGap",
+        "type": "System.Double",
+        "description": "Rip-gap distance"
+      },
+      {
+        "name": "UseDefaultRelief",
+        "type": "System.Boolean",
+        "description": "True to use parent bend's ratio, false to not"
+      },
+      {
+        "name": "UseReliefRatio",
+        "type": "System.Boolean",
+        "description": "True to use custom relief ratio, false to not"
+      },
+      {
+        "name": "ReliefRatio",
+        "type": "System.Double",
+        "description": "If useReliefRatio is True, then specify relief ratio"
+      },
+      {
+        "name": "ReliefWidth",
+        "type": "System.Double",
+        "description": "If UseReliefRatio is True and ReliefType is swSheetMetalReliefRectangular or swSheetMetalReliefObround, then specify relief depth"
+      },
+      {
+        "name": "ReliefDepth",
+        "type": "System.Double",
+        "description": "If UseReliefRatio is True and ReliefType is swSheetMetalReliefRectangular or swSheetMetalReliefObround, then specify relief depth"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Relief type as defined by swSheetMetalReliefTypes_e ; valid selections: swSheetMetalRelievObround swSheetMetalReliefRectangular swSheetMetalReliefTear"
+      },
+      {
+        "name": "TrimSideBends",
+        "type": "System.Boolean",
+        "description": "True to trim side bends, false to not"
+      },
+      {
+        "name": "FlangePos",
+        "type": "System.Int32",
+        "description": "Flange position as defined by swFlangePositionTypes_e ; valid selections: swFlangePositionTypeMaterialInside swFlangePositionTypeMaterialOutside swFlangePositionTypeBendOutside"
+      },
+      {
+        "name": "OffsetDist1",
+        "type": "System.Double",
+        "description": "Starting offset distance if partial flange"
+      },
+      {
+        "name": "OffsetDist2",
+        "type": "System.Double",
+        "description": "Ending offset distance if partial flange"
+      },
+      {
+        "name": "PCBA",
+        "type": "CustomBendAllowance",
+        "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMiterFlangeFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "miter",
+      "flange",
+      "imiterflangefeaturedata",
+      "sheet",
+      "metal",
+      "isheetmetalfeaturedata",
+      "flanges",
+      "insertsheetmetalmiterflange",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "use",
+      "default",
+      "radius",
+      "boolean",
+      "global",
+      "double",
+      "rip",
+      "gap",
+      "relief",
+      "ratio",
+      "width",
+      "depth",
+      "type",
+      "int32",
+      "trim",
+      "side",
+      "bends",
+      "pos",
+      "offset",
+      "dist1",
+      "dist2",
+      "pcba",
+      "custom",
+      "bend",
+      "allowance"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalMiterFlange",
+  "description": "Inserts a meter flange in a sheet metal part.",
+  "signature": "Feature InsertSheetMetalMiterFlange( \n   System.Boolean\nUseDefaultRadius\n,\n   System.Double\nGlobalRadius\n,\n   System.Double\nRipGap\n,\n   System.Boolean\nUseDefaultRelief\n,\n   System.Boolean\nUseReliefRatio\n,\n   System.Double\nReliefRatio\n,\n   System.Double\nReliefWidth\n,\n   System.Double\nReliefDepth\n,\n   System.Int32\nReliefType\n,\n   System.Boolean\nTrimSideBends\n,\n   System.Int32\nFlangePos\n,\n   System.Double\nOffsetDist1\n,\n   System.Double\nOffsetDist2\n,\n   CustomBendAllowance\nPCBA\n)",
+  "parameters": [
+    {
+      "name": "UseDefaultRadius",
+      "type": "System.Boolean",
+      "description": "True to use default bend radius, false to use GlobalRadius"
+    },
+    {
+      "name": "GlobalRadius",
+      "type": "System.Double",
+      "description": "Global bend radius"
+    },
+    {
+      "name": "RipGap",
+      "type": "System.Double",
+      "description": "Rip-gap distance"
+    },
+    {
+      "name": "UseDefaultRelief",
+      "type": "System.Boolean",
+      "description": "True to use parent bend's ratio, false to not"
+    },
+    {
+      "name": "UseReliefRatio",
+      "type": "System.Boolean",
+      "description": "True to use custom relief ratio, false to not"
+    },
+    {
+      "name": "ReliefRatio",
+      "type": "System.Double",
+      "description": "If useReliefRatio is True, then specify relief ratio"
+    },
+    {
+      "name": "ReliefWidth",
+      "type": "System.Double",
+      "description": "If UseReliefRatio is True and ReliefType is swSheetMetalReliefRectangular or swSheetMetalReliefObround, then specify relief depth"
+    },
+    {
+      "name": "ReliefDepth",
+      "type": "System.Double",
+      "description": "If UseReliefRatio is True and ReliefType is swSheetMetalReliefRectangular or swSheetMetalReliefObround, then specify relief depth"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Relief type as defined by swSheetMetalReliefTypes_e ; valid selections: swSheetMetalRelievObround swSheetMetalReliefRectangular swSheetMetalReliefTear"
+    },
+    {
+      "name": "TrimSideBends",
+      "type": "System.Boolean",
+      "description": "True to trim side bends, false to not"
+    },
+    {
+      "name": "FlangePos",
+      "type": "System.Int32",
+      "description": "Flange position as defined by swFlangePositionTypes_e ; valid selections: swFlangePositionTypeMaterialInside swFlangePositionTypeMaterialOutside swFlangePositionTypeBendOutside"
+    },
+    {
+      "name": "OffsetDist1",
+      "type": "System.Double",
+      "description": "Starting offset distance if partial flange"
+    },
+    {
+      "name": "OffsetDist2",
+      "type": "System.Double",
+      "description": "Ending offset distance if partial flange"
+    },
+    {
+      "name": "PCBA",
+      "type": "CustomBendAllowance",
+      "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+    }
+  ],
+  "returns": "Pointer to the IFeature object or NULL",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IMiterFlangeFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

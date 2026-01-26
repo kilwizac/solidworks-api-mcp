@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "InsertScene",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SceneDefinitionFile",
+        "type": "System.String",
+        "description": "Fully qualified path and filename for the scene"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration.GetScene",
+      "IModelDocExtension.DeleteScene",
+      "IModelDocExtension.GetRenderCustomReferences",
+      "IModelDocExtension.GetRenderStockReferences"
+    ],
+    "keywords": [
+      "realview",
+      "graphics",
+      "scenes",
+      "scene",
+      "insertscene",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "insert",
+      "definition",
+      "file",
+      "string",
+      "boolean",
+      "render",
+      "references",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.InsertScene",
+  "description": "Applies the specified scene to the model.",
+  "signature": "System.Boolean InsertScene( \n   System.String\nSceneDefinitionFile\n)",
+  "parameters": [
+    {
+      "name": "SceneDefinitionFile",
+      "type": "System.String",
+      "description": "Fully qualified path and filename for the scene"
+    }
+  ],
+  "returns": "True if the specified scene is displayed, false if not",
+  "remarks": "RealView graphics must be enabled\nto apply and view scenes.\nCall\nIModelView::GraphicsRedraw\nor\nIModelView::IGraphicsRedraw\nto repaint the graphics area.",
+  "examples": [
+    {
+      "title": "Get Render References (C#)",
+      "href": "Get_Render_References_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Render References (VB.NET)",
+      "href": "Get_Render_References_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Render References (VBA)",
+      "href": "Get_Render_References_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.GetScene",
+    "IModelDocExtension.DeleteScene",
+    "IModelDocExtension.GetRenderCustomReferences",
+    "IModelDocExtension.GetRenderStockReferences"
+  ]
+}

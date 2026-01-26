@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRenderMaterial",
+    "member": "SetVDirection2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "VDir_X",
+        "type": "System.Double",
+        "description": "X coordinate of the V direction"
+      },
+      {
+        "name": "VDir_Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the V direction"
+      },
+      {
+        "name": "VDir_Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the V direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IRenderMaterial.GetUDirection2",
+      "IRenderMaterial.GetVDirection2"
+    ],
+    "keywords": [
+      "setvdirection2",
+      "irendermaterial",
+      "render",
+      "material",
+      "direction2",
+      "dir",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IRenderMaterial.SetVDirection2",
+  "description": "Sets the V direction of the texture-based appearance.",
+  "signature": "void SetVDirection2( \n   System.Double\nVDir_X\n,\n   System.Double\nVDir_Y\n,\n   System.Double\nVDir_Z\n)",
+  "parameters": [
+    {
+      "name": "VDir_X",
+      "type": "System.Double",
+      "description": "X coordinate of the V direction"
+    },
+    {
+      "name": "VDir_Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the V direction"
+    },
+    {
+      "name": "VDir_Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the V direction"
+    }
+  ],
+  "returns": "",
+  "remarks": "To specify the V direction in the Y direction, set:\nVDir_X to 0.0.\nVDir_Y to 1.0.\nVDir_Z to 0.0.\nThe\nmapping type\n(surface, projection, automatic, etc.) indirectly determines the V direction. This vector is perpendicular to the U direction.\nCall\nIRenderMaterial::SetUDirection2\nto set the U direction.",
+  "examples": [],
+  "related": [
+    "IRenderMaterial.GetUDirection2",
+    "IRenderMaterial.GetVDirection2"
+  ]
+}

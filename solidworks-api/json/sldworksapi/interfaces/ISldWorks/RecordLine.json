@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RecordLine",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text to write to a VBA macro and the SOLIDWORKS journal file"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "DSldWorksEvents_BeginRecordNotifyEventHandler",
+      "DSldWorksEvents_EndRecordNotifyEventHandler",
+      "ISldWorks.RunMacro2"
+    ],
+    "keywords": [
+      "record",
+      "macros",
+      "recordline",
+      "isldworks",
+      "sld",
+      "works",
+      "line",
+      "text",
+      "string",
+      "boolean",
+      "vba",
+      "recor",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.RecordLine",
+  "description": "Adds a line of code to a VBA macro and the SOLIDWORKS journal file.",
+  "signature": "System.Boolean RecordLine( \n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text to write to a VBA macro and the SOLIDWORKS journal file"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This method is useful if you want your add-in application to record and play back SOLIDWORKS macros or write to the SOLIDWORKS journal file.\nFor example, if your add-in application allows end users to change the material specifications associated with a model, then end users may want to be able to record and play back the operation in a macro. This might allow them to easily assign material specifications to a large number of files by playing back the macro.\nText is only written to macros if macro recording is enabled when the method is called (\nISldWorks::Run Command\nswCommands_RecordPauseMacro \"\"). Users are prompted to select the type of macros to create when recording is stopped (ISldWorks::Run Command swCommands_StopMacro \"\").\nFor your add-in functionality to be recorded reliably in all macro formats, you should call all three macro-recording methods:\nISldWorks::RecordLine to record to a\nSW VBA Macro (*.swp)\n.\nISldWorks::RecordLineVBnet\nto record to a\nSW VSTA VB Macro (*.vbproj)\n.\nISldWorks::RecordLineCSharp\nto record to a\nSW VSTA C# Macro (*.csproj)\n.\nExercise caution when recording lines that include string literals. String literals are parsed when the add-in application is compiled and again when the macro is compiled.",
+  "examples": [
+    {
+      "title": "Record Macros (VBA)",
+      "href": "Record_Macros_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recor Macros (VB.NET)",
+      "href": "Record_Macros_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Record Macros (C#)",
+      "href": "Record_Macros_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "DSldWorksEvents_BeginRecordNotifyEventHandler",
+    "DSldWorksEvents_EndRecordNotifyEventHandler",
+    "ISldWorks.RunMacro2"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "SetBendNoteTextFormat",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Format",
+        "type": "System.String",
+        "description": "Format in which to display all bend notes in this drawing view of a sheet metal part (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetBendNoteTextFormat",
+      "IView.ShowSheetMetalBendNotes"
+    ],
+    "keywords": [
+      "bend",
+      "line",
+      "notes",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "note",
+      "inote",
+      "view",
+      "bends",
+      "setbendnotetextformat",
+      "text",
+      "format",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IView.SetBendNoteTextFormat",
+  "description": "Sets the text format of all bend notes in this drawing view of a sheet metal part.",
+  "signature": "System.Boolean SetBendNoteTextFormat( \n   System.String\nFormat\n)",
+  "parameters": [
+    {
+      "name": "Format",
+      "type": "System.String",
+      "description": "Format in which to display all bend notes in this drawing view of a sheet metal part (see Remarks )"
+    }
+  ],
+  "returns": "True if format is successfully set, false if not",
+  "remarks": "Before calling this method, call\nIView::GetBendNoteAttributeString\nto specify Format.",
+  "examples": [],
+  "related": [
+    "IView.GetBendNoteTextFormat",
+    "IView.ShowSheetMetalBendNotes"
+  ]
+}

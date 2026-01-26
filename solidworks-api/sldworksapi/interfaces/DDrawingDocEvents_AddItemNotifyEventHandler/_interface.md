@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DDrawingDocEvents_AddItemNotifyEventHandler
+inherits: null
+description: Notifies the user program when an item is added to one of the SOLIDWORKS tree structures (for example, FeatureManager design tree, ConfigurationManager tree, and so on).
+member_count: 0
+docset: sldworksapi
+categories:
+  - drawings
+common_members: []
+---
+
+# DDrawingDocEvents_AddItemNotifyEventHandler
+
+Notifies the user program when an item is added to one of the SOLIDWORKS tree structures (for example, FeatureManager design tree, ConfigurationManager tree, and so on).

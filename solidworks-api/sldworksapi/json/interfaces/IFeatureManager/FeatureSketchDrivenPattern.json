@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureSketchDrivenPattern",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "UseCentroid",
+        "type": "System.Boolean",
+        "description": "True to use a centroid as the reference point, false to not"
+      },
+      {
+        "name": "BGeomPatt",
+        "type": "System.Boolean",
+        "description": "True to pattern using only the feature geometry, false to pattern each instance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "featuresketchdrivenpattern",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "sketch",
+      "driven",
+      "pattern",
+      "use",
+      "centroid",
+      "boolean",
+      "geom",
+      "patt"
+    ]
+  },
+  "title": "IFeatureManager.FeatureSketchDrivenPattern",
+  "description": "Obsolete. See IFeatureManager::CreateFeature and the Remarks in ISketchPatternFeatureData.",
+  "signature": "Feature FeatureSketchDrivenPattern( \n   System.Boolean\nUseCentroid\n,\n   System.Boolean\nBGeomPatt\n)",
+  "parameters": [
+    {
+      "name": "UseCentroid",
+      "type": "System.Boolean",
+      "description": "True to use a centroid as the reference point, false to not"
+    },
+    {
+      "name": "BGeomPatt",
+      "type": "System.Boolean",
+      "description": "True to pattern using only the feature geometry, false to pattern each instance"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Before calling this method, select the required entities using the proper selection marks:\nfeatures = 4\npoints = 32\nsketches = 64\nfaces = 128\nbodies = 256\nSee\nIModelDocExtension::SelectByID2\nfor details about selecting input entities. See the SOLIDWORKS Help for more information about sketch-driven patterns.",
+  "examples": [],
+  "related": []
+}

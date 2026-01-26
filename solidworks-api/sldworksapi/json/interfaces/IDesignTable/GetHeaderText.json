@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "GetHeaderText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Col",
+        "type": "System.Int32",
+        "description": "0-based column number with the header text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.ColumnHidden",
+      "IDesignTable.GetColumnCount",
+      "IDesignTable.GetStartColumnNumber",
+      "IDesignTable.GetTotalColumnCount",
+      "IDesignTable.GetVisibleColumnCount",
+      "IDesignTable.GetVisibleLeftColumnNumber"
+    ],
+    "keywords": [
+      "getheadertext",
+      "idesigntable",
+      "design",
+      "table",
+      "header",
+      "text",
+      "col",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IDesignTable.GetHeaderText",
+  "description": "Gets the header text for the specified column.",
+  "signature": "System.String GetHeaderText( \n   System.Int32\nCol\n)",
+  "parameters": [
+    {
+      "name": "Col",
+      "type": "System.Int32",
+      "description": "0-based column number with the header text"
+    }
+  ],
+  "returns": "Text string from the column header",
+  "remarks": "Before you use any of the design table methods, you must first activate the design table using\nIDesignTable::Attach\n. After you are finished getting design table data, you can deactivate the table using\nIDesignTable::Detach\n.",
+  "examples": [],
+  "related": [
+    "IDesignTable.ColumnHidden",
+    "IDesignTable.GetColumnCount",
+    "IDesignTable.GetStartColumnNumber",
+    "IDesignTable.GetTotalColumnCount",
+    "IDesignTable.GetVisibleColumnCount",
+    "IDesignTable.GetVisibleLeftColumnNumber"
+  ]
+}

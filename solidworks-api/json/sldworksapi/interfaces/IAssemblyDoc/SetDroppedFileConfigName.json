@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "SetDroppedFileConfigName",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of the configuration to set"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.GetDroppedAtEntity",
+      "IAssemblyDoc.SetDroppedFileName"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "configurations",
+      "configuration",
+      "iconfiguration",
+      "files",
+      "dropped",
+      "setdroppedfileconfigname",
+      "assembly",
+      "doc",
+      "file",
+      "config",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IAssemblyDoc.SetDroppedFileConfigName",
+  "description": "Sets the configuration name for the recently dropped file.",
+  "signature": "System.Boolean SetDroppedFileConfigName( \n   System.String\nConfigName\n)",
+  "parameters": [
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of the configuration to set"
+    }
+  ],
+  "returns": "True if the name is successfully set, false if not",
+  "remarks": "If the configuration name is set in response to the\nFileDropNotify\nevent, SOLIDWORKS does not display the dialog for the selected configuration names when a file is dropped in an assembly.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.GetDroppedAtEntity",
+    "IAssemblyDoc.SetDroppedFileName"
+  ]
+}

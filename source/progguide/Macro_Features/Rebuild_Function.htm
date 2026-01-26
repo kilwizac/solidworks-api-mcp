@@ -1,0 +1,484 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Rebuild Function</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 17, 2002 11:47:05 AM">
+<meta NAME=MS-HAID CONTENT=RebuildFunction>
+<meta NAME=MS-HKWD CONTENT="Macro feature (see also IMacroFeatureData Interface),rebuild function">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1463>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Rebuild Function</h1>
+
+<p>The rebuild function for a macro feature performs the real work. No 
+ new features can be introduced and no user interaction can occur during 
+ a rebuild of a model containing a macro feature. </p>
+
+<p>There are three types of rebuild functions:</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 100%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=100%>
+<col style="width: 14.103%;">
+<col style="width: 23.892%;">
+<col style="width: 62.005%;">
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 14.103%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			border-bottom-style: None;
+			border-right-style: None;
+			border-left-style: None;
+			border-top-style: None;"
+	bgcolor=#DBDBDB
+	width=14.103%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">Type</td>
+<td style="width: 23.892%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			border-bottom-style: None;
+			border-right-style: None;
+			border-top-style: None;"
+	bgcolor=#DBDBDB
+	width=23.892%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">Definition</td>
+<td style="width: 62.005%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			border-bottom-style: None;
+			border-top-style: None;
+			border-right-style: None;"
+	bgcolor=#DBDBDB
+	width=62.005%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">Actions</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="width: 14.103%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;
+			border-left-style: None;"
+	width=14.103%>
+<p>Independent</td>
+<td style="width: 23.892%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=23.892%>
+<p>Interacts with the model, but does not modify existing geometry or create 
+ new geometry</td>
+<td style="width: 62.005%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=62.005%>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Obtains the <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData.html">IMacroFeatureData</a> 
+ object from the input <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature.html">IFeature 
+ object</a></p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Obtains the selections and parameters from the 
+ IMacroFeatureData object</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Processes the inputs according to the design of 
+ the feature</p></li>
+	
+	<li class=kadov-p><p>Validates data based on the model</p></li>
+	
+	<li class=kadov-p><p>Updates external databases</p></li>
+</ul>
+<p>Return values can be:</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>True, which indicates success</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>False, which indicates failure with no additional 
+ information</p></li>
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>String, which is displayed in an error message 
+ to the user; for example:</p></li>
+</ul>
+<p>
+<ul>
+<li><font face="Verdana" style="font-size: 8pt">VBA</li>
+<br>
+</font><font style="font-size: 10pt" face="Courier New">s</font><font face="Courier New" size="2">wmRebuild</font><font face="Courier New" size="2"> = 
+&quot;Macro feature output error message&quot;</font><font face="Verdana" style="font-size: 8pt"><br>
+</font>
+<li><font face="Verdana" style="font-size: 8pt">C++ COM</li>
+<br>
+</font><font style="font-size: 10pt" face="Courier New">CComBSTR bMsg = _T(&quot;Macro feature output error message&quot;);<br>
+_variant_t vBSTRRet = bMsg;<br>
+*retval = vBSTRRet;</font><font face="Verdana" style="font-size: 8pt"><br>
+</font>
+<li><font face="Verdana" style="font-size: 8pt">C#</li>
+<br>
+</font><font style="font-size: 10pt" face="Courier New">functionReturnValue = &quot;Macro feature output error message&quot;;<br>
+return functionReturnValue;</font><font face="Verdana" style="font-size: 8pt"><br>
+</font>
+<li><font face="Verdana" style="font-size: 8pt">VB.NET</li>
+<br>
+</font><font style="font-size: 10pt" face="Courier New">Regenerate = &quot;Macro feature output error message&quot;</font><font face="Verdana" style="font-size: 8pt"><br>
+&nbsp;</font></ul></p></td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 14.103%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-left-style: None;
+			border-bottom-style: None;"
+	width=14.103%>
+<p>Modify</td>
+<td colspan=1
+	rowspan=1
+	style="width: 23.892%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=23.892%>
+<p>Modifies one or more input bodies</td>
+<td colspan=1
+	rowspan=1
+	style="width: 62.005%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=62.005%>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>Obtains the IMacroFeatureData from the input feature</p></li>
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>Obtains the bodies to modify from 
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~EditBodies.html">IMacroFeatureData::EditBodies</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~IGetEditBodies.html">IMacroFeatureData::IGetEditBodies</a></p>
+	</li>
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>Obtains the selections and parameters from the 
+ IMacroFeatureData object</p></li>
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>Processes the inputs according to the design of 
+ the feature</p></li>
+	<li class=kadov-p>
+	<p>Copies any selected object for use with the input 
+ body</p></li>
+	<li class=kadov-p>
+	<p>Creates any new geometry based on the input data</p></li>
+	<li class=kadov-p>
+	<p>Modifies the input bodies</p></li>
+	<li style="margin-left: -20px;"
+		class=kadov-p>
+	<p>Calls 
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~GetEntitiesNeedUserId.html">IMacroFeatureData::GetEntitiesNeedUserId</a> 
+ on the input body</p></li>
+	<li class=kadov-p>
+	Gets any faces or edges 
+ that need IDs<br>
+&nbsp;</li>
+	<li class=kadov-p>
+	Places IDs using 
+	<a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~SetFaceUserId.html">IMacroFeatureData::SetFaceUserId</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~SetEdgeUserId.html">IMacroFeatureData::SetEdgeUserId</a>, 
+ respectively</li>
+</ul>
+<p style="margin-left: 40px;"><span style="font-weight: bold;">NOTE</span>: 
+ The numbering scheme should be consistent and reproducible.</p>
+<p>Return values can be:</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>True, which indicates success</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>False, which indicates failure and no additional 
+ information is provided</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>String, which is displayed in an error message 
+ to the user; for example:</p></li>
+</ul>
+<p></p>
+<ul>
+	<li><font face="Verdana" style="font-size: 8pt">VBA</li>
+<br></font><font style="font-size: 10pt" face="Courier New">swmRebuild = &quot;Macro 
+	feature output error message&quot;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">C++ COM</li>
+<br></font><font style="font-size: 10pt" face="Courier New">CComBSTR bMsg = _T(&quot;Macro feature output error message&quot;);<br>_variant_t vBSTRRet = bMsg;<br>*retval = vBSTRRet;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">C#</li>
+<br></font><font style="font-size: 10pt" face="Courier New">functionReturnValue = 
+	&quot;Macro feature output error message&quot;;<br>return functionReturnValue;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">VB.NET</li>
+<br></font><font style="font-size: 10pt" face="Courier New ">Regenerate = &quot;Macro feature output error message&quot;</font></ul>
+<p><b>NOTE: </b>A macro feature rebuild function can output more than one body, 
+in a VARIANT SafeArray containing multiple IBody2 objects, by either modifying 
+one or more edit bodies or by creating one or more new bodies. For multibody 
+macro features only, call
+<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~EnableMultiBodyConsume.html">
+IMacroFeatureData::EnableMultiBodyConsume</a> from within the rebuild function to specify whether 
+the original edit body is appended (default) or replaced with multiple bodies in 
+the FeatureManager design tree's Solid Bodies folder.</p></td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 14.103%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: None;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=14.103%>
+<p>Create</td>
+<td colspan=1
+	rowspan=1
+	style="width: 23.892%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=23.892%>
+<p>Creates one or more output bodies</td>
+<td colspan=1
+	rowspan=1
+	style="width: 62.005%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=62.005%>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Obtains the IMacroFeatureData object from the 
+ input Feature object</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Obtains the selections and parameters from the 
+ IMacroFeatureData object</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Processes the inputs according to the design of 
+ the feature</p></li>
+	
+	<li class=kadov-p><p>Copies any new selected object</p></li>
+	
+	<li class=kadov-p><p>Creates any new geometry based on the input data</p></li>
+	
+	<li class=kadov-p><p>Creates the new bodies</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p>Calls <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~GetEntitiesNeedUserId.html">IMacroFeatureData::GetEntitiesNeedUserId</a> 
+ on the new body</p></li>
+	
+	<li class=kadov-p>Gets any faces or edges 
+ that need IDs<br>
+&nbsp;</li>
+	
+	<li class=kadov-p>Places IDs using <a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~SetFaceUserId.html">IMacroFeatureData::SetFaceUserId</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~SetEdgeUserId.html">IMacroFeatureData::SetEdgeUserId</a>, 
+ respectively</li>
+</ul>
+<p style="margin-left: 40px;"><span style="font-weight: bold;">NOTE</span>: 
+ <!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->The numbering 
+ scheme should be consistent and reproducible.</p>
+<p style="margin-left: 8px;">Return values can be:</p>
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 8px;"><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IBody2.html">IBody2</a>, 
+ the newly created body, or a VARIANT SafeArray containign multiple IBody2 
+	objects</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 8px;">False, which indicates 
+ failure and provides no additional information</p></li>
+	
+	<li style="margin-left: -20px;"
+		class=kadov-p><p style="margin-left: 8px;">String, which is displayed 
+ in an error message to the user; for example:</p></li>
+</ul>
+<p></p>
+<ul>
+	<li><font face="Verdana" style="font-size: 8pt">VBA</li>
+<br></font><font style="font-size: 10pt" face="Courier New">swmRebuild = &quot;Macro 
+	feature output error message&quot;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">C++ COM</li>
+<br></font><font style="font-size: 10pt" face="Courier New">CComBSTR bMsg = _T(&quot;Macro feature output error message&quot;);<br>_variant_t vBSTRRet = bMsg;<br>*retval = vBSTRRet;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">C#</li>
+<br></font><font style="font-size: 10pt" face="Courier New">functionReturnValue = 
+	&quot;Macro feature output error message&quot;;<br>return functionReturnValue;</font><font face="Verdana" style="font-size: 8pt"><br>
+	</font>
+	<li><font face="Verdana" style="font-size: 8pt">VB.NET</li>
+<br></font><font style="font-size: 10pt" face="Courier New">Regenerate = &quot;Macro feature output error message&quot;</font></ul>
+<p style="margin-left: 8px;"><b>NOTE: </b>A macro feature rebuild function can 
+output more than one body, in a VARIANT SafeArray containing multiple IBody2 
+objects, by either modifying one or more edit bodies or by creating one or more 
+new bodies. For multibody macro features only, call
+<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~EnableMultiBodyConsume.html">
+IMacroFeatureData::EnableMultiBodyConsume</a> from within the rebuild function to specify whether 
+the original edit body is appended (default) or replaced with multiple bodies in 
+the FeatureManager design tree's Solid Bodies folder.</p></td></tr>
+</table>
+
+<p>The rebuild function is called by SOLIDWORKS whenever the macro feature 
+ is regenerated. The parametric information needed to regenerate the feature 
+ should be stored in the feature’s parameter and selection lists. These 
+ lists are created when the feature is inserted into the model and are 
+ available for reading and editing from the feature’s IMacroFeatureData 
+ interface. For example, the data stored in the parameters and selection 
+ lists can be used to perform low-level Boolean body operations to affect 
+ geometric features. </p>
+
+<p>Because IBody2 objects created using the API do not always automatically 
+ assign IDs to their faces and edges, you should always check that there 
+ are no entity IDs that need to be assigned. Otherwise, any Boolean body 
+ operations involving that Body2 object will cause regeneration to fail. 
+ Use IMacroFeatureData::GetEntitiesNeedUserId <!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->to 
+ check for the IDs. If the faces and edges arrays returned are both empty, 
+ then no user IDs are required. Otherwise, use IMacroFeatureData::SetFaceUserId 
+ and IMacroFeatureData::SetEdgeUserId to set the IDs of those entities. 
+ </p>
+
+<p>The macro feature’s rebuild function is responsible for ensuring that 
+ the same IDs are always placed on the same entities each time the regeneration 
+ function is called. The order in which the entities are returned cannot 
+ be used. Instead, there should be some algorithm used that relies on the 
+ geometry of the body to determine entity IDs. Of course, features with 
+ no impact on the geometry of the model can also be created.</p>
+
+<p>The following example illustrates a VBA-based rebuild function. When 
+ called, it returns true to indicate to SOLIDWORKS that it was successful. 
+ </p>
+
+<p class=apiCode
+	style="margin-left: 49px;">Function swmRegen(app As Variant, part As 
+ Variant, feature As Variant) As Variant</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">msgbox &quot;Regeneration function called.&quot; 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">swmRegen = True</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">End Function</p>
+
+<p><span style="font-weight: bold;">NOTES:</span> </p>
+<ul>
+	<li><font face="Verdana" style="font-size: 8pt">When regenerating a macro 
+ feature, 
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDimension~ReferencePoints.html">IDimension::ReferencePoints</a> 
+ gets and sets the reference points of a display dimension (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDisplayDimension.html">IDisplayDimension</a> 
+ object). <!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->In 
+ all other cases, this property gets and sets the reference points of a 
+ dimension (<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDimension.html">IDimension</a> 
+ object).</font></li>
+	<li>
+	<pre style="font-size: 8pt; font-family: Courier New; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt"><span style="font-family: Verdana">If your macro feature is crashing while regenerating, then force</span><span lang="EN" style="font-family: Verdana"> garbage collection and wait for all finalizers to complete before continuing. For example, include the following code </span><span style="font-family: Verdana">at the end of your rebuild function in a VB.NET application:</span></pre>
+	<p class="MsoNormal" style="margin-left:.5in">
+	<span lang="EN" style="font-size: 10.0pt; font-family: Courier New; color: green">
+	‘Wait for all finalizers to complete before continuing</span></p>
+	<p class="MsoNormal" style="margin-left:.5in">
+	<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">GC.Collect()<br>
+	GC.WaitforPendingFinalizers()<br>
+	GC.Collect()<br>
+	GC.WaitforPendingFinalizers()</span></p>
+	<p>&nbsp;</p></li>
+</ul> 
+
+</body>
+
+</html>

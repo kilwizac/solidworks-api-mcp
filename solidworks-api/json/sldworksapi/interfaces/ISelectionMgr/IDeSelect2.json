@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "IDeSelect2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of objects to deselect"
+      },
+      {
+        "name": "AtIndex",
+        "type": "System.Int32",
+        "description": "Index position within the current list of selected items where index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectionMgr.DeSelect2",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectedObjectCount2",
+      "ISelectionMgr.GetSelectedObjectLoop2",
+      "ISelectionMgr.GetSelectedObjectMark",
+      "ISelectionMgr.GetSelectedObjectType3",
+      "ISelectionMgr.GetSelectedObjectsComponent3",
+      "ISelectionMgr.GetSelectedObjectsDrawingView2",
+      "ISelectionMgr.GetSelectionPoint2",
+      "ISelectionMgr.GetSelectionPointInSketchSpace2",
+      "ISelectionMgr.IGetSelectionPoint2",
+      "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+    ],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "deselect",
+      "objects",
+      "ideselect2",
+      "mgr",
+      "de",
+      "select2",
+      "count",
+      "int32",
+      "index",
+      "mark"
+    ]
+  },
+  "title": "ISelectionMgr.IDeSelect2",
+  "description": "Deselects the specified entity.",
+  "signature": "System.Int32 IDeSelect2( \n   System.Int32\nCount\n,\n   ref System.Int32\nAtIndex\n,\n   System.Int32\nMark\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of objects to deselect"
+    },
+    {
+      "name": "AtIndex",
+      "type": "System.Int32",
+      "description": "Index position within the current list of selected items where index ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+    }
+  ],
+  "returns": "1 if the specified entity is deselected, 0 if not",
+  "remarks": "AtIndex should be either an array of 32-bit integers or a single 32-bit integer. See\nLong vs. Integer\nfor details about data types.",
+  "examples": [],
+  "related": [
+    "ISelectionMgr.DeSelect2",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectedObjectCount2",
+    "ISelectionMgr.GetSelectedObjectLoop2",
+    "ISelectionMgr.GetSelectedObjectMark",
+    "ISelectionMgr.GetSelectedObjectType3",
+    "ISelectionMgr.GetSelectedObjectsComponent3",
+    "ISelectionMgr.GetSelectedObjectsDrawingView2",
+    "ISelectionMgr.GetSelectionPoint2",
+    "ISelectionMgr.GetSelectionPointInSketchSpace2",
+    "ISelectionMgr.IGetSelectionPoint2",
+    "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+  ]
+}

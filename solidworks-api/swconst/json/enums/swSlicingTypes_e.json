@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSlicingTypes_e",
+    "description": "Types of slicing. Bitmask.",
+    "member_count": 5,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSlicingTypes_e",
+  "description": "Types of slicing. Bitmask.",
+  "values": [
+    {
+      "member": "swSlicingTypes_Circle",
+      "value": "4",
+      "description": "= Creates a circle whose diameter equals the average of the length and width of the rectangle that encloses all the sketch entities; circle is located at the intersection of the source geometry and the slicing plane"
+    },
+    {
+      "member": "swSlicingTypes_Exact",
+      "value": "2",
+      "description": "= Creates an exact intersection of the mesh BREP body and graphics body resulting in a polyline; set only if swSlicingTypes_Intersection is also set; not valid with swSlicingTypes_Circle and swSlicingTypes_Rectangle"
+    },
+    {
+      "member": "swSlicingTypes_Intersection",
+      "value": "1",
+      "description": "= For SOLIDWORKS BREP geometry, the slicing is identical to what is generated using the Intersection Curve tool; for mesh BREP and graphics bodies, sketches generated cannot be modified"
+    },
+    {
+      "member": "swSlicingTypes_None",
+      "value": "0",
+      "description": ""
+    },
+    {
+      "member": "swSlicingTypes_Rectangle",
+      "value": "8",
+      "description": "= Creates a rectangle that encloses all the sketch entities and is located at the intersection of the source geometry and the slicing plane"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "EditBalloonProperties2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Style of balloon as defined in swBalloonStyle_e"
+      },
+      {
+        "name": "Size",
+        "type": "System.Int32",
+        "description": "Balloon size as defined in swBalloonFit_e"
+      },
+      {
+        "name": "UpperTextStyle",
+        "type": "System.Int32",
+        "description": "Balloon text style as defined in swBalloonTextContent_e"
+      },
+      {
+        "name": "UpperText",
+        "type": "System.String",
+        "description": "Text for the balloon; valid only if UpperTextStyle is one of the following: swBalloonTextContent_e.swBalloonTextCustom swBalloonTextContent_e.swBalloonTextCustomProperties swBalloonTextContent_e.swBalloonTextCutListProperties"
+      },
+      {
+        "name": "LowerTextStyle",
+        "type": "System.Int32",
+        "description": "Lower text style as defined in swBalloonTextContent_e ; valid only if Style is swBalloonStyle_e.swBS_SplitCirc"
+      },
+      {
+        "name": "LowerText",
+        "type": "System.String",
+        "description": "Text for the lower text in the balloon; valid only if Style is swBalloonStyle_e.swBS_SplitCirc and LowerTextStyle is one of the following: swBalloonTextContent_e.swBalloonTextCustom swBalloonTextContent_e.swBalloonTextCustomProperties swBalloonTextContent_e.swBalloonTextCutListProperties"
+      },
+      {
+        "name": "CustomSize",
+        "type": "System.Double",
+        "description": "User-defined size of the balloon; valid only if Size is swBalloonFit_e.swBF_UserDef"
+      },
+      {
+        "name": "ShowQuantity",
+        "type": "System.Boolean",
+        "description": "True to show quantity, false to not"
+      },
+      {
+        "name": "QuantityPlacement",
+        "type": "System.Int16",
+        "description": "Placement of quantity value as defined in swBalloonQuantityPlacement_e ; valid only if ShowQuantity is true"
+      },
+      {
+        "name": "QuantityDenotationText",
+        "type": "System.String",
+        "description": "Denotation text for quantity; valid only if ShowQuantity is true"
+      },
+      {
+        "name": "QuantityDistance",
+        "type": "System.Double",
+        "description": "Distance between the balloon and the quantity; valid only if ShowQuantity is true"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "INote.SetBalloon",
+      "INote.SetBomBalloonText"
+    ],
+    "keywords": [
+      "balloons",
+      "see",
+      "also",
+      "iballoonstack",
+      "edit",
+      "editballoonproperties2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "balloon",
+      "properties2",
+      "style",
+      "int32",
+      "size",
+      "upper",
+      "text",
+      "string",
+      "lower",
+      "custom",
+      "double",
+      "show",
+      "quantity",
+      "boolean",
+      "placement",
+      "int16",
+      "denotation",
+      "distance",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.EditBalloonProperties2",
+  "description": "Edits the selected balloon's properties.",
+  "signature": "System.Object EditBalloonProperties2( \n   System.Int32\nStyle\n,\n   System.Int32\nSize\n,\n   System.Int32\nUpperTextStyle\n,\n   System.String\nUpperText\n,\n   System.Int32\nLowerTextStyle\n,\n   System.String\nLowerText\n,\n   System.Double\nCustomSize\n,\n   System.Boolean\nShowQuantity\n,\n   System.Int16\nQuantityPlacement\n,\n   System.String\nQuantityDenotationText\n,\n   System.Double\nQuantityDistance\n)",
+  "parameters": [
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Style of balloon as defined in swBalloonStyle_e"
+    },
+    {
+      "name": "Size",
+      "type": "System.Int32",
+      "description": "Balloon size as defined in swBalloonFit_e"
+    },
+    {
+      "name": "UpperTextStyle",
+      "type": "System.Int32",
+      "description": "Balloon text style as defined in swBalloonTextContent_e"
+    },
+    {
+      "name": "UpperText",
+      "type": "System.String",
+      "description": "Text for the balloon; valid only if UpperTextStyle is one of the following: swBalloonTextContent_e.swBalloonTextCustom swBalloonTextContent_e.swBalloonTextCustomProperties swBalloonTextContent_e.swBalloonTextCutListProperties"
+    },
+    {
+      "name": "LowerTextStyle",
+      "type": "System.Int32",
+      "description": "Lower text style as defined in swBalloonTextContent_e ; valid only if Style is swBalloonStyle_e.swBS_SplitCirc"
+    },
+    {
+      "name": "LowerText",
+      "type": "System.String",
+      "description": "Text for the lower text in the balloon; valid only if Style is swBalloonStyle_e.swBS_SplitCirc and LowerTextStyle is one of the following: swBalloonTextContent_e.swBalloonTextCustom swBalloonTextContent_e.swBalloonTextCustomProperties swBalloonTextContent_e.swBalloonTextCutListProperties"
+    },
+    {
+      "name": "CustomSize",
+      "type": "System.Double",
+      "description": "User-defined size of the balloon; valid only if Size is swBalloonFit_e.swBF_UserDef"
+    },
+    {
+      "name": "ShowQuantity",
+      "type": "System.Boolean",
+      "description": "True to show quantity, false to not"
+    },
+    {
+      "name": "QuantityPlacement",
+      "type": "System.Int16",
+      "description": "Placement of quantity value as defined in swBalloonQuantityPlacement_e ; valid only if ShowQuantity is true"
+    },
+    {
+      "name": "QuantityDenotationText",
+      "type": "System.String",
+      "description": "Denotation text for quantity; valid only if ShowQuantity is true"
+    },
+    {
+      "name": "QuantityDistance",
+      "type": "System.Double",
+      "description": "Distance between the balloon and the quantity; valid only if ShowQuantity is true"
+    }
+  ],
+  "returns": "Note",
+  "remarks": "Before calling this method, select the balloon annotation whose properties you want to edit.",
+  "examples": [
+    {
+      "title": "Edit Balloon (VBA)",
+      "href": "Edit_Balloon_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Balloon (VB.NET)",
+      "href": "Edit_Balloon_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Balloon (C#)",
+      "href": "Edit_Balloon_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "INote.SetBalloon",
+    "INote.SetBomBalloonText"
+  ]
+}

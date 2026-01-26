@@ -1,0 +1,300 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>GetCreateFeatureErrors Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~GetCreateFeatureErrors" />
+    <meta name="Description" content="Gets the errors that occurred during the last call to IFeatureManager::CreateFeature." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.GetCreateFeatureErrors" />
+    <meta name="Microsoft.Help.Keywords" content="GetCreateFeatureErrors Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                GetCreateFeatureErrors Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : GetCreateFeatureErrors Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="MsgsPopupContent" class="i-popup-content">
+        Array of&#160;errors as defined by&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swCreateFeatureError_e.html">swCreateFeatureError_e</a>
+    </div>
+
+    <div id="FeatureTypeNamePopupContent" class="i-popup-content">
+        Feature type name
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Gets the errors that occurred during the last call to&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~CreateFeature">IFeatureManager::CreateFeature</a>.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function GetCreateFeatureErrors( _
+   ByRef <i><a class="i-popup-link" id="MsgsPopupLink" data-popup-contentsource="#MsgsPopupContent" data-popup-showevent="click mouseenter">Msgs</a></i> As System.Object, _
+   ByRef <i><a class="i-popup-link" id="FeatureTypeNamePopupLink" data-popup-contentsource="#FeatureTypeNamePopupContent" data-popup-showevent="click mouseenter">FeatureTypeName</a></i> As System.String _
+) As System.Integer
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim Msgs As System.Object
+Dim FeatureTypeName As System.String
+Dim value As System.Integer
+ 
+value = instance.GetCreateFeatureErrors(Msgs, FeatureTypeName)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.int GetCreateFeatureErrors( 
+   out System.object <i><a class="i-popup-link" id="MsgsPopupLink" data-popup-contentsource="#MsgsPopupContent" data-popup-showevent="click mouseenter">Msgs</a></i>,
+   out System.string <i><a class="i-popup-link" id="FeatureTypeNamePopupLink" data-popup-contentsource="#FeatureTypeNamePopupContent" data-popup-showevent="click mouseenter">FeatureTypeName</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.int GetCreateFeatureErrors( 
+   [Out] System.Object^ <i><a class="i-popup-link" id="MsgsPopupLink" data-popup-contentsource="#MsgsPopupContent" data-popup-showevent="click mouseenter">Msgs</a></i>,
+   [Out] System.String^ <i><a class="i-popup-link" id="FeatureTypeNamePopupLink" data-popup-contentsource="#FeatureTypeNamePopupContent" data-popup-showevent="click mouseenter">FeatureTypeName</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Msgs</i></dt>
+
+                <dd>Array of&#160;errors as defined by&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swCreateFeatureError_e.html">swCreateFeatureError_e</a></dd>
+
+                <dt><i>FeatureTypeName</i></dt>
+
+                <dd>Feature type name</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                0&#160;&lt;= Number of messages issued at the time of last&#160;call to IFeatureManager::CreateFeature&#160;&lt;= 20
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            This method is valid only&#160;after attempting to create&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMateControllerFeatureData">Mate Controller</a> features using IFeatureManager::CreateFeature.
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>' ===============================================<br />
+            ' Preconditions:<br />
+            ' 1. Open <em>Public_documents</em><strong>\SOLIDWORKS\SOLIDWORKS 2024\samples\tutorial\api\AdvancedMates\advancedmatedemo1.sldasm</strong>.<br />
+            ' 2. Create two distance mates to center the steel disc inside the magnet.<br />
+            '<br />
+            ' Postconditions:<br />
+            ' 1. Inspect the Immediate window.<br />
+            ' 2. Mate controller feature is not created.<br />
+            ' 3. Observe the returned error code: 6 indicates that the number of mate selections (2)<br />
+            '&#160;&#160;&#160; do not match the number of values (3) in the specified position data array.<br />
+            ' ========================================================<br />
+            Dim swApp As SldWorks.SldWorks<br />
+            Dim Part As SldWorks.ModelDoc2<br />
+            Dim Assem As SldWorks.AssemblyDoc<br />
+            Dim boolstatus As Boolean<br />
+            Dim i As Long, j As Long, longstatus As Long, longwarnings As Long<br />
+            Option Explicit</p>
+
+            <p>Sub main()</p>
+
+            <p>&#160;&#160;&#160; Set swApp = Application.SldWorks<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set Part = swApp.ActiveDoc<br />
+            &#160;&#160;&#160; Set Assem = Part<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim myModelView As Object<br />
+            &#160;&#160;&#160; Set myModelView = Part.ActiveView<br />
+            &#160;&#160;&#160; myModelView.FrameState = swWindowState_e.swWindowMaximized<br />
+            &#160;&#160;&#160; Part.ClearSelection2 True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim var As Variant<br />
+            &#160;&#160;&#160; var = Assem.<strong>CollectAllSupportiveMates</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print "Mates:"<br />
+            &#160;&#160;&#160; For i = 0 To UBound(var)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; var(i).Select2 True, 0<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "&#160; " &amp; var(i).Name<br />
+            &#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim featMgr As SldWorks.FeatureManager<br />
+            &#160;&#160;&#160; Set featMgr = Part.FeatureManager<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim mateControllerObj As MateControllerFeatureData<br />
+            &#160;&#160;&#160; Set mateControllerObj = featMgr.<strong>CreateDefinition</strong>(swFmMateController)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>AddNewPosition</strong> ("Position1")<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>AddNewPosition</strong> ("Position2")<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>AddNewPosition</strong> ("Position3")<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim position2ValArr(2) As Double<br />
+            &#160;&#160;&#160; position2ValArr(0) = 1.0646<br />
+            &#160;&#160;&#160; position2ValArr(1) = 0.0635<br />
+            &#160;&#160;&#160; position2ValArr(2) = 1.02<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Call mateControllerObj.<strong>SetValues</strong>("Position2", position2ValArr)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim posVar As Variant<br />
+            &#160;&#160;&#160; Dim valArr As Variant<br />
+            &#160;&#160;&#160; posVar = mateControllerObj.<strong>GetPositions</strong>()<br />
+            &#160;&#160;&#160; valArr = mateControllerObj.<strong>GetValues</strong>("Position3")<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim position3ValArr(2) As Double<br />
+            &#160;&#160;&#160; position3ValArr(0) = 1#<br />
+            &#160;&#160;&#160; position3ValArr(1) = 0.0635<br />
+            &#160;&#160;&#160; position3ValArr(2) = 1.05<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Call mateControllerObj.<strong>SetValues</strong>("Position3", position3ValArr)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>AddConfigurationFromPosition</strong> "Position 2", False<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>DeletePosition</strong> ("Position 1")<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim posArr(2) As String<br />
+            &#160;&#160;&#160; posArr(0) = "Position3"<br />
+            &#160;&#160;&#160; posArr(1) = "Position2"<br />
+            &#160;&#160;&#160; posArr(2) = "Position1"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; mateControllerObj.<strong>ReOrderPositions</strong> ((posArr))<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim mateContFeat As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set mateContFeat = featMgr.<strong>CreateFeature</strong>(mateControllerObj)<br />
+            &#160;&#160;&#160; Dim err As Variant<br />
+            &#160;&#160;&#160; Dim FeatureType As String<br />
+            &#160;&#160;&#160; Dim cnt As Long<br />
+            &#160;&#160;&#160; cnt = featMgr.<strong>GetCreateFeatureErrors</strong>(err, FeatureType)<br />
+            &#160;&#160;&#160; Debug.Print "Number of errors returned: " &amp; cnt<br />
+            &#160;&#160;&#160; Debug.Print "Feature type: " &amp; FeatureType<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; For j = 0 To UBound(err)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Error code as defined by swCreateFeatureError_e: " &amp; err(j)<br />
+            &#160;&#160;&#160; Next</p>
+
+            <p>End Sub<br /></p>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~GetCreateFeatureErrors.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

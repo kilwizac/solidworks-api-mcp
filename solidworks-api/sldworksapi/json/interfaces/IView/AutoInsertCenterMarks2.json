@@ -1,0 +1,189 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "AutoInsertCenterMarks2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "InsertType",
+        "type": "System.Int32",
+        "description": "Features for which to insert center marks as defined in swAutoInsertCenterMarkTypes_e"
+      },
+      {
+        "name": "InsertOption",
+        "type": "System.Int32",
+        "description": "Center mark options as defined in swCenterMarkConnectionLine_e"
+      },
+      {
+        "name": "LinearSlotCenter",
+        "type": "System.Boolean",
+        "description": "True to add center marks to slot centers, false to add them to slot ends"
+      },
+      {
+        "name": "ArcSlotCenter",
+        "type": "System.Boolean",
+        "description": "True to add center marks to arc centers, false to add them to arc ends"
+      },
+      {
+        "name": "UseDocumentDefaults",
+        "type": "System.Boolean",
+        "description": "True to use the display settings specified in Tools > Options > Document Properties > Centerlines/Center Marks , false to use the display settings set by this method"
+      },
+      {
+        "name": "Size",
+        "type": "System.Double",
+        "description": "Size of center mark; valid only if UseDocumentDefaults is false"
+      },
+      {
+        "name": "Gap",
+        "type": "System.Double",
+        "description": "Size of gap between the center mark and extension line; valid only if UseDocumentDefaults is false and the Tools > Options > Document Properties > Centerlines/Center Marks > Scale by view scale check box is clear (see Remarks )"
+      },
+      {
+        "name": "ExtendedLines",
+        "type": "System.Boolean",
+        "description": "True to extend lines from center mark points, false to not; valid only if UseDocumentDefaults is false"
+      },
+      {
+        "name": "CenterLineFont",
+        "type": "System.Boolean",
+        "description": "True to use the centerline font, false to not; valid only if UseDocumentDefaults is false"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Rotation angle for the center mark; a positive angle rotates the center mark counterclockwise"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetCenterMarkCount2",
+      "IView.GetCenterMarkInfo",
+      "IView.GetCenterMarks"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "center",
+      "marks",
+      "drawing",
+      "views",
+      "iview",
+      "view",
+      "autoinsertcentermarks2",
+      "auto",
+      "insert",
+      "marks2",
+      "type",
+      "int32",
+      "option",
+      "linear",
+      "slot",
+      "boolean",
+      "arc",
+      "use",
+      "document",
+      "defaults",
+      "size",
+      "double",
+      "gap",
+      "extended",
+      "lines",
+      "line",
+      "font",
+      "angle",
+      "automatically",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.AutoInsertCenterMarks2",
+  "description": "Automatically inserts the specified center marks in this view.",
+  "signature": "System.Boolean AutoInsertCenterMarks2( \n   System.Int32\nInsertType\n,\n   System.Int32\nInsertOption\n,\n   System.Boolean\nLinearSlotCenter\n,\n   System.Boolean\nArcSlotCenter\n,\n   System.Boolean\nUseDocumentDefaults\n,\n   System.Double\nSize\n,\n   System.Double\nGap\n,\n   System.Boolean\nExtendedLines\n,\n   System.Boolean\nCenterLineFont\n,\n   System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "InsertType",
+      "type": "System.Int32",
+      "description": "Features for which to insert center marks as defined in swAutoInsertCenterMarkTypes_e"
+    },
+    {
+      "name": "InsertOption",
+      "type": "System.Int32",
+      "description": "Center mark options as defined in swCenterMarkConnectionLine_e"
+    },
+    {
+      "name": "LinearSlotCenter",
+      "type": "System.Boolean",
+      "description": "True to add center marks to slot centers, false to add them to slot ends"
+    },
+    {
+      "name": "ArcSlotCenter",
+      "type": "System.Boolean",
+      "description": "True to add center marks to arc centers, false to add them to arc ends"
+    },
+    {
+      "name": "UseDocumentDefaults",
+      "type": "System.Boolean",
+      "description": "True to use the display settings specified in Tools > Options > Document Properties > Centerlines/Center Marks , false to use the display settings set by this method"
+    },
+    {
+      "name": "Size",
+      "type": "System.Double",
+      "description": "Size of center mark; valid only if UseDocumentDefaults is false"
+    },
+    {
+      "name": "Gap",
+      "type": "System.Double",
+      "description": "Size of gap between the center mark and extension line; valid only if UseDocumentDefaults is false and the Tools > Options > Document Properties > Centerlines/Center Marks > Scale by view scale check box is clear (see Remarks )"
+    },
+    {
+      "name": "ExtendedLines",
+      "type": "System.Boolean",
+      "description": "True to extend lines from center mark points, false to not; valid only if UseDocumentDefaults is false"
+    },
+    {
+      "name": "CenterLineFont",
+      "type": "System.Boolean",
+      "description": "True to use the centerline font, false to not; valid only if UseDocumentDefaults is false"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Rotation angle for the center mark; a positive angle rotates the center mark counterclockwise"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Call this method on each active view in which you want to insert center marks.\nBefore calling this method:\nCall\nIDrawingDoc::ActivateView\nwith the name of the view to activate.\nCall\nIDrawingDoc::ActiveDrawingView\nto get a handle on the activated view.\nCall\nIDrawingDoc::InsertCenterMark3\nif you want to insert one center mark in one view.\nTo...\nCall...\nGet the\nTools > Options > Document Properties > Centerlines/Center Marks > Scale by view scale\nsetting\nIModelDocExtension::GetUserPreferenceToggle\nswUserPreferenceToggle_e\n.swDetailingCenterMarkScaleByViewScale,\nswUserPreferenceOption_e\n.swDetailingNoOptionSpecified\nSet the\nTools > Options > Document Properties > Centerlines/Center Marks > Scale by view scale\nsetting\nIModelDocExtension::SetUserPreferenceToggle\nswUserPreferenceToggle_e.swDetailingCenterMarkScaleByViewScale, swUserPreferenceOption_e.swDetailingNoOptionSpecified, <\nvalue\n>",
+  "examples": [
+    {
+      "title": "Automatically Insert Center Marks (C#)",
+      "href": "Auto_Insert_Center_Marks_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Automatically Insert Center Marks (VB.NET)",
+      "href": "Auto_Insert_Center_Marks_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Automatically Insert Center Marks (VBA)",
+      "href": "Auto_Insert_Center_Marks_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetCenterMarkCount2",
+    "IView.GetCenterMarkInfo",
+    "IView.GetCenterMarks"
+  ]
+}

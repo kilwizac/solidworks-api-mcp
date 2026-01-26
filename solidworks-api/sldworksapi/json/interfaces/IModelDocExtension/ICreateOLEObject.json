@@ -1,0 +1,110 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ICreateOLEObject",
+    "returns": "SwOLEObject",
+    "parameters": [
+      {
+        "name": "Aspect",
+        "type": "System.Int32",
+        "description": "Viewing aspect of the OLE object as defined in the DVASPECT enumeration (see Remarks )"
+      },
+      {
+        "name": "Position",
+        "type": "System.Double",
+        "description": "Top-left and bottom-right positions (see Remarks )"
+      },
+      {
+        "name": "ByteCount",
+        "type": "System.Int32",
+        "description": "Number of bytes"
+      },
+      {
+        "name": "Buffer",
+        "type": "System.Byte",
+        "description": "Data for the OLE object (see Remarks )"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "0 if True or 1 if false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.CreateOLEObject",
+      "IModelDocExtension.GetOLEObjectCount",
+      "IModelDocExtension.GetOLEObjects",
+      "IModelDocExtension.IGetOLEObjects",
+      "IModelDocExtension.InsertObjectFromFile"
+    ],
+    "keywords": [
+      "ole",
+      "objects",
+      "icreateoleobject",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "create",
+      "object",
+      "aspect",
+      "int32",
+      "position",
+      "double",
+      "byte",
+      "count",
+      "buffer",
+      "error",
+      "code",
+      "sw"
+    ]
+  },
+  "title": "IModelDocExtension.ICreateOLEObject",
+  "description": "Creates an OLE object on the active document.",
+  "signature": "SwOLEObject ICreateOLEObject( \n   System.Int32\nAspect\n,\n   ref System.Double\nPosition\n,\n   System.Int32\nByteCount\n,\n   ref System.byte\nBuffer\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "Aspect",
+      "type": "System.Int32",
+      "description": "Viewing aspect of the OLE object as defined in the DVASPECT enumeration (see Remarks )"
+    },
+    {
+      "name": "Position",
+      "type": "System.Double",
+      "description": "Top-left and bottom-right positions (see Remarks )"
+    },
+    {
+      "name": "ByteCount",
+      "type": "System.Int32",
+      "description": "Number of bytes"
+    },
+    {
+      "name": "Buffer",
+      "type": "System.Byte",
+      "description": "Data for the OLE object (see Remarks )"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "0 if True or 1 if false"
+    }
+  ],
+  "returns": "OLE object",
+  "remarks": "Argument\nInformation\nAspect\nUses the DVASPECT enumeration, which has the following values:\nDVASPECT_CONTENT = 1\nDVASPECT_THUMBNAIL = 2\nDVASPECT_ICON = 4\nDVASPECT_DOCPRINT = 8\nSee the MSDN documentation for details about the DVASPECT enumeration.\nPosition\nSpecify:\nSheet coordinates for drawings.\nScreen pixel coordinates for parts and assemblies.\nBuffer\nSee\nISwOLEObject::Buffer\nor specify\nISwOLEObject::IGetBuffer\n- or -\nGet the data from your own OLE object.\nThe data is in the format obtained from the Microsoft MFC object COleClientItem using the GetHGlobalFromILockBytes.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.CreateOLEObject",
+    "IModelDocExtension.GetOLEObjectCount",
+    "IModelDocExtension.GetOLEObjects",
+    "IModelDocExtension.IGetOLEObjects",
+    "IModelDocExtension.InsertObjectFromFile"
+  ]
+}

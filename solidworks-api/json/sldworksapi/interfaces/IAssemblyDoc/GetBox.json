@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "GetBox",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Type of bounding box as defined by swBoundingBoxOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.IGetBox",
+      "IAssemblyDoc.UpdateBox",
+      "IBody2.GetBodyBox",
+      "IBody2.IGetBodyBox",
+      "IComponent2.GetBox",
+      "IComponent2.IGetBox",
+      "IFace2.GetBox",
+      "IFace2.IGetBox",
+      "IFeature.GetBox",
+      "IFeature.IGetBox",
+      "IModelDocExtension.GetVisibleBox",
+      "IModelDocExtension.RemoveVisibleBox",
+      "IModelDocExtension.SetVisibleBox"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "bounding",
+      "box",
+      "getbox",
+      "assembly",
+      "doc",
+      "options",
+      "int32",
+      "object",
+      "using",
+      "vb",
+      "net",
+      "vba",
+      "recalculate"
+    ]
+  },
+  "title": "IAssemblyDoc.GetBox",
+  "description": "Gets the bounding box.",
+  "signature": "System.Object GetBox( \n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Type of bounding box as defined by swBoundingBoxOptions_e"
+    }
+  ],
+  "returns": "Object containing the two diagonal points that bound the component; the array contains 6 doubles (see Remarks )",
+  "remarks": "IMPORTANT:\nThe values returned are approximate and should not be used for comparison\nor calculation purposes. Furthermore, the bounding box may vary after rebuilding the model.The resulting box encloses the object, but it might not be the tightest box.\nThe X, Y, Z points returned by SOLIDWORKS are the lower- and upper-diagonal corners that bound the component with the box sides parallel to the X, Y and Z axes. SOLIDWORKS returns box dimensions that enclose the object and are typically close to the minimum possible size.\nThe return value is an array of doubles as follows:\n[\nXCorner1, YCorner1, ZCorner1, XCorner2, YCorner2, ZCorner2\n]",
+  "examples": [
+    {
+      "title": "Get Assembly Bounding Box Using Assembly (C#)",
+      "href": "Get_Assembly_Bounding_Box_Using_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Assembly Bounding Box Using Assembly (VB.NET)",
+      "href": "Get_Assembly_Bounding_Box_Using_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Assembly Bounding Box Using Assembly (VBA)",
+      "href": "Get_Assembly_Bounding_Box_using_Assembly_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (C#)",
+      "href": "Recalculate_Bounding_Box_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (VB.NET)",
+      "href": "Recalculate_Bounding_Box_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Recalculate Bounding Box (VBA)",
+      "href": "Recalculate_Bounding_Box_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IGetBox",
+    "IAssemblyDoc.UpdateBox",
+    "IBody2.GetBodyBox",
+    "IBody2.IGetBodyBox",
+    "IComponent2.GetBox",
+    "IComponent2.IGetBox",
+    "IFace2.GetBox",
+    "IFace2.IGetBox",
+    "IFeature.GetBox",
+    "IFeature.IGetBox",
+    "IModelDocExtension.GetVisibleBox",
+    "IModelDocExtension.RemoveVisibleBox",
+    "IModelDocExtension.SetVisibleBox"
+  ]
+}

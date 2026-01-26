@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetEllipses5",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.IGetEllipses5"
+    ],
+    "keywords": [
+      "ellipses",
+      "drawing",
+      "views",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "getellipses5",
+      "ellipses5",
+      "object"
+    ]
+  },
+  "title": "IView.GetEllipses5",
+  "description": "Gets all of the ellipses added by a user in this drawing view.",
+  "signature": "System.Object GetEllipses5()",
+  "parameters": [],
+  "returns": "Array of doubles ( Remarks )",
+  "remarks": "This method only returns ellipses that were sketched by a user in this drawing view. Use\nIView::GetPolylines6\nor\nIView::GetPolylines6\nto access the solid model's projected display data in the drawing view.\nAll part and assembly geometry shown in a drawing view is represented by polylines. To access the polylines, use View::GetPolylines3.\nThe return values are in an array of doubles:\n[\nColor, LineType, LineStyleIndex, LineWidth, LayerID, LayerOverride, StartPt[3], EndPt[3], CenterPt[3], MajorPt[3], MinorPt[3], Direction ...\n]\nwhere:\nColor = COLORREF returned as an integer. Return value can be 0 or -1 for default color.\nLineType = line type. Valid returns as defined in\nswLineTypes_e\n. A\nlineType\nis a combination of a lineStyle and lineWeight.\nLineStyleIndex = line style. Valid line styles as defined in\nswLineStyles_e\n.\nLineWidth = integer value defining the line width. Valid width values as defined in\nswLineWeights_e\n.\nLayerID = integer value indicating that layer holds this entity. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayerOverride = integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if\nLayerOverride\nis returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nStartPt[3] = array of 3 doubles (X,Y,Z) describing the ellipse start point.\nEndPt[3] = array of 3 doubles (X,Y,Z) describing the ellipse end point. If the ellipse is closed, then this will be the same point as the\nStartPt\n.\nCenterPt[3] = array of 3 doubles (X,Y,Z) describing the ellipse center point.\nMajorPt[3] = array of 3 doubles (X,Y,Z) describing a point on the ellipse and on the major axis.\nMinorPt[3] = array of 3 doubles (X,Y,Z) describing a point on the ellipse and on the minor axis.\nDirection = -1 for clockwise, +1 for counterclockwise.\nThis set of data repeats for each ellipse in the view. The size of the array is (NumEllipses * 22). To determine the number of ellipses, use\nIView::GetEllipseCount\n.\nThe data returned from this method is in terms of view space. If you want the data in terms of sheet space (for example, the 0,0 origin being the lower-left corner of the sheet), then combine this data with the three return values from\nIView::GetXForm\nor\nIView::IGetXForm\n.\nThe sheet must be visible. See\nISheet::SheetFormatVisible\n.",
+  "examples": [],
+  "related": [
+    "IView.IGetEllipses5"
+  ]
+}

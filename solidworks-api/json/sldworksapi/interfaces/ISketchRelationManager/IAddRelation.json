@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelationManager",
+    "member": "IAddRelation",
+    "returns": "SketchRelation",
+    "parameters": [
+      {
+        "name": "NumEntities",
+        "type": "System.Int32",
+        "description": "Number of entities to which to add the relation"
+      },
+      {
+        "name": "EntityArray",
+        "type": "System.Object",
+        "description": "Array of entities to which to add the relation"
+      },
+      {
+        "name": "RelationType",
+        "type": "System.Int32",
+        "description": "Type of relation as defined by swConstraintType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelationManager.AddRelation"
+    ],
+    "keywords": [
+      "relations",
+      "iaddrelation",
+      "isketchrelationmanager",
+      "sketch",
+      "relation",
+      "manager",
+      "add",
+      "num",
+      "entities",
+      "int32",
+      "entity",
+      "array",
+      "object",
+      "type"
+    ]
+  },
+  "title": "ISketchRelationManager.IAddRelation",
+  "description": "Adds a relation to the specified entities in the active sketch.",
+  "signature": "SketchRelation IAddRelation( \n   System.Int32\nNumEntities\n,\n   ref System.Object\nEntityArray\n,\n   System.Int32\nRelationType\n)",
+  "parameters": [
+    {
+      "name": "NumEntities",
+      "type": "System.Int32",
+      "description": "Number of entities to which to add the relation"
+    },
+    {
+      "name": "EntityArray",
+      "type": "System.Object",
+      "description": "Array of entities to which to add the relation"
+    },
+    {
+      "name": "RelationType",
+      "type": "System.Int32",
+      "description": "Type of relation as defined by swConstraintType_e"
+    }
+  ],
+  "returns": "Sketch relation",
+  "remarks": "A sketch must be active for this method to have any effect. Use\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\nto determine if a sketch is active.\nCall\nISketchRelationManager::GetRelationsCount\nbefore calling this method to get the value for NumEntities.",
+  "examples": [],
+  "related": [
+    "ISketchRelationManager.AddRelation"
+  ]
+}

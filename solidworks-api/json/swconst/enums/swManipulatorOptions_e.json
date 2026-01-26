@@ -1,0 +1,27 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swManipulatorOptions_e",
+    "description": "Manipulator options. Bitmask.",
+    "member_count": 2,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swManipulatorOptions_e",
+  "description": "Manipulator options. Bitmask.",
+  "values": [
+    {
+      "member": "swManipulatorOpts_Default",
+      "value": "0",
+      "description": "or 0x0; Manipulators created using the SOLIDWORKS API are deleted when a component is modified or deleted in the context of an assembly NOTE: This is the default behavior."
+    },
+    {
+      "member": "swManipulatorOpts_KeepAfterComponentModify",
+      "value": "1",
+      "description": "or 0x1; Manipulators are not deleted when a component is modified or deleted in the context of an assembly"
+    }
+  ]
+}

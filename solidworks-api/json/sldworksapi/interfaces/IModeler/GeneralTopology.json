@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModeler",
+    "member": "GeneralTopology",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.GetManifoldBodiesCount",
+      "IModeler.IMakeManifoldBodies",
+      "IModeler.MakeManifoldBodies"
+    ],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "general",
+      "non",
+      "manifold",
+      "generaltopology",
+      "imodeler",
+      "modeler",
+      "topology",
+      "boolean",
+      "create",
+      "convert",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IModeler.GeneralTopology",
+  "description": "Gets or sets the Parasolid option to create general (non-manifold) bodies.",
+  "signature": "System.Boolean GeneralTopology {get; set;}",
+  "parameters": [],
+  "returns": "True to create general bodies, false to not",
+  "remarks": "SOLIDWORKS expects this property be false because SOLIDWORKS does not support the creation of general bodies. If you set this property to True, then set it back to false as soon as your intended operations complete.\nTo tessellate a general body, set\nITesssellation::MatchType\nto swTesselationMatchFacetGeometry, which sets the Parasolid facet match to clipping facet boundaries to a common edge",
+  "examples": [
+    {
+      "title": "Create and Convert Non-manifold Bodies (C#)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VB.NET)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VBA)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModeler.GetManifoldBodiesCount",
+    "IModeler.IMakeManifoldBodies",
+    "IModeler.MakeManifoldBodies"
+  ]
+}

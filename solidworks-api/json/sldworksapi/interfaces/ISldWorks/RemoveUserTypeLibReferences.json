@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RemoveUserTypeLibReferences",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "VTlbRef",
+        "type": "System.Object",
+        "description": "Array of strings of the user-specified type library references"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetUserTypeLibReferenceCount",
+      "ISldWorks.IGetUserTypeLibReferences",
+      "ISldWorks.IRemoveUserTypeLibReferences",
+      "ISldWorks.ISetUserTypeLibReferences",
+      "ISldWorks.UserTypeLibReferences"
+    ],
+    "keywords": [
+      "type",
+      "libraries",
+      "removeusertypelibreferences",
+      "isldworks",
+      "sld",
+      "works",
+      "remove",
+      "user",
+      "lib",
+      "references",
+      "tlb",
+      "ref",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.RemoveUserTypeLibReferences",
+  "description": "Removes the user-specified type library references.",
+  "signature": "System.Boolean RemoveUserTypeLibReferences( \n   System.Object\nVTlbRef\n)",
+  "parameters": [
+    {
+      "name": "VTlbRef",
+      "type": "System.Object",
+      "description": "Array of strings of the user-specified type library references"
+    }
+  ],
+  "returns": "True if the user-specified type library references are removed, false if not",
+  "remarks": "Any macro recorded after this method is called will not have references to the removed user-specified type libraries.\nAn add-in can use this method to\nremove its type library references when the add-in is unloaded.\nSee\nType Libraries\nfor details.",
+  "examples": [],
+  "related": [
+    "ISldWorks.GetUserTypeLibReferenceCount",
+    "ISldWorks.IGetUserTypeLibReferences",
+    "ISldWorks.IRemoveUserTypeLibReferences",
+    "ISldWorks.ISetUserTypeLibReferences",
+    "ISldWorks.UserTypeLibReferences"
+  ]
+}

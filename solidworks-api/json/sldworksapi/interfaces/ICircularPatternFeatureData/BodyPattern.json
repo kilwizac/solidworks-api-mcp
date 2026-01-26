@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICircularPatternFeatureData",
+    "member": "BodyPattern",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "ICircularPatternFeatureData.IGetPatternBodyArray",
+      "ICircularPatternFeatureData.IGetPatternFaceArray",
+      "ICircularPatternFeatureData.IGetPatternFeatureArray",
+      "ICircularPatternFeatureData.ISetPatternBodyArray",
+      "ICircularPatternFeatureData.ISetPatternFaceArray",
+      "ICircularPatternFeatureData.ISetPatternFeatureArray",
+      "ICircularPatternFeatureData.PatternElement"
+    ],
+    "keywords": [
+      "bodypattern",
+      "icircularpatternfeaturedata",
+      "circular",
+      "pattern",
+      "feature",
+      "data",
+      "body",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ICircularPatternFeatureData.BodyPattern",
+  "description": "Gets or sets whether to base this circular pattern feature on bodies and structure systems or features and faces.",
+  "signature": "System.Boolean BodyPattern {get; set;}",
+  "parameters": [],
+  "returns": "True for bodies and structure systems, false for features and faces",
+  "remarks": "If this property is:\nTrue, use\nICircularPatternFeatureData::PatternBodyArray\nto specify the bodies to pattern and\nICircularPatternFeatureData::StructureSystemToPatternArray\nto specify the structure systems to pattern.\nFalse, use\nICircularPatternFeatureData::PatternFaceArray\nor\nICircularPatternFeatureData::PatternFeatureArray\nto specify the face or feature to pattern.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.",
+  "examples": [],
+  "related": [
+    "ICircularPatternFeatureData.IGetPatternBodyArray",
+    "ICircularPatternFeatureData.IGetPatternFaceArray",
+    "ICircularPatternFeatureData.IGetPatternFeatureArray",
+    "ICircularPatternFeatureData.ISetPatternBodyArray",
+    "ICircularPatternFeatureData.ISetPatternFaceArray",
+    "ICircularPatternFeatureData.ISetPatternFeatureArray",
+    "ICircularPatternFeatureData.PatternElement"
+  ]
+}

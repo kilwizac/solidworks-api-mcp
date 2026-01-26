@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "GetEndVertex",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetStartVertex",
+      "IEdge.IGetEndVertex",
+      "IEdge.IGetStartVertex"
+    ],
+    "keywords": [
+      "getendvertex",
+      "iedge",
+      "edge",
+      "end",
+      "vertex",
+      "object",
+      "check",
+      "interference",
+      "using",
+      "imodeler",
+      "checkinterfence",
+      "vba",
+      "radius",
+      "variable",
+      "fillet",
+      "modify",
+      "weld",
+      "bead",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEdge.GetEndVertex",
+  "description": "Gets the ending vertex for this edge.",
+  "signature": "System.Object GetEndVertex()",
+  "parameters": [],
+  "returns": "Vertex",
+  "remarks": "If no vertex exists for this edge (such as the edge of a newly created cylinder), then this method returns NULL.\nThis method and\nIEdge::GetStartVertex\nor\nIEdge::IGetStartVertex\nreturn distinct vertices, unless the edge is closed. Because edges have no natural direction, you cannot necessarily predict which of the two points you will get first and which last.\nUse\nICoEdge::GetCurveParams\nor\nICoEdge::IGetCurveParams\nto get consistent start and end positions.",
+  "examples": [
+    {
+      "title": "Check Interference Using IModeler::CheckInterfence (VBA)",
+      "href": "Check_Interference_using_Modeler_CheckInterference_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Radius of Variable Radius Fillet (VBA)",
+      "href": "Get_Radius_of_Variable_Radius_Fillet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Vertex (VBA)",
+      "href": "Get_Vertex_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Fillet Weld Bead (VBA)",
+      "href": "Modify_Fillet_Weld_Bead_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Fillet Weld Bead (VB.NET)",
+      "href": "Modify_Fillet_Weld_Bead_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify Fillet Weld Bead (C#)",
+      "href": "Modify_Fillet_Weld_Bead_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdge.GetStartVertex",
+    "IEdge.IGetEndVertex",
+    "IEdge.IGetStartVertex"
+  ]
+}

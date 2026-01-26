@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "IGetLineAtIndex3",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired line where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetLineAtIndex3",
+      "IDisplayData.GetLineCount"
+    ],
+    "keywords": [
+      "lines",
+      "display",
+      "data",
+      "igetlineatindex3",
+      "idisplaydata",
+      "line",
+      "index3",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IDisplayData.IGetLineAtIndex3",
+  "description": "Gets information for the specified line.",
+  "signature": "System.Double IGetLineAtIndex3( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired line where the index begins at 0"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\ncolor, lineType, lineStyle, lineWeight, startPt[3], endPt[3]\n]\nwhere:\ncolor\nCOLORREF returned as an integer; return value can be 0 or -1 for default color\nlineType\nLine type as defined in\nswLineTypes_e\nlineStyle\nLine style as defined in\nswLineStyles_e\nlineWeight\nLine thickness as defined in\nswLineWeights_e\nstartPt[3]\nx, y, z\nline start point\nendPt[3]\nx, y, z line end point",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetLineAtIndex3",
+    "IDisplayData.GetLineCount"
+  ]
+}

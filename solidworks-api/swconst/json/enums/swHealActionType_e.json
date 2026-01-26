@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swHealActionType_e",
+    "description": "Healing actions.",
+    "member_count": 3,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swHealActionType_e",
+  "description": "Healing actions.",
+  "values": [
+    {
+      "member": "swHealAction_Cap",
+      "value": "2",
+      "description": "= Finds a surface where all edges of the wound lie and attaches this to a face and covers the wound; SOLIDWORKS creates a new face to cover the wound"
+    },
+    {
+      "member": "swHealAction_GrowParent",
+      "value": "1",
+      "description": "= Extends the parent faces around the wound to cover it"
+    },
+    {
+      "member": "swHealAction_Shrink",
+      "value": "0",
+      "description": "= If extending faces does not yield a solution, then SOLIDWORKS tries to shrink the faces"
+    }
+  ]
+}

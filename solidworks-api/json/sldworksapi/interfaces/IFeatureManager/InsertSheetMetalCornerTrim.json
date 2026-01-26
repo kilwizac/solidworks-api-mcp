@@ -1,0 +1,107 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalCornerTrim",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "InternalCornerFlag",
+        "type": "System.Int32",
+        "description": "Do internal corners only"
+      },
+      {
+        "name": "BreakType",
+        "type": "System.Int32",
+        "description": "Type of break as defined in swBreakCornerTypes_e"
+      },
+      {
+        "name": "BreakDist",
+        "type": "System.Double",
+        "description": "Distance to break from corner"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Type of relief: 0 = circular 1 = square 2 = bend-waist"
+      },
+      {
+        "name": "Param",
+        "type": "System.Double",
+        "description": "ReliefType dependent: circular, its diameter square, its side length bend-waist, its radius"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBreakCornerFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "break",
+      "corners",
+      "see",
+      "ibreakcornerfeaturedata",
+      "corner",
+      "feature",
+      "also",
+      "ifeature",
+      "insertsheetmetalcornertrim",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "sheet",
+      "metal",
+      "trim",
+      "internal",
+      "flag",
+      "int32",
+      "type",
+      "dist",
+      "double",
+      "relief",
+      "param"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalCornerTrim",
+  "description": "Inserts a break corner trim in the sheet metal part.",
+  "signature": "Feature InsertSheetMetalCornerTrim( \n   System.Int32\nInternalCornerFlag\n,\n   System.Int32\nBreakType\n,\n   System.Double\nBreakDist\n,\n   System.Int32\nReliefType\n,\n   System.Double\nParam\n)",
+  "parameters": [
+    {
+      "name": "InternalCornerFlag",
+      "type": "System.Int32",
+      "description": "Do internal corners only"
+    },
+    {
+      "name": "BreakType",
+      "type": "System.Int32",
+      "description": "Type of break as defined in swBreakCornerTypes_e"
+    },
+    {
+      "name": "BreakDist",
+      "type": "System.Double",
+      "description": "Distance to break from corner"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Type of relief: 0 = circular 1 = square 2 = bend-waist"
+    },
+    {
+      "name": "Param",
+      "type": "System.Double",
+      "description": "ReliefType dependent: circular, its diameter square, its side length bend-waist, its radius"
+    }
+  ],
+  "returns": "Pointer to the break corner trim feature in the sheet metal part",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IBreakCornerFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IProjectionCurveFeatureData",
+    "member": "Reverse",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "reverse",
+      "iprojectioncurvefeaturedata",
+      "projection",
+      "curve",
+      "feature",
+      "data",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IProjectionCurveFeatureData.Reverse",
+  "description": "Reverses the direction that the curve is projected.",
+  "signature": "System.Boolean Reverse {get; set;}",
+  "parameters": [],
+  "returns": "True to reverse the direction of this projected curve, false to not",
+  "remarks": "If all faces in\nIProjectionCurveFeatureData::FaceArray\nare on the same side with respect to\nIProjectionCurveFeatureData::Sketch\n, then this property is ignored. The projection direction is calculated from the selected sketches and faces.\nYou can reverse the direction in which the curve is projected when the selected face wraps around the plane of the curve. For example, if the sketch being projected is surrounded by a cylindrical face, then two possible projections exist. If this property is set to true, the direction based on the normal vector of the sketch is reversed. The default direction is along the sketch normal.",
+  "examples": [
+    {
+      "title": "IProjectionCurveFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IProjectionCurveFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

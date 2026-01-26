@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetWitnessLineGap",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "WitnessIndex",
+        "type": "System.Int16",
+        "description": "Index of the extension line whose gap to get"
+      },
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True if using the document default value of the gap, false if not (see Remarks )"
+      },
+      {
+        "name": "Gap",
+        "type": "System.Double",
+        "description": "Gap value in system units (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.SetWitnessLineGap",
+      "IView.GetDimensionInfo6",
+      "IView.IGetDimensionInfo6"
+    ],
+    "keywords": [
+      "extension",
+      "lines",
+      "gap",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "getwitnesslinegap",
+      "idisplaydimension",
+      "display",
+      "witness",
+      "line",
+      "index",
+      "int16",
+      "use",
+      "doc",
+      "boolean",
+      "double",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetWitnessLineGap",
+  "description": "Gets the gap of the specified dimension extension line.",
+  "signature": "System.Boolean GetWitnessLineGap( \n   System.Int16\nWitnessIndex\n,\n   out System.Boolean\nUseDoc\n,\n   out System.Double\nGap\n)",
+  "parameters": [
+    {
+      "name": "WitnessIndex",
+      "type": "System.Int16",
+      "description": "Index of the extension line whose gap to get"
+    },
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True if using the document default value of the gap, false if not (see Remarks )"
+    },
+    {
+      "name": "Gap",
+      "type": "System.Double",
+      "description": "Gap value in system units (see Remarks )"
+    }
+  ],
+  "returns": "True if the operation succeeds, false if not",
+  "remarks": "The UseDoc argument is dependent on the detailing standard. You can retrieve the document default value using the\ndocument-level user-preference swDetailingWitnessLineGap\n.\nThe Gap argument is the document default value if UseDoc is true; otherwise, the value returned is the locally set value.",
+  "examples": [
+    {
+      "title": "Get and Set Dimension Extension Lines Gap (VBA)",
+      "href": "Get_and_Set_Dimension_Extension_Lines_Gaps_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.SetWitnessLineGap",
+    "IView.GetDimensionInfo6",
+    "IView.IGetDimensionInfo6"
+  ]
+}

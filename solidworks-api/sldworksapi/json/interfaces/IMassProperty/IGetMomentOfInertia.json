@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMassProperty",
+    "member": "IGetMomentOfInertia",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "WhereTaken",
+        "type": "System.Int32",
+        "description": "Coordinate system as defined in swMassPropertyMoment_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty.GetMomentOfInertia",
+      "IMassProperty.IGetPrincipleAxesOfInertia",
+      "IMassProperty.IGetPrincipleMomentsOfInertia",
+      "IMassProperty.PrincipleAxesOfInertia",
+      "IMassProperty.PrincipleMomentsOfInertia"
+    ],
+    "keywords": [
+      "igetmomentofinertia",
+      "imassproperty",
+      "mass",
+      "moment",
+      "inertia",
+      "where",
+      "taken",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IMassProperty.IGetMomentOfInertia",
+  "description": "Gets the moment of inertia at the specified coordinate system for this model.",
+  "signature": "System.Double IGetMomentOfInertia( \n   System.Int32\nWhereTaken\n)",
+  "parameters": [
+    {
+      "name": "WhereTaken",
+      "type": "System.Int32",
+      "description": "Coordinate system as defined in swMassPropertyMoment_e"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of size 9 containing the moment of inertia calculations (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method returns metric units unless explicitly specified otherwise.\nThe return value is a 0-based array of doubles:\n[\nLxx, Lxy, Lxz, Lyx, Lyy, Lyz, Lzx, Lzy, Lzz\n]",
+  "examples": [],
+  "related": [
+    "IMassProperty.GetMomentOfInertia",
+    "IMassProperty.IGetPrincipleAxesOfInertia",
+    "IMassProperty.IGetPrincipleMomentsOfInertia",
+    "IMassProperty.PrincipleAxesOfInertia",
+    "IMassProperty.PrincipleMomentsOfInertia"
+  ]
+}

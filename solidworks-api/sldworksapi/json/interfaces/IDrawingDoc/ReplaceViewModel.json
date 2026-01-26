@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "ReplaceViewModel",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NewModelPathName",
+        "type": "System.String",
+        "description": "Full path and filename of the replacement model"
+      },
+      {
+        "name": "Views",
+        "type": "System.Object",
+        "description": "Array of IView s in which to replace the model"
+      },
+      {
+        "name": "Instances",
+        "type": "System.Object",
+        "description": "Array of IComponent2 s that are specific instances of the model to replace in the drawing"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.InsertModelInPredefinedView"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "models",
+      "replaceviewmodel",
+      "idrawingdoc",
+      "doc",
+      "replace",
+      "view",
+      "model",
+      "new",
+      "path",
+      "name",
+      "string",
+      "object",
+      "instances",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.ReplaceViewModel",
+  "description": "Replaces the specified instances of a model in the specified drawing views.",
+  "signature": "System.Boolean ReplaceViewModel( \n   System.String\nNewModelPathName\n,\n   System.Object\nViews\n,\n   System.Object\nInstances\n)",
+  "parameters": [
+    {
+      "name": "NewModelPathName",
+      "type": "System.String",
+      "description": "Full path and filename of the replacement model"
+    },
+    {
+      "name": "Views",
+      "type": "System.Object",
+      "description": "Array of IView s in which to replace the model"
+    },
+    {
+      "name": "Instances",
+      "type": "System.Object",
+      "description": "Array of IComponent2 s that are specific instances of the model to replace in the drawing"
+    }
+  ],
+  "returns": "True if the model is replaced, false if not",
+  "remarks": "This method corresponds to\nTools > Replace Model\n.",
+  "examples": [
+    {
+      "title": "Replace View Model (C#)",
+      "href": "Replace_View_Model_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Replace View Model (VB.NET)",
+      "href": "Replace_View_Model_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Replace View Model (VBA)",
+      "href": "Replace_View_Model_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.InsertModelInPredefinedView"
+  ]
+}

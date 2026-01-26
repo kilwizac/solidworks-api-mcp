@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetTypeName2",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetNameForSelection",
+      "IFeature.Name"
+    ],
+    "keywords": [
+      "gettypename2",
+      "ifeature",
+      "feature",
+      "type",
+      "name2",
+      "string",
+      "create",
+      "ellipse",
+      "vba",
+      "add",
+      "spring",
+      "motion",
+      "study",
+      "vb",
+      "net",
+      "instant3d"
+    ]
+  },
+  "title": "IFeature.GetTypeName2",
+  "description": "Gets the type of feature.",
+  "signature": "System.String GetTypeName2()",
+  "parameters": [],
+  "returns": "String identifying the type of feature (see Remarks )",
+  "remarks": "Use\nIFeature::GetDefinition\nto get a feature data object (i.e., an object whose interface name ends in FeatureData or FeatureData2, such as ISymmetricMateFeatureData, IExtrudeFeatureData2, ILoftFeatureData, ISimpleFilletFeatureData2, IChamferFeatureData2, etc.); otherwise, use\nIFeature::GetSpecificFeature2\nto get an object for a feature.\nType of feature\nString returned by this method\nInterface\nAssembly\nAsmExploder\nNone (Assembly exploded view in ConfigurationManager)\nCompExplodeStep\nNone (Explode step for assembly exploded view)\nExplodeLineProfileFeature\nISketch\nInContextFeatHolder\nIFeature\nMagneticGroundPlane\nIFeature\nMateCamTangent\nICamFollowerMateFeatureData\nMateCoincident\nICoincidentMateFeatureData\nMateConcentric\nIConcentricMateFeatureData\nMateDistanceDim\nIDistanceMateFeatureData\nMateGearDim\nIGearMateFeatureData\nMateHinge\nIHingeMateFeatureData\nMateInPlace\nIMate2\nMateLimitDistanceDim\nIDistanceMateFeatureData\nMateLinearCoupler\nILinearCouplerMateFeatureData\nMateLock\nILockMateFeatureData\nMateParallel\nIParallelMateFeatureData\nMatePerpendicular\nIPerpendicularMateFeatureData\nMatePlanarAngleDim\nIAngleMateFeatureData\nMateProfileCenter\nIProfileCenterMateFeatureData\nMateRackPinionDim\nIRackPinionMateFeatureData\nMateScrew\nIScrewMateFeatureData\nMateSlot\nISlotMateFeatureData\nMateSymmetric\nISymmetricMateFeatureData\nMateTangent\nITangentMateFeatureData\nMateUniversalJoint\nIUniversalJointMateFeatureData\nMateWidth\nIWidthMateFeatureData\nPosGroupFolder\nIMateReference\nReference\nIComponent2\nReferencePattern\nIComponent2\nSmartComponentFeature\nISmartComponentFeatureData\nBody\nAdvHoleWzd\nIAdvancedHoleFeatureData\nAPattern\nIFillPatternFeatureData\nBaseBody\nIExtrudeFeatureData2\nBending\nNone (\nFlex\nfeature)\nBlend\nILoftFeatureData\nBlendCut\nILoftFeatureData\nBodyExplodeStep\nNone (Explode step in multi-body part exploded view)\nBoss\nIExtrudeFeatureData2\nBossThin\nIExtrudeFeatureData2\nChamfer\nIChamferFeatureData2\nCirPattern\nICircularPatternFeatureData\nCombineBodies\nICombineBodiesFeatureData\nCosmeticThread\nICosmeticThreadFeatureData\nCosmeticWeldBead\nICosmeticWeldBeadFeatureData\nCreateAssemFeat\nISaveBodyFeatureData\nCurvePattern\nICurveDrivenPatternFeatureData\nCut\nIExtrudeFeatureData2\nCutThin\nIExtrudeFeatureData2\nDeform\nNone (\nDeform\nfeature)\nDeleteBody\nIDeleteBodyFeatureData\nDelFace\nIDeleteFaceFeatureData\nDerivedCirPattern\nIDerivedPatternFeatureData\nDerivedHolePattern\nIDerivedPatternFeatureData\nDerivedLPattern\nIDerivedPatternFeatureData\nDimPattern\nIDimPatternFeatureData\nDome\nIDomeFeatureData2\nDraft\nIDraftFeatureData2\nEdgeMerge\nIHealEdgesFeatureData\nEmboss\nIWrapSketchFeatureData\nExtrusion\nIExtrudeFeatureData2\nFillet\nISimpleFilletFeatureData2\nHelix\nIHelixFeatureData\nHoleSeries\nIHoleSeriesFeatureData2\nHoleWzd\nIWizardHoleFeatureData2\nImported\nNone (\nImported\nfeature)\nLocalChainPattern\nIChainPatternFeatureData\nLocalCirPattern\nILocalCircularPatternFeatureData\nLocalCurvePattern\nILocalCurvePatternFeatureData\nLocalLPattern\nILocalLinearPatternFeatureData\nLocalSketchPattern\nILocalSketchPatternFeatureData\nLPattern\nILinearPatternFeatureData\nMacroFeature\nIMacroFeatureData\nMirrorCompFeat\nIMirrorComponentFeatureData\nMirrorPattern\nIMirrorPatternFeatureData\nMirrorSolid\nIMirrorSolidFeatureData\nMirrorStock\nIMirrorPartFeatureData\nMoveCopyBody\nIMoveCopyBodyFeatureData\nNetBlend\nIBoundaryBossFeatureData\nPrtExploder\nNone (Multi-body part exploded view in ConfigurationManager)\nPunch\nIIndentFeatureData\nReplaceFace\nIReplaceFaceFeatureData\nRevCut\nIRevolveFeatureData2\nRevolution\nIRevolveFeatureData2\nRevolutionThin\nIRevolveFeatureData2\nRib\nIRibFeatureData2\nRip\nIRipFeatureData\nRound fillet corner\nISimpleFilletFeatureData2\nSculpt\nIIntersectFeatureData\nShape\nObsolete\nShell\nIShellFeatureData\nSketchHole\nISimpleHoleFeatureData2\nSketchPattern\nISketchPatternFeatureData\nSplit\nISplitBodyFeatureData\nfor a feature that was created by splitting a part into multiple parts using either\nIFeatureManager::PostSplitBody\nor the\nSplit\nfeature in the user interface\nSplitBody\nNone; returned for a body created by splitting a part and saving the body to a part; you cannot access the data of a split body saved to a part\nStock\nIDerivedPartFeatureData\nSweep\nISweepFeatureData\nSweepCut\nISweepFeatureData\nSweepThread\nIThreadFeatureData\nTablePattern\nITablePatternFeatureData\nThicken\nIThickenFeatureData\nThickenCut\nIThickenFeatureData\nVarFillet\nIVariableFilletFeatureData2\nDrawing\nBendTableAchor\nITableAnchor\nBomFeat\nIBomFeature\nBomTemplate\nITableAnchor\nDetailCircle\nIDetailCircle\nDrBreakoutSectionLine\nIDrSection\nor\nIBrokenOutSectionFeatureData\nDrSectionLine\nIDrSection\nGeneralTableAnchor\nITableAnchor\nHoleTableAnchor\nITableAnchor\nLiveSection\nIRefPlane\nPunchTableAnchor\nITableAnchor\nRevisionTableAnchor\nITableAnchor\nWeldmentTableAnchor\nITableAnchor\nWeldTableAnchor\nITableAnchor\nFolder\nBlockFolder\nObsolete\nCommentsFolder\nICommentFolder\nCosmeticWeldSubFolder\nICosmeticWeldBeadFolder\nCutListFolder\nIBodyFolder\nFeatSolidBodyFolder\nIBodyFolder\nFeatSurfaceBodyFolder\nIBodyFolder\nFtrFolder\nIFeatureFolder\nInsertedFeatureFolder\nIFeatureFolder\nMateReferenceGroupFolder\nIFeatureFolder\nProfileFtrFolder\nIFeatureFolder\nRefAxisFtrFolder\nIFeatureFolder\nRefPlaneFtrFolder\nIFeatureFolder\nSketchSliceFolder\nIFeatureFolder\nSolidBodyFolder\nIBodyFolder\nSubAtomFolder\nIBodyFolder\nif a body\nSubWeldFolder\nIBodyFolder\nSurfaceBodyFolder\nIBodyFolder\nTemplateFlatPattern\nIFlatPatternFolder\nImported File\nMBimport\nIImport3DInterconnectData\nMiscellaneous\nAttribute\nIAttribute\nBlockDef\nObsolete\nCurveInFile\nIFreePointCurveFeatureData\nGridFeature\nNone (\nGrid\nfeature)\nLibraryFeature\nILibraryFeatureData\nScale\nIScaleFeatureData\nSensor\nISensor\nViewBodyFeature\nObsolete\nMold\nCavity\nICavityFeatureData\nMoldCoreCavitySolids\nIToolingSplitFeatureData\nMoldPartingGeom\nIPartingSurfaceFeatureData\nMoldPartLine\nIPartingLineFeatureData\nMoldShutOffSrf\nIShutOffSurfaceFeatureData\nSideCore\nICoreFeatureData\nXformStock\nDerivedPartFeatureData\nMotion and Simulation\nAEM3DContact\nISimulation3DContactFeatureData\nAEMGravity\nISimulationGravityFeatureData\nAEMLinearDamper\nISimulationDamperFeatureData\nAEMLinearMotor\nISimulationMotorFeatureData\nAEMLinearSpring\nISimulationLinearSpringFeatureData\nAEMRotationalMotor\nISimulationMotorFeatureData\nAEMTorque\nISimulationForceFeatureData\nAEMTorsionalDamper\nISimulationDamperFeatureData\nAEMTorsionalSpring\nNone (\nTorsionalSpring\nfeature)\nSimPlotFeature\nIMotionPlotFeatureData\nSimPlotXAxisFeature\nIMotionPlotAxisFeatureData\nSimPlotYAxisFeature\nIMotionPlotAxisFeatureData\nSimResultFolder\nIMotionStudyResults\nReference Geometry\nBoundingBox\nIBoundingBoxFeatureData\nCenterOfMass\nICenterOfMass\nCoordSys\nICoordinateSystemFeatureData\nGroundPlane\nIGroundPlaneFeatureData\nRefAxis\nIRefAxis\nor\nIRefAxisFeatureData\nRefPlane\nIRefPlane\nor\nIRefPlaneFeatureData\nScenes, Lights, and Cameras\nAmbientLight\nILight\nCameraFeature\nICamera\nDirectionLight\nILight\nPointLight\nILight\nSpotLight\nILight\nSheet Metal\nSMBaseFlange\nIBaseFlangeFeatureData\nBreakCorner\nIBreakCornerFeatureData\nCornerTrim\nIBreakCornerFeatureData\nCrossBreak\nICrossBreakFeatureData\nEdgeFlange\nIEdgeFlangeFeatureData\nFlatPattern\nIFlatPatternFeatureData\nFlattenBends\nIBendsFeatureData\nFold\nIFoldsFeatureData\nFormToolInstance\nNone (\nFormTool\nfeature)\nHem\nIHemFeatureData\nJog\nIJogFeatureData\nLoftedBend\nILoftedBendsFeatureData\nNormalCut\nISMNormalCutFeatureData2\nOneBend\nIOneBendFeatureData\nProcessBends\nIBendsFeatureData\nSheetMetal\nISheetMetalFeatureData\nSketchBend\nIOneBendFeatureData\nSM3dBend\nISketchedBendFeatureData\nSMGusset\nISMGussetFeatureData\nSMMiteredFlange\nIMiterFlangeFeatureData\nSolidToSheetMetal\nIConvertSolidFeatureData\nTemplateSheetMetal\nISheetMetalFolder\nToroidalBend\nIOneBendFeatureData\nUnFold\nIFoldsFeatureData\nSketch\n3DProfileFeature\nISketch\n3DSplineCurve\nIReferenceCurve\nor\nIReferencePointCurveFeatureData\nCompositeCurve\nIReferenceCurve\nor\nICompositeCurveFeatureData\nImportedCurve\nIReferenceCurve\nor\nIImportedCurveFeatureData\nPLine\nISplitLineFeatureData\nProfileFeature\nISketch\nRefCurve\nIReferenceCurve\nor\nIProjectionCurveFeatureData\nRefPoint\nIRefPoint\nor\nIRefPointFeatureData\nSketchBlockDef\nISketchBlockDefinition\nSketchBlockInst\nISketchBlockInstance\nSketchBitmap\nISketchPicture\nSurface\nBlendRefSurface\nNone (\nSurface-Loft\nfeature)\nExtendRefSurface\nISurfaceExtendFeatureData\nExtruRefSurface\nISurfExtrudeFeatureData\nFillRefSurface\nIFillSurfaceFeatureData\nFlattenSurface\nISurfaceFlattenFeatureData\nMidRefSurface\nIMidSurface3\nOffsetRefSuface\nISurfaceOffsetFeatureData\nPlanarSurface\nISurfacePlanarFeatureData\nRadiateRefSurface\nISurfaceRadiateFeatureData\nRefSurface\nNone (\nSurface-Imported\nfeature)\nRevolvRefSurf\nISurfRevolveFeatureData\nRuledSrfFromEdge\nIRuledSurfaceFeatureData\nSewRefSurface\nISurfaceKnitFeatureData\nSurfCut\nISurfaceCutFeatureData\nSweepRefSurface\nISweepFeatureData\nTrimRefSurface\nISurfaceTrimFeatureData\nUnTrimRefSurf\nNone (\nSurface-Untrim\nfeature)\nWeldment and Structure System\nEndCap\nIEndCapFeatureData\nStrctSysBtwPtsMbrFeat\nISecondaryMemberBetweenPointsFeatureData\nStrctSysCnrFeat\nICornerMember\nStrctSysCnrGrpFeat\nICornerTreatmentGroupFolder\nStrctSysCnrMgmtFeat\nICornerManagementFolder\nStrctSysFeat\nIStructureSystemFolder\nStrctSysGrpFeat\nIProfileGroupFolder\nStrctSysPathSegMbrFeat\nIPrimaryMemberPathSegmentFeatureData\nStrctSysPtToMem\nISecondaryMemberUpToMembersFeatureData\nStrctSysRefPlnMbrFeat\nIPrimaryMemberRefPlaneFeatureData\nStrctSysSkPtLenMbrFeat\nIPrimaryMemberPointLengthFeatureData\nStrctSysSupPlnMbrFeat\nISecondaryMemberSupportPlaneFeatureData\nStrctSysSurfPlnMbrFeat\nIPrimaryMemberFacePlaneIntersectionFeatureData\nAdvStructMember\nIStructureSystemMemberFeatureData\nGusset\nIGussetFeatureData\nWeldBeadFeat\nIWeldmentBeadFeatureData\nWeldCornerFeat\nIWeldmentTrimExtendFeatureData\nWeldMemberFeat\nIStructuralMemberFeatureData\nWeldmentFeature\nIStructuralMemberFeatureData\nWeldmentTableFeat\nIWeldmentCutListFeature\nNOTE:\nThis method returns strings for some features shown in the FeatureManager design tree (e.g.,\nMateGroup\n,\nWeldment\n, etc.) that set up the design functionality environment and, thus, do not have interfaces.",
+  "examples": [
+    {
+      "title": "Create Ellipse (VBA)",
+      "href": "Create_Ellipse_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Spring to Motion Study (C#)",
+      "href": "Add_Spring_to_Motion_Study_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Spring to Motion Study (VB.NET)",
+      "href": "Add_Spring_to_Motion_Study_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Spring to Motion Study (VBA)",
+      "href": "Add_Spring_to_Motion_Study_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Type of Instant3D Feature (C#)",
+      "href": "Get_Type_of_Instant3D_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Type of Instant3D Feature (VB.NET)",
+      "href": "Get_Type_of_Instant3D_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Type of Instant3D Feature (VBA)",
+      "href": "Get_Type_of_Instant3D_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetNameForSelection",
+    "IFeature.Name"
+  ]
+}

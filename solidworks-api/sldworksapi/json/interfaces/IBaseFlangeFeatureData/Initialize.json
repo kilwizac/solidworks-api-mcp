@@ -1,0 +1,170 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBaseFlangeFeatureData",
+    "member": "Initialize",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "UseMaterialSheetMetalParameters",
+        "type": "System.Boolean",
+        "description": "True to use the sheet metal properties of the applied material, false to not"
+      },
+      {
+        "name": "OverrideDefaultBendAllowance",
+        "type": "System.Boolean",
+        "description": "True to override the default bend allowance, false to not"
+      },
+      {
+        "name": "CustomBendAllowance",
+        "type": "System.Object",
+        "description": "ICustomBendAllowance ; valid only if OverrideDefaultBendAllowance is true"
+      },
+      {
+        "name": "OverrideDefaultBendRelief",
+        "type": "System.Boolean",
+        "description": "True to override the default bend relief, false to not"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Relief type as defined in swSheetMetalReliefTypes_e ; valid only if OverrideDefaultBendRelief is true"
+      },
+      {
+        "name": "UseReliefRatio",
+        "type": "System.Boolean",
+        "description": "True to use ReliefRatio, false to use ReliefWidth and ReliefDepth; valid only if OverrideDefaultBendRelief is true"
+      },
+      {
+        "name": "ReliefRatio",
+        "type": "System.Double",
+        "description": "Relief ratio; valid only if UseReliefRatio is true"
+      },
+      {
+        "name": "ReliefWidth",
+        "type": "System.Double",
+        "description": "Relief width (numerator of relief ratio); valid only if UseReliefRatio is false"
+      },
+      {
+        "name": "ReliefDepth",
+        "type": "System.Double",
+        "description": "Relief depth (denominator of relief ratio); valid only if UseReliefRatio is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBaseFlangeFeatureData.GetCustomBendAllowance",
+      "IBaseFlangeFeatureData.ReliefDepth",
+      "IBaseFlangeFeatureData.ReliefRatio",
+      "IBaseFlangeFeatureData.ReliefType",
+      "IBaseFlangeFeatureData.ReliefWidth",
+      "IBaseFlangeFeatureData.UseDefaultBendAllowance",
+      "IBaseFlangeFeatureData.UseDefaultBendRelief",
+      "IBaseFlangeFeatureData.UseMaterialSheetMetalParameters",
+      "IBaseFlangeFeatureData.UseReliefRatio"
+    ],
+    "keywords": [
+      "initialize",
+      "ibaseflangefeaturedata",
+      "base",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "material",
+      "sheet",
+      "metal",
+      "parameters",
+      "boolean",
+      "override",
+      "default",
+      "bend",
+      "allowance",
+      "custom",
+      "object",
+      "relief",
+      "type",
+      "int32",
+      "ratio",
+      "double",
+      "width",
+      "depth",
+      "void"
+    ]
+  },
+  "title": "IBaseFlangeFeatureData.Initialize",
+  "description": "Initializes a newly created sheet metal base flange feature with the specified data.",
+  "signature": "void Initialize( \n   System.Boolean\nUseMaterialSheetMetalParameters\n,\n   System.Boolean\nOverrideDefaultBendAllowance\n,\n   System.Object\nCustomBendAllowance\n,\n   System.Boolean\nOverrideDefaultBendRelief\n,\n   System.Int32\nReliefType\n,\n   System.Boolean\nUseReliefRatio\n,\n   System.Double\nReliefRatio\n,\n   System.Double\nReliefWidth\n,\n   System.Double\nReliefDepth\n)",
+  "parameters": [
+    {
+      "name": "UseMaterialSheetMetalParameters",
+      "type": "System.Boolean",
+      "description": "True to use the sheet metal properties of the applied material, false to not"
+    },
+    {
+      "name": "OverrideDefaultBendAllowance",
+      "type": "System.Boolean",
+      "description": "True to override the default bend allowance, false to not"
+    },
+    {
+      "name": "CustomBendAllowance",
+      "type": "System.Object",
+      "description": "ICustomBendAllowance ; valid only if OverrideDefaultBendAllowance is true"
+    },
+    {
+      "name": "OverrideDefaultBendRelief",
+      "type": "System.Boolean",
+      "description": "True to override the default bend relief, false to not"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Relief type as defined in swSheetMetalReliefTypes_e ; valid only if OverrideDefaultBendRelief is true"
+    },
+    {
+      "name": "UseReliefRatio",
+      "type": "System.Boolean",
+      "description": "True to use ReliefRatio, false to use ReliefWidth and ReliefDepth; valid only if OverrideDefaultBendRelief is true"
+    },
+    {
+      "name": "ReliefRatio",
+      "type": "System.Double",
+      "description": "Relief ratio; valid only if UseReliefRatio is true"
+    },
+    {
+      "name": "ReliefWidth",
+      "type": "System.Double",
+      "description": "Relief width (numerator of relief ratio); valid only if UseReliefRatio is false"
+    },
+    {
+      "name": "ReliefDepth",
+      "type": "System.Double",
+      "description": "Relief depth (denominator of relief ratio); valid only if UseReliefRatio is false"
+    }
+  ],
+  "returns": "",
+  "remarks": "After you call this method to initialize the base flange feature, you cannot change any of the properties associated with this method's parameters. After initialization you can get, but not set, the following using this interface:\nWhether to use default bend allowance\nWhether to use default bend relief\nWhether to use material sheet metal parameters\nWhether to use relief ratio\nCustom bend allowance\nRelief depth\nRelief ratio\nRelief type\nRelief width\nYou can, however, change any properties associated with the parent sheet metal after calling this method. For example:\nISheetMetalFeatureData::SetCustomBendAllowance\nISheetMetalFeatureData::SetOverrideDefaultParameter2\nISheetMetalFeatureData::AutoReliefType\nISheetMetalFeatureData::ReliefRatio\nISheetMetalFeatureData::UseMaterialSheetMetalParameters\nSee the Examples.",
+  "examples": [
+    {
+      "title": "IBaseFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBaseFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBaseFlangeFeatureData.GetCustomBendAllowance",
+    "IBaseFlangeFeatureData.ReliefDepth",
+    "IBaseFlangeFeatureData.ReliefRatio",
+    "IBaseFlangeFeatureData.ReliefType",
+    "IBaseFlangeFeatureData.ReliefWidth",
+    "IBaseFlangeFeatureData.UseDefaultBendAllowance",
+    "IBaseFlangeFeatureData.UseDefaultBendRelief",
+    "IBaseFlangeFeatureData.UseMaterialSheetMetalParameters",
+    "IBaseFlangeFeatureData.UseReliefRatio"
+  ]
+}

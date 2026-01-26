@@ -1,0 +1,117 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFrame",
+    "member": "AddMenuItem2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Menu",
+        "type": "System.String",
+        "description": "Name of the menu to which to add this menu item"
+      },
+      {
+        "name": "Item",
+        "type": "System.String",
+        "description": "Name of menu item (including accelerator key \"&\"); if Item is null or empty, then this method adds a separator"
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position at which to add the new menu item; the first item is at position 0; if Position is 1, the new menu item is added to the end of the list"
+      },
+      {
+        "name": "CallbackFcnAndModule",
+        "type": "System.String",
+        "description": "Function called when user clicks the menu item (see Remarks )"
+      },
+      {
+        "name": "BitmapFileName",
+        "type": "System.String",
+        "description": "Path and filename of the bitmap for the menu item"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IFrame.AddMenu",
+      "IFrame.AddMenuPopupIcon",
+      "IFrame.GetSubMenuCount",
+      "IFrame.GetSubMenus",
+      "IFrame.IGetSubMenus",
+      "IFrame.RemoveMenu",
+      "IFrame.RemoveMenuPopupIcon",
+      "IFrame.RenameMenu",
+      "ISldWorks.GetLocalizedMenuName"
+    ],
+    "keywords": [
+      "menus",
+      "frames",
+      "addmenuitem2",
+      "iframe",
+      "frame",
+      "add",
+      "menu",
+      "item2",
+      "string",
+      "item",
+      "position",
+      "int32",
+      "callback",
+      "fcn",
+      "module",
+      "bitmap",
+      "file",
+      "name",
+      "boolean"
+    ]
+  },
+  "title": "IFrame.AddMenuItem2",
+  "description": "Adds a menu item and bitmap or a separator to an existing menu.",
+  "signature": "System.Boolean AddMenuItem2( \n   System.String\nMenu\n,\n   System.String\nItem\n,\n   System.Int32\nPosition\n,\n   System.String\nCallbackFcnAndModule\n,\n   System.String\nBitmapFileName\n)",
+  "parameters": [
+    {
+      "name": "Menu",
+      "type": "System.String",
+      "description": "Name of the menu to which to add this menu item"
+    },
+    {
+      "name": "Item",
+      "type": "System.String",
+      "description": "Name of menu item (including accelerator key \"&\"); if Item is null or empty, then this method adds a separator"
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position at which to add the new menu item; the first item is at position 0; if Position is 1, the new menu item is added to the end of the list"
+    },
+    {
+      "name": "CallbackFcnAndModule",
+      "type": "System.String",
+      "description": "Function called when user clicks the menu item (see Remarks )"
+    },
+    {
+      "name": "BitmapFileName",
+      "type": "System.String",
+      "description": "Path and filename of the bitmap for the menu item"
+    }
+  ],
+  "returns": "True if menu item is added, false if not",
+  "remarks": "This method only works for the C++ application implemented as a DLL, not as an EXE. Any function exposed as a callback from a menu item must be declared as an EXPORT or included in your .def file.\nYou can add a new menu item to any one of the four frames (main frame, part frame, assembly frame, or drawing frame). To do this, you must get the\nIFrame\nobject when the desired frame is active.\nFor example, if you want your menu to be available when a part document is active, then call\nISldWorks::Frame\nwhen a part is first loaded or created, and use that IFrame object to call this method. Once you add your menu to the part frame, you do not need to do it again during the current SOLIDWORKS Design session.\nThe CallbackFcnAndModule argument specifies which function to call when this menu item is selected by the user. The syntax is as follows:\n\"dllname@function@updatefunction,hintstring\"\nwhere:\ndllname\nName of your library as specified in the project .def file. The actual DLL filename and the definition in the .def file must be the same.\nfunction\nName of the function that gets called when the user clicks the menu item. This function must also be declared as an EXPORT in your .def file.\nSee\nAdd-in Callback and Enable Methods\nto learn how to specify your function.\nupdatefunction\nOptional argument that controls the state of the button. If specified, then SOLIDWORKS Design calls this function before the button is displayed. Define your updatefunction to return an integer and declare it as an EXPORT or included in your .def file. The display of the button is controlled by the return value of the function as follows:\nreturn 0 - Menu item is unchecked and disabled.\nreturn 1 - Menu item is unchecked and enabled. This is the default menu state if no update function is specified.\nreturn 2 - Menu item is checked and disabled.\nreturn 3 - Menu item is checked and enabled.\nSee\nAdd-in Callback and Enable Methods\nto learn how to specify your updatefunction.\nhintstring\nOptional argument that contains a text hint displayed in the SOLIDWORKS Design status bar when the user moves the mouse over this menu item. If hintstring is specified, then it must be preceded by a comma. For example:\n\"Userdll@AddBox@checkForUserSelects,Add a box\"",
+  "examples": [],
+  "related": [
+    "IFrame.AddMenu",
+    "IFrame.AddMenuPopupIcon",
+    "IFrame.GetSubMenuCount",
+    "IFrame.GetSubMenus",
+    "IFrame.IGetSubMenus",
+    "IFrame.RemoveMenu",
+    "IFrame.RemoveMenuPopupIcon",
+    "IFrame.RenameMenu",
+    "ISldWorks.GetLocalizedMenuName"
+  ]
+}

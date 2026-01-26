@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IImportDxfDwgData",
+    "member": "SetMergePoints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to merge near-identical points, false to not"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance to determine whether two points should be merged"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io"
+    ],
+    "related": [
+      "IImportDxfDwgData.GetMergeDistance",
+      "IImportDxfDwgData.GetMergePoints"
+    ],
+    "keywords": [
+      "setmergepoints",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "merge",
+      "points",
+      "sheet",
+      "string",
+      "boolean",
+      "distance",
+      "double",
+      "file",
+      "part",
+      "sketch",
+      "vba"
+    ]
+  },
+  "title": "IImportDxfDwgData.SetMergePoints",
+  "description": "Sets whether near-identical points within the specified distance are merged in the part sketch after entities are imported.",
+  "signature": "System.Boolean SetMergePoints( \n   System.String\nSheet\n,\n   System.Boolean\nMerge\n,\n   System.Double\nDistance\n)",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to merge near-identical points, false to not"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance to determine whether two points should be merged"
+    }
+  ],
+  "returns": "True if near-identical points within the specified distance are merged, false if not",
+  "remarks": "This property only supports importing to a part sketch; it does not support importing to a drawing.\nBy default, points within 0.001mm are merged.",
+  "examples": [
+    {
+      "title": "Import DXF file into Part Sketch (VBA)",
+      "href": "Import_DXF_File_into_Part_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IImportDxfDwgData.GetMergeDistance",
+    "IImportDxfDwgData.GetMergePoints"
+  ]
+}

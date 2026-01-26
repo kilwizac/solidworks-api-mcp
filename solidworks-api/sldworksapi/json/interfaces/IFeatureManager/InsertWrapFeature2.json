@@ -1,0 +1,125 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertWrapFeature2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of wrap as defined in swWrapSketchType_e"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness; 0.00001 (thinnest) - 10000 (thickest)"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the wrap, false to not"
+      },
+      {
+        "name": "Method",
+        "type": "System.Int32",
+        "description": "Type of wrap method as defined in swWrapMethods_e"
+      },
+      {
+        "name": "MeshFactor",
+        "type": "System.Int32",
+        "description": "Accuracy of flattened triangle mesh; 1 (lowest) - 10 (highest)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWrapSketchFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "wrap",
+      "wrapsketchfeaturedata",
+      "iwrapsketchfeaturedata",
+      "insertwrapfeature2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature2",
+      "type",
+      "int32",
+      "thickness",
+      "double",
+      "reverse",
+      "dir",
+      "boolean",
+      "mesh",
+      "factor",
+      "create",
+      "multiple",
+      "faces",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertWrapFeature2",
+  "description": "Inserts a wrap feature.",
+  "signature": "Feature InsertWrapFeature2( \n   System.Int32\nType\n,\n   System.Double\nThickness\n,\n   System.Boolean\nReverseDir\n,\n   System.Int32\nMethod\n,\n   System.Int32\nMeshFactor\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of wrap as defined in swWrapSketchType_e"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness; 0.00001 (thinnest) - 10000 (thickest)"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the wrap, false to not"
+    },
+    {
+      "name": "Method",
+      "type": "System.Int32",
+      "description": "Type of wrap method as defined in swWrapMethods_e"
+    },
+    {
+      "name": "MeshFactor",
+      "type": "System.Int32",
+      "description": "Accuracy of flattened triangle mesh; 1 (lowest) - 10 (highest)"
+    }
+  ],
+  "returns": "Wrap feature",
+  "remarks": "To select...\nUse\nIModelDocExtension::SelectByID2\nor\nIModelDocExtension::SelectByRay\nand specify a Mark of...\nOne or more faces on which to place the wrap feature\n1\nPull direction entity if Type is:\nswWrapSketchType_e.swWrapSketchType_Emboss\n- or -\nswWrapSketchType_e.swWrapSketchType_Engrave\nFor a line or linear edge, the pull direction is the direction of the selected entity. For a plane, the pull direction is normal to the plane. To wrap the sketch normal to the sketch plane, do not select a pull direction entity.\n2\n2D sketch containing no open contours; 3D sketches are not supported\n4\nNOTE:\nThe difference between this method and the now obsolete\nIFeatureManager::InsertWrapFeature\nis that IFeatureManager::InsertWrapFeature2 can create a wrap feature on one or more faces and IFeatureManager::InsertWrapFeature creates a wrap feature on one face only.",
+  "examples": [
+    {
+      "title": "Create Wrap Feature on Multiple Faces (C#)",
+      "href": "Create_Wrap_Feature_on_Multiple_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Wrap Feature on Multiple Faces (VB.NET)",
+      "href": "Create_Wrap_Feature_on_Multiple_Faces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Wrap Feature on Multiple Faces (VBA)",
+      "href": "Create_Wrap_Feature_on_Multiple_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWrapSketchFeatureData"
+  ]
+}

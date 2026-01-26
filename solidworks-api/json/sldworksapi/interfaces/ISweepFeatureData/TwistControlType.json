@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweepFeatureData",
+    "member": "TwistControlType",
+    "returns": "System.Int16",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.D1ReverseTwistDir",
+      "ISweepFeatureData.D2ReverseTwistDir",
+      "ISweepFeatureData.GetD2TwistAngle",
+      "ISweepFeatureData.GetTwistAngle",
+      "ISweepFeatureData.SetD2TwistAngle",
+      "ISweepFeatureData.SetTwistAngle"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "twist",
+      "twistcontroltype",
+      "sweep",
+      "feature",
+      "data",
+      "control",
+      "type",
+      "int16"
+    ],
+    "readonly": null
+  },
+  "title": "ISweepFeatureData.TwistControlType",
+  "description": "Gets or sets the type of twist control for this sweep feature.",
+  "signature": "System.Int16 TwistControlType {get; set;}",
+  "parameters": [],
+  "returns": "Twist control as defined in swTwistControlType_e (see Remarks )",
+  "remarks": "For user interface options...\nSet...\nProfile Orientation set to...\nAnd Profile Twist set to...\nISweepFeatureData::TwistControlType as defined in swTwistControlType_e to...\nAnd\nISweepFeatureData::PathAlignmentType\nas defined in\nswTangencyType_e\nto...\nFollow Path\nNone\nswTwistControlFollowPath\nswTangencyNone\nSpecify Twist Value\nswTwistControlConstantTwistAlongPath\nswTangencyNone\nSpecify Direction Vector\nswTwistControlFollowPath\nswTangencyDirectionVector\nFollow Path and First Guide Curve (option appears with at least one guide curve)\nswTwistControlFollowPathFirstGuideCurve\nswTangencyNone\nFollow Path and First and Second Guide Curves (option appears with at least two guide curves)\nswTwistControlFollowFirstSecondGuideCurves\nswTangencyNone\nTangent to Adjacent Faces\nswTwistControlFollowPath\nswTangencyAllFaces\nMinimum Twist (available only with a 3D path)\nswTwistControlFollowPath\nswMinimumTwist\nNatural\nswTwistControlFollowPath\nswTangencyNone\nKeep Normal Constant\nNone\nswTwistControlKeepNormalConstant\nswTangencyNone\nSpecify Twist Value\nswTwistControlConstantTwistAlongPath + swTwistControlKeepNormalConstant\nswTangencyNone\nIf you specify this property with swTwistControlType_e.swTwistControlConstantTwistAlongPath to specify profile twist values, you must set\nISweepFeatureData::AlignWithEndFaces\nto false.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.D1ReverseTwistDir",
+    "ISweepFeatureData.D2ReverseTwistDir",
+    "ISweepFeatureData.GetD2TwistAngle",
+    "ISweepFeatureData.GetTwistAngle",
+    "ISweepFeatureData.SetD2TwistAngle",
+    "ISweepFeatureData.SetTwistAngle"
+  ]
+}

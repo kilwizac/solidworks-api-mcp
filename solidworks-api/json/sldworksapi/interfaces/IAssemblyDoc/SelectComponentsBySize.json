@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "SelectComponentsBySize",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Percent",
+        "type": "System.Double",
+        "description": "0.0 <= Percent of assembly size <= 100.0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.SelectAll",
+      "IModelDocExtension.SelectByID2"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "select",
+      "size",
+      "selectcomponentsbysize",
+      "assembly",
+      "doc",
+      "components",
+      "percent",
+      "double",
+      "boolean",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAssemblyDoc.SelectComponentsBySize",
+  "description": "Selects assembly components by percent of assembly size.",
+  "signature": "System.Boolean SelectComponentsBySize( \n   System.Double\nPercent\n)",
+  "parameters": [
+    {
+      "name": "Percent",
+      "type": "System.Double",
+      "description": "0.0 <= Percent of assembly size <= 100.0"
+    }
+  ],
+  "returns": "True if Percent is valid, false if Percent > 100 or Percent < 0",
+  "remarks": "This method corresponds to\nTools > Component Selection > Select By Size\n.",
+  "examples": [
+    {
+      "title": "Select Assembly Components by Size (VBA)",
+      "href": "Select_Assembly_Components_by_Size_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Assembly Components by Size (VB.NET)",
+      "href": "Select_Assembly_Components_by_Size_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Assembly Components by Size (C#)",
+      "href": "Select_Assembly_Components_by_Size_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.SelectAll",
+    "IModelDocExtension.SelectByID2"
+  ]
+}

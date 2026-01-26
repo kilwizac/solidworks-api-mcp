@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchBlockInstance",
+    "member": "GetLeaderPoints",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchBlockInstance.IGetLeaderPoints",
+      "ISketchBlockInstance.SetLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "getleaderpoints",
+      "sketch",
+      "block",
+      "instance",
+      "leader",
+      "points",
+      "object"
+    ]
+  },
+  "title": "ISketchBlockInstance.GetLeaderPoints",
+  "description": "Gets the coordinate information for the leader on this block instance.",
+  "signature": "System.Object GetLeaderPoints()",
+  "parameters": [],
+  "returns": "Array containing leader point information (see Remarks )",
+  "remarks": "For the COM interface, you must specify an array size of 9. Depending on the number of points in the leader, this array might only be partially filled upon return from the API. For the OLE Automation interface, the returned SafeArray is sized appropriately for the number of points returned.\nYou must determine the number of points in the leader to use the data returned by this method. The number of points is a function of the number of segments in the leader. The leader line can have one or two segments depending on whether it is straight or bent. Use\nISketchBlockInstnace::GetLeaderStyle\nto determine the number of points in the leader.\nIf SketchBlockInstance::GetLeaderStyle returns...\nThen the number of points equals...\nswNO_LEADER\n0\nswSTRAIGHT\n2\nswBENT\n3\nThe format of the return array is:\nretval\n[0] = X-coordinate of first leader point\nretval\n[1] = Y-coordinate of first leader point\nretval\n[2] = Z-coordinate of first leader point\nretval\n[3] = X-coordinate of second leader point\nretval\n[4] = Y-coordinate of second leader point\nretval\n[5] = Z-coordinate of second leader point\nretval\n[6] = X-coordinate of third leader point\nretval\n[7] = Y-coordinate of third leader point\nretval\n[8] = Z-coordinate of third leader point",
+  "examples": [],
+  "related": [
+    "ISketchBlockInstance.IGetLeaderPoints",
+    "ISketchBlockInstance.SetLeader"
+  ]
+}

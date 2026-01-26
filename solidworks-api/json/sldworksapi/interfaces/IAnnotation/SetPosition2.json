@@ -1,0 +1,111 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "SetPosition2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of the origin of the annotation"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the origin of the annotation"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the origin of the annotation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetPosition",
+      "INote.LockPosition"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "position",
+      "setposition2",
+      "position2",
+      "double",
+      "boolean",
+      "insert",
+      "note",
+      "vba",
+      "vb",
+      "net",
+      "traverse",
+      "annotations"
+    ]
+  },
+  "title": "IAnnotation.SetPosition2",
+  "description": "Sets the position of this annotation.",
+  "signature": "System.Boolean SetPosition2( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of the origin of the annotation"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the origin of the annotation"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the origin of the annotation"
+    }
+  ],
+  "returns": "True if the position of the annotation is successfully set, false if not",
+  "remarks": "The following table lists the types of annotations that this method supports and the position of the x, y, z origin. In a drawing, the x, y, z origin is relative to the origin of the drawing sheet (the lower-left corner of the sheet).\nType of Annotation\nPosition of XYZ Origin\nDatum Feature Symbols\nPoint where leader hits symbol\nDatum Target Symbols\nCenter point of the circle that is attached to the leader\nDisplay dimensions\nPoint of leader attachment centered on a text box border / center point of bottom border of text box\nGeometric Tolerances\nUpper-left corner of the symbol\nNotes\nUpper-left corner of the text box\nRevision Clouds\nPosition of x,y,z determined by\nIRevisionCloud::Shape\nSurface Finish Symbols\nLower-left point of symbol\nTable Annotations\nPosition of x,y,z determined by\nITableAnnotation::AnchorType\nWeld Symbols\nLeft endpoint of the main horizontal line in the symbol\nIf you use this method on any other types of annotations, SOLIDWORKS takes no action and returns false.\nThe position of an annotation can be subject to certain restrictions. These restrictions apply to setting the position through the user interface and using this method. One example of a restriction is a surface-finish symbol that is inserted directly on a face (that is, no leaders). It can only be moved within the borders of that face. If it is inserted directly on an edge, it can only be moved along that edge or extensions of that edge. Datum feature symbols have similar restrictions. If this method attempts to set a position of an annotation that violates any restrictions, the annotation is placed as near as possible to the specified position.\nThe position of table annotations cannot be set if the table is anchored. Use\nITableAnnotation::Anchored\nto determine if the table is anchored.\nIf a dimension has\noffset text\n, and you want to move...\nThen...\nDimension text, dimension line, and extension lines\nTurn offset text off.\nUse this method to move the dimension text, dimension line, and extension lines.\nTurn offset text back on.\nDimension text only\nUse this method to move the dimension text. The dimension line and extension lines will not move.\nBecause radial and diametric dimensions are already attached to the end of a leader, this property is not available for these types of dimensions.",
+  "examples": [
+    {
+      "title": "Insert a Note (VBA)",
+      "href": "Insert_a_Note_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert a Note (VB.NET)",
+      "href": "Insert_a_Note_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert a Note (C#)",
+      "href": "Insert_a_Note_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (C#)",
+      "href": "Traverse_Annotations_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (VB.NET)",
+      "href": "Traverse_Annotations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (VBA)",
+      "href": "Traverse_Annotations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.GetPosition",
+    "INote.LockPosition"
+  ]
+}

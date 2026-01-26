@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ReorderFeature",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FeatureToMove",
+        "type": "System.String",
+        "description": "Name of feature to move"
+      },
+      {
+        "name": "TargetFeature",
+        "type": "System.String",
+        "description": "Name of feature before or after which to move FeatureToMove; valid only if MoveLocation is swMoveLocation_e .swMoveAfter - or - Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder"
+      },
+      {
+        "name": "MoveLocation",
+        "type": "System.Int32",
+        "description": "Move type as defined by swMoveLocation_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.ReorderComponents",
+      "IPartDoc.ReorderFeature"
+    ],
+    "keywords": [
+      "reorderfeature",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "reorder",
+      "feature",
+      "move",
+      "string",
+      "target",
+      "location",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.ReorderFeature",
+  "description": "Obsolete. Superseded by IModelDocExtension::ReorderFeature2.",
+  "signature": "System.Boolean ReorderFeature( \n   System.String\nFeatureToMove\n,\n   System.String\nTargetFeature\n,\n   System.Int32\nMoveLocation\n)",
+  "parameters": [
+    {
+      "name": "FeatureToMove",
+      "type": "System.String",
+      "description": "Name of feature to move"
+    },
+    {
+      "name": "TargetFeature",
+      "type": "System.String",
+      "description": "Name of feature before or after which to move FeatureToMove; valid only if MoveLocation is swMoveLocation_e .swMoveAfter - or - Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder"
+    },
+    {
+      "name": "MoveLocation",
+      "type": "System.Int32",
+      "description": "Move type as defined by swMoveLocation_e"
+    }
+  ],
+  "returns": "True if feature moved successfully, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.ReorderComponents",
+    "IPartDoc.ReorderFeature"
+  ]
+}

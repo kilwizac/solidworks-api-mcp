@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAnnotation",
+    "member": "Visible",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "hide",
+      "show",
+      "visible",
+      "int32",
+      "patterned",
+      "cosmetic",
+      "thread",
+      "annotations",
+      "data",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IAnnotation.Visible",
+  "description": "Gets or sets the visibility state of this annotation.",
+  "signature": "System.Int32 Visible {get; set;}",
+  "parameters": [],
+  "returns": "Visibility state as defined in swAnnotationVisibilityState_e",
+  "remarks": "There are several reasons why an annotation might or might not be visible on the screen.\nThis property determines whether an annotation has been individually displayed or hidden if you selected and specifically hid the annotation or if you selected and specifically hid the dimensions of a feature. This property cannot determine whether an annotation is hidden if it is on a layer that is hidden (all annotations of this type are hidden) or if the feature that owns it is suppressed. Therefore, even though this method indicates that an annotation is visible, it might not necessarily be visible on the screen.\nIf an annotation's visibility is set to swAnnotationHalfHidden, then that annotation is in a half-hidden state, which is not a permanent state. For example, during a\nHide/Show Annotations\noperation in a drawing, a half-hidden annotation is displayed in gray if the interactive user selects to show all annotations. Any annotation set to swAnnotationHalfHidden is hidden when the interactive user finishes using\nHide/Show Annotations\n.\nWhen you use this property to change the visibility of an annotation, you also cause changes to the visible model. To see those changes, redraw the graphics window using\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [
+    {
+      "title": "Get Patterned Cosmetic Thread Annotations Data (C#)",
+      "href": "Get_Patterned_Cosmetic_Thread_Annotations_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Patterned Cosmetic Thread Annotations Data (VB.NET)",
+      "href": "Get_Patterned_Cosmetic_Thread_Annotations_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Patterned Cosmetic Thread Annotations Data (VBA)",
+      "href": "Get_Patterned_Cosmetic_Thread_Annotations_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,548 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>ISecondaryMemberBetweenPointsFeatureData Interface</title>
+    <meta name="Title" content="ISecondaryMemberBetweenPointsFeatureData Interface" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData" />
+    <meta name="Description" content="Allows access to a secondary structure system member that is created between the end points on primary structure system member pairs." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData" />
+    <meta name="Microsoft.Help.Keywords" content="SecondaryMemberBetweenPointsFeatureData. See ISecondaryMemberBetweenPointsFeatureData" />
+    <meta name="Microsoft.Help.Keywords" content="ISecondaryMemberBetweenPointsFeatureData Interface" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                ISecondaryMemberBetweenPointsFeatureData Interface
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <a class="i-page-link" href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData_members">Members</a>&#160; <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> : ISecondaryMemberBetweenPointsFeatureData Interface</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Allows access to a secondary structure system member that is created between the end points on primary structure system member pairs.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Public Interface ISecondaryMemberBetweenPointsFeatureData 
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData">ISecondaryMemberBetweenPointsFeatureData</a>
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+public interface ISecondaryMemberBetweenPointsFeatureData 
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+public interface class ISecondaryMemberBetweenPointsFeatureData 
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>See the&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IStructureSystemFolder">IStructureSystemFolder</a> Remarks.</p>
+
+            <p>For more information, see the <strong>SOLIDWORKS Design user-interface help &gt; Weldments and Structure System &gt; Structure System &gt; Secondary Member PropertyManager</strong> topic.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>'This example demonstrates how to add these secondary structure system members to a primary structure system:</p>
+
+            <p>'&#160;&#160; - Between points</p>
+
+            <p>'&#160;&#160; - On&#160;plane</p>
+
+            <p>'&#160;&#160; - Up to members</p>
+
+            <p>'==========================================================================================<br />
+            'Preconditions:<br />
+            '1. Ensure the specified part template exists.<br />
+            '2. Open an Immediate window.<br />
+            '3. Press F5.<br />
+            '<br />
+            'Postconditions:<br />
+            ' 1. Creates <strong>Sketch1</strong> containing two sketch segments.<br />
+            ' 2. Configures the start/end extensions and the member profile.<br />
+            ' 3. Selects the two sketch segments.<br />
+            ' 4. Creates primary <strong>Structure System1</strong> with two primary path segment members (<strong>Member1</strong> and <strong>Member2</strong>).<br />
+            ' 5. Inspect the structure system in the graphics area.<br />
+            ' 6. Press F5 to add a secondary support plane member.<br />
+            '&#160;&#160;&#160;&#160; Creates secondary <strong>Structure System2</strong> (<strong>Member3</strong>).<br />
+            ' 7. Press F5 to edit the support plane member.<br />
+            ' 8. Press F5 to add a secondary between points member.<br />
+            '&#160;&#160;&#160;&#160; Creates secondary <strong>Structure System3</strong> (<strong>Member4</strong>).<br />
+            ' 9. Press F5 to edit the between points member.<br />
+            '10. Press F5 to add a secondary structure system up to member.<br />
+            '11. When the macro stops, multi-select a Member1 vertex<br />
+            '&#160;&#160;&#160;&#160;&#160; in the graphics area and Member2 in the FeatureManager Design tree.<br />
+            '12. Press F5 to create secondary Structure System4 (Member5).<br />
+            '13. Inspect the Immediate window.<br />
+            '========================================================================</p>
+
+            <p>Dim swApp As SldWorks.SldWorks<br />
+            Dim modDoc As SldWorks.ModelDoc2<br />
+            Dim swFeatMgr As SldWorks.FeatureManager<br />
+            Dim swSelMgr As SldWorks.SelectionMgr<br />
+            Dim modDocExt As SldWorks.ModelDocExtension<br />
+            Dim structMemDef As SldWorks.StructureSystemMemberFeatureData<br />
+            Dim profDef As SldWorks.StructureSystemMemberProfile<br />
+            Dim PrimDef As SldWorks.PrimaryStructuralMemberFeatureData<br />
+            Dim memPathSegDef As PrimaryMemberPathSegmentFeatureData<br />
+            Dim memBetweenPointsSecDef As SldWorks.SecondaryMemberBetweenPointsFeatureData<br />
+            Dim secMemDatTochange As SldWorks.SecondaryMemberBetweenPointsFeatureData<br />
+            Dim memSupportPlaneSecDef As SldWorks.SecondaryMemberSupportPlaneFeatureData<br />
+            Dim segments(2) As Object<br />
+            Dim stat As Boolean<br />
+            Dim memData(0) As SldWorks.StructureSystemMemberFeatureData<br />
+            Dim memDataArray As Variant<br />
+            Dim structSys As SldWorks.Feature<br />
+            Dim baseSecondarySystem As SldWorks.StructureSystemFolder<br />
+            Dim structSysDef As SldWorks.StructureSystemFolder<br />
+            Dim structSysSecDef As SldWorks.StructureSystemFolder<br />
+            Dim feat As SldWorks.Feature<br />
+            Dim structSysModDef As SldWorks.StructureSystemFolder<br />
+            Dim outProfiles As Variant<br />
+            Dim MemberData As SldWorks.StructureSystemMemberFeatureData<br />
+            Dim memberArray As Variant<br />
+            Dim profileGrpFeat As SldWorks.Feature<br />
+            Dim profileGrp As SldWorks.ProfileGroupFolder<br />
+            Dim memTochange As SldWorks.StructureSystemMemberFeatureData<br />
+            Dim I As Long<br />
+            Dim j As Long<br />
+            Dim secDef As SldWorks.SecondaryStructuralMemberFeatureData<br />
+            Dim UpToMemDef As SldWorks.SecondaryMemberUpToMembersFeatureData<br />
+            Dim point As Object<br />
+            Dim Members(0) As Object</p>
+
+            <p><br />
+            Option Explicit</p>
+
+            <p><br />
+            Sub main()</p>
+
+            <p>&#160;&#160;&#160; Set swApp = Application.SldWorks<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim swSheetWidth As Double<br />
+            &#160;&#160;&#160; swSheetWidth = 0<br />
+            &#160;&#160;&#160; Dim swSheetHeight As Double<br />
+            &#160;&#160;&#160; swSheetHeight = 0<br />
+            &#160;&#160;&#160; Set modDoc = swApp.NewDocument("C:\ProgramData\SolidWorks\SOLIDWORKS 2023\templates\Part.PRTDOT", 0, swSheetWidth, swSheetHeight)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set modDocExt = modDoc.Extension<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; modDoc.SketchManager.InsertSketch True<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Front Plane", "PLANE", -0.077188654347454, 0.054268560279924, 3.86214196026222E-03, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; modDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim skSegment As Object<br />
+            &#160;&#160;&#160; Set skSegment = modDoc.SketchManager.CreateLine(-0.168061, 0.084736, 0#, -0.168061, -0.077684, 0#)<br />
+            &#160;&#160;&#160; Set skSegment = modDoc.SketchManager.CreateLine(0.075216, 0.107771, 0#, 0.075216, -0.006699, 0#)<br />
+            &#160;&#160;&#160; modDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Top Plane", "PLANE", 0, 0, 0, True, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; Dim myRefPlane As SldWorks.RefPlane<br />
+            &#160;&#160;&#160; Set myRefPlane = modDoc.FeatureManager.<strong>InsertRefPlane</strong>(8, 0.03, 0, 0, 0, 0)<br />
+            &#160;&#160;&#160; modDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Top Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; modDoc.ClearSelection2 True<br />
+            &#160;&#160;&#160; modDoc.SketchManager.InsertSketch True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Line1@Sketch1", "EXTSKETCHSEGMENT", -0.168061313304597, 5.44142573846353E-02, 0, False, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Line2@Sketch1", "EXTSKETCHSEGMENT", 7.52162521083513E-02, 5.32390034454423E-02, 0, True, 0, Nothing, 0)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; 'Create primary structure system path segment members<br />
+            &#160;&#160;&#160; Set structMemDef = modDocExt.<strong>CreateStructureSystemMemberData</strong>(0)<br />
+            &#160;&#160;&#160; Debug.Print "Type of structure system member as defined by swStructureSystemMemberType_e: " &amp; structMemDef.<strong>StructureSystemMemberType</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; structMemDef.<strong>StartEndExtendD1</strong> = 1#<br />
+            &#160;&#160;&#160; structMemDef.<strong>StartEndExtendD2</strong> = 2#<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set profDef = structMemDef.<strong>MemberProfile</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; profDef.ProfileStandard = "ansi inch"<br />
+            &#160;&#160;&#160; profDef.ProfileType = "c channel"<br />
+            &#160;&#160;&#160; profDef.ProfileSize = "3 x 5"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set PrimDef = structMemDef<br />
+            &#160;&#160;&#160; Debug.Print "Structure system primary member creation type as defined by swStructureSystemMemberCreationType_e: " &amp; PrimDef.<strong>PrimaryMemberType</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set memPathSegDef = PrimDef<br />
+            &#160;&#160;&#160; memPathSegDef.<strong>MergeTangentMembers</strong> = True<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set swSelMgr = modDoc.SelectionManager<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim segments(1) As Object<br />
+            &#160;&#160;&#160; Set segments(0) = swSelMgr.GetSelectedObject6(1, 0)<br />
+            &#160;&#160;&#160; Set segments(1) = swSelMgr.GetSelectedObject6(2, 0)</p>
+
+            <p>&#160;&#160;&#160; stat = memPathSegDef.<strong>SetPathSegments</strong>(segments)<br />
+            &#160;&#160;&#160; Debug.Print "Path segments successfully set: " &amp; stat<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim PrimMemData(0) As SldWorks.StructureSystemMemberFeatureData<br />
+            &#160;&#160;&#160; Set PrimMemData(0) = structMemDef<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim PrimMemDatArray As Variant<br />
+            &#160;&#160;&#160; PrimMemDatArray = PrimMemData<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim structSysFeat As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set structSysFeat = modDocExt.<strong>CreateStructureSystem</strong>(PrimMemDatArray, Nothing)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; modDoc.ViewZoomtofit<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set structSysDef = structSysFeat.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160; Debug.Print "Number of profile group folders: " &amp; structSysDef.<strong>GetProfileGroupFoldersCount</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim outProfiles As Variant<br />
+            &#160;&#160;&#160; outProfiles = structSysDef.<strong>GetProfileGroupFolders</strong>()<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim memberArray As Variant<br />
+            &#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; If (Not IsEmpty(outProfiles)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For I = 0 To UBound(outProfiles)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set profileGrpFeat = outProfiles(I)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set profileGrp = profileGrpFeat.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not profileGrp Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Number of members in profile group: " &amp; profileGrp.<strong>GetStructureSystemMemberCount</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; memberArray = profileGrp.<strong>GetStructureSystemMembers</strong>()<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If (Not IsEmpty(memberArray)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Exit For<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; 'Create secondary structure system support plane member</p>
+
+            <p><br />
+            &#160;&#160;&#160; Dim structSecMemDef As SldWorks.StructureSystemMemberFeatureData<br />
+            &#160;&#160;&#160; Set structSecMemDef = modDocExt.<strong>CreateStructureSystemMemberData</strong>(4) 'Secondary Support Plane<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Debug.Print "Type of structure system member as defined by swStructureSystemMemberType_e: " &amp; structMemDef.<strong>StructureSystemMemberType</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; structSecMemDef.StartEndExtendD1 = 0.5<br />
+            &#160;&#160;&#160; structSecMemDef.StartEndExtendD2 = 0.5<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim secProfDef As SldWorks.StructureSystemMemberProfile<br />
+            &#160;&#160;&#160; Set secProfDef = structSecMemDef.<strong>MemberProfile</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; secProfDef.ProfileStandard = "ansi inch"<br />
+            &#160;&#160;&#160; secProfDef.ProfileType = "c channel"<br />
+            &#160;&#160;&#160; secProfDef.ProfileSize = "3 x 5"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim SecDef As SecondaryStructuralMemberFeatureData<br />
+            &#160;&#160;&#160; Set SecDef = structSecMemDef<br />
+            &#160;&#160;&#160; Debug.Print "Structure system secondary member creation type as defined by swStructureSystemMemberCreationType_e: " &amp; SecDef.<strong>SecondaryMemberType</strong>; ""<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set memSupportPlaneSecDef = SecDef<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; stat = memSupportPlaneSecDef.<strong>SetMemberPairs</strong>(memberArray)<br />
+            &#160;&#160;&#160; Debug.Print "Member pairs set successfully: " &amp; stat<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; stat = modDocExt.SelectByID2("Plane1", "PLANE", 0, 0, 0, True, 0, Nothing, 0)<br />
+            &#160;&#160;&#160; Dim Planes(0) As Object<br />
+            &#160;&#160;&#160; Set Planes(0) = swSelMgr.GetSelectedObject6(1, 0)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; stat = memSupportPlaneSecDef.<strong>SetIntersectingPlanesAndFaces</strong>(Planes)<br />
+            &#160;&#160;&#160; Debug.Print "Intersecting plane set successfully: " &amp; stat<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim secMemData(0) As SldWorks.StructureSystemMemberFeatureData<br />
+            &#160;&#160;&#160; Set secMemData(0) = structSecMemDef<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim secMemDatArray As Variant<br />
+            &#160;&#160;&#160; secMemDatArray = secMemData<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim structSysFeat2 As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set structSysFeat2 = modDocExt.<strong>CreateStructureSystem</strong>(Nothing, secMemDatArray)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; modDoc.ViewZoomtofit<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; 'Edit secondary support plane member by changing start/end extensions</p>
+
+            <p><br />
+            &#160;&#160;&#160; Set baseSecondarySystem = structSysFeat2.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160; Debug.Print "Number of profile group folders: " &amp; baseSecondarySystem.<strong>GetProfileGroupFoldersCount</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; outProfiles = baseSecondarySystem.<strong>GetProfileGroupFolders</strong>()<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim secMemberData As Object<br />
+            &#160;&#160;&#160; Dim SecMemberArray As Variant<br />
+            &#160;&#160;&#160; Dim secProfileGrpFeat As SldWorks.Feature<br />
+            &#160;&#160;&#160; Dim secProfileGrp As SldWorks.ProfileGroupFolder<br />
+            &#160;&#160;&#160; If (Not IsEmpty(outProfiles)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For I = 0 To UBound(outProfiles)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secProfileGrpFeat = outProfiles(I)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secProfileGrp = secProfileGrpFeat.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not secProfileGrp Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Number of members in profile group: " &amp; secProfileGrp.<strong>GetStructureSystemMemberCount</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; SecMemberArray = secProfileGrp.<strong>GetStructureSystemMembers</strong>()<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If (Not IsEmpty(SecMemberArray)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For j = 0 To UBound(SecMemberArray)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secMemberData = SecMemberArray(j)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Exit For<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim memTochange As SldWorks.StructureSystemMemberFeatureData<br />
+            &#160;&#160;&#160; Set memTochange = secMemberData<br />
+            &#160;&#160;&#160; Dim SecMemFeat As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set SecMemFeat = memTochange.<strong>GetFeature</strong>()<br />
+            &#160;&#160;&#160; memTochange.<strong>StartEndExtendD1</strong> = 0.2<br />
+            &#160;&#160;&#160; memTochange.<strong>StartEndExtendD2</strong> = 0.1</p>
+
+            <p>&#160;&#160;&#160; stat = SecMemFeat.<strong>ModifyDefinition</strong>(secMemberData, modDoc, Nothing)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; 'Create secondary between points member</p>
+
+            <p><br />
+            &#160;&#160;&#160; Set structSecMemDef = modDocExt.<strong>CreateStructureSystemMemberData</strong>(5)<br />
+            &#160;&#160;&#160; Debug.Print "Type of structure system member as defined by swStructureSystemMemberType_e: " &amp; structMemDef.StructureSystemMemberType</p>
+
+            <p>&#160;&#160;&#160; Set secProfDef = structSecMemDef.<strong>MemberProfile</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; secProfDef.ProfileStandard = "ansi inch"<br />
+            &#160;&#160;&#160; secProfDef.ProfileType = "c channel"<br />
+            &#160;&#160;&#160; secProfDef.ProfileSize = "3 x 5"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set SecDef = structSecMemDef<br />
+            &#160;&#160;&#160; Debug.Print "Structure system secondary member creation type as defined by swStructureSystemMemberCreationType_e: " &amp; SecDef.<strong>SecondaryMemberType</strong><br />
+            &#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set memBetweenPointsSecDef = SecDef</p>
+
+            <p>&#160;&#160;&#160; stat = memBetweenPointsSecDef.<strong>SetMemberPairs</strong>(memberArray)<br />
+            &#160;&#160;&#160; Debug.Print "Member pairs successfully set: " &amp; stat<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; memBetweenPointsSecDef.<strong>SecondaryMemberOffsetType</strong> = 0<br />
+            &#160;&#160;&#160; memBetweenPointsSecDef.<strong>DistanceMember1</strong> = 0.5<br />
+            &#160;&#160;&#160; memBetweenPointsSecDef.<strong>DistanceMember2</strong> = 0.4<br />
+            &#160;&#160;&#160; memBetweenPointsSecDef.<strong>RevDirectionDistanceMember1</strong> = False<br />
+            &#160;&#160;&#160; memBetweenPointsSecDef.<strong>RevDirectionDistanceMember2</strong> = False<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set secMemData(0) = structSecMemDef<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; secMemDatArray = secMemData<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set structSysFeat2 = modDocExt.<strong>CreateStructureSystem</strong>(Nothing, secMemDatArray)<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Stop<br />
+            &#160;&#160;&#160;&#160;&#160;<br />
+            &#160;&#160;&#160; 'Edit between points member by changing start/end extensions and offset type</p>
+
+            <p><br />
+            &#160;&#160;&#160; Set structSysSecDef = structSysFeat2.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160; Debug.Print "Number of profile group folders: " &amp; structSysSecDef.<strong>GetProfileGroupFoldersCount</strong></p>
+
+            <p>&#160;&#160;&#160; Dim outSecProfiles As Variant<br />
+            &#160;&#160;&#160; outSecProfiles = structSysSecDef.<strong>GetProfileGroupFolders</strong>()</p>
+
+            <p>&#160;&#160;&#160; If (Not IsEmpty(outSecProfiles)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For I = 0 To UBound(outSecProfiles)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secProfileGrpFeat = outSecProfiles(I)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secProfileGrp = secProfileGrpFeat.<strong>GetSpecificFeature2</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If Not secProfileGrp Is Nothing Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Debug.Print "Number of members in profile group: " &amp; secProfileGrp.<strong>GetStructureSystemMemberCount</strong><br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; SecMemberArray = secProfileGrp.<strong>GetStructureSystemMembers</strong>()<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; If (Not IsEmpty(SecMemberArray)) Then<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; For j = 0 To UBound(SecMemberArray)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Set secMemberData = SecMemberArray(j)<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; End If<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Next<br />
+            &#160;&#160;&#160; End If</p>
+
+            <p>&#160;&#160;&#160; Set memTochange = secMemberData</p>
+
+            <p>&#160;&#160;&#160; Set SecMemFeat = memTochange.<strong>GetFeature</strong>()<br />
+            &#160;&#160;&#160; memTochange.<strong>StartEndExtendD1</strong> = 0.2<br />
+            &#160;&#160;&#160; memTochange.<strong>StartEndExtendD2</strong> = 0.1<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set secMemDatTochange = memTochange<br />
+            &#160;&#160;&#160; secMemDatTochange.<strong>SecondaryMemberOffsetType</strong> = 1<br />
+            &#160;&#160;&#160; secMemDatTochange.<strong>LengthRatioMember1</strong> = 0.1<br />
+            &#160;&#160;&#160; secMemDatTochange.<strong>LengthRatioMember2</strong> = 0.2<br />
+            &#160;&#160;&#160; stat = SecMemFeat.<strong>ModifyDefinition</strong>(secMemberData, modDoc, Nothing)<br />
+            <br />
+            'Create secondary structure system up to member<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set structMemDef = modDocExt.<strong>CreateStructureSystemMemberData</strong>(6)</p>
+
+            <p>&#160;&#160;&#160; Debug.Print "Structure system member type as defined by swStructureSystemMemberType_e: " &amp; structMemDef.<strong>StructureSystemMemberType</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; structMemDef.<strong>StartEndExtendD1</strong> = 0#<br />
+            &#160;&#160;&#160; Debug.Print "Start/end direction 1: " &amp; structMemDef.<strong>StartEndExtendD1</strong><br />
+            &#160;&#160;&#160; structMemDef.<strong>StartEndExtendD2</strong> = 0#<br />
+            &#160;&#160;&#160; Debug.Print "Start/end direction 2: " &amp; structMemDef.<strong>StartEndExtendD2</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set profDef = structMemDef.<strong>MemberProfile</strong><br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; profDef.<strong>ProfileStandard</strong> = "ansi inch"<br />
+            &#160;&#160;&#160; profDef.<strong>ProfileType</strong> = "pipe"<br />
+            &#160;&#160;&#160; profDef.<strong>ProfileSize</strong> = "0.5 sch 40"<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set secDef = structMemDef<br />
+            &#160;&#160;&#160; Debug.Print "Secondary member type as defined by swStructureSystemMemberCreationType_e: " &amp; secDef.SecondaryMemberType<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set UpToMemDef = secDef<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; UpToMemDef.<strong>MemberPointParametersType</strong> = swSecondaryMemberUpToMembersMemberPointParameters_e.swSecondaryMemberUpToMembersMemberPointParameters_FromPoint<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Stop&#160; 'Multi-select a Member1 vertex in the graphics area and Member2 in the FeatureManager Design tree</p>
+
+            <p>&#160;&#160;&#160; Set point = swSelMgr.GetSelectedObject6(1, 0)<br />
+            &#160;&#160;&#160; Set Members(0) = swSelMgr.GetSelectedObject6(2, 0)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Call UpToMemDef.<strong>SetFromPoint</strong>(point)<br />
+            &#160;&#160;&#160; UpToMemDef.<strong>SetFromPointMembers</strong>(Members)<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; UpToMemDef.<strong>SecondaryMemberOffsetType</strong> = swSecondaryMemberUpToMembersDistanceFromEndType_Distance<br />
+            &#160;&#160;&#160; UpToMemDef.<strong>DistanceMember</strong> = 0.1<br />
+            &#160;&#160;&#160; UpToMemDef.<strong>RevDirectionDistanceMember</strong> = False<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Set memData(0) = structMemDef<br />
+            &#160;&#160;&#160; memDataArray = memData<br />
+            &#160;&#160;&#160;<br />
+            &#160;&#160;&#160; Dim structSysFeat3 As SldWorks.Feature<br />
+            &#160;&#160;&#160; Set structSysFeat3 = modDocExt.<strong>CreateStructureSystem</strong>(Nothing, memDataArray)<br />
+            &#160;&#160;&#160;<br />
+            End Sub</p>
+        </div>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Create_Secondary_SSMembers_Example_VBNET.htm">Create Secondary Structure System Members (VB.NET)</a><br />
+            <a href="Create_Secondary_SSMembers_Example_CSharp.htm">Create Secondary Structure System Members (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData_members">ISecondaryMemberBetweenPointsFeatureData Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

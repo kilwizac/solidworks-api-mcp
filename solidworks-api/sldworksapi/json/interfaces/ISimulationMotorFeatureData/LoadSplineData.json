@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimulationMotorFeatureData",
+    "member": "LoadSplineData",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Value",
+        "type": "System.String",
+        "description": "File from which to load the spline data point values"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "features"
+    ],
+    "related": [
+      "ISimulationMotorFeatureData.SplineData"
+    ],
+    "keywords": [
+      "loadsplinedata",
+      "isimulationmotorfeaturedata",
+      "simulation",
+      "motor",
+      "feature",
+      "data",
+      "load",
+      "spline",
+      "value",
+      "string",
+      "boolean",
+      "create",
+      "linear",
+      "vba"
+    ]
+  },
+  "title": "ISimulationMotorFeatureData.LoadSplineData",
+  "description": "Loads the spline data from the specified file for this motor feature.",
+  "signature": "System.Boolean LoadSplineData( \n   System.String\nValue\n)",
+  "parameters": [
+    {
+      "name": "Value",
+      "type": "System.String",
+      "description": "File from which to load the spline data point values"
+    }
+  ],
+  "returns": "True if the operation succeeds, false if it fails",
+  "remarks": "The file should contain one data point per line. The data point consists of two values:\nTime\nValue at that time\nUse commas or spaces as separators between the values.",
+  "examples": [
+    {
+      "title": "Create Linear Motor Feature (VBA)",
+      "href": "Create_Linear_Motor_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISimulationMotorFeatureData.SplineData"
+  ]
+}

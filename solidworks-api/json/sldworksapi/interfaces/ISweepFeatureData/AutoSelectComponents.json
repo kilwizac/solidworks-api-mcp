@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweepFeatureData",
+    "member": "AutoSelectComponents",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "autoselectcomponents",
+      "isweepfeaturedata",
+      "sweep",
+      "feature",
+      "data",
+      "auto",
+      "select",
+      "components",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweepFeatureData.AutoSelectComponents",
+  "description": "Gets and sets whether to automatically select all assembly components to be affected by this swept-cutfeature.",
+  "signature": "System.Boolean AutoSelectComponents {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically select all affected assembly components, false to manually select components ( see Remarks )",
+  "remarks": "Use this property,\nISweepFeatureData::AssemblyFeatureScope\n, and\nISweepFeatureData::PropagateFeatureToParts\nto insert sweep cuts into an assembly.\nThis API works with ISweepFeatureData::AssemblyFeatureScope to configure the scope of an assembly sweep feature. This API performs the same configuration that is done in the Feature Scope section of the PropertyManager page of the sweep feature:\nAssemblyFeatureScope setting\nAutoSelectComponents setting\nPropertyManager page Feature Scope setting\nFalse\nIgnored\nAll components selected\nAuto-select not visible\nTrue\nIf true, affected components are automatically selected\nIf false, manually select the components before calling this API\nSelected components selected\nIf Auto-select is not checked, then manually select components\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

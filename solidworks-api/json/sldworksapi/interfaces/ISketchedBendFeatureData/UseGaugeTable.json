@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchedBendFeatureData",
+    "member": "UseGaugeTable",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "usegaugetable",
+      "isketchedbendfeaturedata",
+      "sketched",
+      "bend",
+      "feature",
+      "data",
+      "use",
+      "gauge",
+      "table",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchedBendFeatureData.UseGaugeTable",
+  "description": "Gets or sets whether to use available bend radius values from a gauge table for this sketched bend.",
+  "signature": "System.Boolean UseGaugeTable {get; set;}",
+  "parameters": [],
+  "returns": "True to use available bend radius values from a gauge table, false to not",
+  "remarks": "This property:\nis valid only if a gauge table is specified in a parent sheet metal feature (e.g., lofted bend, swept flange, base flange).\nis valid only if\nISketchedBendFeatureData::UseDefaultBendRadius\nis set to false.\nis automatically set to false and cannot be changed if ISketchedBendFeatureData::UseDefaultBendRadius is set to true.\nmust be set to false in order to set\nISketchedBendFeatureData::BendRadius\n.",
+  "examples": [],
+  "related": []
+}

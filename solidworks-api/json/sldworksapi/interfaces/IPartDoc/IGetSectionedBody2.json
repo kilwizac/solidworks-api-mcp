@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "IGetSectionedBody2",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "ViewIn",
+        "type": "ModelView",
+        "description": "Model view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "geometry",
+      "parts",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "sectioned",
+      "igetsectionedbody2",
+      "ipartdoc",
+      "part",
+      "doc",
+      "body2",
+      "view",
+      "model"
+    ]
+  },
+  "title": "IPartDoc.IGetSectionedBody2",
+  "description": "Gets the sectioned body seen in the specified drawing view.",
+  "signature": "Body2 IGetSectionedBody2( \n   ModelView\nViewIn\n)",
+  "parameters": [
+    {
+      "name": "ViewIn",
+      "type": "ModelView",
+      "description": "Model view"
+    }
+  ],
+  "returns": "Sectioned body",
+  "remarks": "To determine if the desired model view is currently displaying a sectioned view, use\nIModelView::GetDisplayState\n.\nIf you need the full body representation, use\nIPartDoc::GetBodies2\nor\nIPartDoc::EnumBodies3\n, which ignores the sectioning operation.",
+  "examples": [],
+  "related": []
+}

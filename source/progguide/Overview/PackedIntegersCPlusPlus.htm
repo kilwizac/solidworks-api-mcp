@@ -1,0 +1,95 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Unpacking Double Arrays into Integer Pairs in C++</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="06 13, 2002 8:17:29 AM">
+<meta name=MS-HKWD content="Unpacking arrays">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=557>
+<meta name=layout-width content=651>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Unpacking Double Arrays into Integer Pairs in C++</h1>
+
+<p>Some API functions return integer information packed into arrays of 
+ double values.</p>
+
+<p>To extract the pair of integers from a double in C++, SOLIDWORKS suggests 
+ using a union:</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">union PackedData_</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">{</p>
+
+<blockquote>
+	<p class=apiCode
+	style="margin-left: 49px;">double doubleValue;</p>
+	<p class=apiCode
+	style="margin-left: 49px;">int intValues[2];</p>
+</blockquote>
+
+<p class=apiCode
+	style="margin-left: 49px;">} PackedData;</p>
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">int iValue1, iValue2;</p>
+
+<p>&nbsp;</p>
+
+<p>To access the data, assign <font face="Courier New" size="2">doubleValue</font> 
+to the array element containing the data, then use
+<font face="Courier New" size="2">intValues</font> to access the integers:</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">PackedData.doubleValue = dArray[0];</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">iValue1 = PackedData.intValues[0];</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">iValue2 = PackedData.intValues[1];</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

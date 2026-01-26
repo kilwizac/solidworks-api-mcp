@@ -1,0 +1,44 @@
+---
+type: method
+interface: IRefPlane
+member: IGetBoundingBox
+returns: MathPoint
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IRefPlane.BoundingBox
+keywords:
+  - igetboundingbox
+  - irefplane
+  - ref
+  - plane
+  - bounding
+  - box
+  - math
+  - point
+---
+
+# IRefPlane.IGetBoundingBox
+
+Gets the bounding box of the reference plane, the top-left and bottom-right points.
+
+## Signature
+
+```csharp
+MathPoint IGetBoundingBox()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+in-process, unmanaged C++: Pointer to an array containing the bounding box, always two (2) IMathpoint objects VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## See Also
+
+- `IRefPlane.BoundingBox`

@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "ImprintCurve",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Curve",
+        "type": "System.Object",
+        "description": "Curve to imprint on the face"
+      },
+      {
+        "name": "NewEdges",
+        "type": "System.Object",
+        "description": "Array of new edges created by the imprinted curve"
+      },
+      {
+        "name": "NewFaces",
+        "type": "System.Object",
+        "description": "Array of new faces created by the imprinted curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.IImprintCurve",
+      "IFace2.ImprintCurveCount"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "faces",
+      "face",
+      "iface2",
+      "curves",
+      "imprintcurve",
+      "face2",
+      "imprint",
+      "object",
+      "new",
+      "edges",
+      "void"
+    ]
+  },
+  "title": "IFace2.ImprintCurve",
+  "description": "Imprints a curve on the selected face.",
+  "signature": "void ImprintCurve( \n   System.Object\nCurve\n,\n   out System.Object\nNewEdges\n,\n   out System.Object\nNewFaces\n)",
+  "parameters": [
+    {
+      "name": "Curve",
+      "type": "System.Object",
+      "description": "Curve to imprint on the face"
+    },
+    {
+      "name": "NewEdges",
+      "type": "System.Object",
+      "description": "Array of new edges created by the imprinted curve"
+    },
+    {
+      "name": "NewFaces",
+      "type": "System.Object",
+      "description": "Array of new faces created by the imprinted curve"
+    }
+  ],
+  "returns": "",
+  "remarks": "The specified curve must lie on the face.\nTo imprint a curve on a new face of a temporary body, create a copy of the original curve and imprint the copy of the curve on the new face.",
+  "examples": [],
+  "related": [
+    "IFace2.IImprintCurve",
+    "IFace2.ImprintCurveCount"
+  ]
+}

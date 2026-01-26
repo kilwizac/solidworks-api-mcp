@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "GetEntryText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Row number of the desired cell; this is a 0-based index"
+      },
+      {
+        "name": "Col",
+        "type": "System.Int32",
+        "description": "Column number of the desired cell; this is a 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "getentrytext",
+      "ibomtable",
+      "bom",
+      "table",
+      "entry",
+      "text",
+      "row",
+      "int32",
+      "col",
+      "string"
+    ]
+  },
+  "title": "IBomTable.GetEntryText",
+  "description": "Retrieves the contents of the specified cell as a string regardless of the cell's data type.",
+  "signature": "System.String GetEntryText( \n   System.Int32\nRow\n,\n   System.Int32\nCol\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Row number of the desired cell; this is a 0-based index"
+    },
+    {
+      "name": "Col",
+      "type": "System.Int32",
+      "description": "Column number of the desired cell; this is a 0-based index"
+    }
+  ],
+  "returns": "Text string from the specified cell",
+  "remarks": "Use\nIBomTable::GetEntryValue\nfor typed return values.\nBefore you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": []
+}

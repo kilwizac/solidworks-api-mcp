@@ -1,0 +1,120 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetBCurveParams3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "WantCubicIn",
+        "type": "System.Boolean",
+        "description": "True returns cubic rational parameters, false does not"
+      },
+      {
+        "name": "WantNRational",
+        "type": "System.Boolean",
+        "description": "True returns cubic rational parameters, false does not"
+      },
+      {
+        "name": "ForceNonPeriodic",
+        "type": "System.Boolean",
+        "description": "True converts the periodic curve to nonperiodic, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICoEdge.GetCurveParams",
+      "ICoEdge.IGetCurveParams",
+      "ICurve.CircleParams",
+      "ICurve.ConvertArcToBcurve",
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.GetEllipseParams",
+      "ICurve.GetPCurveParams",
+      "ICurve.ICircleParams",
+      "ICurve.IGetBCurveParams3",
+      "ICurve.IGetBCurveParamsSize3",
+      "ICurve.IGetEllipseParams",
+      "ICurve.IGetPCurveParams",
+      "ICurve.ILineParams",
+      "ICurve.Identity",
+      "ICurve.IsBcurve",
+      "ICurve.IsCircle",
+      "ICurve.IsEllipse",
+      "ICurve.IsLine",
+      "ICurve.LineParams",
+      "ICurve.MakeBsplineCurve2",
+      "IEdge.GetCurveParams2",
+      "IEdge.IGetCurveParams2",
+      "IModeler.CreatePCurve",
+      "IModeler.ICreatePCurve"
+    ],
+    "keywords": [
+      "getbcurveparams3",
+      "icurve",
+      "curve",
+      "params3",
+      "want",
+      "cubic",
+      "boolean",
+      "rational",
+      "force",
+      "non",
+      "periodic",
+      "object"
+    ]
+  },
+  "title": "ICurve.GetBCurveParams3",
+  "description": "Obsolete. Superseded by ICurve::GetBCurveParams4",
+  "signature": "System.Object GetBCurveParams3( \n   System.Boolean\nWantCubicIn\n,\n   System.Boolean\nWantNRational\n,\n   System.Boolean\nForceNonPeriodic\n)",
+  "parameters": [
+    {
+      "name": "WantCubicIn",
+      "type": "System.Boolean",
+      "description": "True returns cubic rational parameters, false does not"
+    },
+    {
+      "name": "WantNRational",
+      "type": "System.Boolean",
+      "description": "True returns cubic rational parameters, false does not"
+    },
+    {
+      "name": "ForceNonPeriodic",
+      "type": "System.Boolean",
+      "description": "True converts the periodic curve to nonperiodic, false does not"
+    }
+  ],
+  "returns": "Array describing the parameters of the curve",
+  "remarks": "To control the accuracy of the curve data, see\nIModeler::SetToleranceValue\n.\nThe return value is an array of doubles. The array size is ( 2 + numKnots + numControlPointDoubles) where numKnots is (numControlPoints + order). The array is as follows:\n[\npackedDouble1\n,\npackedDouble2\n,\nknot1\n,\nknot2\n,...,\nControlPoint1\n[\nDimension\n],\nControlPoint2\n[\nDimension\n],...\n]\nwhere:\npackedDouble1\nis\nan integer pair containing the\nDimension\nand\nOrder\npackedDouble2\nis\nan integer pair containing the\nNumControlPoints\nand\nPeriodicity\nknot1\nknot2\n...\nControlPoint1\n[\ndimension\n]\nControlPoint2\n[\ndimension\n]\n...\nThe size of the control point array is based on the curve dimension:\nIf\nDimension\n= 3, then\nControlPoint\nis an array of 3 doubles ( x, y, z )\nIf\nDimension\n= 4, then\nControlPoint\nis an array of 4 doubles ( x, y, z, w ) where w = weight",
+  "examples": [],
+  "related": [
+    "ICoEdge.GetCurveParams",
+    "ICoEdge.IGetCurveParams",
+    "ICurve.CircleParams",
+    "ICurve.ConvertArcToBcurve",
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.GetEllipseParams",
+    "ICurve.GetPCurveParams",
+    "ICurve.ICircleParams",
+    "ICurve.IGetBCurveParams3",
+    "ICurve.IGetBCurveParamsSize3",
+    "ICurve.IGetEllipseParams",
+    "ICurve.IGetPCurveParams",
+    "ICurve.ILineParams",
+    "ICurve.Identity",
+    "ICurve.IsBcurve",
+    "ICurve.IsCircle",
+    "ICurve.IsEllipse",
+    "ICurve.IsLine",
+    "ICurve.LineParams",
+    "ICurve.MakeBsplineCurve2",
+    "IEdge.GetCurveParams2",
+    "IEdge.IGetCurveParams2",
+    "IModeler.CreatePCurve",
+    "IModeler.ICreatePCurve"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTableAnnotation",
+    "member": "ApplySavedSortScheme",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SortData",
+        "type": "BomTableSortData",
+        "description": "IBomTableSortData"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "file-io"
+    ],
+    "related": [],
+    "keywords": [
+      "table",
+      "sort",
+      "applysavedsortscheme",
+      "ibomtableannotation",
+      "bom",
+      "annotation",
+      "apply",
+      "saved",
+      "scheme",
+      "data",
+      "boolean",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBomTableAnnotation.ApplySavedSortScheme",
+  "description": "Sorts this BOM table using the sort data that was previously saved in the table.",
+  "signature": "System.Boolean ApplySavedSortScheme( \n   BomTableSortData\nSortData\n)",
+  "parameters": [
+    {
+      "name": "SortData",
+      "type": "BomTableSortData",
+      "description": "IBomTableSortData"
+    }
+  ],
+  "returns": "True if BOM table is successfully sorted, false if not",
+  "remarks": "Before calling this method, you must:\nSet\nIBomTableSortData::SaveCurrentSortParameters\nto true to indicate that the sort settings should be saved in the BOM table in the drawing.\nIBomTableAnnotation::Sort\nto actually save the sort settings in the BOM table in the drawing.\nIBomTableAnnotation::GetBomTableSortData\nto populate SortData.\nSee\nSorting Tables\nfor more information.",
+  "examples": [
+    {
+      "title": "Sort Table (VBA)",
+      "href": "Sort_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Sort Table (VB.NET)",
+      "href": "Sort_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Sort Table (C#)",
+      "href": "Sort_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swRayPtsResults_e",
+    "description": "Types of intersections and whether the rays are entering or exiting the body when they hit. Bitmask.",
+    "member_count": 7,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swRayPtsResults_e",
+  "description": "Types of intersections and whether the rays are entering or exiting the body when they hit. Bitmask.",
+  "values": [
+    {
+      "member": "swRayPtsResultsEDGE",
+      "value": "4",
+      "description": "or 0x4; Edge hit"
+    },
+    {
+      "member": "swRayPtsResultsENTER",
+      "value": "16",
+      "description": "or 0x10; Ray was entering body when it hit (optionally appears when swRayPtsOptsENTRY_EXIT is specified in the options argument to IModelDoc2::RayIntersections )"
+    },
+    {
+      "member": "swRayPtsResultsEXIT",
+      "value": "32",
+      "description": "or 0x20; Ray was exiting body when it hit (optionally appears when swRayPtsOptsENTRY_EXIT is specified in the options argument to IModelDoc2::RayIntersections )"
+    },
+    {
+      "member": "swRayPtsResultsFACE",
+      "value": "1",
+      "description": "or 0x1; Simple face hit"
+    },
+    {
+      "member": "swRayPtsResultsSILHOUETTE",
+      "value": "2",
+      "description": "or 0x2; Grazing face hit"
+    },
+    {
+      "member": "swRayPtsResultsUnknown",
+      "value": "0",
+      "description": "or 0x0; Unknown"
+    },
+    {
+      "member": "swRayPtsResultsVERTEX",
+      "value": "8",
+      "description": "or 0x8; Vertex hit"
+    }
+  ]
+}

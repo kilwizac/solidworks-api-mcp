@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVertex",
+    "member": "Display",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Model in which to display the vertex"
+      },
+      {
+        "name": "Color",
+        "type": "System.Int32",
+        "description": "COLORREF value for highlighting"
+      },
+      {
+        "name": "Scale",
+        "type": "System.Double",
+        "description": "Radius of the circle used to display the vertex NOTE: Vertex is displayed as a circle. By default, the radius is 4 pixels. Therefore, a scale of 1 is equal to 4 pixels."
+      },
+      {
+        "name": "HighlightState",
+        "type": "System.Boolean",
+        "description": "True to highlight the vertex, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "display",
+      "ivertex",
+      "vertex",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "color",
+      "int32",
+      "scale",
+      "double",
+      "highlight",
+      "state",
+      "boolean",
+      "void",
+      "vertices",
+      "vba"
+    ]
+  },
+  "title": "IVertex.Display",
+  "description": "Highlights the vertex in the specified color.",
+  "signature": "void Display( \n   ModelDoc2\nTopDoc\n,\n   System.Int32\nColor\n,\n   System.Double\nScale\n,\n   System.Boolean\nHighlightState\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Model in which to display the vertex"
+    },
+    {
+      "name": "Color",
+      "type": "System.Int32",
+      "description": "COLORREF value for highlighting"
+    },
+    {
+      "name": "Scale",
+      "type": "System.Double",
+      "description": "Radius of the circle used to display the vertex NOTE: Vertex is displayed as a circle. By default, the radius is 4 pixels. Therefore, a scale of 1 is equal to 4 pixels."
+    },
+    {
+      "name": "HighlightState",
+      "type": "System.Boolean",
+      "description": "True to highlight the vertex, false to not"
+    }
+  ],
+  "returns": "",
+  "remarks": "If HighlightState set to...\nThen the vertex is...\nTrue\nHighlighted in the color specified for Color\nFalse\nHidden and Color is ignored",
+  "examples": [
+    {
+      "title": "Display Vertices (VBA)",
+      "href": "Display_Vertices_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

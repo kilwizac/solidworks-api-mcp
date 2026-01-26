@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DSldWorksEvents_BackgroundProcessingEndNotifyEventHandler
+inherits: null
+description: Notifies the user program when background processing has ended.
+member_count: 0
+docset: sldworksapi
+categories:
+  - documents
+common_members: []
+---
+
+# DSldWorksEvents_BackgroundProcessingEndNotifyEventHandler
+
+Notifies the user program when background processing has ended.

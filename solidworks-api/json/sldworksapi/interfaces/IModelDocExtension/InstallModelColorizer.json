@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "InstallModelColorizer",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PInterface",
+        "type": "System.Object",
+        "description": "Pointer to your implemented interface"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.RemoveModelColorizer"
+    ],
+    "keywords": [
+      "colorizer",
+      "see",
+      "also",
+      "iswcolorcontour1",
+      "install",
+      "installmodelcolorizer",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IModelDocExtension.InstallModelColorizer",
+  "description": "Installs your implemented interface of the ISwColorContour interface.",
+  "signature": "void InstallModelColorizer( \n   System.Object\nPInterface\n)",
+  "parameters": [
+    {
+      "name": "PInterface",
+      "type": "System.Object",
+      "description": "Pointer to your implemented interface"
+    }
+  ],
+  "returns": "",
+  "remarks": "After your implemented interface is installed, the SOLIDWORKS Design software calls\nISwColorContour::Value\non each graphical update. Your implemented interface must provide the corresponding color for each vertex and the value associated with each vertex. This value is displayed when the cursor is over that vertex.\nAdditionally, when the cursor is over the model, the SOLIDWORKS Design software calls\nISwColorContour::DisplayString\nand passes the value to be formatted by your implemented interface, which the SOLIDWORKS Design software will then display.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.RemoveModelColorizer"
+  ]
+}

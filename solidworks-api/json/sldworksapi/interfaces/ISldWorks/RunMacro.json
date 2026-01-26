@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RunMacro",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FilePathName",
+        "type": "System.String",
+        "description": "Path and file name of the project file containing the macro"
+      },
+      {
+        "name": "ModuleName",
+        "type": "System.String",
+        "description": "Name of the module in the macro"
+      },
+      {
+        "name": "ProcedureName",
+        "type": "System.String",
+        "description": "Name of the procedure in the module"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetCurrentMacroPathFolder",
+      "ISldWorks.GetCurrentMacroPathName",
+      "ISldWorks.GetMacroMethods",
+      "ISldWorks.RecordLine"
+    ],
+    "keywords": [
+      "runmacro",
+      "isldworks",
+      "sld",
+      "works",
+      "run",
+      "macro",
+      "file",
+      "path",
+      "name",
+      "string",
+      "module",
+      "procedure",
+      "boolean",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.RunMacro",
+  "description": "Obsolete. Superseded by ISldWorks::RunMacro2.",
+  "signature": "System.Boolean RunMacro( \n   System.String\nFilePathName\n,\n   System.String\nModuleName\n,\n   System.String\nProcedureName\n)",
+  "parameters": [
+    {
+      "name": "FilePathName",
+      "type": "System.String",
+      "description": "Path and file name of the project file containing the macro"
+    },
+    {
+      "name": "ModuleName",
+      "type": "System.String",
+      "description": "Name of the module in the macro"
+    },
+    {
+      "name": "ProcedureName",
+      "type": "System.String",
+      "description": "Name of the procedure in the module"
+    }
+  ],
+  "returns": "True if macro runs successfully, false if not",
+  "remarks": "See\nSOLIDWORKS Macros\nfor details.",
+  "examples": [
+    {
+      "title": "Run Macro (VBA)",
+      "href": "Run_Macro_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetCurrentMacroPathFolder",
+    "ISldWorks.GetCurrentMacroPathName",
+    "ISldWorks.GetMacroMethods",
+    "ISldWorks.RecordLine"
+  ]
+}

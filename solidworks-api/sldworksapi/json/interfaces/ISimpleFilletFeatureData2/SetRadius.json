@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "SetRadius",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "System.Object",
+        "description": "Fillet item at which to set the radius"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Radius of the symmetric fillet at PFilletItem; Distance 1 radius of the asymmetric fillet"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.AsymmetricFillet",
+      "ISimpleFilletFeatureData2.DefaultRadius",
+      "ISimpleFilletFeatureData2.GetRadius",
+      "ISimpleFilletFeatureData2.IGetRadius",
+      "ISimpleFilletFeatureData2.ISetRadius",
+      "ISimpleFilletFeatureData2.IsMultipleRadius"
+    ],
+    "keywords": [
+      "setradius",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "radius",
+      "item",
+      "object",
+      "double",
+      "void"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.SetRadius",
+  "description": "Sets the radius at the specified fillet item.",
+  "signature": "void SetRadius( \n   System.Object\nPFilletItem\n,\n   System.Double\nRadius\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "System.Object",
+      "description": "Fillet item at which to set the radius"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Radius of the symmetric fillet at PFilletItem; Distance 1 radius of the asymmetric fillet"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nISimpleFilletFeatureData2::GetFilletItemAtIndex\nto get the pointer with which to specify PFilletItem.\nCall\nISimpleFilletFeatureData2::SetDistance\nto set the Distance 2 radius at PFilletItem of the asymmetric fillet.",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.AsymmetricFillet",
+    "ISimpleFilletFeatureData2.DefaultRadius",
+    "ISimpleFilletFeatureData2.GetRadius",
+    "ISimpleFilletFeatureData2.IGetRadius",
+    "ISimpleFilletFeatureData2.ISetRadius",
+    "ISimpleFilletFeatureData2.IsMultipleRadius"
+  ]
+}

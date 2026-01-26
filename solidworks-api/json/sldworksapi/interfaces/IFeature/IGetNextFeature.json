@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "IGetNextFeature",
+    "returns": "Feature",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IComponent2.FirstFeature",
+      "IFeature.GetFirstSubFeature",
+      "IFeature.GetNextFeature",
+      "IFeature.GetNextSubFeature",
+      "IFeature.IGetFirstSubFeature",
+      "IFeature.IGetNextSubFeature",
+      "IModelDoc2.FirstFeature",
+      "IModelDoc2.IFirstFeature",
+      "IPartDoc.FirstFeature",
+      "IPartDoc.IFirstFeature"
+    ],
+    "keywords": [
+      "traverse",
+      "features",
+      "igetnextfeature",
+      "ifeature",
+      "feature",
+      "next",
+      "access",
+      "assembly",
+      "names",
+      "creators"
+    ]
+  },
+  "title": "IFeature.IGetNextFeature",
+  "description": "Gets the next feature.",
+  "signature": "Feature IGetNextFeature()",
+  "parameters": [],
+  "returns": "Pointer to the next feature",
+  "remarks": "This method:\nallows you to access suppressed features.\nreturns features in the current order for the model, and this order changes when the model is edited.\nYour application should not assume that:\nfeatures retain the same relative or absolute position throughout the model\u2019s lifetime. For example, you should not assume that Sketch1 always appears before Sketch2.\nany feature has a specific name. Because features can be renamed, you cannot assume that the first reference plane feature is named Plane1.\nWhen traversing the FeatureManager design tree, your application should use\nIFeature::GetTypeName2\nand\nIFeature::GetSpecificFeature2\nto identify specific features instead of relying solely on\nIFeature::Name\n.\nThis method returns features in the model definition order, which is not the same as the order displayed in the user interface. See\nITreeControlItem\nfor details.\nIFeature::GetFirstSubFeature\nand\nIFeature::IGetFirstSubFeature\nprovide access to subfeatures.",
+  "examples": [
+    {
+      "title": "Access Assembly (C++)",
+      "href": "Access_Assembly_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Creators of Features (C++)",
+      "href": "Get_Names_of_Creators_of_Features_Examples_CPlusCPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.FirstFeature",
+    "IFeature.GetFirstSubFeature",
+    "IFeature.GetNextFeature",
+    "IFeature.GetNextSubFeature",
+    "IFeature.IGetFirstSubFeature",
+    "IFeature.IGetNextSubFeature",
+    "IModelDoc2.FirstFeature",
+    "IModelDoc2.IFirstFeature",
+    "IPartDoc.FirstFeature",
+    "IPartDoc.IFirstFeature"
+  ]
+}

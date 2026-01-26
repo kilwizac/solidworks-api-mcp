@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "GetFirstCoEdge",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ILoop2.EnumCoEdges",
+      "ILoop2.GetCoEdgeCount",
+      "ILoop2.GetCoEdges",
+      "ILoop2.IGetCoEdges",
+      "ILoop2.IGetFirstCoEdge"
+    ],
+    "keywords": [
+      "getfirstcoedge",
+      "iloop2",
+      "loop2",
+      "first",
+      "co",
+      "edge",
+      "object",
+      "determine",
+      "type",
+      "face",
+      "vba",
+      "select",
+      "tangent",
+      "faces",
+      "edges",
+      "all",
+      "holes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ILoop2.GetFirstCoEdge",
+  "description": "Gets the first coedge of the loop.",
+  "signature": "System.Object GetFirstCoEdge()",
+  "parameters": [],
+  "returns": "First coedge in loop",
+  "remarks": "The\nICoEdge\nobjects are returned in a CW or CCW manner based on the direction of the\nILoop2\n.\nThe loop direction is determined as follows: if a loop is viewed along its direction, with the face normal pointing upwards, then the face that owns the loop is to the left. This means that inner loops are CW and outer loops are CCW. To determine if a loop is an outer loop, see\nILoop2::IsOuter\n.\nThe coedge direction always aligns with the direction of the loop.",
+  "examples": [
+    {
+      "title": "Determine Type of Face (VBA)",
+      "href": "Determine_Type_of_Face_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Tangent Faces (VBA)",
+      "href": "Select_Tangent_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (C#)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VB.NET)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VBA)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ILoop2.EnumCoEdges",
+    "ILoop2.GetCoEdgeCount",
+    "ILoop2.GetCoEdges",
+    "ILoop2.IGetCoEdges",
+    "ILoop2.IGetFirstCoEdge"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheetMetalFeatureData",
+    "member": "ReleaseSelectionAccess",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "releaseselectionaccess",
+      "isheetmetalfeaturedata",
+      "sheet",
+      "metal",
+      "feature",
+      "data",
+      "release",
+      "selection",
+      "access",
+      "void",
+      "fixed",
+      "face",
+      "part",
+      "vba"
+    ]
+  },
+  "title": "ISheetMetalFeatureData.ReleaseSelectionAccess",
+  "description": "Releases access to selections used to define the sheet metal feature.",
+  "signature": "void ReleaseSelectionAccess()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "To release access to sheet metal feature data in sheet metal models created in SOLIDWORKS 2013 or later, follow the examples of\nIModelDocExtension::GetTemplateSheetMetal\n.\nISheetMetalFeatureData::AccessSelections\nand\nISheetMetalFeatureData::IAccessSelections2\nput the model in a rollback state to allow access to the selections that define the feature.\nUse this method to restore the rollback state if you did not modify the feature, or use\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you did modify the feature.",
+  "examples": [
+    {
+      "title": "Get Fixed Face of Sheet Metal Part (VBA)",
+      "href": "Get_Fixed_Face_of_Sheet_Metal_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

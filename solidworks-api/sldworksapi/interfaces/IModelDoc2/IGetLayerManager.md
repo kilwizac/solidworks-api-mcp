@@ -1,0 +1,50 @@
+---
+type: method
+interface: IModelDoc2
+member: IGetLayerManager
+returns: LayerMgr
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - IModelDoc2.GetLayerManager
+keywords:
+  - layer
+  - see
+  - also
+  - ilayer
+  - ilayermgr
+  - interfaces
+  - igetlayermanager
+  - imodeldoc2
+  - model
+  - doc2
+  - manager
+  - mgr
+---
+
+# IModelDoc2.IGetLayerManager
+
+Gets the layer manager ofr the current drawing document.
+
+## Signature
+
+```csharp
+LayerMgr IGetLayerManager()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Layer manager
+
+## See Also
+
+- `IModelDoc2.GetLayerManager`

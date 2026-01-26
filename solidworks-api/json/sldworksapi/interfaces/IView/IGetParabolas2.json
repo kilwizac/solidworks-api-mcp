@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetParabolas2",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetParabolas2"
+    ],
+    "keywords": [
+      "parabolas",
+      "drawing",
+      "views",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "igetparabolas2",
+      "parabolas2",
+      "double"
+    ]
+  },
+  "title": "IView.IGetParabolas2",
+  "description": "Gets all of the information about all of the parabolas in this view.",
+  "signature": "System.Double IGetParabolas2()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return values are in an array of doubles:\n[\nColor, LineType, LineFont, LineWidth, LayerID, LayerOverride, StartPt[3], EndPt[3], FocusPt[3], ApexPt[3]\n]\nwhere:\nColor\n= COLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLineType\n= line type. Valid returns as defined in\nswLineTypes_e\n. A\nLineType\nis a combination of a LineStyle and LineWeight.\nLineFont\n= Value is used for polyline font information.\nLineWidth\n= integer value defining the line width. Valid width values as defined in\nswLineWeights_e\n.\nLayerID = integer value indicating which layer holds this entity. Obtain the\nILayer\nobject by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayerOverride = integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if\nLayerOverride\nwas returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\nStartPt[3] = array of 3 doubles (X,Y,Z) describing the parabola start point.\nEndPt[3] = array of 3 doubles (X,Y,Z) describing the parabola end point.\nFocusPt[3] = array of 3 doubles (X,Y,Z) describing the parabola focus point.\nApexPt[3] = array of 3 doubles (X,Y,Z) describing the parabola apex point.\nThis set of data repeats for each parabola in the view. The size of the array is (NumParabolas * 18).  To determine the number of parabolas, use\nIView::GetParabolaCount\n.",
+  "examples": [],
+  "related": [
+    "IView.GetParabolas2"
+  ]
+}

@@ -1,0 +1,52 @@
+---
+type: property
+interface: IMiterFlangeFeatureData
+member: UseDefaultBendRadius
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IMiterFlangeFeatureData.BendRadius
+keywords:
+  - bend
+  - radius
+  - usedefaultbendradius
+  - imiterflangefeaturedata
+  - miter
+  - flange
+  - feature
+  - data
+  - use
+  - default
+  - boolean
+readonly: null
+---
+
+# IMiterFlangeFeatureData.UseDefaultBendRadius
+
+Gets or sets whether to use the default bend radius for this miter flange feature.
+
+## Signature
+
+```csharp
+System.Boolean UseDefaultBendRadius {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to use the default bend radius, false to use specified bend radius
+
+## Examples
+
+- IMiterFlangeFeatureData (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMiterFlangeFeatureData)
+
+## See Also
+
+- `IMiterFlangeFeatureData.BendRadius`

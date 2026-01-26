@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "GetModelMaterialPropertyValues",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetMaterialPropertyValues2",
+      "IComponent2.HasMaterialPropertyValues",
+      "IComponent2.IGetModelMaterialPropertyValues"
+    ],
+    "keywords": [
+      "properties",
+      "components",
+      "getmodelmaterialpropertyvalues",
+      "icomponent2",
+      "component2",
+      "model",
+      "material",
+      "values",
+      "config",
+      "name",
+      "string",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.GetModelMaterialPropertyValues",
+  "description": "Gets the material properties of this lightweight component in the specified configuration.",
+  "signature": "System.Object GetModelMaterialPropertyValues( \n   System.String\nConfigName\n)",
+  "parameters": [
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of configuration"
+    }
+  ],
+  "returns": "An array of 9 doubles (see Remarks )",
+  "remarks": "The contents of the returned array:\n[\nR, G, B, Ambient, Diffuse, Specularity, Shininess, Transparency, Emission\n]\nValid values are between 0.0 and 1.0, inclusive. Multiply the R, G, and B values by 255 to obtain the red, green, and blue component values. Multiply the other values in the array by 100 to obtain percentages. If all values in the array are -1, then material property values were not assigned to this component, and the component has the same default properties as the user interface.",
+  "examples": [
+    {
+      "title": "Get Model Material Property Values (VBA)",
+      "href": "Get_Model_Material_Property_Values_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Model Material Property Values (VB.NET)",
+      "href": "Get_Model_Material_Property_Values_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Model Material Property Values (C#)",
+      "href": "Get_Model_Material_Property_Values_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.GetMaterialPropertyValues2",
+    "IComponent2.HasMaterialPropertyValues",
+    "IComponent2.IGetModelMaterialPropertyValues"
+  ]
+}

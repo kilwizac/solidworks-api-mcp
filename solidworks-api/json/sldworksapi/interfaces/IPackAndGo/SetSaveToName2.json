@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPackAndGo",
+    "member": "SetSaveToName2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Override",
+        "type": "System.Boolean",
+        "description": "True to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames , false to not"
+      },
+      {
+        "name": "SaveToName",
+        "type": "System.String",
+        "description": "Path or the path and filename of the Zip file to use to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IPackAndGo.FlattenToSingleFolder",
+      "IPackAndGo.GetSaveToName"
+    ],
+    "keywords": [
+      "setsavetoname2",
+      "ipackandgo",
+      "pack",
+      "go",
+      "save",
+      "name2",
+      "override",
+      "boolean",
+      "name",
+      "string",
+      "add",
+      "remove",
+      "files",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IPackAndGo.SetSaveToName2",
+  "description": "Overrides the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames with the specified path or the path and name of the Zip file.",
+  "signature": "System.Boolean SetSaveToName2( \n   System.Boolean\nOverride\n,\n   System.String\nSaveToName\n)",
+  "parameters": [
+    {
+      "name": "Override",
+      "type": "System.Boolean",
+      "description": "True to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames , false to not"
+    },
+    {
+      "name": "SaveToName",
+      "type": "System.String",
+      "description": "Path or the path and filename of the Zip file to use to override the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames"
+    }
+  ],
+  "returns": "True if the paths and filenames of the documents set by IPackAndGo::SetDocumentSaveToNames or IPackAndGo::ISetDocumentSaveToNames are overridden, false if not",
+  "remarks": "The difference between this method and the now obsolete IPackAndGo::SetSaveToName is that this method supports saving to minimal folders. It saves to any folder structure as defined by\nIPackAndGo::FolderStructureOption\n.",
+  "examples": [
+    {
+      "title": "Add and Remove Files from Pack and Go (VBA)",
+      "href": "Add_and_Remove_Files_from_Pack_and_Go_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Remove Files from Pack and Go (VB.NET)",
+      "href": "Add_and_Remove_Files_from_Pack_and_Go_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Remove Files from Pack and Go (C#)",
+      "href": "Add_and_Remove_Files_from_Pack_and_Go_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPackAndGo.FlattenToSingleFolder",
+    "IPackAndGo.GetSaveToName"
+  ]
+}

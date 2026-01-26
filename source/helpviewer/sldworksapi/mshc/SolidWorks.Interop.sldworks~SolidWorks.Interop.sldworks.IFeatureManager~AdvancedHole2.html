@@ -1,0 +1,332 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>AdvancedHole2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~AdvancedHole2" />
+    <meta name="Description" content="Creates an Advanced Hole feature." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.AdvancedHole2" />
+    <meta name="Microsoft.Help.Keywords" content="Advanced Hole (see also IAdvancedHoleFeatureData Interface), create" />
+    <meta name="Microsoft.Help.Keywords" content="Feature (see also IFeature Interface), Advanced Holes" />
+    <meta name="Microsoft.Help.Keywords" content="Feature (see also IFeature Interface), stacked holes" />
+    <meta name="Microsoft.Help.Keywords" content="AdvancedHole2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                AdvancedHole2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : AdvancedHole2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="AdvancedHoleNearElementArrayPopupContent" class="i-popup-content">
+        Array of near side hole data objects (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="AdvancedHoleFarElementArrayPopupContent" class="i-popup-content">
+        Array of far side hole data objects (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="UseBaselineDimensionsPopupContent" class="i-popup-content">
+        True to use baseline dimensions, false to not (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="IsCustomCalloutPopupContent" class="i-popup-content">
+        True&#160;to&#160;customize the&#160;hole callout, false to use a default hole callout (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="IsDepthUptoTipPopupContent" class="i-popup-content">
+        True if hole depth is up to the drill point tip, false if hole depth is up to the shoulder (full depth of hole) (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="ResultArrayPopupContent" class="i-popup-content">
+        Array of result codes as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swAdvancedHoleResults_e.html">swAdvancedHoleResults_e</a>&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates an Advanced Hole feature.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function AdvancedHole2( _
+   ByVal <i><a class="i-popup-link" id="AdvancedHoleNearElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleNearElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleNearElementArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="AdvancedHoleFarElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleFarElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleFarElementArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="UseBaselineDimensionsPopupLink" data-popup-contentsource="#UseBaselineDimensionsPopupContent" data-popup-showevent="click mouseenter">UseBaselineDimensions</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="IsCustomCalloutPopupLink" data-popup-contentsource="#IsCustomCalloutPopupContent" data-popup-showevent="click mouseenter">IsCustomCallout</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="IsDepthUptoTipPopupLink" data-popup-contentsource="#IsDepthUptoTipPopupContent" data-popup-showevent="click mouseenter">IsDepthUptoTip</a></i> As System.Boolean, _
+   ByRef <i><a class="i-popup-link" id="ResultArrayPopupLink" data-popup-contentsource="#ResultArrayPopupContent" data-popup-showevent="click mouseenter">ResultArray</a></i> As System.Object _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim AdvancedHoleNearElementArray As System.Object
+Dim AdvancedHoleFarElementArray As System.Object
+Dim UseBaselineDimensions As System.Boolean
+Dim IsCustomCallout As System.Boolean
+Dim IsDepthUptoTip As System.Boolean
+Dim ResultArray As System.Object
+Dim value As Feature
+ 
+value = instance.AdvancedHole2(AdvancedHoleNearElementArray, AdvancedHoleFarElementArray, UseBaselineDimensions, IsCustomCallout, IsDepthUptoTip, ResultArray)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature AdvancedHole2( 
+   System.object <i><a class="i-popup-link" id="AdvancedHoleNearElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleNearElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleNearElementArray</a></i>,
+   System.object <i><a class="i-popup-link" id="AdvancedHoleFarElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleFarElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleFarElementArray</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseBaselineDimensionsPopupLink" data-popup-contentsource="#UseBaselineDimensionsPopupContent" data-popup-showevent="click mouseenter">UseBaselineDimensions</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsCustomCalloutPopupLink" data-popup-contentsource="#IsCustomCalloutPopupContent" data-popup-showevent="click mouseenter">IsCustomCallout</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsDepthUptoTipPopupLink" data-popup-contentsource="#IsDepthUptoTipPopupContent" data-popup-showevent="click mouseenter">IsDepthUptoTip</a></i>,
+   out System.object <i><a class="i-popup-link" id="ResultArrayPopupLink" data-popup-contentsource="#ResultArrayPopupContent" data-popup-showevent="click mouseenter">ResultArray</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ AdvancedHole2( 
+   System.Object^ <i><a class="i-popup-link" id="AdvancedHoleNearElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleNearElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleNearElementArray</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="AdvancedHoleFarElementArrayPopupLink" data-popup-contentsource="#AdvancedHoleFarElementArrayPopupContent" data-popup-showevent="click mouseenter">AdvancedHoleFarElementArray</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseBaselineDimensionsPopupLink" data-popup-contentsource="#UseBaselineDimensionsPopupContent" data-popup-showevent="click mouseenter">UseBaselineDimensions</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsCustomCalloutPopupLink" data-popup-contentsource="#IsCustomCalloutPopupContent" data-popup-showevent="click mouseenter">IsCustomCallout</a></i>,
+   System.bool <i><a class="i-popup-link" id="IsDepthUptoTipPopupLink" data-popup-contentsource="#IsDepthUptoTipPopupContent" data-popup-showevent="click mouseenter">IsDepthUptoTip</a></i>,
+   [Out] System.Object^ <i><a class="i-popup-link" id="ResultArrayPopupLink" data-popup-contentsource="#ResultArrayPopupContent" data-popup-showevent="click mouseenter">ResultArray</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>AdvancedHoleNearElementArray</i></dt>
+
+                <dd>Array of near side hole data objects (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>AdvancedHoleFarElementArray</i></dt>
+
+                <dd>Array of far side hole data objects (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>UseBaselineDimensions</i></dt>
+
+                <dd>True to use baseline dimensions, false to not (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>IsCustomCallout</i></dt>
+
+                <dd>True&#160;to&#160;customize the&#160;hole callout, false to use a default hole callout (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>IsDepthUptoTip</i></dt>
+
+                <dd>True if hole depth is up to the drill point tip, false if hole depth is up to the shoulder (full depth of hole) (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>ResultArray</i></dt>
+
+                <dd>Array of result codes as defined in&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swAdvancedHoleResults_e.html">swAdvancedHoleResults_e</a>&#160;(see <strong>Remarks</strong>)</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">IFeature</a>; Nothing or null if&#160;this method results in an invalid geometry condition&#160;(see <strong>Remarks</strong>)
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>The Advanced Hole feature:</p>
+
+            <div>
+                <ul>
+                    <li>is separate from the Hole Wizard functionality (see <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~HoleWizard5">FeatureManager::HoleWizard5</a>).&#160;</li>
+
+                    <li>consists of several hole elements,&#160;e.g., counterbore, countersink, straight, and tapered tap,&#160;that are stacked from the near&#160;and far side faces inward. The near and far side stacks, combined,&#160;form the Advanced Hole.</li>
+
+                    <li>can be added only to parts at this time.</li>
+                </ul>
+            </div>
+
+            <p>AdvancedHoleNearElementArray and AdvancedHoleFarElementArray each contain&#160;one or more hole type-specific objects in order as they&#160;stack from the near and far side faces:</p>
+
+            <ul>
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICounterboreElementData">ICounterboreElementData</a></li>
+
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICountersinkElementData">ICountersinkElementData</a></li>
+
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IStraightElementData">IStraightElementData</a></li>
+
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IStraightTapElementData">IStraightTapElementData</a></li>
+
+                <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ITaperedTapElementData">ITaperedTapElementData</a></li>
+            </ul>
+
+            <p>The hole type-specific interfaces above&#160;extend the parent interface,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleElementData">IAdvancedHoleElementData</a>, which you use to set general Advanced Hole properties.</p>
+
+            <p>UseBaseLineDimensions controls which hole type-specific properties are valid. See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleFeatureData~UseBaselineDimensions">IAdvancedHoleFeatureData::UseBaselineDimensions</a>.</p>
+
+            <p>IsCustomCallout set to true&#160;allows you to&#160;set a custom callout string for individual hole elements&#160;using&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleElementData~CalloutString">IAdvancedHoleElementData::CalloutString</a>.</p>
+
+            <p>IsDepthUptoTip is valid only when:</p>
+
+            <ul>
+                <li>No far side elements&#160;are in the stack.</li>
+
+                <li>The near side end element:
+
+                    <ul>
+                        <li>is a hole or straight tap,</li>
+
+                        <li>has an&#160;end shape&#160;of drill point,&#160;and</li>
+
+                        <li>has an end condition that is&#160;blind or&#160;offset from surface.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>ResultArray contains a return code for each element in AdvancedHoleNearElementArray and AdvancedHoleFarElementArray. It is possible for this method to fail to create an advanced hole, even though ResultArray contains all success result codes. If the individual hole elements all combine to produce invalid geometry (e.g., a disjoint body or a self-intersecting face)&#160;or if incorrect near or far side faces are selected, then this method returns Nothing or null.</p>
+
+            <p>To create an Advanced Hole feature, follow the examples which do the following:</p>
+
+            <ol>
+                <li>Call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByRay">IModelDocExtension::SelectByRay</a> to select the near side&#160;(Mark = 256)&#160;and far side (Mark = 512)&#160;faces of the Advanced Hole. You must select these faces by location, so do not use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEntity~Select4">IEntity::Select4</a>.</li>
+
+                <li>Call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~CreateAdvancedHoleElementData">IModelDocExtension::CreateAdvancedHoleElementData</a> to create an&#160;AdvancedHoleElementData object.</li>
+
+                <li>Set&#160;the&#160;general Advanced Hole properties&#160;using&#160;the AdvancedHoleElementData object.</li>
+
+                <li>Cast&#160;the AdvancedHoleElementData object&#160;using one of the hole type-specific&#160;interfaces.</li>
+
+                <li>Set the specific Advanced Hole properties&#160;using the hole type-specific object. For IStraightTapElementData and IStraightElementData objects, specify the IsDepthUptoTip requirements described in these Remarks.</li>
+
+                <li>Repeat steps&#160;2 -&#160;5 for each&#160;hole element you want to add to the near and far side stacks&#160;of the Advanced Hole.</li>
+
+                <li>Create near and far side arrays of the hole type-specific objects in stacking order from each face inward. The innermost elements of each stack should match to create a contiguous hole that extends from near side face to far side face. Create an empty far side array if using IsDepthUptoTip.</li>
+
+                <li>Pass the near and far side arrays to&#160;this method&#160;to create the Advanced Hole.</li>
+
+                <li>Delete the defining Advanced Hole&#160;sketch point and call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~CreatePoint">ISketchManager::CreatePoint</a> one or more times to insert the Advanced Hole&#160;in multiple locations.</li>
+            </ol>
+
+            <p>To edit an Advanced Hole feature, call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature~GetDefinition">IFeature::GetDefinition</a> to access&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleFeatureData">IAdvancedHoleFeatureData</a>. See <a href="sldworksapiprogguide.chm::/Miscellaneous/Accessing_Selections_that_Define_Features.htm">Accessing Selections that Define Features</a>.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Create_Advanced_Hole_Example_VB.htm">Create Advanced Hole Feature (VBA)</a><br />
+            <a href="Create_Advanced_Hole_Example_VBNET.htm">Create Advanced Hole Feature (VB.NET)</a><br />
+            <a href="Create_Advanced_Hole_Example_CSharp.htm">Create Advanced Hole Feature (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~AdvancedHole2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

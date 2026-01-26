@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "DefineMessageBar",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "UniqueName",
+        "type": "System.String",
+        "description": "Unique ID of this message bar"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "definemessagebar",
+      "isldworks",
+      "sld",
+      "works",
+      "define",
+      "message",
+      "bar",
+      "unique",
+      "name",
+      "string",
+      "object",
+      "imessagebarhandler"
+    ]
+  },
+  "title": "ISldWorks.DefineMessageBar",
+  "description": "Called by a SOLIDWORKS add-in, creates a message bar definition object.",
+  "signature": "System.Object DefineMessageBar( \n   System.String\nUniqueName\n)",
+  "parameters": [
+    {
+      "name": "UniqueName",
+      "type": "System.String",
+      "description": "Unique ID of this message bar"
+    }
+  ],
+  "returns": "IMessageBarDefinition",
+  "remarks": "It is the add-in's responsibility to ensure that the ID is unique by using, for example, a combination of add-in module name and unique message identifier:\n\"MyAddInName+ID_MYMESSAGE1\"",
+  "examples": [
+    {
+      "title": "IMessageBarHandler",
+      "href": "ms-its:swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IMessageBarHandler.html",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

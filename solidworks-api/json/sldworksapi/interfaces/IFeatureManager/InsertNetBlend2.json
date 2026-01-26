@@ -1,0 +1,314 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertNetBlend2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int16",
+        "description": "0 = Base 1 = Boss 2 = Surface 3 = Cut"
+      },
+      {
+        "name": "NCurvesDir1",
+        "type": "System.Int16",
+        "description": "Number of curves in Direction 1"
+      },
+      {
+        "name": "NCurvesDir2",
+        "type": "System.Int16",
+        "description": "Number of curves in Direction 2"
+      },
+      {
+        "name": "HasCenterline",
+        "type": "System.Boolean",
+        "description": "True if a centerline exists, false if not"
+      },
+      {
+        "name": "TessTolFactor",
+        "type": "System.Double",
+        "description": "Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the value, the more intermediate sections created"
+      },
+      {
+        "name": "WantsSolid",
+        "type": "System.Boolean",
+        "description": "True to create a solid body, false to create a surface body; only valid when Type = 0, 1, or 3"
+      },
+      {
+        "name": "MergeBody",
+        "type": "System.Boolean",
+        "description": "True merges the results in a multibody part, false does not"
+      },
+      {
+        "name": "FeatureScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "AutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+      },
+      {
+        "name": "Thin",
+        "type": "System.Boolean",
+        "description": "True if this feature is a thin body, false if not"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Thickness value for the first direction"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Thickness value for the second direction"
+      },
+      {
+        "name": "ReverseThickness",
+        "type": "System.Boolean",
+        "description": "True to reverse the thickness, false to not"
+      },
+      {
+        "name": "ThinSolidType",
+        "type": "System.Int16",
+        "description": "Thin wall type as defined in swThinWallType_e"
+      },
+      {
+        "name": "UseSharedThickness",
+        "type": "System.Boolean",
+        "description": "True to use shared thickness, false to not"
+      },
+      {
+        "name": "CapEnds",
+        "type": "System.Boolean",
+        "description": "True to cap the ends, false to not"
+      },
+      {
+        "name": "EndThickness",
+        "type": "System.Double",
+        "description": "End cap thickness"
+      },
+      {
+        "name": "AutoFillet",
+        "type": "System.Boolean",
+        "description": "True to fillet the corners automatically, false to not"
+      },
+      {
+        "name": "FilletRadius",
+        "type": "System.Double",
+        "description": "Fillet radius when AutoFillet is true"
+      },
+      {
+        "name": "ForceNonRational",
+        "type": "System.Boolean",
+        "description": "True to force the resulting surface to be non-rational, false to not"
+      },
+      {
+        "name": "CreateSolid",
+        "type": "System.Boolean",
+        "description": "True to create a solid body, false to create a surface body; only valid when Type = 2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData",
+      "IFeatureManager.SetNetBlendCurveData",
+      "IFeatureManager.SetNetBlendDirectionData"
+    ],
+    "keywords": [
+      "boundary",
+      "feature",
+      "surface",
+      "boundarybossfeaturedata",
+      "see",
+      "iboundarybossfeaturedata",
+      "also",
+      "ifeature",
+      "isurface",
+      "insertnetblend2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "net",
+      "blend2",
+      "type",
+      "int16",
+      "curves",
+      "dir1",
+      "dir2",
+      "has",
+      "centerline",
+      "boolean",
+      "tess",
+      "tol",
+      "factor",
+      "double",
+      "wants",
+      "solid",
+      "merge",
+      "body",
+      "scope",
+      "auto",
+      "select",
+      "thin",
+      "thickness1",
+      "thickness2",
+      "reverse",
+      "thickness",
+      "use",
+      "shared",
+      "cap",
+      "ends",
+      "end",
+      "fillet",
+      "radius",
+      "force",
+      "non",
+      "rational",
+      "create",
+      "vb",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertNetBlend2",
+  "description": "This method inserts a boundary feature or a boundary surface feature.",
+  "signature": "Feature InsertNetBlend2( \n   System.Int16\nType\n,\n   System.Int16\nNCurvesDir1\n,\n   System.Int16\nNCurvesDir2\n,\n   System.Boolean\nHasCenterline\n,\n   System.Double\nTessTolFactor\n,\n   System.Boolean\nWantsSolid\n,\n   System.Boolean\nMergeBody\n,\n   System.Boolean\nFeatureScope\n,\n   System.Boolean\nAutoSelect\n,\n   System.Boolean\nThin\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Boolean\nReverseThickness\n,\n   System.Int16\nThinSolidType\n,\n   System.Boolean\nUseSharedThickness\n,\n   System.Boolean\nCapEnds\n,\n   System.Double\nEndThickness\n,\n   System.Boolean\nAutoFillet\n,\n   System.Double\nFilletRadius\n,\n   System.Boolean\nForceNonRational\n,\n   System.Boolean\nCreateSolid\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int16",
+      "description": "0 = Base 1 = Boss 2 = Surface 3 = Cut"
+    },
+    {
+      "name": "NCurvesDir1",
+      "type": "System.Int16",
+      "description": "Number of curves in Direction 1"
+    },
+    {
+      "name": "NCurvesDir2",
+      "type": "System.Int16",
+      "description": "Number of curves in Direction 2"
+    },
+    {
+      "name": "HasCenterline",
+      "type": "System.Boolean",
+      "description": "True if a centerline exists, false if not"
+    },
+    {
+      "name": "TessTolFactor",
+      "type": "System.Double",
+      "description": "Factor to control the number of intermediate sections used for loft with centerline; default value is 1.0; the greater the value, the more intermediate sections created"
+    },
+    {
+      "name": "WantsSolid",
+      "type": "System.Boolean",
+      "description": "True to create a solid body, false to create a surface body; only valid when Type = 0, 1, or 3"
+    },
+    {
+      "name": "MergeBody",
+      "type": "System.Boolean",
+      "description": "True merges the results in a multibody part, false does not"
+    },
+    {
+      "name": "FeatureScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "AutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects"
+    },
+    {
+      "name": "Thin",
+      "type": "System.Boolean",
+      "description": "True if this feature is a thin body, false if not"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Thickness value for the first direction"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Thickness value for the second direction"
+    },
+    {
+      "name": "ReverseThickness",
+      "type": "System.Boolean",
+      "description": "True to reverse the thickness, false to not"
+    },
+    {
+      "name": "ThinSolidType",
+      "type": "System.Int16",
+      "description": "Thin wall type as defined in swThinWallType_e"
+    },
+    {
+      "name": "UseSharedThickness",
+      "type": "System.Boolean",
+      "description": "True to use shared thickness, false to not"
+    },
+    {
+      "name": "CapEnds",
+      "type": "System.Boolean",
+      "description": "True to cap the ends, false to not"
+    },
+    {
+      "name": "EndThickness",
+      "type": "System.Double",
+      "description": "End cap thickness"
+    },
+    {
+      "name": "AutoFillet",
+      "type": "System.Boolean",
+      "description": "True to fillet the corners automatically, false to not"
+    },
+    {
+      "name": "FilletRadius",
+      "type": "System.Double",
+      "description": "Fillet radius when AutoFillet is true"
+    },
+    {
+      "name": "ForceNonRational",
+      "type": "System.Boolean",
+      "description": "True to force the resulting surface to be non-rational, false to not"
+    },
+    {
+      "name": "CreateSolid",
+      "type": "System.Boolean",
+      "description": "True to create a solid body, false to create a surface body; only valid when Type = 2"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Use\nIModelDocExtension::SelectByID2\nand the following selection marks to select the entities for a boundary feature or boundary surface feature.\nSketch curves\nDirection 1: 8193, 16385, 24577\nDirection 2: 8194, 16386, 24578\nFaces\nDirection 1: 8193, 16385, 24577\nDirection 2: 8194, 16386, 24578\nOther sketch entities (3D sketch (Unknown/SELOBJGROUP)\nDirection 1: 12289, 24577\nDirection 2: 16386, 28674",
+  "examples": [
+    {
+      "title": "Insert Solid Body Boundary Surface Feature (C#)",
+      "href": "Insert_Solid_Body_Boundary_Surface_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Solid Body Boundary Surface Feature (VB.NET)",
+      "href": "Insert_Solid_Body_Boundary_Surface_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Solid Body Boundary Surface Feature (VBA)",
+      "href": "Insert_Solid_Body_Boundary_Surface_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBoundaryBossFeatureData",
+    "IFeatureManager.SetNetBlendCurveData",
+    "IFeatureManager.SetNetBlendDirectionData"
+  ]
+}

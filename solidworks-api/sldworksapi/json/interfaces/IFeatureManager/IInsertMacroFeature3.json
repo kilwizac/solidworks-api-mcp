@@ -1,0 +1,217 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "IInsertMacroFeature3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BaseName",
+        "type": "System.String",
+        "description": "Name of the base feature (see Remarks )"
+      },
+      {
+        "name": "ProgId",
+        "type": "System.String",
+        "description": "Indicates callback object (see Remarks )"
+      },
+      {
+        "name": "MacroMethods",
+        "type": "System.String",
+        "description": "Null; valid only for VBA"
+      },
+      {
+        "name": "ParamCount",
+        "type": "System.Int32",
+        "description": "Number of parameters"
+      },
+      {
+        "name": "ParamNames",
+        "type": "System.String",
+        "description": "Array of strings of the parameters of size ParamCount"
+      },
+      {
+        "name": "ParamTypes",
+        "type": "System.Int32",
+        "description": "Array of the types of parameters of size paramCount as defined by swMacroFeatureParamType_e"
+      },
+      {
+        "name": "ParamValues",
+        "type": "System.String",
+        "description": "Array of strings of the values of parameters of size ParamCount"
+      },
+      {
+        "name": "DimCount",
+        "type": "System.Int32",
+        "description": "Number of dimensions"
+      },
+      {
+        "name": "DimTypes",
+        "type": "System.Int32",
+        "description": "Array of the types of dimensions as defined by swDimensionType_e (see Remarks )"
+      },
+      {
+        "name": "DimCountValues",
+        "type": "System.Double",
+        "description": "Array of doubles of the values of dimensions of size DimCount"
+      },
+      {
+        "name": "BodyCount",
+        "type": "System.Int32",
+        "description": "Number of bodies to modify in the macro feature"
+      },
+      {
+        "name": "EditBodies",
+        "type": "Body2",
+        "description": "Array of IBody2 objects to modify in the macro feature"
+      },
+      {
+        "name": "IconCount",
+        "type": "System.Int32",
+        "description": "Number of icons"
+      },
+      {
+        "name": "IconFiles",
+        "type": "System.String",
+        "description": "Array of strings of the file names for the icons (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Placement of the macro feature in the FeatureManager design tree as defined by swMacroFeatureOptions_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertMacroFeature3",
+      "IMacroFeatureData"
+    ],
+    "keywords": [
+      "com",
+      "feature",
+      "macro",
+      "see",
+      "also",
+      "imacrofeaturedata",
+      "ifeature",
+      "iinsertmacrofeature3",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature3",
+      "base",
+      "name",
+      "string",
+      "prog",
+      "id",
+      "methods",
+      "param",
+      "count",
+      "int32",
+      "names",
+      "types",
+      "values",
+      "dim",
+      "double",
+      "body",
+      "edit",
+      "bodies",
+      "body2",
+      "icon",
+      "files",
+      "options"
+    ]
+  },
+  "title": "IFeatureManager.IInsertMacroFeature3",
+  "description": "Inserts a macro feature in this model.",
+  "signature": "Feature IInsertMacroFeature3( \n   System.String\nBaseName\n,\n   System.String\nProgId\n,\n   ref System.String\nMacroMethods\n,\n   System.Int32\nParamCount\n,\n   ref System.String\nParamNames\n,\n   ref System.Int32\nParamTypes\n,\n   ref System.String\nParamValues\n,\n   System.Int32\nDimCount\n,\n   ref System.Int32\nDimTypes\n,\n   ref System.Double\nDimCountValues\n,\n   System.Int32\nBodyCount\n,\n   ref Body2\nEditBodies\n,\n   System.Int32\nIconCount\n,\n   ref System.String\nIconFiles\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "BaseName",
+      "type": "System.String",
+      "description": "Name of the base feature (see Remarks )"
+    },
+    {
+      "name": "ProgId",
+      "type": "System.String",
+      "description": "Indicates callback object (see Remarks )"
+    },
+    {
+      "name": "MacroMethods",
+      "type": "System.String",
+      "description": "Null; valid only for VBA"
+    },
+    {
+      "name": "ParamCount",
+      "type": "System.Int32",
+      "description": "Number of parameters"
+    },
+    {
+      "name": "ParamNames",
+      "type": "System.String",
+      "description": "Array of strings of the parameters of size ParamCount"
+    },
+    {
+      "name": "ParamTypes",
+      "type": "System.Int32",
+      "description": "Array of the types of parameters of size paramCount as defined by swMacroFeatureParamType_e"
+    },
+    {
+      "name": "ParamValues",
+      "type": "System.String",
+      "description": "Array of strings of the values of parameters of size ParamCount"
+    },
+    {
+      "name": "DimCount",
+      "type": "System.Int32",
+      "description": "Number of dimensions"
+    },
+    {
+      "name": "DimTypes",
+      "type": "System.Int32",
+      "description": "Array of the types of dimensions as defined by swDimensionType_e (see Remarks )"
+    },
+    {
+      "name": "DimCountValues",
+      "type": "System.Double",
+      "description": "Array of doubles of the values of dimensions of size DimCount"
+    },
+    {
+      "name": "BodyCount",
+      "type": "System.Int32",
+      "description": "Number of bodies to modify in the macro feature"
+    },
+    {
+      "name": "EditBodies",
+      "type": "Body2",
+      "description": "Array of IBody2 objects to modify in the macro feature"
+    },
+    {
+      "name": "IconCount",
+      "type": "System.Int32",
+      "description": "Number of icons"
+    },
+    {
+      "name": "IconFiles",
+      "type": "System.String",
+      "description": "Array of strings of the file names for the icons (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Placement of the macro feature in the FeatureManager design tree as defined by swMacroFeatureOptions_e (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "BaseName\nThe argument BaseName is serialized within the feature and cannot be changed.\nYou can find out the name of the base feature by using\nIMacroFeatureData::GetBaseName\n.\nThe BaseName argument is also used to generate the name of the feature when the feature is first created.\nProgId\nIf creating a macro feature using...\nThen ProgId is...\nCOM callback methods\nThe name of the component that implements the COM callback methods. The object that is represented by ProgID must support the ISwComFeature interface.\nInsertMacroFeature3 (\"Sample\", \"Sample.MyFeature\", _\nNothing, paramNames, paramTypes, _\nparamValues, dimTypes, dimValues, _\neditBodies, iconFiles, _\nswMacroFeatureByDefault)\nIn the COM server, the Sample.Feature class is derived or supports the ISwComFeature interface. These methods support the macro feature's\nrebuild\n,\nedit\n, and\nsecurity\nfunctions.\nDimTypes\nOnly these dimension types are supported by this method:\nswAngularDimension\nswLinearDimension\nswRadialDimension\nIconFiles\nThe array of the file names for the icons can contain either three or nine strings.\nNumber of strings in array\nTypes of images in this order\nImage format and sizes\nThree\nRegular\nSuppressed\nHighlighted\nWindows bitmap (\n*.bmp\n) format\n16 pixels wide X 18 pixels high\nNine\nNOTES:\nThis size array is only valid for macro features created in parts, assemblies, and drawings in SOLIDWORKS 2017 and later.\nSOLIDWORKS displays the appropriate images based on the current DPI setting of the display device.\nRegular small\nSuppressed small\nHighlighted small\nRegular medium\nSuppressed medium\nHighlighted medium\nRegular large\nSuppressed large\nHighlighted large\nWindows bitmap (\n*.bmp\n) format\nRecommended sizes are:\nSmall: 20 pixels wide X 20 pixels high\nMedium: 32 pixels wide X 32 pixels high\nLarge: 40 pixels wide X 40 pixels high\nYou can specify either the full path name or just the file name for the strings; for example,\nc:\n\\\nbitmaps\n\\\nicon1.bmp\nor\nicon1.bmp\n.\nOptions\nswMacroFeatureOptions_e.swMacroFeatureEmbedMacroFile is not supported by programming languages for the Microsoft .NET Framework; for example, not supported by C#, Visual Basic .NET, or Managed C++.\nSee\nOverview of Macro Features\nfor more information.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertMacroFeature3",
+    "IMacroFeatureData"
+  ]
+}

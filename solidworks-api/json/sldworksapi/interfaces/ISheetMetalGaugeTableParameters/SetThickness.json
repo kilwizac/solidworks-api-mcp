@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheetMetalGaugeTableParameters",
+    "member": "SetThickness",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Gauge thickness"
+      },
+      {
+        "name": "Override",
+        "type": "System.Boolean",
+        "description": "True to override an existing value, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISheetMetalGaugeTableParameters.GetThickness",
+      "ISheetMetalGaugeTableParameters.OverrideThickness",
+      "ISheetMetalGaugeTableParameters.ReverseDirection"
+    ],
+    "keywords": [
+      "setthickness",
+      "isheetmetalgaugetableparameters",
+      "sheet",
+      "metal",
+      "gauge",
+      "table",
+      "parameters",
+      "thickness",
+      "double",
+      "override",
+      "boolean"
+    ]
+  },
+  "title": "ISheetMetalGaugeTableParameters.SetThickness",
+  "description": "Sets the gauge thickness in this gauge table.",
+  "signature": "System.Boolean SetThickness( \n   System.Double\nThickness\n,\n   System.Boolean\nOverride\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Gauge thickness"
+    },
+    {
+      "name": "Override",
+      "type": "System.Boolean",
+      "description": "True to override an existing value, false to not (see Remarks )"
+    }
+  ],
+  "returns": "True if gauge thickness successfully set, false if not",
+  "remarks": "If Override is:\ntrue, then specify Thickness using an override gauge thickness. You should also use\nISheetMetalGaugeTableParameters::SetRadius\nto override the bend radius.\nfalse, instead of calling this method use\nISheetMetalGaugeTableParameters::GetAvailableGaugeNumbers\nand\nISheetMetalGaugeTableParameters::SetCurrentGaugeNumber\nto change the current gauge number. Each gauge number has a default thickness.",
+  "examples": [
+    {
+      "title": "ISheetMetalGaugeTableParameters",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheetMetalGaugeTableParameters",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheetMetalGaugeTableParameters.GetThickness",
+    "ISheetMetalGaugeTableParameters.OverrideThickness",
+    "ISheetMetalGaugeTableParameters.ReverseDirection"
+  ]
+}

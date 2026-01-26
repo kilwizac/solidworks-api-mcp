@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swInsertSlicingError_e",
+    "description": "Error codes for slicing insertion. Bitmask.",
+    "member_count": 9,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swInsertSlicingError_e",
+  "description": "Error codes for slicing insertion. Bitmask.",
+  "values": [
+    {
+      "member": "swInsertSlicingError_EntitiesCannotFormPlane",
+      "value": "0",
+      "description": "x10 = Point and provided line overlap"
+    },
+    {
+      "member": "swInsertSlicingError_GenericError",
+      "value": "0",
+      "description": "x1 = Slicing inserted successfully"
+    },
+    {
+      "member": "swInsertSlicingError_InvalidNumberOfPlanes",
+      "value": "0",
+      "description": "x80 = Number of planes must be <= 100"
+    },
+    {
+      "member": "swInsertSlicingError_InvalidSlicesToGenerateOption",
+      "value": "0",
+      "description": "x4 = Slicing method specified in ISlicingData::SlicesToGenerate is not valid"
+    },
+    {
+      "member": "swInsertSlicingError_InvalidSlicingData",
+      "value": "0",
+      "description": "x40 = Null or invalid slicing data"
+    },
+    {
+      "member": "swInsertSlicingError_InvalidSlicingPlaneEntities",
+      "value": "0",
+      "description": "x8 = None or invalid type of entities specified"
+    },
+    {
+      "member": "swInsertSlicingError_InvalidTotalAngle",
+      "value": "0",
+      "description": "x2 = ( ISlicingData::NumberOfPlanes * ISlicingData::Offset ) is invalid"
+    },
+    {
+      "member": "swInsertSlicingError_NoBodiesInsideBox",
+      "value": "0",
+      "description": "x20 = No bodies are inside the bounding box"
+    },
+    {
+      "member": "swInsertSlicingError_NoError",
+      "value": "0",
+      "description": "x0 = Slicing inserted successfully"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "InsertWeldSymbol",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Dim1",
+        "type": "System.String",
+        "description": "First text value to the left of the symbol"
+      },
+      {
+        "name": "Symbol",
+        "type": "System.String",
+        "description": "Weld symbol name (see Remarks )"
+      },
+      {
+        "name": "Dim2",
+        "type": "System.String",
+        "description": "Text value to the right of the symbol"
+      },
+      {
+        "name": "Symmetric",
+        "type": "System.Boolean",
+        "description": "True puts the symbol above and below the horizontal line"
+      },
+      {
+        "name": "FieldWeld",
+        "type": "System.Boolean",
+        "description": "True puts a flag for field welding"
+      },
+      {
+        "name": "ShowOtherSide",
+        "type": "System.Boolean",
+        "description": "True puts Dim1, Symbol, and Dim2 on the other side of the horizontal line"
+      },
+      {
+        "name": "DashOnTop",
+        "type": "System.Boolean",
+        "description": "True puts the dash line on top"
+      },
+      {
+        "name": "Peripheral",
+        "type": "System.Boolean",
+        "description": "True puts a peripheral symbol"
+      },
+      {
+        "name": "HasProcess",
+        "type": "System.Boolean",
+        "description": "True uses ProcessValue"
+      },
+      {
+        "name": "ProcessValue",
+        "type": "System.String",
+        "description": "Process value if HasProcess is set to True"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IWeldSymbol"
+    ],
+    "keywords": [
+      "weld",
+      "symbols",
+      "see",
+      "iweldsymbol",
+      "insertweldsymbol",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "insert",
+      "symbol",
+      "dim1",
+      "string",
+      "dim2",
+      "symmetric",
+      "boolean",
+      "field",
+      "show",
+      "other",
+      "side",
+      "dash",
+      "top",
+      "peripheral",
+      "has",
+      "process",
+      "value",
+      "void"
+    ]
+  },
+  "title": "IDrawingDoc.InsertWeldSymbol",
+  "description": "Creates a weld symbol located at the last edge selection.",
+  "signature": "void InsertWeldSymbol( \n   System.String\nDim1\n,\n   System.String\nSymbol\n,\n   System.String\nDim2\n,\n   System.Boolean\nSymmetric\n,\n   System.Boolean\nFieldWeld\n,\n   System.Boolean\nShowOtherSide\n,\n   System.Boolean\nDashOnTop\n,\n   System.Boolean\nPeripheral\n,\n   System.Boolean\nHasProcess\n,\n   System.String\nProcessValue\n)",
+  "parameters": [
+    {
+      "name": "Dim1",
+      "type": "System.String",
+      "description": "First text value to the left of the symbol"
+    },
+    {
+      "name": "Symbol",
+      "type": "System.String",
+      "description": "Weld symbol name (see Remarks )"
+    },
+    {
+      "name": "Dim2",
+      "type": "System.String",
+      "description": "Text value to the right of the symbol"
+    },
+    {
+      "name": "Symmetric",
+      "type": "System.Boolean",
+      "description": "True puts the symbol above and below the horizontal line"
+    },
+    {
+      "name": "FieldWeld",
+      "type": "System.Boolean",
+      "description": "True puts a flag for field welding"
+    },
+    {
+      "name": "ShowOtherSide",
+      "type": "System.Boolean",
+      "description": "True puts Dim1, Symbol, and Dim2 on the other side of the horizontal line"
+    },
+    {
+      "name": "DashOnTop",
+      "type": "System.Boolean",
+      "description": "True puts the dash line on top"
+    },
+    {
+      "name": "Peripheral",
+      "type": "System.Boolean",
+      "description": "True puts a peripheral symbol"
+    },
+    {
+      "name": "HasProcess",
+      "type": "System.Boolean",
+      "description": "True uses ProcessValue"
+    },
+    {
+      "name": "ProcessValue",
+      "type": "System.String",
+      "description": "Process value if HasProcess is set to True"
+    }
+  ],
+  "returns": "",
+  "remarks": "Symbol specifies the weld symbol name. You can find a list of weld symbol names in\nC:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\\nlang\n\\\nenglish\\gtol.sym\n.\nThe format of Symbol is\n<\nStandard\n-\nType\n>\n. For example, a JIS seam is\n<JWELD-JSM>\n, and an ISO seam is\n<WELD-JSM>\n. You must include the right- and left-angle brackets and separate\nStandard\nand\nType\nwith a hyphen.",
+  "examples": [],
+  "related": [
+    "IWeldSymbol"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "ExtentCurve",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "AtStart",
+        "type": "System.Boolean",
+        "description": "True to extend b-spline curve from start point, false to extend b-spline curve from end point"
+      },
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Length by which to extend b-spline curve"
+      },
+      {
+        "name": "LinearExt",
+        "type": "System.Boolean",
+        "description": "True if the extension is linear, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.CreateTrimmedCurve2",
+      "ICurve.IConvertPcurveToBcurveSize",
+      "ICurve.IJoinCurves",
+      "ICurve.JoinCurves",
+      "ICurve.MakeBsplineCurve",
+      "ICurve.ReverseCurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "extentcurve",
+      "icurve",
+      "curve",
+      "extent",
+      "start",
+      "boolean",
+      "length",
+      "double",
+      "linear",
+      "ext"
+    ]
+  },
+  "title": "ICurve.ExtentCurve",
+  "description": "Extends a b-spline curve by the specified length.",
+  "signature": "Curve ExtentCurve( \n   System.Boolean\nAtStart\n,\n   System.Double\nLength\n,\n   System.Boolean\nLinearExt\n)",
+  "parameters": [
+    {
+      "name": "AtStart",
+      "type": "System.Boolean",
+      "description": "True to extend b-spline curve from start point, false to extend b-spline curve from end point"
+    },
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Length by which to extend b-spline curve"
+    },
+    {
+      "name": "LinearExt",
+      "type": "System.Boolean",
+      "description": "True if the extension is linear, false if not"
+    }
+  ],
+  "returns": "Pointer to newly extended ICurve object",
+  "remarks": "This method only affects b-spline curves. For all other types of curves, this method does nothing.",
+  "examples": [],
+  "related": [
+    "ICurve.CreateTrimmedCurve2",
+    "ICurve.IConvertPcurveToBcurveSize",
+    "ICurve.IJoinCurves",
+    "ICurve.JoinCurves",
+    "ICurve.MakeBsplineCurve",
+    "ICurve.ReverseCurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

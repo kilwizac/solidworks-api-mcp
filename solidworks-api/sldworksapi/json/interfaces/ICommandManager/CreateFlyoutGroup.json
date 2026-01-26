@@ -1,0 +1,161 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "CreateFlyoutGroup",
+    "returns": "FlyoutGroup",
+    "parameters": [
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "Unique, user-defined ID for the new flyout"
+      },
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Name of the flyout to create"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "ToolTip for the new flyout"
+      },
+      {
+        "name": "Hint",
+        "type": "System.String",
+        "description": "Text displayed in SOLIDWORKS Design status bar when a user's mouse pointer is over the flyout"
+      },
+      {
+        "name": "SmallIcon",
+        "type": "System.String",
+        "description": "Path to the small bitmap or PNG used in the flyout"
+      },
+      {
+        "name": "LargeIcon",
+        "type": "System.String",
+        "description": "Path to the large bitmap or PNG used in the flyout"
+      },
+      {
+        "name": "SmallImageList",
+        "type": "System.String",
+        "description": "Path to the bitmap or PNG containing all of the small button and separator images for this flyout"
+      },
+      {
+        "name": "LargeImageList",
+        "type": "System.String",
+        "description": "Path to the bitmap or PNG containing all of the large button and separator images for this flyout"
+      },
+      {
+        "name": "CallbackFunction",
+        "type": "System.String",
+        "description": "Function to call when the flyout is selected"
+      },
+      {
+        "name": "UpdateCallbackFunction",
+        "type": "System.String",
+        "description": "Optional update function that controls the state of the item; if specified, then SOLIDWORKS Design calls this function before displaying the item (see Remarks ) If this update function returns... Then the SOLIDWORKS Design... 0 Disables the item 1 Enables the item; this is the default state if no update function is specified"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.GetFlyoutGroup",
+      "ICommandManager.GetFlyoutGroups",
+      "ICommandManager.NumberOfFlyoutGroups",
+      "ICommandManager.RemoveFlyoutGroup"
+    ],
+    "keywords": [
+      "createflyoutgroup",
+      "icommandmanager",
+      "command",
+      "manager",
+      "create",
+      "flyout",
+      "group",
+      "user",
+      "id",
+      "int32",
+      "title",
+      "string",
+      "tool",
+      "tip",
+      "hint",
+      "small",
+      "icon",
+      "large",
+      "image",
+      "list",
+      "callback",
+      "function",
+      "update"
+    ]
+  },
+  "title": "ICommandManager.CreateFlyoutGroup",
+  "description": "Obsolete. Superseded by ICommandManager::CreateFlyoutGroup2.",
+  "signature": "FlyoutGroup CreateFlyoutGroup( \n   System.Int32\nUserID\n,\n   System.String\nTitle\n,\n   System.String\nToolTip\n,\n   System.String\nHint\n,\n   System.String\nSmallIcon\n,\n   System.String\nLargeIcon\n,\n   System.String\nSmallImageList\n,\n   System.String\nLargeImageList\n,\n   System.String\nCallbackFunction\n,\n   System.String\nUpdateCallbackFunction\n)",
+  "parameters": [
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "Unique, user-defined ID for the new flyout"
+    },
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Name of the flyout to create"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "ToolTip for the new flyout"
+    },
+    {
+      "name": "Hint",
+      "type": "System.String",
+      "description": "Text displayed in SOLIDWORKS Design status bar when a user's mouse pointer is over the flyout"
+    },
+    {
+      "name": "SmallIcon",
+      "type": "System.String",
+      "description": "Path to the small bitmap or PNG used in the flyout"
+    },
+    {
+      "name": "LargeIcon",
+      "type": "System.String",
+      "description": "Path to the large bitmap or PNG used in the flyout"
+    },
+    {
+      "name": "SmallImageList",
+      "type": "System.String",
+      "description": "Path to the bitmap or PNG containing all of the small button and separator images for this flyout"
+    },
+    {
+      "name": "LargeImageList",
+      "type": "System.String",
+      "description": "Path to the bitmap or PNG containing all of the large button and separator images for this flyout"
+    },
+    {
+      "name": "CallbackFunction",
+      "type": "System.String",
+      "description": "Function to call when the flyout is selected"
+    },
+    {
+      "name": "UpdateCallbackFunction",
+      "type": "System.String",
+      "description": "Optional update function that controls the state of the item; if specified, then SOLIDWORKS Design calls this function before displaying the item (see Remarks ) If this update function returns... Then the SOLIDWORKS Design... 0 Disables the item 1 Enables the item; this is the default state if no update function is specified"
+    }
+  ],
+  "returns": "IFlyoutGroup",
+  "remarks": "After creating the flyout, display it on a CommandManager tab by calling\nICommandTabBox::AddCommands\n. Call\nIFlyoutGroup::AddContextMenuFlyout\nto add it to context menus. Call\nIFlyoutGroup::AddCommandItem\nto add menu items to the flyout group.\nIf any flyout menu items are enabled, then the flyout button cannot be disabled by the flyout group's UpdateCallbackFunction. The sensitivity of the top-level flyout button is always determined by its enabled menu items. Disabled flyout menu items do not appear in the flyout menu. If there are no flyout menu items, then control of the top-level flyout button is returned to the flyout group's UpdateCallbackFunction.",
+  "examples": [],
+  "related": [
+    "ICommandManager.GetFlyoutGroup",
+    "ICommandManager.GetFlyoutGroups",
+    "ICommandManager.NumberOfFlyoutGroups",
+    "ICommandManager.RemoveFlyoutGroup"
+  ]
+}

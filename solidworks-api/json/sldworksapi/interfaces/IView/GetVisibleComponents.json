@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetVisibleComponents",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.EnumHiddenComponents2",
+      "IView.GetHiddenComponents",
+      "IView.GetVisibleComponentCount",
+      "IView.GetVisibleEntities",
+      "IView.GetVisibleEntityCount",
+      "IView.IGetVisibleComponents",
+      "IView.IGetVisibleEntities"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "drawing",
+      "views",
+      "iview",
+      "view",
+      "getvisiblecomponents",
+      "visible",
+      "object",
+      "all",
+      "edges",
+      "component",
+      "vba",
+      "entities"
+    ]
+  },
+  "title": "IView.GetVisibleComponents",
+  "description": "Gets the visible components in this drawing view.",
+  "signature": "System.Object GetVisibleComponents()",
+  "parameters": [],
+  "returns": "Visible components in this drawing view",
+  "remarks": "Visible components are components not completely obscured by other components in the view.\nNOTE: This method does not retrieve a complete component object. For example, the component returned by this method does not support\nIComponent2::GetBodies3\n(returns null). To retrieve a visible component that fully supports\nIComponent2\nmethods and properties, call:\nIView::GetVisibleDrawingComponents\nIDrawingComponent::Component",
+  "examples": [
+    {
+      "title": "Get All Edges in Visible Component in Drawing View (VBA)",
+      "href": "Get_All_Edges_in_Visible_Component_in_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get All Visible Components in Drawing View (VBA)",
+      "href": "Get_All_Visible_Components_in_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Visible Components and Entities in Drawing View (VBA)",
+      "href": "Get_Visible_Components_and_Entities_in_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.EnumHiddenComponents2",
+    "IView.GetHiddenComponents",
+    "IView.GetVisibleComponentCount",
+    "IView.GetVisibleEntities",
+    "IView.GetVisibleEntityCount",
+    "IView.IGetVisibleComponents",
+    "IView.IGetVisibleEntities"
+  ]
+}

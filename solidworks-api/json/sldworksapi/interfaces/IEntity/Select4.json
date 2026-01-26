@@ -1,0 +1,144 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "Select4",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Append",
+        "type": "System.Boolean",
+        "description": "True appends the entity to the selection list, false replaces the selection list with this entity"
+      },
+      {
+        "name": "Data",
+        "type": "SelectData",
+        "description": "Pointer to the ISelectData object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "select4",
+      "ientity",
+      "entity",
+      "append",
+      "boolean",
+      "data",
+      "select",
+      "check",
+      "interference",
+      "using",
+      "iassemblydoc",
+      "toolscheckinterference2",
+      "vba",
+      "faces",
+      "associated",
+      "feature",
+      "reference",
+      "point",
+      "visible",
+      "components",
+      "entities",
+      "drawing",
+      "view",
+      "loop",
+      "edges",
+      "use",
+      "safe",
+      "offset",
+      "surface",
+      "vb",
+      "net",
+      "all",
+      "holes",
+      "face"
+    ]
+  },
+  "title": "IEntity.Select4",
+  "description": "Selects an entity and marks it.",
+  "signature": "System.Boolean Select4( \n   System.Boolean\nAppend\n,\n   SelectData\nData\n)",
+  "parameters": [
+    {
+      "name": "Append",
+      "type": "System.Boolean",
+      "description": "True appends the entity to the selection list, false replaces the selection list with this entity"
+    },
+    {
+      "name": "Data",
+      "type": "SelectData",
+      "description": "Pointer to the ISelectData object"
+    }
+  ],
+  "returns": "True if the selection is successful, false if not",
+  "remarks": "When you use this method, selection behaves differently depending on the command state of SOLIDWORKS. One case is when SOLIDWORKS is running a command that has a PropertyManager associated with a selection list box (for example, a feature creation command such as\nInsert Fillet\n). The selection behavior in this case is:\nSelecting a new entity appends it to the selection list.\n- or -\nSelecting an entity that is already selected deselects the entity.\nSOLIDWORKS ignores the Append argument because the selection is always appended to the selection list.\nThe second case is when there is no command running, which is the default state of SOLIDWORKS.\nYou can use this method only with\nIEntity\nobjects that you get from the active document. For example, if Assembly1 is the active document when you call this method, then you must get the entity directly from the Assembly1 document. You can do this using items in the selection list (for example,\nISelectionMgr::GetSelectedObject6\n) or you can traverse the body of an assembly component (for example,\nIComponent2::GetBody\nand\nIBody2::GetFirstFace\n). You cannot obtain the entity from the underlying part document (for example,\nIComponent2::GetModelDoc\nor\nIBody2::GetFirstFace\n).\nYou can use this method to select features. In Visual C++, you must first get the\nIEntity\ninterface from the\nIFeature\nobject.",
+  "examples": [
+    {
+      "title": "Check Interference Using IAssemblyDoc::ToolsCheckInterference2 (VBA)",
+      "href": "Check_Interference_using_AssemblyDoc_ToolsCheckInterference2_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Reference Point Data (VBA)",
+      "href": "Get_Reference_Point_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Visible Components and Entities in Drawing View (VBA)",
+      "href": "Get_Visible_Components_and_Entities_in_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Loop of Edges (VBA)",
+      "href": "Select_Loop_of_Edges_Example_VB_.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Use Safe Entity (VBA)",
+      "href": "Use_Safe_Entity_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Offset Surface Data (C#)",
+      "href": "Get_Offset_Surface_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Offset Surface Data (VB.NET)",
+      "href": "Get_Offset_Surface_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Offset Surface Data (VBA)",
+      "href": "Get_Offset_Surface_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (C#)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VB.NET)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VBA)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

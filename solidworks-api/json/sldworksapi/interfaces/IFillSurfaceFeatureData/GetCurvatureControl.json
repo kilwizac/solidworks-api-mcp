@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFillSurfaceFeatureData",
+    "member": "GetCurvatureControl",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "EntityIn",
+        "type": "System.Object",
+        "description": "Edge or sketch boundary returned from IFillSurfaceFeatureData::GetPatchBoundary"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFillSurfaceFeatureData.GetAlternateFace",
+      "IFillSurfaceFeatureData.GetPatchBoundaryCount",
+      "IFillSurfaceFeatureData.IGetPatchBoundary",
+      "IFillSurfaceFeatureData.ISetPatchBoundary",
+      "IFillSurfaceFeatureData.SetCurvatureControl",
+      "IFillSurfaceFeatureData.SetPatchBoundary",
+      "IFillSurfaceFeatureData.ToggleAlternateFace"
+    ],
+    "keywords": [
+      "getcurvaturecontrol",
+      "ifillsurfacefeaturedata",
+      "fill",
+      "surface",
+      "feature",
+      "data",
+      "curvature",
+      "control",
+      "entity",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "IFillSurfaceFeatureData.GetCurvatureControl",
+  "description": "Gets the contact type for the input boundary.",
+  "signature": "System.Int32 GetCurvatureControl( \n   System.Object\nEntityIn\n)",
+  "parameters": [
+    {
+      "name": "EntityIn",
+      "type": "System.Object",
+      "description": "Edge or sketch boundary returned from IFillSurfaceFeatureData::GetPatchBoundary"
+    }
+  ],
+  "returns": "Control type as defined in swContactType_e",
+  "remarks": "Sketch boundaries always return a control type of swContact.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IFillSurfaceFeatureData.GetAlternateFace",
+    "IFillSurfaceFeatureData.GetPatchBoundaryCount",
+    "IFillSurfaceFeatureData.IGetPatchBoundary",
+    "IFillSurfaceFeatureData.ISetPatchBoundary",
+    "IFillSurfaceFeatureData.SetCurvatureControl",
+    "IFillSurfaceFeatureData.SetPatchBoundary",
+    "IFillSurfaceFeatureData.ToggleAlternateFace"
+  ]
+}

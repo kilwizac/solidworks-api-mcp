@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILayerMgr",
+    "member": "GetLayerById",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "LayerId",
+        "type": "System.Int16",
+        "description": "Layer ID"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ILayerMgr.IGetLayerById"
+    ],
+    "keywords": [
+      "getlayerbyid",
+      "ilayermgr",
+      "layer",
+      "mgr",
+      "id",
+      "int16",
+      "object"
+    ]
+  },
+  "title": "ILayerMgr.GetLayerById",
+  "description": "Gets the layer using the specified layer ID in this drawing document.",
+  "signature": "System.Object GetLayerById( \n   System.Int16\nLayerId\n)",
+  "parameters": [
+    {
+      "name": "LayerId",
+      "type": "System.Int16",
+      "description": "Layer ID"
+    }
+  ],
+  "returns": "Layer",
+  "remarks": "You can get the layer ID from several places.\nIView::GetUserPoints2\nand\nIView::GetLines4\n(and similar functions) return the LayerId as part of the array of return information.\nIAnnotation::GetVisualProperties\nalso returns the LayerId as part of the array of return information.",
+  "examples": [],
+  "related": [
+    "ILayerMgr.IGetLayerById"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "ICreatePoint2",
+    "returns": "SketchPoint",
+    "parameters": [
+      {
+        "name": "PointX",
+        "type": "System.Double",
+        "description": "X location of the point"
+      },
+      {
+        "name": "PointY",
+        "type": "System.Double",
+        "description": "X location of the point"
+      },
+      {
+        "name": "PointZ",
+        "type": "System.Double",
+        "description": "Y location of the point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.CreatePoint2",
+      "ISketchPoint"
+    ],
+    "keywords": [
+      "icreatepoint2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "point2",
+      "point",
+      "double",
+      "sketch"
+    ]
+  },
+  "title": "IModelDoc2.ICreatePoint2",
+  "description": "Obsolete. Superseded by ISketchManager::CreatePoint.",
+  "signature": "SketchPoint ICreatePoint2( \n   System.Double\nPointX\n,\n   System.Double\nPointY\n,\n   System.Double\nPointZ\n)",
+  "parameters": [
+    {
+      "name": "PointX",
+      "type": "System.Double",
+      "description": "X location of the point"
+    },
+    {
+      "name": "PointY",
+      "type": "System.Double",
+      "description": "X location of the point"
+    },
+    {
+      "name": "PointZ",
+      "type": "System.Double",
+      "description": "Y location of the point"
+    }
+  ],
+  "returns": "Newly created sketch point ; this value is NULL if the operation fails",
+  "remarks": "This method creates a point in the active 2D or 3D sketch. If a sketch is not active, the point is not created and NULL is returned. Use\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\nto check to see if the sketch is active.\nIModelDoc2::SetAddToDB\nand\nIModelDoc2::SetDisplayWhenAdded\nincrease performance during entity creation by adding entities directly to the SOLIDWORKS database. IModelDoc2::SetAddToDB also avoids inferencing.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.CreatePoint2",
+    "ISketchPoint"
+  ]
+}

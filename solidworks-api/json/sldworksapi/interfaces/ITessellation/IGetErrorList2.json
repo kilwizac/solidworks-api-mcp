@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "IGetErrorList2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FaceErrArray",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of faces that have errors VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "FacetErrArray",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of longs or integers describing the facets with errors VBA, VB.NET, C#, and C++/CLI: Not supported"
+      },
+      {
+        "name": "VertexPointErrArray",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex point IDs from FacetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+      },
+      {
+        "name": "VertexNormalErrArray",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex normal IDs from FacetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+      },
+      {
+        "name": "VertexParamsErrArray",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex parameters IDs from facetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ITessellation.GetErrorList",
+      "ITessellation.IGetErrorListCount",
+      "ITessellation.NeedErrorList"
+    ],
+    "keywords": [
+      "igeterrorlist2",
+      "itessellation",
+      "tessellation",
+      "error",
+      "list2",
+      "face",
+      "err",
+      "array",
+      "face2",
+      "facet",
+      "int32",
+      "vertex",
+      "point",
+      "normal",
+      "params",
+      "void"
+    ]
+  },
+  "title": "ITessellation.IGetErrorList2",
+  "description": "Gets the tessellation error list.",
+  "signature": "void IGetErrorList2( \n   out Face2\nFaceErrArray\n,\n   out System.Int32\nFacetErrArray\n,\n   out System.Int32\nVertexPointErrArray\n,\n   out System.Int32\nVertexNormalErrArray\n,\n   out System.Int32\nVertexParamsErrArray\n)",
+  "parameters": [
+    {
+      "name": "FaceErrArray",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of faces that have errors VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "FacetErrArray",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of longs or integers describing the facets with errors VBA, VB.NET, C#, and C++/CLI: Not supported"
+    },
+    {
+      "name": "VertexPointErrArray",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex point IDs from FacetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+    },
+    {
+      "name": "VertexNormalErrArray",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex normal IDs from FacetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+    },
+    {
+      "name": "VertexParamsErrArray",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of longs or integers of vertex parameters IDs from facetErrArray VBA, VB.NET, C#, and C++/CLI: Not supported"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before using this method, make sure that you can retrieve the list for the tessellation data that you want to query error information from:\nITessellation::NeedVertexNormal\nITessellation::NeedVertexParams\nITessellation::NeedFaceFacetMap\nITessellation::NeedEdgeFinMap\nITessellation::NeedErrorList\nAfter using an ITessellation function, you can return error information about any of the tessellation data.\nThe arrays returned by ITessellation::GetErrorList contains the tessellation entity IDs that have errors:\nFace error: The specified face could not be faceted.\nFacet error: The specified facet is disconnected from its neighboring facets.\nVertex error: The specified vertex does not match any vertices on adjacent faces. There may be gaps between facets.\nVertex normal error: The tessellate function could not calculate an accurate vertex normal.\nVertex parameter error: The tessellate function could not calculate accurate vertex parameters.",
+  "examples": [],
+  "related": [
+    "ITessellation.GetErrorList",
+    "ITessellation.IGetErrorListCount",
+    "ITessellation.NeedErrorList"
+  ]
+}

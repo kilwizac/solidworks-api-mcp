@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "IGetPosition",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetPosition",
+      "IAnnotation.SetPosition",
+      "INote.LockPosition"
+    ],
+    "keywords": [
+      "igetposition",
+      "iannotation",
+      "annotation",
+      "position",
+      "double"
+    ]
+  },
+  "title": "IAnnotation.IGetPosition",
+  "description": "Gets the position of this annotation.",
+  "signature": "System.Double IGetPosition()",
+  "parameters": [],
+  "returns": "Pointer to an array of doubles (see Remarks )",
+  "remarks": "The retval is an array of 3 doubles, the x, y, z origin of the annotation.\nIf this method is not successful in retrieving the position of the annotation, the status value is S_false (COM only). Make sure that you check this value before using the returned position.\nThe following table lists the types of annotations that this method supports and the position of the x, y, z origin. In a drawing, the x, y, z origin is relative to the origin of the drawing sheet (the lower-left corner of the sheet).\nType of Annotation\nPosition of XYZ Origin\nDatum Feature Symbols\nPoint where leader hits symbol\nDatum Target Symbols\nCenterpoint of the circle that is attached to the leader\nDimensions\nUpper-left corner of the text box of the dimension\nGeometric Tolerances\nUpper-left corner of the symbol\nNotes\nUpper-left corner of the text box\nSurface Finish Symbols\nLower-left point of symbol\nTable Annotations\nPosition of x,y,z determined by\nITableAnnotation::AnchorType\nWeld Symbols\nLeft endpoint of the main horizontal line in the symbol\nIf you use this method on any other types of annotations, SOLIDWORKS takes no action\nand returns false.",
+  "examples": [],
+  "related": [
+    "IAnnotation.GetPosition",
+    "IAnnotation.SetPosition",
+    "INote.LockPosition"
+  ]
+}

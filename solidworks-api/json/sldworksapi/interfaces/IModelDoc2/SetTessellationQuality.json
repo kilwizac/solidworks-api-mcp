@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetTessellationQuality",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "QualityNum",
+        "type": "System.Int32",
+        "description": "0 < Shaded-display image quality number < 106 (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetTessellationQuality"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "quality",
+      "image",
+      "settessellationquality",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "num",
+      "int32",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SetTessellationQuality",
+  "description": "Sets the shaded-display image quality number for the current document.",
+  "signature": "void SetTessellationQuality( \n   System.Int32\nQualityNum\n)",
+  "parameters": [
+    {
+      "name": "QualityNum",
+      "type": "System.Int32",
+      "description": "0 < Shaded-display image quality number < 106 (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "QualityNum is the degree of tessellation of curved surfaces for shaded rendering output.\nTools > Options > Document Properties > Image Quality\nincludes a field that sets the maximum chordal deviation. QualityNum and the maximum chordal deviation (in meters) are coupled and inversely proportional as follows:\nvar\n=\nTessMin\n+\nQualityNum\n*((\nTessMax\n-\nTessMin\n)/100)\nDeviation\n= 0.025 * (\nBodyDiameter\n* 2) /\nvar\n;\nwhere:\nTessMin\n= 6\nTessMax\n= 166\n0 <\nQualityNum\n< 106\nBodyDiameter\nis the diagonal distance across the bounds of the part box. See\nIPartDoc::GetPartBox\nor\nIPartDoc::IGetPartBox\nfor more information.\nThere are two ways to set the image quality for assemblies using the API. You can either:\nCall this method\n- or -\nSet\nswUserPreferenceIntegerValue_e\n.swImageQualityShaded\nSet\nswUserPreferenceDoubleValue_e\n.swImageQualityShadedDeviation\nBefore doing either, you must set\nswUserPreferenceToggle_e\n.swImageQualityApplyToAllReferencedPartDoc to true in order to affect the image quality of the assembly.\nCall\nIModelView::GraphicsRedraw\nafter calling this method to update the part.\nNOTE:\nSetting the degree of tessellation to a higher value results in:\nfiner tessellation,\nincreased file size,\nslower graphics performance, and\nincreased memory usage.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetTessellationQuality"
+  ]
+}

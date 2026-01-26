@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMathVector",
+    "member": "IMultiplyTransform",
+    "returns": "MathVector",
+    "parameters": [
+      {
+        "name": "TransformObjIn",
+        "type": "MathTransform",
+        "description": "Math transform by which to multiply the math vector"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMathVector.MultiplyTransform"
+    ],
+    "keywords": [
+      "imultiplytransform",
+      "imathvector",
+      "math",
+      "vector",
+      "multiply",
+      "transform",
+      "obj"
+    ]
+  },
+  "title": "IMathVector.IMultiplyTransform",
+  "description": "Multiplies this math vector by the specified math transform.",
+  "signature": "MathVector IMultiplyTransform( \n   MathTransform\nTransformObjIn\n)",
+  "parameters": [
+    {
+      "name": "TransformObjIn",
+      "type": "MathTransform",
+      "description": "Math transform by which to multiply the math vector"
+    }
+  ],
+  "returns": "Newly created math vector or NULL if the operation fails",
+  "remarks": "The matrix is rotated and then scaled. It is not transformed because the math vector is assumed to be positionless.",
+  "examples": [],
+  "related": [
+    "IMathVector.MultiplyTransform"
+  ]
+}

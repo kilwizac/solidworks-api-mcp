@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateCompoundNote",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Note height in meters"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x location of note in meters"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y location of note in meters"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z location of note in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.CreateText2",
+      "IDrawingDoc.ICreateCompoundNote",
+      "IDrawingDoc.ICreateText2",
+      "IDrawingDoc.InsertNewNote2",
+      "IDrawingDoc.InsertRevisionSymbol",
+      "IDrawingDoc.NewNote"
+    ],
+    "keywords": [
+      "createcompoundnote",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "create",
+      "compound",
+      "note",
+      "height",
+      "double",
+      "object",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.CreateCompoundNote",
+  "description": "Obsolete for documents created in SOLIDWORKS 2016 and later. Superseded by ISketchBlockDefinition and ISketchBlockInstance. Creates and returns a compound note.",
+  "signature": "System.Object CreateCompoundNote( \n   System.Double\nHeight\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Note height in meters"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x location of note in meters"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y location of note in meters"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z location of note in meters"
+    }
+  ],
+  "returns": "Newly created compound note",
+  "remarks": "A compound note is a note that can contain multiple text strings and sketch geometry.\nCompound notes are equivalent to a user-defined symbol. After creating a compound note, you can use the other compound note methods to add text and sketch geometry to the object.\nThis object appears to the end-user as though it were one item. If the user selects the compound note and drags it, all of the entities and text move together.\nBecause a compound note can have multiple pieces of text, many of the compound note methods require that you specify the index value of the text. For example, the first piece of text added to the compound note using\nINote::AddText\nhas index number 1, the second text added has index number 2, and so on.\nSOLIDWORKS adds the note to the view of the current selection, so you must make a selection before you call this method.",
+  "examples": [
+    {
+      "title": "Create Compound Note (VBA)",
+      "href": "Create_Compound_Note_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.CreateText2",
+    "IDrawingDoc.ICreateCompoundNote",
+    "IDrawingDoc.ICreateText2",
+    "IDrawingDoc.InsertNewNote2",
+    "IDrawingDoc.InsertRevisionSymbol",
+    "IDrawingDoc.NewNote"
+  ]
+}

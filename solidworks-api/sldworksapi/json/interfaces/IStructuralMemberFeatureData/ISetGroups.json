@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IStructuralMemberFeatureData",
+    "member": "ISetGroups",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of structural-member groups"
+      },
+      {
+        "name": "SegGroups",
+        "type": "StructuralMemberGroup",
+        "description": "in-process, unmanaged C++: Pointer to an array of structural-member groups VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IStructuralMemberFeatureData.Groups",
+      "IStructuralMemberFeatureData.IGetGroups",
+      "IStructuralMemberGroup"
+    ],
+    "keywords": [
+      "isetgroups",
+      "istructuralmemberfeaturedata",
+      "structural",
+      "member",
+      "feature",
+      "data",
+      "groups",
+      "count",
+      "int32",
+      "seg",
+      "group",
+      "void"
+    ]
+  },
+  "title": "IStructuralMemberFeatureData.ISetGroups",
+  "description": "Sets the structural-member groups to use in this structural member.",
+  "signature": "void ISetGroups( \n   System.Int32\nCount\n,\n   ref StructuralMemberGroup\nSegGroups\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of structural-member groups"
+    },
+    {
+      "name": "SegGroups",
+      "type": "StructuralMemberGroup",
+      "description": "in-process, unmanaged C++: Pointer to an array of structural-member groups VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "This method works only for features that support groups. A feature supports groups only if\nIStructuralMemberFeatureData::GetGroupsCount\n> 0.\nCall\nIFeatureManager::CreateStructuralMemberGroup\nto create groups.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IStructuralMemberFeatureData.Groups",
+    "IStructuralMemberFeatureData.IGetGroups",
+    "IStructuralMemberGroup"
+  ]
+}

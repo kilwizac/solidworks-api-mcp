@@ -1,0 +1,880 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Tracking IDs</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Tracking IDs,overview">
+<meta name=MS-HKWD content="Tracking IDs">
+<meta name=MS-HKWD content=ID>
+<meta name=MS-HKWD content="ID,tracking">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1234>
+<meta name=layout-width content=1018>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+<!--(Style Sheet)===================================================-->
+
+<style>
+<!--
+
+td ol,
+td ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+-->
+</style>
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Tracking IDs</h1>
+
+<h2>Overview</h2>
+
+<p>Tracking IDs allow you to assign IDs to the following topological entities 
+ in order to track them across modeling operations such as split, merge, 
+ copy, delete, etc.: </p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>bodies (<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~GetTrackingIDs.html">IBody2::GetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~IGetTrackingIDs.html">IBody2::IGetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~GetTrackingIDsCount.html">IBody2::GetTrackingIDsCount</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~RemoveTrackingID.html">IBody2::RemoveTrackingID</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~SetTrackingID.html">IBody2::SetTrackingID</a>)</p></li>
+	
+	<li class=kadov-p><p>edges (<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~GetTrackingIDs.html">IEdge::GetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~IGetTrackingIDs.html">IEdge::IGetTrackingIDs</a>, 
+ I<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~GetTrackingIDsCount.html">Edge::GetTrackingIDsCount</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~RemoveTrackingID.html">IEdge::RemoveTrackingID</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~SetTrackingID.html">IEdge::SetTrackingID</a>) 
+ </p></li>
+	
+	<li class=kadov-p><p>faces (<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrackingIDs.html">IFace2::GetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetTrackingIDs.html">IFace2::IGetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetTrackingIDsCount.html">IFace2::GetTrackingIDsCount</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~RemoveTrackingID.html">IFace2::RemoveTrackingID</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~SetTrackingID.html">IFace2::SetTrackingID)</a></p></li>
+	
+	<li class=kadov-p><p>loops <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~GetTrackingIDs.html">ILoop2::GetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~IGetTrackingIDs.html">ILoop2::IGetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~GetTrackingIDsCount.html">ILoop2::GetTrackingIDsCount</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~RemoveTrackingID.html">ILoop2::RemoveTrackingID</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ILoop2~SetTrackingID.html">ILoop2::SetTrackingID</a>)</p></li>
+	
+	<li class=kadov-p><p>vertices (<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex~GetTrackingIDs.html">IVertex::GetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex~IGetTrackingIDs.html">IVertex::IGetTrackingIDs</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex~GetTrackingIDsCount.html">IVertex::GetTrackingIDsCount,</a> 
+ <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex~RemoveTrackingID.html">IVertex::RemoveTrackingID</a>, 
+ and <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVertex~SetTrackingID.html">IVertex::SetTrackingID</a>)</p></li>
+</ul>
+
+<p>Your application can define tracking IDs that are specific to that application 
+ to avoid interference with other applications using <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RegisterTrackingDefinition.html">ISldWorks::RegisterTrackingDefinition</a>. 
+ Because tracking IDs are intended for use by application developers, there 
+ are no visual clues that entities have been assigned tracking IDs. You 
+ can find the entities assigned tracking IDs in a document using <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~FindTrackedObjects.html">IModelDocExtension::FindTrackedObjects</a>.</p>
+
+<h2>Usage</h2>
+
+<p>Tracking IDs are supported within a single model document only and are 
+ limited to part and assembly documents. Tracking IDs propagate across 
+ modeling operations (e.g., splitting a face in two <font face="Verdana">—</font> 
+both faces inherit the tracking ID of the original face) while attributes, persistent IDs, and safe entities 
+ do not.</p>
+<p>The lifetime of a tracking ID is from the time of its creation until a 
+rebuild of the model. Attributes, persistent IDs, and safe entities have longer 
+lifetimes. Persistent IDs exist across 
+SOLIDWORKS sessions, and safe entities continue to exist after a rebuild. 
+Attributes behave like features.</p>
+
+<p>By default, tracking IDs are not persistent across SOLIDWORKS sessions. 
+ However, you can create a macro feature to assign tracking IDs, which 
+ would then allow you to retrieve tracking IDs across SOLIDWORKS sessions. 
+ </p>
+
+<p>You can assign a tracking 
+ ID to the result body of a macro feature. You assign the tracking ID as 
+ the last step, just before the result body is returned by the rebuild 
+ function of the macro feature to avoid modifying the body and losing the 
+ tracking ID. You assign the tracking ID to the entire body using IBody2::SetTrackingID 
+ or to individual entities using, for example, IFace2::SetTrackingID. The 
+ latter allows you to reuse the logic required for <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMacroFeatureData~SetFaceUserId.html">IMacroFeatureData::SetFaceUserId</a> 
+ (for SOLIDWORKS purposes) for assigning a tracking ID (for your purposes).</p>
+
+<h2>Guidelines</h2>
+
+<p>You assign a tracking ID before modifying an entity. </p>
+
+<p>You can:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>obtain bodies to which to assign tracking IDs 
+ using <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartDoc~GetBodies2.html">IPartDoc::GetBodies2</a>. 
+ </p></li>
+	
+	<li class=kadov-p><p>obtain bodies, belonging to components in assembly 
+ documents, to which to assign tracking IDs using <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2~GetBodies2.html">IComponent2::GetBodies</a>.</p></li>
+	
+	<li class=kadov-p><p>propagate tracking IDs from a part document to 
+ component instances of that part in an assembly context. Your application 
+ can obtain the corresponding face using <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~GetCorrespondingEntity.html">IModelDocExtension::GetCorrespondingEntity</a>. 
+ The same tracking ID used in the part document can be assigned to the 
+ corresponding face in the component context.</p></li>
+	
+	<li class=kadov-p><p>assign:</p></li>
+	
+	<ul style="list-style: disc;"
+		type=disc>
+		
+		<li class=kadov-p><p>same tracking ID to multiple objects of different 
+ types.</p></li>
+		
+		<li class=kadov-p><p>same tracking ID to edges, faces, loops, and 
+ vertices that belong to different bodies.</p></li>
+		
+		<li class=kadov-p><p>same tracking ID to bodies, edges, faces, 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->loops, 
+ and vertices that belong to different components. </p></li>
+		
+		<li class=kadov-p><p>multiple tracking IDs to the same object.</p></li>
+		
+		<li class=kadov-p><p>tracking IDs to temporary bodies, model bodies, 
+ surface and solid bodies, and the output bodies of macro features.</p></li>
+	</ul>
+</ul>
+
+<p>You cannot assign tracking IDs:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<ul style="list-style: disc;"
+		type=disc>
+		
+		<li class=kadov-p><p>to a general, i.e., non-manifold, body</p></li>
+		
+		<li class=kadov-p><p>to entities used in sketch or drawing context</p></li>
+		
+		<li class=kadov-p><p>transient entities (e.g., silhouette edges 
+ returned by <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~IGetSilhoutteEdges.html">IFace2::IGetSilhoutteEdges</a> 
+ or edges returned by <a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchText~GetEdges.html">ISketchText::GetEdges</a>)</p></li>
+	</ul>
+</ul>
+
+<h2>Implementation</h2>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="width: 100%;
+				x-cell-content-align: Bottom;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=100%>
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+<col style="width: 14.286%;">
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=2
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-top-color: #000000;
+			border-top-style: Solid;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-bottom-width: 1px;
+			border-right-width: 1px;
+			border-left-width: 1px;
+			border-top-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold;">Object</td>
+<td colspan=6
+	rowspan=1
+	style="width: 85.716%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-top-style: Solid;
+			border-top-color: #000000;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			border-right-width: 1px;
+			border-top-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=85.716%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Modeling Operation</td>
+<td_null>
+<td_null>
+<td_null>
+<td_null>
+<td_null></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td_null>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Split</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Merge</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Delete</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Replace</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Copy</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;
+			border-bottom-width: 1px;
+			border-right-width: 1px;
+			background-color: #dbdbdb;"
+	bgcolor=#DBDBDB
+	width=14.286%>
+<p style="font-weight: bold; text-align: Center;"
+	align=center>Pattern</td></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-left-width: 1px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p>IBody2</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>S</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>M</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>D</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>R</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>C</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>P</td></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			border-left-width: 1px;
+			border-left-color: #000000;
+			border-left-style: Solid;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	width=14.286%>
+<p>IEdge</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>S</td>
+<td style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>M</td>
+<td style="width: 14.286%;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>D</td>
+<td style="width: 14.286%;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>R</td>
+<td style="width: 14.286%;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>C</td>
+<td style="width: 14.286%;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>N/A</td></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-left-width: 1px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p>IFace2</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>S</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>M</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>D</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>R</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>C</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>P</td></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-width: 1px;
+			border-left-color: #000000;
+			border-left-style: Solid;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p>ILoop2</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>S</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>M</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>D</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>R</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>C</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>N/A</td></tr>
+
+<tr style="x-cell-content-align: bottom;"
+	valign=bottom>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Solid;
+			border-left-color: #000000;
+			border-left-width: 1px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p>IVertex</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>S</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 1px;
+			border-right-color: #000000;
+			border-right-style: Solid;
+			border-bottom-style: Solid;
+			border-bottom-color: #000000;
+			border-bottom-width: 1px;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>M</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>D</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>R</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>C</td>
+<td colspan=1
+	rowspan=1
+	style="width: 14.286%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Solid;
+			border-right-color: #000000;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-bottom-color: #000000;
+			border-bottom-style: Solid;"
+	width=14.286%>
+<p style="text-align: center;"
+	align=center>N/A</td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>S = Assign ID to the new object resulting from the split operation. 
+ The number of objects to which the ID is assigned is incremented by 1.</p>
+
+<p>M = Remove ID from the object being merged into another object. The 
+ number of objects to which the ID is assigned is decremented by 1.</p>
+
+<p>D = Remove ID from object being deleted. The number of objects to which 
+ the ID is assigned is decremented with 1.</p>
+
+<p>R = Remove ID from object and assign it to the object that replaces 
+ it. The number of objects to which the ID is assigned remains the same.</p>
+
+<p>C = Assign ID to the new objects resulting from the copy operation. 
+ The number of objects to which the ID is assigned is incremented by the 
+ number of new copies.</p>
+
+<p>P = Assign ID to new objects corresponding to the source object being 
+ patterned. The number of objects to which the ID is assigned is incremented 
+ by the number of new pattern instances. Similar implementation for mirror 
+ operations.</p>
+
+<p>N/A = Not applicable.</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

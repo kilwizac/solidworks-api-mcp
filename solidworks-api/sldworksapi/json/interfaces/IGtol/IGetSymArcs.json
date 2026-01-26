@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetSymArcs",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymEdgeCounts",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.GetSymText",
+      "IGtol.GetSymTextPoints",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymEdgeCounts",
+      "IGtol.IGetSymLines",
+      "IGtol.IGetSymText",
+      "IGtol.IGetSymTextPoints"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymarcs",
+      "igtol",
+      "gtol",
+      "sym",
+      "arcs",
+      "idx",
+      "int16",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetSymArcs",
+  "description": "Gets an array that defines all arcs in the symbol.",
+  "signature": "System.Double IGetSymArcs( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Each arc in the symbol is defined by three points: center, arc start, and arc end.\nFormat of return information is the following array of doubles:\nFor the\ni\nth arc:\nretval\n[9 *\ni\n+ 0] = X-coordinate of center point\nretval\n[9 *\ni\n+ 1] = Y-coordinate of center point\nretval\n[9 *\ni\n+ 2] = Z-coordinate of center point\nretval\n[9 *\ni\n+ 3] = X-coordinate of arc start point\nretval\n[9 *\ni\n+ 4] = Y-coordinate of arc start point\nretval\n[9 *\ni\n+ 5] = Z-coordinate of arc start point\nretval\n[9 *\ni\n+ 6] = X-coordinate of arc end point\nretval\n[9 *\ni\n+ 7] = Y-coordinate of arc end point\nretval\n[9 *\ni\n+ 8] = Z-coordinate of arc end point",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymEdgeCounts",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.GetSymText",
+    "IGtol.GetSymTextPoints",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymEdgeCounts",
+    "IGtol.IGetSymLines",
+    "IGtol.IGetSymText",
+    "IGtol.IGetSymTextPoints"
+  ]
+}

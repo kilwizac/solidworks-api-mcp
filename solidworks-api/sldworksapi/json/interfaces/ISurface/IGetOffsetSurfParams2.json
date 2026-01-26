@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IGetOffsetSurfParams2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "BaseSurf",
+        "type": "Surface",
+        "description": "Base surface used to generate the offset surface"
+      },
+      {
+        "name": "Sense",
+        "type": "System.Boolean",
+        "description": "If true, then the offset is in the direction of the original surface's normal; if false, then the offset is in the opposite direction of the original surface's normal"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.GetOffsetSurfParams2"
+    ],
+    "keywords": [
+      "igetoffsetsurfparams2",
+      "isurface",
+      "surface",
+      "offset",
+      "surf",
+      "params2",
+      "base",
+      "sense",
+      "boolean",
+      "double"
+    ]
+  },
+  "title": "ISurface.IGetOffsetSurfParams2",
+  "description": "Gets the overall offset distance of this offset surface.",
+  "signature": "System.Double IGetOffsetSurfParams2( \n   out Surface\nBaseSurf\n,\n   out System.Boolean\nSense\n)",
+  "parameters": [
+    {
+      "name": "BaseSurf",
+      "type": "Surface",
+      "description": "Base surface used to generate the offset surface"
+    },
+    {
+      "name": "Sense",
+      "type": "System.Boolean",
+      "description": "If true, then the offset is in the direction of the original surface's normal; if false, then the offset is in the opposite direction of the original surface's normal"
+    }
+  ],
+  "returns": "Offset for the surface",
+  "remarks": "This method can get a pointer to the base surface and its sense. Both BaseSurf and Sense parameters can be a NULL pointer.",
+  "examples": [],
+  "related": [
+    "ISurface.GetOffsetSurfParams2"
+  ]
+}

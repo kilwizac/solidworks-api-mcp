@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "MergePoints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance at which points are considered coincident"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketch.GetSketchPoints2",
+      "ISketch.IGetSketchPoints2",
+      "ISketchPoint"
+    ],
+    "keywords": [
+      "mergepoints",
+      "isketch",
+      "sketch",
+      "merge",
+      "points",
+      "distance",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISketch.MergePoints",
+  "description": "Merges sketch points within a specified distance.",
+  "signature": "System.Boolean MergePoints( \n   System.Double\nDistance\n)",
+  "parameters": [
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance at which points are considered coincident"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This method requires that only one open contour exists in the sketch. To specify a distance below which points are automatically merged while creating the segments, use\nISketchRelationManager::AddRelation\nor\nISketchRelationManager::IAddRelation\nand swConstraintType_COINCIDENT.",
+  "examples": [],
+  "related": [
+    "ISketch.GetSketchPoints2",
+    "ISketch.IGetSketchPoints2",
+    "ISketchPoint"
+  ]
+}

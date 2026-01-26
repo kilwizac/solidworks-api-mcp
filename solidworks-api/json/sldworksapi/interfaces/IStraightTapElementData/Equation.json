@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IStraightTapElementData",
+    "member": "Equation",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "equation",
+      "istraighttapelementdata",
+      "straight",
+      "tap",
+      "element",
+      "data",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IStraightTapElementData.Equation",
+  "description": "Gets or sets the equation for the blind depth or offset distance of this straight tap hole element.",
+  "signature": "System.Int32 Equation {get; set;}",
+  "parameters": [],
+  "returns": "Equation for the blind depth or offset distance as defined in swStraightTapHoleEquation_e",
+  "remarks": "If\nIAdvancedHoleFeatureData::UseBaselineDimensions\nis set to false, and:\nIAdvancedHoleElementData::EndCondition\nis set to\nswEndConditions_e\n.swEndCondBlind, then this property specifies the equation for the depth of the Blind end condition. If this property is set to swStraightTapeHoleEquation_e.swStraightTapHoleEquation_UserDefinedValue, then use\nIAdvancedHoleElementData::BlindDepth\nto set the custom Blind depth of this hole element.\nIAdvancedHoleElementData::EndCondition is specifically set to anything other than Blind, then this property is not valid.\nIf IAdvancedHoleFeatureData::UseBaselineDimensions is set to true, then:\nthe end condition automatically becomes swEndConditions_e.swEndCondOffsetFromSurface,\n- and -\nthis property specifies the equation for the offset distance. If this property is set to swStraightTapHoleEquation_e.swStraightTapHoleEquation_UserDefinedValue, then use\nIAdvancedHoleElementData::OffsetDistance\nto set the custom offset distance of this hole element.",
+  "examples": [],
+  "related": []
+}

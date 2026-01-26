@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSegment",
+    "member": "SelectChain",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Append",
+        "type": "System.Boolean",
+        "description": "True to append to the current selection list, false to replace the selection list"
+      },
+      {
+        "name": "Data",
+        "type": "SelectData",
+        "description": "ISelectData"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "selectchain",
+      "isketchsegment",
+      "sketch",
+      "segment",
+      "select",
+      "chain",
+      "append",
+      "boolean",
+      "data",
+      "chains",
+      "entities",
+      "attached",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchSegment.SelectChain",
+  "description": "Selects chains of entities attached to this sketch segment.",
+  "signature": "System.Boolean SelectChain( \n   System.Boolean\nAppend\n,\n   SelectData\nData\n)",
+  "parameters": [
+    {
+      "name": "Append",
+      "type": "System.Boolean",
+      "description": "True to append to the current selection list, false to replace the selection list"
+    },
+    {
+      "name": "Data",
+      "type": "SelectData",
+      "description": "ISelectData"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method call\nISelectionMgr::CreateSelectData\nto specify Data.\nThis method is equivalent to right-clicking a sketch segment and selecting\nSelect Chain\n. The chain of entities in each direction is selected. Selection ends when a branch in the chain is encountered.",
+  "examples": [
+    {
+      "title": "Select Chains of Entities Attached to a Sketch Segment (VBA)",
+      "href": "Select_Chain_of_Entities_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Chains of Entities Attached to a Sketch Segment (VB.NET)",
+      "href": "Select_Chain_of_Entities_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Chains of Entities Attached to a Sketch Segment (C#)",
+      "href": "Select_Chain_of_Entities_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

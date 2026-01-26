@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISldWorks",
+    "member": "ActiveDoc",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActivateDoc2",
+      "ISldWorks.EnumDocuments2",
+      "ISldWorks.GetFirstDocument",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.GetOpenFileName",
+      "ISldWorks.GetOpenedFileInfo",
+      "ISldWorks.IActivateDoc3",
+      "ISldWorks.IActiveDoc2",
+      "ISldWorks.IGetFirstDocument2",
+      "ISldWorks.IGetOpenDocumentByName2",
+      "ISldWorks.OpenDoc6"
+    ],
+    "keywords": [
+      "document",
+      "active",
+      "activedoc",
+      "isldworks",
+      "sld",
+      "works",
+      "doc",
+      "object",
+      "create",
+      "equation",
+      "driven",
+      "curve",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "ISldWorks.ActiveDoc",
+  "description": "Gets the currently active document.",
+  "signature": "System.Object ActiveDoc {get;}",
+  "parameters": [],
+  "returns": "Model document or Nothing or null if the operation fails",
+  "remarks": "If no document is active, then Nothing or null is returned. This is a read-only property.\nThe currently active document cannot be the document that is being edited by the end-user. For example, you can use in-context editing to modify an assembly component. The currently active document is the assembly, but the edit target is the assembly component. For assemblies, you can determine the edit target by using the\nIAssemblyDoc::GetEditTarget\nor\nIAssemblyDoc::IGetEditTarget2\nmethod.",
+  "examples": [
+    {
+      "title": "Create Equation-driven Curve (C#)",
+      "href": "Create_Equation-driven_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Equation-driven Curve (VB.NET)",
+      "href": "Create_Equation-driven_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Equation-driven Curve (VBA)",
+      "href": "Create_Equation-driven_Curve_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ActivateDoc2",
+    "ISldWorks.EnumDocuments2",
+    "ISldWorks.GetFirstDocument",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.GetOpenFileName",
+    "ISldWorks.GetOpenedFileInfo",
+    "ISldWorks.IActivateDoc3",
+    "ISldWorks.IActiveDoc2",
+    "ISldWorks.IGetFirstDocument2",
+    "ISldWorks.IGetOpenDocumentByName2",
+    "ISldWorks.OpenDoc6"
+  ]
+}

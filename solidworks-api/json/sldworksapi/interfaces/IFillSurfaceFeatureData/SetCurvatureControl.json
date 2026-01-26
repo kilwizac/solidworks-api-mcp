@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFillSurfaceFeatureData",
+    "member": "SetCurvatureControl",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "EntityIn",
+        "type": "System.Object",
+        "description": "Edge or sketch boundary returned by IFillSurfaceFeatureData::GetPatchBoundary or IFillSurfaceFeatureData::IGetPatchBoundary"
+      },
+      {
+        "name": "ControlType",
+        "type": "System.Int32",
+        "description": "Contact type as defined in swContactType_e"
+      },
+      {
+        "name": "BAll",
+        "type": "System.Boolean",
+        "description": "True to set contact type for all boundary entities, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFillSurfaceFeatureData.GetAlternateFace",
+      "IFillSurfaceFeatureData.GetCurvatureControl",
+      "IFillSurfaceFeatureData.GetPatchBoundary",
+      "IFillSurfaceFeatureData.GetPatchBoundaryCount",
+      "IFillSurfaceFeatureData.ISetPatchBoundary",
+      "IFillSurfaceFeatureData.SetPatchBoundary",
+      "IFillSurfaceFeatureData.ToggleAlternateFace"
+    ],
+    "keywords": [
+      "setcurvaturecontrol",
+      "ifillsurfacefeaturedata",
+      "fill",
+      "surface",
+      "feature",
+      "data",
+      "curvature",
+      "control",
+      "entity",
+      "object",
+      "type",
+      "int32",
+      "all",
+      "boolean"
+    ]
+  },
+  "title": "IFillSurfaceFeatureData.SetCurvatureControl",
+  "description": "Sets the contact type for this fill-surface feature.",
+  "signature": "System.Boolean SetCurvatureControl( \n   System.Object\nEntityIn\n,\n   System.Int32\nControlType\n,\n   System.Boolean\nBAll\n)",
+  "parameters": [
+    {
+      "name": "EntityIn",
+      "type": "System.Object",
+      "description": "Edge or sketch boundary returned by IFillSurfaceFeatureData::GetPatchBoundary or IFillSurfaceFeatureData::IGetPatchBoundary"
+    },
+    {
+      "name": "ControlType",
+      "type": "System.Int32",
+      "description": "Contact type as defined in swContactType_e"
+    },
+    {
+      "name": "BAll",
+      "type": "System.Boolean",
+      "description": "True to set contact type for all boundary entities, false to not"
+    }
+  ],
+  "returns": "True if contact type is set, false if not",
+  "remarks": "Sketch boundaries must be set to swContact.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IFillSurfaceFeatureData.GetAlternateFace",
+    "IFillSurfaceFeatureData.GetCurvatureControl",
+    "IFillSurfaceFeatureData.GetPatchBoundary",
+    "IFillSurfaceFeatureData.GetPatchBoundaryCount",
+    "IFillSurfaceFeatureData.ISetPatchBoundary",
+    "IFillSurfaceFeatureData.SetPatchBoundary",
+    "IFillSurfaceFeatureData.ToggleAlternateFace"
+  ]
+}

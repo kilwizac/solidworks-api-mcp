@@ -1,0 +1,248 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFilletBeadFeature2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type1",
+        "type": "System.Int16",
+        "description": "First side: 0 = Full length 1 = Intermittent 2 = Staggered"
+      },
+      {
+        "name": "Size1",
+        "type": "System.Double",
+        "description": "Size of fillet on first side"
+      },
+      {
+        "name": "Length1",
+        "type": "System.Double",
+        "description": "Length of fillet on first side"
+      },
+      {
+        "name": "PenetrationType1",
+        "type": "System.Int16",
+        "description": "First side: 0 = Full penetration 1 = Partial penetration 2 = No penetration"
+      },
+      {
+        "name": "PenetrationValue1",
+        "type": "System.Double",
+        "description": "If penetrationType1 is set to 1 (Partial penetration), then set its value"
+      },
+      {
+        "name": "Pitch",
+        "type": "System.Double",
+        "description": "Pitch, if Intermittent or Staggered on both sides"
+      },
+      {
+        "name": "Type2",
+        "type": "System.Int16",
+        "description": "Second side: 0= Full length 1 = Intermittent 2= Staggered"
+      },
+      {
+        "name": "Size2",
+        "type": "System.Double",
+        "description": "Size of fillet on second side"
+      },
+      {
+        "name": "Length2",
+        "type": "System.Double",
+        "description": "Length of fillet on second side"
+      },
+      {
+        "name": "PenetrationType2",
+        "type": "System.Int16",
+        "description": "Second side: 0 = Full penetration 1 = Partial penetration 2 = No penetration"
+      },
+      {
+        "name": "PenetrationValue2",
+        "type": "System.Double",
+        "description": "If penetrationType2 is set to 1 (Partial penetration), then set its value"
+      },
+      {
+        "name": "Flag",
+        "type": "System.Int32",
+        "description": "0 = One-sided and no tangent propagation 1 = Two-sided 2 = Tangent propagation 3 = Two-sided and tangent propagation"
+      },
+      {
+        "name": "EdgeNum1",
+        "type": "System.Int32",
+        "description": "Number of intersecting edges on first side"
+      },
+      {
+        "name": "DeSelEdge1",
+        "type": "System.Object",
+        "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on first side"
+      },
+      {
+        "name": "EdgeNum2",
+        "type": "System.Int32",
+        "description": "Number of intersecting edges on second side"
+      },
+      {
+        "name": "DeSelEdge2",
+        "type": "System.Object",
+        "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on second side"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IEndCapFeatureData",
+      "IFeatureManager.InsertEndCapFeature",
+      "IFeatureManager.InsertFilletBeadFeature3",
+      "IFeatureManager.InsertStructuralWeldment2",
+      "IFeatureManager.InsertSubWeldFolder",
+      "IFeatureManager.InsertWeldmentCutList",
+      "IFeatureManager.InsertWeldmentFeature",
+      "IFeatureManager.InsertWeldmentTrimFeature",
+      "IGussetFeatureData",
+      "IStructuralMemberFeatureData",
+      "IWeldBead",
+      "IWeldmentBeadFeatureData",
+      "IWeldmentCutListAnnotation",
+      "IWeldmentCutListFeature"
+    ],
+    "keywords": [
+      "insertfilletbeadfeature2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "fillet",
+      "bead",
+      "feature2",
+      "type1",
+      "int16",
+      "size1",
+      "double",
+      "length1",
+      "penetration",
+      "value1",
+      "pitch",
+      "type2",
+      "size2",
+      "length2",
+      "value2",
+      "flag",
+      "int32",
+      "edge",
+      "num1",
+      "de",
+      "sel",
+      "edge1",
+      "object",
+      "num2",
+      "edge2"
+    ]
+  },
+  "title": "IFeatureManager.InsertFilletBeadFeature2",
+  "description": "Inserts a fillet weld bead feature and also fills the gap between the pre-selected part bodies, if any.",
+  "signature": "Feature InsertFilletBeadFeature2( \n   System.Int16\nType1\n,\n   System.Double\nSize1\n,\n   System.Double\nLength1\n,\n   System.Int16\nPenetrationType1\n,\n   System.Double\nPenetrationValue1\n,\n   System.Double\nPitch\n,\n   System.Int16\nType2\n,\n   System.Double\nSize2\n,\n   System.Double\nLength2\n,\n   System.Int16\nPenetrationType2\n,\n   System.Double\nPenetrationValue2\n,\n   System.Int32\nFlag\n,\n   System.Int32\nEdgeNum1\n,\n   System.Object\nDeSelEdge1\n,\n   System.Int32\nEdgeNum2\n,\n   System.Object\nDeSelEdge2\n)",
+  "parameters": [
+    {
+      "name": "Type1",
+      "type": "System.Int16",
+      "description": "First side: 0 = Full length 1 = Intermittent 2 = Staggered"
+    },
+    {
+      "name": "Size1",
+      "type": "System.Double",
+      "description": "Size of fillet on first side"
+    },
+    {
+      "name": "Length1",
+      "type": "System.Double",
+      "description": "Length of fillet on first side"
+    },
+    {
+      "name": "PenetrationType1",
+      "type": "System.Int16",
+      "description": "First side: 0 = Full penetration 1 = Partial penetration 2 = No penetration"
+    },
+    {
+      "name": "PenetrationValue1",
+      "type": "System.Double",
+      "description": "If penetrationType1 is set to 1 (Partial penetration), then set its value"
+    },
+    {
+      "name": "Pitch",
+      "type": "System.Double",
+      "description": "Pitch, if Intermittent or Staggered on both sides"
+    },
+    {
+      "name": "Type2",
+      "type": "System.Int16",
+      "description": "Second side: 0= Full length 1 = Intermittent 2= Staggered"
+    },
+    {
+      "name": "Size2",
+      "type": "System.Double",
+      "description": "Size of fillet on second side"
+    },
+    {
+      "name": "Length2",
+      "type": "System.Double",
+      "description": "Length of fillet on second side"
+    },
+    {
+      "name": "PenetrationType2",
+      "type": "System.Int16",
+      "description": "Second side: 0 = Full penetration 1 = Partial penetration 2 = No penetration"
+    },
+    {
+      "name": "PenetrationValue2",
+      "type": "System.Double",
+      "description": "If penetrationType2 is set to 1 (Partial penetration), then set its value"
+    },
+    {
+      "name": "Flag",
+      "type": "System.Int32",
+      "description": "0 = One-sided and no tangent propagation 1 = Two-sided 2 = Tangent propagation 3 = Two-sided and tangent propagation"
+    },
+    {
+      "name": "EdgeNum1",
+      "type": "System.Int32",
+      "description": "Number of intersecting edges on first side"
+    },
+    {
+      "name": "DeSelEdge1",
+      "type": "System.Object",
+      "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on first side"
+    },
+    {
+      "name": "EdgeNum2",
+      "type": "System.Int32",
+      "description": "Number of intersecting edges on second side"
+    },
+    {
+      "name": "DeSelEdge2",
+      "type": "System.Object",
+      "description": "Array indicating if intersecting edges are selected (0) or deselected (1) on second side"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IEndCapFeatureData",
+    "IFeatureManager.InsertEndCapFeature",
+    "IFeatureManager.InsertFilletBeadFeature3",
+    "IFeatureManager.InsertStructuralWeldment2",
+    "IFeatureManager.InsertSubWeldFolder",
+    "IFeatureManager.InsertWeldmentCutList",
+    "IFeatureManager.InsertWeldmentFeature",
+    "IFeatureManager.InsertWeldmentTrimFeature",
+    "IGussetFeatureData",
+    "IStructuralMemberFeatureData",
+    "IWeldBead",
+    "IWeldmentBeadFeatureData",
+    "IWeldmentCutListAnnotation",
+    "IWeldmentCutListFeature"
+  ]
+}

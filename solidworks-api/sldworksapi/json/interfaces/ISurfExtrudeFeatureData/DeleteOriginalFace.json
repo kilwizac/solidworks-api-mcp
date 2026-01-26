@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISurfExtrudeFeatureData",
+    "member": "DeleteOriginalFace",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "deleteoriginalface",
+      "isurfextrudefeaturedata",
+      "surf",
+      "extrude",
+      "feature",
+      "data",
+      "delete",
+      "original",
+      "face",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISurfExtrudeFeatureData.DeleteOriginalFace",
+  "description": "Gets or sets whether to delete the original faces of this extruded surface.",
+  "signature": "System.Boolean DeleteOriginalFace {get; set;}",
+  "parameters": [],
+  "returns": "True to delete the original faces, false to not (see Remarks )",
+  "remarks": "This property is only available if\nISurfExtrudeFeatureData::BothDirections\n= false.\nDeleting original faces results in the model being hollow where the faces were deleted and creates multiple bodies. To create a single body when original faces are deleted, use\nISurfExtrudeFeatureData::KnitResult\n.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISurfExtrudeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurfExtrudeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

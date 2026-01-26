@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISimpleHoleFeatureData2",
+    "member": "Depth",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "depth",
+      "isimpleholefeaturedata2",
+      "simple",
+      "hole",
+      "feature",
+      "data2",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "ISimpleHoleFeatureData2.Depth",
+  "description": "Gets or sets the depth of this simple hole feature.",
+  "signature": "System.Double Depth {get; set;}",
+  "parameters": [],
+  "returns": "Hole depth",
+  "remarks": "This property only supports getting the depth of a blind hole. To get the depth of holes with other types of end conditions, you could:\nuse\nIExtrudeFeatureData2::GetDepth\nto get the length of the extrusion.\nanalyze the curves and edges of the hole to get the depth or thickness of it at a specific point.\nuse\nISimpleHoleFeatureData2::SurfaceOffset\nfor a hole with a depth that is offset from the surface.",
+  "examples": [],
+  "related": []
+}

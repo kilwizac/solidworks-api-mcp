@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParagraphs",
+    "member": "GetTextSegmentText",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of text segment whose text to get"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IParagraphs.GetTextSegmentFormat"
+    ],
+    "keywords": [
+      "gettextsegmenttext",
+      "iparagraphs",
+      "paragraphs",
+      "text",
+      "segment",
+      "index",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IParagraphs.GetTextSegmentText",
+  "description": "Gets the text of the specified text segment in the current paragraph.",
+  "signature": "System.String GetTextSegmentText( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of text segment whose text to get"
+    }
+  ],
+  "returns": "Text of text segment",
+  "remarks": "Paragraphs contain one or more text segments. Each text segment has a different format.\nBefore calling this method, set the current paragraph using\nIParagraphs::CurrentParagraph\n.\nTo populate Index, call\nIParagraphs::GetTextSegmentCount\n.",
+  "examples": [
+    {
+      "title": "IParagraphs",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IParagraphs",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IParagraphs.GetTextSegmentFormat"
+  ]
+}

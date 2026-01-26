@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetGridSettings",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GridOptions",
+      "IModelDoc2.ToolsGrid"
+    ],
+    "keywords": [
+      "grid",
+      "options",
+      "getgridsettings",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "settings",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.GetGridSettings",
+  "description": "Gets the current grid settings.",
+  "signature": "System.Object GetGridSettings()",
+  "parameters": [],
+  "returns": "Current grid settings (see Remarks )",
+  "remarks": "The return format is the following array of doubles:\n[\ndispGrid\n,\ngridSpacing\n,\nsnap, dotStyle, nMajor, nMinor, angleSnap, angleUnit, minorAuto\n]\nwhere:\ndispGrid\n- can be interpreted as a BOOLEAN: True if grid displayed, false otherwise\ngridSpacing\n- snap distance\nsnap\n- can be interpreted as a BOOLEAN: True if snap to grid is on, false otherwise\ndotStyle\n- can be interpreted as a BOOLEAN: True if dotted grids, false otherwise\nnMajor\n- number of minors in major\nnMinor\n- number of snaps in minor\nangleSnap\n- can be interpreted as a BOOLEAN: True if snap to angle is on, false otherwise\nangleUnit\n- value of angle to which to snap\nminorAuto\n- an be interpreted as a BOOLEAN: True if the minor grids are set automatically, false otherwise",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GridOptions",
+    "IModelDoc2.ToolsGrid"
+  ]
+}

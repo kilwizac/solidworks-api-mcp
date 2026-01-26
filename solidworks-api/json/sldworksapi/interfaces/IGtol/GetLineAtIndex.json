@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetLineAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired line where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetLineCount",
+      "IGtol.IGetLineAtIndex"
+    ],
+    "keywords": [
+      "lines",
+      "geometric",
+      "tolerancing",
+      "getlineatindex",
+      "igtol",
+      "gtol",
+      "line",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetLineAtIndex",
+  "description": "Gets the start and end information for the specified line.",
+  "signature": "System.Object GetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired line where the index begins at zero"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType, startPt[3], endPt[3]\n]\nwhere:\nlineType\n= the\nline type\nstartPt\n[3] = the XYZ line start point\nendPt\n[3] = the XYZ line end point",
+  "examples": [],
+  "related": [
+    "IGtol.GetLineCount",
+    "IGtol.IGetLineAtIndex"
+  ]
+}

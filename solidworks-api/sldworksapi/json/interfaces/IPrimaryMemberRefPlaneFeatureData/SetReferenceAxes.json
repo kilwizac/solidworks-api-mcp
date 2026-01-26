@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPrimaryMemberRefPlaneFeatureData",
+    "member": "SetReferenceAxes",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RetEntities",
+        "type": "System.Object",
+        "description": "Array of parallel IRefPlane s and/or IFace2 s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "setreferenceaxes",
+      "iprimarymemberrefplanefeaturedata",
+      "primary",
+      "member",
+      "ref",
+      "plane",
+      "feature",
+      "data",
+      "reference",
+      "axes",
+      "ret",
+      "entities",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IPrimaryMemberRefPlaneFeatureData.SetReferenceAxes",
+  "description": "Sets the direction reference(s) for this structure system member.",
+  "signature": "System.Boolean SetReferenceAxes( \n   System.Object\nRetEntities\n)",
+  "parameters": [
+    {
+      "name": "RetEntities",
+      "type": "System.Object",
+      "description": "Array of parallel IRefPlane s and/or IFace2 s"
+    }
+  ],
+  "returns": "True if reference axes successfully set, false if not",
+  "remarks": "The number of members created = (\nIPrimaryMemberRefPlaneFeatureData::GetReferenceAxes\n*\nIPrimaryMemberRefPlaneFeatureData::GetReferenceLocations\n)\nDuring:\ncreation, you can set any number of entities that are intersecting with the start and end reference (\nIPrimaryMemberRefPlaneFeatureData::GetStartAndEndReferences\n).\nediting, you can set only one entity that intersects with the start and end reference.",
+  "examples": [
+    {
+      "title": "IPrimaryMemberRefPlaneFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPrimaryMemberRefPlaneFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "AddContextMenu",
+    "returns": "CommandGroup",
+    "parameters": [
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "User-defined ID for this context-sensitive menu"
+      },
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Name of the context-sensitive menu to add to the CommandManager"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.Name",
+      "ICommandGroup.SelectType",
+      "ICommandManager.RemoveCommandGroup"
+    ],
+    "keywords": [
+      "addcontextmenu",
+      "icommandmanager",
+      "command",
+      "manager",
+      "add",
+      "context",
+      "menu",
+      "user",
+      "id",
+      "int32",
+      "title",
+      "string",
+      "group"
+    ]
+  },
+  "title": "ICommandManager.AddContextMenu",
+  "description": "Adds a new context-sensitive menu to the CommandManager.",
+  "signature": "CommandGroup AddContextMenu( \n   System.Int32\nUserID\n,\n   System.String\nTitle\n)",
+  "parameters": [
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "User-defined ID for this context-sensitive menu"
+    },
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Name of the context-sensitive menu to add to the CommandManager"
+    }
+  ],
+  "returns": "Pointer to ICommandGroup object",
+  "remarks": "A context-sensitive menu is a pop-up menu that is displayed when a user right-clicks a selectable object type defined by\nICommandGroup::SelectType\nand, if the object type is a custom feature,\nICommandGroup::CustomNames\n.\nYou can turn off all menus or all toolbars for a CommandGroup. See\nICommandGroup::HasMenu\nand\nICommandGroup::HasToolbar\nfor details.",
+  "examples": [],
+  "related": [
+    "ICommandGroup.Name",
+    "ICommandGroup.SelectType",
+    "ICommandManager.RemoveCommandGroup"
+  ]
+}

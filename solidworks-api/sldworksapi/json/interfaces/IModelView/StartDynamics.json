@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "StartDynamics",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.DynamicMode",
+      "IModelView.HlrQuality",
+      "IModelView.RotateAboutAxis",
+      "IModelView.RotateAboutCenter",
+      "IModelView.RotateAboutPoint"
+    ],
+    "keywords": [
+      "rotate",
+      "model",
+      "views",
+      "hidden",
+      "lines",
+      "removed",
+      "visible",
+      "hlr",
+      "see",
+      "hlv",
+      "startdynamics",
+      "imodelview",
+      "view",
+      "start",
+      "dynamics",
+      "void",
+      "dynamic",
+      "rotation"
+    ]
+  },
+  "title": "IModelView.StartDynamics",
+  "description": "Provides faster rotation of model views.",
+  "signature": "void StartDynamics()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "After setting swUserPreferenceIntegerValue_e.swLevelOfDetail high enough, this method can be used at the beginning of dynamic model view changes to:\nchange HLR or HLV mode to wireframe mode, which provides you with faster view rotation because the edges are not calculated during your view re-orientation.\nturn curved-surface bodies into polyhedra for faster view manipulations when in shaded mode.\nDynamic view motion remains in effect until you call\nIModelView::StopDynamics\n.\nIf the SOLIDWORKS file is in view-only mode and is not displaying a shaded image, then you cannot perform any view rotations. Do not call any of the view rotation functions.\nTo determine if the file is in view-only mode and is not displaying a shaded image, use\nIModelDoc2::IsOpenedViewOnly\nand\nIModelView::GetDisplayState\n.",
+  "examples": [
+    {
+      "title": "Dynamic View Rotation (C++)",
+      "href": "Dynamic_View_Rotation_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelView.DynamicMode",
+    "IModelView.HlrQuality",
+    "IModelView.RotateAboutAxis",
+    "IModelView.RotateAboutCenter",
+    "IModelView.RotateAboutPoint"
+  ]
+}

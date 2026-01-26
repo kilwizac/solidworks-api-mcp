@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartingLineFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component in which the feature is to be modified (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "parts",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "ipartinglinefeaturedata",
+      "parting",
+      "line",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean",
+      "options",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IPartingLineFeatureData.AccessSelections",
+  "description": "Gains access to the selections that describe the parting line feature.",
+  "signature": "System.Boolean AccessSelections( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component in which the feature is to be modified (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is Nothing or null\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nIPartingLineFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Set Options for Parting Line (VBA)",
+      "href": "Set_Split_Faces_Option_for_Parting_Line_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Parting Line Feature Data (C#)",
+      "href": "Get_and_Set_Parting_Line_Feature_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Parting Line Feature Data (VB.NET)",
+      "href": "Get_and_Set_Parting_Line_Feature_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Parting Line Feature Data (VBA)",
+      "href": "Get_and_Set_Parting_Line_Feature_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

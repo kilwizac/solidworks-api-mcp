@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMultiJogLeader",
+    "member": "IGetLineAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IMultiJogLeader.GetLineAtIndex",
+      "IMultiJogLeader.GetLineCount"
+    ],
+    "keywords": [
+      "igetlineatindex",
+      "imultijogleader",
+      "multi",
+      "jog",
+      "leader",
+      "line",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IMultiJogLeader.IGetLineAtIndex",
+  "description": "Gets the symbol information for the specified line.",
+  "signature": "System.Double IGetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line where the index begins at 0"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\n]\nwhere:\nlineType\n= line type. See\nswLineTypes_e\n.\nstartPt\n[3] = XYZ line start point.\nendPt\n[3] = XYZ line end point.",
+  "examples": [],
+  "related": [
+    "IMultiJogLeader.GetLineAtIndex",
+    "IMultiJogLeader.GetLineCount"
+  ]
+}

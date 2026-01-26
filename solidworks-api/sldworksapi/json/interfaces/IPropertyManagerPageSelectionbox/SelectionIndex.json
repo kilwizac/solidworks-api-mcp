@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "SelectionIndex",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Item",
+        "type": "System.Int32",
+        "description": "0-based index number of the currently selected item (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "selectionindex",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "selection",
+      "index",
+      "item",
+      "int32"
+    ],
+    "readonly": true
+  },
+  "title": "IPropertyManagerPageSelectionbox.SelectionIndex",
+  "description": "Gets the index number of the currently selected item in the selection box.",
+  "signature": "System.Int32 SelectionIndex( \n   System.Int32\nItem\n) {get;}",
+  "parameters": [
+    {
+      "name": "Item",
+      "type": "System.Int32",
+      "description": "0-based index number of the currently selected item (see Remarks )"
+    }
+  ],
+  "returns": "1-based index number to use with ISelectionMgr APIs (see Remarks )",
+  "remarks": "Use:\nIPropertyManagerPageSelectionbox::ItemCount\nto get the number of items in the selection box.\nthe return value Index with such ISelectionMgr APIs as\nISelectionMgr::GetSelectedObject6\nand\nISelectionMgr::GetSelectedObjectType3\n.",
+  "examples": [],
+  "related": []
+}

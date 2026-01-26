@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDerivedPatternFeatureData",
+    "member": "GetTransform",
+    "returns": "MathTransform",
+    "parameters": [
+      {
+        "name": "Instance",
+        "type": "System.Int32",
+        "description": "Index of one repeating element in this pattern (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICurveDrivenPatternFeatureData.SkippedItemArray"
+    ],
+    "keywords": [
+      "transform",
+      "patterns",
+      "gettransform",
+      "iderivedpatternfeaturedata",
+      "derived",
+      "pattern",
+      "feature",
+      "data",
+      "instance",
+      "int32",
+      "math"
+    ]
+  },
+  "title": "IDerivedPatternFeatureData.GetTransform",
+  "description": "Gets the transform for the specified instance of this derived-pattern feature.",
+  "signature": "MathTransform GetTransform( \n   System.Int32\nInstance\n)",
+  "parameters": [
+    {
+      "name": "Instance",
+      "type": "System.Int32",
+      "description": "Index of one repeating element in this pattern (see Remarks )"
+    }
+  ],
+  "returns": "Transform",
+  "remarks": "To get the number of instances in this pattern, get the number of subfeatures of the pattern by traversing the FeatureManager design tree, getting the derived-pattern feature, getting the derived-pattern feature's subfeatures, and keeping count of the number of subfeatures. You can use\nIModelDoc2::FirstFeature\n,\nIFeature::GetFirstSubFeature\n, and\nIFeature::GetNextSubFeature\nto traverse the FeatureManager design tree and get the derived-pattern feature's subfeatures.\nTransform each instance by calling this method, setting its parameter\nInstance\nas follows:\n1 <=\nInstance\n<= total number of instances in this pattern",
+  "examples": [],
+  "related": [
+    "ICurveDrivenPatternFeatureData.SkippedItemArray"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "RayIntersections",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "BodiesIn",
+        "type": "System.Object",
+        "description": "Array of bodies that are hit by the rays (see Remarks )"
+      },
+      {
+        "name": "BasePointsIn",
+        "type": "System.Object",
+        "description": "Array of doubles containing the x,y,z base points of each ray"
+      },
+      {
+        "name": "VectorsIn",
+        "type": "System.Object",
+        "description": "Array of doubles containing the direction vectors of each ray"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Number of options as defined in swRayPtsOpts_e"
+      },
+      {
+        "name": "HitRadius",
+        "type": "System.Double",
+        "description": "Radius of hit cylinder; this is used mainly in grazing cases to establish a hit"
+      },
+      {
+        "name": "Offset",
+        "type": "System.Double",
+        "description": "Length tolerance to use to establish whether a hit on a face represents the entry or exit of the ray from the body (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetRayIntersectionsPoints",
+      "IModelDoc2.GetRayIntersectionsTopology",
+      "IModelDoc2.IGetRayIntersectionsPoints",
+      "IModelDoc2.IGetRayIntersectionsTopology",
+      "IModelDoc2.IMultiSelectByRay",
+      "IModelDoc2.IRayIntersections",
+      "IModelDoc2.ISelectByRay",
+      "IModelDoc2.MultiSelectByRay",
+      "IModelDoc2.SelectByRay"
+    ],
+    "keywords": [
+      "rayintersections",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "ray",
+      "intersections",
+      "bodies",
+      "object",
+      "base",
+      "points",
+      "vectors",
+      "options",
+      "int32",
+      "hit",
+      "radius",
+      "double",
+      "offset"
+    ]
+  },
+  "title": "IModelDoc2.RayIntersections",
+  "description": "Obsolete. Superseded by IModelDocExtension::RayIntersections.",
+  "signature": "System.Int32 RayIntersections( \n   System.Object\nBodiesIn\n,\n   System.Object\nBasePointsIn\n,\n   System.Object\nVectorsIn\n,\n   System.Int32\nOptions\n,\n   System.Double\nHitRadius\n,\n   System.Double\nOffset\n)",
+  "parameters": [
+    {
+      "name": "BodiesIn",
+      "type": "System.Object",
+      "description": "Array of bodies that are hit by the rays (see Remarks )"
+    },
+    {
+      "name": "BasePointsIn",
+      "type": "System.Object",
+      "description": "Array of doubles containing the x,y,z base points of each ray"
+    },
+    {
+      "name": "VectorsIn",
+      "type": "System.Object",
+      "description": "Array of doubles containing the direction vectors of each ray"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Number of options as defined in swRayPtsOpts_e"
+    },
+    {
+      "name": "HitRadius",
+      "type": "System.Double",
+      "description": "Radius of hit cylinder; this is used mainly in grazing cases to establish a hit"
+    },
+    {
+      "name": "Offset",
+      "type": "System.Double",
+      "description": "Length tolerance to use to establish whether a hit on a face represents the entry or exit of the ray from the body (see Remarks )"
+    }
+  ],
+  "returns": "Number of intersections found",
+  "remarks": "The method performs the intersection operations between the specified bodies and the ray vectors. To get the results (a set of intersection points, intersection normals, and the bodies that were hit from your bodiesIn array) of the intersection operations, you must call\nIModelDoc2::GetRayIntersectionsPoints\nor\nIModelDoc2::IGetRayIntersectionPoints\nand\nIModelDoc2::GetRayIntersectionTopology\nor\nIModelDoc2::IGetRayIntersectionsTopology\n.\nInformation returned by IModelDoc2::GetRayIntersectionsPoints, IModelDoc2::IGetRayIntersectionPoints, IModelDoc2::GetRayIntersectionTopology, and IModelDoc2::IGetRayIntersectionsTopology depends partially on the value of the options argument. Valid values can be concatenated together using bitwise operations. See IModelDoc2::GetRayIntersectionsPoints or IModelDoc2::IGetRayIntersectionPoints to see which data is always output regardless of the values specified in the options argument.\nFor each ray that hits an edge or a vertex, the offset distance is added in both the positive and negative directions along the ray and the points computed are tested for spatial inclusion in the hit body. This determines if the ray was entering, leaving, or just grazing the body at the hit point. Entry and exit onto faces can be computed does not require such an offset.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetRayIntersectionsPoints",
+    "IModelDoc2.GetRayIntersectionsTopology",
+    "IModelDoc2.IGetRayIntersectionsPoints",
+    "IModelDoc2.IGetRayIntersectionsTopology",
+    "IModelDoc2.IMultiSelectByRay",
+    "IModelDoc2.IRayIntersections",
+    "IModelDoc2.ISelectByRay",
+    "IModelDoc2.MultiSelectByRay",
+    "IModelDoc2.SelectByRay"
+  ]
+}

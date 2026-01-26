@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHoleDataTable",
+    "member": "GetCellData",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ColumnName",
+        "type": "System.String",
+        "description": "Column name (see Remarks )"
+      },
+      {
+        "name": "RowIndex",
+        "type": "System.Int32",
+        "description": "0-based row index"
+      },
+      {
+        "name": "CellData",
+        "type": "System.String",
+        "description": "Cell data"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "getcelldata",
+      "iholedatatable",
+      "hole",
+      "data",
+      "table",
+      "cell",
+      "column",
+      "name",
+      "string",
+      "row",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IHoleDataTable.GetCellData",
+  "description": "Gets data from the specified table cell of this Hole Wizard fastener table.",
+  "signature": "System.Boolean GetCellData( \n   System.String\nColumnName\n,\n   System.Int32\nRowIndex\n,\n   out System.String\nCellData\n)",
+  "parameters": [
+    {
+      "name": "ColumnName",
+      "type": "System.String",
+      "description": "Column name (see Remarks )"
+    },
+    {
+      "name": "RowIndex",
+      "type": "System.Int32",
+      "description": "0-based row index"
+    },
+    {
+      "name": "CellData",
+      "type": "System.String",
+      "description": "Cell data"
+    }
+  ],
+  "returns": "True if cell data successfully retrieved, false if not",
+  "remarks": "To set:\nColumnName, use\nIHoleDataTable::GetColumnNames\n.\nRowIndex, use\nIHoleDataTable::GetRowCount\n.",
+  "examples": [
+    {
+      "title": "IHoleDataTable",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IHoleDataTable",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

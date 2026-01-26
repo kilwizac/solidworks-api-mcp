@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetExternalReferenceName",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.BreakAllExternalReferences",
+      "IModelDoc2.IListAuxiliaryExternalFileReferences",
+      "IModelDoc2.ListAuxiliaryExternalFileReferences",
+      "IModelDoc2.ListAuxiliaryExternalFileReferencesCount",
+      "IModelDoc2.LockAllExternalReferences",
+      "IModelDocExtension.IListExternalFileReferences",
+      "IModelDocExtension.ListExternalFileReferences",
+      "IModelDocExtension.ListExternalFileReferencesCount",
+      "IModelDocExtension.UpdateExternalFileReferences"
+    ],
+    "keywords": [
+      "dependent",
+      "documents",
+      "external",
+      "references",
+      "document",
+      "name",
+      "reference",
+      "getexternalreferencename",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "string"
+    ]
+  },
+  "title": "IModelDoc2.GetExternalReferenceName",
+  "description": "Gets the name of the externally referenced document (in the case of a join or mirrored part).",
+  "signature": "System.String GetExternalReferenceName()",
+  "parameters": [],
+  "returns": "Full path of referenced document or NULL",
+  "remarks": "If the model document does not have an externally referenced document, a NULL string is returned.\nThis example shows how to get the names of any externally referenced document for the open model.\n'\n------------------------------------------\nOption Explicit\nSub main()\nDim swApp\nAs SldWorks.SldWorks\nDim swModel\nAs SldWorks.ModelDoc2\nSet swApp = Application.SldWorks\nSet swModel = swApp.ActiveDoc\nDebug.Print \"File = \" & swModel.GetPathName\nDebug.Print \"\nExtRefName = \" & swModel.\nGetExternalReferenceName\nEnd Sub\n'------------------------------------------",
+  "examples": [],
+  "related": [
+    "IModelDoc2.BreakAllExternalReferences",
+    "IModelDoc2.IListAuxiliaryExternalFileReferences",
+    "IModelDoc2.ListAuxiliaryExternalFileReferences",
+    "IModelDoc2.ListAuxiliaryExternalFileReferencesCount",
+    "IModelDoc2.LockAllExternalReferences",
+    "IModelDocExtension.IListExternalFileReferences",
+    "IModelDocExtension.ListExternalFileReferences",
+    "IModelDocExtension.ListExternalFileReferencesCount",
+    "IModelDocExtension.UpdateExternalFileReferences"
+  ]
+}

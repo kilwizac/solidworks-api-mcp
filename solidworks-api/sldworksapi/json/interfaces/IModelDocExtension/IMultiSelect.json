@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IMultiSelect",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of selectable objects"
+      },
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of selectable objects: objects can be heterogeneous if any object is not selected, then it is ignored"
+      },
+      {
+        "name": "AppendFlag",
+        "type": "System.Boolean",
+        "description": "True to append the objects to the selection list, false replace the current selection list with these objects"
+      },
+      {
+        "name": "Data",
+        "type": "SelectData",
+        "description": "ISelectData object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.MultiSelect",
+      "IModelDocExtension.SelectAll",
+      "IModelDocExtension.SelectByID2",
+      "ISelectionMgr"
+    ],
+    "keywords": [
+      "imultiselect",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "multi",
+      "select",
+      "count",
+      "int32",
+      "objects",
+      "object",
+      "append",
+      "flag",
+      "boolean",
+      "data"
+    ]
+  },
+  "title": "IModelDocExtension.IMultiSelect",
+  "description": "Obsolete. Superseded by IModelDocExtension::MultiSelect2.",
+  "signature": "System.Int32 IMultiSelect( \n   System.Int32\nCount\n,\n   ref System.Object\nObjects\n,\n   System.Boolean\nAppendFlag\n,\n   SelectData\nData\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of selectable objects"
+    },
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of selectable objects: objects can be heterogeneous if any object is not selected, then it is ignored"
+    },
+    {
+      "name": "AppendFlag",
+      "type": "System.Boolean",
+      "description": "True to append the objects to the selection list, false replace the current selection list with these objects"
+    },
+    {
+      "name": "Data",
+      "type": "SelectData",
+      "description": "ISelectData object"
+    }
+  ],
+  "returns": "Number of objects selected",
+  "remarks": "If this now obsolete method is used to populate a selection box in a PropertyManager page, then\nIPropertyManagerPage2Handler9::OnSubmitSelection\nonly fires when set to true and\nISelectData::Mark\nis set to 0.\nUse\nIModelDocExtension::MultiSelect2\nif you need IPropertyManagerPage2Handler9::OnSubmitSelection to fire when set to true and ISelectData::Mark is set to either a 0 or non-0 value.\nThe\nCallout\nproperty of the\nISelectData\nobject is not used by this method.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.MultiSelect",
+    "IModelDocExtension.SelectAll",
+    "IModelDocExtension.SelectByID2",
+    "ISelectionMgr"
+  ]
+}

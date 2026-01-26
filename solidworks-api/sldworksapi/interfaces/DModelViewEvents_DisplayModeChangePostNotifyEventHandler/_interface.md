@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DModelViewEvents_DisplayModeChangePostNotifyEventHandler
+inherits: null
+description: Post-notifies the user program when a model view display mode is changed.
+member_count: 0
+docset: sldworksapi
+categories:
+  - ui
+common_members: []
+---
+
+# DModelViewEvents_DisplayModeChangePostNotifyEventHandler
+
+Post-notifies the user program when a model view display mode is changed.

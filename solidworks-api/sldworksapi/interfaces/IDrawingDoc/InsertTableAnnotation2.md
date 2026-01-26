@@ -1,0 +1,138 @@
+---
+type: method
+interface: IDrawingDoc
+member: InsertTableAnnotation2
+returns: TableAnnotation
+parameters:
+  -
+    name: UseAnchorPoint
+    type: System.Boolean
+    description: True to anchor the table to the general table anchor point and ignore any coordinates specified for X and Y, or false to use the coordinates specified for X and Y
+  -
+    name: X
+    type: System.Double
+    description: X coordinate to insert this table annotation
+  -
+    name: Y
+    type: System.Double
+    description: Y coordinate to insert this table annotation
+  -
+    name: AnchorType
+    type: System.Int32
+    description: Type of anchor as defined in swBOMConfigurationAnchorType_e (see Remarks )
+  -
+    name: TableTemplate
+    type: System.String
+    description: Path and filename of the general table template to use (see Remarks )
+  -
+    name: Rows
+    type: System.Int32
+    description: Number of rows in the table annotation
+  -
+    name: Columns
+    type: System.Int32
+    description: Number of columns in the table annotation
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - dimensions
+  - drawings
+  - ui
+related:
+  - IModelDocExtension.InsertGeneralTableAnnotation
+keywords:
+  - table
+  - annotations
+  - see
+  - also
+  - itableannotation
+  - inserttableannotation2
+  - idrawingdoc
+  - drawing
+  - doc
+  - insert
+  - annotation2
+  - use
+  - anchor
+  - point
+  - boolean
+  - double
+  - type
+  - int32
+  - template
+  - string
+  - rows
+  - columns
+  - annotation
+  - general
+  - vba
+  - feature
+  - vb
+  - net
+---
+
+# IDrawingDoc.InsertTableAnnotation2
+
+Inserts a table annotation in this drawing.
+
+## Signature
+
+```csharp
+TableAnnotation InsertTableAnnotation2( 
+   System.Boolean
+UseAnchorPoint
+,
+   System.Double
+X
+,
+   System.Double
+Y
+,
+   System.Int32
+AnchorType
+,
+   System.String
+TableTemplate
+,
+   System.Int32
+Rows
+,
+   System.Int32
+Columns
+)
+```
+## Parameters
+
+- `UseAnchorPoint` (System.Boolean): True to anchor the table to the general table anchor point and ignore any coordinates specified for X and Y, or false to use the coordinates specified for X and Y
+- `X` (System.Double): X coordinate to insert this table annotation
+- `Y` (System.Double): Y coordinate to insert this table annotation
+- `AnchorType` (System.Int32): Type of anchor as defined in swBOMConfigurationAnchorType_e (see Remarks )
+- `TableTemplate` (System.String): Path and filename of the general table template to use (see Remarks )
+- `Rows` (System.Int32): Number of rows in the table annotation
+- `Columns` (System.Int32): Number of columns in the table annotation
+
+## Return Value
+
+Pointer to the ITableAnnotation object
+
+## Remarks
+
+If TableTemplate is...
+Then..
+A valid path and filename
+AnchorType and Columns are ignored, and the information from the table template is used instead
+Empty
+General table is inserted based only on the other input arguments
+
+## Examples
+
+- Insert General Table (VBA) (Insert_General_Table_Example_VB.htm)
+- Get General Table Feature (C#) (Get_General_Table_Feature_Example_CSharp.htm)
+- Get General Table Feature (VB.NET) (Get_General_Table_Feature_Example_VBNET.htm)
+- Get General Table Feature (VBA) (Get_General_Table_Feature_Example_VB.htm)
+
+## See Also
+
+- `IModelDocExtension.InsertGeneralTableAnnotation`

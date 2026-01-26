@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfigurationManager",
+    "member": "IGetConfigurationParams",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of the configuration"
+      },
+      {
+        "name": "ParamCount",
+        "type": "System.Int32",
+        "description": "Number of parameters for this configuration"
+      },
+      {
+        "name": "ParamNames",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an an array of the names of the parameters for this configuration of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "ParamValues",
+        "type": "System.String",
+        "description": "in-process, unmanaged C++: Pointer to an array of values of the parameters for this configuration of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetParameterCount",
+      "IConfiguration.GetParameters",
+      "IConfiguration.IGetParameters",
+      "IConfiguration.ISetParameters",
+      "IConfiguration.SetParameters",
+      "IConfigurationManager.ActiveConfiguration",
+      "IConfigurationManager.GetConfigurationParams",
+      "IConfigurationManager.ISetConfigurationParams",
+      "IConfigurationManager.SetConfigurationParams"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "configurations",
+      "igetconfigurationparams",
+      "iconfigurationmanager",
+      "configuration",
+      "manager",
+      "params",
+      "config",
+      "name",
+      "string",
+      "param",
+      "count",
+      "int32",
+      "names",
+      "values",
+      "boolean"
+    ]
+  },
+  "title": "IConfigurationManager.IGetConfigurationParams",
+  "description": "Gets the parameters for this configuration.",
+  "signature": "System.Boolean IGetConfigurationParams( \n   System.String\nConfigName\n,\n   System.Int32\nParamCount\n,\n   out System.String\nParamNames\n,\n   out System.String\nParamValues\n)",
+  "parameters": [
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of the configuration"
+    },
+    {
+      "name": "ParamCount",
+      "type": "System.Int32",
+      "description": "Number of parameters for this configuration"
+    },
+    {
+      "name": "ParamNames",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an an array of the names of the parameters for this configuration of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "ParamValues",
+      "type": "System.String",
+      "description": "in-process, unmanaged C++: Pointer to an array of values of the parameters for this configuration of size ParamCount VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "True if successful in getting the names and values of the parameters for this configuration, false if unsuccessful",
+  "remarks": "Call\nIConfgurationManager::GetConfigurationParamsCount\nbefore calling this method to get the value for ParamCount.\nThe output values may not be accurate if a design table was not added to the model.",
+  "examples": [
+    {
+      "title": "Get Configuration Parameters (C++)",
+      "href": "Get_Configuration_Parameters_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.GetParameterCount",
+    "IConfiguration.GetParameters",
+    "IConfiguration.IGetParameters",
+    "IConfiguration.ISetParameters",
+    "IConfiguration.SetParameters",
+    "IConfigurationManager.ActiveConfiguration",
+    "IConfigurationManager.GetConfigurationParams",
+    "IConfigurationManager.ISetConfigurationParams",
+    "IConfigurationManager.SetConfigurationParams"
+  ]
+}

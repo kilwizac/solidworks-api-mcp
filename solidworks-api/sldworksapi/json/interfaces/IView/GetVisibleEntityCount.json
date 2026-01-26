@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetVisibleEntityCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "LpViewComponent",
+        "type": "Component2",
+        "description": "Component from which to get the visible EntityType"
+      },
+      {
+        "name": "EntityType",
+        "type": "System.Int32",
+        "description": "Type of entity as defined in swViewEntityType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.EnumHiddenComponents2",
+      "IView.GetHiddenComponents",
+      "IView.GetVisibleComponentCount",
+      "IView.GetVisibleComponents",
+      "IView.GetVisibleEntities",
+      "IView.IGetVisibleComponents"
+    ],
+    "keywords": [
+      "getvisibleentitycount",
+      "iview",
+      "view",
+      "visible",
+      "entity",
+      "count",
+      "lp",
+      "component",
+      "component2",
+      "type",
+      "int32"
+    ]
+  },
+  "title": "IView.GetVisibleEntityCount",
+  "description": "Obsolete. Superseded by IView::GetVisibleEntityCount2.",
+  "signature": "System.Int32 GetVisibleEntityCount( \n   Component2\nLpViewComponent\n,\n   System.Int32\nEntityType\n)",
+  "parameters": [
+    {
+      "name": "LpViewComponent",
+      "type": "Component2",
+      "description": "Component from which to get the visible EntityType"
+    },
+    {
+      "name": "EntityType",
+      "type": "System.Int32",
+      "description": "Type of entity as defined in swViewEntityType_e"
+    }
+  ],
+  "returns": "Number of specified entities in LpViewComponent",
+  "remarks": "Visible entities are only those entities not completely obscured by other entities in the view.\nCall this method before calling\nIView::IGetVisibleEntities\nto get the size of the array for that method.",
+  "examples": [],
+  "related": [
+    "IView.EnumHiddenComponents2",
+    "IView.GetHiddenComponents",
+    "IView.GetVisibleComponentCount",
+    "IView.GetVisibleComponents",
+    "IView.GetVisibleEntities",
+    "IView.IGetVisibleComponents"
+  ]
+}

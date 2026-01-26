@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "InsertBomTable",
+    "returns": "BomTableAnnotation",
+    "parameters": [
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Path and name of BOM table template (see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Int32",
+        "description": "X coordinate for the placement of the BOM table"
+      },
+      {
+        "name": "Y",
+        "type": "System.Int32",
+        "description": "Y coordinate for the placement of the BOM table"
+      },
+      {
+        "name": "BomType",
+        "type": "System.Int32",
+        "description": "Type of BOM table as defined by swBomType_e"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration for this BOM table (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IView.InsertBomTable2"
+    ],
+    "keywords": [
+      "insertbomtable",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "insert",
+      "bom",
+      "table",
+      "template",
+      "name",
+      "string",
+      "int32",
+      "type",
+      "configuration",
+      "annotation",
+      "stacked",
+      "balloon",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.InsertBomTable",
+  "description": "Obsolete. Superseded by IModelDocExtension::InsertBomTable2.",
+  "signature": "BomTableAnnotation InsertBomTable( \n   System.String\nTemplateName\n,\n   System.Int32\nX\n,\n   System.Int32\nY\n,\n   System.Int32\nBomType\n,\n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Path and name of BOM table template (see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Int32",
+      "description": "X coordinate for the placement of the BOM table"
+    },
+    {
+      "name": "Y",
+      "type": "System.Int32",
+      "description": "Y coordinate for the placement of the BOM table"
+    },
+    {
+      "name": "BomType",
+      "type": "System.Int32",
+      "description": "Type of BOM table as defined by swBomType_e"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration for this BOM table (see Remarks )"
+    }
+  ],
+  "returns": "BOM table annotation",
+  "remarks": "The system will not default to the default configuration when you specify an empty string for Configuration. You must specify the configuration.\nBy default, the BOM table templates are in the <\ninstall_dir\n>\\\nlang\n\\<\nlanguage\n> folder and have a filename extension of\n.sldbomtbt\n. The template and table must be of the same type. For example, you could specify\nC:\\Program Files\\SOLIDWORKS\\lang\\English\\bom-standard.sldbomtbt\nfor TemplateName if you wanted to insert an English-version of the standard BOM table template.\nIf the BOM table is a parts-only or indented-style BOM and ConfigurationName is invalid, then the BOM is not created.",
+  "examples": [
+    {
+      "title": "Insert BOM Table and Stacked Balloon (VB.NET)",
+      "href": "Insert_BOM_Table_and_Stacked_Balloon_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert BOM Table and Stacked Balloon (VBA)",
+      "href": "Insert_BOM_Table_and_Stacked_Balloon_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.InsertBomTable2"
+  ]
+}

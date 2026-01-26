@@ -1,0 +1,193 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>SOLIDWORKS Design Augmented</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=MS-HKWD content="SOLIDWORKS Design Augmented">
+<meta name=MS-HKWD content="3DEXPERIENCE">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=634>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>SOLIDWORKS Design Augmented</h1>
+
+<p>As of SOLIDWORKS 2020 SP03.1, SOLIDWORKS Design can run on the <strong>3D</strong>EXPERIENCE 
+platform as SOLIDWORKS Design Augmented. SOLIDWORKS Design Augmented provides access to all 
+the <strong>3D</strong>EXPERIENCE services and apps that you are entitled to use 
+based on your role. Before using the SOLIDWORKS APIs with SOLIDWORKS Design 
+Augmented, 
+you must install and set up roles and collaborative spaces in the <strong>3D</strong>EXPERIENCE 
+platform and install SOLIDWORKS Design Augmented. </p>
+<p>Read <strong>SOLIDWORKS Design Augmented Help &gt; Installation</strong>.</p>
+<h3 style="font-weight: normal;"><strong>Using SOLIDWORKS APIs with SOLIDWORKS 
+Design Augmented</strong></h3>
+<p style="font-weight: normal;">As with SOLIDWORKS Design Desktop, you can use the 
+Macro toolbar in SOLIDWORKS Design Augmented to create and edit macros. Macros are 
+saved in the local directories that you specify. You can make references to type 
+libraries and interop assemblies in the local SOLIDWORKS Design installation that 
+SOLIDWORKS Design Augmented deploys. You can also presume that most of your working 
+SOLIDWORKS Design macros will also work with SOLIDWORKS Design Augmented. However due <strong>
+3D</strong>EXPERIENCE file storage, some SOLIDWORKS APIs have been added, 
+changed, or discontinued for use with SOLIDWORKS Design Augmented. </p>
+<p style="font-weight: normal;">Note the following:</p>
+<ul>
+	<li>
+	<p style="font-weight: normal;">SOLIDWORKS Design Augmented opens<strong> 3D</strong>EXPERIENCE 
+	documents with limited options. See the
+	<a href="sldworksapi.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~OpenDoc7.html">
+	ISldWorks::OpenDoc7</a> and
+	<a href="sldworksapi.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDocumentSpecification.html">
+	IDocumentSpecification</a> Remarks.</p>
+	<ul>
+		<li>
+		<p style="font-weight: normal;">Open a part in one of two modes: 
+		Resolved or Quick View. </p>
+		</li>
+		<li>
+		<p style="font-weight: normal;">Open an assembly in one of three modes: 
+		Large Design Review, LightWeight, or Resolved. You can also opt to use 
+		Speedpak and load hidden components.</p>
+		</li>
+		<li>
+		<p style="font-weight: normal;">Open a drawing in one of four modes: 
+		Quick View, Detailing, LightWeight, or Resolved. You can also opt to use 
+		Speedpak.</p>
+		</li>
+		<li>
+		<p style="font-weight: normal;">See IDocumentSpecification::Selective, 
+		IDocumentSpecification::LightWeight, 
+		IDocumentSpecification::UseLightWeightDefault, 
+		IDocumentSpecification::ViewOnly, IDocumentSpecification::DetailingMode, 
+		IDocumentSpecification::UseSpeedPak, and 
+		IDocumentSpecification::IgnoreHiddenComponents.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p style="font-weight: normal;">Documents opened with SOLIDWORKS Design 
+	Augmented 
+	can be saved only to a <strong>3D</strong>EXPERIENCE collaborative space 
+	that you previously set up. Documents cannot be saved locally and, once 
+	saved to the <strong>3D</strong>EXPERIENCE platform with SOLIDWORKS Design 
+	Augmented, cannot be retrieved from outside of the <strong>3D</strong>EXPERIENCE 
+	platform.</p>
+	</li>
+	<li>
+	<p style="font-weight: normal;">Documents that have been saved with either 
+	SOLIDWORKS Design Desktop or SOLIDWORKS Design Augmented can be opened with 
+	SOLIDWORKS Design Augmented. However, documents saved with SOLIDWORKS Design 
+	Augmented can only be 
+	opened from within the <strong>3D</strong>EXPERIENCE platform or with 
+	SOLIDWORKS Design Augmented.</p>
+	</li>
+	<li>
+	<p style="font-weight: normal;">SOLIDWORKS Design Augmented employs the Product 
+	Lifecycle Management (PLM) software provided by <strong>3D</strong>EXPERIENCE. 
+	Therefore, the SOLIDWORKS PDM Pro API does not work with SOLDWORKS 
+	Design Augmented.</p>
+	</li>
+</ul>
+<p style="font-weight: normal;">APIs that support opening and saving documents 
+with SOLIDWORKS Design Augmented are available as of SOLIDWORKS Design 2020 SP03.1. In future 
+releases, more APIs specific to SOLIDWORKS Design Augmented functionality may be added. 
+You should always read the API Help Release Notes in each service pack to learn 
+about API changes for SOLIDWORKS Design Augmented functionality. Use the Index and 
+Search tabs in the SOLIDWORKS API Help to search for &quot;3DEXPERIENCE&quot; or 
+&quot;SOLIDWORKS Design Augmented&quot;.</p>
+<p style="font-weight: normal;">After you install SOLIDWORKS Design Augmented, run the 
+following two examples in order: </p>
+<h3><b><font color="#A52A2A" face="Arial">Example 1: Save a SOLIDWORKS Design 
+Augmented 
+document</font></b></h3>
+<p>' VBA</p>
+<p>' Preconditions: Open a new part with SOLIDWORKS Design Augmented.</p>
+<p>' Postconditions: </p>
+<p>' 1. <strong>NonActiveSave.sldprt</strong> is saved to a collaborative space 
+on the <strong>3D</strong>EXPERIENCE platform.</p>
+<p>' 2. Use <strong>3D</strong>EXPERIENCE <strong>3D</strong>Search to find
+<strong>NonActiveSave.sldprt </strong>on the <strong>3D</strong>EXPERIENCE 
+platform.</p>
+<p>' 3. Do not close the document as Example 2 requires that it be open.</p>
+<p>Option Explicit<br>Dim swApp As SldWorks.SldWorks<br>Dim swModel As 
+SldWorks.ModelDoc2<br>Dim swModExt As SldWorks.ModelDocExtension<br>Dim 
+swSaveTo3DExp As SldWorks.SaveTo3DExperienceOptions<br>Dim strFileName, 
+strComment As String<br>Dim bStat As Boolean<br>Dim lError As Long<br>Dim 
+IWarning As Long<br><br>Sub main()<br><br>&nbsp;&nbsp;&nbsp;&nbsp; Set swApp = 
+Application.SldWorks<br>&nbsp;&nbsp;&nbsp;&nbsp; Set swModel = swApp.<strong>ActiveDoc</strong><br>&nbsp;&nbsp;&nbsp;&nbsp; 
+Set swModExt = swModel.<strong>Extension</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If swApp.<strong>ApplicationType</strong> = 
+swApplicationType_3DEXPERIENCE Then</p>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set swSaveTo3DExp 
+= swApp.<strong>GetSaveTo3DExperienceOptions</strong><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+strFileName = &quot;NonActiveSave.sldprt&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+strComment = &quot;No comment&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+swSaveTo3DExp.<strong>FileName</strong> = strFileName<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bStat = swSaveTo3DExp.<strong>SetRevisionComments</strong>(strComment)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bStat = swModExt.<strong>SaveTo3DExperience</strong>(swSaveTo3DExp, lError, 
+IWarning)<br><br>&nbsp;&nbsp;&nbsp;&nbsp; End If<br><br>End Sub</p>
+
+<h3>Example 2: Open a SOLIDWORKS Design Augmented document</h3>
+<p>' VBA</p>
+<p>' Preconditions: <br>' 1. <strong>NonActiveSave.sldprt</strong> is open in 
+SOLIDWORKS Design Augmented.<br>' 2. Open the Immediate window.<br>' 3. Run the macro.<br>
+' 4. When the macro stops, close the document.<br>' 5. Press F5 to reopen the
+<strong>3D</strong>EXPERIENCE document.</p>
+<p>' Postconditions: <strong>NonActiveSave.sldprt</strong> is re-opened from the
+<strong>3D</strong>EXPERIENCE platform.<br><br>Option Explicit<br>Dim swApp As 
+SldWorks.SldWorks<br>Dim swModel As SldWorks.ModelDoc2<br>Dim swModExt As 
+SldWorks.ModelDocExtension<br>Dim swPart As SldWorks.PartDoc<br>Dim 
+swPLMObjectSpecification As SldWorks.PLMObjectSpecification<br>Dim 
+swDocSpecification As SldWorks.DocumentSpecification<br>Dim strPartTitle As 
+String<br>Dim strPLMid As String<br><br><br>Sub main()<br><br>&nbsp;&nbsp;&nbsp;&nbsp; 
+Set swApp = Application.SldWorks<br>&nbsp;&nbsp;&nbsp;&nbsp; Set swModel = 
+swApp.<strong>ActiveDoc</strong><br>&nbsp;&nbsp;&nbsp;&nbsp; Set swModExt = 
+swModel.<strong>Extension</strong><br><br>&nbsp;&nbsp;&nbsp;&nbsp; If swApp.<strong>ApplicationType</strong> 
+= swApplicationType_3DEXPERIENCE Then<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+strPLMid = swModExt.<strong>GetPLMID</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Debug.Print swModel.<strong>GetPathName</strong> &amp; &quot; &quot; &amp; strPLMid<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Stop 'Close document in the user interface<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Open <strong>3D</strong>EXPERIENCE document using the API<br>&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Set swDocSpecification = swApp.<strong>GetOpenDocSpec</strong>(&quot;&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Set swPLMObjectSpecification = swDocSpecification.<strong>PLMObjectSpecification</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+swPLMObjectSpecification.<strong>PLMID</strong> = strPLMid<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Set swModel = swApp.<strong>OpenDoc7</strong>(swDocSpecification)<br><br>&nbsp;&nbsp;&nbsp;&nbsp; 
+End If<br><br>End Sub</p>
+
+<p>Also see the
+<a href="sldworksapi.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPLMObjectSpecification.html">
+IPLMObjectSpecification</a> .NET examples.</p>
+
+</body>
+
+</html>

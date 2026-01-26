@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICollisionDetectionManager",
+    "member": "GetCollisions",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TreatContactAsCollision",
+        "type": "System.Boolean",
+        "description": "True to treat touching faces/edges/vertices as colliding, false to require solid bodies to overlap in a finite volume"
+      },
+      {
+        "name": "Collisions",
+        "type": "System.Object",
+        "description": "Array of ICollision s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "getcollisions",
+      "icollisiondetectionmanager",
+      "collision",
+      "detection",
+      "manager",
+      "collisions",
+      "treat",
+      "contact",
+      "boolean",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "ICollisionDetectionManager.GetCollisions",
+  "description": "Gets the collisions detected.",
+  "signature": "System.Int32 GetCollisions( \n   System.Boolean\nTreatContactAsCollision\n,\n   out System.Object\nCollisions\n)",
+  "parameters": [
+    {
+      "name": "TreatContactAsCollision",
+      "type": "System.Boolean",
+      "description": "True to treat touching faces/edges/vertices as colliding, false to require solid bodies to overlap in a finite volume"
+    },
+    {
+      "name": "Collisions",
+      "type": "System.Object",
+      "description": "Array of ICollision s"
+    }
+  ],
+  "returns": "Number of collisions found",
+  "remarks": "Use\nICollisionDetectionManager::IsCollisionPresent\nto determine whether to run this method.\nThis method can take significantly longer to execute than ICollisionDetectionManager::IsCollisionPresent, because this method might perform the collision detection calculation repeatedly.",
+  "examples": [
+    {
+      "title": "ICollisionDetectionManager",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICollisionDetectionManager",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

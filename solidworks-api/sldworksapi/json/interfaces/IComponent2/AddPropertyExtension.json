@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "AddPropertyExtension",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "PropertyExtension",
+        "type": "System.Object",
+        "description": "Value of the property extension to add to the component"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetPropertyExtension",
+      "IComponent2.ResetPropertyExtension"
+    ],
+    "keywords": [
+      "extension",
+      "addpropertyextension",
+      "icomponent2",
+      "component2",
+      "add",
+      "object",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.AddPropertyExtension",
+  "description": "Adds a property extension to this component.",
+  "signature": "System.Int32 AddPropertyExtension( \n   System.Object\nPropertyExtension\n)",
+  "parameters": [
+    {
+      "name": "PropertyExtension",
+      "type": "System.Object",
+      "description": "Value of the property extension to add to the component"
+    }
+  ],
+  "returns": "1 if the property extension is added to the component, -1 if not",
+  "remarks": "This method does not support adding multiple property extensions to the same component.\nTo use this method:\nDeclare the variable.\nAssign the variable a value: float, integer, or string.\nCall this method to add the value to the component.\nNOTE\n: SOLIDWORKS recommends that you use the\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninterfaces instead of this method. These interfaces provide more flexibility.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetPropertyExtension",
+    "IComponent2.ResetPropertyExtension"
+  ]
+}

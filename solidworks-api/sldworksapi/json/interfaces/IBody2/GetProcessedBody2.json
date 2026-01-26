@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "GetProcessedBody2",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "MaxUAngle",
+        "type": "System.Double",
+        "description": "Maximum U angle"
+      },
+      {
+        "name": "MaxVAngle",
+        "type": "System.Double",
+        "description": "Maximum V angle"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetProcessedBodyWithSelFace",
+      "IBody2.IGetProcessedBodyWithSelFace",
+      "IPartDoc.IGetProcessedBody2"
+    ],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "processed",
+      "getprocessedbody2",
+      "body2",
+      "max",
+      "angle",
+      "double",
+      "process",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBody2.GetProcessedBody2",
+  "description": "Pre-processes the geometry of the body using the specified parameters.",
+  "signature": "Body2 GetProcessedBody2( \n   System.Double\nMaxUAngle\n,\n   System.Double\nMaxVAngle\n)",
+  "parameters": [
+    {
+      "name": "MaxUAngle",
+      "type": "System.Double",
+      "description": "Maximum U angle"
+    },
+    {
+      "name": "MaxVAngle",
+      "type": "System.Double",
+      "description": "Maximum V angle"
+    }
+  ],
+  "returns": "Pointer to the body ; this body is a processed copy of the body for this part",
+  "remarks": "Pre-processing (for example, IGES) is sometimes necessary for exporting to systems that have difficulty with periodic conditions.\nFaces that lie on periodic surfaces that are not closed in the periodic direction might have bounds returned by\nIFace2::GetUVBounds\nthat are on the periodic seam. Use\nIModeler::SplitFaceOnParam\nif the application needs to ensure that the face bounds lie completely on the surface bounds.\nThis method does not split at a seam unless the face is closed in that parameter. Splitting only occurs if the face has a parametric extent greater than the specified pitch.",
+  "examples": [
+    {
+      "title": "Process Body (C#)",
+      "href": "Process_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VB.NET)",
+      "href": "Process_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VBA)",
+      "href": "Process_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetProcessedBodyWithSelFace",
+    "IBody2.IGetProcessedBodyWithSelFace",
+    "IPartDoc.IGetProcessedBody2"
+  ]
+}

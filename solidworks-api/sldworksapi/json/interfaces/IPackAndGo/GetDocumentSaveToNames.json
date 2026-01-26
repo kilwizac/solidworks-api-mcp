@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPackAndGo",
+    "member": "GetDocumentSaveToNames",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PathNameList",
+        "type": "System.Object",
+        "description": "Array of strings containing the path and filenames to which to save the model's documents (see Remarks )"
+      },
+      {
+        "name": "DocumentStatusList",
+        "type": "System.Object",
+        "description": "Array containing the types of documents as defined in swPackAndGoDocumentStatus_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IPackAndGo.IGetDocumentSaveToNames",
+      "IPackAndGo.ISetDocumentSaveToNames"
+    ],
+    "keywords": [
+      "getdocumentsavetonames",
+      "ipackandgo",
+      "pack",
+      "go",
+      "document",
+      "save",
+      "names",
+      "path",
+      "name",
+      "list",
+      "object",
+      "status",
+      "boolean",
+      "assembly",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IPackAndGo.GetDocumentSaveToNames",
+  "description": "Gets the paths and filenames to which to save the model's documents for Pack and Go set by IPackAndGo::SetDocumentSaveToNames.",
+  "signature": "System.Boolean GetDocumentSaveToNames( \n   out System.Object\nPathNameList\n,\n   out System.Object\nDocumentStatusList\n)",
+  "parameters": [
+    {
+      "name": "PathNameList",
+      "type": "System.Object",
+      "description": "Array of strings containing the path and filenames to which to save the model's documents (see Remarks )"
+    },
+    {
+      "name": "DocumentStatusList",
+      "type": "System.Object",
+      "description": "Array containing the types of documents as defined in swPackAndGoDocumentStatus_e"
+    }
+  ],
+  "returns": "True if the paths and filenames of the model's documents are returned, false if not",
+  "remarks": "The order and number of documents must match the order of the array returned by\nIPackAndGo::GetDocumentNames\n. If a\nprefix\nor\nsuffix\nis set, then the filenames include it. You can set both a prefix and suffix for the filenames.",
+  "examples": [
+    {
+      "title": "Pack and Go an Assembly (C#)",
+      "href": "Pack_and_Go_an_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Pack and Go an Assembly (VB.NET)",
+      "href": "Pack_and_Go_an_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Pack and Go an Assembly (VBA)",
+      "href": "Pack_and_Go_an_Assembly_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPackAndGo.IGetDocumentSaveToNames",
+    "IPackAndGo.ISetDocumentSaveToNames"
+  ]
+}

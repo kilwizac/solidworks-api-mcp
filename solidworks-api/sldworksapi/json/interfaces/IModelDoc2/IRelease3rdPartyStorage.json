@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IRelease3rdPartyStorage",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "StringIn",
+        "type": "System.String",
+        "description": "Name of the stream to release"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+      "DAssemblyDocEvents_SaveToStorageNotifyEventHandler",
+      "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+      "DDrawingDocEvents_SaveToStorageNotifyEventHandler",
+      "DPartDocEvents_LoadFromStorageNotifyEventHandler",
+      "DPartDocEvents_SaveToStorageNotifyEventHandler"
+    ],
+    "keywords": [
+      "istream",
+      "storage",
+      "stream",
+      "irelease3rdpartystorage",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "release3rd",
+      "party",
+      "string",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.IRelease3rdPartyStorage",
+  "description": "Releases the specified third-party stream.",
+  "signature": "void IRelease3rdPartyStorage( \n   System.String\nStringIn\n)",
+  "parameters": [
+    {
+      "name": "StringIn",
+      "type": "System.String",
+      "description": "Name of the stream to release"
+    }
+  ],
+  "returns": "",
+  "remarks": "You can use this method with\nIModelDoc2::IGet3rdPartyStorage\n. You must use it if you are not using the LoadFromStorageNotify event. You must call this method when the call to IModelDoc2::IGet3rdPartyStorage returns a NULL stream.\nNOTE\n:\nIf you are using serialization, then be careful with the standard MFC macros; otherwise, you can get messages like\nUnexpected File Format\nafter your application is unloaded. One way of using IMPLEMENT_SERIAL is:\nIMPLEMENT_SERIAL( CCustomAttr, CObject, VERSIONABLE_SCHEMA|0 )",
+  "examples": [],
+  "related": [
+    "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+    "DAssemblyDocEvents_SaveToStorageNotifyEventHandler",
+    "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+    "DDrawingDocEvents_SaveToStorageNotifyEventHandler",
+    "DPartDocEvents_LoadFromStorageNotifyEventHandler",
+    "DPartDocEvents_SaveToStorageNotifyEventHandler"
+  ]
+}

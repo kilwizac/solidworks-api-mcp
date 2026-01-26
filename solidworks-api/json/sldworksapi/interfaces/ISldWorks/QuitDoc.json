@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "QuitDoc",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of document to close"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActiveDoc",
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.EnumDocuments2",
+      "ISldWorks.ExitApp",
+      "ISldWorks.GetFirstDocument",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.GetOpenFileName",
+      "ISldWorks.IActiveDoc2",
+      "ISldWorks.IGetFirstDocument2",
+      "ISldWorks.IGetOpenDocumentByName2",
+      "ISldWorks.LoadFile4",
+      "ISldWorks.OpenDoc6"
+    ],
+    "keywords": [
+      "document",
+      "quit",
+      "quitdoc",
+      "isldworks",
+      "sld",
+      "works",
+      "doc",
+      "name",
+      "string",
+      "void",
+      "save",
+      "rolledbacked",
+      "part",
+      "parasolid",
+      "file",
+      "vba",
+      "add",
+      "delete",
+      "appearances",
+      "specific",
+      "display",
+      "states",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.QuitDoc",
+  "description": "Closes the specified document without saving changes.",
+  "signature": "void QuitDoc( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of document to close"
+    }
+  ],
+  "returns": "",
+  "remarks": "If you are closing the only document in the SOLIDWORKS Design session and the SOLIDWORKS Design session is a background session, then calling\nISldWorks::CloseDoc\nor this method results in the SOLIDWORKS Design session closing.\nYou can create a background SOLIDWORKS Design session when the starting a SOLIDWORKS Design session in your application and the session is controlled by the user (\nISldWorks::UserControl\nset to false). To keep the SOLIDWORKS Design session open, set ISldWorks::UserControl to true, which makes the session visible, or you can close your documents at the end of your application's execution.",
+  "examples": [
+    {
+      "title": "Save Rolledbacked Part as Parasolid File (VBA)",
+      "href": "Save_Roll_Backed_Part_as_Parasolid_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (C#)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VB.NET)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Delete Appearances from Specific Display States (VBA)",
+      "href": "Add_and_Delete_Materials_from_Specific_Display_States_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ActiveDoc",
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.EnumDocuments2",
+    "ISldWorks.ExitApp",
+    "ISldWorks.GetFirstDocument",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.GetOpenFileName",
+    "ISldWorks.IActiveDoc2",
+    "ISldWorks.IGetFirstDocument2",
+    "ISldWorks.IGetOpenDocumentByName2",
+    "ISldWorks.LoadFile4",
+    "ISldWorks.OpenDoc6"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swLinkDimensionError_e",
+    "description": "Link dimension errors.",
+    "member_count": 13,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swLinkDimensionError_e",
+  "description": "Link dimension errors.",
+  "values": [
+    {
+      "member": "swLinkDimensionError_AlreadyLinked",
+      "value": "4",
+      "description": "= Dimension already linked elsewhere"
+    },
+    {
+      "member": "swLinkDimensionError_CannotLink",
+      "value": "8",
+      "description": "= The selected dimensions cannot be linked; combination of failures swLinkDimensionError_LinkAcrossDocs to swLinkDimensionError_DrivenByEquation"
+    },
+    {
+      "member": "swLinkDimensionError_DrivenByEquation",
+      "value": "7",
+      "description": "= Dimension's driven by an equation"
+    },
+    {
+      "member": "swLinkDimensionError_EmptyString",
+      "value": "11",
+      "description": "= Empty string passed as link text"
+    },
+    {
+      "member": "swLinkDimensionError_ErrorUknown",
+      "value": "0",
+      "description": "= Unknown error occurred"
+    },
+    {
+      "member": "swLinkDimensionError_IncompatibleDimTypes",
+      "value": "3",
+      "description": "= Cannot link incompatible dimension types"
+    },
+    {
+      "member": "swLinkDimensionError_IncompatibleValues",
+      "value": "6",
+      "description": "= Incompatible range of values make these dimensions not linkable"
+    },
+    {
+      "member": "swLinkDimensionError_InvalidString",
+      "value": "12",
+      "description": "= Invalid string passed as link text; cannot contain the at sign (@) character"
+    },
+    {
+      "member": "swLinkDimensionError_LinkAcrossDocs",
+      "value": "2",
+      "description": "= Values to be linked must belong to the same model"
+    },
+    {
+      "member": "swLinkDimensionError_NoError",
+      "value": "1",
+      "description": "= No error; success"
+    },
+    {
+      "member": "swLinkDimensionError_ReadOnlyOrDriven",
+      "value": "5",
+      "description": "= Dimension is a read-only, driven, or a reference dimension that cannot be linked"
+    },
+    {
+      "member": "swLinkDimensionError_UnableToCreateSharedParam",
+      "value": "9",
+      "description": "= Shared parameter could not be created"
+    },
+    {
+      "member": "swLinkDimensionError_UnlinkFailure",
+      "value": "10",
+      "description": "= Dimension was not already linked"
+    }
+  ]
+}

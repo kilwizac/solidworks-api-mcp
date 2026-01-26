@@ -1,0 +1,131 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "SetProperties",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PaperSz",
+        "type": "System.Int32",
+        "description": "Paper size as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Templ",
+        "type": "System.Int32",
+        "description": "Template as defined in swDwgTemplates_e"
+      },
+      {
+        "name": "Scale1",
+        "type": "System.Double",
+        "description": "Scale numerator"
+      },
+      {
+        "name": "Scale2",
+        "type": "System.Double",
+        "description": "Scale denominator"
+      },
+      {
+        "name": "FirstAngle",
+        "type": "System.Boolean",
+        "description": "True if you want first angle projection, false if not"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Custom paper width if PaperSz = swDwgPaperSizes_e.swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Custom paper height if PaperSz = swDwgPaperSizes_e.swDwgPapersUserDefined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.GetProperties",
+      "ISheet.GetSize",
+      "ISheet.GetTemplateName",
+      "ISheet.IGetProperties",
+      "ISheet.IPageSetup",
+      "ISheet.PageSetup",
+      "ISheet.SetTemplateName"
+    ],
+    "keywords": [
+      "setproperties",
+      "isheet",
+      "sheet",
+      "properties",
+      "paper",
+      "sz",
+      "int32",
+      "templ",
+      "scale1",
+      "double",
+      "scale2",
+      "first",
+      "angle",
+      "boolean",
+      "width",
+      "height",
+      "void"
+    ]
+  },
+  "title": "ISheet.SetProperties",
+  "description": "Obsolete. Superseded by ISheet::SetProperties2.",
+  "signature": "void SetProperties( \n   System.Int32\nPaperSz\n,\n   System.Int32\nTempl\n,\n   System.Double\nScale1\n,\n   System.Double\nScale2\n,\n   System.Boolean\nFirstAngle\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "PaperSz",
+      "type": "System.Int32",
+      "description": "Paper size as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Templ",
+      "type": "System.Int32",
+      "description": "Template as defined in swDwgTemplates_e"
+    },
+    {
+      "name": "Scale1",
+      "type": "System.Double",
+      "description": "Scale numerator"
+    },
+    {
+      "name": "Scale2",
+      "type": "System.Double",
+      "description": "Scale denominator"
+    },
+    {
+      "name": "FirstAngle",
+      "type": "System.Boolean",
+      "description": "True if you want first angle projection, false if not"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Custom paper width if PaperSz = swDwgPaperSizes_e.swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Custom paper height if PaperSz = swDwgPaperSizes_e.swDwgPapersUserDefined"
+    }
+  ],
+  "returns": "",
+  "remarks": "If you specify a custom template, then the current custom template is used by this sheet until you call\nISheet::SetTemplateName\nand pass in a different custom template name.\nNOTE\n:\nIf Templ does not match the PaperSz specification, then you get a template that does not fit the paper size. This parameter does not override the PaperSz setting. Also, if you change the scale of the sheet using Scale1 and Scale2, then any drawing view that is set to use the sheet's scale takes the new scale setting.\nYou can also use\nISheet::SetSize\nto set the size of the sheet and the standard sheet size.",
+  "examples": [],
+  "related": [
+    "ISheet.GetProperties",
+    "ISheet.GetSize",
+    "ISheet.GetTemplateName",
+    "ISheet.IGetProperties",
+    "ISheet.IPageSetup",
+    "ISheet.PageSetup",
+    "ISheet.SetTemplateName"
+  ]
+}

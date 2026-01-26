@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISWPropertySheet",
+    "member": "AddActivePage",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Title of CPropertyPage"
+      },
+      {
+        "name": "ProgId",
+        "type": "System.String",
+        "description": "Name, ProgID, or CLSID of the ActiveX control (see Remarks )"
+      },
+      {
+        "name": "LicenseKey",
+        "type": "System.String",
+        "description": "License key for the ActiveX control"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "addactivepage",
+      "iswpropertysheet",
+      "isw",
+      "sheet",
+      "add",
+      "active",
+      "page",
+      "title",
+      "string",
+      "prog",
+      "id",
+      "license",
+      "key",
+      "int32"
+    ]
+  },
+  "title": "ISWPropertySheet.AddActivePage",
+  "description": "Adds a third-party CPropertyPage to ISWPropertySheet and adds an ActiveX control on top of the page.",
+  "signature": "System.Int32 AddActivePage( \n   System.String\nTitle\n,\n   System.String\nProgId\n,\n   System.String\nLicenseKey\n)",
+  "parameters": [
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Title of CPropertyPage"
+    },
+    {
+      "name": "ProgId",
+      "type": "System.String",
+      "description": "Name, ProgID, or CLSID of the ActiveX control (see Remarks )"
+    },
+    {
+      "name": "LicenseKey",
+      "type": "System.String",
+      "description": "License key for the ActiveX control"
+    }
+  ],
+  "returns": "Index of CPropertyPage on ISWPropertySheet",
+  "remarks": "Typically, this method is called from the ISldWorks\nPropertySheetCreateNotify\nevent handler. See the Example section.\nThe ProgID argument accepts any of these values:\nOLE short name\nor ProgID for the class; for example,\n\"MSCAL.Calendar\".\nThe name must match the name registered by the control.\nString form of a CLSID, contained within braces, for example,\n\"{9DBAFCCF-592F-101B-85CE-00608CEC297B}\".\nSee also\nKeystrokes and Accelerator Keys in ActiveX Modeless Dialogs and PropertyManager Pages\n.",
+  "examples": [],
+  "related": []
+}

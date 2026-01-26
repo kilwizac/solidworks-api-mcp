@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "GetErrorList",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FaceErrArray",
+        "type": "System.Object",
+        "description": "Array of tessellation faces that have errors"
+      },
+      {
+        "name": "FacetErrArray",
+        "type": "System.Object",
+        "description": "Array of tessellation facets that have errors"
+      },
+      {
+        "name": "VertexPointErrArray",
+        "type": "System.Object",
+        "description": "Array of tessellation vertex points that have errors"
+      },
+      {
+        "name": "VertexNormalErrArray",
+        "type": "System.Object",
+        "description": "Array of tessellation vertex normals that have errors"
+      },
+      {
+        "name": "VertexParamsErrArray",
+        "type": "System.Object",
+        "description": "Array of tessellation vertex parameters that have errors"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ITessellation.IGetErrorList2",
+      "ITessellation.IGetErrorListCount",
+      "ITessellation.NeedErrorList"
+    ],
+    "keywords": [
+      "geterrorlist",
+      "itessellation",
+      "tessellation",
+      "error",
+      "list",
+      "face",
+      "err",
+      "array",
+      "object",
+      "facet",
+      "vertex",
+      "point",
+      "normal",
+      "params",
+      "void"
+    ]
+  },
+  "title": "ITessellation.GetErrorList",
+  "description": "Gets the tessellation error list.",
+  "signature": "void GetErrorList( \n   out System.Object\nFaceErrArray\n,\n   out System.Object\nFacetErrArray\n,\n   out System.Object\nVertexPointErrArray\n,\n   out System.Object\nVertexNormalErrArray\n,\n   out System.Object\nVertexParamsErrArray\n)",
+  "parameters": [
+    {
+      "name": "FaceErrArray",
+      "type": "System.Object",
+      "description": "Array of tessellation faces that have errors"
+    },
+    {
+      "name": "FacetErrArray",
+      "type": "System.Object",
+      "description": "Array of tessellation facets that have errors"
+    },
+    {
+      "name": "VertexPointErrArray",
+      "type": "System.Object",
+      "description": "Array of tessellation vertex points that have errors"
+    },
+    {
+      "name": "VertexNormalErrArray",
+      "type": "System.Object",
+      "description": "Array of tessellation vertex normals that have errors"
+    },
+    {
+      "name": "VertexParamsErrArray",
+      "type": "System.Object",
+      "description": "Array of tessellation vertex parameters that have errors"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before using this method, make sure that you can retrieve the list for the tessellation data that you want to query error information from:\nITessellation::NeedVertexNormal\nITessellation::NeedVertexParams\nITessellation::NeedFaceFacetMap\nITessellation::NeedEdgeFinMap\nITessellation::NeedErrorList\nAfter using an ITessellation function, you can return error information about any of the tessellation data.\nThe arrays returned by ITessellation::GetErrorList contains the tessellation entity IDs that have errors:\nFace error: The specified face could not be faceted.\nFacet error: The specified facet is disconnected from its neighboring facets.\nVertex error: The specified vertex does not match any vertices on adjacent faces. There may be gaps between facets.\nVertex normal error: The tessellate function could not calculate an accurate vertex normal.\nVertex parameter error: The tessellate function could not calculate accurate vertex parameters.",
+  "examples": [],
+  "related": [
+    "ITessellation.IGetErrorList2",
+    "ITessellation.IGetErrorListCount",
+    "ITessellation.NeedErrorList"
+  ]
+}

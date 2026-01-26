@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWizardHoleFeatureData2",
+    "member": "ChangeStandard",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Standard",
+        "type": "System.Int32",
+        "description": "Standard as defined in swWzdHoleStandards_e"
+      },
+      {
+        "name": "FastenerType",
+        "type": "System.Int32",
+        "description": "Fastener type as defined in swWzdHoleStandardFastenerTypes_e"
+      },
+      {
+        "name": "SSize",
+        "type": "System.String",
+        "description": "Fastener size"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "holes",
+      "see",
+      "also",
+      "isimpleholefeaturedata2",
+      "iwizardholefeaturedata2",
+      "interfaces",
+      "standards",
+      "changestandard",
+      "wizard",
+      "hole",
+      "feature",
+      "data2",
+      "change",
+      "standard",
+      "int32",
+      "fastener",
+      "type",
+      "size",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IWizardHoleFeatureData2.ChangeStandard",
+  "description": "Sets the standard for all of the parameters of the Hole Wizard feature that are driven by the database.",
+  "signature": "System.Boolean ChangeStandard( \n   System.Int32\nStandard\n,\n   System.Int32\nFastenerType\n,\n   System.String\nSSize\n)",
+  "parameters": [
+    {
+      "name": "Standard",
+      "type": "System.Int32",
+      "description": "Standard as defined in swWzdHoleStandards_e"
+    },
+    {
+      "name": "FastenerType",
+      "type": "System.Int32",
+      "description": "Fastener type as defined in swWzdHoleStandardFastenerTypes_e"
+    },
+    {
+      "name": "SSize",
+      "type": "System.String",
+      "description": "Fastener size"
+    }
+  ],
+  "returns": "True if the standard is changed, false if not",
+  "remarks": "Use this method to change\nfastener size\n,\nfastener type\n, and\ndesign standard\nof a Hole Wizard feature.\nIf changing the standard requires you to change the type, then you must call\nIWizardHoleFeatureData2::Type\nbefore calling IWizardHoleFeatureData2::ChangeStandard.",
+  "examples": [],
+  "related": []
+}

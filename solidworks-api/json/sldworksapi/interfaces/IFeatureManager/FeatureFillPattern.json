@@ -1,0 +1,254 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureFillPattern",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "PatternLayoutType",
+        "type": "System.Int32",
+        "description": "Pattern layout type as defined in swPatternLayoutType_e"
+      },
+      {
+        "name": "LayoutSpacingType",
+        "type": "System.Int32",
+        "description": "Pattern layout spacing as defined in swPatternLayoutSpacingType_e"
+      },
+      {
+        "name": "InstanceSpacing",
+        "type": "System.Double",
+        "description": "Distance between pattern instance centers; valid always for PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation; valid for all other PatternLayoutTypes only if LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutTargetSpacing"
+      },
+      {
+        "name": "StaggerAngle",
+        "type": "System.Double",
+        "description": "Angle by which to stagger rows of pattern instances; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation"
+      },
+      {
+        "name": "Margins",
+        "type": "System.Double",
+        "description": "Distance between the fill boundary and the outermost instance in the pattern layout; 0 for no margin"
+      },
+      {
+        "name": "LoopSpacing",
+        "type": "System.Double",
+        "description": "Distance between instance centers of adjacent pattern loops; valid for all PatternLayoutTypes except swPatternLayoutType_e.swPatternLayoutPerforation"
+      },
+      {
+        "name": "NoOfInstances",
+        "type": "System.Int32",
+        "description": "Number of pattern instances per loop or side of the pattern layout; valid only if both are true: LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutInstances PatternLayoutType is set to one of the following: swPatternLayoutType_e.swPatternLayoutCircular swPatternLayoutType_e.swPatternLayoutPolygon swPatternLayoutType_e.swPatternLayoutSquare"
+      },
+      {
+        "name": "PatternLayoutPolygonSides",
+        "type": "System.Int32",
+        "description": "Number of sides in the polygonal layout of the pattern; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPolygon"
+      },
+      {
+        "name": "FeaturesToPatternType",
+        "type": "System.Int32",
+        "description": "Type of objects to pattern as defined in swFeaturesToPatternType_e"
+      },
+      {
+        "name": "CreateSeedCutType",
+        "type": "System.Int32",
+        "description": "Pattern seed cut types as defined in swCreateSeedCutType_e"
+      },
+      {
+        "name": "Diameter",
+        "type": "System.Double",
+        "description": "Diameter of the circle-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutCircle"
+      },
+      {
+        "name": "Dimension",
+        "type": "System.Double",
+        "description": "Length of the side of a diamond-cut or square-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType is set to one of the following: swCreateSeedCutType_e.swCreateSeedCutDiamond swCreateSeedCutType_e.swCreateSeedCutSquare"
+      },
+      {
+        "name": "Rotation",
+        "type": "System.Double",
+        "description": "Counterclockwise rotation of the seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType is set to one of the following: swCreateSeedCutType_e.swCreateSeedCutDiamond swCreateSeedCutType_e.swCreateSeedCutPolygon swCreateSeedCutType_e.swCreateSeedCutSquare"
+      },
+      {
+        "name": "Diagonal",
+        "type": "System.Double",
+        "description": "Length of the diagonal in the diamond-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutDiamond"
+      },
+      {
+        "name": "CreateSeedCutPolygonSides",
+        "type": "System.Int32",
+        "description": "Number of sides in the polygon-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+      },
+      {
+        "name": "OuterRadius",
+        "type": "System.Double",
+        "description": "Radius of circle that circumscribes the polygon-cut seed instance; valid only if both are ture: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+      },
+      {
+        "name": "InnerRadius",
+        "type": "System.Double",
+        "description": "Radius of circle that inscribes the polygon-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+      },
+      {
+        "name": "FlipShapeDirection",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the pattern seed cut; valid only if FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut"
+      },
+      {
+        "name": "GeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to create the pattern using an exact copy of the seed instance, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featurefillpattern",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "fill",
+      "pattern",
+      "layout",
+      "type",
+      "int32",
+      "spacing",
+      "instance",
+      "double",
+      "stagger",
+      "angle",
+      "margins",
+      "loop",
+      "no",
+      "instances",
+      "polygon",
+      "sides",
+      "features",
+      "create",
+      "seed",
+      "cut",
+      "diameter",
+      "dimension",
+      "rotation",
+      "diagonal",
+      "outer",
+      "radius",
+      "inner",
+      "flip",
+      "shape",
+      "direction",
+      "boolean",
+      "geometry"
+    ]
+  },
+  "title": "IFeatureManager.FeatureFillPattern",
+  "description": "Obsolete. See IFeatureManager::CreateFeature and the Remarks in IFillPatternFeatureData.",
+  "signature": "Feature FeatureFillPattern( \n   System.Int32\nPatternLayoutType\n,\n   System.Int32\nLayoutSpacingType\n,\n   System.Double\nInstanceSpacing\n,\n   System.Double\nStaggerAngle\n,\n   System.Double\nMargins\n,\n   System.Double\nLoopSpacing\n,\n   System.Int32\nNoOfInstances\n,\n   System.Int32\nPatternLayoutPolygonSides\n,\n   System.Int32\nFeaturesToPatternType\n,\n   System.Int32\nCreateSeedCutType\n,\n   System.Double\nDiameter\n,\n   System.Double\nDimension\n,\n   System.Double\nRotation\n,\n   System.Double\nDiagonal\n,\n   System.Int32\nCreateSeedCutPolygonSides\n,\n   System.Double\nOuterRadius\n,\n   System.Double\nInnerRadius\n,\n   System.Boolean\nFlipShapeDirection\n,\n   System.Boolean\nGeometryPattern\n)",
+  "parameters": [
+    {
+      "name": "PatternLayoutType",
+      "type": "System.Int32",
+      "description": "Pattern layout type as defined in swPatternLayoutType_e"
+    },
+    {
+      "name": "LayoutSpacingType",
+      "type": "System.Int32",
+      "description": "Pattern layout spacing as defined in swPatternLayoutSpacingType_e"
+    },
+    {
+      "name": "InstanceSpacing",
+      "type": "System.Double",
+      "description": "Distance between pattern instance centers; valid always for PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation; valid for all other PatternLayoutTypes only if LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutTargetSpacing"
+    },
+    {
+      "name": "StaggerAngle",
+      "type": "System.Double",
+      "description": "Angle by which to stagger rows of pattern instances; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPerforation"
+    },
+    {
+      "name": "Margins",
+      "type": "System.Double",
+      "description": "Distance between the fill boundary and the outermost instance in the pattern layout; 0 for no margin"
+    },
+    {
+      "name": "LoopSpacing",
+      "type": "System.Double",
+      "description": "Distance between instance centers of adjacent pattern loops; valid for all PatternLayoutTypes except swPatternLayoutType_e.swPatternLayoutPerforation"
+    },
+    {
+      "name": "NoOfInstances",
+      "type": "System.Int32",
+      "description": "Number of pattern instances per loop or side of the pattern layout; valid only if both are true: LayoutSpacingType = swPatternLayoutSpacingType_e.swPatternLayoutInstances PatternLayoutType is set to one of the following: swPatternLayoutType_e.swPatternLayoutCircular swPatternLayoutType_e.swPatternLayoutPolygon swPatternLayoutType_e.swPatternLayoutSquare"
+    },
+    {
+      "name": "PatternLayoutPolygonSides",
+      "type": "System.Int32",
+      "description": "Number of sides in the polygonal layout of the pattern; valid only if PatternLayoutType = swPatternLayoutType_e.swPatternLayoutPolygon"
+    },
+    {
+      "name": "FeaturesToPatternType",
+      "type": "System.Int32",
+      "description": "Type of objects to pattern as defined in swFeaturesToPatternType_e"
+    },
+    {
+      "name": "CreateSeedCutType",
+      "type": "System.Int32",
+      "description": "Pattern seed cut types as defined in swCreateSeedCutType_e"
+    },
+    {
+      "name": "Diameter",
+      "type": "System.Double",
+      "description": "Diameter of the circle-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutCircle"
+    },
+    {
+      "name": "Dimension",
+      "type": "System.Double",
+      "description": "Length of the side of a diamond-cut or square-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType is set to one of the following: swCreateSeedCutType_e.swCreateSeedCutDiamond swCreateSeedCutType_e.swCreateSeedCutSquare"
+    },
+    {
+      "name": "Rotation",
+      "type": "System.Double",
+      "description": "Counterclockwise rotation of the seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType is set to one of the following: swCreateSeedCutType_e.swCreateSeedCutDiamond swCreateSeedCutType_e.swCreateSeedCutPolygon swCreateSeedCutType_e.swCreateSeedCutSquare"
+    },
+    {
+      "name": "Diagonal",
+      "type": "System.Double",
+      "description": "Length of the diagonal in the diamond-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutDiamond"
+    },
+    {
+      "name": "CreateSeedCutPolygonSides",
+      "type": "System.Int32",
+      "description": "Number of sides in the polygon-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+    },
+    {
+      "name": "OuterRadius",
+      "type": "System.Double",
+      "description": "Radius of circle that circumscribes the polygon-cut seed instance; valid only if both are ture: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+    },
+    {
+      "name": "InnerRadius",
+      "type": "System.Double",
+      "description": "Radius of circle that inscribes the polygon-cut seed instance; valid only if both are true: FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut CreateSeedCutType = swCreateSeedCutType_e.swCreateSeedCutPolygon"
+    },
+    {
+      "name": "FlipShapeDirection",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the pattern seed cut; valid only if FeaturesToPatternType = swFeaturesToPatternType_e.swFeaturesToPatternCreateSeedCut"
+    },
+    {
+      "name": "GeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to create the pattern using an exact copy of the seed instance, false to not"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Insert > Pattern/Mirror > Fill Pattern\nin the SOLIDWORKS menu opens the Fill Pattern PropertyManager. The parameters in this method correspond to the options in the Fill Pattern PropertyManager.\nFor all pattern layouts except\nswPatternLayoutType_e\n.swPatternLayoutPerforation, the fill pattern is created by positioning a pattern seed instance within the fill boundary and copying the pattern in concentric loops about the seed instance.\nSee the SOLIDWORKS Help for more information about fill pattern features.\nTo create a fill pattern:\nUse\nIModelDocExtension::SelectByID2\nor another selection method to select the entities required to create a fill pattern feature.\nSelect...\nFor the Fill Pattern's...\nUsing Mark...\nSketch, face, planar curve on a face, or coplanar faces\nFill boundary\n1\nDirection reference (e.g., edge or axis)\nPattern direction (if not selected, SOLIDWORKS chooses a direction reference appropriate for the specified layout)\n2\nVertex or sketch point\nLocation of the pattern seed instance (if a point is not selected, the pattern seed instance is placed at the center of the fill boundary region)\n3\nFeatures\nPattern objects\n4\nFaces\nPattern objects\n5\nBodies\nPattern objects\n6\nCall this method, specifying the following parameters:\nPatternLayoutType\nLayoutSpacingType\nFeaturesToPatternType\nGeometryPattern\nLoopSpacing (for all PatternLayoutTypes except swPatternLayoutType_e.swPatternLayoutPerforation)\nDepending on the settings above, other parameters might need to be specified.",
+  "examples": [],
+  "related": []
+}

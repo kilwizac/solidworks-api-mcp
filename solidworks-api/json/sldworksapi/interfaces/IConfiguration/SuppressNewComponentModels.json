@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IConfiguration",
+    "member": "SuppressNewComponentModels",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetComponentSuppressionState",
+      "IConfiguration.HideNewComponentModels"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "suppress",
+      "suppressnewcomponentmodels",
+      "iconfiguration",
+      "configuration",
+      "new",
+      "component",
+      "models",
+      "boolean",
+      "change",
+      "properties",
+      "vba",
+      "traverse",
+      "hierarchy",
+      "configurations"
+    ],
+    "readonly": null
+  },
+  "title": "IConfiguration.SuppressNewComponentModels",
+  "description": "Gets or sets whether new components are suppressed in this configuration.",
+  "signature": "System.Boolean SuppressNewComponentModels {get; set;}",
+  "parameters": [],
+  "returns": "True suppresses the new component in this configuration, false resolves it",
+  "remarks": "This setting applies only to inactive configurations.\nThis property applies only to assembly configurations. SOLIDWORKS always returns false when you get this property on a part configuration. Setting this property on a part configuration has no effect.",
+  "examples": [
+    {
+      "title": "Change Configuration Properties (VBA)",
+      "href": "Change_Configuration_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Hierarchy of Configurations (VBA)",
+      "href": "Traverse_Hierarchy_of_Configurations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.GetComponentSuppressionState",
+    "IConfiguration.HideNewComponentModels"
+  ]
+}

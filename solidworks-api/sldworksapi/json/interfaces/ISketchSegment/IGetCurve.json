@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSegment",
+    "member": "IGetCurve",
+    "returns": "Curve",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSegment.GetCurve"
+    ],
+    "keywords": [
+      "igetcurve",
+      "isketchsegment",
+      "sketch",
+      "segment",
+      "curve",
+      "spline",
+      "points"
+    ]
+  },
+  "title": "ISketchSegment.IGetCurve",
+  "description": "Gets the underlying curve for this sketch segment.",
+  "signature": "Curve IGetCurve()",
+  "parameters": [],
+  "returns": "Underlying curve",
+  "remarks": "This operation only supports for\nellipse\n,\nline\n,\narc\n,\nspline\n, and\nparabola\nsketch items. All other sketch segment types will return NULL, and S_false for COM applications.\nNOTE:\nSupport for ellipse, line, and arc segments was introduced in SOLIDWORKS 2004.",
+  "examples": [
+    {
+      "title": "Get Curve Spline Points (C++)",
+      "href": "Get_Curve_Spline_Points_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchSegment.GetCurve"
+  ]
+}

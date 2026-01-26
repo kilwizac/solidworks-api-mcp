@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "BeginSketchEdit",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "sketches"
+    ],
+    "related": [
+      "INote.AddText",
+      "INote.EndSketchEdit",
+      "INote.GetCompoundTextAtIndex",
+      "INote.GetCompoundTextCount",
+      "INote.GetExtent",
+      "INote.GetExtentAtIndex",
+      "INote.GetHeightAtIndex",
+      "INote.GetTextAtIndex",
+      "INote.GetTextJustificationAtIndex",
+      "INote.GetTextOffsetAtIndex",
+      "INote.IGetExtent",
+      "INote.IGetExtentAtIndex",
+      "INote.IGetSketch",
+      "INote.IGetTextOffsetAtIndex",
+      "INote.IsCompoundNote",
+      "INote.SetTextAtIndex",
+      "INote.SetTextJustificationAtIndex",
+      "INote.SetTextOffsetAtIndex",
+      "INote.SetTextPoint",
+      "INote.SetZeroLengthLeader"
+    ],
+    "keywords": [
+      "beginsketchedit",
+      "inote",
+      "note",
+      "begin",
+      "sketch",
+      "edit",
+      "void",
+      "create",
+      "compound",
+      "vba"
+    ]
+  },
+  "title": "INote.BeginSketchEdit",
+  "description": "Obsolete for documents created in SOLIDWORKS 2016 and later. Activates the sketch of the compound note.",
+  "signature": "void BeginSketchEdit()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "Subsequent calls for creation of sketch segment geometry (for example,\nIModelDoc2::CreateLine2\nor\nIModelDoc2::ICreateLine2\n,\nIModelDoc2::CreateArc2\nor\nIModelDoc2::ICreateArc2\n, and so on) place the geometry into the sketch of the compound note.\nTo extract information about existing compound note sketch geometry, use\nINote::GetSketch\nor\nINote::IGetSketch\n.\nBecause a compound note can have multiple pieces of text, many of the compound note methods require you to specify the index value of the desired text. For example, the first piece of text added to the compound note using\nINote::AddText\nhas an index number of 1, the second text added has an index number of 2, and so on.",
+  "examples": [
+    {
+      "title": "Create Compound Note (VBA)",
+      "href": "Create_Compound_Note_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "INote.AddText",
+    "INote.EndSketchEdit",
+    "INote.GetCompoundTextAtIndex",
+    "INote.GetCompoundTextCount",
+    "INote.GetExtent",
+    "INote.GetExtentAtIndex",
+    "INote.GetHeightAtIndex",
+    "INote.GetTextAtIndex",
+    "INote.GetTextJustificationAtIndex",
+    "INote.GetTextOffsetAtIndex",
+    "INote.IGetExtent",
+    "INote.IGetExtentAtIndex",
+    "INote.IGetSketch",
+    "INote.IGetTextOffsetAtIndex",
+    "INote.IsCompoundNote",
+    "INote.SetTextAtIndex",
+    "INote.SetTextJustificationAtIndex",
+    "INote.SetTextOffsetAtIndex",
+    "INote.SetTextPoint",
+    "INote.SetZeroLengthLeader"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetRowHeight",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of row for which to set height"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Height at which to set specified row, in system units"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Table's behavior after changing row as defined by swTableRowColSizeChangeBehavior_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.DeleteRow",
+      "ITableAnnotation.GetLockRowHeight",
+      "ITableAnnotation.GetRowVerticalGap",
+      "ITableAnnotation.InsertRow",
+      "ITableAnnotation.MoveRow",
+      "ITableAnnotation.RowCount",
+      "ITableAnnotation.RowHidden",
+      "ITableAnnotation.SetLockRowHeight",
+      "ITableAnnotation.SetRowVerticalGap",
+      "ITableAnnotation.TotalRowCount"
+    ],
+    "keywords": [
+      "table",
+      "rows",
+      "setrowheight",
+      "itableannotation",
+      "annotation",
+      "row",
+      "height",
+      "index",
+      "int32",
+      "double",
+      "options"
+    ]
+  },
+  "title": "ITableAnnotation.SetRowHeight",
+  "description": "Sets the height of the specified row in this table.",
+  "signature": "System.Double SetRowHeight( \n   System.Int32\nIndex\n,\n   System.Double\nHeight\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of row for which to set height"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Height at which to set specified row, in system units"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Table's behavior after changing row as defined by swTableRowColSizeChangeBehavior_e (see Remarks )"
+    }
+  ],
+  "returns": "Height to which specified row is set (see Remarks )",
+  "remarks": "The index for both rows and columns is 0-based.\nIndex is the number of the row whose height to set. The first row is row 0.\nIt can also be a value from the\nswTableCellRangeIdentifier_e\nenumerator.\nIf Index equals...\nThen the height of all of the rows...\nswTableCellRange_All\nIs set, if possible.\nswTableCellRange_Current\nIn the current range (see\nITableAnnotation::GetCellRange\nand\nITableAnnotation::SetCellRange\n) is set, if possible\nWhen the height of a row changes, then the rest of the table is affected. The Options argument indicates\nthe rest of the table's behavior.\nIf...\nThen...\nOptions = swTableRowColChange_TableSizeCanChange\nThe rest of the rows remain the same height and are shifted away from the table anchor to make room for the changed row.\nHeight of the entire table must remain the same, so that the table continues to fit properly on the drawing\nOther rows must absorb the change in height. There are two possibilities supported by this method.\nIf Options = swTableRowColChange_AbsorbedByNext, then first row below the rows whose height has changed, are adjusted if possible.\nIf that is not possible, then the first row above the rows whose height has changed, is adjusted if possible. If that is not possible either, then no action is taken.\nThe other similar case is if Options = swTableRowColChange_AbsorbedByPrevious. First the row above is tried, then the row below.\nOptions = swTableRowColChange_AbsorbedByNext or swTableRowColChange_AbsorbedByPrevious\nIt might not be possible to get the desired results. If this is the case, then you must determine the full height of the table yourself and set row heights individually using the swTableRowColChange_TableSizeCanChange option, making sure to end up with the original\ntable height.\nThe return value is the height at which the row is set. If you specified a range of rows, it is the height of the first row of that range.\nIt is possible that the return value is different than the value that you passed in. One possibility is that if you specify a row height that is less than the minimum row height, then the minimum row height is used instead of what you specified. Another possibility is that if you are trying to maintain a fixed table height, but the height of the adjacent rows is not big enough to absorb the height changes to the rows that you specified, then the return value is the same as the row's original width instead of what you specified.\nTo get the row height, use\nITableAnnotation::GetRowHeight\n.\nTo get or set the column width, use\nITableAnnotation::GetColumnWidth\nand\nITableAnnotation::SetColumnWidth\n.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.DeleteRow",
+    "ITableAnnotation.GetLockRowHeight",
+    "ITableAnnotation.GetRowVerticalGap",
+    "ITableAnnotation.InsertRow",
+    "ITableAnnotation.MoveRow",
+    "ITableAnnotation.RowCount",
+    "ITableAnnotation.RowHidden",
+    "ITableAnnotation.SetLockRowHeight",
+    "ITableAnnotation.SetRowVerticalGap",
+    "ITableAnnotation.TotalRowCount"
+  ]
+}

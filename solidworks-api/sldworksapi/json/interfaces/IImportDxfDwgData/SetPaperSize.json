@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IImportDxfDwgData",
+    "member": "SetPaperSize",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+      },
+      {
+        "name": "Size",
+        "type": "System.Int32",
+        "description": "Size as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "If Size is swDwgPapersUserDefined, then the height of the paper in meters"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "If Size is swDwgPapersUserDefined, then the width of the paper in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io"
+    ],
+    "related": [
+      "IImportDxfDwgData.GetPaperSize"
+    ],
+    "keywords": [
+      "setpapersize",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "paper",
+      "size",
+      "sheet",
+      "string",
+      "int32",
+      "height",
+      "double",
+      "width",
+      "boolean",
+      "file",
+      "drawing",
+      "vba",
+      "insert",
+      "position",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IImportDxfDwgData.SetPaperSize",
+  "description": "Sets the size of the paper in the drawing.",
+  "signature": "System.Boolean SetPaperSize( \n   System.String\nSheet\n,\n   System.Int32\nSize\n,\n   System.Double\nHeight\n,\n   System.Double\nWidth\n)",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+    },
+    {
+      "name": "Size",
+      "type": "System.Int32",
+      "description": "Size as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "If Size is swDwgPapersUserDefined, then the height of the paper in meters"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "If Size is swDwgPapersUserDefined, then the width of the paper in meters"
+    }
+  ],
+  "returns": "True if paper size is set, false if not",
+  "remarks": "This method only supports importing to a drawing; it does not support importing to a part sketch.",
+  "examples": [
+    {
+      "title": "Import DXF File into Drawing (VBA)",
+      "href": "Import_DXF_File_to_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (VBA)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (VB.NET)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Position DXF/DWG File in Drawing (C#)",
+      "href": "Insert_and_Position_DXF_File_in_Drawing_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IImportDxfDwgData.GetPaperSize"
+  ]
+}

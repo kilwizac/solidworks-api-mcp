@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldSymbol",
+    "member": "GetLineAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IWeldSymbol.GetLineCount",
+      "IWeldSymbol.IGetLineAtIndex"
+    ],
+    "keywords": [
+      "getlineatindex",
+      "iweldsymbol",
+      "weld",
+      "symbol",
+      "line",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IWeldSymbol.GetLineAtIndex",
+  "description": "Gets information for the specified line.",
+  "signature": "System.Object GetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\n]\nwhere:\nlineType\n= line type as defined in\nswLineTypes_e\nstartPt[3]\n= XYZ line start point\nendPt[3]\n= XYZ line end point",
+  "examples": [],
+  "related": [
+    "IWeldSymbol.GetLineCount",
+    "IWeldSymbol.IGetLineAtIndex"
+  ]
+}

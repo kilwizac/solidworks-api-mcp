@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSpline",
+    "member": "SetControlVertexWeights",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ControlWeightValues",
+        "type": "System.Object",
+        "description": "Array of control vertex weights"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "geometry",
+      "sketches"
+    ],
+    "related": [
+      "ISketchSpline.GetControlVertexWeights"
+    ],
+    "keywords": [
+      "setcontrolvertexweights",
+      "isketchspline",
+      "sketch",
+      "spline",
+      "control",
+      "vertex",
+      "weights",
+      "weight",
+      "values",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "ISketchSpline.SetControlVertexWeights",
+  "description": "Sets the weights of the control vetexes of this rational spline.",
+  "signature": "System.Boolean SetControlVertexWeights( \n   System.Object\nControlWeightValues\n)",
+  "parameters": [
+    {
+      "name": "ControlWeightValues",
+      "type": "System.Object",
+      "description": "Array of control vertex weights"
+    }
+  ],
+  "returns": "True if weights successfully set, false if not",
+  "remarks": "This method:\nis valid only if\nISketchSpline::IsRationalCurve\nis true.\nreturns false if the number of weights in ControlWeightValues is not equal to the number of control vertexes of the spline.",
+  "examples": [],
+  "related": [
+    "ISketchSpline.GetControlVertexWeights"
+  ]
+}

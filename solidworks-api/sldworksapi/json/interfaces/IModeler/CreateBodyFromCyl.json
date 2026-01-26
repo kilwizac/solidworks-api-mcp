@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateBodyFromCyl",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "CylDimArray",
+        "type": "System.Object",
+        "description": "Array containing 8 doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "cylinder",
+      "dimensions",
+      "createbodyfromcyl",
+      "imodeler",
+      "modeler",
+      "create",
+      "body",
+      "cyl",
+      "dim",
+      "array",
+      "object"
+    ]
+  },
+  "title": "IModeler.CreateBodyFromCyl",
+  "description": "Creates a temporary body from cylinder dimensions.",
+  "signature": "System.Object CreateBodyFromCyl( \n   System.Object\nCylDimArray\n)",
+  "parameters": [
+    {
+      "name": "CylDimArray",
+      "type": "System.Object",
+      "description": "Array containing 8 doubles (see Remarks )"
+    }
+  ],
+  "returns": "Body",
+  "remarks": "TheCylArray argument is the following array of doubles:\n[\ncylFaceCenter[3], cylAxis[3], cylRadius, cylHeight\n]\nwhere:\ncylFaceCenter[3]\nXYZ location that represents the center of one of the cylinder faces\ncylAxis[3]\nXYZ direction; the cylinder is extruded along this vector from the\ncylFaceCenter\nlocation for a distance of\ncylHeight\ncylRadius\nCylinder radius\ncylHeight\nLength to extrude along the\ncylAxis\ndirection; if\ncylHeight\nis 0, then a sheet body is created of dimension\ncylRadius\nand whose normal is defined by\ncylAxis",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateWireBody"
+  ]
+}

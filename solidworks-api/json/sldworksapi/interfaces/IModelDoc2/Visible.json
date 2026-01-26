@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "Visible",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "document",
+      "visibility",
+      "model",
+      "documents",
+      "see",
+      "also",
+      "imodeldoc2",
+      "imodeldocextension",
+      "interfaces",
+      "visible",
+      "doc2",
+      "boolean",
+      "names",
+      "open",
+      "vba",
+      "run",
+      "attach",
+      "solidworks",
+      "session",
+      "components",
+      "window",
+      "handles",
+      "dibsections",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.Visible",
+  "description": "Gets or sets the visibility of the active document.",
+  "signature": "System.Boolean Visible {get; set;}",
+  "parameters": [],
+  "returns": "True if the document is visible, false if not",
+  "remarks": "User-interface resources are not released by setting this property to false. Opening large numbers of models and then hiding them using this property will eventually cause critical resource shortages and instability.\nInstead of setting this property to false to hide a document, consider calling\nISldWorks::CloseDoc\nto release its user-interface resources. Or open the document invisibly using\nISldWorks::DocumentVisible\n.",
+  "examples": [
+    {
+      "title": "Get Names of Open Documents (VBA)",
+      "href": "Get_Names_of_Open_Documents_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Run or Attach to SOLIDWORKS Session (VBA)",
+      "href": "SOLIDWORKS_Visible_or_BackGround_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (C#)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (VB.NET)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Components, Window Handles, and DIBSECTIONs (VBA)",
+      "href": "Get_Names_of_Components_and_Window_Handle,_and_DIBSECTION_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

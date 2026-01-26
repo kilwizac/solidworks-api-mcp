@@ -1,0 +1,151 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "GetBodyOutline2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "BodyList",
+        "type": "System.Object",
+        "description": "Array of bodies"
+      },
+      {
+        "name": "Direction",
+        "type": "MathVector",
+        "description": "IMathVector direction of view"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance (Parasolid default 0.00001)"
+      },
+      {
+        "name": "ProjectOnPlane",
+        "type": "System.Boolean",
+        "description": "True to project the curves onto a plane, false to not (see Remarks )"
+      },
+      {
+        "name": "Curves",
+        "type": "System.Object",
+        "description": "Array of 3D trimmed curves that form the outline"
+      },
+      {
+        "name": "TopolEntities",
+        "type": "System.Object",
+        "description": "Array of topological entities associated with the outline"
+      },
+      {
+        "name": "Outline",
+        "type": "System.Object",
+        "description": "Array of integers indicating which curves belong to which outline"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "outlines",
+      "curve",
+      "icurve",
+      "body",
+      "getbodyoutline2",
+      "imodeler",
+      "modeler",
+      "outline2",
+      "list",
+      "object",
+      "direction",
+      "math",
+      "vector",
+      "tolerance",
+      "double",
+      "project",
+      "plane",
+      "boolean",
+      "curves",
+      "topol",
+      "entities",
+      "outline",
+      "int32",
+      "form",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModeler.GetBodyOutline2",
+  "description": "Gets the curves that form the outline of a body.",
+  "signature": "System.Int32 GetBodyOutline2( \n   System.Object\nBodyList\n,\n   MathVector\nDirection\n,\n   System.Double\nTolerance\n,\n   System.Boolean\nProjectOnPlane\n,\n   out System.Object\nCurves\n,\n   out System.Object\nTopolEntities\n,\n   out System.Object\nOutline\n)",
+  "parameters": [
+    {
+      "name": "BodyList",
+      "type": "System.Object",
+      "description": "Array of bodies"
+    },
+    {
+      "name": "Direction",
+      "type": "MathVector",
+      "description": "IMathVector direction of view"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance (Parasolid default 0.00001)"
+    },
+    {
+      "name": "ProjectOnPlane",
+      "type": "System.Boolean",
+      "description": "True to project the curves onto a plane, false to not (see Remarks )"
+    },
+    {
+      "name": "Curves",
+      "type": "System.Object",
+      "description": "Array of 3D trimmed curves that form the outline"
+    },
+    {
+      "name": "TopolEntities",
+      "type": "System.Object",
+      "description": "Array of topological entities associated with the outline"
+    },
+    {
+      "name": "Outline",
+      "type": "System.Object",
+      "description": "Array of integers indicating which curves belong to which outline"
+    }
+  ],
+  "returns": "Number of curves that form the outline",
+  "remarks": "When rendered, the array of curves returned in Curves might not display as a continuous outline of the body.\nTo close gaps:\nCall this method with ProjectOnPlane = true.\nPost-process the array of curves returned in Curves to interpolate the end points of each curve to generate a continuous outline of the body. See the\nGet Body Outline\nexamples.",
+  "examples": [
+    {
+      "title": "Get Curves that Form Outline of Bodies (VBA)",
+      "href": "Get_Curves_that_Form_Outline_of_Bodies_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Body Outline (VBA)",
+      "href": "Get_Body_Outline_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Body Outline (VB.NET)",
+      "href": "Get_Body_Outline_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Body Outline (C#)",
+      "href": "Get_Body_Outline_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

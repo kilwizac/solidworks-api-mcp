@@ -1,0 +1,42 @@
+---
+type: method
+interface: ITaskpaneView
+member: HideView
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related:
+  - ITaskpaneView.ShowView
+keywords:
+  - hideview
+  - itaskpaneview
+  - taskpane
+  - view
+  - hide
+  - boolean
+---
+
+# ITaskpaneView.HideView
+
+Hides the application-level tab on the Task Pane.
+
+## Signature
+
+```csharp
+System.Boolean HideView()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if the application-level tab is hidden, false if not
+
+## See Also
+
+- `ITaskpaneView.ShowView`

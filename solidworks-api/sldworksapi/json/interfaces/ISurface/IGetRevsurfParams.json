@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IGetRevsurfParams",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.GetRevsurfParams"
+    ],
+    "keywords": [
+      "igetrevsurfparams",
+      "isurface",
+      "surface",
+      "revsurf",
+      "params",
+      "double"
+    ]
+  },
+  "title": "ISurface.IGetRevsurfParams",
+  "description": "Gets the parameters for the surface.",
+  "signature": "System.Double IGetRevsurfParams()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "A surface of revolution is constructed by revolving a profile curve (line or arc or b-spline) about an axis. The profile curve for the surface of revolution can be retrieved with\nISurface::GetProfileCurve\nor\nISurface::IGetProfileCurve\n.\nEight doubles of parameters returned.\nPoint [3]\n-  X, Y, Z coordinates of the start point of the axis of rotation.\nAxisDir[3]\n-  Vector showing the direction of the axis of rotation.\nParams[2]\n-  Parameter range of the part of the profile curve that was used to create the surface.",
+  "examples": [],
+  "related": [
+    "ISurface.GetRevsurfParams"
+  ]
+}

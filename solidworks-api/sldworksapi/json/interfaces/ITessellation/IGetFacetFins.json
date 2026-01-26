@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "IGetFacetFins",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FacetId",
+        "type": "System.Int32",
+        "description": "ID of the facet to use to return the fin IDs"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ITessellation.GetFacetFins"
+    ],
+    "keywords": [
+      "igetfacetfins",
+      "itessellation",
+      "tessellation",
+      "facet",
+      "fins",
+      "id",
+      "int32"
+    ]
+  },
+  "title": "ITessellation.IGetFacetFins",
+  "description": "Gets all of the fin IDs of the fins that border this facet.",
+  "signature": "System.Int32 IGetFacetFins( \n   System.Int32\nFacetId\n)",
+  "parameters": [
+    {
+      "name": "FacetId",
+      "type": "System.Int32",
+      "description": "ID of the facet to use to return the fin IDs"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of long or integer values that describe the fin IDs VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "A cache is created when you use\nITessellation::IGetFacetFinsCount\n. This cache is released when you use ITessellation::IGetFacetFins. If you use ITessellation::IGetFacetFinsCount again, then the cache is refilled. Alternatively, you can use ITessellation::IGetFacetFins repeatedly.",
+  "examples": [],
+  "related": [
+    "ITessellation.GetFacetFins"
+  ]
+}

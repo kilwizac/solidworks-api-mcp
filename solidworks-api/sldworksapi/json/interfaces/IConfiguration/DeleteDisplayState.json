@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "DeleteDisplayState",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DisplayStateName",
+        "type": "System.String",
+        "description": "Name of display state to delete from this configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.ApplyDisplayState",
+      "IConfiguration.CopyDisplayStateFromConfiguration",
+      "IConfiguration.GetDisplayStatesCount",
+      "IConfiguration.RenameDisplayState",
+      "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+      "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "deletedisplaystate",
+      "iconfiguration",
+      "configuration",
+      "delete",
+      "state",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IConfiguration.DeleteDisplayState",
+  "description": "Deletes the specified display state from this configuration.",
+  "signature": "System.Boolean DeleteDisplayState( \n   System.String\nDisplayStateName\n)",
+  "parameters": [
+    {
+      "name": "DisplayStateName",
+      "type": "System.String",
+      "description": "Name of display state to delete from this configuration"
+    }
+  ],
+  "returns": "True if the specified display state is deleted, false if not",
+  "remarks": "Use\nIConfiguration::GetDisplayStates\nor\nIConfiguration::IGetDisplayStates\nto get the names of the display states from the configuration from which to copy the display state.",
+  "examples": [],
+  "related": [
+    "IConfiguration.ApplyDisplayState",
+    "IConfiguration.CopyDisplayStateFromConfiguration",
+    "IConfiguration.GetDisplayStatesCount",
+    "IConfiguration.RenameDisplayState",
+    "IModelDocExtension.DeleteDisplayStateSpecificRenderMaterial",
+    "IModelDocExtension.IDeleteDisplayStateSpecificRenderMaterial"
+  ]
+}

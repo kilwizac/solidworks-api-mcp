@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "SetGuideTangencyType",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      },
+      {
+        "name": "TangType",
+        "type": "System.Int32",
+        "description": "Type of tangency as defined in swBoundaryBossTangencyType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetGuideTangencyType",
+      "IBoundaryBossFeatureData.GetTangentApplyToAll",
+      "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.GetTangentInfluence",
+      "IBoundaryBossFeatureData.GetTangentLength",
+      "IBoundaryBossFeatureData.MergeTangentFaces",
+      "IBoundaryBossFeatureData.SetTangentApplyToAll",
+      "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.SetTangentInfluence",
+      "IBoundaryBossFeatureData.SetTangentLength"
+    ],
+    "keywords": [
+      "setguidetangencytype",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "guide",
+      "tangency",
+      "type",
+      "direction",
+      "int32",
+      "index",
+      "tang",
+      "void"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.SetGuideTangencyType",
+  "description": "Sets the type of tangency for the specified curve in the specified direction in this boundary feature.",
+  "signature": "void SetGuideTangencyType( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n,\n   System.Int32\nTangType\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    },
+    {
+      "name": "TangType",
+      "type": "System.Int32",
+      "description": "Type of tangency as defined in swBoundaryBossTangencyType_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is only available when a minimum of three curves in the specified direction exist.\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.\nIf specified curve is...\nThen the valid types of tangency as defined in swBoundaryBossTangencyType_e are...\nSketch curve\nswBoundaryBossTangency_None\nswBoundaryBossTangency_DirectionVector\nswBoundaryBossTangency_NormalToProfile\nFace\nswBoundaryBossTangency_None\nswBoundaryBossTangency_DirectionVector\nswBoundaryBossTangency_NormalToProfile\nswBoundaryBossTangency_TangencyToFace\nswBoundaryBossTangency_CurvatureToFace\nEdge\nswBoundaryBossTangency_Default\nswBoundaryBossTangency_None\nswBoundaryBossTangency_DirectionVector\nswBoundaryBossTangency_TangencyToFace\nswBoundaryBossTangency_CurvatureToFace",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetGuideTangencyType",
+    "IBoundaryBossFeatureData.GetTangentApplyToAll",
+    "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.GetTangentInfluence",
+    "IBoundaryBossFeatureData.GetTangentLength",
+    "IBoundaryBossFeatureData.MergeTangentFaces",
+    "IBoundaryBossFeatureData.SetTangentApplyToAll",
+    "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.SetTangentInfluence",
+    "IBoundaryBossFeatureData.SetTangentLength"
+  ]
+}

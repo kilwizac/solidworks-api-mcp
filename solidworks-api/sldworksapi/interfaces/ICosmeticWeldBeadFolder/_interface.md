@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ICosmeticWeldBeadFolder
+inherits: null
+description: Allows access to the properties of cosmetic weld beads.
+member_count: 11
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - CostPerUnitMass
+  - MassPerUnitLength
+  - Material
+  - NumberOfWeldPasses
+  - Process
+  - TimePerUnitLength
+  - TotalCost
+  - TotalLength
+---
+
+# ICosmeticWeldBeadFolder
+
+Allows access to the properties of cosmetic weld beads.
+
+## Common Members
+
+- `CostPerUnitMass`
+- `MassPerUnitLength`
+- `Material`
+- `NumberOfWeldPasses`
+- `Process`
+- `TimePerUnitLength`
+- `TotalCost`
+- `TotalLength`

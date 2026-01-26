@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "Select",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Edge",
+        "type": "System.Object",
+        "description": "Edge of the loop (see Remarks )"
+      },
+      {
+        "name": "Append",
+        "type": "System.Boolean",
+        "description": "True to append this selection to the selection list, false to replace the selection list with this selection"
+      },
+      {
+        "name": "SelectionData",
+        "type": "System.Object",
+        "description": "ISelectData object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "DAssemblyDocEvents_FileDropNotifyEventHandler",
+      "DPartDocEvents_FlipLoopNotifyEventHandler"
+    ],
+    "keywords": [
+      "select",
+      "iloop2",
+      "loop2",
+      "edge",
+      "object",
+      "append",
+      "boolean",
+      "selection",
+      "data"
+    ]
+  },
+  "title": "ILoop2.Select",
+  "description": "Selects a loop in the graphics area.",
+  "signature": "System.Boolean Select( \n   System.Object\nEdge\n,\n   System.Boolean\nAppend\n,\n   System.Object\nSelectionData\n)",
+  "parameters": [
+    {
+      "name": "Edge",
+      "type": "System.Object",
+      "description": "Edge of the loop (see Remarks )"
+    },
+    {
+      "name": "Append",
+      "type": "System.Boolean",
+      "description": "True to append this selection to the selection list, false to replace the selection list with this selection"
+    },
+    {
+      "name": "SelectionData",
+      "type": "System.Object",
+      "description": "ISelectData object"
+    }
+  ],
+  "returns": "True if the loop is selected, false if not",
+  "remarks": "This loop can share Edge with an adjacent loop, if it exists.\nIf Edge is:\na valid edge on this loop, this method selects the adjacent loop.\nNothing or null, this method selects this loop.",
+  "examples": [],
+  "related": [
+    "DAssemblyDocEvents_FileDropNotifyEventHandler",
+    "DPartDocEvents_FlipLoopNotifyEventHandler"
+  ]
+}

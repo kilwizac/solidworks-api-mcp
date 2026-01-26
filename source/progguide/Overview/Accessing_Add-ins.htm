@@ -1,0 +1,436 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Accessing SOLIDWORKS Add-in Objects</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 16, 2002 1:52:32 PM">
+<meta name=MS-HKWD content="SOLIDWORKS add-ins">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2124>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+<style type="text/css">
+.auto-style1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style2 {
+	font-size: xx-small;
+}
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Accessing SOLIDWORKS Add-in Objects</h1>
+
+<p>There are two types of add-ins that you can use with SOLIDWORKS: </p>
+<ul>
+	<li class=kadov-p><b>SOLIDWORKS add-ins,</b> which provide additional functionality 
+	and may be included in SOLIDWORKS Professional or SOLIDWORKS Premium or 
+	purchased separately. This topic 
+	discusses how to reliably access four SOLIDWORKS add-in objects using
+	<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetAddInObject.html">
+	ISldWorks::GetAddInObject</a>. <br>
+&nbsp;</li>
+	<li class=kadov-p><b>Other add-ins</b> developed by you or SOLIDWORKS 
+	Partners. See
+	<a href="../GettingStarted/SolidWorks_API_Standalone_and_Add-in_Applications_Overview.htm">
+	SOLIDWORKS API Standalone and Add-in Applications Overview</a>. </li>
+</ul>
+<p>To see the SOLIDWORKS add-ins that you are licensed to use, select <b>Tools &gt; 
+Add-Ins</b> from the SOLIDWORKS menu. The Add-Ins dialog lists SOLIDWORKS 
+add-ins at the top and Other add-ins at the bottom. To get the functionality of 
+a SOLIDWORKS add-in or to use its APIs, you must load it either from the Add-Ins 
+dialog or programmatically. In the Add-Ins dialog, select the check box next to 
+the add-in of interest and click
+<b>OK</b>. To load the add-in programmatically, call
+<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~LoadAddIn.html">
+ISldWorks::LoadAddIn</a>, passing in the add-in name.</p>
+<h2>Accessing SOLIDWORKS Add-in Objects</h2>
+<p>After loading a SOLIDWORKS add-in either through the user interface or 
+by calling ISldWorks::LoadAddIn, in order to use its APIs, you must first access the add-in's 
+API object by calling ISldWorks::GetAddInObject. The following table lists the four SOLIDWORKS 
+add-ins whose add-in objects can be retrieved by calling ISldWorks::GetAddInObject 
+with either a GUID, a version-independent ProgID or, in two cases, a version-specific ProgID:</p>
+<table border="1" width="100%">
+	<tr>
+		<th><font face="Verdana" style="font-size: 8pt">Add-in</font></th>
+		<th><font face="Verdana" style="font-size: 8pt"><a href="#ind">Version-independent 
+		ProgID</a></font></th>
+		<th><font face="Verdana" style="font-size: 8pt"><a href="#spec">Version-specific ProgID</a> 
+		(for SW2019)</font></th>
+		<th><font face="Verdana" style="font-size: 8pt"><a href="#clsid1">GUID</a> 
+		location in the Windows Registry (regedit.exe)...</font></th>
+		<th><font face="Verdana" style="font-size: 8pt">Add-in object 
+		returned by ISldWorks::GetAddInObject</font></th>
+	</tr>
+	<tr>
+		<td><font face="Verdana" style="font-size: 8pt">FeatureWorks</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">&quot;FeatureWorks.FeatureWorksApp&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">Not applicable - use version-independent ProgID 
+		or GUID</font></td>
+		<td><font face="Verdana" style="font-size: 8pt; font-weight: 700">
+		HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\FeatureWorks</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">
+		<a href="fworksapi.chm::/SolidWorks.Interop.fworks~SolidWorks.Interop.fworks.IFeatureWorksApp.html">
+		IFeatureWorksApp</a></font></td>
+	</tr>
+	<tr class="auto-style1">
+		<td class="auto-style2">SOLIDWORKS Inspection</td>
+		<td class="auto-style2">&quot;Inspection.ExtSwAddin&quot;</td>
+		<td class="auto-style2"><font face="Verdana" style="font-size: 8pt">Not applicable - use version-independent ProgID 
+		or GUID</font></td>
+		<td class="auto-style2"><font face="Verdana" style="font-size: 8pt">Search for<b> SOLIDWORKS 
+		Inspection</b> in data fields<b> </b>of<b> HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SOLIDWORKS 
+		2022\Addins\</b>. (The GUID is highlighted in the left panel when the 
+		add-in name is found in the right panel.)</font></td>
+		<td class="auto-style2">
+		<a href="swinspectionapi.chm::/SolidWorks.Interop.swinspectionAddIn~SolidWorks.Interop.swinspectionAddIn.IInspectionAddinMgr.html">
+		IInspectionAddinMgr</a></td>
+	</tr>
+	<tr>
+		<td><font face="Verdana" style="font-size: 8pt">SOLIDWORKS Design 
+		Checker</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">&quot;SWDesignChecker.SWDesignCheck&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">
+		&quot;SWDesignChecker.SWDesignCheck.2019&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">Search for <b>SOLIDWORKS 
+		Design Checker</b> in data fields of <b>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SOLIDWORKS 
+		2019\Addins\</b>. (The GUID is highlighted in the left panel when the 
+		add-in name is found in the right panel.)</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">
+		<a href="dsgnchkapi.chm::/SolidWorks.Interop.dsgnchk~SolidWorks.Interop.dsgnchk.ISWDesignCheck.html">
+		ISWDesignCheck</a></font></td>
+	</tr>
+	<tr>
+		<td><font face="Verdana" style="font-size: 8pt">SOLIDWORKS Simulation</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">&quot;SldWorks.Simulation&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">&quot;SldWorks.Simulation.12&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt; font-weight: 700">
+		HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SOLIDWORKS 2019\Applications\SOLIDWORKS 
+		Simulation</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">ICwAddincallback (access
+		<a href="cworksapi.chm::/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICosmosWorks.html">
+		ICosmosWorks</a> through ICwAddinCallback::CosmosWorks)</font></td>
+	</tr>
+	<tr>
+		<td><font face="Verdana" style="font-size: 8pt">SOLIDWORKS Utilities</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">&quot;Utilities.UtilitiesApp&quot;</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">Not applicable - use version-independent ProgID 
+		or GUID</font></td>
+		<td><font face="Verdana" style="font-size: 8pt; font-weight:700">
+		HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\SOLIDWORKS Utilities</font></td>
+		<td><font face="Verdana" style="font-size: 8pt">
+		<a href="swutilitiesapi.chm::/SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities.IUtilities.html">
+		IUtilities</a></font></td>
+	</tr>
+</table>
+<h3><a name="ind"></a>Version-Independent ProgID </h3>
+<p>The version-independent ProgID of a SOLIDWORKS add-in remains unchanged from one version of 
+SOLIDWORKS to the next. </p>
+<p>Some SOLIDWORKS add-ins (e.g., FeatureWorks and SOLIDWORKS Utilities) use only 
+version-independent ProgIDs. As a result, the version-independent ProgID can be 
+used successfully from any version of SOLIDWORKS installed, as long as the 
+add-in, itself, is loaded. </p>
+<p>Other SOLIDWORKS add-ins (e.g., SOLIDWORKS Simulation and SOLIDWORKS Design 
+Checker) use either version-specific or version-independent ProgIDs. When you 
+have multiple SOLIDWORKS installations, the 
+version-independent ProgID can only be used successfully from the latest version 
+of SOLIDWORKS. If you have 
+multiple SOLIDWORKS installations and are running one of the earlier 
+versions, passing in the version-independent ProgID results in type 
+mismatches and a failure to access the SOLIDWORKS add-in object. In that case, 
+you must pass in the version-specific ProgID to successfully access the SOLIDWORKS add-in object.</p>
+<h3><a name="spec"></a>Version-Specific ProgID</h3>
+<p>The version-specific ProgID of a SOLIDWORKS add-in changes from one version of SOLIDWORKS to the 
+next. </p>
+<p>When you have multiple SOLIDWORKS installations, for two SOLIDWORKS add-ins (SOLIDWORKS Simulation and SOLIDWORKS Design 
+Checker), passing in the version-specific ProgID succeeds regardless of whether 
+you are running the latest version or an earlier version.</p>
+<p>The most reliable method for accessing SOLIDWORKS add-in objects, when you do 
+not have strict control over the installation history of your system, is to 
+first call
+<a href="sldworksAPI.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RevisionNumber.html">
+ISldWorks::RevisionNumber</a> to identify the version of SOLIDWORKS running and 
+then use that information to calculate at runtime the SOLIDWORKS-compatible version-specific 
+ProgID for the add-in. </p>
+<p>The calculation of the version-specific ProgID differs between SOLIDWORKS 
+Simulation and SOLIDWORKS Design Checker. In the calculations below,<i> SOLIDWORKS_major_version_number</i> 
+is the leftmost two digits in the string 
+	returned by ISldWorks::RevisionNumber. For example, if 
+ISldWorks::RevisionNumber returns &quot;27.0.0&quot;, then <i> SOLIDWORKS_major_version_number</i> 
+is 27, and the minor version decimal number is 0.0. </p>
+<h6>SOLIDWORKS Simulation Version-Specific ProgID</h6>
+<p>Specify ProgID as &quot;Sldworks.Simulation.<i>nn</i>&quot;, where:</p>
+<ul>
+	<li class=kadov-p><i>nn</i> = <i>SOLIDWORKS_major_version_number</i> - 15</li>
+</ul>
+<h6>SOLIDWORKS Design Checker Version-Specific ProgID</h6>
+<p>Specify ProgID as <font face="Verdana" style="font-size: 8pt">&quot;SWDesignChecker.SWDesignCheck.<i>nnnn</i>&quot;</font>, 
+where:</p>
+<ul>
+	<li class=kadov-p><i>nnnn</i> = <i>SOLIDWORKS_major_version_number + 1992</i></li>
+</ul>
+<h3><a name="clsid1"></a>GUID</h3>
+<p>Specify Clsid with a GUID in curly braces, &quot;{GUID}&quot;, or 
+ISldWorks::GetAddInObject will interpret it as a ProgID.</p>
+<h3>Code Snippets</h3>
+<p>The following code snippets demonstrate, in four languages, how to calculate 
+the SOLIDWORKS-compatible version-specific ProgID for the SOLIDWORKS Simulation 
+add-in and use it in ISldWorks::GetAddInObject to retrieve the correct SOLIDWORKS 
+Simulation add-in object.</p>
+<h6>VBA</h6>
+
+<p class=APICODE>Option Explicit</p>
+
+<p class=APICODE>Sub main()</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Dim 
+ SwApp As SldWorks.SldWorks<br>
+&nbsp;&nbsp; Dim 
+ COSMOSWORKS As Object<br>
+&nbsp;&nbsp; Dim 
+ COSMOSObject As Object<br>
+&nbsp;&nbsp; Dim swVersion As Long<br>
+&nbsp;&nbsp; Dim cwVersion As Long<br>
+&nbsp;&nbsp; Dim cwProgID As String</p>
+<p>...</p>
+
+<p class=APICODE><!--kadov_tag{{</spaces>}}-->&nbsp;&nbsp; 'Connect to SOLIDWORKS</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->If 
+ SwApp Is Nothing Then Set SwApp = Application.SldWorks<br>
+&nbsp;</p>
+
+<p class="APICODE">&nbsp;&nbsp; 'Determine&nbsp;host&nbsp;SOLIDWORKS&nbsp;major version<br>
+&nbsp;&nbsp;&nbsp; swVersion&nbsp; = Left(SwApp.<b>RevisionNumber</b>, 2)<br>
+<br>
+&nbsp;&nbsp; 'Calculate&nbsp;the&nbsp;version-specific&nbsp;ProgID&nbsp;of the Simulation add-in 
+that is compatible with&nbsp;this&nbsp;version&nbsp;of&nbsp;SOLIDWORKS<br>
+&nbsp;&nbsp;&nbsp; cwVersion&nbsp; = &nbsp;swVersion&nbsp; - &nbsp;15<br>
+&nbsp;&nbsp;&nbsp; cwProgID&nbsp; = &nbsp;&quot;SldWorks.Simulation.&quot; &amp; cwVersion<br>
+&nbsp;&nbsp;&nbsp; Debug.Print (cwProgID)</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--><br>
+&nbsp;&nbsp; 'Get the SOLIDWORKS Simulation object</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Set 
+ COSMOSObject = SwApp.<span style="font-weight: bold;">GetAddInObject</span>(cwProgID)<br>
+&nbsp;&nbsp;&nbsp; If 
+ COSMOSObject Is Nothing Then ErrorMsg SwApp, &quot;COSMOSObject object 
+ not found&quot;, True</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Set 
+ COSMOSWORKS = COSMOSObject.<b>COSMOSWORKS<br>
+</b>&nbsp;&nbsp;&nbsp; If 
+ COSMOSWORKS Is Nothing Then ErrorMsg SwApp, &quot;COSMOSWORKS object not 
+ found&quot;, True</p>
+
+<p class=APICODE><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;'Open the active document and 
+use the COSMOSWORKS API</p>
+
+<p>...</p>
+
+<p class=APICODE>End Sub</p>
+
+<p class=APICODE>&nbsp;</p>
+
+<h6>VB.NET</h6>
+<p><font face="Courier New" size="2"><span style="color:blue;">Partial</span>&nbsp;<span style="color:blue;">Class</span>&nbsp;<span style="color:#2b91af;">SolidWorksMacro</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Public</span>&nbsp;<span style="color:blue;">Sub</span>&nbsp;main()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Dim</span>&nbsp;COSMOSWORKS&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:blue;">Object</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Dim</span>&nbsp;COSMOSObject&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:blue;">Object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim</span>&nbsp;swVersion&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:blue;">Integer</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Dim</span>&nbsp;cwVersion&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:blue;">Integer</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Dim</span>&nbsp;cwProgID&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:blue;">String</span></font></p>
+<p><font face="Courier New" size="2"><span style="color: #0000FF">...</span></font></p>
+<p><font face="Courier New" size="2"><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Determine&nbsp;host&nbsp;SOLIDWORKS&nbsp;major version</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swVersion&nbsp;=&nbsp;<span style="color:#2b91af;">Convert</span>.ToInt32(swApp.<b>RevisionNumber</b>().Substring(0,&nbsp;2))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">'Calculate&nbsp;the&nbsp;version-specific&nbsp;ProgID&nbsp;of the 
+Simulation add-in that is compatible with&nbsp;this&nbsp;version&nbsp;of&nbsp;SOLIDWORKS</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cwVersion&nbsp;=&nbsp;swVersion&nbsp;-&nbsp;15<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cwProgID&nbsp;=&nbsp;<span style="color:blue;">String</span>.Format(<span style="color:#a31515;">&quot;SldWorks.Simulation.{0}&quot;</span>,&nbsp;cwVersion)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Debug</span>.Print(cwProgID)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">'Get&nbsp;the&nbsp;SOLIDWORKS&nbsp;Simulation&nbsp;object</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COSMOSObject&nbsp;=&nbsp;swApp.<b>GetAddInObject</b>(cwProgID)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">If</span>&nbsp;COSMOSObject&nbsp;<span style="color:blue;">Is</span>&nbsp;<span style="color:blue;">Nothing</span>&nbsp;<span style="color:blue;">Then</span>&nbsp;ErrorMsg(swApp,&nbsp;<span style="color:#a31515;">&quot;COSMOSObject&nbsp;object&nbsp;not&nbsp;found&quot;</span>,&nbsp;<span style="color:blue;">True</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COSMOSWORKS&nbsp;=&nbsp;COSMOSObject.<b>CosmosWorks</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">If</span>&nbsp;COSMOSWORKS&nbsp;<span style="color:blue;">Is</span>&nbsp;<span style="color:blue;">Nothing</span>&nbsp;<span style="color:blue;">Then</span>&nbsp;ErrorMsg(swApp,&nbsp;<span style="color:#a31515;">&quot;COSMOSWORKS&nbsp;object&nbsp;not&nbsp;found&quot;</span>,&nbsp;<span style="color:blue;">True</span>)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">'Open&nbsp;the&nbsp;active&nbsp;document and use the 
+COSMOSWORKS API</span></font></p>
+<p><font face="Courier New" size="2"><span style="color: #008000">...</span></font></p>
+<p><font face="Courier New" size="2"><span style="color:blue;">&nbsp;&nbsp;&nbsp; 
+End</span>&nbsp;<span style="color:blue;">Sub</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">'''</span><span style="color:green;">&nbsp;</span><span style="color:gray;">&lt;summary&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">'''</span><span style="color:green;">&nbsp;The&nbsp;SldWorks&nbsp;swApp&nbsp;variable&nbsp;is&nbsp;pre-assigned&nbsp;for&nbsp;you.</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">'''</span><span style="color:green;">&nbsp;</span><span style="color:gray;">&lt;/summary&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">Public</span>&nbsp;swApp&nbsp;<span style="color:blue;">As</span>&nbsp;<span style="color:#2b91af;">SldWorks</span><br>
+<span style="color:blue;">End</span>&nbsp;<span style="color:blue;">Class</span></font></p>
+<p>&nbsp;</p>
+<h6>C#</h6>
+<p><font face="Courier New" size="2"><span style="color:blue;">partial</span>&nbsp;<span style="color:blue;">class</span>&nbsp;<span style="color:#2b91af;">SolidWorksMacro</span><br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:blue;">void</span>&nbsp;Main()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">dynamic</span>&nbsp;COSMOSWORKS&nbsp;=&nbsp;<span style="color:blue;">default</span>(<span style="color:blue;">dynamic</span>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">dynamic</span>&nbsp;COSMOSObject&nbsp;=&nbsp;<span style="color:blue;">default</span>(<span style="color:blue;">dynamic</span>);</font></p>
+<p><font face="Courier New" size="2">...</font></p>
+<p><font face="Courier New" size="2"><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//&nbsp;Determine&nbsp;host&nbsp;SOLIDWORKS&nbsp;major version</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">int</span>&nbsp;swVersion&nbsp;=&nbsp;<span style="color:#2b91af;">Convert</span>.ToInt32(swApp.<b>RevisionNumber</b>().Substring(0,&nbsp;2));<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;Calculate&nbsp;the&nbsp;version-specific ProgID&nbsp;of 
+the Simulation add-in that is compatible with&nbsp;this&nbsp;version&nbsp;of&nbsp;SOLIDWORKS</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">int</span>&nbsp;cwVersion&nbsp;=&nbsp;swVersion&nbsp;-&nbsp;15;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">String</span>&nbsp;cwProgID&nbsp;=&nbsp;<span style="color:#2b91af;">String</span>.Format(<span style="color:#a31515;">&quot;SldWorks.Simulation.{0}&quot;</span>,&nbsp;cwVersion);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2b91af;">Debug</span>.Print(cwProgID);<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;Get&nbsp;the&nbsp;SOLIDWORKS&nbsp;Simulation&nbsp;object&nbsp;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COSMOSObject&nbsp;=&nbsp;swApp.<b>GetAddInObject</b>(cwProgID);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(COSMOSObject&nbsp;==&nbsp;<span style="color:blue;">null</span>)&nbsp;ErrorMsg(swApp,&nbsp;<span style="color:#a31515;">&quot;COSMOSObject&nbsp;object&nbsp;not&nbsp;found&quot;</span>,&nbsp;<span style="color:blue;">true</span>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COSMOSWORKS&nbsp;=&nbsp;COSMOSObject.<b>CosmosWorks</b>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">if</span>&nbsp;(COSMOSWORKS&nbsp;==&nbsp;<span style="color:blue;">null</span>)&nbsp;ErrorMsg(swApp,&nbsp;<span style="color:#a31515;">&quot;COSMOSWORKS&nbsp;object&nbsp;not&nbsp;found&quot;</span>,&nbsp;<span style="color:blue;">true</span>);<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;Open&nbsp;the&nbsp;active&nbsp;document and use the 
+COSMOSWORKS API</span></font></p>
+<p><font face="Courier New" size="2"><span style="color: #008000">...</span></font></p>
+<p><font face="Courier New" size="2" color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;<font face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">///</span><span style="color:green;">&nbsp;</span><span style="color:gray;">&lt;summary&gt;</span><span style="color:green;">&nbsp;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">///</span><span style="color:green;">&nbsp;The&nbsp;SldWorks&nbsp;swApp&nbsp;variable&nbsp;is&nbsp;pre-assigned&nbsp;for&nbsp;you.&nbsp;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:gray;">///</span><span style="color:green;">&nbsp;</span><span style="color:gray;">&lt;/summary&gt;</span><span style="color:green;">&nbsp;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">public</span>&nbsp;<span style="color:#2b91af;">SldWorks</span>&nbsp;swApp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}</font></p>
+<h6>Unmanaged C++ COM</h6>
+<p style="font-family: Courier New; font-size: 13; color: black; background: white" class="APICODE">
+<span style="color:blue;">#include</span>&nbsp;<span style="color:#a31515;">&quot;stdafx.h&quot;</span>&nbsp;<br>
+<span style="color:blue;">#include</span>&nbsp;<span style="color:#a31515;">&lt;string&gt;</span><br>
+<span style="color:blue;">#import</span>&nbsp;<span style="color:#a31515;">&quot;sldworks.tlb&quot;</span>&nbsp;raw_interfaces_only,&nbsp;raw_native_types,&nbsp;no_namespace,&nbsp;named_guids&nbsp;&nbsp;<span style="color:green;">//&nbsp;SOLIDWORKS&nbsp;type&nbsp;library</span><br>
+<span style="color:blue;">#import</span>&nbsp;<span style="color:#a31515;">&quot;swconst.tlb&quot;</span>&nbsp;raw_interfaces_only,&nbsp;raw_native_types,&nbsp;no_namespace,&nbsp;named_guids&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;SOLIDWORKS&nbsp;constants&nbsp;type&nbsp;library</span><br>
+<span style="color:blue;">#import</span>&nbsp;<span style="color:#a31515;">&quot;cosworks.tlb&quot;</span>&nbsp;raw_interfaces_only,&nbsp;raw_native_types,&nbsp;no_namespace,&nbsp;named_guids&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;SOLIDWORKS&nbsp;Simulation&nbsp;type&nbsp;library</span><br>&nbsp;<br>
+<span style="color:blue;">using</span>&nbsp;<span style="color:blue;">namespace</span>&nbsp;std;<br>&nbsp;<br>
+<span style="color:blue;">int</span>&nbsp;<span style="color:#6f008a;">_tmain</span>(<span style="color:blue;">int</span>&nbsp;<span style="color:gray;">argc</span>,&nbsp;<span style="color:#2b91af;">_TCHAR</span>*&nbsp;<span style="color:gray;">argv</span>[])<br>{</p>
+<p style="font-family: Courier New; font-size: 13; color: black; background: white" class="APICODE">
+<br><span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;Initialize&nbsp;COM</span><br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;Do&nbsp;this&nbsp;before&nbsp;using&nbsp;ATL&nbsp;smart&nbsp;pointers&nbsp;so&nbsp;that&nbsp;</span><br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;COM&nbsp;is&nbsp;available</span><br>&nbsp;&nbsp;&nbsp;
+	CoInitialize(<span style="color:#6f008a;">NULL</span>);<br>&nbsp;<br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp;
+//&nbsp;Use&nbsp;a&nbsp;block&nbsp;so&nbsp;that&nbsp;the&nbsp;smart&nbsp;pointers&nbsp;are&nbsp;destructed&nbsp;when&nbsp;</span><br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;the&nbsp;scope&nbsp;of&nbsp;this&nbsp;block&nbsp;is&nbsp;exited</span><br>&nbsp;&nbsp;&nbsp;
+	{<br><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;Use&nbsp;ATL&nbsp;smart&nbsp;pointers</span><br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">ISldWorks</span>&gt;&nbsp;&nbsp;pSwApp;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">ICosmosWorks</span>&gt;&nbsp;pCOSMOSWORKS;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">IDispatch</span>&gt;&nbsp;pCOSMOSDispatch;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">ICwAddincallback</span>&gt;&nbsp;pCOSMOSObject;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">IDispatch</span>&gt;&nbsp;pDispatchSafeArray&nbsp;=&nbsp;<span style="color:#6f008a;">NULL</span>;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComPtr</span>&lt;<span style="color:#2b91af;">ISafeArrayUtility</span>&gt;&nbsp;pSwSafeArray&nbsp;=&nbsp;<span style="color:#6f008a;">NULL</span>;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HRESULT</span>&nbsp;hres;<br>&nbsp;<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pSwApp.CoCreateInstance(<span style="color:blue;">__uuidof</span>(<span style="color:#2b91af;">SldWorks</span>),&nbsp;<span style="color:#6f008a;">NULL</span>,&nbsp;<span style="color:darkslategray;">CLSCTX_LOCAL_SERVER</span>)&nbsp;!=&nbsp;<span style="color:#6f008a;">S_OK</span>)&nbsp;{<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return</span>(0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pSwApp.CoCreateInstance(<span style="color:blue;">__uuidof</span>(<span style="color:#2b91af;">ICosmosWorks</span>),&nbsp;<span style="color:#6f008a;">NULL</span>,&nbsp;<span style="color:darkslategray;">CLSCTX_LOCAL_SERVER</span>)&nbsp;!=&nbsp;<span style="color:#6f008a;">S_OK</span>)&nbsp;{<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return</span>(0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pSwApp.CoCreateInstance(<span style="color:blue;">__uuidof</span>(<span style="color:#2b91af;">IDispatch</span>),&nbsp;<span style="color:#6f008a;">NULL</span>,&nbsp;<span style="color:darkslategray;">CLSCTX_LOCAL_SERVER</span>)&nbsp;!=&nbsp;<span style="color:#6f008a;">S_OK</span>)&nbsp;{<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return</span>(0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pSwApp.CoCreateInstance(<span style="color:blue;">__uuidof</span>(<span style="color:#2b91af;">ICwAddincallback</span>),&nbsp;<span style="color:#6f008a;">NULL</span>,&nbsp;<span style="color:darkslategray;">CLSCTX_LOCAL_SERVER</span>)&nbsp;!=&nbsp;<span style="color:#6f008a;">S_OK</span>)&nbsp;{<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return</span>(0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		hres&nbsp;=&nbsp;pSwApp<span style="color:teal;">-&gt;</span>GetSafeArrayUtility(<span style="color:teal;">&amp;</span>pDispatchSafeArray);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		hres&nbsp;=&nbsp;pDispatchSafeArray.QueryInterface&lt;<span style="color:#2b91af;">ISafeArrayUtility</span>&gt;(<span style="color:teal;">&amp;</span>pSwSafeArray);<br>&nbsp;<br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;Determine&nbsp;host&nbsp;SOLIDWORKS&nbsp;major&nbsp;version</span><br>
+<span style="color:#6f008a;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; USES_CONVERSION</span>;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComBSTR</span>&nbsp;bstrNum;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		std::<span style="color:#2b91af;">string</span>&nbsp;strNum;<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char</span>&nbsp;*buffer;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		pSwApp<span style="color:teal;">-&gt;</span><b>RevisionNumber</b>(<span style="color:teal;">&amp;</span>bstrNum);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		strNum&nbsp;<span style="color:teal;">=</span>&nbsp;<span style="color:#6f008a;">W2A</span>(bstrNum);<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long</span>&nbsp;m_swMajNum&nbsp;=&nbsp;strtol(strNum.c_str(),&nbsp;&amp;buffer,&nbsp;10);<br>&nbsp;<br>&nbsp;<br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;Calculate&nbsp;the&nbsp;version-specific&nbsp;ProgID&nbsp;of&nbsp;the&nbsp;Simulation&nbsp;add-in&nbsp;that&nbsp;is&nbsp;compatible&nbsp;with&nbsp;this&nbsp;version&nbsp;of&nbsp;SOLIDWORKS</span><br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long</span>&nbsp;cwVersion;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		cwVersion&nbsp;=&nbsp;m_swMajNum&nbsp;-&nbsp;15;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComBSTR</span>&nbsp;cwProgID;<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComBSTR</span>&nbsp;strVersion;<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wchar_t</span>&nbsp;temp_str[11];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		_itow_s(cwVersion,&nbsp;temp_str,&nbsp;10);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		strVersion&nbsp;<span style="color:teal;">=</span>&nbsp;SysAllocString(temp_str);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		cwProgID&nbsp;<span style="color:teal;">=</span>&nbsp;<span style="color:#6f008a;">OLESTR</span>(<span style="color:#a31515;">&quot;SldWorks.Simulation.&quot;</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		strVersion&nbsp;<span style="color:teal;">=</span>&nbsp;cwProgID.Append(strVersion);<br>&nbsp;<br>&nbsp;<br>
+<span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;Get&nbsp;the&nbsp;SOLIDWORKS&nbsp;Simulation&nbsp;object&nbsp;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		pSwApp<span style="color:teal;">-&gt;</span><b>GetAddInObject</b>(strVersion,&nbsp;<span style="color:teal;">&amp;</span>pCOSMOSDispatch);<br>
+<br><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pCOSMOSDispatch&nbsp;<span style="color:teal;">==</span>&nbsp;<span style="color:#6f008a;">NULL</span>)&nbsp;{<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComBSTR</span>&nbsp;msg;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			msg&nbsp;<span style="color:teal;">=</span>&nbsp;(<span style="color:#6f008a;">OLESTR</span>(<span style="color:#a31515;">&quot;COSMOSObject&nbsp;object&nbsp;not&nbsp;found:&nbsp;&quot;</span>));<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long</span>&nbsp;res;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			pSwApp<span style="color:teal;">-&gt;</span>SendMsgToUser2(msg,&nbsp;0,&nbsp;0,&nbsp;&amp;res);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		hres&nbsp;=&nbsp;pCOSMOSDispatch<span style="color:teal;">-&gt;</span>QueryInterface(<span style="color:blue;">__uuidof</span>(<span style="color:#2b91af;">CwAddincallback</span>),(<span style="color:blue;">void</span>**)<span style="color:teal;">&amp;</span>pCOSMOSObject);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		pCOSMOSObject<span style="color:teal;">-&gt;</span><b>get_CosmosWorks</b>(<span style="color:teal;">&amp;</span>pCOSMOSWORKS);<br>
+<br><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</span>&nbsp;(pCOSMOSWORKS&nbsp;<span style="color:teal;">==</span>&nbsp;<span style="color:#6f008a;">NULL</span>)&nbsp;{<br>
+<span style="color:#2b91af;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CComBSTR</span>&nbsp;msg;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			msg&nbsp;<span style="color:teal;">=</span>&nbsp;(<span style="color:#6f008a;">OLESTR</span>(<span style="color:#a31515;">&quot;COSMOSWORKS&nbsp;object&nbsp;not&nbsp;found:&nbsp;&quot;</span>));<br>
+<span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long</span>&nbsp;res;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			pSwApp<span style="color:teal;">-&gt;</span>SendMsgToUser2(msg,&nbsp;0,&nbsp;0,&nbsp;&amp;res);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;<br><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;Open&nbsp;the&nbsp;active&nbsp;document&nbsp;and&nbsp;use&nbsp;the&nbsp;COSMOSWORKS&nbsp;API</span></p>
+<p class="APICODE">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .</p>
+<p class="APICODE"><br>
+&nbsp;&nbsp;&nbsp; }</p>
+			<p style="font-family: Courier New; font-size: 13; color: black; background: white" class="APICODE">
+			&nbsp;&nbsp;&nbsp;
+			<span style="color:green;">//&nbsp;ATL&nbsp;smart&nbsp;pointers&nbsp;are&nbsp;destructed&nbsp;so&nbsp;that&nbsp;all&nbsp;COM&nbsp;objects&nbsp;</span><br>
+			<span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;held&nbsp;on&nbsp;to&nbsp;are&nbsp;released</span><br>
+			<span style="color:green;">
+			&nbsp;&nbsp;&nbsp;
+			//&nbsp;Shut&nbsp;down&nbsp;COM&nbsp;because&nbsp;you&nbsp;no&nbsp;longer&nbsp;need&nbsp;it</span><br>
+&nbsp;<br>
+			<span style="color:green;">&nbsp;&nbsp;&nbsp; //&nbsp;Stop&nbsp;COM</span><br>
+			&nbsp;&nbsp;&nbsp;
+			CoUninitialize();<br>
+&nbsp;<br>
+			<span style="color:blue;">&nbsp;&nbsp;&nbsp; return</span>(0);</p>
+		</blockquote>
+<p style="font-family: Courier New; font-size: 13; color: black; background: white" class="APICODE">
+		}<br>
+&nbsp;</p>
+	<p>See <a href="Accessing_Objects.htm">Accessing SOLIDWORKS Objects</a>.</p>
+
+</body>
+
+</html>

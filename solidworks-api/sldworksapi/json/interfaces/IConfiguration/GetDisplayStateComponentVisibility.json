@@ -1,0 +1,120 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "GetDisplayStateComponentVisibility",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "DisplayStateName",
+        "type": "System.String",
+        "description": "Name of the display state"
+      },
+      {
+        "name": "Onlyhidden",
+        "type": "System.Boolean",
+        "description": "True to only return visibilities for hidden components, false to return visibilities for all components"
+      },
+      {
+        "name": "ToplevelOnly",
+        "type": "System.Boolean",
+        "description": "True to get the top-level components only, false to get all components"
+      },
+      {
+        "name": "Components",
+        "type": "System.Object",
+        "description": "Array of IComponent2 s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetDisplayStateBodyProperties",
+      "IConfiguration.GetDisplayStateComponentProperties",
+      "IConfiguration.GetDisplayStateFaceProperties",
+      "IConfiguration.GetDisplayStateFeatureProperties",
+      "IConfiguration.GetDisplayStateProperties",
+      "IConfiguration.GetDisplayStates",
+      "IConfiguration.GetDisplayStatesCount"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "getdisplaystatecomponentvisibility",
+      "iconfiguration",
+      "configuration",
+      "state",
+      "component",
+      "visibility",
+      "name",
+      "string",
+      "onlyhidden",
+      "boolean",
+      "toplevel",
+      "only",
+      "components",
+      "object",
+      "visibilities",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IConfiguration.GetDisplayStateComponentVisibility",
+  "description": "Gets the components and their visibilities in the specified display state.",
+  "signature": "System.Object GetDisplayStateComponentVisibility( \n   System.String\nDisplayStateName\n,\n   System.Boolean\nOnlyhidden\n,\n   System.Boolean\nToplevelOnly\n,\n   out System.Object\nComponents\n)",
+  "parameters": [
+    {
+      "name": "DisplayStateName",
+      "type": "System.String",
+      "description": "Name of the display state"
+    },
+    {
+      "name": "Onlyhidden",
+      "type": "System.Boolean",
+      "description": "True to only return visibilities for hidden components, false to return visibilities for all components"
+    },
+    {
+      "name": "ToplevelOnly",
+      "type": "System.Boolean",
+      "description": "True to get the top-level components only, false to get all components"
+    },
+    {
+      "name": "Components",
+      "type": "System.Object",
+      "description": "Array of IComponent2 s"
+    }
+  ],
+  "returns": "Array of longs or integers indicating component visibilities; 1 if visible, 0 if hidden",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Display States and Visibilities of Components (C#)",
+      "href": "Get_Display_State_Names_and_Visibilites_of_Components_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Display States and Visibilities of Components (VB.NET)",
+      "href": "Get_Display_State_Names_and_Visibilites_of_Components_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Display States and Visibilities of Components (VBA)",
+      "href": "Get_Display_State_Names_and_Visibilites_of_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IConfiguration.GetDisplayStateBodyProperties",
+    "IConfiguration.GetDisplayStateComponentProperties",
+    "IConfiguration.GetDisplayStateFaceProperties",
+    "IConfiguration.GetDisplayStateFeatureProperties",
+    "IConfiguration.GetDisplayStateProperties",
+    "IConfiguration.GetDisplayStates",
+    "IConfiguration.GetDisplayStatesCount"
+  ]
+}

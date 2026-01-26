@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICustomPropertyManager",
+    "member": "Get4",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FieldName",
+        "type": "System.String",
+        "description": "Name of the custom property"
+      },
+      {
+        "name": "UseCached",
+        "type": "System.Boolean",
+        "description": "True if the configuration has been activated, false if not (see Remarks )"
+      },
+      {
+        "name": "ValOut",
+        "type": "System.String",
+        "description": "Value of the custom property"
+      },
+      {
+        "name": "ResolvedValOut",
+        "type": "System.String",
+        "description": "Evaluated value of the custom property"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "get4",
+      "icustompropertymanager",
+      "custom",
+      "manager",
+      "field",
+      "name",
+      "string",
+      "use",
+      "cached",
+      "boolean",
+      "val",
+      "out",
+      "resolved",
+      "properties",
+      "referenced",
+      "part",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ICustomPropertyManager.Get4",
+  "description": "Obsolete. Superseded by ICustomPropertyManager::Get5.",
+  "signature": "System.Boolean Get4( \n   System.String\nFieldName\n,\n   System.Boolean\nUseCached\n,\n   out System.String\nValOut\n,\n   out System.String\nResolvedValOut\n)",
+  "parameters": [
+    {
+      "name": "FieldName",
+      "type": "System.String",
+      "description": "Name of the custom property"
+    },
+    {
+      "name": "UseCached",
+      "type": "System.Boolean",
+      "description": "True if the configuration has been activated, false if not (see Remarks )"
+    },
+    {
+      "name": "ValOut",
+      "type": "System.String",
+      "description": "Value of the custom property"
+    },
+    {
+      "name": "ResolvedValOut",
+      "type": "System.String",
+      "description": "Evaluated value of the custom property"
+    }
+  ],
+  "returns": "True if up-to-date data is returned, false if not (see Remarks )",
+  "remarks": "This method can get the cached custom property, even if the configuration is not currently active, without having to change configurations.\nIf UseCached is set to...\nAnd the configuration has already been activated...\nThen...\nTrue\nYes\nUp-to-date data is returned and return value = true\nTrue\nNo\nCached data is returned and return value = false\nFalse\nYes\nUp-to-date data is returned and return value = true\nFalse\nNo\nUp-to-date data is returned and return value = true\nThis method returns configuration-specific, linked, custom-property, evaluated data more quickly than the now obsolete\nICustomPropertyManager::Get2\n, if the configuration was previously activated.\nIf you always want up-to-date data, then you should set UseCached to false. This might result in a more time-consuming call if the configuration was not previously activated.\nThis method does not preface the resolved evaluated values of external referenced documents with\nfromparent+\n, unlike the now obsolete\nICustomPropertyManager::Get3\n.",
+  "examples": [
+    {
+      "title": "Get Custom Properties of Referenced Part (C#)",
+      "href": "Get_Custom_Properties_of_Referenced_Part_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Custom Properties of Referenced Part (VB.NET)",
+      "href": "Get_Custom_Properties_of_Referenced_Part_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Custom Properties of Referenced Part (VBA)",
+      "href": "Get_Custom_Properties_of_Referenced_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMirrorComponentFeatureData",
+    "member": "AlignmentReferences",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [
+      "IMirrorComponentFeatureData.FlipDirections"
+    ],
+    "keywords": [
+      "alignmentreferences",
+      "imirrorcomponentfeaturedata",
+      "mirror",
+      "component",
+      "feature",
+      "data",
+      "alignment",
+      "references",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMirrorComponentFeatureData.AlignmentReferences",
+  "description": "Gets or sets the alignment references for components whose orientation axes align to them.",
+  "signature": "System.Object AlignmentReferences {get; set;}",
+  "parameters": [],
+  "returns": "Array of IEdge , IFace2 , IRefPlane , ISketchSegment (linear)",
+  "remarks": "This property is valid only if\nIMirrorComponentFeatureData::ComponentsToInstanceAlignToSelection\nis not null or Nothing.\nThere is a one-to-one mapping between this property's array and IMirrorComponentFeatureData::ComponentsToInstanceAlignToSelection. If this array contains fewer elements than IMirrorComponentFeatureData::ComponentsToInstanceAlignToSelection, then the feature will fail to be created.",
+  "examples": [
+    {
+      "title": "IMirrorComponentFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMirrorComponentFeatureData.FlipDirections"
+  ]
+}

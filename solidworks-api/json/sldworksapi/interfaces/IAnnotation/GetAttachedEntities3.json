@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetAttachedEntities3",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetNext3",
+      "IAnnotation.ISetAttachedEntities",
+      "IAnnotation.SetAttachedEntities"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "entities",
+      "entity",
+      "ientity",
+      "annotations",
+      "getattachedentities3",
+      "attached",
+      "entities3",
+      "object",
+      "types",
+      "selected",
+      "vba",
+      "vb",
+      "net",
+      "select",
+      "silhouette",
+      "edge",
+      "note",
+      "attach"
+    ]
+  },
+  "title": "IAnnotation.GetAttachedEntities3",
+  "description": "Gets the entities to which this annotation is attached.",
+  "signature": "System.Object GetAttachedEntities3()",
+  "parameters": [],
+  "returns": "Array of objects",
+  "remarks": "This method now supports all annotation types. See\nIAnnotation::GetType\nto determine the type of annotation.\nThe array returned by this function may contain one or more objects of varying type. To determine the corresponding object type in the IAnnotation::GetAttachedEntites3 array, see\nIAnnotation::GetAttachedEntityTypes\nor\nIAnnotation::IGetAttachedEntityTypes\n. COM applications can use QueryInterface to obtain the specific object from the LPUNKNOWN pointer.\nObject Type\nObject Returned\nswSelFACES\nIFace2\nswSelEDGES\nIEdge\nswSelVERTICES\nIVertex\nswSelSKETCHSEGS\nISketchSegment\nswSelSKETCHPOINTS\nISketchPoint\nswSelSilhouettes\nISilhouetteEdge\nswSelNOTHING\nNULL (annotation is dangling or unsupported)\nYou can associate annotations with some items not listed in the previous table (for example, origins). If this annotation is attached to one or more of those entities, then SOLIDWORKS returns a corresponding NULL in one of the array positions and IAnnotation::GetAttachedEntityTypes indicates the unsupported entity by returning a corresponding swSelNOTHING value. COM applications that call\nIAnnotation::GetAttachedEntityCount3\ninclude the NULL value in the total count of associated entities.\nLikewise, if an annotation has become disassociated from its geometry, then SOLIDWORKS returns a corresponding NULL in one of the array positions and\nIAnnotation::GetAttachedEntityTypes\nindicates the dangling item by returning a corresponding swSelNOTHING value.\nIf this annotation is not associated with any geometry (for example, a note without a leaderline), then SOLIDWORKS returns an empty array.",
+  "examples": [
+    {
+      "title": "Get Types of Entities Attached to Selected Annotation (VBA)",
+      "href": "Get_Types_of_Entities_for_Selected_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Types of Entities Attached to Selected Annotation (VB.NET)",
+      "href": "Get_Types_of_Entities_for_Selected_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Types of Entities Attached to Selected Annotation (C#)",
+      "href": "Get_Types_of_Entities_for_Selected_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Silhouette Edge Attached to Note (C#)",
+      "href": "Select_Silhouette_Edge_Attached_to_Note_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Silhouette Edge Attached to Note (VB.NET)",
+      "href": "Select_Silhouette_Edge_Attached_to_Note_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Silhouette Edge Attached to Note (VBA)",
+      "href": "Select_Silhouette_Edge_Attached_to_Note_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation to Entity (C#)",
+      "href": "Attach_Annotation_to_Entity_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation to Entity (VB.NET)",
+      "href": "Attach_Annotation_to_Entity_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Attach Annotation to Entity (VBA)",
+      "href": "Attach_Annotation_to_Entity_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.GetNext3",
+    "IAnnotation.ISetAttachedEntities",
+    "IAnnotation.SetAttachedEntities"
+  ]
+}

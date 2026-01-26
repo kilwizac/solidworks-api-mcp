@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IListAuxiliaryExternalFileReferences",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NumRefs",
+        "type": "System.Int32",
+        "description": "Number of external references"
+      },
+      {
+        "name": "Feature",
+        "type": "System.String",
+        "description": "Array of size NumRefs containing the names of features that include auxiliary external references"
+      },
+      {
+        "name": "ExternalFileName",
+        "type": "System.String",
+        "description": "Array of size NumRefs containing the names of the auxiliary external files"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ListAuxiliaryExternalFileReferences",
+      "IModelDoc2.ListAuxiliaryExternalFileReferencesCount",
+      "IModelDoc2.LockAllExternalReferences",
+      "IModelDocExtension.IListExternalFileReferences",
+      "IModelDocExtension.ListExternalFileReferences"
+    ],
+    "keywords": [
+      "dependent",
+      "documents",
+      "external",
+      "references",
+      "auxiliary",
+      "ilistauxiliaryexternalfilereferences",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "list",
+      "file",
+      "num",
+      "refs",
+      "int32",
+      "feature",
+      "string",
+      "name",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.IListAuxiliaryExternalFileReferences",
+  "description": "Gets the names of auxiliary external file references for this model.",
+  "signature": "void IListAuxiliaryExternalFileReferences( \n   System.Int32\nNumRefs\n,\n   out System.String\nFeature\n,\n   out System.String\nExternalFileName\n)",
+  "parameters": [
+    {
+      "name": "NumRefs",
+      "type": "System.Int32",
+      "description": "Number of external references"
+    },
+    {
+      "name": "Feature",
+      "type": "System.String",
+      "description": "Array of size NumRefs containing the names of features that include auxiliary external references"
+    },
+    {
+      "name": "ExternalFileName",
+      "type": "System.String",
+      "description": "Array of size NumRefs containing the names of the auxiliary external files"
+    }
+  ],
+  "returns": "",
+  "remarks": "Call\nIModelDoc2::ListAuxiliaryExtenalFileReferencesCount\nbefore calling of this method to determine the size of the arrays.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ListAuxiliaryExternalFileReferences",
+    "IModelDoc2.ListAuxiliaryExternalFileReferencesCount",
+    "IModelDoc2.LockAllExternalReferences",
+    "IModelDocExtension.IListExternalFileReferences",
+    "IModelDocExtension.ListExternalFileReferences"
+  ]
+}

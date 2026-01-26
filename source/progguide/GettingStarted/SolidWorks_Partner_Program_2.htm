@@ -1,0 +1,195 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>SOLIDWORKS Partner Program</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=SOLIDWORKS Partners>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=543>
+<meta name=layout-width content=784>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+<style type="text/css">
+.auto-style1 {
+	font-family: Verdana, sans-serif;
+}
+.auto-style2 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style3 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 8pt;
+}
+.auto-style4 {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+}
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>SOLIDWORKS Partner Program</h1>
+
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">As of SOLIDWORKS 2021, SOLIDWORKS Partners must register their 
+products with the SOLIDWORKS Partner Program. The SOLIDWORKS Partner Program team, in turn, 
+provides license keys and a sample add-in that registered SOLIDWORKS Partners 
+can modify to create their add-ins. The sample&nbsp;add-in:</span></p>
+<ul>
+	<li>
+	<p class="APICODE">I<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">mplements both
+	<a href="swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.ISwAddin.html">
+	ISwAddin</a> and
+	<a href="swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.ISwPEManager.html">ISwPEManager</a>.</span></p>
+	</li>
+	<li>
+	<p class="APICODE">E<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">mploys an
+	<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISwPEClassFactory.html">
+	<span style="color:blue">ISwPEClassFactory</span></a>&nbsp;callback object that 
+allows the add-in to transfer a license key to SOLIDWORKS Design for entitlement 
+verification and receive back an
+	<a href="sldworksapi.chm::/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISwPEToken.html">
+	ISwPEToken</a> object. </span></p>
+	</li>
+</ul>
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">License keys provide better quality and security and may be extended in the 
+future to afford SOLIDWORKS Partners special entitlements. </span>
+<o:p></o:p>
+</p>
+<p class="APICODE">
+<span class="auto-style4">SOLIDWORKS Partners can obtain more information from</span><span class="auto-style3"><o:p> 
+the SOLIDWORKS Partner Team by emailing SOLIDWORKS.PartnerProgram@3ds.com.</o:p></span></p>
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">During the load of the partner's add-in, SOLIDWORKS Design uses the partner's license key to verify entitlement and 
+determine how to display the partner's add-in in the&nbsp;<b>Tools &gt; Add-Ins</b> dialog:<o:p></o:p></span></p>
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>Partner Gold Add-ins</strong></span></p>
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>Partner Solution Add-ins</strong></span></p>
+<p class="APICODE">
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;
+<strong>Other Add-ins</strong><o:p> - Unregistered add-ins</o:p></span></p>
+<h4>
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">For SOLIDWORKS Design Desktop...</span></h4>
+<p class="auto-style2">SOLIDWORKS Design lists the registered partner add-in under 
+<strong>Partner Gold Add-ins</strong> or <strong>Partner Solution Add-ins</strong> according to its verified entitlement. If the 
+entitlement type in the license key does not match the current registry value, 
+SOLIDWORKS Design still lists the add-in according to
+<span style="font-size:8.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">the entitlement in the license key. The registry is updated with the 
+entitlement in the license key.<o:p>
+<span style="font-size:8.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p>To see the add-in listed under its proper entitlement, re-open
+<strong>Tools &gt; Add-Ins</strong>.</o:p></span></o:p></span></p>
+<p>
+<o:p>&nbsp;- or -</o:p></p>
+<p class="auto-style1">SOLIDWORKS Design lists the add-in under <strong>Other Add-ins</strong> 
+because:</p>
+<ul>
+	<li>
+	<p>The add-in does not send a license key back to 
+	SOLIDWORKS Design at load time.</p>
+	</li>
+	<li>
+	<p>The add-in does not implement ISwPEManager.</p>
+	</li>
+	<li>
+	<p class="auto-style2">The<span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black"> license key passed its expiration date. </span></p>
+	</li>
+	<li>
+	<p class="APICODE"><span class="auto-style3">One or more license key
+	</span>
+	<span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black"><span class="auto-style3">tokens do not match corresponding values in the registry (add-in 
+	GUID, add-in name, or SOLIDWORKS version).</span></span><span style="font-size:8.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black"> </span></p>
+	</li>
+</ul>
+<h4>
+<span style="font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">For SOLIDWORKS Design Augmented...</span></h4>
+<p class="auto-style2">SOLIDWORKS Design lists the partner add-in under <strong>Partner Gold 
+Add-ins</strong> or <strong>Partner Solution Add-ins</strong> according to its 
+verified entitlement. If the entitlement type in the license key does not match 
+the current registry value, SOLIDWORKS Design still lists the add-in according to
+<span style="font-size:8.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black">the entitlement in the license key. The registry is updated with the 
+entitlement in the license key.<o:p> To see the add-in listed under its proper 
+entitlement, re-open <strong>Tools &gt; Add-ins</strong>.</o:p></span></p>
+<p class="auto-style2">&nbsp;- or -&nbsp;</p>
+<p class="auto-style2">SOLIDWORKS Design lists the add-in under <strong>Other Addin-ins</strong> 
+if the add-in does not implement ISwPEManager or the add-in does not send a 
+license key to SOLIDWORKS Design. In either case, the SOLIDWORKS Partner may be in 
+violation of its partner agreement with SOLIDWORKS.</p>
+<p class="auto-style2">- or -</p>
+<p class="auto-style2">SOLIDWORKS Design lists the add-in under <strong>Other Add-ins</strong> 
+but does not load it (unchecked) because:</p>
+<ul>
+	<li>
+	<p class="APICODE"><span class="auto-style3">The</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black" class="auto-style3"> license key passed its expiration date, or the 
+	license key is not valid for the current release of SOLIDWORKS Design.</span></p>
+	</li>
+	<li>
+	<p class="APICODE"><span class="auto-style3">One or more license key
+	</span>
+	<span style="font-size:8.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black" class="auto-style2">tokens do not match corresponding values in the registry (add-in 
+	GUID, add-in name, or SOLIDWORKS version).</span></p>
+	</li>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+---
+type: property
+interface: IView
+member: CropViewNoOutline
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - drawings
+  - ui
+related:
+  - IView.Crop2
+  - IView.CropViewJaggedOutline
+  - IView.CropViewJaggedShapeIntensity
+keywords:
+  - view
+  - see
+  - also
+  - iview
+  - crop
+  - drawing
+  - views
+  - cropviewnooutline
+  - no
+  - outline
+  - boolean
+  - using
+  - jagged
+  - vb
+  - net
+  - vba
+readonly: null
+---
+
+# IView.CropViewNoOutline
+
+Gets or sets whether to show an outline in this cropped drawing view.
+
+## Signature
+
+```csharp
+System.Boolean CropViewNoOutline {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to not show an outline, false to show an outline
+
+## Remarks
+
+Call
+IView::IsCropped
+to find out if this drawing view is cropped.
+
+## Examples
+
+- Crop Drawing View Using Jagged Outline (C#) (Crop_Drawing_View_Using_Jagged_Outline_Example_CSharp.htm)
+- Crop Drawing View Using Jagged Outline (VB.NET) (Crop_Drawing_View_Using_Jagged_Outline_Example_VBNET.htm)
+- Crop Drawing View Using Jagged Outline (VBA) (Crop_Drawing_View_Using_Jagged_Outline_Example_VB.htm)
+
+## See Also
+
+- `IView.Crop2`
+- `IView.CropViewJaggedOutline`
+- `IView.CropViewJaggedShapeIntensity`

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "IModifyDefinition2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Data",
+        "type": "System.Object",
+        "description": "IUnknown interface to the feature data object; use QueryInterface to get the interface to the actual object"
+      },
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component for the feature (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetDefinition",
+      "IFeature.ModifyDefinition"
+    ],
+    "keywords": [
+      "modify",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "definition",
+      "imodifydefinition2",
+      "definition2",
+      "data",
+      "object",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean"
+    ]
+  },
+  "title": "IFeature.IModifyDefinition2",
+  "description": "Updates the definition of a feature with the new values in an associated feature data object obtained with IFeature::IGetDefinition.",
+  "signature": "System.Boolean IModifyDefinition2( \n   System.Object\nData\n,\n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "Data",
+      "type": "System.Object",
+      "description": "IUnknown interface to the feature data object; use QueryInterface to get the interface to the actual object"
+    },
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component for the feature (see Remarks )"
+    }
+  ],
+  "returns": "True if the feature is updated successfully, false if not",
+  "remarks": "To modify a feature in...\nThen TopDoc argument...\nA part\nIs the\nIModelDoc2\nobject for the part and the Component argument should be Nothing or null\nAn assembly\nShould be the assembly IModelDoc2 object and the Component argument should be the\nIComponent2\nobject in which the feature is to be modified\nWhen you modify a feature in an assembly, this method leaves the assembly in Editing Part mode. You can switch back to editing the assembly by calling\nIAssemblyDoc::EditAssembly\n.",
+  "examples": [],
+  "related": [
+    "IFeature.GetDefinition",
+    "IFeature.ModifyDefinition"
+  ]
+}

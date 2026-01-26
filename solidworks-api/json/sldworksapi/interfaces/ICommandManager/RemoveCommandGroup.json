@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "RemoveCommandGroup",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "User-defined ID for this CommandGroup"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.GetCommandGroup",
+      "ICommandManager.GetGroups",
+      "ICommandManager.IGetGroups",
+      "ICommandManager.NumberOfGroups"
+    ],
+    "keywords": [
+      "removecommandgroup",
+      "icommandmanager",
+      "command",
+      "manager",
+      "remove",
+      "group",
+      "user",
+      "id",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "ICommandManager.RemoveCommandGroup",
+  "description": "Obsolete. Superseded by ICommandManager::RemoveCommandGroup2.",
+  "signature": "System.Boolean RemoveCommandGroup( \n   System.Int32\nUserID\n)",
+  "parameters": [
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "User-defined ID for this CommandGroup"
+    }
+  ],
+  "returns": "True if the CommandGroup is removed, false if not",
+  "remarks": "This method removes CommandGroups created using\nICommandManager::AddContextMenu\nand\nICommandManager::CreateCommandGroup\n.",
+  "examples": [],
+  "related": [
+    "ICommandManager.GetCommandGroup",
+    "ICommandManager.GetGroups",
+    "ICommandManager.IGetGroups",
+    "ICommandManager.NumberOfGroups"
+  ]
+}

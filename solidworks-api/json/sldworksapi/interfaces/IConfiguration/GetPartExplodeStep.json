@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "GetPartExplodeStep",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the explode step (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "parts"
+    ],
+    "related": [
+      "IConfiguration.AddPartExplodeStep",
+      "IConfiguration.DeleteExplodeStep",
+      "IConfiguration.GetCurrentPartExplodeViewName"
+    ],
+    "keywords": [
+      "getpartexplodestep",
+      "iconfiguration",
+      "configuration",
+      "part",
+      "explode",
+      "step",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IConfiguration.GetPartExplodeStep",
+  "description": "Gets the specified explode step of an explode view of a multibody part.",
+  "signature": "System.Object GetPartExplodeStep( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the explode step (see Remarks )"
+    }
+  ],
+  "returns": "IPartExplodeStep",
+  "remarks": "This method is valid only for the active configuration.\nBefore calling this method, call\nIPartDoc::ShowExploded\nto activate the explode view of interest.\nTo specify Index, call\nIConfiguration::GetNumberOfPartExplodeSteps\nto get the number of explode steps in the explode view.",
+  "examples": [],
+  "related": [
+    "IConfiguration.AddPartExplodeStep",
+    "IConfiguration.DeleteExplodeStep",
+    "IConfiguration.GetCurrentPartExplodeViewName"
+  ]
+}

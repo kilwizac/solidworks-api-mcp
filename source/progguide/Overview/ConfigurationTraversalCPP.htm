@@ -1,0 +1,169 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Get Names of Configurations Using Variant Example (C++)</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="C++ examples,configurations">
+<meta name=MS-HKWD content="C++ examples">
+<meta name=MS-HKWD content="C++ examples,ISafeArrayUtility">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1131>
+<meta name=layout-width content=846>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="./ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Get Names of Configurations Using Variant Example (C++)</h1>
+
+<p class=CodePlain><font face="Verdana">This example shows how to:</font></p>
+<ul>
+	<li>
+	<p class=CodePlain><font face="Verdana">get the names of the configurations in the 
+	active model. </font></p></li>
+	<li>
+	<p class=CodePlain><font face="Verdana">pass a Variant to IModelDoc2::GetConfigurationNames.</font></p>
+	</li>
+	<li>
+	<p class=CodePlain><font face="Verdana">use the ISafeArrayUtility interface 
+	to get the names of the configurations.</font></p>
+	</li>
+</ul>
+<pre style="font-family: Consolas; font-size: 13; color: black; background: white"><span style="color:green;">//-------------------------------------------------------</span>
+<span style="color:green;">//&nbsp;Preconditions:&nbsp;</span>
+<span style="color:green;">//&nbsp;1.&nbsp;Start&nbsp;up&nbsp;SOLIDWORKS&nbsp;and&nbsp;open&nbsp;a&nbsp;part&nbsp;or&nbsp;assembly&nbsp;document.</span>
+<span style="color:green;">//&nbsp;2.&nbsp;Start&nbsp;Microsoft&nbsp;Visual&nbsp;Studio&nbsp;2010.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;a.&nbsp;Click&nbsp;<b>File&nbsp;&gt;&nbsp;New&nbsp;&gt;&nbsp;Project&nbsp;&gt;&nbsp;Visual&nbsp;C++&nbsp;&gt;&nbsp;Win32&nbsp;Console&nbsp;Application</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;b.&nbsp;Type&nbsp;the&nbsp;name&nbsp;of&nbsp;your&nbsp;project&nbsp;in&nbsp;<b>Name</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;c.&nbsp;Click&nbsp;<b>OK</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;d.&nbsp;Click&nbsp;<b>Next</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;e.&nbsp;Select&nbsp;<b>ATL</b>&nbsp;and&nbsp;click&nbsp;<b>Finish</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;f.&nbsp;Click&nbsp;<b>Project&nbsp;&gt;&nbsp;Properties&nbsp;&gt;&nbsp;Configuration&nbsp;Properties&nbsp;&gt;&nbsp;</b></span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C/C++&nbsp;</b>and&nbsp;type&nbsp;the path&nbsp;to&nbsp;<b>sldworks.tlb</b>&nbsp;and&nbsp;<b>swconst.tlb</b>,&nbsp;
+//       typically&nbsp;<b>C:\Program&nbsp;Files\SOLIDWORKS&nbsp;Corp\SOLIDWORKS</b>, in
+//       </span><span style="color:green;"><b>Additional&nbsp;Include&nbsp;Directories</b>.</span>
+<span style="color:green;">//&nbsp;&nbsp;&nbsp;&nbsp;g.&nbsp;Click&nbsp;<b>OK</b>.</span>
+<span style="color:green;">//&nbsp;3.&nbsp;Replace&nbsp;the&nbsp;code&nbsp;in&nbsp;the&nbsp;code&nbsp;window&nbsp;with&nbsp;<a href="#ThisCode">this&nbsp;code</a>.</span>
+<span style="color:green;">//&nbsp;4.&nbsp;Click&nbsp;<b>Debug&nbsp;&gt;&nbsp;Start&nbsp;Debugging</b>.&nbsp;</span>
+<span style="color:green;">//&nbsp;5.&nbsp;Click&nbsp;<b>Yes</b>.</span>
+<span style="color:green;">//</span>
+<span style="color:green;">//&nbsp;Postconditions:&nbsp;</span>
+<span style="color:green;">//&nbsp;1.&nbsp;Pops&nbsp;up&nbsp;a&nbsp;message&nbsp;box&nbsp;for each configuration in the active
+//    model, containing the name of that configuration.</span>
+<span style="color:green;">//&nbsp;2.&nbsp;Click&nbsp;<b>OK</b>&nbsp;to&nbsp;close&nbsp;each&nbsp;message&nbsp;box.</span>
+<span style="color:green;">//--------------------------------------------------------</span>
+&nbsp;
+<font color="#008000"><a name="ThisCode"></a>//This code</font> 
+<span style="color:blue;">#include</span>&nbsp;<span style="color:#a31515;">&quot;stdafx.h&quot;</span>&nbsp;
+<span style="color:blue;">#import</span>&nbsp;<span style="color:#a31515;">&quot;sldworks.tlb&quot;</span>&nbsp;raw_interfaces_only,&nbsp;raw_native_types,&nbsp;no_namespace,&nbsp;named_guids&nbsp;&nbsp;<span style="color:green;">//&nbsp;SOLIDWORKS&nbsp;type&nbsp;library</span>
+<span style="color:blue;">#import</span>&nbsp;<span style="color:#a31515;">&quot;swconst.tlb&quot;</span>&nbsp;raw_interfaces_only,&nbsp;raw_native_types,&nbsp;no_namespace,&nbsp;named_guids&nbsp;&nbsp;&nbsp;<span style="color:green;">//&nbsp;SOLIDWORKS&nbsp;constants&nbsp;type&nbsp;library</span>
+&nbsp;
+ 
+<span style="color:blue;">int</span>&nbsp;_tmain(<span style="color:blue;">int</span>&nbsp;argc,&nbsp;_TCHAR*&nbsp;argv[])
+{
+	<span style="color:green;">//&nbsp;Initialize&nbsp;COM</span>
+	<span style="color:green;">//&nbsp;Do&nbsp;this&nbsp;before&nbsp;using&nbsp;ATL&nbsp;smart&nbsp;pointers&nbsp;so&nbsp;that&nbsp;</span>
+	<span style="color:green;">//&nbsp;COM&nbsp;is&nbsp;available</span>
+	CoInitialize(NULL);&nbsp;
+ 
+	<span style="color:green;">//&nbsp;Use&nbsp;a&nbsp;block&nbsp;so&nbsp;that&nbsp;the&nbsp;smart&nbsp;pointers&nbsp;are&nbsp;destructed&nbsp;when&nbsp;</span>
+	<span style="color:green;">//&nbsp;the&nbsp;scope&nbsp;of&nbsp;this&nbsp;block&nbsp;is&nbsp;exited</span>
+	{
+		<span style="color:green;">//&nbsp;Use&nbsp;ATL&nbsp;smart&nbsp;pointers</span>
+		CComPtr&lt;ISldWorks&gt;&nbsp; pSwApp;&nbsp;
+ 
+		<span style="color:blue;">if</span>(pSwApp.CoCreateInstance(<span style="color:blue;">__uuidof</span>(SldWorks),&nbsp;NULL,&nbsp;CLSCTX_LOCAL_SERVER)&nbsp;!=&nbsp;S_OK)&nbsp;{
+			<span style="color:blue;">return</span>(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}&nbsp;
+ 
+		pSwApp-&gt;<b>put_UserControl</b>(VARIANT_TRUE);
+		pSwApp-&gt;<b>put_Visible</b>(VARIANT_TRUE);&nbsp;
+ 
+		CComPtr&lt;IModelDoc2&gt;&nbsp;&nbsp;pSwModel;
+		pSwApp-&gt;<b>get_IActiveDoc2</b>(&amp;pSwModel);&nbsp;
+ 
+		<span style="color:blue;">if</span>&nbsp;(!&nbsp;pSwModel)&nbsp;{
+			<span style="color:blue;">return</span>(0);
+		}&nbsp;
+ 
+		CComBSTR&nbsp;strModelTitle;
+		<span style="color:blue;">long</span>&nbsp;nDocumentType;&nbsp;&nbsp;<span style="color:green;">//&nbsp;swDocumentTypes_e&nbsp;</span>
+ 
+		pSwModel-&gt;<b>GetTitle</b>(&amp;strModelTitle);
+		pSwModel-&gt;<b>GetType</b>(&amp;nDocumentType);&nbsp;
+ 
+		VARIANT&nbsp;&nbsp;vConfigurationNames;&nbsp;
+		::VariantInit(&amp;vConfigurationNames);
+ 
+		<span style="color:green;">//&nbsp;Get the names of the configurations in the active model
+                  // NOTE: This&nbsp;is&nbsp;an&nbsp;out-of-process&nbsp;client,&nbsp;so&nbsp;you&nbsp;cannot&nbsp;
+                  // use&nbsp;ModelDoc2::IGetConfigurationNames</span>
+		pSwModel-&gt;<b>GetConfigurationNames</b>(&amp;vConfigurationNames);&nbsp;
+		
+		CComPtr&lt;IDispatch&gt;&nbsp;pDispatchSafeArray&nbsp;=&nbsp;NULL;
+		CComPtr&lt;ISafeArrayUtility&gt;&nbsp;pSwSafeArray&nbsp;=&nbsp;NULL;
+		HRESULT&nbsp;hres;
+		hres&nbsp;=&nbsp;pSwApp-&gt;<b>GetSafeArrayUtility</b>(&amp;pDispatchSafeArray);
+		hres&nbsp;=&nbsp;pDispatchSafeArray.QueryInterface&lt;ISafeArrayUtility&gt;(&amp;pSwSafeArray);
+ 
+		<span style="color:blue;">long</span>&nbsp;saCount&nbsp;=&nbsp;0;
+		<span style="color:blue;">long</span>&nbsp;saType&nbsp;=&nbsp;0;
+		<span style="color:blue;">long</span>*&nbsp;visible&nbsp;=&nbsp;0;
+ 
+		<span style="color:blue;">long</span>&nbsp;nbrConfigs&nbsp;=&nbsp;0;
+		pSwModel-&gt;<b>GetConfigurationCount</b>(&amp;nbrConfigs);
+ 
+		<span style="color:green;">//Get the name of each configuration</span>
+		<span style="color:blue;">for</span>&nbsp;(<span style="color:blue;">long</span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;nbrConfigs;&nbsp;i++)&nbsp;{
+			BSTR&nbsp;configurationName;
+			pSwSafeArray-&gt;<b>GetBstr</b>(vConfigurationNames,&nbsp;i,&nbsp;&amp;configurationName);
+			CComBSTR&nbsp;msg;
+			msg&nbsp;=&nbsp;(OLESTR(<span style="color:#a31515;">&quot;Name&nbsp;of&nbsp;configuration:&nbsp;&quot;</span>));
+			msg.Append(configurationName);
+			<span style="color:blue;">long</span>&nbsp;res;
+			pSwApp-&gt;<b>SendMsgToUser2</b>(msg,&nbsp;0,0,&nbsp;&amp;res);
+		}
+&nbsp;
+ 
+	}&nbsp;
+	<span style="color:green;">//&nbsp;ATL&nbsp;smart&nbsp;pointers&nbsp;are&nbsp;destructed&nbsp;so&nbsp;that&nbsp;all&nbsp;COM&nbsp;objects&nbsp;</span>
+	<span style="color:green;">//&nbsp;held&nbsp;on&nbsp;to&nbsp;are&nbsp;released</span>
+	<span style="color:green;">//&nbsp;Shut&nbsp;down&nbsp;COM&nbsp;because&nbsp;you&nbsp;no&nbsp;longer&nbsp;need&nbsp;it</span>
+ 
+	<span style="color:green;">//&nbsp;Stop&nbsp;COM</span>
+	CoUninitialize();&nbsp;
+ 
+	<span style="color:blue;">return</span>(0);
+}</pre>
+
+</body>
+
+</html>

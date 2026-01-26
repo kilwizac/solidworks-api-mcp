@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetBox",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IAssemblyDoc.GetBox",
+      "IAssemblyDoc.IGetBox",
+      "IBody2.GetBodyBox",
+      "IBody2.IGetBodyBox",
+      "IComponent2.GetBox",
+      "IComponent2.IGetBox",
+      "IFace2.IGetBox",
+      "IFeature.GetBox",
+      "IFeature.IGetBox",
+      "IModelDocExtension.GetVisibleBox",
+      "IModelDocExtension.RemoveVisibleBox",
+      "IModelDocExtension.SetVisibleBox"
+    ],
+    "keywords": [
+      "bounding",
+      "box",
+      "faces",
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "getbox",
+      "face2",
+      "object",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFace2.GetBox",
+  "description": "Gets the box boundaries for this face.",
+  "signature": "System.Object GetBox()",
+  "parameters": [],
+  "returns": "Object containing the two diagonal points that bound the component; an array of 6 doubles",
+  "remarks": "IMPORTANT:\nThe values returned are approximate and should not be used for comparison or calculation purposes. Furthermore, the bounding box may vary after rebuilding the model.\nThe resulting box encloses the object, but it might not be the tightest box.\nThis method returns X,Y,Z points that are the lower and upper diagonal corners that bound the face with the box sides parallel to the X, Y and Z axes. The box dimensions enclose the face and are typically close to the minimum possible size, but this is not guaranteed.\nThe return value is an array of doubles as follows:\n[\nXCorner1, YCorner1, ZCorner1, XCorner2, YCorner2, ZCorner2\n]",
+  "examples": [
+    {
+      "title": "Get Bounding Box (C#)",
+      "href": "Get_Bounding_Box_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Bounding Box (VB.NET)",
+      "href": "Get_Bounding_Box_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Bounding Box (VBA)",
+      "href": "Get_Bounding_Box_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetBox",
+    "IAssemblyDoc.IGetBox",
+    "IBody2.GetBodyBox",
+    "IBody2.IGetBodyBox",
+    "IComponent2.GetBox",
+    "IComponent2.IGetBox",
+    "IFace2.IGetBox",
+    "IFeature.GetBox",
+    "IFeature.IGetBox",
+    "IModelDocExtension.GetVisibleBox",
+    "IModelDocExtension.RemoveVisibleBox",
+    "IModelDocExtension.SetVisibleBox"
+  ]
+}

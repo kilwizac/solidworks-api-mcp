@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "CreateMate",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "MateData",
+        "type": "System.Object",
+        "description": "Mate-specific object (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AutoMateRepair"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "mates",
+      "createmate",
+      "assembly",
+      "doc",
+      "create",
+      "mate",
+      "data",
+      "object"
+    ]
+  },
+  "title": "IAssemblyDoc.CreateMate",
+  "description": "Creates a mate with the specified feature data object.",
+  "signature": "System.Object CreateMate( \n   System.Object\nMateData\n)",
+  "parameters": [
+    {
+      "name": "MateData",
+      "type": "System.Object",
+      "description": "Mate-specific object (see Remarks )"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "IMateFeatureData\nis the base interface for the following mate-specific interfaces (an asterisk indicates that pre-selection of mate entities during mate creation is supported):\nIAngleMateFeatureData\nICamFollowerMateFeatureData\n*\nICoincidentMateFeatureData\n*\nIConcentricMateFeatureData\n*\nIDistanceMateFeatureData\nIGearMateFeatureData\n*\nIHingeMateFeatureData\n*\nILinearCouplerMateFeatureData\nILockMateFeatureData\n*\nIParallelMateFeatureData\n*\nIPerpendicularMateFeatureData\n*\nIProfileCenterMateFeatureData\nIRackPinionMateFeatureData\n*\nIScrewMateFeatureData\n*\nISlotMateFeatureData\n*\nISymmetricMateFeatureData\nITangentMateFeatureData\n*\nIUniversalJointMateFeatureData\n*\nIWidthMateFeatureData\nTo create a standard, advanced, or mechanical mate:\nUse\nIAssemblyDoc::CreateMateData\nto access a MateFeatureData object.\nSet the general properties of the MateFeatureData object.\nCast the MateFeatureData object to one of the mate-specific objects.\nFollow specific instructions in the Remarks of the mate-specific interface, set specific properties of the mate-specific object, and/or pre-select entities to mate for asterisked interfaces above.\nCall this method, passing in the mate-specific object.\nTo create:\nMisaligned concentric mates, use\nIAssemblyDoc::AddConcentricMateWithTolerance\n.\nCylindrical distance mates, use\nIAssemblyDoc::AddDistanceMate\n.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.AutoMateRepair"
+  ]
+}

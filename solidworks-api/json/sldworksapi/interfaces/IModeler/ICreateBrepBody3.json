@@ -1,0 +1,251 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateBrepBody3",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of body to create as defined in swTopology_e"
+      },
+      {
+        "name": "NTopologies",
+        "type": "System.Int32",
+        "description": "Number of topological entities in the topologies argument"
+      },
+      {
+        "name": "Topologies",
+        "type": "System.Int32",
+        "description": "Array of topologies (see swTopoEntity_e ), one for each topological entity"
+      },
+      {
+        "name": "EdgeTolArray",
+        "type": "System.Double",
+        "description": "Array of tolerances for edges"
+      },
+      {
+        "name": "VertexTolArray",
+        "type": "System.Double",
+        "description": "Array of tolerances for vertices"
+      },
+      {
+        "name": "PointArray",
+        "type": "System.Double",
+        "description": "Array of coordinates of vertices (geometry for vertices)"
+      },
+      {
+        "name": "CurveArra1",
+        "type": "Curve",
+        "description": "Array of curves (geometry for edges; 3D curve) and coedges (geometry for coedges; 2D curve)"
+      },
+      {
+        "name": "CurveSurfaceArray1",
+        "type": "Surface",
+        "description": "Array of surfaces that lie on CurveArra1 2D curve"
+      },
+      {
+        "name": "CurveArray2",
+        "type": "Curve",
+        "description": "Array of curves (geometry for edges; 3D curve) and array of coedges (geometry for coedges; 2D curve)"
+      },
+      {
+        "name": "CurveSurfaceArray2",
+        "type": "Surface",
+        "description": "Array of surfaces that on lie on CurveArray2 2D curve"
+      },
+      {
+        "name": "SurfaceArray",
+        "type": "Surface",
+        "description": "Array of surfaces (geometry for faces)"
+      },
+      {
+        "name": "NRelations",
+        "type": "System.Int32",
+        "description": "Number of 1-to-1 relationships between topological entities"
+      },
+      {
+        "name": "Parents",
+        "type": "System.Int32",
+        "description": "Array of parents, one in each relationship"
+      },
+      {
+        "name": "Children",
+        "type": "System.Int32",
+        "description": "Array of children, one in each relationship"
+      },
+      {
+        "name": "Senses",
+        "type": "System.Int32",
+        "description": "Array of senses in which child is used by parent in the relationship"
+      },
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "0 = Default 1 = Repair and simplify body 2 = Simplify body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "brep",
+      "icreatebrepbody3",
+      "imodeler",
+      "modeler",
+      "create",
+      "body3",
+      "type",
+      "int32",
+      "topologies",
+      "edge",
+      "tol",
+      "array",
+      "double",
+      "vertex",
+      "point",
+      "curve",
+      "arra1",
+      "surface",
+      "array1",
+      "array2",
+      "relations",
+      "parents",
+      "children",
+      "senses",
+      "option",
+      "body2"
+    ]
+  },
+  "title": "IModeler.ICreateBrepBody3",
+  "description": "Creates a temporary body from BREP (boundary representation) data.",
+  "signature": "Body2 ICreateBrepBody3( \n   System.Int32\nType\n,\n   System.Int32\nNTopologies\n,\n   ref System.Int32\nTopologies\n,\n   ref System.Double\nEdgeTolArray\n,\n   ref System.Double\nVertexTolArray\n,\n   ref System.Double\nPointArray\n,\n   ref Curve\nCurveArra1\n,\n   ref Surface\nCurveSurfaceArray1\n,\n   ref Curve\nCurveArray2\n,\n   ref Surface\nCurveSurfaceArray2\n,\n   ref Surface\nSurfaceArray\n,\n   System.Int32\nNRelations\n,\n   ref System.Int32\nParents\n,\n   ref System.Int32\nChildren\n,\n   ref System.Int32\nSenses\n,\n   System.Int32\nOption\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of body to create as defined in swTopology_e"
+    },
+    {
+      "name": "NTopologies",
+      "type": "System.Int32",
+      "description": "Number of topological entities in the topologies argument"
+    },
+    {
+      "name": "Topologies",
+      "type": "System.Int32",
+      "description": "Array of topologies (see swTopoEntity_e ), one for each topological entity"
+    },
+    {
+      "name": "EdgeTolArray",
+      "type": "System.Double",
+      "description": "Array of tolerances for edges"
+    },
+    {
+      "name": "VertexTolArray",
+      "type": "System.Double",
+      "description": "Array of tolerances for vertices"
+    },
+    {
+      "name": "PointArray",
+      "type": "System.Double",
+      "description": "Array of coordinates of vertices (geometry for vertices)"
+    },
+    {
+      "name": "CurveArra1",
+      "type": "Curve",
+      "description": "Array of curves (geometry for edges; 3D curve) and coedges (geometry for coedges; 2D curve)"
+    },
+    {
+      "name": "CurveSurfaceArray1",
+      "type": "Surface",
+      "description": "Array of surfaces that lie on CurveArra1 2D curve"
+    },
+    {
+      "name": "CurveArray2",
+      "type": "Curve",
+      "description": "Array of curves (geometry for edges; 3D curve) and array of coedges (geometry for coedges; 2D curve)"
+    },
+    {
+      "name": "CurveSurfaceArray2",
+      "type": "Surface",
+      "description": "Array of surfaces that on lie on CurveArray2 2D curve"
+    },
+    {
+      "name": "SurfaceArray",
+      "type": "Surface",
+      "description": "Array of surfaces (geometry for faces)"
+    },
+    {
+      "name": "NRelations",
+      "type": "System.Int32",
+      "description": "Number of 1-to-1 relationships between topological entities"
+    },
+    {
+      "name": "Parents",
+      "type": "System.Int32",
+      "description": "Array of parents, one in each relationship"
+    },
+    {
+      "name": "Children",
+      "type": "System.Int32",
+      "description": "Array of children, one in each relationship"
+    },
+    {
+      "name": "Senses",
+      "type": "System.Int32",
+      "description": "Array of senses in which child is used by parent in the relationship"
+    },
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "0 = Default 1 = Repair and simplify body 2 = Simplify body"
+    }
+  ],
+  "returns": "Body",
+  "remarks": "The CurveArray1 and CurveArray2 must be paired with CurveSurfaceArray1 and CurveSurfaceArray2, respectively. Order is not important. The 2D curve has to be created in the direction of the loop.\nIf non-negative values are packed into the EdgeToleranceArray and VertexToleranceArray arrays, then tolerances are applied to the corresponding edges or vertices. These arrays should be the same size as CurveArray1 and PointArray, respectively. Otherwise, a default value of 1.0e-8 (modeler precision) is used.\nNOTE\n:\nIModeler::SetInitKnitGapWidth\ndoes not affect this method.\nUseful methods for creating geometry for the topological entities are:\nIBody2::CreatePlanarSurface\nor\nIBody2::ICreatePlanarSurface\nIBody2::AddProfileArc\nor\nIBody2::IAddProfileArc\nIBody2::AddProfileLine\nor\nIBody2::IAddProfileLine\nIBody2::CreateRevolutionSurface\nor\nIBody2::ICreateRevolutionSurface\nFor example, to create a cone, find topological relationships and form relevant arrays. A\ncomplete solid cone consists of 8 topological entities:\n1 shell\n2 faces\n3 loops\n1 edge\n1 vertex\nThere are 8 relations:\nthe shell is the parent of 2 faces - 2\nthe planar end face has 1 loop - 1\nthe conical face has 2 loops - 2\ntwo loops are each the parent of 1 edge - 2\none loop is the parent of 1 vertex 1\nThe topologies array:\nIndex\nValue\n0\nswTopoShell\n1\nswTopoFace\n2\nswTopoFace\n3\nswTopoLoop\n4\nswTopoEdge\n5\nswTopoLoop\n6\nswTopoLoop\n7\nswTopoVertex\nThe set of arrays:\nindex\nparents\nchildren\nsenses\nrelation\n0\n0\n1\n0\nshell to face\n1\n0\n2\n0\nshell to face\n2\n1\n3\n0\nface to loop\n3\n3\n4\n-1\nloop to edge\n4\n2\n5\n0\nface to loop\n5\n2\n6\n0\nface to loop\n6\n5\n4\n1\nloop to edge\n7\n6\n7\n0\nloop to vertex\nValues in the parents and children arrays correspond to the indices of the topology array.\nEach face or edge created by\nIModeler::CreateBrepBody3\nor IModeler::ICreateBrepBody3 has an associated integer ID that is the same as the index to the input topologies. Use\nIFace2::GetFaceId\nor\nIEdge::GetId\nto get the associated integer ID.\nEvery shell should be a closed shell. Sheet bodies should have additional back faces to form a closed shell. When creating a sheet body, these extra back faces are retained in the result and should be removed using\nIModeler::DeleteFacesFromSheetBody\nor\nIModeler::IDeleteFacesFromSheetBody\n.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateWireBody"
+  ]
+}

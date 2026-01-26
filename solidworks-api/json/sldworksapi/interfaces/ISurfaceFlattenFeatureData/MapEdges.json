@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISurfaceFlattenFeatureData",
+    "member": "MapEdges",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "ISurfaceFlattenFeatureData.TearEdges"
+    ],
+    "keywords": [
+      "mapedges",
+      "isurfaceflattenfeaturedata",
+      "surface",
+      "flatten",
+      "feature",
+      "data",
+      "map",
+      "edges",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ISurfaceFlattenFeatureData.MapEdges",
+  "description": "Gets or sets the map edges for this surface-flatten feature.",
+  "signature": "System.Object MapEdges {get; set;}",
+  "parameters": [],
+  "returns": "Array of entities that lie on the selected faces or surfaces to flatten (see Remarks )",
+  "remarks": "Map edges:\nare entities to map to the flattened surface. By default, any entity that lies on top of a face or surface to flatten is ignored unless the user selects the entity as a map edge.\nare useful when users want to see where a selected entity on the original body would lie on a flattened surface. For example, users might select edges as map lines to serve as bend lines in the flattened surface.\ncan be any of these types of selected entities:\nedges,\nreference curves,\n2D/3D splines,\nsketches, and\nsketch text.\nThe SOLIDWORKS API returns\nedges\nfor the entities selected for the map edges in a surface-flatten feature.",
+  "examples": [],
+  "related": [
+    "ISurfaceFlattenFeatureData.TearEdges"
+  ]
+}

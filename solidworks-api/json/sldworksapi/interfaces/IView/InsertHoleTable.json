@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertHoleTable",
+    "returns": "HoleTableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "If True and the appropriate sheet format anchor point exists, then insert table at this point; if false, then use the values specified for the X and Y arguments as the insertion point"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate for the placement of this hole table"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate for the placement of this hole table"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and filename of the template that you want to use that corresponds to this type of table (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "insertholetable",
+      "iview",
+      "view",
+      "insert",
+      "hole",
+      "table",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "template",
+      "string",
+      "annotation"
+    ]
+  },
+  "title": "IView.InsertHoleTable",
+  "description": "Obsolete. Superseded by IView::InsertHoleTable2.",
+  "signature": "HoleTableAnnotation InsertHoleTable( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nTableTemplate\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "If True and the appropriate sheet format anchor point exists, then insert table at this point; if false, then use the values specified for the X and Y arguments as the insertion point"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate for the placement of this hole table"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate for the placement of this hole table"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and filename of the template that you want to use that corresponds to this type of table (see Remarks )"
+    }
+  ],
+  "returns": "Hole table annotation",
+  "remarks": "This method requires ordered preselection of various entities:\ndatum = 1\nhole = 2\nx axis = 4\ny axis = 8\nSee\nIModelDocExtension::SelectByID2\nfor details.\nBy default, the hole table templates are in the <\ninstall_dir\n>\\\nlang\n\\<\nlanguage\n> folder and have a filename extension of\n.sldholtbt\n. The template and table must be of the same type. For example, you could specify\nC:\\Program Files\\SOLIDWORKS\\lang\\English\\standard hole table--letters.sldholetbt\nfor TableTemplate if you wanted to insert an English-version of the standard hole letters table template.",
+  "examples": [],
+  "related": []
+}

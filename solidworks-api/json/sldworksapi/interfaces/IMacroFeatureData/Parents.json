@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMacroFeatureData",
+    "member": "Parents",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.GetParentsCount"
+    ],
+    "keywords": [
+      "parents",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMacroFeatureData.Parents",
+  "description": "Gets or sets the parent features for this macro feature.",
+  "signature": "System.Object Parents {get; set;}",
+  "parameters": [],
+  "returns": "Array of parent features for this macro feature",
+  "remarks": "Parent features set by this property are not persistent when the macro feature is regenerated. Reset the parent features in the\nSwComFeature::Regenerate\nhandler.\nTo get the parent features...\nUse...\nassigned to a macro feature by IMacroFeatureData::Parents or IMacroFeatureData::ISetParents\nIMacroFeatureData::Parents or\nIMacroFeatureData::IGetParents\n- or-\nIFeature::GetParents\nor\nIFeature::IGetParents\nof a macro feature created by first selecting objects and then calling\nIFeatureManager::InsertMacroFeature3\nor\nIFeatureManager::IInsertMacroFeature3\nIMacroFeatureData::GetSelections3\nor\nIMacroFeatureData::IGetSelections3\n- or -\nIFeature::GetParents or IFeature::IGetParents\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetParentsCount"
+  ]
+}

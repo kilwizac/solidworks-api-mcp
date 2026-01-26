@@ -1,0 +1,100 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertTableDrivenPattern2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of the file that has the coordinates for the table-driven pattern; can be an empty string (see Remarks )"
+      },
+      {
+        "name": "PointVar",
+        "type": "System.Object",
+        "description": "Array of x, y coordinates of the points for the table-driven pattern (see Remarks )"
+      },
+      {
+        "name": "UseCentroid",
+        "type": "System.Boolean",
+        "description": "True to use the centroid of the seed feature, face, or body; false to use a different point as the reference point (see Remarks )"
+      },
+      {
+        "name": "GeomPattern",
+        "type": "System.Boolean",
+        "description": "True to pattern the geometry, false to not"
+      },
+      {
+        "name": "PropVisProps",
+        "type": "System.Boolean",
+        "description": "True to propagate visual properties, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "inserttabledrivenpattern2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "table",
+      "driven",
+      "pattern2",
+      "file",
+      "name",
+      "string",
+      "point",
+      "var",
+      "object",
+      "use",
+      "centroid",
+      "boolean",
+      "geom",
+      "pattern",
+      "prop",
+      "vis",
+      "props"
+    ]
+  },
+  "title": "IFeatureManager.InsertTableDrivenPattern2",
+  "description": "Obsolete. See IFeatureManager::CreateFeature and the Remarks in ITablePatternFeatureData.",
+  "signature": "Feature InsertTableDrivenPattern2( \n   System.String\nFileName\n,\n   System.Object\nPointVar\n,\n   System.Boolean\nUseCentroid\n,\n   System.Boolean\nGeomPattern\n,\n   System.Boolean\nPropVisProps\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of the file that has the coordinates for the table-driven pattern; can be an empty string (see Remarks )"
+    },
+    {
+      "name": "PointVar",
+      "type": "System.Object",
+      "description": "Array of x, y coordinates of the points for the table-driven pattern (see Remarks )"
+    },
+    {
+      "name": "UseCentroid",
+      "type": "System.Boolean",
+      "description": "True to use the centroid of the seed feature, face, or body; false to use a different point as the reference point (see Remarks )"
+    },
+    {
+      "name": "GeomPattern",
+      "type": "System.Boolean",
+      "description": "True to pattern the geometry, false to not"
+    },
+    {
+      "name": "PropVisProps",
+      "type": "System.Boolean",
+      "description": "True to propagate visual properties, false to not"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Specify:\ncoordinates for the input points in system units in a\n.sldptab\nor\n.txt\nfile for FileName.\n- or -\ninput points in system units in PointVar. Because each point has two coordinates (x, y), the size of PointVar is (2 x number_of_points).\nThis method requires selecting the input entities using these selection marks:\nInput entity\nMark\nSeed feature\n4\nCoordinate system\n16\nReference point\n32\nSeed face\n128\nSeed body\n256\nIf UseCentroid is false, then you must specify a reference point.\nSee the SOLIDWORKS Help for more information about table-driven patterns.",
+  "examples": [],
+  "related": []
+}

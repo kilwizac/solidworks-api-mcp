@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSMCommandStatus_e",
+    "description": "Return conditions for various sheet metal APIs that attempt to do set operations.",
+    "member_count": 5,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSMCommandStatus_e",
+  "description": "Return conditions for various sheet metal APIs that attempt to do set operations.",
+  "values": [
+    {
+      "member": "swSMErrorInvalidBendState",
+      "value": "4",
+      "description": "= Failed, an invalid bend state was specified"
+    },
+    {
+      "member": "swSMErrorNone",
+      "value": "0",
+      "description": "= Successful, operation completed"
+    },
+    {
+      "member": "swSMErrorNotAPart",
+      "value": "2",
+      "description": "= Failed, sheet metal commands only apply to SOLIDWORKS parts"
+    },
+    {
+      "member": "swSMErrorNotASheetMetalPart",
+      "value": "3",
+      "description": "= Failed, the part contains no sheet metal features"
+    },
+    {
+      "member": "swSMErrorUnknown",
+      "value": "1",
+      "description": "= Failed, for an unknown reason"
+    }
+  ]
+}

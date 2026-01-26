@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "PresentationTransform",
+    "returns": "MathTransform",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetSpecificTransform"
+    ],
+    "keywords": [
+      "transform",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "presentationtransform",
+      "component2",
+      "presentation",
+      "math",
+      "use",
+      "transforms",
+      "move",
+      "component",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.PresentationTransform",
+  "description": "Gets or sets the component transform.",
+  "signature": "MathTransform PresentationTransform {get; set;}",
+  "parameters": [],
+  "returns": "Component transform",
+  "remarks": "This property affects the graphical display; it does not affect the underlying model geometry.\nThis property:\ngets or sets the component transform for graphical display.\nignores all mate and in-context relationships. Only the display of the component on the screen is affected.\ndoes not apply the transform to component geometry.\ndoes not display any changes. To display changes, call\nIModelDoc2::GraphicsRedraw2\n.\nThis property's functionality is for graphical purposes only and does not affect solid models. For example, if you want to animate the explode steps for an assembly, then maintaining assembly mate and in-context relationships is not needed or desirable.\nYou must first enable a presentation transform by setting\nIAssemblyDoc::EnablePresentation\nto true.\nIComponent2::RemovePresentationTransform\nremoves any transform applied by IComponent2::PresentationTransform. Set IAssemblyDoc::EnablePresentation to false after calling IComponent2::RemovePresentationTransform. After calling this method, the component is next drawn in a position consistent with its underlying geometry (\nIComponent2::Transform2\n).",
+  "examples": [
+    {
+      "title": "Use Presentation Transforms to Move Component (VBA)",
+      "href": "Use_Presentation_Transforms_to_Move_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.GetSpecificTransform"
+  ]
+}

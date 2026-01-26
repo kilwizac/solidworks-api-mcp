@@ -1,0 +1,48 @@
+---
+type: property
+interface: ISketchManager
+member: AutoInference
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - sketches
+related:
+  - ISketchManager.InferenceMode
+keywords:
+  - autoinference
+  - isketchmanager
+  - sketch
+  - manager
+  - auto
+  - inference
+  - boolean
+readonly: null
+---
+
+# ISketchManager.AutoInference
+
+Obsolete. Superseded by ISldWorks::GetUserPreferenceToggle or ISldWorks::SetUserPreferenceToggle and swUserPreferenceToggle_e.swSketchInference.
+
+## Signature
+
+```csharp
+System.Boolean AutoInference {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if automatic inteferencing is on, false if off
+
+## Remarks
+
+Inferencing mode can be seen when creating a sketch segment and your cursor moves past another sketch enitity. If inferencing is turned on, you see a dashed line from your current cursor position to the inferenced position on the existing sketch entity.
+
+## See Also
+
+- `ISketchManager.InferenceMode`

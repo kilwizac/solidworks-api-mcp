@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAutoBalloonOptions",
+    "member": "Size",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "size",
+      "iautoballoonoptions",
+      "auto",
+      "balloon",
+      "options",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAutoBalloonOptions.Size",
+  "description": "Gets and sets the size of the balloons.",
+  "signature": "System.Int32 Size {get; set;}",
+  "parameters": [],
+  "returns": "Size of the balloons as defined in swBalloonFit_e ; specify -1 to use the document default balloon size (see Remarks )",
+  "remarks": "To get or set document default values for Size...\nUse...\nGet\nIModelDocExtension::GetUserPreferenceInteger\n((swUserPreferenceIntegerValue_e.swDetailingBOMBalloonFit, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\nSet\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMBalloonFit, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonFit_e.<\nValue\n>)\nSee the SOLIDWORKS Help for additional details about autoballoons.",
+  "examples": [
+    {
+      "title": "IAutoBalloonOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAutoBalloonOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

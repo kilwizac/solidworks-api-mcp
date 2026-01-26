@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "HorizontalAutoSplit",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "MaxNumberOfRows",
+        "type": "System.Int32",
+        "description": "Maximum number of rows in the split portions"
+      },
+      {
+        "name": "Apply",
+        "type": "System.Int32",
+        "description": "How often to horizontally split the table as defined in swHorizontalAutoSplitApply_e"
+      },
+      {
+        "name": "PlacementOfNewSplitTables",
+        "type": "System.Int32",
+        "description": "Where to place the horizontally split table as defined in swHorizontalAutoSplitPlacementOfSplitTable_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.GetSplitInformation",
+      "ITableAnnotation.Split"
+    ],
+    "keywords": [
+      "split",
+      "table",
+      "horizontalautosplit",
+      "itableannotation",
+      "annotation",
+      "horizontal",
+      "auto",
+      "max",
+      "number",
+      "rows",
+      "int32",
+      "apply",
+      "placement",
+      "new",
+      "tables",
+      "object"
+    ]
+  },
+  "title": "ITableAnnotation.HorizontalAutoSplit",
+  "description": "Starts the automatic horizontal splitting of this table using the specified options.",
+  "signature": "System.Object HorizontalAutoSplit( \n   System.Int32\nMaxNumberOfRows\n,\n   System.Int32\nApply\n,\n   System.Int32\nPlacementOfNewSplitTables\n)",
+  "parameters": [
+    {
+      "name": "MaxNumberOfRows",
+      "type": "System.Int32",
+      "description": "Maximum number of rows in the split portions"
+    },
+    {
+      "name": "Apply",
+      "type": "System.Int32",
+      "description": "How often to horizontally split the table as defined in swHorizontalAutoSplitApply_e"
+    },
+    {
+      "name": "PlacementOfNewSplitTables",
+      "type": "System.Int32",
+      "description": "Where to place the horizontally split table as defined in swHorizontalAutoSplitPlacementOfSplitTable_e"
+    }
+  ],
+  "returns": "Array of split ITableAnnotation s",
+  "remarks": "This method horizontally splits:\nHole tables\nBill of Materials tables\nGeneral tables\nIf Apply is set to\nswHorizontalAutoSplitApply_e\n.Continuously, in order to stop the automatic splitting of tables, you must set\nITableAnnotation::StopAutoSplitting\nto true.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.GetSplitInformation",
+    "ITableAnnotation.Split"
+  ]
+}

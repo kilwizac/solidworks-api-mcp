@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IReferenceCurve",
+    "member": "IGetSegments",
+    "returns": "Edge",
+    "parameters": [
+      {
+        "name": "NumSegments",
+        "type": "System.Int32",
+        "description": "Number of segments in the reference curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IReferenceCurve.GetFirstSegment",
+      "IReferenceCurve.GetNextSegment",
+      "IReferenceCurve.GetSegments",
+      "IReferenceCurve.IGetFirstSegment",
+      "IReferenceCurve.IGetNextSegment"
+    ],
+    "keywords": [
+      "igetsegments",
+      "ireferencecurve",
+      "reference",
+      "curve",
+      "segments",
+      "num",
+      "int32",
+      "edge"
+    ]
+  },
+  "title": "IReferenceCurve.IGetSegments",
+  "description": "Gets the segments in this reference curve.",
+  "signature": "Edge IGetSegments( \n   System.Int32\nNumSegments\n)",
+  "parameters": [
+    {
+      "name": "NumSegments",
+      "type": "System.Int32",
+      "description": "Number of segments in the reference curve"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of segments in the reference curve VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIReferenceCurve::GetSegmentCount\nto get NumSegments.",
+  "examples": [],
+  "related": [
+    "IReferenceCurve.GetFirstSegment",
+    "IReferenceCurve.GetNextSegment",
+    "IReferenceCurve.GetSegments",
+    "IReferenceCurve.IGetFirstSegment",
+    "IReferenceCurve.IGetNextSegment"
+  ]
+}

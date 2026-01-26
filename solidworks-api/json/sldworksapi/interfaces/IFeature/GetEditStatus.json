@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetEditStatus",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "editing",
+      "status",
+      "edit",
+      "features",
+      "sketches",
+      "sketch",
+      "isketch",
+      "geteditstatus",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeature.GetEditStatus",
+  "description": "Gets whether the feature can currently be edited.",
+  "signature": "System.Int32 GetEditStatus()",
+  "parameters": [],
+  "returns": "Editing status of feature as defined in swFeatureEditStatus_e",
+  "remarks": "Although swFeatureEditStatus_e is a bitmask, you currently cannot combine its mutually exclusive enumerators and you must examine the bit value of the return value for the editing status of the feature.\nIf...\nThen the return value will be...\na feature and all of its dependent items are not currently being edited\n0 (swFeature_Editable) for the feature and all of its dependent items\na feature is currently being edited\n1 (swFeature_NonEditable); this will also be the return value for all of the feature's dependent items\na sketch is currently being edited\n2 (swFeature_UnderEditing)",
+  "examples": [
+    {
+      "title": "Get Editing Status of Features (VB.NET)",
+      "href": "Get_Editing_Status_of_Features_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Editing Status of Features (VBA)",
+      "href": "Get_Editing_Status_of_Features_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Editing Status of Features (C#)",
+      "href": "Get_Editing_Status_of_Features_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

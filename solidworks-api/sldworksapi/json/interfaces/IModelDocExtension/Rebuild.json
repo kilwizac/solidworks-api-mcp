@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "Rebuild",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Type of rebuild as defined in swRebuildOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.EditRebuild3",
+      "IModelDoc2.ForceRebuild3",
+      "IModelDocExtension.EditRebuildAll",
+      "IModelDocExtension.ForceRebuildAll",
+      "IModelDocExtension.NeedsRebuild2"
+    ],
+    "keywords": [
+      "document",
+      "rebuild",
+      "model",
+      "documents",
+      "see",
+      "also",
+      "imodeldoc2",
+      "imodeldocextension",
+      "interfaces",
+      "models",
+      "doc",
+      "extension",
+      "options",
+      "int32",
+      "boolean",
+      "assembly",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.Rebuild",
+  "description": "Rebuilds the model in assembly and drawing documents and returns the status of the rebuild.",
+  "signature": "System.Boolean Rebuild( \n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Type of rebuild as defined in swRebuildOptions_e"
+    }
+  ],
+  "returns": "True if the rebuild is successful, false if not",
+  "remarks": "Use\nIModelDoc2::GetType\nto check the type of document.",
+  "examples": [
+    {
+      "title": "Rebuild an Assembly (VBA)",
+      "href": "Rebuild_an_Assembly_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rebuild an Assembly (VB.NET)",
+      "href": "Rebuild_an_Assembly_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rebuild an Assembly (C#)",
+      "href": "Rebuild_an_Assembly_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.EditRebuild3",
+    "IModelDoc2.ForceRebuild3",
+    "IModelDocExtension.EditRebuildAll",
+    "IModelDocExtension.ForceRebuildAll",
+    "IModelDocExtension.NeedsRebuild2"
+  ]
+}

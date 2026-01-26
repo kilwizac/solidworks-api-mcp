@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnumSketchSegments",
+    "member": "Next",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Celt",
+        "type": "System.Int32",
+        "description": "Number of sketch segments for the sketch segments enumeration"
+      },
+      {
+        "name": "Rgelt",
+        "type": "SketchSegment",
+        "description": "Pointer to an array of sketch segments of size Celt"
+      },
+      {
+        "name": "PceltFetched",
+        "type": "System.Int32",
+        "description": "Pointer to the number of sketch segments returned from the list; this value can be less than celt if you ask for more sketch segments than exist, or it can be NULL if no more sketch segments exist"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "next",
+      "ienumsketchsegments",
+      "sketch",
+      "segments",
+      "celt",
+      "int32",
+      "rgelt",
+      "segment",
+      "pcelt",
+      "fetched",
+      "void",
+      "select",
+      "all"
+    ]
+  },
+  "title": "IEnumSketchSegments.Next",
+  "description": "Gets the next sketch segment in the sketch segments enumeration.",
+  "signature": "void Next( \n   System.Int32\nCelt\n,\n   out SketchSegment\nRgelt\n,\n   out System.Int32\nPceltFetched\n)",
+  "parameters": [
+    {
+      "name": "Celt",
+      "type": "System.Int32",
+      "description": "Number of sketch segments for the sketch segments enumeration"
+    },
+    {
+      "name": "Rgelt",
+      "type": "SketchSegment",
+      "description": "Pointer to an array of sketch segments of size Celt"
+    },
+    {
+      "name": "PceltFetched",
+      "type": "System.Int32",
+      "description": "Pointer to the number of sketch segments returned from the list; this value can be less than celt if you ask for more sketch segments than exist, or it can be NULL if no more sketch segments exist"
+    }
+  ],
+  "returns": "",
+  "remarks": "For use in in-process DLLs only.",
+  "examples": [
+    {
+      "title": "Select All Sketch Segments (C++)",
+      "href": "Select_All_Sketch_Segments_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

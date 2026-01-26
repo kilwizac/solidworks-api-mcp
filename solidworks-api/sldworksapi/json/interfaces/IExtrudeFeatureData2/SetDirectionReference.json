@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExtrudeFeatureData2",
+    "member": "SetDirectionReference",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Ref1",
+        "type": "System.Object",
+        "description": "First reference entity"
+      },
+      {
+        "name": "Ref2",
+        "type": "System.Object",
+        "description": "Second reference entity"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IExtrudeFeatureData2.GetDirectionReference"
+    ],
+    "keywords": [
+      "setdirectionreference",
+      "iextrudefeaturedata2",
+      "extrude",
+      "feature",
+      "data2",
+      "direction",
+      "reference",
+      "ref1",
+      "object",
+      "ref2",
+      "void"
+    ]
+  },
+  "title": "IExtrudeFeatureData2.SetDirectionReference",
+  "description": "Sets the direction of the extrusion.",
+  "signature": "void SetDirectionReference( \n   System.Object\nRef1\n,\n   System.Object\nRef2\n)",
+  "parameters": [
+    {
+      "name": "Ref1",
+      "type": "System.Object",
+      "description": "First reference entity"
+    },
+    {
+      "name": "Ref2",
+      "type": "System.Object",
+      "description": "Second reference entity"
+    }
+  ],
+  "returns": "",
+  "remarks": "Sometimes one reference entity can sufficiently define a direction; for example, an edge or axis. Other times, two reference entities are required to define a direction; for example, two vertices or two sketch points.\nIf...\nThen...\nOne reference entity can sufficiently define the direction\nRef2 is NULL\nTwo reference entities are required to define the direction\nBoth Ref1 and Ref2 are non-NULL\nValid reference entities for Type1 and Type2:\nline segment\nedge\naxis\nvertex\nface\nplane\nsketch point",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2.GetDirectionReference"
+  ]
+}

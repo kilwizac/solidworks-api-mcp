@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DModelViewEvents_RepaintNotifyEventHandler
+inherits: null
+description: Pre-notifies the user program when a view is about to be repainted and returns the paint type.
+member_count: 0
+docset: sldworksapi
+categories:
+  - ui
+common_members: []
+---
+
+# DModelViewEvents_RepaintNotifyEventHandler
+
+Pre-notifies the user program when a view is about to be repainted and returns the paint type.

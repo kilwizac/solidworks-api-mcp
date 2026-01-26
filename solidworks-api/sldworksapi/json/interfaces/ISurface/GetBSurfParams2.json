@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "GetBSurfParams2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "WantCubic",
+        "type": "System.Boolean",
+        "description": "True if cubic is needed, false if not; specifying true converts any surface type to a cubic Bsurface"
+      },
+      {
+        "name": "WantNonRational",
+        "type": "System.Boolean",
+        "description": "True if non-rational is needed, false if not; specifying true converts any surface type to a non-rational Bsurface; if you specify true, then you should only use this method for surfaces that are Bsurface or blend surface; otherwise, the underlying call is not made and the values returned from this are not initialized or contain the values from the last call"
+      },
+      {
+        "name": "VP0",
+        "type": "System.Object",
+        "description": "Array of values describing the UV range of the surface to be output; you can obtain these values by using ISurface::Parameterization or ISurface::IParameterization"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance, in meters, between the approximated b-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired"
+      },
+      {
+        "name": "Sense",
+        "type": "System.Boolean",
+        "description": "Approximated b-spline surface is not always in the same direction as the original surface; if sense is true, then the underlying surface and the b-spline surface are in the same direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IGetBSurfParams",
+      "ISurface.IGetBSurfParamsSize3"
+    ],
+    "keywords": [
+      "getbsurfparams2",
+      "isurface",
+      "surface",
+      "surf",
+      "params2",
+      "want",
+      "cubic",
+      "boolean",
+      "non",
+      "rational",
+      "vp0",
+      "object",
+      "tolerance",
+      "double",
+      "sense"
+    ]
+  },
+  "title": "ISurface.GetBSurfParams2",
+  "description": "Obsolete. Superseded by ISurface::GetBSurfParams3.",
+  "signature": "System.Object GetBSurfParams2( \n   System.Boolean\nWantCubic\n,\n   System.Boolean\nWantNonRational\n,\n   System.Object\nVP0\n,\n   System.Double\nTolerance\n,\n   out System.Boolean\nSense\n)",
+  "parameters": [
+    {
+      "name": "WantCubic",
+      "type": "System.Boolean",
+      "description": "True if cubic is needed, false if not; specifying true converts any surface type to a cubic Bsurface"
+    },
+    {
+      "name": "WantNonRational",
+      "type": "System.Boolean",
+      "description": "True if non-rational is needed, false if not; specifying true converts any surface type to a non-rational Bsurface; if you specify true, then you should only use this method for surfaces that are Bsurface or blend surface; otherwise, the underlying call is not made and the values returned from this are not initialized or contain the values from the last call"
+    },
+    {
+      "name": "VP0",
+      "type": "System.Object",
+      "description": "Array of values describing the UV range of the surface to be output; you can obtain these values by using ISurface::Parameterization or ISurface::IParameterization"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance, in meters, between the approximated b-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired"
+    },
+    {
+      "name": "Sense",
+      "type": "System.Boolean",
+      "description": "Approximated b-spline surface is not always in the same direction as the original surface; if sense is true, then the underlying surface and the b-spline surface are in the same direction"
+    }
+  ],
+  "returns": "Array of values giving the b-spline surface parameters",
+  "remarks": "The VP0 parameter contains the following values, which you can obtain by using\nISurface::Parameterization\nor\nISurface::IParameterization\n:\nvP0[0] & vP0[2] are the lower bounds of the U & V surface parameters, respectively\nvP0[1] &\nvP0[3] are the upper bounds of the U & V surface parameters, respectively\nIf you want to use the Bsurface in combination with its trim curves, you should use the\nIFace2::GetTrimCurves2\nmethod to extract the trim curves and the Bsurface. The IFace2::GetTrimCurves2 method provides much better alignment of the trim curves with the Bsurface because they are both generated at the same time.\nEvaluation is as follows:\nNumber of returned double elements is (4 + NumUKnots + NumVKnots + NumControlPointDoubles), where NumUKnots = (NumColumnsControlPoints + Uorder) and NumVKnots = (NumRowsControlPoints + Vorder).\nThe returned data are arranged in this order:\nUorder, Vorder - These are two ints packed into a double\nUorder - Order of surface in U direction\nVorder - Order of surface in V direction\nNumColumnsControlPoints, NumRowsControlPoints - These are two integers packed into a double\nNumColumnsControlPoints - Number of columns for the control points\nNumRowsControlPoints - Number of rows for the control points\nUperiodicity, Vperiodicity - These are two integers packed into a double. Since you may be generating a Bsurface with this function, the U,V periodicity values may be opposite from the original surface. Refer to ISurface::Parameterization or ISurface::IParameterization.\nUperiodicity - True if surface is periodic in U direction\nVperiodicity - True if surface is periodic in V direction\nDimensionControlPoints, dummy - These are two integers packed into a double\nDimensionControlPoints - Dimension for control points.\nDimensionControlPoints = 3 for non-rational surfaces and control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].\nDimensionControlPoints = 4 for rational surfaces and control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].\ndummy - a system-used filler.\nUKnots - Knot vector in the u direction.\nThere will be (NumColumnsControlPoints + Uorder) knot values. If the surface is periodic in the U direction, then data is converted and returned in a non-periodic form with additional knots added to the surface ends.\nVKnots - Knot vector in the v direction.\nThere will be (NumRowsControlPoints + Vorder) knot values. If the surface is periodic in the V direction, then data is converted and returned in a non-periodic form with additional knots added to the surface ends.\nControlPoints - This is a list of control points output in (NumColumnsControlPoints*NumRowsControlPoints) vectors of dimension DimensionControlPoints. The vectors are output row by row. The U direction of surface is in the row direction. The V direction of surface is in the column direction.\nFor non-rational surfaces, control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].\nFor rational surfaces, control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].\nFor example:\nRow1, Column1\nRow1, Column2\nx0, y0, z0\nx1, y1, z1\n= 6\nRow2, Column1\nRow2, Column2\nx2, y2, z2\nx3, y3, z3\n= 6\nRow3, Column1\nRow3, Column2\nx4, y4, z4\nx5, y5, z5\n= 6\n= 18",
+  "examples": [],
+  "related": [
+    "ISurface.IGetBSurfParams",
+    "ISurface.IGetBSurfParamsSize3"
+  ]
+}

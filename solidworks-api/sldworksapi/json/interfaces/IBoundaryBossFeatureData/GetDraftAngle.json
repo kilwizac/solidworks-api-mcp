@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "GetDraftAngle",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetDraftAngleReverseDirection",
+      "IBoundaryBossFeatureData.SetDraftAngle",
+      "IBoundaryBossFeatureData.SetDraftAngleReverseDirection"
+    ],
+    "keywords": [
+      "getdraftangle",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "draft",
+      "angle",
+      "direction",
+      "int32",
+      "guide",
+      "index",
+      "double",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.GetDraftAngle",
+  "description": "Gets the draft angle for the specified curve in the specified direction in this boundary feature.",
+  "signature": "System.Double GetDraftAngle( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    }
+  ],
+  "returns": "Draft angle",
+  "remarks": "Call\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.",
+  "examples": [
+    {
+      "title": "Insert Boundary Feature (C#)",
+      "href": "Insert_Boundary_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VB.NET)",
+      "href": "Insert_Boundary_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VBA)",
+      "href": "Insert_Boundary_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBoundaryBossFeatureData.GetDraftAngleReverseDirection",
+    "IBoundaryBossFeatureData.SetDraftAngle",
+    "IBoundaryBossFeatureData.SetDraftAngleReverseDirection"
+  ]
+}

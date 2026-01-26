@@ -1,0 +1,330 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>InsertHoleTable2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~InsertHoleTable2" />
+    <meta name="Description" content="Obsolete. Superseded by IView::InsertHoleTable3." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IView.InsertHoleTable2" />
+    <meta name="Microsoft.Help.Keywords" content="InsertHoleTable2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                InsertHoleTable2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView Interface</a> : InsertHoleTable2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="UseAnchorPointPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then&#160;insert the table at&#160;the location specified by the X and Y parameters</p>
+    </div>
+
+    <div id="XPopupContent" class="i-popup-content">
+        X coordinate in meters for the anchor of this hole table
+    </div>
+
+    <div id="YPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Y coordinate in meters for the anchor of this hole table</p>
+    </div>
+
+    <div id="AnchorTypePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Anchor type as defined by <!--ParamDesc--><a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swBOMConfigurationAnchorType_e.html">swBomConfigurationAnchorType_e</a></p>
+    </div>
+
+    <div id="StartValuePopupContent" class="i-popup-content">
+        Starting value for datum tags; a letter from A to Z,&#160;if TableTemplate uses letter tags; a positive integer, if TableTemplate uses number tags (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="TableTemplatePopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Path and filename of the table template that corresponds to the table you want to use (see <span style="FONT-WEIGHT: bold">Remarks</span>)</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <font color="red">Obsolete. Superseded by</font>&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~InsertHoleTable3">IView::InsertHoleTable3</a><font color="red">.</font>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function InsertHoleTable2( _
+   ByVal <i><a class="i-popup-link" id="UseAnchorPointPopupLink" data-popup-contentsource="#UseAnchorPointPopupContent" data-popup-showevent="click mouseenter">UseAnchorPoint</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="AnchorTypePopupLink" data-popup-contentsource="#AnchorTypePopupContent" data-popup-showevent="click mouseenter">AnchorType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="StartValuePopupLink" data-popup-contentsource="#StartValuePopupContent" data-popup-showevent="click mouseenter">StartValue</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="TableTemplatePopupLink" data-popup-contentsource="#TableTemplatePopupContent" data-popup-showevent="click mouseenter">TableTemplate</a></i> As System.String _
+) As HoleTableAnnotation
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView</a>
+Dim UseAnchorPoint As System.Boolean
+Dim X As System.Double
+Dim Y As System.Double
+Dim AnchorType As System.Integer
+Dim StartValue As System.String
+Dim TableTemplate As System.String
+Dim value As HoleTableAnnotation
+ 
+value = instance.InsertHoleTable2(UseAnchorPoint, X, Y, AnchorType, StartValue, TableTemplate)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+HoleTableAnnotation InsertHoleTable2( 
+   System.bool <i><a class="i-popup-link" id="UseAnchorPointPopupLink" data-popup-contentsource="#UseAnchorPointPopupContent" data-popup-showevent="click mouseenter">UseAnchorPoint</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.int <i><a class="i-popup-link" id="AnchorTypePopupLink" data-popup-contentsource="#AnchorTypePopupContent" data-popup-showevent="click mouseenter">AnchorType</a></i>,
+   System.string <i><a class="i-popup-link" id="StartValuePopupLink" data-popup-contentsource="#StartValuePopupContent" data-popup-showevent="click mouseenter">StartValue</a></i>,
+   System.string <i><a class="i-popup-link" id="TableTemplatePopupLink" data-popup-contentsource="#TableTemplatePopupContent" data-popup-showevent="click mouseenter">TableTemplate</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+HoleTableAnnotation^ InsertHoleTable2( 
+   System.bool <i><a class="i-popup-link" id="UseAnchorPointPopupLink" data-popup-contentsource="#UseAnchorPointPopupContent" data-popup-showevent="click mouseenter">UseAnchorPoint</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.int <i><a class="i-popup-link" id="AnchorTypePopupLink" data-popup-contentsource="#AnchorTypePopupContent" data-popup-showevent="click mouseenter">AnchorType</a></i>,
+   System.String^ <i><a class="i-popup-link" id="StartValuePopupLink" data-popup-contentsource="#StartValuePopupContent" data-popup-showevent="click mouseenter">StartValue</a></i>,
+   System.String^ <i><a class="i-popup-link" id="TableTemplatePopupLink" data-popup-contentsource="#TableTemplatePopupContent" data-popup-showevent="click mouseenter">TableTemplate</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>UseAnchorPoint</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then&#160;insert the table at&#160;the location specified by the X and Y parameters</p>
+                </dd>
+
+                <dt><i>X</i></dt>
+
+                <dd>X coordinate in meters for the anchor of this hole table</dd>
+
+                <dt><i>Y</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Y coordinate in meters for the anchor of this hole table</p>
+                </dd>
+
+                <dt><i>AnchorType</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Anchor type as defined by <!--ParamDesc--><a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swBOMConfigurationAnchorType_e.html">swBomConfigurationAnchorType_e</a></p>
+                </dd>
+
+                <dt><i>StartValue</i></dt>
+
+                <dd>Starting value for datum tags; a letter from A to Z,&#160;if TableTemplate uses letter tags; a positive integer, if TableTemplate uses number tags (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>TableTemplate</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Path and filename of the table template that corresponds to the table you want to use (see <span style="FONT-WEIGHT: bold">Remarks</span>)</p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IHoleTableAnnotation">Hole table annotation</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method inserts a table with the following information for selected holes:</p>
+
+            <ul>
+                <li>Datum tag</li>
+
+                <li>X-location of hole center</li>
+
+                <li>Y-location of hole center</li>
+
+                <li>Size</li>
+            </ul>
+
+            <p>This method displays datum tags next to holes that have been pre-selected in the view.&#160;The location of the datum tags is relative to a datum origin that is also pre-selected in the view.</p>
+
+            <p>Before calling this method, call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">IModelDocExtension::SelectByID2</a>&#160;to select the datum origin, hole edges, and&#160;faces (for multiple holes)&#160;as follows:</p>
+
+            <p></p>
+
+            <table style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" cellspacing="0" cols="2" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="258">
+                            <p align="center"><strong>Selection</strong></p>
+                        </td>
+
+                        <td>
+                            <p align="center"><strong>Mark</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="258">Datum origin vertex</td>
+
+                        <td align="center">1</td>
+                    </tr>
+
+                    <tr>
+                        <td width="258">Hole edges and faces</td>
+
+                        <td>
+                            <p align="center">2</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="258">Datum origin x axis direction reference</td>
+
+                        <td>
+                            <p align="center">4</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="258">Datum origin y axis direction reference</td>
+
+                        <td>
+                            <p align="center">8</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p></p>
+
+            <p class="apiRemarksText">Specify TableTemplate using a hole table template (<strong>*.sldholtbt</strong>)&#160;in <span style="FONT-STYLE: italic">install_dir</span>\<span style="FONT-WEIGHT: bold">lang</span>\<em>l<span style="FONT-STYLE: italic">anguage</span></em>.</p>
+
+            <p class="apiRemarksText">Specify a&#160;TableTemplate and StartValue that matches the table you want to create. For example, to insert a hole table with letter tags,&#160;specify TableTemplate using <em>install_dir</em><span style="FONT-WEIGHT: bold"><span style="FONT-STYLE: italic">\</span>lang\English\standard hole table--letters.sldholtbt</span>&#160;and specify StartValue using a letter from A to Z.&#160;</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Get_Labels_of_Datum_Origin_Example_CSharp.htm">Get Labels of Datum Origin (C#)</a><br />
+            <a href="Get_Labels_of_Datum_Origin_Example_VBNET.htm">Get Labels of Datum Origin (VB.NET)</a><br />
+            <a href="Get_Labels_of_Datum_Origin_Example_VB.htm">Get Labels of Datum Origin (VBA)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView">IView Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView_members">IView Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~InsertHoleTable2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

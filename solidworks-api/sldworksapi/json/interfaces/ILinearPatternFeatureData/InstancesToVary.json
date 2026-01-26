@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILinearPatternFeatureData",
+    "member": "InstancesToVary",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "instancestovary",
+      "ilinearpatternfeaturedata",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "instances",
+      "vary",
+      "boolean",
+      "iinstancetovaryoptions"
+    ],
+    "readonly": null
+  },
+  "title": "ILinearPatternFeatureData.InstancesToVary",
+  "description": "Gets or sets whether to vary the spacing of pattern instances in this linear pattern feature.",
+  "signature": "System.Boolean InstancesToVary {get; set;}",
+  "parameters": [],
+  "returns": "True to vary the spacing of pattern instances, false to not",
+  "remarks": "This property is valid only when editing the linear pattern feature. You cannot set this property during creation of the feature.\nTo vary instances in a linear pattern feature:\nCall\nIFeature::GetDefinition\n.\nCall\nILinearPatternFeatureData::AccessSelections\n.\nSet this property to true.\nCall\nIFeature::ModifyDefinition\n.\nCall ILinearPatternFeatureData::AccessSelections.\nCall\nILinearPatternFeatureData::GetInstanceToVaryOptions\n.\nModify\nIInstanceToVaryOptions\nproperties.\nCall\nILinearPatternFeatureData::SetInstanceToVaryOptions\n.\nCall IFeature::ModifyDefinition.",
+  "examples": [
+    {
+      "title": "IInstanceToVaryOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IInstanceToVaryOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

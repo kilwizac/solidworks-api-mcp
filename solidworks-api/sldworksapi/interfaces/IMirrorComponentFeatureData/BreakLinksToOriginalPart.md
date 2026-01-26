@@ -1,0 +1,56 @@
+---
+type: property
+interface: IMirrorComponentFeatureData
+member: BreakLinksToOriginalPart
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+  - features
+  - parts
+related: []
+keywords:
+  - breaklinkstooriginalpart
+  - imirrorcomponentfeaturedata
+  - mirror
+  - component
+  - feature
+  - data
+  - break
+  - links
+  - original
+  - part
+  - boolean
+readonly: null
+---
+
+# IMirrorComponentFeatureData.BreakLinksToOriginalPart
+
+Gets or sets whether to break links between opposite-hand components and original components.
+
+## Signature
+
+```csharp
+System.Boolean BreakLinksToOriginalPart {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to break links, false (default) to not
+
+## Remarks
+
+This property is valid only if
+IMirrorComponentFeatureData::CreateDerivedConfigurations
+is false.
+If you set this property to true, then changes made to the original component do not propagate to the opposite-hand version.
+
+## Examples
+
+- IMirrorComponentFeatureData (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData)

@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "GetTessTriStrips",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "NoConversion",
+        "type": "System.Boolean",
+        "description": "True prohibits converting to user units from system units, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetTessNorms",
+      "IPartDoc.GetTessTriStripEdges",
+      "IPartDoc.GetTessTriStripNorms",
+      "IPartDoc.GetTessTriStripSize",
+      "IPartDoc.GetTessTriStripTextures",
+      "IPartDoc.GetTessTriangleCount",
+      "IPartDoc.GetTessTriangles",
+      "IPartDoc.IGetTessNorms",
+      "IPartDoc.IGetTessTriStripEdgeSize",
+      "IPartDoc.IGetTessTriStripEdges",
+      "IPartDoc.IGetTessTriStripNorms",
+      "IPartDoc.IGetTessTriStrips",
+      "IPartDoc.IGetTessTriangles",
+      "ITessellation"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "parts",
+      "ipartdoc",
+      "gettesstristrips",
+      "part",
+      "doc",
+      "tess",
+      "tri",
+      "strips",
+      "no",
+      "conversion",
+      "boolean",
+      "object"
+    ]
+  },
+  "title": "IPartDoc.GetTessTriStrips",
+  "description": "Gets the vertices that make up the shaded picture tessellation for this part.",
+  "signature": "System.Object GetTessTriStrips( \n   System.Boolean\nNoConversion\n)",
+  "parameters": [
+    {
+      "name": "NoConversion",
+      "type": "System.Boolean",
+      "description": "True prohibits converting to user units from system units, false does not"
+    }
+  ],
+  "returns": "Array of floats (see Remarks )",
+  "remarks": "The vertices are all unique for that strip. In other words, a vertex that is shared by two tessellation triangles will only appear once in the return value.\nThese triangles are intended for graphics display purposes and do not represent a tessellation that could be used, for example, by a machining application. If you need the type of accuracy associated with a machining product, it is recommended that you traverse the body faces and extract the topology and geometry data to create your own faceting.\nThese triangles are intended for graphics display purposes and do not represent a tessellation that can be used, for example, by a machining application. If you need the level of accuracy associated with a machining product, traverse the body faces and extract the topology and geometry data to create your own faceting.\nThis method returns an array of float values in the form of:\n[\nNumStrips\n,\nVertexPerStrip\n1,\nVertexPerStrip\n2,...,\nVertexPerStripN\n,\nVertexPoints\n1[\nVertexPerStrip\n1 elements]*3,\nVertexPoints\n2[\nVertexPerStrip\n2 elements]*3,...,\nVertexPointsN\n[\nVertexPerStripN\nelements]*3]\nwhere:\nNumStrips\n= number of triangle strips on a particular face.\nVertexPerStripN\n= number of vertex points for the\nN\nth triangle strip.\nVertexPointsN\n= a sub-array of vertices consisting of three float values representing the x,y,z coordinate of the vertex; the sub-array's length is defined by the\nVertexPerStripN\nelement in the array.\nBecause the values\nNumStrips\nand the elements of\nVertexPerStrip\nare long values\npacked into single values,\nyou must\nunpack\nthem before they can be used.",
+  "examples": [],
+  "related": [
+    "IPartDoc.GetTessNorms",
+    "IPartDoc.GetTessTriStripEdges",
+    "IPartDoc.GetTessTriStripNorms",
+    "IPartDoc.GetTessTriStripSize",
+    "IPartDoc.GetTessTriStripTextures",
+    "IPartDoc.GetTessTriangleCount",
+    "IPartDoc.GetTessTriangles",
+    "IPartDoc.IGetTessNorms",
+    "IPartDoc.IGetTessTriStripEdgeSize",
+    "IPartDoc.IGetTessTriStripEdges",
+    "IPartDoc.IGetTessTriStripNorms",
+    "IPartDoc.IGetTessTriStrips",
+    "IPartDoc.IGetTessTriangles",
+    "ITessellation"
+  ]
+}

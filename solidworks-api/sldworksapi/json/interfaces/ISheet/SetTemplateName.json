@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "SetTemplateName",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NameIn",
+        "type": "System.String",
+        "description": "Path name of the sheet format template"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.GetProperties",
+      "ISheet.GetTemplateName",
+      "ISheet.GetTemplateSketch",
+      "ISheet.IGetProperties"
+    ],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "template",
+      "names",
+      "name",
+      "settemplatename",
+      "string",
+      "void",
+      "whether",
+      "hide",
+      "cutting",
+      "line",
+      "shoulders",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISheet.SetTemplateName",
+  "description": "Sets the template name for the sheet format.",
+  "signature": "void SetTemplateName( \n   System.String\nNameIn\n)",
+  "parameters": [
+    {
+      "name": "NameIn",
+      "type": "System.String",
+      "description": "Path name of the sheet format template"
+    }
+  ],
+  "returns": "",
+  "remarks": "If you want to use:\na custom template name, before calling this method, call\nISheet::SetProperties\nand specify swDwgTemplates_e.swDwgTemplateCustom for the Templ parameter.\none of the standard templates provided by SOLIDWORKS, then there is no need to call ISheet::SetTemplateName. Instead, call ISheet::SetProperties and specify the appropriate enumerator for the Templ parameter.",
+  "examples": [
+    {
+      "title": "Get and Set Whether to Hide Cutting Line Shoulders (C#)",
+      "href": "Get_and_Set_Whether_to_Hide_Cutting_Line_Shoulders_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Whether to Hide Cutting Line Shoulders (VB.NET)",
+      "href": "Get_and_Set_Whether_to_Hide_Cutting_Line_Shoulders_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Whether to Hide Cutting Line Shoulders (VBA)",
+      "href": "Get_and_Set_Whether_to_Hide_Cutting_Line_Shoulders_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheet.GetProperties",
+    "ISheet.GetTemplateName",
+    "ISheet.GetTemplateSketch",
+    "ISheet.IGetProperties"
+  ]
+}

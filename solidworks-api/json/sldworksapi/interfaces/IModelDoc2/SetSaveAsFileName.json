@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetSaveAsFileName",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Save As filename"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.SaveAs"
+    ],
+    "keywords": [
+      "document",
+      "save",
+      "setsaveasfilename",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "file",
+      "name",
+      "string",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SetSaveAsFileName",
+  "description": "Sets the Save As filename from within the FileSaveAsNotify2 event handlers, thereby, bypassing the Save As dialog.",
+  "signature": "void SetSaveAsFileName( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Save As filename"
+    }
+  ],
+  "returns": "",
+  "remarks": "Use this method from within the FileSaveAsNotify2 event handler. When setting the\nSave As\nfilename using this method, S_false should be returned from the FileSaveAsNotify2 event handler. See\nDAssemblyDocEvents FileSaveAsNotify2\n,\nDDrawingDocEvents FileSaveAsNotify2\n, and\nDPartDocEvents FileSaveAsNotify2\nnotifications.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.SaveAs"
+  ]
+}

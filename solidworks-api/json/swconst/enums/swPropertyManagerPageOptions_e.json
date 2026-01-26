@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swPropertyManagerPageOptions_e",
+    "description": "Options for PropertyManager pages. Bitmask.",
+    "member_count": 19,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swPropertyManagerPageOptions_e",
+  "description": "Options for PropertyManager pages. Bitmask.",
+  "values": [
+    {
+      "member": "swPropertyManagerOptions_AbortCommands",
+      "value": "1024",
+      "description": "or 0x400; Abort active command when PropertyManager page is displayed"
+    },
+    {
+      "member": "swPropertyManagerOptions_AllowHorizontalResize",
+      "value": "",
+      "description": "Obsolete; a s of SOLIDWORKS 2006 and later, all PropertyManager pages can be resized horizontally"
+    },
+    {
+      "member": "swPropertyManagerOptions_CancelButton",
+      "value": "2",
+      "description": "or 0x2"
+    },
+    {
+      "member": "swPropertyManagerOptions_CanEscapeCancel",
+      "value": "4096",
+      "description": "or 0x1000; When a user presses the Esc key, the PropertyManager page will close the page; this enumerator only applies to pages that do not contain selection boxes"
+    },
+    {
+      "member": "swPropertyManagerOptions_CloseDialogButton",
+      "value": "8",
+      "description": "or 0x8"
+    },
+    {
+      "member": "swPropertyManagerOptions_DisablePageBuildDuringHandlers",
+      "value": "32768",
+      "description": "or 0x8000; Paint the PropertyManager page after control returns to SOLIDWORKS from the add-in's handler; may help eliminate any flickering of the PropertyManager page of the add-in changes the visibility of numerous controls on the PropertyManager page"
+    },
+    {
+      "member": "swPropertyManagerOptions_DisableSelection",
+      "value": "256",
+      "description": "or 0x100"
+    },
+    {
+      "member": "swPropertyManagerOptions_GrayOutDisabledSelectionListboxes",
+      "value": "65536",
+      "description": "or 0x10000; Controls whether a PropertyManager page should show its disabled selection list boxes so that they appear grayed out by coloring their backgrounds the same color as the divider box background. NOTE: Disabled selection list boxes should be hidden; graying them out is an exception to SOLIDWORKS standard practice."
+    },
+    {
+      "member": "swPropertyManagerOptions_HandleKeystrokes",
+      "value": "8192",
+      "description": "or 0x2000; Enables processing of keystrokes while the PropertyManager page is displayed; disabled by default"
+    },
+    {
+      "member": "swPropertyManagerOptions_LockedPage",
+      "value": "4",
+      "description": "or 0x4"
+    },
+    {
+      "member": "swPropertyManagerOptions_MultiplePages",
+      "value": "16",
+      "description": "or 0x10"
+    },
+    {
+      "member": "swPropertyManagerOptions_OkayButton",
+      "value": "1",
+      "description": "or 0x1"
+    },
+    {
+      "member": "swPropertyManagerOptions_PreviewButton",
+      "value": "128",
+      "description": "or 0x80"
+    },
+    {
+      "member": "swPropertyManagerOptions_PushpinButton",
+      "value": "32",
+      "description": "or 0x20"
+    },
+    {
+      "member": "swPropertyManagerOptions_RedoButton",
+      "value": "16384",
+      "description": "or 0x4000;"
+    },
+    {
+      "member": "swPropertyManagerOptions_SupportsChainSelection",
+      "value": "131072",
+      "description": "or 0x20000; If set, then show Select Chain : on the shortcut menu if a sketch entity is currently selected. - or - if nothing is selected, but the cursor is over a sketch entity when the right-mouse button was clicked."
+    },
+    {
+      "member": "swPropertyManagerOptions_SupportsIsolate",
+      "value": "262144",
+      "description": "or 0x40000; If set, then show Isolate item in right-mouse button menu of assembly components. This option must be used with swPropertyManagerOptions_LockedPage."
+    },
+    {
+      "member": "swPropertyManagerOptions_UndoButton",
+      "value": "2048",
+      "description": "or 0x800"
+    },
+    {
+      "member": "swPropertyManagerOptions_WhatsNew",
+      "value": "512",
+      "description": "or 0x200; Indicates that you want a What's New button to appear on your PropertyManager page"
+    }
+  ]
+}

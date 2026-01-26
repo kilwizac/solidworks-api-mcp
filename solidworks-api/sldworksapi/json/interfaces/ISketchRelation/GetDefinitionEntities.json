@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelation",
+    "member": "GetDefinitionEntities",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelation.GetEntitiesCount"
+    ],
+    "keywords": [
+      "getdefinitionentities",
+      "isketchrelation",
+      "sketch",
+      "relation",
+      "definition",
+      "entities",
+      "object"
+    ]
+  },
+  "title": "ISketchRelation.GetDefinitionEntities",
+  "description": "Obsolete. Superseded by ISketchRelation::GetDefinitionEntities2.",
+  "signature": "System.Object GetDefinitionEntities()",
+  "parameters": [],
+  "returns": "Array of the actual entities for this sketch relation",
+  "remarks": "When you created a sketch relation, an internal entity may have also been created to define that sketch relation. For example, if you added a sketch relation by specifying or selecting a point and an edge, a sketch segment may have been created. If this happened, then\nISketchRelation::GetEntities\nand\nISketchRelation::IGetEntities\nwould return the point and sketch segment. To get the actual entities used to define the sketch relation, call ISketchRelation::GetDefinitionEntities or\nISketchRelation::IGetDefinitionEntities\n.\nBecause some of the objects may be NULL, you should check for this before accessing them. You should deallocate any dynamically allocated memory.",
+  "examples": [],
+  "related": [
+    "ISketchRelation.GetEntitiesCount"
+  ]
+}

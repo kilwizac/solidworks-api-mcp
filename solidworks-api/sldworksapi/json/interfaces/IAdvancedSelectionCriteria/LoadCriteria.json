@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAdvancedSelectionCriteria",
+    "member": "LoadCriteria",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CriteriaFileName",
+        "type": "System.String",
+        "description": "Path and filename of query file (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "loadcriteria",
+      "iadvancedselectioncriteria",
+      "advanced",
+      "selection",
+      "criteria",
+      "load",
+      "file",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IAdvancedSelectionCriteria.LoadCriteria",
+  "description": "Loads the specified query file and makes it the current advanced component selection criteria list.",
+  "signature": "System.Boolean LoadCriteria( \n   System.String\nCriteriaFileName\n)",
+  "parameters": [
+    {
+      "name": "CriteriaFileName",
+      "type": "System.String",
+      "description": "Path and filename of query file (see Remarks )"
+    }
+  ],
+  "returns": "True if query file loads, false if not",
+  "remarks": "Specify CriteriaFileName with either a\n*.xml\nfile or a legacy\n*.sqy\nfile.\nTo create a\n*.xml\nquery file, you can either:\nUse the Advanced Component Selection dialog (\nStandard toolbar > Advanced Select\n) to export a query file in XML format.\n- or -\nOpen a txt file in Notepad and add content as follows:\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SWQueryList>\n<Query Name=\"InContextHasMate\" Favourites_Index=\"1\">\n<Boolean Name=\"And\" Category=\"In Context Relations\" SubCategory=\"Has mate to part\" Condition=\"=\" Value=\"base plate-1@98food processor\"/>\n</Query>\n</SWQueryList>\nReplace the attribute values in the <Query> and <Boolean> elements as required. Refer to the\nAssemblies > Basic Component Operations > Selecting Components > Advanced Component Selection > Search Criteria for Advanced Component Selection\ntopic in the SOLIDWORKS help to see all the options for populating the Category (Category1 in the dialog), SubCategory (Category2 in the dialog), Condition, and Value attributes.\nIn <Query> Favourites_Index specifies where the query appears at the end of the Select toolbar. This attribute corresponds to the row number in the Manage Searches tab of the dialog.\nIn <Boolean> Name specifies \"And\" (default) or \"Or\" to indicate whether to logically AND or OR multiple Boolean elements in the Query element. This attribute corresponds to the And/Or column in the dialog.\nAdd more <Query> and <Boolean> elements as needed to further constrain your query.\nSave the query file with a\n.xml\nextension.\nAfter calling this method, call\nIAdvancedSelectionCriteria::Select\nto select the assembly components that satisfy the query criteria.",
+  "examples": [
+    {
+      "title": "IAdvancedSelectionCriteria",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedSelectionCriteria",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

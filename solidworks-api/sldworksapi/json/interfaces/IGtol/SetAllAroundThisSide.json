@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "SetAllAroundThisSide",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "AllAroundTS",
+        "type": "System.Boolean",
+        "description": "True to use an All Around This Side leader, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetAllAroundThisSide",
+      "IGtol.SetAllOverThisSide"
+    ],
+    "keywords": [
+      "setallaroundthisside",
+      "igtol",
+      "gtol",
+      "all",
+      "around",
+      "side",
+      "ts",
+      "boolean",
+      "void"
+    ]
+  },
+  "title": "IGtol.SetAllAroundThisSide",
+  "description": "Sets whether this GTol uses an All Around This Side leader.",
+  "signature": "void SetAllAroundThisSide( \n   System.Boolean\nAllAroundTS\n)",
+  "parameters": [
+    {
+      "name": "AllAroundTS",
+      "type": "System.Boolean",
+      "description": "True to use an All Around This Side leader, false to not"
+    }
+  ],
+  "returns": "",
+  "remarks": "This property is valid only for bent, perpendicular, and multi-jog leaders. To create bent, perpendicular, and multi-jog leaders, use\nIAnnotation::SetLeader3\n.\nUse:\nIGtol::IsAttached\nto determine whether this symbol is currently using a leader.\nIGtol::HasExtraLeader\nto determine whether this symbol is using a bent leader.\nIGtol::GetLeaderSide\nto determine where the leader is attached to the symbol.\nIGtol::SetLeader\nto set the characteristics of the leader on this symbol.",
+  "examples": [],
+  "related": [
+    "IGtol.GetAllAroundThisSide",
+    "IGtol.SetAllOverThisSide"
+  ]
+}

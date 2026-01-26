@@ -1,0 +1,46 @@
+---
+type: method
+interface: ISketchPoint
+member: Select
+returns: System.Boolean
+parameters:
+  -
+    name: AppendFlag
+    type: System.Boolean
+    description: 
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - selections
+  - sketches
+related: []
+keywords:
+  - select
+  - isketchpoint
+  - sketch
+  - point
+  - append
+  - flag
+  - boolean
+---
+
+# ISketchPoint.Select
+
+Obsolete. Superseded by ISketchPoint::Select4.
+
+## Signature
+
+```csharp
+System.Boolean Select( 
+   System.Boolean
+AppendFlag
+)
+```
+## Parameters
+
+- `AppendFlag` (System.Boolean): 
+
+## Return Value
+
+Unknown.

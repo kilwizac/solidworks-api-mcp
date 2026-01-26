@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetSelectionFilters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "SelType",
+        "type": "System.Object",
+        "description": "Array of long values representing the swSelectType_e"
+      },
+      {
+        "name": "State",
+        "type": "System.Boolean",
+        "description": "True to activate the selection filters, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetSelectionFilter",
+      "ISldWorks.GetSelectionFilters",
+      "ISldWorks.IGetSelectionFilters",
+      "ISldWorks.IGetSelectionFiltersCount",
+      "ISldWorks.ISetSelectionFilters",
+      "ISldWorks.SetApplySelectionFilter",
+      "ISldWorks.SetSelectionFilter"
+    ],
+    "keywords": [
+      "selection",
+      "filters",
+      "see",
+      "also",
+      "iselectionmgr",
+      "setselectionfilters",
+      "isldworks",
+      "sld",
+      "works",
+      "sel",
+      "type",
+      "object",
+      "state",
+      "boolean",
+      "void",
+      "toggle",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.SetSelectionFilters",
+  "description": "Sets the status for multiple selection filters.",
+  "signature": "void SetSelectionFilters( \n   System.Object\nSelType\n,\n   System.Boolean\nState\n)",
+  "parameters": [
+    {
+      "name": "SelType",
+      "type": "System.Object",
+      "description": "Array of long values representing the swSelectType_e"
+    },
+    {
+      "name": "State",
+      "type": "System.Boolean",
+      "description": "True to activate the selection filters, false to not"
+    }
+  ],
+  "returns": "",
+  "remarks": "The state is applied to all elements in the SelType array. To determine if the selection filter is active, use\nISldWorks::GetApplySelectionFilter\n.",
+  "examples": [
+    {
+      "title": "Set and Toggle Selection Filters (VBA)",
+      "href": "Clear,_Set,_and_Toggle_Selection_Filters_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetSelectionFilter",
+    "ISldWorks.GetSelectionFilters",
+    "ISldWorks.IGetSelectionFilters",
+    "ISldWorks.IGetSelectionFiltersCount",
+    "ISldWorks.ISetSelectionFilters",
+    "ISldWorks.SetApplySelectionFilter",
+    "ISldWorks.SetSelectionFilter"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPageSetup",
+    "member": "SetResolution",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDefault",
+        "type": "System.Boolean",
+        "description": "True to use the default printer resolution, false to set the printer resolution"
+      },
+      {
+        "name": "DPI",
+        "type": "System.Int32",
+        "description": "Dots per inch"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IPageSetup.GetResolution"
+    ],
+    "keywords": [
+      "setresolution",
+      "ipagesetup",
+      "page",
+      "setup",
+      "resolution",
+      "use",
+      "default",
+      "boolean",
+      "dpi",
+      "int32"
+    ]
+  },
+  "title": "IPageSetup.SetResolution",
+  "description": "Sets the current printer resolution on documents and drawing sheets.",
+  "signature": "System.Boolean SetResolution( \n   System.Boolean\nUseDefault\n,\n   System.Int32\nDPI\n)",
+  "parameters": [
+    {
+      "name": "UseDefault",
+      "type": "System.Boolean",
+      "description": "True to use the default printer resolution, false to set the printer resolution"
+    },
+    {
+      "name": "DPI",
+      "type": "System.Int32",
+      "description": "Dots per inch"
+    }
+  ],
+  "returns": "True if printer resolution is set, false if not",
+  "remarks": "Specifying IPageSetup::SetResolution (false, 0) turns on the default resolution, which results in\nIPageSetup::GetUseDefaultResolution\nreturning True.",
+  "examples": [],
+  "related": [
+    "IPageSetup.GetResolution"
+  ]
+}

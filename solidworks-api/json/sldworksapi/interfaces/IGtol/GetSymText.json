@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetSymText",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Symbol index number used by SOLIDWORKS"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.GetSymTextPoints",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymEdgeCounts",
+      "IGtol.IGetSymLines",
+      "IGtol.IGetSymText",
+      "IGtol.IGetSymTextPoints"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "getsymtext",
+      "igtol",
+      "gtol",
+      "sym",
+      "text",
+      "idx",
+      "int16",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetSymText",
+  "description": "Gets the symbol text.",
+  "signature": "System.Object GetSymText( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Symbol index number used by SOLIDWORKS"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "The format of the return data is an array of BSTRs. The size of the array is based on the number of text pieces in this GTol. This number can be determined using TextCount returned by\nIGtol::GetSymEdgeCounts\n.",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.GetSymTextPoints",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymEdgeCounts",
+    "IGtol.IGetSymLines",
+    "IGtol.IGetSymText",
+    "IGtol.IGetSymTextPoints"
+  ]
+}

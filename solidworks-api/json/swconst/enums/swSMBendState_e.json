@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSMBendState_e",
+    "description": "Bend state values for a sheet metal part.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSMBendState_e",
+  "description": "Bend state values for a sheet metal part.",
+  "values": [
+    {
+      "member": "swSMBendStateFlattened",
+      "value": "2",
+      "description": "= The bends are flattened; the model is rolled back to just after a FlattenBends feature, but just before the corresponding ProcessBends feature"
+    },
+    {
+      "member": "swSMBendStateFolded",
+      "value": "3",
+      "description": "= The bends are folded; the model is rolled back to just after a FlattenBends ProcessBends feature pair"
+    },
+    {
+      "member": "swSMBendStateNone",
+      "value": "0",
+      "description": "= Not a sheet metal part; no SheetMetal features present"
+    },
+    {
+      "member": "swSMBendStateSharps",
+      "value": "1",
+      "description": "= The bends are in their sharp state; the part is rolled back to just before the first FlattenBends feature"
+    }
+  ]
+}

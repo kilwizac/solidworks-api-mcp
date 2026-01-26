@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDocExtension",
+    "member": "DisplayStateSpecMaterialPropertyValues",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Setting",
+        "type": "DisplayStateSetting",
+        "description": "IDisplayStateSetting (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.DisplayMode",
+      "IModelDocExtension.Transparency",
+      "IModelDocExtension.Visibility"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "material",
+      "properties",
+      "appearance",
+      "setting",
+      "iappearancesetting",
+      "displaystatespecmaterialpropertyvalues",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "display",
+      "state",
+      "spec",
+      "values",
+      "object",
+      "change",
+      "color",
+      "component",
+      "specific",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDocExtension.DisplayStateSpecMaterialPropertyValues",
+  "description": "Gets and sets the appearance settings for the specified display state setting.",
+  "signature": "System.Object DisplayStateSpecMaterialPropertyValues( \n   DisplayStateSetting\nSetting\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Setting",
+      "type": "DisplayStateSetting",
+      "description": "IDisplayStateSetting (see Remarks )"
+    }
+  ],
+  "returns": "One-dimensional array of IAppearanceSetting s (see Remarks )",
+  "remarks": "Before using this method to get or set appearance settings:\nCall\nIModelDocExtension::GetDisplayStateSetting\nto obtain an\nIDisplayStateSetting\nobject.\nCall\nIDisplayStateSetting::Names\nor\nIDisplayStateSetting::ISetNames\nto specify the display states.\nCall\nIDisplayStateSetting::Entities\nor\nIDisplayStateSetting::ISetEntities\nto specify the components.\nCall\nIDisplayStateSetting::Option\nto specify the display state scope of the setting.\nSpecify the Setting parameter using the IDisplayStateSetting object.\nEach\nIAppearanceSetting\nin the array returned by this method maps to a component in a display state. The size of the returned array is (\nIDisplayStateSetting::GetEntityCount\n*\nIDisplayStateSetting::GetNameCount\n).\nThe returned array stores appearance settings (AS) for N components in M display states as follows:\nComponent1 DisplayState1 AS, Component1 DisplayState2 AS, ..., Component1 DisplayStateM AS,\nComponent2 DisplayState1 AS, Component2 DisplayState2 AS, ..., Component2 DisplayStateM AS,\n...\nComponentN DisplayState1 AS, ComponentN DisplayState2 AS, ..., ComponentN DisplayStateM AS\nBefore using this method to set appearance settings:\nPerform steps1-5 as described above.\nCall\nIModelDocExtension::GetAppearanceSetting\nto obtain an\nIAppearanceSetting\nobject.\nSet the properties in the IAppearanceSetting object for the component in the display state.\nRepeat steps 2 and 3 for each component in each display state.\nCreate an array of the IAppearanceSetting objects in the order described above.",
+  "examples": [
+    {
+      "title": "Change Color of Component in Specific Display State (C#)",
+      "href": "Change_Color_of_Component_in_Specific_Display_State_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Color of Component in Specific Display State (VB.NET)",
+      "href": "Change_Color_of_Component_in_Specific_Display_State_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Color of Component in Specific Display State (VBA)",
+      "href": "Change_Color_of_Component_in_Specific_Display_State_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.DisplayMode",
+    "IModelDocExtension.Transparency",
+    "IModelDocExtension.Visibility"
+  ]
+}

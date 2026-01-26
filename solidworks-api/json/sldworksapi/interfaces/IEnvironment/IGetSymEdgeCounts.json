@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEnvironment",
+    "member": "IGetSymEdgeCounts",
+    "returns": "System.Int16",
+    "parameters": [
+      {
+        "name": "SymId",
+        "type": "System.String",
+        "description": "Name of the geometric tolerance symbol formatted as: < LibraryName-SymbolName > where LibraryName and SymbolName are in the SOLIDWORKS text file C:\\ProgramData\\SolidWorks\\SolidWorks 20 nn \\ lang \\ english\\gtol.sym . NOTE : You must include the right- and left-angle brackets and separate LibraryName and SymbolName with a hyphen; for example, <MOD-DEG>."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEnvironment.GetSymEdgeCounts",
+      "IEnvironment.IGetSymArcs",
+      "IEnvironment.IGetSymCircles",
+      "IEnvironment.IGetSymLines",
+      "IEnvironment.IGetSymTextPoints",
+      "IEnvironment.IGetSymTriangles"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymedgecounts",
+      "ienvironment",
+      "environment",
+      "sym",
+      "edge",
+      "counts",
+      "id",
+      "string",
+      "int16"
+    ]
+  },
+  "title": "IEnvironment.IGetSymEdgeCounts",
+  "description": "Gets an array that contains the number of lines, arcs, circles, text strings, and triangles in the specified geometric tolerance symbol.",
+  "signature": "System.Int16 IGetSymEdgeCounts( \n   System.String\nSymId\n)",
+  "parameters": [
+    {
+      "name": "SymId",
+      "type": "System.String",
+      "description": "Name of the geometric tolerance symbol formatted as: < LibraryName-SymbolName > where LibraryName and SymbolName are in the SOLIDWORKS text file C:\\ProgramData\\SolidWorks\\SolidWorks 20 nn \\ lang \\ english\\gtol.sym . NOTE : You must include the right- and left-angle brackets and separate LibraryName and SymbolName with a hyphen; for example, <MOD-DEG>."
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of shorts (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Format of return information is the following array of short integers:\nretval[0] = line count\nretval[1] = arc count\nretval[2] = circle count\nretval[3] = text count\nretval[4] = triangle count",
+  "examples": [],
+  "related": [
+    "IEnvironment.GetSymEdgeCounts",
+    "IEnvironment.IGetSymArcs",
+    "IEnvironment.IGetSymCircles",
+    "IEnvironment.IGetSymLines",
+    "IEnvironment.IGetSymTextPoints",
+    "IEnvironment.IGetSymTriangles"
+  ]
+}

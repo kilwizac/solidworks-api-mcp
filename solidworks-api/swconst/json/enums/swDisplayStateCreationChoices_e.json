@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swDisplayStateCreationChoices_e",
+    "description": "Display-state preserve options.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swDisplayStateCreationChoices_e",
+  "description": "Display-state preserve options.",
+  "values": [
+    {
+      "member": "swDisplayStateCreation_AskUser",
+      "value": "-1",
+      "description": "; Display the dialog where the user can select the display states (PhotoWorks material and SOLIDWORKS colors) he or she wants to preserve; however, if swDisplayStateCreation_AskUser is set and the user opens the file using ISldWorks::OpenDoc n (where n is the version number of the method), then both display states are preserved and the dialog is not displayed; valid in documents created in SOLIDWORKS 2009 and earlier"
+    },
+    {
+      "member": "swDisplayStateCreation_BothPWSW",
+      "value": "3",
+      "description": "; Preserve both PhotoWorks and SOLIDWORKS display states; valid in documents created in SOLIDWORKS 2009 and earlier"
+    },
+    {
+      "member": "swDisplayStateCreation_PW",
+      "value": "1",
+      "description": "; Preserve PhotoWorks material display state only; valid in documents created in SOLIDWORKS 2009 and earlier"
+    },
+    {
+      "member": "swDisplayStateCreation_SW",
+      "value": "2",
+      "description": "; Preserve SOLIDWORKS color display state only; valid in documents created in SOLIDWORKS 2009 and earlier"
+    }
+  ]
+}

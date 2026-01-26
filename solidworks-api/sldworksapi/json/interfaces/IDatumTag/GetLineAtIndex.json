@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTag",
+    "member": "GetLineAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line; index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTag.GetLineCount",
+      "IDatumTag.IGetLineAtIndex"
+    ],
+    "keywords": [
+      "getlineatindex",
+      "idatumtag",
+      "datum",
+      "tag",
+      "line",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDatumTag.GetLineAtIndex",
+  "description": "Gets information for the specified line in this datum tag.",
+  "signature": "System.Object GetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line; index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\n]\nwhere:\nlineType\nLine type as defined in\nswLineTypes_e\nstartPt\n[3]\nXYZ line start point\nendPt\n[3]\nXYZ line end point",
+  "examples": [],
+  "related": [
+    "IDatumTag.GetLineCount",
+    "IDatumTag.IGetLineAtIndex"
+  ]
+}

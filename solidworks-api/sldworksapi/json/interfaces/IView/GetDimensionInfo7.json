@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDimensionInfo7",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "view",
+      "see",
+      "also",
+      "iview",
+      "dimensions",
+      "sheet",
+      "isheet",
+      "dimension",
+      "idimension",
+      "drawing",
+      "views",
+      "getdimensioninfo7",
+      "info7",
+      "object"
+    ]
+  },
+  "title": "IView.GetDimensionInfo7",
+  "description": "Gets all of the dimension information in the current drawing sheet or the current drawing view.",
+  "signature": "System.Object GetDimensionInfo7()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The data returned is an array of doubles as follows:\n[\ndimensionCount\n,\n[\ndimensionType, LineStyleIndex, LineWidth, Color, LayerID, LayerOverride, refPoint1a\n[3]\n, refPoint1b\n[3]\n, refPoint2a\n[3]\n, refPoint2b\n[3]\n, refPoint3\n[3]\n, textPoint\n[3]\n, textDirection\n[3]\n, dimNormal\n[3]\n, angularDimInfo\n[9]\n, angularOrdinateDimInfo[10], precision, arrowLength, arrowHeadWidth, arrowHeadHeight, arrowHeadStyle, witnessGap, witnessExt, dimValue, textHeight, arrowsOut, isDiameter, RadialDimensionflags\n]\n]\nwhere:\ndimensionCount\n= number of dimensions found in the drawing view\nEach dimension has the following data:\ndimensionType =\nreturns 0 = Linear, 1 = Angular, 2 = Radial, 3 = Ordinate, 4 = Chamfer, 5 = Angular Ordinate\nLineStyleIndex\n= line style; valid line styles as defined in\nswLineStyles_e\nLineWidth\n= integer value defining the line width; valid width values as defined in\nswLineWeights_e\nColor\n= COLORREF returned as an integer; return value could be 0 or -1 for default color\nLayerID\n= integer value indicating which layer holds this entity; this integer value is the array index value into the layerList array; obtain the layerList array using\nILayerMgr::GetLayerList\nor\nILayerMgr::IGetLayerList\n; a value of 1 indicates that this item is not on a layer\nLayerOverride\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the\nILayer\ndefault properties; if the bit value is set, then the specific property or properties have been overridden; the bit indicators are: color = 0x1, style = 0x2, and width = 0x4; therefore, if\nLayerOverride\nwas returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer\nrefPoint1a\n[3]\n= array of three doubles\nrefPoint1b\n[3]\n= array of three doubles\nrefPoint2a\n[3]\n= array of three doubles\nrefPoint2b\n[3]\n= array of three doubles\nrefPoint3\n[3]\n= array of three doubles\ntextPoint\n[3]\n= array of three doubles; this is the upper-left corner of the dimension bounding box\ntextDirection\n[3]\n= array of three doubles\ndimNormal\n[3]\n= array of three doubles\nangularDimInfo\n[9]\nThis data is only returned for angular dimensions; the array of 9 values is as follows:\nquadrant\n= as defined in\nswQuadant_e\ndirectionLine1\n[3] = array of three doubles\ndirectionLine2\n[3] = array of three doubles\nisInteriorAngle\n= BOOLEAN returned as a double; true if it is an interior angle\nisFlipped\n= BOOLEAN returned as a double; true if it is flipped\nangularOrdinateDimInfo\n[10] This data is only returned for angular ordinate dimiensions; the array of 10 values is as follows:\npoint\n[3] = array of three doubles\nisPermanent\n= BOOLEAN returned as a double; true if it is permanent\nleaderType\n= where 1 = Above Text, 2 = Inline Text, 3 = Horizontal Text\nisExtThruCenter\n= BOOLEAN returned as a double; true if the extension line passes through the\ncenter\nisBidirectiona\n= BOOLEAN returned as a double; true if it is bidirectional\ndirection\n[3] = array of three doubles\nprecision\n= number of decimal places\narrowLength\n= arrow length\narrowHeadWidth\n= arrowhead width\narrowHeadHeight\n= arrowhead height\narrowHeadStyle\n= arrowhead style as defined in\nswArrowStyle_e\nwitnessGap\n= extension gap\nwitnessExt\n= extension's extension\ndimValue\n= dimension value\ntextHeight\n= dimension text height\narrowsOut\n= BOOLEAN\nreturned as a double and is true if the arrows are outside\nisDiameter\n= BOOLEAN\nreturned as a double and is used by radial dimensions; if this value is true, then the\ndimValue\nreturned is the diameter value, if false, then the\ndimValue\nreturned is the radial value\nRadialDimensionflags  =\nbit code defining properties for radial dimensions or 0 if the dimension is not radial. This element contains a bitwise OR of the following values:\nRADIAL_INSIDE - Specifies that the arrows of the radial dimension are displayed inside the arc/circle.\nRADIAL_2ND_ARROW - Specifies that there should be two outside arrows displayed with the radial dimension.\nRADIAL_SOLID_LEADER - Specifies that the leader line should be drawn in solid.\nRADIAL_CALLOUT - Specifies that there should be text displayed with the dimension.\nRADIAL_IS_RADIAL - Specifies that the leader line should remain radial.\nRADIAL_IS_BENT - Specifies that the leader line should be bent at the end.\nRADIAL_IS_LINEAR - Specifies that the leader line should be straight at the end.\nRADIAL_DOC_2ND_ARROW - Specifies that there should be two outside document arrows displayed with the radial dimension.\nRADIAL_HAS_SNAPPED_DIR - Specifies that the arrow should snap to the grid.\nThe maximum number of doubles contained in the array will be (1 +\ndimensionCount\n* 52).\nThis method does not support\nhole callouts\n.",
+  "examples": [],
+  "related": []
+}

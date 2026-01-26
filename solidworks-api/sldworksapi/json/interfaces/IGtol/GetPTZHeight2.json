@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetPTZHeight2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int32",
+        "description": "Frame number"
+      },
+      {
+        "name": "TolNumber",
+        "type": "System.Int32",
+        "description": "Tolerance number"
+      },
+      {
+        "name": "PtzDisplay",
+        "type": "System.Boolean",
+        "description": "True if the projected zone tolerance is displayed in the GTol, false if not"
+      },
+      {
+        "name": "PtzHt",
+        "type": "System.String",
+        "description": "Height of the projected tolerance zone"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.SetPTZHeight2"
+    ],
+    "keywords": [
+      "getptzheight2",
+      "igtol",
+      "gtol",
+      "ptz",
+      "height2",
+      "frame",
+      "number",
+      "int32",
+      "tol",
+      "display",
+      "boolean",
+      "ht",
+      "string",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IGtol.GetPTZHeight2",
+  "description": "Gets the projected tolerance zone for the specified frame and tolerance in this GTol.",
+  "signature": "System.Boolean GetPTZHeight2( \n   System.Int32\nFrameNumber\n,\n   System.Int32\nTolNumber\n,\n   out System.Boolean\nPtzDisplay\n,\n   out System.String\nPtzHt\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int32",
+      "description": "Frame number"
+    },
+    {
+      "name": "TolNumber",
+      "type": "System.Int32",
+      "description": "Tolerance number"
+    },
+    {
+      "name": "PtzDisplay",
+      "type": "System.Boolean",
+      "description": "True if the projected zone tolerance is displayed in the GTol, false if not"
+    },
+    {
+      "name": "PtzHt",
+      "type": "System.String",
+      "description": "Height of the projected tolerance zone"
+    }
+  ],
+  "returns": "True if the method executed successfully, false if not",
+  "remarks": "This method:\nis valid only if this Gtol was created in a version of SOLIDWORKS earlier than 2022.\nreturns the height of the projected tolerance zone as a string because it is a user-specified parameter that can be textual, numeric, or both types of data.",
+  "examples": [
+    {
+      "title": "Insert GTol (C#)",
+      "href": "Insert_GTol_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VB.NET)",
+      "href": "Insert_GTol_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VBA)",
+      "href": "Insert_GTol_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGtol.SetPTZHeight2"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISMGussetFeatureData",
+    "member": "ReferencePoint",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISMGussetFeatureData.ReferenceLine",
+      "ISMGussetFeatureData.SupportingFaces"
+    ],
+    "keywords": [
+      "referencepoint",
+      "ismgussetfeaturedata",
+      "ism",
+      "gusset",
+      "feature",
+      "data",
+      "reference",
+      "point",
+      "object",
+      "ifeaturemanager",
+      "insertsheetmetalgussetfeature3"
+    ],
+    "readonly": null
+  },
+  "title": "ISMGussetFeatureData.ReferencePoint",
+  "description": "Gets or sets a position reference for this gusset.",
+  "signature": "System.Object ReferencePoint {get; set;}",
+  "parameters": [],
+  "returns": "Point (e.g., vertex , sketch point , or reference point ) where to position this gusset",
+  "remarks": "If you do not set this property, you must set\nISMGussetFeatureData::UseOffset\nand\nISMGussetFeatureData::OffsetDistance\nto offset the gusset from an assumed reference point. For insertion of the first gusset, the assumed reference point is on the end of the sheet metal bend. For second and subsequent gusset insertions, the assumed reference point is on the edge of the gusset last inserted.\nSee the\nISMGussetFeatureData\nRemarks.",
+  "examples": [
+    {
+      "title": "IFeatureManager::InsertSheetMetalGussetFeature3",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertSheetMetalGussetFeature3",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISMGussetFeatureData.ReferenceLine",
+    "ISMGussetFeatureData.SupportingFaces"
+  ]
+}

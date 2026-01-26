@@ -1,0 +1,150 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>CommandManager and CommandGroups</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=CommandGroup_Object>
+<meta NAME=MS-HAID CONTENT=CommandManager_Object>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=918>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>CommandManager and CommandGroups</h1>
+
+<p>You can create native SOLIDWORKS toolbars and menus using
+<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandManager.html">ICommandManager</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup.html">ICommandGroup</a>. </p>
+<p><span style="font-weight: bold;">NOTE:</span> You can only create one 
+ CommandManager in an add-in application; however, multiple CommandGroups 
+ can exist in an add-in application. See SOLIDWORKS Help for details about 
+ the CommandManager. <br>&nbsp;</p>
+
+<p>The CommandManager-style toolbars and menus:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Allowo you to add toolbars to the SOLIDWORKS CommandManager.</p></li>
+	
+	<li class=kadov-p><p>Allow you to drag your toolbar buttons to and from other API 
+ and native SOLIDWORKS toolbars using the <span style="font-weight: bold;">Tools</span>, 
+ <span style="font-weight: bold;">Customize</span> dialog or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~DragToolbarButton.html">ISldWorks::DragToolbarButton.</a></p></li>
+	
+	<li class=kadov-p><p>Allow you to create flyout toolbars and submenus.</p></li>
+	<li class=kadov-p>
+	<p>Are associated, so they use the same name, button, callback function, 
+ enable function, and add-in ID.</p></li>
+</ul>
+
+<p>You cannot create an ICommandGroup with a toolbar, start SOLIDWORKS, 
+ use the toolbar, close SOLIDWORKS, add items to or remove items from the 
+ toolbar, and start SOLIDWORKS. Instead, to add to or remove items from a 
+toolbar during development, you must:</p>
+<ol>
+	<li class=kadov-p><p>Call
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~ToolbarId.html">ICommandGroup::ToolbarId</a> 
+	to get the ID of the toolbar you want to modify.</li>
+	<li class=kadov-p><p>Use the ID to find the toolbar in the registry.</li>
+	<li class=kadov-p><p>Remove the toolbar definition 
+ from the registry:<br>
+	HKEY_CURRENT_USER\Software\SOLIDWORKS\SOLIDWORKS 
+ &lt;version&gt;\User Interface\Custom API Toolbars\&lt;index&gt;<br>
+	HKEY_CURRENT_USER\Software\SOLIDWORKS\SOLIDWORKS 
+ &lt;version&gt;\User Interface\Toolbars<br>
+	HKEY_CURRENT_USER\Software\SOLIDWORKS\SOLIDWORKS 
+ &lt;version&gt;\User Interface\Toolbars\PartTool<br>
+	HKEY_CURRENT_USER\Software\SOLIDWORKS\SOLIDWORKS 
+ &lt;version&gt;\User Interface\Toolbars\AssemblyTool<br>
+	HKEY_CURRENT_USER\Software\SOLIDWORKS\SOLIDWORKS 
+ &lt;version&gt;\User Interface\Toolbars\DrawingTool</li>
+	<li class=kadov-p><p>Add items to and remove items from the toolbar.</li>
+	<li class=kadov-p><p>Assign the ICommandGroup a different user ID. This is the ID generated 
+	by
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandManager~CreateCommandGroup.html">ICommandManager::CreateCommandGroup</a>. 
+	You must keep track of the toolbar user IDs in each version of 
+ your add-in. The user ID and the GUID of the CoClass implementing ISwAddin 
+ are a unique pair.</li>
+</ol>
+
+<h3>To add commands:</h3>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Create the ICommandManager using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~GetCommandManager.html">ISldWorks::GetCommandManager</a>. 
+ <span style="font-weight: bold;"><br>
+	<br>
+	NOTE:</span> You might want to declare this object as a class variable 
+ in your add-in so that it can be accessed from anywhere later.</p></li>
+	
+	<li class=kadov-p><p>Create one or more top-level CommandGroups using 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandManager~CreateCommandGroup.html">ICommandManager::CreateCommandGroup</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandManager~AddContextMenu.html">ICommandManager::AddContextMenu</a>.</p></li>
+	
+	<li class=kadov-p><p>Add bitmap files of the images of buttons to the 
+ CommandGroups using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~LargeIconList.html">ICommandGroup::LargeIconList</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~SmallIconList.html">ICommandGroup::SmallIconList</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~LargeMainIcon.html">ICommandGroup::LargeMainIcon</a>, 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~SmallMainIcon.html">ICommandGroup::SmallMainIcon</a>.<span 
+ style="font-weight: bold;"><br>
+	<br>
+	NOTE:</span> You only add the bitmap files to the top-level group. 
+ These files provide the images of the buttons for all of the CommandGroups.</p></li>
+	
+	<li class=kadov-p><p>Add commands to the CommandGroups using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~AddCommandItem2.html">ICommandGroup::AddCommandItem2</a>.</p></li>
+	
+	<li class=kadov-p><p>Enable or disable toolbars or menus for specific 
+ CommandGroups using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~HasToolbar.html">ICommandGroup::HasToolbar</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~HasMenu.html">ICommandGroup::HasMenu</a>.</p></li>
+	
+	<li class=kadov-p><p>Create context-sensitive menus using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~SelectType.html">ICommandGroup::SelectType</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~CustomNames.html">ICommandGroup::CustomNames</a>, 
+ if the selected object is a custom feature such as an attribute.</p></li>
+	
+	<li class=kadov-p><p>Activate the top-level ICommandGroup using <a 
+ href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandGroup~Activate.html">ICommandGroup::Activate</a>.</p></li>
+</ol>
+
+<h3>To remove commands:</h3>
+
+<p>Use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICommandManager~RemoveCommandGroup.html">ICommandManager::RemoveCommandGroup</a> 
+ for all CommandGroups created with ICommandManager::CreateCommandGroup 
+ and ICommandManager::AddContextMenu.</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

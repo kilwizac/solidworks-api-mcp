@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCorresponding",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "InputObject",
+        "type": "System.Object",
+        "description": "Pointer to the Dispatch object in the assembly context"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IComponent2.GetCorresponding",
+      "IComponent2.GetCorrespondingEntity",
+      "IComponent2.IGetCorrespondingEntity",
+      "IModelDocExtension.GetCorrespondingEntity"
+    ],
+    "keywords": [
+      "getcorresponding",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "corresponding",
+      "input",
+      "object",
+      "note",
+      "assembly",
+      "vba",
+      "part"
+    ]
+  },
+  "title": "IModelDocExtension.GetCorresponding",
+  "description": "Obsolete. Superseded by IModelDocExtension::GetCorresponding2.",
+  "signature": "System.Object GetCorresponding( \n   System.Object\nInputObject\n)",
+  "parameters": [
+    {
+      "name": "InputObject",
+      "type": "System.Object",
+      "description": "Pointer to the Dispatch object in the assembly context"
+    }
+  ],
+  "returns": "Pointer to the corresponding object in the underlying part, assembly, or subassembly document",
+  "remarks": "Given an object in an assembly context, this method gets the corresponding object in the underlying component document regardless of whether the document is a part or an assembly.\nYou can use this method with any object assigned a persistent reference ID; for example, a\nIFeature\n,\nIAnnotation\nor\nISketch\nobject.",
+  "examples": [
+    {
+      "title": "Get Corresponding Note in Assembly (VBA)",
+      "href": "Get_Corresponding_Note_in_Assembly_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Corresponding Note in Part (VBA)",
+      "href": "Get_Corresponding_Note_in_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.GetCorresponding",
+    "IComponent2.GetCorrespondingEntity",
+    "IComponent2.IGetCorrespondingEntity",
+    "IModelDocExtension.GetCorrespondingEntity"
+  ]
+}

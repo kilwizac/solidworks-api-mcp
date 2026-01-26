@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetLockRowHeight",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the row (see Remarks )"
+      },
+      {
+        "name": "LockRowHeight",
+        "type": "System.Boolean",
+        "description": "True to lock this row's height, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.DeleteRow",
+      "ITableAnnotation.GetLockRowHeight",
+      "ITableAnnotation.GetRowHeight",
+      "ITableAnnotation.GetRowVerticalGap",
+      "ITableAnnotation.InsertRow",
+      "ITableAnnotation.MoveRow",
+      "ITableAnnotation.RowHidden",
+      "ITableAnnotation.SetRowHeight",
+      "ITableAnnotation.SetRowVerticalGap"
+    ],
+    "keywords": [
+      "setlockrowheight",
+      "itableannotation",
+      "table",
+      "annotation",
+      "lock",
+      "row",
+      "height",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SetLockRowHeight",
+  "description": "Sets whether to lock the height of the specified row in this table annotation.",
+  "signature": "System.Boolean SetLockRowHeight( \n   System.Int32\nIndex\n,\n   System.Boolean\nLockRowHeight\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the row (see Remarks )"
+    },
+    {
+      "name": "LockRowHeight",
+      "type": "System.Boolean",
+      "description": "True to lock this row's height, false to not"
+    }
+  ],
+  "returns": "True if setting whether to lock the height of the specified row is successful, false if not",
+  "remarks": "Call\nITableAnnotation::RowCount\nto get the number of visible rows or\nITableAnnotation::TotalRowCount\nto get the number of visible and hidden rows in this table annotation.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.DeleteRow",
+    "ITableAnnotation.GetLockRowHeight",
+    "ITableAnnotation.GetRowHeight",
+    "ITableAnnotation.GetRowVerticalGap",
+    "ITableAnnotation.InsertRow",
+    "ITableAnnotation.MoveRow",
+    "ITableAnnotation.RowHidden",
+    "ITableAnnotation.SetRowHeight",
+    "ITableAnnotation.SetRowVerticalGap"
+  ]
+}

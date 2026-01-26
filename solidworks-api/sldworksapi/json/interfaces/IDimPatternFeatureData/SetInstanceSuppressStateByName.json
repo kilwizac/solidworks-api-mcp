@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "SetInstanceSuppressStateByName",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "InstanceName",
+        "type": "System.String",
+        "description": "Name of pattern instance to suppress (see Remarks )"
+      },
+      {
+        "name": "SuppressState",
+        "type": "System.Boolean",
+        "description": "True if the pattern instance is suppressed, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.GetInstanceSuppressStateByIndex",
+      "IDimPatternFeatureData.GetInstanceSuppressStateByName",
+      "IDimPatternFeatureData.SetInstanceSuppressStateByIndex"
+    ],
+    "keywords": [
+      "setinstancesuppressstatebyname",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "instance",
+      "suppress",
+      "state",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IDimPatternFeatureData.SetInstanceSuppressStateByName",
+  "description": "Sets whether a pattern instance with the specified name is suppressed in this variable pattern feature.",
+  "signature": "System.String SetInstanceSuppressStateByName( \n   System.String\nInstanceName\n,\n   System.Boolean\nSuppressState\n)",
+  "parameters": [
+    {
+      "name": "InstanceName",
+      "type": "System.String",
+      "description": "Name of pattern instance to suppress (see Remarks )"
+    },
+    {
+      "name": "SuppressState",
+      "type": "System.Boolean",
+      "description": "True if the pattern instance is suppressed, false if not"
+    }
+  ],
+  "returns": "If the pattern instance is... Then Return Value is an... Suppressed Empty string indicating success Not suppressed Error string",
+  "remarks": "Use\nIDimPatternFeatureData::GetInstanceNameByIndex\nto get InstanceName.",
+  "examples": [],
+  "related": [
+    "IDimPatternFeatureData.GetInstanceSuppressStateByIndex",
+    "IDimPatternFeatureData.GetInstanceSuppressStateByName",
+    "IDimPatternFeatureData.SetInstanceSuppressStateByIndex"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingComponent",
+    "member": "IGetChildren",
+    "returns": "DrawingComponent",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of drawing component objects that are child components of this drawing component"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IDrawingComponent.GetChildren"
+    ],
+    "keywords": [
+      "children",
+      "drawing",
+      "components",
+      "igetchildren",
+      "idrawingcomponent",
+      "component",
+      "count",
+      "int32"
+    ]
+  },
+  "title": "IDrawingComponent.IGetChildren",
+  "description": "Gets the child components for this drawing component.",
+  "signature": "DrawingComponent IGetChildren( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of drawing component objects that are child components of this drawing component"
+    }
+  ],
+  "returns": "Array of IDrawingComponent objects that are child components of the drawing component",
+  "remarks": "This method traverses the referenced component tree in a given view. Use\nIDrawingComponent::Visible\nto get or set the visibility of individual components in the given view.\nBefore calling this method, call\nIDrawingComponent::GetChildrenCount\nto determine the size of the array.",
+  "examples": [],
+  "related": [
+    "IDrawingComponent.GetChildren"
+  ]
+}

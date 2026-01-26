@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetStandardViewRotation",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ViewId",
+        "type": "System.Int32",
+        "description": "View ID that you want to evaluate as defined in swStandardViews_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IGetStandardViewRotation",
+      "IModelDocExtension.GetNamedViewRotation",
+      "IModelDocExtension.IGetNamedViewRotation"
+    ],
+    "keywords": [
+      "standard",
+      "views",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "orientation",
+      "getstandardviewrotation",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "rotation",
+      "id",
+      "int32",
+      "object",
+      "show",
+      "named",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.GetStandardViewRotation",
+  "description": "Gets the specified view orientation matrix with respect to the Front view.",
+  "signature": "System.Object GetStandardViewRotation( \n   System.Int32\nViewId\n)",
+  "parameters": [
+    {
+      "name": "ViewId",
+      "type": "System.Int32",
+      "description": "View ID that you want to evaluate as defined in swStandardViews_e"
+    }
+  ],
+  "returns": "Array describing the view rotation with respect to the Front view; this is an array of 9 doubles",
+  "remarks": "The end-user may have redefined the Front view to be something other than the X-Y plane.",
+  "examples": [
+    {
+      "title": "Show Named View (VBA)",
+      "href": "Show_Named_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IGetStandardViewRotation",
+    "IModelDocExtension.GetNamedViewRotation",
+    "IModelDocExtension.IGetNamedViewRotation"
+  ]
+}

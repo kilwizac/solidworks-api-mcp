@@ -1,0 +1,76 @@
+---
+type: method
+interface: ISldWorks
+member: DocumentVisible
+returns: void
+parameters:
+  -
+    name: Visible
+    type: System.Boolean
+    description: True if the documents of the specified type are displayed upon creation or retrieval, false if not
+  -
+    name: Type
+    type: System.Int32
+    description: Type of document to which you apply visibility as defined in swDocumentTypes_e
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - ISldWorks.UserControl
+  - ISldWorks.Visible
+keywords:
+  - document
+  - visibility
+  - documentvisible
+  - isldworks
+  - sld
+  - works
+  - visible
+  - boolean
+  - type
+  - int32
+  - void
+---
+
+# ISldWorks.DocumentVisible
+
+Allows the application to control the display of a document in a window upon creation or retrieval.
+
+## Signature
+
+```csharp
+void DocumentVisible( 
+   System.Boolean
+Visible
+,
+   System.Int32
+Type
+)
+```
+## Parameters
+
+- `Visible` (System.Boolean): True if the documents of the specified type are displayed upon creation or retrieval, false if not
+- `Type` (System.Int32): Type of document to which you apply visibility as defined in swDocumentTypes_e
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+This method is a flag that allows you to display or hide documents as they are loaded.
+If you create a document invisibly by passing false to this method, then you cannot make it visible with
+IModelDoc2::Visible
+. Instead you should close it and then reopen it as a visible document.
+Additionally if SOLIDWORKS was hidden by a call to
+ISldWorks::UserControlBackground
+, and a document is opened (e.g., a configuration is loaded), then you must call this method to keep the SOLIDWORKS Design user interface hidden.
+
+## See Also
+
+- `ISldWorks.UserControl`
+- `ISldWorks.Visible`

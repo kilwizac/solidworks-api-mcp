@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchPoint",
+    "member": "Layer",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchPoint.LayerOverride"
+    ],
+    "keywords": [
+      "layer",
+      "isketchpoint",
+      "sketch",
+      "point",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchPoint.Layer",
+  "description": "Gets or sets the layer for this sketch point.",
+  "signature": "System.String Layer {get; set;}",
+  "parameters": [],
+  "returns": "Name of the layer for this sketch point",
+  "remarks": "Layers are only supported in drawing documents.\nEvery sketch point is on a layer. Sketch points can be created on a specific layer in drawings.\nThe return value may be an empty string because an older document may not contain layers. Also, this can occur if sketch points were generated in a new document that has no layers defined.",
+  "examples": [],
+  "related": [
+    "ISketchPoint.LayerOverride"
+  ]
+}

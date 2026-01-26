@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelationManager",
+    "member": "IGetRelations",
+    "returns": "SketchRelation",
+    "parameters": [
+      {
+        "name": "Filter",
+        "type": "System.Int32",
+        "description": "Sketch relation as defined in swSketchRelationFilterType_e"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of sketch relations"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelationManager.GetRelations"
+    ],
+    "keywords": [
+      "relations",
+      "igetrelations",
+      "isketchrelationmanager",
+      "sketch",
+      "relation",
+      "manager",
+      "filter",
+      "int32",
+      "count"
+    ]
+  },
+  "title": "ISketchRelationManager.IGetRelations",
+  "description": "Gets all of the sketch relations in the sketch based on the specified filter.",
+  "signature": "SketchRelation IGetRelations( \n   System.Int32\nFilter\n,\n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Filter",
+      "type": "System.Int32",
+      "description": "Sketch relation as defined in swSketchRelationFilterType_e"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of sketch relations"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of sketch relations VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Because some of the objects may be NULL, you should check for this before accessing them. You should deallocate on any dynamically allocated memory.\nCall\nISketchRelationManager::GetRelationsCount\nbefore calling this method to get the value for Count.",
+  "examples": [],
+  "related": [
+    "ISketchRelationManager.GetRelations"
+  ]
+}

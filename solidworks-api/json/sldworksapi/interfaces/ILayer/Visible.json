@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILayer",
+    "member": "Visible",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "visible",
+      "ilayer",
+      "layer",
+      "boolean",
+      "determine",
+      "vba",
+      "layers",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "ILayer.Visible",
+  "description": "Gets or sets the visibility of this layer.",
+  "signature": "System.Boolean Visible {get; set;}",
+  "parameters": [],
+  "returns": "True if the layer is visible, false if the layer is not visible (see Remarks )",
+  "remarks": "After setting this property to the opposite state, call\nILayer::Printable\nto check its state, because setting ILayer::Visible might change the state of ILayer::Printable.\nTo ensure that ILayer::Visible and ILayer::Printable are set to the desired states, perform the following steps in this order:\nSet ILayer::Visible.\nGet the state of ILayer::Printable.\nSet ILayer::Printable if necessary.",
+  "examples": [
+    {
+      "title": "Determine if Layer is Visible (VBA)",
+      "href": "Determine_if_Layer_is_Visible_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Layers (C#)",
+      "href": "Get_Layers_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Layers (VB.NET)",
+      "href": "Get_Layers_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Layers (VBA)",
+      "href": "Get_Layers_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

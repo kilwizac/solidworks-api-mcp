@@ -1,0 +1,27 @@
+---
+type: interface
+interface: ITitleBlockTableFeature
+inherits: null
+description: Provides access to title block table features.
+member_count: 4
+docset: sldworksapi
+categories:
+  - drawings
+  - features
+common_members:
+  - GetFeature
+  - GetTableAnnotationCount
+  - GetTableAnnotations
+  - IGetTableAnnotations
+---
+
+# ITitleBlockTableFeature
+
+Provides access to title block table features.
+
+## Common Members
+
+- `GetFeature`
+- `GetTableAnnotationCount`
+- `GetTableAnnotations`
+- `IGetTableAnnotations`

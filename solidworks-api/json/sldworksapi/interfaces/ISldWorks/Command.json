@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "Command",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Command",
+        "type": "System.Int32",
+        "description": "Command as defined by swCommand_e"
+      },
+      {
+        "name": "Args",
+        "type": "System.Object",
+        "description": "See Remarks"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "commands",
+      "solidworks",
+      "files",
+      "open",
+      "dialog",
+      "file",
+      "command",
+      "isldworks",
+      "sld",
+      "works",
+      "int32",
+      "args",
+      "object"
+    ]
+  },
+  "title": "ISldWorks.Command",
+  "description": "Opens the specified dialog or file.",
+  "signature": "System.Object Command( \n   System.Int32\nCommand\n,\n   System.Object\nArgs\n)",
+  "parameters": [
+    {
+      "name": "Command",
+      "type": "System.Int32",
+      "description": "Command as defined by swCommand_e"
+    },
+    {
+      "name": "Args",
+      "type": "System.Object",
+      "description": "See Remarks"
+    }
+  ],
+  "returns": "",
+  "remarks": "If command specified is...\nThen pass...\nswOpenHTMLHelp\nPath and filename for the compiled HTML file (has .chm filename extension)\nswFileOpen\nswFileNew\nswOpenRecentFile\nEmpty VARIANT; for example:\nVARIANT args;\nV_VT(&args) = VT_EMPTY;\n// Call Command API and open the File, Open dialog\nswApp->Command(0, args, &retval);",
+  "examples": [],
+  "related": []
+}

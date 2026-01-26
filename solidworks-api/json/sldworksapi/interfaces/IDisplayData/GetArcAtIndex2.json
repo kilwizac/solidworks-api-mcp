@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetArcAtIndex2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired arc where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetArcCount",
+      "IDisplayData.IGetLineAtIndex2"
+    ],
+    "keywords": [
+      "getarcatindex2",
+      "idisplaydata",
+      "display",
+      "data",
+      "arc",
+      "index2",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetArcAtIndex2",
+  "description": "Gets information for the specified arc.",
+  "signature": "System.Object GetArcAtIndex2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired arc where the index begins at zero"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\ncolor, lineType, Unused, Unused, startPt[3], endPt[3], centerPt[3], arcNormal[3], rotationDir\n]\nwhere:\ncolor\nCOLORREF returned as an integer; return value can be 0 or -1 for default color\nLineType\nLine type as defined in\nswLineTypes_e\nstartPt[3]\nXYZ arc start point\nendPt[3]\nXYZ arc end point\ncenterPt[3]\nXYZ arc center point\narcNormal[3]\nXYZ arc normal vector\nrotationDir\nBoolean returned as a double that represents the rotation direction, where CCW = True and CW = false",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetArcCount",
+    "IDisplayData.IGetLineAtIndex2"
+  ]
+}

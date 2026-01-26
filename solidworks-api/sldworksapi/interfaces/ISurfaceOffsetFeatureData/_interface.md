@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ISurfaceOffsetFeatureData
+inherits: null
+description: Allows access to a surface offset feature.
+member_count: 13
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - Distance
+  - Entities
+  - Faces
+  - Flip
+  - GetEntitiesCount
+  - GetFacesCount
+  - IAccessSelections
+---
+
+# ISurfaceOffsetFeatureData
+
+Allows access to a surface offset feature.
+
+## Common Members
+
+- `AccessSelections`
+- `Distance`
+- `Entities`
+- `Faces`
+- `Flip`
+- `GetEntitiesCount`
+- `GetFacesCount`
+- `IAccessSelections`

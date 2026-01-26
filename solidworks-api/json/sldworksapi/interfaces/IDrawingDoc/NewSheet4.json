@@ -1,0 +1,273 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "NewSheet4",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name to be given to the new drawing sheet"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Size of paper as defined in swDwgPaperSizes_e ; valid only if TemplateIn is swDwgTemplates_e.swDwgTemplateNone"
+      },
+      {
+        "name": "TemplateIn",
+        "type": "System.Int32",
+        "description": "Template as defined in swDwgTemplates_e"
+      },
+      {
+        "name": "Scale1",
+        "type": "System.Double",
+        "description": "Scale numerator"
+      },
+      {
+        "name": "Scale2",
+        "type": "System.Double",
+        "description": "Scale denominator"
+      },
+      {
+        "name": "FirstAngle",
+        "type": "System.Boolean",
+        "description": "True for first angle projection, false for third angle projection"
+      },
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Name of custom template with full directory path; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateCustom"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Paper width; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Paper height; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+      },
+      {
+        "name": "PropertyViewName",
+        "type": "System.String",
+        "description": "Name of view containing the model from which to get custom property values"
+      },
+      {
+        "name": "ZoneLeftMargin",
+        "type": "System.Double",
+        "description": "Zone area left margin; distance from drawing sheet's left edge"
+      },
+      {
+        "name": "ZoneRightMargin",
+        "type": "System.Double",
+        "description": "Zone area right margin; distance from drawing sheet's right edge"
+      },
+      {
+        "name": "ZoneTopMargin",
+        "type": "System.Double",
+        "description": "Zone area top margin; distance from drawing sheet's top edge"
+      },
+      {
+        "name": "ZoneBottomMargin",
+        "type": "System.Double",
+        "description": "Zone area bottom margin; distance from drawing sheet's bottom edge"
+      },
+      {
+        "name": "ZoneRow",
+        "type": "System.Int32",
+        "description": "Number of zone rows in the zone area of this sheet (see Remarks )"
+      },
+      {
+        "name": "ZoneCol",
+        "type": "System.Int32",
+        "description": "Number of zone columns in the zone area of this sheet (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.ActivateSheet",
+      "IDrawingDoc.EditSheet",
+      "IDrawingDoc.GetCurrentSheet",
+      "IDrawingDoc.GetSheetCount",
+      "IDrawingDoc.GetSheetNames",
+      "IDrawingDoc.PasteSheet",
+      "IDrawingDoc.ReorderSheets",
+      "IDrawingDoc.SetupSheet6",
+      "IDrawingDoc.SheetNext",
+      "IDrawingDoc.SheetPrevious",
+      "ISheet",
+      "ISheet.GetDrawingZone"
+    ],
+    "keywords": [
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "sheets",
+      "sheet",
+      "isheet",
+      "drawing",
+      "zones",
+      "add",
+      "newsheet4",
+      "doc",
+      "new",
+      "sheet4",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "int32",
+      "template",
+      "scale1",
+      "double",
+      "scale2",
+      "first",
+      "angle",
+      "boolean",
+      "width",
+      "height",
+      "view",
+      "zone",
+      "left",
+      "margin",
+      "right",
+      "top",
+      "bottom",
+      "row",
+      "col",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.NewSheet4",
+  "description": "Creates a new drawing sheet in this drawing document.",
+  "signature": "System.Boolean NewSheet4( \n   System.String\nName\n,\n   System.Int32\nPaperSize\n,\n   System.Int32\nTemplateIn\n,\n   System.Double\nScale1\n,\n   System.Double\nScale2\n,\n   System.Boolean\nFirstAngle\n,\n   System.String\nTemplateName\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n,\n   System.String\nPropertyViewName\n,\n   System.Double\nZoneLeftMargin\n,\n   System.Double\nZoneRightMargin\n,\n   System.Double\nZoneTopMargin\n,\n   System.Double\nZoneBottomMargin\n,\n   System.Int32\nZoneRow\n,\n   System.Int32\nZoneCol\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name to be given to the new drawing sheet"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Size of paper as defined in swDwgPaperSizes_e ; valid only if TemplateIn is swDwgTemplates_e.swDwgTemplateNone"
+    },
+    {
+      "name": "TemplateIn",
+      "type": "System.Int32",
+      "description": "Template as defined in swDwgTemplates_e"
+    },
+    {
+      "name": "Scale1",
+      "type": "System.Double",
+      "description": "Scale numerator"
+    },
+    {
+      "name": "Scale2",
+      "type": "System.Double",
+      "description": "Scale denominator"
+    },
+    {
+      "name": "FirstAngle",
+      "type": "System.Boolean",
+      "description": "True for first angle projection, false for third angle projection"
+    },
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Name of custom template with full directory path; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateCustom"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Paper width; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Paper height; valid only if TemplateIn is set to swDwgTemplates_e.swDwgTemplateNone or PaperSize is set to swDwgPaperSizes_e.swDwgPapersUserDefined"
+    },
+    {
+      "name": "PropertyViewName",
+      "type": "System.String",
+      "description": "Name of view containing the model from which to get custom property values"
+    },
+    {
+      "name": "ZoneLeftMargin",
+      "type": "System.Double",
+      "description": "Zone area left margin; distance from drawing sheet's left edge"
+    },
+    {
+      "name": "ZoneRightMargin",
+      "type": "System.Double",
+      "description": "Zone area right margin; distance from drawing sheet's right edge"
+    },
+    {
+      "name": "ZoneTopMargin",
+      "type": "System.Double",
+      "description": "Zone area top margin; distance from drawing sheet's top edge"
+    },
+    {
+      "name": "ZoneBottomMargin",
+      "type": "System.Double",
+      "description": "Zone area bottom margin; distance from drawing sheet's bottom edge"
+    },
+    {
+      "name": "ZoneRow",
+      "type": "System.Int32",
+      "description": "Number of zone rows in the zone area of this sheet (see Remarks )"
+    },
+    {
+      "name": "ZoneCol",
+      "type": "System.Int32",
+      "description": "Number of zone columns in the zone area of this sheet (see Remarks )"
+    }
+  ],
+  "returns": "True if drawing sheet creation was successful, false if not",
+  "remarks": "The drawing sheet can be created with zones that annotations in other views can reference. Each zone is referenced by an alphanumeric label that is defined using the Zone Editor. See the SOLIDWORKS Help for more information about drawing sheet zones.\n(ZoneRow x ZoneCol) is the total number of zones in the zone area of this drawing sheet. The zone area is specified by ZoneLeftMargin, ZoneRightMargin, ZoneTopMargin, and ZoneBottomMargin.",
+  "examples": [
+    {
+      "title": "Create Drawing Sheet Zones (VBA)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (VB.NET)",
+      "href": "Create_Drawing_Sheet_Zones_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Drawing Sheet Zones (C#)",
+      "href": "Create_Drawing_Sheet_Zones_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.ActivateSheet",
+    "IDrawingDoc.EditSheet",
+    "IDrawingDoc.GetCurrentSheet",
+    "IDrawingDoc.GetSheetCount",
+    "IDrawingDoc.GetSheetNames",
+    "IDrawingDoc.PasteSheet",
+    "IDrawingDoc.ReorderSheets",
+    "IDrawingDoc.SetupSheet6",
+    "IDrawingDoc.SheetNext",
+    "IDrawingDoc.SheetPrevious",
+    "ISheet",
+    "ISheet.GetDrawingZone"
+  ]
+}

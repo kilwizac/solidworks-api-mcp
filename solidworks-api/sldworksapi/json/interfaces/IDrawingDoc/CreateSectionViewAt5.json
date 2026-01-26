@@ -1,0 +1,171 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateSectionViewAt5",
+    "returns": "View",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x position on the drawing sheet for the center of the section view"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y position on the drawing sheet for the center of the section view"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z position on the drawing sheet for the center of the section view"
+      },
+      {
+        "name": "SectionLabel",
+        "type": "System.String",
+        "description": "Letter for the label for the section view"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options that affect the section view as defined in swCreateSectionViewAtOptions_e"
+      },
+      {
+        "name": "ExcludedComponents",
+        "type": "System.Object",
+        "description": "Array of components to exclude from the section view"
+      },
+      {
+        "name": "SectionDepth",
+        "type": "System.Double",
+        "description": "Distance from the selected section line (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.Create1stAngleViews2",
+      "IDrawingDoc.Create3rdAngleViews2",
+      "IDrawingDoc.CreateAuxiliaryViewAt2",
+      "IDrawingDoc.CreateDetailViewAt3",
+      "IDrawingDoc.CreateDrawViewFromModelView3",
+      "IDrawingDoc.CreateFlatPatternViewFromModelView3",
+      "IDrawingDoc.CreateRelativeView",
+      "IDrawingDoc.CreateSectionView",
+      "IDrawingDoc.CreateUnfoldedViewAt3",
+      "IDrawingDoc.CreateViewport3",
+      "IDrawingDoc.ICreateAuxiliaryViewAt2",
+      "IDrawingDoc.ICreateDetailViewAt3",
+      "IDrawingDoc.ICreateSectionViewAt5"
+    ],
+    "keywords": [
+      "section",
+      "views",
+      "see",
+      "also",
+      "idrsection",
+      "create",
+      "drawing",
+      "iview",
+      "view",
+      "createsectionviewat5",
+      "idrawingdoc",
+      "doc",
+      "at5",
+      "double",
+      "label",
+      "string",
+      "options",
+      "int32",
+      "excluded",
+      "components",
+      "object",
+      "depth",
+      "some",
+      "data",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.CreateSectionViewAt5",
+  "description": "Creates the specified section view.",
+  "signature": "View CreateSectionViewAt5( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.String\nSectionLabel\n,\n   System.Int32\nOptions\n,\n   System.Object\nExcludedComponents\n,\n   System.Double\nSectionDepth\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x position on the drawing sheet for the center of the section view"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y position on the drawing sheet for the center of the section view"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z position on the drawing sheet for the center of the section view"
+    },
+    {
+      "name": "SectionLabel",
+      "type": "System.String",
+      "description": "Letter for the label for the section view"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options that affect the section view as defined in swCreateSectionViewAtOptions_e"
+    },
+    {
+      "name": "ExcludedComponents",
+      "type": "System.Object",
+      "description": "Array of components to exclude from the section view"
+    },
+    {
+      "name": "SectionDepth",
+      "type": "System.Double",
+      "description": "Distance from the selected section line (see Remarks )"
+    }
+  ],
+  "returns": "Section view",
+  "remarks": "Before calling this method, select the section line or lines to use as a section line.\nThis method runs silently; the end-user is not prompted for a label.\nUse\nIView::GetSection\nto get the\nIDrSection\nobject, and use\nIDrSection::SetLabel2\nto set the name for the label, which provides a warning if the name is a duplicate and the standard does not accept duplicate names.",
+  "examples": [
+    {
+      "title": "Create Section View and Get Some Data (VBA)",
+      "href": "Create_Section_View_and_Get_Some_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Section View and Get Some Data (VB.NET)",
+      "href": "Create_Section_View_and_Get_Some_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Section View and Get Some Data (C#)",
+      "href": "Create_Section_View_and_Get_Some_Data_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.Create1stAngleViews2",
+    "IDrawingDoc.Create3rdAngleViews2",
+    "IDrawingDoc.CreateAuxiliaryViewAt2",
+    "IDrawingDoc.CreateDetailViewAt3",
+    "IDrawingDoc.CreateDrawViewFromModelView3",
+    "IDrawingDoc.CreateFlatPatternViewFromModelView3",
+    "IDrawingDoc.CreateRelativeView",
+    "IDrawingDoc.CreateSectionView",
+    "IDrawingDoc.CreateUnfoldedViewAt3",
+    "IDrawingDoc.CreateViewport3",
+    "IDrawingDoc.ICreateAuxiliaryViewAt2",
+    "IDrawingDoc.ICreateDetailViewAt3",
+    "IDrawingDoc.ICreateSectionViewAt5"
+  ]
+}

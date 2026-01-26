@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICenterMark",
+    "member": "GroupCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "groupcount",
+      "icentermark",
+      "center",
+      "mark",
+      "group",
+      "count",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": true
+  },
+  "title": "ICenterMark.GroupCount",
+  "description": "Gets the number of center marks in a center mark set.",
+  "signature": "System.Int32 GroupCount {get;}",
+  "parameters": [],
+  "returns": "Number of center marks in a center mark set",
+  "remarks": "If the center mark is in a center mark set (i.e., a linear or circular pattern), then:\nyou can only change the length of the arms of any of the center marks in that pattern; you cannot change any other properties of those center marks. Call\nICenterMark::IsGrouped\nto determine if a center mark is in a center mark set.\nuse this property to get a range of valid values for\nICenterMark::GetExtendedLength\n's and\nICenterMark::SetExtendedLength\n's GroupID parameter. You can use a value from 0 to the number of center marks in a center mark set for the GroupID parameter.",
+  "examples": [
+    {
+      "title": "Get and Set Center Mark Set (C#)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VB.NET)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VBA)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBA.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

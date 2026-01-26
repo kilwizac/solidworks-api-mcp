@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMateReference",
+    "member": "ReferenceEntity2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Mate reference entity as defined in swMateReferenceIndex_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "referenceentity2",
+      "imatereference",
+      "mate",
+      "reference",
+      "entity2",
+      "index",
+      "int32",
+      "object",
+      "properties",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IMateReference.ReferenceEntity2",
+  "description": "Gets the specified mate entity in this mate reference.",
+  "signature": "System.Object ReferenceEntity2( \n   System.Int32\nIndex\n) {get;}",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Mate reference entity as defined in swMateReferenceIndex_e"
+    }
+  ],
+  "returns": "IEntity or ISketchPoint (see Remarks )",
+  "remarks": "Before calling this property, call\nIMateReference::ReferenceEntityCount\nto determine the range of values for Index.\nAfter calling this property, call\nIMateReference::ReferenceEntityType\nto determine which type this property returns and then cast the returned object into the appropriate type.",
+  "examples": [
+    {
+      "title": "Get Mate Reference Properties (VBA)",
+      "href": "Get_Mate_Reference_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mate Reference Properties (VB.NET)",
+      "href": "Get_Mate_Reference_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mate Reference Properties (C#)",
+      "href": "Get_Mate_Reference_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

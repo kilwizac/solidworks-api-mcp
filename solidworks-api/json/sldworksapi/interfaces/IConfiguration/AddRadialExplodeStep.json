@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "AddRadialExplodeStep",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ExplDist",
+        "type": "System.Double",
+        "description": "Distance in meters to move the components in this explode step"
+      },
+      {
+        "name": "ExplAng",
+        "type": "System.Double",
+        "description": "Angle in radians of rotation about component origins"
+      },
+      {
+        "name": "DivergeFromAxis",
+        "type": "System.Boolean",
+        "description": "True to move components at an angle from the selected explode direction, false to not (see Remarks )"
+      },
+      {
+        "name": "Error",
+        "type": "System.Int32",
+        "description": "Error code as defined in swCreateExplodeStepError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.AddExplodeStep2",
+      "IConfiguration.DeleteExplodeStep",
+      "IConfiguration.GetExplodeStep",
+      "IConfiguration.GetNumberOfExplodeSteps"
+    ],
+    "keywords": [
+      "addradialexplodestep",
+      "iconfiguration",
+      "configuration",
+      "add",
+      "radial",
+      "explode",
+      "step",
+      "expl",
+      "dist",
+      "double",
+      "ang",
+      "diverge",
+      "axis",
+      "boolean",
+      "error",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IConfiguration.AddRadialExplodeStep",
+  "description": "Adds a radial explode step to the explode view of the active configuration.",
+  "signature": "System.Object AddRadialExplodeStep( \n   System.Double\nExplDist\n,\n   System.Double\nExplAng\n,\n   System.Boolean\nDivergeFromAxis\n,\n   out System.Int32\nError\n)",
+  "parameters": [
+    {
+      "name": "ExplDist",
+      "type": "System.Double",
+      "description": "Distance in meters to move the components in this explode step"
+    },
+    {
+      "name": "ExplAng",
+      "type": "System.Double",
+      "description": "Angle in radians of rotation about component origins"
+    },
+    {
+      "name": "DivergeFromAxis",
+      "type": "System.Boolean",
+      "description": "True to move components at an angle from the selected explode direction, false to not (see Remarks )"
+    },
+    {
+      "name": "Error",
+      "type": "System.Int32",
+      "description": "Error code as defined in swCreateExplodeStepError_e"
+    }
+  ],
+  "returns": "Explode step",
+  "remarks": "This method:\nIs valid only for an active current explode view. To create an explode view, call\nIAssemblyDoc::AutoExplode\nor\nIAssemblyDoc::CreateExplodedView\n.\nAlways clears the selection list.\nDoes not work if the Explode PropertyManager is open.\nDoes not work if any component is being edited in the context of the assembly.\nBefore calling this method, you must:\nUse\nIConfigurationManager::ActiveConfiguration\nto get the active configuration for the assembly.\nCall\nIAssemblyDoc::ShowExploded2\nto activate an explode view.\nCall\nIModelDocExtension::SelectByID2\nto select:\nComponents to move with Mark = 1.\nAn explode direction entity (cylindrical\nface\n, conical face, linear\nedge\n, or\naxis\n) with Mark = 34.\nA diverge direction entity (cylindrical face, conical face, linear edge, or axis) with Mark = 64. The selected entity must form an angle with the direction entity. If DivergeFromAxis is set to true and an invalid diverge direction is selected, then DivergeFromAxis is set to false, and the direction entity is set to null. If DivergeFromAxis is set to false, then the direction entity is set to null.\nAfter calling this method, call\nIModelDoc2::EditRebuild3\n.\nFor C++, specify VARIANT_TRUE or VARIANT_FALSE for ReverseDir and DivergeFromAxis.\nTo edit a radial explode step, see the\nIExplodeStep\nremarks.\nTo create an explode step for the explode view of a multibody part, see\nIConfiguration::AddPartExplodeStep\n.",
+  "examples": [],
+  "related": [
+    "IConfiguration.AddExplodeStep2",
+    "IConfiguration.DeleteExplodeStep",
+    "IConfiguration.GetExplodeStep",
+    "IConfiguration.GetNumberOfExplodeSteps"
+  ]
+}

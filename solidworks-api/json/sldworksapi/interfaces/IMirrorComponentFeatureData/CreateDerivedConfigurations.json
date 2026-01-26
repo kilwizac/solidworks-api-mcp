@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMirrorComponentFeatureData",
+    "member": "CreateDerivedConfigurations",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "createderivedconfigurations",
+      "imirrorcomponentfeaturedata",
+      "mirror",
+      "component",
+      "feature",
+      "data",
+      "create",
+      "derived",
+      "configurations",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IMirrorComponentFeatureData.CreateDerivedConfigurations",
+  "description": "Gets or sets whether to create a derived configuration of the opposite-hand components in the original assembly.",
+  "signature": "System.Boolean CreateDerivedConfigurations {get; set;}",
+  "parameters": [],
+  "returns": "True to create a derived configuration of the opposite-hand components in the original assembly, false (default) to create new part files",
+  "remarks": "This property is valid only:\nIf\nIMirrorComponentFeatureData::OppositeHandComponents\nis not Nothing or null.\nAt creation time. You cannot edit this property after it is set.\nIf this property is...\nAnd\nIMirrorComponentFeatureData::NameModifierType\nis...\nThen use...\nTrue\nswMirrorComponentName_Prefix\n- or -\nswMirrorComponentName_Suffix\nIMirrorComponentFeatureData::NameModifier\nto prepend a prefix or append a suffix to the configuration name of the original component to create a derived configuration name for the new opposite-hand versions.\nTrue\nswMirrorComponentName_Custom\nIMirrorComponentFeatureData::MirroredComponentFilenames\nto specify the derived configuration name.\nFalse\nswMirrorComponentName_Prefix\n- or -\nswMirrorComponentName_Suffix\nIMirrorComponentFeatureData::NameModifier to prepend a prefix or append a suffix to the orginal component file name to create a new opposite-hand version file name.\nFalse\nswMirrorComponentName_Custom\nIMirrorComponentFeatureData::MirroredComponentFilenames to specify the opposite-hand version file names.\nIf you set this property to false, you can also specify the following import features:\nIMirrorComponentFeatureData::BreakLinksToOriginalPart\n(if set to false, you can also set\nIMirrorComponentFeatureData::DimXpertScheme\nand/or\nIMirrorComponentFeatureData::MirrorTransferOptions\n)\nIMirrorComponentFeatureData::PreserveZAxis\nIMirrorComponentFeatureData::PropagateFromOriginalPart",
+  "examples": [
+    {
+      "title": "IMirrorComponentFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

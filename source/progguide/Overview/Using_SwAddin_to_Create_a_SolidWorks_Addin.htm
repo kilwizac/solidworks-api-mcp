@@ -1,0 +1,197 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Using SwAddin to Create a SOLIDWORKS Addin</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="06 14, 2002 11:39:36 AM">
+<meta NAME=MS-HAID CONTENT=Create_SwAddin>
+<meta NAME=MS-HKWD CONTENT="Use,SwAddin">
+<meta NAME=MS-HKWD CONTENT="Create,SOLIDWORKS add-in">
+<meta NAME=MS-HKWD CONTENT=Create>
+<meta NAME=MS-HKWD CONTENT=Use>
+<meta NAME=MS-HKWD CONTENT="Add-ins,SOLIDWORKS API">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=836>
+<meta name=layout-width content=782>
+<meta name=x-ignored-words content="SwAddin;ConnectToSW;DisconnectFromSW">
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Using SwAddin to Create a SOLIDWORKS Add-In</h1>
+
+<p><a name=top></a>You can create a SOLIDWORKS add-in using the <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwAddin.html">ISwAddin</a> 
+ object instead of using a <a href="SolidWorks_API_Add-Ins,_Project_Templates,_and_Wizards.htm">
+SOLIDWORKS 
+ add-in wizard</a>.</p>
+
+<p>When you use the ISwAddin object to create a SOLIDWORKS add-in, the 
+ add-in must include some specific functionality and code. It is also important 
+ to understand what SOLIDWORKS Design does for the add-in. Click 
+ a link to read that section.</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="#addin">What does the add-in have to 
+ do?</a></p></li>
+	
+	<li class=kadov-p><p><a href="#application">What does SOLIDWORKS Design do?</a></p></li>
+</ul>
+
+<h2><a name=addin></a>What does the add-in have to do?</h2>
+
+<p>The add-in DLL must be created as a COM Server and it must:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Implement a co-creatable object that supports 
+ SwAddin.</p></li>
+	
+	<li class=kadov-p><p>During installation call:</p></li>
+</ol>
+<blockquote>
+	<ul>
+		<li><font face="Verdana" style="font-size: 8pt"><b>Regsvr32.exe</b> for 
+		unmanaged C++ and managed C++/CLI add-ins. See
+		<a href="https://support.microsoft.com/en-us/kb/249873" target="_blank">How to use the 
+		Regsvr32 tool and troubleshoot Regsvr32 error messages</a> for details.</font></li>
+	</ul>
+	<blockquote>
+		<p>Register the 
+ add-in's CLSID in <b>HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\AddIns</b> and set 
+ the following registry keys:</p>
+		<ul>
+			<li><font face="Verdana" style="font-size: 8pt">
+			<span style="font-weight: bold;">Default</span> to 1 or 0, where 1 enables the add-in in the add-in 
+ manager so that it loads when the user starts SOLIDWORKS Design.</font></li>
+			<li><font face="Verdana" style="font-size: 8pt">
+			<span style="font-weight: bold;">Description</span> to a text description of the add-in that is displayed 
+ in the add-in manager.</font></li>
+			<li><font face="Verdana" style="font-size: 8pt">
+			<span style="font-weight: bold;">Title</span> to a text title of the description that is displayed in 
+ the add-in manager.</font></li>
+		</ul>
+	</blockquote>
+	<ul>
+		<li><font face="Verdana" style="font-size: 8pt"><b>RegAsm.exe</b> for C# 
+		and VB.NET add-ins. See
+		<a href="https://msdn.microsoft.com/en-us/library/h627s4zy(v=vs.110).aspx" target="_blank">
+		Registering Assemblies with COM</a> for details.</font></li>
+	</ul>
+</blockquote>
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p value="3"><p>Define event handlers as needed.</p></li>
+</ol>
+
+<p>In its implementation of <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwAddin~ConnectToSW.html">ISwAddin::ConnectToSW</a>, 
+ the add-in can:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Call <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetAddinCallbackInfo.html">ISldWorks::SetAddinCallbackInfo</a> 
+ and pass the instance handle of the add-in and the object that supports 
+ the callback methods. SOLIDWORKS Design holds onto this object and 
+ makes callbacks.</p></li>
+	
+	<li class=kadov-p><p>Call <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~AddMenuItem3.html">ISldWorks::AddMenuItem3</a> 
+ and pass the callback method associated with the menu item.</p></li>
+	
+	<li class=kadov-p><p>Call <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~AddToolbar4.html">ISldWorks::AddToolbar4</a> 
+ and pass the callback method associated with the toolbar button.</p></li>
+</ol>
+
+<p style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<h2><a name=application></a>What does SOLIDWORKS Design do?</h2>
+
+<p>When the end-user starts SOLIDWORKS Design, SOLIDWORKS Design: </p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Checks the registry for add-ins.</p></li>
+	
+	<li class=kadov-p><p>Creates an object associated with the CLSID of 
+ the add-in.</p></li>
+	
+	<li class=kadov-p><p>Performs a QueryInterface on the add-in looking 
+ for the SwAddin object.</p></li>
+	
+	<li class=kadov-p><p>Calls <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwAddin~ConnectToSW.html">ISwAddin::ConnectToSW</a>.</p></li>
+</ol>
+
+<p>When the user closes SOLIDWORKS Design or disables an add-in in 
+ the add-in Manager, SOLIDWORKS Design:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Calls <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwAddin~DisconnectFromSW.html">ISwAddin::DisconnectFromSW</a>, 
+ providing the add-in an opportunity for cleanup.</p></li>
+	
+	<li class=kadov-p><p>Destroys the object it created with the add-in 
+ CLSID.</p></li>
+</ol>
+
+<p>If the end-user disables an add-in in the add-in manager, SOLIDWORKS 
+ Design does not reload it the next time SOLIDWORKS Design starts. 
+ If the end-user closes SOLIDWORKS Design with an add-in enabled, 
+ SOLIDWORKS Design reloads the add-in the next time it starts.</p>
+
+<p class=apiBullet
+	style="text-align: center;"
+	align=center><a href="#top">Back to top</a></p>
+
+<p>To learn more about add-ins and their menu items and toolbars:</p>
+<ul>
+	<li class=kadov-p><p style="line-height: 150%">
+	<a href="Add-in_Callbacks.htm">Add-in Callbacks</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Icons.htm">Add-in Icons</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Shortcut_Menus.htm">Add-in Shortcut Menus</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Add-in_Toolbars.htm">Add-in Toolbars</a></p></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p style="color: #808080;">&nbsp;</p>
+
+</body>
+
+</html>

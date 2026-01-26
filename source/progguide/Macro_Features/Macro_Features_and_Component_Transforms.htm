@@ -1,0 +1,75 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Macro Features and Component Transforms</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=525>
+<meta name=layout-width content=837>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+ <META NAME="MS-HKWD" CONTENT="Macro feature (see also IMacroFeatureData Interface),component transforms">
+ <META NAME="MS-HKWD" CONTENT="Transform">
+ <META NAME="MS-HKWD" CONTENT="Transform,components">
+ <META NAME="MS-HKWD" CONTENT="Transform,macro features">
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Macro Features and Component Transforms</h1>
+
+<p>If a macro feature allows users to select entities, then you may need 
+ to know the component transform of the component where the entity resides 
+ and the transform of the component where the macro feature resides when 
+ editing or regenerating a macro feature.</p>
+
+<p>For example, if an edge on a component other than the component where 
+ the macro feature resides is selected, and you want to use that edge for 
+ direction, then the vector that you calculate will be the component's. 
+ To get the actual direction (the way that it looks on the screen), you 
+ must transform this vector from the edge's component to the component 
+ where the macro feature resides.</p>
+
+<p>To make this transform, you must do two transforms in this order:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>You must transform the vector from the component 
+ to the assembly using the transform from <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~GetSelections3.html">IMacroFeatureData::GetSelections3</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~IGetSelections3.html">IMacroFeatureData::IGetSelections3</a>.</p></li>
+	
+	<li class=kadov-p><p>You must transform the vector from the assembly 
+ to the component where the macro feature resides using <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~GetEditTargetTransform.html">IMacroFeatureData::GetEditTargetTransfrom.</a></p></li>
+</ol>
+
+</body>
+
+</html>

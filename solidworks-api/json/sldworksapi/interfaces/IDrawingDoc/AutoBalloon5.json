@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "AutoBalloon5",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "BalloonOptions",
+        "type": "AutoBalloonOptions",
+        "description": "IAutoBalloonOptions"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.InsertBOMBalloon2",
+      "IModelDocExtension.InsertStackedBalloon2"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "autoballoons",
+      "automatic",
+      "balloons",
+      "iballoonstack",
+      "autoballoon5",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "auto",
+      "balloon5",
+      "balloon",
+      "options",
+      "object",
+      "add",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.AutoBalloon5",
+  "description": "Automatically inserts BOM balloons in selected drawing views.",
+  "signature": "System.Object AutoBalloon5( \n   AutoBalloonOptions\nBalloonOptions\n)",
+  "parameters": [
+    {
+      "name": "BalloonOptions",
+      "type": "AutoBalloonOptions",
+      "description": "IAutoBalloonOptions"
+    }
+  ],
+  "returns": "Array of INotes",
+  "remarks": "This method automatically inserts BOM balloons for bill of materials items in selected drawing views. If a drawing sheet is selected, BOM balloons are automatically inserted for all of the drawing views on that drawing sheet.\nTo automatically insert BOM balloons:\nSelect one or more views or sheets for which to automatically create BOM balloons.\nCall\nIDrawingDoc::CreateAutoBalloonOptions\nto create an\nIAutoBalloonOptions\nobject.\nSet the properties on the IAutoBalloonOptions object.\nCall this method using the IAutoBalloonOptions object in the BalloonOptions argument.",
+  "examples": [
+    {
+      "title": "Add Autoballoons to Drawing (VBA)",
+      "href": "Add_Autoballoon_to_Face_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Autoballoons to Drawing (VB.NET)",
+      "href": "Add_Autoballoon_to_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Autoballoons to Drawing (C#)",
+      "href": "Add_Autoballoon_to_Face_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.InsertBOMBalloon2",
+    "IModelDocExtension.InsertStackedBalloon2"
+  ]
+}

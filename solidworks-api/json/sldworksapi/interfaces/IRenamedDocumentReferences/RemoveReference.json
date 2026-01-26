@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRenamedDocumentReferences",
+    "member": "RemoveReference",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Reference",
+        "type": "System.String",
+        "description": "Pathname of the reference to the renamed document to remove"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "removereference",
+      "irenameddocumentreferences",
+      "renamed",
+      "document",
+      "references",
+      "remove",
+      "reference",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IRenamedDocumentReferences.RemoveReference",
+  "description": "Removes the specified reference from the list of references to update.",
+  "signature": "System.Boolean RemoveReference( \n   System.String\nReference\n)",
+  "parameters": [
+    {
+      "name": "Reference",
+      "type": "System.String",
+      "description": "Pathname of the reference to the renamed document to remove"
+    }
+  ],
+  "returns": "True if the reference to the renamed document is removed, false if not",
+  "remarks": "This method is only available if\nIRenamedDocumentReferences::UpdateWhereUsedReferences\nis true.\nRemoving a reference results in that reference referencing the old file name of the document and not the new name of the document.",
+  "examples": [],
+  "related": []
+}

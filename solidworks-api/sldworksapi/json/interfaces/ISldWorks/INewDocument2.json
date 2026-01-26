@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "INewDocument2",
+    "returns": "ModelDoc2",
+    "parameters": [
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Name of the template to use for creating the new document"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Size of paper as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width of paper; used only when PaperSize is swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Height of paper; used only when PaperSize is swDwgPapersUserDefined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDocumentTemplate",
+      "ISldWorks.NewDocument"
+    ],
+    "keywords": [
+      "document",
+      "new",
+      "inewdocument2",
+      "isldworks",
+      "sld",
+      "works",
+      "document2",
+      "template",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "int32",
+      "width",
+      "double",
+      "height",
+      "model",
+      "doc2",
+      "access",
+      "assembly"
+    ]
+  },
+  "title": "ISldWorks.INewDocument2",
+  "description": "Creates a new document based on the specified template.",
+  "signature": "ModelDoc2 INewDocument2( \n   System.String\nTemplateName\n,\n   System.Int32\nPaperSize\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Name of the template to use for creating the new document"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Size of paper as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width of paper; used only when PaperSize is swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Height of paper; used only when PaperSize is swDwgPapersUserDefined"
+    }
+  ],
+  "returns": "Newly created document or NULL if the operation fails",
+  "remarks": "To get the default template filename, use\nISldWorks::GetUserPreferenceStringValue\n:\nfor parts: swDefaultTemplatePart\nfor assemblies: swDefaultTemplateAssembly\nfor drawings: swDefaultTemplateDrawing",
+  "examples": [
+    {
+      "title": "Access Assembly (C++)",
+      "href": "Access_Assembly_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetDocumentTemplate",
+    "ISldWorks.NewDocument"
+  ]
+}

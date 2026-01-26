@@ -1,0 +1,64 @@
+---
+type: method
+interface: IPartDoc
+member: IGetPartBox
+returns: System.Double
+parameters:
+  -
+    name: NoConversion
+    type: System.Boolean
+    description: Convert to user units or not; True retains system units, false changes to user units
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - parts
+  - ui
+related: []
+keywords:
+  - bounding
+  - box
+  - parts
+  - see
+  - also
+  - ipartdoc
+  - igetpartbox
+  - part
+  - doc
+  - no
+  - conversion
+  - boolean
+  - double
+  - return
+  - extents
+---
+
+# IPartDoc.IGetPartBox
+
+Gets the box enclosing the part.
+
+## Signature
+
+```csharp
+System.Double IGetPartBox( 
+   System.Boolean
+NoConversion
+)
+```
+## Parameters
+
+- `NoConversion` (System.Boolean): Convert to user units or not; True retains system units, false changes to user units
+
+## Return Value
+
+in-process, unmanaged C++: Pointer to an array of 6 doubles containing the 2 diagonal points that bound the part VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## Remarks
+
+The values returned are approximate and should not be used for comparison or calculation purposes. Furthermore, the bounding box may vary after rebuilding the model.
+The X,Y,Z points returned are the lower- and upper-diagonal corners that bound the part with the box sides parallel to the X, Y and Z axes. The box dimensions returned enclose the part and usually close to the minimum possible size, but this is not guaranteed.
+
+## Examples
+
+- Return Box Extents (C++) (Return_Box_Extents_Example_CPlusPlus_COM.htm)

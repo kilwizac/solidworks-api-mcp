@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentTrimExtendFeatureData",
+    "member": "ISetBodiesToBeTrimmed",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of bodies to trim"
+      },
+      {
+        "name": "BodiesIn",
+        "type": "Body2",
+        "description": "in-process, unmanaged C++: Pointer to an array of bodies to trim (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWeldmentTrimExtendFeatureData.BodiesToBeTrimmed",
+      "IWeldmentTrimExtendFeatureData.GetBodiesToBeTrimmedCount",
+      "IWeldmentTrimExtendFeatureData.IGetBodiesToBeTrimmed"
+    ],
+    "keywords": [
+      "isetbodiestobetrimmed",
+      "iweldmenttrimextendfeaturedata",
+      "weldment",
+      "trim",
+      "extend",
+      "feature",
+      "data",
+      "bodies",
+      "trimmed",
+      "count",
+      "int32",
+      "body2",
+      "void"
+    ]
+  },
+  "title": "IWeldmentTrimExtendFeatureData.ISetBodiesToBeTrimmed",
+  "description": "Sets the bodies to trim.",
+  "signature": "void ISetBodiesToBeTrimmed( \n   System.Int32\nCount\n,\n   ref Body2\nBodiesIn\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of bodies to trim"
+    },
+    {
+      "name": "BodiesIn",
+      "type": "Body2",
+      "description": "in-process, unmanaged C++: Pointer to an array of bodies to trim (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Only end-trim corner types (swEndConditionTrim) can have multiple bodies to trim. Use\nIWeldmentTrimExtendFeatureData::CornerType\nto determine the type of corner.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IWeldmentTrimExtendFeatureData.BodiesToBeTrimmed",
+    "IWeldmentTrimExtendFeatureData.GetBodiesToBeTrimmedCount",
+    "IWeldmentTrimExtendFeatureData.IGetBodiesToBeTrimmed"
+  ]
+}

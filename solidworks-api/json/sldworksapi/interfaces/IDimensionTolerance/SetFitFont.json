@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "SetFitFont",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDimension",
+        "type": "System.Boolean",
+        "description": "True if the fit tolerance font should be the same size as the dimension font, false if not"
+      },
+      {
+        "name": "UseScale",
+        "type": "System.Boolean",
+        "description": "True if the fit tolerance font should be scaled based on the dimension font, false if the fit tolerance font size is an absolute height value"
+      },
+      {
+        "name": "Value",
+        "type": "System.Double",
+        "description": "Scale ratio if UseScale is true or height value if UseScale is false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDimensionTolerance.FitDisplayStyle",
+      "IDimensionTolerance.FitType"
+    ],
+    "keywords": [
+      "fit",
+      "tolerances",
+      "setfitfont",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "font",
+      "use",
+      "boolean",
+      "scale",
+      "value",
+      "double",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimensionTolerance.SetFitFont",
+  "description": "Sets the fit tolerance font values.",
+  "signature": "System.Boolean SetFitFont( \n   System.Boolean\nUseDimension\n,\n   System.Boolean\nUseScale\n,\n   System.Double\nValue\n)",
+  "parameters": [
+    {
+      "name": "UseDimension",
+      "type": "System.Boolean",
+      "description": "True if the fit tolerance font should be the same size as the dimension font, false if not"
+    },
+    {
+      "name": "UseScale",
+      "type": "System.Boolean",
+      "description": "True if the fit tolerance font should be scaled based on the dimension font, false if the fit tolerance font size is an absolute height value"
+    },
+    {
+      "name": "Value",
+      "type": "System.Double",
+      "description": "Scale ratio if UseScale is true or height value if UseScale is false"
+    }
+  ],
+  "returns": "True if the fit tolerance font is set, false if not",
+  "remarks": "If UseDimension is...\nThen...\nTrue\nThe other arguments are ignored.\nUseScale is true.\nValue is 1.0.\nFalse\nUseScale determines how Value is interpreted.\nIf UseScale is...\nThen Value is assumed to be...\nTrue\nScale value to use, and the height value is not changed.\nFalse\nHeight value to use, and the scale value is not changed.\nTo get the fit tolerance font information, use\nIDimensionTolerance::GetFitFontUseDimension\n,\nIDimensionTolerance::GetFitFontUseScale\n,\nIDimensionTolerance::GetFitFontScale\n, and\nIDimensionTolerance::GetFitFontHeight\n.\nThis method deals with the fit tolerance font information, not the tolerance font information. To get or set tolerance information, use\nIDimensionTolerance::GetFontUseDimension\n,\nIDimensionTolerance::GetFontUseScale\n,\nIDimensionTolerance::GetFontScale\n,\nIDimensionTolerance::GetFontHeight\n, and\nIDimensionTolerance::SetFont\n.\nTo see the effects of changing the fit tolerance font information, use\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [
+    {
+      "title": "Get Dimension Tolerance (C#)",
+      "href": "Get_Dimension_Tolerance_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Dimension Tolerance (VB.NET)",
+      "href": "Get_Dimension_Tolerance_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Dimension Tolerance (VBA)",
+      "href": "Get_Dimension_Tolerance_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimensionTolerance.FitDisplayStyle",
+    "IDimensionTolerance.FitType"
+  ]
+}

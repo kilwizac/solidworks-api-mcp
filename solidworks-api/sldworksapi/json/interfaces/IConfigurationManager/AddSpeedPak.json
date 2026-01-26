@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfigurationManager",
+    "member": "AddSpeedPak",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "1 = Geometry 2 = Graphics"
+      },
+      {
+        "name": "PartThreshold",
+        "type": "System.Double",
+        "description": ""
+      },
+      {
+        "name": "FaceThreshold",
+        "type": "System.Double",
+        "description": "See Remarks"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.IsSpeedPak",
+      "IConfiguration.UpdateSpeedPak"
+    ],
+    "keywords": [
+      "addspeedpak",
+      "iconfigurationmanager",
+      "configuration",
+      "manager",
+      "add",
+      "speed",
+      "pak",
+      "type",
+      "int32",
+      "part",
+      "threshold",
+      "double",
+      "face",
+      "object"
+    ]
+  },
+  "title": "IConfigurationManager.AddSpeedPak",
+  "description": "Obsolete. Superseded by IConfigurationManager::AddSpeedPak2.",
+  "signature": "System.Object AddSpeedPak( \n   System.Int32\nType\n,\n   System.Double\nPartThreshold\n,\n   System.Double\nFaceThreshold\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "1 = Geometry 2 = Graphics"
+    },
+    {
+      "name": "PartThreshold",
+      "type": "System.Double",
+      "description": ""
+    },
+    {
+      "name": "FaceThreshold",
+      "type": "System.Double",
+      "description": "See Remarks"
+    }
+  ],
+  "returns": "SpeedPak configuration",
+  "remarks": "The SOLIDWORKS Design user-interface control corresponding to the FaceThreshhold parameter was removed from SOLIDWORKS 2013 and later. Regardless of the value that you specify for the FaceThreshhold parameter, the value 0 is passed, which results in no faces being included for SpeedPak by a call to this method.\nThis method was revised as described so that existing applications that call this method will not fail.",
+  "examples": [],
+  "related": [
+    "IConfiguration.IsSpeedPak",
+    "IConfiguration.UpdateSpeedPak"
+  ]
+}

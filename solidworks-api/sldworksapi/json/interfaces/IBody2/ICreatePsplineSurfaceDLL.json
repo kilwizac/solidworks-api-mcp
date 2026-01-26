@@ -1,0 +1,141 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreatePsplineSurfaceDLL",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "Dim",
+        "type": "System.Int32",
+        "description": "Dimension of the surface: 3 = nonrational 4 = rational"
+      },
+      {
+        "name": "UOrder",
+        "type": "System.Int32",
+        "description": "Order in U"
+      },
+      {
+        "name": "VOrder",
+        "type": "System.Int32",
+        "description": "Order in V"
+      },
+      {
+        "name": "Ncol",
+        "type": "System.Int32",
+        "description": "Number of patches in U"
+      },
+      {
+        "name": "Nrow",
+        "type": "System.Int32",
+        "description": "Number of patches in V"
+      },
+      {
+        "name": "Coeffs",
+        "type": "System.Double",
+        "description": "Coefficient array in the order that the Parasolid Kernel Interface routine CRPWPS needs them"
+      },
+      {
+        "name": "Basis",
+        "type": "System.Int32",
+        "description": "Representation method; current default is polynomial"
+      },
+      {
+        "name": "Xform",
+        "type": "System.Double",
+        "description": "Transform to apply to the new surface"
+      },
+      {
+        "name": "ScaleFactor",
+        "type": "System.Double",
+        "description": "Units-of-measure scaling"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreatepsplinesurfacedll",
+      "ibody2",
+      "body2",
+      "create",
+      "pspline",
+      "dll",
+      "dim",
+      "int32",
+      "order",
+      "ncol",
+      "nrow",
+      "coeffs",
+      "double",
+      "basis",
+      "xform",
+      "scale",
+      "factor"
+    ]
+  },
+  "title": "IBody2.ICreatePsplineSurfaceDLL",
+  "description": "Creates a B-surface from a piecewise surface.",
+  "signature": "Surface ICreatePsplineSurfaceDLL( \n   System.Int32\nDim\n,\n   System.Int32\nUOrder\n,\n   System.Int32\nVOrder\n,\n   System.Int32\nNcol\n,\n   System.Int32\nNrow\n,\n   ref System.Double\nCoeffs\n,\n   System.Int32\nBasis\n,\n   ref System.Double\nXform\n,\n   System.Double\nScaleFactor\n)",
+  "parameters": [
+    {
+      "name": "Dim",
+      "type": "System.Int32",
+      "description": "Dimension of the surface: 3 = nonrational 4 = rational"
+    },
+    {
+      "name": "UOrder",
+      "type": "System.Int32",
+      "description": "Order in U"
+    },
+    {
+      "name": "VOrder",
+      "type": "System.Int32",
+      "description": "Order in V"
+    },
+    {
+      "name": "Ncol",
+      "type": "System.Int32",
+      "description": "Number of patches in U"
+    },
+    {
+      "name": "Nrow",
+      "type": "System.Int32",
+      "description": "Number of patches in V"
+    },
+    {
+      "name": "Coeffs",
+      "type": "System.Double",
+      "description": "Coefficient array in the order that the Parasolid Kernel Interface routine CRPWPS needs them"
+    },
+    {
+      "name": "Basis",
+      "type": "System.Int32",
+      "description": "Representation method; current default is polynomial"
+    },
+    {
+      "name": "Xform",
+      "type": "System.Double",
+      "description": "Transform to apply to the new surface"
+    },
+    {
+      "name": "ScaleFactor",
+      "type": "System.Double",
+      "description": "Units-of-measure scaling"
+    }
+  ],
+  "returns": "Newly created B- surface",
+  "remarks": "This method creates a B-surface from piecewise data.\nAs per Parasolid, The following ways to represent the data are available:\nHermite (cubic only)  (basis = 13651)\nBezier  (basis = 13652)\nPolynomial  (basis = 13653)\nTaylor series  (basis = 13654)\nDimension of coefficient vectors dim:\nFor rational surfaces Dim = 4\nFor non-rational surfaces Dim = 3\nOrder of each patch of the surface in u, Uorder, and in v, Vorder:\nThe order of the surface = degree + 1.\nThe minimum order is 2.\nIf the Hermite basis is used (basis = 13651) then the surface has to be bicubic (Uorder\n= Vorder = 4).\nNumber of columns Ncol: There must be at least one column.\nNumber of rows Nrow: There must be at least one row.\nCoefficient data Coeffs:\nContains (Uorder * Vorder * Ncol * Nrow) vectors of dimension Dim. If Dim = 3, then the vectors are 3-D vectors giving the x, y and z components. If Dim = 4, then each vector has a weight (w) associated with it, and x, y, z and w components are supplied for each vector. The weights supplied must be greater than 0.\nThe data is supplied patch by patch, row by row.\nThe interpretation of the patch data depends on the representation method chosen; this is determined by the value of the argument basis.\nAdjacent patches (in the u and v directions) must meet all along the corresponding boundary; that is, the surface must be continuous.\nRepresentation method basis:\nThe expressions for each patch of the B-surface P(u,v) in the various representations are shown next. For generality, the rational form is given. The simplification to the non-rational form can be obtained by setting both the weights and the denominator equal to 1.0.\nBezier vertices 13652:\nThe equation of a rational Bezier surface patch is:\nnu  nv                               nu nv\n--  --                               / -- --\nP(u,v)   =   >   >   b (u) b (v) w  V    /  >  >  b (u) b (v) w\n--  --   i     j     ij ij           /   -- --  i    j     ij\ni=0 j=0                              i=0 j=0\nwhere nu  = uorder-1, nv = vorder-1\nV   = Bezier vertex\nij\nw   = weight for V\nij               ij\nb (u), b (v) = Bezier coefficients.\ni      j\nFor the rational form the Bezier vertices and weights are supplied:\nV  ,w  ,V  ,w  ,...,V  ,w  ,V  ,w  ,...,V  ,w  ,...,V  ,w  ,...,V  ,w  .\n00  00  10  10      m0  m0  01  01      m1  m1      0n  0n      mn  mn\nFor the non-rational form the w's are missed out.\nPolynomial coefficients 13653:\nThe surface equation is given by a rational bipolynomial of orders Uorder, Vorder:\nnu  nv                          nu nv\n--  --           i   j            / -- --      i  j\nP(u,v)   =   >   >   w   A   u   v  /  >  >  w   u  v\n--  --   ij  ij                  /   -- --  ij\ni=0 j=0                           i=0 j=0\nwhere nu = Uorder-1, nv = Vorder-1\nFor the rational form the polynomial coefficients Aij are supplied:\nA  ,w  ,A  ,w  ,...,A  ,w  ,A  ,w  ,...,A  ,w  ,...,A  ,w  ,...,A  ,w\n00  00  10  10      m0  m0  01  01      m1  m1      0n  0n      mn  mn\nstarting with the constant term and ending with the term of highest degree.\nFor the non-rational form the w's are missed out.\nHermite coefficients 13651\nThis method can only be used for bicubics.\nThe Hermite equation for the patch in matrix form is:\n2  3       T            2 3  T\n( 1 u u  u ) M A M ( 1 v v v )\nP(u,v) = -------------------------------------\n2  3       T       2 3  T\n( 1 u u  u ) M W M ( 1 v v v )\nwhere M =  (  1  0  0  0  )\n(  0  0  1  0  )\n( -3  3 -2 -1  )\n(  2 -2  1  1  )\nA =  ( w00*P00   w01*P01   wv00*Pv00   wv01*Pv01  )\n( w10*P10   w11*P11   wv10*Pv10   wv11*Pv11  )\n( wu00*Pu00 wu01*Pu01 wuv00*Puv00 wuv01*Puv01 )\n( wu10*Pu10 wu11*Pu11 wuv10*Puv10 wuv11*Puv11 )\nW = ( w00  w01  wv00  wv01 )\n( w10  w11  wv10  wv11 )\n( wu00 wu01 wuv00 wuv01 )\n( wu10 wu11 wuv10 wuv11 )\nand the superscript T denotes the transpose.\nIn the matrices A and W, the coefficients P, Pu, Pv and Puv are the points at the corners and their derivatives. The w's are the corresponding weights and their derivatives. P00 denotes P(0,0), and so on.\nFor the rational form the coefficients are supplied:\nP00,   w00,   P10,   w10,   P01,   w01,   P11,   w11\nPu00,  wu00,  Pu10,  wu10,  Pu01,  wu01,  Pu11,  wu11\nPv00,  wv00,  Pv10,  wv10,  Pv01,  wv01,  Pv11,  wv11\nPuv00, wuv00, Puv10, wuv10, Puv01, wuv01, Puv11, wuw11\nFor the non-rational form, the w's are missed out.\nTaylor series 13654:\nThis method stores the derivatives evaluated u=0, v=0 corner of each patch,  allowing the surface to be reconstructed as a Taylor series:\nnu    nv\n--     --    (i)(j)  (i)(j)  i  j       /\n>      >    w       P       u  v   /  i! j!\n--     --\ni=0   j=0\nP(u,v) = ------------------------------------------\nnu    nv\n--    --     (i)(j)  i  j       /\n>     >     w       u  v   /  i! j!\n--    --\ni=0  j=0\nwhere nu = Uorder-1, nv = Vorder-1\ni+j\n(i)(j)     d   P\nP         =  ------ (0,0)\ni  j\ndu dv\ni+j\n(i)(j)     d   w\nw         = ------ (0,0)\ni  j\ndu dv\nThe point is supplied first, followed by the U derivatives in order and ending with the derivative of order Uorder-1 in U, Vorder-1 in V.\nAny existing object created by this method is destroyed if you call this method again.",
+  "examples": [],
+  "related": []
+}

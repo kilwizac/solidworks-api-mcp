@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "Select",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Append",
+        "type": "System.Boolean",
+        "description": "True appends the selection list, false replaces the selection list"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "Value you want to use as a mark"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "selections"
+    ],
+    "related": [
+      "IBomTable.DeSelect"
+    ],
+    "keywords": [
+      "select",
+      "ibomtable",
+      "bom",
+      "table",
+      "append",
+      "boolean",
+      "mark",
+      "int32"
+    ]
+  },
+  "title": "IBomTable.Select",
+  "description": "Selects this BOM table and marks it.",
+  "signature": "System.Boolean Select( \n   System.Boolean\nAppend\n,\n   System.Int32\nMark\n)",
+  "parameters": [
+    {
+      "name": "Append",
+      "type": "System.Boolean",
+      "description": "True appends the selection list, false replaces the selection list"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "Value you want to use as a mark"
+    }
+  ],
+  "returns": "True if the BOM table is selected, false if not",
+  "remarks": "Before you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": [
+    "IBomTable.DeSelect"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "GetType",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAnnotation.GetAttachedEntities2",
+      "IAttribute.GetEntity",
+      "IAttribute.GetEntityState",
+      "IAttribute.IGetEntity2",
+      "IComponent2.GetCorrespondingEntity",
+      "IComponent2.IGetCorrespondingEntity"
+    ],
+    "keywords": [
+      "gettype",
+      "ientity",
+      "entity",
+      "type",
+      "int32",
+      "knit",
+      "surface",
+      "data",
+      "vba",
+      "mirror",
+      "solid",
+      "component",
+      "feature",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEntity.GetType",
+  "description": "Gets the type of the entity.",
+  "signature": "System.Int32 GetType()",
+  "parameters": [],
+  "returns": "Type of entity as defined in swSelectType_e",
+  "remarks": "You can use this method to determine the entity type and the appropriate function calls allowed for the specific type. For example, if this entity is a face, you can call\nIFace2::GetArea\n. However, you cannot call\nIEdge::GetCurve\nor\nIEdge::IGetCurve\nbecause it is on\nIEdge\nobject. COM implementations can also use QueryInterface to determine the underlying interface supported by this\nIEntity\nobject.",
+  "examples": [
+    {
+      "title": "Get Knit Surface Data (VBA)",
+      "href": "Get_Knit_Surface_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mirror Solid Data (VBA)",
+      "href": "Get_Mirror_Solid_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component from Feature (VBA)",
+      "href": "Get_Component_from_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component from Feature (VB.NET)",
+      "href": "Get_Component_from_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component from Feature (C#)",
+      "href": "Get_Component_from_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.GetAttachedEntities2",
+    "IAttribute.GetEntity",
+    "IAttribute.GetEntityState",
+    "IAttribute.IGetEntity2",
+    "IComponent2.GetCorrespondingEntity",
+    "IComponent2.IGetCorrespondingEntity"
+  ]
+}

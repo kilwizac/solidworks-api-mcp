@@ -1,0 +1,619 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>InsertSheetMetalHem2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertSheetMetalHem2" />
+    <meta name="Description" content="Inserts a hem of the specified relief type at the selected edges of the current sheet metal part." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.InsertSheetMetalHem2" />
+    <meta name="Microsoft.Help.Keywords" content="Hems. See IHemFeatureData Interface" />
+    <meta name="Microsoft.Help.Keywords" content="Sheet metal (see also ISheetMetalFeatureData Interface), hems" />
+    <meta name="Microsoft.Help.Keywords" content="Feature (see also IFeature Interface), hem" />
+    <meta name="Microsoft.Help.Keywords" content="InsertSheetMetalHem2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                InsertSheetMetalHem2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : InsertSheetMetalHem2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="TypePopupContent" class="i-popup-content">
+        Type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swHemTypes_e.html">swHemTypes_e</a>
+    </div>
+
+    <div id="PositionPopupContent" class="i-popup-content">
+        <p>Position as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swHemPositionTypes_e.html">swHemPositionTypes_e</a></p>
+    </div>
+
+    <div id="ReversePopupContent" class="i-popup-content">
+        <p>True reverses the direction, false does not</p>
+    </div>
+
+    <div id="DLengthPopupContent" class="i-popup-content">
+        <p>Hem length; valid only for open or closed hems</p>
+    </div>
+
+    <div id="DGapPopupContent" class="i-popup-content">
+        <p>Gap distance; valid only for open hems</p>
+    </div>
+
+    <div id="DAnglePopupContent" class="i-popup-content">
+        <p>Hem angle; valid only for tear-drop or rolled hems</p>
+    </div>
+
+    <div id="DRadPopupContent" class="i-popup-content">
+        <p>Hem radius; valid only for tear-drop or rolled hems</p>
+    </div>
+
+    <div id="DMiterGapPopupContent" class="i-popup-content">
+        <p>Hem miter gap</p>
+    </div>
+
+    <div id="PCBAPopupContent" class="i-popup-content">
+        <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+            <tbody>
+                <tr style="x-cell-content-align: top" valign="top">
+                    <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB">
+                        <p class="apiTableColHeading"><strong>If...</strong></p>
+                    </td>
+
+                    <td style="BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB">
+                        <p class="apiTableColHeading"><strong>Then...</strong></p>
+                    </td>
+                </tr>
+
+                <tr style="x-cell-content-align: top" valign="top">
+                    <td style="BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                        <p>non-NULL</p>
+                    </td>
+
+                    <td style="BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                        <p>Pointer to <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomBendAllowance">ICustomBendAllowance</a> object for which required values have been set</p>
+                    </td>
+                </tr>
+
+                <tr style="x-cell-content-align: top" valign="top">
+                    <td style="BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                        <p>NULL</p>
+                    </td>
+
+                    <td style="BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                        <p>Parent bend's bend allowance is used</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="UseDefaultReliefPopupContent" class="i-popup-content">
+        True to use the default relief, false to use the relief specified by ReliefType
+    </div>
+
+    <div id="ReliefTypePopupContent" class="i-popup-content">
+        <p>Type of relief as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>; valid only if UseDefaultRelief is false</p>
+    </div>
+
+    <div id="ReliefTearTypesPopupContent" class="i-popup-content">
+        <p>Type of relief tear as defined in&#160; <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swReliefTearTypes_e.html">swReliefTearTypes_e</a>; valid only when:</p>
+
+        <ul>
+            <li>UseDefaultRelief is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>ReliefType is&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefTear</li>
+        </ul>
+    </div>
+
+    <div id="UseReliefRatioPopupContent" class="i-popup-content">
+        <p>True to use ReliefRatio, false to use&#160;ReliefWidth/ReliefDepth; valid only when:</p>
+
+        <ul>
+            <li>UseDefaultRelief is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+        </ul>
+    </div>
+
+    <div id="ReliefRatioPopupContent" class="i-popup-content">
+        <p>Relief ratio; valid only when:</p>
+
+        <ul>
+            <li>UseDefaultRelief is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>UseReliefRatio is true</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+        </ul>
+    </div>
+
+    <div id="ReliefWidthPopupContent" class="i-popup-content">
+        <p>Width of the relief; valid only when:</p>
+
+        <ul>
+            <li>UseDefaultRelief is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>UseReliefRatio is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+        </ul>
+    </div>
+
+    <div id="ReliefDepthPopupContent" class="i-popup-content">
+        <p>Depth of the relief; valid only when:</p>
+
+        <ul>
+            <li>UseDefaultRelief is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>UseReliefRatio is false</li>
+        </ul>
+
+        <p>&#160;&#160;&#160; - and -</p>
+
+        <ul>
+            <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+        </ul>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Inserts a hem of the specified relief type at the selected edges of the current sheet metal part.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function InsertSheetMetalHem2( _
+   ByVal <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="PositionPopupLink" data-popup-contentsource="#PositionPopupContent" data-popup-showevent="click mouseenter">Position</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ReversePopupLink" data-popup-contentsource="#ReversePopupContent" data-popup-showevent="click mouseenter">Reverse</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="DLengthPopupLink" data-popup-contentsource="#DLengthPopupContent" data-popup-showevent="click mouseenter">DLength</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DGapPopupLink" data-popup-contentsource="#DGapPopupContent" data-popup-showevent="click mouseenter">DGap</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DAnglePopupLink" data-popup-contentsource="#DAnglePopupContent" data-popup-showevent="click mouseenter">DAngle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DRadPopupLink" data-popup-contentsource="#DRadPopupContent" data-popup-showevent="click mouseenter">DRad</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="DMiterGapPopupLink" data-popup-contentsource="#DMiterGapPopupContent" data-popup-showevent="click mouseenter">DMiterGap</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="PCBAPopupLink" data-popup-contentsource="#PCBAPopupContent" data-popup-showevent="click mouseenter">PCBA</a></i> As CustomBendAllowance, _
+   ByVal <i><a class="i-popup-link" id="UseDefaultReliefPopupLink" data-popup-contentsource="#UseDefaultReliefPopupContent" data-popup-showevent="click mouseenter">UseDefaultRelief</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ReliefTypePopupLink" data-popup-contentsource="#ReliefTypePopupContent" data-popup-showevent="click mouseenter">ReliefType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ReliefTearTypesPopupLink" data-popup-contentsource="#ReliefTearTypesPopupContent" data-popup-showevent="click mouseenter">ReliefTearTypes</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="UseReliefRatioPopupLink" data-popup-contentsource="#UseReliefRatioPopupContent" data-popup-showevent="click mouseenter">UseReliefRatio</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ReliefRatioPopupLink" data-popup-contentsource="#ReliefRatioPopupContent" data-popup-showevent="click mouseenter">ReliefRatio</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ReliefWidthPopupLink" data-popup-contentsource="#ReliefWidthPopupContent" data-popup-showevent="click mouseenter">ReliefWidth</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ReliefDepthPopupLink" data-popup-contentsource="#ReliefDepthPopupContent" data-popup-showevent="click mouseenter">ReliefDepth</a></i> As System.Double _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim Type As System.Integer
+Dim Position As System.Integer
+Dim Reverse As System.Boolean
+Dim DLength As System.Double
+Dim DGap As System.Double
+Dim DAngle As System.Double
+Dim DRad As System.Double
+Dim DMiterGap As System.Double
+Dim PCBA As CustomBendAllowance
+Dim UseDefaultRelief As System.Boolean
+Dim ReliefType As System.Integer
+Dim ReliefTearTypes As System.Integer
+Dim UseReliefRatio As System.Boolean
+Dim ReliefRatio As System.Double
+Dim ReliefWidth As System.Double
+Dim ReliefDepth As System.Double
+Dim value As Feature
+ 
+value = instance.InsertSheetMetalHem2(Type, Position, Reverse, DLength, DGap, DAngle, DRad, DMiterGap, PCBA, UseDefaultRelief, ReliefType, ReliefTearTypes, UseReliefRatio, ReliefRatio, ReliefWidth, ReliefDepth)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature InsertSheetMetalHem2( 
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="PositionPopupLink" data-popup-contentsource="#PositionPopupContent" data-popup-showevent="click mouseenter">Position</a></i>,
+   System.bool <i><a class="i-popup-link" id="ReversePopupLink" data-popup-contentsource="#ReversePopupContent" data-popup-showevent="click mouseenter">Reverse</a></i>,
+   System.double <i><a class="i-popup-link" id="DLengthPopupLink" data-popup-contentsource="#DLengthPopupContent" data-popup-showevent="click mouseenter">DLength</a></i>,
+   System.double <i><a class="i-popup-link" id="DGapPopupLink" data-popup-contentsource="#DGapPopupContent" data-popup-showevent="click mouseenter">DGap</a></i>,
+   System.double <i><a class="i-popup-link" id="DAnglePopupLink" data-popup-contentsource="#DAnglePopupContent" data-popup-showevent="click mouseenter">DAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="DRadPopupLink" data-popup-contentsource="#DRadPopupContent" data-popup-showevent="click mouseenter">DRad</a></i>,
+   System.double <i><a class="i-popup-link" id="DMiterGapPopupLink" data-popup-contentsource="#DMiterGapPopupContent" data-popup-showevent="click mouseenter">DMiterGap</a></i>,
+   CustomBendAllowance <i><a class="i-popup-link" id="PCBAPopupLink" data-popup-contentsource="#PCBAPopupContent" data-popup-showevent="click mouseenter">PCBA</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseDefaultReliefPopupLink" data-popup-contentsource="#UseDefaultReliefPopupContent" data-popup-showevent="click mouseenter">UseDefaultRelief</a></i>,
+   System.int <i><a class="i-popup-link" id="ReliefTypePopupLink" data-popup-contentsource="#ReliefTypePopupContent" data-popup-showevent="click mouseenter">ReliefType</a></i>,
+   System.int <i><a class="i-popup-link" id="ReliefTearTypesPopupLink" data-popup-contentsource="#ReliefTearTypesPopupContent" data-popup-showevent="click mouseenter">ReliefTearTypes</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseReliefRatioPopupLink" data-popup-contentsource="#UseReliefRatioPopupContent" data-popup-showevent="click mouseenter">UseReliefRatio</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefRatioPopupLink" data-popup-contentsource="#ReliefRatioPopupContent" data-popup-showevent="click mouseenter">ReliefRatio</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefWidthPopupLink" data-popup-contentsource="#ReliefWidthPopupContent" data-popup-showevent="click mouseenter">ReliefWidth</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefDepthPopupLink" data-popup-contentsource="#ReliefDepthPopupContent" data-popup-showevent="click mouseenter">ReliefDepth</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ InsertSheetMetalHem2( 
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="PositionPopupLink" data-popup-contentsource="#PositionPopupContent" data-popup-showevent="click mouseenter">Position</a></i>,
+   System.bool <i><a class="i-popup-link" id="ReversePopupLink" data-popup-contentsource="#ReversePopupContent" data-popup-showevent="click mouseenter">Reverse</a></i>,
+   System.double <i><a class="i-popup-link" id="DLengthPopupLink" data-popup-contentsource="#DLengthPopupContent" data-popup-showevent="click mouseenter">DLength</a></i>,
+   System.double <i><a class="i-popup-link" id="DGapPopupLink" data-popup-contentsource="#DGapPopupContent" data-popup-showevent="click mouseenter">DGap</a></i>,
+   System.double <i><a class="i-popup-link" id="DAnglePopupLink" data-popup-contentsource="#DAnglePopupContent" data-popup-showevent="click mouseenter">DAngle</a></i>,
+   System.double <i><a class="i-popup-link" id="DRadPopupLink" data-popup-contentsource="#DRadPopupContent" data-popup-showevent="click mouseenter">DRad</a></i>,
+   System.double <i><a class="i-popup-link" id="DMiterGapPopupLink" data-popup-contentsource="#DMiterGapPopupContent" data-popup-showevent="click mouseenter">DMiterGap</a></i>,
+   CustomBendAllowance^ <i><a class="i-popup-link" id="PCBAPopupLink" data-popup-contentsource="#PCBAPopupContent" data-popup-showevent="click mouseenter">PCBA</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseDefaultReliefPopupLink" data-popup-contentsource="#UseDefaultReliefPopupContent" data-popup-showevent="click mouseenter">UseDefaultRelief</a></i>,
+   System.int <i><a class="i-popup-link" id="ReliefTypePopupLink" data-popup-contentsource="#ReliefTypePopupContent" data-popup-showevent="click mouseenter">ReliefType</a></i>,
+   System.int <i><a class="i-popup-link" id="ReliefTearTypesPopupLink" data-popup-contentsource="#ReliefTearTypesPopupContent" data-popup-showevent="click mouseenter">ReliefTearTypes</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseReliefRatioPopupLink" data-popup-contentsource="#UseReliefRatioPopupContent" data-popup-showevent="click mouseenter">UseReliefRatio</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefRatioPopupLink" data-popup-contentsource="#ReliefRatioPopupContent" data-popup-showevent="click mouseenter">ReliefRatio</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefWidthPopupLink" data-popup-contentsource="#ReliefWidthPopupContent" data-popup-showevent="click mouseenter">ReliefWidth</a></i>,
+   System.double <i><a class="i-popup-link" id="ReliefDepthPopupLink" data-popup-contentsource="#ReliefDepthPopupContent" data-popup-showevent="click mouseenter">ReliefDepth</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Type</i></dt>
+
+                <dd>Type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swHemTypes_e.html">swHemTypes_e</a></dd>
+
+                <dt><i>Position</i></dt>
+
+                <dd>
+                    <p>Position as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swHemPositionTypes_e.html">swHemPositionTypes_e</a></p>
+                </dd>
+
+                <dt><i>Reverse</i></dt>
+
+                <dd>
+                    <p>True reverses the direction, false does not</p>
+                </dd>
+
+                <dt><i>DLength</i></dt>
+
+                <dd>
+                    <p>Hem length; valid only for open or closed hems</p>
+                </dd>
+
+                <dt><i>DGap</i></dt>
+
+                <dd>
+                    <p>Gap distance; valid only for open hems</p>
+                </dd>
+
+                <dt><i>DAngle</i></dt>
+
+                <dd>
+                    <p>Hem angle; valid only for tear-drop or rolled hems</p>
+                </dd>
+
+                <dt><i>DRad</i></dt>
+
+                <dd>
+                    <p>Hem radius; valid only for tear-drop or rolled hems</p>
+                </dd>
+
+                <dt><i>DMiterGap</i></dt>
+
+                <dd>
+                    <p>Hem miter gap</p>
+                </dd>
+
+                <dt><i>PCBA</i></dt>
+
+                <dd>
+                    <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                        <tbody>
+                            <tr style="x-cell-content-align: top" valign="top">
+                                <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB">
+                                    <p class="apiTableColHeading"><strong>If...</strong></p>
+                                </td>
+
+                                <td style="BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB">
+                                    <p class="apiTableColHeading"><strong>Then...</strong></p>
+                                </td>
+                            </tr>
+
+                            <tr style="x-cell-content-align: top" valign="top">
+                                <td style="BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                                    <p>non-NULL</p>
+                                </td>
+
+                                <td style="BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                                    <p>Pointer to <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomBendAllowance">ICustomBendAllowance</a> object for which required values have been set</p>
+                                </td>
+                            </tr>
+
+                            <tr style="x-cell-content-align: top" valign="top">
+                                <td style="BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                                    <p>NULL</p>
+                                </td>
+
+                                <td style="BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                                    <p>Parent bend's bend allowance is used</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </dd>
+
+                <dt><i>UseDefaultRelief</i></dt>
+
+                <dd>True to use the default relief, false to use the relief specified by ReliefType</dd>
+
+                <dt><i>ReliefType</i></dt>
+
+                <dd>
+                    <p>Type of relief as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>; valid only if UseDefaultRelief is false</p>
+                </dd>
+
+                <dt><i>ReliefTearTypes</i></dt>
+
+                <dd>
+                    <p>Type of relief tear as defined in&#160; <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swReliefTearTypes_e.html">swReliefTearTypes_e</a>; valid only when:</p>
+
+                    <ul>
+                        <li>UseDefaultRelief is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>ReliefType is&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefTear</li>
+                    </ul>
+                </dd>
+
+                <dt><i>UseReliefRatio</i></dt>
+
+                <dd>
+                    <p>True to use ReliefRatio, false to use&#160;ReliefWidth/ReliefDepth; valid only when:</p>
+
+                    <ul>
+                        <li>UseDefaultRelief is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+                    </ul>
+                </dd>
+
+                <dt><i>ReliefRatio</i></dt>
+
+                <dd>
+                    <p>Relief ratio; valid only when:</p>
+
+                    <ul>
+                        <li>UseDefaultRelief is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>UseReliefRatio is true</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+                    </ul>
+                </dd>
+
+                <dt><i>ReliefWidth</i></dt>
+
+                <dd>
+                    <p>Width of the relief; valid only when:</p>
+
+                    <ul>
+                        <li>UseDefaultRelief is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>UseReliefRatio is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+                    </ul>
+                </dd>
+
+                <dt><i>ReliefDepth</i></dt>
+
+                <dd>
+                    <p>Depth of the relief; valid only when:</p>
+
+                    <ul>
+                        <li>UseDefaultRelief is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>UseReliefRatio is false</li>
+                    </ul>
+
+                    <p>&#160;&#160;&#160; - and -</p>
+
+                    <ul>
+                        <li>ReliefType is either <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefObround or <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swSheetMetalReliefTypes_e.html">swSheetMetalReliefTypes_e</a>.swSheetMetalReliefRectangular</li>
+                    </ul>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">IFeature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>Before calling this method:</p>
+
+            <ol>
+                <li>Call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~CreateCustomBendAllowance">IFeatureManager::CreateCustomBendAllowance</a> to create an instance of ICustomBendAllowance.</li>
+
+                <li>Initialize the CustomBendAllowance object.</li>
+
+                <li>Assign PCBA to the initialized CustomBendAllowance object.</li>
+
+                <li>Select one or more edges in the sheet metal model to which to add the specified hem.</li>
+            </ol>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Insert_Sheet_Metal_Hem_Example_VB.htm">Insert Sheet Metal Hem (VBA)</a><br />
+            <a href="Insert_Sheet_Metal_Hem_Example_VBNET.htm">Insert Sheet Metal Hem (VB.NET)</a><br />
+            <a href="Insert_Sheet_Metal_Hem_Example_CSharp.htm">Insert Sheet Metal Hem (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IHemFeatureData">IHemFeatureData Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheetMetalFeatureData">ISheetMetalFeatureData Interface</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertSheetMetalHem2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

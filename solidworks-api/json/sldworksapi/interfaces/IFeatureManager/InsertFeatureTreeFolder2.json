@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFeatureTreeFolder2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of folder to insert as defined by swFeatureTreeFolderType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureFolder"
+    ],
+    "keywords": [
+      "folders",
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "insertfeaturetreefolder2",
+      "feature",
+      "manager",
+      "insert",
+      "folder2",
+      "type",
+      "int32",
+      "move",
+      "assembly",
+      "components",
+      "new",
+      "folder",
+      "vb",
+      "net",
+      "vba",
+      "specify",
+      "iges",
+      "levels",
+      "values",
+      "import",
+      "file"
+    ]
+  },
+  "title": "IFeatureManager.InsertFeatureTreeFolder2",
+  "description": "Inserts a folder in the FeatureManager design tree for pre-selected features or components.",
+  "signature": "Feature InsertFeatureTreeFolder2( \n   System.Int32\nType\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of folder to insert as defined by swFeatureTreeFolderType_e"
+    }
+  ],
+  "returns": "Newly created folder feature",
+  "remarks": "This method operates on the features that are selected before this method executes.\nIf creating...\nThen...\nA folder to contain preselected features\nCertain types of features cannot be moved into that folder, such as the predefined planes that exist when a new part is created. These types of features are ignored by this method.\nIf multiple features are selected when this method runs, all of the features are moved into the new folder; however, these features must be consecutive. If they are not, only the first group of consecutive features are moved into the new folder.\nAn empty folder\nThe folder is created just before the first valid feature in the selections. The new folder cannot be placed before certain features, such as the predefined planes that exist when a new part is created.\nMold folders\nWhen a surface feature is pre-selected, three sub-folders are created in the Surface Bodies folder: Cavity Surface Bodies, Core Surface Bodies, and Parting Surface Bodies\nBecause a folder cannot be created inside another folder, any selected features already inside a folder are ignored.\nThis method works with components and features.",
+  "examples": [
+    {
+      "title": "Move Assembly Components to New Folder (C#)",
+      "href": "Move_Assembly_Components_to_New_Folder_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Assembly Components to New Folder (VB.NET)",
+      "href": "Move_Assembly_Components_to_New_Folder_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Assembly Components to New Folder (VBA)",
+      "href": "Move_Assembly_Components_to_New_Folder_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (C#)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VB.NET)",
+      "href": "Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Specify IGES Levels and Values, Then Import IGES File (VBA)",
+      "href": "Specify_IGES_Levels_and_Values,_Then_Import_IGES_File_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureFolder"
+  ]
+}

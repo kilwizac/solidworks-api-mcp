@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "ConvertArcToBcurve",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Center",
+        "type": "System.Object",
+        "description": "Array for the x, y, z coordinates of the center point of the arc"
+      },
+      {
+        "name": "Axis",
+        "type": "System.Object",
+        "description": "Array for the normal vector of the arc"
+      },
+      {
+        "name": "Start",
+        "type": "System.Object",
+        "description": "Array for the x, y, z coordinates of the start point of the arc"
+      },
+      {
+        "name": "End",
+        "type": "System.Object",
+        "description": "Array for the x, y, z coordinates of the end point of the arc"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.GetBCurveParams",
+      "ICurve.IGetBCurveParams",
+      "ICurve.MakeBsplineCurve"
+    ],
+    "keywords": [
+      "convertarctobcurve",
+      "icurve",
+      "curve",
+      "convert",
+      "arc",
+      "bcurve",
+      "center",
+      "object",
+      "axis",
+      "start",
+      "end"
+    ]
+  },
+  "title": "ICurve.ConvertArcToBcurve",
+  "description": "Gets the b-spline value representation of the arc.",
+  "signature": "System.Object ConvertArcToBcurve( \n   System.Object\nCenter\n,\n   System.Object\nAxis\n,\n   System.Object\nStart\n,\n   System.Object\nEnd\n)",
+  "parameters": [
+    {
+      "name": "Center",
+      "type": "System.Object",
+      "description": "Array for the x, y, z coordinates of the center point of the arc"
+    },
+    {
+      "name": "Axis",
+      "type": "System.Object",
+      "description": "Array for the normal vector of the arc"
+    },
+    {
+      "name": "Start",
+      "type": "System.Object",
+      "description": "Array for the x, y, z coordinates of the start point of the arc"
+    },
+    {
+      "name": "End",
+      "type": "System.Object",
+      "description": "Array for the x, y, z coordinates of the end point of the arc"
+    }
+  ],
+  "returns": "Array for the b-spline representation of the arc",
+  "remarks": "Given coordinates of the center, start, end points and the normal vector of an arc, this method returns the b-spline representation of the arc.\nThe returned data are doubles arranged in the following order:\ndim, order\nTwo integers packed into a double.\ndim\nDimension of the control point data.\nIf dim=3 (non-rational), control point coordinates are returned as [x0,y0,z0,x1,y1,z1,.....].\nIf dim=4 (rational), control point coordinates are returned as [x0,y0,z0,w0,x1,y1,z1,w1,.....], where w is the weight for the point.\norder\nOrder of the b-spline returned.\nNumControlPoints, Periodic\nTwo integers packed into a double.\nNumControlPoints\nNumber of control points for the b-spline.\nPeriodic\nTrue if the b-spline is periodic.\nKnots\nKnot vectors. The Knot array contains (\nNumControlPoints\n+\norder\n) knot values. If the original curve is periodic, then the data is returned in a non-periodic form with extra knots inserted at the curve ends.\nControlPoints\nList of control points output in (\nNumControlPoints\n) vectors of dimension dim.\nFor non-rational b-spline, control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].\nFor rational b-spline, control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........], where w is the weight for the point.",
+  "examples": [],
+  "related": [
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.GetBCurveParams",
+    "ICurve.IGetBCurveParams",
+    "ICurve.MakeBsplineCurve"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface2",
+    "member": "IGetNextFacePair",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Distance between theses two parallel faces"
+      },
+      {
+        "name": "PartnerFaceDisp",
+        "type": "Face2",
+        "description": "Face on the original part body used in generating the neutral face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.GetFacePairCount",
+      "IMidSurface2.GetFirstFacePair",
+      "IMidSurface2.GetNextFacePair"
+    ],
+    "keywords": [
+      "igetnextfacepair",
+      "imidsurface2",
+      "mid",
+      "surface2",
+      "next",
+      "face",
+      "pair",
+      "thickness",
+      "double",
+      "partner",
+      "disp",
+      "face2"
+    ]
+  },
+  "title": "IMidSurface2.IGetNextFacePair",
+  "description": "Obsolete. Superseded by IMidSurface3::IGetNextFacePair.",
+  "signature": "Face2 IGetNextFacePair( \n   out System.Double\nThickness\n,\n   out Face2\nPartnerFaceDisp\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Distance between theses two parallel faces"
+    },
+    {
+      "name": "PartnerFaceDisp",
+      "type": "Face2",
+      "description": "Face on the original part body used in generating the neutral face"
+    }
+  ],
+  "returns": "Face on the original part body used in generating the neutral face",
+  "remarks": "The two faces returned are the two parallel faces from the original part body that were used to generate the neutral face in this midsurface feature.\nCall\nIMidSurface2::IGetFirstFacePair\nto get the first pair of faces used in this midsurface feature.\nThis method is similar to\nIMidSurface2::IGetNextFace\n, except this method does not return the neutral face.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetFacePairCount",
+    "IMidSurface2.GetFirstFacePair",
+    "IMidSurface2.GetNextFacePair"
+  ]
+}

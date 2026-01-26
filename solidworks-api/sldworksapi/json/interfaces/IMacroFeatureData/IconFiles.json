@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMacroFeatureData",
+    "member": "IconFiles",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "file-io"
+    ],
+    "related": [
+      "IMacroFeatureData.GetIconFileCount",
+      "IMacroFeatureData.IGetIconFiles",
+      "IMacroFeatureData.ISetIconFiles"
+    ],
+    "keywords": [
+      "iconfiles",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "icon",
+      "files",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMacroFeatureData.IconFiles",
+  "description": "Gets or sets the file names for the icons for this macro feature.",
+  "signature": "System.Object IconFiles {get; set;}",
+  "parameters": [],
+  "returns": "Array of the file names for the icons (see Remarks )",
+  "remarks": "The array of the file names for the icons can contain either three or nine strings.\nNumber of strings in array\nTypes of images in this order\nImage format and sizes\nThree\nRegular\nSuppressed\nHighlighted\nWindows bitmap (\n*.bmp\n) format\n16 pixels wide X 18 pixels high\nNine\nNOTES:\nThis size array is only valid for macro features created in parts, assemblies, and drawings in SOLIDWORKS 2017 and later.\nSOLIDWORKS displays the appropriate images based on the current DPI setting of the display device.\nRegular small\nSuppressed small\nHighlighted small\nRegular medium\nSuppressed medium\nHighlighted medium\nRegular large\nSuppressed large\nHighlighted large\nWindows bitmap (\n*.bmp\n) format\nRecommended sizes are:\nSmall: 20 pixels wide X 20 pixels high\nMedium: 32 pixels wide X 32 pixels high\nLarge: 40 pixels wide X 40 pixels high\nYou can specify either the full path name or just the file name for the strings; for example,\nc:\n\\\nbitmaps\n\\\nicon1.bmp\nor\nicon1.bmp\n.\nIf you change the bitmaps after inserting them with a macro feature into a SOLIDWORKS document, then the new bitmaps are not displayed until you exit and restart SOLIDWORKS.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetIconFileCount",
+    "IMacroFeatureData.IGetIconFiles",
+    "IMacroFeatureData.ISetIconFiles"
+  ]
+}

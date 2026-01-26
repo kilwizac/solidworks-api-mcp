@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "GetCellTextOrientation",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "0-based index of the cell row; valid only if AllCells is set to false"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "0-based index of the cell column; valid only if AllCells is set to false"
+      },
+      {
+        "name": "IncludeHidden",
+        "type": "System.Boolean",
+        "description": "True to include hidden rows and columns in Row and Column indexes, false to not"
+      },
+      {
+        "name": "AllCells",
+        "type": "System.Boolean",
+        "description": "True to get the orientation in all cells, false to not; if false, set Row and Column (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.SetCellTextOrientation"
+    ],
+    "keywords": [
+      "table",
+      "cells",
+      "getcelltextorientation",
+      "itableannotation",
+      "annotation",
+      "cell",
+      "text",
+      "orientation",
+      "row",
+      "int32",
+      "column",
+      "include",
+      "hidden",
+      "boolean",
+      "all"
+    ]
+  },
+  "title": "ITableAnnotation.GetCellTextOrientation",
+  "description": "Gets the text orientation in the specified cell of this table.",
+  "signature": "System.Int32 GetCellTextOrientation( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n,\n   System.Boolean\nIncludeHidden\n,\n   System.Boolean\nAllCells\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "0-based index of the cell row; valid only if AllCells is set to false"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "0-based index of the cell column; valid only if AllCells is set to false"
+    },
+    {
+      "name": "IncludeHidden",
+      "type": "System.Boolean",
+      "description": "True to include hidden rows and columns in Row and Column indexes, false to not"
+    },
+    {
+      "name": "AllCells",
+      "type": "System.Boolean",
+      "description": "True to get the orientation in all cells, false to not; if false, set Row and Column (see Remarks )"
+    }
+  ],
+  "returns": "Text orientation as defined in swTableCellOrientation_e (see Remarks )",
+  "remarks": "If AllCells is set to false, this method returns one of swTableCellOrientation_e.:\nswTableCellOrientation_Right\nswTableCellOrientation_Left\nswTableCellOrientation_Up\nswTableCellOrientation_Down\nIf AllCells is set to true, this method returns one of the above or:\nswTableCellOrientation_Varies, if all the cells do not share the same text orientation.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.SetCellTextOrientation"
+  ]
+}

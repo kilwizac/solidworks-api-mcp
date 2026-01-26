@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ImportToolboxItem",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StdToImport",
+        "type": "System.String",
+        "description": "Standard to import (see Remarks )"
+      },
+      {
+        "name": "DestinationFilePath",
+        "type": "System.String",
+        "description": "Path and name of file to import (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ExportToolboxItem"
+    ],
+    "keywords": [
+      "importtoolboxitem",
+      "isldworks",
+      "sld",
+      "works",
+      "import",
+      "toolbox",
+      "item",
+      "std",
+      "string",
+      "destination",
+      "file",
+      "path",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.ImportToolboxItem",
+  "description": "Imports data for the specified Toolbox standard.",
+  "signature": "System.Int32 ImportToolboxItem( \n   System.String\nStdToImport\n,\n   System.String\nDestinationFilePath\n)",
+  "parameters": [
+    {
+      "name": "StdToImport",
+      "type": "System.String",
+      "description": "Standard to import (see Remarks )"
+    },
+    {
+      "name": "DestinationFilePath",
+      "type": "System.String",
+      "description": "Path and name of file to import (see Remarks )"
+    }
+  ],
+  "returns": "0 if the Toolbox standard imported successfully, 1 if not",
+  "remarks": "Specify StdToImport with the path and file name beneath\nC:\\SOLIDWORKS Data\\browser\n, e.g., \"\nansi inch\\bolts and screws\\hex head\\heavy hex bolt_ai.sldprt\n\".\nSpecify DestinationFilePath with the path and file name of the Excel Workbook (\n*.xslx\n) you want to import. The Excel file name is formatted as follows:\nstandard\n_\nhole class\n_\nhole type\n.xslx",
+  "examples": [],
+  "related": [
+    "ISldWorks.ExportToolboxItem"
+  ]
+}

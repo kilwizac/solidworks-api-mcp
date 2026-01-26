@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateBoundedSurface",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "UOpt",
+        "type": "System.Boolean",
+        "description": "True if U parameter range is given in uvData, false for the entire U parameter range"
+      },
+      {
+        "name": "VOpt",
+        "type": "System.Boolean",
+        "description": "True if V parameter range is given in uvData, false for the entire V parameter range"
+      },
+      {
+        "name": "UvParams",
+        "type": "System.Double",
+        "description": "Array of 4 doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.CreateBoundedSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreateboundedsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "bounded",
+      "opt",
+      "boolean",
+      "uv",
+      "params",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IBody2.ICreateBoundedSurface",
+  "description": "Creates a bounded surface from an independent base surface.",
+  "signature": "void ICreateBoundedSurface( \n   System.Boolean\nUOpt\n,\n   System.Boolean\nVOpt\n,\n   ref System.Double\nUvParams\n)",
+  "parameters": [
+    {
+      "name": "UOpt",
+      "type": "System.Boolean",
+      "description": "True if U parameter range is given in uvData, false for the entire U parameter range"
+    },
+    {
+      "name": "VOpt",
+      "type": "System.Boolean",
+      "description": "True if V parameter range is given in uvData, false for the entire V parameter range"
+    },
+    {
+      "name": "UvParams",
+      "type": "System.Double",
+      "description": "Array of 4 doubles (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before you use this method, you must call one of the base surface creation methods, such as\nIBody2::ICreateBsplineSurface\n.\nThe UOpt and VOpt arguments allow the application to supply parameter range information so that a bounded surface can be made up from part of the base surface. If UOpt and VOpt are both set to false, then SOLIDWORKS uses the entire parameter ranges. This method fails for surfaces with infinite parameter ranges.\nUvParams contains 4 doubles describing the UV parameter ranges.\nU parameter range\nuvData[0]\nand\nuvData[1]\n;\nUvData[0]\nmust be less than\nuvData[1]\nV parameter range\nuvData[2]\nand\nuvData[3]\n;\nUvData[2]\nmust be less than\nuvData[3]\nTo construct a solid body from bounded surfaces, call\nIPartDoc::ICreateNewBody2\nfirst, which arranges for a placeholder for this bounded surface.",
+  "examples": [],
+  "related": [
+    "IBody2.CreateBoundedSurface"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ReplaceReferencedDocument",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ReferencingDocument",
+        "type": "System.String",
+        "description": "Document whose references to modify; the document cannot be open"
+      },
+      {
+        "name": "ReferencedDocument",
+        "type": "System.String",
+        "description": "Document is referenced by ReferencingDocument; all of its references within ReferencingDocument are replaced by NewReference"
+      },
+      {
+        "name": "NewReference",
+        "type": "System.String",
+        "description": "New document used by ReferencingDocument"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "external",
+      "references",
+      "documents",
+      "replacereferenceddocument",
+      "isldworks",
+      "sld",
+      "works",
+      "replace",
+      "referenced",
+      "document",
+      "referencing",
+      "string",
+      "new",
+      "reference",
+      "boolean",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.ReplaceReferencedDocument",
+  "description": "Replaces a referenced document.",
+  "signature": "System.Boolean ReplaceReferencedDocument( \n   System.String\nReferencingDocument\n,\n   System.String\nReferencedDocument\n,\n   System.String\nNewReference\n)",
+  "parameters": [
+    {
+      "name": "ReferencingDocument",
+      "type": "System.String",
+      "description": "Document whose references to modify; the document cannot be open"
+    },
+    {
+      "name": "ReferencedDocument",
+      "type": "System.String",
+      "description": "Document is referenced by ReferencingDocument; all of its references within ReferencingDocument are replaced by NewReference"
+    },
+    {
+      "name": "NewReference",
+      "type": "System.String",
+      "description": "New document used by ReferencingDocument"
+    }
+  ],
+  "returns": "True if the the referenced document is replaced, false if not",
+  "remarks": "Mates, dimensions, and other references might fail when the referencingDocument is opened.\nIf the internal ID of the ReferencedDocument does not match the internal ID of the NewReference document, then an error message is displayed when the ReferencingDocument is opened. The internal ID is a time stamp that was generated when the file was created. Unless the NewReference is actually a renamed copy of the ReferencedDocument document, then it is unlikely that the internal IDs will match.\nThis method does not check for the existence of the NewReference document. If the document does not exist when the ReferencingDocument is opened, then the user is warned and prompted to browse for a replacement.\nThe ReferencedDocument and NewReference file types must match. For example, if ReferencingDocument is an assembly with four subassemblies, you cannot replace any of the subassembly references with a part document. If you were to replace any of the subassembly references, they would need to be replaced by another SOLIDWORKS assembly document.\nYou might also notice that the component name, which is visible in the FeatureManager design tree, will not change to the name of the NewReference unless the proper user preference is set (\nTools, Options, System Options, External References, Update component names when documents are replaced\n).",
+  "examples": [
+    {
+      "title": "Replace Referenced Document (VBA)",
+      "href": "Replace_Referenced_Document_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

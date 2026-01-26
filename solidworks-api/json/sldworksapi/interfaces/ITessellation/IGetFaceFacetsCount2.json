@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "IGetFaceFacetsCount2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FaceObj",
+        "type": "Face2",
+        "description": "Face on which to count the facets"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ITessellation.GetFaceFacets"
+    ],
+    "keywords": [
+      "igetfacefacetscount2",
+      "itessellation",
+      "tessellation",
+      "face",
+      "facets",
+      "count2",
+      "obj",
+      "face2",
+      "int32"
+    ]
+  },
+  "title": "ITessellation.IGetFaceFacetsCount2",
+  "description": "Gets the number of facets corresponding to a face.",
+  "signature": "System.Int32 IGetFaceFacetsCount2( \n   Face2\nFaceObj\n)",
+  "parameters": [
+    {
+      "name": "FaceObj",
+      "type": "Face2",
+      "description": "Face on which to count the facets"
+    }
+  ],
+  "returns": "Number of facets",
+  "remarks": "This method caches the raw facet data after determining the number of facets. A subsequent call to\nITessellation::IGetFaceFacets2\ndoes not have to fetch the facet data again.",
+  "examples": [],
+  "related": [
+    "ITessellation.GetFaceFacets"
+  ]
+}

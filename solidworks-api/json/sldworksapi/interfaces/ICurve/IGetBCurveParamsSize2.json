@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IGetBCurveParamsSize2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "WantCubic",
+        "type": "System.Boolean",
+        "description": "True for cubic curves, false if not"
+      },
+      {
+        "name": "WantNRational",
+        "type": "System.Boolean",
+        "description": "True for non-rational curves, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.GetBCurveParams",
+      "ICurve.IGetBCurveParams",
+      "ICurve.IsBcurve",
+      "ICurve.MakeBsplineCurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "igetbcurveparamssize2",
+      "icurve",
+      "curve",
+      "params",
+      "size2",
+      "want",
+      "cubic",
+      "boolean",
+      "rational",
+      "int32",
+      "spline",
+      "points"
+    ]
+  },
+  "title": "ICurve.IGetBCurveParamsSize2",
+  "description": "Obsolete. Superseded by ICurve::IGetBCurveParamsSize3.",
+  "signature": "System.Int32 IGetBCurveParamsSize2( \n   System.Boolean\nWantCubic\n,\n   System.Boolean\nWantNRational\n)",
+  "parameters": [
+    {
+      "name": "WantCubic",
+      "type": "System.Boolean",
+      "description": "True for cubic curves, false if not"
+    },
+    {
+      "name": "WantNRational",
+      "type": "System.Boolean",
+      "description": "True for non-rational curves, false if not"
+    }
+  ],
+  "returns": "Size of the data set returned by ICurve::IGetBCurveParams .",
+  "remarks": "Use this method to control the type of information returned in the subsequent call to\nICurve::IGetBCurveParams\n.\nTo control the accuracy of the curve data, use\nIModeler::SetToleranceValue\n.",
+  "examples": [
+    {
+      "title": "Get Curve Spline Points (C++)",
+      "href": "Get_Curve_Spline_Points_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.GetBCurveParams",
+    "ICurve.IGetBCurveParams",
+    "ICurve.IsBcurve",
+    "ICurve.MakeBsplineCurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

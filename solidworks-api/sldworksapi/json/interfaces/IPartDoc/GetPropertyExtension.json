@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPartDoc",
+    "member": "GetPropertyExtension",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "(Size of the array returned by IPartDoc::AddPropertyExtension ) - (Position of the property extension in the array) (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.ResetPropertyExtension"
+    ],
+    "keywords": [
+      "extension",
+      "getpropertyextension",
+      "ipartdoc",
+      "part",
+      "doc",
+      "id",
+      "int32",
+      "object",
+      "add",
+      "extensions",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IPartDoc.GetPropertyExtension",
+  "description": "Gets the specified property extension on this part document.",
+  "signature": "System.Object GetPropertyExtension( \n   System.Int32\nID\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "(Size of the array returned by IPartDoc::AddPropertyExtension ) - (Position of the property extension in the array) (see Remarks )"
+    }
+  ],
+  "returns": "Value of the property extension",
+  "remarks": "IPartDoc::AddPropertyExtension adds property extensions to a last-in-first-out, 1-based array and returns the size of that array. See the examples in\nExample\n.\nNOTE\n: SOLIDWORKS recommends that you use the\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninterfaces instead of this method. These interfaces provide more flexibility.",
+  "examples": [
+    {
+      "title": "Add and Get Property Extensions (C#)",
+      "href": "Add_and_Get_Property_Extension_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Get Property Extensions (VB.NET)",
+      "href": "Add_and_Get_Property_Extension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Get Property Extensions (VBA)",
+      "href": "Add_and_Get_Property_Extension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.ResetPropertyExtension"
+  ]
+}

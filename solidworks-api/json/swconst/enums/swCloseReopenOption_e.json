@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swCloseReopenOption_e",
+    "description": "File close and reopen options. Bitmask.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swCloseReopenOption_e",
+  "description": "File close and reopen options. Bitmask.",
+  "values": [
+    {
+      "member": "swCloseReopenOption_DiscardChanges",
+      "value": "2",
+      "description": "or 0x2; include this option to discard any changes to the document before reopening it; if you exclude this option and there are changes, ISldWorks::CloseAndReopen fails and returns swCloseReopenError_e.swCloseReopenModifiedError"
+    },
+    {
+      "member": "swCloseReopenOption_ExitDetailingMode",
+      "value": "8",
+      "description": "or 0x8; include this option to reopen model drawings as resolved; if excluded by ISldWorks::CloseAndReopen2, keeps a model drawing in detailing mode on reopen"
+    },
+    {
+      "member": "swCloseReopenOption_MatchSheet",
+      "value": "4",
+      "description": "or 0x4; include this option to open the same sheet that was active during closing"
+    },
+    {
+      "member": "swCloseReopenOption_ReadOnly",
+      "value": "1",
+      "description": "or 0x1; include this option to open the drawing document in read-only mode"
+    }
+  ]
+}

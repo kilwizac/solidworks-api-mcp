@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IBSurfParamData
+inherits: null
+description: Allows access to the parameterization data of a B-spline surface.
+member_count: 11
+docset: sldworksapi
+categories:
+  - documents
+common_members:
+  - ControlPointColumnCount
+  - ControlPointDimension
+  - ControlPointRowCount
+  - GetControlPoints
+  - IGetControlPoints
+  - UKnots
+  - UOrder
+  - UPeriodicity
+---
+
+# IBSurfParamData
+
+Allows access to the parameterization data of a B-spline surface.
+
+## Common Members
+
+- `ControlPointColumnCount`
+- `ControlPointDimension`
+- `ControlPointRowCount`
+- `GetControlPoints`
+- `IGetControlPoints`
+- `UKnots`
+- `UOrder`
+- `UPeriodicity`

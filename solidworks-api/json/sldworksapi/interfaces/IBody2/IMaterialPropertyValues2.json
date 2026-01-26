@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBody2",
+    "member": "IMaterialPropertyValues2",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetMaterialIdName2",
+      "IBody2.GetMaterialPropertyName",
+      "IBody2.GetMaterialUserName2",
+      "IBody2.IGetMaterialPropertyValuesForFace",
+      "IBody2.IRemoveMaterialProperty",
+      "IBody2.MaterialPropertyValues2",
+      "IBody2.RemoveMaterialProperty",
+      "IBody2.SetMaterialIdName2",
+      "IBody2.SetMaterialProperty",
+      "IBody2.SetMaterialUserName2",
+      "IComponent2.IMaterialPropertyValues",
+      "IFace2.IMaterialPropertyValues",
+      "IModelDoc2.IMaterialPropertyValues",
+      "IPartDoc.IMaterialPropertyValues"
+    ],
+    "keywords": [
+      "color",
+      "bodies",
+      "material",
+      "properties",
+      "see",
+      "also",
+      "ibody2",
+      "imaterialpropertyvalues2",
+      "body2",
+      "values2",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IBody2.IMaterialPropertyValues2",
+  "description": "Gets or sets the material properties for a body other than the base body in the active configuration.",
+  "signature": "System.Double IMaterialPropertyValues2 {get; set;}",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The material values include the face color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency, and emission. Valid settings are from 0 to 1 for all values.\nThis property is intended to be used on bodies other than the base body and should follow a call to\nIPartDoc::EnumRelatedBodies2\n. The format of the parameters or return values is an array of 9 doubles as follows:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after setting this property.",
+  "examples": [],
+  "related": [
+    "IBody2.GetMaterialIdName2",
+    "IBody2.GetMaterialPropertyName",
+    "IBody2.GetMaterialUserName2",
+    "IBody2.IGetMaterialPropertyValuesForFace",
+    "IBody2.IRemoveMaterialProperty",
+    "IBody2.MaterialPropertyValues2",
+    "IBody2.RemoveMaterialProperty",
+    "IBody2.SetMaterialIdName2",
+    "IBody2.SetMaterialProperty",
+    "IBody2.SetMaterialUserName2",
+    "IComponent2.IMaterialPropertyValues",
+    "IFace2.IMaterialPropertyValues",
+    "IModelDoc2.IMaterialPropertyValues",
+    "IPartDoc.IMaterialPropertyValues"
+  ]
+}

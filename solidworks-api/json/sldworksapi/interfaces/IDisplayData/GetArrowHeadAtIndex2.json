@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetArrowHeadAtIndex2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired arrow head where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetArrowHeadCount"
+    ],
+    "keywords": [
+      "getarrowheadatindex2",
+      "idisplaydata",
+      "display",
+      "data",
+      "arrow",
+      "head",
+      "index2",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetArrowHeadAtIndex2",
+  "description": "Gets information on the specified arrow head.",
+  "signature": "System.Object GetArrowHeadAtIndex2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired arrow head where the index begins at zero"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\narrowHeadPt[3], arrowHeadDir[3], arrowHeadWidth, arrowHeadHeight, arrowHeadStyle, arrowHeadNormal[3]\n]\nwhere:\nArray member...\nContains...\narrowHeadPt[3]\nXYZ coordinates of arrow head tip location\narrowHeadDir[3]\nXYZ coordinates of arrow head direction\narrowHeadWidth\nArrow head width measured along the arrow head direction\narrowHeadHeight\nArrow head height\narrowHeadStyle\nArrow head style as defined in\nswArrowStyle_e\narrowHeadNormal[3]\nXYZ coordinates of normal to the plane of the arrow head",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetArrowHeadCount"
+  ]
+}

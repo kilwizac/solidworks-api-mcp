@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetMultiJogLeaders",
+    "returns": "MultiJogLeader",
+    "parameters": [
+      {
+        "name": "NumMultiJogLeader",
+        "type": "System.Int32",
+        "description": "Number of multi-jog leaders in this drawing view."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetMultiJogLeaders"
+    ],
+    "keywords": [
+      "multi",
+      "jog",
+      "leaders",
+      "see",
+      "also",
+      "imultijogleader",
+      "drawing",
+      "views",
+      "view",
+      "iview",
+      "annotation",
+      "iannotation",
+      "igetmultijogleaders",
+      "num",
+      "leader",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetMultiJogLeaders",
+  "description": "Gets all of the multi-jog leaders in this drawing view.",
+  "signature": "MultiJogLeader IGetMultiJogLeaders( \n   System.Int32\nNumMultiJogLeader\n)",
+  "parameters": [
+    {
+      "name": "NumMultiJogLeader",
+      "type": "System.Int32",
+      "description": "Number of multi-jog leaders in this drawing view."
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of multi-jog leaders VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of multi-jog leaders all at once instead of calling\nIView::GetFirstMultiJogLeader\nand then repeatedly calling\nIMultiJogLeader::GetNext\nto obtain the remaining multi-jog leaders in the drawing view.\nBefore calling this method, call\nIView::GetMultiJogLeaderCount\nto get the value for numMultiJogLeader.",
+  "examples": [],
+  "related": [
+    "IView.GetMultiJogLeaders"
+  ]
+}

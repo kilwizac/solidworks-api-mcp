@@ -1,0 +1,181 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertEndCapFeature3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Depth",
+        "type": "System.Double",
+        "description": "Thickness of the end cap"
+      },
+      {
+        "name": "BIsGivenOffset",
+        "type": "System.Boolean",
+        "description": "True to provide an offset value, false to provide a thickness ratio"
+      },
+      {
+        "name": "BIsChamfer",
+        "type": "System.Boolean",
+        "description": "True if end cap feature is chamfered, false if end cap is filleted"
+      },
+      {
+        "name": "OffsetValue",
+        "type": "System.Double",
+        "description": "Edge offset value; valid only if BIsGivenOffset is true"
+      },
+      {
+        "name": "WallThicknessRatio",
+        "type": "System.Double",
+        "description": "Wall thickness ratio; valid only if BIsGivenOffset is false"
+      },
+      {
+        "name": "ChamferValue",
+        "type": "System.Double",
+        "description": "Chamfer distance if BIsChamfer is true, fillet radius if BIsChamfer is false"
+      },
+      {
+        "name": "BIsCornerTreatment",
+        "type": "System.Boolean",
+        "description": "True to chamfer or fillet the end cap corners, false to not; valid only if BIsGivenOffset is false"
+      },
+      {
+        "name": "DepthOffset",
+        "type": "System.Double",
+        "description": "Inset distance; valid only if BIsEndCapInward = 2"
+      },
+      {
+        "name": "BIsReverse",
+        "type": "System.Boolean",
+        "description": "True to reverse the offset or thickness ratio, false to not"
+      },
+      {
+        "name": "BIsEndCapInward",
+        "type": "System.Int32",
+        "description": "Thickness direction as defined in swEndCapThicknessDirection_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IEndCapFeatureData"
+    ],
+    "keywords": [
+      "end",
+      "caps",
+      "see",
+      "iendcapfeaturedata",
+      "feature",
+      "also",
+      "ifeature",
+      "cap",
+      "weldments",
+      "insertendcapfeature3",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature3",
+      "depth",
+      "double",
+      "given",
+      "offset",
+      "boolean",
+      "chamfer",
+      "value",
+      "wall",
+      "thickness",
+      "ratio",
+      "corner",
+      "treatment",
+      "reverse",
+      "inward",
+      "int32",
+      "weldment",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertEndCapFeature3",
+  "description": "Inserts an end cap feature for one or more pre-selected open ends of a structural member.",
+  "signature": "Feature InsertEndCapFeature3( \n   System.Double\nDepth\n,\n   System.Boolean\nBIsGivenOffset\n,\n   System.Boolean\nBIsChamfer\n,\n   System.Double\nOffsetValue\n,\n   System.Double\nWallThicknessRatio\n,\n   System.Double\nChamferValue\n,\n   System.Boolean\nBIsCornerTreatment\n,\n   System.Double\nDepthOffset\n,\n   System.Boolean\nBIsReverse\n,\n   System.Int32\nBIsEndCapInward\n)",
+  "parameters": [
+    {
+      "name": "Depth",
+      "type": "System.Double",
+      "description": "Thickness of the end cap"
+    },
+    {
+      "name": "BIsGivenOffset",
+      "type": "System.Boolean",
+      "description": "True to provide an offset value, false to provide a thickness ratio"
+    },
+    {
+      "name": "BIsChamfer",
+      "type": "System.Boolean",
+      "description": "True if end cap feature is chamfered, false if end cap is filleted"
+    },
+    {
+      "name": "OffsetValue",
+      "type": "System.Double",
+      "description": "Edge offset value; valid only if BIsGivenOffset is true"
+    },
+    {
+      "name": "WallThicknessRatio",
+      "type": "System.Double",
+      "description": "Wall thickness ratio; valid only if BIsGivenOffset is false"
+    },
+    {
+      "name": "ChamferValue",
+      "type": "System.Double",
+      "description": "Chamfer distance if BIsChamfer is true, fillet radius if BIsChamfer is false"
+    },
+    {
+      "name": "BIsCornerTreatment",
+      "type": "System.Boolean",
+      "description": "True to chamfer or fillet the end cap corners, false to not; valid only if BIsGivenOffset is false"
+    },
+    {
+      "name": "DepthOffset",
+      "type": "System.Double",
+      "description": "Inset distance; valid only if BIsEndCapInward = 2"
+    },
+    {
+      "name": "BIsReverse",
+      "type": "System.Boolean",
+      "description": "True to reverse the offset or thickness ratio, false to not"
+    },
+    {
+      "name": "BIsEndCapInward",
+      "type": "System.Int32",
+      "description": "Thickness direction as defined in swEndCapThicknessDirection_e"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method, select one or more end\nfaces\nof a structural member in the graphics area.\nInstead of using this method, you can pass the faces in an argument array of\nIFeatureManager::InsertEndCapFeature2\n.",
+  "examples": [
+    {
+      "title": "Insert Weldment End Cap (VBA)",
+      "href": "Insert_Weldment_End_Cap_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment End Cap (VB.NET)",
+      "href": "Insert_Weldment_End_Cap_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment End Cap (C#)",
+      "href": "Insert_Weldment_End_Cap_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEndCapFeatureData"
+  ]
+}

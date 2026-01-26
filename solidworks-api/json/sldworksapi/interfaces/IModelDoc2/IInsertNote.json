@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IInsertNote",
+    "returns": "Note",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text string or symbol for the note (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.InsertNote"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "insert",
+      "iinsertnote",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "text",
+      "string"
+    ]
+  },
+  "title": "IModelDoc2.IInsertNote",
+  "description": "Inserts a note in this document.",
+  "signature": "Note IInsertNote( \n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text string or symbol for the note (see Remarks )"
+    }
+  ],
+  "returns": "Newly created note",
+  "remarks": "If you use a symbol in Text, it must be formatted as:\n<\nLibraryName-SymbolName\n>\nwhere\nLibraryName\nand\nSymbolName\nare in the SOLIDWORKS text file\nC:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\\nlang\n\\\nenglish\\gtol.sym\n.\nNOTE\n: You must include the right- and left-angle brackets and separate\nLibraryName\nand\nSymbolName\nwith a hyphen; for example, <MOD-DEG>.\nThe leader attachment points for the new note come from the selections made before calling this method. The initial location of the note will be near the selection location. If there are no selections, the note:\nDoes not have a leader\nIs free standing\nIs at the origin of the model or drawing\nThis method creates a default note. To adjust the display characteristics of this note, you should use the pointer that is returned by this method to access the properties and get and set methods of the Note object, such as\nINote::SetBalloon\nand\nINote::Angle\n. Use\nINote::GetAnnotation\nor\nINote::IGetAnnotation\nto retrieve the\nIAnnotation\nobject.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.InsertNote"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "IGetArcAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired arc where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetArcAtIndex"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "arcs",
+      "notes",
+      "igetarcatindex",
+      "arc",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "INote.IGetArcAtIndex",
+  "description": "Gets information for the specified arc in this note.",
+  "signature": "System.Double IGetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired arc where the index begins at 0"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Call\nINote::GetArcCount\nbefore calling this method to determine the size of the return array.\nReturn value is an array of doubles:\n[\nLineType, StartPt[3], EndPt[3], CenterPt[3], RotDir\n]\nwhere :\nLineType\nLine type. Valid returns are defined in\nswLineTypes_e\n. A LineType is a combination of a line style and line weight.\nStartPt[3]\nArray of 3 doubles (X,Y,Z) describing the start point.\nEndPt[3]\nArray of 3 doubles (X,Y,Z) describing the end point. If the arc is closed, then this is the same point as the\nStartPt\n.\nCenterPt[3]\nArray of 3 doubles (X,Y,Z) describing the center point.\nRotDir\nRotational direction (CW = -1, CCW = 1)\nThe data returned from this method is in terms of document apace.\nIf the document containing this note is...\nThen the coordinates returned are based on the...\nDrawing\nSheet origin\nPart or assembly\nModel origin",
+  "examples": [],
+  "related": [
+    "INote.GetArcAtIndex"
+  ]
+}

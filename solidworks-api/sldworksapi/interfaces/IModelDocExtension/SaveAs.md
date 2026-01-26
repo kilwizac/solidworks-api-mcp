@@ -1,0 +1,192 @@
+---
+type: method
+interface: IModelDocExtension
+member: SaveAs
+returns: System.Boolean
+parameters:
+  -
+    name: Name
+    type: System.String
+    description: Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )
+  -
+    name: Version
+    type: System.Int32
+    description: Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )
+  -
+    name: Options
+    type: System.Int32
+    description: Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )
+  -
+    name: ExportData
+    type: System.Object
+    description: IExportPdfData object for exporting drawing sheets to PDF (see Remarks )
+  -
+    name: Errors
+    type: System.Int32
+    description: Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )
+  -
+    name: Warnings
+    type: System.Int32
+    description: Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - core
+  - file-io
+  - ui
+related:
+  - IModelDocExtension.SaveDeFeaturedFile
+  - ISldWorks.ActivateDoc2
+  - ISldWorks.ActiveDoc
+  - ISldWorks.CheckpointConvertedDocument
+  - ISldWorks.CloseAllDocuments
+  - ISldWorks.CloseDoc
+  - ISldWorks.CopyDocument
+  - ISldWorks.ExitApp
+  - ISldWorks.IActiveDoc2
+  - ISldWorks.LoadFile4
+  - ISldWorks.OpenDoc6
+  - ISldWorks.QuitDoc
+keywords:
+  - saveas
+  - imodeldocextension
+  - model
+  - doc
+  - extension
+  - save
+  - name
+  - string
+  - version
+  - int32
+  - options
+  - export
+  - data
+  - object
+  - errors
+  - warnings
+  - boolean
+  - file
+  - pdf
+  - vba
+  - vb
+  - net
+  - import
+  - step
+---
+
+# IModelDocExtension.SaveAs
+
+Obsolete. Superseded by IModelDocExtension::SaveAs2.
+
+## Signature
+
+```csharp
+System.Boolean SaveAs( 
+   System.String
+Name
+,
+   System.Int32
+Version
+,
+   System.Int32
+Options
+,
+   System.Object
+ExportData
+,
+   out System.Int32
+Errors
+,
+   out System.Int32
+Warnings
+)
+```
+## Parameters
+
+- `Name` (System.String): Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )
+- `Version` (System.Int32): Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )
+- `Options` (System.Int32): Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )
+- `ExportData` (System.Object): IExportPdfData object for exporting drawing sheets to PDF (see Remarks )
+- `Errors` (System.Int32): Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )
+- `Warnings` (System.Int32): Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )
+
+## Return Value
+
+True if the save is successful, false if not
+
+## Remarks
+
+To save as an IGES, STL, or STEP file, the document to convert must be the active document. Before calling this method:
+Call
+ISldWorks::ActivateDoc3
+to make the document to convert the active document.
+Call
+ISldWorks::ActiveDoc
+to get the active document.
+This method:
+Exports the entire model, unless faces or bodies are selected, in which case, it exports only those. Call
+IModelDoc2::ClearSelection2
+before calling IModelDocExtension::SaveAs to clear the selection list and export the entire model.
+Overwrites existing files unless they are read only.
+Results in the FileSaveNotify event being sent to any application listening.
+Removes any configuration-specific bitmap previews, except the current configuration's.
+Saving a document as PDF when the document is open as view only is not supported.
+Do not use ModelDocExtension::SaveAs to copy assemblies, drawings, or parts with in-context references. Instead, use
+ISldWorks::CopyDocument
+or
+ISldWorks::ICopyDocument
+.
+Use Name to specify the full pathname of the saved document. If you specify only the file name, then it is saved in the active document's directory. The filename extension indicates the conversion that should be performed (for example,
+Part1.igs
+to save to IGES). If the filename extension does not uniquely indicate how the file should be formatted, use Version to specify how to save the file. For example, to save:
+A standard drawing document as a detached drawing, specify swSaveAsDetachedDrawing for Version.
+A detached drawing as a standard drawing, specify swSaveAsStandardDrawing for Version.
+A standard or detached drawing document in the same format, specify swSaveAsCurrentVersion for Version.
+Use ExportData to specify which drawings sheets to save to PDF. If ExportData is Nothing or null, then all sheets are saved to PDF. Saving a document as PDF when the document is open as view-only is not supported.
+Use Options to specify save options. You can specify additional options using
+ISldWorks::SetUserPreferenceIntegerValue
+. For example:
+' Save assembly as multibody part and save exterior faces as surface bodies
+swApp.SetUserPreferenceIntegerValue swSaveAssemblyAsPartOptions, _
+swSaveAsmAsPart_ExteriorFaces
+swModelDocExt.SaveAs "H:\Assem1.SLDPRT", swSaveAsCurrentVersion, _
+swSaveAsOptions_Silent, Nothing, nErrors, nWarnings
+- or -
+' Save all drawing sheets in active drawing document as an eDrawings file
+swApp.SetUserPreferenceIntegerValue swEdrawingsSaveAsSelectionOption, swEdrawingSaveAll
+swModelDocExt.SaveAs "H:\Grid.edrw", swSaveAsCurrentVersion, _
+swSaveAsOptions_Silent, Nothing, nErrors, nWarnings
+If the file is saved successfully, then the returned value is true and Errors is 0. If the save is not successful, then the returned value is false and Errors contains a bitwise OR of the error codes that were generated in saving the document. Check the masks against the
+swFileSaveError_e
+enumeration. If you do not want SOLIDWORKS to return error information, set Errors to Nothing or null.
+Even if the file is saved successfully, there might be warnings or information that occur during the save operation in which you might be interested. Warnings contains a bitwise OR of the warning codes that were generated when saving the document. Check the masks against the
+swFileSaveWarning_e
+enumeration. If you do not want warning information returned, set Warnings to Nothing or null.
+Use
+IModelDoc2::Save3
+to save a file using its current name.
+
+## Examples
+
+- Save File As PDF (VBA) (Save_File_as_PDF_Example_VB.htm)
+- Save File as PDF (C#) (Save_File_as_PDF_Example_CSharp.htm)
+- Save File as PDF (VB.NET) (Save_File_as_PDF_Example_VBNET.htm)
+- Import STEP File (C#) (Import_STEP_File_Example_CSharp.htm)
+- Import STEP File (VB.NET) (Import_STEP_File_Example_VBNET.htm)
+- Import STEP File (VBA) (Import_STEP_File_Example_VB.htm)
+
+## See Also
+
+- `IModelDocExtension.SaveDeFeaturedFile`
+- `ISldWorks.ActivateDoc2`
+- `ISldWorks.ActiveDoc`
+- `ISldWorks.CheckpointConvertedDocument`
+- `ISldWorks.CloseAllDocuments`
+- `ISldWorks.CloseDoc`
+- `ISldWorks.CopyDocument`
+- `ISldWorks.ExitApp`
+- `ISldWorks.IActiveDoc2`
+- `ISldWorks.LoadFile4`
+- `ISldWorks.OpenDoc6`
+- `ISldWorks.QuitDoc`

@@ -1,0 +1,87 @@
+---
+type: method
+interface: IEnumCoEdges
+member: Next
+returns: void
+parameters:
+  -
+    name: Celt
+    type: System.Int32
+    description: Number of coedges for the coedges enumeration
+  -
+    name: Rgelt
+    type: CoEdge
+    description: Pointer to an array of coedges of size Celt
+  -
+    name: PceltFetched
+    type: System.Int32
+    description: Number of coedges returned from the list; this value can be less than Celt if you asked for more coedges than exist, or it can be NULL if no more coedges exist
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - geometry
+related:
+  - ICoEdge.GetNext
+  - ICoEdge.IGetNext
+  - ILoop2.GetFirstCoEdge
+  - ILoop2.IGetFirstCoEdge
+keywords:
+  - next
+  - ienumcoedges
+  - co
+  - edges
+  - celt
+  - int32
+  - rgelt
+  - edge
+  - pcelt
+  - fetched
+  - void
+  - enumerate
+  - bodies
+---
+
+# IEnumCoEdges.Next
+
+Gets the next coedge in the coedges enumeration.
+
+## Signature
+
+```csharp
+void Next( 
+   System.Int32
+Celt
+,
+   out CoEdge
+Rgelt
+,
+   out System.Int32
+PceltFetched
+)
+```
+## Parameters
+
+- `Celt` (System.Int32): Number of coedges for the coedges enumeration
+- `Rgelt` (CoEdge): Pointer to an array of coedges of size Celt
+- `PceltFetched` (System.Int32): Number of coedges returned from the list; this value can be less than Celt if you asked for more coedges than exist, or it can be NULL if no more coedges exist
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+For use in in-process DLLs only.
+
+## Examples
+
+- Enumerate Bodies (C++) (Enumerate_Bodies_Example_CPlusPlus_COM.htm)
+
+## See Also
+
+- `ICoEdge.GetNext`
+- `ICoEdge.IGetNext`
+- `ILoop2.GetFirstCoEdge`
+- `ILoop2.IGetFirstCoEdge`

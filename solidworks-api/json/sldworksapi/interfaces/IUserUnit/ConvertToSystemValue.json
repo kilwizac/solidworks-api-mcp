@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IUserUnit",
+    "member": "ConvertToSystemValue",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UnitText",
+        "type": "System.String",
+        "description": "Value to convert"
+      },
+      {
+        "name": "ComputedValue",
+        "type": "System.Double",
+        "description": "Converted value in document units"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IUserUnit.ConvertDoubleToSystemValue",
+      "IUserUnit.ConvertToUserUnit"
+    ],
+    "keywords": [
+      "converttosystemvalue",
+      "iuserunit",
+      "user",
+      "unit",
+      "convert",
+      "value",
+      "text",
+      "string",
+      "computed",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IUserUnit.ConvertToSystemValue",
+  "description": "Converts a text string to a document unit value.",
+  "signature": "System.Boolean ConvertToSystemValue( \n   System.String\nUnitText\n,\n   out System.Double\nComputedValue\n)",
+  "parameters": [
+    {
+      "name": "UnitText",
+      "type": "System.String",
+      "description": "Value to convert"
+    },
+    {
+      "name": "ComputedValue",
+      "type": "System.Double",
+      "description": "Converted value in document units"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This takes the value directly from a textbox control and passes it in to convert to a double value.\nThis imitates the behavior of when working in the SOLIDWORKS Design user interface and passing a value like \"10 / 2\" into one of the values on a dialog box.",
+  "examples": [
+    {
+      "title": "IUserUnit",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IUserUnit",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IUserUnit.ConvertDoubleToSystemValue",
+    "IUserUnit.ConvertToUserUnit"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IsFutureVersion",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "isfutureversion",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "future",
+      "version",
+      "boolean",
+      "history",
+      "document",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.IsFutureVersion",
+  "description": "Gets whether this document is for a future version of SOLIDWORKS.",
+  "signature": "System.Boolean IsFutureVersion()",
+  "parameters": [],
+  "returns": "True if the document is for a future version of SOLIDWORKS, false if not",
+  "remarks": "As of 2012 SP5, loading future file versions is supported, and\nISldWorks::OpenDoc6\nno longer throws a\nswFileLoadError_e\n.swFutureVersion error.\nUse IModelDocExtension::IsFutureVersion to determine:\nhow to obtain the correct version history of a document. If a future version document is loaded in an older version of SOLIDWORKS,\nIModelDoc2::VersionHistory\nand\nIModelDoc2::IVersionHistory\nreturn the version history of the part template, not the version history of the future version document. To get the version history of a future version document, use\nISldWorks::VersionHistory\nor\nISldWorks::IVersionHistory\nto get the version history from its file.\nwhether a component is for a future version of SOLIDWORKS and should be hidden in the user interface of older versions. Although they can be loaded, future version components may not be actionable in older versions of SOLIDWORKS.",
+  "examples": [
+    {
+      "title": "Get Version History of Future Version Document (VBA)",
+      "href": "Get_Version_History_of_Future_Version_Document_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Version History of Future Version Document (VB.NET)",
+      "href": "Get_Version_History_of_Future_Version_Document_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Version History of Future Version Document (C#)",
+      "href": "Get_Version_History_of_Future_Version_Document_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

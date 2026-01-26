@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICutListSortOptions",
+    "member": "SetFacesOrFeaturesToExclude",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Entities",
+        "type": "System.Object",
+        "description": "Array of IFace2 or IFeature to exclude"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "ICutListSortOptions.GetFacesOrFeaturesToExclude"
+    ],
+    "keywords": [
+      "setfacesorfeaturestoexclude",
+      "icutlistsortoptions",
+      "cut",
+      "list",
+      "sort",
+      "options",
+      "faces",
+      "features",
+      "exclude",
+      "entities",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "ICutListSortOptions.SetFacesOrFeaturesToExclude",
+  "description": "Sets the faces or features to exclude from cut list sorting.",
+  "signature": "System.Int32 SetFacesOrFeaturesToExclude( \n   System.Object\nEntities\n)",
+  "parameters": [
+    {
+      "name": "Entities",
+      "type": "System.Object",
+      "description": "Array of IFace2 or IFeature to exclude"
+    }
+  ],
+  "returns": "Error code as defined in swCutListExclusionStatus_e",
+  "remarks": "In order to avoid cut list sorting issues using\nIBodyFolder::SortCutList\n, the Entities array must contain entities of selection type BODYFEATURE or FACE.\nFaces and features you cannot exclude:\nChamfers that remove an entire face.\nSuppressed features.\nFeatures that create new bodies from sketches, such as boss-extrude, revolve, and sweep.\nCertain sheet metal features.",
+  "examples": [],
+  "related": [
+    "ICutListSortOptions.GetFacesOrFeaturesToExclude"
+  ]
+}

@@ -1,0 +1,35 @@
+---
+type: method
+interface: ISketchPath
+member: GetSketch
+returns: Sketch
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - sketches
+related: []
+keywords:
+  - getsketch
+  - isketchpath
+  - sketch
+  - path
+---
+
+# ISketchPath.GetSketch
+
+Gets the sketch where this sketch path exists.
+
+## Signature
+
+```csharp
+Sketch GetSketch()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Sketch

@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "CopyDisplayStateFromConfiguration",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CopyFromConfig",
+        "type": "Configuration",
+        "description": "Pointer to the configuration from which to copy the display state"
+      },
+      {
+        "name": "DisplayStateNameToCopy",
+        "type": "System.String",
+        "description": "Name of the display state to copy"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.ApplyDisplayState",
+      "IConfiguration.CreateDisplayState",
+      "IConfiguration.DeleteDisplayState",
+      "IConfiguration.GetDisplayStatesCount",
+      "IConfiguration.RenameDisplayState",
+      "IConfigurationManager.LinkDisplayStatesToConfigurations"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "copydisplaystatefromconfiguration",
+      "iconfiguration",
+      "configuration",
+      "copy",
+      "state",
+      "config",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IConfiguration.CopyDisplayStateFromConfiguration",
+  "description": "Copies the specified display state from the specified configuration to this configuration.",
+  "signature": "System.Boolean CopyDisplayStateFromConfiguration( \n   Configuration\nCopyFromConfig\n,\n   System.String\nDisplayStateNameToCopy\n)",
+  "parameters": [
+    {
+      "name": "CopyFromConfig",
+      "type": "Configuration",
+      "description": "Pointer to the configuration from which to copy the display state"
+    },
+    {
+      "name": "DisplayStateNameToCopy",
+      "type": "System.String",
+      "description": "Name of the display state to copy"
+    }
+  ],
+  "returns": "True if the specified display is copied to this configuration, false if not",
+  "remarks": "Use\nIConfiguration::GetDisplayStates\nor\nIConfiguration::IGetDisplayStates\nto get the names of the display states from the configuration from which to copy the display state.",
+  "examples": [],
+  "related": [
+    "IConfiguration.ApplyDisplayState",
+    "IConfiguration.CreateDisplayState",
+    "IConfiguration.DeleteDisplayState",
+    "IConfiguration.GetDisplayStatesCount",
+    "IConfiguration.RenameDisplayState",
+    "IConfigurationManager.LinkDisplayStatesToConfigurations"
+  ]
+}

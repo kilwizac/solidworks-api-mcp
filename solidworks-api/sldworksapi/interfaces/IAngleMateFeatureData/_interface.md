@@ -1,0 +1,35 @@
+---
+type: interface
+interface: IAngleMateFeatureData
+inherits: null
+description: Allows access to an angle mate or a limit angle mate feature.
+member_count: 8
+docset: sldworksapi
+categories:
+  - assemblies
+  - features
+common_members:
+  - Angle
+  - EntitiesToMate
+  - FlipDimension
+  - IsAdvancedMate
+  - MateAlignment
+  - MaximumAngle
+  - MinimumAngle
+  - ReferenceEntity
+---
+
+# IAngleMateFeatureData
+
+Allows access to an angle mate or a limit angle mate feature.
+
+## Common Members
+
+- `Angle`
+- `EntitiesToMate`
+- `FlipDimension`
+- `IsAdvancedMate`
+- `MateAlignment`
+- `MaximumAngle`
+- `MinimumAngle`
+- `ReferenceEntity`

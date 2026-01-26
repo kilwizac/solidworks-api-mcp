@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "SaveTo3DExperience",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Object",
+        "description": "ISaveTo3DExperienceOptions (see Remarks )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Error codes"
+      },
+      {
+        "name": "Warnings",
+        "type": "System.Int32",
+        "description": "Warning codes"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "3dexperience",
+      "solidworks",
+      "connected",
+      "saveto3dexperience",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "save",
+      "to3",
+      "experience",
+      "options",
+      "object",
+      "errors",
+      "int32",
+      "warnings",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.SaveTo3DExperience",
+  "description": "Saves this document in SOLIDWORKS Design Augmented using the specified save options.",
+  "signature": "System.Boolean SaveTo3DExperience( \n   System.Object\nOptions\n,\n   out System.Int32\nErrors\n,\n   out System.Int32\nWarnings\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Object",
+      "description": "ISaveTo3DExperienceOptions (see Remarks )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Error codes"
+    },
+    {
+      "name": "Warnings",
+      "type": "System.Int32",
+      "description": "Warning codes"
+    }
+  ],
+  "returns": "True if the document saved successfully, false if not",
+  "remarks": "If the file is:\nnew and the file name is specified in Options, then this method acts like\nFile > Save\n. If any other options are specified, then this method acts like\nFile > Save With Options\n.\nalready saved to the platform and a new file name is specified in Options, then this method acts like\nFile > Save As New\n.",
+  "examples": [],
+  "related": []
+}

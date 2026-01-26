@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPMIGtolBoxData",
+    "member": "TolerancePerUnitValue2",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IPMIGtolBoxData.Unit"
+    ],
+    "keywords": [
+      "toleranceperunitvalue2",
+      "ipmigtolboxdata",
+      "ipmi",
+      "gtol",
+      "box",
+      "data",
+      "tolerance",
+      "per",
+      "unit",
+      "value2",
+      "double",
+      "iannotation",
+      "getpmidata"
+    ],
+    "readonly": null
+  },
+  "title": "IPMIGtolBoxData.TolerancePerUnitValue2",
+  "description": "Gets the tolerance 2 per unit area in this PMI Gtol frame box.",
+  "signature": "System.Double TolerancePerUnitValue2 {get; set;}",
+  "parameters": [],
+  "returns": "Tolerance 2 per unit area",
+  "remarks": "This property is valid only if:\nIPMIFrameData::GeometricCharacteristic\nreturns\nswGeometricCharacteristic_e\nswGeometricCharacteristic_Flatness\nswGeometricCharacteristic_Straightness\nIPMIGtolBoxData::TolerancePerUnitType\nreturns\nswPMITolPerUnitAreaType_e\n.swPMITolPerUnitType_Rectangular.\nIf IPMIGtolBoxData::TolerancePerUnitType returns swPMITolPerUnitAreaType_e.swPMITolPerUnitType_Rectangular, use this property and\nIPMIGtolBoxData::TolerancePerUnitValue1\nto calculate the unit area value. Then divide\nIPMIGtolBoxData::TolValue\nby the unit area value to get the tolerance per unit area value.",
+  "examples": [
+    {
+      "title": "IAnnotation::GetPMIData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotation~GetPMIData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPMIGtolBoxData.Unit"
+  ]
+}

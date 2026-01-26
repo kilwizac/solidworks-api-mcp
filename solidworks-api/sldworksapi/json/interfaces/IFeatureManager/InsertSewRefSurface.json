@@ -1,0 +1,129 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSewRefSurface",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "UseGapFilters",
+        "type": "System.Boolean",
+        "description": "True to use gap filters, false to not"
+      },
+      {
+        "name": "TryToFormSolid",
+        "type": "System.Boolean",
+        "description": "True to form a solid body, false to no"
+      },
+      {
+        "name": "MergeEntities",
+        "type": "System.Boolean",
+        "description": "True to merge edges and faces by removing redundant vertices and edges, false to not"
+      },
+      {
+        "name": "KnitTolerance",
+        "type": "System.Double",
+        "description": "Knit tolerance (see Remarks )"
+      },
+      {
+        "name": "MaxValueForGapRange",
+        "type": "System.Double",
+        "description": "Maximum value of gap range for gap filters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISurfaceKnitFeatureData"
+    ],
+    "keywords": [
+      "knit",
+      "surfaces",
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "insertsewrefsurface",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "sew",
+      "ref",
+      "use",
+      "gap",
+      "filters",
+      "boolean",
+      "try",
+      "form",
+      "solid",
+      "merge",
+      "entities",
+      "tolerance",
+      "double",
+      "max",
+      "value",
+      "range",
+      "create",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertSewRefSurface",
+  "description": "Creates a surface by knitting the selected surfaces together.",
+  "signature": "Feature InsertSewRefSurface( \n   System.Boolean\nUseGapFilters\n,\n   System.Boolean\nTryToFormSolid\n,\n   System.Boolean\nMergeEntities\n,\n   System.Double\nKnitTolerance\n,\n   System.Double\nMaxValueForGapRange\n)",
+  "parameters": [
+    {
+      "name": "UseGapFilters",
+      "type": "System.Boolean",
+      "description": "True to use gap filters, false to not"
+    },
+    {
+      "name": "TryToFormSolid",
+      "type": "System.Boolean",
+      "description": "True to form a solid body, false to no"
+    },
+    {
+      "name": "MergeEntities",
+      "type": "System.Boolean",
+      "description": "True to merge edges and faces by removing redundant vertices and edges, false to not"
+    },
+    {
+      "name": "KnitTolerance",
+      "type": "System.Double",
+      "description": "Knit tolerance (see Remarks )"
+    },
+    {
+      "name": "MaxValueForGapRange",
+      "type": "System.Double",
+      "description": "Maximum value of gap range for gap filters"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "Make selections using\nIModelDocExtension::SelectByID2\nwith a mark number of 1. S\nee the SOLIDWORKS Help for information about what entities are valid for selection.\nA knit tolerance's:\nlower limit is 0.0001 mm\nupper limit is 0.1 mm\nThe knit tolerance value should be in a gap range such that:\n(Minimum gap) <= (Knit tolerance) <= MIN(0.1 mm, Maximum gap)",
+  "examples": [
+    {
+      "title": "Create Surface Knit Feature (VB.NET)",
+      "href": "Create_Surface_Knit_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Surface Knit Feature (VBA)",
+      "href": "Create_Surface_Knit_Feature_Example_VB6.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Surface Knit Feature (C#)",
+      "href": "Create_Surface_Knit_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurfaceKnitFeatureData"
+  ]
+}

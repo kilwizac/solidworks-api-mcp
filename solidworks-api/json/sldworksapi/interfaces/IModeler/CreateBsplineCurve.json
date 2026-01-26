@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateBsplineCurve",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Props",
+        "type": "System.Object",
+        "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+      },
+      {
+        "name": "Knots",
+        "type": "System.Object",
+        "description": "Array of numKnots doubles (see Remarks )"
+      },
+      {
+        "name": "CtrlPtCoords",
+        "type": "System.Object",
+        "description": "Array of NumCtrlPtCoord doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBody2.AddProfileBspline",
+      "IBody2.IAddProfileBspline",
+      "IModeler.ICreateBsplineCurve"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "spline",
+      "splines",
+      "createbsplinecurve",
+      "imodeler",
+      "modeler",
+      "create",
+      "bspline",
+      "props",
+      "object",
+      "knots",
+      "ctrl",
+      "pt",
+      "coords"
+    ]
+  },
+  "title": "IModeler.CreateBsplineCurve",
+  "description": "Creates a b-spline curve.",
+  "signature": "System.Object CreateBsplineCurve( \n   System.Object\nProps\n,\n   System.Object\nKnots\n,\n   System.Object\nCtrlPtCoords\n)",
+  "parameters": [
+    {
+      "name": "Props",
+      "type": "System.Object",
+      "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+    },
+    {
+      "name": "Knots",
+      "type": "System.Object",
+      "description": "Array of numKnots doubles (see Remarks )"
+    },
+    {
+      "name": "CtrlPtCoords",
+      "type": "System.Object",
+      "description": "Array of NumCtrlPtCoord doubles (see Remarks )"
+    }
+  ],
+  "returns": "B-spline curve",
+  "remarks": "The Props argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nLength of this array...\nGiven by...\nKnots\nnumKnots = NumCtrlPoints + Order\nCtrlPtCoords\nNumCtrlPtCoord = NumCtrlPoints + DimensionControlPoints",
+  "examples": [],
+  "related": [
+    "IBody2.AddProfileBspline",
+    "IBody2.IAddProfileBspline",
+    "IModeler.ICreateBsplineCurve"
+  ]
+}

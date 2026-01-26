@@ -1,0 +1,34 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "GetFontUseScale",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "getfontusescale",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "font",
+      "use",
+      "scale",
+      "boolean"
+    ]
+  },
+  "title": "IDimensionTolerance.GetFontUseScale",
+  "description": "Gets whether the tolerance font size is scaled based on the dimension font size, or if it is an absolute height value.",
+  "signature": "System.Boolean GetFontUseScale()",
+  "parameters": [],
+  "returns": "True if the tolerance font size is scaled based on the dimension font size, false if the tolerance font size is an absolute height value",
+  "remarks": "If\nIDimensionTolerance::GetFontUseDimension\nis true, then the value returned by this\nIDimensionTolerance::GetFontUseScale is True and the value returned by\nIDimensionTolerance::GetFontScale\nis 1.0.\nTo get other tolerance font information, use the\nIDimensionTolerance::GetFontHeight\n.\nTo set the tolerance font information, use the\nIDimensionTolerance::SetFont\nmethod.\nThis method deals with the tolerance font information, not the fit tolerance font information. To get or set fit tolerance information, use\nIDimensionTolerance::GetFitFontUseDimension\n,\nIDimensionTolerance::GetFitFontUseScale\n,\nIDimensionTolerance::GetFitFontScale\n,\nIDimensionTolerance::GetFitFontHeight\n, and\nIDimensionTolerance::SetFitFont\n.",
+  "examples": [],
+  "related": []
+}

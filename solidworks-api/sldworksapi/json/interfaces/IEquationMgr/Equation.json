@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IEquationMgr",
+    "member": "Equation",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the equation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEquationMgr.Add2",
+      "IEquationMgr.Add3",
+      "IEquationMgr.AutomaticRebuild",
+      "IEquationMgr.AutomaticSolveOrder",
+      "IEquationMgr.Delete",
+      "IEquationMgr.Disabled",
+      "IEquationMgr.EvaluateAll",
+      "IEquationMgr.GetCount",
+      "IEquationMgr.GetDisabledEquationCount",
+      "IEquationMgr.GlobalVariable"
+    ],
+    "keywords": [
+      "equation",
+      "see",
+      "also",
+      "iequationmgr",
+      "mgr",
+      "index",
+      "int32",
+      "string",
+      "use",
+      "iif",
+      "function",
+      "when",
+      "adding",
+      "vba",
+      "disable",
+      "vb",
+      "net",
+      "values"
+    ],
+    "readonly": null
+  },
+  "title": "IEquationMgr.Equation",
+  "description": "Gets or sets the equation at the specified index.",
+  "signature": "System.String Equation( \n   System.Int32\nIndex\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the equation"
+    }
+  ],
+  "returns": "String containing the equation",
+  "remarks": "The string set by this property must be formatted as if entered in the SOLIDWORKS Design user interface; that is, you must embed the names of the dimensions and global variables in double double quotes. To use the following examples to specify Equation, you must replace every double quote with double double quotes, and enclose the entire equation with double quotes.\nGlobal variable assignment:\n\"B\" = 2\nComponent equation:\n\"\nN_SPOKES@CirPattern1\" = \"BARLENGTH@Sketch2\" /10\nDimension equation that uses the Visual Basic IIf function:\n\"D1@Extrude2\" = ((\"D1@Extrude3\">20, 15, 6))+5\nDimension equation that sets a dimension to the current value:\n\"D1@Extrude2\" =\nDimension equation that modifies the right-hand side of an already existing dimension equation:\n\"D1@Extrude2\" = 0.05\nNOTE:\nTo set an equation:\ndirectly to an assembly component's model, you must call\nIAssemblyDoc::EditPart2\nbefore calling this method.\nfor specific configurations in a model with multiple configurations, use\nIEquationMgr::SetEquationAndConfigurationOption\n.",
+  "examples": [
+    {
+      "title": "Use IIf Function When Adding an Equation (VBA)",
+      "href": "Use_IIf_Function_When_Adding_an_Equation_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Disable Equation (C#)",
+      "href": "Disable_Equation_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Disable Equation (VB.NET)",
+      "href": "Disable_Equation_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Disable Equation (VBA)",
+      "href": "Disable_Equation_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Equation Values (C#)",
+      "href": "Get_Equation_Values_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Equation Values (VB.NET)",
+      "href": "Get_Equation_Values_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Equation Values (VBA)",
+      "href": "Get_Equation_Values_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEquationMgr.Add2",
+    "IEquationMgr.Add3",
+    "IEquationMgr.AutomaticRebuild",
+    "IEquationMgr.AutomaticSolveOrder",
+    "IEquationMgr.Delete",
+    "IEquationMgr.Disabled",
+    "IEquationMgr.EvaluateAll",
+    "IEquationMgr.GetCount",
+    "IEquationMgr.GetDisabledEquationCount",
+    "IEquationMgr.GlobalVariable"
+  ]
+}

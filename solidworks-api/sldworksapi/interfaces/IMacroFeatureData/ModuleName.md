@@ -1,0 +1,83 @@
+---
+type: property
+interface: IMacroFeatureData
+member: ModuleName
+returns: System.String
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IMacroFeatureData.GetModuleCount
+  - IMacroFeatureData.GetModuleNames
+  - IMacroFeatureData.GetProcedureCount
+  - IMacroFeatureData.GetProcedureNames
+  - IMacroFeatureData.GetPropertyManagerHandleModuleCount
+  - IMacroFeatureData.GetPropertyManagerHandleModuleNames
+  - IMacroFeatureData.GetPropertyManagerHandleProcedureCount
+  - IMacroFeatureData.GetPropertyManagerHandleProcedureNames
+  - IMacroFeatureData.IGetModuleNames
+  - IMacroFeatureData.IGetProcedureNames
+  - IMacroFeatureData.IGetPropertyManagerHandleModuleNames
+  - IMacroFeatureData.IGetPropertyManagerHandleProcedureNames
+  - IMacroFeatureData.MacroFileName
+  - IMacroFeatureData.ProcedureName
+  - IMacroFeatureData.PropertyManagerHandleMacroFileName
+  - IMacroFeatureData.PropertyManagerHandleModuleName
+  - IMacroFeatureData.PropertyManagerHandleProcedureName
+  - IMacroFeatureData.SecurityHandleMacroFileName
+  - IMacroFeatureData.SecurityHandleModuleName
+  - IMacroFeatureData.SecurityHandleProcedureName
+keywords:
+  - modulename
+  - imacrofeaturedata
+  - macro
+  - feature
+  - data
+  - module
+  - name
+  - string
+readonly: null
+---
+
+# IMacroFeatureData.ModuleName
+
+Gets or sets the name of a module in the macro for this macro feature.
+
+## Signature
+
+```csharp
+System.String ModuleName {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Name of the module in the macro
+
+## See Also
+
+- `IMacroFeatureData.GetModuleCount`
+- `IMacroFeatureData.GetModuleNames`
+- `IMacroFeatureData.GetProcedureCount`
+- `IMacroFeatureData.GetProcedureNames`
+- `IMacroFeatureData.GetPropertyManagerHandleModuleCount`
+- `IMacroFeatureData.GetPropertyManagerHandleModuleNames`
+- `IMacroFeatureData.GetPropertyManagerHandleProcedureCount`
+- `IMacroFeatureData.GetPropertyManagerHandleProcedureNames`
+- `IMacroFeatureData.IGetModuleNames`
+- `IMacroFeatureData.IGetProcedureNames`
+- `IMacroFeatureData.IGetPropertyManagerHandleModuleNames`
+- `IMacroFeatureData.IGetPropertyManagerHandleProcedureNames`
+- `IMacroFeatureData.MacroFileName`
+- `IMacroFeatureData.ProcedureName`
+- `IMacroFeatureData.PropertyManagerHandleMacroFileName`
+- `IMacroFeatureData.PropertyManagerHandleModuleName`
+- `IMacroFeatureData.PropertyManagerHandleProcedureName`
+- `IMacroFeatureData.SecurityHandleMacroFileName`
+- `IMacroFeatureData.SecurityHandleModuleName`
+- `IMacroFeatureData.SecurityHandleProcedureName`

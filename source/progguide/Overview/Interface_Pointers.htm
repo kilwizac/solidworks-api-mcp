@@ -1,0 +1,275 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Interface Pointers</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=ZQueryInterFace>
+<meta name=date content="08 1, 2002 3:07:55 PM">
+<meta name=MS-HKWD content=IInterfacePtr>
+<meta name=MS-HKWD content="Smart pointers">
+<meta name=MS-HKWD content="Interface pointers">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1497>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Interface Pointers </h1>
+
+<p>Interface pointers can be an area of confusion with unmanaged C++ programming. 
+ Each SOLIDWORKS API method that returns an interface pointer automatically 
+ increments the reference count on the interface pointer by 1.</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><span style="font-weight: bold;">COM implementations</span>. 
+ You can call a SOLIDWORKS API that returns an interface pointer. You can 
+ then use this pointer as you like, but you are responsible for releasing 
+ it. </p></li>
+</ul>
+
+<p style="margin-left: 48px;">This unmanaged C++ COM example demonstrates 
+ how to handle interface pointers.&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;"><span style="font-family: Courier New">{</span></p>
+<blockquote>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">LPMODELDOC2 m_ModelDoc 
+ = NULL;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Get the IModelDoc pointer</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">HRESULT res = UserApp-&gt;getSWApp()-&gt;get_IActiveDoc( 
+ &amp;m_ModelDoc );</font> &nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">if( m_ModelDoc == 
+ NULL )</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">return;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">LPPARTDOC m_PartDoc 
+ = NULL;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Get the IPartDoc pointer</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">res = m_ModelDoc-&gt;QueryInterface(IID_IPartDoc, 
+ (LPVOID *)&amp;m_PartDoc); </font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">ASSERT( res == S_OK 
+ );</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Use the interface pointers within your 
+ code and then release them when done</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">m_ModelDoc-&gt;Release();&nbsp;</font>// 
+ Release the IModelDoc2 pointer</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">m_PartDoc-&gt;Release();&nbsp;</font>// 
+ Release the IPartDoc pointer</p>
+</blockquote>
+<p class=apiCode
+	style="margin-left: 89px;">
+<font style="font-family: 'Courier New';"
+									face="Courier New">}</font></p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<p style="margin-left: 88px;"><span style="font-weight: bold;">NOTE: </span>LP<span 
+ style="font-style: italic;">INTERFACE</span><span style="font-weight: bold;"> 
+ </span>is a <span style="font-weight: bold;">typedef</span> and a pointer 
+ to the named interface. e.g., <span style="font-family: 'Courier New', monospace; font-size: 10pt;">LPPARTDOC</span> 
+ points to the PartDoc interface, <span style="font-family: 'Courier New', monospace; font-size: 10pt;">LPMODELDOC2</span> 
+points to the ModelDoc2 interface, etc.</p>
+
+<p style="margin-left: 48px;">You can also use <a href="Smart_Pointers.htm"
+													id=a1>smart pointers</a> 
+ with COM implementations. <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CComPtr</span> 
+ is an ATL smart pointer. <span style="font-family: 'Courier New', monospace; font-size: 10pt;">I</span><span 
+ style="font-size: 10pt; font-style: italic;">Interface</span><span style="font-family: 'Courier New', monospace; font-size: 10pt;">Ptr</span> 
+ (e.g., <span style="font-family: 'Courier New', monospace; font-size: 10pt;">IModelDoc2Ptr</span>) 
+ is also a smart pointer that does many of the same things as <span style="font-size: 10pt; font-family: 'Courier New', monospace;">CComPtr</span>, 
+ but it is not part of ATL. It is a <span style="font-weight: bold;">typedef</span> 
+ that resolves to a <span style="font-weight: bold;">_com_ptr_t</span> 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->(defined 
+ in <span style="font-weight: bold;">comip.h</span>) using <!--kadov_tag{{<spaces>}}-->&nbsp;<span 
+ style="font-weight: bold;"><!--kadov_tag{{</spaces>}}-->_COM_SMARTPTR_TYPEDEF</span>. 
+ For more information about using smart pointers with container classes, see
+<a href="STL_Container_Classes_and_Smart_Pointers.htm">STL Container Classes and Smart Pointers</a>.</p>
+
+<p style="margin-left: 48px;">For an example of using smart pointers, see 
+ <a href="sldworksAPI.chm::/Access_Assembly_Example_CPlusPlus_COM.htm">Access 
+ Assembly Example (C++ COM)</a>. </p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><span style="font-weight: bold;">Dispatch implementations</span>. 
+ The release of the interface pointer is hidden in the destructor of the 
+ Dispatch objects (for example, IModelDoc2, IFace2, and so on). This implies 
+ that attaching an interface pointer to more than one of these Dispatch 
+ objects will cause a release to be performed by each of the objects as 
+ they go out of scope. This will cause a problem because the reference 
+ count was only incremented once when the interface pointer was returned 
+ to you. </p></li>
+</ul>
+
+<p style="margin-left: 48px;">To avoid this problem, you must manually 
+ increment the reference count ( <span style="font-family: 'Courier New', monospace;">pdisp-&gt;AddRef();</span><span 
+ style="font-style: italic;"> </span>) if you are attaching the interface 
+ pointer to more than one object. </p>
+
+<p style="margin-left: 48px;">This C++ Dispatch example demonstrates how 
+ to handle the reference count on interface pointers.&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;"><font style="font-family: 'Courier New';"
+									face="Courier New">{</font></p>
+
+<blockquote>
+	<p class=apiCode
+	style="margin-left: 89px; font-family: 'Courier New';">LPDISPATCH modDisp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">/</font>/ Get interface 
+ pointer to the active document</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">modDisp = UserApp-&gt;getSWApp()-&gt;GetActiveDoc();</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Reference count on modDisp automatically 
+ incremented by 1
+	<font style="font-family: 'Courier New';"
+									face="Courier New">&nbsp;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px; font-family: 'Courier New';">if( modDisp 
+ == NULL )</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">return;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Attach to the IModelDoc2 object</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">IModelDoc2 m_ModelDoc( 
+ modDisp );&nbsp;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Attach to the IPartDoc object</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">IPartDoc m_PartDoc( 
+ modDisp );&nbsp;</font></p>
+	<p class=apiCode
+	style="margin-left: 89px;">&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">
+	<font style="font-family: 'Courier New';"
+									face="Courier New">/</font>/ Manually 
+ increment the reference count on modDisp<span> because</span></p>
+	<p class=apiCode
+	style="margin-left: 49px; text-indent: 40px;">// you use modDisp 
+ a second time</p>
+	<p class=apiCode
+	style="margin-left: 89px; font-family: 'Courier New';">modDisp-&gt;AddRef();&nbsp;</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Use objects within your code</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px;">.</p>
+	<p class=apiCode
+	style="margin-left: 89px; font-family: 'Courier New';">&nbsp; </p>
+	<p class=apiCode
+	style="margin-left: 89px;">// Variables go out of scope and destructors are 
+ called for IModelDoc2 and IPartDoc,</p>
+	<p class=apiCode
+	style="margin-left: 89px;">// which decrements the reference count 
+ on modDisp by two</p>
+</blockquote>
+<p class=apiCode
+	style="margin-left: 89px;">}</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SketchSpline",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "MorePts",
+        "type": "System.Int32",
+        "description": "Number of points left to specify the spline after this one ( see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x coordinate in meters"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y coordinate in meters"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z coordinate in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "ISketchSpline"
+    ],
+    "keywords": [
+      "sketch",
+      "entities",
+      "splines",
+      "see",
+      "also",
+      "isketch",
+      "sketchspline",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "spline",
+      "more",
+      "pts",
+      "int32",
+      "double",
+      "void",
+      "create",
+      "2d",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.SketchSpline",
+  "description": "Starts a spline, or continues one, using the specified point.",
+  "signature": "void SketchSpline( \n   System.Int32\nMorePts\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "MorePts",
+      "type": "System.Int32",
+      "description": "Number of points left to specify the spline after this one ( see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x coordinate in meters"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y coordinate in meters"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z coordinate in meters"
+    }
+  ],
+  "returns": "",
+  "remarks": "MorePts goes from\nn\nto 0 in (\nn\n+1) calls of this method. When\nn\n= 0, the last call is made to this method, and the spline is created. For example, if specifying 5 points, then the value of MorePts ranges from 4 to 0.\nIn SOLIDWORKS 2005 SP1 and earlier, if a failure occurred in a previous call to ModelDoc2::SketchSpline, then subsequent calls to this method failed. In SOLIDWORKS 2005 SP2 and later, if you specify a negative value for MorePts prior to sending the actual data, then the method reinitializes.\nIn 2D sketches, z is ignored.",
+  "examples": [
+    {
+      "title": "Create 2D Spline (VBA)",
+      "href": "Create_2D_Spline_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create 2D Spline (VB.NET)",
+      "href": "Create_2D_Spline_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create 2D Spline (C#)",
+      "href": "Create_2D_Spline_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchSpline"
+  ]
+}

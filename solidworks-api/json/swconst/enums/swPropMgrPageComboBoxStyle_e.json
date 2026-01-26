@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swPropMgrPageComboBoxStyle_e",
+    "description": "PropertyManager page combobox styles.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swPropMgrPageComboBoxStyle_e",
+  "description": "PropertyManager page combobox styles.",
+  "values": [
+    {
+      "member": "swPropMgrPageComboBoxStyle_AvoidSelectionText",
+      "value": "8",
+      "description": "or 0x8; The item the user selects in the attached drop-down list does not appear in the combo box. Instead, the user's selection causes the add-in to get a callback via IPropertyManagerPage2Handler4::OnComboboxSelectionChanged . The Id argument is the combo box"
+    },
+    {
+      "member": "swPropMgrPageComboBoxStyle_EditableText",
+      "value": "2",
+      "description": "or 0x2; Allows editing of the text in the combo box"
+    },
+    {
+      "member": "swPropMgrPageComboBoxStyle_EditBoxReadOnly",
+      "value": "4",
+      "description": "or 0x4; User can only select a value from the attached drop-down list for the combo box NOTE: You can set swPropMgrPageComboBoxStyle_EditBoxReadOnly either before or after the PropertyManager page is displayed. If set after the PropertyManager page is displayed and the box contains editable text, then that text cannot be edited by the user. However, you can use IPropertyManagerPageCombobox::EditText to edit the text in the combo box."
+    },
+    {
+      "member": "swPropMgrPageComboBoxStyle_Sorted",
+      "value": "1",
+      "description": "or 0x1; Sort the items in the attached drop-down list of the combo box in alphabetical order"
+    }
+  ]
+}

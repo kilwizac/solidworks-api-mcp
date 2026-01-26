@@ -1,0 +1,80 @@
+---
+type: method
+interface: IBody2
+member: IAddProfileLine
+returns: Curve
+parameters:
+  -
+    name: RootPoint
+    type: System.Object
+    description: Array of 3 doubles (x,y,z)
+  -
+    name: Direction
+    type: System.Object
+    description: Array of 3 doubles (x,y,z)
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+  - geometry
+related:
+  - IBody2.AddProfileLine
+keywords:
+  - iaddprofileline
+  - ibody2
+  - body2
+  - add
+  - profile
+  - line
+  - root
+  - point
+  - object
+  - direction
+  - curve
+  - create
+  - imported
+  - surface
+  - body
+  - sketch
+---
+
+# IBody2.IAddProfileLine
+
+Creates a line profile curve and returns a pointer to that curve.
+
+## Signature
+
+```csharp
+Curve IAddProfileLine( 
+   System.Object
+RootPoint
+,
+   System.Object
+Direction
+)
+```
+## Parameters
+
+- `RootPoint` (System.Object): Array of 3 doubles (x,y,z)
+- `Direction` (System.Object): Array of 3 doubles (x,y,z)
+
+## Return Value
+
+Line profile, ICurve
+
+## Remarks
+
+You can use this method with
+IBody2::ICreateRevolutionSurface
+to generate a cylindrical surface of revolution or with
+IBody2::ICreateExtrusionSurface
+to generate a tabulated cylinder.
+
+## Examples
+
+- Create Imported Surface Body from Sketch (C#) (Create_Imported_Surface_Body_from_Sketch_Example_CSharp.htm)
+
+## See Also
+
+- `IBody2.AddProfileLine`

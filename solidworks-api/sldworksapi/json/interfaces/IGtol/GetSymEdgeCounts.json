@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetSymEdgeCounts",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "geometry"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymEdgeCounts",
+      "IGtol.IGetSymLines",
+      "IGtol.IGetSymText",
+      "IGtol.IGetSymTextPoints"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "getsymedgecounts",
+      "igtol",
+      "gtol",
+      "sym",
+      "edge",
+      "counts",
+      "idx",
+      "int16",
+      "object"
+    ]
+  },
+  "title": "IGtol.GetSymEdgeCounts",
+  "description": "Gets an array of the number of lines, arcs and circles in the specified symbol.",
+  "signature": "System.Object GetSymEdgeCounts( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "Format of return information is the following array of short integers:\nretval\n[0] = Line count\nretval\n[1] = Arc count\nretval\n[2] = Circle count\nretval\n[3] = Text count\nFor more information, see\nIGtol::GetSymText\nand\nIGtol::GetSymTextPoints\n.",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymEdgeCounts",
+    "IGtol.IGetSymLines",
+    "IGtol.IGetSymText",
+    "IGtol.IGetSymTextPoints"
+  ]
+}

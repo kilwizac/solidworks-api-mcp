@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "IGetEdges",
+    "returns": "Edge",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ILoop2.EnumEdges",
+      "ILoop2.GetEdgeCount",
+      "ILoop2.GetEdges"
+    ],
+    "keywords": [
+      "igetedges",
+      "iloop2",
+      "loop2",
+      "edges",
+      "edge"
+    ]
+  },
+  "title": "ILoop2.IGetEdges",
+  "description": "Gets all the edges in the loop.",
+  "signature": "Edge IGetEdges()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of edges that make up the loop VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The\nIEdge\nobjects are returned in a CW or CCW manner based on the direction of the\nILoop2\n.\nThe loop direction is determined as follows: if a loop is viewed along its direction, with the face normal pointing upwards, then the face that owns the loop is to the left. This means that inner loops are CW and outer loops are CCW. To determine if a loop is an outer loop, use\nILoop2::IsOuter\n.\nBecause an edge is shared by multiple loops, the edge direction might be opposite to the direction of the ILoop2. To check this, use\nIEdge::IEdgeInFaceSense2\n.\nIf the loop is a singular loop, use\nILoop2::IGetVertices\nto get its position (a single vertex). LIoop2::GetEdges returns an empty array if the loop is singular.",
+  "examples": [],
+  "related": [
+    "ILoop2.EnumEdges",
+    "ILoop2.GetEdgeCount",
+    "ILoop2.GetEdges"
+  ]
+}

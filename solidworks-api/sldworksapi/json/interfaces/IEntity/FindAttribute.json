@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "FindAttribute",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "AttributeDef",
+        "type": "System.Object",
+        "description": "Attribute definition you want to find"
+      },
+      {
+        "name": "WhichOne",
+        "type": "System.Int32",
+        "description": "Instance of this type on this entity (0,1,2,3, and so on)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAttribute.GetDefinition",
+      "IAttributeDef.CreateInstance5",
+      "IBody2.FindAttribute",
+      "IComponent2.FindAttribute",
+      "IEntity.IFindAttribute",
+      "ISldWorks.DefineAttribute"
+    ],
+    "keywords": [
+      "attribute",
+      "see",
+      "also",
+      "iattribute",
+      "find",
+      "findattribute",
+      "ientity",
+      "entity",
+      "def",
+      "object",
+      "which",
+      "one",
+      "int32",
+      "create",
+      "vba",
+      "delete",
+      "blended",
+      "faces",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEntity.FindAttribute",
+  "description": "Finds an attribute on an entity.",
+  "signature": "System.Object FindAttribute( \n   System.Object\nAttributeDef\n,\n   System.Int32\nWhichOne\n)",
+  "parameters": [
+    {
+      "name": "AttributeDef",
+      "type": "System.Object",
+      "description": "Attribute definition you want to find"
+    },
+    {
+      "name": "WhichOne",
+      "type": "System.Int32",
+      "description": "Instance of this type on this entity (0,1,2,3, and so on)"
+    }
+  ],
+  "returns": "Attribute instance",
+  "remarks": "After you add an attribute instance to a face, edge, vertex, loop, feature, or document, you can retrieve the attribute for query or modification in several ways:\nBecause an attribute instance is a feature:\nYou can use any of the standard feature traversal functions (\nIPartDoc::FeatureByName\n,\nIModelDoc2::FirstFeature\n, and\nIFeature::GetNextFeature\n) to get the feature representation of the attribute. You can then use the Feature object that represents the attribute instance with\nIFeature::GetSpecificFeature2\nto get the underlying Attribute object.\nIt can be suppressed. Check its state by using\nIAttribute::GetEntityState\n(swIsEntitySuppressed).\nIf the user selected the attribute in the FeatureManager design tree, you can use standard selection control to get the Feature object for the attribute instance (\nISelectionMgr::GetSelectedObject6\n) and call Feature::GetSpecificFeature2 to get the underlying attribute object.\nIf you traverse body topology, you can locate any Attribute object with a call to Entity::FindAttribute from the Entity object (for example, the face or edge). If the attribute instance was placed on the document, then you must use Feature::GetSpecificFeature2 to get back to it.\nAlways call\nIAttribute::GetEntityState\nto check if the attribute instance is valid and unambiguous.",
+  "examples": [
+    {
+      "title": "Create Attribute (VBA)",
+      "href": "Create_Attribute_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VBA)",
+      "href": "Delete_Blended_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Faces (VBA)",
+      "href": "Delete_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (C#)",
+      "href": "Find_Attribute_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (VB.NET)",
+      "href": "Find_Attribute_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (VBA)",
+      "href": "Find_Attribute_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAttribute.GetDefinition",
+    "IAttributeDef.CreateInstance5",
+    "IBody2.FindAttribute",
+    "IComponent2.FindAttribute",
+    "IEntity.IFindAttribute",
+    "ISldWorks.DefineAttribute"
+  ]
+}

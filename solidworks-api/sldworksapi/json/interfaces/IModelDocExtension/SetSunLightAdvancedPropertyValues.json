@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDocExtension",
+    "member": "SetSunLightAdvancedPropertyValues",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Haze",
+        "type": "System.Double",
+        "description": "0.0 <= Haze setting < = 1.0"
+      },
+      {
+        "name": "SunDiameter",
+        "type": "System.Double",
+        "description": "0.01 < = sun diameter visible in the scene <= 21474836.47"
+      },
+      {
+        "name": "GroundAlbedo",
+        "type": "System.Int32",
+        "description": "RGB color reflected from the ground upwards"
+      },
+      {
+        "name": "SkyGamma",
+        "type": "System.Double",
+        "description": "0.1 <= visible sky Output Gamma <= 100.0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetSunLightAdvancedPropertyValues",
+      "IModelDocExtension.SetSunLightSourcePropertyValues",
+      "IModelDocExtension.SunLightInformation"
+    ],
+    "keywords": [
+      "lighting",
+      "advanced",
+      "properties",
+      "setsunlightadvancedpropertyvalues",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "sun",
+      "light",
+      "values",
+      "haze",
+      "double",
+      "diameter",
+      "ground",
+      "albedo",
+      "int32",
+      "sky",
+      "gamma",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDocExtension.SetSunLightAdvancedPropertyValues",
+  "description": "Sets the specified sunlight advanced properties.",
+  "signature": "System.Boolean SetSunLightAdvancedPropertyValues( \n   System.Double\nHaze\n,\n   System.Double\nSunDiameter\n,\n   System.Int32\nGroundAlbedo\n,\n   System.Double\nSkyGamma\n)",
+  "parameters": [
+    {
+      "name": "Haze",
+      "type": "System.Double",
+      "description": "0.0 <= Haze setting < = 1.0"
+    },
+    {
+      "name": "SunDiameter",
+      "type": "System.Double",
+      "description": "0.01 < = sun diameter visible in the scene <= 21474836.47"
+    },
+    {
+      "name": "GroundAlbedo",
+      "type": "System.Int32",
+      "description": "RGB color reflected from the ground upwards"
+    },
+    {
+      "name": "SkyGamma",
+      "type": "System.Double",
+      "description": "0.1 <= visible sky Output Gamma <= 100.0"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "After calling this method, call\nIModelDocExtension::UpdateSunLight\n.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetSunLightAdvancedPropertyValues",
+    "IModelDocExtension.SetSunLightSourcePropertyValues",
+    "IModelDocExtension.SunLightInformation"
+  ]
+}

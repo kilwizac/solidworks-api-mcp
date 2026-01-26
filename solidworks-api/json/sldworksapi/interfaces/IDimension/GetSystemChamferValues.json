@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimension",
+    "member": "GetSystemChamferValues",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Length of chamfer"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of chamfer"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "documents"
+    ],
+    "related": [
+      "IDrawingDoc.AddChamferDim",
+      "IDrawingDoc.IAddChamferDim"
+    ],
+    "keywords": [
+      "getsystemchamfervalues",
+      "idimension",
+      "dimension",
+      "chamfer",
+      "values",
+      "length",
+      "double",
+      "angle",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimension.GetSystemChamferValues",
+  "description": "Gets the chamfer dimension values in system units.",
+  "signature": "System.Boolean GetSystemChamferValues( \n   out System.Double\nLength\n,\n   out System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Length of chamfer"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of chamfer"
+    }
+  ],
+  "returns": "True if the dimension is a chamfer dimension, false if not",
+  "remarks": "Unlike most other types of dimensions, the values returned for a chamfer dimension are not necessarily the values seen by the user in the displayed dimension text. The display dimension interprets these values and considers the type of chamfer display requested by the user and then creates an appropriate output string.",
+  "examples": [
+    {
+      "title": "Get Chamfer Dimension (C#)",
+      "href": "Get_Chamfer_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Dimension (VB.NET)",
+      "href": "Get_Chamfer_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Chamfer Dimension (VBA)",
+      "href": "Get_Chamfer_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.AddChamferDim",
+    "IDrawingDoc.IAddChamferDim"
+  ]
+}

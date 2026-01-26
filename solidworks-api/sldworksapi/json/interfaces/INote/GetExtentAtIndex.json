@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetExtentAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index number of the text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.AddText",
+      "INote.BeginSketchEdit",
+      "INote.EndSketchEdit",
+      "INote.GetCompoundTextAtIndex",
+      "INote.GetCompoundTextCount",
+      "INote.GetExtent",
+      "INote.GetHeightAtIndex",
+      "INote.GetSketch",
+      "INote.IGetExtent",
+      "INote.IGetLeaderAtIndex",
+      "INote.IGetSketch",
+      "INote.IsCompoundNote",
+      "INote.SetTextJustificationAtIndex",
+      "INote.SetTextOffsetAtIndex",
+      "INote.SetTextPoint",
+      "INote.SetZeroLengthLeader"
+    ],
+    "keywords": [
+      "getextentatindex",
+      "inote",
+      "note",
+      "extent",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "INote.GetExtentAtIndex",
+  "description": "Obsolete for documents created in SOLIDWORKS 2016 and later. Gets the extents of the specified piece of text within a compound note.",
+  "signature": "System.Object GetExtentAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index number of the text"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "This method is not valid for invisible documents.\nThe data returned is an array of 6 doubles that describe the lower-left and upper-right box extents of the text string. The values (X,Y,Z) are in sheet space. In other words, they are in relation to the origin of the drawing document which is in the lower-left corner of the drawing.\nIn a compound note, this method determines the text item's offset relative to note's text point.\nBecause a compound note can have multiple pieces of text, many of the compound note methods require you to specify the index value of the desired text. For example, the first piece of text added to the compound note using\nINote::AddText\nhas an index number of 1, the second text added has an index number 2, and so on.\nIf you use this method on a standard note (not a compound note), then the index value should be set to 1.",
+  "examples": [],
+  "related": [
+    "INote.AddText",
+    "INote.BeginSketchEdit",
+    "INote.EndSketchEdit",
+    "INote.GetCompoundTextAtIndex",
+    "INote.GetCompoundTextCount",
+    "INote.GetExtent",
+    "INote.GetHeightAtIndex",
+    "INote.GetSketch",
+    "INote.IGetExtent",
+    "INote.IGetLeaderAtIndex",
+    "INote.IGetSketch",
+    "INote.IsCompoundNote",
+    "INote.SetTextJustificationAtIndex",
+    "INote.SetTextOffsetAtIndex",
+    "INote.SetTextPoint",
+    "INote.SetZeroLengthLeader"
+  ]
+}

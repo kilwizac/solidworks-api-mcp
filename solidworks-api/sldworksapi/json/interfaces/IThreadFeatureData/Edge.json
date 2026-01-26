@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IThreadFeatureData",
+    "member": "Edge",
+    "returns": "Edge",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "edge",
+      "ithreadfeaturedata",
+      "thread",
+      "feature",
+      "data"
+    ],
+    "readonly": null
+  },
+  "title": "IThreadFeatureData.Edge",
+  "description": "Gets or sets the entity where to start the helix of this thread feature.",
+  "signature": "Edge Edge {get; set;}",
+  "parameters": [],
+  "returns": "Planar circular edge (see Remarks )",
+  "remarks": "Use\nIModelDocExtension::SelectByRay\nwith Mark = 1 to select the edge.\nIf this property does not set a planar circular edge, then you must use\nIThreadFeatureData::StartEntity\nto specify the start location of this thread's helix.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "IThreadFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IThreadFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

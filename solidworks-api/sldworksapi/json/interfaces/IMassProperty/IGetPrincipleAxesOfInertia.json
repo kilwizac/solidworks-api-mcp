@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMassProperty",
+    "member": "IGetPrincipleAxesOfInertia",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Axis",
+        "type": "System.Int32",
+        "description": "0 = X axis 1 = Y axis 2 = Z axis"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty.GetMomentOfInertia",
+      "IMassProperty.IGetMomentOfInertia",
+      "IMassProperty.IGetPrincipleMomentsOfInertia",
+      "IMassProperty.PrincipleAxesOfInertia",
+      "IMassProperty.PrincipleMomentsOfInertia"
+    ],
+    "keywords": [
+      "igetprincipleaxesofinertia",
+      "imassproperty",
+      "mass",
+      "principle",
+      "axes",
+      "inertia",
+      "axis",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IMassProperty.IGetPrincipleAxesOfInertia",
+  "description": "Gets the principal axes of inertia for this model.",
+  "signature": "System.Double IGetPrincipleAxesOfInertia( \n   System.Int32\nAxis\n)",
+  "parameters": [
+    {
+      "name": "Axis",
+      "type": "System.Int32",
+      "description": "0 = X axis 1 = Y axis 2 = Z axis"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of size 3 (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method returns:\na vector that represents the requested axis.\nmetric units unless explicitly specified otherwise.\nThe return value is a 0-based array of doubles:\n[\nlx, ly, lz\n]",
+  "examples": [],
+  "related": [
+    "IMassProperty.GetMomentOfInertia",
+    "IMassProperty.IGetMomentOfInertia",
+    "IMassProperty.IGetPrincipleMomentsOfInertia",
+    "IMassProperty.PrincipleAxesOfInertia",
+    "IMassProperty.PrincipleMomentsOfInertia"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfigurationManager",
+    "member": "AddConfiguration",
+    "returns": "Configuration",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the configuration"
+      },
+      {
+        "name": "Comment",
+        "type": "System.String",
+        "description": "Comment displayed in Configuration Properties"
+      },
+      {
+        "name": "AlternateName",
+        "type": "System.String",
+        "description": "Alternate configuration name (i.e., user-specified name); used if swConfigOption_UseAlternateName is set to true"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Combination of one or more Boolean configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+      },
+      {
+        "name": "ParentConfigName",
+        "type": "System.String",
+        "description": "Name of parent configuration"
+      },
+      {
+        "name": "Description",
+        "type": "System.String",
+        "description": "Text that identifies the configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.AddComponentConfiguration",
+      "IComponent2.Name2",
+      "IConfiguration.AlternateName",
+      "IConfiguration.GetChildren",
+      "IConfiguration.GetParent",
+      "IConfiguration.IGetChildren",
+      "IConfiguration.Name",
+      "IConfigurationManager.ActiveConfiguration",
+      "IModelDoc2.AddConfiguration3"
+    ],
+    "keywords": [
+      "addconfiguration",
+      "iconfigurationmanager",
+      "configuration",
+      "manager",
+      "add",
+      "name",
+      "string",
+      "comment",
+      "alternate",
+      "options",
+      "int32",
+      "parent",
+      "config",
+      "description",
+      "dimensions",
+      "mid",
+      "tolerance",
+      "vba",
+      "derived",
+      "configurations"
+    ]
+  },
+  "title": "IConfigurationManager.AddConfiguration",
+  "description": "Obsolete. Superseded by IConfigurationManager::AddConfiguration2.",
+  "signature": "Configuration AddConfiguration( \n   System.String\nName\n,\n   System.String\nComment\n,\n   System.String\nAlternateName\n,\n   System.Int32\nOptions\n,\n   System.String\nParentConfigName\n,\n   System.String\nDescription\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the configuration"
+    },
+    {
+      "name": "Comment",
+      "type": "System.String",
+      "description": "Comment displayed in Configuration Properties"
+    },
+    {
+      "name": "AlternateName",
+      "type": "System.String",
+      "description": "Alternate configuration name (i.e., user-specified name); used if swConfigOption_UseAlternateName is set to true"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Combination of one or more Boolean configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+    },
+    {
+      "name": "ParentConfigName",
+      "type": "System.String",
+      "description": "Name of parent configuration"
+    },
+    {
+      "name": "Description",
+      "type": "System.String",
+      "description": "Text that identifies the configuration"
+    }
+  ],
+  "returns": "Newly created configuration",
+  "remarks": "The Options argument can be a combination of any of the following values:\nswConfigOption_SuppressByDefault - True if you want to suppress newly added features and mates in this configuration, false if not\nswConfigOption_HideByDefault - True if you want newly added components to be hidden, false if not\nswConfigOption_MinFeatureManager - True if you want newly added components to only display their component name in the FeatureManager design tree, false if you want newly added components to display their name and each of their features in the FeatureManager design tree",
+  "examples": [
+    {
+      "title": "Set Dimensions to Mid-Tolerance (VBA)",
+      "href": "Set_Dimensions_to_Mid-Tolerance_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Derived Configurations (VBA)",
+      "href": "Add_Derived_Configurations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddComponentConfiguration",
+    "IComponent2.Name2",
+    "IConfiguration.AlternateName",
+    "IConfiguration.GetChildren",
+    "IConfiguration.GetParent",
+    "IConfiguration.IGetChildren",
+    "IConfiguration.Name",
+    "IConfigurationManager.ActiveConfiguration",
+    "IModelDoc2.AddConfiguration3"
+  ]
+}

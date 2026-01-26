@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetBreakLineInfo",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.BreakLineGap",
+      "IView.GetBreakLineCount",
+      "IView.GetBreakLines",
+      "IView.IGetBreakLineInfo",
+      "IView.IGetBreakLines",
+      "IView.InsertBreak",
+      "IView.IsBroken"
+    ],
+    "keywords": [
+      "getbreaklineinfo",
+      "iview",
+      "view",
+      "break",
+      "line",
+      "info",
+      "object"
+    ]
+  },
+  "title": "IView.GetBreakLineInfo",
+  "description": "Obsolete. Superseded by IView::GetBreakLineInfo2.",
+  "signature": "System.Object GetBreakLineInfo()",
+  "parameters": [],
+  "returns": "Array of break line information (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nbreaklineStyle, [ color, lineType, lineStyleIndex, lineWeight, layerId,\nlayerOverride, number of lines, number of arcs ], line data or arc data\n]\nbreaklineStyle\nValid returns are found in\nswBreakLineStyle_e\ncolor\nCOLORREF returned as an integer. Return value could be 0 or -1 for default color\nlineType\nValid returns are found in\nswLineTypes_e\n. A lineType is a combination of a lineStyle and lineWeight.\nLineStyleIndex\nValid line styles can be found in\nswLineStyles_e.\nlineWeight\nAn integer value defining the line width. Valid width values can be found in\nswLineWeights_e\n.\nlayerId\nAn integer value indicating which layer holds this entity. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nand\nILayerMgr::IGetLayerId\n.\nlayerOverride\nAn integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are:\ncolor = 0x1\nstyle = 0x2\nwidth = 0x4\nTherefore, if LayerOverride is returned as 3, then the color and style were specifically set for this item and may not match the default values associated with this item's layer.\nNumber of lines\nNumber of pairs of lines in the break line.\nNumber of arcs\nNumber of pairs of arcs in the break line.\nEach break line is a pair of line segments:\nFor...\nThen...\nswBreakLineStraight\nEach has 1 line for a total of 4 points:\nLineStartPt[3]\nLine1EngPt[3]\nLine2StartPt[3]\nLine2EndPt[3]\nswBreakLineZigZag\nEach has 5 lines\nswBreakLine_SmallZigZag\nEach has 5 lines\nswBreakLine_Curve\nEach has 2 arcs; data is packed as follows:\narcDirection\nstartPoint\nEndPoint\nCenterPoint",
+  "examples": [],
+  "related": [
+    "IView.BreakLineGap",
+    "IView.GetBreakLineCount",
+    "IView.GetBreakLines",
+    "IView.IGetBreakLineInfo",
+    "IView.IGetBreakLines",
+    "IView.InsertBreak",
+    "IView.IsBroken"
+  ]
+}

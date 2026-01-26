@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetCenterMarkInfo",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "ICenterMark",
+      "IView.AutoInsertCenterMarks",
+      "IView.GetCenterMarks",
+      "IView.GetFirstCenterMark",
+      "IView.IGetCenterMarkInfo",
+      "IView.IGetCenterMarks"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "center",
+      "marks",
+      "view",
+      "feature",
+      "ifeature",
+      "getcentermarkinfo",
+      "mark",
+      "info",
+      "object"
+    ]
+  },
+  "title": "IView.GetCenterMarkInfo",
+  "description": "Gets information about each center mark that is a feature in the view.",
+  "signature": "System.Object GetCenterMarkInfo()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Center marks are now annotations. Previously, center marks were features. This method is only valid for center marks that are features.\nThe return value is the following array of doubles:\n[\nnumCenterMarks,\n[\nnumCenterMarkLines\n,\nlineType1\n,\nplus1StartPt\n[3],\nplus1EndPt\n[3],\nlineType2\n,\nplus2StartPt\n[3],\nplus2EndPt\n[3],\n[\nlineType, lineStartPt\n[3],\nlineEndPt\n[3]\n]\n]\n]\nwhere:\nnumCenterMarks\n= is the number of center marks in this view. See also\nIView::GetCenterMarkCount2\n.\nThe following set of data repeats itself for each center mark in the view. The number of times the information is given is\nnumCenterMarks\n:\nnumCenterMarkLines\n= number of centermark lines in the current center mark. Every center mark has at least two lines. These two lines represent the plus at the center of the circle.\nlineType1\n= line type associated with the first plus-sign line. See the\nswLineTypes_e\nenumeration.\nplus1StartPt\n[3]\n= X,Y,Z start point of the first line in the plus sign.\nplus1EndPt\n[3]\n= X,Y,Z end point of the first line in the plus sign.\nlineType2\n= line type associated with the second plus-sign line. See the\nswLineTypes_e\nenumeration.\nplus2StartPt\n[3]\n= X,Y,Z start point of the second line in the plus sign.\nplus2EndPt\n[3]\n= X,Y,Z end point of the second line in the plus sign.\nThis set of data also repeats itself for the remaining centermark lines in this particular center mark. The number of times this information is given is (\nnumCenterMarkLines\n- 2)\n:\nLineType\n= line type associated with the second plus-sign line. See the\nswLineTypes_e\nenumeration.\nlineStartPt\n[3] = X,Y,Z start point for this centermark line.\nlineEndPt\n[3] = X,Y,Z end point for this centermark line.",
+  "examples": [],
+  "related": [
+    "ICenterMark",
+    "IView.AutoInsertCenterMarks",
+    "IView.GetCenterMarks",
+    "IView.GetFirstCenterMark",
+    "IView.IGetCenterMarkInfo",
+    "IView.IGetCenterMarks"
+  ]
+}

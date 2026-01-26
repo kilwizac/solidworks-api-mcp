@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "SetAsTableAnchor",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "TableType",
+        "type": "System.Int32",
+        "description": "Table for which an anchor is required as defined in swTableAnnotationType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.TableAnchor"
+    ],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "table",
+      "anchor",
+      "setastableanchor",
+      "type",
+      "int32",
+      "object",
+      "anchors",
+      "formats",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISheet.SetAsTableAnchor",
+  "description": "Sets the anchor for the specified table at a selected point in the sheet format.",
+  "signature": "System.Object SetAsTableAnchor( \n   System.Int32\nTableType\n)",
+  "parameters": [
+    {
+      "name": "TableType",
+      "type": "System.Int32",
+      "description": "Table for which an anchor is required as defined in swTableAnnotationType_e"
+    }
+  ],
+  "returns": "ITableAnchor",
+  "remarks": "Before calling this method, you must call:\nIDrawingDoc::EditTemplate\nto edit the sheet format.\nIModelDoc2::EditSketch\nto create a sketch.\nISketchManager::CreatePoint\nto create a sketch point where to position the table anchor.\nIf an anchor already exists for the table, then this method moves the anchor of that table to the selected position.\nAfter calling this method you must call:\nIDrawingDoc::EditSheet\nIModelDoc2::EditSketch\nIModelDoc2::ForceRebuild3",
+  "examples": [
+    {
+      "title": "Set Table Anchors in Sheet Formats (VBA)",
+      "href": "Set_Table_Anchors_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Table Anchors in Sheet Formats (VB.NET)",
+      "href": "Set_Table_Anchors_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Table Anchors in Sheet Formats (C#)",
+      "href": "Set_Table_Anchors_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheet.TableAnchor"
+  ]
+}

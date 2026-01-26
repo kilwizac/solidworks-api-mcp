@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAnnotation",
+    "member": "Layer",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "layer",
+      "iannotation",
+      "annotation",
+      "string",
+      "insert",
+      "autoballoons",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IAnnotation.Layer",
+  "description": "Gets or sets the layer used by this annotation. Layers are supported only in SOLIDWORKS drawings.",
+  "signature": "System.String Layer {get; set;}",
+  "parameters": [],
+  "returns": "Name of the layer used for this annotation",
+  "remarks": "In Drawing documents, annotations can be created on a specific layer. This property allows you to get or set the layer used by this annotation. You can also set an annotation to not be on any layer by specifying \"\" for theLayer.\nNOTE:\nThe return value might be an empty string because an old document might not contain layers. This also occurs if annotations have been generated in a new document that does not have layers defined.",
+  "examples": [
+    {
+      "title": "Insert Autoballoons (VBA)",
+      "href": "Insert_Autoballoons_Example_VB_AutoBalloon2_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

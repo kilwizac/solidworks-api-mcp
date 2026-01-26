@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILocalCircularPatternFeatureData",
+    "member": "GetModifiedInstance",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Instance",
+        "type": "System.Int32",
+        "description": "Pattern instance number (see Remarks )"
+      },
+      {
+        "name": "AngleFromSeed",
+        "type": "System.Double",
+        "description": "Angle from the pattern seed"
+      },
+      {
+        "name": "OffsetFromNominal",
+        "type": "System.Double",
+        "description": "Degree offset from the nominal position of Instance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "getmodifiedinstance",
+      "ilocalcircularpatternfeaturedata",
+      "local",
+      "circular",
+      "pattern",
+      "feature",
+      "data",
+      "modified",
+      "instance",
+      "int32",
+      "angle",
+      "seed",
+      "double",
+      "offset",
+      "nominal",
+      "void"
+    ]
+  },
+  "title": "ILocalCircularPatternFeatureData.GetModifiedInstance",
+  "description": "Gets the modified values for the specified pattern instance in this circular component pattern feature.",
+  "signature": "void GetModifiedInstance( \n   System.Int32\nInstance\n,\n   out System.Double\nAngleFromSeed\n,\n   out System.Double\nOffsetFromNominal\n)",
+  "parameters": [
+    {
+      "name": "Instance",
+      "type": "System.Int32",
+      "description": "Pattern instance number (see Remarks )"
+    },
+    {
+      "name": "AngleFromSeed",
+      "type": "System.Double",
+      "description": "Angle from the pattern seed"
+    },
+    {
+      "name": "OffsetFromNominal",
+      "type": "System.Double",
+      "description": "Degree offset from the nominal position of Instance"
+    }
+  ],
+  "returns": "",
+  "remarks": "To specify Instance, you can use\nILocalCircularPatternFeatureData::GetModifiedInstances\nto learn which pattern instances are modified.\nTo calculate Instance:\nCalculate:\nFor a bi-directional pattern:\nI\n=\nn2\n* (\ni\n- 1) + (\nj\n- 1)\nFor a uni-directional pattern:\nI\n=\ni\n- 1\nwhere:\nI\n= pattern instance number\nn2\n= number of instances in Direction 2\ni\n= index for Direction 1\nj\n= index for Direction 2\nIn the pattern's PropertyManager, find\nn2\nin the\nDirection 2\n> Spacing and Instances > Number of instances\nfield and find [\ni,j\n] in the\nModified Instances\nsection.",
+  "examples": [],
+  "related": []
+}

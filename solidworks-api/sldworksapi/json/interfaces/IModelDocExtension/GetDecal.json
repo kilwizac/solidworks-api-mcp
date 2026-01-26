@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetDecal",
+    "returns": "Decal",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Decal ID (see Remarks )"
+      },
+      {
+        "name": "Configuration",
+        "type": "System.String",
+        "description": "Name of the configuration where to get the decal"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IDecal",
+      "IModelDocExtension.AddDecal",
+      "IModelDocExtension.CreateDecal",
+      "IModelDocExtension.DeleteAllDecals",
+      "IModelDocExtension.DeleteDecal",
+      "IModelDocExtension.GetDecals",
+      "IModelDocExtension.GetDecalsCount",
+      "IModelDocExtension.HideDecal",
+      "IModelDocExtension.IGetDecals",
+      "IModelDocExtension.MoveDecal",
+      "IModelDocExtension.ReverseDecalsOrder"
+    ],
+    "keywords": [
+      "decal",
+      "see",
+      "also",
+      "idecal",
+      "getdecal",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "id",
+      "int32",
+      "configuration",
+      "string",
+      "mask",
+      "types",
+      "each",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.GetDecal",
+  "description": "Gets the specified decal in this model.",
+  "signature": "Decal GetDecal( \n   System.Int32\nID\n,\n   System.String\nConfiguration\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Decal ID (see Remarks )"
+    },
+    {
+      "name": "Configuration",
+      "type": "System.String",
+      "description": "Name of the configuration where to get the decal"
+    }
+  ],
+  "returns": "Decal",
+  "remarks": "The decal ID is the index number of the decal in the model. Call\nIModelDocExtension::GetDecalsCount\nto find out the number of decals in the model and their IDs.",
+  "examples": [
+    {
+      "title": "Get Mask Types of Each Decal (VBA)",
+      "href": "Get_Mask_Types_of_Each_Decal_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDecal",
+    "IModelDocExtension.AddDecal",
+    "IModelDocExtension.CreateDecal",
+    "IModelDocExtension.DeleteAllDecals",
+    "IModelDocExtension.DeleteDecal",
+    "IModelDocExtension.GetDecals",
+    "IModelDocExtension.GetDecalsCount",
+    "IModelDocExtension.HideDecal",
+    "IModelDocExtension.IGetDecals",
+    "IModelDocExtension.MoveDecal",
+    "IModelDocExtension.ReverseDecalsOrder"
+  ]
+}

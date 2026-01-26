@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "InsertPart",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of part file"
+      },
+      {
+        "name": "ImportPlane",
+        "type": "System.Boolean",
+        "description": "True if the planes from the part should be imported into this part, false if not"
+      },
+      {
+        "name": "ImportAxis",
+        "type": "System.Boolean",
+        "description": "True if the axes from the part should be imported into this part, false if not"
+      },
+      {
+        "name": "ImportCThread",
+        "type": "System.Boolean",
+        "description": "True if the cosmetic threads from the part should be imported into this part, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "insertpart",
+      "ipartdoc",
+      "part",
+      "doc",
+      "insert",
+      "file",
+      "name",
+      "string",
+      "import",
+      "plane",
+      "boolean",
+      "axis",
+      "thread",
+      "feature"
+    ]
+  },
+  "title": "IPartDoc.InsertPart",
+  "description": "Obsolete. Superseded by IPartDoc::InsertPart2.",
+  "signature": "Feature InsertPart( \n   System.String\nFileName\n,\n   System.Boolean\nImportPlane\n,\n   System.Boolean\nImportAxis\n,\n   System.Boolean\nImportCThread\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of part file"
+    },
+    {
+      "name": "ImportPlane",
+      "type": "System.Boolean",
+      "description": "True if the planes from the part should be imported into this part, false if not"
+    },
+    {
+      "name": "ImportAxis",
+      "type": "System.Boolean",
+      "description": "True if the axes from the part should be imported into this part, false if not"
+    },
+    {
+      "name": "ImportCThread",
+      "type": "System.Boolean",
+      "description": "True if the cosmetic threads from the part should be imported into this part, false if not"
+    }
+  ],
+  "returns": "New feature",
+  "remarks": "This method inserts the specified part at the origin of this part. To position the insert part at a different location or orientation or both, use\nIFeatureManager::InsertMoveCopyBody2\n.\nThe interface returned by this method is\nIFeature\n, which gives you access to the feature APIs such as\nIFeature::Name\nto get or set the name of the feature.",
+  "examples": [],
+  "related": []
+}

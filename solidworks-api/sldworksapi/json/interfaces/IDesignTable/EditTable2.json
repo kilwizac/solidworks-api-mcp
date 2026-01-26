@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "EditTable2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "NewWindow",
+        "type": "System.Boolean",
+        "description": "True to edit the design table in a separate window, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.IsActive",
+      "IDesignTable.Updatable",
+      "IDesignTable.UpdateFeature",
+      "IDesignTable.UpdateModel"
+    ],
+    "keywords": [
+      "design",
+      "tables",
+      "see",
+      "also",
+      "idesigntable",
+      "edit",
+      "excel",
+      "edittable2",
+      "table",
+      "table2",
+      "new",
+      "window",
+      "boolean",
+      "object",
+      "disable",
+      "cell",
+      "drop",
+      "down",
+      "lists",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDesignTable.EditTable2",
+  "description": "Lets you edit the design table.",
+  "signature": "System.Object EditTable2( \n   System.Boolean\nNewWindow\n)",
+  "parameters": [
+    {
+      "name": "NewWindow",
+      "type": "System.Boolean",
+      "description": "True to edit the design table in a separate window, false to not"
+    }
+  ],
+  "returns": "Microsoft Excel worksheet for this design table",
+  "remarks": "Do not use this method and\nIDesignTable::Attach\nin the same macro. Using IDesignTable::EditTable2 is preferable because it returns a pointer to the Microsoft Excel worksheet being operated on.\nTo avoid problems with zooming, set bNewWindow to True.\nYou can change the parameter values in the cells, add rows for additional configurations, or add columns to control additional parameters.\nIf the return value of this method is assigned to a variable, then it must be released before closing the design table with\nIDesignTable::UpdateTable\n(\ntype\n, True).",
+  "examples": [
+    {
+      "title": "Disable Cell Drop-down Lists in Design Table (C#)",
+      "href": "Disable_Cell_Drop-down_Lists_in_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Disable Cell Drop-down Lists in Design Table (VB.NET)",
+      "href": "Disable_Cell_Drop-down_Lists_in_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Disable Cell Drop-down Lists in Design Table (VBA)",
+      "href": "Disable_Cell_Drop-down_Lists_in_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDesignTable.IsActive",
+    "IDesignTable.Updatable",
+    "IDesignTable.UpdateFeature",
+    "IDesignTable.UpdateModel"
+  ]
+}

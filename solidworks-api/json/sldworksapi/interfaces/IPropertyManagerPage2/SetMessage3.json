@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPage2",
+    "member": "SetMessage3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Message",
+        "type": "System.String",
+        "description": "Message text"
+      },
+      {
+        "name": "Visibility",
+        "type": "System.Int32",
+        "description": "Visibility state of this message as defined by swPropertyManagerPageMessageVisibility"
+      },
+      {
+        "name": "Expanded",
+        "type": "System.Int32",
+        "description": "Expand, compress, or leave the state of the message as is, as defined by swPropertyManagerPageMessageExpanded"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Caption for message"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "propertymanager",
+      "page",
+      "see",
+      "also",
+      "ipropertymanagerpage2",
+      "message",
+      "setmessage3",
+      "manager",
+      "page2",
+      "message3",
+      "string",
+      "visibility",
+      "int32",
+      "expanded",
+      "caption",
+      "boolean"
+    ]
+  },
+  "title": "IPropertyManagerPage2.SetMessage3",
+  "description": "Sets the message in this PropertyManager page.",
+  "signature": "System.Boolean SetMessage3( \n   System.String\nMessage\n,\n   System.Int32\nVisibility\n,\n   System.Int32\nExpanded\n,\n   System.String\nCaption\n)",
+  "parameters": [
+    {
+      "name": "Message",
+      "type": "System.String",
+      "description": "Message text"
+    },
+    {
+      "name": "Visibility",
+      "type": "System.Int32",
+      "description": "Visibility state of this message as defined by swPropertyManagerPageMessageVisibility"
+    },
+    {
+      "name": "Expanded",
+      "type": "System.Int32",
+      "description": "Expand, compress, or leave the state of the message as is, as defined by swPropertyManagerPageMessageExpanded"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Caption for message"
+    }
+  ],
+  "returns": "True if the message is set, false if not",
+  "remarks": "If Caption is empty, then the current caption is not changed.\nThis method should be useful when creating multi-page PropertyManager pages where you want different informational messages on each page.",
+  "examples": [],
+  "related": []
+}

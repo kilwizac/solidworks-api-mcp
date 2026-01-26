@@ -1,0 +1,135 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertBendTable",
+    "returns": "BendTableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "True to insert the bend table at the sheet format anchor point, false to insert it at the point specified by the X and Y parameters of this method"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X-coordinate for placement of the bend table; valid only when UseAnchorPoint is false"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y-coordinate for placement of the bend table; valid only when UseAnchorPoint is false"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined in swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "StartValue",
+        "type": "System.String",
+        "description": "Starting datum tag; a value from A to Z for letter tags; a positive integer for number tags"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Full pathname of the template (e.g., install_dir \\ lang\\ language \\ bendtable-standard.sldbndtbt )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IBendTable",
+      "IPartDoc.InsertBendTable"
+    ],
+    "keywords": [
+      "table",
+      "bend",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "tables",
+      "insertbendtable",
+      "insert",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "start",
+      "value",
+      "string",
+      "template",
+      "annotation",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IView.InsertBendTable",
+  "description": "Inserts a bend table for this drawing view.",
+  "signature": "BendTableAnnotation InsertBendTable( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nStartValue\n,\n   System.String\nTableTemplate\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "True to insert the bend table at the sheet format anchor point, false to insert it at the point specified by the X and Y parameters of this method"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X-coordinate for placement of the bend table; valid only when UseAnchorPoint is false"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y-coordinate for placement of the bend table; valid only when UseAnchorPoint is false"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined in swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "StartValue",
+      "type": "System.String",
+      "description": "Starting datum tag; a value from A to Z for letter tags; a positive integer for number tags"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Full pathname of the template (e.g., install_dir \\ lang\\ language \\ bendtable-standard.sldbndtbt )"
+    }
+  ],
+  "returns": "IBendTableAnnotation",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Insert Bend Table (VBA)",
+      "href": "Insert_Bend_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Bend Table (VB.NET)",
+      "href": "Insert_Bend_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Bend Table (C#)",
+      "href": "Insert_Bend_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBendTable",
+    "IPartDoc.InsertBendTable"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "FirstFeature",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.FirstFeature",
+      "IModelDoc2.IFirstFeature",
+      "IPartDoc.IFirstFeature",
+      "IPartDoc.ReorderFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "first",
+      "traverse",
+      "features",
+      "parts",
+      "ipartdoc",
+      "firstfeature",
+      "part",
+      "doc",
+      "object",
+      "suppress",
+      "unsuppress",
+      "vba",
+      "subfeatures",
+      "autodimension",
+      "all",
+      "sketches",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IPartDoc.FirstFeature",
+  "description": "Gets the first feature in the part.",
+  "signature": "System.Object FirstFeature()",
+  "parameters": [],
+  "returns": "First feature in the part",
+  "remarks": "This method returns features in the current order for the part, and this order changes when the part is edited.\nYour application should not assume that:\nfeatures retain the same relative or absolute position throughout the part\u2019s lifetime. For example, you should not assume that Sketch1 always appears before Sketch2.\nany feature has a specific name. Because features can be renamed, you cannot assume that the first reference plane feature is named Plane1.\nWhen traversing the FeatureManager design tree, your application should use\nIFeature::GetTypeName2\nand\nIFeature::GetSpecificFeature2\nto identify specific features instead of relying solely on\nIFeature::Name\n.\nThis method returns features in the model definition order, which is not the same as the order displayed in the user interface. See\nITreeControlItem\nfor details.\nIf a feature is suppressed, then this method can still access the feature.\nTo access the next feature in the FeatureManager design tree and subfeatures, use\nIFeature::GetNextFeature\nor\nIFeature::IGetNextFeature\nand\nIFeature::GetFirstSubFeature\nor\nIFeature::IGetFirstSubFeature\n.",
+  "examples": [
+    {
+      "title": "Suppress or Unsuppress Feature (VBA)",
+      "href": "Feature_Suppression_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Subfeatures (VBA)",
+      "href": "Traverse_SubFeatures_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension All Sketches (C#)",
+      "href": "Autodimension_All_Sketches_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension All Sketches (VB.NET)",
+      "href": "Autodimension_All_Sketches_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Autodimension All Sketches (VBA)",
+      "href": "Autodimension_All_Sketches_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.FirstFeature",
+    "IModelDoc2.IFirstFeature",
+    "IPartDoc.IFirstFeature",
+    "IPartDoc.ReorderFeature"
+  ]
+}

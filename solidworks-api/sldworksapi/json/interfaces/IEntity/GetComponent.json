@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "GetComponent",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAttribute.GetEntity",
+      "IAttribute.GetEntityState",
+      "IComponent2.GetCorrespondingEntity",
+      "IEntity.GetSafeEntity",
+      "IEntity.IGetComponent2",
+      "IFaultEntity.Entity",
+      "IModelDocExtension.GetCorrespondingEntity",
+      "IPartDoc.GetEntityByName",
+      "IPartDoc.GetNamedEntities",
+      "IView.GetVisibleEntities"
+    ],
+    "keywords": [
+      "getcomponent",
+      "ientity",
+      "entity",
+      "component",
+      "object",
+      "selected",
+      "vba",
+      "feature",
+      "via",
+      "display",
+      "dimension",
+      "bom",
+      "balloon",
+      "properties",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEntity.GetComponent",
+  "description": "Gets the owning component for this entity.",
+  "signature": "System.Object GetComponent()",
+  "parameters": [],
+  "returns": "Component that owns this entity",
+  "remarks": "You can use\nISelectionMgr::GetSelectedObject6\nto get the selected object in the assembly, then use the entity object representing that face or edge object to call this method.\nThis method works only when you get the\nIEntity\nobject directly from the assembly document or from an assembly entity that is displayed in a drawing document.",
+  "examples": [
+    {
+      "title": "Get Component for Selected Entity (VBA)",
+      "href": "Get_Component_for_Selected_Entity_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component from Feature (VBA)",
+      "href": "Get_Component_from_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Component Via Display Dimension (VBA)",
+      "href": "Get_Component_Via_Display_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (C#)",
+      "href": "Get_BOM_Balloon_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VB.NET)",
+      "href": "Get_BOM_Balloon_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BOM Balloon Properties (VBA)",
+      "href": "Get_BOM_Balloon_Properties_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAttribute.GetEntity",
+    "IAttribute.GetEntityState",
+    "IComponent2.GetCorrespondingEntity",
+    "IEntity.GetSafeEntity",
+    "IEntity.IGetComponent2",
+    "IFaultEntity.Entity",
+    "IModelDocExtension.GetCorrespondingEntity",
+    "IPartDoc.GetEntityByName",
+    "IPartDoc.GetNamedEntities",
+    "IView.GetVisibleEntities"
+  ]
+}

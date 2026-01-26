@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICoreFeatureData",
+    "member": "SetExtractionDirection",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PDir1",
+        "type": "System.Object",
+        "description": "Entity that defines the extraction direction (see Remarks )"
+      },
+      {
+        "name": "PDir2",
+        "type": "System.Object",
+        "description": "Entity that defines the extraction direction (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICoreFeatureData.GetExtractionDirection"
+    ],
+    "keywords": [
+      "setextractiondirection",
+      "icorefeaturedata",
+      "core",
+      "feature",
+      "data",
+      "extraction",
+      "direction",
+      "dir1",
+      "object",
+      "dir2",
+      "boolean"
+    ]
+  },
+  "title": "ICoreFeatureData.SetExtractionDirection",
+  "description": "Sets the entities that define the extraction direction of this core feature.",
+  "signature": "System.Boolean SetExtractionDirection( \n   System.Object\nPDir1\n,\n   System.Object\nPDir2\n)",
+  "parameters": [
+    {
+      "name": "PDir1",
+      "type": "System.Object",
+      "description": "Entity that defines the extraction direction (see Remarks )"
+    },
+    {
+      "name": "PDir2",
+      "type": "System.Object",
+      "description": "Entity that defines the extraction direction (see Remarks )"
+    }
+  ],
+  "returns": "True if the entities that define the extraction direction of this core feature are set, false if not",
+  "remarks": "The types of entities that define the extraction direction are:\nFace\nPlane\nEdge\nVertex\nSketch line\nSketch point\nThere can be two entities because two sketch points can specify a direction.",
+  "examples": [],
+  "related": [
+    "ICoreFeatureData.GetExtractionDirection"
+  ]
+}

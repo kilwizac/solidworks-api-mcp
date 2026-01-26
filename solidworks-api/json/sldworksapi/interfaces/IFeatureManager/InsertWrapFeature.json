@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertWrapFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of wrap as defined in swWrapSketchType_e"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness; 0.00001 (thinnest) - 10000 (thickest)"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the wrap, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IWrapSketchFeatureData"
+    ],
+    "keywords": [
+      "insertwrapfeature",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "wrap",
+      "type",
+      "int32",
+      "thickness",
+      "double",
+      "reverse",
+      "dir",
+      "boolean",
+      "change",
+      "face",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertWrapFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertWrapFeature2.",
+  "signature": "Feature InsertWrapFeature( \n   System.Int32\nType\n,\n   System.Double\nThickness\n,\n   System.Boolean\nReverseDir\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of wrap as defined in swWrapSketchType_e"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness; 0.00001 (thinnest) - 10000 (thickest)"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the wrap, false to not"
+    }
+  ],
+  "returns": "Wrap feature",
+  "remarks": "Use\nIModelDocExtension::SelectByID2\nand these values to mark these selections:\n1 = Face on which to place the wrap feature\n2 = Pull direction if Type is swWrapSketchType_e.swWrapSketchType_Emboss or swWrapSketchType_e.swWrapSketchType_Engrave\n4 = 2D sketch of wrap feature; 3D sketches are invalid",
+  "examples": [
+    {
+      "title": "Change Wrap Feature Face (C#)",
+      "href": "Change_Wrap_Feature_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Wrap Feature Face (VB.NET)",
+      "href": "Change_Wrap_Feature_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Wrap Feature Face (VBA)",
+      "href": "Change_Wrap_Feature_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IWrapSketchFeatureData"
+  ]
+}

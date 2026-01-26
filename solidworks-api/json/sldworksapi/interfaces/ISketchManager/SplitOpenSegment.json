@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SplitOpenSegment",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of the point that splits the sketch segment in two"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the point that splits the sketch segment in two"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the point that splits the sketch segment in two"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "file-io",
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.SplitClosedSegment"
+    ],
+    "keywords": [
+      "sketch",
+      "tools",
+      "split",
+      "segment",
+      "see",
+      "also",
+      "isketch",
+      "splitopensegment",
+      "isketchmanager",
+      "manager",
+      "open",
+      "double",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchManager.SplitOpenSegment",
+  "description": "Splits the selected open sketch segment into two sketch segments.",
+  "signature": "System.Object SplitOpenSegment( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of the point that splits the sketch segment in two"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the point that splits the sketch segment in two"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the point that splits the sketch segment in two"
+    }
+  ],
+  "returns": "Array of sketch segments of the now split formerly open sketch skegment",
+  "remarks": "Before calling this method, be sure to disable snapping by either:\nDe-selecting\nSystem Options > Sketch > Relations/Snaps > Enable snapping\n- or -\nCalling\nISldWorks::SetUserPreferenceToggle\n(\nswUserPreferenceToggle_e\n.swSketchInference, false).",
+  "examples": [
+    {
+      "title": "Split Open Sketch Segment (VBA)",
+      "href": "Split_Open_Sketch_Segment_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Split Open Sketch Segment (VB.NET)",
+      "href": "Split_Open_Sketch_Segment_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Split Open Sketch Segment (C#)",
+      "href": "Split_Open_Sketch_Segment_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.SplitClosedSegment"
+  ]
+}

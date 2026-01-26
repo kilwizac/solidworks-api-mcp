@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRevisionCloud",
+    "member": "IGetPathPointAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of a point on the path of this revision cloud annotation (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IRevisionCloud.GetPathPointAtIndex",
+      "IRevisionCloud.SetPathPointAtIndex"
+    ],
+    "keywords": [
+      "igetpathpointatindex",
+      "irevisioncloud",
+      "revision",
+      "cloud",
+      "path",
+      "point",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IRevisionCloud.IGetPathPointAtIndex",
+  "description": "Gets the coordinates of a point with the specified index on the path of this revision cloud annotation.",
+  "signature": "System.Double IGetPathPointAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of a point on the path of this revision cloud annotation (see Remarks )"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles of x, y, and z coordinates of a point on the path of this revision cloud annotation VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "To get the range of values for Index, call\nIRevisionCloud::GetPathPointCount\nto get the total number of points on the path of this revision cloud annotation.",
+  "examples": [],
+  "related": [
+    "IRevisionCloud.GetPathPointAtIndex",
+    "IRevisionCloud.SetPathPointAtIndex"
+  ]
+}

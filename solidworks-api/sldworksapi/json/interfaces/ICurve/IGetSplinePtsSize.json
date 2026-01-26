@@ -1,0 +1,83 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IGetSplinePtsSize",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "PropArray",
+        "type": "System.Int32",
+        "description": "Array that includes dimension, order, number of control points, and periodicity"
+      },
+      {
+        "name": "KnotsArray",
+        "type": "System.Double",
+        "description": "knot1, knot2, ..., knot n"
+      },
+      {
+        "name": "CntrlPntCoordArray",
+        "type": "System.Double",
+        "description": "controlpoint1[dimension], controlpoint2[dimension], ..., controlpoint n [dimension]"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.GetSplinePts"
+    ],
+    "keywords": [
+      "igetsplineptssize",
+      "icurve",
+      "curve",
+      "spline",
+      "pts",
+      "size",
+      "prop",
+      "array",
+      "int32",
+      "knots",
+      "double",
+      "cntrl",
+      "pnt",
+      "coord",
+      "points"
+    ]
+  },
+  "title": "ICurve.IGetSplinePtsSize",
+  "description": "Gets the size of the array required by ICurve::IGetSplinePts.",
+  "signature": "System.Int32 IGetSplinePtsSize( \n   ref System.Int32\nPropArray\n,\n   ref System.Double\nKnotsArray\n,\n   ref System.Double\nCntrlPntCoordArray\n)",
+  "parameters": [
+    {
+      "name": "PropArray",
+      "type": "System.Int32",
+      "description": "Array that includes dimension, order, number of control points, and periodicity"
+    },
+    {
+      "name": "KnotsArray",
+      "type": "System.Double",
+      "description": "knot1, knot2, ..., knot n"
+    },
+    {
+      "name": "CntrlPntCoordArray",
+      "type": "System.Double",
+      "description": "controlpoint1[dimension], controlpoint2[dimension], ..., controlpoint n [dimension]"
+    }
+  ],
+  "returns": "Size of the data set returned by ICurve::IGetSplinePts",
+  "remarks": "PropArray contains 4 integers:\nDimension\nOrder\nNumber of control points\nPeriodicity ( True or false )\nKnotsArray is an array of doubles with (Number of control points + Order) elements.\nThe size of the CntrlPntCoordArray array is based on the curve dimension.\nDimension = 2 then each control point is an array of 2 doubles ( u, v )\nDimension = 3 then each control point is an array of 3 doubles ( x, y, z)\nDimension = 4 then each control point is an array of 4 doubles ( x, y, z, w ) where w = weight\nData passed into this method must satisfy the following requirements:\nIf the curve is periodic, it must not have any repeated knots.\nIf the curve is non-periodic, it must only have repeated knots at its ends.\nThe curve must be cubic or lower degree, non-rational and have continuous first and second derivatives.\nNOTE:\nFor a linear or quadratic curve to satisfy these continuity requirements, it\nmust consist of a single segment.",
+  "examples": [
+    {
+      "title": "Get Curve Spline Points (C++)",
+      "href": "Get_Curve_Spline_Points_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.GetSplinePts"
+  ]
+}

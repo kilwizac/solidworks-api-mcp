@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "EdgeInFaceSense",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Facedisp",
+        "type": "System.Object",
+        "description": "Face that the edge is on"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.IEdgeInFaceSense2"
+    ],
+    "keywords": [
+      "edgeinfacesense",
+      "iedge",
+      "edge",
+      "face",
+      "sense",
+      "facedisp",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IEdge.EdgeInFaceSense",
+  "description": "Checks whether the edge and the loop lying on the specified face have the same direction (sense).",
+  "signature": "System.Boolean EdgeInFaceSense( \n   System.Object\nFacedisp\n)",
+  "parameters": [
+    {
+      "name": "Facedisp",
+      "type": "System.Object",
+      "description": "Face that the edge is on"
+    }
+  ],
+  "returns": "True for the same direction, false for the opposite direction",
+  "remarks": "If this edge does not belong to the specified face, then this method can cause unpredictable\nresults.",
+  "examples": [],
+  "related": [
+    "IEdge.IEdgeInFaceSense2"
+  ]
+}

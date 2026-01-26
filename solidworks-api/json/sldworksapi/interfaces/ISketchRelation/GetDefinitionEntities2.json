@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelation",
+    "member": "GetDefinitionEntities2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelation.GetEntitiesCount"
+    ],
+    "keywords": [
+      "getdefinitionentities2",
+      "isketchrelation",
+      "sketch",
+      "relation",
+      "definition",
+      "entities2",
+      "object",
+      "relations",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchRelation.GetDefinitionEntities2",
+  "description": "Gets the actual entities associated with this sketch relation.",
+  "signature": "System.Object GetDefinitionEntities2()",
+  "parameters": [],
+  "returns": "Array of the actual entities for this sketch relation",
+  "remarks": "When you create a sketch relation, an internal entity may be created to define that sketch relation. For example, if you add a sketch relation by specifying or selecting a point and an edge, a sketch segment may be created. If this happens, then\nISketchRelation::GetEntities\nand\nISketchRelation::IGetEntities\nreturn the point and sketch segment.\nTo get the actual entities used to define the sketch relation, call ISketchRelation::GetDefinitionEntities2 or\nISketchRelation::IGetDefinitionEntities2\n. For example, if the relation is of type\nswConstraintType_e\n.swConstraintType_OFFSETEDGE, and the relation is created by selecting a face, then this method returns that face.\nBecause some of the objects may be null, you should check for null before accessing them. You should deallocate any dynamically allocated memory.",
+  "examples": [
+    {
+      "title": "Get Sketch Relations (VBA)",
+      "href": "Get_Sketch_Relations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (VB.NET)",
+      "href": "Get_Sketch_Relations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (C#)",
+      "href": "Get_Sketch_Relations_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchRelation.GetEntitiesCount"
+  ]
+}

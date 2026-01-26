@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISldWorks",
+    "member": "CreatePropertyManagerPage",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Title",
+        "type": "System.String",
+        "description": "Title of the page"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swPropertyManagerPageOptions_e"
+      },
+      {
+        "name": "Handler",
+        "type": "System.Object",
+        "description": "Pointer to the event handler for this page ( IPropertyManagerPage2Handler5 )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Status of the creation as defined in swPropertyManagerPageStatus_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ICreatePropertyManagerPage"
+    ],
+    "keywords": [
+      "propertymanager",
+      "page",
+      "see",
+      "also",
+      "ipropertymanagerpage2",
+      "create",
+      "createpropertymanagerpage",
+      "isldworks",
+      "sld",
+      "works",
+      "manager",
+      "title",
+      "string",
+      "options",
+      "int32",
+      "handler",
+      "object",
+      "errors"
+    ],
+    "readonly": null
+  },
+  "title": "ISldWorks.CreatePropertyManagerPage",
+  "description": "Creates a PropertyManager page.",
+  "signature": "System.Object CreatePropertyManagerPage( \n   System.String\nTitle\n,\n   System.Int32\nOptions\n,\n   System.Object\nHandler\n,\n   out System.Int32\nErrors\n)",
+  "parameters": [
+    {
+      "name": "Title",
+      "type": "System.String",
+      "description": "Title of the page"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swPropertyManagerPageOptions_e"
+    },
+    {
+      "name": "Handler",
+      "type": "System.Object",
+      "description": "Pointer to the event handler for this page ( IPropertyManagerPage2Handler5 )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Status of the creation as defined in swPropertyManagerPageStatus_e"
+    }
+  ],
+  "returns": "PropertyManager page",
+  "remarks": "Specify swPropertyManagerPageOptions_e.swPropertyManagerOptions_LockedPage in the Options parameter when you create your PropertyManager page. It is important that when a handler (such as\nIPropertyManagerPage2Handler5::OnButtonPress\nor\nIPropertyManagerPage2Handler5::OnClose\n) is finished and control returns to SOLIDWORKS that the PropertyManager page is still there. If the PropertyManager page is not there, SOLIDWORKS might crash. Some methods try to close the PropertyManager page, but you can avoid this scenario by creating the PropertyManager page as Locked.",
+  "examples": [
+    {
+      "title": "IPropertyManagerPage2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPage2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.ICreatePropertyManagerPage"
+  ]
+}

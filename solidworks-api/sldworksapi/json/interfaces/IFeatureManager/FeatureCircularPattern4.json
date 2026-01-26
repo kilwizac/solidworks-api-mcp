@@ -1,0 +1,142 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureCircularPattern4",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Number",
+        "type": "System.Int32",
+        "description": "Number of instances of the circular pattern to insert, including the original instance"
+      },
+      {
+        "name": "Spacing",
+        "type": "System.Double",
+        "description": "Spacing between each instance of the circular pattern; total angle in radians if EqualSpacing is true"
+      },
+      {
+        "name": "FlipDirection",
+        "type": "System.Boolean",
+        "description": "True to flip the direction of the circular pattern, false to not"
+      },
+      {
+        "name": "DName",
+        "type": "System.String",
+        "description": "Name of the angular dimension defining the direction of the pattern"
+      },
+      {
+        "name": "GeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to use geometry pattern, false to not"
+      },
+      {
+        "name": "EqualSpacing",
+        "type": "System.Boolean",
+        "description": "True to use equal spacing, false to not"
+      },
+      {
+        "name": "VaryInstance",
+        "type": "System.Boolean",
+        "description": "True to vary the dimensions or spacing of individual pattern instances, false to not; valid only if GeometryPattern = false (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICircularPatternFeatureData"
+    ],
+    "keywords": [
+      "featurecircularpattern4",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "circular",
+      "pattern4",
+      "number",
+      "int32",
+      "spacing",
+      "double",
+      "flip",
+      "direction",
+      "boolean",
+      "name",
+      "string",
+      "geometry",
+      "pattern",
+      "equal",
+      "vary",
+      "instance",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.FeatureCircularPattern4",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureCircularPattern5.",
+  "signature": "Feature FeatureCircularPattern4( \n   System.Int32\nNumber\n,\n   System.Double\nSpacing\n,\n   System.Boolean\nFlipDirection\n,\n   System.String\nDName\n,\n   System.Boolean\nGeometryPattern\n,\n   System.Boolean\nEqualSpacing\n,\n   System.Boolean\nVaryInstance\n)",
+  "parameters": [
+    {
+      "name": "Number",
+      "type": "System.Int32",
+      "description": "Number of instances of the circular pattern to insert, including the original instance"
+    },
+    {
+      "name": "Spacing",
+      "type": "System.Double",
+      "description": "Spacing between each instance of the circular pattern; total angle in radians if EqualSpacing is true"
+    },
+    {
+      "name": "FlipDirection",
+      "type": "System.Boolean",
+      "description": "True to flip the direction of the circular pattern, false to not"
+    },
+    {
+      "name": "DName",
+      "type": "System.String",
+      "description": "Name of the angular dimension defining the direction of the pattern"
+    },
+    {
+      "name": "GeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to use geometry pattern, false to not"
+    },
+    {
+      "name": "EqualSpacing",
+      "type": "System.Boolean",
+      "description": "True to use equal spacing, false to not"
+    },
+    {
+      "name": "VaryInstance",
+      "type": "System.Boolean",
+      "description": "True to vary the dimensions or spacing of individual pattern instances, false to not; valid only if GeometryPattern = false (see Remarks )"
+    }
+  ],
+  "returns": "Circular pattern feature",
+  "remarks": "If...\nTo select a feature, use...\nTo select a component, use...\nUsing\nIModelDocExtension::SelectByID2\nto select features and components, ordered selection of the features and components is required\n1 to mark the direction axis\n4 to mark the features to pattern\n1 to mark the components to pattern\n2 to mark the direction axis\nDirectly selecting a feature or axis using\nIFeature::Select2\n1 to mark the direction axis\n4 to mark the features to pattern\nISelectData::Mark\nand\nComponent2::Select3\n1 to mark the components to pattern\n2 to mark the direction axis\nIf VaryInstance = true, then to indicate how to vary the individual pattern instances, decide on the type of pattern and call its corresponding method before calling this method:\nType...\nMethod...\nIncrement\nIFeatureManager::InsertVaryInstanceIncrement\nOverride\nIFeatureManager::InsertVaryInstanceOverride",
+  "examples": [
+    {
+      "title": "Create Circular Pattern (VBA)",
+      "href": "Create_Circular_Pattern_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Circular Pattern (VB.NET)",
+      "href": "Create_Circular_Pattern_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Circular Pattern (C#)",
+      "href": "Create_Circular_Pattern_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICircularPatternFeatureData"
+  ]
+}

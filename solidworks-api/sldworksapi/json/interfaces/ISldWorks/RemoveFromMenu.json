@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RemoveFromMenu",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CommandID",
+        "type": "System.Int32",
+        "description": "Command ID of the command to remove as defined by swCommands_e"
+      },
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Document types in which to remove the command as defined in swDocumentTypes_e"
+      },
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "1 = Menu 2 = Toolbar 3 = Both menu and toolbar"
+      },
+      {
+        "name": "RemoveParentMenu",
+        "type": "System.Boolean",
+        "description": "True to remove the specified command's parent menu, false to not NOTE: This parameter is specific to menus only; it does not affect toolbars."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddMenu",
+      "ISldWorks.AddMenuItem3",
+      "ISldWorks.AddMenuPopupItem2",
+      "ISldWorks.AddToolbar4",
+      "ISldWorks.AddToolbarCommand2",
+      "ISldWorks.DragToolbarButton",
+      "ISldWorks.HideToolbar2",
+      "ISldWorks.RemoveMenu",
+      "ISldWorks.RemoveMenuPopupItem2",
+      "ISldWorks.RemoveToolbar2"
+    ],
+    "keywords": [
+      "menus",
+      "items",
+      "remove",
+      "menu",
+      "toolbar",
+      "buttons",
+      "removefrommenu",
+      "isldworks",
+      "sld",
+      "works",
+      "command",
+      "id",
+      "int32",
+      "document",
+      "type",
+      "option",
+      "parent",
+      "boolean",
+      "commands",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.RemoveFromMenu",
+  "description": "Removes:",
+  "signature": "System.Boolean RemoveFromMenu( \n   System.Int32\nCommandID\n,\n   System.Int32\nDocumentType\n,\n   System.Int32\nOption\n,\n   System.Boolean\nRemoveParentMenu\n)",
+  "parameters": [
+    {
+      "name": "CommandID",
+      "type": "System.Int32",
+      "description": "Command ID of the command to remove as defined by swCommands_e"
+    },
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Document types in which to remove the command as defined in swDocumentTypes_e"
+    },
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "1 = Menu 2 = Toolbar 3 = Both menu and toolbar"
+    },
+    {
+      "name": "RemoveParentMenu",
+      "type": "System.Boolean",
+      "description": "True to remove the specified command's parent menu, false to not NOTE: This parameter is specific to menus only; it does not affect toolbars."
+    }
+  ],
+  "returns": "True if the specified items are removed, false if not",
+  "remarks": "This method does not affect context-sensitive menus (also called shortcut menus and pop-up menus); this command only affects main frame menus and toolbars. To remove commands and parent menus from context-sensitive menus, use\nISldWorks::RemoveFromPopupMenu\n.\nThe specified items are removed after this method executes, and their removal can be seen immediately.\nThis method is not persistent across SOLIDWORKS Design sessions.",
+  "examples": [
+    {
+      "title": "Remove Menu Commands, Menus, and Toolbar Buttons (VBA)",
+      "href": "Remove_Menu_Commands_Menus_and_Toolbar_Buttons_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.AddMenu",
+    "ISldWorks.AddMenuItem3",
+    "ISldWorks.AddMenuPopupItem2",
+    "ISldWorks.AddToolbar4",
+    "ISldWorks.AddToolbarCommand2",
+    "ISldWorks.DragToolbarButton",
+    "ISldWorks.HideToolbar2",
+    "ISldWorks.RemoveMenu",
+    "ISldWorks.RemoveMenuPopupItem2",
+    "ISldWorks.RemoveToolbar2"
+  ]
+}

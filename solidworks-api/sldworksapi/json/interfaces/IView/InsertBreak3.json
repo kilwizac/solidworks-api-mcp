@@ -1,0 +1,148 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertBreak3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Orientation",
+        "type": "System.Int32",
+        "description": "Horizontal or vertical cut as defined in swBreakLineOrientation_e"
+      },
+      {
+        "name": "Position1",
+        "type": "System.Double",
+        "description": "Location of the first line in the break (see Remarks )"
+      },
+      {
+        "name": "Position2",
+        "type": "System.Double",
+        "description": "Location of the second line in the break (see Remarks )"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Break line style as defined in swBreakLineStyle_e"
+      },
+      {
+        "name": "ShapeIntensity",
+        "type": "System.Int32",
+        "description": "Shape intensity for jagged cut break lines only; valid range is 1 (most) through 5 (least)"
+      },
+      {
+        "name": "BreakSketchBlocks",
+        "type": "System.Boolean",
+        "description": "True to break sketch blocks, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.BreakView",
+      "IView.BreakLineGap",
+      "IView.GetBreakLineCount2",
+      "IView.GetBreakLineInfo2",
+      "IView.GetBreakLines",
+      "IView.IsBroken"
+    ],
+    "keywords": [
+      "break",
+      "lines",
+      "see",
+      "also",
+      "ibreakline",
+      "drawing",
+      "views",
+      "cut",
+      "iview",
+      "view",
+      "insertbreak3",
+      "insert",
+      "break3",
+      "orientation",
+      "int32",
+      "position1",
+      "double",
+      "position2",
+      "style",
+      "shape",
+      "intensity",
+      "sketch",
+      "blocks",
+      "boolean",
+      "object",
+      "jagged",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IView.InsertBreak3",
+  "description": "Inserts the specified type of break at the specified location in this drawing view.",
+  "signature": "System.Object InsertBreak3( \n   System.Int32\nOrientation\n,\n   System.Double\nPosition1\n,\n   System.Double\nPosition2\n,\n   System.Int32\nStyle\n,\n   System.Int32\nShapeIntensity\n,\n   System.Boolean\nBreakSketchBlocks\n)",
+  "parameters": [
+    {
+      "name": "Orientation",
+      "type": "System.Int32",
+      "description": "Horizontal or vertical cut as defined in swBreakLineOrientation_e"
+    },
+    {
+      "name": "Position1",
+      "type": "System.Double",
+      "description": "Location of the first line in the break (see Remarks )"
+    },
+    {
+      "name": "Position2",
+      "type": "System.Double",
+      "description": "Location of the second line in the break (see Remarks )"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Break line style as defined in swBreakLineStyle_e"
+    },
+    {
+      "name": "ShapeIntensity",
+      "type": "System.Int32",
+      "description": "Shape intensity for jagged cut break lines only; valid range is 1 (most) through 5 (least)"
+    },
+    {
+      "name": "BreakSketchBlocks",
+      "type": "System.Boolean",
+      "description": "True to break sketch blocks, false to not"
+    }
+  ],
+  "returns": "Break line",
+  "remarks": "A break in a drawing view consists of a pair of break lines. This method inserts the break lines at the locations indicated by Position1 and Position2.\nIf the orientation of the break is...\nThen Position1 and Position2 are...\nHorizontal\nY values relative to the drawing view origin, indicating where along the Y axis to place the breaks\nVertical\nX values relative to the drawing view origin, indicating where along the X axis to place the breaks",
+  "examples": [
+    {
+      "title": "Insert Jagged Cut Break (VBA)",
+      "href": "Insert_Jagged_Cut_Break_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Jagged Cut Break (VB.NET)",
+      "href": "Insert_Jagged_Cut_Break_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Jagged Cut Break (C#)",
+      "href": "Insert_Jagged_Cut_Break_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.BreakView",
+    "IView.BreakLineGap",
+    "IView.GetBreakLineCount2",
+    "IView.GetBreakLineInfo2",
+    "IView.GetBreakLines",
+    "IView.IsBroken"
+  ]
+}

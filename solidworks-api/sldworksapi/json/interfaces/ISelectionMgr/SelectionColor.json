@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISelectionMgr",
+    "member": "SelectionColor",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "Mark value (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "ISelectionMgr.ClearSelectionColors"
+    ],
+    "keywords": [
+      "selectioncolor",
+      "iselectionmgr",
+      "selection",
+      "mgr",
+      "color",
+      "mark",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISelectionMgr.SelectionColor",
+  "description": "Gets or sets the selection color.",
+  "signature": "System.Int32 SelectionColor( \n   System.Int32\nMark\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "Mark value (see Remarks )"
+    }
+  ],
+  "returns": "Value indicating the color to use for a selection as defined by swSystemColors; these values are from swUserPreferenceIntegerValue_e kadov_tag{{<spaces>}} kadov_tag{{</spaces>}} (see Remarks )",
+  "remarks": "You should have a set of marks that you want to apply to selected objects. These marks are application specific and should be designed to present to the user a visual collection of like objects.\nThe values that SOLIDWORKS internal dialogs typically use for selection colors are:\nswSystemColorsSelectedItem1\nswSystemColorsSelectedItem2\nswSystemColorsSelectedItem3\nYou can also specify any of the following values:\nswSystemColorsViewportBackground\nswSystemColorsTopGradientColor\nswSystemColorsBottomGradientColor\nswSystemColorsDynamicHighlight\nswSystemColorsHighlight\nswSystemColorsSelectedFaceShaded\nswSystemColorsDrawingsVisibleModelEdge\nswSystemColorsDrawingsHiddenModelEdge",
+  "examples": [],
+  "related": [
+    "ISelectionMgr.ClearSelectionColors"
+  ]
+}

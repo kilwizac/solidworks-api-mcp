@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface3",
+    "member": "IGetFirstFaceArray",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "FromFrontFaceListDisp",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of front faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "SizeOfFrontFaceList",
+        "type": "System.Int32",
+        "description": "VBA, VB.NET, C#, and C++/CLI: Not supported"
+      },
+      {
+        "name": "FromFaceBackListDisp",
+        "type": "Face2",
+        "description": "Number of front faces"
+      },
+      {
+        "name": "SizeOfBackFaceList",
+        "type": "System.Int32",
+        "description": "in-process, unmanaged C++: Pointer to an array of back faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Number of back faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface3.GetFaceCount",
+      "IMidSurface3.GetFirstFaceArray",
+      "IMidSurface3.GetNextFaceArray",
+      "IMidSurface3.IGetNextFaceArray"
+    ],
+    "keywords": [
+      "igetfirstfacearray",
+      "imidsurface3",
+      "mid",
+      "surface3",
+      "first",
+      "face",
+      "array",
+      "front",
+      "list",
+      "disp",
+      "face2",
+      "size",
+      "int32",
+      "back",
+      "thickness",
+      "double"
+    ]
+  },
+  "title": "IMidSurface3.IGetFirstFaceArray",
+  "description": "Gets the first face and the thickness between the faces.",
+  "signature": "Face2 IGetFirstFaceArray( \n   out Face2\nFromFrontFaceListDisp\n,\n   out System.Int32\nSizeOfFrontFaceList\n,\n   out Face2\nFromFaceBackListDisp\n,\n   out System.Int32\nSizeOfBackFaceList\n,\n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "FromFrontFaceListDisp",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of front faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "SizeOfFrontFaceList",
+      "type": "System.Int32",
+      "description": "VBA, VB.NET, C#, and C++/CLI: Not supported"
+    },
+    {
+      "name": "FromFaceBackListDisp",
+      "type": "Face2",
+      "description": "Number of front faces"
+    },
+    {
+      "name": "SizeOfBackFaceList",
+      "type": "System.Int32",
+      "description": "in-process, unmanaged C++: Pointer to an array of back faces VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Number of back faces"
+    }
+  ],
+  "returns": "First face",
+  "remarks": "A separator is needed between the front faces and back faces. Thus, a NULL always exists between the front faces and the back faces.\nFor example, if there are five faces in the model, then the mid-surface has five faces. To get the five faces:\nCall IMidSurface3::IGetGetFirstFaceArray once.\nCall\nIMidSurface3::IGetNextFaceArray\nfour times.\nAt each call, the data is arranged as follows if there is one front face in the array:\n[\nNeutral face\n]\n,\n[\nfront face\n]\n, NULL,\n[\nback face\n]\nIf there are more than one front face in the array, then the data is arranged as follows:\n[\nNeutral face\n]\n,\n[\nfront face1, front face2\n]\n, NULL,\n[\nback face1, back face2\n]\nTo get the next face from the original paired faces, call IMidSurface3::IGetNextFaceArray.",
+  "examples": [],
+  "related": [
+    "IMidSurface3.GetFaceCount",
+    "IMidSurface3.GetFirstFaceArray",
+    "IMidSurface3.GetNextFaceArray",
+    "IMidSurface3.IGetNextFaceArray"
+  ]
+}

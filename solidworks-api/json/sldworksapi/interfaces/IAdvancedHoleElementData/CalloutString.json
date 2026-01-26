@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAdvancedHoleElementData",
+    "member": "CalloutString",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "calloutstring",
+      "iadvancedholeelementdata",
+      "advanced",
+      "hole",
+      "element",
+      "data",
+      "callout",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IAdvancedHoleElementData.CalloutString",
+  "description": "Gets or sets the hole callout string for this Advanced Hole element.",
+  "signature": "System.String CalloutString {get; set;}",
+  "parameters": [],
+  "returns": "Hole callout string (see Remarks )",
+  "remarks": "This property is valid only if\nIAdvancedHoleFeatureData::CustomizeCallout\nis set to true.\nThe hole callout string is formatted as follows:\n<\nLibraryName\n-\nSymbolName\n> <\ncallout_var1\n> <\ncallout_var2\n>... <\ncallout_varn\n>\nwhere:\nLibraryName\nand\nSymbolName\nare defined in\nc:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\lang\\english\\gtol.sym\n.\ncallout_var1-n\nare callout variables. Use\nIModelDocExtension::GetCalloutVariableString\nto get the strings for hole callout variables defined in\nswCalloutVariable_e\n. You can also find the hole callout variable strings by clicking\nHole Callout > Callout Variables\nin the Advanced Hole PropertyManager.\nNote\n: You must include the right- and left-angle brackets and the hyphens when setting the elements of this property string:\n\"<HOLE-SPOT><MOD-DIAM> <ah-cboredia> <HOLE-DEPTH> <ah-cboredepth><ah-cboreside>\"",
+  "examples": [
+    {
+      "title": "IAdvancedHoleElementData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedHoleElementData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

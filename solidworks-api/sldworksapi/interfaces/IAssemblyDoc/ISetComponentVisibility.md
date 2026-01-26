@@ -1,0 +1,96 @@
+---
+type: method
+interface: IAssemblyDoc
+member: ISetComponentVisibility
+returns: void
+parameters:
+  -
+    name: Visibility
+    type: System.Boolean
+    description: True to show the selected component, false to hide it
+  -
+    name: Config_opt
+    type: System.Int32
+    description: Configuration option as defined in swInConfigurationOpts_e
+  -
+    name: Config_count
+    type: System.Int32
+    description: Number of configurations for the component
+  -
+    name: Config_names
+    type: System.String
+    description: Array of the names of the configurations for the component
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - assemblies
+  - core
+  - ui
+related:
+  - IComponent2.GetVisibility
+  - IComponent2.ISetVisibility
+  - IComponent2.SetVisibility
+  - IComponent2.Visible
+keywords:
+  - components
+  - see
+  - also
+  - icomponent2
+  - visibility
+  - assemblies
+  - iassemblydoc
+  - hide
+  - show
+  - isetcomponentvisibility
+  - assembly
+  - doc
+  - component
+  - boolean
+  - config
+  - opt
+  - int32
+  - count
+  - names
+  - string
+  - void
+---
+
+# IAssemblyDoc.ISetComponentVisibility
+
+Hides or shows the selected component in the specified configurations in this assembly document.
+
+## Signature
+
+```csharp
+void ISetComponentVisibility( 
+   System.Boolean
+Visibility
+,
+   System.Int32
+Config_opt
+,
+   System.Int32
+Config_count
+,
+   ref System.String
+Config_names
+)
+```
+## Parameters
+
+- `Visibility` (System.Boolean): True to show the selected component, false to hide it
+- `Config_opt` (System.Int32): Configuration option as defined in swInConfigurationOpts_e
+- `Config_count` (System.Int32): Number of configurations for the component
+- `Config_names` (System.String): Array of the names of the configurations for the component
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IComponent2.GetVisibility`
+- `IComponent2.ISetVisibility`
+- `IComponent2.SetVisibility`
+- `IComponent2.Visible`

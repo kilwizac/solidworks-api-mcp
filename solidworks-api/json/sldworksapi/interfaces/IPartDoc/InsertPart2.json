@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "InsertPart2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of part file"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Insertion options as defined in swInsertPartOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IDerivedPartFeatureData"
+    ],
+    "keywords": [
+      "insertpart2",
+      "ipartdoc",
+      "part",
+      "doc",
+      "insert",
+      "part2",
+      "file",
+      "name",
+      "string",
+      "options",
+      "int32",
+      "feature"
+    ]
+  },
+  "title": "IPartDoc.InsertPart2",
+  "description": "Obsolete. Superseded by IPartDoc::InsertPart3.",
+  "signature": "Feature InsertPart2( \n   System.String\nFileName\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of part file"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Insertion options as defined in swInsertPartOptions_e"
+    }
+  ],
+  "returns": "Inserted feature",
+  "remarks": "This method inserts the specified part at the origin of this part. To position the inserted part at a different location or orientation or both, use\nIFeatureManager::InsertMoveCopyBody2\n.",
+  "examples": [],
+  "related": [
+    "IDerivedPartFeatureData"
+  ]
+}

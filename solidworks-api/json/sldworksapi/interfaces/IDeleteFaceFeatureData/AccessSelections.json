@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDeleteFaceFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Top-level document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "selections"
+    ],
+    "related": [
+      "IDeleteFaceFeatureData.IAccessSelections"
+    ],
+    "keywords": [
+      "accessselections",
+      "ideletefacefeaturedata",
+      "delete",
+      "face",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean",
+      "insert",
+      "change",
+      "deleteface",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDeleteFaceFeatureData.AccessSelections",
+  "description": "Allows access to the selections that describe the DeleteFace feature.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Top-level document"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc argument is the ModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nif you modified the feature\nIDeleteFaceFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Insert and Change DeleteFace Feature (C#)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VB.NET)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert and Change DeleteFace Feature (VBA)",
+      "href": "Insert_and_Change_DeleteFace_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDeleteFaceFeatureData.IAccessSelections"
+  ]
+}

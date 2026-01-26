@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParameter",
+    "member": "SetDoubleValue2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Value",
+        "type": "System.Double",
+        "description": "Value to store for the named configuration option"
+      },
+      {
+        "name": "ConfigurationOption",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swSetValueInConfiguration_e"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IParameter.GetDoubleValue"
+    ],
+    "keywords": [
+      "setdoublevalue2",
+      "iparameter",
+      "parameter",
+      "double",
+      "value2",
+      "value",
+      "configuration",
+      "option",
+      "int32",
+      "name",
+      "string",
+      "boolean",
+      "create",
+      "attribute",
+      "vba",
+      "delete",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IParameter.SetDoubleValue2",
+  "description": "Sets the double or integer value of a named configuration option parameter.",
+  "signature": "System.Boolean SetDoubleValue2( \n   System.Double\nValue\n,\n   System.Int32\nConfigurationOption\n,\n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "Value",
+      "type": "System.Double",
+      "description": "Value to store for the named configuration option"
+    },
+    {
+      "name": "ConfigurationOption",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swSetValueInConfiguration_e"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The ConfigurationName argument is:\nNot required if ConfigurationOption is set to swSetValue_InThisConfiguration = 1 or swSetValue_InAllConfigurations = 2.\nRequired if ConfigurationOption is set to swSetValue_InSpecificConfigurations = 3.\nSet C\nonfigurationOption to swSetValue_InAllConfigurations = 2 for drawing documents because they do not have configurations.",
+  "examples": [
+    {
+      "title": "Create Attribute (VBA)",
+      "href": "Create_Attribute_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Attribute (C#)",
+      "href": "Delete_Attribute_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Attribute (VB.NET)",
+      "href": "Delete_Attribute_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Attribute (VBA)",
+      "href": "Delete_Attribute_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IParameter.GetDoubleValue"
+  ]
+}

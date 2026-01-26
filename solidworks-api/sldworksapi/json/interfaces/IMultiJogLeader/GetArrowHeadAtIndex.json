@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMultiJogLeader",
+    "member": "GetArrowHeadAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arrow head"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IMultiJogLeader.GetArrowHeadCount",
+      "IMultiJogLeader.IGetArrowHeadAtIndex"
+    ],
+    "keywords": [
+      "arrows",
+      "multi",
+      "jog",
+      "leaders",
+      "getarrowheadatindex",
+      "imultijogleader",
+      "leader",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IMultiJogLeader.GetArrowHeadAtIndex",
+  "description": "Gets information for the specified arrow head.",
+  "signature": "System.Object GetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arrow head"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\narrowHeadPt\n[3],\narrowHeadDir\n[3],\narrowHeadWidth\n,\narrowHeadHeight\n,\narrowHeadStyle\n]\nwhere:\narrowHeadPt\n[3] = XYZ arrow head tip location.\narrowHeadDir\n[3] = XYZ arrow head direction.\narrowHeadWidth\n= arrow head width where the width is measured along the arrow head direction.\narrowHeadHeight\n= arrow head height.\narrowHeadStyle\n= arrow head style; for example, open, closed, and so on. See\nswArrowStyle_e\n.",
+  "examples": [],
+  "related": [
+    "IMultiJogLeader.GetArrowHeadCount",
+    "IMultiJogLeader.IGetArrowHeadAtIndex"
+  ]
+}

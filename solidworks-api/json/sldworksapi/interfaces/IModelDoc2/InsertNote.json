@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertNote",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text string or symbol for the note (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IInsertNote",
+      "IModelDoc2.InsertNewNote3",
+      "INote"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "insert",
+      "insertnote",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "text",
+      "string",
+      "object",
+      "vba",
+      "create",
+      "block",
+      "definition",
+      "instance",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.InsertNote",
+  "description": "Inserts a note in this document.",
+  "signature": "System.Object InsertNote( \n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text string or symbol for the note (see Remarks )"
+    }
+  ],
+  "returns": "Newly created note",
+  "remarks": "If you use a symbol in Text, it must be formatted as:\n<\nLibraryName-SymbolName\n>\nwhere\nLibraryName\nand\nSymbolName\nare in the SOLIDWORKS text file\nC:\\ProgramData\\SolidWorks\\SolidWorks 20\nnn\n\\\nlang\n\\\nenglish\\gtol.sym\n.\nNOTE\n: You must include the right- and left-angle brackets and separate\nLibraryName\nand\nSymbolName\nwith a hyphen; for example, <MOD-DEG>.\nThe leader attachment points for the new note come from the selections made before calling this method. The initial location of the note will be near the selection location. If there are no selections, the note:\nDoes not have a leader\nIs free standing\nIs at the origin of the model or drawing\nThis method creates a default note. To adjust the display characteristics of this note, you should use the pointer that is returned by this method to access the properties and get and set methods of the Note object, such as\nINote::SetBalloon\n,\nINote::Angle\n, and\nINote::LockPosition\n. Use\nINote::GetAnnotation\nor\nINote::IGetAnnotation\nto retrieve the\nIAnnotation\nobject.",
+  "examples": [
+    {
+      "title": "Insert Note (VBA)",
+      "href": "Insert_a_Note_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Block Definition and Insert Block Instance (VBA)",
+      "href": "Create_Block_Definition_and_Insert_Block_Instance_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Block Definition and Insert Block Instance (C#)",
+      "href": "Create_Block_Definition_and_Insert_Block_Instance_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Block Definition and Insert Block Instance (VB.NET)",
+      "href": "Create_Block_Definition_and_Insert_Block_Instance_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IInsertNote",
+    "IModelDoc2.InsertNewNote3",
+    "INote"
+  ]
+}

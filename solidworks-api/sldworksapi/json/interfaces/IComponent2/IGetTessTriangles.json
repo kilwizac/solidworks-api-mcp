@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "IGetTessTriangles",
+    "returns": "System.Single",
+    "parameters": [
+      {
+        "name": "NoConversion",
+        "type": "System.Boolean",
+        "description": "True prohibits conversion to user units from system units, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetTessTriangles"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "components",
+      "icomponent2",
+      "igettesstriangles",
+      "component2",
+      "tess",
+      "triangles",
+      "no",
+      "conversion",
+      "boolean",
+      "single"
+    ]
+  },
+  "title": "IComponent2.IGetTessTriangles",
+  "description": "Gets the triangles that make up the shaded picture tessellation for this component.",
+  "signature": "System.Single IGetTessTriangles( \n   System.Boolean\nNoConversion\n)",
+  "parameters": [
+    {
+      "name": "NoConversion",
+      "type": "System.Boolean",
+      "description": "True prohibits conversion to user units from system units, false does not"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to array of floats (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Tessellation information is available only when the component is loaded as lightweight.\nThese triangles are intended for graphics display purposes and do not represent a\ntessellation that could be used, for example, by a machining application. If you\nneed the type of accuracy associated with a machining product, we recommend that\nyou traverse the body faces and extract the topology and geometry data to create\nyour own faceting.\nThe format of the returned data is:\nfloat x, y, z - first point in meters\nfloat x, y, z - second point in meters\nfloat x, y, z - third point in meters\nfor the set of triangles for the component.\nThe total size of the data is\n[\n9 x sizeof(\nfloat)\nx\n(number of triangles)\n]\n.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetTessTriangles"
+  ]
+}

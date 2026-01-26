@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "ISetSelectionFilters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FilterCount",
+        "type": "System.Int16",
+        "description": "Number of filters"
+      },
+      {
+        "name": "Filters",
+        "type": "System.Int32",
+        "description": "in-procses, unmanaged C++: Array of filter values as defined in swSelectType_e (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "isetselectionfilters",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "selection",
+      "filters",
+      "filter",
+      "count",
+      "int16",
+      "int32",
+      "void"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageSelectionbox.ISetSelectionFilters",
+  "description": "Defines the types of objects the user can select for this selection box.",
+  "signature": "void ISetSelectionFilters( \n   System.Int16\nFilterCount\n,\n   ref System.Int32\nFilters\n)",
+  "parameters": [
+    {
+      "name": "FilterCount",
+      "type": "System.Int16",
+      "description": "Number of filters"
+    },
+    {
+      "name": "Filters",
+      "type": "System.Int32",
+      "description": "in-procses, unmanaged C++: Array of filter values as defined in swSelectType_e (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "You can only use this method to set properties on the PropertyManager page before it is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\n.\nWhen a user makes a selection in the graphics area, SOLIDWORKS must decide whether to select a face, body, or component. The following table shows what appears in a selection box created with the specifed filters after a selection occurs in the graphics area.\nFilters\nResult\nswSelFACES,  swSelSOLIDBODIES\nFace\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelFACES, swSelCOMPONENTS\nComponent\nIf you want a face to appear in the selection box, then use swSELCOMPSDONTOVERRIDE.\nswSelSOLIDBODIES, swSelCOMPONENTS\nComponent\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelFACES, swSelSOLIDBODIES, swSelCOMPONENTS\nComponent\nIf you want a face to appear in the selection box, then use swSelCOMPSDONTOVERRIDE.\n- or -\nIf you want a body to appear in the selection box, then use swSelSOLIDBODIESFIRST.\nswSelSURFACEBODIES and swSelSURFBODIESFIRST behave simliar to swSelSOLIDBODIES and swSelSOLIDBODIESFIRST. swSelEDGES and swSelVERTICES behave similar to swSelFACES. If the Filters is set to swSelNOTHING or swSelUNSUPPORTED, this the call to this method fails.",
+  "examples": [],
+  "related": []
+}

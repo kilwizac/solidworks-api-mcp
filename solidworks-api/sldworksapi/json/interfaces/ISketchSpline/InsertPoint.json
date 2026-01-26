@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSpline",
+    "member": "InsertPoint",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate on this spline"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate on this spline"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate on this spline"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSpline.DeletePoint",
+      "ISketchSpline.GetPointCount",
+      "ISketchSpline.GetPoints2",
+      "ISketchSpline.IEnumPoints",
+      "ISketchSpline.ShowInflectionPoints",
+      "ISplineHandle.SplinePointNumber"
+    ],
+    "keywords": [
+      "insertpoint",
+      "isketchspline",
+      "sketch",
+      "spline",
+      "insert",
+      "point",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISketchSpline.InsertPoint",
+  "description": "Inserts a point at the specified coordinates of this spline.",
+  "signature": "System.Boolean InsertPoint( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate on this spline"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate on this spline"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate on this spline"
+    }
+  ],
+  "returns": "True if a point is added to the spline, false if not",
+  "remarks": "This method works only if X, Y, and Z specify a location on this spline. You cannot add a new point that is not on this spline.",
+  "examples": [],
+  "related": [
+    "ISketchSpline.DeletePoint",
+    "ISketchSpline.GetPointCount",
+    "ISketchSpline.GetPoints2",
+    "ISketchSpline.IEnumPoints",
+    "ISketchSpline.ShowInflectionPoints",
+    "ISplineHandle.SplinePointNumber"
+  ]
+}

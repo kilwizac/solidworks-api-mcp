@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IGetSectionProperties2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of sections"
+      },
+      {
+        "name": "Sections",
+        "type": "System.Object",
+        "description": "Array of sections"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetSectionProperties2"
+    ],
+    "keywords": [
+      "mass",
+      "properties",
+      "see",
+      "imassproperty",
+      "section",
+      "igetsectionproperties2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "properties2",
+      "count",
+      "int32",
+      "sections",
+      "object",
+      "double"
+    ]
+  },
+  "title": "IModelDocExtension.IGetSectionProperties2",
+  "description": "Gets the section properties for the following types of selected items:",
+  "signature": "System.Double IGetSectionProperties2( \n   System.Int32\nCount\n,\n   ref System.Object\nSections\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of sections"
+    },
+    {
+      "name": "Sections",
+      "type": "System.Object",
+      "description": "Array of sections"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of size 24 of the section properties for the selected items (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method clears the selection set.\nIf...\nThen...\nThe user selected a set of either parallel planes or parallel faces\nYou can pass an empty sections array\nThe user selected any items and you pass a sections array\nThe properties of the user-selected items and the sections array are combined in the returned array\nYou pass a sections array and you do not want this array combined with the properties of any user-selected items\nClear any user-selected items\nThe objects in the Sections parameter are added to the current selection set. If the objects are already in the current selection set, an error is generated; that is, status code will be equal to 1, which means invalid input.\nThe format of the returned array (retval) of size 24:\nretval[0]\nstatus of request:\n0 = success\n1 = invalid input\n2 = selected faces are not in the same or parallel planes\n3 = unable to compute section properties\nretval[1]\narea\nretval[2]\ncentroid x\nretval[3]\ncentroid y\nretval[4]\ncentroid z\nretval[5]\nmoment of inertia XX\nreval[6]\nmoment of inertia YY\nretval[7]\nmoment of inertia ZZ\nretval[8]\nmoment of inertia -XY\nretval[9]\nmoment of inertia -ZX\nretval[10]\nmoment of inertia -YZ\nretval[11]\npolar moment of inertia of an area at the centroid\nretval[12]\nangle between principal axis and part axis\nretval[13]\nprincipal moment of inertia of an area at the centroid, lx\nretval[14]\nprincipal moment of inertia of an area at the centroid, ly\nretval[15]\ndirection vector X for principle axes (x component)\nretval[16]\ndirection vector X for principle axes (y component)\nretval[17]\ndirection vector X for principle axes (z component)\nretval[18]\ndirection vector Y for principle axes (x component)\nretval[19]\ndirection vector Y for principle axes (y component)\nretval[20]\ndirection vector Y for principle axes (z component)\nretval[21]\ndirection vector Z for principle axes (x component)\nretval[22]\ndirection vector Z for principle axes (y component)\nretval[23]\ndirection vector Z for principle axes (z component)\nThis method returns metric units unless explicitly specified otherwise.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetSectionProperties2"
+  ]
+}

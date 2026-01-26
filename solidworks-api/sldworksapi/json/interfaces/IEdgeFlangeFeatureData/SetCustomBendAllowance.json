@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdgeFlangeFeatureData",
+    "member": "SetCustomBendAllowance",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PBendData",
+        "type": "CustomBendAllowance",
+        "description": "Pointer to the ICustomBendAllowance object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IEdgeFlangeFeatureData.GetCustomBendAllowance",
+      "IEdgeFlangeFeatureData.UseDefaultBendAllowance"
+    ],
+    "keywords": [
+      "custom",
+      "bend",
+      "allowance",
+      "setcustombendallowance",
+      "iedgeflangefeaturedata",
+      "edge",
+      "flange",
+      "feature",
+      "data",
+      "void"
+    ]
+  },
+  "title": "IEdgeFlangeFeatureData.SetCustomBendAllowance",
+  "description": "Sets the custom bend allowance for this edge flange.",
+  "signature": "void SetCustomBendAllowance( \n   CustomBendAllowance\nPBendData\n)",
+  "parameters": [
+    {
+      "name": "PBendData",
+      "type": "CustomBendAllowance",
+      "description": "Pointer to the ICustomBendAllowance object"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is valid only if\nIEdgeFlangeFeatureData::UseDefaultBendAllowance\nis set to false.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "IEdgeFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdgeFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdgeFlangeFeatureData.GetCustomBendAllowance",
+    "IEdgeFlangeFeatureData.UseDefaultBendAllowance"
+  ]
+}

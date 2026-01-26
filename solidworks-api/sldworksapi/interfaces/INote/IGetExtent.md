@@ -1,0 +1,81 @@
+---
+type: method
+interface: INote
+member: IGetExtent
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+related:
+  - INote.AddText
+  - INote.BeginSketchEdit
+  - INote.EndSketchEdit
+  - INote.GetCompoundTextAtIndex
+  - INote.GetCompoundTextCount
+  - INote.GetExtentAtIndex
+  - INote.GetHeightAtIndex
+  - INote.GetSketch
+  - INote.GetTextJustificationAtIndex
+  - INote.GetTextOffsetAtIndex
+  - INote.IGetExtentAtIndex
+  - INote.IGetTextOffsetAtIndex
+  - INote.IsCompoundNote
+  - INote.SetTextJustificationAtIndex
+  - INote.SetTextOffsetAtIndex
+  - INote.SetTextPoint
+  - INote.SetZeroLengthLeader
+keywords:
+  - compound
+  - notes
+  - note
+  - see
+  - also
+  - inote
+  - igetextent
+  - extent
+  - double
+---
+
+# INote.IGetExtent
+
+Gets the extents of a note in sheet space.
+
+## Signature
+
+```csharp
+System.Double IGetExtent()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## Remarks
+
+The data returned is an array of 6 doubles that describe the lower-left and upper-right box extents of the note. The values (X,Y,Z) are in sheet space. In other words, the X,Y,Z values are in relation to the origin of the drawing document, which is in the lower-left hand corner of the drawing.
+
+## See Also
+
+- `INote.AddText`
+- `INote.BeginSketchEdit`
+- `INote.EndSketchEdit`
+- `INote.GetCompoundTextAtIndex`
+- `INote.GetCompoundTextCount`
+- `INote.GetExtentAtIndex`
+- `INote.GetHeightAtIndex`
+- `INote.GetSketch`
+- `INote.GetTextJustificationAtIndex`
+- `INote.GetTextOffsetAtIndex`
+- `INote.IGetExtentAtIndex`
+- `INote.IGetTextOffsetAtIndex`
+- `INote.IsCompoundNote`
+- `INote.SetTextJustificationAtIndex`
+- `INote.SetTextOffsetAtIndex`
+- `INote.SetTextPoint`
+- `INote.SetZeroLengthLeader`

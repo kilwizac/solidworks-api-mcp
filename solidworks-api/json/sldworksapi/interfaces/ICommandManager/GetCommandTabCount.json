@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandManager",
+    "member": "GetCommandTabCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Document type as defined in swDocumentTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandManager.AddCommandTab",
+      "ICommandManager.CommandTabs",
+      "ICommandManager.GetCommandTab",
+      "ICommandManager.RemoveCommandTab"
+    ],
+    "keywords": [
+      "getcommandtabcount",
+      "icommandmanager",
+      "command",
+      "manager",
+      "tab",
+      "count",
+      "document",
+      "type",
+      "int32"
+    ]
+  },
+  "title": "ICommandManager.GetCommandTabCount",
+  "description": "Gets the number of tabs on the CommandManager for the specified document type.",
+  "signature": "System.Int32 GetCommandTabCount( \n   System.Int32\nDocumentType\n)",
+  "parameters": [
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Document type as defined in swDocumentTypes_e"
+    }
+  ],
+  "returns": "Number of tabs on the CommandManager",
+  "remarks": "Call this method before\nICommandManager::IGetCommandTabs\nto get the size of the array for that method.\nAll CommandManager tabs are returned. Some CommandManager tabs may not be active or visible.",
+  "examples": [],
+  "related": [
+    "ICommandManager.AddCommandTab",
+    "ICommandManager.CommandTabs",
+    "ICommandManager.GetCommandTab",
+    "ICommandManager.RemoveCommandTab"
+  ]
+}

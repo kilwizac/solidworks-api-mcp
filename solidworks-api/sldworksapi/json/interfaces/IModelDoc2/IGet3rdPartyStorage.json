@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IGet3rdPartyStorage",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "StringIn",
+        "type": "System.String",
+        "description": "Name of the stream; the name should be less than 30 characters and must be unique and qualified among all parties choosing to store within the current session"
+      },
+      {
+        "name": "IsStoring",
+        "type": "System.Boolean",
+        "description": "True if you are storing data, false if you are reading data"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+      "DAssemblyDocEvents_SaveToStorageNotifyEventHandler",
+      "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+      "DDrawingDocEvents_SaveToStorageNotifyEventHandler",
+      "DPartDocEvents_LoadFromStorageNotifyEventHandler",
+      "DPartDocEvents_SaveToStorageNotifyEventHandler"
+    ],
+    "keywords": [
+      "istream",
+      "storage",
+      "stream",
+      "iget3rdpartystorage",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "get3rd",
+      "party",
+      "string",
+      "storing",
+      "boolean",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.IGet3rdPartyStorage",
+  "description": "Gets the IStream interface to the specified third-party stream inside this SOLIDWORKS Design document.",
+  "signature": "System.Object IGet3rdPartyStorage( \n   System.String\nStringIn\n,\n   System.Boolean\nIsStoring\n)",
+  "parameters": [
+    {
+      "name": "StringIn",
+      "type": "System.String",
+      "description": "Name of the stream; the name should be less than 30 characters and must be unique and qualified among all parties choosing to store within the current session"
+    },
+    {
+      "name": "IsStoring",
+      "type": "System.Boolean",
+      "description": "True if you are storing data, false if you are reading data"
+    }
+  ],
+  "returns": "IUnknown (see Remarks )",
+  "remarks": "Call this interface when a SaveToStorageNotify or LoadFromStorageNotify notification is received. Do not call this method to save or load from storage in reaction to the FileSaveNotify or FileOpenNotify2 events.\nDuring a file-open operation, your application receives a\nLoadFromStorageNotify\nevent if you have registered for document notifications. When you receive this event, it is safe to open your Stream for reading using IModelDoc2::\nIGet3rdPartyStorage\n. When a file is fully loaded, you can call this method for reading your data at any time. This provides you with access to read your storage node whenever needed. However, it is not a good idea to attempt this while in the middle of a FileSaveNotify or FileOpenNotify2 as unforeseen conflicts can occur.\nIf your application is loaded in the middle of a SOLIDWORKS Design session, then you can traverse all open documents using\nISldworks::EnumDocuments2\n,\nISldWorks::IGetFirstDocument2\n, or\nIModelDoc2::IGetNext\nand read the storage from all existing open documents. From that point on, your application can use the LoadFromStorageNotify event to recognize when new documents have been opened and need reading.\nFor storage writing, IModelDoc2::\nIGet3rdPartyStorage\ninterface is locked unless the\nSaveToStorageNotify\nevent has been sent. Therefore, you can only write to your storage when the file is actually being saved and your application has received the\nSaveToStorageNotify\nevent.\nYour call to IModelDoc2::\nIGet3rdPartyStorage\nmust be followed by a call to\nIModelDoc2::IRelease3rdPartyStorage\n. This must be done even when you fail to obtain a Stream and the return value from IModelDoc2::\nIGet3rdPartyStorage\nis NULL. If you fail to call IModelDoc2::IRelease3rdPartyStorage, the third-party node may remain locked and prevent future access. You are not required to call IModelDoc2::IRelease3rdPartyStorage, under any circumstance, if you called IModelDoc2::\nIGet3rdPartyStorage\nin reaction to one of the\nSaveToStorageNotify\nor\nLoadFromStorageNotify\nevents. However, calling IModelDoc2::IRelease3rdPartyStorage excessively does not cause problems.\nAs work progresses during an active session and you have information that needs to be stored, you may want to flag the document as dirty using\nIModelDoc2::SetSaveFlag\n. This causes a\nSave Changes?\nprompt to display if the user tries to close the file without saving. If the user clicks\nYes\nto this prompt, then your application receives the\nSaveToStorageNotify\nevent.\nNOTE:\nThe name given to the storage stream should be registered so that no conflicts occur. Once registered, the stream name is reserved exclusively for your application.\nPassing the unique ID string and a flag to determine if data is being stored or loaded returns an IUnknown pointer. You must then use QueryInterface() to get the\nIStream\ninterface. The stream is used for serialization and then released in the third-party code.\nSwRootStorage --|\n|\n|-- ThirdPty --|\n|\n|-- <SW Assigned IStream name 1>\n|-- <SW Assigned IStream name 2>\n|-- <SW Assigned IStream name 3>\n: : :\n|-- <SW Assigned IStream name n>\nThe IStream object used by the third party is written to IStream objects under an IStorage object called ThirdPty in the SOLIDWORKS compound document. Each third party writes to a single IStream object whose name is assigned by SOLIDWORKS.\nNOTE:\nIf you are using serialization, then be careful with the standard MFC macros;\notherwise, you may get messages like\nUnexpected File Format\nafter your application is unloaded. One way of using IMPLEMENT_SERIAL is:\nIMPLEMENT_SERIAL( CCustomAttr, CObject, VERSIONABLE_SCHEMA|0 )",
+  "examples": [],
+  "related": [
+    "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+    "DAssemblyDocEvents_SaveToStorageNotifyEventHandler",
+    "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+    "DDrawingDocEvents_SaveToStorageNotifyEventHandler",
+    "DPartDocEvents_LoadFromStorageNotifyEventHandler",
+    "DPartDocEvents_SaveToStorageNotifyEventHandler"
+  ]
+}

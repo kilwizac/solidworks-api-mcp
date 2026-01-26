@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPartDoc",
+    "member": "SetMaterialPropertyName2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of configuration"
+      },
+      {
+        "name": "Database",
+        "type": "System.String",
+        "description": "Name of the material database (see Remarks )"
+      },
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of material (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetMaterialPropertyName2",
+      "IPartDoc.GetMaterialVisualProperties",
+      "IPartDoc.IMaterialPropertyValues",
+      "IPartDoc.MaterialIdName",
+      "IPartDoc.MaterialPropertyValues",
+      "IPartDoc.MaterialUserName",
+      "IPartDoc.SetMaterialVisualProperties"
+    ],
+    "keywords": [
+      "material",
+      "properties",
+      "parts",
+      "see",
+      "also",
+      "ipartdoc",
+      "materials",
+      "remove",
+      "setmaterialpropertyname2",
+      "part",
+      "doc",
+      "name2",
+      "config",
+      "name",
+      "string",
+      "database",
+      "void",
+      "visual",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IPartDoc.SetMaterialPropertyName2",
+  "description": "Sets the name of the material property for the specified configuration.",
+  "signature": "void SetMaterialPropertyName2( \n   System.String\nConfigName\n,\n   System.String\nDatabase\n,\n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of configuration"
+    },
+    {
+      "name": "Database",
+      "type": "System.String",
+      "description": "Name of the material database (see Remarks )"
+    },
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of material (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method only supports parts.\nClick\nTools > Options > System Options > File Locations > Material Databases\nto verify that a folder for Database is specified.\nIf Database is an empty string, then the default\nsldmaterials\nis used. Otherwise, specify the material database file name with the\n.sldmat\nfilename extension. For example:\nPartDoc.SetMaterialPropertyName2 \"AddHoles\", \"solidworks materials.sldmat\", \"Alloy Steel\"\n- or -\nPartDoc.SetMaterialPropertyName2 \"AddHoles\", \"c:\\Program Files\\SOLIDWORKS\\lang\\english\\sldmaterials\\solidworks materials.sldmat\", \"Alloy Steel\"\nTo remove a material, pass an empty string to Name.",
+  "examples": [
+    {
+      "title": "Get and Set Material Visual Properties (VBA)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Material Visual Properties (VB.NET)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Material Visual Properties (C#)",
+      "href": "Get_and_Set_Material_Visual_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.GetMaterialPropertyName2",
+    "IPartDoc.GetMaterialVisualProperties",
+    "IPartDoc.IMaterialPropertyValues",
+    "IPartDoc.MaterialIdName",
+    "IPartDoc.MaterialPropertyValues",
+    "IPartDoc.MaterialUserName",
+    "IPartDoc.SetMaterialVisualProperties"
+  ]
+}

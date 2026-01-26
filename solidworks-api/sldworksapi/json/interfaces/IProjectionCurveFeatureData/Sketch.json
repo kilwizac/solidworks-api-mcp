@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IProjectionCurveFeatureData",
+    "member": "Sketch",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [
+      "IProjectionCurveFeatureData.Reverse"
+    ],
+    "keywords": [
+      "sketch",
+      "iprojectioncurvefeaturedata",
+      "projection",
+      "curve",
+      "feature",
+      "data",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IProjectionCurveFeatureData.Sketch",
+  "description": "Gets or sets the sketch to project in this projection curve feature.",
+  "signature": "System.Object Sketch {get; set;}",
+  "parameters": [],
+  "returns": "ISketch",
+  "remarks": "You cannot use this property to get or set the target sketch for sketch-on-sketch projection curve features. You can only pre-select the target sketch before creating the feature. See the\nIProjectionCurveFeatureData\nRemarks.\nUse\nIFeature::GetSpecificFeature2\nto get the ISketch object from the selected\nIFeature\nobject.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IProjectionCurveFeatureData.Reverse"
+  ]
+}

@@ -1,0 +1,53 @@
+---
+type: property
+interface: ISecondaryMemberUpToMembersFeatureData
+member: MemberPointParametersType
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related: []
+keywords:
+  - memberpointparameterstype
+  - isecondarymemberuptomembersfeaturedata
+  - secondary
+  - member
+  - up
+  - members
+  - feature
+  - data
+  - point
+  - parameters
+  - type
+  - int32
+  - isecondarymemberbetweenpointsfeaturedata
+readonly: null
+---
+
+# ISecondaryMemberUpToMembersFeatureData.MemberPointParametersType
+
+Gets or sets the point parameter used to create this secondary structure system up-to member.
+
+## Signature
+
+```csharp
+System.Int32 MemberPointParametersType {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Point parameter as defined by swSecondaryMemberUpToMembersMemberPointParameters_e
+
+## Remarks
+
+The setter of this method is valid only during creation. As in the user interface, you cannot change the member point parameters type after the secondary structure system member is created.
+
+## Examples
+
+- ISecondaryMemberBetweenPointsFeatureData (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISecondaryMemberBetweenPointsFeatureData)

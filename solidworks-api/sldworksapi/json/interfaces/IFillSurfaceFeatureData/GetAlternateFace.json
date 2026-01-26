@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFillSurfaceFeatureData",
+    "member": "GetAlternateFace",
+    "returns": "Face2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "getalternateface",
+      "ifillsurfacefeaturedata",
+      "fill",
+      "surface",
+      "feature",
+      "data",
+      "alternate",
+      "face",
+      "face2"
+    ]
+  },
+  "title": "IFillSurfaceFeatureData.GetAlternateFace",
+  "description": "Gets an alternate face to use as the boundary face for the curvature control of the patch.",
+  "signature": "Face2 GetAlternateFace()",
+  "parameters": [],
+  "returns": "Pointer to the alternate face, the IFace2 object",
+  "remarks": "This method is valid only when the contact type is tangent and edges are used to define the patch boundary. If an edge has two faces, then this method returns the face with which the resultant feature geometry is tangent.\nUse\nIFillSurfaceFeatureData::GetCurvatureControl\nto determine the contact type.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,315 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Overview of Macro Features</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HAID content=IntroMacro>
+<meta name=date content="10 16, 2002 3:18:43 PM">
+<meta name=MS-HKWD content="Macro feature (see also IMacroFeatureData Interface)">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=484>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Overview of Macro Features</h1>
+
+<p>Macro features are application-defined features that users can add to 
+ a SOLIDWORKS model. The effect of a macro feature on the model is defined 
+ by programs that you, or a third-party, develop. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p>Macro features use one of two techniques to specify their intended behavior. 
+ They can be associated either with functions:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>contained within a SOLIDWORKS <a href="VBA_Macro_Files.htm">VBA 
+ macro file (*.swp)</a>. <br>
+	<br>
+	- or -</p></li>
+	
+	<li class=kadov-p><p>exposed by a <a href="Exposed_COM_DLL_or_Executable.htm">COM 
+ server DLL or executable</a>.</p></li>
+</ul>
+
+<p>
+	<b>NOTE</b>: You cannot record or write macro features using SOLIDWORKS .NET 
+macros.</p>
+<p>You must write macro feature functions to define your macro feature. </p>
+<p>&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 93.265%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=93.265%>
+<col style="width: 24.453%;">
+<col style="width: 11.872%;">
+<col style="width: 12.375%;">
+<col style="width: 51.298%;">
+
+<tr style="x-cell-content-align: top; height: 0px;"
+	valign=top>
+<td rowspan=1
+	colspan=1
+	style="width: 24.453%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=24.453%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">Macro feature function</td>
+<td colspan=1
+	rowspan=1
+	style="width: 11.872%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=11.872%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">VBA</td>
+<td colspan=1
+	rowspan=1
+	style="width: 12.375%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=12.375%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">COM</td>
+<td rowspan=1
+	colspan=1
+	style="width: 51.298%;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #dbdbdb;
+			x-cell-content-align: bottom;"
+	valign=bottom
+	bgcolor=#DBDBDB
+	width=51.298%>
+<p class=apiTableColHeading
+	style="font-weight: bold;">Comment</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 24.453%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;
+			border-left-style: None;"
+	width=24.453%>
+<p><a href="Edit_Definition_Function.htm">Edit definition</a></td>
+<td colspan=1
+	rowspan=1
+	style="width: 11.872%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=11.872%>
+<p>Required</td>
+<td colspan=1
+	rowspan=1
+	style="width: 12.375%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=12.375%>
+<p>Required</td>
+<td colspan=1
+	rowspan=1
+	style="width: 51.298%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=51.298%>
+<p>Called whenever the user edits the macro feature's definition.</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 24.453%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-left-style: None;
+			border-bottom-style: None;"
+	width=24.453%>
+<p><a href="Rebuild_Function.htm">Rebuild</a></td>
+<td colspan=1
+	rowspan=1
+	style="width: 11.872%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=11.872%>
+<p>Required</td>
+<td colspan=1
+	rowspan=1
+	style="width: 12.375%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=12.375%>
+<p>Required</td>
+<td colspan=1
+	rowspan=1
+	style="width: 51.298%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=51.298%>
+<p>Called whenever the macro feature rebuilds.</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="width: 24.453%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-left-style: None;
+			border-bottom-style: None;"
+	width=24.453%>
+<p><a href="Security_Function.htm">Security</a> </td>
+<td colspan=1
+	rowspan=1
+	style="width: 11.872%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=11.872%>
+<p>Optional</td>
+<td colspan=1
+	rowspan=1
+	style="width: 12.375%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: None;
+			border-bottom-style: None;"
+	width=12.375%>
+<p>Required</td>
+<td colspan=1
+	rowspan=1
+	style="width: 51.298%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom-style: None;
+			border-right-style: None;"
+	width=51.298%>
+<p>Allows you to specify whether instances of the macro feature can be 
+ edited, suppressed, or deleted from the model.</td></tr>
+</table>
+
+<p>The names of the VBA macro feature functions must begin with <span style="font-weight: bold;">swm</span>. 
+ For example, you could name the functions<span style="font-weight: bold;"> 
+ swmEdit</span>, <span style="font-weight: bold;">swmRebuild</span>, and 
+ <span style="font-weight: bold;">swmSecurity</span>.</p>
+
+<p>Users must be able to run the program that creates the macro feature 
+ whenever they want to add one to a model.</p>
+
+<p>The <a href="MacroFeatureData_Interface.htm">IMacroFeatureData Interface</a> 
+ supports macro features.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"
+	align=center>&nbsp;</p>
+
+<!--kadov_tag{{<implicit_p>}}-->
+<!--Metadata type="DesignerControl" startspan
+<object classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" type="application/x-oleobject" id="RelatedTopic1" style="width: 1px; height: 1px;" width="1" height="1" dtcid="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="26">
+	<param name="_ExtentY" value="26">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="MacroFeatureInterface$$**$$VBAMacro$$**$$COMMacro$$**$$">
+	<param name="Image" value>
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\HELP\Cheryle_Working_Folder\SW2010\ROBOHELP\sldworksAPIProgGuide\Macro_Features\Overview_of_Macro_Features.htm">
+	<param name="_ID" value="RelatedTopic1">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value>
+	<param name="Window" value>
+	<param name="ChmFile" value>
+	<param name="DisableJump" value="0">
+</object>
+-->
+<OBJECT
+  CLASSID="clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11"
+  ID="RelatedTopic1"  TYPE="application/x-oleobject">
+  <PARAM  NAME="Command"  VALUE="ALink">
+  <PARAM  NAME="Font"  VALUE="MS Sans Serif,8,0,,">
+  <PARAM  NAME="Frame"  VALUE="">
+  <PARAM  NAME="Item1"  VALUE="">
+  <PARAM  NAME="Item2"  VALUE="MacroFeatureInterface">
+  <PARAM  NAME="Item3"  VALUE="VBAMacro">
+  <PARAM  NAME="Item4"  VALUE="COMMacro">
+</OBJECT>
+
+<!--metadata type="DesignerControl" endspan-->
+ 
+
+</body>
+
+</html>

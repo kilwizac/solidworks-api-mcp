@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISplineParamData",
+    "member": "GetSegments",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Segments",
+        "type": "System.Object",
+        "description": "Array of doubles ( see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISplineParamData.IGetSegments",
+      "ISplineParamData.SegmentCount"
+    ],
+    "keywords": [
+      "getsegments",
+      "isplineparamdata",
+      "spline",
+      "param",
+      "data",
+      "segments",
+      "object",
+      "boolean",
+      "parameterization",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISplineParamData.GetSegments",
+  "description": "Gets the coefficients of all of the piecewise polynomials of a spline.",
+  "signature": "System.Boolean GetSegments( \n   out System.Object\nSegments\n)",
+  "parameters": [
+    {
+      "name": "Segments",
+      "type": "System.Object",
+      "description": "Array of doubles ( see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This method works only with P-spline parameterization data. Before calling this method, call\nICurve::GetPCurveParams2\nto obtain the P-spline parameterization data object for the curve.\nEach pair of spline control points defines one segment of a curve. Each segment is typically represented by a cubic polynomial. This method returns a one-dimensional array containing doubles that are the coefficients of all of the piecewise cubic polynomials of the spline.\nThe segment coefficients are stored in the Segments array in order of increasing variable exponent:\n(constants)(first degree coefficients)(second degree coefficients)(third degree coefficients) etc.\nFor example, if the spline segments are represented by cubic rational (dim=4) polynomials in parametric form,\n(w0*a0 + w1*a1*t + w2*a2*t**2 + w3*a3*t**3)\np(t) = --------------------------------------------\n(w0 + w1*t + w2*t**2 + w3*t**3)\nwhere w0, w1, w2, w3 are weighting coefficients and a0, a1, a2, a3 are vector coefficients, then the Segments array stores (dimension(4) X order(4)) = 16 coefficients:\n(a0x,a0y,a0z,w0)(a1x,a1y,a1z,w1)(a2x,a2y,a2z,w2)(a3x,a3y,a3z,w3).\nIf the spline segments are represented by cubic non-rational (dim=3) polynomials, then the Segments array stores (dimension(3) X order(4)) = 12 coefficients:\n(a0x,a0y,a0z)(a1x,a1y,a1z)(a2x,a2y,a2z)(a3x,a3y,a3z0).\nThe total number of coefficients returned by this method is:\n(\nsegment count\n) x (\norder\n) x (\ndimension\n)",
+  "examples": [
+    {
+      "title": "Get P-Spline Parameterization Data (C#)",
+      "href": "Get_P-Spline_Parameterization_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get P-Spline Parameterization Data (VB.NET)",
+      "href": "Get_P-Spline_Parameterization_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get P-Spline Parameterization Data (VBA)",
+      "href": "Get_P-Spline_Parameterization_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISplineParamData.IGetSegments",
+    "ISplineParamData.SegmentCount"
+  ]
+}

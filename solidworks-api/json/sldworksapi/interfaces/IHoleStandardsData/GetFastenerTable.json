@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHoleStandardsData",
+    "member": "GetFastenerTable",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "StandardName",
+        "type": "System.String",
+        "description": "Standard name (see Remarks )"
+      },
+      {
+        "name": "FastenerID",
+        "type": "System.Int32",
+        "description": "Fastener ID (see Remarks )"
+      },
+      {
+        "name": "TableID",
+        "type": "System.Int32",
+        "description": "Fastener table type ID (see Remarks )"
+      },
+      {
+        "name": "HoleTable",
+        "type": "System.Object",
+        "description": "IHoleDataTable"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "getfastenertable",
+      "iholestandardsdata",
+      "hole",
+      "standards",
+      "data",
+      "fastener",
+      "table",
+      "standard",
+      "name",
+      "string",
+      "id",
+      "int32",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IHoleStandardsData.GetFastenerTable",
+  "description": "Gets the Hole Wizard fastener table for the specified Hole Wizard standard, fastener ID, and fastener table type ID.",
+  "signature": "System.Boolean GetFastenerTable( \n   System.String\nStandardName\n,\n   System.Int32\nFastenerID\n,\n   System.Int32\nTableID\n,\n   out System.Object\nHoleTable\n)",
+  "parameters": [
+    {
+      "name": "StandardName",
+      "type": "System.String",
+      "description": "Standard name (see Remarks )"
+    },
+    {
+      "name": "FastenerID",
+      "type": "System.Int32",
+      "description": "Fastener ID (see Remarks )"
+    },
+    {
+      "name": "TableID",
+      "type": "System.Int32",
+      "description": "Fastener table type ID (see Remarks )"
+    },
+    {
+      "name": "HoleTable",
+      "type": "System.Object",
+      "description": "IHoleDataTable"
+    }
+  ],
+  "returns": "True if fastener data table successfully retrieved, false if not",
+  "remarks": "To set:\nStandardName, use\nIHoleStandardsData::GetHoleStandards\n.\nFastenerID, use\nIHoleStandardsData::GetFastenerTypes\n.\nTableID, use\nIHoleStandardsData::GetFastenerTableTypes\n.",
+  "examples": [
+    {
+      "title": "IHoleStandardsData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IHoleStandardsData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

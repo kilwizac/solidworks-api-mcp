@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ReleaseStream",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "StreamType",
+        "type": "System.Int32",
+        "description": "1 = material stream"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "stream",
+      "release",
+      "releasestream",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "type",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.ReleaseStream",
+  "description": "Releases a previously obtained stream.",
+  "signature": "System.Boolean ReleaseStream( \n   System.Int32\nStreamType\n)",
+  "parameters": [
+    {
+      "name": "StreamType",
+      "type": "System.Int32",
+      "description": "1 = material stream"
+    }
+  ],
+  "returns": "True if stream is released, false if not",
+  "remarks": "To obtain the stream, call\nIModelDocExtension::GetStream\n.\nVB Example\nThis example illustrates attaching an XML document to a stream, and then releasing the stream.\nDim swApp As Object\nSub main()\nSet swApp = Application.SldWorks\nDim docext As SldWorks.ModelDocExtension\nSet docext = swApp.ActiveDoc.Extension\nDim xmldoc As MSXML2.DOMDocument\nSet xmldoc = CreateObject(\"MSXML2.DOMDocument\")\nDim stat As Boolean\nDim stream\nSet stream = docext.\nGetStream\n(1, stat)\nxmldoc.Load (stream)\ndocext.\nReleaseStream\n(1)\nxmldoc.Save (\"C:\\temp\\xmlmat.xml\")\nEnd Sub\nC++ Example\n//--------\nCComPtr<IModelDocExtension> ext;\nm_iModelDoc2->get_Extension(&ext);\nLPSTREAM stream = NULL;\nVARIANT_BOOL access = 0;\next->\nIGetStream\n(1, &access, &stream);\n// Your code\nif (stream)\n{\nVARIANT_BOOL status;\next->\nIReleaseStream\n(1, &status);\nstream->Release();\n}\n//--------",
+  "examples": [],
+  "related": []
+}

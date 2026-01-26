@@ -1,0 +1,123 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty",
+    "member": "SetOverrideMomentsOfInertiaValue",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ReferenceFrame",
+        "type": "System.Int32",
+        "description": "Frame of reference as defined in swMomentsOfInertiaReferenceFrame_e"
+      },
+      {
+        "name": "CoordinateSystemName",
+        "type": "System.String",
+        "description": "Name of coordinate system; valid only if ReferenceFrame = swMomentsOfInertiaReferenceFrame_e.swMomentsOfInertiaReferenceFrame_UserCoordinateSystem"
+      },
+      {
+        "name": "Value",
+        "type": "System.Object",
+        "description": "Array of nine doubles: [ Lxx, Lxy, Lxz, Lyx, Lyy, Lyz, Lzx, Lzy, Lzz ]"
+      },
+      {
+        "name": "Config_option",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of configuration names; valid only if Config_option = swInConfigurationOpts_e.swSpecifyConfiguration"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty.ISetOverrideMomentsOfInertiaValue",
+      "IMassProperty.OverrideMomentsOfInertia"
+    ],
+    "keywords": [
+      "setoverridemomentsofinertiavalue",
+      "imassproperty",
+      "mass",
+      "override",
+      "moments",
+      "inertia",
+      "value",
+      "reference",
+      "frame",
+      "int32",
+      "coordinate",
+      "name",
+      "string",
+      "object",
+      "config",
+      "option",
+      "names",
+      "boolean",
+      "properties",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IMassProperty.SetOverrideMomentsOfInertiaValue",
+  "description": "Overrides the moments of inertia of the model currently being edited in this part or assembly document.",
+  "signature": "System.Boolean SetOverrideMomentsOfInertiaValue( \n   System.Int32\nReferenceFrame\n,\n   System.String\nCoordinateSystemName\n,\n   System.Object\nValue\n,\n   System.Int32\nConfig_option\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "ReferenceFrame",
+      "type": "System.Int32",
+      "description": "Frame of reference as defined in swMomentsOfInertiaReferenceFrame_e"
+    },
+    {
+      "name": "CoordinateSystemName",
+      "type": "System.String",
+      "description": "Name of coordinate system; valid only if ReferenceFrame = swMomentsOfInertiaReferenceFrame_e.swMomentsOfInertiaReferenceFrame_UserCoordinateSystem"
+    },
+    {
+      "name": "Value",
+      "type": "System.Object",
+      "description": "Array of nine doubles: [ Lxx, Lxy, Lxz, Lyx, Lyy, Lyz, Lzx, Lzy, Lzz ]"
+    },
+    {
+      "name": "Config_option",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of configuration names; valid only if Config_option = swInConfigurationOpts_e.swSpecifyConfiguration"
+    }
+  ],
+  "returns": "True if the moments of inertia are overridden, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get and Override Mass Properties (VBA)",
+      "href": "Get_Mass_Properties_using_MassProperty_Object_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Override Mass Properties (VB.NET)",
+      "href": "Get_Mass_Properties_Using_IMassProperty_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Override Mass Properties (C#)",
+      "href": "Get_Mass_Properties_Using_IMassProperty_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty.ISetOverrideMomentsOfInertiaValue",
+    "IMassProperty.OverrideMomentsOfInertia"
+  ]
+}

@@ -1,0 +1,68 @@
+---
+type: method
+interface: IModelDocExtension
+member: ShowMessageBar
+returns: System.Int32
+parameters:
+  -
+    name: Definition
+    type: System.Object
+    description: IMessageBarDefinition
+  -
+    name: Handler
+    type: System.Object
+    description: IMessageBarHandler
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - ui
+related: []
+keywords:
+  - showmessagebar
+  - imodeldocextension
+  - model
+  - doc
+  - extension
+  - show
+  - message
+  - bar
+  - definition
+  - object
+  - handler
+  - int32
+  - imessagebarhandler
+---
+
+# IModelDocExtension.ShowMessageBar
+
+Shows the specified message bar in this document's window.
+
+## Signature
+
+```csharp
+System.Int32 ShowMessageBar( 
+   System.Object
+Definition
+,
+   System.Object
+Handler
+)
+```
+## Parameters
+
+- `Definition` (System.Object): IMessageBarDefinition
+- `Handler` (System.Object): IMessageBarHandler
+
+## Return Value
+
+Result code as defined by swShowMessageBarResult_e
+
+## Remarks
+
+This method is called by an add-in to display the specified message bar in this document's window.
+
+## Examples
+
+- IMessageBarHandler (ms-its:swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IMessageBarHandler.html)

@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetTessTriStrips",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "NoConversion",
+        "type": "System.Boolean",
+        "description": "True prohibits conversion to user units from system units, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.IGetTessTriStrips"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "components",
+      "icomponent2",
+      "gettesstristrips",
+      "component2",
+      "tess",
+      "tri",
+      "strips",
+      "no",
+      "conversion",
+      "boolean",
+      "object"
+    ]
+  },
+  "title": "IComponent2.GetTessTriStrips",
+  "description": "Gets the vertices that make up the shaded picture tessellation for this component.",
+  "signature": "System.Object GetTessTriStrips( \n   System.Boolean\nNoConversion\n)",
+  "parameters": [
+    {
+      "name": "NoConversion",
+      "type": "System.Boolean",
+      "description": "True prohibits conversion to user units from system units, false does not"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "Tessellation information is available only when the component is loaded as lightweight.\nThese triangles are intended for graphical display purposes and do not represent a tessellation that could be used, for example, by a machining application. If you need the type of accuracy associated with a machining product, you should traverse the body faces and extract the topology and geometry data to create your own faceting.\nwhere:\nFaceCount\n= number of faces on the body\nStripCount\n= total number of strips on the body\nVertexCount\nx 3 = total number of vertices. Multiplied by three to cover X,Y, and Z\nNumStrips\n= number of strips on a particular face\nVertexPerStrip\n= an array containing the number of vertex points on particular face strip\nVertexPoints\n= an array of X,Y,Z points for each vertex on the particular face strip\nBecause the returned array elements are of type float, and\nFaceCount\n,\nStripCount\n,\nVertexCount\n,\nNumStrips\n, and the elements of\nVertexPerStrip\nare integers that have been packed into the return array elements, and you must\nunpack\nthem before you can use them.\nFor example:\nsa[0] = number of faces\nsa[1] = total number of strips\nsa[2] = total number of vertices x 3 (i.e., - data values)\nFor each face:\nsa[3] = number of strips in this face\nsa[4] = number of vertices in first strip of this face\nsa[5] = number of vertices in second strip of this face\n...\nsa[3 + sa[3&cd; = number of vertices in last strip of this face\nFor each strip, i:\nsa[3 + sa[3] + 1] = X value of first vertex in this strip of the face\nsa[3 + sa[3] + 2] = Y value of first vertex in this strip of the face\nsa[3 + sa[3] + 3] = Z value of first vertex in this strip of the face\nsa[3 + sa[3] + 4] = X value of second vertex in this strip of the face\n...\nsa[3 + sa[3] + (sa[3+i] x 3)] = Z value of last vertex in this strip of the face",
+  "examples": [],
+  "related": [
+    "IComponent2.IGetTessTriStrips"
+  ]
+}

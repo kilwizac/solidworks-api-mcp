@@ -1,0 +1,43 @@
+---
+type: property
+interface: IDSPBRMaterial
+member: NormalTexture
+returns: System.String
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related: []
+keywords:
+  - normaltexture
+  - idspbrmaterial
+  - idspbr
+  - material
+  - normal
+  - texture
+  - string
+readonly: null
+---
+
+# IDSPBRMaterial.NormalTexture
+
+Gets or sets the normal texture map for this material.
+
+## Signature
+
+```csharp
+System.String NormalTexture {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Name of the normal texture map
+
+## Remarks
+
+Search for "Normal texture map" on the web to obtain more information about this property.

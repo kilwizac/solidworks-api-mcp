@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDrawingComponent",
+    "member": "Layer",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "layer",
+      "idrawingcomponent",
+      "drawing",
+      "component",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IDrawingComponent.Layer",
+  "description": "Gets or sets the name of the layer on which the component resides in the view.",
+  "signature": "System.String Layer {get; set;}",
+  "parameters": [],
+  "returns": "Name of the layer on which this component resides",
+  "remarks": "If you specify...\nThen...\nEmpty string\nName of the component's layer is set to None or to the name of the default layer.\nName of an existing layer\nComponent is placed on that layer.\nName of a non-existent layer\nLayer does not change.\nIf the drawing component is an assembly:\nyou can set the layer, and the layers of child drawing components will also be set.\nthe query returns an empty string because the layer is uniquely defined in case child\ndrawing components reside on different layers.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,285 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Add-in Callback and Enable Methods</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 16, 2002 1:52:32 PM">
+<meta name=MS-HKWD content="Add-ins,callback">
+<meta name=MS-HKWD content=Callbacks>
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2124>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Add-in Callback and Enable Methods</h1>
+
+<p>There are two possible signatures for the callback and enable methods of menu 
+items and toolbar commands of SOLIDWORKS add-ins:</p>
+
+<ul>
+	<li class=kadov-p><p style="line-height: 150%">No parameters</p></li>
+	<li class=kadov-p><p style="line-height: 150%">One string parameter 
+	(supported in SOLIDWORKS 2012 SP0 and later)</p></li>
+</ul>
+<h2>No Parameters in the Callback or Enable Method</h2>
+<p>Implement one callback method and one enable method for each menu item and 
+toolbar command in the add-in. These callback and enable methods take no 
+arguments.</p>
+<h3>Example:</h3>
+<p class="APICODE"><span style="font-family: Courier New">cmdIndex0 = 
+cmdGroup.AddCommandItem2(&quot;CreateCube&quot;, -1, &quot;Create a cube&quot;, &quot;Create cube&quot;, 0,
+<span style="color:#A31515">&quot;CreateCube&quot;</span>, <span style="color:
+#A31515">&quot;EnableCube&quot;</span>, mainItemID1, menuToolbarOption);</span></p>
+<p class="APICODE"><span style="font-family: Courier New">cmdIndex1 = 
+cmdGroup.AddCommandItem2(&quot;Show PMP&quot;, -1,
+&quot;Display sample property manager&quot;,
+&quot;Show PMP&quot;, 2, <span style="color:#A31515">&quot;ShowPMP&quot;</span>,
+<span style="color:#A31515">&quot;EnablePMP&quot;</span>, mainItemID2, menuToolbarOption);</span></p>
+<p class="APICODE">&nbsp;</p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New; color: #0000FF">#Region UI Callbacks</span></p>
+<blockquote>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New; color: blue">public</span><span style="font-family: Courier New">
+	<span style="color:blue">void</span> CreateCube</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">{</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">// Create Cube command code</font></span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">}</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New; color: blue">public</span><span style="font-family: Courier New">
+	<span style="color:blue">int</span> EnableCube</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">{</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">// Return status of the Create 
+	Cube enablement</font></span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">return</span> 
+	0;</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">}</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New; color: blue">public</span><span style="font-family: Courier New">
+	<span style="color:blue">void</span> ShowPMP</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">{</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">// Show PMP command code</font></span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">}</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New; color: blue">public</span><span style="font-family: Courier New">
+	<span style="color:blue">int</span> EnablePMP</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">{</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">// Return status of Show PMP 
+	enablement</font></span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;
+	<span style="color:blue">return</span> 
+	0;</span></p>
+	<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+	<span style="font-family: Courier New">}</span></p>
+</blockquote>
+<p>In the example above, one callback method and one enable method are 
+implemented for each command item. These methods are implemented somewhere else in the add-in, usually in the UI Callback region.</p>
+<h2>One String Parameter in the Callback or Enable Method</h2>
+<p>Implement one callback method and one enable method, each having one string 
+parameter. Do this when you want to use the same callback/enable method for all 
+of your menu items and toolbar commands. The argument in the method call 
+indicates which menu item or toolbar command behavior to invoke.</p>
+
+<h3>Example: </h3>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New; color: green">// Create command items, 
+passing to the callback and enable methods a number indicating which menu item 
+or toolbar command</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;cmdIndex0 = cmdGroup.AddCommandItem2(&quot;CreateCube&quot;, 
+-1, &quot;Create a cube&quot;,
+&quot;Create cube&quot;, 0, <span style="color:#A31515">
+&quot;CallBackFunction(1)&quot;</span>, <span style="color:#A31515">&quot;EnableFunction(1)&quot;</span>, 
+mainItemID1, menuToolbarOption);</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;cmdIndex1 = cmdGroup.AddCommandItem2(&quot;Show 
+PMP&quot;, -1, &quot;Display PMP&quot;,
+&quot;Show PMP&quot;, 2, <span style="color:#A31515">
+&quot;CallBackFunction(2)&quot;</span>, <span style="color:#A31515">&quot;EnableFunction(2)&quot;</span>, 
+mainItemID2, menuToolbarOption);</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">&nbsp;</p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New; color: #0000FF">#Region UI Callbacks</span><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color: green; font-family: Courier New">// Single-parameter callback 
+method</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">public</span>
+<span style="color:blue">void</span> CallBackFunction(<span style="color:blue">string</span> 
+data)</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">int</span> 
+commandType = <span style="color:blue">int</span>.Parse(data);</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+switch</span> (commandType)</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+case</span> 1:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:green">// Create cube command code</span></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+case</span> 2:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:green">// Show PMP command code</span></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+default</span>:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color: green; font-family: Courier New">// Single-parameter 
+enable method</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">public</span>
+<span style="color:blue">int</span> EnableFunction(<span style="color:blue">string</span> 
+data)</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">int</span> 
+commandType = <span style="color:blue">int</span>.Parse(data);</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+int arg;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+switch</span> (commandType)</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+case</span> 1:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:green">// </span><font color="#008000">Return status of 
+Create Cube enablement</font></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+arg = 0;</font></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;
+<span style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+case</span> 2:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:green">// Return status of Show PMP enablement</span></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New; color: #008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><font color="#0000FF"><span style="font-family: Courier New">arg = 1</span></font></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+default</span>:</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">arg = 0</font></span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">break</span>;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:blue">
+return</span> arg;</span></p>
+<p class="APICODE" style="text-autospace: none; margin-top: 0in">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p>&nbsp;</p>
+<p>In the example above, the same callback and enable methods are used for 
+multiple menu items. The parameter in the callback and enable methods 
+differentiates which behavior to invoke. The callback and enable 
+method parameters must be of data type string. </p>
+<p>Download <b>Using Single-Argument 
+	Callbacks in SolidWorks Add-ins, </b>which is a complete add-in example, 
+from the SOLIDWORKS API forum. You must be a SOLIDWORKS subscription customer to 
+access the SOLIDWORKS API forum documents.</p>
+<p>&nbsp;</p>
+
+<p>To learn more about add-ins and their menu items and toolbars:</p>
+<ul>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Add-in_Icons.htm">
+	Add-in Icons</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Shortcut_Menus.htm">Add-in Shortcut Menus</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Add-in_Toolbars.htm">Add-in Toolbars</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Using_SwAddin_to_Create_a_SolidWorks_Addin.htm">
+	Using SwAddin to Create a SOLIDWORKS Add-in</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%">
+	<a href="SolidWorks_API_Add-Ins,_Project_Templates,_and_Wizards.htm">
+	SOLIDWORKS API Add-in Templates and Wizards</a></p></li>
+</ul>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

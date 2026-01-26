@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISlicingData",
+    "member": "SetBoundingBoxDirection2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Double",
+        "description": "For linear slicing: 0.0 < right manipulator < 500.0 For radial slicing: -500.0 < bottom manipulator < 0.0 (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISlicingData.GetBoundingBoxDirection2"
+    ],
+    "keywords": [
+      "setboundingboxdirection2",
+      "islicingdata",
+      "slicing",
+      "data",
+      "bounding",
+      "box",
+      "direction2",
+      "direction",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISlicingData.SetBoundingBoxDirection2",
+  "description": "Sets bounding box direction 2 (right manipulator for linear slicing, bottom manipulator for radial slicing).",
+  "signature": "System.Boolean SetBoundingBoxDirection2( \n   System.Double\nDirection\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Double",
+      "description": "For linear slicing: 0.0 < right manipulator < 500.0 For radial slicing: -500.0 < bottom manipulator < 0.0 (see Remarks )"
+    }
+  ],
+  "returns": "True if direction 2 of bounding box successfully set, false if not",
+  "remarks": "Use these methods to adjust the slicing volume to include or exclude geometry for slicing:\nISlicingData::SetBoundingBoxDirection1\nISlicingData::SetBoundingBoxDirection2\nISlicingData::SetBoundingBoxDirection3\nISlicingData::SetBoundingBoxDirection4\nThis method fails when:\nDirection exceeds the specified limits.\nThe bounding box cannot be created because\nISlicingData::PlaneReferences\nhas not been set.",
+  "examples": [
+    {
+      "title": "ISlicingData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISlicingData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISlicingData.GetBoundingBoxDirection2"
+  ]
+}

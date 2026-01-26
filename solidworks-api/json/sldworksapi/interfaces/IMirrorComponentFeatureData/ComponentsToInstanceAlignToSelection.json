@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMirrorComponentFeatureData",
+    "member": "ComponentsToInstanceAlignToSelection",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "componentstoinstancealigntoselection",
+      "imirrorcomponentfeaturedata",
+      "mirror",
+      "component",
+      "feature",
+      "data",
+      "components",
+      "instance",
+      "align",
+      "selection",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMirrorComponentFeatureData.ComponentsToInstanceAlignToSelection",
+  "description": "Gets or sets the array of components whose orientation axes align to selected references.",
+  "signature": "System.Object ComponentsToInstanceAlignToSelection {get; set;}",
+  "parameters": [],
+  "returns": "Array of IComponent2",
+  "remarks": "This property is valid only for components for which you are\nnot\ncreating opposite-hand versions. Use\nIMirrorComponentFeatureData::OppositeHandComponents\nto specify components for which you are creating opposite-hand versions.\nUse\nIMirrorComponentFeatureData::ComponentOrientationsAlignToSelection\nto specify the orientation of each component in this property's array. There is a one-to-one mapping between this property's array and IMirrorComponentFeatureData::ComponentOrientationsAlignToSelection.\nUse\nIMirrorComponentFeatureData::AlignmentReferences\nto specify alignment references. There is a one-to-one mapping between this property's array and IMirrorComponentFeatureData::AlignmentReferences. If this property's array contains more elements than IMirrorComponentFeatureData::AlignmentReferences, then the feature will fail to be created.",
+  "examples": [
+    {
+      "title": "IMirrorComponentFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

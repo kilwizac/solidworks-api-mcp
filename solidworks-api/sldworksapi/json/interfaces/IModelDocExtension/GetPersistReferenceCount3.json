@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetPersistReferenceCount3",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "DispObj",
+        "type": "System.Object",
+        "description": "Selected object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "persistent",
+      "reference",
+      "ids",
+      "number",
+      "objects",
+      "id",
+      "getpersistreferencecount3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "persist",
+      "count3",
+      "disp",
+      "obj",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "IModelDocExtension.GetPersistReferenceCount3",
+  "description": "Gets the size of the persistent reference ID assigned to the selected object in this model document.",
+  "signature": "System.Int32 GetPersistReferenceCount3( \n   System.Object\nDispObj\n)",
+  "parameters": [
+    {
+      "name": "DispObj",
+      "type": "System.Object",
+      "description": "Selected object"
+    }
+  ],
+  "returns": "Size of that object's persistent reference ID",
+  "remarks": "Persistent reference ID values obtained using the now obsolete IModelDocExtension::GetPersistReference and its related obsolete methods, IModelDocExtension::GetPersistReferenceCount and IModelDocExtension::GetObjectByPersistReference2, are not compatible with persistent reference IDs obtained using\nIModelDocExtension::GetPersistReference3\nor\nIModelDocExtension::IGetPersistReference3\nand its related methods,\nIModelDocExtension::GetObjectByPersistReference3\nor\nIModelDocExtension::IGetObjectByPersistReference3\nand this method.\nIMPORTANT:\nSOLIDWORKS recommends not using this method with IModelDocExtension::IGetPersistReference3 because when these methods are used together, you will experience a significant decrease in performance.\nSee\nPersistent Reference IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get Object's Persistent Reference ID (C++)",
+      "href": "Get_Object_s_Persistent_Reference_ID_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

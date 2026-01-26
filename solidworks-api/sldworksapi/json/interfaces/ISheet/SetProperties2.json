@@ -1,0 +1,165 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "SetProperties2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PaperSz",
+        "type": "System.Int32",
+        "description": "Paper size as defined in swDwgPaperSizes_e (see Remarks )"
+      },
+      {
+        "name": "Templ",
+        "type": "System.Int32",
+        "description": "Template as defined in swDwgTemplates_e (see Remarks )"
+      },
+      {
+        "name": "Scale1",
+        "type": "System.Double",
+        "description": "Scale numerator (see Remarks )"
+      },
+      {
+        "name": "Scale2",
+        "type": "System.Double",
+        "description": "Scale denominator (see Remarks )"
+      },
+      {
+        "name": "FirstAngle",
+        "type": "System.Boolean",
+        "description": "True if you want first angle projection, false if not"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Custom paper width if PaperSz = swDwgPaperSizes_e.swDwgPaperUserDefined (see Remarks )"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Custom paper height if PaperSz = swDwgPaperSizes_e.swDwgPaperUserDefined (see Remarks )"
+      },
+      {
+        "name": "SameCustomPropAsSheetInDocProp",
+        "type": "System.Boolean",
+        "description": "True to select the Same as sheet specified in Document Properties check box in the Sheet Properties dialog, false to not (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ISheet.GetProperties2",
+      "ISheet.GetSize",
+      "ISheet.GetTemplateName",
+      "ISheet.PageSetup",
+      "ISheet.SetTemplateName"
+    ],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "properties",
+      "sheets",
+      "setproperties2",
+      "properties2",
+      "paper",
+      "sz",
+      "int32",
+      "templ",
+      "scale1",
+      "double",
+      "scale2",
+      "first",
+      "angle",
+      "boolean",
+      "width",
+      "height",
+      "same",
+      "custom",
+      "prop",
+      "doc",
+      "void",
+      "drawing",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISheet.SetProperties2",
+  "description": "Sets the properties for this sheet.",
+  "signature": "void SetProperties2( \n   System.Int32\nPaperSz\n,\n   System.Int32\nTempl\n,\n   System.Double\nScale1\n,\n   System.Double\nScale2\n,\n   System.Boolean\nFirstAngle\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n,\n   System.Boolean\nSameCustomPropAsSheetInDocProp\n)",
+  "parameters": [
+    {
+      "name": "PaperSz",
+      "type": "System.Int32",
+      "description": "Paper size as defined in swDwgPaperSizes_e (see Remarks )"
+    },
+    {
+      "name": "Templ",
+      "type": "System.Int32",
+      "description": "Template as defined in swDwgTemplates_e (see Remarks )"
+    },
+    {
+      "name": "Scale1",
+      "type": "System.Double",
+      "description": "Scale numerator (see Remarks )"
+    },
+    {
+      "name": "Scale2",
+      "type": "System.Double",
+      "description": "Scale denominator (see Remarks )"
+    },
+    {
+      "name": "FirstAngle",
+      "type": "System.Boolean",
+      "description": "True if you want first angle projection, false if not"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Custom paper width if PaperSz = swDwgPaperSizes_e.swDwgPaperUserDefined (see Remarks )"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Custom paper height if PaperSz = swDwgPaperSizes_e.swDwgPaperUserDefined (see Remarks )"
+    },
+    {
+      "name": "SameCustomPropAsSheetInDocProp",
+      "type": "System.Boolean",
+      "description": "True to select the Same as sheet specified in Document Properties check box in the Sheet Properties dialog, false to not (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "If you...\nThen...\nSpecify a custom template\nThe current custom template is used by this sheet until you call\nISheet::SetTemplateName\nand pass in a different custom template name.\nSpecify a value for Templ that does not match PaperSz\nThe template does not fit the paper size. Templ does not override the PaperSz setting.\nChange the scale of the sheet using Scale1 and Scale2\nAny drawing view that is set to use the sheet's scale takes the new scale setting.\nSet SameCustomPropAsSheetInDocProp to true\nThe\nTools > Options > Document Properties > Drawing Sheets > Use custom property values from the sheet\ncheck box must be preselected.\nNOTE:\nYou can also use\nISheet::SetSize\nto set the size of the sheet and the standard sheet size.",
+  "examples": [
+    {
+      "title": "Set Drawing Sheet Properties (C#)",
+      "href": "Set_Drawing_Sheet_Properties_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Drawing Sheet Properties (VB.NET)",
+      "href": "Set_Drawing_Sheet_Properties_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Drawing Sheet Properties (VBA)",
+      "href": "Set_Drawing_Sheet_Properties_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISheet.GetProperties2",
+    "ISheet.GetSize",
+    "ISheet.GetTemplateName",
+    "ISheet.PageSetup",
+    "ISheet.SetTemplateName"
+  ]
+}

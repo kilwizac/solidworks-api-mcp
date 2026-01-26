@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPageSelectionbox",
+    "member": "SetCalloutLabel",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Label",
+        "type": "System.String",
+        "description": "Default callout label"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "selections",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "setcalloutlabel",
+      "ipropertymanagerpageselectionbox",
+      "manager",
+      "page",
+      "selectionbox",
+      "callout",
+      "label",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IPropertyManagerPageSelectionbox.SetCalloutLabel",
+  "description": "Sets the default callout label for selections made in this selection box on the PropertyManager page.",
+  "signature": "System.Boolean SetCalloutLabel( \n   System.String\nLabel\n)",
+  "parameters": [
+    {
+      "name": "Label",
+      "type": "System.String",
+      "description": "Default callout label"
+    }
+  ],
+  "returns": "True if the callout label was set, false if not",
+  "remarks": "This property can be used at any time, whether or not the callout is displayed. The label must not be an empty string.\nBy default, the selection box is created without callouts for selections. This method overrides that behavior.\nFor more control, you can implement the\nIPropertyManagerPage2Handler5::OnSelectionboxCalloutCreated\nproperty, which allows you to collect information such as the selection type from the last selection. Next, use the\nIPropertyManagerPageSelectionbox::Callout\nproperty to get the\nICallout\nobject. Then, use that object's various properties to control the callout text and display characteristics based on that selection information.",
+  "examples": [],
+  "related": []
+}

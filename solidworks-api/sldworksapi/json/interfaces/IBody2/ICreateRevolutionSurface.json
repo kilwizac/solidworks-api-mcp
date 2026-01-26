@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateRevolutionSurface",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "ProfileCurve",
+        "type": "Curve",
+        "description": "Profile curve (generatrix)"
+      },
+      {
+        "name": "AxisPoint",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "AxisDirection",
+        "type": "System.Object",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "ProfileEndPtParams",
+        "type": "System.Object",
+        "description": "Array of 2 doubles (uStart,uEnd) (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.CreateRevolutionSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreaterevolutionsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "revolution",
+      "profile",
+      "curve",
+      "axis",
+      "point",
+      "object",
+      "direction",
+      "end",
+      "pt",
+      "params"
+    ]
+  },
+  "title": "IBody2.ICreateRevolutionSurface",
+  "description": "Creates a new surface of revolution.",
+  "signature": "Surface ICreateRevolutionSurface( \n   Curve\nProfileCurve\n,\n   System.Object\nAxisPoint\n,\n   System.Object\nAxisDirection\n,\n   System.Object\nProfileEndPtParams\n)",
+  "parameters": [
+    {
+      "name": "ProfileCurve",
+      "type": "Curve",
+      "description": "Profile curve (generatrix)"
+    },
+    {
+      "name": "AxisPoint",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "AxisDirection",
+      "type": "System.Object",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "ProfileEndPtParams",
+      "type": "System.Object",
+      "description": "Array of 2 doubles (uStart,uEnd) (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to a new surface of revolution",
+  "remarks": "You can use this method with:\nA set of related functions that construct a body from trimmed surfaces.\nTrimming curve creation routines (for example,\nISurface::IAddTrimmingLoop2\n) to construct a trimmed surface of revolution.\nIf you pass ProfileEndPtParams to this method, the surface is trimmed in the axial direction; otherwise, it is infinite. SOLIDWORKS closes the surface periodic ( period [0,2PI]) in the direction of revolution. The ProfileEndPtParams parameters indicate to SOLIDWORKS which part of the curve to spin. These parameters are used only when the profile curve intersects the revolve axis. You must pass the parameters in ascending order. SOLIDWORKS extends the curve from the given parameter range to meet the revolve axis and spins this portion of curve.\nYou can also pass an empty VARIANT object to ProfileEndPtParams; it cannot be NULL. You must define a variable of type VARIANT.\nAny existing object created by this method is destroyed if you call this method again.",
+  "examples": [],
+  "related": [
+    "IBody2.CreateRevolutionSurface"
+  ]
+}

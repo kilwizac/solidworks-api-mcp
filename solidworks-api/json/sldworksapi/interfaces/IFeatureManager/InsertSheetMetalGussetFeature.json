@@ -1,0 +1,275 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalGussetFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BOffset",
+        "type": "System.Boolean",
+        "description": "True to offset the gusset section plane from the selected reference point, false to not"
+      },
+      {
+        "name": "DOffset",
+        "type": "System.Double",
+        "description": "Value by which to offset the gusset section plane from the selected reference point; valid only if BOffset is true"
+      },
+      {
+        "name": "BFlipOffsetSide",
+        "type": "System.Boolean",
+        "description": "True to specify the gusset section plane offset on the opposite side of the selected reference point, false to not; valid only if BOffset is true"
+      },
+      {
+        "name": "ProfDimType",
+        "type": "System.Int32",
+        "description": "Type of gusset profile dimensioning scheme: 0 = indent 1 = profile dimensioning (see Remarks )"
+      },
+      {
+        "name": "DIndentDepth",
+        "type": "System.Double",
+        "description": "Gusset depth; valid only if ProfDimType = 0"
+      },
+      {
+        "name": "DLength",
+        "type": "System.Double",
+        "description": "d1 gusset leg length; length of sheet metal from bend to intersection with first end of gusset; valid only if ProfDimType = 1 (see Remarks )"
+      },
+      {
+        "name": "BUseAngle",
+        "type": "System.Boolean",
+        "description": "True to dimension the angle that is formed by the intersection of the gusset with either face adjacent to the bend; valid only if ProfDimType = 1 (see Remarks )"
+      },
+      {
+        "name": "DHeight",
+        "type": "System.Double",
+        "description": "d2 gusset leg length; length of sheet metal from bend to intersection with second end of gusset; valid only if ProfDimType = 1 (see Remarks )"
+      },
+      {
+        "name": "DAngle",
+        "type": "System.Double",
+        "description": "Angle formed by intersection of gusset with one face adjacent to the bend; valid only if ProfDimType = 1 and BUseAngle is true (see Remarks )"
+      },
+      {
+        "name": "BFlipSides",
+        "type": "System.Boolean",
+        "description": "True to swap d1 and d2 in the dimensioning scheme, false to not; valid only if ProfDimType = 1 (see Remarks )"
+      },
+      {
+        "name": "DWidth",
+        "type": "System.Double",
+        "description": "Gusset width"
+      },
+      {
+        "name": "DThickness",
+        "type": "System.Double",
+        "description": "Gusset thickness"
+      },
+      {
+        "name": "BDraft",
+        "type": "System.Boolean",
+        "description": "True to draft gusset side faces, false to not"
+      },
+      {
+        "name": "DDraftAngle",
+        "type": "System.Double",
+        "description": "Angle by which to draft the gusset side faces; valid only if BDraft is true"
+      },
+      {
+        "name": "BInnerCornerFillet",
+        "type": "System.Boolean",
+        "description": "True to fillet the gusset inner corners, false to not"
+      },
+      {
+        "name": "DInnerCornerFilletRadius",
+        "type": "System.Double",
+        "description": "Inner corner fillet radius; valid only if BInnerCornerFillet is true"
+      },
+      {
+        "name": "BOuterCornerFillet",
+        "type": "System.Boolean",
+        "description": "True to fillet the gusset outer corners, false to not"
+      },
+      {
+        "name": "DOuterCornerFilletRadius",
+        "type": "System.Double",
+        "description": "Outer corner fillet radius; valid only if BOuterCornerFilletRadius is true"
+      },
+      {
+        "name": "GussetType",
+        "type": "System.Int32",
+        "description": "Type of gusset: 0 = rounded back 1 = flat back"
+      },
+      {
+        "name": "BEdgeFillet",
+        "type": "System.Boolean",
+        "description": "True to fillet the edges of a gusset, false to not; valid only if GussetType = 1"
+      },
+      {
+        "name": "DEdgeFilletRadius",
+        "type": "System.Double",
+        "description": "Edge fillet radius; valid only if BEdgeFillet is true and GussetType = 1"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISMGussetFeatureData"
+    ],
+    "keywords": [
+      "insertsheetmetalgussetfeature",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "sheet",
+      "metal",
+      "gusset",
+      "offset",
+      "boolean",
+      "double",
+      "flip",
+      "side",
+      "prof",
+      "dim",
+      "type",
+      "int32",
+      "indent",
+      "depth",
+      "length",
+      "use",
+      "angle",
+      "height",
+      "sides",
+      "width",
+      "thickness",
+      "draft",
+      "inner",
+      "corner",
+      "fillet",
+      "radius",
+      "outer",
+      "edge"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalGussetFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertSheetMetalGussetFeature3.",
+  "signature": "Feature InsertSheetMetalGussetFeature( \n   System.Boolean\nBOffset\n,\n   System.Double\nDOffset\n,\n   System.Boolean\nBFlipOffsetSide\n,\n   System.Int32\nProfDimType\n,\n   System.Double\nDIndentDepth\n,\n   System.Double\nDLength\n,\n   System.Boolean\nBUseAngle\n,\n   System.Double\nDHeight\n,\n   System.Double\nDAngle\n,\n   System.Boolean\nBFlipSides\n,\n   System.Double\nDWidth\n,\n   System.Double\nDThickness\n,\n   System.Boolean\nBDraft\n,\n   System.Double\nDDraftAngle\n,\n   System.Boolean\nBInnerCornerFillet\n,\n   System.Double\nDInnerCornerFilletRadius\n,\n   System.Boolean\nBOuterCornerFillet\n,\n   System.Double\nDOuterCornerFilletRadius\n,\n   System.Int32\nGussetType\n,\n   System.Boolean\nBEdgeFillet\n,\n   System.Double\nDEdgeFilletRadius\n)",
+  "parameters": [
+    {
+      "name": "BOffset",
+      "type": "System.Boolean",
+      "description": "True to offset the gusset section plane from the selected reference point, false to not"
+    },
+    {
+      "name": "DOffset",
+      "type": "System.Double",
+      "description": "Value by which to offset the gusset section plane from the selected reference point; valid only if BOffset is true"
+    },
+    {
+      "name": "BFlipOffsetSide",
+      "type": "System.Boolean",
+      "description": "True to specify the gusset section plane offset on the opposite side of the selected reference point, false to not; valid only if BOffset is true"
+    },
+    {
+      "name": "ProfDimType",
+      "type": "System.Int32",
+      "description": "Type of gusset profile dimensioning scheme: 0 = indent 1 = profile dimensioning (see Remarks )"
+    },
+    {
+      "name": "DIndentDepth",
+      "type": "System.Double",
+      "description": "Gusset depth; valid only if ProfDimType = 0"
+    },
+    {
+      "name": "DLength",
+      "type": "System.Double",
+      "description": "d1 gusset leg length; length of sheet metal from bend to intersection with first end of gusset; valid only if ProfDimType = 1 (see Remarks )"
+    },
+    {
+      "name": "BUseAngle",
+      "type": "System.Boolean",
+      "description": "True to dimension the angle that is formed by the intersection of the gusset with either face adjacent to the bend; valid only if ProfDimType = 1 (see Remarks )"
+    },
+    {
+      "name": "DHeight",
+      "type": "System.Double",
+      "description": "d2 gusset leg length; length of sheet metal from bend to intersection with second end of gusset; valid only if ProfDimType = 1 (see Remarks )"
+    },
+    {
+      "name": "DAngle",
+      "type": "System.Double",
+      "description": "Angle formed by intersection of gusset with one face adjacent to the bend; valid only if ProfDimType = 1 and BUseAngle is true (see Remarks )"
+    },
+    {
+      "name": "BFlipSides",
+      "type": "System.Boolean",
+      "description": "True to swap d1 and d2 in the dimensioning scheme, false to not; valid only if ProfDimType = 1 (see Remarks )"
+    },
+    {
+      "name": "DWidth",
+      "type": "System.Double",
+      "description": "Gusset width"
+    },
+    {
+      "name": "DThickness",
+      "type": "System.Double",
+      "description": "Gusset thickness"
+    },
+    {
+      "name": "BDraft",
+      "type": "System.Boolean",
+      "description": "True to draft gusset side faces, false to not"
+    },
+    {
+      "name": "DDraftAngle",
+      "type": "System.Double",
+      "description": "Angle by which to draft the gusset side faces; valid only if BDraft is true"
+    },
+    {
+      "name": "BInnerCornerFillet",
+      "type": "System.Boolean",
+      "description": "True to fillet the gusset inner corners, false to not"
+    },
+    {
+      "name": "DInnerCornerFilletRadius",
+      "type": "System.Double",
+      "description": "Inner corner fillet radius; valid only if BInnerCornerFillet is true"
+    },
+    {
+      "name": "BOuterCornerFillet",
+      "type": "System.Boolean",
+      "description": "True to fillet the gusset outer corners, false to not"
+    },
+    {
+      "name": "DOuterCornerFilletRadius",
+      "type": "System.Double",
+      "description": "Outer corner fillet radius; valid only if BOuterCornerFilletRadius is true"
+    },
+    {
+      "name": "GussetType",
+      "type": "System.Int32",
+      "description": "Type of gusset: 0 = rounded back 1 = flat back"
+    },
+    {
+      "name": "BEdgeFillet",
+      "type": "System.Boolean",
+      "description": "True to fillet the edges of a gusset, false to not; valid only if GussetType = 1"
+    },
+    {
+      "name": "DEdgeFilletRadius",
+      "type": "System.Double",
+      "description": "Edge fillet radius; valid only if BEdgeFillet is true and GussetType = 1"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method to create a sheet metal gusset feature, you must pre-select faces, lines, edges, vertices, or points as follows:\nTo...\nCall\nIModelDocExtension::SelectByID2\nto select...\nSpecify the legs of the gusset feature\nTwo flat faces of a bend.\n- or -\nTwo flat faces adjacent to a cylindrical bend face.\n- or -\nOne cylindrical bend face.\n- or -\nOne flat face and one non-planar face adjacent to a toroidal bend.\n- or -\nOne toroidal bend face.\nOptionally orient the gusset section plane\nOne linear edge or sketch segment that is perpendicular to the gusset section plane.\nIf you do not pre-select either entity, then the method uses the bend line adjacent to the gusset legs as the reference.\nOptionally position the gusset section plane\nOne vertex, sketch point, or reference point.\nIf you do not pre-select any one of these entities, then you must set BOffset to true and specify DOffset for an assumed reference point. For insertion of the first gusset, the assumed reference point is on the end of the sheet metal bend. For second and subsequent gusset insertions, the assumed reference point is on the edge of the gusset last inserted.\nInstead of pre-selecting the references and calling this method, you can pass the references as arrays to\nIFeatureManager::InsertSheetMetalGussetFeature2\n.\nIf ProfDimType = 1, to dimension the gusset profile using...\nSpecify...\nBoth legs of the gusset\nDLength of d1 leg\nDHeight of d2 leg\nBUseAngle = false\nBFlipSides = true to swap d1 and d2 legs during dimensioning\nd1 leg and the angle it forms with the gusset\nDLength of d1 leg\nDAngle of angle formed by gusset intersecting d1 leg\nBUseAngle = true\nBFlipSides = true to swap d1 and d2 legs during dimensioning\nd2 leg and the angle it forms with the gusset\nDHeight of d2 leg\nDAngle of angle formed by gusset intersecting d2 leg\nBUseAngle = true\nBFlipSides = true to swap d1 and d2 legs during dimensioning\nSee the SOLIDWORKS Help for more information about sheet metal gusset features.",
+  "examples": [],
+  "related": [
+    "ISMGussetFeatureData"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAdvancedSelectionCriteria",
+    "member": "AddItem2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Category1",
+        "type": "System.String",
+        "description": "Name of Category1 (see Remarks )"
+      },
+      {
+        "name": "Category2",
+        "type": "System.String",
+        "description": "Name of Category2 (see Remarks )"
+      },
+      {
+        "name": "Condition",
+        "type": "System.Int32",
+        "description": "Condition as defined in swAdvSelectType_e (see Remarks )"
+      },
+      {
+        "name": "Value",
+        "type": "System.String",
+        "description": "Text value satisfying Condition (see Remarks )"
+      },
+      {
+        "name": "IsAnd",
+        "type": "System.Boolean",
+        "description": "True if all of the criteria in the advanced component selection list must be met, false if only this criteria in the advanced component selection list must be met"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "additem2",
+      "iadvancedselectioncriteria",
+      "advanced",
+      "selection",
+      "criteria",
+      "add",
+      "item2",
+      "category1",
+      "string",
+      "category2",
+      "condition",
+      "int32",
+      "value",
+      "boolean"
+    ]
+  },
+  "title": "IAdvancedSelectionCriteria.AddItem2",
+  "description": "Adds the specified advanced component selection criterion to the list.",
+  "signature": "System.Int32 AddItem2( \n   System.String\nCategory1\n,\n   System.String\nCategory2\n,\n   System.Int32\nCondition\n,\n   System.String\nValue\n,\n   System.Boolean\nIsAnd\n)",
+  "parameters": [
+    {
+      "name": "Category1",
+      "type": "System.String",
+      "description": "Name of Category1 (see Remarks )"
+    },
+    {
+      "name": "Category2",
+      "type": "System.String",
+      "description": "Name of Category2 (see Remarks )"
+    },
+    {
+      "name": "Condition",
+      "type": "System.Int32",
+      "description": "Condition as defined in swAdvSelectType_e (see Remarks )"
+    },
+    {
+      "name": "Value",
+      "type": "System.String",
+      "description": "Text value satisfying Condition (see Remarks )"
+    },
+    {
+      "name": "IsAnd",
+      "type": "System.Boolean",
+      "description": "True if all of the criteria in the advanced component selection list must be met, false if only this criteria in the advanced component selection list must be met"
+    }
+  ],
+  "returns": "Index number of the newly added criterion in the advanced component selection criteria list",
+  "remarks": "For a list of possible Category1, Category2, Condition, and Value values, see the\nAssemblies > Basic Component Operations > Selecting Components > Advanced Component Selection > Search Criteria for Advanced Component Selection\ntopic in the SOLIDWORKS Design user-interface help.\nAfter calling this method multiple times to add criteria:\nSave\nthe criteria.\nSelect\nthe components satisfying the criteria.",
+  "examples": [],
+  "related": []
+}

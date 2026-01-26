@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface2",
+    "member": "IGetNextFace",
+    "returns": "Face2",
+    "parameters": [
+      {
+        "name": "FromFace1Disp",
+        "type": "Face2",
+        "description": "Face on the original part body used in generating the neutral face"
+      },
+      {
+        "name": "FromFace2Disp",
+        "type": "Face2",
+        "description": "Face on the original part body used in generating the neutral face"
+      },
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Distance between the two parallel faces, FromFace1Disp and FromFace2Disp"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface2.GetFaceCount",
+      "IMidSurface2.GetFirstFace",
+      "IMidSurface2.GetNextFace"
+    ],
+    "keywords": [
+      "igetnextface",
+      "imidsurface2",
+      "mid",
+      "surface2",
+      "next",
+      "face",
+      "face1",
+      "disp",
+      "face2",
+      "thickness",
+      "double"
+    ]
+  },
+  "title": "IMidSurface2.IGetNextFace",
+  "description": "Obsolete. Superseded by IMidSurface3::IGetNextFace.",
+  "signature": "Face2 IGetNextFace( \n   out Face2\nFromFace1Disp\n,\n   out Face2\nFromFace2Disp\n,\n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "FromFace1Disp",
+      "type": "Face2",
+      "description": "Face on the original part body used in generating the neutral face"
+    },
+    {
+      "name": "FromFace2Disp",
+      "type": "Face2",
+      "description": "Face on the original part body used in generating the neutral face"
+    },
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Distance between the two parallel faces, FromFace1Disp and FromFace2Disp"
+    }
+  ],
+  "returns": "Face in this midsurface feature",
+  "remarks": "Call\nIMidSurface2::IGetFirstFace\nbefore calling this method to get the first neutral face.\nThis method returns the next neutral face in this midsurface feature along with three other items.\nThe first two return values are the two faces from the original part body that were used to generate this neutral midsurface face.\nThe next return value is the thickness (in meters) between the two parallel faces from the original part body.\nThe last return value is the neutral face in this midsurface feature.",
+  "examples": [],
+  "related": [
+    "IMidSurface2.GetFaceCount",
+    "IMidSurface2.GetFirstFace",
+    "IMidSurface2.GetNextFace"
+  ]
+}

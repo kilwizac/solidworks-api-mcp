@@ -1,0 +1,233 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Understanding the SOLIDWORKS API Class Hierarchy</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="SOLIDWORKS API object model">
+<meta name=MS-HKWD content="SOLIDWORKS API class hierarchy">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1154>
+<meta name=layout-width content=651>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Understanding the SOLIDWORKS API Class Hierarchy</h1>
+
+<p>SOLIDWORKS does not document its API with a complete class hierarchy 
+ diagram, much like the famous MFC and .NET/WinFX class hierarchy diagrams. 
+ The reason for this is that MFC and .NET rely heavily on:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Classes </p></li>
+	
+	<li class=kadov-p><p>Implementation inheritance </p></li>
+	
+	<li class=kadov-p><p>Casting between classes using static casts (C++) 
+ </p></li>
+</ul>
+
+<p>These types of class libraries and APIs can often benefit from a hierarchy 
+ diagram.</p>
+
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->However, 
+ SOLIDWORKS is a COM-based API that uses:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Interfaces </p></li>
+	
+	<li class=kadov-p><p>Interface inheritance </p></li>
+	
+	<li class=kadov-p><p>Factory methods to return interfaces on existing 
+ and new objects </p></li>
+	
+	<li class=kadov-p><p>Casting between interfaces through:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li>QueryInterface 
+ (C++), which
+	<span class="expandtext" id="POPUP187979727_tmp" bInitialized="true">
+	<span style="font-style: normal"><font color="#000000">returns a pointer to 
+	a specified interface on an object to which a client currently holds an 
+	interface pointer.</font></span></span></li>
+	<li>direct assignment (VB/VB.NET).</li>
+	<li>the <span style="font-weight: bold;">is/as</span> 
+ reserved words (C#).</li>
+</ul>
+
+	</li>
+</ul>
+
+<p>While a graphical hierarchy diagram often does not convey as much information 
+ in this style of API, there are a few places where it can be useful.</p>
+
+<h2>Interface Inheritance in the SOLIDWORKS API</h2>
+
+<p>Objects that implement:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAssemblyDoc.html">IAssemblyDoc</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IDrawingDoc.html">IDrawingDoc</a>, 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPartDoc.html">IPartDoc</a> 
+ can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IModelDoc2.html">IModelDoc2</a>. 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p></li>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IEdge.html">IEdge</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFace2.html">IFace2</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature.html">IFeature</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ILoop2.html">ILoop2</a>, 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IVertex.html">IVertex</a> 
+ can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IEntity.html">IEntity</a>. 
+ </p></li>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IBomTableAnnotation.html">IBomTableAnnotation</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IHoleTableAnnotation.html">IHoleTableAnnotation</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IRevisionTableAnnotation.html">IRevisionTableAnnotation</a>,
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IWeldmentCutListAnnotation.html">IWeldmentCutListAnnotation</a>, 
+	and other table-annotation interfaces 
+ can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ITableAnnotation.html">ITableAnnotation</a>. 
+ 	See
+	<a href="swconst.chm::/SolidWorks.interop.swconst~SolidWorks.interop.swconst.swTableAnnotationType_e.html">
+	swTableAnnotationType_e</a> for a list of the interfaces that can 
+	QueryInterface to ITableAnnotation.</p></li>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAttribute.html">IAttribute</a> 
+ also can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature.html">IFeature</a>. 
+ </p></li>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchArc.html">ISketchArc</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchEllipse.html">ISketchEllipse</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchLine.html">ISketchLine</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchParabola.html">ISketchParabola</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchPoint.html">ISketchPoint</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchSpline.html">ISketchSpline</a>, 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchText.html">ISketchText</a> 
+ can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketchSegment.html">ISketchSegment</a>. 
+ </p></li>
+	
+	<li class=kadov-p><p>PropertyManager page controls, such as <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageActiveX.html">IPropertyManagerPageActiveX</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageBitmap.html">IPropertyManagerPageBitmap</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageBitmapButton.html">IPropertyManagerPageBitmapButton</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageButton.html">IPropertyManagerPageButton</a>, 
+ etc., can QueryInterface to <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPageControl.html">IPropertyManagerPageControl</a>. 
+ </p></li>
+</ul>
+
+<p><span style="font-weight: bold;"><!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->NOTE:</span> 
+ The phrase <span style="font-style: italic;">can QueryInterface</span> 
+ to is synonymous with <span style="font-style: italic;">implements</span> 
+ or <span style="font-style: italic;">can be assigned to</span> in Visual 
+ Basic.</p>
+
+<p>While it is technically incorrect to say, for example, that IPartDoc 
+ derives from IModelDoc2, the way that developers use these interfaces 
+ is similar to the way they would use a derived class with implementation 
+ inheritance.</p>
+
+<h2>Using methods as an alternative to QueryInterface/Interface inheritance</h2>
+
+<p>There are several other areas of the API that use other methods to perform 
+ operations similar to a QueryInterface().</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAnnotation~GetSpecificAnnotation.html">IAnnotation::GetSpecificAnnotation</a> 
+ can return:</p></li>
+	
+	<ul style="list-style: disc;"
+		type=disc>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ICThread.html">ICThread*</a> 
+ </p></li>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IGtol.html">IGtol*</a></p></li>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.INote.html">INote*</a></p></li>
+		
+		<li class=kadov-p><p>others. See 
+		<a href="swconst.chm::/SolidWorks.interop.swconst~SolidWorks.interop.swconst.swAnnotationType_e.html">swAnnotationType_e</a> 
+ for a list of the types that can be returned<br>&nbsp;</p></li>
+	</ul>
+	
+	<li class=kadov-p><p><!--kadov_tag{{<spaces>}}-->&nbsp;<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~GetSpecificFeature2.html"><!--kadov_tag{{</spaces>}}-->IFeature::GetSpecificFeature2</a> 
+ can return:</p></li>
+	
+	<ul style="list-style: disc;"
+		type=disc>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAttribute.html">IAttribute*</a> 
+ </p></li>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMate2.html">IMate2*</a> 
+ </p></li>
+		
+		<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISketch.html">ISketch*</a></p></li>
+		
+		<li class=kadov-p><p>others.</p></li>
+	</ul>
+</ul>
+
+<h2>Accessors</h2>
+
+<p>To find out how to get a specific SOLIDWORKS interface or object from 
+ other SOLIDWORKS interfaces or objects, use the <span style="font-weight: bold;">Accessors</span> 
+ link located at the bottom of an interface's topic.</p>
+
+<h2>Reference material</h2>
+
+<p>For more information on classes, objects, casting, interfaces, QueryInterface, 
+ COM, and inheritance, see:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><span style="font-style: italic;">Inside COM </span><span>by</span><span 
+ style="font-style: italic;"> </span>Dale Rogerson. <span>(</span>Microsoft 
+ Press)</p></li>
+	
+	<li class=kadov-p><p><span style="font-style: italic;">Programming 
+ .NET Components</span> by Juval Lowy (O'Reilly)</p></li>
+</ul>
+
+</body>
+
+</html>

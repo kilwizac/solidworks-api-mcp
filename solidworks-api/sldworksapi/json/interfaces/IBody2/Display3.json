@@ -1,0 +1,107 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "Display3",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Part or component where the temporary body exists (see Remarks )"
+      },
+      {
+        "name": "Color",
+        "type": "System.Int32",
+        "description": "COLORREF value (see Remarks )"
+      },
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "Selection state of temporary body as defined by swTempBodySelectOptions_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "display3",
+      "ibody2",
+      "body2",
+      "component",
+      "object",
+      "color",
+      "int32",
+      "option",
+      "create",
+      "loft",
+      "body",
+      "vb",
+      "net",
+      "vba",
+      "display"
+    ]
+  },
+  "title": "IBody2.Display3",
+  "description": "Displays this temporary body in the context of the specified part or component.",
+  "signature": "System.Int32 Display3( \n   System.Object\nComponent\n,\n   System.Int32\nColor\n,\n   System.Int32\nOption\n)",
+  "parameters": [
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Part or component where the temporary body exists (see Remarks )"
+    },
+    {
+      "name": "Color",
+      "type": "System.Int32",
+      "description": "COLORREF value (see Remarks )"
+    },
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "Selection state of temporary body as defined by swTempBodySelectOptions_e (see Remarks )"
+    }
+  ],
+  "returns": "0 = Success 1 = Failed because this body is not a temporary body 2 = Invalid component 3 = Not a part instance",
+  "remarks": "This method:\nIs valid only for temporary bodies. To determine whether a body is temporary, use\nIBody2::IsTemporaryBody\n.\nApplies Color to this temporary body in the graphics area, effectively selecting it.\nYou can also use\nIBody2::MaterialPropertyValues2\nto change the appearance of this temporary body.\nComponent cannot be in a subassembly.\nSpecifying Option with swTempBodySelectable sets the blocking state to\nswBlockingStates_e\n.swModifyBlock. Unset the blocking state by calling\nIBody2::Hide\n.",
+  "examples": [
+    {
+      "title": "Create Loft Body (VB.NET)",
+      "href": "Create_Loft_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (VBA)",
+      "href": "Create_Loft_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (C#)",
+      "href": "Create_Loft_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (C#)",
+      "href": "Display_Temporary_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (VB.NET)",
+      "href": "Display_Temporary_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Display Temporary Body (VBA)",
+      "href": "Display_Temporary_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

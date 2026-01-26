@@ -1,0 +1,109 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetChildren",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.GetComponentCount",
+      "IAssemblyDoc.GetComponents",
+      "IComponent2.GetParent",
+      "IComponent2.IGetChildren",
+      "IConfiguration.GetRootComponent3"
+    ],
+    "keywords": [
+      "children",
+      "components",
+      "getchildren",
+      "icomponent2",
+      "component2",
+      "object",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "vba",
+      "names",
+      "bodies",
+      "multibody",
+      "part",
+      "transforms",
+      "assembly",
+      "make",
+      "all",
+      "visible",
+      "traverse",
+      "component",
+      "feature",
+      "levels",
+      "using",
+      "recursion",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IComponent2.GetChildren",
+  "description": "Gets all of the children components of this component.",
+  "signature": "System.Object GetChildren()",
+  "parameters": [],
+  "returns": "Array of components",
+  "remarks": "If this assembly component is a part document, SOLIDWORKS returns NULL. If this assembly component is the root component or a subassembly, then this method returns the child components that belong to the assembly document.\nThe typical order of calls needed in assembly traversal is:\nIConfigurationManager::ActiveConfiguration\n(called only once)\nIConfiguration::GetRootComponent\n(called only once)\nIComponent2::GetChildren (called recursively)\nYou must call the IComponent2::GetChildren method recursively because it returns only the immediate (one level) children. It does not get child components of the sub-assemblies. For example, if one of the child components of a component is a sub-assembly that has its own children, those children are not returned by this method. You need to call this method again from that sub-assembly component to get its children.\nFor a given component, this method returns all of the immediate child components. This includes suppressed, hidden, and lightweight components. Use\nIComponent2::Visible\nand\nIComponent2::GetSuppression\nto detect the component states.\nResults of an assembly traversal vary based on the configuration currently displayed in your main assembly and based on the configuration referenced by the subassembly component. The list of child components that this method returns can be different depending on which configuration is referenced by the component (see IConfigurationManager::ActiveConfiguration and\nIComponent2::ReferencedConfiguration\n).\nFor example, if one configuration of your main assembly contains a suppressed subassembly, IComponent2::GetChildren returns an empty array when you call it from that suppressed subassembly component. As another example, a subassembly document (.sldasm file) can contain several configurations, each of which has varying states of suppression for its child components. When inserted into your main assembly, this subassembly\ndocument can reference any of these configurations. As a result, you might find that the child component suppression states vary based on which configuration is referenced by the subassembly component.\nNOTE:\nComponents might not be returned in the same order from call to call.",
+  "examples": [
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Bodies in Multibody Part (VBA)",
+      "href": "Get_Names_of_Bodies_in_MultiBody_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Transforms of Assembly Components (VBA)",
+      "href": "Get_Transforms_of_Assembly_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Make All Assembly Components Visible (VBA)",
+      "href": "Make_All_Assembly_Components_Visible_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels (VBA)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Level_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VBA)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VB.NET)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (C#)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetComponentCount",
+    "IAssemblyDoc.GetComponents",
+    "IComponent2.GetParent",
+    "IComponent2.IGetChildren",
+    "IConfiguration.GetRootComponent3"
+  ]
+}

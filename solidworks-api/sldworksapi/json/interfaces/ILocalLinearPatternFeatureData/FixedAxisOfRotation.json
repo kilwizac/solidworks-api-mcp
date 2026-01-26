@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILocalLinearPatternFeatureData",
+    "member": "FixedAxisOfRotation",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "fixedaxisofrotation",
+      "ilocallinearpatternfeaturedata",
+      "local",
+      "linear",
+      "pattern",
+      "feature",
+      "data",
+      "fixed",
+      "axis",
+      "rotation",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ILocalLinearPatternFeatureData.FixedAxisOfRotation",
+  "description": "Gets or sets whether patterned instances rotate around a common axis.",
+  "signature": "System.Boolean FixedAxisOfRotation {get; set;}",
+  "parameters": [],
+  "returns": "True if patterned instances rotate around ILocalLinearPatternFeatureData::RotationAxis , false if each instance rotates about its own axis",
+  "remarks": "This property is valid only if\nILocalLinearPatternFeatureData::RotateInstances\nis true.\nIf this property is set to:\nTrue, then you can also specify\nILocalLinearPatternFeatureData::AlignToSeed\n.\nFalse, then the rotation axis of each instance of a component is translated along Direction 1 and then rotated following the axis of rotation for that component.\nSee\nAccessing Selections that Define Features\nfor additional details on using this property.\nFor more information, see the\nLinear Component Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": []
+}

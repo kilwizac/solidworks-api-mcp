@@ -1,0 +1,183 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "NewDocument",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Fully qualified path and name of the template to use for creating the new document"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Size of paper as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width of paper; used only when PaperSize is swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Height of paper; used only when PaperSize is swDwgPapersUserDefined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDocumentTemplate",
+      "ISldWorks.INewDocument2"
+    ],
+    "keywords": [
+      "document",
+      "create",
+      "new",
+      "newdocument",
+      "isldworks",
+      "sld",
+      "works",
+      "template",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "int32",
+      "width",
+      "double",
+      "height",
+      "object",
+      "combine",
+      "assembly",
+      "components",
+      "part",
+      "vba",
+      "dimension",
+      "edge",
+      "drawing",
+      "insert",
+      "conic",
+      "curve",
+      "vb",
+      "net",
+      "model",
+      "annotations",
+      "process",
+      "body",
+      "fill",
+      "holes"
+    ]
+  },
+  "title": "ISldWorks.NewDocument",
+  "description": "Creates a new document based on the specified template.",
+  "signature": "System.Object NewDocument( \n   System.String\nTemplateName\n,\n   System.Int32\nPaperSize\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Fully qualified path and name of the template to use for creating the new document"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Size of paper as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width of paper; used only when PaperSize is swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Height of paper; used only when PaperSize is swDwgPapersUserDefined"
+    }
+  ],
+  "returns": "Newly created document or NULL if the operation fails",
+  "remarks": "To get the default template filename, use\nISldWorks::GetUserPreferenceStringValue\n.",
+  "examples": [
+    {
+      "title": "Combine Assembly Components Into Part (VBA)",
+      "href": "Combine_Assembly_Components_into_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Dimension Edge in Drawing (VBA)",
+      "href": "Dimension_Edge_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Conic Curve (C#)",
+      "href": "Insert_Conic_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Conic Curve (VB.NET)",
+      "href": "Insert_Conic_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Conic Curve (VBA)",
+      "href": "Insert_Conic_Curve_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Model Annotations (C#)",
+      "href": "Insert_Model_Annotations_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Model Annotations (VB.NET)",
+      "href": "Insert_Model_Annotations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Model Annotations (VBA)",
+      "href": "Insert_Model_Annotations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (C#)",
+      "href": "Process_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VB.NET)",
+      "href": "Process_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Process Body (VBA)",
+      "href": "Process_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (C#)",
+      "href": "Fill_Holes_in_Part_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (VB.NET)",
+      "href": "Fill_Holes_in_Part_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fill Holes in Part (VBA)",
+      "href": "Fill_Holes_in_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetDocumentTemplate",
+    "ISldWorks.INewDocument2"
+  ]
+}

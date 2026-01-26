@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetDisplayData3",
+    "returns": "DisplayData",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDisplayData3"
+    ],
+    "keywords": [
+      "display",
+      "data",
+      "see",
+      "idisplaydata",
+      "igetdisplaydata3",
+      "iview",
+      "view",
+      "data3"
+    ]
+  },
+  "title": "IView.IGetDisplayData3",
+  "description": "Gets the the IDisplayData object for this drawing view containing only those model items that are visible in the view.",
+  "signature": "DisplayData IGetDisplayData3()",
+  "parameters": [],
+  "returns": "IDisplayData object",
+  "remarks": "The data kept with the\nIDisplayData\nobject is strictly for display purposes and allows you to recreate unintelligent geometry. It does not provide associations or detailed information about the geometry.\nThis method supersedes the now obsolete\nIView::IGetDisplayData2\nand should be used in its place. The previous version of this method returned model items that were not imported to the drawing view and, therefore, not visible in the drawing view.",
+  "examples": [],
+  "related": [
+    "IView.GetDisplayData3"
+  ]
+}

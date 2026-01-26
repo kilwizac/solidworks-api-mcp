@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDimensionDisplayString5",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "DimensionSize",
+        "type": "System.Int32",
+        "description": "Number of strings for each dimension (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDimensionDisplayInfo5",
+      "IView.GetDimensionDisplayInfoSize2",
+      "IView.GetDimensionIds4",
+      "IView.GetDimensionInfo7",
+      "IView.GetDimensionString4",
+      "IView.GetFirstDisplayDimension5",
+      "IView.ProjectedDimensions"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "drawing",
+      "sheets",
+      "views",
+      "iview",
+      "dimensions",
+      "sheet",
+      "isheet",
+      "view",
+      "getdimensiondisplaystring5",
+      "display",
+      "string5",
+      "size",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IView.GetDimensionDisplayString5",
+  "description": "Gets all of the dimension text in the current drawing sheet or the current drawing view.",
+  "signature": "System.Object GetDimensionDisplayString5( \n   out System.Int32\nDimensionSize\n)",
+  "parameters": [
+    {
+      "name": "DimensionSize",
+      "type": "System.Int32",
+      "description": "Number of strings for each dimension (see Remarks )"
+    }
+  ],
+  "returns": "Array of strings (see Remarks )",
+  "remarks": "This method returns a string array of size (\nDimensionSize\n) x (\nnumber_of_dimensions_in_view\n).\nThis set of values returned for each dimension in the view:\n[\nvalue1, tolMax1 tolMin1, value2, tolMax2, tolMin2, prefix, suffix, callout1, callout2, bottom\n]\nwhere:\nvalue1\n= Primary Dimension Value\ntolMax1\n= Maximum Variation for\nvalue1\ntolMin1\n= Minimum Variation for\nvalue1\nvalue2\n= Dual Dimension Value\ntolMax2\n= Maximum Variation for\nvalue2\ntolMin2\n= Minimum Variation for\nvalue2\nprefix\n= Text before\nvalue1\nsuffix\n= Text after\nvalue1\ncallout1\n= Text above\nprefix\n<\nvalue1\n>\nsuffix\ncallout2\n= Text below\nprefix\n<\nvalue1\n>\nsuffix\nbottom\n= Text below\ncallout2\nThe Dimension PropertyManager page (PMP) contains two Dimension Text boxes. Add dimension text by entering prefix, suffix, callout1, and callout2 texts in the first Dimension Text box. Enter bottom text in the second Dimension Text box.\nIf any of the above values are not used in the dimension, then those values are returned as empty strings in the returned array of this method.\nFor more information, see\nSOLIDWORKS Design user-interface help > Detailing and Drawings > Drawings > Dimensions in Drawings > Dimension Value PropertyManager\n.\nNOTES:\nA previous version of this method,\nIView::GetDimensionDisplayString2\n, detects and overlooks dangling dimensions. This method neither overlooks nor indicates that any dimensions are dangling. Use IView::GetDimensionDisplayString2 if you need dangling dimensions detected and overlooked.\nThis method does not support\nhole callouts\n.",
+  "examples": [],
+  "related": [
+    "IView.GetDimensionDisplayInfo5",
+    "IView.GetDimensionDisplayInfoSize2",
+    "IView.GetDimensionIds4",
+    "IView.GetDimensionInfo7",
+    "IView.GetDimensionString4",
+    "IView.GetFirstDisplayDimension5",
+    "IView.ProjectedDimensions"
+  ]
+}

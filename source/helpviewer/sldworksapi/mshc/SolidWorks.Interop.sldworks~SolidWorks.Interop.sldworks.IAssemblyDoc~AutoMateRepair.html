@@ -1,0 +1,557 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>AutoMateRepair Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~AutoMateRepair" />
+    <meta name="Description" content="Automatically repairs broken mates in this assembly." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IAssemblyDoc.AutoMateRepair" />
+    <meta name="Microsoft.Help.Keywords" content="AutoMateRepair Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                AutoMateRepair Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc Interface</a> : AutoMateRepair Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ProcessedMatesPopupContent" class="i-popup-content">
+        Array of successfully repaired <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMate2">IMate2</a>s
+    </div>
+
+    <div id="FailedMatesPopupContent" class="i-popup-content">
+        Array of failed IMate2s
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Automatically repairs broken mates in this assembly.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function AutoMateRepair( _
+   ByRef <i><a class="i-popup-link" id="ProcessedMatesPopupLink" data-popup-contentsource="#ProcessedMatesPopupContent" data-popup-showevent="click mouseenter">ProcessedMates</a></i> As System.Object, _
+   ByRef <i><a class="i-popup-link" id="FailedMatesPopupLink" data-popup-contentsource="#FailedMatesPopupContent" data-popup-showevent="click mouseenter">FailedMates</a></i> As System.Object _
+) As System.Integer
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc</a>
+Dim ProcessedMates As System.Object
+Dim FailedMates As System.Object
+Dim value As System.Integer
+ 
+value = instance.AutoMateRepair(ProcessedMates, FailedMates)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.int AutoMateRepair( 
+   out System.object <i><a class="i-popup-link" id="ProcessedMatesPopupLink" data-popup-contentsource="#ProcessedMatesPopupContent" data-popup-showevent="click mouseenter">ProcessedMates</a></i>,
+   out System.object <i><a class="i-popup-link" id="FailedMatesPopupLink" data-popup-contentsource="#FailedMatesPopupContent" data-popup-showevent="click mouseenter">FailedMates</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.int AutoMateRepair( 
+   [Out] System.Object^ <i><a class="i-popup-link" id="ProcessedMatesPopupLink" data-popup-contentsource="#ProcessedMatesPopupContent" data-popup-showevent="click mouseenter">ProcessedMates</a></i>,
+   [Out] System.Object^ <i><a class="i-popup-link" id="FailedMatesPopupLink" data-popup-contentsource="#FailedMatesPopupContent" data-popup-showevent="click mouseenter">FailedMates</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>ProcessedMates</i></dt>
+
+                <dd>Array of successfully repaired <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMate2">IMate2</a>s</dd>
+
+                <dt><i>FailedMates</i></dt>
+
+                <dd>Array of failed IMate2s</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Mate repair errors as defined by&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swAutoMateRepairErrors_e.html">swAutoMateRepairErrors_e</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>Before calling this method you must:</p>
+
+            <ul>
+                <li>ensure that the entities needed to repair the broken mates are present in the assembly</li>
+            </ul>
+
+            <p>&#160;&#160;&#160; - and -</p>
+
+            <ul>
+                <li>select the Mates folder in the FeatureManager design tree.</li>
+            </ul>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'---------------------------------------------------------------</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' Preconditions:</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 1. Open the Immediate window.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 2. Ensure that <strong>c:\temp</strong> and the specified templates exist.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' Postconditions:</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 1. When the macro stops, inspect the FeatureManager design tree.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'<span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Observe that two Cylinder_225 components, two planes, and two mates are added to the assembly.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 2. In the FeatureManager design tree delete PLANE2.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'<span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Observe that Cylinder_225&lt;1&gt; and Coincident2 are red, indicating a mate error has occurred.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 3. In the user interface add a reference plane that is 1 mm from the Front Plane.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 4. In the FeatureManager design tree select the Mates folder.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>' 5. Press F5 to autorepair the broken mate.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'<span style="mso-spacerun: yes">&#160;&#160;&#160;</span> The Immediate window shows one repaired mate.</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>'----------------------------------------------------------------</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Dim swApp As SldWorks.SldWorks</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Dim Part As SldWorks.ModelDoc2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Dim boolstatus As Boolean</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Dim longstatus As Long, longwarnings As Long</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Option Explicit</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Sub main()</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swApp = Application.SldWorks</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swSheetWidth As Double</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swSheetWidth = 0</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swSheetHeight As Double</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swSheetHeight = 0</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.NewDocument("c:\temp\Part.prtdot", 0, swSheetWidth, swSheetHeight)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swPart As SldWorks.PartDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swPart = Part</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swApp.ActivateDoc2 "Part1", False, longstatus</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.ActiveDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim myModelView As SldWorks.ModelView</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myModelView = Part.ActiveView</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> myModelView.FrameState = swWindowState_e.swWindowMaximized</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.SketchManager.InsertSketch True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", -0.068513658157061, 4.03895355082156E-02, 8.71366929740688E-03, False, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim skSegment As Object</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set skSegment = Part.SketchManager.CreateCircle(0#, 0#, 0#, 0.045995, 0.021666, 0#)</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ShowNamedView2 "*Trimetric", 8</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ViewZoomtofit2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim myFeature As SldWorks.Feature</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myFeature = Part.FeatureManager.FeatureExtrusion2(True, False, False, 0, 0, 0.225, 0.01, False, False, False, False, 1.74532925199433E-02, 1.74532925199433E-02, False, False, False, False, True, True, True, 0, 0, False)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.SelectionManager.EnableContourSelection = False</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Save As</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> longstatus = Part.SaveAs3("c:\temp\Cylinder_225.SLDPRT", 0, 0)</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swSheetWidth = 0</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swSheetHeight = 0</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span>&#160;<span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>Set Part = swApp.NewDocument("c:\temp\Assembly.asmdot", 0, swSheetWidth, swSheetHeight)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swAssembly As SldWorks.AssemblyDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swAssembly = Part</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swApp.ActivateDoc2 "Assem3", False, longstatus</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.ActiveDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myModelView = Part.ActiveView</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> myModelView.FrameState = swWindowState_e.swWindowMaximized</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Insert Component</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim AssemblyTitle As String</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> AssemblyTitle = Part.GetTitle</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim tmpObj As SldWorks.ModelDoc2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim errors As Long</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set tmpObj = swApp.OpenDoc6("c:\temp\Cylinder_225.SLDPRT", 1, 32, "", errors, longwarnings)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swInsertedComponent As SldWorks.Component2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swInsertedComponent = Part.AddComponent5("c:\temp\Cylinder_225.SLDPRT", 0, "", False, "", 0.721748083354866, 0.92923566513213, 1.36775956940221)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swApp.CloseDoc "c:\temp\Cylinder_225.SLDPRT"</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Cylinder_225-1", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.UnfixComponent</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Create PLANE1 and PLANE2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.SetUserPreferenceToggle(swUserPreferenceToggle_e.swDisplayPlanes, True)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim myRefPlane As SldWorks.RefPlane</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myRefPlane = Part.FeatureManager.InsertRefPlane(8, 0.1, 0, 0, 0, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myRefPlane = Part.FeatureManager.InsertRefPlane(8, 0.001, 0, 0, 0, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Insert Component</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> AssemblyTitle = Part.GetTitle</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set tmpObj = swApp.OpenDoc6("c:\temp\Cylinder_225.SLDPRT", 1, 32, "", errors, longwarnings)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.ActivateDoc3(AssemblyTitle, True, 0, errors)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swInsertedComponent = Part.AddComponent5("c:\temp\Cylinder_225.SLDPRT", 0, "", False, "", -9.24876597127877E-02, 5.65812429995276E-02, 0.22909678472206)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> swApp.CloseDoc "c:\temp\Cylinder_225.SLDPRT"</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("PLANE1", "PLANE", 0.012624285665936, 0.154967158689601, 0.112309569516221, True, 1, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByRay(-0.076247080467482, 0.103507691590153, 0.115945777078347, -0.283810108456217, -0.958610200111282, 2.27663475480263E-02, 2.30409955137483E-03, 1, True, 1, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Create CoincidentMateFeatureData</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim MateData As SldWorks.CoincidentMateFeatureData</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set MateData = Part.CreateMateData(0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Set the Entities To Mate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim EntitiesToMate(1) As Object</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set EntitiesToMate(0) = Part.SelectionManager.GetSelectedObject6(1, -1)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set EntitiesToMate(1) = Part.SelectionManager.GetSelectedObject6(2, -1)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim EntitiesToMateVar As Variant</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> EntitiesToMateVar = EntitiesToMate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> MateData.EntitiesToMate = (EntitiesToMateVar)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Set the Mate Alignment</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> MateData.MateAlignment = 1</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Create the mate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim MateFeature As SldWorks.Feature</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set MateFeature = Part.CreateMate(MateData)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.EditRebuild3</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("PLANE2", "PLANE", -0.051265823820458, 0.210240836185798, -8.14719342065839E-02, True, 1, Nothing, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByRay(0.767058330396253, 0.909200270895155, 1.48052500817425, -0.400036026779312, -0.515038074910024, -0.758094294050284, 1.12587739183236E-02, 1, True, 0, 0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Create CoincidentMateFeatureData</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set MateData = Part.CreateMateData(0)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Set the Entities To Mate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set EntitiesToMate(0) = Part.SelectionManager.GetSelectedObject6(1, -1)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set EntitiesToMate(1) = Part.SelectionManager.GetSelectedObject6(2, -1)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> EntitiesToMateVar = EntitiesToMate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> MateData.EntitiesToMate = (EntitiesToMateVar)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Set the Mate Alignment</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> MateData.MateAlignment = 1</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Create the mate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set MateFeature = Part.CreateMate(MateData)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ClearSelection2 True</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.EditRebuild3</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Part.ViewZoomtofit2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Stop<span style="mso-spacerun: yes">&#160;</span> ' Delete Plane2; create a new plane that is 1mm from the Front Plane; select the Mates folder in the FeatureManager design tree; then press F5 to repair the broken mate</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swModel As SldWorks.ModelDoc2</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim cnt As Long</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swModel = swApp.ActiveDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim swAsm As SldWorks.AssemblyDoc</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swAsm = swModel</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim failedMates As Variant</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim ProcessedMates As Variant</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Dim lStatus As Long</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> lStatus = swAsm.<strong>AutoMateRepair</strong>(ProcessedMates, failedMates)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print "Number of Processed Mates is " &amp; UBound(ProcessedMates) + 1 &amp; ":"</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> For cnt = 0 To UBound(ProcessedMates)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print ProcessedMates(cnt).Name</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Next</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print vbNewLine</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print "Number of failed Mates is " &amp; UBound(failedMates) + 1 &amp; ":"</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> For cnt = 0 To UBound(failedMates)</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print failedMates(cnt).Name</span></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Next</span></p>
+
+            <p class="MsoNormal"></p>
+
+            <p class="MsoNormal"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%'>End Sub</span></p>
+
+            <p>&#160;</p>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc_members">IAssemblyDoc Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~CreateMate">IAssemblyDoc::CreateMate Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~AutoMateRepair.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

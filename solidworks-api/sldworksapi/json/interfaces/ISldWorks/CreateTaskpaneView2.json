@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "CreateTaskpaneView2",
+    "returns": "TaskpaneView",
+    "parameters": [
+      {
+        "name": "Bitmap",
+        "type": "System.String",
+        "description": "Path and file name of the bitmap for the tab of this Task Pane view (see Remarks )"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "ToolTip for this Task Pane view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ActivateTaskPane",
+      "ISldWorks.RefreshTaskpaneContent",
+      "ISldWorks.TaskPaneIsPinned"
+    ],
+    "keywords": [
+      "createtaskpaneview2",
+      "isldworks",
+      "sld",
+      "works",
+      "create",
+      "taskpane",
+      "view2",
+      "bitmap",
+      "string",
+      "tool",
+      "tip",
+      "view"
+    ]
+  },
+  "title": "ISldWorks.CreateTaskpaneView2",
+  "description": "Obsolete. Superseded by ISldworks::CreateTaskpaneView3.",
+  "signature": "TaskpaneView CreateTaskpaneView2( \n   System.String\nBitmap\n,\n   System.String\nToolTip\n)",
+  "parameters": [
+    {
+      "name": "Bitmap",
+      "type": "System.String",
+      "description": "Path and file name of the bitmap for the tab of this Task Pane view (see Remarks )"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "ToolTip for this Task Pane view"
+    }
+  ],
+  "returns": "Task Pane view",
+  "remarks": "The bitmap should be 16 colors and 16 x 18 (width x height) pixels. Any portions of the bitmap that are white (RGB 255,255,255) will be transparent.",
+  "examples": [],
+  "related": [
+    "ISldWorks.ActivateTaskPane",
+    "ISldWorks.RefreshTaskpaneContent",
+    "ISldWorks.TaskPaneIsPinned"
+  ]
+}

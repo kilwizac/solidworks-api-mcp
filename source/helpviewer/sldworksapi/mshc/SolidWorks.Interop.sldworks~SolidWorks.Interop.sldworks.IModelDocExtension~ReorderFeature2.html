@@ -1,0 +1,414 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>ReorderFeature2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ReorderFeature2" />
+    <meta name="Description" content="Moves the specified feature to another location in the FeatureManager design tree of this part or assembly." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModelDocExtension.ReorderFeature2" />
+    <meta name="Microsoft.Help.Keywords" content="Feature (see also IFeature Interface), reorder" />
+    <meta name="Microsoft.Help.Keywords" content="ReorderFeature2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                ReorderFeature2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension Interface</a> : ReorderFeature2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="FeatToMovePopupContent" class="i-popup-content">
+        Name of feature to move (see&#160;<strong>Remarks</strong>)
+    </div>
+
+    <div id="TargetFeatPopupContent" class="i-popup-content">
+        <p>Name of feature&#160;before or after&#160;which to move FeatureToMove</p>
+
+        <p>- or -</p>
+
+        <p>Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder and FeatToMove is not&#160;a Cut list/Solid Bodies&#160;folder</p>
+
+        <p>(see&#160;<strong>Remarks</strong>)</p>
+    </div>
+
+    <div id="MoveLocationPopupContent" class="i-popup-content">
+        Move type as defined by&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swMoveLocation_e.html">swMoveLocation_e</a>&#160;(see&#160;<strong>Remarks</strong>)
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Moves the specified feature to another location in the FeatureManager design tree of this part or assembly.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function ReorderFeature2( _
+   ByVal <i><a class="i-popup-link" id="FeatToMovePopupLink" data-popup-contentsource="#FeatToMovePopupContent" data-popup-showevent="click mouseenter">FeatToMove</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="TargetFeatPopupLink" data-popup-contentsource="#TargetFeatPopupContent" data-popup-showevent="click mouseenter">TargetFeat</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="MoveLocationPopupLink" data-popup-contentsource="#MoveLocationPopupContent" data-popup-showevent="click mouseenter">MoveLocation</a></i> As System.Integer _
+) As System.Boolean
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension</a>
+Dim FeatToMove As System.String
+Dim TargetFeat As System.String
+Dim MoveLocation As System.Integer
+Dim value As System.Boolean
+ 
+value = instance.ReorderFeature2(FeatToMove, TargetFeat, MoveLocation)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.bool ReorderFeature2( 
+   System.string <i><a class="i-popup-link" id="FeatToMovePopupLink" data-popup-contentsource="#FeatToMovePopupContent" data-popup-showevent="click mouseenter">FeatToMove</a></i>,
+   System.string <i><a class="i-popup-link" id="TargetFeatPopupLink" data-popup-contentsource="#TargetFeatPopupContent" data-popup-showevent="click mouseenter">TargetFeat</a></i>,
+   System.int <i><a class="i-popup-link" id="MoveLocationPopupLink" data-popup-contentsource="#MoveLocationPopupContent" data-popup-showevent="click mouseenter">MoveLocation</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.bool ReorderFeature2( 
+   System.String^ <i><a class="i-popup-link" id="FeatToMovePopupLink" data-popup-contentsource="#FeatToMovePopupContent" data-popup-showevent="click mouseenter">FeatToMove</a></i>,
+   System.String^ <i><a class="i-popup-link" id="TargetFeatPopupLink" data-popup-contentsource="#TargetFeatPopupContent" data-popup-showevent="click mouseenter">TargetFeat</a></i>,
+   System.int <i><a class="i-popup-link" id="MoveLocationPopupLink" data-popup-contentsource="#MoveLocationPopupContent" data-popup-showevent="click mouseenter">MoveLocation</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>FeatToMove</i></dt>
+
+                <dd>Name of feature to move (see&#160;<strong>Remarks</strong>)</dd>
+
+                <dt><i>TargetFeat</i></dt>
+
+                <dd>
+                    <p>Name of feature&#160;before or after&#160;which to move FeatureToMove</p>
+
+                    <p>- or -</p>
+
+                    <p>Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder and FeatToMove is not&#160;a Cut list/Solid Bodies&#160;folder</p>
+
+                    <p>(see&#160;<strong>Remarks</strong>)</p>
+                </dd>
+
+                <dt><i>MoveLocation</i></dt>
+
+                <dd>Move type as defined by&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swMoveLocation_e.html">swMoveLocation_e</a>&#160;(see&#160;<strong>Remarks</strong>)</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                True if feature moved successfully, false if not
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method functions just like the now obsolete IModelDocExtension::ReorderFeature, but also supports reordering of cut list folders and cut list sub-weldment folders.</p>
+
+            <p>When reordering cut list folders and sub-weldment folders, the following restrictions apply:</p>
+
+            <ul>
+                <li>FeatToMove is a folder feature: cut list / solid body / sub-weldment&#160;folder;&#160;FeatToMove is not a cut list item/solid body.</li>
+
+                <li>This method:
+
+                    <ul>
+                        <li>reorders solid folders in parts and assembly components.</li>
+
+                        <li>is called after assigning a ModelDoc variable to&#160;the part or assembly component whose cut list folders you want to reorder.</li>
+
+                        <li>only affects cut lists in the active configuration. To reorder a cut list folder in another configuration, you must make it active before calling this method.</li>
+
+                        <li>returns false if you try to move of a cut list/solid body folder to the top using either MoveLocation = swMoveLocation_e.swMoveToTop or MoveLocation = swMoveLocation_e.swMoveBefore. For example, if&#160;TargetFeat is the top folder, then you cannot set MoveLocation to&#160;swMoveLocation_e.swMoveBefore.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>Use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatureCount">IBodyFolder::GetTopLevelFeatureCount</a> and&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatures">IBodyFolder::GetTopLevelFeatures</a> to obtain top level folders in a body folder.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <p>'VBA</p>
+
+            <p>'This example demonstrates how to use this method to re-order folders in the Cut list/Solid Bodies folder.</p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' Preconditions:</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 1. Open <em>Public_documents</em><strong>\samples\tutorial\api\weldment_box3.sldprt</strong>.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 2. Open an Immediate window.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 3. Run/Debug the macro.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>'</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>'Postconditions:</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 1. When the macro pauses, inspect the Cut list folder.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 2. Observe the order of two new sub folders in the Cut list folder: <strong>Sub-weldment2</strong> comes before <strong>Sub-weldment3</strong>.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 3. Press F5 to reorder these folders.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 4. When the macro pauses, inspect the reordered folders: <strong>Sub-weldment3</strong> moves before <strong>Sub-weldment2</strong>.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 5. Select a body or folder in the Cut list folder.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 6. Press F5 to locate the selection's parent folder.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' 7. Inspect the Immediate window for the parent folder type and name (Type = "SolidBodyFolder" and Name = "Solid Bodies").</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>'</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>' NOTE: Do not save the model as it is used by other examples.</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>'=====================================================</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim swApp As SldWorks.SldWorks</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim myFeature As SldWorks.Feature</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim Part As SldWorks.ModelDoc2</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim swFolderFeat As SldWorks.Feature</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim swFeatureMgr As SldWorks.FeatureManager</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim swSelectionMgr As SldWorks.SelectionMgr</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim swSelObj As Object</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim boolstatus As Boolean</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Dim longstatus As Long, longwarnings As Long</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Option Explicit</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'>Sub main()</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;</span>&#160;<span style="mso-spacerun: yes">&#160;&#160;</span>Set swApp = Application.SldWorks</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set Part = swApp.ActiveDoc</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[1]", "SOLIDBODY", 0, 0, 0, False, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[2]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[3]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[4]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[6]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member1[8]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member3[1]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Structural Member3[2]", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myFeature = Part.FeatureManager.<strong>InsertSubFolder</strong>()</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Gusset1", "SOLIDBODY", 0, 0, 0, False, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Gusset2", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Gusset3", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.SelectByID2("Gusset4", "SOLIDBODY", 0, 0, 0, True, 0, Nothing, 0)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set myFeature = Part.FeatureManager.<strong>InsertSubFolder</strong>()</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Stop '1. Inspect the order of cut list folders;</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> '2. Press F5 to reorder the folders</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> boolstatus = Part.Extension.<strong>ReorderFeature2</strong>("Sub-weldment2", "Sub-weldment3", swMoveLocation_e.swMoveAfter)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Stop '1. Inspect the new order of cut list folders;</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> '2. Select a body or body folder in the cut list folder;</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> '3. Press F5 to locate its parent folder</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swSelectionMgr = Part.SelectionManager</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print "Selected Obj Type: " &amp; swSelectionMgr.GetSelectedObjectType3(1, -1)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swSelObj = swSelectionMgr.GetSelectedObject6(1, -1)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> ' Locate the parent folder<span style="mso-spacerun: yes">&#160;</span> of the selection</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swFeatureMgr = Part.FeatureManager</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Set swFolderFeat = swFeatureMgr.<strong>CutListFolderLocation</strong>(swSelObj)</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> If swFolderFeat Is Nothing Then</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span> Debug.Print "Please select a solid body/cut list item or solid body/cut list folder"</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span> Exit Sub</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> End If</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span> Debug.Print "Parent folder Type: " &amp; swFolderFeat.GetTypeName2 &amp; " Name: " &amp; swFolderFeat.Name</span></p>
+
+            <p class="MsoNormal" style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; mso-fareast-font-family: "Times New Roman"'><span style="mso-spacerun: yes">&#160;&#160;&#160;</span></span></p><span style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; LINE-HEIGHT: 107%; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'>End Sub</span>
+        </div>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Reorder_Features_Example_VB.htm">Reorder Features (VBA)</a><br />
+            <a href="Reorder_Features_Example_VBNET.htm">Reorder Features (VB.NET)</a><br />
+            <a href="Reorder_Features_Example_CSharp.htm">Reorder Features (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension">IModelDocExtension Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension_members">IModelDocExtension Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartDoc~ReorderFeature">IPartDoc::ReorderFeature Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~ReorderComponents">IAssemblyDoc::ReorderComponents Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ReorderFeature2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

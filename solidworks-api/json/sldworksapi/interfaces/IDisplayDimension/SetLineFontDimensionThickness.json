@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetLineFontDimensionThickness",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True uses the document setting for the thickness of leaders, false uses the setting specified in Style"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Leader thickness as defined in swLineWeights_e ; valid only if UseDoc = false"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.SetLineFontDimensionStyle"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "lines",
+      "setlinefontdimensionthickness",
+      "idisplaydimension",
+      "display",
+      "line",
+      "font",
+      "thickness",
+      "use",
+      "doc",
+      "boolean",
+      "style",
+      "int32"
+    ]
+  },
+  "title": "IDisplayDimension.SetLineFontDimensionThickness",
+  "description": "Sets the thickness of leaders of this display dimension.",
+  "signature": "System.Boolean SetLineFontDimensionThickness( \n   System.Boolean\nUseDoc\n,\n   System.Int32\nStyle\n)",
+  "parameters": [
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True uses the document setting for the thickness of leaders, false uses the setting specified in Style"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Leader thickness as defined in swLineWeights_e ; valid only if UseDoc = false"
+    }
+  ],
+  "returns": "True if the leader thickness is set, false if not",
+  "remarks": "After calling this method, call\nIModelView::GraphicsRedraw\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.SetLineFontDimensionStyle"
+  ]
+}

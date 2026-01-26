@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DAssemblyDocEvents_ComponentDisplayModeChangePreNotifyEventHandler
+inherits: null
+description: Fired before a reference component's display mode is changed in an assembly.
+member_count: 0
+docset: sldworksapi
+categories:
+  - assemblies
+common_members: []
+---
+
+# DAssemblyDocEvents_ComponentDisplayModeChangePreNotifyEventHandler
+
+Fired before a reference component's display mode is changed in an assembly.

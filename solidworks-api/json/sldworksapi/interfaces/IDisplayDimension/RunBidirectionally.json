@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "RunBidirectionally",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.DisplayAsChain",
+      "IDisplayDimension.ExtensionLineExtendsFromCenterOfSet",
+      "IDisplayDimension.Jogged"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "lines",
+      "angular",
+      "running",
+      "dimensions",
+      "runbidirectionally",
+      "idisplaydimension",
+      "display",
+      "run",
+      "bidirectionally",
+      "boolean",
+      "insert",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.RunBidirectionally",
+  "description": "Gets or sets whether each dimension runs in a direction closest to the baseline in this angular running dimension.",
+  "signature": "System.Boolean RunBidirectionally {get; set;}",
+  "parameters": [],
+  "returns": "True if each dimension runs in a direction closest to the baseline, false if all dimensions run in the same direction (see Remarks )",
+  "remarks": "If this property is...\nThen...\nTrue\nNo angle dimension in the angular running dimension is greater than 180\n\u2070\nfrom the baseline, and each angle is measured from a direction that is closest to the baseline.\nFalse\nThe running direction of all angle dimensions is determined by the first angle dimension added. For example, if the user places the baseline dimension at the top of the part, clicking on a feature to the right of the baseline dimension forces all subsequent angular dimensions to be measured clockwise from the baseline.\nThis property corresponds to the\nRun bidirectionally\ncheck box in the\nWitness/Leader Display\npanel of the\nLeaders\ntab of the\nDimension\nPropertyManager page that appears when you right-click in a drawing and select\nMore Dimensions > Angular Running Dimension\n.",
+  "examples": [
+    {
+      "title": "Insert Angular Running Dimension (VBA)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (VB.NET)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (C#)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.DisplayAsChain",
+    "IDisplayDimension.ExtensionLineExtendsFromCenterOfSet",
+    "IDisplayDimension.Jogged"
+  ]
+}

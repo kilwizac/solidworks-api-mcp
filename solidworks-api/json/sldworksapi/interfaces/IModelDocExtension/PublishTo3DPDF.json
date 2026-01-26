@@ -1,0 +1,108 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "PublishTo3DPDF",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "MBDPdfData",
+        "type": "System.Object",
+        "description": "SOLIDWORKS MBD 3D PDF data"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.PublishSTEP242File",
+      "IView3D"
+    ],
+    "keywords": [
+      "mbd",
+      "model",
+      "based",
+      "definition",
+      "solidworks",
+      "mbd3dpdfdata",
+      "see",
+      "imbd3dpdfdata",
+      "3d",
+      "pdf",
+      "publishto3dpdf",
+      "imodeldocextension",
+      "doc",
+      "extension",
+      "publish",
+      "to3",
+      "dpdf",
+      "data",
+      "object",
+      "int32",
+      "text",
+      "custom",
+      "properties",
+      "theme",
+      "vb",
+      "net",
+      "vba",
+      "fire",
+      "notification",
+      "when",
+      "publishing",
+      "part"
+    ]
+  },
+  "title": "IModelDocExtension.PublishTo3DPDF",
+  "description": "Creates a 3D PDF for SOLIDWORKS MBD.",
+  "signature": "System.Int32 PublishTo3DPDF( \n   System.Object\nMBDPdfData\n)",
+  "parameters": [
+    {
+      "name": "MBDPdfData",
+      "type": "System.Object",
+      "description": "SOLIDWORKS MBD 3D PDF data"
+    }
+  ],
+  "returns": "Status as defined in swPublishTo3DPDFError_e",
+  "remarks": "SOLIDWORKS Model Based Definition (MBD) is an integrated drawingless manufacturing solution for SOLIDWORKS.\nThis method:\nrequires the that the SOLDWORKS MBD add-in be loaded. (\nISldWorks::LoadAddIn\n)\ncorresponds to the\nPublish to 3D PDF\nbutton on the SOLIDWORKS MBD toolbar.\nTypical steps for generating a SOLIDWORKS MBD 3D PDF using the SOLIDWORKS API are:\nGet the MBD3DPdfData object using\nIModelDocExtension::GetMBD3DPdfData\n.\nSet the path and file name of the SOLIDWORKS MBD 3D PDF theme using\nIMBD3DPdfData::ThemeName\n.\nGet standard and custom views using\nIMBD3DPdfData::GetStandardViews\nand\nIMBD3DPdfData::GetMoreViews\n.\nSet standard and custom views using\nIMBD3DPdfData::SetStandardViews\nand\nIMBD3DPdfData::SetMoreViews\n.\nGet and set text and custom properties in the theme using\nIMBD3DPdfData::GetTextAndCustomProperties\nand\nITextAndCustomProperty\n.\nSet the path for the SOLIDWORKS MBD 3D PDF using\nIMBD3DPdfData::FilePath\n.\nGenerate the SOLIDWORKS MBD 3D PDF using this method.\nSee the SOLIDWORKS Help for details about MBD.",
+  "examples": [
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (C#)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (VB.NET)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Publish Text and Custom Properties from Theme to MBD 3D PDF (VBA)",
+      "href": "Publish_Text_and_Custom_Properties_from_Theme_to_MBD_3D_PDF_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Notification When Publishing Part to MBD 3D PDF (C#)",
+      "href": "Fire_Notification_When_Publishing_Part_to_MBD_3D_PDF_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Notification When Publishing Part to MBD 3D PDF (VB.NET)",
+      "href": "Fire_Notification_When_Publishing_Part_to_MBD_3D_PDF_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Notification When Publishing Part to MBD 3D PDF (VBA)",
+      "href": "Fire_Notification_When_Publishing_Part_to_MBD_3D_PDF_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.PublishSTEP242File",
+    "IView3D"
+  ]
+}

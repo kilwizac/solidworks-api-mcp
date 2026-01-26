@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "UpdateStandardViews",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ViewName",
+        "type": "System.String",
+        "description": "Name of the standard model view to change; empty string to use ViewId ( see Remarks )"
+      },
+      {
+        "name": "ViewId",
+        "type": "System.Int32",
+        "description": "View ID as defined in swStandardViews_e ; -1 to use ViewName ( see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ShowNamedView2",
+      "IModelDocExtension.ResetStandardViews"
+    ],
+    "keywords": [
+      "named",
+      "views",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "updatestandardviews",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "update",
+      "standard",
+      "name",
+      "string",
+      "id",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.UpdateStandardViews",
+  "description": "Changes the specified standard view to the current model view.",
+  "signature": "System.Boolean UpdateStandardViews( \n   System.String\nViewName\n,\n   System.Int32\nViewId\n)",
+  "parameters": [
+    {
+      "name": "ViewName",
+      "type": "System.String",
+      "description": "Name of the standard model view to change; empty string to use ViewId ( see Remarks )"
+    },
+    {
+      "name": "ViewId",
+      "type": "System.Int32",
+      "description": "View ID as defined in swStandardViews_e ; -1 to use ViewName ( see Remarks )"
+    }
+  ],
+  "returns": "True if the standard model view update is successful, false if not",
+  "remarks": "This method works with parts and assemblies only.\nIf you set both ViewName and ViewId, then ViewId takes precedence if the two arguments do not resolve to the same standard model view.\nThis method does not support the following standard model views:\nswStandardViews_e\n.swDimetricView\nswStandardViews_e.swIsometricView\nswStandardViews_e.swTrimetricView",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ShowNamedView2",
+    "IModelDocExtension.ResetStandardViews"
+  ]
+}

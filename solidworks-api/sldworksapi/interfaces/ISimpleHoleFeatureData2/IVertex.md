@@ -1,0 +1,61 @@
+---
+type: property
+interface: ISimpleHoleFeatureData2
+member: IVertex
+returns: Vertex
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - geometry
+related:
+  - ISimpleHoleFeatureData2.Face
+  - ISimpleHoleFeatureData2.GetEndConditionReference
+  - ISimpleHoleFeatureData2.IFace
+  - ISimpleHoleFeatureData2.SetEndConditionReference
+  - ISimpleHoleFeatureData2.Type
+  - ISimpleHoleFeatureData2.Vertex
+keywords:
+  - ivertex
+  - isimpleholefeaturedata2
+  - simple
+  - hole
+  - feature
+  - data2
+  - vertex
+readonly: null
+---
+
+# ISimpleHoleFeatureData2.IVertex
+
+Gets or sets the end-condition vertex of this simple hole feature.
+
+## Signature
+
+```csharp
+Vertex IVertex {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+End-condition vertex or NULL if the operation fails
+
+## Remarks
+
+See
+Accessing Selections that Define Features
+for additional details.
+
+## See Also
+
+- `ISimpleHoleFeatureData2.Face`
+- `ISimpleHoleFeatureData2.GetEndConditionReference`
+- `ISimpleHoleFeatureData2.IFace`
+- `ISimpleHoleFeatureData2.SetEndConditionReference`
+- `ISimpleHoleFeatureData2.Type`
+- `ISimpleHoleFeatureData2.Vertex`

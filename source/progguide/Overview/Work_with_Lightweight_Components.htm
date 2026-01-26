@@ -1,0 +1,124 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Work with Lightweight Components</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="11 5, 2002 10:33:05 AM">
+<meta NAME=MS-HAID CONTENT=ZLightWeight>
+<meta name=MS-HKWD content="Assemblies (see also IAssemblyDoc Interface),lightweight">
+<meta name=MS-HKWD content="Components (see also IComponent2 Interface),lightweight">
+<meta name=MS-HKWD content=Lightweight>
+<meta name=MS-HKWD content="Lightweight,components">
+<meta name=MS-HKWD content="Lightweight,assemblies">
+<meta name=MS-HKWD content="Components (see also IComponent2 Interface)">
+<meta name=MS-HKWD content="Assemblies (see also IAssemblyDoc Interface)">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=505>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Work with Lightweight Components</h1>
+
+<p>SOLIDWORKS supports a mode for assembly components called lightweight. 
+ A lightweight component contains only a small subset of its data for display 
+ purposes, which increases system performance when loading assemblies. 
+ The extra data is not loaded until it is needed.</p>
+
+<p>Because lightweight components contain only a small subset of the data, 
+ applications cannot query for all the information that is available to 
+ a fully resolved component. To avoid problems in this area, <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IComponent2~IsHidden.html">IComponent2::IsHidden</a> 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IComponent2~IsHidden.html">IComponent2::IsSuppressed</a> 
+ return true if a component is flagged as lightweight. <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IComponent2~IGetBody.html">IComponent2::IGetBody</a> 
+ returns a special HRESULT value if a component is lightweight.</p>
+
+<p>To take advantage of lightweight components, use <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IComponent2~GetSuppression.html">IComponent2::GetSuppression</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IComponent2~SetSuppression.html">IComponent2::SetSuppression</a>, 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAssemblyDoc~ResolveAllLightWeightComponents.html">IAssemblyDoc::ResolveAllLightWeightComponents</a>, 
+ and <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IAssemblyDoc~GetLightWeightComponentCount.html">IAssemblyDoc::GetLightWeightComponentCount</a>.</p>
+
+<p>To find or control whether SOLIDWORKS is using lightweight components 
+ see:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldworks~SetUserPreferenceToggle.html">ISldWorks::SetUserPreferenceToggle&nbsp;- 
+ swAutoLoadPartsLightweight</a> controls whether assemblies are loaded 
+ with lightweight components</p></li>
+	
+	<li class=kadov-p><p><a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~SetUserpreferenceIntegerValue.html">ISldWorks::SetUserPreferenceIntegerValue&nbsp;- 
+ swResolveLightweight</a> controls how lightweight components are resolved</p></li>
+</ul>
+
+<p style="margin-bottom: 0;">
+<!--Metadata type="DesignerControl" startspan
+<object classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" type="application/x-oleobject" id="RelatedTopic0" dtcid="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="1217">
+	<param name="_ExtentY" value="556">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="AssemblyDoc_Object$$**$$ZLightWeight$$**$$">
+	<param name="Image" value>
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\Help\APIHelp with Document!X\sw2009\sldworksAPIProgGuide\Overview\Work_with_Lightweight_Components.htm">
+	<param name="_ID" value="RelatedTopic0">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value>
+	<param name="Window" value>
+	<param name="ChmFile" value>
+	<param name="DisableJump" value="0">
+</object>
+-->
+<OBJECT
+  CLASSID="clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11"
+  ID="RelatedTopic0"  TYPE="application/x-oleobject">
+  <PARAM  NAME="Command"  VALUE="ALink">
+  <PARAM  NAME="Font"  VALUE="MS Sans Serif,8,0,,">
+  <PARAM  NAME="Frame"  VALUE="">
+  <PARAM  NAME="Item1"  VALUE="">
+  <PARAM  NAME="Item2"  VALUE="AssemblyDoc_Object">
+  <PARAM  NAME="Item3"  VALUE="ZLightWeight">
+</OBJECT>
+
+<!--metadata type="DesignerControl" endspan-->
+ </p>
+
+</body>
+
+</html>

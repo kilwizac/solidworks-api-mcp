@@ -1,0 +1,44 @@
+---
+type: method
+interface: IModelDoc2
+member: ToolsMassProps
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related: []
+keywords:
+  - mass
+  - properties
+  - see
+  - imassproperty
+  - toolsmassprops
+  - imodeldoc2
+  - model
+  - doc2
+  - tools
+  - props
+  - void
+---
+
+# IModelDoc2.ToolsMassProps
+
+Calculates the mass properties.
+
+## Signature
+
+```csharp
+void ToolsMassProps()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

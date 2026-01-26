@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICoEdge",
+    "member": "Evaluate",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Param",
+        "type": "System.Double",
+        "description": "Curve parameter desired (U value desired for evaluation)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICoEdge.GetCurveParams",
+      "ICoEdge.IEvaluate",
+      "ICoEdge.IGetCurveParams"
+    ],
+    "keywords": [
+      "evaluate",
+      "icoedge",
+      "co",
+      "edge",
+      "param",
+      "double",
+      "object",
+      "determine",
+      "type",
+      "face",
+      "vba",
+      "select",
+      "tangent",
+      "faces",
+      "edges",
+      "all",
+      "holes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICoEdge.Evaluate",
+  "description": "Obsolete. Superseded by ICoEdge::Evaluate2.",
+  "signature": "System.Object Evaluate( \n   System.Double\nParam\n)",
+  "parameters": [
+    {
+      "name": "Param",
+      "type": "System.Double",
+      "description": "Curve parameter desired (U value desired for evaluation)"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The tangency vector is defined to be in the direction of the coedge.\nThe format of the return value is an array of 6 doubles:\nretval[0] x location on the curve\nretval[1] y location on the curve\nretval[2] z location on the curve\nretval[3] x vector describing the tangency at the parameter location on the coedge\nretval[4] y vector describing the tangency at the parameter location on the coedge\nretval[5] z vector describing the tangency at the parameter location on the coedge",
+  "examples": [
+    {
+      "title": "Determine Type of Face (VBA)",
+      "href": "Determine_Type_of_Face_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Tangent Faces (VBA)",
+      "href": "Select_Tangent_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (C#)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VB.NET)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VBA)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICoEdge.GetCurveParams",
+    "ICoEdge.IEvaluate",
+    "ICoEdge.IGetCurveParams"
+  ]
+}

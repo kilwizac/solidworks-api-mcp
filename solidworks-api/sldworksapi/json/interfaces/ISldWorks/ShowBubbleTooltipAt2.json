@@ -1,0 +1,200 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ShowBubbleTooltipAt2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PointX",
+        "type": "System.Int32",
+        "description": "x coordinate in pixels relative to upper-left corner of the screen (see Remarks )"
+      },
+      {
+        "name": "PointY",
+        "type": "System.Int32",
+        "description": "y coordinate in pixels relative to upper-left corner of the screen (see Remarks )"
+      },
+      {
+        "name": "ArrowPos",
+        "type": "System.Int32",
+        "description": "Arrow position as defined in swArrowPosition"
+      },
+      {
+        "name": "TitleString",
+        "type": "System.String",
+        "description": "Title of bubble ToolTip"
+      },
+      {
+        "name": "MessageString",
+        "type": "System.String",
+        "description": "Message for bubble ToolTip"
+      },
+      {
+        "name": "TitleBitmapID",
+        "type": "System.Int32",
+        "description": "ID of the bitmap to display in the bubble ToolTip as defined in swBitMaps (see Remarks )"
+      },
+      {
+        "name": "TitleBitmap",
+        "type": "System.String",
+        "description": "Path and filename of the bitmap to display before TitleString in the bubble ToolTip"
+      },
+      {
+        "name": "UrlLoc",
+        "type": "System.String",
+        "description": "Any valid Windows Internet Explorer file to display in the body of the bubble ToolTip (see Remarks )"
+      },
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Add-in's application ID specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "LinkStringID",
+        "type": "System.Int32",
+        "description": "ID of the hyperlink as defined in swLinkString (see Remarks )"
+      },
+      {
+        "name": "LinkString",
+        "type": "System.String",
+        "description": "String to show as the hyperlink in the bubble ToolTip"
+      },
+      {
+        "name": "CallBack",
+        "type": "System.String",
+        "description": "Name of the callback function for the hyperlink"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.HideBubbleTooltip",
+      "ISldWorks.ShowBubbleTooltip"
+    ],
+    "keywords": [
+      "bubble",
+      "tooltips",
+      "showbubbletooltipat2",
+      "isldworks",
+      "sld",
+      "works",
+      "show",
+      "tooltip",
+      "at2",
+      "point",
+      "int32",
+      "arrow",
+      "pos",
+      "title",
+      "string",
+      "message",
+      "bitmap",
+      "id",
+      "url",
+      "loc",
+      "cookie",
+      "link",
+      "call",
+      "back",
+      "void",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.ShowBubbleTooltipAt2",
+  "description": "Displays a bubble ToolTip at the specified location.",
+  "signature": "void ShowBubbleTooltipAt2( \n   System.Int32\nPointX\n,\n   System.Int32\nPointY\n,\n   System.Int32\nArrowPos\n,\n   System.String\nTitleString\n,\n   System.String\nMessageString\n,\n   System.Int32\nTitleBitmapID\n,\n   System.String\nTitleBitmap\n,\n   System.String\nUrlLoc\n,\n   System.Int32\nCookie\n,\n   System.Int32\nLinkStringID\n,\n   System.String\nLinkString\n,\n   System.String\nCallBack\n)",
+  "parameters": [
+    {
+      "name": "PointX",
+      "type": "System.Int32",
+      "description": "x coordinate in pixels relative to upper-left corner of the screen (see Remarks )"
+    },
+    {
+      "name": "PointY",
+      "type": "System.Int32",
+      "description": "y coordinate in pixels relative to upper-left corner of the screen (see Remarks )"
+    },
+    {
+      "name": "ArrowPos",
+      "type": "System.Int32",
+      "description": "Arrow position as defined in swArrowPosition"
+    },
+    {
+      "name": "TitleString",
+      "type": "System.String",
+      "description": "Title of bubble ToolTip"
+    },
+    {
+      "name": "MessageString",
+      "type": "System.String",
+      "description": "Message for bubble ToolTip"
+    },
+    {
+      "name": "TitleBitmapID",
+      "type": "System.Int32",
+      "description": "ID of the bitmap to display in the bubble ToolTip as defined in swBitMaps (see Remarks )"
+    },
+    {
+      "name": "TitleBitmap",
+      "type": "System.String",
+      "description": "Path and filename of the bitmap to display before TitleString in the bubble ToolTip"
+    },
+    {
+      "name": "UrlLoc",
+      "type": "System.String",
+      "description": "Any valid Windows Internet Explorer file to display in the body of the bubble ToolTip (see Remarks )"
+    },
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Add-in's application ID specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "LinkStringID",
+      "type": "System.Int32",
+      "description": "ID of the hyperlink as defined in swLinkString (see Remarks )"
+    },
+    {
+      "name": "LinkString",
+      "type": "System.String",
+      "description": "String to show as the hyperlink in the bubble ToolTip"
+    },
+    {
+      "name": "CallBack",
+      "type": "System.String",
+      "description": "Name of the callback function for the hyperlink"
+    }
+  ],
+  "returns": "",
+  "remarks": "If PointX and PointY are both set to 0 and TitleBitmapID is swBitMapTreeError and a PropertyManager page is displayed, then the bubble ToolTip will appear in the same location as the SOLIDWORKS Design user-interface Rebuild Errors bubble ToolTip. You must specify both TitleBitmapID and TitleBitmap values.\nIf you specified a ...\nThen the bubble ToolTip...\ngif, .jpg, or .jpeg image for UrlLoc\nis automatically expanded to accommodate the image.\nURL for UrlLoc\ncannot be resized; if the URL:\nis an HTML file, then the contents of the HTML file are displayed in the bubble ToolTip.\nlinks to a website, then the default or specified web page at that website is displayed in the bubble ToolTip.\nThe Cookie, LinkStringID, LinkString, and Callback parameters are intended for use by add-in applications to display a hyperlink in the bubble ToolTip that, when clicked, calls a function to do something outside of the application; for example, open the add-in application's Help system.",
+  "examples": [
+    {
+      "title": "C#",
+      "href": "#CSharp",
+      "code_blocks": []
+    },
+    {
+      "title": "VB.NET",
+      "href": "#VBNET",
+      "code_blocks": []
+    },
+    {
+      "title": "VBA",
+      "href": "#VBA",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.HideBubbleTooltip",
+    "ISldWorks.ShowBubbleTooltip"
+  ]
+}

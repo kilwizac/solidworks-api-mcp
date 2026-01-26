@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetLockColumnWidth",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the column (see Remarks )"
+      },
+      {
+        "name": "LockColumnWidth",
+        "type": "System.Boolean",
+        "description": "True to lock this column's width, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.ColumnHidden",
+      "ITableAnnotation.DeleteColumn",
+      "ITableAnnotation.GetColumnTitle",
+      "ITableAnnotation.GetColumnType",
+      "ITableAnnotation.GetColumnWidth",
+      "ITableAnnotation.GetLockColumnWidth",
+      "ITableAnnotation.InsertColumn2",
+      "ITableAnnotation.MoveColumn",
+      "ITableAnnotation.SetColumnTitle",
+      "ITableAnnotation.SetColumnType",
+      "ITableAnnotation.SetColumnWidth"
+    ],
+    "keywords": [
+      "setlockcolumnwidth",
+      "itableannotation",
+      "table",
+      "annotation",
+      "lock",
+      "column",
+      "width",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SetLockColumnWidth",
+  "description": "Sets whether to lock the width of the specified column in this table annotation.",
+  "signature": "System.Boolean SetLockColumnWidth( \n   System.Int32\nIndex\n,\n   System.Boolean\nLockColumnWidth\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the column (see Remarks )"
+    },
+    {
+      "name": "LockColumnWidth",
+      "type": "System.Boolean",
+      "description": "True to lock this column's width, false to not"
+    }
+  ],
+  "returns": "True if setting whether to lock the width of the specified column is successful, false if not",
+  "remarks": "Call\nITableAnnotation::ColumnCount\nto get the number of visible columns or\nITableAnnotation::TotalColumnCount\nto get the number of visible and hidden columns in this table annotation.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.ColumnHidden",
+    "ITableAnnotation.DeleteColumn",
+    "ITableAnnotation.GetColumnTitle",
+    "ITableAnnotation.GetColumnType",
+    "ITableAnnotation.GetColumnWidth",
+    "ITableAnnotation.GetLockColumnWidth",
+    "ITableAnnotation.InsertColumn2",
+    "ITableAnnotation.MoveColumn",
+    "ITableAnnotation.SetColumnTitle",
+    "ITableAnnotation.SetColumnType",
+    "ITableAnnotation.SetColumnWidth"
+  ]
+}

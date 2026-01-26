@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreatePlanarSurface2",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "RootPoint",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "Normal",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x,y,z)"
+      },
+      {
+        "name": "Ref",
+        "type": "System.Double",
+        "description": "Array of 3 doubles representing the vector defining the x-axis on the plane"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateBsplineSurface",
+      "IModeler.CreateConicalSurface2",
+      "IModeler.CreateCoonsBSurface",
+      "IModeler.CreateCylindricalSurface2",
+      "IModeler.CreateExtrusionSurface",
+      "IModeler.CreateLoftSurface",
+      "IModeler.CreateOffsetSurface",
+      "IModeler.CreatePlanarSurface2",
+      "IModeler.CreateRuledSurface",
+      "IModeler.CreateSphericalSurface2",
+      "IModeler.CreateSweptSurface",
+      "IModeler.CreateToroidalSurface",
+      "IModeler.ICreateBsplineSurface",
+      "IModeler.ICreateConicalSurface2",
+      "IModeler.ICreateCylindricalSurface2",
+      "IModeler.ICreateExtrusionSurface",
+      "IModeler.ICreateLoftSurface",
+      "IModeler.ICreateOffsetSurface",
+      "IModeler.ICreateRuledSurface",
+      "IModeler.ICreateSphericalSurface2",
+      "IModeler.ICreateSweptSurface",
+      "IModeler.ICreateToroidalSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "planar",
+      "icreateplanarsurface2",
+      "imodeler",
+      "modeler",
+      "create",
+      "surface2",
+      "root",
+      "point",
+      "double",
+      "normal",
+      "ref"
+    ]
+  },
+  "title": "IModeler.ICreatePlanarSurface2",
+  "description": "Creates a new infinite planar surface.",
+  "signature": "Surface ICreatePlanarSurface2( \n   ref System.Double\nRootPoint\n,\n   ref System.Double\nNormal\n,\n   ref System.Double\nRef\n)",
+  "parameters": [
+    {
+      "name": "RootPoint",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "Normal",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x,y,z)"
+    },
+    {
+      "name": "Ref",
+      "type": "System.Double",
+      "description": "Array of 3 doubles representing the vector defining the x-axis on the plane"
+    }
+  ],
+  "returns": "Newly created planar surface",
+  "remarks": "You can use this method with:\nA set of related functions designed to construct a body from trimmed surfaces. It can also be used with trimming curve creation routines to construct a trimmed planar surface.\nTrimming curve creation routines such as\nISurface::AddTrimmingLoop2\nor\nISurface::IAddTrimmingLoop2\nto construct a trimmed surface.\nSee\nIBody2::CreatePlanarTrimSurfaceDLL\nor\nIBody2::ICreatePlanarTrimSurfaceDLL\n, which allows you to create a planar trimmed surface directly from the vertex points.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBsplineSurface",
+    "IModeler.CreateConicalSurface2",
+    "IModeler.CreateCoonsBSurface",
+    "IModeler.CreateCylindricalSurface2",
+    "IModeler.CreateExtrusionSurface",
+    "IModeler.CreateLoftSurface",
+    "IModeler.CreateOffsetSurface",
+    "IModeler.CreatePlanarSurface2",
+    "IModeler.CreateRuledSurface",
+    "IModeler.CreateSphericalSurface2",
+    "IModeler.CreateSweptSurface",
+    "IModeler.CreateToroidalSurface",
+    "IModeler.ICreateBsplineSurface",
+    "IModeler.ICreateConicalSurface2",
+    "IModeler.ICreateCylindricalSurface2",
+    "IModeler.ICreateExtrusionSurface",
+    "IModeler.ICreateLoftSurface",
+    "IModeler.ICreateOffsetSurface",
+    "IModeler.ICreateRuledSurface",
+    "IModeler.ICreateSphericalSurface2",
+    "IModeler.ICreateSweptSurface",
+    "IModeler.ICreateToroidalSurface"
+  ]
+}

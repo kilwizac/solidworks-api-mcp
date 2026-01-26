@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchBlockInstance",
+    "member": "GetAttachedEntities",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Entities",
+        "type": "System.Object",
+        "description": "Array of attached entities"
+      },
+      {
+        "name": "EntityTypes",
+        "type": "System.Object",
+        "description": "Array of longs or integers (see Long vs. Integer ) of the types of attached entities (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "attached",
+      "entities",
+      "entity",
+      "ientity",
+      "getattachedentities",
+      "sketch",
+      "block",
+      "instance",
+      "object",
+      "types",
+      "boolean"
+    ]
+  },
+  "title": "ISketchBlockInstance.GetAttachedEntities",
+  "description": "Gets the entities to which this block instance is attached.",
+  "signature": "System.Boolean GetAttachedEntities( \n   out System.Object\nEntities\n,\n   out System.Object\nEntityTypes\n)",
+  "parameters": [
+    {
+      "name": "Entities",
+      "type": "System.Object",
+      "description": "Array of attached entities"
+    },
+    {
+      "name": "EntityTypes",
+      "type": "System.Object",
+      "description": "Array of longs or integers (see Long vs. Integer ) of the types of attached entities (see Remarks )"
+    }
+  ],
+  "returns": "True if the entities are retrieved, false if not",
+  "remarks": "The arrays returned by this method can contain one or more different object and type.\nPossible returned Entities\nPossible returned EntityTypes\nIFace2\nswSelFACES\nIEdge\nswSelEDGES\nIVertex\nswSelVERTICES\nISketchSegment\nswSelSKETCHSEGS\nISketchPoint\nswSelSKETCHPOINTS\nA block instance that was inserted with a leader attached to an entity remains attached to that entity even if the leader is hidden. If the leader is shown again later on, the leader still points to the entity and the block instance is still properly associated with the entity.",
+  "examples": [],
+  "related": []
+}

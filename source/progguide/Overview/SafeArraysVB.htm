@@ -1,0 +1,90 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Passing SafeArrays in VB</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="05 23, 2002 11:36:35 AM">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=505>
+<meta name=layout-width content=842>
+<meta NAME=MS-HKWD CONTENT="SafeArrays,VBA" >
+<meta NAME=MS-HKWD CONTENT="SafeArrays" >
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Passing SafeArrays in Visual Basic for Applications</h1>
+
+<p>Passing array data to SOLIDWORKS in Visual Basic for Applications (VBA) requires the use of 
+ a VARIANT variable to hold the data. Put the data into an array and <!--kadov_tag{{</spaces>}}-->
+assign a VARIANT to the array. Pass the VARIANT enclosed 
+ in parentheses to the API function.</p>
+
+<p>&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">Dim varArray As Variant</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">Dim DataArray(9) As double</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">' Assign values</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">DataArray(0) = 0.1</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">...</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">&nbsp;</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">' Pass the data in a VARIANT to a SOLIDWORKS 
+method</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">varArray = DataArray</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">Result = Object.Method( (varArray) )&nbsp;&nbsp;' 
+ The extra parentheses are required</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

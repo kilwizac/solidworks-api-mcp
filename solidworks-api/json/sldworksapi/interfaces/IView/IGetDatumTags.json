@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetDatumTags",
+    "returns": "DatumTag",
+    "parameters": [
+      {
+        "name": "NumDatumTag",
+        "type": "System.Int32",
+        "description": "Total number of datum tags on the drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDatumTagCount",
+      "IView.GetDatumTags"
+    ],
+    "keywords": [
+      "datum",
+      "tags",
+      "see",
+      "also",
+      "idatumtag",
+      "annotations",
+      "view",
+      "iview",
+      "annotation",
+      "iannotation",
+      "igetdatumtags",
+      "num",
+      "tag",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetDatumTags",
+  "description": "Gets all the datum tags on this drawing view.",
+  "signature": "DatumTag IGetDatumTags( \n   System.Int32\nNumDatumTag\n)",
+  "parameters": [
+    {
+      "name": "NumDatumTag",
+      "type": "System.Int32",
+      "description": "Total number of datum tags on the drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of datum tags VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of datum tags all at once instead of calling\nIView::GetFirstDatumTag\nand then repeatedly calling\nIDatumTag::GetNext\nto obtain the remaining datum tags on this drawing view.\nBefore calling this method, call\nIView::GetDatumTagCount\nto get the value for numDatumTag.",
+  "examples": [],
+  "related": [
+    "IView.GetDatumTagCount",
+    "IView.GetDatumTags"
+  ]
+}

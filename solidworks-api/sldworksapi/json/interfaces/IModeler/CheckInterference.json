@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CheckInterference",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Body1",
+        "type": "System.Object",
+        "description": "First body to check for interference"
+      },
+      {
+        "name": "Body2",
+        "type": "System.Object",
+        "description": "Second body to check for interference"
+      },
+      {
+        "name": "CoincidentInterference",
+        "type": "System.Boolean",
+        "description": "True to check for coincident interference, false to not"
+      },
+      {
+        "name": "Body1InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that have interfered from the first body with the second body"
+      },
+      {
+        "name": "Body2InterferedFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that have interfered from the second body with the first body"
+      },
+      {
+        "name": "IntersectedBodyArray",
+        "type": "System.Object",
+        "description": "Array of the interfering bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.IToolsCheckInterference3",
+      "IAssemblyDoc.ToolsCheckInterference2",
+      "IModeler.ICheckInterferenceCount2"
+    ],
+    "keywords": [
+      "checkinterference",
+      "imodeler",
+      "modeler",
+      "check",
+      "interference",
+      "body1",
+      "object",
+      "body2",
+      "coincident",
+      "boolean",
+      "interfered",
+      "face",
+      "array",
+      "intersected",
+      "body",
+      "using",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CheckInterference",
+  "description": "Obsolete. Superseded by IModeler::CheckInterference3.",
+  "signature": "System.Boolean CheckInterference( \n   System.Object\nBody1\n,\n   System.Object\nBody2\n,\n   System.Boolean\nCoincidentInterference\n,\n   out System.Object\nBody1InterferedFaceArray\n,\n   out System.Object\nBody2InterferedFaceArray\n,\n   out System.Object\nIntersectedBodyArray\n)",
+  "parameters": [
+    {
+      "name": "Body1",
+      "type": "System.Object",
+      "description": "First body to check for interference"
+    },
+    {
+      "name": "Body2",
+      "type": "System.Object",
+      "description": "Second body to check for interference"
+    },
+    {
+      "name": "CoincidentInterference",
+      "type": "System.Boolean",
+      "description": "True to check for coincident interference, false to not"
+    },
+    {
+      "name": "Body1InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that have interfered from the first body with the second body"
+    },
+    {
+      "name": "Body2InterferedFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that have interfered from the second body with the first body"
+    },
+    {
+      "name": "IntersectedBodyArray",
+      "type": "System.Object",
+      "description": "Array of the interfering bodies"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Each body must be transformed in the coordinate space of the top-level assembly so that it is positioned the same with respect to the other bodies as it is in assembly space.\nTo align the two bodies, apply the transformation from\nIComponent2::Transform2\nusing\nIBody2::ApplyTransform\n.",
+  "examples": [
+    {
+      "title": "Check Interference Using IModeler::CheckInterference (VBA)",
+      "href": "Check_Interference_using_Modeler_CheckInterference_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IToolsCheckInterference3",
+    "IAssemblyDoc.ToolsCheckInterference2",
+    "IModeler.ICheckInterferenceCount2"
+  ]
+}

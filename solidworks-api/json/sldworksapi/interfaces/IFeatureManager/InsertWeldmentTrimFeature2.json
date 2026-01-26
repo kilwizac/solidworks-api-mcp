@@ -1,0 +1,127 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertWeldmentTrimFeature2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "EndCond",
+        "type": "System.Int32",
+        "description": "End condition as defined by swSolidworksWeldmentEndCondOptions_e"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Logical sum of values as defined in swWeldmentTrimExtendOptionType_e (see Remarks )"
+      },
+      {
+        "name": "GapValue",
+        "type": "System.Double",
+        "description": "Length to trim (see Remarks )"
+      },
+      {
+        "name": "BodiesToTrim",
+        "type": "System.Object",
+        "description": "Array of bodies to trim"
+      },
+      {
+        "name": "BodiesOrFaces",
+        "type": "System.Object",
+        "description": "Array of bodies or faces that define the trimming boundaries"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertWeldmentTrimFeature",
+      "IWeldmentTrimExtendFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "weldment",
+      "trim",
+      "weldments",
+      "extend",
+      "insertweldmenttrimfeature2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature2",
+      "end",
+      "cond",
+      "int32",
+      "options",
+      "gap",
+      "value",
+      "double",
+      "bodies",
+      "object",
+      "faces",
+      "features",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertWeldmentTrimFeature2",
+  "description": "Inserts a weldment trim feature for the specified weldment bodies or faces.",
+  "signature": "Feature InsertWeldmentTrimFeature2( \n   System.Int32\nEndCond\n,\n   System.Int32\nOptions\n,\n   System.Double\nGapValue\n,\n   System.Object\nBodiesToTrim\n,\n   System.Object\nBodiesOrFaces\n)",
+  "parameters": [
+    {
+      "name": "EndCond",
+      "type": "System.Int32",
+      "description": "End condition as defined by swSolidworksWeldmentEndCondOptions_e"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Logical sum of values as defined in swWeldmentTrimExtendOptionType_e (see Remarks )"
+    },
+    {
+      "name": "GapValue",
+      "type": "System.Double",
+      "description": "Length to trim (see Remarks )"
+    },
+    {
+      "name": "BodiesToTrim",
+      "type": "System.Object",
+      "description": "Array of bodies to trim"
+    },
+    {
+      "name": "BodiesOrFaces",
+      "type": "System.Object",
+      "description": "Array of bodies or faces that define the trimming boundaries"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Use\nIModelDocExtension::SelectByID2\nand specify the following marks to select the body, or bodies, to trim and the trimming boundaries:\n1 = Body or bodies to trim\n2 = Trimming boundaries (body or face)\nIf you include swWeldmentTrimExtendOption_WeldGap in the Options parameter, then the GapValue parameter is used. Specify 0 for GapValue to ensure that there is no weld gap.\nIf you exclude swWeldmentTrimExtendOption_WeldGap from the Options parameter, then the weld gap defaults to the last value specified in the SOLIDWORKS Design user-interface.",
+  "examples": [
+    {
+      "title": "Insert Weldment Features (VBA)",
+      "href": "Insert_Weldment_Features_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (VB.NET)",
+      "href": "Insert_Weldment_Features_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (C#)",
+      "href": "Insert_Weldment_Features_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertWeldmentTrimFeature",
+    "IWeldmentTrimExtendFeatureData"
+  ]
+}

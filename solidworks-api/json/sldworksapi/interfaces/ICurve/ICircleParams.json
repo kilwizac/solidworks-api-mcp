@@ -1,0 +1,41 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICurve",
+    "member": "ICircleParams",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.CircleParams",
+      "ICurve.Identity",
+      "ICurve.IsCircle"
+    ],
+    "keywords": [
+      "icircleparams",
+      "icurve",
+      "curve",
+      "circle",
+      "params",
+      "double"
+    ],
+    "readonly": true
+  },
+  "title": "ICurve.ICircleParams",
+  "description": "Gets the parameters of a curve that is a circle.",
+  "signature": "System.Double ICircleParams {get;}",
+  "parameters": [],
+  "returns": "Pointer to an array of doubles (see Remarks )",
+  "remarks": "To determine if a circular edge is a complete circle or an arc, use\nIEdge::IGetCurveParams2\n.\nThe return value is the following array of 7 double values:\n[\ncenter.x, center.y, center.z, axis.x, axis.y, axis.z, radius\n]\nCenter and radius values are in meters.",
+  "examples": [],
+  "related": [
+    "ICurve.CircleParams",
+    "ICurve.Identity",
+    "ICurve.IsCircle"
+  ]
+}

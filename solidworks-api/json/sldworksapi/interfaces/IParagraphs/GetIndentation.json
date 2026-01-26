@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParagraphs",
+    "member": "GetIndentation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FirstlineIndent",
+        "type": "System.Double",
+        "description": "Indentation of first line"
+      },
+      {
+        "name": "Indent",
+        "type": "System.Double",
+        "description": "Indentation of lines other than the first line"
+      },
+      {
+        "name": "IndentIncrement",
+        "type": "System.Double",
+        "description": "Amount by which to increment the current indents"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IParagraphs.SetIndentation"
+    ],
+    "keywords": [
+      "getindentation",
+      "iparagraphs",
+      "paragraphs",
+      "indentation",
+      "firstline",
+      "indent",
+      "double",
+      "increment",
+      "boolean"
+    ]
+  },
+  "title": "IParagraphs.GetIndentation",
+  "description": "Gets the indentation of the current paragraph.",
+  "signature": "System.Boolean GetIndentation( \n   out System.Double\nFirstlineIndent\n,\n   out System.Double\nIndent\n,\n   out System.Double\nIndentIncrement\n)",
+  "parameters": [
+    {
+      "name": "FirstlineIndent",
+      "type": "System.Double",
+      "description": "Indentation of first line"
+    },
+    {
+      "name": "Indent",
+      "type": "System.Double",
+      "description": "Indentation of lines other than the first line"
+    },
+    {
+      "name": "IndentIncrement",
+      "type": "System.Double",
+      "description": "Amount by which to increment the current indents"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, set the current paragraph using\nIParagraphs::CurrentParagraph\n.",
+  "examples": [],
+  "related": [
+    "IParagraphs.SetIndentation"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "InsertModelAnnotations4",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "Source of dimensions as defined by swImportModelItemsSource_e"
+      },
+      {
+        "name": "Types",
+        "type": "System.Int32",
+        "description": "Annotation types to insert as defined in swInsertAnnotation_e ; only valid if InsertAllAnnotations and InsertAllReferenceGeometry are False"
+      },
+      {
+        "name": "AllViews",
+        "type": "System.Boolean",
+        "description": "True to insert the annotations in all views in the drawing, false to insert annotations only in the selected view"
+      },
+      {
+        "name": "DuplicateDims",
+        "type": "System.Boolean",
+        "description": "True to eliminate duplicate dimensions, false to allow duplicate dimensions"
+      },
+      {
+        "name": "HiddenFeatureDims",
+        "type": "System.Boolean",
+        "description": "True to insert dimensions from features that are hidden, false to not insert dimensions from features that are hidden"
+      },
+      {
+        "name": "UsePlacementInSketch",
+        "type": "System.Boolean",
+        "description": "True to insert dimensions as they were placed in sketch, false to not"
+      },
+      {
+        "name": "InsertAllAnnotations",
+        "type": "System.Boolean",
+        "description": "True to insert all annotations, false to insert only those specified in Types"
+      },
+      {
+        "name": "InsertAllReferenceGeometry",
+        "type": "System.Boolean",
+        "description": "True to insert all reference geometry, false to insert only those specified in Types"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.InsertModelDimensions",
+      "IDrawingDoc.InsertModelInPredefinedView"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "drawing",
+      "views",
+      "drawings",
+      "idrawingdoc",
+      "annotations",
+      "insertmodelannotations4",
+      "doc",
+      "insert",
+      "model",
+      "annotations4",
+      "option",
+      "int32",
+      "types",
+      "all",
+      "boolean",
+      "duplicate",
+      "dims",
+      "hidden",
+      "feature",
+      "use",
+      "placement",
+      "sketch",
+      "reference",
+      "geometry",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.InsertModelAnnotations4",
+  "description": "Inserts model annotations into this drawing document's currently selected drawing view.",
+  "signature": "System.Object InsertModelAnnotations4( \n   System.Int32\nOption\n,\n   System.Int32\nTypes\n,\n   System.Boolean\nAllViews\n,\n   System.Boolean\nDuplicateDims\n,\n   System.Boolean\nHiddenFeatureDims\n,\n   System.Boolean\nUsePlacementInSketch\n,\n   System.Boolean\nInsertAllAnnotations\n,\n   System.Boolean\nInsertAllReferenceGeometry\n)",
+  "parameters": [
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "Source of dimensions as defined by swImportModelItemsSource_e"
+    },
+    {
+      "name": "Types",
+      "type": "System.Int32",
+      "description": "Annotation types to insert as defined in swInsertAnnotation_e ; only valid if InsertAllAnnotations and InsertAllReferenceGeometry are False"
+    },
+    {
+      "name": "AllViews",
+      "type": "System.Boolean",
+      "description": "True to insert the annotations in all views in the drawing, false to insert annotations only in the selected view"
+    },
+    {
+      "name": "DuplicateDims",
+      "type": "System.Boolean",
+      "description": "True to eliminate duplicate dimensions, false to allow duplicate dimensions"
+    },
+    {
+      "name": "HiddenFeatureDims",
+      "type": "System.Boolean",
+      "description": "True to insert dimensions from features that are hidden, false to not insert dimensions from features that are hidden"
+    },
+    {
+      "name": "UsePlacementInSketch",
+      "type": "System.Boolean",
+      "description": "True to insert dimensions as they were placed in sketch, false to not"
+    },
+    {
+      "name": "InsertAllAnnotations",
+      "type": "System.Boolean",
+      "description": "True to insert all annotations, false to insert only those specified in Types"
+    },
+    {
+      "name": "InsertAllReferenceGeometry",
+      "type": "System.Boolean",
+      "description": "True to insert all reference geometry, false to insert only those specified in Types"
+    }
+  ],
+  "returns": "Array of inserted IAnnotation objects",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Insert Model Annotations (VBA)",
+      "href": "Insert_Model_Annotations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Model Annotations (VB.NET)",
+      "href": "Insert_Model_Annotations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Model Annotations (C#)",
+      "href": "Insert_Model_Annotations_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.InsertModelDimensions",
+    "IDrawingDoc.InsertModelInPredefinedView"
+  ]
+}

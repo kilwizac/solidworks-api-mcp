@@ -1,0 +1,139 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICheckInterferenceCount3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NumOfTargetBodies",
+        "type": "System.Int32",
+        "description": "Number of target bodies"
+      },
+      {
+        "name": "TargetBodies",
+        "type": "Body2",
+        "description": "Array of target bodies"
+      },
+      {
+        "name": "NumOfToolBodies",
+        "type": "System.Int32",
+        "description": "Number of tool bodies"
+      },
+      {
+        "name": "ToolBodies",
+        "type": "Body2",
+        "description": "Array of tool bodies"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Check interference options as defined by swCheckInterferenceOption_e"
+      },
+      {
+        "name": "NumBody1InterferedFaceArray",
+        "type": "System.Int32",
+        "description": "Number of faces that interfered from the first body with the second body"
+      },
+      {
+        "name": "NumBody2InterferedFaceArray",
+        "type": "System.Int32",
+        "description": "Number of faces that interfered from the second body with the first body"
+      },
+      {
+        "name": "NumIntersectedBodyArray",
+        "type": "System.Int32",
+        "description": "Number of interfering bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAssemblyDoc.IToolsCheckInterference3",
+      "IAssemblyDoc.ToolsCheckInterference2",
+      "IModeler.CheckInterference3",
+      "IModeler.ICheckInterference3"
+    ],
+    "keywords": [
+      "check",
+      "interference",
+      "detection",
+      "icheckinterferencecount3",
+      "imodeler",
+      "modeler",
+      "count3",
+      "num",
+      "target",
+      "bodies",
+      "int32",
+      "body2",
+      "tool",
+      "options",
+      "body1",
+      "interfered",
+      "face",
+      "array",
+      "intersected",
+      "body",
+      "boolean"
+    ]
+  },
+  "title": "IModeler.ICheckInterferenceCount3",
+  "description": "Checks interference among the specified bodies and returns the number of interferences.",
+  "signature": "System.Boolean ICheckInterferenceCount3( \n   System.Int32\nNumOfTargetBodies\n,\n   ref Body2\nTargetBodies\n,\n   System.Int32\nNumOfToolBodies\n,\n   ref Body2\nToolBodies\n,\n   System.Int32\nOptions\n,\n   out System.Int32\nNumBody1InterferedFaceArray\n,\n   out System.Int32\nNumBody2InterferedFaceArray\n,\n   out System.Int32\nNumIntersectedBodyArray\n)",
+  "parameters": [
+    {
+      "name": "NumOfTargetBodies",
+      "type": "System.Int32",
+      "description": "Number of target bodies"
+    },
+    {
+      "name": "TargetBodies",
+      "type": "Body2",
+      "description": "Array of target bodies"
+    },
+    {
+      "name": "NumOfToolBodies",
+      "type": "System.Int32",
+      "description": "Number of tool bodies"
+    },
+    {
+      "name": "ToolBodies",
+      "type": "Body2",
+      "description": "Array of tool bodies"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Check interference options as defined by swCheckInterferenceOption_e"
+    },
+    {
+      "name": "NumBody1InterferedFaceArray",
+      "type": "System.Int32",
+      "description": "Number of faces that interfered from the first body with the second body"
+    },
+    {
+      "name": "NumBody2InterferedFaceArray",
+      "type": "System.Int32",
+      "description": "Number of faces that interfered from the second body with the first body"
+    },
+    {
+      "name": "NumIntersectedBodyArray",
+      "type": "System.Int32",
+      "description": "Number of interfering bodies"
+    }
+  ],
+  "returns": "",
+  "remarks": "Call this method before calling\nIModeler::ICheckInterference3\nto get the size of the arrays for that method.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.IToolsCheckInterference3",
+    "IAssemblyDoc.ToolsCheckInterference2",
+    "IModeler.CheckInterference3",
+    "IModeler.ICheckInterference3"
+  ]
+}

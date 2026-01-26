@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetArrowHeadStyleAtIndex",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of leader within this annotation (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.SetArrowHeadStyleAtIndex"
+    ],
+    "keywords": [
+      "arrows",
+      "leaders",
+      "getarrowheadstyleatindex",
+      "iannotation",
+      "annotation",
+      "arrow",
+      "head",
+      "style",
+      "index",
+      "int32"
+    ]
+  },
+  "title": "IAnnotation.GetArrowHeadStyleAtIndex",
+  "description": "Gets the arrow head style of a specific leader on this annotation.",
+  "signature": "System.Int32 GetArrowHeadStyleAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of leader within this annotation (see Remarks )"
+    }
+  ],
+  "returns": "Arrowhead style as defined in swArrowStyle_e",
+  "remarks": "The index value is 0-based. Therefore, a valid index value is greater than or equal to 0, but less than the number of leaders on this annotation. Use\nIAnnotation::GetArrowHeadCount\nto find the number of leaders on this annotation. If the index value is invalid, SOLIDWORKS returns the arrowhead style as -1, and returns an S_FALSE status (COM interface).\nUse\nIAnnotation::SetArrowHeadStyleAtIndex\nto set the arrow head style of a specific leader.",
+  "examples": [],
+  "related": [
+    "IAnnotation.SetArrowHeadStyleAtIndex"
+  ]
+}

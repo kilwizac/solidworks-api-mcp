@@ -1,0 +1,125 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "EditConfiguration3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Current configuration name"
+      },
+      {
+        "name": "NewName",
+        "type": "System.String",
+        "description": "New configuration name"
+      },
+      {
+        "name": "Comment",
+        "type": "System.String",
+        "description": "Comment used in configuration properties"
+      },
+      {
+        "name": "AlternateName",
+        "type": "System.String",
+        "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to True"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.ConfigurationManager",
+      "IModelDoc2.DeleteConfiguration2",
+      "IModelDoc2.GetConfigurationByName",
+      "IModelDoc2.GetConfigurationCount",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IAddConfiguration3",
+      "IModelDoc2.IGetConfigurationByName",
+      "IModelDoc2.IGetConfigurationNames",
+      "IModelDoc2.ShowConfiguration2"
+    ],
+    "keywords": [
+      "edit",
+      "configurations",
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "editconfiguration3",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "configuration3",
+      "name",
+      "string",
+      "new",
+      "comment",
+      "alternate",
+      "options",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.EditConfiguration3",
+  "description": "Edits the specified configuration.",
+  "signature": "System.Boolean EditConfiguration3( \n   System.String\nName\n,\n   System.String\nNewName\n,\n   System.String\nComment\n,\n   System.String\nAlternateName\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Current configuration name"
+    },
+    {
+      "name": "NewName",
+      "type": "System.String",
+      "description": "New configuration name"
+    },
+    {
+      "name": "Comment",
+      "type": "System.String",
+      "description": "Comment used in configuration properties"
+    },
+    {
+      "name": "AlternateName",
+      "type": "System.String",
+      "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to True"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+    }
+  ],
+  "returns": "True if configuration name was changed, false if not",
+  "remarks": "The Options argument can be a combination of any of the following values:\nswConfigOption_SuppressByDefault\nTrue if you want to suppress newly added features and mates in this configuration, false if not\nswConfigOption_HideByDefault - True if you want newly added components to be hidden, false if not\nswConfigOption_MinFeatureManager\nTrue if you want newly added components to only display their component name in the FeatureManager design tree, false if you want newly added components to display their name and each of their features in the FeatureManager design tree",
+  "examples": [],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.ConfigurationManager",
+    "IModelDoc2.DeleteConfiguration2",
+    "IModelDoc2.GetConfigurationByName",
+    "IModelDoc2.GetConfigurationCount",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IAddConfiguration3",
+    "IModelDoc2.IGetConfigurationByName",
+    "IModelDoc2.IGetConfigurationNames",
+    "IModelDoc2.ShowConfiguration2"
+  ]
+}

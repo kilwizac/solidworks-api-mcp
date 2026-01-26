@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SelectedEdgeProperties",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "EdgeName",
+        "type": "System.String",
+        "description": "Name of the edge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "geometry",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IEdge",
+      "IModelDoc2.EntityProperties",
+      "IModelDoc2.SelectedFaceProperties",
+      "IModelDoc2.SelectedFeatureProperties"
+    ],
+    "keywords": [
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "properties",
+      "edges",
+      "selectededgeproperties",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "selected",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.SelectedEdgeProperties",
+  "description": "Sets the property values of the selected edge.",
+  "signature": "System.Boolean SelectedEdgeProperties( \n   System.String\nEdgeName\n)",
+  "parameters": [
+    {
+      "name": "EdgeName",
+      "type": "System.String",
+      "description": "Name of the edge"
+    }
+  ],
+  "returns": "True if edge properties successfully changed, false if not",
+  "remarks": "If the edge...\nThen this method...\nDoes not have a name\nSets the name.\nHas a name\nDoes not change the name and returns false.\nThis behavior is intended to prevent a program from renaming an edge that is referenced in some other location.\nFor example, if an assembly contains a mate to an edge on a part, then a name is automatically assigned to that edge. If you change that name, then there is no guarantee that the mate remains valid. Therefore, when using entity names, you should first check to see if the entity is already named, and if so, use the existing name. If no name exists for the edge, then you can give the edge a name.",
+  "examples": [],
+  "related": [
+    "IEdge",
+    "IModelDoc2.EntityProperties",
+    "IModelDoc2.SelectedFaceProperties",
+    "IModelDoc2.SelectedFeatureProperties"
+  ]
+}

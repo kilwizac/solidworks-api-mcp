@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "GetTriangleAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the triangle where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.IGetTriangleAtIndex"
+    ],
+    "keywords": [
+      "gettriangleatindex",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "triangle",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISFSymbol.GetTriangleAtIndex",
+  "description": "Gets the triangle at the specified index.",
+  "signature": "System.Object GetTriangleAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the triangle where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Call\nISFSymbol::GetTriangleCount\nbefore calling this method to get the number of triangles in this surface finish symbol.\nThe return value is the following array of doubles :\n[\nvertexPt1\n[3],\nvertexPt2\n[3],\nvertexPt3\n[3],\nisFilled\n,\nlineType\n]\nwhere:\nvertexPt1\n[3]\n= First XYZ vertex point\nvertexPt2\n[3]\n= Second XYZ vertex point\nvertexPt3\n[3]\n= Third XYZ vertex point\nisFilled\n= BOOLEAN returned as a double; True if triangle is filled, false if not\nlineType\n= Line type as defined in\nswLineTypes_e\n.",
+  "examples": [],
+  "related": [
+    "ISFSymbol.IGetTriangleAtIndex"
+  ]
+}

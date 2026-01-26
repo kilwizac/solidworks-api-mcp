@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertSplitLineProject",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "IsDirectional",
+        "type": "System.Boolean",
+        "description": "Whether to project in one direction: 0 projects in both directions 1 projects in one direction"
+      },
+      {
+        "name": "FlipDir",
+        "type": "System.Boolean",
+        "description": "Whether to project along the normal to the sketch plane; valid only when isDirectional = 1: 0 projects in a direction opposite to the normal of the sketch plane 1 projects along the normal of the sketch plane"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.InsertSplitLineIntersect",
+      "IModelDoc2.InsertSplitLineSil",
+      "ISplitLineFeatureData"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "split",
+      "lines",
+      "insertsplitlineproject",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "line",
+      "project",
+      "directional",
+      "boolean",
+      "flip",
+      "dir",
+      "void",
+      "create",
+      "projection",
+      "feature",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.InsertSplitLineProject",
+  "description": "Splits a face by projecting sketch lines onto the face.",
+  "signature": "void InsertSplitLineProject( \n   System.Boolean\nIsDirectional\n,\n   System.Boolean\nFlipDir\n)",
+  "parameters": [
+    {
+      "name": "IsDirectional",
+      "type": "System.Boolean",
+      "description": "Whether to project in one direction: 0 projects in both directions 1 projects in one direction"
+    },
+    {
+      "name": "FlipDir",
+      "type": "System.Boolean",
+      "description": "Whether to project along the normal to the sketch plane; valid only when isDirectional = 1: 0 projects in a direction opposite to the normal of the sketch plane 1 projects along the normal of the sketch plane"
+    }
+  ],
+  "returns": "",
+  "remarks": "The sketch to project must be selected using\nIModelDocExtension::SelectByID2\nwith a mark value of 4.\nThe faces to split must be selected using IModelDocExtension::SelectByID2 with mark values of 1.",
+  "examples": [
+    {
+      "title": "Create Projection Split Line Feature (VBA)",
+      "href": "Create_Projection_Split_Line_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Projection Split Line Feature (VB.NET)",
+      "href": "Create_Projection_Split_Line_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Projection Split Line Feature (C#)",
+      "href": "Create_Projection_Split_Line_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertSplitLineIntersect",
+    "IModelDoc2.InsertSplitLineSil",
+    "ISplitLineFeatureData"
+  ]
+}

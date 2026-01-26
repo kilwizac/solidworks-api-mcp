@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetBendLines",
+    "returns": "SketchSegment",
+    "parameters": [
+      {
+        "name": "NumberOfBendLine",
+        "type": "System.Int32",
+        "description": "Number of bendlines in a flat-pattern drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "ISketchSegment.IsBendLine",
+      "IView.GetBendLines"
+    ],
+    "keywords": [
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "bendlines",
+      "bends",
+      "lines",
+      "view",
+      "iview",
+      "igetbendlines",
+      "bend",
+      "number",
+      "line",
+      "int32",
+      "sketch",
+      "segment"
+    ]
+  },
+  "title": "IView.IGetBendLines",
+  "description": "Gets the bendlines in a flat-pattern drawing view.",
+  "signature": "SketchSegment IGetBendLines( \n   System.Int32\nNumberOfBendLine\n)",
+  "parameters": [
+    {
+      "name": "NumberOfBendLine",
+      "type": "System.Int32",
+      "description": "Number of bendlines in a flat-pattern drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of bendlines in a flat-pattern view VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIView::GetBendLineCount\nto get NumberOfBendLine.",
+  "examples": [],
+  "related": [
+    "ISketchSegment.IsBendLine",
+    "IView.GetBendLines"
+  ]
+}

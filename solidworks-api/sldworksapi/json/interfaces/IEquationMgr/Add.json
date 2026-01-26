@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEquationMgr",
+    "member": "Add",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the new equation (-1 places it at the end of the list)"
+      },
+      {
+        "name": "Equation",
+        "type": "System.String",
+        "description": "String containing the equation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEquationMgr.Delete",
+      "IEquationMgr.Equation",
+      "IEquationMgr.GetCount",
+      "IEquationMgr.Status"
+    ],
+    "keywords": [
+      "add",
+      "iequationmgr",
+      "equation",
+      "mgr",
+      "index",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IEquationMgr.Add",
+  "description": "Obsolete. Superseded by IEquationMgr::Add2.",
+  "signature": "System.Int32 Add( \n   System.Int32\nIndex\n,\n   System.String\nEquation\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the new equation (-1 places it at the end of the list)"
+    },
+    {
+      "name": "Equation",
+      "type": "System.String",
+      "description": "String containing the equation"
+    }
+  ],
+  "returns": "Index of the equation; -1 if there was an error",
+  "remarks": "The string specified for the equation argument must be formatted as if entered in the SOLIDWORKS Design user interface (that is, you must embed the names of the dimensions in double quotes). For example:\n\"N_SPOKES@CirPattern1\" = \"BARLENGTH@Sketch2\" /10\nYou can also use the Visual Basic IIf function when specifying a model dimension in the equation argument. For example:\n\"D1@Extrude2\" = (IIf(\"D1@Extrude3\">20, 15, 6))+5",
+  "examples": [],
+  "related": [
+    "IEquationMgr.Delete",
+    "IEquationMgr.Equation",
+    "IEquationMgr.GetCount",
+    "IEquationMgr.Status"
+  ]
+}

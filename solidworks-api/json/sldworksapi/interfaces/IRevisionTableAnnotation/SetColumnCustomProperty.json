@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IRevisionTableAnnotation",
+    "member": "SetColumnCustomProperty",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Column for which to get the custom property"
+      },
+      {
+        "name": "CustomProp",
+        "type": "System.String",
+        "description": "Custom property used for the values in this user-defined column"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IRevisionTableAnnotation.GetAllCustomPropertiesCount",
+      "IRevisionTableAnnotation.GetColumnCustomProperty"
+    ],
+    "keywords": [
+      "setcolumncustomproperty",
+      "irevisiontableannotation",
+      "revision",
+      "table",
+      "annotation",
+      "column",
+      "custom",
+      "index",
+      "int32",
+      "prop",
+      "string",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IRevisionTableAnnotation.SetColumnCustomProperty",
+  "description": "Sets the custom property used for the values in a specified user-defined column.",
+  "signature": "System.Boolean SetColumnCustomProperty( \n   System.Int32\nIndex\n,\n   System.String\nCustomProp\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Column for which to get the custom property"
+    },
+    {
+      "name": "CustomProp",
+      "type": "System.String",
+      "description": "Custom property used for the values in this user-defined column"
+    }
+  ],
+  "returns": "True if custom property is successfully set, false if not",
+  "remarks": "Use this method to create a user-defined column where each row in the column is automatically filled in with the custom property value. The default title for the column is the name of the custom property. If the specified custom property is not a valid custom property, then each row in the column remains empty.\nTo create a user-defined column that is not attached to a custom property; for example, you want to fill in each row of the column yourself, use this method with the CustomProp value specified as the title of the column.\nTo get the list of available custom properties, use\nIRevisionTableAnnotation::GetAllCustomProperties\nor\nIRevisionTableAnnotation::IGetAllCustomProperties\n. The list of possible custom properties includes all of the items in the revision table, which includes items from the file summary items and file custom properties that have been set.\nThis method returns false if the column is not a user-defined column, and no action is taken.",
+  "examples": [],
+  "related": [
+    "IRevisionTableAnnotation.GetAllCustomPropertiesCount",
+    "IRevisionTableAnnotation.GetColumnCustomProperty"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "SetDirectionVector",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      },
+      {
+        "name": "DirectionVector",
+        "type": "System.Object",
+        "description": "Entity to use as the direction vector: linear edge axis face plane"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetDirectionVector"
+    ],
+    "keywords": [
+      "setdirectionvector",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "direction",
+      "vector",
+      "int32",
+      "guide",
+      "index",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.SetDirectionVector",
+  "description": "Sets the entity to use as the direction vector for the specified curve in the specified direction in this boundary feature.",
+  "signature": "void SetDirectionVector( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n,\n   System.Object\nDirectionVector\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    },
+    {
+      "name": "DirectionVector",
+      "type": "System.Object",
+      "description": "Entity to use as the direction vector: linear edge axis face plane"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is only available if the type of tangency of the direction vector is\nswBoundaryBossTangencyType_e\n.swBoundaryBossTangency_DirectionVector. Use\nIBoundaryBossFeatureData::GetGuideTangencyType\nto determine the type of tangency.\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.\nNOTE:\nUsing two vertices for the direction vector is not currently supported by the SOLIDWORKS API.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetDirectionVector"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "SetLeaderAttachmentPointAtIndex",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of annotation (see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x-coordinate of attachment point"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y-coordinate of attachment point"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z-coordinate of attachment point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetLeaderCount",
+      "IAnnotation.GetLeaderPointsAtIndex",
+      "IAnnotation.SetLeader3"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "leaders",
+      "annotations",
+      "setleaderattachmentpointatindex",
+      "leader",
+      "attachment",
+      "point",
+      "index",
+      "int32",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IAnnotation.SetLeaderAttachmentPointAtIndex",
+  "description": "Sets the specified attachment point of a leader for an annotation with the specified index.",
+  "signature": "System.Boolean SetLeaderAttachmentPointAtIndex( \n   System.Int32\nIndex\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of annotation (see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x-coordinate of attachment point"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y-coordinate of attachment point"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z-coordinate of attachment point"
+    }
+  ],
+  "returns": "True if leader attached successfully, false if not",
+  "remarks": "The annotation must be of a type that supports leaders. Only notes, GTols, surface finish symbols, weld symbols, datum target symbols, and block instances support leaders of any kind.",
+  "examples": [],
+  "related": [
+    "IAnnotation.GetLeaderCount",
+    "IAnnotation.GetLeaderPointsAtIndex",
+    "IAnnotation.SetLeader3"
+  ]
+}

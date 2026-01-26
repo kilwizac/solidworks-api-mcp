@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IAddProfileBspline",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "Props",
+        "type": "System.Object",
+        "description": "Contains four integers packed into two double elements (see Remarks )"
+      },
+      {
+        "name": "Knots",
+        "type": "System.Object",
+        "description": "Array of numKnots (see Remarks )"
+      },
+      {
+        "name": "CtrlPtCoords",
+        "type": "System.Object",
+        "description": "Array of numCtrlPtCoord (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.AddProfileBspline"
+    ],
+    "keywords": [
+      "iaddprofilebspline",
+      "ibody2",
+      "body2",
+      "add",
+      "profile",
+      "bspline",
+      "props",
+      "object",
+      "knots",
+      "ctrl",
+      "pt",
+      "coords",
+      "curve"
+    ]
+  },
+  "title": "IBody2.IAddProfileBspline",
+  "description": "Creates an B-spline profile curve and returns a pointer to that curve.",
+  "signature": "Curve IAddProfileBspline( \n   System.Object\nProps\n,\n   System.Object\nKnots\n,\n   System.Object\nCtrlPtCoords\n)",
+  "parameters": [
+    {
+      "name": "Props",
+      "type": "System.Object",
+      "description": "Contains four integers packed into two double elements (see Remarks )"
+    },
+    {
+      "name": "Knots",
+      "type": "System.Object",
+      "description": "Array of numKnots (see Remarks )"
+    },
+    {
+      "name": "CtrlPtCoords",
+      "type": "System.Object",
+      "description": "Array of numCtrlPtCoord (see Remarks )"
+    }
+  ],
+  "returns": "ICurve",
+  "remarks": "You can use this method with\nIBody2::ICreateRevolutionSurface\nto generate any surface of revolution or with\nIBody2::ICreateExtrusionSurface\nto generate a tabulated cylinder.\nThe Props argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nThe length of the knots array is given by:\nnumKnots = NumCtrlPoints + Order\nThe length of the CtrlPtCoords is given by:\nnumCtrlPtCoord = NumCtrlPoints + DimensionControlPoints",
+  "examples": [],
+  "related": [
+    "IBody2.AddProfileBspline"
+  ]
+}

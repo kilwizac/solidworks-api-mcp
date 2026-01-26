@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInterferenceDetectionMgr",
+    "member": "GetComponentsTransformInterferenceCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "NumOfComponent",
+        "type": "System.Int32",
+        "description": "Number of components in the Component array"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Array of IComponent2 s"
+      },
+      {
+        "name": "Transform",
+        "type": "MathTransform",
+        "description": "IMathTransform"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "interfering",
+      "getcomponentstransforminterferencecount",
+      "iinterferencedetectionmgr",
+      "interference",
+      "detection",
+      "mgr",
+      "transform",
+      "count",
+      "num",
+      "component",
+      "int32",
+      "component2",
+      "math"
+    ]
+  },
+  "title": "IInterferenceDetectionMgr.GetComponentsTransformInterferenceCount",
+  "description": "Calculates and gets the number of interfering components for the specified components and math transform.",
+  "signature": "System.Int32 GetComponentsTransformInterferenceCount( \n   System.Int32\nNumOfComponent\n,\n   ref Component2\nComponent\n,\n   ref MathTransform\nTransform\n)",
+  "parameters": [
+    {
+      "name": "NumOfComponent",
+      "type": "System.Int32",
+      "description": "Number of components in the Component array"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Array of IComponent2 s"
+    },
+    {
+      "name": "Transform",
+      "type": "MathTransform",
+      "description": "IMathTransform"
+    }
+  ],
+  "returns": "Number of interfering components",
+  "remarks": "Call this method before calling\nIInterferenceDetectionMgr::IGetComponentsTransformInterference\nto get the size of the array returned by that method.",
+  "examples": [],
+  "related": []
+}

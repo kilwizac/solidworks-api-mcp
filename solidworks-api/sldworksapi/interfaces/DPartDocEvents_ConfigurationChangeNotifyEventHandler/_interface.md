@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DPartDocEvents_ConfigurationChangeNotifyEventHandler
+inherits: null
+description: Gets information about an object or feature that has had one if its configurable parameters changed.
+member_count: 0
+docset: sldworksapi
+categories:
+  - parts
+common_members: []
+---
+
+# DPartDocEvents_ConfigurationChangeNotifyEventHandler
+
+Gets information about an object or feature that has had one if its configurable parameters changed.

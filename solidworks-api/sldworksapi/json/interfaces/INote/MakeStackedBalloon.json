@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "MakeStackedBalloon",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "StackedBalloonOptions",
+        "type": "System.Object",
+        "description": "IStackedBalloonOptions"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IModelDocExtension.InsertStackedBalloon2",
+      "INote.GetBalloonOptions"
+    ],
+    "keywords": [
+      "makestackedballoon",
+      "inote",
+      "note",
+      "make",
+      "stacked",
+      "balloon",
+      "options",
+      "object",
+      "void"
+    ]
+  },
+  "title": "INote.MakeStackedBalloon",
+  "description": "Converts this balloon to a stacked balloon.",
+  "signature": "void MakeStackedBalloon( \n   System.Object\nStackedBalloonOptions\n)",
+  "parameters": [
+    {
+      "name": "StackedBalloonOptions",
+      "type": "System.Object",
+      "description": "IStackedBalloonOptions"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, use\nIModelDocExtension::SelectByID2\nto select the entity to add to the balloon stack.\nAfter calling this method to convert the balloon to a stacked balloon, add more balloons by calling:\nINote::GetBalloonStack\nIBalloonStack::AddTo",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.InsertStackedBalloon2",
+    "INote.GetBalloonOptions"
+  ]
+}

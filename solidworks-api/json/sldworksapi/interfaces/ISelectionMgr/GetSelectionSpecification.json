@@ -1,0 +1,162 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "GetSelectionSpecification",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "1 <= Index in the current list of selected items <= ISelectionMgr::GetSelectedObjectCount2"
+      },
+      {
+        "name": "SelectByString",
+        "type": "System.String",
+        "description": "Feature name of object at Index; \"\" if object is not a feature"
+      },
+      {
+        "name": "ObjectType",
+        "type": "System.String",
+        "description": "Type of object at Index"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of object at Index as defined in swSelectType_e"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate of object at Index; 0 if SelectByString is not \"\""
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate of object at Index; 0 if SelectByString is not \"\""
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z coordinate of object at Index; 0 if SelectByString is not \"\""
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "selections"
+    ],
+    "related": [
+      "IFeature.GetNameForSelection",
+      "IModelDocExtension.SelectByID2",
+      "ISelectionMgr.GetSelectByIdSpecification",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectedObjectLoop2",
+      "ISelectionMgr.GetSelectedObjectMark",
+      "ISelectionMgr.GetSelectedObjectType3",
+      "ISelectionMgr.GetSelectedObjectsComponent4",
+      "ISelectionMgr.GetSelectedObjectsDrawingView2",
+      "ISelectionMgr.GetSelectionPoint2",
+      "ISelectionMgr.GetSelectionPointInSketchSpace2",
+      "ISelectionMgr.SetSelectedObjectMark",
+      "ISelectionMgr.SetSelectionPoint2"
+    ],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "objects",
+      "select",
+      "getselectionspecification",
+      "mgr",
+      "specification",
+      "index",
+      "int32",
+      "string",
+      "object",
+      "type",
+      "double",
+      "boolean",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISelectionMgr.GetSelectionSpecification",
+  "description": "Gets the selection specification at the specified index of the current selection list.",
+  "signature": "System.Boolean GetSelectionSpecification( \n   System.Int32\nIndex\n,\n   out System.String\nSelectByString\n,\n   out System.String\nObjectType\n,\n   out System.Int32\nType\n,\n   out System.Double\nX\n,\n   out System.Double\nY\n,\n   out System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "1 <= Index in the current list of selected items <= ISelectionMgr::GetSelectedObjectCount2"
+    },
+    {
+      "name": "SelectByString",
+      "type": "System.String",
+      "description": "Feature name of object at Index; \"\" if object is not a feature"
+    },
+    {
+      "name": "ObjectType",
+      "type": "System.String",
+      "description": "Type of object at Index"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of object at Index as defined in swSelectType_e"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate of object at Index; 0 if SelectByString is not \"\""
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate of object at Index; 0 if SelectByString is not \"\""
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z coordinate of object at Index; 0 if SelectByString is not \"\""
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Selection Specification (VBA)",
+      "href": "Get_Selection_Specification_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Selection Specification (VB.NET)",
+      "href": "Get_Selection_Specification_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Selection Specification (C#)",
+      "href": "Get_Selection_Specification_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetNameForSelection",
+    "IModelDocExtension.SelectByID2",
+    "ISelectionMgr.GetSelectByIdSpecification",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectedObjectLoop2",
+    "ISelectionMgr.GetSelectedObjectMark",
+    "ISelectionMgr.GetSelectedObjectType3",
+    "ISelectionMgr.GetSelectedObjectsComponent4",
+    "ISelectionMgr.GetSelectedObjectsDrawingView2",
+    "ISelectionMgr.GetSelectionPoint2",
+    "ISelectionMgr.GetSelectionPointInSketchSpace2",
+    "ISelectionMgr.SetSelectedObjectMark",
+    "ISelectionMgr.SetSelectionPoint2"
+  ]
+}

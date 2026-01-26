@@ -1,0 +1,169 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetUserPreferenceToggle",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "UserPreferenceValue",
+        "type": "System.Int32",
+        "description": "User preference as defined in swUserPreferenceToggle_e"
+      },
+      {
+        "name": "OnFlag",
+        "type": "System.Boolean",
+        "description": "True to toggle UserPreferenceValue on, false to toggle UserPreferenceValue off"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetUserPreferenceDouble",
+      "IModelDocExtension.GetUserPreferenceDoubleValueRange",
+      "IModelDocExtension.GetUserPreferenceInteger",
+      "IModelDocExtension.GetUserPreferenceString",
+      "IModelDocExtension.GetUserPreferenceTextFormat",
+      "IModelDocExtension.GetUserPreferenceToggle",
+      "IModelDocExtension.SetUserPreferenceDouble",
+      "IModelDocExtension.SetUserPreferenceInteger",
+      "IModelDocExtension.SetUserPreferenceString",
+      "IModelDocExtension.SetUserPreferenceTextFormat",
+      "IModelDocExtension.SetUserPreferenceToggle",
+      "ISldWorks.GetUserPreferenceDoubleValue",
+      "ISldWorks.GetUserPreferenceIntegerValue",
+      "ISldWorks.GetUserPreferenceStringListValue",
+      "ISldWorks.GetUserPreferenceStringValue",
+      "ISldWorks.GetUserPreferenceToggle",
+      "ISldWorks.SetUserPreferenceDoubleValue",
+      "ISldWorks.SetUserPreferenceIntegerValue",
+      "ISldWorks.SetUserPreferenceStringListValue",
+      "ISldWorks.SetUserPreferenceStringValue"
+    ],
+    "keywords": [
+      "options",
+      "user",
+      "preferences",
+      "setuserpreferencetoggle",
+      "isldworks",
+      "sld",
+      "works",
+      "preference",
+      "toggle",
+      "value",
+      "int32",
+      "flag",
+      "boolean",
+      "void",
+      "display",
+      "shadows",
+      "shaded",
+      "mode",
+      "change",
+      "labels",
+      "solidworks",
+      "triad",
+      "vba",
+      "rename",
+      "assembly",
+      "components",
+      "save",
+      "drawing",
+      "sheets",
+      "dxf",
+      "suppress",
+      "rebuild",
+      "error",
+      "dialogs",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.SetUserPreferenceToggle",
+  "description": "Sets system default user preference values.",
+  "signature": "void SetUserPreferenceToggle( \n   System.Int32\nUserPreferenceValue\n,\n   System.Boolean\nOnFlag\n)",
+  "parameters": [
+    {
+      "name": "UserPreferenceValue",
+      "type": "System.Int32",
+      "description": "User preference as defined in swUserPreferenceToggle_e"
+    },
+    {
+      "name": "OnFlag",
+      "type": "System.Boolean",
+      "description": "True to toggle UserPreferenceValue on, false to toggle UserPreferenceValue off"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is intended for user preferences that can be toggled.\nThis method is equivalent to interactively setting system options in the SOLIDWORKS Design software.\nTo use this method, choose one of the available items from the swUserPreferenceToggle_e enumeration\n.\nPass true to turn the item on, and false to turn the item off.\nFor example, the following command forces the SOLIDWORKS Design application to use the Search Folders when loading files:\nswapp.SetUserPreferenceToggle swUseFolderSearchRules, True\nSee\nSystem Options and Document Properties\nfor details.",
+  "examples": [
+    {
+      "title": "Display Shadows in Shaded Mode (C++)",
+      "href": "Display_Shadows_in_Shaded_Mode_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Labels of SOLIDWORKS Triad (VBA)",
+      "href": "Change_Labels_of_SOLIDWORKS_Triad_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rename Assembly Components (VBA)",
+      "href": "Rename_Assembly_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Drawing Sheets As DXF (VBA)",
+      "href": "Save_Drawing_Sheets_as_DXF_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Suppress Rebuild Error Dialogs (VBA)",
+      "href": "Suppress_Rebuild_Error_Dialogs_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (VBA)",
+      "href": "Get_and_Set_User_Preferences_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (VB.NET)",
+      "href": "Get_and_Set_User_Preferences_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set User Preferences (C#)",
+      "href": "Get_and_Set_User_Preferences_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.GetUserPreferenceDouble",
+    "IModelDocExtension.GetUserPreferenceDoubleValueRange",
+    "IModelDocExtension.GetUserPreferenceInteger",
+    "IModelDocExtension.GetUserPreferenceString",
+    "IModelDocExtension.GetUserPreferenceTextFormat",
+    "IModelDocExtension.GetUserPreferenceToggle",
+    "IModelDocExtension.SetUserPreferenceDouble",
+    "IModelDocExtension.SetUserPreferenceInteger",
+    "IModelDocExtension.SetUserPreferenceString",
+    "IModelDocExtension.SetUserPreferenceTextFormat",
+    "IModelDocExtension.SetUserPreferenceToggle",
+    "ISldWorks.GetUserPreferenceDoubleValue",
+    "ISldWorks.GetUserPreferenceIntegerValue",
+    "ISldWorks.GetUserPreferenceStringListValue",
+    "ISldWorks.GetUserPreferenceStringValue",
+    "ISldWorks.GetUserPreferenceToggle",
+    "ISldWorks.SetUserPreferenceDoubleValue",
+    "ISldWorks.SetUserPreferenceIntegerValue",
+    "ISldWorks.SetUserPreferenceStringListValue",
+    "ISldWorks.SetUserPreferenceStringValue"
+  ]
+}

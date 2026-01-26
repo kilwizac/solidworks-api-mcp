@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "SetPathAlignmentDirectionVector",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Dir",
+        "type": "System.Object",
+        "description": "Plane , planar face , line , edge , cylinder , axis , or a pair of vertices that defines the direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.GetPathAlignmentDirectionVector",
+      "ISweepFeatureData.GetPathType",
+      "ISweepFeatureData.Path"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "path",
+      "setpathalignmentdirectionvector",
+      "sweep",
+      "feature",
+      "data",
+      "alignment",
+      "direction",
+      "vector",
+      "dir",
+      "object",
+      "void"
+    ]
+  },
+  "title": "ISweepFeatureData.SetPathAlignmentDirectionVector",
+  "description": "Sets the direction vector for path alignment in this sweep feature.",
+  "signature": "void SetPathAlignmentDirectionVector( \n   System.Object\nDir\n)",
+  "parameters": [
+    {
+      "name": "Dir",
+      "type": "System.Object",
+      "description": "Plane , planar face , line , edge , cylinder , axis , or a pair of vertices that defines the direction"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is valid only if:\nISweepFeatureData:TwistControlType\nis set to\nswTwistControlType_e\n.swTwistControlFollowPath.\n- and -\nISweepFeatureData::PathAlignmentType\nis set to\nswTangencyType_e\n.swTangencyDirectionVector.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISweepFeatureData.GetPathAlignmentDirectionVector",
+    "ISweepFeatureData.GetPathType",
+    "ISweepFeatureData.Path"
+  ]
+}

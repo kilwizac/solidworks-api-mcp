@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDomeFeatureData2",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component for the feature (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IDomeFeatureData2.IAccessSelections"
+    ],
+    "keywords": [
+      "accessselections",
+      "idomefeaturedata2",
+      "dome",
+      "feature",
+      "data2",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean",
+      "change",
+      "height",
+      "vba",
+      "constraint",
+      "create",
+      "modify",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDomeFeatureData2.AccessSelections",
+  "description": "Gains access to selections used to define the dome.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component for the feature (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections where successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nIDomeFeatureData2::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "Change Height of Dome Feature (VBA)",
+      "href": "Change_Height_of_Dome_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Constraint for Dome Feature (VBA)",
+      "href": "Get_and_Set_Constraint_for_Dome_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Dome Feature (C#)",
+      "href": "Create_and_Modify_Dome_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Dome Feature (VB.NET)",
+      "href": "Create_and_Modify_Dome_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Dome Feature (VBA)",
+      "href": "Create_and_Modify_Dome_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDomeFeatureData2.IAccessSelections"
+  ]
+}

@@ -1,0 +1,352 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>Get6 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~Get6" />
+    <meta name="Description" content="Gets the value and the evaluated value of the specified custom property." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ICustomPropertyManager.Get6" />
+    <meta name="Microsoft.Help.Keywords" content="Get6 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                Get6 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager">ICustomPropertyManager Interface</a> : Get6 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="FieldNamePopupContent" class="i-popup-content">
+        Name of the custom property
+    </div>
+
+    <div id="UseCachedPopupContent" class="i-popup-content">
+        True if the configuration has been activated,&#160;false if not (see <span style="FONT-WEIGHT: bold">Remarks</span>)
+    </div>
+
+    <div id="ValOutPopupContent" class="i-popup-content">
+        Value of the custom property
+    </div>
+
+    <div id="ResolvedValOutPopupContent" class="i-popup-content">
+        Evaluated value of the custom property
+    </div>
+
+    <div id="WasResolvedPopupContent" class="i-popup-content">
+        True if the value was evaluated, false if not (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="LinkToPropertyPopupContent" class="i-popup-content">
+        True to link FieldName to its parent part, false to not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Gets the value and the evaluated value of the specified custom property.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function Get6( _
+   ByVal <i><a class="i-popup-link" id="FieldNamePopupLink" data-popup-contentsource="#FieldNamePopupContent" data-popup-showevent="click mouseenter">FieldName</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="UseCachedPopupLink" data-popup-contentsource="#UseCachedPopupContent" data-popup-showevent="click mouseenter">UseCached</a></i> As System.Boolean, _
+   ByRef <i><a class="i-popup-link" id="ValOutPopupLink" data-popup-contentsource="#ValOutPopupContent" data-popup-showevent="click mouseenter">ValOut</a></i> As System.String, _
+   ByRef <i><a class="i-popup-link" id="ResolvedValOutPopupLink" data-popup-contentsource="#ResolvedValOutPopupContent" data-popup-showevent="click mouseenter">ResolvedValOut</a></i> As System.String, _
+   ByRef <i><a class="i-popup-link" id="WasResolvedPopupLink" data-popup-contentsource="#WasResolvedPopupContent" data-popup-showevent="click mouseenter">WasResolved</a></i> As System.Boolean, _
+   ByRef <i><a class="i-popup-link" id="LinkToPropertyPopupLink" data-popup-contentsource="#LinkToPropertyPopupContent" data-popup-showevent="click mouseenter">LinkToProperty</a></i> As System.Boolean _
+) As System.Integer
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager">ICustomPropertyManager</a>
+Dim FieldName As System.String
+Dim UseCached As System.Boolean
+Dim ValOut As System.String
+Dim ResolvedValOut As System.String
+Dim WasResolved As System.Boolean
+Dim LinkToProperty As System.Boolean
+Dim value As System.Integer
+ 
+value = instance.Get6(FieldName, UseCached, ValOut, ResolvedValOut, WasResolved, LinkToProperty)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.int Get6( 
+   System.string <i><a class="i-popup-link" id="FieldNamePopupLink" data-popup-contentsource="#FieldNamePopupContent" data-popup-showevent="click mouseenter">FieldName</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseCachedPopupLink" data-popup-contentsource="#UseCachedPopupContent" data-popup-showevent="click mouseenter">UseCached</a></i>,
+   out System.string <i><a class="i-popup-link" id="ValOutPopupLink" data-popup-contentsource="#ValOutPopupContent" data-popup-showevent="click mouseenter">ValOut</a></i>,
+   out System.string <i><a class="i-popup-link" id="ResolvedValOutPopupLink" data-popup-contentsource="#ResolvedValOutPopupContent" data-popup-showevent="click mouseenter">ResolvedValOut</a></i>,
+   out System.bool <i><a class="i-popup-link" id="WasResolvedPopupLink" data-popup-contentsource="#WasResolvedPopupContent" data-popup-showevent="click mouseenter">WasResolved</a></i>,
+   out System.bool <i><a class="i-popup-link" id="LinkToPropertyPopupLink" data-popup-contentsource="#LinkToPropertyPopupContent" data-popup-showevent="click mouseenter">LinkToProperty</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.int Get6( 
+   System.String^ <i><a class="i-popup-link" id="FieldNamePopupLink" data-popup-contentsource="#FieldNamePopupContent" data-popup-showevent="click mouseenter">FieldName</a></i>,
+   System.bool <i><a class="i-popup-link" id="UseCachedPopupLink" data-popup-contentsource="#UseCachedPopupContent" data-popup-showevent="click mouseenter">UseCached</a></i>,
+   [Out] System.String^ <i><a class="i-popup-link" id="ValOutPopupLink" data-popup-contentsource="#ValOutPopupContent" data-popup-showevent="click mouseenter">ValOut</a></i>,
+   [Out] System.String^ <i><a class="i-popup-link" id="ResolvedValOutPopupLink" data-popup-contentsource="#ResolvedValOutPopupContent" data-popup-showevent="click mouseenter">ResolvedValOut</a></i>,
+   [Out] System.bool <i><a class="i-popup-link" id="WasResolvedPopupLink" data-popup-contentsource="#WasResolvedPopupContent" data-popup-showevent="click mouseenter">WasResolved</a></i>,
+   [Out] System.bool <i><a class="i-popup-link" id="LinkToPropertyPopupLink" data-popup-contentsource="#LinkToPropertyPopupContent" data-popup-showevent="click mouseenter">LinkToProperty</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>FieldName</i></dt>
+
+                <dd>Name of the custom property</dd>
+
+                <dt><i>UseCached</i></dt>
+
+                <dd>True if the configuration has been activated,&#160;false if not (see <span style="FONT-WEIGHT: bold">Remarks</span>)</dd>
+
+                <dt><i>ValOut</i></dt>
+
+                <dd>Value of the custom property</dd>
+
+                <dt><i>ResolvedValOut</i></dt>
+
+                <dd>Evaluated value of the custom property</dd>
+
+                <dt><i>WasResolved</i></dt>
+
+                <dd>True if the value was evaluated, false if not (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>LinkToProperty</i></dt>
+
+                <dd>True to link FieldName to its parent part, false to not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Result code as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swCustomInfoGetResult_e.html">swCustomInfoGetResult_e</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method returns configuration-specific, linked, and evaluated custom-property data more quickly than the now obsolete ICustomPropertyManager::Get2, if the configuration is previously activated.</p>
+
+            <p>This method gets the cached custom property, even if its configuration is not currently active.</p><!--(Table)=========================================================-->
+
+            <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 24.96%" />
+                    <col style="WIDTH: 25.95%" />
+                    <col style="WIDTH: 49.07%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p style="FONT-WEIGHT: bold; TEXT-ALIGN: center" align="center"><br />
+                            <br />
+                            If UseCached is set&#160;to...</p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; VERTICAL-ALIGN: bottom; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p style="FONT-WEIGHT: bold; TEXT-ALIGN: center" align="center">And the configuration has already been activated...</p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; VERTICAL-ALIGN: bottom; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p style="FONT-WEIGHT: bold"><br />
+                            <br />
+                            Then...</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">True</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">Yes</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p class="apiBulletLeftJustified">Up-to-date data is returned and&#160;WasResolved&#160;= true</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">True</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">No</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p class="apiBulletLeftJustified">Cached data is returned and&#160;WasResolved&#160;= false</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">False</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">Yes</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p class="apiBulletLeftJustified">Up-to-date data is returned and&#160;WasResolved&#160;= true</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">False</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p style="TEXT-ALIGN: center" align="center">No</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p class="apiBulletLeftJustified">Up-to-date data is returned and&#160;WasResolved&#160;= true</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p class="apiRemarksText"><!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->If you always want up-to-date data, then you should set UseCached to false.</p>
+
+            <p class="apiRemarksText">If the configuration is not previously activated, this method might take longer, as it loops through all of the model's configurations to find the specified custom property. When it finishes, the model might not be in its original configuration. To return the model to its original configuration, call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~ForceRebuild3">IModelDoc2::ForceRebuild3</a> after calling this method.</p>
+
+            <p class="apiRemarksText">This method does not preface the resolved evaluated values of external referenced documents with fromparent+, unlike the now obsolete ICustomPropertyManager::Get3.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            See the <strong>Get Custom Properties for Configuration</strong> examples in&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager">ICustomPropertyManager</a>.
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager">ICustomPropertyManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager_members">ICustomPropertyManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~GetAll3">ICustomPropertyManager::GetAll3 Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~GetNames">ICustomPropertyManager::GetNames Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~GetType2">ICustomPropertyManager::GetType2 Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~Set2">ICustomPropertyManager::Set2 Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICustomPropertyManager~Get6.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

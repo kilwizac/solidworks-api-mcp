@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ICurveDrivenPatternFeatureData
+inherits: null
+description: Allows access to a curve-driven pattern feature.
+member_count: 44
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AutoSelect
+  - BodyPattern
+  - D1AlignmentMethod
+  - D1CurveMethod
+  - D1Direction
+  - D1FaceNormal
+  - D1InstanceCount
+---
+
+# ICurveDrivenPatternFeatureData
+
+Allows access to a curve-driven pattern feature.
+
+## Common Members
+
+- `AccessSelections`
+- `AutoSelect`
+- `BodyPattern`
+- `D1AlignmentMethod`
+- `D1CurveMethod`
+- `D1Direction`
+- `D1FaceNormal`
+- `D1InstanceCount`

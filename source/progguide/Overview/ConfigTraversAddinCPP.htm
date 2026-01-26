@@ -1,0 +1,917 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Get Names of Configurations Using BSTR* C-array Example (C++)</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Configuration (see also IConfiguration Interface)">
+<meta name=MS-HKWD content="C++ examples">
+<meta name=MS-HKWD content="C++ examples,configurations">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=4981>
+<meta name=layout-width content=846>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="./ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Get Names of Configurations Using BSTR* C-array Example (C++)</h1>
+
+<p class=CodePlain>// ConfigTraversAddin.cpp : Implementation of CConfigTraversAddin</p>
+
+<p class=CodePlain>// Add-in for getting the names of configurations in an active 
+ model document</p>
+
+<p class=CodePlain>// Demonstrates ModelDoc2::IGetConfigurationNames taking 
+ a BSTR* C-array</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>#include &quot;stdafx.h&quot;</p>
+
+<p class=CodePlain>#include &quot;ConfigTraversAddin.h&quot;</p>
+
+<p class=CodePlain>#include &quot;BitmapHandler.h&quot;</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// CConfigTraversAddin</p>
+
+<p class=CodePlain>// This method adds the CommandManager to the SOLIDWORKS 
+ user-interface</p>
+
+<p class=CodePlain>void CConfigTraversAddin::AddCommandManager()</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComPtr&lt;ICommandGroup&gt; icmdGroup;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComObject&lt;CBitmapHandler&gt; *iBmp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComObject&lt;CBitmapHandler&gt;::CreateInstance(&amp;iBmp);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">long cmdIndex0, cmdIndex1;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">const int array_size = 2;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">HRESULT hres;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">int* docTypes = new int[array_size];</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">docTypes[0] = swDocASSEMBLY;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->docTypes[1] 
+ = swDocDRAWING,</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->docTypes[2] 
+ = swDocPART;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR title;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">title.LoadString(IDS_TOOLBAR_TITLE);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR hint;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">hint.LoadString(IDS_MENU_HINT);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iCmdMgr-&gt;CreateCommandGroup(1,title,title,hint,-1,&amp;icmdGroup);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR smallImageFile;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;CreateBitmapFileFromResource(IDB_TOOLBAR_SMALL, 
+ &amp;smallImageFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_SmallIconList(smallImageFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR largeImageFile;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;CreateBitmapFileFromResource(IDB_TOOLBAR_LARGE, 
+ &amp;largeImageFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_LargeIconList(largeImageFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR largeIconFile;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;CreateBitmapFileFromResource(IDB_ICON_LARGE, 
+ &amp;largeIconFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_LargeMainIcon(largeIconFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR smallIconFile;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;CreateBitmapFileFromResource(IDB_ICON_SMALL, 
+ &amp;smallIconFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_SmallMainIcon(smallIconFile);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR tip;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR callback;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CComBSTR enable;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">long cmdIndex;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">VARIANT_BOOL cmdActivated;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">callback.LoadString(IDS_TOOLBAR_CALLBACK0);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">enable.LoadString(IDS_TOOLBAR_ENABLE0);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">tip.LoadString(IDS_TOOLBAR_TIP0);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">hint.LoadString(IDS_TOOLBAR_HINT0);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;AddCommandItem(tip,-1,hint,tip,0,callback,enable,0,&amp;cmdIndex0);</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_HasToolbar(true);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;put_HasMenu(true);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">icmdGroup-&gt;Activate(&amp;cmdActivated);</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">for(int i=0; i &lt; array_size + 1; i++)</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">{</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">CComPtr&lt;ICommandTab&gt; pTab = NULL;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">long TabCount, docType = docTypes[i];</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">CComPtr&lt;ICommandTab&gt; AddinTab;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">iCmdMgr-&gt;GetCommandTabCount(docType, 
+ &amp;TabCount);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Check for tab </p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iCmdMgr-&gt;GetCommandTab(docType, 
+ title, &amp;pTab);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">if(pTab == NULL)</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">{</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ If no tab, then add one</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->iCmdMgr-&gt;AddCommandTab(docType, 
+ title, &amp;pTab);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CComPtr&lt;ICommandTabBox&gt; 
+ pBox;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pTab-&gt;AddCommandTabBox(&amp;pBox);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Create two commands on this tab</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->long 
+ CommandIDCount = 2;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->long* 
+ CommandIDs = new long[2];</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->long* 
+ TextDisplayStyles = new long[2];</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->long 
+ cmdID = 0;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ The two command buttons have different text styles</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->icmdGroup-&gt;get_CommandID(cmdIndex0, 
+ &amp;cmdID); <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CommandIDs[0] 
+ = cmdID;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->TextDisplayStyles[0] 
+ = swCommandTabButton_TextHorizontal;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->icmdGroup-&gt;get_ToolbarId(&amp;cmdID);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CommandIDs[1] 
+ = cmdID;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->TextDisplayStyles[1] 
+ = swCommandTabButton_TextHorizontal;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->VARIANT_BOOL 
+ vbResult = VARIANT_FALSE;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pBox-&gt;IAddCommands(CommandIDCount, 
+ CommandIDs, TextDisplayStyles, &amp;vbResult);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CommandIDCount 
+ = 1;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CommandIDs 
+ = new long[1];</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->TextDisplayStyles 
+ = new long[1];</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->icmdGroup-&gt;get_ToolbarId(&amp;cmdID);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CommandIDs[0] 
+ = cmdID;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->TextDisplayStyles[0] 
+ = swCommandTabButton_TextBelow | swCommandTabButton_ActionFlyout;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CComPtr&lt;ICommandTabBox&gt; 
+ pBox1;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pTab-&gt;AddCommandTabBox(&amp;pBox1);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pBox1-&gt;IAddCommands(CommandIDCount, 
+ CommandIDs, TextDisplayStyles, &amp;vbResult);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->CComPtr&lt;ICommandTabBox&gt; 
+ pBoxNew1, pBoxNew2;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->pTab-&gt;AddSeparator(pBox1, 
+ cmdID, &amp;pBoxNew1);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">}</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Clean up</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;Dispose();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iBmp-&gt;Release();</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>void CConfigTraversAddin::RemoveCommandManager()</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">VARIANT_BOOL cmdRemoved; </p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iCmdMgr-&gt;RemoveCommandGroup(1,&amp;cmdRemoved);</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Event handlers</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Called when the active document in SOLIDWORKS changes</p>
+
+<p class=CodePlain>STDMETHODIMP CConfigTraversAddin::OnDocChange(void)</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// TODO: Add your implementation code here</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Called when a new document is created or a document 
+ is loaded</p>
+
+<p class=CodePlain><span style="margin-left: 43px;">STDMETHODIMP CConfigTraversAddin::OnDocLoad(BSTR 
+ docTitle, BSTR docPath)</span></p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// TODO: Add your implementation code here</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Called when the active model document changes in 
+ SOLIDWORKS</p>
+
+<p class=CodePlain><span style="margin-left: 43px;">STDMETHODIMP CConfigTraversAddin::OnModelDocChange(void)</span></p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// TODO: Add your implementation code here</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Called when a new file is created</p>
+
+<p class=CodePlain>STDMETHODIMP CConfigTraversAddin::OnFileNew(LPDISPATCH 
+ newDoc, long docType, BSTR templateName)</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// TODO: Add your implementation code here</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Utility methods</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Set up the add-in to catch SOLIDWORKS events</p>
+
+<p class=CodePlain>VARIANT_BOOL CConfigTraversAddin::AttachEventHandlers()</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">VARIANT_BOOL attached = VARIANT_TRUE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">this-&gt;m_libid = LIBID_SldWorks;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">this-&gt;m_wMajorVerNum = GetSldWorksTlbMajor();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">this-&gt;m_wMinorVerNum = 0;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CSldWorksEvents::_tih.m_wMajor = this-&gt;m_wMajorVerNum;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Connect to the SldWorks event sink</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">HRESULT success = this-&gt;DispEventAdvise(iSwApp, 
+ &amp;__uuidof(DSldWorksEvents));</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">if (success != S_OK)</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">return VARIANT_FALSE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return attached;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Stop listening for SOLIDWORKS events</p>
+
+<p class=CodePlain>VARIANT_BOOL CConfigTraversAddin::DetachEventHandlers()</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">VARIANT_BOOL detached = VARIANT_TRUE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Disconnect from the SldWorks event sink</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">HRESULT success = this-&gt;DispEventUnadvise(iSwApp, 
+ &amp;__uuidof(DSldWorksEvents));</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">CSldWorksEvents::_tih.m_plibid = &amp;GUID_NULL;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">if (success != S_OK)</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">return VARIANT_FALSE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return detached;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// ISwAddin Methods</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// This is the starting point for the add-in</p>
+
+<p class=CodePlain>STDMETHODIMP CConfigTraversAddin::ConnectToSW(LPDISPATCH 
+ ThisSW, long Cookie, VARIANT_BOOL * IsConnected)</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">ThisSW-&gt;QueryInterface(__uuidof(ISldWorks), 
+ (void**)&amp;iSwApp);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">addinID = Cookie;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iSwApp-&gt;GetCommandManager(Cookie,&amp;iCmdMgr);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">VARIANT_BOOL status = VARIANT_FALSE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iSwApp-&gt;SetAddinCallbackInfo((long)_AtlBaseModule.GetModuleInstance(), 
+ static_cast&lt;IConfigTraversAddin*&gt;(this), addinID, &amp;status);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Get the current type library version</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">{</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">USES_CONVERSION;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">CComBSTR bstrNum;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">std::string strNum;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">char *buffer;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">iSwApp-&gt;RevisionNumber(&amp;bstrNum);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">strNum = W2A(bstrNum);</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">m_swMajNum = strtol(strNum.c_str(), &amp;buffer, 
+ 10 );</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 83px;">m_swMinNum=0;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Create the addin's user-interface</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">AddCommandManager();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Listen for events</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">*IsConnected = AttachEventHandlers();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">*IsConnected = VARIANT_TRUE;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>STDMETHODIMP CConfigTraversAddin::DisconnectFromSW(VARIANT_BOOL 
+ * IsDisconnected)</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Remove the addin's user-interface</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">RemoveCommandManager();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Stop listening for events</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">*IsDisconnected = DetachEventHandlers();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iCmdMgr.Release();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// Make sure you release the SOLIDWORKS 
+ pointer last</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">iSwApp.Release();</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return E_NOTIMPL;</p>
+
+<p class=CodePlain>}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// IConfigTraversAddin methods</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>// Menu and toolbar callbacks</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain
+	style="background-color: Transparent;">STDMETHODIMP CConfigTraversAddin::ToolbarCallback0(void)</p>
+
+<p class=CodePlain
+	style="background-color: Transparent;">{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">// Use ATL 
+ smart pointers</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">CComPtr&lt;ISldWorks&gt; 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->swApp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">CComPtr&lt;IModelDoc2&gt; 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->swModel;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swApp = iSwApp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swApp-&gt;get_IActiveDoc2(&amp;swModel);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">if (! swModel) 
+ {</p>
+
+<p class=CodePlain
+	style="margin-left: 83px; background-color: Transparent;">return(S_OK);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">}</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">CComBSTR 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->strModelTitle;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">long <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->nDocumentType; 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->// swDocumentTypes_e</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swModel-&gt;GetTitle(&amp;strModelTitle);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swModel-&gt;GetType(&amp;nDocumentType);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">long <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->lNumConfigurations;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swModel-&gt;GetConfigurationCount(&amp;lNumConfigurations);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">BSTR* <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->aConfigurationNames 
+ = new BSTR[lNumConfigurations];</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">swModel-&gt;IGetConfigurationNames(&amp;lNumConfigurations, 
+ aConfigurationNames);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">for (int 
+ i = 0; i &lt; lNumConfigurations; i++) {</p>
+
+<p class=CodePlain
+	style="margin-left: 83px; background-color: Transparent;">CComBSTR 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->bstrConfigurationName(aConfigurationNames[i]);</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">}</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">delete [] 
+ aConfigurationNames;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">&nbsp;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px; background-color: Transparent;">return(S_OK);</p>
+
+<p class=CodePlain
+	style="background-color: Transparent;">}</p>
+
+<p class=CodePlain>&nbsp;</p>
+
+<p class=CodePlain>STDMETHODIMP CConfigTraversAddin::ToolbarEnable0(long* 
+ status)</p>
+
+<p class=CodePlain>{</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">// TODO: Add your implementation code here</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">*status = 1;</p>
+
+<p class=CodePlain
+	style="margin-left: 43px;">return S_OK;</p>
+
+<p class=CodePlain>}</p>
+
+</body>
+
+</html>

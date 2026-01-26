@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPageNumberbox",
+    "member": "SetSliderParameters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "PositionCount",
+        "type": "System.Int32",
+        "description": "Number of discreet positions on the slider"
+      },
+      {
+        "name": "DivisionCount",
+        "type": "System.Int32",
+        "description": "Number of regions separated by tick marks on the slider"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageNumberbox.SetRange2"
+    ],
+    "keywords": [
+      "setsliderparameters",
+      "ipropertymanagerpagenumberbox",
+      "manager",
+      "page",
+      "numberbox",
+      "slider",
+      "parameters",
+      "position",
+      "count",
+      "int32",
+      "division",
+      "void"
+    ]
+  },
+  "title": "IPropertyManagerPageNumberbox.SetSliderParameters",
+  "description": "Sets the parameters for the slider.",
+  "signature": "void SetSliderParameters( \n   System.Int32\nPositionCount\n,\n   System.Int32\nDivisionCount\n)",
+  "parameters": [
+    {
+      "name": "PositionCount",
+      "type": "System.Int32",
+      "description": "Number of discreet positions on the slider"
+    },
+    {
+      "name": "DivisionCount",
+      "type": "System.Int32",
+      "description": "Number of regions separated by tick marks on the slider"
+    }
+  ],
+  "returns": "",
+  "remarks": "When a user drags the slider, PositionCount defines how sensitive the slider is. Not all of the specified discreet points are displayed if the PropertyManager page is not wide enough to show them. However, if the user widens the PropertyManager page, then more points are displayed.\nWhen a user drags the slider, the user-interface tends to snap to the nearest tick mark when the drag is nearby, making it easier for the user to set whole values.",
+  "examples": [],
+  "related": [
+    "IPropertyManagerPageNumberbox.SetRange2"
+  ]
+}

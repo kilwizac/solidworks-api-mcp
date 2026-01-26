@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICircularPatternFeatureData",
+    "member": "IAccessSelections2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component for the feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "iaccessselections2",
+      "icircularpatternfeaturedata",
+      "circular",
+      "pattern",
+      "feature",
+      "data",
+      "access",
+      "selections2",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean"
+    ]
+  },
+  "title": "ICircularPatternFeatureData.IAccessSelections2",
+  "description": "Gains access to selections used to define a circular pattern feature.",
+  "signature": "System.Boolean IAccessSelections2( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component for the feature"
+    }
+  ],
+  "returns": "",
+  "remarks": "Remarks\nTo modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::IModifyDefinition2\nif you modified the feature\nICircularPatternFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [],
+  "related": []
+}

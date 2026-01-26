@@ -1,0 +1,159 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Context-Sensitive SOLIDWORKS API Help</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Macros,SOLIDWORKS API">
+<meta name=MS-HKWD content="Macros,context-sensitive F1 help">
+<meta name=MS-HKWD content="Application basics">
+<meta name=MS-HKWD content="Getting Started">
+<meta name=MS-HKWD content="Macros">
+<meta name=MS-HKWD content="Macros,.NET">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=578>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+<style>
+<!--
+span.MsoHyperlink
+	{mso-style-parent:"";
+	color:#0563C1;
+	text-decoration:underline;
+	text-underline:single}
+.auto-style1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style2 {
+	font-size: 8pt;
+}
+-->
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Context-Sensitive SOLIDWORKS API Help</h1>
+
+<p>Context-sensitive SOLIDWORKS API help is available as you edit SOLIDWORKS VBA and .NET 
+macros. </p>
+<p>To see context-sensitive SOLIDWORKS API help:</p>
+<ol>
+	<li class=kadov-p>Select a SOLIDWORKS API (interface, method, property, or enumerator) in 
+	the editor (VBA or VSTA or Visual Studio).</li>
+	<li class=kadov-p>Press F1.</li>
+</ol>
+<p>As of SOLIDWORKS 2018, if you have Visual Studio 2015 installed, 
+context-sensitive API help for .NET displays in the Microsoft Help Viewer. When 
+you install SOLIDWORKS 2018 or later, SOLIDWORKS API and enumerator&nbsp;helps&nbsp;are 
+registered and integrated with the Help Viewer catalogs of&nbsp;the Visual Studio 
+installed on your machine.&nbsp;</p>
+<p>After installing SOLIDWORKS:</p>
+<ul>
+	<li><span class="auto-style1"><span class="auto-style2">Add Microsoft Help 
+	Viewer to Visual Studio (</span><strong><span class="auto-style2">Tools &gt; 
+	Get Tools and Features &gt; Individual Components &gt; Help Viewer</span></strong><span class="auto-style2">).
+	</span></li>
+	<li><span class="auto-style2">In Visual Studio, select </span><strong>
+	<span class="auto-style2">Help &gt; Set Help Preference &gt; Launch in Help Viewer</span></strong></span>.</li>
+</ul>
+<p><span class="hsedit">Please note:</span></p>
+<ul>
+	<li class=kadov-p><span class="hsedit">Help Viewer SOLIDWORKS API help (<b>*.cab</b> and 
+	<b>*.msha</b>) for users of Visual Studio 
+2012, 2013, or 2015 </span>is delivered in <i>install_dir/</i><b>api/HelpViewer</b>.</li>
+	<li class=kadov-p>HTML 2.0 compiled SOLIDWORKS API help for users of VSTA and Visual 
+	Studio versions earlier than 2015 is 
+delivered in <i>install_dir/</i><b>api/HTMLHelp2x</b>.</li>
+	<li class=kadov-p>HTML 1.0 compiled SOLIDWORKS API help for users of VBA is 
+	delivered in <i>install_dir</i>/<b>api</b>.</li>
+</ul>
+<p>When you press F1 while editing:</p>
+<ul>
+	<li class=kadov-p>VBA macros, HTML 1.0 compiled help displays.</li>
+	<li class=kadov-p>VB.NET and C# macros in VSTA 1.0, HTML 2.0 compiled help 
+	displays.</li>
+	<li class=kadov-p>VB.NET and C# programs in Visual Studio (2012, 2013), 
+	either Help Viewer help or HTML 2.0 compiled help displays. Configure Visual 
+	Studio to launch either the Help Viewer or a browser before using F1.</li>
+	<li class=kadov-p>VB.NET and C# programs in Visual Studio 2015, only Help Viewer 
+	help can display. You must configure Visual Studio 2015 to launch the Help 
+	Viewer before using F1.</li>
+	<li class=kadov-p>VB.NET and C# macros or programs in Visual Studio 2015, example links in the 
+	displayed help do not work. You must open local help to see examples.</li>
+</ul>
+<p>If after installing SOLIDWORKS, F1 does not display help for SOLIDWORKS APIs in 
+.NET macros, try manually 
+registering the SOLIDWORKS API Help with Help Viewer.</p>
+<p>If a previous version of the context-sensitive help is already installed, you 
+must remove it before installing another version. To remove SOLIDWORKS API Help from the Help Viewer:</p>
+<ol>
+	<li class=kadov-p>In Visual Studio, select <b>Help &gt; View Help</b>.</li>
+	<li class=kadov-p>Click the Manage Content tab.</li>
+	<li class=kadov-p>In the Action column for the SOLIDWORKS API Help row, click
+	<b>Remove</b>.</li>
+	<li class=kadov-p>Click <b>Update</b> at the bottom of the Manage Content tab.</li>
+</ol>
+<p>To register SOLIDWORKS API help with Visual Studio Help Viewer:</p>
+<ol>
+	<li class=kadov-p>In Visual Studio, select <b>Help &gt; View Help</b>.</li>
+	<li class=kadov-p>Click the Manage Content tab.</li>
+	<li class=kadov-p>Select <b>Disk</b></li>
+	<li class=kadov-p>Select the location of source content by 
+	clicking <b>... </b>.</li>
+	<li class=kadov-p>Navigate to and select <i>install_dir</i><b>\api\HelpViewer\sldworksapi\helpcontentsetup.msha</b>.</li>
+	<li class=kadov-p>Click <b>Open</b>.</li>
+	<li class=kadov-p>In the Action column for the SOLIDWORKS API Help row, click <b>Add</b>.</li>
+	<li class=kadov-p>Click <b>Update</b> at the bottom of the Manage Content tab.</li>
+	<li class=kadov-p>Click <b>OK</b> in the Security dialog box.</li>
+</ol>
+<p>To register SOLIDWORKS API enumerator help with Visual Studio Help Viewer:</p>
+<ol>
+	<li class=kadov-p>In Visual Studio, select <b>Help &gt; View Help</b>.</li>
+	<li class=kadov-p>Click the Manage Content tab.</li>
+	<li class=kadov-p>Select <b>Disk</b></li>
+	<li class=kadov-p>Select the location of source content by 
+	clicking <b>... </b>.</li>
+	<li class=kadov-p>Navigate to and select <i>install_dir</i><b>\api\HelpViewer\swconst\helpcontentsetup.msha</b>.</li>
+	<li class=kadov-p>Click <b>Open</b>.</li>
+	<li class=kadov-p>In the Action column for the SOLIDWORKS API Help row, click <b>Add</b>.</li>
+	<li class=kadov-p>Click <b>Update</b> at the bottom of the Manage Content tab.</li>
+	<li class=kadov-p>Click <b>OK</b> in the Security dialog box.</li>
+</ol>
+<p>
+<span id="TopicSection|BodyText" class="hsedit" contentEditable="true" style="WIDTH: 100%">
+</span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "GetTextPositionAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the text where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.GetText",
+      "ISFSymbol.GetTextAngleAtIndex",
+      "ISFSymbol.GetTextAtIndex",
+      "ISFSymbol.GetTextFontAtIndex",
+      "ISFSymbol.GetTextHeightAtIndex",
+      "ISFSymbol.GetTextInvertAtIndex",
+      "ISFSymbol.GetTextRefPositionAtIndex",
+      "ISFSymbol.IGetTextPositionAtIndex",
+      "ISFSymbol.SetText"
+    ],
+    "keywords": [
+      "gettextpositionatindex",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "text",
+      "position",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISFSymbol.GetTextPositionAtIndex",
+  "description": "Gets the text item's offset relative to note's text point.",
+  "signature": "System.Object GetTextPositionAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the text where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Call\nISFSymbol::GetTextCount\nbefore calling this method to get the number of text items.\nThe return value is the following array of doubles :\n[\ntextPtX, textPtY, textPtZ\n]\nwhere these text position values are offset values from the origin of this\nISFSymbol\nobject.",
+  "examples": [],
+  "related": [
+    "ISFSymbol.GetText",
+    "ISFSymbol.GetTextAngleAtIndex",
+    "ISFSymbol.GetTextAtIndex",
+    "ISFSymbol.GetTextFontAtIndex",
+    "ISFSymbol.GetTextHeightAtIndex",
+    "ISFSymbol.GetTextInvertAtIndex",
+    "ISFSymbol.GetTextRefPositionAtIndex",
+    "ISFSymbol.IGetTextPositionAtIndex",
+    "ISFSymbol.SetText"
+  ]
+}

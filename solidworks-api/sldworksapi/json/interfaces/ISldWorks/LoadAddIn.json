@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "LoadAddIn",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Fully qualified file name of the add-in"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.UnloadAddIn"
+    ],
+    "keywords": [
+      "add",
+      "ins",
+      "load",
+      "photoview",
+      "360",
+      "loadaddin",
+      "isldworks",
+      "sld",
+      "works",
+      "file",
+      "name",
+      "string",
+      "int32",
+      "unload",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.LoadAddIn",
+  "description": "Loads the specified add-in in SOLIDWORKS.",
+  "signature": "System.Int32 LoadAddIn( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Fully qualified file name of the add-in"
+    }
+  ],
+  "returns": "Status of loading the add-in as defined in swLoadAddinError_e",
+  "remarks": "You cannot load MBD using its add-in path. Instead, load the MBD add-in as follows:\nstatus = swApp.\nLoadAddIn\n('MBD')",
+  "examples": [
+    {
+      "title": "Load and Unload Add-in (C#)",
+      "href": "Load_and_Unload_Add-in_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Load and Unload Add-in (VB.NET)",
+      "href": "Load_and_Unload_Add-in_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Load and Unload Add-in (VBA)",
+      "href": "Load_and_Unload_Add-in_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.UnloadAddIn"
+  ]
+}

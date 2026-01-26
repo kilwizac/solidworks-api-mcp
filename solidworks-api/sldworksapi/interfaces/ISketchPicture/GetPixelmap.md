@@ -1,0 +1,55 @@
+---
+type: method
+interface: ISketchPicture
+member: GetPixelmap
+returns: System.Object
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - sketches
+related:
+  - ISketchPicture.GetPointOnSketchFromPixel
+  - ISketchPicture.IGetPixelmap
+keywords:
+  - getpixelmap
+  - isketchpicture
+  - sketch
+  - picture
+  - pixelmap
+  - object
+---
+
+# ISketchPicture.GetPixelmap
+
+Gets the picture pixels.
+
+## Signature
+
+```csharp
+System.Object GetPixelmap()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Array containing groups of three or four values (see Remarks )
+
+## Remarks
+
+The array contains groups of three, the Red, Green, Blue (RGB) components of pixel color, and optionally a fourth value that indicates the transparency of the pixel, which can be a value from 0 (transparent) to 255 (opaque).
+To determine the format of the data, you need the information returned by
+ISketchPicture::GetPixelmapSize
+:
+Number of items per pixel = size / (rows * columns)
+Each group of three or four goes across each pixel in a row of the bitmap. The next row follows in the array.
+This raw data does not include translation, scaling, rotation, and flipping. SOLIDWORKS Design applies these properties to the raw bitmap data to draw it in the sketch.
+
+## See Also
+
+- `ISketchPicture.GetPointOnSketchFromPixel`
+- `ISketchPicture.IGetPixelmap`

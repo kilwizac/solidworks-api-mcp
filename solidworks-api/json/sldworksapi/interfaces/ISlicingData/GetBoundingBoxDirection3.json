@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISlicingData",
+    "member": "GetBoundingBoxDirection3",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISlicingData.SetBoundingBoxDirection3"
+    ],
+    "keywords": [
+      "getboundingboxdirection3",
+      "islicingdata",
+      "slicing",
+      "data",
+      "bounding",
+      "box",
+      "direction3",
+      "double"
+    ]
+  },
+  "title": "ISlicingData.GetBoundingBoxDirection3",
+  "description": "Gets bounding box direction 3 (left manipulator for linear slicing, inner radius for radial slicing).",
+  "signature": "System.Double GetBoundingBoxDirection3()",
+  "parameters": [],
+  "returns": "For linear slicing: -500.0 < left manipulator < 0.0 For angular slicing: 0.0 < inner radius < outer radius",
+  "remarks": "This method is only valid after you have pre-selected the first slicing plane.\nUse these methods to get the slicing volume for including or excluding geometry for slicing:\nISlicingData::GetBoundingBoxDirection1\nISlicingData::GetBoundingBoxDirection2\nISlicingData::GetBoundingBoxDirection3\nISlicingData::GetBoundingBoxDirection4",
+  "examples": [
+    {
+      "title": "ISlicingData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISlicingData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISlicingData.SetBoundingBoxDirection3"
+  ]
+}

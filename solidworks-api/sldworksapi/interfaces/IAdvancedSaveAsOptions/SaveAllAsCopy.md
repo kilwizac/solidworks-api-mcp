@@ -1,0 +1,44 @@
+---
+type: property
+interface: IAdvancedSaveAsOptions
+member: SaveAllAsCopy
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - file-io
+related: []
+keywords:
+  - saveallascopy
+  - iadvancedsaveasoptions
+  - advanced
+  - save
+  - options
+  - all
+  - copy
+  - boolean
+readonly: false
+---
+
+# IAdvancedSaveAsOptions.SaveAllAsCopy
+
+Sets whether to save all component references as copies.
+
+## Signature
+
+```csharp
+System.Boolean SaveAllAsCopy {set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to save all as a copy, false (default) to not
+
+## Examples
+
+- IAdvancedSaveAsOptions (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAdvancedSaveAsOptions)

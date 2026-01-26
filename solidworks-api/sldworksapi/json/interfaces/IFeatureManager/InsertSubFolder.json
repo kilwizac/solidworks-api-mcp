@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSubFolder",
+    "returns": "Feature",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "folders",
+      "solid",
+      "bodies",
+      "add",
+      "featuremanager",
+      "design",
+      "tree",
+      "see",
+      "also",
+      "ifeaturemanager",
+      "ifeatmgrview",
+      "interfaces",
+      "insertsubfolder",
+      "feature",
+      "manager",
+      "insert",
+      "sub",
+      "folder"
+    ]
+  },
+  "title": "IFeatureManager.InsertSubFolder",
+  "description": "Creates a subfolder in the Solid Bodies folder in the FeatureManager design tree and moves the selected solid bodies or subfolders in the Solid Bodies folder to the new subfolder.",
+  "signature": "Feature InsertSubFolder()",
+  "parameters": [],
+  "returns": "Pointer to the IFeature object, the new subfolder",
+  "remarks": "This method requires that the features (solid bodies or subfolders or both) be selected interactively or programmatically. To select the features programmatically, you can use\nIModelDocExtension::SelectByID2\nand pass the feature names and the appropriate object types and the selection coordinates 0,0,0. To determine the feature names and object types, use the\nIFeature::Name\nand\nIFeature::GetTypeName\nmethods, respectively.",
+  "examples": [],
+  "related": []
+}

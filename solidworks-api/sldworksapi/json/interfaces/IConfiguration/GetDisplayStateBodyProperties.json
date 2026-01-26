@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "GetDisplayStateBodyProperties",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "DisplayStateName",
+        "type": "System.String",
+        "description": "Name of the display state"
+      },
+      {
+        "name": "Bodies",
+        "type": "System.Object",
+        "description": "Array of IBody2 objects"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IConfiguration.GetDisplayStateComponentProperties",
+      "IConfiguration.GetDisplayStateComponentVisibility",
+      "IConfiguration.GetDisplayStateFaceProperties",
+      "IConfiguration.GetDisplayStateFeatureProperties",
+      "IConfiguration.GetDisplayStateProperties",
+      "IConfiguration.GetDisplayStates",
+      "IConfiguration.GetDisplayStatesCount"
+    ],
+    "keywords": [
+      "display",
+      "states",
+      "getdisplaystatebodyproperties",
+      "iconfiguration",
+      "configuration",
+      "state",
+      "body",
+      "properties",
+      "name",
+      "string",
+      "bodies",
+      "object"
+    ]
+  },
+  "title": "IConfiguration.GetDisplayStateBodyProperties",
+  "description": "Gets the bodies and their material properties in the specified display state.",
+  "signature": "System.Object GetDisplayStateBodyProperties( \n   System.String\nDisplayStateName\n,\n   out System.Object\nBodies\n)",
+  "parameters": [
+    {
+      "name": "DisplayStateName",
+      "type": "System.String",
+      "description": "Name of the display state"
+    },
+    {
+      "name": "Bodies",
+      "type": "System.Object",
+      "description": "Array of IBody2 objects"
+    }
+  ],
+  "returns": "Array of body properties (see Remarks )",
+  "remarks": "The material values returned include the face color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency, and emission. Valid values are from 0 to 1 for all variables.\nIf the return value is -1 values, then material property values are not assigned to the feature.\nThe format of the return value is an array of doubles as follows:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]",
+  "examples": [],
+  "related": [
+    "IConfiguration.GetDisplayStateComponentProperties",
+    "IConfiguration.GetDisplayStateComponentVisibility",
+    "IConfiguration.GetDisplayStateFaceProperties",
+    "IConfiguration.GetDisplayStateFeatureProperties",
+    "IConfiguration.GetDisplayStateProperties",
+    "IConfiguration.GetDisplayStates",
+    "IConfiguration.GetDisplayStatesCount"
+  ]
+}

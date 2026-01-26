@@ -1,0 +1,123 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IFindMinimumRadius",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UBound",
+        "type": "System.Double",
+        "description": "MinMax UParameter"
+      },
+      {
+        "name": "VBound",
+        "type": "System.Double",
+        "description": "MinMax VParameter"
+      },
+      {
+        "name": "NumOfRadius",
+        "type": "System.Int32",
+        "description": "Number of radius; can be 0, 1, or 2"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Object",
+        "description": "Minimum radius of curvature (see Remarks )"
+      },
+      {
+        "name": "Location",
+        "type": "System.Object",
+        "description": "Position where the minimum radius curvature occurred (see Remarks )"
+      },
+      {
+        "name": "UVParameter",
+        "type": "System.Object",
+        "description": "UV parameters ; because points are UV, third ordinates are 0 (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.FindMinimumRadius",
+      "ICurve.IFindMinimumRadius",
+      "IFace2.GetUVBounds",
+      "IFace2.IGetUVBounds",
+      "ISurface.FindMinimumRadius",
+      "ISurface.IParameterization",
+      "ISurface.Parameterization"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "radius",
+      "curvature",
+      "surfaces",
+      "ifindminimumradius",
+      "find",
+      "minimum",
+      "bound",
+      "double",
+      "num",
+      "int32",
+      "object",
+      "location",
+      "uv",
+      "parameter",
+      "boolean"
+    ]
+  },
+  "title": "ISurface.IFindMinimumRadius",
+  "description": "Gets the minimum radius of curvature for the selected surface.",
+  "signature": "System.Boolean IFindMinimumRadius( \n   ref System.Double\nUBound\n,\n   ref System.Double\nVBound\n,\n   out System.Int32\nNumOfRadius\n,\n   out System.Object\nRadius\n,\n   out System.Object\nLocation\n,\n   out System.Object\nUVParameter\n)",
+  "parameters": [
+    {
+      "name": "UBound",
+      "type": "System.Double",
+      "description": "MinMax UParameter"
+    },
+    {
+      "name": "VBound",
+      "type": "System.Double",
+      "description": "MinMax VParameter"
+    },
+    {
+      "name": "NumOfRadius",
+      "type": "System.Int32",
+      "description": "Number of radius; can be 0, 1, or 2"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Object",
+      "description": "Minimum radius of curvature (see Remarks )"
+    },
+    {
+      "name": "Location",
+      "type": "System.Object",
+      "description": "Position where the minimum radius curvature occurred (see Remarks )"
+    },
+    {
+      "name": "UVParameter",
+      "type": "System.Object",
+      "description": "UV parameters ; because points are UV, third ordinates are 0 (see Remarks )"
+    }
+  ],
+  "returns": "True if operation succeeds, false if it fails",
+  "remarks": "The search is confined to the portion of the selected curve lying inside of UBound and VBound.\nCOM returns these data types for these parameters:\nRadius: VARIANT of SafeDoubleArray\nLocation: VARIANT of SafeDispatchArray of\nIMathpoint\nUVParameter: VARIANT of SafeDispatchArray of\nIMathpoint",
+  "examples": [],
+  "related": [
+    "ICurve.FindMinimumRadius",
+    "ICurve.IFindMinimumRadius",
+    "IFace2.GetUVBounds",
+    "IFace2.IGetUVBounds",
+    "ISurface.FindMinimumRadius",
+    "ISurface.IParameterization",
+    "ISurface.Parameterization"
+  ]
+}

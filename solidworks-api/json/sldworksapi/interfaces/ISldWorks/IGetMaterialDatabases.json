@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "IGetMaterialDatabases",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of material databases"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetMaterialDatabases"
+    ],
+    "keywords": [
+      "database",
+      "materials",
+      "material",
+      "igetmaterialdatabases",
+      "isldworks",
+      "sld",
+      "works",
+      "databases",
+      "count",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "ISldWorks.IGetMaterialDatabases",
+  "description": "Gets the names of the material databases.",
+  "signature": "System.String IGetMaterialDatabases( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of material databases"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to the an array of the names of the material databases VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nISldWorks::GetMaterialDatabaseCount\nto get the value for Count.\nMaterial database names must be unique. Do not re-use the name of a material database.",
+  "examples": [],
+  "related": [
+    "ISldWorks.GetMaterialDatabases"
+  ]
+}

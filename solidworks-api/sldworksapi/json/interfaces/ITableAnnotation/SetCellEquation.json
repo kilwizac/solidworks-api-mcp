@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SetCellEquation",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "0-based index of the row, -1 to set a column equation"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "0-based index of the column"
+      },
+      {
+        "name": "IncludeHidden",
+        "type": "System.Boolean",
+        "description": "True to include hidden rows and columns in the Row and Column indexes, false to not"
+      },
+      {
+        "name": "Equation",
+        "type": "System.String",
+        "description": "Equation"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.EvaluateCellEquation",
+      "ITableAnnotation.GetCellEquation"
+    ],
+    "keywords": [
+      "table",
+      "cell",
+      "equation",
+      "setcellequation",
+      "itableannotation",
+      "annotation",
+      "row",
+      "int32",
+      "column",
+      "include",
+      "hidden",
+      "boolean",
+      "string",
+      "bom",
+      "types",
+      "equations",
+      "vba"
+    ]
+  },
+  "title": "ITableAnnotation.SetCellEquation",
+  "description": "Sets the specified equation for the specified row and column of this BOM table.",
+  "signature": "System.Int32 SetCellEquation( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n,\n   System.Boolean\nIncludeHidden\n,\n   System.String\nEquation\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "0-based index of the row, -1 to set a column equation"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "0-based index of the column"
+    },
+    {
+      "name": "IncludeHidden",
+      "type": "System.Boolean",
+      "description": "True to include hidden rows and columns in the Row and Column indexes, false to not"
+    },
+    {
+      "name": "Equation",
+      "type": "System.String",
+      "description": "Equation"
+    }
+  ],
+  "returns": "Return code as defined in swCellEquationStatus_e",
+  "remarks": "After calling this method, call\nIModelDoc2::EditRebuild3\nto refresh the table in the user interface.",
+  "examples": [
+    {
+      "title": "Get and Set BOM Column Types and Cell Equations (VBA)",
+      "href": "Get_and_Set_Column_Types_and_Cell_Equations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.EvaluateCellEquation",
+    "ITableAnnotation.GetCellEquation"
+  ]
+}

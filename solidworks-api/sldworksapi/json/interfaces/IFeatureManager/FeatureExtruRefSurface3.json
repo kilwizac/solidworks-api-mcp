@@ -1,0 +1,321 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureExtruRefSurface3",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Sd",
+        "type": "System.Boolean",
+        "description": "True for single-ended, false for double-ended"
+      },
+      {
+        "name": "Dir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the extrude, false to not"
+      },
+      {
+        "name": "StartCond",
+        "type": "System.Int32",
+        "description": "Start condition as defined in swStartConditions_e"
+      },
+      {
+        "name": "OffsetVal",
+        "type": "System.Double",
+        "description": "Offset value"
+      },
+      {
+        "name": "T1",
+        "type": "System.Int32",
+        "description": "Termination type for first end as defined in swEndConditions_e"
+      },
+      {
+        "name": "T2",
+        "type": "System.Int32",
+        "description": "Termination type for second end as defined in swEndConditions_e (valid only if Sd = false)"
+      },
+      {
+        "name": "D1",
+        "type": "System.Double",
+        "description": "Depth of extrusion for first end in meters"
+      },
+      {
+        "name": "D2",
+        "type": "System.Double",
+        "description": "Depth of extrusion for second end in meters (valid only if Sd = false)"
+      },
+      {
+        "name": "Dchk1",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in first direction, false does not allow drafting"
+      },
+      {
+        "name": "Dchk2",
+        "type": "System.Boolean",
+        "description": "True allows draft angle in second direction, false does not allow drafting (valid only if Sd = false)"
+      },
+      {
+        "name": "Ddir1",
+        "type": "System.Boolean",
+        "description": "True for first draft angle to be outward, false for first draft angle to be inward"
+      },
+      {
+        "name": "Ddir2",
+        "type": "System.Boolean",
+        "description": "True for second draft angle to be outward, false for second draft angle to be inward (valid only if Sd = false)"
+      },
+      {
+        "name": "Dang1",
+        "type": "System.Double",
+        "description": "Draft angle for first end"
+      },
+      {
+        "name": "Dang2",
+        "type": "System.Double",
+        "description": "Draft angle for second end (valid only if Sd = false)"
+      },
+      {
+        "name": "OffsetReverse1",
+        "type": "System.Boolean",
+        "description": "If you choose to offset the first end condition from another face or plane, then true specifies the offset from the face or plane in a direction away from the sketch, and false specifies the offset in a direction toward the sketch"
+      },
+      {
+        "name": "OffsetReverse2",
+        "type": "System.Boolean",
+        "description": "If you choose to offset the second end condition from another face or plane, then true specifies the offset from the face or plane in a direction away from the sketch, and false specifies the offset in a direction toward the sketch (valid only if Sd = false)"
+      },
+      {
+        "name": "TranslateSurface1",
+        "type": "System.Boolean",
+        "description": "If you specified T1 as swEndConditions_e.swEndCondOffsetFromSurface, then true specifies that the end of the extrusion is a translation of the reference surface, and false specifies to use a true offset"
+      },
+      {
+        "name": "TranslateSurface2",
+        "type": "System.Boolean",
+        "description": "If you specified T2 as swEndConditions_e.swEndCondOffsetFromSurface, then true specifies that the end of the extrusion is a translation of the reference surface, and false specifies to use a true offset (valid only if Sd = false)"
+      },
+      {
+        "name": "CapEnd1",
+        "type": "System.Boolean",
+        "description": "True to cap first end, false to not"
+      },
+      {
+        "name": "CapEnd2",
+        "type": "System.Boolean",
+        "description": "True to cap second end, false to not (valid only if Sd = false)"
+      },
+      {
+        "name": "DeleteOriginalFace",
+        "type": "System.Boolean",
+        "description": "True to delete original faces, false to not (valid only if Sd = true)"
+      },
+      {
+        "name": "KnitResult",
+        "type": "System.Boolean",
+        "description": "True to knit the extrusion result, false to not (valid only if Sd = true and DeleteOriginalFace = true)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISurfExtrudeFeatureData"
+    ],
+    "keywords": [
+      "extrude",
+      "see",
+      "also",
+      "iextrudefeaturedata2",
+      "reference",
+      "surface",
+      "feature",
+      "ifeature",
+      "extruded",
+      "isurface",
+      "featureextrurefsurface3",
+      "ifeaturemanager",
+      "manager",
+      "extru",
+      "ref",
+      "surface3",
+      "sd",
+      "boolean",
+      "dir",
+      "start",
+      "cond",
+      "int32",
+      "offset",
+      "val",
+      "double",
+      "t1",
+      "t2",
+      "d1",
+      "d2",
+      "dchk1",
+      "dchk2",
+      "ddir1",
+      "ddir2",
+      "dang1",
+      "dang2",
+      "reverse1",
+      "reverse2",
+      "translate",
+      "surface1",
+      "surface2",
+      "cap",
+      "end1",
+      "end2",
+      "delete",
+      "original",
+      "face",
+      "knit",
+      "result",
+      "void",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.FeatureExtruRefSurface3",
+  "description": "Inserts an extruded surface.",
+  "signature": "void FeatureExtruRefSurface3( \n   System.Boolean\nSd\n,\n   System.Boolean\nDir\n,\n   System.Int32\nStartCond\n,\n   System.Double\nOffsetVal\n,\n   System.Int32\nT1\n,\n   System.Int32\nT2\n,\n   System.Double\nD1\n,\n   System.Double\nD2\n,\n   System.Boolean\nDchk1\n,\n   System.Boolean\nDchk2\n,\n   System.Boolean\nDdir1\n,\n   System.Boolean\nDdir2\n,\n   System.Double\nDang1\n,\n   System.Double\nDang2\n,\n   System.Boolean\nOffsetReverse1\n,\n   System.Boolean\nOffsetReverse2\n,\n   System.Boolean\nTranslateSurface1\n,\n   System.Boolean\nTranslateSurface2\n,\n   System.Boolean\nCapEnd1\n,\n   System.Boolean\nCapEnd2\n,\n   System.Boolean\nDeleteOriginalFace\n,\n   System.Boolean\nKnitResult\n)",
+  "parameters": [
+    {
+      "name": "Sd",
+      "type": "System.Boolean",
+      "description": "True for single-ended, false for double-ended"
+    },
+    {
+      "name": "Dir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the extrude, false to not"
+    },
+    {
+      "name": "StartCond",
+      "type": "System.Int32",
+      "description": "Start condition as defined in swStartConditions_e"
+    },
+    {
+      "name": "OffsetVal",
+      "type": "System.Double",
+      "description": "Offset value"
+    },
+    {
+      "name": "T1",
+      "type": "System.Int32",
+      "description": "Termination type for first end as defined in swEndConditions_e"
+    },
+    {
+      "name": "T2",
+      "type": "System.Int32",
+      "description": "Termination type for second end as defined in swEndConditions_e (valid only if Sd = false)"
+    },
+    {
+      "name": "D1",
+      "type": "System.Double",
+      "description": "Depth of extrusion for first end in meters"
+    },
+    {
+      "name": "D2",
+      "type": "System.Double",
+      "description": "Depth of extrusion for second end in meters (valid only if Sd = false)"
+    },
+    {
+      "name": "Dchk1",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in first direction, false does not allow drafting"
+    },
+    {
+      "name": "Dchk2",
+      "type": "System.Boolean",
+      "description": "True allows draft angle in second direction, false does not allow drafting (valid only if Sd = false)"
+    },
+    {
+      "name": "Ddir1",
+      "type": "System.Boolean",
+      "description": "True for first draft angle to be outward, false for first draft angle to be inward"
+    },
+    {
+      "name": "Ddir2",
+      "type": "System.Boolean",
+      "description": "True for second draft angle to be outward, false for second draft angle to be inward (valid only if Sd = false)"
+    },
+    {
+      "name": "Dang1",
+      "type": "System.Double",
+      "description": "Draft angle for first end"
+    },
+    {
+      "name": "Dang2",
+      "type": "System.Double",
+      "description": "Draft angle for second end (valid only if Sd = false)"
+    },
+    {
+      "name": "OffsetReverse1",
+      "type": "System.Boolean",
+      "description": "If you choose to offset the first end condition from another face or plane, then true specifies the offset from the face or plane in a direction away from the sketch, and false specifies the offset in a direction toward the sketch"
+    },
+    {
+      "name": "OffsetReverse2",
+      "type": "System.Boolean",
+      "description": "If you choose to offset the second end condition from another face or plane, then true specifies the offset from the face or plane in a direction away from the sketch, and false specifies the offset in a direction toward the sketch (valid only if Sd = false)"
+    },
+    {
+      "name": "TranslateSurface1",
+      "type": "System.Boolean",
+      "description": "If you specified T1 as swEndConditions_e.swEndCondOffsetFromSurface, then true specifies that the end of the extrusion is a translation of the reference surface, and false specifies to use a true offset"
+    },
+    {
+      "name": "TranslateSurface2",
+      "type": "System.Boolean",
+      "description": "If you specified T2 as swEndConditions_e.swEndCondOffsetFromSurface, then true specifies that the end of the extrusion is a translation of the reference surface, and false specifies to use a true offset (valid only if Sd = false)"
+    },
+    {
+      "name": "CapEnd1",
+      "type": "System.Boolean",
+      "description": "True to cap first end, false to not"
+    },
+    {
+      "name": "CapEnd2",
+      "type": "System.Boolean",
+      "description": "True to cap second end, false to not (valid only if Sd = false)"
+    },
+    {
+      "name": "DeleteOriginalFace",
+      "type": "System.Boolean",
+      "description": "True to delete original faces, false to not (valid only if Sd = true)"
+    },
+    {
+      "name": "KnitResult",
+      "type": "System.Boolean",
+      "description": "True to knit the extrusion result, false to not (valid only if Sd = true and DeleteOriginalFace = true)"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, select the entities for the extruded surface using\nIModelDocExtension::SelectByID2\n.\nEntity\nMark\nBase\n2D or 3D sketch\nSketch segments\nSingle planar face\nMultiple co-planar faces\n0\n0 or 4\n0\n0 for first planar face and 256 for all other co-planar faces\nDirection edge\n16\nStart condition entity\n32\nEnd condition entity\n1",
+  "examples": [
+    {
+      "title": "Insert Extruded Surface (C#)",
+      "href": "Insert_Extruded_Reference_Surface_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Extruded Surface (VB.NET)",
+      "href": "Insert_Extruded_Reference_Surface_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Extruded Surface (VBA)",
+      "href": "Insert_Extruded_Reference_Surface_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurfExtrudeFeatureData"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ITexture",
+    "member": "MaterialName",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "materialname",
+      "itexture",
+      "texture",
+      "material",
+      "name",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "ITexture.MaterialName",
+  "description": "Gets or sets the path and file name of the texture material.",
+  "signature": "System.String MaterialName {get; set;}",
+  "parameters": [],
+  "returns": "Path and file name of the texture (see Remarks )",
+  "remarks": "If the texture is a SOLIDWORKS-supplied texture, then the path returned is:\ninstall_dir\n\\data\\I\nmages\n\\\ntextures\n\\\ntexture_library\n\\\ntexture_type\n\\\ntexture_image_file\nFor example,\ninstall_dir\n\\data\\Images\\textures\\plastic\\brushed\\bred.jpg\n.\nIf the texture is user-defined texture, then the path returned is:\ndrive\n:\n\\\npath_name\n\\\ntexture_image_file\nFor example,\nD:\\MyTextures\\gear.jpg\n.\nCall this property before calling\nITexture::GetSystemTextureName\nto obtain a value for FileNameIn.",
+  "examples": [
+    {
+      "title": "ITexture",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ITexture",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

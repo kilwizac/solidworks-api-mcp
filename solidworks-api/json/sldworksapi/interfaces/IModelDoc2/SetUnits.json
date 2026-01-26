@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetUnits",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "UType",
+        "type": "System.Int16",
+        "description": "Model units as defined in swLengthUnit_e"
+      },
+      {
+        "name": "FractBase",
+        "type": "System.Int16",
+        "description": "Decimal or fraction as defined in swFractionDisplay_e"
+      },
+      {
+        "name": "FractDenom",
+        "type": "System.Int16",
+        "description": "Denominator of the smallest inch fraction to be used, for example, 64 for 1/64; valid only if FractBase is set to swFRACTION (see Remarks )"
+      },
+      {
+        "name": "SigDigits",
+        "type": "System.Int16",
+        "description": "Significant digits; valid only if FractBase is set to swDECIMAL"
+      },
+      {
+        "name": "RoundToFraction",
+        "type": "System.Boolean",
+        "description": "Flag denoting whether or not to round to the fraction; for example, if 4 is the denominator value given in FractDenom and the actual value is 0.27, it is rounded to 0.25"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetAngularUnits",
+      "IModelDoc2.GetUnits",
+      "IModelDoc2.GetUserUnit",
+      "IModelDoc2.IGetAngularUnits",
+      "IModelDoc2.IGetUnits",
+      "IModelDoc2.IGetUserUnit",
+      "IModelDoc2.ISetAngularUnits",
+      "IModelDoc2.SetAngularUnits"
+    ],
+    "keywords": [
+      "units",
+      "setunits",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "type",
+      "int16",
+      "fract",
+      "base",
+      "denom",
+      "sig",
+      "digits",
+      "round",
+      "fraction",
+      "boolean",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SetUnits",
+  "description": "Sets the units used by the end-user for the model.",
+  "signature": "void SetUnits( \n   System.Int16\nUType\n,\n   System.Int16\nFractBase\n,\n   System.Int16\nFractDenom\n,\n   System.Int16\nSigDigits\n,\n   System.Boolean\nRoundToFraction\n)",
+  "parameters": [
+    {
+      "name": "UType",
+      "type": "System.Int16",
+      "description": "Model units as defined in swLengthUnit_e"
+    },
+    {
+      "name": "FractBase",
+      "type": "System.Int16",
+      "description": "Decimal or fraction as defined in swFractionDisplay_e"
+    },
+    {
+      "name": "FractDenom",
+      "type": "System.Int16",
+      "description": "Denominator of the smallest inch fraction to be used, for example, 64 for 1/64; valid only if FractBase is set to swFRACTION (see Remarks )"
+    },
+    {
+      "name": "SigDigits",
+      "type": "System.Int16",
+      "description": "Significant digits; valid only if FractBase is set to swDECIMAL"
+    },
+    {
+      "name": "RoundToFraction",
+      "type": "System.Boolean",
+      "description": "Flag denoting whether or not to round to the fraction; for example, if 4 is the denominator value given in FractDenom and the actual value is 0.27, it is rounded to 0.25"
+    }
+  ],
+  "returns": "",
+  "remarks": "Fractional units are only valid if UType is set to swINCHES or swFEETINCHES.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetAngularUnits",
+    "IModelDoc2.GetUnits",
+    "IModelDoc2.GetUserUnit",
+    "IModelDoc2.IGetAngularUnits",
+    "IModelDoc2.IGetUnits",
+    "IModelDoc2.IGetUserUnit",
+    "IModelDoc2.ISetAngularUnits",
+    "IModelDoc2.SetAngularUnits"
+  ]
+}

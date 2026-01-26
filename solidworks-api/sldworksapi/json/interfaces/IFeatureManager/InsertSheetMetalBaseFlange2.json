@@ -1,0 +1,284 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetalBaseFlange2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Wall thickness of the sheet metal feature"
+      },
+      {
+        "name": "ThickenDir",
+        "type": "System.Boolean",
+        "description": "Direction to thicken the sheet metal"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Global bend radius to insert at the corners"
+      },
+      {
+        "name": "ExtrudeDist1",
+        "type": "System.Double",
+        "description": "Distance of the sheet metal extrusion for the Direction 1"
+      },
+      {
+        "name": "ExtrudeDist2",
+        "type": "System.Double",
+        "description": "Distance of the sheet metal extrusion for the Direction 2"
+      },
+      {
+        "name": "FlipExtruDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the extrude, false to not"
+      },
+      {
+        "name": "EndCondition1",
+        "type": "System.Int32",
+        "description": "End condition for first extrude distance"
+      },
+      {
+        "name": "EndCondition2",
+        "type": "System.Int32",
+        "description": "End condition for second extrude distance"
+      },
+      {
+        "name": "DirToUse",
+        "type": "System.Int32",
+        "description": "End condition type as defined in swEndConditions_e"
+      },
+      {
+        "name": "PCBA",
+        "type": "CustomBendAllowance",
+        "description": "Pointer to the custom bend allowance object"
+      },
+      {
+        "name": "UseDefaultRelief",
+        "type": "System.Boolean",
+        "description": "True to use the default relief, false to not"
+      },
+      {
+        "name": "ReliefType",
+        "type": "System.Int32",
+        "description": "Relief type as defined in swSheetMetalReliefTypes_e"
+      },
+      {
+        "name": "ReliefWidth",
+        "type": "System.Double",
+        "description": "Width of the relief"
+      },
+      {
+        "name": "ReliefDepth",
+        "type": "System.Double",
+        "description": "Depth of the relief"
+      },
+      {
+        "name": "ReliefRatio",
+        "type": "System.Double",
+        "description": "Value for the relief ratio"
+      },
+      {
+        "name": "UseReliefRatio",
+        "type": "System.Boolean",
+        "description": "True to use the relief ratio, false to not"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to connect bodies into a single sheet metal body; false to not"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True to use selected bodies, false to use all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to auto select bodies (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBaseFlangeFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "insertsheetmetalbaseflange2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "sheet",
+      "metal",
+      "base",
+      "flange2",
+      "thickness",
+      "double",
+      "thicken",
+      "dir",
+      "boolean",
+      "radius",
+      "extrude",
+      "dist1",
+      "dist2",
+      "flip",
+      "extru",
+      "end",
+      "condition1",
+      "int32",
+      "condition2",
+      "use",
+      "pcba",
+      "custom",
+      "bend",
+      "allowance",
+      "default",
+      "relief",
+      "type",
+      "width",
+      "depth",
+      "ratio",
+      "merge",
+      "feat",
+      "scope",
+      "auto",
+      "select",
+      "flange",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetalBaseFlange2",
+  "description": "Obsolete. Superseded by IFeatureManager::CreateDefinition and IFeatureManager::CreateFeature.",
+  "signature": "Feature InsertSheetMetalBaseFlange2( \n   System.Double\nThickness\n,\n   System.Boolean\nThickenDir\n,\n   System.Double\nRadius\n,\n   System.Double\nExtrudeDist1\n,\n   System.Double\nExtrudeDist2\n,\n   System.Boolean\nFlipExtruDir\n,\n   System.Int32\nEndCondition1\n,\n   System.Int32\nEndCondition2\n,\n   System.Int32\nDirToUse\n,\n   CustomBendAllowance\nPCBA\n,\n   System.Boolean\nUseDefaultRelief\n,\n   System.Int32\nReliefType\n,\n   System.Double\nReliefWidth\n,\n   System.Double\nReliefDepth\n,\n   System.Double\nReliefRatio\n,\n   System.Boolean\nUseReliefRatio\n,\n   System.Boolean\nMerge\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Wall thickness of the sheet metal feature"
+    },
+    {
+      "name": "ThickenDir",
+      "type": "System.Boolean",
+      "description": "Direction to thicken the sheet metal"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Global bend radius to insert at the corners"
+    },
+    {
+      "name": "ExtrudeDist1",
+      "type": "System.Double",
+      "description": "Distance of the sheet metal extrusion for the Direction 1"
+    },
+    {
+      "name": "ExtrudeDist2",
+      "type": "System.Double",
+      "description": "Distance of the sheet metal extrusion for the Direction 2"
+    },
+    {
+      "name": "FlipExtruDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the extrude, false to not"
+    },
+    {
+      "name": "EndCondition1",
+      "type": "System.Int32",
+      "description": "End condition for first extrude distance"
+    },
+    {
+      "name": "EndCondition2",
+      "type": "System.Int32",
+      "description": "End condition for second extrude distance"
+    },
+    {
+      "name": "DirToUse",
+      "type": "System.Int32",
+      "description": "End condition type as defined in swEndConditions_e"
+    },
+    {
+      "name": "PCBA",
+      "type": "CustomBendAllowance",
+      "description": "Pointer to the custom bend allowance object"
+    },
+    {
+      "name": "UseDefaultRelief",
+      "type": "System.Boolean",
+      "description": "True to use the default relief, false to not"
+    },
+    {
+      "name": "ReliefType",
+      "type": "System.Int32",
+      "description": "Relief type as defined in swSheetMetalReliefTypes_e"
+    },
+    {
+      "name": "ReliefWidth",
+      "type": "System.Double",
+      "description": "Width of the relief"
+    },
+    {
+      "name": "ReliefDepth",
+      "type": "System.Double",
+      "description": "Depth of the relief"
+    },
+    {
+      "name": "ReliefRatio",
+      "type": "System.Double",
+      "description": "Value for the relief ratio"
+    },
+    {
+      "name": "UseReliefRatio",
+      "type": "System.Boolean",
+      "description": "True to use the relief ratio, false to not"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to connect bodies into a single sheet metal body; false to not"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True to use selected bodies, false to use all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to auto select bodies (see Remarks )"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "When UseAutoSelect is set to false and bodies are selected using\nIModelDocExtension::SelectByID2\nor other select methods, use selection mark 8 for the bodies.",
+  "examples": [
+    {
+      "title": "Insert Sheet Metal Base Flange (VBA)",
+      "href": "Insert_Sheet_Metal_Base_Flange_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Sheet Metal Base Flange (VB.NET)",
+      "href": "Insert_Sheet_Metal_Base_Flange_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Sheet Metal Base Flange (C#)",
+      "href": "Insert_Sheet_Metal_Base_Flange_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBaseFlangeFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

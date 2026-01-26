@@ -1,0 +1,96 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "AddOrUpdateSearchData",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "AppName",
+        "type": "System.String",
+        "description": "Third-party application name"
+      },
+      {
+        "name": "AppKeyword",
+        "type": "System.String",
+        "description": "Third-party application keyword"
+      },
+      {
+        "name": "AppValue",
+        "type": "System.String",
+        "description": "Value for AppKeyword"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.DeleteSearchData",
+      "IModelDocExtension.GetSearchData",
+      "IModelDocExtension.GetSearchDataCount",
+      "IModelDocExtension.IGetSearchData"
+    ],
+    "keywords": [
+      "search",
+      "solidworks",
+      "addorupdatesearchdata",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "add",
+      "update",
+      "data",
+      "app",
+      "name",
+      "string",
+      "keyword",
+      "value",
+      "boolean",
+      "third",
+      "party",
+      "application",
+      "keywords",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.AddOrUpdateSearchData",
+  "description": "Adds or updates the SOLIDWORKS Search, third-party, application keyword and value to the model document.",
+  "signature": "System.Boolean AddOrUpdateSearchData( \n   System.String\nAppName\n,\n   System.String\nAppKeyword\n,\n   System.String\nAppValue\n)",
+  "parameters": [
+    {
+      "name": "AppName",
+      "type": "System.String",
+      "description": "Third-party application name"
+    },
+    {
+      "name": "AppKeyword",
+      "type": "System.String",
+      "description": "Third-party application keyword"
+    },
+    {
+      "name": "AppValue",
+      "type": "System.String",
+      "description": "Value for AppKeyword"
+    }
+  ],
+  "returns": "True if the SOLIDWORKS Search, third-party, application keyword and value are added to the model document, false if not",
+  "remarks": "After calling this method and after the keyword has been indexed in SOLIDWORKS Search, type the third-party application name, keyword, or keyword value in the SOLIDWORKS Search box and press\nEnter\n. Any documents assigned any of these three strings will appear on the\nSearch\ntab in the Task Pane.",
+  "examples": [
+    {
+      "title": "Add Third-party Application Keywords to SOLIDWORKS Search and Model (VBA)",
+      "href": "Add_Third-party_Application_Keywords_to_SOLIDWORKS_Search_and_Model_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.DeleteSearchData",
+    "IModelDocExtension.GetSearchData",
+    "IModelDocExtension.GetSearchDataCount",
+    "IModelDocExtension.IGetSearchData"
+  ]
+}

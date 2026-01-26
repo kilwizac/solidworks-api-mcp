@@ -1,0 +1,209 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Microsoft Visual Studio Tools for Applications (VSTA)</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Macros,SOLIDWORKS API">
+<meta name=MS-HKWD content="Application basics">
+<meta name=MS-HKWD content="Getting Started">
+<meta name=MS-HKWD content="Macros">
+<meta name=MS-HKWD content="Microsoft VSTA">
+<meta name=MS-HKWD content="Macros,Microsoft VSTA">
+<meta name=MS-HKWD content="Microsoft VSTA">
+<meta name=MS-HKWD content="VSTA">
+<meta name=MS-HKWD content="VSTA,SOLIDWORKS API">
+<meta name=MS-HKWD content="Visual Studio Tools for Applications">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=578>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+<style>
+<!--
+span.MsoHyperlink
+	{mso-style-parent:"";
+	color:#0563C1;
+	text-decoration:underline;
+	text-underline:single}
+-->
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Microsoft Visual Studio Tools for Applications (VSTA)</h1>
+
+<ul>
+	<li class=kadov-p><a href="#Prereq">Prerequisite Software</a></li>
+	<li class=kadov-p><a href="#AboutVista">Installing VSTA</a></li>
+	<li class=kadov-p><a href="#CreatingMacro2018">Creating a .NET macro in SOLIDWORKS</a></li>
+	<li class=kadov-p><a href="#EditingMacro2018">Editing a .NET macro created in SOLIDWORKS</a></li>
+	<li class=kadov-p><a href="#EditingMacro2017">Upgrading a VSTA 1.0 .NET macro created 
+	in SOLIDWORKS 2017 or earlier</a></li>
+	<li class=kadov-p><a href="#RunningOldDLLs">Running a VSTA 1.0 .NET DLL created in 
+	SOLIDWORKS 2017 or earlier</a></li>
+</ul>
+<h3><a name="Prereq"></a>Prerequisite Software</h3>
+<ul>
+	<li class=kadov-p>
+	Microsoft Visual Studio 201<span style="line-height: 115%; font-family: Verdana">9 (Community, Professional, Premium or Enterprise version) must be installed 
+	in order to record, edit, or debug VB.NET and C# macros in SOLIDWORKS 2023 
+	or later. </span>
+	<p><span style="line-height: 115%; font-family: Verdana"><b>Notes:</b> </span>
+<ul>
+	<li class=kadov-p><span style="line-height: 115%; font-family: Verdana">If you install a 
+	version of Microsoft Visual Studio that is later than 2015, you must ensure that a runtime 
+	version of Microsoft Visual Studio 2015 is also installed. </span></li>
+	<li class=kadov-p><span style="line-height: 115%; font-family: Verdana">If you do not 
+	install Microsoft Visual Studio before you install SOLIDWORKS, you 
+	will not be able to record, edit, or debug VSTA 3.0 macros. You will only be 
+	able to run VSTA 3.0 DLLs.</span></li>
+	<li class=kadov-p><span style="line-height: 115%; font-family: Verdana">If you install 
+	Microsoft Visual Studio after you install SOLIDWORKS 2018, you must also 
+	install the
+	<a href="https://www.microsoft.com/en-US/download/details.aspx?id=49031">
+	VSTA runtime</a> to record, edit, or debug VSTA 3.0 macros.</span></li>
+	</ul>
+	</li>
+</ul>
+<h3><a name="AboutVista"></a>Installing VSTA</h3>
+<p>As of SOLIDWORKS 2021, VSTA (3.0) 2015 
+is activated by default on 
+all Windows versions. VSTA 1.0 .NET macros created in previous releases are converted 
+when they are opened in SOLIDWORKS 2021.</p>
+<p>After installing SOLIDWORKS:</p>
+<ul>
+	<li class=kadov-p>VSTA 1.0 .NET macros created in releases previous to 
+	SOLIDWORKS 2021 are automatically converted to VSTA 2015. After conversion, an instance 
+	of Visual Studio opens the 
+	converted .NET macro for editing. See
+	<a href="#Prereq">Prerequisite Software</a>.<br>&nbsp;</li>
+	<li class=kadov-p><b>Tools &gt; Macro &gt; Edit &gt; Open &gt; File name</b> dropdown contains:<br>&nbsp;<ul>
+		<li class=kadov-p><b>SW VBA Macros (*.swp)</b></li>
+		<li class=kadov-p><b>SW VSTA VB Macro (*.vbproj)</b></li>
+		<li class=kadov-p><b>SW VSTA C# Macro (*.csproj)</b></li>
+		<li class=kadov-p><span 
+ style="font-weight: bold;">SW Macros </span>(*.<span style="font-weight: bold;">swp</span>, 
+ 	*<b>.swb</b>, *.<span style="font-weight: bold;">csproj</span>, *.<span style="font-weight: bold;">vbproj</span>)<br>&nbsp;</li>
+	</ul></li>
+	<li class=kadov-p><b>Tools &gt; Macro &gt; New &gt; Save As &gt; Save as type</b> 
+dropdown contains:<br>&nbsp;<ul>
+		<li><b>SW VBA Macros (*.swp)</b></li>
+		<li><b>SW VSTA VB Macro (*.vbproj)</b></li>
+		<li><b>SW VSTA C# Macro (*.csproj)<br>&nbsp;</b></li>
+	</ul></li>
+	<li class=kadov-p>If VSTA was not nstalled with SOLIDWORKS, 
+	then all of the SOLIDWORKS macro dialog dropdowns contain only:</li>
+</ul>
+
+	<blockquote>
+		<p>&nbsp;&nbsp;&nbsp; <b>&nbsp;&nbsp;&nbsp; SW VBA Macros (*.swp)</b></p>
+</blockquote>
+
+<p>&nbsp;</p>
+<h3><a name="CreatingMacro2018"></a>Creating a .NET macro in SOLIDWORKS</h3>
+<ol>
+	<li class=kadov-p>Read <a href="#AboutVista">Installing VSTA</a>.</li>
+	<li class=kadov-p>In SOLIDWORKS, select <b>Tools &gt; Macro &gt; New</b>.</li>
+	<li class=kadov-p>In the Save As dialog, navigate to the directory where to 
+	save the project.</li>
+	<li class=kadov-p>Specify <b>File name.</b></li>
+	<li class=kadov-p>In <b>Save as type</b> select SW VSTA VB Macro (<b>*.vbproj</b>) 
+	or SW VSTA C# Macro (<b>*.csproj</b>).</li>
+	<li class=kadov-p>Click <b>Save</b>.</li>
+	<li class=kadov-p>A new instance of Visual Studio opens. See
+	<a href="#Prereq">Prerequisite Software</a>.</li>
+	<li class=kadov-p>Solution Explorer shows:<ul>
+		<li class=kadov-p>The solution, <b>VstaProjects</b>.</li>
+		<li class=kadov-p>The project name.</li>
+		<li class=kadov-p><b>My Project</b></li>
+		<li class=kadov-p><b>References</b> (sldworks and swconst interop assemblies added from
+		<i>install_dir</i><b>\api\redist\</b>)</li>
+		<li class=kadov-p><b>SolidWorksMacro.vb</b> or <b>SolidWorksMacro.cs</b>.</li>
+	</ul></li>
+	<li class=kadov-p>The SolidWorksMacro class is assigned a GUID attribute. If 
+	you change this attribute, the macro will not run.</li>
+	<li class=kadov-p>When you compile the macro, the project's configuration 
+	(Debug or Release) and output directory are not read. Only a release DLL is saved in <i>project_folder</i><b>/bin</b>. </li>
+</ol>
+<h3><a name="EditingMacro2018"></a>Editing a .NET macro created in SOLIDWORKS</h3>
+<ol>
+	<li class=kadov-p>Read <a href="#AboutVista">Installing VSTA</a>.</li>
+	<li class=kadov-p>In SOLIDWORKS, select <b>Tools &gt; Macro &gt; Edit</b>.</li>
+	<li class=kadov-p>In the Open dialog, navigate to the project 
+	folder.</li>
+	<li class=kadov-p>Select <b>SW Macros</b> in the project type dropdown.</li>
+	<li class=kadov-p>Select the <b>*.vbproj</b> or <b>*.csproj</b> project file.</li>
+	<li class=kadov-p>Click <b>Open</b>.</li>
+	<li class=kadov-p>A new instance of Visual Studio opens the project you 
+	selected. See
+	<a href="#Prereq">Prerequisite Software</a>.</li>
+</ol>
+<h3><a name="EditingMacro2017"></a>Upgrading a VSTA 1.0 .NET macro created in SOLIDWORKS 2017 or earlier</h3>
+<ol>
+	<li class=kadov-p>Read <a href="#AboutVista">Installing VSTA</a>.</li>
+	<li class=kadov-p>In order to successfully upgrade a VSTA 1.0 .NET macro, the class 
+	name, &quot;SolidWorksMacro&quot;, and the method name, &quot;Execute&quot;, must be 
+	present. 
+	If you renamed those entities in your VSTA 1.0 macro, the macro cannot be 
+	upgraded to VSTA 2015.</li>
+	<li class=kadov-p>In SOLIDWORKS, select <b>Tools &gt; Macro &gt; Edit</b>.</li>
+	<li class=kadov-p>In the Open dialog, navigate to the SwMacro directory of the project 
+	folder created in a previous release.</li>
+	<li class=kadov-p>Select <b>SW Macros</b> in the project type dropdown.</li>
+	<li class=kadov-p>Select the <b>*.vbproj</b> or <b>*.csproj</b> project file.</li>
+	<li class=kadov-p>Click <b>Open</b>.</li>
+	<li class=kadov-p>A new project is created in <i>project_folder</i><b>/SwMacro/upgradedmacro</b>.</li>
+	<li class=kadov-p>A new instance of Visual Studio opens the upgraded 
+	project. See <a href="#Prereq">Prerequisite Software</a>.</li>
+	<li class=kadov-p>When you compile the macro, the project's configuration 
+	(Debug or Release) and output directory are not read. Only a release DLL is saved in 
+	<i>project_folder</i><b>/SwMacro/upgradedmacro/bin.</b></li>
+	<li class=kadov-p>The original macro is not modified or moved.</li>
+</ol>
+<h3><a name="RunningOldDLLs"></a>Running a VSTA 1.0 .NET DLL created in SOLIDWORKS 2017 or earlier</h3>
+<p>Read <a href="#AboutVista">Installing VSTA</a>. VSTA 2015 is active by 
+default, and VSTA 1.0 macros are automatically converted to VSTA 2015: </p>
+<ol>
+	<li class=kadov-p>Follow the instructions in <a href="#EditingMacro2017">
+	Upgrading a VSTA 1.0 .NET macro created in SOLIDWORKS 2017 or earlier</a>.</li>
+	<li class=kadov-p>Select <b>Tools &gt; Macro &gt; Run</b>.</li>
+	<li class=kadov-p>Select <b>SW VSTA Macros (*.dll) </b>in the file type dropdown.</li>
+	<li class=kadov-p>Navigate to <i>project_folder</i><b>\SwMacro\upgradedmacro\bin</b>.</li>
+	<li class=kadov-p>Select the DLL.</li>
+	<li class=kadov-p>Click <b>Open</b> to run the macro.</li>
+</ol>
+
+</body>
+
+</html>

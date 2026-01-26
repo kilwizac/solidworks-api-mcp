@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IParameter",
+    "returns": "Dimension",
+    "parameters": [
+      {
+        "name": "StringIn",
+        "type": "System.String",
+        "description": "Name of parameter (for example, \"D1@Base-Revolve\")"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.Parameter",
+      "IModelDoc2.SetParamValue"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "dimension",
+      "idimension",
+      "parameter",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "string"
+    ]
+  },
+  "title": "IModelDoc2.IParameter",
+  "description": "Gets the specified parameter.",
+  "signature": "Dimension IParameter( \n   System.String\nStringIn\n)",
+  "parameters": [
+    {
+      "name": "StringIn",
+      "type": "System.String",
+      "description": "Name of parameter (for example, \"D1@Base-Revolve\")"
+    }
+  ],
+  "returns": "Dimension",
+  "remarks": "Most parameters are\ndimensions\n.\nThe StringIn argument must be the fully qualified dimension name (for example, \"D1@Base-Extrude\") for this method. However, the full dimension name is not needed if you use\nIFeature::IParameter\nor\nIFeature::Parameter\n.\nSome characters are recognized as special characters. The use of these characters in names or parts or features can cause this method to fail to return a dimension. These special characters are not recognized in names of parts or features:\nat sign ( @ )\nperiod ( . )\nbackslash ( / )",
+  "examples": [],
+  "related": [
+    "IModelDoc2.Parameter",
+    "IModelDoc2.SetParamValue"
+  ]
+}

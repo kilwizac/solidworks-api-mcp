@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "SetComponentIdentifiers",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Primary",
+        "type": "System.Int32",
+        "description": "Component identifier as defined by swComponentIdentifier_e"
+      },
+      {
+        "name": "Secondary",
+        "type": "System.Int32",
+        "description": "Component identifier(s) as defined by swComponentIdentifier_e"
+      },
+      {
+        "name": "Tertiary",
+        "type": "System.Int32",
+        "description": "Component identifier(s) as defined by swComponentIdentifier_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.ComponentPrimaryIdentifier",
+      "IFeatureManager.ComponentSecondaryIdentifier",
+      "IFeatureManager.ComponentTertiaryIdentifier"
+    ],
+    "keywords": [
+      "3dexperience",
+      "solidwork",
+      "connected",
+      "setcomponentidentifiers",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "component",
+      "identifiers",
+      "primary",
+      "int32",
+      "secondary",
+      "tertiary"
+    ]
+  },
+  "title": "IFeatureManager.SetComponentIdentifiers",
+  "description": "Allows you to specify the primary, ( secondary ), and &lt; tertiary &gt; elements to display for the components in the FeatureManager design tree.",
+  "signature": "System.Int32 SetComponentIdentifiers( \n   System.Int32\nPrimary\n,\n   System.Int32\nSecondary\n,\n   System.Int32\nTertiary\n)",
+  "parameters": [
+    {
+      "name": "Primary",
+      "type": "System.Int32",
+      "description": "Component identifier as defined by swComponentIdentifier_e"
+    },
+    {
+      "name": "Secondary",
+      "type": "System.Int32",
+      "description": "Component identifier(s) as defined by swComponentIdentifier_e"
+    },
+    {
+      "name": "Tertiary",
+      "type": "System.Int32",
+      "description": "Component identifier(s) as defined by swComponentIdentifier_e"
+    }
+  ],
+  "returns": "Result code as defined by swSetComponentIdentifierResult_e",
+  "remarks": "This method:\nWorks in both SOLIDWORKS Design and\nSOLIDWORKS Design Augmented\n.\nIs analogous to right-clicking on the top-level component in the FeatureManager design tree and selecting\nTree Display > Component Name and Description\n.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.ComponentPrimaryIdentifier",
+    "IFeatureManager.ComponentSecondaryIdentifier",
+    "IFeatureManager.ComponentTertiaryIdentifier"
+  ]
+}

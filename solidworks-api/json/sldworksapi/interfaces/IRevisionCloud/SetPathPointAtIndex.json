@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRevisionCloud",
+    "member": "SetPathPointAtIndex",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of an existing point on the path of this revision cloud annotation; -1 if creating a new point (see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x coordinate of the point"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y coordinate of the point"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z coordinate of the point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IRevisionCloud.GetPathPointAtIndex",
+      "IRevisionCloud.IGetPathPointAtIndex"
+    ],
+    "keywords": [
+      "setpathpointatindex",
+      "irevisioncloud",
+      "revision",
+      "cloud",
+      "path",
+      "point",
+      "index",
+      "int32",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IRevisionCloud.SetPathPointAtIndex",
+  "description": "Sets the specified coordinates of a point at the specified index on the path of this revision cloud annotation.",
+  "signature": "System.Boolean SetPathPointAtIndex( \n   System.Int32\nIndex\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of an existing point on the path of this revision cloud annotation; -1 if creating a new point (see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x coordinate of the point"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y coordinate of the point"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z coordinate of the point"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "To get the range of values for Index, call\nIRevisionCloud::GetPathPointCount\nto get the total number of points on the path of this revision cloud annotation.\nYou can create a new path point by calling this method, setting Index to -1. You can create new path points any time after\nIDrawingDoc::InsertRevisionCloud\nor\nIDrawingDoc::IInsertRevisionCloud\nis called. You cannot create new path points after\nIRevisionCloud::Finalize\nis called.\nYou can call this method at any time to change the position of existing path points.",
+  "examples": [
+    {
+      "title": "IRevisionCloud",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRevisionCloud",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IRevisionCloud.GetPathPointAtIndex",
+    "IRevisionCloud.IGetPathPointAtIndex"
+  ]
+}

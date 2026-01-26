@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetObjectByPersistReference3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "PersistId",
+        "type": "System.Object",
+        "description": "Object's persistent reference ID (see Remarks )"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "Success or error code as defined by swPersistReferencedObjectStates_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetPersistReference3",
+      "IModelDocExtension.GetPersistReferenceCount3",
+      "IModelDocExtension.IGetObjectByPersistReference3",
+      "IModelDocExtension.IsSamePersistentID",
+      "IView.ReferencedConfigurationID"
+    ],
+    "keywords": [
+      "persistent",
+      "reference",
+      "ids",
+      "objects",
+      "id",
+      "getobjectbypersistreference3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "object",
+      "persist",
+      "reference3",
+      "error",
+      "code",
+      "int32"
+    ]
+  },
+  "title": "IModelDocExtension.GetObjectByPersistReference3",
+  "description": "Gets the object assigned to the specified persistent reference ID.",
+  "signature": "System.Object GetObjectByPersistReference3( \n   System.Object\nPersistId\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "PersistId",
+      "type": "System.Object",
+      "description": "Object's persistent reference ID (see Remarks )"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "Success or error code as defined by swPersistReferencedObjectStates_e (see Remarks )"
+    }
+  ],
+  "returns": "Object (see Remarks )",
+  "remarks": "A persistent reference ID is related to a model. It is portable and can be saved within the model or in other places. Some persistent reference IDs are general to all models and can be instantiated from all models. Your application must handle persistent reference IDs and their relationships among models.\nBefore calling this method, call\nIModelDocExtension::GetPersistReference3\nto get the object's persistent reference ID.\nThe swPersistReferencedObject_Suppressed and swPersistReferencedObject_Deleted enumerators only apply to references of topological entities.\nIModelDocExtension::GetObjectByPersistReference3 was designed to return the base class of a feature to take advantage of the base feature class functionality. Objects returned by IModelDocExtension::GetObjectByPersistReference3 are often features, including\nIConfiguration\n,\nIRefPlane\n, and\nIRefAxis\nobjects. You must first obtain a reference to a feature, and then use\nIFeature::GetSpecificFeature2\nto get the original object.\nSee\nPersistent Reference IDs\nfor more information.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetPersistReference3",
+    "IModelDocExtension.GetPersistReferenceCount3",
+    "IModelDocExtension.IGetObjectByPersistReference3",
+    "IModelDocExtension.IsSamePersistentID",
+    "IView.ReferencedConfigurationID"
+  ]
+}

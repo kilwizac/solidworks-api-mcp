@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "PrintOut4",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Printer",
+        "type": "System.String",
+        "description": "Name of the printer to which to print (see Remarks )"
+      },
+      {
+        "name": "PrintFileName",
+        "type": "System.String",
+        "description": "Name of file to which to print (see Remarks )"
+      },
+      {
+        "name": "PrintSpecification",
+        "type": "System.Object",
+        "description": "IPrintSpecification (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ClosePrintPreview",
+      "IModelDoc2.PrintDirect",
+      "IModelDoc2.PrintPreview",
+      "IModelDocExtension.SaveAs"
+    ],
+    "keywords": [
+      "document",
+      "print",
+      "documents",
+      "printout4",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "out4",
+      "printer",
+      "string",
+      "file",
+      "name",
+      "specification",
+      "object",
+      "void",
+      "drawing",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.PrintOut4",
+  "description": "Prints this document without displaying any dialogs or message boxes.",
+  "signature": "void PrintOut4( \n   System.String\nPrinter\n,\n   System.String\nPrintFileName\n,\n   System.Object\nPrintSpecification\n)",
+  "parameters": [
+    {
+      "name": "Printer",
+      "type": "System.String",
+      "description": "Name of the printer to which to print (see Remarks )"
+    },
+    {
+      "name": "PrintFileName",
+      "type": "System.String",
+      "description": "Name of file to which to print (see Remarks )"
+    },
+    {
+      "name": "PrintSpecification",
+      "type": "System.Object",
+      "description": "IPrintSpecification (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method supports printing parts, assemblies, and both single and multisheet drawings.\nBefore calling this method:\nCall\nIModelDocExtension::GetPrintSpecification\nto get the IPrintSpecification object for this document.\nSet\nIPrintSpecification::PrintToFile\nto:\ntrue to print to PrintFileName.\nfalse to print to Printer.\nSet other properties on the IPrintSpecification object.\nUse the IPrintSpecification object to specify PrintSpecification.\nIf Printer, PrintFileName, and PrintSpecification are not specified, then this method prints to the default printer specified by\nIModelDoc2::Printer\n.",
+  "examples": [
+    {
+      "title": "Print Drawing (VBA)",
+      "href": "Print_Drawing_as_High_Quality_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Print Drawing (VB.NET)",
+      "href": "Print_Drawing_as_High_Quality_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Print Drawing (C#)",
+      "href": "Print_Drawing_as_High_Quality_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.ClosePrintPreview",
+    "IModelDoc2.PrintDirect",
+    "IModelDoc2.PrintPreview",
+    "IModelDocExtension.SaveAs"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDatumTargetSym",
+    "member": "GetTargetAreaSize",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "WhichOne",
+        "type": "System.Int32",
+        "description": "0-based index indicating which size value to get (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDatumTargetSym.GetDisplayTargetArea",
+      "IDatumTargetSym.SetTargetArea"
+    ],
+    "keywords": [
+      "gettargetareasize",
+      "idatumtargetsym",
+      "datum",
+      "target",
+      "sym",
+      "area",
+      "size",
+      "which",
+      "one",
+      "int32",
+      "string"
+    ]
+  },
+  "title": "IDatumTargetSym.GetTargetAreaSize",
+  "description": "Gets the size of the datum target symbol area.",
+  "signature": "System.String GetTargetAreaSize( \n   System.Int32\nWhichOne\n)",
+  "parameters": [
+    {
+      "name": "WhichOne",
+      "type": "System.Int32",
+      "description": "0-based index indicating which size value to get (see Remarks )"
+    }
+  ],
+  "returns": "Target area size (see Remarks )",
+  "remarks": "Use\nIDatumTargetSym::GetTargetShape\nto get the style for the target area.\nIf the target area style for this symbol is a ...\nThen...\nPoint\nThere is one size value, which might be empty. Retrieve the text using an index value of 0. SOLIDWORKS displays the text in the upper half of the symbol, preceded by a diameter character.\nCircle\nThere is one size value. Retrieve the text using an index value of 0. SOLIDWORKS displays the text in the upper half of the symbol, preceded by a diameter character.\nRectangle\nThere are two size values. Retrieve the text using an index value of 0 and 1. SOLIDWORKS displays the texts in the upper half of the symbol, separated by an x character.\nUse\nIDatumTargetSym::SetTargetArea\nto set the target area size.",
+  "examples": [],
+  "related": [
+    "IDatumTargetSym.GetDisplayTargetArea",
+    "IDatumTargetSym.SetTargetArea"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureChainPattern",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "PitchMethod",
+        "type": "System.Int32",
+        "description": "Pitch method as defined in swChainPatternPitchMethod_e ; available for all types of chain patterns"
+      },
+      {
+        "name": "FlipDirection",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction of the chain pattern, false to not; available for all types of chain patterns"
+      },
+      {
+        "name": "FillPath",
+        "type": "System.Boolean",
+        "description": "True to automatically set the number of pattern instances to fill the path, false to not; available for all types of chain patterns and when EqualSpacing is false for distance and linkage distance chain patterns"
+      },
+      {
+        "name": "Number",
+        "type": "System.Int32",
+        "description": "Number of pattern instances; available for all types of chain patterns when FillPath is false"
+      },
+      {
+        "name": "Spacing",
+        "type": "System.Double",
+        "description": "Distance between the pattern instances when EqualSpacing is false; only available for distance and linkage distance chain patterns when EqualSpacing is false"
+      },
+      {
+        "name": "GroupOneFlipPlane",
+        "type": "System.Boolean",
+        "description": "True to flip the path alignment plane for Chain Group 1 , false to not; available for all types of chain patterns"
+      },
+      {
+        "name": "GroupTwoChain",
+        "type": "System.Boolean",
+        "description": "True to set the component to pattern for Chain Group 2 , false to not; only available for connected linkage chain patterns"
+      },
+      {
+        "name": "GroupTwoFlipPlane",
+        "type": "System.Boolean",
+        "description": "True to flip the path alignment plane for Chain Group 2 , false to not; only available for connected linkage chain patterns"
+      },
+      {
+        "name": "AlignMethod",
+        "type": "System.Int32",
+        "description": "Alignment method as defined in swChainPatternAlignment_e ; only available for distance and linkage distance chain patterns"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option as defined in swChainPatternOptions_e ; available for all types of chain patterns"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "featurechainpattern",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "chain",
+      "pattern",
+      "pitch",
+      "int32",
+      "flip",
+      "direction",
+      "boolean",
+      "fill",
+      "path",
+      "number",
+      "spacing",
+      "double",
+      "group",
+      "one",
+      "plane",
+      "two",
+      "align",
+      "options"
+    ]
+  },
+  "title": "IFeatureManager.FeatureChainPattern",
+  "description": "Obsolete. See IFeatureManager::CreateFeature and the Remarks in IChainPatternFeatureData.",
+  "signature": "Feature FeatureChainPattern( \n   System.Int32\nPitchMethod\n,\n   System.Boolean\nFlipDirection\n,\n   System.Boolean\nFillPath\n,\n   System.Int32\nNumber\n,\n   System.Double\nSpacing\n,\n   System.Boolean\nGroupOneFlipPlane\n,\n   System.Boolean\nGroupTwoChain\n,\n   System.Boolean\nGroupTwoFlipPlane\n,\n   System.Int32\nAlignMethod\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "PitchMethod",
+      "type": "System.Int32",
+      "description": "Pitch method as defined in swChainPatternPitchMethod_e ; available for all types of chain patterns"
+    },
+    {
+      "name": "FlipDirection",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction of the chain pattern, false to not; available for all types of chain patterns"
+    },
+    {
+      "name": "FillPath",
+      "type": "System.Boolean",
+      "description": "True to automatically set the number of pattern instances to fill the path, false to not; available for all types of chain patterns and when EqualSpacing is false for distance and linkage distance chain patterns"
+    },
+    {
+      "name": "Number",
+      "type": "System.Int32",
+      "description": "Number of pattern instances; available for all types of chain patterns when FillPath is false"
+    },
+    {
+      "name": "Spacing",
+      "type": "System.Double",
+      "description": "Distance between the pattern instances when EqualSpacing is false; only available for distance and linkage distance chain patterns when EqualSpacing is false"
+    },
+    {
+      "name": "GroupOneFlipPlane",
+      "type": "System.Boolean",
+      "description": "True to flip the path alignment plane for Chain Group 1 , false to not; available for all types of chain patterns"
+    },
+    {
+      "name": "GroupTwoChain",
+      "type": "System.Boolean",
+      "description": "True to set the component to pattern for Chain Group 2 , false to not; only available for connected linkage chain patterns"
+    },
+    {
+      "name": "GroupTwoFlipPlane",
+      "type": "System.Boolean",
+      "description": "True to flip the path alignment plane for Chain Group 2 , false to not; only available for connected linkage chain patterns"
+    },
+    {
+      "name": "AlignMethod",
+      "type": "System.Int32",
+      "description": "Alignment method as defined in swChainPatternAlignment_e ; only available for distance and linkage distance chain patterns"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option as defined in swChainPatternOptions_e ; available for all types of chain patterns"
+    }
+  ],
+  "returns": "Chain pattern feature",
+  "remarks": "You must pre-select the entities for the chain pattern feature. Using the selected entities, this method inserts one of these chain pattern features:\ndistance\ndistance linkage\nconnected linkage\nEntity to select\nCorresponding Chain Pattern PropertyManager control\nSelection mark\nNumber of selections\n2D or 3D\nsketch\ncontaining an open or closed loop,\nSketch line\n, or\nModel\nedge\nPath\n2\n1 for all types of chain patterns\nAssembly\ncomponent\nChain Group 1 Component to Pattern\n1\n1 for all types of chain patterns\nCylindrical\nface\n,\nCircular or linear edge,\nSketch point\n,\nVertex\n, or\nReference axis\nChain Group 1 Path Link 1\n256\n1 for all types of chain patterns\nCylindrical face,\nCircular or linear edge,\nSketch point,\nVertex, or\nReference axis\nChain Group 1 Path Link 2\n512\n1 for distance linkage or connected linkage\nNone for distance\nComponent\nplane\nor planar face\nChain Group 1 Path Alignment Plane\n16384\n1 for all types of chain patterns\nAssembly component\nChain Group 2 Component to Pattern\n2048\n1 for connected linkage\nNone for distance or linkage distance\nCylindrical face,\nCircular or linear edge,\nSketch point,\nVertex, or\nReference axis\nChain Group 2 Path Link 1\n4096\n1 for connected linkage\nNone for distance or linkage distance\nCylindrical face,\nCircular or linear edge,\nSketch point,\nVertex, or\nReference axis\nChain Group 2 Path Link 2\n8192\n1 for connected linkage\nNone for distance or linkage distance\nComponent plane or planar face\nGroup 2 Path Alignment Plane\n32768\n1 for connected linkage\nNone for distance or linkage distance\nAssembly plane\nFace normal alignment\n1024\n1 if the chain path is a sketch line\nNone for all other types of paths\nTo\nset equal spacing\nbetween chain pattern instances, edit the chain pattern feature after creating it.",
+  "examples": [],
+  "related": []
+}

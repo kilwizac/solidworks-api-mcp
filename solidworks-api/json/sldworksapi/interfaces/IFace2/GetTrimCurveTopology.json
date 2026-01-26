@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetTrimCurveTopology",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetTrimCurveTopologyCount",
+      "IFace2.IGetTrimCurveTopology"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "trimmed",
+      "topology",
+      "curve",
+      "gettrimcurvetopology",
+      "face2",
+      "trim",
+      "object"
+    ]
+  },
+  "title": "IFace2.GetTrimCurveTopology",
+  "description": "Gets the trim curve topology for this face.",
+  "signature": "System.Object GetTrimCurveTopology()",
+  "parameters": [],
+  "returns": "Array of coedges, vertices, and NULLs (see Remarks )",
+  "remarks": "This method returns a list of coedges, vertices, and NULLs. You must call\nIFace2::GetTrimCurves2\nor\nIFace2::IGetTrimCurves2\nbefore calling this method.\nThis method returns a list of proper edges corresponding to the list of SP curves from IFace2::GetTrimCurves2 or IFace2::IGetTrimCurves2. Otherwise, this method prompts the user for the list of edges that the software thinks are on the face. These two lists differ in order and content.\nUse\nIFace2::GetTrimCurveTopologyTypes\nor\nIFace2::IGetTrimCurveTopologyTypes\nto get an array of types corresponding to the returned objects.",
+  "examples": [],
+  "related": [
+    "IFace2.GetTrimCurveTopologyCount",
+    "IFace2.IGetTrimCurveTopology"
+  ]
+}

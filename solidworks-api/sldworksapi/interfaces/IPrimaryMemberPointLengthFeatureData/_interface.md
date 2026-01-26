@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IPrimaryMemberPointLengthFeatureData
+inherits: null
+description: Allows access to a structure system member originating at a point and extending to a specified end condition.
+member_count: 10
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - DirectionReference
+  - EndCondition
+  - EndPlane
+  - EndPoint
+  - GetPoints
+  - GetPointsTypes
+  - Length
+  - ReverseDirection
+---
+
+# IPrimaryMemberPointLengthFeatureData
+
+Allows access to a structure system member originating at a point and extending to a specified end condition.
+
+## Common Members
+
+- `DirectionReference`
+- `EndCondition`
+- `EndPlane`
+- `EndPoint`
+- `GetPoints`
+- `GetPointsTypes`
+- `Length`
+- `ReverseDirection`

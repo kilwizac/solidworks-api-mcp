@@ -1,0 +1,46 @@
+---
+type: method
+interface: ISketchPatternFeatureData
+member: IGetBasePoint
+returns: System.Double
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - sketches
+related:
+  - ISketchPatternFeatureData.GetBasePoint
+keywords:
+  - igetbasepoint
+  - isketchpatternfeaturedata
+  - sketch
+  - pattern
+  - feature
+  - data
+  - base
+  - point
+  - double
+---
+
+# ISketchPatternFeatureData.IGetBasePoint
+
+Gets the base point data from which this sketch pattern is created.
+
+## Signature
+
+```csharp
+System.Double IGetBasePoint()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+in-process, unmanaged C++: Pointer to an array of doubles describing the x, y, and z coordinates of the base point VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.
+
+## See Also
+
+- `ISketchPatternFeatureData.GetBasePoint`

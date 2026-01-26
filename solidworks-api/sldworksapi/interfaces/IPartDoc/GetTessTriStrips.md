@@ -1,0 +1,135 @@
+---
+type: method
+interface: IPartDoc
+member: GetTessTriStrips
+returns: System.Object
+parameters:
+  -
+    name: NoConversion
+    type: System.Boolean
+    description: True prohibits converting to user units from system units, false does not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - parts
+  - ui
+related:
+  - IPartDoc.GetTessNorms
+  - IPartDoc.GetTessTriStripEdges
+  - IPartDoc.GetTessTriStripNorms
+  - IPartDoc.GetTessTriStripSize
+  - IPartDoc.GetTessTriStripTextures
+  - IPartDoc.GetTessTriangleCount
+  - IPartDoc.GetTessTriangles
+  - IPartDoc.IGetTessNorms
+  - IPartDoc.IGetTessTriStripEdgeSize
+  - IPartDoc.IGetTessTriStripEdges
+  - IPartDoc.IGetTessTriStripNorms
+  - IPartDoc.IGetTessTriStrips
+  - IPartDoc.IGetTessTriangles
+  - ITessellation
+keywords:
+  - tessellation
+  - see
+  - also
+  - itessellation
+  - parts
+  - ipartdoc
+  - gettesstristrips
+  - part
+  - doc
+  - tess
+  - tri
+  - strips
+  - no
+  - conversion
+  - boolean
+  - object
+---
+
+# IPartDoc.GetTessTriStrips
+
+Gets the vertices that make up the shaded picture tessellation for this part.
+
+## Signature
+
+```csharp
+System.Object GetTessTriStrips( 
+   System.Boolean
+NoConversion
+)
+```
+## Parameters
+
+- `NoConversion` (System.Boolean): True prohibits converting to user units from system units, false does not
+
+## Return Value
+
+Array of floats (see Remarks )
+
+## Remarks
+
+The vertices are all unique for that strip. In other words, a vertex that is shared by two tessellation triangles will only appear once in the return value.
+These triangles are intended for graphics display purposes and do not represent a tessellation that could be used, for example, by a machining application. If you need the type of accuracy associated with a machining product, it is recommended that you traverse the body faces and extract the topology and geometry data to create your own faceting.
+These triangles are intended for graphics display purposes and do not represent a tessellation that can be used, for example, by a machining application. If you need the level of accuracy associated with a machining product, traverse the body faces and extract the topology and geometry data to create your own faceting.
+This method returns an array of float values in the form of:
+[
+NumStrips
+,
+VertexPerStrip
+1,
+VertexPerStrip
+2,...,
+VertexPerStripN
+,
+VertexPoints
+1[
+VertexPerStrip
+1 elements]*3,
+VertexPoints
+2[
+VertexPerStrip
+2 elements]*3,...,
+VertexPointsN
+[
+VertexPerStripN
+elements]*3]
+where:
+NumStrips
+= number of triangle strips on a particular face.
+VertexPerStripN
+= number of vertex points for the
+N
+th triangle strip.
+VertexPointsN
+= a sub-array of vertices consisting of three float values representing the x,y,z coordinate of the vertex; the sub-array's length is defined by the
+VertexPerStripN
+element in the array.
+Because the values
+NumStrips
+and the elements of
+VertexPerStrip
+are long values
+packed into single values,
+you must
+unpack
+them before they can be used.
+
+## See Also
+
+- `IPartDoc.GetTessNorms`
+- `IPartDoc.GetTessTriStripEdges`
+- `IPartDoc.GetTessTriStripNorms`
+- `IPartDoc.GetTessTriStripSize`
+- `IPartDoc.GetTessTriStripTextures`
+- `IPartDoc.GetTessTriangleCount`
+- `IPartDoc.GetTessTriangles`
+- `IPartDoc.IGetTessNorms`
+- `IPartDoc.IGetTessTriStripEdgeSize`
+- `IPartDoc.IGetTessTriStripEdges`
+- `IPartDoc.IGetTessTriStripNorms`
+- `IPartDoc.IGetTessTriStrips`
+- `IPartDoc.IGetTessTriangles`
+- `ITessellation`

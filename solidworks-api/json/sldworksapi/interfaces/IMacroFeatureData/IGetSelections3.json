@@ -1,0 +1,118 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "IGetSelections3",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "SelCount",
+        "type": "System.Int32",
+        "description": "Number of selected objects"
+      },
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of selected objects of size SelCount"
+      },
+      {
+        "name": "ObjectTypes",
+        "type": "System.Int32",
+        "description": "Array of the selected object types as defined in swSelectType_e of size SelCount"
+      },
+      {
+        "name": "SelMarks",
+        "type": "System.Int32",
+        "description": "Array of marks associated with the selected objects of size SelCount"
+      },
+      {
+        "name": "DrViews",
+        "type": "View",
+        "description": "Array of drawing views of size SelCount"
+      },
+      {
+        "name": "ComponentXForms",
+        "type": "MathTransform",
+        "description": "in-process, unmanaged C++: Pointer to an array of transforms for the selections' component s VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IMacroFeatureData.GetSelections3",
+      "IMacroFeatureData.ISetSelections2",
+      "IMacroFeatureData.SetSelections2"
+    ],
+    "keywords": [
+      "igetselections3",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "selections3",
+      "sel",
+      "count",
+      "int32",
+      "objects",
+      "object",
+      "types",
+      "marks",
+      "dr",
+      "views",
+      "view",
+      "component",
+      "forms",
+      "math",
+      "transform",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.IGetSelections3",
+  "description": "Gets the selected objects for the macro feature.",
+  "signature": "void IGetSelections3( \n   System.Int32\nSelCount\n,\n   out System.Object\nObjects\n,\n   out System.Int32\nObjectTypes\n,\n   out System.Int32\nSelMarks\n,\n   out View\nDrViews\n,\n   out MathTransform\nComponentXForms\n)",
+  "parameters": [
+    {
+      "name": "SelCount",
+      "type": "System.Int32",
+      "description": "Number of selected objects"
+    },
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of selected objects of size SelCount"
+    },
+    {
+      "name": "ObjectTypes",
+      "type": "System.Int32",
+      "description": "Array of the selected object types as defined in swSelectType_e of size SelCount"
+    },
+    {
+      "name": "SelMarks",
+      "type": "System.Int32",
+      "description": "Array of marks associated with the selected objects of size SelCount"
+    },
+    {
+      "name": "DrViews",
+      "type": "View",
+      "description": "Array of drawing views of size SelCount"
+    },
+    {
+      "name": "ComponentXForms",
+      "type": "MathTransform",
+      "description": "in-process, unmanaged C++: Pointer to an array of transforms for the selections' component s VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIMacroFeatureData::GetSelectionCount\nto determine the size of the arrays.\nWhen a macro feature is inserted in-context and an entity on a different component is selected, you may need to know that component's transform.\nIf the assembly is the active document, then you can use\nIEntity::IGetComponent2\nor\nIComponent2::Transform2\nto get the component's transform.\nHowever, if the part for the component is open for editing and a\nmacro feature is being edited\n, then you must use I\nMacroFeatureData::GetSelections3 to get the component's transform. This method returns the transform and the selection. If the selection belongs to the same part as the macro feature, then NULL is returned. See also\nMacro Features and Component Transforms\n.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.GetSelections3",
+    "IMacroFeatureData.ISetSelections2",
+    "IMacroFeatureData.SetSelections2"
+  ]
+}

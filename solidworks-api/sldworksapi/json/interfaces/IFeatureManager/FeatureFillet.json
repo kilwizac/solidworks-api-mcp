@@ -1,0 +1,129 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureFillet",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Feature fillet options as defined in swFeatureFilletOptions_e"
+      },
+      {
+        "name": "R1",
+        "type": "System.Double",
+        "description": "Radius; valid only if: Ftyp is not swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options is set with swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+      },
+      {
+        "name": "Ftyp",
+        "type": "System.Int32",
+        "description": "Type of fillet as defined in swFeatureFilletType_e (see Remarks )"
+      },
+      {
+        "name": "OverflowType",
+        "type": "System.Int32",
+        "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+      },
+      {
+        "name": "Radii",
+        "type": "System.Object",
+        "description": "Array containing the radii for the variable radius fillet; valid only if: Ftyp is set to swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options is set with swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options is not set with swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+      },
+      {
+        "name": "SetBackDistances",
+        "type": "System.Object",
+        "description": "Array containing setback distances for the fillet along the edge"
+      },
+      {
+        "name": "PointRadiusArray",
+        "type": "System.Object",
+        "description": "Array containing control point radii at various points along the length of the edge; valid only if Ftyp is set to swFeatureFilletType_e .swFeatureFilletType_VariableRadius"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FilletXpertChange",
+      "IFeatureManager.FilletXpertRemove",
+      "IFeatureManager.IFeatureFillet",
+      "ISimpleFilletFeatureData2",
+      "IVariableFilletFeatureData2"
+    ],
+    "keywords": [
+      "featurefillet",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "fillet",
+      "options",
+      "int32",
+      "r1",
+      "double",
+      "ftyp",
+      "overflow",
+      "type",
+      "radii",
+      "object",
+      "back",
+      "distances",
+      "point",
+      "radius",
+      "array"
+    ]
+  },
+  "title": "IFeatureManager.FeatureFillet",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureFillet2.",
+  "signature": "System.Object FeatureFillet( \n   System.Int32\nOptions\n,\n   System.Double\nR1\n,\n   System.Int32\nFtyp\n,\n   System.Int32\nOverflowType\n,\n   System.Object\nRadii\n,\n   System.Object\nSetBackDistances\n,\n   System.Object\nPointRadiusArray\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Feature fillet options as defined in swFeatureFilletOptions_e"
+    },
+    {
+      "name": "R1",
+      "type": "System.Double",
+      "description": "Radius; valid only if: Ftyp is not swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options is set with swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+    },
+    {
+      "name": "Ftyp",
+      "type": "System.Int32",
+      "description": "Type of fillet as defined in swFeatureFilletType_e (see Remarks )"
+    },
+    {
+      "name": "OverflowType",
+      "type": "System.Int32",
+      "description": "Control of fillet overflowing onto adjacent surfaces as defined in swFilletOverFlowType_e"
+    },
+    {
+      "name": "Radii",
+      "type": "System.Object",
+      "description": "Array containing the radii for the variable radius fillet; valid only if: Ftyp is set to swFeatureFilletType_e .swFeatureFilletType_VariableRadius Options is set with swFeatureFilletOptions_e .swFeatureFilletVarRadiusType Options is not set with swFeatureFilletOptions_e .swFeatureFilletUniformRadius"
+    },
+    {
+      "name": "SetBackDistances",
+      "type": "System.Object",
+      "description": "Array containing setback distances for the fillet along the edge"
+    },
+    {
+      "name": "PointRadiusArray",
+      "type": "System.Object",
+      "description": "Array containing control point radii at various points along the length of the edge; valid only if Ftyp is set to swFeatureFilletType_e .swFeatureFilletType_VariableRadius"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method to create...\nDo this...\nSimple fillets\nCall\nIModelDocExtension::SelectByID2\nwith Mark = 1 to select the edges to fillet.\nSpecify Ftyp with\nswFeatureFilletType_e\n.swFeatureFilletType_Simple.\nFace blend fillets\nCall IModelDocExtension::SelectByID2 with:\nMark = 2 to select the first set of faces.\nMark = 4 to select the second set of faces.\nSpecify Ftyp with\nswFeatureFilletType_e\n.swFeatureFilletType_Face.\nVariable radius fillets\nCall\nIModelDocExtension::SelectByID2\nwith Mark = 1 to select the edges to fillet.\nCall IModelDocExtension::SelectByID2 with Mark = 256 to select the control point references along the length of the selected edge, one control point reference for each radius in PointRadiusArray.\nSpecify Ftyp with\nswFeatureFilletType_e\n.swFeatureFilletType_VariableRadius.\nSpecify multiple radii in Radii.\nSpecify multiple control point radii in PointRadiusArray.\nDo not set the Options parameter to\nswFeatureFilletOptions_e\n.swFilletUniformRadius.\nFull-round fillets\nCall IModelDocExtension::SelectByID2 with:\nMark = 2 to select the first set of side faces.\nMark = 512 to select the set of center faces.\nMark = 4 to select the second set of side faces.\nSpecify Ftyp with\nswFeatureFilletType_e\n.swFeatureFilletType_FullRound.\nSetback fillets\nSee the SOLIDWORKS Help for details.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FilletXpertChange",
+    "IFeatureManager.FilletXpertRemove",
+    "IFeatureManager.IFeatureFillet",
+    "ISimpleFilletFeatureData2",
+    "IVariableFilletFeatureData2"
+  ]
+}

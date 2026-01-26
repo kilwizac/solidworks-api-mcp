@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "DeleteDimension",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DimensionColumnName",
+        "type": "System.String",
+        "description": "Name of the column of dimensions to delete (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.AddDimension"
+    ],
+    "keywords": [
+      "deletedimension",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "delete",
+      "dimension",
+      "column",
+      "name",
+      "string",
+      "boolean",
+      "instances",
+      "dimensions",
+      "variable",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimPatternFeatureData.DeleteDimension",
+  "description": "Deletes the specified column of dimensions in the pattern table in this variable pattern feature.",
+  "signature": "System.Boolean DeleteDimension( \n   System.String\nDimensionColumnName\n)",
+  "parameters": [
+    {
+      "name": "DimensionColumnName",
+      "type": "System.String",
+      "description": "Name of the column of dimensions to delete (see Remarks )"
+    }
+  ],
+  "returns": "True if the column of dimensions is deleted, false if not",
+  "remarks": "The name of a column corresponds to the dimension name and feature name, separated by an @ symbol; e.g.,\nD3@Fillet1\n.\nThere are various ways of getting the name of the column of dimensions to delete from a pattern table. For example, you can traverse the features, get the dimensions, and get the names of the dimensions. You can also select a dimension and get its name. See the examples for details.\nNOTE:\nYou cannot delete a column containing the dimensions of a parent sketch or feature.",
+  "examples": [
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (C#)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (VB.NET)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Instances and Dimensions in Variable Pattern Feature (VBA)",
+      "href": "Delete_Instances_and_Dimensions_in_Variable_Pattern_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimPatternFeatureData.AddDimension"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "VersionHistory",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IVersionHistory",
+      "IModelDocExtension.IsFutureVersion",
+      "ISldWorks.RevisionNumber"
+    ],
+    "keywords": [
+      "version",
+      "number",
+      "solidworks",
+      "versionhistory",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "history",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.VersionHistory",
+  "description": "Gets an array of strings indicating the versions in which this document was saved, including the SOLIDWORKS Design version in which the model document is currently opened and which is the last value returned in the array.",
+  "signature": "System.Object VersionHistory()",
+  "parameters": [],
+  "returns": "Array of strings that describe the version history of the document",
+  "remarks": "There is one array entry for each major release of the SOLIDWORKS Design software in which the document has been saved. The format for each entry is a major release code followed by one or more minor release codes separated by commas:\n<major release code>[<minor release code>]\n- or -\n<major release code>[<minor release code>,<minor release code>...]\nwhere <major release code> equals a number that remains constant through a major release of the SOLIDWORKS Design software. For example, the following values are returned based on the corresponding major SOLIDWORKS Design version:\nSOLIDWORKS Release\nVersion Number\nSOLIDWORKS 95\n44\nSOLIDWORKS 96\n243\nSOLIDWORKS 97\n483\nSOLIDWORKS 97Plus\n629\nSOLIDWORKS 98\n822\nSOLIDWORKS 98Plus\n1008\nSOLIDWORKS 99\n1137\nSOLIDWORKS 2000\n1500\nSOLIDWORKS 2001\n1750\nSOLIDWORKS 2001Plus\n1950\nSOLIDWORKS 2003\n2200\nSOLIDWORKS 2004\n2500\nSOLIDWORKS 2005\n2800\nSOLIDWORKS 2006\n3100\nSOLIDWORKS 2007\n3400\nSOLIDWORKS 2008\n3800\nSOLIDWORKS 2009\n4100\nSOLIDWORKS 2010\n4400\nSOLIDWORKS 2011\n4700\nSOLIDWORKS 2012\n5000\nSOLIDWORKS 2013\n6000\nSOLIDWORKS 2014\n7000\nSOLIDWORKS 2015\n8000\nSOLIDWORKS 2016\n9000\nSOLIDWORKS 2017\n10000\nSOLIDWORKS 2018\n11000\nSOLIDWORKS 2019\n12000\nSOLIDWORKS 2020\n13000\nSOLIDWORKS 2021\n14000\nSOLIDWORKS 2022\n15000\nSOLIDWORKS 2023\n16000\nSOLIDWORKS 2024\n17000\nSOLDWORKS 2025\n18000\nSOLIDWORKS 2026\n19000\nThe <minor release code> equals the year and day of manufacture of a saving version (for example, 1997/320).\nTo get the version in which a model document was last saved, use\nISldWorks::VersionHistory\n.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.IVersionHistory",
+    "IModelDocExtension.IsFutureVersion",
+    "ISldWorks.RevisionNumber"
+  ]
+}

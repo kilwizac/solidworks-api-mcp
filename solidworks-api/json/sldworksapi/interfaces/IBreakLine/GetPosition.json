@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBreakLine",
+    "member": "GetPosition",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Break line to work with (0 or 1)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IBreakLine.SetPosition"
+    ],
+    "keywords": [
+      "getposition",
+      "ibreakline",
+      "break",
+      "line",
+      "position",
+      "index",
+      "int32",
+      "double",
+      "create",
+      "view",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBreakLine.GetPosition",
+  "description": "Gets the location of this break line in the drawing view.",
+  "signature": "System.Double GetPosition( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Break line to work with (0 or 1)"
+    }
+  ],
+  "returns": "Location of the break line (see Remarks )",
+  "remarks": "A drawing view break consists of a pair of lines. This method gets the break line at the location indicated by the Index argument.\nIf the orientation of the break is...\nThen the return value is...\nHorizontal\nY value relative to the drawing view origin (center) that indicates where the break is along the Y axis\nVertical\nX value relative to the drawing view origin (center) that indicates where the break is along the X axis\nTo determine the orientation of the break line, use\nIBreakLine::Orientation\n.",
+  "examples": [
+    {
+      "title": "Create Break View (C#)",
+      "href": "Create_Broken_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Break View (VB.NET)",
+      "href": "Create_Broken_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Break View (VBA)",
+      "href": "Create_Broken_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBreakLine.SetPosition"
+  ]
+}

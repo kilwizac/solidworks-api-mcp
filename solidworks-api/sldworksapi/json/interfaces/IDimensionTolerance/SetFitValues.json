@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "SetFitValues",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "HoleFit",
+        "type": "System.String",
+        "description": "Tolerance hole fit value"
+      },
+      {
+        "name": "ShaftFit",
+        "type": "System.String",
+        "description": "Tolerance shaft fit value"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ICalloutVariable.HoleFit",
+      "ICalloutVariable.ShaftFit",
+      "IDimensionTolerance.FitType"
+    ],
+    "keywords": [
+      "fit",
+      "tolerances",
+      "setfitvalues",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "values",
+      "hole",
+      "string",
+      "shaft",
+      "boolean"
+    ]
+  },
+  "title": "IDimensionTolerance.SetFitValues",
+  "description": "Sets the tolerance hole fit and shaft fit values.",
+  "signature": "System.Boolean SetFitValues( \n   System.String\nHoleFit\n,\n   System.String\nShaftFit\n)",
+  "parameters": [
+    {
+      "name": "HoleFit",
+      "type": "System.String",
+      "description": "Tolerance hole fit value"
+    },
+    {
+      "name": "ShaftFit",
+      "type": "System.String",
+      "description": "Tolerance shaft fit value"
+    }
+  ],
+  "returns": "True if the setting of the fit values is successful, false if not",
+  "remarks": "To get tolerance...\nUse...\nHole fit value\nIDimensionTolerance::GetHoleFitValue\nShaft fit value\nIDimensionTolerance::GetShaftFitValue\nTo see the effects of changing the tolerance fit values, use\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [],
+  "related": [
+    "ICalloutVariable.HoleFit",
+    "ICalloutVariable.ShaftFit",
+    "IDimensionTolerance.FitType"
+  ]
+}

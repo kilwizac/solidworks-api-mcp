@@ -1,0 +1,126 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "GetDistance",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "BaseEntity",
+        "type": "System.Object",
+        "description": "IEntity of another edge or face to get distance from this entity (see Remarks )"
+      },
+      {
+        "name": "MinDistance",
+        "type": "System.Boolean",
+        "description": "True to return minimum distance between entities; false to return maximum distance between entities"
+      },
+      {
+        "name": "Parameter",
+        "type": "System.Object",
+        "description": "If MinDistance = False, and BaseEntity is an edge or curve, specify an array of two doubles (Min, Max), where Min and Max make up the U-parameter range of BaseEntity and BaseEntity is a face, specify an array of four doubles (UMin, VMin, UMax, VMax), where UMin, VMin, UMax, and VMax make up the UV-parameter range of the surface of BaseEntity If MinDistance = True, and BaseEntity is an edge or curve, optionally specify an array of two doubles (Min, Max), where Min and Max make up the U-parameter range of BaseEntity and BaseEntity is a face, optionally specify an array of four doubles (UMin, VMin, UMax, VMax), where UMin, VMin, UMax, and VMax make up the UV-parameter range of the surface of BaseEntity"
+      },
+      {
+        "name": "Position1",
+        "type": "System.Object",
+        "description": "Array of doubles; coordinates of this entity that were used to measure the distance"
+      },
+      {
+        "name": "Position2",
+        "type": "System.Object",
+        "description": "Array of doubles; coordinates of BaseEntity that were used to measure the distance"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Minimum or maximum distance between entities; if Parameter is not specified, minimum distance"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEntity.IGetDistance"
+    ],
+    "keywords": [
+      "getdistance",
+      "ientity",
+      "entity",
+      "distance",
+      "base",
+      "object",
+      "min",
+      "boolean",
+      "parameter",
+      "position1",
+      "position2",
+      "double",
+      "int32",
+      "between",
+      "entities",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEntity.GetDistance",
+  "description": "Gets the minimum or maximum distance between this entity and the given face or edge entity (see Remarks).",
+  "signature": "System.Int32 GetDistance( \n   System.Object\nBaseEntity\n,\n   System.Boolean\nMinDistance\n,\n   System.Object\nParameter\n,\n   out System.Object\nPosition1\n,\n   out System.Object\nPosition2\n,\n   out System.Double\nDistance\n)",
+  "parameters": [
+    {
+      "name": "BaseEntity",
+      "type": "System.Object",
+      "description": "IEntity of another edge or face to get distance from this entity (see Remarks )"
+    },
+    {
+      "name": "MinDistance",
+      "type": "System.Boolean",
+      "description": "True to return minimum distance between entities; false to return maximum distance between entities"
+    },
+    {
+      "name": "Parameter",
+      "type": "System.Object",
+      "description": "If MinDistance = False, and BaseEntity is an edge or curve, specify an array of two doubles (Min, Max), where Min and Max make up the U-parameter range of BaseEntity and BaseEntity is a face, specify an array of four doubles (UMin, VMin, UMax, VMax), where UMin, VMin, UMax, and VMax make up the UV-parameter range of the surface of BaseEntity If MinDistance = True, and BaseEntity is an edge or curve, optionally specify an array of two doubles (Min, Max), where Min and Max make up the U-parameter range of BaseEntity and BaseEntity is a face, optionally specify an array of four doubles (UMin, VMin, UMax, VMax), where UMin, VMin, UMax, and VMax make up the UV-parameter range of the surface of BaseEntity"
+    },
+    {
+      "name": "Position1",
+      "type": "System.Object",
+      "description": "Array of doubles; coordinates of this entity that were used to measure the distance"
+    },
+    {
+      "name": "Position2",
+      "type": "System.Object",
+      "description": "Array of doubles; coordinates of BaseEntity that were used to measure the distance"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Minimum or maximum distance between entities; if Parameter is not specified, minimum distance"
+    }
+  ],
+  "returns": "0 if success; -1 if failure",
+  "remarks": "Only face and edge entities are supported.\nTo populate Parameter you can find the UV parameter ranges as follows:\nFor edges and curves, use\nIEdge::GetCurveParams2\nFor faces, use\nIFace2::GetUVBounds",
+  "examples": [
+    {
+      "title": "Get Distance Between Entities (VBA)",
+      "href": "Get_Distance_Between_Entities_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Distance Between Entities (VB.NET)",
+      "href": "Get_Distance_Between_Entities_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Distance Between Entities (C#)",
+      "href": "Get_Distance_Between_Entities_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEntity.IGetDistance"
+  ]
+}

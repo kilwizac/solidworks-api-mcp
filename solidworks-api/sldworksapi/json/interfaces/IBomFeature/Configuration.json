@@ -1,0 +1,45 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBomFeature",
+    "member": "Configuration",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "bill",
+      "materials",
+      "configurations",
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "ibomfeature",
+      "bom",
+      "feature",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IBomFeature.Configuration",
+  "description": "Gets or sets the name of configuration for this BOM table.",
+  "signature": "System.String Configuration {get; set;}",
+  "parameters": [],
+  "returns": "Name of the configuration shown in the BOM table",
+  "remarks": "You can only use this property for BOM tables that show one configuration at a time, such as for parts and indented subassembly style BOM tables.\nYou cannot use this property for top-level only BOM tables because information on multiple configurations can be shown at once in that style table. In that scenario, getting this property returns an empty string and setting the property has no effect. Use the\nIBomFeature::GetConfigurationCount\n,\nIBomFeature::GetConfigurations\n,\nIBomFeature::IGetConfigurations\n,\nIBomFeature::SetConfigurations\n, or\nIBomFeature::ISetConfigurations\nfor that type of table.",
+  "examples": [
+    {
+      "title": "IBomFeature",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBomFeature",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

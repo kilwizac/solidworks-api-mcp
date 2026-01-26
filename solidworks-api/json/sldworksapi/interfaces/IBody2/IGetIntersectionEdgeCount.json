@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "IGetIntersectionEdgeCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ToolBodyIn",
+        "type": "Body2",
+        "description": "Pointer to the temporary body used to perform the intersection"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "igetintersectionedgecount",
+      "ibody2",
+      "body2",
+      "intersection",
+      "edge",
+      "count",
+      "tool",
+      "body",
+      "int32"
+    ]
+  },
+  "title": "IBody2.IGetIntersectionEdgeCount",
+  "description": "Gets the number of intersecting edges between this body and the specified tool body.",
+  "signature": "System.Int32 IGetIntersectionEdgeCount( \n   Body2\nToolBodyIn\n)",
+  "parameters": [
+    {
+      "name": "ToolBodyIn",
+      "type": "Body2",
+      "description": "Pointer to the temporary body used to perform the intersection"
+    }
+  ],
+  "returns": "Number of intersection edges",
+  "remarks": "Use the return value from this method to determine the size of the array returned by\nIBody2::IGetIntersectionEdges\n.\nIf the two bodies are in an assembly, then IBody2::GetIntersectionEdges and IBody2::IGetIntersectionEdges generate a list of the intersection edges between the two bodies. To do this, the second body must be transformed in its coordinate space so that it is positioned the same with respect to the first body as it is in assembly space.\nTo align the two bodies before calling IBody2::GetIntersectionEdges, IBody2::IGetIntersectionEdges, or Body2::IGetIntersectionEdgeCount, calculate the transformation from the first body to the second body and apply the transform to the second body using\nIBody2::ApplyTransform\n.",
+  "examples": [],
+  "related": []
+}

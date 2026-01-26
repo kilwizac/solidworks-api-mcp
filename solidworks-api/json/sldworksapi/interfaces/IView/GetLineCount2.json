@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetLineCount2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "CrossHatchOption",
+        "type": "System.Int16",
+        "description": "Crosshatch option as defined in swCrossHatchFilter_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetLines4",
+      "IView.IGetLines4"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "lines",
+      "view",
+      "getlinecount2",
+      "line",
+      "count2",
+      "cross",
+      "hatch",
+      "option",
+      "int16",
+      "int32",
+      "polylines",
+      "information",
+      "vba"
+    ]
+  },
+  "title": "IView.GetLineCount2",
+  "description": "Gets the number of lines in this view with an option to include or exclude crosshatch lines.",
+  "signature": "System.Int32 GetLineCount2( \n   System.Int16\nCrossHatchOption\n)",
+  "parameters": [
+    {
+      "name": "CrossHatchOption",
+      "type": "System.Int16",
+      "description": "Crosshatch option as defined in swCrossHatchFilter_e"
+    }
+  ],
+  "returns": "Number of lines",
+  "remarks": "Call this method before calling\nIView::IGetLines4\nto get the size of the array for that method.",
+  "examples": [
+    {
+      "title": "Get Polylines Information (VBA)",
+      "href": "Get_Polylines_Information_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetLines4",
+    "IView.IGetLines4"
+  ]
+}

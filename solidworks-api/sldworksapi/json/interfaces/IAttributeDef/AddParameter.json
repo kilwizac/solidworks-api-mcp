@@ -1,0 +1,133 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAttributeDef",
+    "member": "AddParameter",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NameIn",
+        "type": "System.String",
+        "description": "Name to be given to the parameter (see Remarks )"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Parameter type as defined in swParamType_e"
+      },
+      {
+        "name": "DefaultValue",
+        "type": "System.Double",
+        "description": "Default value (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Not used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAttributeDef.Register",
+      "ISldWorks.DefineAttribute"
+    ],
+    "keywords": [
+      "addparameter",
+      "iattributedef",
+      "attribute",
+      "def",
+      "add",
+      "parameter",
+      "name",
+      "string",
+      "type",
+      "int32",
+      "default",
+      "value",
+      "double",
+      "options",
+      "boolean",
+      "create",
+      "vba",
+      "feature",
+      "include",
+      "library",
+      "vb",
+      "net",
+      "find"
+    ]
+  },
+  "title": "IAttributeDef.AddParameter",
+  "description": "Adds a parameter to the attribute definition using the specified name and default value.",
+  "signature": "System.Boolean AddParameter( \n   System.String\nNameIn\n,\n   System.Int32\nType\n,\n   System.Double\nDefaultValue\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "NameIn",
+      "type": "System.String",
+      "description": "Name to be given to the parameter (see Remarks )"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Parameter type as defined in swParamType_e"
+    },
+    {
+      "name": "DefaultValue",
+      "type": "System.Double",
+      "description": "Default value (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Not used"
+    }
+  ],
+  "returns": "True if the parameter is added successfully, false if not",
+  "remarks": "Parameters cannot be added after the attribute definition is registered.\nThe name of the parameter given by NameIn must be unique in the attribute definition.\nFor parameters of type swParamTypeDouble, the DefaultValue argument allows a default value to be placed in the attribute definition parameter. This value is assigned to the parameters of newly created attribute instances.\nNOTE:\nThere is no way to get or set integer parameters in attributes. Instead, use\nIParameter::GetDoubleValue\nand\nIParameter::SetDoubleValue2\nto get and set values for integer parameters. If you need to store a negative value, define your attribute parameter as type double. SOLIDWORKS does not allow negative integer values.",
+  "examples": [
+    {
+      "title": "Create Attribute (VBA)",
+      "href": "Create_Attribute_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VB.NET)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (C#)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VBA)",
+      "href": "Add_Attribute_to_Feature_and_Include_In_Library_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (C#)",
+      "href": "Find_Attribute_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (VB.NET)",
+      "href": "Find_Attribute_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Find Attribute (VBA)",
+      "href": "Find_Attribute_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAttributeDef.Register",
+    "ISldWorks.DefineAttribute"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetFrameValues",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameSymbols2",
+      "IGtol.GetFrameValues",
+      "IGtol.IGetFrameDiameterSymbols",
+      "IGtol.IGetFrameSymbols2",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "igetframevalues",
+      "igtol",
+      "gtol",
+      "values",
+      "number",
+      "int16",
+      "string"
+    ]
+  },
+  "title": "IGtol.IGetFrameValues",
+  "description": "Gets an array that describes the text that appears in each of the fields of the specified GTol frame.",
+  "signature": "System.String IGetFrameValues( \n   System.Int16\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of strings (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Format of return array of BSTRs is:\nretval\n[0] = Tolerance 1\nretval\n[1] = Tolerance 2\nretval\n[2] = Datum 1\nretval\n[3] = Datum 2\nretval\n[4] = Datum 3",
+  "examples": [],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameSymbols2",
+    "IGtol.GetFrameValues",
+    "IGtol.IGetFrameDiameterSymbols",
+    "IGtol.IGetFrameSymbols2",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues"
+  ]
+}

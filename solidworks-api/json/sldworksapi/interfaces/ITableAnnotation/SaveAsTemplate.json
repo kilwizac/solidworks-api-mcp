@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SaveAsTemplate",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path and filename to which to save the table template file (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "file-io"
+    ],
+    "related": [
+      "ITableAnnotation.SaveAsPDF",
+      "ITableAnnotation.SaveAsText"
+    ],
+    "keywords": [
+      "table",
+      "templates",
+      "tables",
+      "saveastemplate",
+      "itableannotation",
+      "annotation",
+      "save",
+      "template",
+      "file",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SaveAsTemplate",
+  "description": "Saves the format of this table as a template file, which you can then use to create other tables of the same type and that look the same.",
+  "signature": "System.Boolean SaveAsTemplate( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path and filename to which to save the table template file (see Remarks )"
+    }
+  ],
+  "returns": "True if the table is saved as a template file, false if not",
+  "remarks": "You must specify a filename. It should include the path, filename, and filename extension to which to save the table as a template file.\nIf a file of the specified name in the specified path...\nThen it is...\nExists\nOverwritten\nDoes not exist\nCreated\nThe filename extension of the file does not matter, but to be consistent with the SOLIDWORKS naming conventions, the following extensions should be used:\n.\nsldbomtbt\nfor BOM tables\n.\nsldrevtbt\nfor revision tables\n.\nsldholtbt\nfor hole tables\n.\nsldtbt\nfor general tables",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.SaveAsPDF",
+    "ITableAnnotation.SaveAsText"
+  ]
+}

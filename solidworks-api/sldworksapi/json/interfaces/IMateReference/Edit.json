@@ -1,0 +1,162 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMateReference",
+    "member": "Edit",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "BstrMateReferenceName",
+        "type": "System.String",
+        "description": "Name of the new mate reference, which replaces the selected mate reference"
+      },
+      {
+        "name": "PrimaryReferenceEntity",
+        "type": "Entity",
+        "description": "Primary mate reference entity, a pointer to an IEntity object"
+      },
+      {
+        "name": "PrimaryReferenceType",
+        "type": "System.Int32",
+        "description": "Type of mate as defined by swMateReferenceType_e for PrimaryReferenceEntity"
+      },
+      {
+        "name": "PrimaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined by swMateReferenceAlignment_e for PrimaryReferenceEntity"
+      },
+      {
+        "name": "SecondaryReferenceEntity",
+        "type": "Entity",
+        "description": "Secondary mate reference entity, a pointer to an IEntity object"
+      },
+      {
+        "name": "SecondaryReferenceType",
+        "type": "System.Int32",
+        "description": "Type of mate as defined by swMateReferenceType_e for SecondaryReferenceEntity"
+      },
+      {
+        "name": "SecondaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined by swMateReferenceAlignment_e for SecondaryReferenceEntity"
+      },
+      {
+        "name": "TertiaryReferenceEntity",
+        "type": "Entity",
+        "description": "Tertiary mate reference entity, a pointer to an IEntity object"
+      },
+      {
+        "name": "TertiaryReferenceType",
+        "type": "System.Int32",
+        "description": "Type of mate as defined by swMateReferenceType_e for TertiaryReferenceEntity"
+      },
+      {
+        "name": "TertiaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined by swMateReferenceAlignment_e for TertiaryReferenceEntity"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "edit",
+      "imatereference",
+      "mate",
+      "reference",
+      "bstr",
+      "name",
+      "string",
+      "primary",
+      "entity",
+      "type",
+      "int32",
+      "alignment",
+      "secondary",
+      "tertiary",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IMateReference.Edit",
+  "description": "Lets you edit the selected mate reference.",
+  "signature": "System.Boolean Edit( \n   System.String\nBstrMateReferenceName\n,\n   Entity\nPrimaryReferenceEntity\n,\n   System.Int32\nPrimaryReferenceType\n,\n   System.Int32\nPrimaryReferenceAlignment\n,\n   Entity\nSecondaryReferenceEntity\n,\n   System.Int32\nSecondaryReferenceType\n,\n   System.Int32\nSecondaryReferenceAlignment\n,\n   Entity\nTertiaryReferenceEntity\n,\n   System.Int32\nTertiaryReferenceType\n,\n   System.Int32\nTertiaryReferenceAlignment\n)",
+  "parameters": [
+    {
+      "name": "BstrMateReferenceName",
+      "type": "System.String",
+      "description": "Name of the new mate reference, which replaces the selected mate reference"
+    },
+    {
+      "name": "PrimaryReferenceEntity",
+      "type": "Entity",
+      "description": "Primary mate reference entity, a pointer to an IEntity object"
+    },
+    {
+      "name": "PrimaryReferenceType",
+      "type": "System.Int32",
+      "description": "Type of mate as defined by swMateReferenceType_e for PrimaryReferenceEntity"
+    },
+    {
+      "name": "PrimaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined by swMateReferenceAlignment_e for PrimaryReferenceEntity"
+    },
+    {
+      "name": "SecondaryReferenceEntity",
+      "type": "Entity",
+      "description": "Secondary mate reference entity, a pointer to an IEntity object"
+    },
+    {
+      "name": "SecondaryReferenceType",
+      "type": "System.Int32",
+      "description": "Type of mate as defined by swMateReferenceType_e for SecondaryReferenceEntity"
+    },
+    {
+      "name": "SecondaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined by swMateReferenceAlignment_e for SecondaryReferenceEntity"
+    },
+    {
+      "name": "TertiaryReferenceEntity",
+      "type": "Entity",
+      "description": "Tertiary mate reference entity, a pointer to an IEntity object"
+    },
+    {
+      "name": "TertiaryReferenceType",
+      "type": "System.Int32",
+      "description": "Type of mate as defined by swMateReferenceType_e for TertiaryReferenceEntity"
+    },
+    {
+      "name": "TertiaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined by swMateReferenceAlignment_e for TertiaryReferenceEntity"
+    }
+  ],
+  "returns": "Always True",
+  "remarks": "To clear the previous references, you can pass Nothing or null for the primary, secondary, or tertiary reference entities.\nThis method applies the parameters to the actual features. After calling this method, call\nIModelDoc2::EditRebuild\nto rebuild the model, and then call\nIModelDocExtension::NeedsRebuild\nto determine if the rebuild was successful.",
+  "examples": [
+    {
+      "title": "Edit Mate Reference (C#)",
+      "href": "Edit_Mate_Reference_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Mate Reference (VB.NET)",
+      "href": "Edit_Mate_Reference_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Mate Reference (VBA)",
+      "href": "Edit_Mate_Reference_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

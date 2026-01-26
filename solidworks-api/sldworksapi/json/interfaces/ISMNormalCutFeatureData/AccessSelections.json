@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISMNormalCutFeatureData",
+    "member": "AccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "System.Object",
+        "description": "Top-level document"
+      },
+      {
+        "name": "Component",
+        "type": "System.Object",
+        "description": "Component for the feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "accessselections",
+      "ismnormalcutfeaturedata",
+      "ism",
+      "normal",
+      "cut",
+      "feature",
+      "data",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "object",
+      "component",
+      "boolean",
+      "ifeaturemanager",
+      "addsmnormalcuttype"
+    ]
+  },
+  "title": "ISMNormalCutFeatureData.AccessSelections",
+  "description": "Obsolete. See ISMNormalCutFeatureData2.",
+  "signature": "System.Boolean AccessSelections( \n   System.Object\nTopDoc\n,\n   System.Object\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "System.Object",
+      "description": "Top-level document"
+    },
+    {
+      "name": "Component",
+      "type": "System.Object",
+      "description": "Component for the feature"
+    }
+  ],
+  "returns": "True if the selections where successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nif you modified the feature\nISMNormalCutFeatureData::ReleaseSelectionAccess\nif you did not",
+  "examples": [
+    {
+      "title": "IFeatureManager::AddSMNormalCutType",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~AddSMNormalCutType",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

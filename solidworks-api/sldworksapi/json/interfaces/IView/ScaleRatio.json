@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IView",
+    "member": "ScaleRatio",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.IScaleRatio",
+      "IView.UseParentScale",
+      "IView.UseSheetScale"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "scale",
+      "iscalefeaturedata",
+      "view",
+      "scaleratio",
+      "ratio",
+      "object",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IView.ScaleRatio",
+  "description": "Gets or sets the scale of the drawing view, returning the results in ratio format (n:n).",
+  "signature": "System.Object ScaleRatio {get; set;}",
+  "parameters": [],
+  "returns": "Array of 2 doubles (see Remarks )",
+  "remarks": "The two values represent the two numbers if the scale is described as a ratio. The first value is the numerator; the second value is the denominator. This is what the scale is when represented as n:n.\nThis property and\nIView::ScaleDecimal\ncontain the same information, but use the value in a different form.\nIView::ScaleRatio returns the scale as a ratio of two numbers.\nIView::ScaleDecimal returns the scale as a decimal number.\nFor example, if View::ScaleRatio returns 3 2 or 3:2, then IView::ScaleDecimal would return 1.5.\nChanging this property may cause changes to the graphics of the drawing. After making all of the view-related changes, call\nIModelDoc2::EditRebuild3\nto regenerate the drawing to see these changes.",
+  "examples": [
+    {
+      "title": "Set View Scale (VBA)",
+      "href": "Set_View_Scale_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.IScaleRatio",
+    "IView.UseParentScale",
+    "IView.UseSheetScale"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRefPlaneFeatureData",
+    "member": "ReleaseSelectionAccess",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "releaseselectionaccess",
+      "irefplanefeaturedata",
+      "ref",
+      "plane",
+      "feature",
+      "data",
+      "release",
+      "selection",
+      "access",
+      "void"
+    ]
+  },
+  "title": "IRefPlaneFeatureData.ReleaseSelectionAccess",
+  "description": "Releases access to the selections that created the reference plane feature.",
+  "signature": "void ReleaseSelectionAccess()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "IRefPlaneFeatureData::AccessSelections\nand\nIRefPlaneFeatureData::IAccessSelections\nput the model in a rollback state to allow access to the selections that define the feature.\nUse this method to restore the rollback state if you did not modify the feature, or use\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you did modify the feature.\nIMPORTANT:\nReference planes created in SOLIDWORKS 2010 or later are constraint based; reference planes created in SOLIDWORKS 2009 or earlier are not. See the\nRemarks\nsection in the\nIRefPlaneFeatureData interface\ntopic for details about reference planes and this interface.",
+  "examples": [],
+  "related": []
+}

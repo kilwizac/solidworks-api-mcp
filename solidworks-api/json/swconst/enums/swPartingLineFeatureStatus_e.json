@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swPartingLineFeatureStatus_e",
+    "description": "Statuses of parting line features.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swPartingLineFeatureStatus_e",
+  "description": "Statuses of parting line features.",
+  "values": [
+    {
+      "member": "STATUS_MOLD_PARTINGLINE_EDGES_OPEN",
+      "value": "2",
+      "description": "= Select edges that form a closed loop"
+    },
+    {
+      "member": "STATUS_MOLD_PARTINGLINE_NON_SEPARABLE",
+      "value": "4",
+      "description": "= The parting line is complete, but the mold cannot be separated into core and cavity; you might need to create shut-off surfaces"
+    },
+    {
+      "member": "STATUS_MOLD_PARTINGLINE_SEPARABLE",
+      "value": "3",
+      "description": "= The parting line is complete; the mold can be separated into core and cavity"
+    },
+    {
+      "member": "STATUS_MOLD_REDUNDANT_EDGES",
+      "value": "1",
+      "description": "= There are more than enough edges selected to form a parting line; remove any redundant edges or add edges to close gaps between disjoint edge chains"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMBD3DPdfData",
+    "member": "SetBomTable",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the BOM Table Area in the theme (see Remarks )"
+      },
+      {
+        "name": "BomTableName",
+        "type": "System.String",
+        "description": "Name of the BOM table to map to the BOM Table Area specified by Index (see Remarks )"
+      },
+      {
+        "name": "Columns",
+        "type": "System.Object",
+        "description": "Array of strings of the names of the columns to export from the BOM table specified in BomTableName (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IMBD3DPdfData.ExcludeFromAnnotationView"
+    ],
+    "keywords": [
+      "setbomtable",
+      "imbd3dpdfdata",
+      "imbd3",
+      "pdf",
+      "data",
+      "bom",
+      "table",
+      "index",
+      "int32",
+      "name",
+      "string",
+      "columns",
+      "object",
+      "export",
+      "second",
+      "column",
+      "area",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IMBD3DPdfData.SetBomTable",
+  "description": "Maps a BOM Table Area in the theme with a BOM table in the model and sets the columns in the BOM table to export to the BOM Table Area in a SOLIDWORKS MBD 3D PDF.",
+  "signature": "System.Int32 SetBomTable( \n   System.Int32\nIndex\n,\n   System.String\nBomTableName\n,\n   System.Object\nColumns\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the BOM Table Area in the theme (see Remarks )"
+    },
+    {
+      "name": "BomTableName",
+      "type": "System.String",
+      "description": "Name of the BOM table to map to the BOM Table Area specified by Index (see Remarks )"
+    },
+    {
+      "name": "Columns",
+      "type": "System.Object",
+      "description": "Array of strings of the names of the columns to export from the BOM table specified in BomTableName (see Remarks )"
+    }
+  ],
+  "returns": "0 = success; BOM table mapped 1 = failure; specified BomTableName not found in model",
+  "remarks": "To get...\nCall...\nIndex\nIMBD3PdfData::GetBomAreaCount\nto find out the number of BOM Table Areas in the theme\nBOMTableName\nIBomFeature::Name\nColumns\nITableAnnotation::ColumnCount\nto get the number of columns in the BOM table\nITableAnnotation::GetColumnTitle\nfor each column you want to export after getting the\ntable annotation\nfor the\nBOM table annotation",
+  "examples": [
+    {
+      "title": "Export BOM's Second Column to BOM Table Area (C#)",
+      "href": "Export_BOM's_Second_Column_to_BOM_Table_Area_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Export BOM's Second Column to BOM Table Area (VB.NET)",
+      "href": "Export_BOM's_Second_Column_to_BOM_Table_Area_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Export BOM's Second Column to BOM Table Area (VBA)",
+      "href": "Export_BOM's_Second_Column_to_BOM_Table_Area_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMBD3DPdfData.ExcludeFromAnnotationView"
+  ]
+}

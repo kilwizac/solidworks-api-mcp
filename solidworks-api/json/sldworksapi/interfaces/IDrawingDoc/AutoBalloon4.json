@@ -1,0 +1,156 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "AutoBalloon4",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Layout",
+        "type": "System.Int32",
+        "description": "Layout style of the balloons as defined by swBalloonLayoutType_e or specify -1 for this argument to use the document default layout style"
+      },
+      {
+        "name": "IgnoreMultiple",
+        "type": "System.Boolean",
+        "description": "True to apply a balloon to only one instance of a component, false to apply balloons to all instances of that component"
+      },
+      {
+        "name": "Style",
+        "type": "System.Int32",
+        "description": "Style of the balloons as defined by swBalloonStyle_e or specify -1 to use the document default balloon style"
+      },
+      {
+        "name": "Size",
+        "type": "System.Int32",
+        "description": "Fit of balloon as defined by swBalloonFit_e or specify -1 to use the document default balloon fit"
+      },
+      {
+        "name": "UpperTextContent",
+        "type": "System.Int32",
+        "description": "Upper-text content style as defined by swBalloonTextContent_e or specify -1 to use the document default upper text content"
+      },
+      {
+        "name": "UpperText",
+        "type": "System.String",
+        "description": "Text for upper balloon"
+      },
+      {
+        "name": "LowerTextContent",
+        "type": "System.Int32",
+        "description": "Lower-text content style as defined by swBalloonTextContent_e or specify -1 to use the document default lower text content NOTE: This and the next argument are only effective when Style is set to swBS_SplitCirc. See the SOLIDWORKS Help for additional details about autoballoons."
+      },
+      {
+        "name": "LowerText",
+        "type": "System.String",
+        "description": "Text for lower balloon"
+      },
+      {
+        "name": "Layername",
+        "type": "System.String",
+        "description": "Name of the layer for this balloon"
+      },
+      {
+        "name": "BalloonsToFaces",
+        "type": "System.Boolean",
+        "description": "True to attach balloons to faces; false to attach balloons to edges"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.InsertBOMBalloon"
+    ],
+    "keywords": [
+      "autoballoon4",
+      "idrawingdoc",
+      "drawing",
+      "doc",
+      "auto",
+      "balloon4",
+      "layout",
+      "int32",
+      "ignore",
+      "multiple",
+      "boolean",
+      "style",
+      "size",
+      "upper",
+      "text",
+      "content",
+      "string",
+      "lower",
+      "layername",
+      "balloons",
+      "faces",
+      "object"
+    ]
+  },
+  "title": "IDrawingDoc.AutoBalloon4",
+  "description": "Obsolete. Superseded by IDrawingDoc::AutoBalloon5.",
+  "signature": "System.Object AutoBalloon4( \n   System.Int32\nLayout\n,\n   System.Boolean\nIgnoreMultiple\n,\n   System.Int32\nStyle\n,\n   System.Int32\nSize\n,\n   System.Int32\nUpperTextContent\n,\n   System.String\nUpperText\n,\n   System.Int32\nLowerTextContent\n,\n   System.String\nLowerText\n,\n   System.String\nLayername\n,\n   System.Boolean\nBalloonsToFaces\n)",
+  "parameters": [
+    {
+      "name": "Layout",
+      "type": "System.Int32",
+      "description": "Layout style of the balloons as defined by swBalloonLayoutType_e or specify -1 for this argument to use the document default layout style"
+    },
+    {
+      "name": "IgnoreMultiple",
+      "type": "System.Boolean",
+      "description": "True to apply a balloon to only one instance of a component, false to apply balloons to all instances of that component"
+    },
+    {
+      "name": "Style",
+      "type": "System.Int32",
+      "description": "Style of the balloons as defined by swBalloonStyle_e or specify -1 to use the document default balloon style"
+    },
+    {
+      "name": "Size",
+      "type": "System.Int32",
+      "description": "Fit of balloon as defined by swBalloonFit_e or specify -1 to use the document default balloon fit"
+    },
+    {
+      "name": "UpperTextContent",
+      "type": "System.Int32",
+      "description": "Upper-text content style as defined by swBalloonTextContent_e or specify -1 to use the document default upper text content"
+    },
+    {
+      "name": "UpperText",
+      "type": "System.String",
+      "description": "Text for upper balloon"
+    },
+    {
+      "name": "LowerTextContent",
+      "type": "System.Int32",
+      "description": "Lower-text content style as defined by swBalloonTextContent_e or specify -1 to use the document default lower text content NOTE: This and the next argument are only effective when Style is set to swBS_SplitCirc. See the SOLIDWORKS Help for additional details about autoballoons."
+    },
+    {
+      "name": "LowerText",
+      "type": "System.String",
+      "description": "Text for lower balloon"
+    },
+    {
+      "name": "Layername",
+      "type": "System.String",
+      "description": "Name of the layer for this balloon"
+    },
+    {
+      "name": "BalloonsToFaces",
+      "type": "System.Boolean",
+      "description": "True to attach balloons to faces; false to attach balloons to edges"
+    }
+  ],
+  "returns": "Array of newly created notes",
+  "remarks": "This method automatically creates the BOM balloons for the selected drawing views. If a drawing sheet is selected, BOM balloons are automatically created for all of the drawing views on that drawing sheet.\nTo get or set default values for...\nUse...\nLayout\nIModelDocExtension::GetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingAutoBalloonLayout, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\n- or -\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingAutoBalloonLayout, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonLayoutType_e.<\nValue\n>)\nStyle\nIModelDocExtension::GetUserPreferenceInteger((swUserPreferenceIntegerValue_e.swDetailingBOMBalloonStyle, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\n- or -\nIModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swDetailingBOMBalloonFit, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonFit_e.<\nValue\n>)\nSize\nIModelDocExtension::GetUserPreferenceInteger((swUserPreferenceIntegerValue_e.swDetailingBOMBalloonFit, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\n- or -\n(swUserPreferenceIntegerValue_e.swDetailingBOMStackedBalloonFit, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonFit_e.<\nValue\n>)\nUpperTextContent\nIModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swDetailingBOMUpperText, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\n-  or -\nIModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swDetailingBOMUpperText, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonTextContent_e.<\nValue\n>)\nLowerTextContent\nIModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\n- or -\nIModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonTextContent_e.<\nValue\n>)\nThis method also allows you to get only the balloons just created.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.InsertBOMBalloon"
+  ]
+}

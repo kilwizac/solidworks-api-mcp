@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SketchTrim",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Option",
+        "type": "System.Int32",
+        "description": "Sketch trim option as defined in swSketchTrimChoice_e (see Remarks )"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x coordinate of pick location (see Remarks )"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y coordinate of pick location (see Remarks )"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z coordinate of pick location (for 3D sketch) (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchManager.SketchExtend"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "trim",
+      "entities",
+      "sketchtrim",
+      "isketchmanager",
+      "manager",
+      "option",
+      "int32",
+      "double",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.SketchTrim",
+  "description": "Trims the selected sketch entities.",
+  "signature": "System.Boolean SketchTrim( \n   System.Int32\nOption\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "Option",
+      "type": "System.Int32",
+      "description": "Sketch trim option as defined in swSketchTrimChoice_e (see Remarks )"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x coordinate of pick location (see Remarks )"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y coordinate of pick location (see Remarks )"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z coordinate of pick location (for 3D sketch) (see Remarks )"
+    }
+  ],
+  "returns": "True if the sketch entities are trimmed, false if not",
+  "remarks": "Before calling this method, you must edit a sketch and select sketch segments to trim using\nIModelDocExtension::SelectByID2\n.\nSpecify X, Y, and Z with:\nnon-zero doubles only when Option is specified with swSketchTrimChoice_e.swSketchTrimEntityPoint.\n0.0, 0.0, and 0.0 for all other Options.\nOption swSketchTrimChoice_e...\nCorresponds to Trim PropertyManager's...\nBefore calling this method, you must select...\nswSketchTrimClosest\nTrim to closest\nOne, and only one, sketch segment to be trimmed to its closest intersection with another sketch entity.\nswSketchTrimCorner\nCorner\nTwo, and only two, sketch segments to extend/trim to form a corner.\nswSketchTrimEntities\nPower trim\nOne or more (up to total number) sketch segments in the model, specifying their pick points. The sketch segments are trimmed to the sketch segments nearest the pick points.\nWhen you trim sketch segments using Power trim in the user interface, you drag your cursor across sketch segments, and the point at which the cursor crosses a sketch segment is where that sketch segment is trimmed. The API simulates this functionality by requiring you to select sketch segments by pick points, which are used as references when trimming the selected sketch segments.\nswSketchTrimEntityPoint\nPower trim\nOne and only one sketch segment; trims to a specific point on the sketch segment. Call this method, specifying non-zero X, Y, and Z, the point at which to trim the selected sketch segment. The specified point must lie on the sketch segment.\nswSketchTrimInside\nTrim away inside\nAt least three sketch segments: two to create the boundary, and one or more that intersect both sketch segments in the boundary. All selected sketch segments that intersect the boundary are trimmed inside the boundary segments.\nswSketchTrimOutside\nTrim away outside\nAt least three sketch segments; two to create the trim boundary, and one or more that intersect both sketch segments in the boundary. All selected sketch segments that intersect the boundary are trimmed outside the boundary segments.\nswSketchTrimTwoEntities\nPower trim\nTwo intersecting sketch segments; trims the first selected sketch segment to the second intersecting sketch segment. Use IModelDocExtension::SelectByID2 with Mark = 0 to select two sketch segments, specifying their pick points. The order in which the sketch segments are selected determines which one is trimmed. The first selected sketch segment will be trimmed on its pick point side to the second selected sketch segment.\nSee the\nTrim Entities\ntopic in the SOLIDWORKS help for more information about trimming sketch entities.",
+  "examples": [
+    {
+      "title": "Trim Sketch Entities (C#)",
+      "href": "Trim_Sketch_Entities_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Trim Sketch Entities (VB.NET)",
+      "href": "Trim_Sketch_Entities_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Trim Sketch Entities (VBA)",
+      "href": "Trim_Sketch_Entities_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchManager.SketchExtend"
+  ]
+}

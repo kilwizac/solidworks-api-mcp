@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBSurfParamData",
+    "member": "IGetControlPoints",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "1 <= index of row <= ControlPointRowCount"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "1 <= index of column <= ControlPointColumnCount"
+      },
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "ControlPointDimension"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBSurfParamData.GetControlPoints"
+    ],
+    "keywords": [
+      "igetcontrolpoints",
+      "ibsurfparamdata",
+      "ib",
+      "surf",
+      "param",
+      "data",
+      "control",
+      "points",
+      "row",
+      "int32",
+      "column",
+      "count",
+      "double"
+    ]
+  },
+  "title": "IBSurfParamData.IGetControlPoints",
+  "description": "Gets the coordinates of a control point at a specific row and column of the control point matrix.",
+  "signature": "System.Double IGetControlPoints( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n,\n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "1 <= index of row <= ControlPointRowCount"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "1 <= index of column <= ControlPointColumnCount"
+    },
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "ControlPointDimension"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Control points are stored in (ControlPointColumnCount*ControlPointRowCount) vectors of dimension\nControlPointDimension\n. The U direction of surface is in the row direction. The V direction of surface is in the column direction.\nFor non-rational surfaces ControlPointDimension = 3, and control point coordinates are stored as [x0,y0,z0,x1,y1,z1,.........].\nFor rational surfaces ControlPointDimension = 4, and control point coordinates and weights are stored as [x0,y0,z0,w0,x1,y1,z1,w1,........].\nFor example, 6 control points are stored in 6 vectors of dimension 3 in a 2X3 matrix as follows:\nRow1, Column1\nRow1, Column2\n# Coordinates\nx0, y0, z0\nx1, y1, z1\n= 6\nRow2, Column1\nRow2, Column2\nx2, y2, z2\nx3, y3, z3\n= 6\nRow3, Column1\nRow3, Column2\nx4, y4, z4\nx5, y5, z5\n= 6\nTotal\n= 18",
+  "examples": [],
+  "related": [
+    "IBSurfParamData.GetControlPoints"
+  ]
+}

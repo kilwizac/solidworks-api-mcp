@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IHoleTable",
+    "member": "HoleTag",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "0-based index of the row in which you want to change the name of the tag"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IHoleTable.HoleTagsVisible",
+      "IHoleTable.TagStyle"
+    ],
+    "keywords": [
+      "hole",
+      "tables",
+      "see",
+      "also",
+      "iholetable",
+      "tags",
+      "holetag",
+      "table",
+      "tag",
+      "row",
+      "int32",
+      "string",
+      "change",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IHoleTable.HoleTag",
+  "description": "Gets or sets the name of the specified tag in a hole table.",
+  "signature": "System.String HoleTag( \n   System.Int32\nRow\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "0-based index of the row in which you want to change the name of the tag"
+    }
+  ],
+  "returns": "Tag name",
+  "remarks": "IHoleTable::CombineTags\nmust be false for IHoleTable::HoleTag to work.\nIf you plan on changing many hole tags, then consider setting\nIHoleTable::EnableUpdate\nto false to avoid a possible degradation in performance. After changing all of the hole tags, set IHoleTable::EnableUpdate to true to update the hole table and model view.",
+  "examples": [
+    {
+      "title": "Change Tags in Hole Table (VB.NET)",
+      "href": "Change_Tags_in_Hole_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Tags in Hole Table (VBA)",
+      "href": "Change_Tags_in_Hole_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Tags in Hole Table (C#)",
+      "href": "Change_Tags_in_Hole_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IHoleTable.HoleTagsVisible",
+    "IHoleTable.TagStyle"
+  ]
+}

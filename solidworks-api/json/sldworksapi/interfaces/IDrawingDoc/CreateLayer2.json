@@ -1,0 +1,152 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateLayer2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Layername",
+        "type": "System.String",
+        "description": "Layer name (see Remarks )"
+      },
+      {
+        "name": "LayerDesc",
+        "type": "System.String",
+        "description": "Description for the new layer"
+      },
+      {
+        "name": "LayerColor",
+        "type": "System.Int32",
+        "description": "COLORREF value specifying the color of items in this layer"
+      },
+      {
+        "name": "LayerStyle",
+        "type": "System.Int32",
+        "description": "Line style as defined in swLineStyles_e"
+      },
+      {
+        "name": "LayerWidth",
+        "type": "System.Int32",
+        "description": "Line width as defined in swLineWeights_e"
+      },
+      {
+        "name": "BOn",
+        "type": "System.Boolean",
+        "description": "True makes this layer visible, false makes it invisible"
+      },
+      {
+        "name": "BPrint",
+        "type": "System.Boolean",
+        "description": "True to print this layer when printing the document, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.SetCurrentLayer",
+      "ILayer",
+      "ILayerMgr"
+    ],
+    "keywords": [
+      "drawings",
+      "see",
+      "also",
+      "idrawingdoc",
+      "layers",
+      "layer",
+      "ilayer",
+      "ilayermgr",
+      "interfaces",
+      "create",
+      "createlayer2",
+      "drawing",
+      "doc",
+      "layer2",
+      "layername",
+      "string",
+      "desc",
+      "color",
+      "int32",
+      "style",
+      "width",
+      "boolean",
+      "print",
+      "selected",
+      "view",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDrawingDoc.CreateLayer2",
+  "description": "Creates a layer for this document.",
+  "signature": "System.Boolean CreateLayer2( \n   System.String\nLayername\n,\n   System.String\nLayerDesc\n,\n   System.Int32\nLayerColor\n,\n   System.Int32\nLayerStyle\n,\n   System.Int32\nLayerWidth\n,\n   System.Boolean\nBOn\n,\n   System.Boolean\nBPrint\n)",
+  "parameters": [
+    {
+      "name": "Layername",
+      "type": "System.String",
+      "description": "Layer name (see Remarks )"
+    },
+    {
+      "name": "LayerDesc",
+      "type": "System.String",
+      "description": "Description for the new layer"
+    },
+    {
+      "name": "LayerColor",
+      "type": "System.Int32",
+      "description": "COLORREF value specifying the color of items in this layer"
+    },
+    {
+      "name": "LayerStyle",
+      "type": "System.Int32",
+      "description": "Line style as defined in swLineStyles_e"
+    },
+    {
+      "name": "LayerWidth",
+      "type": "System.Int32",
+      "description": "Line width as defined in swLineWeights_e"
+    },
+    {
+      "name": "BOn",
+      "type": "System.Boolean",
+      "description": "True makes this layer visible, false makes it invisible"
+    },
+    {
+      "name": "BPrint",
+      "type": "System.Boolean",
+      "description": "True to print this layer when printing the document, false to not"
+    }
+  ],
+  "returns": "True if the layer was created successfully, false if not",
+  "remarks": "If this layer is not visible, then SOLIDWORKS does not display entities on the layer.\nDo not use backslash or @ symbols in Layername.",
+  "examples": [
+    {
+      "title": "Create Layer for Selected View (VBA)",
+      "href": "Create_Layer_for_Selected_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Layer for Selected View (VB.NET)",
+      "href": "Create_Layer_for_Selected_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Layer for Selected View (C#)",
+      "href": "Create_Layer_for_Selected_View_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.SetCurrentLayer",
+    "ILayer",
+    "ILayerMgr"
+  ]
+}

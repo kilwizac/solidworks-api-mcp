@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "IGetEntityByName",
+    "returns": "Entity",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of entity"
+      },
+      {
+        "name": "EntityType",
+        "type": "System.Int32",
+        "description": "Entity type as defined in swSelectType_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.DeleteEntityName",
+      "IPartDoc.GetEntityByName",
+      "IPartDoc.GetEntityName",
+      "IPartDoc.GetNamedEntities",
+      "IPartDoc.IDeleteEntityName",
+      "IPartDoc.IGetEntityName",
+      "IPartDoc.IGetNamedEntities",
+      "IPartDoc.SetEntityName"
+    ],
+    "keywords": [
+      "name",
+      "entity",
+      "see",
+      "also",
+      "ientity",
+      "parts",
+      "ipartdoc",
+      "entities",
+      "igetentitybyname",
+      "part",
+      "doc",
+      "string",
+      "type",
+      "int32",
+      "edge",
+      "data"
+    ]
+  },
+  "title": "IPartDoc.IGetEntityByName",
+  "description": "Gets an entity (face, edge, vertex) by name.",
+  "signature": "Entity IGetEntityByName( \n   System.String\nName\n,\n   System.Int32\nEntityType\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of entity"
+    },
+    {
+      "name": "EntityType",
+      "type": "System.Int32",
+      "description": "Entity type as defined in swSelectType_e (see Remarks )"
+    }
+  ],
+  "returns": "Entity",
+  "remarks": "Valid entityType types:\nswSelFACES\nswSelEDGES\nswSeleVERTICES\nAnother way to obtain an\nIEntity\nobject based on its name is to traverse the body topology (for example, use\nIBody2::GetFirstFace\nor\nIBody2::IGetFirstFace\nand so on) and use\nIModelDoc2::GetEntityName\nor\nIModelDoc2::IGetEntityName\nto determine when you have located the desired entity.\nBecause the names of entities are stored with the part document, this method resides on the\nIPartDoc\nobject.",
+  "examples": [
+    {
+      "title": "Get Edge Data By Name (C++)",
+      "href": "Get_Edge_Data_By_Name_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPartDoc.DeleteEntityName",
+    "IPartDoc.GetEntityByName",
+    "IPartDoc.GetEntityName",
+    "IPartDoc.GetNamedEntities",
+    "IPartDoc.IDeleteEntityName",
+    "IPartDoc.IGetEntityName",
+    "IPartDoc.IGetNamedEntities",
+    "IPartDoc.SetEntityName"
+  ]
+}

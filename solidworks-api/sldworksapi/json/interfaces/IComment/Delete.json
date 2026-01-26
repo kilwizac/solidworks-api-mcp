@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComment",
+    "member": "Delete",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICommentFolder.AddComment",
+      "IFeature.AddComment",
+      "IModelDocExtension.AddComment"
+    ],
+    "keywords": [
+      "delete",
+      "icomment",
+      "comment",
+      "boolean"
+    ]
+  },
+  "title": "IComment.Delete",
+  "description": "Deletes a comment.",
+  "signature": "System.Boolean Delete()",
+  "parameters": [],
+  "returns": "True if the comment is deleted, false if not",
+  "remarks": "The comment to delete must not be selected in the FeatureManager design tree. Use\nIModelDoc2::ClearSelection2\nto ensure that the comment is not currently selected.\nYou must rebuild the FeatureManager design tree after deleting the comment. Use\nIFeatureManager::UpdateFeatureTree\nto perform this action.",
+  "examples": [],
+  "related": [
+    "ICommentFolder.AddComment",
+    "IFeature.AddComment",
+    "IModelDocExtension.AddComment"
+  ]
+}

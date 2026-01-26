@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHelixFeatureData",
+    "member": "SetRegionParameterAtIndex",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the region"
+      },
+      {
+        "name": "Parameter",
+        "type": "System.Int32",
+        "description": "Region parameter as defined in swVariablePitchHelixRegionParameter_e (see Remarks )"
+      },
+      {
+        "name": "PitchValue",
+        "type": "System.Double",
+        "description": "Region parameter value"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IHelixFeatureData.AddLastRecord",
+      "IHelixFeatureData.DeleteRecord",
+      "IHelixFeatureData.GetRegionParameterAtIndex",
+      "IHelixFeatureData.InsertRecord",
+      "IHelixFeatureData.PitchCount",
+      "IHelixFeatureData.VariablePitch"
+    ],
+    "keywords": [
+      "setregionparameteratindex",
+      "ihelixfeaturedata",
+      "helix",
+      "feature",
+      "data",
+      "region",
+      "parameter",
+      "index",
+      "int32",
+      "pitch",
+      "value",
+      "double",
+      "create",
+      "modify",
+      "variable",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IHelixFeatureData.SetRegionParameterAtIndex",
+  "description": "Sets the specified parameter for the specified region in this variable-pitch helix.",
+  "signature": "System.Int32 SetRegionParameterAtIndex( \n   System.Int32\nIndex\n,\n   System.Int32\nParameter\n,\n   System.Double\nPitchValue\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the region"
+    },
+    {
+      "name": "Parameter",
+      "type": "System.Int32",
+      "description": "Region parameter as defined in swVariablePitchHelixRegionParameter_e (see Remarks )"
+    },
+    {
+      "name": "PitchValue",
+      "type": "System.Double",
+      "description": "Region parameter value"
+    }
+  ],
+  "returns": "Status of setting region parameters as defined in swSetHelixRegionParameterStatus_e",
+  "remarks": "If the\nhelix is defined\nas...\nThen you cannot change...\nswHelixDefinedBy_e.swHelixDefinedByHeightAndPitch\nRevolution value\nswHelixDefinedBy_e.swHelixDefinedByHeightAndRevolution\nPitch value\nswHelixDefinedBy_e.swHelixDefinedByPitchAndRevolution\nHeight value\nIf setting a value for...\nThen you...\nRevolution\nMust specify a value greater than the previous region's revolution value and less than the next region's revolution value\nPitch for the first region only\nCannot change diameter, height, or revolution",
+  "examples": [
+    {
+      "title": "Create and Modify Variable-pitch Helix (C#)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Variable-pitch Helix (VB.NET)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Variable-pitch Helix (VBA)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IHelixFeatureData.AddLastRecord",
+    "IHelixFeatureData.DeleteRecord",
+    "IHelixFeatureData.GetRegionParameterAtIndex",
+    "IHelixFeatureData.InsertRecord",
+    "IHelixFeatureData.PitchCount",
+    "IHelixFeatureData.VariablePitch"
+  ]
+}

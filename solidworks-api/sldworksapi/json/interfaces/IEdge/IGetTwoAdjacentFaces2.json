@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IGetTwoAdjacentFaces2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Face1",
+        "type": "Face2",
+        "description": "Pointer to the first adjacent face"
+      },
+      {
+        "name": "Face2",
+        "type": "Face2",
+        "description": "Pointer to the second adjacent face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetTwoAdjacentFaces2",
+      "IVertex.GetAdjacentFaces",
+      "IVertex.IGetAdjacentFaces"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "adjacent",
+      "faces",
+      "igettwoadjacentfaces2",
+      "iedge",
+      "edge",
+      "two",
+      "faces2",
+      "face1",
+      "face2",
+      "void"
+    ]
+  },
+  "title": "IEdge.IGetTwoAdjacentFaces2",
+  "description": "Gets the two faces adjacent to an edge.",
+  "signature": "void IGetTwoAdjacentFaces2( \n   out Face2\nFace1\n,\n   out Face2\nFace2\n)",
+  "parameters": [
+    {
+      "name": "Face1",
+      "type": "Face2",
+      "description": "Pointer to the first adjacent face"
+    },
+    {
+      "name": "Face2",
+      "type": "Face2",
+      "description": "Pointer to the second adjacent face"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is designed to be used with body-related edges, not reference curve or reference sketch edges. This method supports both solid and sheet bodies.\nIf...\nThen the values returned are...\nTwo valid faces exist\nTwo faces\nOnly one valid face exists\nOne face and NULL",
+  "examples": [],
+  "related": [
+    "IEdge.GetTwoAdjacentFaces2",
+    "IVertex.GetAdjacentFaces",
+    "IVertex.IGetAdjacentFaces"
+  ]
+}

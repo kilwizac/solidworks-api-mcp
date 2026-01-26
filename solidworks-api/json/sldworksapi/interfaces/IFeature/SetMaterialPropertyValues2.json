@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFeature",
+    "member": "SetMaterialPropertyValues2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Material_values",
+        "type": "System.Object",
+        "description": "Array of material property values"
+      },
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of configuration names"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetMaterialPropertyValues2",
+      "IFeature.HasMaterialPropertyValues",
+      "IFeature.IGetMaterialPropertyValues2",
+      "IFeature.IRemoveMaterialProperty2",
+      "IFeature.ISetMaterialPropertyValues2",
+      "IFeature.RemoveMaterialProperty2"
+    ],
+    "keywords": [
+      "material",
+      "properties",
+      "features",
+      "color",
+      "setmaterialpropertyvalues2",
+      "ifeature",
+      "feature",
+      "values2",
+      "values",
+      "object",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "void"
+    ],
+    "readonly": null
+  },
+  "title": "IFeature.SetMaterialPropertyValues2",
+  "description": "Sets the material property values for this feature in the specified configurations.",
+  "signature": "void SetMaterialPropertyValues2( \n   System.Object\nMaterial_values\n,\n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Material_values",
+      "type": "System.Object",
+      "description": "Array of material property values"
+    },
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of configuration names"
+    }
+  ],
+  "returns": "",
+  "remarks": "The material properties are color (R,G,B values), reflectivity (ambient,\ndiffuse, specular, shininess), transparency, and emission. Valid values are between 0.0 and 1.0, inclusive, for all material properties.\nIf you set Config_opt to swThisConfiguration or swAllConfiguration, then Config_names\nis ignored.\nThe format of the Material_values array:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after calling this method.",
+  "examples": [],
+  "related": [
+    "IFeature.GetMaterialPropertyValues2",
+    "IFeature.HasMaterialPropertyValues",
+    "IFeature.IGetMaterialPropertyValues2",
+    "IFeature.IRemoveMaterialProperty2",
+    "IFeature.ISetMaterialPropertyValues2",
+    "IFeature.RemoveMaterialProperty2"
+  ]
+}

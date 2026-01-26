@@ -1,0 +1,71 @@
+---
+type: method
+interface: IModelDoc2
+member: InsertFamilyTableNew
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - IDesignTable
+  - IModelDoc2.CloseFamilyTable
+  - IModelDoc2.DeleteDesignTable
+  - IModelDoc2.GetDesignTable
+  - IModelDoc2.IGetDesignTable
+  - IModelDoc2.InsertFamilyTableEdit
+  - IModelDoc2.InsertFamilyTableOpen
+  - IModelDocExtension.HasDesignTable
+keywords:
+  - design
+  - tables
+  - see
+  - also
+  - idesigntable
+  - excel
+  - table
+  - insert
+  - insertfamilytablenew
+  - imodeldoc2
+  - model
+  - doc2
+  - family
+  - new
+  - void
+---
+
+# IModelDoc2.InsertFamilyTableNew
+
+Inserts an existing design table from the model into the selected drawing view.
+
+## Signature
+
+```csharp
+void InsertFamilyTableNew()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+Before using this method in a drawing, you must have selected a drawing view and that drawing view must contain a model that has an existing family table. If you have not selected a drawing view before using this method or if the selected drawing view does not contain a family table, then this method takes no action.
+
+## See Also
+
+- `IDesignTable`
+- `IModelDoc2.CloseFamilyTable`
+- `IModelDoc2.DeleteDesignTable`
+- `IModelDoc2.GetDesignTable`
+- `IModelDoc2.IGetDesignTable`
+- `IModelDoc2.InsertFamilyTableEdit`
+- `IModelDoc2.InsertFamilyTableOpen`
+- `IModelDocExtension.HasDesignTable`

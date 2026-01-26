@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "MultiSelect",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of selectable objects: can be the same type of objects (e.g., an array of faces or an array of edges) or different types of objects (e.g., an array of entities of faces and edges ) if an object is not selected, then it is ignored"
+      },
+      {
+        "name": "AppendFlag",
+        "type": "System.Boolean",
+        "description": "True to append the objects to the selection list, false to replace the current selection list with these objects"
+      },
+      {
+        "name": "Data",
+        "type": "System.Object",
+        "description": "ISelectData object, Nothing, or null"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.IMultiSelect",
+      "IModelDocExtension.SelectAll",
+      "IModelDocExtension.SelectByID2",
+      "ISelectionMgr"
+    ],
+    "keywords": [
+      "multiselect",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "multi",
+      "select",
+      "objects",
+      "object",
+      "append",
+      "flag",
+      "boolean",
+      "data",
+      "int32"
+    ]
+  },
+  "title": "IModelDocExtension.MultiSelect",
+  "description": "Obsolete. Superseded by IModelDocExtension::MultiSelect2.",
+  "signature": "System.Int32 MultiSelect( \n   System.Object\nObjects\n,\n   System.Boolean\nAppendFlag\n,\n   System.Object\nData\n)",
+  "parameters": [
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of selectable objects: can be the same type of objects (e.g., an array of faces or an array of edges) or different types of objects (e.g., an array of entities of faces and edges ) if an object is not selected, then it is ignored"
+    },
+    {
+      "name": "AppendFlag",
+      "type": "System.Boolean",
+      "description": "True to append the objects to the selection list, false to replace the current selection list with these objects"
+    },
+    {
+      "name": "Data",
+      "type": "System.Object",
+      "description": "ISelectData object, Nothing, or null"
+    }
+  ],
+  "returns": "Number of objects selected in the model",
+  "remarks": "If this now obsolete method is used to populate a selection box in a PropertyManager page, then\nIPropertyManagerPage2Handler9::OnSubmitSelection\nonly fires when set to true and\nISelectData::Mark\nis set to 0.\nUse\nIModelDocExtension::MultiSelect2\nif you need IPropertyManagerPage2Handler9::OnSubmitSelection to fire when set to true and ISelectData::Mark is set to either a 0 or non-0 value.\nThe\nCallout\nproperty of the\nISelectData\nobject is not used by this method.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.IMultiSelect",
+    "IModelDocExtension.SelectAll",
+    "IModelDocExtension.SelectByID2",
+    "ISelectionMgr"
+  ]
+}

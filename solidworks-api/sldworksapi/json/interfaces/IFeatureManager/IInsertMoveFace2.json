@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "IInsertMoveFace2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "MoveType",
+        "type": "System.Int32",
+        "description": "Type of move: 0 = Offset 1 = Translate 2 = Rotate"
+      },
+      {
+        "name": "ReverseDir",
+        "type": "System.Boolean",
+        "description": "True to reverse the direction, false to not"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "If MoveType is Rotate, then specify the angle at which to draft the faces"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance to offset or translate the faces"
+      },
+      {
+        "name": "TranslationParams",
+        "type": "System.Double",
+        "description": "in-process, unmanaged C++: Pointer to an array three doubles for delta x, delta y, and delta z direction translation VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      },
+      {
+        "name": "RotationParams",
+        "type": "System.Double",
+        "description": "in-process, unmanaged C++: Pointer to an array six doubles: first three doubles are the x, y, and z rotation origin last three doubles are the x, y, and z rotation angle VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFeatureManager.InsertMoveFace2",
+      "IMoveFaceFeatureData"
+    ],
+    "keywords": [
+      "iinsertmoveface2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "move",
+      "face2",
+      "type",
+      "int32",
+      "reverse",
+      "dir",
+      "boolean",
+      "angle",
+      "double",
+      "distance",
+      "translation",
+      "params",
+      "rotation"
+    ]
+  },
+  "title": "IFeatureManager.IInsertMoveFace2",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertMoveFace3.",
+  "signature": "Feature IInsertMoveFace2( \n   System.Int32\nMoveType\n,\n   System.Boolean\nReverseDir\n,\n   System.Double\nAngle\n,\n   System.Double\nDistance\n,\n   ref System.Double\nTranslationParams\n,\n   ref System.Double\nRotationParams\n)",
+  "parameters": [
+    {
+      "name": "MoveType",
+      "type": "System.Int32",
+      "description": "Type of move: 0 = Offset 1 = Translate 2 = Rotate"
+    },
+    {
+      "name": "ReverseDir",
+      "type": "System.Boolean",
+      "description": "True to reverse the direction, false to not"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "If MoveType is Rotate, then specify the angle at which to draft the faces"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance to offset or translate the faces"
+    },
+    {
+      "name": "TranslationParams",
+      "type": "System.Double",
+      "description": "in-process, unmanaged C++: Pointer to an array three doubles for delta x, delta y, and delta z direction translation VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    },
+    {
+      "name": "RotationParams",
+      "type": "System.Double",
+      "description": "in-process, unmanaged C++: Pointer to an array six doubles: first three doubles are the x, y, and z rotation origin last three doubles are the x, y, and z rotation angle VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Use the following marks with\nIModelDocExtension::SelectByID2\n:\n1 = face\n2 = direction reference (plane, planar face, linear edge, or reference axis) for translate\n4 = axis reference (linear edge or reference axis) for rotate\nIf you specify a value for TranslationParms or RotationParams, then do not specify a value for Distance or Angle, respectively. The translation or rotation parameters are calculated internally when Distance or Angle is specified.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertMoveFace2",
+    "IMoveFaceFeatureData"
+  ]
+}

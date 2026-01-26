@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICoEdge",
+    "member": "IGetCurve",
+    "returns": "Curve",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICoEdge.GetCurve"
+    ],
+    "keywords": [
+      "igetcurve",
+      "icoedge",
+      "co",
+      "edge",
+      "curve"
+    ]
+  },
+  "title": "ICoEdge.IGetCurve",
+  "description": "Gets the underlying curve of this coedge if the coedge is a result of imprecisely sewing two surfaces together.",
+  "signature": "Curve IGetCurve()",
+  "parameters": [],
+  "returns": "Pointer to the curve that is attached to this coedge (see Remarks )",
+  "remarks": "This method may return NULL if no geometry is attached to the coedge. The edge may still be accurate, and you can obtain the geometry from the edge using:\nICoEdge::IGetEdge\nIEdge::IGetCurve",
+  "examples": [],
+  "related": [
+    "ICoEdge.GetCurve"
+  ]
+}

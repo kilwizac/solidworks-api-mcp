@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IsTolerant",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Edge tolerance or gap in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IVertex.IsTolerant"
+    ],
+    "keywords": [
+      "tolerance",
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "istolerant",
+      "tolerant",
+      "double",
+      "boolean",
+      "maximum",
+      "vertex",
+      "gaps",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IEdge.IsTolerant",
+  "description": "Gets whether an edge is tolerant and its tolerance value.",
+  "signature": "System.Boolean IsTolerant( \n   out System.Double\nTolerance\n)",
+  "parameters": [
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Edge tolerance or gap in meters"
+    }
+  ],
+  "returns": "True if tolerant, false if not tolerant",
+  "remarks": "If the tolerance (or gap) between common edges in a part:\nis greater than 1/2 of the session precision (i.e., > 5.0E-9 mm), then each edge is tolerant, and this method returns true.\nis less than or equal to 1/2 of the session precision (i.e., <= 5.0E-9 mm), then each edge is exact and not tolerant, and this method returns false.\nTraverse part body edges and use this method to find the maximum edge gap (tolerance) in a part, which can also be found using the\nTools > Check\ndialog in the SOLIDWORKS Design user interface.",
+  "examples": [
+    {
+      "title": "Get Maximum Edge and Vertex Gaps (VBA)",
+      "href": "Get_Maximum_Edge_and_Vertex_Gaps_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Maximum Edge and Vertex Gaps (VB.NET)",
+      "href": "Get_Maximum_Edge_and_Vertex_Gaps_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Maximum Edge and Vertex Gaps (C#)",
+      "href": "Get_Maximum_Edge_and_Vertex_Gaps_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IVertex.IsTolerant"
+  ]
+}

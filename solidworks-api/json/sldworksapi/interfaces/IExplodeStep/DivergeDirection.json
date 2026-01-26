@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IExplodeStep",
+    "member": "DivergeDirection",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [],
+    "keywords": [
+      "divergedirection",
+      "iexplodestep",
+      "explode",
+      "step",
+      "diverge",
+      "direction",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IExplodeStep.DivergeDirection",
+  "description": "Gets or sets the diverge direction entity for this radial explode step.",
+  "signature": "System.Object DivergeDirection {get; set;}",
+  "parameters": [],
+  "returns": "Cylindrical face , conical face, linear edge , or axis (see Remarks )",
+  "remarks": "This property is valid only if:\nIExplodeStep::ExplodeStepType\nis set to\nswAssemblyExplodeStepType_e\n.swAssemblyExplodeStepType_Radial,\n- and -\nthe selected entity creates an angle with the explode direction.\nIf you set this property to a valid diverge direction entity, then\nIExplodeStep::DivergeFromAxis\nis automatically set to true.\nIf you set this property to Nothing or null, then IExplodeStep::DivergeFromAxis is automatically set to false.",
+  "examples": [
+    {
+      "title": "IExplodeStep",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IExplodeStep",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

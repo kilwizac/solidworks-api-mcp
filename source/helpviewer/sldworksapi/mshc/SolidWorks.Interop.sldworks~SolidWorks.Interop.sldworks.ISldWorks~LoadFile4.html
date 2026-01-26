@@ -1,0 +1,500 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>LoadFile4 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~LoadFile4" />
+    <meta name="Description" content="Loads a third-party native CAD file into a new SOLIDWORKS document using 3D Interconnect." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISldWorks.LoadFile4" />
+    <meta name="Microsoft.Help.Keywords" content="DXF/DWG files, load" />
+    <meta name="Microsoft.Help.Keywords" content="IGES files (see also IImportIgesData Interface), import" />
+    <meta name="Microsoft.Help.Keywords" content="Load, non-native SOLIDWORKS file" />
+    <meta name="Microsoft.Help.Keywords" content="LoadFile4 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                LoadFile4 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks Interface</a> : LoadFile4 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="FileNamePopupContent" class="i-popup-content">
+        Full path and file name of the&#160;third-party native&#160;CAD&#160;part or assembly document&#160;to import (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="ArgStringPopupContent" class="i-popup-content">
+        Space-separated string that allows optional arguments to be specified when opening a third-party native CAD file; empty string if 3D Interconnect is enabled&#160;(see <span style="FONT-WEIGHT: bold">Remarks</span>)
+    </div>
+
+    <div id="ImportDataPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportIgesData">IImportIgesData</a>,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData">IImportDxfDwgData</a>, or&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportStepData">IImportStepData</a>&#160;object; null or Nothing if 3D Interconnect is not enabled (see <span style="FONT-WEIGHT: bold">Remarks</span>)
+    </div>
+
+    <div id="ErrorsPopupContent" class="i-popup-content">
+        Errors as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadError_e.html">swFileLoadError_e</a>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Loads a third-party native CAD file into a new SOLIDWORKS document using 3D Interconnect.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function LoadFile4( _
+   ByVal <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="ArgStringPopupLink" data-popup-contentsource="#ArgStringPopupContent" data-popup-showevent="click mouseenter">ArgString</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="ImportDataPopupLink" data-popup-contentsource="#ImportDataPopupContent" data-popup-showevent="click mouseenter">ImportData</a></i> As System.Object, _
+   ByRef <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i> As System.Integer _
+) As ModelDoc2
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks</a>
+Dim FileName As System.String
+Dim ArgString As System.String
+Dim ImportData As System.Object
+Dim Errors As System.Integer
+Dim value As ModelDoc2
+ 
+value = instance.LoadFile4(FileName, ArgString, ImportData, Errors)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+ModelDoc2 LoadFile4( 
+   System.string <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i>,
+   System.string <i><a class="i-popup-link" id="ArgStringPopupLink" data-popup-contentsource="#ArgStringPopupContent" data-popup-showevent="click mouseenter">ArgString</a></i>,
+   System.object <i><a class="i-popup-link" id="ImportDataPopupLink" data-popup-contentsource="#ImportDataPopupContent" data-popup-showevent="click mouseenter">ImportData</a></i>,
+   out System.int <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+ModelDoc2^ LoadFile4( 
+   System.String^ <i><a class="i-popup-link" id="FileNamePopupLink" data-popup-contentsource="#FileNamePopupContent" data-popup-showevent="click mouseenter">FileName</a></i>,
+   System.String^ <i><a class="i-popup-link" id="ArgStringPopupLink" data-popup-contentsource="#ArgStringPopupContent" data-popup-showevent="click mouseenter">ArgString</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ImportDataPopupLink" data-popup-contentsource="#ImportDataPopupContent" data-popup-showevent="click mouseenter">ImportData</a></i>,
+   [Out] System.int <i><a class="i-popup-link" id="ErrorsPopupLink" data-popup-contentsource="#ErrorsPopupContent" data-popup-showevent="click mouseenter">Errors</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>FileName</i></dt>
+
+                <dd>Full path and file name of the&#160;third-party native&#160;CAD&#160;part or assembly document&#160;to import (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>ArgString</i></dt>
+
+                <dd>Space-separated string that allows optional arguments to be specified when opening a third-party native CAD file; empty string if 3D Interconnect is enabled&#160;(see <span style="FONT-WEIGHT: bold">Remarks</span>)</dd>
+
+                <dt><i>ImportData</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportIgesData">IImportIgesData</a>,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData">IImportDxfDwgData</a>, or&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportStepData">IImportStepData</a>&#160;object; null or Nothing if 3D Interconnect is not enabled (see <span style="FONT-WEIGHT: bold">Remarks</span>)</dd>
+
+                <dt><i>Errors</i></dt>
+
+                <dd>Errors as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFileLoadError_e.html">swFileLoadError_e</a></dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">Model document</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method:</p>
+
+            <ul>
+                <li>Uses 3D Interconnect to load&#160;FileName into a new SOLIDWORKS document. Before calling this method, turn on 3D Interconnect&#160;by setting <strong>Tools &gt; Options &gt; System Options &gt; Import &gt; Enable 3D Interconnect</strong> or calling <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~SetUserPreferenceToggle">ISldWorks::SetUserPreferenceToggle</a>(<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swUserPreferenceToggle_e.html">swUserPreferenceToggle_e</a>.swMultiCAD_Enable3DInterconnect, True). With 3D Interconnect enabled, this method supports the following third-party native CAD formats and versions:
+
+                    <ul>
+                        <li>ACIS: .sat, .sab, .asat, .asab for r1 - 2018 1.0</li>
+
+                        <li>Autodesk® Inventor: .ipt for V6-V2018, .iam for V11 - V2018</li>
+
+                        <li>CATIA® V5: .CATPart, .CATProduct for V5R8 - V5-6R2017</li>
+
+                        <li>IGES: .igs, .iges for up to 5.3</li>
+
+                        <li>JT: .jt for JT 8.x, 9.x, and 10.x</li>
+
+                        <li>PTC®: .prt, .prt.*, .asm.* for Pro/ENGINEER® 16 - Creo 4.0</li>
+
+                        <li>Solid Edge®: .par, .asm, .psm for V18 - ST10</li>
+
+                        <li>STEP: .stp, .step for AP203, AP214, AP24</li>
+
+                        <li>NX™ software: .prt for UG 11 - NX 11</li>
+                    </ul>
+                </li>
+
+                <li>Imports FileName into the appropriate native SOLIDWORKS part or assembly.
+
+                    <ul>
+                        <li>For parts, the SOLIDWORKS&#160;file created is a copy of the original non-native file. The copy retains an external reference to the original CAD file. If the original third-party native file is modified in its orginal application, the SOLIDWORKS copy can be updated to import those changes. Changes to the SOLIDWORKS copy do not propagate back to the original file.</li>
+
+                        <li>For assemblies, you must save the new SOLIDWORKS assembly in order for SOLIDWORKS to import the third-party native assembly and create the copy. Only after saving the new SOLIDWORKS assembly can you&#160;edit the imported top-level assembly or break its reference link. Editing lower-level components of the imported top-level assembly or individually breaking their reference links is not supported.</li>
+
+                        <li>See the&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImport3DInterconnectData">IImport3DInterconnectData</a> Remarks for information about editing imported CAD data and breaking reference links to third-party native CAD parts and assemblies.</li>
+                    </ul>
+                </li>
+
+                <li>Imports the geometry as a featureless solid body.&#160;</li>
+
+                <li>Does not import&#160;FileName&#160;into&#160;any existing SOLIDWORKS file or&#160;the active document. To import a third-party native CAD file into an existing SOLIDWORKS:
+
+                    <ul>
+                        <li>Part,&#160;use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartDoc~InsertImportedFeature">IPartDoc::InsertImportedFeature</a>.</li>
+
+                        <li>Assembly, use&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~InsertImportedComponent">IAssemblyDoc::InsertImportedComponent</a>.</li>
+                    </ul>
+                </li>
+
+                <li>Imports&#160;third-party native&#160;CAD files using different behavior&#160;if 3D Interconnect is not enabled:</li>
+            </ul>
+
+            <table style="BORDER-SPACING: 0px" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 17.91%" />
+                    <col style="WIDTH: 82.08%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="VERTICAL-ALIGN: bottom; BORDER-BOTTOM-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>If 3D Interconnect is not enabled and you are&#160;importing...</strong></p>
+                        </td>
+
+                        <td style="BORDER-TOP-STYLE: none; VERTICAL-ALIGN: bottom; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiTableColHeading"><strong>Then...</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Third-party native CAD files</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p class="apiBulletLeftJustified">Set ArgString to <strong>FWNS</strong> to display a FeatureWorks dialog after opening.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 17.91%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p>Pro/E files</p>
+                        </td>
+
+                        <td style="WIDTH: 82.08%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p-CapiBulletLeftJustified">
+                                    <p class="apiBulletLeftJustified">To import features, set ArgString to <span style="FONT-WEIGHT: bold">R</span></p>
+                                </li>
+
+                                <li class="kadov-p-CapiBulletLeftJustified">
+                                    <p class="apiBulletLeftJustified">To import geometry, set ArgString to:</p>
+                                </li>
+
+                                <li style="LIST-STYLE-TYPE: none; DISPLAY: inline">
+                                    <ul>
+                                        <li class="kadov-p">
+                                            <p><span style="FONT-WEIGHT: bold">B</span> Direct geometry import with knitting</p>
+                                        </li>
+
+                                        <li class="kadov-p">
+                                            <p><span style="FONT-WEIGHT: bold">C</span> Direct geometry import without knitting</p>
+                                        </li>
+
+                                        <li class="kadov-p">
+                                            <p><span style="FONT-WEIGHT: bold">D</span> Geometry import with knitting</p>
+                                        </li>
+
+                                        <li class="kadov-p">
+                                            <p><span style="FONT-WEIGHT: bold">E</span> Geometry import without knitting</p>
+                                        </li>
+
+                                        <li class="kadov-p">
+                                            <p><span style="FONT-WEIGHT: bold">S</span> Surface geometry import with knitting</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p>These arguments are case sensitive. Specifying one of these options suppresses dialog.</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <p>Non DXF/DWG and Non Pro/E files</p>
+                        </td>
+
+                        <td style="BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px">
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p-CapiBulletLeftJustified">
+                                    <p class="apiBulletLeftJustified">To import the foreign file into a new SOLIDWORKS document,&#160;set ArgString to&#160;<span style="FONT-WEIGHT: bold">r.</span></p>
+                                </li>
+                            </ul>
+
+                            <p>For example, to import an IGES file named <span style="FONT-WEIGHT: bold">cup.igs</span> into a new SOLIDWORKS document:</p>
+
+                            <p class="apicode">Set swModel = swApp.LoadFile4 "D:\Samples\cup.IGS", "r", importData, Err.</p>
+
+                            <p></p>
+
+                            <p>See <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportIgesData">IImportIgesData</a> for details about importing IGES data.</p>
+
+                            <p><span style="FONT-WEIGHT: bold">NOTES:</span></p>
+
+                            <div style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 2em" type="disc">
+                                <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                    <li class="kadov-p-CapiBulletLeftJustified">
+                                        <p class="apiBulletLeftJustified">Whether the result is a surface or solid depends on the import options. See <a href="sldworksAPIProgGuide.chm::/OVERVIEW/Import_and_Export_File_Options.htm">Import and Export File Options</a> for details.</p>
+                                    </li>
+
+                                    <li class="kadov-p-CapiBulletLeftJustified">
+                                        <p class="apiBulletLeftJustified">If ArgString is set to an empty string<span style="FONT-STYLE: italic">,</span> then dialogs may be presented to the end-user during translation.&#160;</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="BORDER-LEFT-STYLE: none; WIDTH: 17.91%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">DXF/DWG files</td>
+
+                        <td style="WIDTH: 82.08%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">
+                            <p class="apiRemarksText">You can:</p>
+
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p-CapiRemarksText">
+                                    <p class="apiRemarksText">Let SOLIDWORKS determine the default values:</p>
+
+                                    <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                        <li class="kadov-p-CapiRemarksText">
+                                            <p class="apiRemarksText">Paper size and sheet scale are computed to fit the input data.</p>
+                                        </li>
+
+                                        <li class="kadov-p-CapiRemarksText">
+                                            <p class="apiRemarksText">Length unit is&#160;determined from the header of the input DXF/DWG file.</p>
+                                        </li>
+
+                                        <li class="kadov-p-CapiRemarksText">
+                                            <p class="apiRemarksText">Sheet name is&#160;the same as the layout name in the input DXF/DWG file.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p class="apiRemarksText">&#160;<!--kadov_tag{{</spaces>}}-->- or -</p>
+
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p-CapiRemarksText">
+                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px">Set your own values by using:</p>
+
+                                    <ol style="LIST-STYLE-TYPE: decimal" type="1">
+                                        <li class="kadov-p-CapiRemarksText">
+                                            <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetImportFileData">ISldWorks::GetImportFileData</a> to obtain the IImportDxfDwgData interface.</p>
+                                        </li>
+
+                                        <li class="kadov-p-CapiRemarksText">
+                                            <p class="apiRemarksText" style="MARGIN-LEFT: 8px">Use the following methods with a Sheet argument of "" (an empty string) to set up your defaults before loading the file:</p>
+
+                                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~GetPaperSize">IImportDxfDwgData::GetPaperSize</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~GetPosition">IImportDxfDwgData::GetPosition</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~GetSheetScale">IImportDxfDwgData::GetSheetScale</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~ImportMethod">IImportDxfDwgData::ImportMethod</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~LengthUnit">IImportDxfDwgData::LengthUnit</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~SetPaperSize">IImportDxfDwgData::SetPaperSize</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~SetPosition">IImportDxfDwgData::SetPosition</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~SetSheetScale">IImportDxfDwgData::SetSheetScale</a></p>
+                                                </li>
+
+                                                <li class="kadov-p-CapiRemarksText">
+                                                    <p class="apiRemarksText" style="MARGIN-LEFT: 8px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData~SheetName">IImportDxfDwgData::SheetName</a></p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ul>
+
+                            <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+                                <p class="apiRemarksText" style="MARGIN-LEFT: 8px">See <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IImportDxfDwgData">IImportDxfDwgData</a> for details about importing DXF/DWG data.</p>
+                            </blockquote>
+
+                            <p class="apiRemarksText" style="MARGIN-LEFT: 48px"><span style="FONT-WEIGHT: bold">NOTES:</span></p>
+
+                            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                                <li class="kadov-p-CapiRemarksText">
+                                    <p class="apiRemarksText" style="MARGIN-LEFT: 48px">Getting the IImportDxfDwgData interface does not get default values from the input file. Any values not set by you are set to the values computed by SOLIDWORKS.</p>
+                                </li>
+
+                                <li class="kadov-p-CapiRemarksText">
+                                    <p class="apiRemarksText" style="MARGIN-LEFT: 48px">If the DWG/DXF file has multiple sheets, use these methods with a valid layout name in the Sheet argument to set up sheet specific settings, which overrides the default settings. If any of the individual items are not specified for a given layout name, the value used is from the defaults (layout name ""). If the default value is not specified, SOLIDWORKS computes and uses a meaningful value for that item.</p>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Import_DXF_File_into_Part_Sketch_Example_VB.htm">Import DXF File Into Part Sketch (VBA)</a><br />
+            <a href="Import_IGES_File_Example_VB.htm">Import IGES File (VBA)</a><br />
+            <a href="Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_CSharp.htm">Specify IGES Levels and Values, Then Import IGES File (C#)</a><br />
+            <a href="Specify_IGES_Levels_and_Values_Then_Import_IGES_File_Example_VBNET.htm">Specify IGES Levels and Values, Then Import IGES File (VB.NET)</a><br />
+            <a href="Specify_IGES_Levels_and_Values,_Then_Import_IGES_File_Example_VB.htm">Specify IGES Levels and Values, Then Import IGES File (VBA)</a><br />
+            <a href="Import3DInterconnect_Example_CSharp.htm">Use 3D Interconnect to Import Third-Party Native CAD Files (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks">ISldWorks Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_members">ISldWorks Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~OpenDoc6">ISldWorks::OpenDoc6 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertDwgOrDxfFile2">IFeatureManager::InsertDwgOrDxfFile2 Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~LoadFile4.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

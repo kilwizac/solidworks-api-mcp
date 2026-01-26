@@ -1,0 +1,32 @@
+---
+type: interface
+interface: ISurfRevolveFeatureData
+inherits: null
+description: Allows access to a surface revolve feature.
+member_count: 7
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - GetRevolutionAngle
+  - IAccessSelections
+  - ReleaseSelectionAccess
+  - ReverseDirection
+  - SetRevolutionAngle
+  - Type
+---
+
+# ISurfRevolveFeatureData
+
+Allows access to a surface revolve feature.
+
+## Common Members
+
+- `AccessSelections`
+- `GetRevolutionAngle`
+- `IAccessSelections`
+- `ReleaseSelectionAccess`
+- `ReverseDirection`
+- `SetRevolutionAngle`
+- `Type`

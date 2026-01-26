@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetFrameValues",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Frame number to examine (1 or 2)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameCount",
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameSymbols2",
+      "IGtol.IGetFrameDiameterSymbols",
+      "IGtol.IGetFrameSymbols2",
+      "IGtol.IGetFrameValues",
+      "IGtol.SetFrameSymbols2",
+      "IGtol.SetFrameValues"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "getframevalues",
+      "igtol",
+      "gtol",
+      "values",
+      "number",
+      "int16",
+      "object",
+      "text",
+      "items",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IGtol.GetFrameValues",
+  "description": "Gets an array that describes the text that appears in each of the fields of the specified GTol frame.",
+  "signature": "System.Object GetFrameValues( \n   System.Int16\nFrameNumber\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Frame number to examine (1 or 2)"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "This method is valid only if this Gtol was created in a version of SOLIDWORKS earlier than 2022.\nFormat of return array of strings is:\nretval\n[0] = Tolerance 1\nretval\n[1] = Tolerance 2\nretval\n[2] = Datum 1\nretval\n[3] = Datum 2\nretval\n[4] = Datum 3",
+  "examples": [
+    {
+      "title": "Get Text Items in GTol Frame (VBA)",
+      "href": "Get_Text_Items_in_GTol_Frame_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Text Items in GTol Frame (VB.NET)",
+      "href": "Get_Text_Items_in_GTol_Frame_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Text Items in GTol Frame (C#)",
+      "href": "Get_Text_Items_in_GTol_Frame_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGtol.GetFrameCount",
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameSymbols2",
+    "IGtol.IGetFrameDiameterSymbols",
+    "IGtol.IGetFrameSymbols2",
+    "IGtol.IGetFrameValues",
+    "IGtol.SetFrameSymbols2",
+    "IGtol.SetFrameValues"
+  ]
+}

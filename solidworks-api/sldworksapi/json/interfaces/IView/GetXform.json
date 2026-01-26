@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetXform",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.IGetXform",
+      "IView.ISetXform",
+      "IView.ModelToViewTransform",
+      "IView.SetXform"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "transforms",
+      "transform",
+      "view",
+      "getxform",
+      "xform",
+      "object"
+    ]
+  },
+  "title": "IView.GetXform",
+  "description": "Gets the matrix used for displaying this drawing view.",
+  "signature": "System.Object GetXform()",
+  "parameters": [],
+  "returns": "Array of 3 doubles that describe the location and scale of the drawing view (see Remarks )",
+  "remarks": "The first two values returned are the X and Y locations of the view relative to the sheet origin, and the third value returned is the scale of the drawing view.\nBecause of a Microsoft compilation issue, the Dispatch name generated in the\nswdisp.h\nand\nswdisp.cpp\nfiles for the Dispatch version of this method is GetXform (with a lower-case letter f). To work around this:\nUse GetXform in your code instead of GetXForm.\n- or -\nModify the swdisp.h and swdisp.cpp files so that the declaration for GetXForm in the\nIView\nobject is changed to GetXform. Remember to change it when you upgrade the SOLIDWORKS Design software.\nIView::GetViewXform\nand\nIView::IGetViewXform\nget the transform from model space origin to drawing space origin.",
+  "examples": [],
+  "related": [
+    "IView.IGetXform",
+    "IView.ISetXform",
+    "IView.ModelToViewTransform",
+    "IView.SetXform"
+  ]
+}

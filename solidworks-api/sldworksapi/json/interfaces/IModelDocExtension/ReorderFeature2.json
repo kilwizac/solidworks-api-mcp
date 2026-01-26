@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ReorderFeature2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FeatToMove",
+        "type": "System.String",
+        "description": "Name of feature to move (see Remarks )"
+      },
+      {
+        "name": "TargetFeat",
+        "type": "System.String",
+        "description": "Name of feature before or after which to move FeatureToMove - or - Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder and FeatToMove is not a Cut list/Solid Bodies folder (see Remarks )"
+      },
+      {
+        "name": "MoveLocation",
+        "type": "System.Int32",
+        "description": "Move type as defined by swMoveLocation_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.ReorderComponents",
+      "IPartDoc.ReorderFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "reorder",
+      "reorderfeature2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "feature2",
+      "feat",
+      "move",
+      "string",
+      "target",
+      "location",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.ReorderFeature2",
+  "description": "Moves the specified feature to another location in the FeatureManager design tree of this part or assembly.",
+  "signature": "System.Boolean ReorderFeature2( \n   System.String\nFeatToMove\n,\n   System.String\nTargetFeat\n,\n   System.Int32\nMoveLocation\n)",
+  "parameters": [
+    {
+      "name": "FeatToMove",
+      "type": "System.String",
+      "description": "Name of feature to move (see Remarks )"
+    },
+    {
+      "name": "TargetFeat",
+      "type": "System.String",
+      "description": "Name of feature before or after which to move FeatureToMove - or - Name of folder; valid only if MoveLocation is swMoveLocation_e.swMoveToFolder and FeatToMove is not a Cut list/Solid Bodies folder (see Remarks )"
+    },
+    {
+      "name": "MoveLocation",
+      "type": "System.Int32",
+      "description": "Move type as defined by swMoveLocation_e (see Remarks )"
+    }
+  ],
+  "returns": "True if feature moved successfully, false if not",
+  "remarks": "This method functions just like the now obsolete IModelDocExtension::ReorderFeature, but also supports reordering of cut list folders and cut list sub-weldment folders.\nWhen reordering cut list folders and sub-weldment folders, the following restrictions apply:\nFeatToMove is a folder feature: cut list / solid body / sub-weldment folder; FeatToMove is not a cut list item/solid body.\nThis method:\nreorders solid folders in parts and assembly components.\nis called after assigning a ModelDoc variable to the part or assembly component whose cut list folders you want to reorder.\nonly affects cut lists in the active configuration. To reorder a cut list folder in another configuration, you must make it active before calling this method.\nreturns false if you try to move of a cut list/solid body folder to the top using either MoveLocation = swMoveLocation_e.swMoveToTop or MoveLocation = swMoveLocation_e.swMoveBefore. For example, if TargetFeat is the top folder, then you cannot set MoveLocation to swMoveLocation_e.swMoveBefore.\nUse\nIBodyFolder::GetTopLevelFeatureCount\nand\nIBodyFolder::GetTopLevelFeatures\nto obtain top level folders in a body folder.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.ReorderComponents",
+    "IPartDoc.ReorderFeature"
+  ]
+}

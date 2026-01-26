@@ -1,0 +1,110 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureCircularPattern3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Number",
+        "type": "System.Int32",
+        "description": "Number of instances of the circular pattern to insert, including the original instance"
+      },
+      {
+        "name": "Spacing",
+        "type": "System.Double",
+        "description": "Spacing between each instance of the circular pattern or total angle if EqualSpacing is true (in radians)"
+      },
+      {
+        "name": "FlipDirection",
+        "type": "System.Boolean",
+        "description": "True to flip the direction of the circular pattern, false to not"
+      },
+      {
+        "name": "DName",
+        "type": "System.String",
+        "description": "Name of the angular dimension defining the direction of the pattern"
+      },
+      {
+        "name": "GeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to use geometry pattern, false to not"
+      },
+      {
+        "name": "EqualSpacing",
+        "type": "System.Boolean",
+        "description": "True to use equal spacing, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ICircularPatternFeatureData"
+    ],
+    "keywords": [
+      "featurecircularpattern3",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "circular",
+      "pattern3",
+      "number",
+      "int32",
+      "spacing",
+      "double",
+      "flip",
+      "direction",
+      "boolean",
+      "name",
+      "string",
+      "geometry",
+      "pattern",
+      "equal"
+    ]
+  },
+  "title": "IFeatureManager.FeatureCircularPattern3",
+  "description": "Obsolete. Superseded by IFeatureManager::FeatureCircularPattern4.",
+  "signature": "Feature FeatureCircularPattern3( \n   System.Int32\nNumber\n,\n   System.Double\nSpacing\n,\n   System.Boolean\nFlipDirection\n,\n   System.String\nDName\n,\n   System.Boolean\nGeometryPattern\n,\n   System.Boolean\nEqualSpacing\n)",
+  "parameters": [
+    {
+      "name": "Number",
+      "type": "System.Int32",
+      "description": "Number of instances of the circular pattern to insert, including the original instance"
+    },
+    {
+      "name": "Spacing",
+      "type": "System.Double",
+      "description": "Spacing between each instance of the circular pattern or total angle if EqualSpacing is true (in radians)"
+    },
+    {
+      "name": "FlipDirection",
+      "type": "System.Boolean",
+      "description": "True to flip the direction of the circular pattern, false to not"
+    },
+    {
+      "name": "DName",
+      "type": "System.String",
+      "description": "Name of the angular dimension defining the direction of the pattern"
+    },
+    {
+      "name": "GeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to use geometry pattern, false to not"
+    },
+    {
+      "name": "EqualSpacing",
+      "type": "System.Boolean",
+      "description": "True to use equal spacing, false to not"
+    }
+  ],
+  "returns": "Circular pattern feature",
+  "remarks": "This method requires ordered selection of the features and components.\nFeatures and axis: Use\nIModelDocExtension::SelectByID2\nwith a Mark of 4 for the features to pattern and a Mark of 1 for the axis. You can also use\nIFeature::Select2\nto select the features and the axis.\nComponents and axis: Use IModelDocExtension::SelectByID2 with a Mark of 1 for the components to pattern and a Mark of 2 for the axis.\nYou must select the features or components before selecting the axis.",
+  "examples": [],
+  "related": [
+    "ICircularPatternFeatureData"
+  ]
+}

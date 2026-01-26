@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSpline",
+    "member": "DeletePoint",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Point",
+        "type": "SketchPoint",
+        "description": "Sketch point to delete (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSpline.GetPointCount",
+      "ISketchSpline.GetPoints2",
+      "ISketchSpline.IEnumPoints",
+      "ISketchSpline.IGetPoints",
+      "ISketchSpline.InsertPoint",
+      "ISketchSpline.ShowInflectionPoints",
+      "ISplineHandle.SplinePointNumber"
+    ],
+    "keywords": [
+      "deletepoint",
+      "isketchspline",
+      "sketch",
+      "spline",
+      "delete",
+      "point",
+      "boolean"
+    ]
+  },
+  "title": "ISketchSpline.DeletePoint",
+  "description": "Deletes a point on this spline.",
+  "signature": "System.Boolean DeletePoint( \n   SketchPoint\nPoint\n)",
+  "parameters": [
+    {
+      "name": "Point",
+      "type": "SketchPoint",
+      "description": "Sketch point to delete (see Remarks )"
+    }
+  ],
+  "returns": "True if the point is deleted, false if not",
+  "remarks": "This method does not work if Point specifies the start or end point of this spline.",
+  "examples": [],
+  "related": [
+    "ISketchSpline.GetPointCount",
+    "ISketchSpline.GetPoints2",
+    "ISketchSpline.IEnumPoints",
+    "ISketchSpline.IGetPoints",
+    "ISketchSpline.InsertPoint",
+    "ISketchSpline.ShowInflectionPoints",
+    "ISplineHandle.SplinePointNumber"
+  ]
+}

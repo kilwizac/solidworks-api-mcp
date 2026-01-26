@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComment",
+    "member": "Name",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "name",
+      "icomment",
+      "comment",
+      "string",
+      "comments",
+      "folder",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IComment.Name",
+  "description": "Gets or sets the name of the comment as it appears in the FeatureManager design tree.",
+  "signature": "System.String Name {get; set;}",
+  "parameters": [],
+  "returns": "Name of the comment as it appears in the FeatureManager design tree",
+  "remarks": "You cannot set this property if the comment is owned by a feature because the name of the comment always matches the name of the feature that owns it. To determine if a comment is owned by a feature, use\nIComment::FeatureOwner\n.\nYou must rebuild the FeatureManager design tree after setting the name of a comment. Use\nIFeatureManager::UpdateFeatureTree\nto perform this action.",
+  "examples": [
+    {
+      "title": "Get Comments in Comments Folder (C#)",
+      "href": "Get_Comments_in_Comments_Folder_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Comments in Comments Folder (VB.NET)",
+      "href": "Get_Comments_in_Comments_Folder_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Comments in Comments Folder (VBA)",
+      "href": "Get_Comments_in_Comments_Folder_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

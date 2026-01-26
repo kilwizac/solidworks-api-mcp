@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetPointAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.IGetPointAtIndex"
+    ],
+    "keywords": [
+      "getpointatindex",
+      "idisplaydata",
+      "display",
+      "data",
+      "point",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetPointAtIndex",
+  "description": "Gets information about the specified point.",
+  "signature": "System.Object GetPointAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the point"
+    }
+  ],
+  "returns": "Array (see Remarks )",
+  "remarks": "The return values are in an array of 7 doubles:\n[\nColor, LineType, LineStyleIndex, PointStyle, CircleFilled, X, Y, Z\n]\nwhere:\nColor\nCOLORREF returned as an integer; return value can be 0 or -1 for the default color\nLineType\nLine type as defined in\nswLineTypes_e\nPointStyle\nPoint style as defined in\nswPointStyle_e\nCircleFilled\n0 if the circle is filled, 1 if not\nX\nX coordinate of the specified point\nY\nY coordinate of the specified point\nZ\nZ coordiante of the specified point\nUse\nIDisplayData::GetPointCount\nto determine the number of points.",
+  "examples": [],
+  "related": [
+    "IDisplayData.IGetPointAtIndex"
+  ]
+}

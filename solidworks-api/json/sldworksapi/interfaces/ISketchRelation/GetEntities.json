@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelation",
+    "member": "GetEntities",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelation.GetEntitiesCount"
+    ],
+    "keywords": [
+      "getentities",
+      "isketchrelation",
+      "sketch",
+      "relation",
+      "entities",
+      "object",
+      "replace",
+      "vba",
+      "relations",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchRelation.GetEntities",
+  "description": "Gets the entities associated with this sketch relation.",
+  "signature": "System.Object GetEntities()",
+  "parameters": [],
+  "returns": "Array of entities for this sketch relation",
+  "remarks": "When you create a sketch relation, an internal entity may also be created to define that sketch relation. For example, if you add a sketch relation by specifying or selecting a point and an edge, a sketch segment may be created. If this happens, then ISketchRelation::GetEntities and\nISketchRelation::IGetEntities\nreturn the point and sketch segment. To get the actual entities used to define the sketch relation, call\nISketchRelation::GetDefinitionEntities\nor\nISketchRelation::IGetDefinitionEntities\n.\nBecause some of the objects may be NULL, you should check for this before accessing them. You should deallocate any dynamically allocated memory.",
+  "examples": [
+    {
+      "title": "Replace Sketch Relation (VBA)",
+      "href": "Replace_Sketch_Relation_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (VBA)",
+      "href": "Get_Sketch_Relations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (VB.NET)",
+      "href": "Get_Sketch_Relations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (C#)",
+      "href": "Get_Sketch_Relations_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchRelation.GetEntitiesCount"
+  ]
+}

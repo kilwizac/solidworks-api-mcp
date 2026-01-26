@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IGetMassProperties",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Accuracy",
+        "type": "System.Int32",
+        "description": "0 = as is 1 = default 2 = maximum"
+      },
+      {
+        "name": "Status",
+        "type": "System.Int32",
+        "description": "Status of the mass property results as defined in swMassPropertiesStatus_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IMassProperty",
+      "IModelDocExtension.CreateMassProperty",
+      "IModelDocExtension.GetMassProperties"
+    ],
+    "keywords": [
+      "igetmassproperties",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "mass",
+      "properties",
+      "accuracy",
+      "int32",
+      "status",
+      "double"
+    ]
+  },
+  "title": "IModelDocExtension.IGetMassProperties",
+  "description": "Obsolete. Superseded by IModelDocExtension::GetMassProperties2.",
+  "signature": "System.Double IGetMassProperties( \n   System.Int32\nAccuracy\n,\n   out System.Int32\nStatus\n)",
+  "parameters": [
+    {
+      "name": "Accuracy",
+      "type": "System.Int32",
+      "description": "0 = as is 1 = default 2 = maximum"
+    },
+    {
+      "name": "Status",
+      "type": "System.Int32",
+      "description": "Status of the mass property results as defined in swMassPropertiesStatus_e"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of size 13; the last element is the accuracy at which returned mass properties are calculated (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is a 0-based array of doubles as follows:\n[\nCenterOfMassX, CenterOfMassY, CenterOfMassZ, Volume, Area, Mass, MomXX, MomYY, MomZZ, MomXY, MomZX, MomYZ, Accuracy\n]\nYou can use\nISldWorks::GetUserPreferenceDoubleValue\nand swMaterialPropertyDensity to get the density of the SOLIDWORKS part. If the user did not explicitly set the density, then SOLIDWORKS uses a value of 1.0. You can also derive the density of the body by calculating:\nDensity = ( Mass / Volume )\nThis method returns metric units unless explicitly specified otherwise.\nIf this object is...\nThen...\nAn assembly\nSOLIDWORKS does not include any suppressed components in the mass property analysis. See\nIComponent2::GetSuppression\nto determine the state of each assembly component.\nThis method returns the moments of inertia (MOI) about the assembly center-of-gravity coordinate system aligned with the assembly axes.\nA part\nThe calculated origin for the returned values are based on the default coordinate systems of the model document. They are not based on the selected coordinate system.\nThis method supports multibody parts.",
+  "examples": [],
+  "related": [
+    "IMassProperty",
+    "IModelDocExtension.CreateMassProperty",
+    "IModelDocExtension.GetMassProperties"
+  ]
+}

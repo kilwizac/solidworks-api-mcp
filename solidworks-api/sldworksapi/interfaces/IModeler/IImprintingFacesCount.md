@@ -1,0 +1,120 @@
+---
+type: method
+interface: IModeler
+member: IImprintingFacesCount
+returns: System.Boolean
+parameters:
+  -
+    name: NTargetFaces
+    type: System.Int32
+    description: 
+  -
+    name: TargetFaceArray
+    type: Face
+    description: 
+  -
+    name: NToolFaces
+    type: System.Int32
+    description: 
+  -
+    name: ToolFaceArray
+    type: Face
+    description: 
+  -
+    name: Options
+    type: System.Int32
+    description: 
+  -
+    name: NTargetEdges
+    type: System.Int32
+    description: 
+  -
+    name: NtoolEdges
+    type: System.Int32
+    description: 
+  -
+    name: NtargetVertices
+    type: System.Int32
+    description: 
+  -
+    name: ToolVertices
+    type: System.Int32
+    description: 
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - documents
+  - geometry
+related: []
+keywords:
+  - iimprintingfacescount
+  - imodeler
+  - modeler
+  - imprinting
+  - faces
+  - count
+  - target
+  - int32
+  - face
+  - array
+  - tool
+  - options
+  - edges
+  - ntool
+  - ntarget
+  - vertices
+  - boolean
+---
+
+# IModeler.IImprintingFacesCount
+
+Obsolete. Superseded by IModeler::IImprintingFacesCount2.
+
+## Signature
+
+```csharp
+System.Boolean IImprintingFacesCount( 
+   System.Int32
+NTargetFaces
+,
+   ref Face
+TargetFaceArray
+,
+   System.Int32
+NToolFaces
+,
+   ref Face
+ToolFaceArray
+,
+   System.Int32
+Options
+,
+   out System.Int32
+NTargetEdges
+,
+   out System.Int32
+NtoolEdges
+,
+   out System.Int32
+NtargetVertices
+,
+   out System.Int32
+ToolVertices
+)
+```
+## Parameters
+
+- `NTargetFaces` (System.Int32): 
+- `TargetFaceArray` (Face): 
+- `NToolFaces` (System.Int32): 
+- `ToolFaceArray` (Face): 
+- `Options` (System.Int32): 
+- `NTargetEdges` (System.Int32): 
+- `NtoolEdges` (System.Int32): 
+- `NtargetVertices` (System.Int32): 
+- `ToolVertices` (System.Int32): 
+
+## Return Value
+
+Unknown.

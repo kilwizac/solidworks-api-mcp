@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchedBendFeatureData",
+    "member": "GetFixedFace",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X location"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y location"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z location"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry",
+      "sketches"
+    ],
+    "related": [
+      "ISketchedBendFeatureData.SetFixedFace"
+    ],
+    "keywords": [
+      "bends",
+      "fixed",
+      "face",
+      "getfixedface",
+      "isketchedbendfeaturedata",
+      "sketched",
+      "bend",
+      "feature",
+      "data",
+      "double",
+      "object",
+      "change",
+      "radius",
+      "vba"
+    ]
+  },
+  "title": "ISketchedBendFeatureData.GetFixedFace",
+  "description": "Gets the fixed face from this sketched bend.",
+  "signature": "System.Object GetFixedFace( \n   out System.Double\nX\n,\n   out System.Double\nY\n,\n   out System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X location"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y location"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z location"
+    }
+  ],
+  "returns": "Fixed IFace2 that does not move as a result of the bend",
+  "remarks": "The location is a point on the fixed face, but in the space of the sketch used to define the sketched-bend feature. Thus, the z location is always 0.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "Change Bend Radius of Sketched Bend (VBA)",
+      "href": "Change_Bend_Radius_of_Sketched_Bend_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchedBendFeatureData.SetFixedFace"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetArrowHeadInfo",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetArrowHeadAtIndex",
+      "IGtol.GetArrowHeadCount",
+      "IGtol.GetArrowHeadInfo",
+      "IGtol.IGetArrowHeadAtIndex"
+    ],
+    "keywords": [
+      "arrows",
+      "geometric",
+      "tolerancing",
+      "igetarrowheadinfo",
+      "igtol",
+      "gtol",
+      "arrow",
+      "head",
+      "info",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetArrowHeadInfo",
+  "description": "Gets an array of doubles that describe the geometry of the arrowhead on the far end of the leader line.",
+  "signature": "System.Double IGetArrowHeadInfo()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This information returned by this method is independent of whether this note actually has an arrowhead.\nThe format of the return information is the following array of doubles:\nretval\n[0] = Arrow length (for example, leader into arrowhead)\nretval\n[1] = Arrowhead length\nretval\n[2] = Arrowhead width\nretval\n[3] = Arrowhead style as defined in\nswArrowStyle_e",
+  "examples": [],
+  "related": [
+    "IGtol.GetArrowHeadAtIndex",
+    "IGtol.GetArrowHeadCount",
+    "IGtol.GetArrowHeadInfo",
+    "IGtol.IGetArrowHeadAtIndex"
+  ]
+}

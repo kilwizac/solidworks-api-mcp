@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFaultEntity",
+    "member": "ErrorCode",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index number indicating the entity with the fault"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "errorcode",
+      "ifaultentity",
+      "fault",
+      "entity",
+      "error",
+      "code",
+      "index",
+      "int32",
+      "check",
+      "bodies",
+      "faults",
+      "vba",
+      "faces",
+      "edges",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IFaultEntity.ErrorCode",
+  "description": "Gets the error for the fault for the specified entity.",
+  "signature": "System.Int32 ErrorCode( \n   System.Int32\nIndex\n) {get;}",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index number indicating the entity with the fault"
+    }
+  ],
+  "returns": "Error as defined by swFaultEntityErrorCode_e ; -1 indicates an unknown error",
+  "remarks": "To determine the value for index, call\nIFaultEntity::Count\nbefore calling this property. Call\nIFaultEntity::Entity2\nto get the entity.",
+  "examples": [
+    {
+      "title": "Check Bodies for Faults (VBA)",
+      "href": "Check_Bodies_for_Faults_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Check Faces for Faults (VBA)",
+      "href": "Check_Faces_for_Faults_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Check Edges for Faults (C#)",
+      "href": "Check_Edges_for_Faults_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Check Edges for Faults (VB.NET)",
+      "href": "Check_Edges_for_Faults_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Check Edges for Faults (VBA)",
+      "href": "Check_Edges_for_Faults_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

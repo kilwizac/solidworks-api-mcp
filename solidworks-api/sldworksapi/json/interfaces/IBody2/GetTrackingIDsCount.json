@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "GetTrackingIDsCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetTrackingIDs",
+      "IBody2.RemoveTrackingID",
+      "IBody2.SetTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "gettrackingidscount",
+      "body2",
+      "ds",
+      "count",
+      "cookie",
+      "int32",
+      "remove",
+      "body",
+      "vba"
+    ]
+  },
+  "title": "IBody2.GetTrackingIDsCount",
+  "description": "Gets the number of tracking IDs on this body.",
+  "signature": "System.Int32 GetTrackingIDsCount( \n   System.Int32\nTrackingCookie\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    }
+  ],
+  "returns": "Number of tracking IDs on this body",
+  "remarks": "Call this method before calling\nIBody2::IGetTrackingIDs\nto determine the size of the array for that method.\nSee\nTracking IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get, Set, and Remove Tracking IDs on Body (VBA)",
+      "href": "Get_Set_And_Remove_Tracking_IDs_On_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetTrackingIDs",
+    "IBody2.RemoveTrackingID",
+    "IBody2.SetTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

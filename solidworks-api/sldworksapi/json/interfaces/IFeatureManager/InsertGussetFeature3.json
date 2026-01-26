@@ -1,0 +1,290 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertGussetFeature3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Depth",
+        "type": "System.Double",
+        "description": "Thickness of the gusset"
+      },
+      {
+        "name": "DirType",
+        "type": "System.Int16",
+        "description": "Thickness direction of the gusset as defined in swGussetThicknessType_e"
+      },
+      {
+        "name": "LocType",
+        "type": "System.Int16",
+        "description": "Location of the reference plane for the sketch of the gusset as defined in swGussetProfileLocationType_e"
+      },
+      {
+        "name": "BIsProfile",
+        "type": "System.Boolean",
+        "description": "True to use a polygon profile, false to use a triangle profile"
+      },
+      {
+        "name": "ProfileD1",
+        "type": "System.Double",
+        "description": "Profile Distance1 (see Remarks )"
+      },
+      {
+        "name": "ProfileD2",
+        "type": "System.Double",
+        "description": "Profile Distance2 (see Remarks )"
+      },
+      {
+        "name": "ProfileD3",
+        "type": "System.Double",
+        "description": "Profile Distance3 (see Remarks )"
+      },
+      {
+        "name": "ProfileAngle",
+        "type": "System.Double",
+        "description": "Profile Angle (see Remarks ); valid only if BUseLenDim is false"
+      },
+      {
+        "name": "ProfileD4",
+        "type": "System.Double",
+        "description": "Profile Distance4 (see Remarks ); valid only if BUseLenDim is true"
+      },
+      {
+        "name": "BOffset",
+        "type": "System.Boolean",
+        "description": "True to offset the reference plane for the sketch, false to not"
+      },
+      {
+        "name": "DProfileOffset",
+        "type": "System.Double",
+        "description": "Value by which to offset the reference plane for the sketch"
+      },
+      {
+        "name": "CrvIndex",
+        "type": "System.Int32",
+        "description": "Index of the edge to use if multiple intersecting edges exist"
+      },
+      {
+        "name": "BReverseDir",
+        "type": "System.Boolean",
+        "description": "If BOffset set to true, then true to reverse direction, false to not"
+      },
+      {
+        "name": "BReverseFace",
+        "type": "System.Boolean",
+        "description": "Reverse ProfileD1 and ProfileD2 if triangle profile - or - Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile"
+      },
+      {
+        "name": "BUseLenDim",
+        "type": "System.Boolean",
+        "description": "True to use ProfileD4, false to use ProfileAngle"
+      },
+      {
+        "name": "ProfileD5",
+        "type": "System.Double",
+        "description": "Chamfer Distance5 (see Remarks ); valid only if BNeedChamferInGusset is true"
+      },
+      {
+        "name": "ProfileD6",
+        "type": "System.Double",
+        "description": "Chamfer Distance6 (see Remarks ); valid only if BNeedChamferInGusset and BUseLenDimForChamber are both true"
+      },
+      {
+        "name": "ProfileChamferAngle",
+        "type": "System.Double",
+        "description": "Chamfer Angle (see Remarks ); valid only if BUseLenDimForChamfer is false and BNeedChamferInGusset is true"
+      },
+      {
+        "name": "BUseLenDimForChamfer",
+        "type": "System.Boolean",
+        "description": "True to use ProfileD6, false to use ProfileChamferAngle; valid only if BNeedChamferInGusset is true"
+      },
+      {
+        "name": "BNeedChamferInGusset",
+        "type": "System.Boolean",
+        "description": "True to create a chamfer to allow room for a weld bead under the gusset, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IGussetFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "gusset",
+      "gussets",
+      "igussetfeaturedata",
+      "weldments",
+      "insertgussetfeature3",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature3",
+      "depth",
+      "double",
+      "dir",
+      "type",
+      "int16",
+      "loc",
+      "profile",
+      "boolean",
+      "d1",
+      "d2",
+      "d3",
+      "angle",
+      "d4",
+      "offset",
+      "crv",
+      "index",
+      "int32",
+      "reverse",
+      "face",
+      "use",
+      "len",
+      "dim",
+      "d5",
+      "d6",
+      "chamfer",
+      "need",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertGussetFeature3",
+  "description": "Inserts a gusset feature for pre-selected faces of a weldment.",
+  "signature": "Feature InsertGussetFeature3( \n   System.Double\nDepth\n,\n   System.Int16\nDirType\n,\n   System.Int16\nLocType\n,\n   System.Boolean\nBIsProfile\n,\n   System.Double\nProfileD1\n,\n   System.Double\nProfileD2\n,\n   System.Double\nProfileD3\n,\n   System.Double\nProfileAngle\n,\n   System.Double\nProfileD4\n,\n   System.Boolean\nBOffset\n,\n   System.Double\nDProfileOffset\n,\n   System.Int32\nCrvIndex\n,\n   System.Boolean\nBReverseDir\n,\n   System.Boolean\nBReverseFace\n,\n   System.Boolean\nBUseLenDim\n,\n   System.Double\nProfileD5\n,\n   System.Double\nProfileD6\n,\n   System.Double\nProfileChamferAngle\n,\n   System.Boolean\nBUseLenDimForChamfer\n,\n   System.Boolean\nBNeedChamferInGusset\n)",
+  "parameters": [
+    {
+      "name": "Depth",
+      "type": "System.Double",
+      "description": "Thickness of the gusset"
+    },
+    {
+      "name": "DirType",
+      "type": "System.Int16",
+      "description": "Thickness direction of the gusset as defined in swGussetThicknessType_e"
+    },
+    {
+      "name": "LocType",
+      "type": "System.Int16",
+      "description": "Location of the reference plane for the sketch of the gusset as defined in swGussetProfileLocationType_e"
+    },
+    {
+      "name": "BIsProfile",
+      "type": "System.Boolean",
+      "description": "True to use a polygon profile, false to use a triangle profile"
+    },
+    {
+      "name": "ProfileD1",
+      "type": "System.Double",
+      "description": "Profile Distance1 (see Remarks )"
+    },
+    {
+      "name": "ProfileD2",
+      "type": "System.Double",
+      "description": "Profile Distance2 (see Remarks )"
+    },
+    {
+      "name": "ProfileD3",
+      "type": "System.Double",
+      "description": "Profile Distance3 (see Remarks )"
+    },
+    {
+      "name": "ProfileAngle",
+      "type": "System.Double",
+      "description": "Profile Angle (see Remarks ); valid only if BUseLenDim is false"
+    },
+    {
+      "name": "ProfileD4",
+      "type": "System.Double",
+      "description": "Profile Distance4 (see Remarks ); valid only if BUseLenDim is true"
+    },
+    {
+      "name": "BOffset",
+      "type": "System.Boolean",
+      "description": "True to offset the reference plane for the sketch, false to not"
+    },
+    {
+      "name": "DProfileOffset",
+      "type": "System.Double",
+      "description": "Value by which to offset the reference plane for the sketch"
+    },
+    {
+      "name": "CrvIndex",
+      "type": "System.Int32",
+      "description": "Index of the edge to use if multiple intersecting edges exist"
+    },
+    {
+      "name": "BReverseDir",
+      "type": "System.Boolean",
+      "description": "If BOffset set to true, then true to reverse direction, false to not"
+    },
+    {
+      "name": "BReverseFace",
+      "type": "System.Boolean",
+      "description": "Reverse ProfileD1 and ProfileD2 if triangle profile - or - Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile"
+    },
+    {
+      "name": "BUseLenDim",
+      "type": "System.Boolean",
+      "description": "True to use ProfileD4, false to use ProfileAngle"
+    },
+    {
+      "name": "ProfileD5",
+      "type": "System.Double",
+      "description": "Chamfer Distance5 (see Remarks ); valid only if BNeedChamferInGusset is true"
+    },
+    {
+      "name": "ProfileD6",
+      "type": "System.Double",
+      "description": "Chamfer Distance6 (see Remarks ); valid only if BNeedChamferInGusset and BUseLenDimForChamber are both true"
+    },
+    {
+      "name": "ProfileChamferAngle",
+      "type": "System.Double",
+      "description": "Chamfer Angle (see Remarks ); valid only if BUseLenDimForChamfer is false and BNeedChamferInGusset is true"
+    },
+    {
+      "name": "BUseLenDimForChamfer",
+      "type": "System.Boolean",
+      "description": "True to use ProfileD6, false to use ProfileChamferAngle; valid only if BNeedChamferInGusset is true"
+    },
+    {
+      "name": "BNeedChamferInGusset",
+      "type": "System.Boolean",
+      "description": "True to create a chamfer to allow room for a weld bead under the gusset, false to not"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "See the SOLIDWORKS Help for more information about profile and chamfer distances and angles in weldment gussets.\nBefore calling this method, you must call\nIModelDocExtension::SelectByID2\nto select two faces that are the supporting legs of this gusset with a Mark of 1.\nInstead of using this method, you can pass an array of faces to\nIFeatureManager::InsertGussetFeature2\n.",
+  "examples": [
+    {
+      "title": "Insert Gusset Feature (VBA)",
+      "href": "Insert_Gusset_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Gusset Feature (VB.NET)",
+      "href": "Insert_Gusset_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Gusset Feature (C#)",
+      "href": "Insert_Gusset_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGussetFeatureData"
+  ]
+}

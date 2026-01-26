@@ -1,0 +1,65 @@
+---
+type: property
+interface: IFeatureManager
+member: ShowComponentNames
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IFeatureManager.ShowComponentConfigurationDescriptions
+  - IFeatureManager.ShowComponentConfigurationNames
+  - IFeatureManager.ShowComponentDescriptions
+  - IFeatureManager.ShowDisplayStateNames
+  - IFeatureManager.ShowFeatureDescription
+  - IFeatureManager.ShowFeatureName
+keywords:
+  - components
+  - see
+  - also
+  - icomponent2
+  - configurations
+  - featuremanager
+  - design
+  - tree
+  - ifeaturemanager
+  - ifeatmgrview
+  - interfaces
+  - component
+  - showcomponentnames
+  - feature
+  - manager
+  - show
+  - names
+  - boolean
+readonly: null
+---
+
+# IFeatureManager.ShowComponentNames
+
+Gets or sets whether to show the component configuration names in the FeatureManager design tree.
+
+## Signature
+
+```csharp
+System.Boolean ShowComponentNames {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True shows the component configuration names, false does not EndOLEPropertyRow
+
+## See Also
+
+- `IFeatureManager.ShowComponentConfigurationDescriptions`
+- `IFeatureManager.ShowComponentConfigurationNames`
+- `IFeatureManager.ShowComponentDescriptions`
+- `IFeatureManager.ShowDisplayStateNames`
+- `IFeatureManager.ShowFeatureDescription`
+- `IFeatureManager.ShowFeatureName`

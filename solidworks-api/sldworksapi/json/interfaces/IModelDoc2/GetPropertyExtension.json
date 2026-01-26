@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "GetPropertyExtension",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "(Size of the array returned by IModelDoc2::AddPropertyExtension ) - (Position of the property extension in the array)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ResetPropertyExtension"
+    ],
+    "keywords": [
+      "model",
+      "documents",
+      "see",
+      "also",
+      "imodeldoc2",
+      "imodeldocextension",
+      "interfaces",
+      "extensions",
+      "extension",
+      "getpropertyextension",
+      "doc2",
+      "id",
+      "int32",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.GetPropertyExtension",
+  "description": "Gets the specified property extension on this model.",
+  "signature": "System.Object GetPropertyExtension( \n   System.Int32\nID\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "(Size of the array returned by IModelDoc2::AddPropertyExtension ) - (Position of the property extension in the array)"
+    }
+  ],
+  "returns": "Value of the property extension",
+  "remarks": "IModelDoc2::AddPropertyExtension adds property extensions to a last-in-first-out, 1-based array and returns the size of that array.\nNOTE\n: SOLIDWORKS recommends that you use the\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninterfaces instead of this method. These interfaces provide more flexibility.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ResetPropertyExtension"
+  ]
+}

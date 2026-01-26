@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMultiJogLeader",
+    "member": "GetLineAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IMultiJogLeader.GetLineCount",
+      "IMultiJogLeader.IGetLineAtIndex"
+    ],
+    "keywords": [
+      "getlineatindex",
+      "imultijogleader",
+      "multi",
+      "jog",
+      "leader",
+      "line",
+      "index",
+      "int32",
+      "object",
+      "data",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IMultiJogLeader.GetLineAtIndex",
+  "description": "Gets the symbol information for the specified line.",
+  "signature": "System.Object GetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the line"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\n]\nwhere:\nlineType\n= line type. See\nswLineTypes_e\n.\nstartPt\n[3] = XYZ line start point.\nendPt\n[3] = XYZ line end point.",
+  "examples": [
+    {
+      "title": "Get Multi-jog Leader Data (C#)",
+      "href": "Get_Multi-jog_Leader_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Multi-jog Leader Data (VB.NET)",
+      "href": "Get_Multi-jog_Leader_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Multi-jog Leader Data (VBA)",
+      "href": "Get_Multi-jog_Leader_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMultiJogLeader.GetLineCount",
+    "IMultiJogLeader.IGetLineAtIndex"
+  ]
+}

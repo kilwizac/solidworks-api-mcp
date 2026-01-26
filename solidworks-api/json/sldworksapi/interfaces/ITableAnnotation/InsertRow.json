@@ -1,0 +1,103 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "InsertRow",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Where",
+        "type": "System.Int32",
+        "description": "Where to insert the new row as defined in swTableItemInsertPosition_e"
+      },
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of row where to insert new row (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.DeleteRow",
+      "ITableAnnotation.GetLockRowHeight",
+      "ITableAnnotation.GetRowHeight",
+      "ITableAnnotation.GetRowVerticalGap",
+      "ITableAnnotation.MoveRow",
+      "ITableAnnotation.RowCount",
+      "ITableAnnotation.RowHidden",
+      "ITableAnnotation.SetLockRowHeight",
+      "ITableAnnotation.SetRowHeight",
+      "ITableAnnotation.SetRowVerticalGap",
+      "ITableAnnotation.TotalRowCount"
+    ],
+    "keywords": [
+      "table",
+      "rows",
+      "insertrow",
+      "itableannotation",
+      "annotation",
+      "insert",
+      "row",
+      "where",
+      "int32",
+      "index",
+      "boolean",
+      "sort",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ITableAnnotation.InsertRow",
+  "description": "Inserts a row into this table.",
+  "signature": "System.Boolean InsertRow( \n   System.Int32\nWhere\n,\n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Where",
+      "type": "System.Int32",
+      "description": "Where to insert the new row as defined in swTableItemInsertPosition_e"
+    },
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of row where to insert new row (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "Index:\nis 0-based.\nis valid only if Where is set to swTableItemInsertPosition_e.swTableItemInsertPosition_After or swTableItemInsertPosition_e.swTableItemInsertPosition_Before.",
+  "examples": [
+    {
+      "title": "Sort Table (VBA)",
+      "href": "Sort_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Sort Table (VB.NET)",
+      "href": "Sort_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Sort Table (C#)",
+      "href": "Sort_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.DeleteRow",
+    "ITableAnnotation.GetLockRowHeight",
+    "ITableAnnotation.GetRowHeight",
+    "ITableAnnotation.GetRowVerticalGap",
+    "ITableAnnotation.MoveRow",
+    "ITableAnnotation.RowCount",
+    "ITableAnnotation.RowHidden",
+    "ITableAnnotation.SetLockRowHeight",
+    "ITableAnnotation.SetRowHeight",
+    "ITableAnnotation.SetRowVerticalGap",
+    "ITableAnnotation.TotalRowCount"
+  ]
+}

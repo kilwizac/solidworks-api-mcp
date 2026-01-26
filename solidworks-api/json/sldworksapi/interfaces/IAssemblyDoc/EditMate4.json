@@ -1,0 +1,252 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "EditMate4",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "MateTypeFromEnum",
+        "type": "System.Int32",
+        "description": "Type of mate as defined in swMateType_e"
+      },
+      {
+        "name": "AlignFromEnum",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined in swMateAlign_e"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "True to flip the mate components, false to not"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance value; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+      },
+      {
+        "name": "DistanceAbsUpperLimit",
+        "type": "System.Double",
+        "description": "Absolute maximum distance allowed; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+      },
+      {
+        "name": "DistanceAbsLowerLimit",
+        "type": "System.Double",
+        "description": "Absolute minimum distance allowed; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+      },
+      {
+        "name": "GearRatioNumerator",
+        "type": "System.Double",
+        "description": "Gear ratio numerator value; valid only if MateTypeFromEnum is swMateType_e.swMateGEAR"
+      },
+      {
+        "name": "GearRatioDenominator",
+        "type": "System.Double",
+        "description": "Gear ratio denominator value; valid only if MateTypeFromEnum is swMateType_e.swMateGEAR"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle value; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+      },
+      {
+        "name": "AngleAbsUpperLimit",
+        "type": "System.Double",
+        "description": "Absolute maximum angle allowed; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+      },
+      {
+        "name": "AngleAbsLowerLimit",
+        "type": "System.Double",
+        "description": "Absolute minimum angle allowed; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+      },
+      {
+        "name": "ForPositioningOnly",
+        "type": "System.Boolean",
+        "description": "True to only position the components according to the mating relationship and not return a mate, false to return a mate"
+      },
+      {
+        "name": "LockRotation",
+        "type": "System.Boolean",
+        "description": "True to lock component rotation, false to not"
+      },
+      {
+        "name": "WidthMateOption",
+        "type": "System.Int32",
+        "description": "Width mate options as defined in swMateWidthOptions_e ; valid only if MateTypeFromEnum is swMateType_e.swMateWIDTH"
+      },
+      {
+        "name": "RepairMatesWithSameMissingEntity",
+        "type": "System.Boolean",
+        "description": "True to repair all mates missing the same mate entity, false to not"
+      },
+      {
+        "name": "ErrorStatus",
+        "type": "System.Int32",
+        "description": "Success or error as defined by swAddMateError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddConcentricMateWithTolerance",
+      "IAssemblyDoc.AddMate5"
+    ],
+    "keywords": [
+      "editmate4",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "edit",
+      "mate4",
+      "mate",
+      "type",
+      "int32",
+      "align",
+      "flip",
+      "boolean",
+      "distance",
+      "double",
+      "abs",
+      "upper",
+      "limit",
+      "lower",
+      "gear",
+      "ratio",
+      "numerator",
+      "denominator",
+      "angle",
+      "positioning",
+      "only",
+      "lock",
+      "rotation",
+      "width",
+      "option",
+      "repair",
+      "mates",
+      "same",
+      "missing",
+      "entity",
+      "error",
+      "status",
+      "void",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.EditMate4",
+  "description": "Obsolete. See the Remarks in each standard, advanced, and mechanical mate's feature data interface.",
+  "signature": "void EditMate4( \n   System.Int32\nMateTypeFromEnum\n,\n   System.Int32\nAlignFromEnum\n,\n   System.Boolean\nFlip\n,\n   System.Double\nDistance\n,\n   System.Double\nDistanceAbsUpperLimit\n,\n   System.Double\nDistanceAbsLowerLimit\n,\n   System.Double\nGearRatioNumerator\n,\n   System.Double\nGearRatioDenominator\n,\n   System.Double\nAngle\n,\n   System.Double\nAngleAbsUpperLimit\n,\n   System.Double\nAngleAbsLowerLimit\n,\n   System.Boolean\nForPositioningOnly\n,\n   System.Boolean\nLockRotation\n,\n   System.Int32\nWidthMateOption\n,\n   System.Boolean\nRepairMatesWithSameMissingEntity\n,\n   out System.Int32\nErrorStatus\n)",
+  "parameters": [
+    {
+      "name": "MateTypeFromEnum",
+      "type": "System.Int32",
+      "description": "Type of mate as defined in swMateType_e"
+    },
+    {
+      "name": "AlignFromEnum",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined in swMateAlign_e"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "True to flip the mate components, false to not"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance value; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+    },
+    {
+      "name": "DistanceAbsUpperLimit",
+      "type": "System.Double",
+      "description": "Absolute maximum distance allowed; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+    },
+    {
+      "name": "DistanceAbsLowerLimit",
+      "type": "System.Double",
+      "description": "Absolute minimum distance allowed; valid only if MateTypeFromEnum is swMateType_e.swMateDISTANCE"
+    },
+    {
+      "name": "GearRatioNumerator",
+      "type": "System.Double",
+      "description": "Gear ratio numerator value; valid only if MateTypeFromEnum is swMateType_e.swMateGEAR"
+    },
+    {
+      "name": "GearRatioDenominator",
+      "type": "System.Double",
+      "description": "Gear ratio denominator value; valid only if MateTypeFromEnum is swMateType_e.swMateGEAR"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle value; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+    },
+    {
+      "name": "AngleAbsUpperLimit",
+      "type": "System.Double",
+      "description": "Absolute maximum angle allowed; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+    },
+    {
+      "name": "AngleAbsLowerLimit",
+      "type": "System.Double",
+      "description": "Absolute minimum angle allowed; valid only if MateTypeFromEnum is swMateType_e.swMateANGLE"
+    },
+    {
+      "name": "ForPositioningOnly",
+      "type": "System.Boolean",
+      "description": "True to only position the components according to the mating relationship and not return a mate, false to return a mate"
+    },
+    {
+      "name": "LockRotation",
+      "type": "System.Boolean",
+      "description": "True to lock component rotation, false to not"
+    },
+    {
+      "name": "WidthMateOption",
+      "type": "System.Int32",
+      "description": "Width mate options as defined in swMateWidthOptions_e ; valid only if MateTypeFromEnum is swMateType_e.swMateWIDTH"
+    },
+    {
+      "name": "RepairMatesWithSameMissingEntity",
+      "type": "System.Boolean",
+      "description": "True to repair all mates missing the same mate entity, false to not"
+    },
+    {
+      "name": "ErrorStatus",
+      "type": "System.Int32",
+      "description": "Success or error as defined by swAddMateError_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "To edit:\nStandard, advanced, and mechanical mates created using\nIAssemblyDoc::CreateMate\n, follow the steps to edit the mate in the Remarks of the mate's feature data interface.\nMisaligned concentric mates, use\nIAssemblyDoc::EditConcentricMate\n.\nDistance mates, use\nIAssemblyDoc::EditDistanceMate\n.\nIf repairing all mates missing the same mate entity, then select the following items in the following order before calling this method:\nMate feature to repair.\nTwo model items to mate (that is, two faces, edge and face, and so on). The two model items must be selected with a selection mark of 1. See\nISelectData\nor\nIModelDocExtension::SelectByID2\nfor details on using selection marks.\nIf MateTypeFromEnum is swMateType_e.swMateDISTANCE or swMateType_e.swMateANGLE, and the mate is applied to the closest position that meets the mate condition specified by Distance or Angle, then setting Flip to true moves the components to the other possible mate position.\nThis method does not support editing\nInplace\nmates.",
+  "examples": [
+    {
+      "title": "Repair Mates Missing Same Mate Entity (C#)",
+      "href": "Repair_Mates_Missing_Same_Mate_Entity_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Repair Mates Missing Same Mate Entity (VB.NET)",
+      "href": "Repair_Mates_Missing_Same_Mate_Entity_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Repair Mates Missing Same Mate Entity (VBA)",
+      "href": "Repair_Mates_Missing_Same_Mate_Entity_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddConcentricMateWithTolerance",
+    "IAssemblyDoc.AddMate5"
+  ]
+}

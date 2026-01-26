@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAutoBalloonOptions",
+    "member": "LowerTextContent",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "lowertextcontent",
+      "iautoballoonoptions",
+      "auto",
+      "balloon",
+      "options",
+      "lower",
+      "text",
+      "content",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IAutoBalloonOptions.LowerTextContent",
+  "description": "Gets and sets the style of the lower text of the balloons.",
+  "signature": "System.Int32 LowerTextContent {get; set;}",
+  "parameters": [],
+  "returns": "Style of the lower text as defined in swBalloonTextContent_e ; specify -1 to use the document default lower text style (see Remarks )",
+  "remarks": "This property is valid only when\nIAutoBalloonOptions::Style\nis set to\nswBalloonStyle_e\n.swBS_SplitCirc.\nTo get or set document default values for LowerTextContent...\nUse...\nGet\nIModelDocExtension::GetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified)\nSet\nIModelDocExtension::SetUserPreferenceInteger\n(swUserPreferenceIntegerValue_e.swDetailingBOMLowerText, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swBalloonTextContent_e.<\nValue\n>)\nSee the SOLIDWORKS Help for additional details about autoballoons.",
+  "examples": [],
+  "related": []
+}

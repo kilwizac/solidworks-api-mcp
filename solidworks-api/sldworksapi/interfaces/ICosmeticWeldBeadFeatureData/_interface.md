@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ICosmeticWeldBeadFeatureData
+inherits: null
+description: Allows access to a cosmetic weld bead feature.
+member_count: 26
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - BeadSize
+  - FromToLength
+  - FromToReverse
+  - FromToStartPoint
+  - FromToWeldLength
+  - Gap
+  - GapOrPitch
+---
+
+# ICosmeticWeldBeadFeatureData
+
+Allows access to a cosmetic weld bead feature.
+
+## Common Members
+
+- `AccessSelections`
+- `BeadSize`
+- `FromToLength`
+- `FromToReverse`
+- `FromToStartPoint`
+- `FromToWeldLength`
+- `Gap`
+- `GapOrPitch`

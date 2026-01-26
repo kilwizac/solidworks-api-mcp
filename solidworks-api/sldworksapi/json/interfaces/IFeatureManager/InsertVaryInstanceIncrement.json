@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertVaryInstanceIncrement",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DName",
+        "type": "System.String",
+        "description": "If IncrementType is... Then set DName to... 1 Name of the pattern instance dimension to increment 2 \"Spacing Increment\""
+      },
+      {
+        "name": "PatternType",
+        "type": "System.Int32",
+        "description": "Type of pattern (see Remarks ): 2 = linear 4 = circular 256 = table-driven"
+      },
+      {
+        "name": "IncrementType",
+        "type": "System.Int32",
+        "description": "Type of increment: 1 = dimension 2 = spacing"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction in which to apply the dimension or spacing increment. If PatternType is... Then set Direction to... 2 0 = direction 1 1 = direction 2 4 0 = direction 1"
+      },
+      {
+        "name": "IncrementValue",
+        "type": "System.Double",
+        "description": "Value with which to increment the pattern instance dimension or spacing"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "insertvaryinstanceincrement",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "vary",
+      "instance",
+      "increment",
+      "name",
+      "string",
+      "pattern",
+      "type",
+      "int32",
+      "direction",
+      "value",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.InsertVaryInstanceIncrement",
+  "description": "Obsolete. Superseded by IInstanceToVaryOptions.",
+  "signature": "System.Boolean InsertVaryInstanceIncrement( \n   System.String\nDName\n,\n   System.Int32\nPatternType\n,\n   System.Int32\nIncrementType\n,\n   System.Int32\nDirection\n,\n   System.Double\nIncrementValue\n)",
+  "parameters": [
+    {
+      "name": "DName",
+      "type": "System.String",
+      "description": "If IncrementType is... Then set DName to... 1 Name of the pattern instance dimension to increment 2 \"Spacing Increment\""
+    },
+    {
+      "name": "PatternType",
+      "type": "System.Int32",
+      "description": "Type of pattern (see Remarks ): 2 = linear 4 = circular 256 = table-driven"
+    },
+    {
+      "name": "IncrementType",
+      "type": "System.Int32",
+      "description": "Type of increment: 1 = dimension 2 = spacing"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction in which to apply the dimension or spacing increment. If PatternType is... Then set Direction to... 2 0 = direction 1 1 = direction 2 4 0 = direction 1"
+    },
+    {
+      "name": "IncrementValue",
+      "type": "System.Double",
+      "description": "Value with which to increment the pattern instance dimension or spacing"
+    }
+  ],
+  "returns": "True if the increment is applied successfully, false if not",
+  "remarks": "To vary the spacings or dimensions of pattern instances:\nCall this method multiple times to increment multiple dimensions or spacings of pattern instances.\nCall\nIFeatureManager::InsertVaryInstanceOverride\nmultiple times to override multiple dimensions or spacings of pattern instances.\nIf PatternType is...\nCall IFeatureManager::CreateFeature(...)\n2\nLinearPatternFeatureData object\n4\nCircularPatternFeatureData object\n256\nDimPatternFeatureData object",
+  "examples": [],
+  "related": []
+}

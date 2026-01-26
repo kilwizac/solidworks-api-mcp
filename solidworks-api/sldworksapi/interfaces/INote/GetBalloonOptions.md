@@ -1,0 +1,71 @@
+---
+type: method
+interface: INote
+member: GetBalloonOptions
+returns: System.Object
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+related:
+  - IModelDocExtension.InsertBOMBalloon2
+  - INote.GetBalloonInfo
+  - INote.GetBalloonPadding
+  - INote.GetBalloonSize
+  - INote.GetBalloonStack
+  - INote.GetBalloonStyle
+  - INote.GetBomBalloonText
+  - INote.GetBomBalloonTextStyle
+  - INote.HasBalloon
+  - INote.IsBomBalloon
+  - INote.IsStackedBalloon
+  - INote.MakeStackedBalloon
+  - INote.SetBalloon
+keywords:
+  - getballoonoptions
+  - inote
+  - note
+  - balloon
+  - options
+  - object
+  - iballoonoptions
+---
+
+# INote.GetBalloonOptions
+
+Gets the balloon options for this note.
+
+## Signature
+
+```csharp
+System.Object GetBalloonOptions()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+IBalloonOptions
+
+## Examples
+
+- IBalloonOptions (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBalloonOptions)
+
+## See Also
+
+- `IModelDocExtension.InsertBOMBalloon2`
+- `INote.GetBalloonInfo`
+- `INote.GetBalloonPadding`
+- `INote.GetBalloonSize`
+- `INote.GetBalloonStack`
+- `INote.GetBalloonStyle`
+- `INote.GetBomBalloonText`
+- `INote.GetBomBalloonTextStyle`
+- `INote.HasBalloon`
+- `INote.IsBomBalloon`
+- `INote.IsStackedBalloon`
+- `INote.MakeStackedBalloon`
+- `INote.SetBalloon`

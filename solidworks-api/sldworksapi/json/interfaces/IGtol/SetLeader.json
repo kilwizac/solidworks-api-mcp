@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "SetLeader",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Leader",
+        "type": "System.Boolean",
+        "description": "True enables a leader on this symbol, false disables it"
+      },
+      {
+        "name": "LeaderSide",
+        "type": "System.Int32",
+        "description": "Leader attachment information as defined in swLeaderSide_e"
+      },
+      {
+        "name": "BentLeader",
+        "type": "System.Boolean",
+        "description": "True enables a bent leader on this symbol, false disables it"
+      },
+      {
+        "name": "AllAround",
+        "type": "System.Boolean",
+        "description": "True enables the all around symbol on the leader, false disables it"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetLeaderAtIndex2",
+      "IGtol.GetLeaderCount",
+      "IGtol.GetLeaderInfo",
+      "IGtol.IGetLeaderAtIndex2",
+      "IGtol.IGetLeaderInfo"
+    ],
+    "keywords": [
+      "leaders",
+      "geometric",
+      "tolerancing",
+      "setleader",
+      "igtol",
+      "gtol",
+      "leader",
+      "boolean",
+      "side",
+      "int32",
+      "bent",
+      "all",
+      "around",
+      "void"
+    ]
+  },
+  "title": "IGtol.SetLeader",
+  "description": "Sets the characteristics of the leader for this symbol.",
+  "signature": "void SetLeader( \n   System.Boolean\nLeader\n,\n   System.Int32\nLeaderSide\n,\n   System.Boolean\nBentLeader\n,\n   System.Boolean\nAllAround\n)",
+  "parameters": [
+    {
+      "name": "Leader",
+      "type": "System.Boolean",
+      "description": "True enables a leader on this symbol, false disables it"
+    },
+    {
+      "name": "LeaderSide",
+      "type": "System.Int32",
+      "description": "Leader attachment information as defined in swLeaderSide_e"
+    },
+    {
+      "name": "BentLeader",
+      "type": "System.Boolean",
+      "description": "True enables a bent leader on this symbol, false disables it"
+    },
+    {
+      "name": "AllAround",
+      "type": "System.Boolean",
+      "description": "True enables the all around symbol on the leader, false disables it"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method ignores:\nLeaderSide, BentLeader, and AllAround values if the leader value is false. Use\nIGtol::IsAttached\nto determine if this symbol is currently using a leader.\nAllAround value if the BentLeader value is false. Use\nIGtol::HasExtraLeader\nto determine if this symbol is using a bent leader.\nUse:\nIGtol::GetLeaderSide\nto determine where the leader is attached to the symbol\nIGtol::GetAllAround\nto determine if this leader is using the all around symbol",
+  "examples": [],
+  "related": [
+    "IGtol.GetLeaderAtIndex2",
+    "IGtol.GetLeaderCount",
+    "IGtol.GetLeaderInfo",
+    "IGtol.IGetLeaderAtIndex2",
+    "IGtol.IGetLeaderInfo"
+  ]
+}

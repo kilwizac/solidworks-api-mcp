@@ -1,0 +1,448 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>IEvaluate Method (ISurface)</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IEvaluate" />
+    <meta name="Description" content="Evaluates the surface, given the u and v parameters of the surface." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISurface.IEvaluate" />
+    <meta name="Microsoft.Help.Keywords" content="IEvaluate Method (ISurface)" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                IEvaluate Method (ISurface)
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a> : IEvaluate Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="UParamPopupContent" class="i-popup-content">
+        <p>Value of u parameter</p>
+    </div>
+
+    <div id="VParamPopupContent" class="i-popup-content">
+        <p>Value of v parameter</p>
+    </div>
+
+    <div id="NumUDerivPopupContent" class="i-popup-content">
+        <p>Number of u derivatives required</p>
+    </div>
+
+    <div id="NumVDerivPopupContent" class="i-popup-content">
+        <p>Number of v derivatives required</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Evaluates the surface, given the u and v parameters of the surface.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function IEvaluate( _
+   ByVal <i><a class="i-popup-link" id="UParamPopupLink" data-popup-contentsource="#UParamPopupContent" data-popup-showevent="click mouseenter">UParam</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="VParamPopupLink" data-popup-contentsource="#VParamPopupContent" data-popup-showevent="click mouseenter">VParam</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="NumUDerivPopupLink" data-popup-contentsource="#NumUDerivPopupContent" data-popup-showevent="click mouseenter">NumUDeriv</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="NumVDerivPopupLink" data-popup-contentsource="#NumVDerivPopupContent" data-popup-showevent="click mouseenter">NumVDeriv</a></i> As System.Integer _
+) As System.Double
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface</a>
+Dim UParam As System.Double
+Dim VParam As System.Double
+Dim NumUDeriv As System.Integer
+Dim NumVDeriv As System.Integer
+Dim value As System.Double
+ 
+value = instance.IEvaluate(UParam, VParam, NumUDeriv, NumVDeriv)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.double IEvaluate( 
+   System.double <i><a class="i-popup-link" id="UParamPopupLink" data-popup-contentsource="#UParamPopupContent" data-popup-showevent="click mouseenter">UParam</a></i>,
+   System.double <i><a class="i-popup-link" id="VParamPopupLink" data-popup-contentsource="#VParamPopupContent" data-popup-showevent="click mouseenter">VParam</a></i>,
+   System.int <i><a class="i-popup-link" id="NumUDerivPopupLink" data-popup-contentsource="#NumUDerivPopupContent" data-popup-showevent="click mouseenter">NumUDeriv</a></i>,
+   System.int <i><a class="i-popup-link" id="NumVDerivPopupLink" data-popup-contentsource="#NumVDerivPopupContent" data-popup-showevent="click mouseenter">NumVDeriv</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.double IEvaluate( 
+   System.double <i><a class="i-popup-link" id="UParamPopupLink" data-popup-contentsource="#UParamPopupContent" data-popup-showevent="click mouseenter">UParam</a></i>,
+   System.double <i><a class="i-popup-link" id="VParamPopupLink" data-popup-contentsource="#VParamPopupContent" data-popup-showevent="click mouseenter">VParam</a></i>,
+   System.int <i><a class="i-popup-link" id="NumUDerivPopupLink" data-popup-contentsource="#NumUDerivPopupContent" data-popup-showevent="click mouseenter">NumUDeriv</a></i>,
+   System.int <i><a class="i-popup-link" id="NumVDerivPopupLink" data-popup-contentsource="#NumVDerivPopupContent" data-popup-showevent="click mouseenter">NumVDeriv</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>UParam</i></dt>
+
+                <dd>
+                    <p>Value of u parameter</p>
+                </dd>
+
+                <dt><i>VParam</i></dt>
+
+                <dd>
+                    <p>Value of v parameter</p>
+                </dd>
+
+                <dt><i>NumUDeriv</i></dt>
+
+                <dd>
+                    <p>Number of u derivatives required</p>
+                </dd>
+
+                <dt><i>NumVDeriv</i></dt>
+
+                <dd>
+                    <p>Number of v derivatives required</p>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method returns the evaluated point, normal, and derivatives with respect to u and v up to order NumUDerivs and NumVDerivs, respectively. If NumUDerivs and NumVDerivs are 0, then no derivatives are returned.</p>
+
+            <p>For more information on the valid u and v parameters of the surface, see <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Parameterization">ISurface::Parameterization</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IParameterization">ISurface::IParameterization</a>. <!--kadov_tag{{<spaces>}}--><!--kadov_tag{{</spaces>}}-->Also, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~FaceInSurfaceSense">IFace2::FaceInSurfaceSense</a> to check to see if the normal of the face is in the same direction or in the opposite direction of the surface normal.</p>
+
+            <p>The evaluation returns the following array of (3 *((( <span style="FONT-STYLE: italic">NumUDerivs</span> +1) * (N<span style="FONT-STYLE: italic">umVDerivs</span> + 1)) + 1 )) doubles:</p>
+
+            <p style="MARGIN-LEFT: 48px"><span style="FONT-SIZE: 14pt">[</span>&#160;<span style="FONT-STYLE: italic">evaluatedPoint</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">[</span><span style="FONT-STYLE: italic">3</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">]</span>, <span style="FONT-STYLE: italic">evaluatedDerivatives</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">[</span><span style="FONT-STYLE: italic">xx</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">]</span>, <span style="FONT-STYLE: italic">evaluatedNormal</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">[</span><span style="FONT-STYLE: italic">3</span><span style="FONT-SIZE: 12pt; FONT-STYLE: italic">]</span>&#160;<span style="FONT-SIZE: 14pt">]</span></p>
+
+            <p style="MARGIN-LEFT: 0px">where:</p>
+
+            <p style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">evaluatedPoint</span><span style="FONT-SIZE: 12pt">[</span>3<span style="FONT-SIZE: 12pt">]&#160;</span>= point representing the evaluated X,Y,Z point in meters</p>
+
+            <p style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">evaluatedDerivatives</span><span style="FONT-SIZE: 12pt">[</span>xx<span style="FONT-SIZE: 12pt">]&#160;</span>= array of vectors representing the derivatives</p>
+
+            <p style="MARGIN-LEFT: 88px">where the <span style="FONT-STYLE: italic">n</span>th derivative <span id="dxMisspelled" class="dxMisspelled" word="wrt">wrt</span> u (i &lt;= <em>N<span style="FONT-STYLE: italic">umUDerivs</span></em>)</p>
+
+            <p style="MARGIN-LEFT: 88px">and the <span style="FONT-STYLE: italic">n</span>th derivative <span id="dxMisspelled" class="dxMisspelled" word="wrt">wrt</span> v (j &lt;= <span style="FONT-STYLE: italic">NumVDerivs</span>)</p>
+
+            <p style="MARGIN-LEFT: 88px">would be vector number ( i + (<span style="FONT-STYLE: italic">NumUDerivs</span> + 1) * j ) - 1 in the <span style="FONT-STYLE: italic">evaluatedDerivatives</span> array.</p>
+
+            <p style="MARGIN-LEFT: 88px">If <span style="FONT-STYLE: italic">NumUDerivs</span> and <em>N<span style="FONT-STYLE: italic">umVDerivs</span></em> are 0, then no derivatives are returned.</p>
+
+            <p style="MARGIN-LEFT: 48px"><span style="FONT-STYLE: italic">evaluatedNormal</span><span style="FONT-SIZE: 12pt">[</span>3<span style="FONT-SIZE: 12pt">]&#160;</span>= a vector representing the evaluated normal</p>
+
+            <p style="MARGIN-LEFT: 22.5pt">The following table describes the number of derivatives that can be requested based on the surface type. If you request more derivatives than allowed, then this method returns all data as zeros. To determine the surface type, see <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Identity">ISurface::Identity</a>.</p>
+
+            <p style="MARGIN-LEFT: 22.5pt"><!--(Table)=========================================================--></p>
+
+            <table style="WIDTH: 330px; MARGIN-LEFT: 49.65pt; BORDER-SPACING: 0px" cellspacing="0" width="330" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 133px" />
+                    <col style="WIDTH: 189px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="WIDTH: 133px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="133">
+                            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+                        </td>
+
+                        <td style="WIDTH: 189px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="189">
+                            <p style="FONT-WEIGHT: bold; TEXT-ALIGN: center" align="center">U Derivatives</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><!--(Table)=========================================================-->
+
+            <table style="WIDTH: 331px; MARGIN-LEFT: 49.65pt; BORDER-SPACING: 0px" cellspacing="0" width="331" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 137px" />
+                    <col style="WIDTH: 52px" />
+                    <col style="WIDTH: 12.08%" />
+                    <col />
+                    <col style="WIDTH: 47px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="WIDTH: 137px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="137">
+                            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+                        </td>
+
+                        <td style="WIDTH: 52px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="52">
+                            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+                        </td>
+
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p><span style="FONT-WEIGHT: bold">0</span></p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p><span style="FONT-WEIGHT: bold">1</span></p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p><span style="FONT-WEIGHT: bold">2</span></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="WIDTH: 137px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="137">
+                            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+                        </td>
+
+                        <td style="WIDTH: 52px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="52">
+                            <p><span style="FONT-WEIGHT: bold">0</span></p>
+                        </td>
+
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p>a</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>a</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>b</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="WIDTH: 137px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="137">
+                            <p style="FONT-WEIGHT: bold">V Derivatives</p>
+                        </td>
+
+                        <td style="WIDTH: 52px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="52">
+                            <p><span style="FONT-WEIGHT: bold">1</span></p>
+                        </td>
+
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p>a</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>a</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>c</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="WIDTH: 137px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="137">
+                            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+                        </td>
+
+                        <td style="WIDTH: 52px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="52">
+                            <p><span style="FONT-WEIGHT: bold">2</span></p>
+                        </td>
+
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p>b</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>c</p>
+                        </td>
+
+                        <td style="WIDTH: 47px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="47">
+                            <p>d</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p></p>
+
+            <p style="MARGIN-LEFT: 22.5pt">&#160;</p>
+
+            <p style="MARGIN-LEFT: 49.65pt"><span style="FONT-STYLE: italic">where</span>:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 63.8pt; TEXT-INDENT: -14.15pt">a - All surface types</p>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 63.8pt; TEXT-INDENT: -14.15pt">b - All surface types except blend surfaces</p>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 63.8pt; TEXT-INDENT: -14.15pt">c - All surface types except blend surfaces and offset surfaces</p>
+                </li>
+
+                <li class="kadov-p">
+                    <p style="MARGIN-LEFT: 63.8pt; TEXT-INDENT: -14.15pt">d - All surface types except blend surfaces but offset surfaces will only return 0th, 1st, and 2nd derivatives (the uncalculated 3rd and 4th derivatives are returned as 0 vectors).</p>
+                </li>
+            </ul>
+
+            <p>For example, if you specified 2 derivatives in both u and v, then an array containing 10 vectors is returned. The returned data is in model space coordinates. <!--kadov_tag{{<spaces>}}-->&#160;<!--kadov_tag{{</spaces>}}--></p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v) <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/du <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudu">dudu</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dv">dv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudv">dudv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dududv">dududv</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dvdv">dvdv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudvdv">dudvdv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dududvdv">dududvdv</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[N(u,v)]</p>
+
+            <p>where:</p>
+
+            <div style="LIST-STYLE-TYPE: disc; margin-left: 2em" type="disc">
+                <ul>
+                    <li class="kadov-p">
+                        <p>du the partial derivative in the u direction</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p><span id="dxMisspelled" class="dxMisspelled" word="dv">dv</span> the partial derivative in the v direction</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p>N(u,v) the normal vector</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p>Each P() represents a model space point or vector depending on the entry in the array</p>
+                    </li>
+                </ul>
+            </div>
+
+            <p>If you request 2 derivatives for u and 1 for v, then an array containing 7 vectors is returned:</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v) <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/du <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudu">dudu</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dv">dv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudv">dudv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dududv">dududv</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[N(u,v)]</p>
+
+            <p>If u = 1 and v = 2, then:</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v) <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/du]</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dv">dv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudv">dudv</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dvdv">dvdv</span> <!--kadov_tag{{<spaces>}}-->&#160;&#160;&#160;&#160;&#160;&#160;&#160;<!--kadov_tag{{</spaces>}}-->P(u,v)/<span id="dxMisspelled" class="dxMisspelled" word="dudvdv">dudvdv</span>]</p>
+
+            <p style="MARGIN-LEFT: 48px">[N(u,v)]</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_members">ISurface Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~Evaluate">ISurface::Evaluate Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~EvaluateAtPoint">ISurface::EvaluateAtPoint Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IEvaluateAtPoint">ISurface::IEvaluateAtPoint Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IReverseEvaluate">ISurface::IReverseEvaluate Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~ReverseEvaluate">ISurface::ReverseEvaluate Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IEvaluate.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

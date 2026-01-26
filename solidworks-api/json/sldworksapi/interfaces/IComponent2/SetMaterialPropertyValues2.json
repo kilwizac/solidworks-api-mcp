@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "SetMaterialPropertyValues2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Material_values",
+        "type": "System.Object",
+        "description": "Array of material values for this component (see Remarks )"
+      },
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of configuration names for this component"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetMaterialPropertyValues2",
+      "IComponent2.HasMaterialPropertyValues",
+      "IComponent2.IGetMaterialPropertyValues2",
+      "IComponent2.IMaterialPropertyValues",
+      "IComponent2.IRemoveMaterialProperty2",
+      "IComponent2.ISetMaterialPropertyValues2",
+      "IComponent2.MaterialPropertyValues",
+      "IComponent2.RemoveMaterialProperty2"
+    ],
+    "keywords": [
+      "material",
+      "components",
+      "properties",
+      "color",
+      "setmaterialpropertyvalues2",
+      "icomponent2",
+      "component2",
+      "values2",
+      "values",
+      "object",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "void"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.SetMaterialPropertyValues2",
+  "description": "Sets the material properties for this component.",
+  "signature": "void SetMaterialPropertyValues2( \n   System.Object\nMaterial_values\n,\n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Material_values",
+      "type": "System.Object",
+      "description": "Array of material values for this component (see Remarks )"
+    },
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of configuration names for this component"
+    }
+  ],
+  "returns": "",
+  "remarks": "The material property values include the color (R,G,B values), reflectivity (ambient, diffuse, specular, shininess), transparency, and emission.\nThe format of Material_values is an array of doubles:\n[\nR, G, B, Ambient, Diffuse, Specular, Shininess, Transparency, Emission\n]\nTo see a color change, you must:\nSpecify\nR\n,\nG\n, and\nB\n, each with a value between 0.0 and 1.0, inclusive. (These values are internally multiplied by 255.0 to determine the RGB color.)\nSpecify the reflectivity properties (\nDiffuse\n,\nSpecular\n,\nShininess\n(1.0 - Specular spread/Blurriness)), each with a value greater than 0.0 and less than or equal to 1.0.\nSpecify\nAmbient\n,\nTransparency\nand\nEmission\n, each with a value between 0.0 and 1.0, inclusive.\nRefresh the graphics area after calling this method.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetMaterialPropertyValues2",
+    "IComponent2.HasMaterialPropertyValues",
+    "IComponent2.IGetMaterialPropertyValues2",
+    "IComponent2.IMaterialPropertyValues",
+    "IComponent2.IRemoveMaterialProperty2",
+    "IComponent2.ISetMaterialPropertyValues2",
+    "IComponent2.MaterialPropertyValues",
+    "IComponent2.RemoveMaterialProperty2"
+  ]
+}

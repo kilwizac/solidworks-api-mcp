@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetVisibleEntities",
+    "returns": "Entity",
+    "parameters": [
+      {
+        "name": "LpViewComponent",
+        "type": "Component2",
+        "description": "Component from which to get EntityType"
+      },
+      {
+        "name": "EntityType",
+        "type": "System.Int32",
+        "description": "Type of entity as defined in swViewEntityType_e"
+      },
+      {
+        "name": "ViewEntityCount",
+        "type": "System.Int32",
+        "description": "Number of specified visible entities"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.EnumHiddenComponents2",
+      "IView.GetHiddenComponents",
+      "IView.GetVisibleComponentCount",
+      "IView.GetVisibleComponents",
+      "IView.GetVisibleEntities",
+      "IView.IGetVisibleComponents"
+    ],
+    "keywords": [
+      "igetvisibleentities",
+      "iview",
+      "view",
+      "visible",
+      "entities",
+      "lp",
+      "component",
+      "component2",
+      "entity",
+      "type",
+      "int32",
+      "count"
+    ]
+  },
+  "title": "IView.IGetVisibleEntities",
+  "description": "Obsolete. Superseded by IView::IGetVisibleEntities2.",
+  "signature": "Entity IGetVisibleEntities( \n   Component2\nLpViewComponent\n,\n   System.Int32\nEntityType\n,\n   System.Int32\nViewEntityCount\n)",
+  "parameters": [
+    {
+      "name": "LpViewComponent",
+      "type": "Component2",
+      "description": "Component from which to get EntityType"
+    },
+    {
+      "name": "EntityType",
+      "type": "System.Int32",
+      "description": "Type of entity as defined in swViewEntityType_e"
+    },
+    {
+      "name": "ViewEntityCount",
+      "type": "System.Int32",
+      "description": "Number of specified visible entities"
+    }
+  ],
+  "returns": "Array of the specified visible entities",
+  "remarks": "Visible entities are only those entities not completely obscured by other entities in the view.\nCall\nIView::GetVisibleEntityCount\nbefore calling this method to get the value of ViewEntityCount.",
+  "examples": [],
+  "related": [
+    "IView.EnumHiddenComponents2",
+    "IView.GetHiddenComponents",
+    "IView.GetVisibleComponentCount",
+    "IView.GetVisibleComponents",
+    "IView.GetVisibleEntities",
+    "IView.IGetVisibleComponents"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "CreateSmartComponent",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ComponentIn",
+        "type": "Component2",
+        "description": "IComponent2 to make smart"
+      },
+      {
+        "name": "RelatedComponents",
+        "type": "System.Object",
+        "description": "Array of the components to associate with the Smart Component"
+      },
+      {
+        "name": "RelatedFeatures",
+        "type": "System.Object",
+        "description": "Array of the features contained in the components to associate with the Smart Component"
+      },
+      {
+        "name": "AutoSizeDiameter",
+        "type": "System.Boolean",
+        "description": "True to auto-size a cylindrical Smart Component that has multiple configurations, false to not"
+      },
+      {
+        "name": "LpMateReference",
+        "type": "Entity",
+        "description": "Concentric mate reference between a cylindrical face or axis and a feature"
+      },
+      {
+        "name": "BoundingValues",
+        "type": "System.Object",
+        "description": "Array of doubles specifying minimum and maximum diameter values with which each configuration is compatible"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddSmartComponent",
+      "IComponent2.GetSmartComponentData",
+      "IComponent2.IsSmartComponent",
+      "IComponent2.SetSmartComponentData",
+      "ISmartComponentFeatureData"
+    ],
+    "keywords": [
+      "smart",
+      "components",
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "createsmartcomponent",
+      "assembly",
+      "doc",
+      "create",
+      "component",
+      "component2",
+      "related",
+      "object",
+      "features",
+      "auto",
+      "size",
+      "diameter",
+      "boolean",
+      "lp",
+      "mate",
+      "reference",
+      "entity",
+      "bounding",
+      "values",
+      "make",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.CreateSmartComponent",
+  "description": "Creates a Smart Component.",
+  "signature": "System.Boolean CreateSmartComponent( \n   Component2\nComponentIn\n,\n   System.Object\nRelatedComponents\n,\n   System.Object\nRelatedFeatures\n,\n   System.Boolean\nAutoSizeDiameter\n,\n   Entity\nLpMateReference\n,\n   System.Object\nBoundingValues\n)",
+  "parameters": [
+    {
+      "name": "ComponentIn",
+      "type": "Component2",
+      "description": "IComponent2 to make smart"
+    },
+    {
+      "name": "RelatedComponents",
+      "type": "System.Object",
+      "description": "Array of the components to associate with the Smart Component"
+    },
+    {
+      "name": "RelatedFeatures",
+      "type": "System.Object",
+      "description": "Array of the features contained in the components to associate with the Smart Component"
+    },
+    {
+      "name": "AutoSizeDiameter",
+      "type": "System.Boolean",
+      "description": "True to auto-size a cylindrical Smart Component that has multiple configurations, false to not"
+    },
+    {
+      "name": "LpMateReference",
+      "type": "Entity",
+      "description": "Concentric mate reference between a cylindrical face or axis and a feature"
+    },
+    {
+      "name": "BoundingValues",
+      "type": "System.Object",
+      "description": "Array of doubles specifying minimum and maximum diameter values with which each configuration is compatible"
+    }
+  ],
+  "returns": "True if the Smart Component is created, false if not",
+  "remarks": "For example, a component with these configurations:\nTenInchDiameter\nThirteenInchDiameter\nTwentyInchDiameter\nmight have a BoundingValues array of [\n9,11,12,14,19,21], which specifies a +1 tolerance over each configuration parameter.",
+  "examples": [
+    {
+      "title": "Make Smart Component (VBA)",
+      "href": "Make_Smart_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Make Smart Component With Mate (VBA)",
+      "href": "Make_Smart_Component_with__Mate_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddSmartComponent",
+    "IComponent2.GetSmartComponentData",
+    "IComponent2.IsSmartComponent",
+    "IComponent2.SetSmartComponentData",
+    "ISmartComponentFeatureData"
+  ]
+}

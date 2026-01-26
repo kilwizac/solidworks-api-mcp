@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "IGetParents",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ParentCount",
+        "type": "System.Int32",
+        "description": "Number of parent features for this macro feature"
+      },
+      {
+        "name": "PFeatures",
+        "type": "Feature",
+        "description": "in-process, unmanaged C++: Pointer to an array of features of parents of this macro feature VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "igetparents",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "parents",
+      "parent",
+      "count",
+      "int32",
+      "features",
+      "void"
+    ]
+  },
+  "title": "IMacroFeatureData.IGetParents",
+  "description": "Gets the parent features of this macro feature.",
+  "signature": "void IGetParents( \n   System.Int32\nParentCount\n,\n   out Feature\nPFeatures\n)",
+  "parameters": [
+    {
+      "name": "ParentCount",
+      "type": "System.Int32",
+      "description": "Number of parent features for this macro feature"
+    },
+    {
+      "name": "PFeatures",
+      "type": "Feature",
+      "description": "in-process, unmanaged C++: Pointer to an array of features of parents of this macro feature VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "To get the parent features...\nUse...\nassigned to a macro feature by\nIMacroFeatureData::Parents\nor\nIMacroFeatureData::ISetParents\nIMacroFeatureData::Parents or IMacroFeatureData::IGetParents\n- or-\nIFeature::GetParents\nor\nIFeature::IGetParents\nof a macro feature created by first selecting objects and then calling\nIFeatureManager::InsertMacroFeature3\nor\nIFeatureManager::IInsertMacroFeature3\nIMacroFeatureData::GetSelections3\nor\nIMacroFeatureData::IGetSelections3\n- or -\nIFeature::GetParents or IFeature::IGetParents\nBefore calling this method, call\nIMacroFeatureData::GetParentsCount\nto determine the value of ParentCount.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,137 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ScaleOrCopy",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Copy",
+        "type": "System.Boolean",
+        "description": "True to copy the sketch items or annotations, false to not"
+      },
+      {
+        "name": "NumCopies",
+        "type": "System.Int32",
+        "description": "Number of copies"
+      },
+      {
+        "name": "BaseX",
+        "type": "System.Double",
+        "description": "X coordinate of the base point"
+      },
+      {
+        "name": "BaseY",
+        "type": "System.Double",
+        "description": "Y coordinate of the base point"
+      },
+      {
+        "name": "BaseZ",
+        "type": "System.Double",
+        "description": "Z coordinate of the base point"
+      },
+      {
+        "name": "Scale",
+        "type": "System.Double",
+        "description": "Factor by which to scale the sketch entities or annotations"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.MoveOrCopy",
+      "IModelDocExtension.RotateOrCopy"
+    ],
+    "keywords": [
+      "scale",
+      "see",
+      "also",
+      "iscalefeaturedata",
+      "sketch",
+      "entities",
+      "annotations",
+      "annotation",
+      "iannotation",
+      "copy",
+      "scaleorcopy",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "boolean",
+      "num",
+      "copies",
+      "int32",
+      "base",
+      "double",
+      "void",
+      "rotate",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDocExtension.ScaleOrCopy",
+  "description": "Scales and optionally copies the selected sketch items or annotations.",
+  "signature": "void ScaleOrCopy( \n   System.Boolean\nCopy\n,\n   System.Int32\nNumCopies\n,\n   System.Double\nBaseX\n,\n   System.Double\nBaseY\n,\n   System.Double\nBaseZ\n,\n   System.Double\nScale\n)",
+  "parameters": [
+    {
+      "name": "Copy",
+      "type": "System.Boolean",
+      "description": "True to copy the sketch items or annotations, false to not"
+    },
+    {
+      "name": "NumCopies",
+      "type": "System.Int32",
+      "description": "Number of copies"
+    },
+    {
+      "name": "BaseX",
+      "type": "System.Double",
+      "description": "X coordinate of the base point"
+    },
+    {
+      "name": "BaseY",
+      "type": "System.Double",
+      "description": "Y coordinate of the base point"
+    },
+    {
+      "name": "BaseZ",
+      "type": "System.Double",
+      "description": "Z coordinate of the base point"
+    },
+    {
+      "name": "Scale",
+      "type": "System.Double",
+      "description": "Factor by which to scale the sketch entities or annotations"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, use\nIModelDocExtension::SelectByID2\nto select the entities to scale or copy.\nUsing this method may break existing sketch relations, including relations that are automatically created when offsetting or converting entities. Use the\nISketchRelationManager\nmethods before and after using this method to determine whether all sketch relations remain intact.",
+  "examples": [
+    {
+      "title": "Rotate, Scale, and Copy Sketch (C#)",
+      "href": "Rotate_Scale_Copy_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate, Scale, and Copy Sketch (VB.NET)",
+      "href": "Rotate_Scale_Copy_Sketch_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Rotate, Scale, and Copy Sketch (VBA)",
+      "href": "Rotate_Scale_Copy_Sketch_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.MoveOrCopy",
+    "IModelDocExtension.RotateOrCopy"
+  ]
+}

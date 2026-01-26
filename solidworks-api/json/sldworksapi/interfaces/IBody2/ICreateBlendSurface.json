@@ -1,0 +1,155 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateBlendSurface",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "Surface1",
+        "type": "Surface",
+        "description": "First side surface"
+      },
+      {
+        "name": "Range1",
+        "type": "System.Double",
+        "description": "Signed offset of Surface1"
+      },
+      {
+        "name": "Surface2",
+        "type": "Surface",
+        "description": "Second side surface"
+      },
+      {
+        "name": "Range2",
+        "type": "System.Double",
+        "description": "Signed offset of Surface2"
+      },
+      {
+        "name": "StartVec",
+        "type": "System.Double",
+        "description": "Array of 3 doubles representing a point close to the start of the blend spine"
+      },
+      {
+        "name": "EndVec",
+        "type": "System.Double",
+        "description": "Array of 3 doubles representing a point close to the end of the blend spine"
+      },
+      {
+        "name": "HaveHelpVec",
+        "type": "System.Int32",
+        "description": "Optional; True if help vector is provided"
+      },
+      {
+        "name": "HelpVec",
+        "type": "System.Double",
+        "description": "Array of 3 doubles representing the direction of the help vector"
+      },
+      {
+        "name": "HaveHelpBox",
+        "type": "System.Int32",
+        "description": "Optional; True if box is provided"
+      },
+      {
+        "name": "HelpBox",
+        "type": "System.Double",
+        "description": "Array of 6 doubles bounding the area of interest"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.CreateBlendSurface"
+    ],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreateblendsurface",
+      "ibody2",
+      "body2",
+      "create",
+      "blend",
+      "surface1",
+      "range1",
+      "double",
+      "surface2",
+      "range2",
+      "start",
+      "vec",
+      "end",
+      "have",
+      "help",
+      "int32",
+      "box"
+    ]
+  },
+  "title": "IBody2.ICreateBlendSurface",
+  "description": "Creates a constant radius rolling-ball blend surface (also known as a pipe surface) between two side surfaces.",
+  "signature": "Surface ICreateBlendSurface( \n   Surface\nSurface1\n,\n   System.Double\nRange1\n,\n   Surface\nSurface2\n,\n   System.Double\nRange2\n,\n   ref System.Double\nStartVec\n,\n   ref System.Double\nEndVec\n,\n   System.Int32\nHaveHelpVec\n,\n   ref System.Double\nHelpVec\n,\n   System.Int32\nHaveHelpBox\n,\n   ref System.Double\nHelpBox\n)",
+  "parameters": [
+    {
+      "name": "Surface1",
+      "type": "Surface",
+      "description": "First side surface"
+    },
+    {
+      "name": "Range1",
+      "type": "System.Double",
+      "description": "Signed offset of Surface1"
+    },
+    {
+      "name": "Surface2",
+      "type": "Surface",
+      "description": "Second side surface"
+    },
+    {
+      "name": "Range2",
+      "type": "System.Double",
+      "description": "Signed offset of Surface2"
+    },
+    {
+      "name": "StartVec",
+      "type": "System.Double",
+      "description": "Array of 3 doubles representing a point close to the start of the blend spine"
+    },
+    {
+      "name": "EndVec",
+      "type": "System.Double",
+      "description": "Array of 3 doubles representing a point close to the end of the blend spine"
+    },
+    {
+      "name": "HaveHelpVec",
+      "type": "System.Int32",
+      "description": "Optional; True if help vector is provided"
+    },
+    {
+      "name": "HelpVec",
+      "type": "System.Double",
+      "description": "Array of 3 doubles representing the direction of the help vector"
+    },
+    {
+      "name": "HaveHelpBox",
+      "type": "System.Int32",
+      "description": "Optional; True if box is provided"
+    },
+    {
+      "name": "HelpBox",
+      "type": "System.Double",
+      "description": "Array of 6 doubles bounding the area of interest"
+    }
+  ],
+  "returns": "Newly created surface",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IBody2.CreateBlendSurface"
+  ]
+}

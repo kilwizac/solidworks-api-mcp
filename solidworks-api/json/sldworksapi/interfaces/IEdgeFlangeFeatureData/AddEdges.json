@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdgeFlangeFeatureData",
+    "member": "AddEdges",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "EdgeArray",
+        "type": "System.Object",
+        "description": "Array of edge s associated with SketchArray"
+      },
+      {
+        "name": "SketchArray",
+        "type": "System.Object",
+        "description": "Array of sketch es associated with EdgeArray"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IEdgeFlangeFeatureData.Edges",
+      "IEdgeFlangeFeatureData.IGetEdges",
+      "IEdgeFlangeFeatureData.ISetEdges",
+      "IEdgeFlangeFeatureData.RemoveEdges"
+    ],
+    "keywords": [
+      "addedges",
+      "iedgeflangefeaturedata",
+      "edge",
+      "flange",
+      "feature",
+      "data",
+      "add",
+      "edges",
+      "array",
+      "object",
+      "sketch",
+      "int32"
+    ]
+  },
+  "title": "IEdgeFlangeFeatureData.AddEdges",
+  "description": "Adds edges to this edge flange.",
+  "signature": "System.Int32 AddEdges( \n   System.Object\nEdgeArray\n,\n   System.Object\nSketchArray\n)",
+  "parameters": [
+    {
+      "name": "EdgeArray",
+      "type": "System.Object",
+      "description": "Array of edge s associated with SketchArray"
+    },
+    {
+      "name": "SketchArray",
+      "type": "System.Object",
+      "description": "Array of sketch es associated with EdgeArray"
+    }
+  ],
+  "returns": "Error code as defined by swEdgeFlangeError_e",
+  "remarks": "Before calling this method, call\nIModelDoc2::InsertSketchForEdgeFlange\nto associate the sketches with the edges.",
+  "examples": [
+    {
+      "title": "IEdgeFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdgeFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdgeFlangeFeatureData.Edges",
+    "IEdgeFlangeFeatureData.IGetEdges",
+    "IEdgeFlangeFeatureData.ISetEdges",
+    "IEdgeFlangeFeatureData.RemoveEdges"
+  ]
+}

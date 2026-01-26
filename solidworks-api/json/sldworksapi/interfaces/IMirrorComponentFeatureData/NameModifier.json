@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMirrorComponentFeatureData",
+    "member": "NameModifier",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "namemodifier",
+      "imirrorcomponentfeaturedata",
+      "mirror",
+      "component",
+      "feature",
+      "data",
+      "name",
+      "modifier",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IMirrorComponentFeatureData.NameModifier",
+  "description": "Gets or sets the prefix or suffix to add to the file or configuration names of the components to be mirrored.",
+  "signature": "System.String NameModifier {get; set;}",
+  "parameters": [],
+  "returns": "Prefix or suffix text; \"Mirror\" by default",
+  "remarks": "This property is valid only if:\nIMirrorComponentFeatureData::NameModifierType\nis either\nswMirrorComponentNameModifier_e\n.swMirrorComponentName_Prefix or swMirrorComponentNameModifier_e.swMirrorComponentNameName_Suffix,\n- and -\nIMirrorComponentFeatureData::OppositeHandComponents\nis not Nothing or null,\n- and -\nIMirrorComponentFeatureData::MirroredComponentFilenames\nis not Nothing or null.\nIf\nIMirrorComponentFeatureData::CreateDerivedConfigurations\nis:\nTrue, then this property prepends a prefix or appends a suffix to the configuration name of the original component to create new opposite-hand version configuration names.\nFalse, then this property prepends a prefix or appends a suffix to the orginal component file name to create new opposite-hand version file names.",
+  "examples": [
+    {
+      "title": "IMirrorComponentFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

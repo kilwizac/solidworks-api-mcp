@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "GetTrackingIDs",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "TrackingCookie",
+        "type": "System.Int32",
+        "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+      },
+      {
+        "name": "TrackingIDs",
+        "type": "System.Object",
+        "description": "Array of tracking IDs on this edge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetTrackingIDsCount",
+      "IEdge.IGetTrackingIDs",
+      "IEdge.RemoveTrackingID",
+      "IEdge.SetTrackingID",
+      "IModelDocExtension.FindTrackedObjects"
+    ],
+    "keywords": [
+      "tracking",
+      "ids",
+      "edges",
+      "edge",
+      "see",
+      "also",
+      "iedge",
+      "gettrackingids",
+      "ds",
+      "cookie",
+      "int32",
+      "object",
+      "remove",
+      "vba"
+    ]
+  },
+  "title": "IEdge.GetTrackingIDs",
+  "description": "Gets the tracking IDs assigned to this edge.",
+  "signature": "System.Int32 GetTrackingIDs( \n   System.Int32\nTrackingCookie\n,\n   out System.Object\nTrackingIDs\n)",
+  "parameters": [
+    {
+      "name": "TrackingCookie",
+      "type": "System.Int32",
+      "description": "Cookie obtained from ISldWorks::RegisterTrackingDefinition"
+    },
+    {
+      "name": "TrackingIDs",
+      "type": "System.Object",
+      "description": "Array of tracking IDs on this edge"
+    }
+  ],
+  "returns": "Status as defined by swTrackingIDError_e",
+  "remarks": "See\nTracking IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Get, Set, and Remove Tracking IDs on Edge (VBA)",
+      "href": "Get_Set_And_Remove_Tracking_IDs_On_Edge_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEdge.GetTrackingIDsCount",
+    "IEdge.IGetTrackingIDs",
+    "IEdge.RemoveTrackingID",
+    "IEdge.SetTrackingID",
+    "IModelDocExtension.FindTrackedObjects"
+  ]
+}

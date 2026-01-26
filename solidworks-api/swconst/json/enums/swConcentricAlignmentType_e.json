@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swConcentricAlignmentType_e",
+    "description": "Concentric mate alignment types.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swConcentricAlignmentType_e",
+  "description": "Concentric mate alignment types.",
+  "values": [
+    {
+      "member": "swConcentricAlignConcentric",
+      "value": "0",
+      "description": "; Align both mates to be exactly concentric; neither mate is misaligned"
+    },
+    {
+      "member": "swConcentricAlignLinkedMate",
+      "value": "2",
+      "description": "; Align the linked mate to be exactly concentric, causing the currently edited mate to be misaligned"
+    },
+    {
+      "member": "swConcentricAlignSymmetric",
+      "value": "3",
+      "description": "; Misalign both concentric mates, splitting the misalignment deviation evenly between mates"
+    },
+    {
+      "member": "swConcentricAlignThisMate",
+      "value": "1",
+      "description": "; Align the mate currently being edited to be exactly concentric, causing the linked mate to be misaligned"
+    }
+  ]
+}

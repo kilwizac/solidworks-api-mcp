@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "OffsetText",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetText",
+      "IDisplayDimension.SetText"
+    ],
+    "keywords": [
+      "offsettext",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "offset",
+      "text",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.OffsetText",
+  "description": "Gets or sets whether or not to offset the text of a dimension.",
+  "signature": "System.Boolean OffsetText {get; set;}",
+  "parameters": [],
+  "returns": "True to offset the dimension text, false to not",
+  "remarks": "If this property is set to...\nThen...\nTrue\nDimension text is attached to the end of a leader that can be moved about freely.\nDimension line and extension lines to which the dimension text is associated do not move.\nfalse\nDimension text is displayed on the dimension line.\nDimension line and extension lines can move when the dimension text is moved.\nBecause radial and diametric dimensions are already attached to the end of a leader, this property is not available for these types of dimensions.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.GetText",
+    "IDisplayDimension.SetText"
+  ]
+}

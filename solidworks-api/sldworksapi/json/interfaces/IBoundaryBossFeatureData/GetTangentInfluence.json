@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "GetTangentInfluence",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetTangentApplyToAll",
+      "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.GetTangentLength",
+      "IBoundaryBossFeatureData.MergeTangentFaces",
+      "IBoundaryBossFeatureData.SetGuideTangencyType",
+      "IBoundaryBossFeatureData.SetTangentApplyToAll",
+      "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.SetTangentInfluence",
+      "IBoundaryBossFeatureData.SetTangentLength"
+    ],
+    "keywords": [
+      "gettangentinfluence",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "tangent",
+      "influence",
+      "direction",
+      "int32",
+      "guide",
+      "index",
+      "double"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.GetTangentInfluence",
+  "description": "Gets the curve influence for the specified curve in the specified direction in this boundary feature.",
+  "signature": "System.Double GetTangentInfluence( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    }
+  ],
+  "returns": "Percentage of curve influence; 0.0 <= value for curve influence <= 1.0",
+  "remarks": "This method is only available if curves in both directions exist and the type of curve influence is:\nswBoundaryBossCurveInfluenceType_e\n.swBoundaryBossCurve_GlobalInfluence\n- or-\nswBoundaryBossCurveInfluenceType_e.swBoundaryBossCurve_ToNextSharpInfluence\nCall\nIBoundaryBossFeatureData::D1CurveInfluence\nand\nIBoundaryBossFeatureData::D2CurveInfluence\nto determine the type of curve influences in both directions.\nThis method is not available if the type of tangency is:\nswBoundaryBossTangencyType_e\n.swBoundaryBossTangency_None\n- or -\nswBoundaryBossTangencyType_e.swBoundaryBossTangency_Default\nCall\nIBoundaryBossFeatureData::GetGuideTangencyType\nto determine the type of tangency.\nTo get a valid range of values for GuideIndex, call\nIBoundaryBossFeatureData::GetCurvesCount\n.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetTangentApplyToAll",
+    "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.GetTangentLength",
+    "IBoundaryBossFeatureData.MergeTangentFaces",
+    "IBoundaryBossFeatureData.SetGuideTangencyType",
+    "IBoundaryBossFeatureData.SetTangentApplyToAll",
+    "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.SetTangentInfluence",
+    "IBoundaryBossFeatureData.SetTangentLength"
+  ]
+}

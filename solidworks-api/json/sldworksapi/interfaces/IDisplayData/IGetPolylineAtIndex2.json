@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "IGetPolylineAtIndex2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired polyline where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetPolyLineCount",
+      "IDisplayData.GetPolygonSizeAtIndex",
+      "IDisplayData.GetPolylineAtIndex2"
+    ],
+    "keywords": [
+      "igetpolylineatindex2",
+      "idisplaydata",
+      "display",
+      "data",
+      "polyline",
+      "index2",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IDisplayData.IGetPolylineAtIndex2",
+  "description": "Gets information for the specified polyline.",
+  "signature": "System.Double IGetPolylineAtIndex2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired polyline where the index begins at zero"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Format of return values is an array of doubles with the format:\n[\npolyLineType, DataSize, Color, LineFont, Unused, Unused, NumPolyPoints, [x,y,z]\n]\nwhere:\npolyLineType\nUnderlying geometry type:\n0 - Polyline type\n1 - Arc or Circle type\nDataSize\nNumber of elements in the GeomData array. For Type = 0, this argument is 0.\nColor\nPolyline color.\nLineFont\nPolyline font information. You can use his value with\nIDrawingDoc::GetLineFontInfo2\nand\nIDrawingDoc::GetLineFontName2\n. This value is valid only if LineStyle is -1.\nNumPolyPoints\nNumber of XYZ points found in the [x,y,z] return value.\n[x,y,z]\nArray of points used to describe the polyline. This array has\nNumPolyPoints\npoints. This method returns an array for every polyline regardless of its type.\nUse\nIDisplayData::GetPolyLineSizeAtIndex2\nto determine the number of elements returned in this array.",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetPolyLineCount",
+    "IDisplayData.GetPolygonSizeAtIndex",
+    "IDisplayData.GetPolylineAtIndex2"
+  ]
+}

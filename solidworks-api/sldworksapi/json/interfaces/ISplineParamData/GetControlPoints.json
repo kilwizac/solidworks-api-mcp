@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISplineParamData",
+    "member": "GetControlPoints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ControlPoints",
+        "type": "System.Object",
+        "description": "One-dimensional array of doubles ( see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISplineParamData.IGetControlPoints",
+      "ISplineParamData.SetControlPoints"
+    ],
+    "keywords": [
+      "getcontrolpoints",
+      "isplineparamdata",
+      "spline",
+      "param",
+      "data",
+      "control",
+      "points",
+      "object",
+      "boolean",
+      "bcurve",
+      "vb",
+      "net",
+      "vba",
+      "parameters"
+    ]
+  },
+  "title": "ISplineParamData.GetControlPoints",
+  "description": "Gets the coordinates of all of the control points of the spline.",
+  "signature": "System.Boolean GetControlPoints( \n   out System.Object\nControlPoints\n)",
+  "parameters": [
+    {
+      "name": "ControlPoints",
+      "type": "System.Object",
+      "description": "One-dimensional array of doubles ( see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Control points determine the shape of a spline or curve. Starting with a set of control points, all other points of a spline can be calculated. A given point on the spline is calculated using the polynomial basis functions of its nearest control points. The\nknot vector\ndetermines which control point basis functions are in force for calculating each point along a curve.\nThe size of the ControlPoints array is based on the curve dimension:\nif\ndimension\n= 2, then each control point has 2 doubles ( x, y )\nif\ndimension\n= 3, then each control point has 3 doubles ( x, y, z )\nif\ndimension\n= 4, and the curve is closed or periodic, then each control point has 4 doubles ( x, y, z, w ), where w = weight\nif\ndimension\n= 4, and the curve is open or non-periodic, then each control point has 4 doubles ( w*x, w*y, w*z, w ), where w = weight\nSize of ControlPoints array =\ncontrol points count\n*\ndimension",
+  "examples": [
+    {
+      "title": "Get BCurve Spline Points (C#)",
+      "href": "Get_BCurve_Spline_Points_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BCurve Spline Points (VB.NET)",
+      "href": "Get_BCurve_Spline_Points_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BCurve Spline Points (VBA)",
+      "href": "Get_BCurve_Spline_Points_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Spline's Parameters (C#)",
+      "href": "Get_Spline's_Parameters_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Spline's Parameters (VB.NET)",
+      "href": "Get_Spline's_Parameters_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Spline's Parameters (VBA)",
+      "href": "Get_Spline's_Parameters_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISplineParamData.IGetControlPoints",
+    "ISplineParamData.SetControlPoints"
+  ]
+}

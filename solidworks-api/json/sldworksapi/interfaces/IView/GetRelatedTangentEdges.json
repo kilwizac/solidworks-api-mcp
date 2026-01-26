@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetRelatedTangentEdges",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "BendLine",
+        "type": "System.Object",
+        "description": "Bendline whose visible tangent edges you want (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "geometry",
+      "ui"
+    ],
+    "related": [
+      "IView.GetRelatedTangentEdgeCount",
+      "IView.IGetRelatedTangentEdges"
+    ],
+    "keywords": [
+      "tangent",
+      "edges",
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "getrelatedtangentedges",
+      "iview",
+      "view",
+      "related",
+      "bend",
+      "line",
+      "object",
+      "bendlines",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.GetRelatedTangentEdges",
+  "description": "Gets the visible tangent edges for the specified bendline in a flat-pattern drawing view.",
+  "signature": "System.Object GetRelatedTangentEdges( \n   System.Object\nBendLine\n)",
+  "parameters": [
+    {
+      "name": "BendLine",
+      "type": "System.Object",
+      "description": "Bendline whose visible tangent edges you want (see Remarks )"
+    }
+  ],
+  "returns": "Array of visible tangent edges for the specified bendline",
+  "remarks": "Hidden tangent edges are not returned by this method. Use\nIDrawingDoc::ViewTangentEdges\nto change the visibility of tangent edges in a drawing.\nCall\nIView::GetBendLineCount\nto get the number of bendlines in a flat-pattern drawing view. Call\nIView::GetBendLines\nor\nIView::IGetBendLines\nto get an array of bendlines for a flat-pattern drawing view. Use the value returned by IView::GetBendLineCount to determine the index of the bendline in the array of bendlines you want.",
+  "examples": [
+    {
+      "title": "Get Tangent Edges of Bendlines (VB.NET)",
+      "href": "Get_Tangent_Edges_of_Bendlines_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Tangent Edges of Bendlines (VBA)",
+      "href": "Get_Tangent_Edges_of_Bendlines_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Tangent Edges of Bendlines (C#)",
+      "href": "Get_Tangent_Edges_of_Bendlines_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetRelatedTangentEdgeCount",
+    "IView.IGetRelatedTangentEdges"
+  ]
+}

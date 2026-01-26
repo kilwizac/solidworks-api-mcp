@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetStream",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "StreamType",
+        "type": "System.Int32",
+        "description": "1 = material stream"
+      },
+      {
+        "name": "ReadOnly",
+        "type": "System.Boolean",
+        "description": "True if the stream is read-only, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "stream",
+      "handle",
+      "getstream",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "type",
+      "int32",
+      "read",
+      "only",
+      "boolean",
+      "object"
+    ]
+  },
+  "title": "IModelDocExtension.GetStream",
+  "description": "Gets the handle for the specified stream.",
+  "signature": "System.Object GetStream( \n   System.Int32\nStreamType\n,\n   out System.Boolean\nReadOnly\n)",
+  "parameters": [
+    {
+      "name": "StreamType",
+      "type": "System.Int32",
+      "description": "1 = material stream"
+    },
+    {
+      "name": "ReadOnly",
+      "type": "System.Boolean",
+      "description": "True if the stream is read-only, false if not"
+    }
+  ],
+  "returns": "Pointer to the IUnknown interface for this stream",
+  "remarks": "To release the stream, call\nIModelDocExtension::ReleaseStream\n.\nVB Example\nThis example illustrates attaching an XML document to a stream, and then releasing the stream.\nDim swApp As Object\nSub main()\nSet swApp = Application.SldWorks\nDim docext As SldWorks.ModelDocExtension\nSet docext = swApp.ActiveDoc.Extension\nDim xmldoc As MSXML2.DOMDocument\nSet xmldoc = CreateObject(\"MSXML2.DOMDocument\")\nDim stat As Boolean\nDim stream\nSet stream = docext.\nGetStream\n(1, stat)\nxmldoc.Load (stream)\ndocext.\nReleaseStream\n(1)\nxmldoc.Save (\"C:\\temp\\xmlmat.xml\")\nEnd Sub\nC++ Example\n//--------\nCComPtr<IModelDocExtension> ext;\nm_iModelDoc2->get_Extension(&ext);\nLPSTREAM stream = NULL;\nVARIANT_BOOL access = 0;\next->\nIGetStream\n(1, &access, &stream);\n// Your code\nif (stream)\n{\nVARIANT_BOOL status;\next->\nIReleaseStream\n(1, &status);\nstream->Release();\n}\n//--------",
+  "examples": [],
+  "related": []
+}

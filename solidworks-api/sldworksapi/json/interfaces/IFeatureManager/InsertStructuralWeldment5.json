@@ -1,0 +1,136 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertStructuralWeldment5",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Path",
+        "type": "System.String",
+        "description": "Path and file name of the type of structural member (see Remarks )"
+      },
+      {
+        "name": "ConnectedSegmentsOption",
+        "type": "System.Int32",
+        "description": "Option as defined in swConnectedSegmentsOption_e"
+      },
+      {
+        "name": "AllowProtrusion",
+        "type": "System.Boolean",
+        "description": "True to allow protrusion, false to not"
+      },
+      {
+        "name": "Groups",
+        "type": "System.Object",
+        "description": "Array of IStructuralMemberGroup objects"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration in a custom weldment profile or an empty string (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IStructuralMemberFeatureData",
+      "IStructuralMemberFeatureData.ConfigurationName",
+      "IStructuralMemberGroup"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "structural",
+      "member",
+      "istructuralmemberfeaturedata",
+      "weldments",
+      "members",
+      "insertstructuralweldment5",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "weldment5",
+      "path",
+      "string",
+      "connected",
+      "segments",
+      "option",
+      "int32",
+      "allow",
+      "protrusion",
+      "boolean",
+      "groups",
+      "object",
+      "configuration",
+      "name",
+      "using",
+      "custom",
+      "weldment",
+      "profile",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertStructuralWeldment5",
+  "description": "Inserts a structural weldment feature.",
+  "signature": "Feature InsertStructuralWeldment5( \n   System.String\nPath\n,\n   System.Int32\nConnectedSegmentsOption\n,\n   System.Boolean\nAllowProtrusion\n,\n   System.Object\nGroups\n,\n   System.String\nConfigurationName\n)",
+  "parameters": [
+    {
+      "name": "Path",
+      "type": "System.String",
+      "description": "Path and file name of the type of structural member (see Remarks )"
+    },
+    {
+      "name": "ConnectedSegmentsOption",
+      "type": "System.Int32",
+      "description": "Option as defined in swConnectedSegmentsOption_e"
+    },
+    {
+      "name": "AllowProtrusion",
+      "type": "System.Boolean",
+      "description": "True to allow protrusion, false to not"
+    },
+    {
+      "name": "Groups",
+      "type": "System.Object",
+      "description": "Array of IStructuralMemberGroup objects"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration in a custom weldment profile or an empty string (see Remarks )"
+    }
+  ],
+  "returns": "Structural weldment feature",
+  "remarks": "Specify Path using either:\nSOLIDWORKS-supplied weldment profile (*.\nsldlfp\n) from\ninstall_dir\n\\\nlang\n\\\nlang\n\\\nweldment profiles\n-\nor -\ncustom weldment profile (*.\nsldlfp\n); see the SOLIDWORKS Help for details about custom weldment profiles\nIf using...\nThen specify ConfigurationName as...\nSOLIDWORKS-supplied weldment profile\nEmpty string\nCustom weldment profile\nName of the configuration in the custom weldment profile\nUse\nIFeatureManager::CreateStructuralMemberGroup\n,\nIStructuralMemberFeatureData::Groups\n, or\nIStructuralMemberFeatureData::IGetGroups\nto populate the Groups parameter.",
+  "examples": [
+    {
+      "title": "Insert Structural Weldments Using Custom Weldment Profile (C#)",
+      "href": "Insert_Structural_Weldments_Using_Custom_Weldment_Profile_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldments Using Custom Weldment Profile (VB.NET)",
+      "href": "Insert_Structural_Weldments_Using_Custom_Weldment_Profile_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Structural Weldments Using Custom Weldment Profile (VBA)",
+      "href": "Insert_Structural_Weldments_Using_Custom_Weldment_Profile_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IStructuralMemberFeatureData",
+    "IStructuralMemberFeatureData.ConfigurationName",
+    "IStructuralMemberGroup"
+  ]
+}

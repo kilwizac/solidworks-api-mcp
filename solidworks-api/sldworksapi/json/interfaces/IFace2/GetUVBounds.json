@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "GetUVBounds",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.GetProcessedBody2",
+      "IFace2.IGetUVBounds"
+    ],
+    "keywords": [
+      "getuvbounds",
+      "iface2",
+      "face2",
+      "uv",
+      "bounds",
+      "object",
+      "create",
+      "trimmed",
+      "curve",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFace2.GetUVBounds",
+  "description": "Gets the values that describe the U, V bounds of this face.",
+  "signature": "System.Object GetUVBounds()",
+  "parameters": [],
+  "returns": "Array (see Remarks )",
+  "remarks": "The return values bound an area of the surface in which the face is defined. You can determine the surface U, V bounds using\nISurface::Parameterization\nor\nISurface::IParameterization\n.\nThe returned data is an array of 4 doubles arranged in the following order:\nretval[0] - Minimum U parameter of this face\nretval[1] - Maximum U parameter of this face\nretval[2] - Minimum V parameter of this face\nretval[3] - Maximum V parameter of this face\nThe minimum parameters are always less than the maximum parameters, and the range (for example, retval[1] - retval[0] and retval[3]-retval[2]) is always less than or equal to the U and V range of the underlying surface.\nFor surfaces with periodic parameters, the face parameter box can never be larger than the period of the corresponding surface parameter.\nuRange[0] <= retval[0] < uRange[1]\nvRange[0] <= retval[2] < vRange[1]\nwhere uRange and vRange describe the UV range of the surface\nTherefore, a face that straddles the boundary of a periodic parameter has an upper parameter value for the face that is greater than the upper parameter range of the surface.",
+  "examples": [
+    {
+      "title": "Create Trimmed Curve (VBA)",
+      "href": "Return_Untrimmed_Curve_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (VB.NET)",
+      "href": "Return_Untrimmed_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (C#)",
+      "href": "Return_Untrimmed_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetProcessedBody2",
+    "IFace2.IGetUVBounds"
+  ]
+}

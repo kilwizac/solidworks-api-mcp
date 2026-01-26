@@ -1,0 +1,31 @@
+{
+  "frontmatter": {
+    "type": "pattern",
+    "title": "Connect to SOLIDWORKS Message Pump to Handle Keystrokes and Accelerator Keys (C#)",
+    "keywords": [
+      "connect",
+      "solidworks",
+      "message",
+      "pump",
+      "handle",
+      "keystrokes",
+      "accelerator",
+      "keys"
+    ],
+    "categories": [
+      "documents"
+    ],
+    "related": []
+  },
+  "title": "Connect to SOLIDWORKS Message Pump to Handle Keystrokes and Accelerator Keys (C#)",
+  "body": [
+    "This example shows how to connect to a SOLIDWORKS message pump by creating, installing, and uninstalling a hook for a modeless dialog box or PropertyManager page for intercepting keystrokes and handling accelerator keys.",
+    "",
+    "## Code",
+    "",
+    "```csharp",
+    "//Create, install, and uninstall a hook for a modeless dialog box\n//or PropertyManager page for intercepting keystrokes and\n//handling accelerator keys\nusing System;\nusing System.Runtime.InteropServices;\nnamespace WinHooks\n{\n    public class HookEventArgs : EventArgs\n    {\n        public int HookCode; // Hook code\n        public IntPtr wParam; // WPARAM argument\n        public IntPtr lParam; // LPARAM argument\n    }\n    // Hook Types\n    public enum HookType : int\n    {\n        WH_JOURNALRECORD = 0,\n        WH_JOURNALPLAYBACK = 1,\n        WH_KEYBOARD = 2,\n        WH_GETMESSAGE = 3,\n        WH_CALLWNDPROC = 4,\n        WH_CBT = 5,\n        WH_SYSMSGFILTER = 6,\n        WH_MOUSE = 7,\n        WH_HARDWARE = 8,\n        WH_DEBUG = 9,\n        WH_SHELL = 10,\n        WH_FOREGROUNDIDLE = 11,\n        WH_CALLWNDPROCRET = 12,\n        WH_KEYBOARD_LL = 13,\n        WH_MOUSE_LL = 14\n    }\n    public class LocalWindowsHook\n    {\n        // Filter function delegate\n        public delegate int HookProc(int code, IntPtr wParam,\n           IntPtr lParam);\n        // Internal properties\n        protected IntPtr m_hhook = IntPtr.Zero;\n        protected HookProc m_filterFunc = null;\n        protected HookType m_hookType;\n        // Event delegate\n        public delegate void HookEventHandler(object sender, HookEventArgs e);\n        // Event: HookInvoked\n        public event HookEventHandler HookInvoked;\n        protected void OnHookInvoked(HookEventArgs e)\n        {\n            if (HookInvoked != null)\n                HookInvoked(this, e);\n        }\n        // Class constructor(s)\n        public LocalWindowsHook(HookType hook)\n        {\n            m_hookType = hook;\n            m_filterFunc = new HookProc(this.CoreHookProc);\n        }\n        public LocalWindowsHook(HookType hook, HookProc func)\n        {\n            m_hookType = hook;\n            m_filterFunc = func;\n        }\n        // Default filter function\n        public int CoreHookProc(int code, IntPtr wParam, IntPtr lParam)\n        {\n            if (code < 0)\n                return CallNextHookEx(m_hhook, code, wParam, lParam);\n            // Let clients determine what to do\n            HookEventArgs e = new HookEventArgs();\n            e.HookCode = code;\n            e.wParam = wParam;\n            e.lParam = lParam;\n            OnHookInvoked(e);\n            // Yield to the next hook in the chain\n            return CallNextHookEx(m_hhook, code, wParam, lParam);\n        }\n        // Install the hook\n        public void Install()\n        {\n            m_hhook = SetWindowsHookEx(\n                m_hookType,\n                m_filterFunc,\n                IntPtr.Zero,\n                (int) AppDomain.GetCurrentThreadId());\n        }\n \n        // Uninstall the hook\n        public void Uninstall()\n        {\n            UnhookWindowsHookEx(m_hhook);\n        }\n        #region Win32 Imports\n        // Win32: SetWindowsHookEx()\n        [DllImport(\"user32.dll\")]\n        protected static extern IntPtr SetWindowsHookEx(HookType code,\n            HookProc func,\n            IntPtr hInstance,\n            int threadID);\n        // Win32: UnhookWindowsHookEx()\n        [DllImport(\"user32.dll\")]\n        protected static extern int UnhookWindowsHookEx(IntPtr hhook);\n        // Win32: CallNextHookEx()\n        [DllImport(\"user32.dll\")]\n        protected static extern int CallNextHookEx(IntPtr hhook,\n            int code, IntPtr wParam, IntPtr lParam);\n        #endregion\n    }\n}",
+    "```",
+    ""
+  ]
+}

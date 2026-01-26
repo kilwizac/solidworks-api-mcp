@@ -1,0 +1,175 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>SOLIDWORKS Macros</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Macros,SOLIDWORKS API">
+<meta name=MS-HKWD content=VBA>
+<meta name=MS-HKWD content="Microsoft VBA">
+<meta name=MS-HKWD content="VBA,SOLIDWORKS API">
+<meta name=MS-HKWD content="Application basics">
+<meta name=MS-HKWD content="Getting Started">
+<meta name=MS-HKWD content=Macros>
+<meta name=MS-HKWD content="Microsoft VSTA">
+<meta name=MS-HKWD content="Macros,Microsoft VSTA">
+<meta name=MS-HKWD content=VSTA>
+<meta name=MS-HKWD content="VSTA,SOLIDWORKS API">
+<meta name=MS-HKWD content="Visual Studio Tools for Applications">
+<meta name=MS-HKWD content="Macros,Microsoft VBA">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=578>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>SOLIDWORKS Macros</h1>
+
+<p>The quickest and easiest way to start programming with the SOLIDWORKS 
+ API is to record a SOLIDWORKS macro, which contains the SOLIDWORKS API 
+ calls that correspond to the actions performed in the user interface. 
+ You can modify the macro in Microsoft Visual Basic for Applications (VBA) 
+ or Microsoft Visual Studio Tools for Applications (VSTA) to fit your work 
+ site's needs. </p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><span style="font-weight: bold;">Microsoft VBA</span> 
+ is a toolset based on Microsoft Visual Basic for Applications (VBA) and 
+ is embedded in SOLIDWORKS . Microsoft VBA lets you record, 
+ run, and edit Microsoft VBA macros in SOLIDWORKS. Recorded 
+ macros are saved as <span style="font-weight: bold;">.swp</span> files. 
+ </p></li>
+	
+	<li class=kadov-p><p><span style="font-weight: bold;">Microsoft Visual 
+	Studio Tools for Applications (VSTA)</span> 
+ is a toolset based on Microsoft VB.NET and C# and is installed with SOLIDWORKS. Microsoft VSTA lets you record, edit, debug, and run VB.NET and C# 
+	code with SOLIDWORKS. Recorded Microsoft VSTA macros are saved 
+ 	as Microsoft VB.NET or C# projects. Building or debugging a Microsoft VSTA macro creates an executable file that ends in the filename extension 
+ <span style="font-weight: bold;">.dll,</span> which can be used by SOLIDWORKS in the same manner as a <span style="font-weight: bold;">.swp</span> 
+ 	file.<span style="font-weight: bold;"><br>
+	<br>
+	NOTES:</span> </p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li>
+<a href="VSTA_2015.htm">SOLIDWORKS 2018 offers Visual Studio Tools for 
+Applications (VSTA)</a>, impacting how VB.NET and C# macros are developed and 
+run in SOLIDWORKS 2018 and later.<br>
+&nbsp;</li>
+	<li>When debugging Microsoft VSTA macros with user-interface 
+ components such as PropertyManager pages, manipulators, or other objects 
+ that use events or handler objects, the debugger must continue to run 
+ after the main() method of the VSTA macro exits. Either deselect the user-interface 
+ system option <span style="font-weight: bold;">Stop VSTA debugger on macro 
+ exit</span> (located on the <span style="font-weight: bold;">Tools &gt;</span>
+	<span style="font-weight: bold;">Options &gt;</span>
+	<span style="font-weight: bold;">System</span>
+	<span style="font-weight: bold;">Options</span> dialog) or set swUserPreferenceToggle_e.swStopDebuggingVstaOnExit 
+ to false to keep the debugger running after the main() method of the Microsoft 
+ VSTA macro exits.</li>
+</ul>
+
+	</li>
+</ul>
+
+<p>Typically you would follow these steps to create a SOLIDWORKS API application 
+ using SOLIDWORKS macros:</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Plan the user-interface actions before recording 
+ them. </p></li>
+	
+	<li class=kadov-p><p><a href="Record_Solidworks_Macro.htm">Record</a> 
+ the user-interface actions. <span style="font-weight: bold;"><br>
+	<br>
+	NOTE:</span> If you are not familiar with recording SOLIDWORKS macros, 
+ record the macro a couple of times to eliminate interactive changes to 
+ the view such as changing the view orientation, zooming in or out, panning, 
+ rotating the model, and so on.</p></li>
+	
+	<li class=kadov-p><p><a href="Edit_or_Debug_SolidWorks_Macro.htm">Edit</a> 
+ the macro to delete extra lines of code and explicitly declare and early 
+ bind variables.</p></li>
+	
+	<li class=kadov-p><p><a href="Run_SolidWorks_Macro.htm">Run</a> the 
+ macro to test it. </p></li>
+	
+	<li class=kadov-p><p><a href="Edit_or_Debug_SolidWorks_Macro.htm">Debug</a> 
+ the macro and test it again.</p></li>
+	
+	<li class=kadov-p><p>If the application has a user interface, create 
+ it in Microsoft VBA or Microsoft VSTA and then modify the macro to work 
+ with the user interface, run the modified macro, and debug it.</p></li>
+</ol>
+
+<p>When done recording, testing, and debugging the macro, you can <a href="Assign_SolidWorks_Macro_to_Button.htm">assign 
+ the macro to button</a>.</p>
+
+<!--kadov_tag{{<implicit_p>}}-->
+<!--Metadata type="DesignerControl" startspan
+<object id="RelatedTopic1" classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" dtcid="1" height="1" style="width: 1px; height: 1px;" type="application/x-oleobject" width="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="26">
+	<param name="_ExtentY" value="26">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="RecordSolidWorksMacro$$**$$EditSolidWorksMacro$$**$$RunSolidWorksMacro$$**$$AssignSolidWorksMacroShortcutKeyMenu$$**$$AssignSolidWorksMacroButton$$**$$TypesApplications$$**$$GettingStarted$$**$$">
+	<param name="Image" value="">
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\HELP\Cheryle_Working_Folder\SW2010\ROBOHELP\sldworksAPIProgGuide\GettingStarted\SolidWorks_Macros.htm">
+	<param name="_ID" value="RelatedTopic1">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value="">
+	<param name="Window" value="">
+	<param name="ChmFile" value="">
+	<param name="DisableJump" value="0">
+</object>
+--><!--metadata endspan type="DesignerControl"-->
+ 
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

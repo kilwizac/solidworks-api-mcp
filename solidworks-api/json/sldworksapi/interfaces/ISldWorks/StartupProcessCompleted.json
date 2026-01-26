@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISldWorks",
+    "member": "StartupProcessCompleted",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "add",
+      "ins",
+      "solidworks",
+      "startup",
+      "process",
+      "applications",
+      "out",
+      "startupprocesscompleted",
+      "isldworks",
+      "sld",
+      "works",
+      "completed",
+      "boolean"
+    ],
+    "readonly": true
+  },
+  "title": "ISldWorks.StartupProcessCompleted",
+  "description": "Gets whether the SOLIDWORKS startup process, including loading all startup add-ins, has completed.",
+  "signature": "System.Boolean StartupProcessCompleted {get;}",
+  "parameters": [],
+  "returns": "True if the SOLIDWORKS startup process, including loading all startup add-ins, has completed, false if not (see Remarks )",
+  "remarks": "Use this property in out-of-process add-in applications to ensure that SOLIDWORKS, including loading all startup add-ins, is ready to receive additional API calls. For example, call this property before calling\nISldWorks::OpenDoc6\nin an out-of-process add-in application.",
+  "examples": [],
+  "related": []
+}

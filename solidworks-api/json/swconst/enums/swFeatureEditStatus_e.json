@@ -1,0 +1,32 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFeatureEditStatus_e",
+    "description": "Editing status of feature. Bitmask.",
+    "member_count": 3,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFeatureEditStatus_e",
+  "description": "Editing status of feature. Bitmask.",
+  "values": [
+    {
+      "member": "swFeature_Editable",
+      "value": "0",
+      "description": "or 0x0; Feature can be edited"
+    },
+    {
+      "member": "swFeature_NonEditable",
+      "value": "1",
+      "description": "or 0x1; Feature cannot be edited"
+    },
+    {
+      "member": "swFeature_UnderEditing",
+      "value": "2",
+      "description": "or 0x2; If the feature is a sketch, then the sketch is already being edited"
+    }
+  ]
+}

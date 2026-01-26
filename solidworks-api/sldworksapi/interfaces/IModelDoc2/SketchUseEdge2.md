@@ -1,0 +1,51 @@
+---
+type: method
+interface: IModelDoc2
+member: SketchUseEdge2
+returns: System.Boolean
+parameters:
+  -
+    name: Chain
+    type: System.Boolean
+    description: 
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - core
+  - documents
+  - geometry
+  - sketches
+  - ui
+related: []
+keywords:
+  - sketchuseedge2
+  - imodeldoc2
+  - model
+  - doc2
+  - sketch
+  - use
+  - edge2
+  - chain
+  - boolean
+---
+
+# IModelDoc2.SketchUseEdge2
+
+Obsolete. Superseded by ISketchManager::SketchUseEdge.
+
+## Signature
+
+```csharp
+System.Boolean SketchUseEdge2( 
+   System.Boolean
+Chain
+)
+```
+## Parameters
+
+- `Chain` (System.Boolean): 
+
+## Return Value
+
+Unknown.

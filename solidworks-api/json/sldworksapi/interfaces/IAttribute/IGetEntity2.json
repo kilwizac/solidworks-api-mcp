@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAttribute",
+    "member": "IGetEntity2",
+    "returns": "Entity",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAttribute.GetEntity",
+      "IAttribute.GetEntityState",
+      "IBody2.FindAttribute",
+      "IComponent2.FindAttribute",
+      "IEntity.FindAttribute",
+      "IEntity.IFindAttribute",
+      "IFeature.GetSpecificFeature2",
+      "ISldWorks.DefineAttribute"
+    ],
+    "keywords": [
+      "entity",
+      "see",
+      "also",
+      "ientity",
+      "attributes",
+      "igetentity2",
+      "iattribute",
+      "attribute",
+      "entity2"
+    ]
+  },
+  "title": "IAttribute.IGetEntity2",
+  "description": "Gets the entity to which this attribute was originally associated.",
+  "signature": "Entity IGetEntity2()",
+  "parameters": [],
+  "returns": "IEntity or NULL (see Remarks )",
+  "remarks": "This method returns NULL when the attribute is associated with:\nthe document\nan invalid entity\na suppressed entity\nWhen this method returns NULL, use\nIAttribute::GetEntityState\nto determine which of these situations you have encountered.\nWhen the\nIAttribute\nobject is suppressed, this method returns NULL.",
+  "examples": [],
+  "related": [
+    "IAttribute.GetEntity",
+    "IAttribute.GetEntityState",
+    "IBody2.FindAttribute",
+    "IComponent2.FindAttribute",
+    "IEntity.FindAttribute",
+    "IEntity.IFindAttribute",
+    "IFeature.GetSpecificFeature2",
+    "ISldWorks.DefineAttribute"
+  ]
+}

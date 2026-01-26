@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICenterMark",
+    "member": "GetExtendedLength",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "GroupID",
+        "type": "System.Int32",
+        "description": "Center mark instance (see Remarks )"
+      },
+      {
+        "name": "HandleID",
+        "type": "System.Int32",
+        "description": "Center mark handle ID as defined in swCenterMarkHandle_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ICenterMark.SetExtendedLength"
+    ],
+    "keywords": [
+      "getextendedlength",
+      "icentermark",
+      "center",
+      "mark",
+      "extended",
+      "length",
+      "group",
+      "id",
+      "int32",
+      "handle",
+      "double",
+      "extend",
+      "arms",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICenterMark.GetExtendedLength",
+  "description": "Gets the extended length of the specified arm (handle) of this center mark.",
+  "signature": "System.Double GetExtendedLength( \n   System.Int32\nGroupID\n,\n   System.Int32\nHandleID\n)",
+  "parameters": [
+    {
+      "name": "GroupID",
+      "type": "System.Int32",
+      "description": "Center mark instance (see Remarks )"
+    },
+    {
+      "name": "HandleID",
+      "type": "System.Int32",
+      "description": "Center mark handle ID as defined in swCenterMarkHandle_e"
+    }
+  ],
+  "returns": "Extended length of the HandleID",
+  "remarks": "If the center mark is in a center mark set (i.e., a linear or circular pattern), then use\nICenterMark::GroupCount\nto get the range of valid values for the GroupID parameter. You can use a value from 0 to ICenterMark::GroupCount for the GroupID parameter. To determine if a center mark is in a center mark set, use\nICenterMark::IsGrouped\n.",
+  "examples": [
+    {
+      "title": "Extend Arms of Center Mark (VBA)",
+      "href": "Extend_Arms_of_Center_Mark_Examples_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (C#)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VB.NET)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VBA)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBA.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICenterMark.SetExtendedLength"
+  ]
+}

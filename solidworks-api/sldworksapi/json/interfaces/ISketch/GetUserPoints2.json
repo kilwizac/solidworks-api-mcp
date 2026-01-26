@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketch",
+    "member": "GetUserPoints2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "ISketch.IGetUserPoints2"
+    ],
+    "keywords": [
+      "sketch",
+      "see",
+      "also",
+      "isketch",
+      "points",
+      "isketchpoint",
+      "user",
+      "entities",
+      "getuserpoints2",
+      "points2",
+      "object",
+      "their",
+      "persistent",
+      "ids",
+      "vba"
+    ]
+  },
+  "title": "ISketch.GetUserPoints2",
+  "description": "Gets all of the user points in this sketch.",
+  "signature": "System.Object GetUserPoints2()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is an array of doubles with this format:\n[\nColor, Line Font, Line Width, Layer ID, Layer Override,\np\ntLoc[3]\n]\nwhere:\nColor\n= COLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLine Font\n= line style. Valid line styles can be found in the\nswLineStyles_e\nenumeration.\nLine Width\n= integer value defining the line width. Valid width values can be found in the\nswLineWeights_e\nenumeration.\nLayer ID\n= integer value indicating which layer holds this entity. The\nILayer\nobject can be obtained by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\nLayer Override\n= integer with bit flags set to determine which properties, if any, have been overridden with respect to the Layer default properties. If the bit value is set, then the specific property or properties have been overridden. The bit indicators are: color = 0x1, style = 0x2, and width = 0x4. Therefore, if LayerOverride was returned as 3, you know the color and style have been specifically set for this item and may not match the default values associated with this item's layer.\np\ntLoc[3]\n= an array of doubles (x, y, z) describing the point location\nThis set of data repeats for each user point in the sketch. The size of the array is (NumPts * 8). To determine the number of points in the sketch, use\nISketch::GetUserPointsCount\n.\nSee\nISketch::GetSketchPoints2\n,\nISketch::IGetSketchPoints2\n, or\nISketch::IEnumSketchPoints\nfor access to individual\nISketchPoint\nobjects.",
+  "examples": [
+    {
+      "title": "Get Sketch Points and Their Persistent IDs (VBA)",
+      "href": "Get_Sketch_Points_and_Their_Persistent_IDs_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketch.IGetUserPoints2"
+  ]
+}

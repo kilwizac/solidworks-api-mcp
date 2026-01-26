@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetInferenceMode",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "InferenceMode",
+        "type": "System.Boolean",
+        "description": "True to enable sketch inference mode, false to disable it"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetInferenceMode"
+    ],
+    "keywords": [
+      "setinferencemode",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "inference",
+      "mode",
+      "boolean",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.SetInferenceMode",
+  "description": "Obsolete. Superseded by SketchManager::InferenceMode.",
+  "signature": "void SetInferenceMode( \n   System.Boolean\nInferenceMode\n)",
+  "parameters": [
+    {
+      "name": "InferenceMode",
+      "type": "System.Boolean",
+      "description": "True to enable sketch inference mode, false to disable it"
+    }
+  ],
+  "returns": "",
+  "remarks": "Setting inference mode to...\nAllows...\nTrue\nInferencing during sketch operations, subject to other settings that may disable inferencing such as\nIModelDoc2::AutoInferToggle\n,\nIModelDoc2::SetAddToDB\n, and\nIDrawingDoc::StartDrawing\n.\nfalse\nFaster sketching without inferencing, similar to\nIModelDoc2::SetAddToDB\n, except that using this method does not disable undo operations.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.GetInferenceMode"
+  ]
+}

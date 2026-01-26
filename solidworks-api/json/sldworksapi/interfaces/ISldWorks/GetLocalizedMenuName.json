@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetLocalizedMenuName",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "MenuId",
+        "type": "System.Int32",
+        "description": "Menu ID as defined in swMenuIdentifiers_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "menus",
+      "items",
+      "getlocalizedmenuname",
+      "isldworks",
+      "sld",
+      "works",
+      "localized",
+      "menu",
+      "name",
+      "id",
+      "int32",
+      "string",
+      "language",
+      "names",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetLocalizedMenuName",
+  "description": "Gets a localized menu name for the specified menu ID.",
+  "signature": "System.String GetLocalizedMenuName( \n   System.Int32\nMenuId\n)",
+  "parameters": [
+    {
+      "name": "MenuId",
+      "type": "System.Int32",
+      "description": "Menu ID as defined in swMenuIdentifiers_e"
+    }
+  ],
+  "returns": "String containing the localized menu name",
+  "remarks": "The string returned allows the application to provide a correctly localized string representing the menu name that menus and menu items can be when added to in the SOLIDWORKS Design user interface.\nThis method should be called before\nISldWorks::AddMenu\n,\nISldWorks::AddMenuItem3\n,\nIFrame::AddMenu\n, or\nIFrame::AddMenuItem2\n.",
+  "examples": [
+    {
+      "title": "Get Language and Localized Menu Names (VBA)",
+      "href": "Get_Language_and_Localized_Menu_Names_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,301 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>CreateSpline3 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~CreateSpline3" />
+    <meta name="Description" content="Creates either a 2D spline or a spline constrained to a surface." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISketchManager.CreateSpline3" />
+    <meta name="Microsoft.Help.Keywords" content="Sketch (see also ISketch Interface), splines" />
+    <meta name="Microsoft.Help.Keywords" content="Sketch entities, splines" />
+    <meta name="Microsoft.Help.Keywords" content="Splines, create" />
+    <meta name="Microsoft.Help.Keywords" content="CreateSpline3 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                CreateSpline3 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager">ISketchManager Interface</a> : CreateSpline3 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="PointDataPopupContent" class="i-popup-content">
+        Array of X,Y,Z coordinates of the spline points&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="SurfsPopupContent" class="i-popup-content">
+        Array of&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface</a> objects; null or Nothing for 2D splines (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="DirectionPopupContent" class="i-popup-content">
+        Array of&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">IMathVector</a> objects; valid only for on-surface splines&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="SimulateNaturalEndsPopupContent" class="i-popup-content">
+        True to simulate natural ends, false to not; valid only for 2D splines (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="StatusPopupContent" class="i-popup-content">
+        Array of boolean values; empty&#160;for 2D splines (see <strong>Remarks</strong>)
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates either a 2D spline&#160;or&#160;a spline constrained to a surface.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function CreateSpline3( _
+   ByVal <i><a class="i-popup-link" id="PointDataPopupLink" data-popup-contentsource="#PointDataPopupContent" data-popup-showevent="click mouseenter">PointData</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SurfsPopupLink" data-popup-contentsource="#SurfsPopupContent" data-popup-showevent="click mouseenter">Surfs</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="DirectionPopupLink" data-popup-contentsource="#DirectionPopupContent" data-popup-showevent="click mouseenter">Direction</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SimulateNaturalEndsPopupLink" data-popup-contentsource="#SimulateNaturalEndsPopupContent" data-popup-showevent="click mouseenter">SimulateNaturalEnds</a></i> As System.Boolean, _
+   ByRef <i><a class="i-popup-link" id="StatusPopupLink" data-popup-contentsource="#StatusPopupContent" data-popup-showevent="click mouseenter">Status</a></i> As System.Object _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager">ISketchManager</a>
+Dim PointData As System.Object
+Dim Surfs As System.Object
+Dim Direction As System.Object
+Dim SimulateNaturalEnds As System.Boolean
+Dim Status As System.Object
+Dim value As System.Object
+ 
+value = instance.CreateSpline3(PointData, Surfs, Direction, SimulateNaturalEnds, Status)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object CreateSpline3( 
+   System.object <i><a class="i-popup-link" id="PointDataPopupLink" data-popup-contentsource="#PointDataPopupContent" data-popup-showevent="click mouseenter">PointData</a></i>,
+   System.object <i><a class="i-popup-link" id="SurfsPopupLink" data-popup-contentsource="#SurfsPopupContent" data-popup-showevent="click mouseenter">Surfs</a></i>,
+   System.object <i><a class="i-popup-link" id="DirectionPopupLink" data-popup-contentsource="#DirectionPopupContent" data-popup-showevent="click mouseenter">Direction</a></i>,
+   System.bool <i><a class="i-popup-link" id="SimulateNaturalEndsPopupLink" data-popup-contentsource="#SimulateNaturalEndsPopupContent" data-popup-showevent="click mouseenter">SimulateNaturalEnds</a></i>,
+   out System.object <i><a class="i-popup-link" id="StatusPopupLink" data-popup-contentsource="#StatusPopupContent" data-popup-showevent="click mouseenter">Status</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ CreateSpline3( 
+   System.Object^ <i><a class="i-popup-link" id="PointDataPopupLink" data-popup-contentsource="#PointDataPopupContent" data-popup-showevent="click mouseenter">PointData</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="SurfsPopupLink" data-popup-contentsource="#SurfsPopupContent" data-popup-showevent="click mouseenter">Surfs</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="DirectionPopupLink" data-popup-contentsource="#DirectionPopupContent" data-popup-showevent="click mouseenter">Direction</a></i>,
+   System.bool <i><a class="i-popup-link" id="SimulateNaturalEndsPopupLink" data-popup-contentsource="#SimulateNaturalEndsPopupContent" data-popup-showevent="click mouseenter">SimulateNaturalEnds</a></i>,
+   [Out] System.Object^ <i><a class="i-popup-link" id="StatusPopupLink" data-popup-contentsource="#StatusPopupContent" data-popup-showevent="click mouseenter">Status</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>PointData</i></dt>
+
+                <dd>Array of X,Y,Z coordinates of the spline points&#160;(see <strong>Remarks</strong>)</dd>
+
+                <dt><i>Surfs</i></dt>
+
+                <dd>Array of&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface</a> objects; null or Nothing for 2D splines (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>Direction</i></dt>
+
+                <dd>Array of&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMathVector">IMathVector</a> objects; valid only for on-surface splines&#160;(see <strong>Remarks</strong>)</dd>
+
+                <dt><i>SimulateNaturalEnds</i></dt>
+
+                <dd>True to simulate natural ends, false to not; valid only for 2D splines (see <strong>Remarks</strong>)</dd>
+
+                <dt><i>Status</i></dt>
+
+                <dd>Array of boolean values; empty&#160;for 2D splines (see <strong>Remarks</strong>)</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchSegment">ISketchSegment</a>&#160;or null if an error
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText">This method allows you to create:</p>
+
+            <ul>
+                <li class="apiRemarksText">2D splines.</li>
+
+                <li class="apiRemarksText">On-surface splines as can also be created using <strong>Tools &gt; Sketch Entities &gt; Spline on Surface</strong>.</li>
+            </ul>
+
+            <p class="apiRemarksText">To create a&#160;2D spline, specify:</p>
+
+            <ul>
+                <li class="apiRemarksText">PointData&#160;with at least six coordinates (for&#160;the start and end points of the spline):<br />
+                <br />
+                &#160;&#160;&#160;&#160;&#160; [<em>start_pt_x, start_pt_y, start_pt_z, end_pt_x, end_pt_y, end_pt_z</em>]<br />
+                <br />
+                For 2D sketches, SOLIDWORKS&#160;assumes PointData contains no Z values.</li>
+
+                <li class="apiRemarksText">SimulateNaturalEnds with true for zero curvature end conditions&#160;or&#160;false to maintain curvature&#160;at the ends.&#160;</li>
+
+                <li class="apiRemarksText">All other parameters&#160;with null or Nothing.</li>
+            </ul>
+
+            <p class="apiRemarksText">To create an on-surface spline, specify:</p>
+
+            <ul>
+                <li class="apiRemarksText">PointData with two or more points anywhere in 3D space. Each spline point will project onto a surface in the Surf array, depending on the direction vector&#160;specified for each point&#160;in the Direction array.</li>
+
+                <li class="apiRemarksText">Surf with an array of&#160;surfaces onto which the&#160;PointData is projected.</li>
+
+                <li class="apiRemarksText">Direction with an array of vectors,&#160;which are projection directions for every point in the PointData array. If Direction is Nothing or null, then the view vector for the current screen view is used to project each point onto a surface.</li>
+            </ul>
+
+            <p class="apiRemarksText">For on-surface splines only, Status&#160;contains an&#160;array of statuses, one for each point in PointArray. True indicates that the point successfully projects onto&#160;one of the&#160;surfaces. False indicates either:</p>
+
+            <ul>
+                <li>the point does not "hit" any of the specified surfaces&#160;using the direction that the point&#160;is mapped to in the&#160;Direction array,</li>
+            </ul>
+
+            <p class="apiRemarksText">&#160;&#160; -&#160;or -</p>
+
+            <ul>
+                <li>the spline cannot be continued at that point where the surfaces are no longer&#160;contiguous.</li>
+            </ul>
+
+            <p class="apiRemarksText">This method:</p>
+
+            <ul>
+                <li class="apiRemarksText">Creates&#160;the 2D spline in the active sketch. If a sketch is not active, then a new sketch is created. Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~ActiveSketch">ISketchManager::ActiveSketch</a> to check if the sketch active.</li>
+
+                <li class="apiRemarksText">Creates a new 3D sketch to create&#160;the on-surface spline. Call&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~InsertSketch">ISketchManager::InsertSketch</a> to finalize the sketch.</li>
+
+                <li class="apiRemarksText">Does not work with <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~AddToDB">ISketchManager::AddToDB</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~DisplayWhenAdded">ISketchManager::DisplayWhenAdded</a>. It always adds the spline directly to the database (as if ISketchManager::AddToDB(True) was in effect), and you must redraw your document window to see the entities that you added (as if ISketchManager::DisplayWhenAdded(False) was in effect).</li>
+            </ul>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-example-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Example</span>
+        </div>
+
+        <div id="i-example-section-content" class="i-section-content">
+            <a href="Create_On-surface_Spline_Example_VB.htm">Create On-surface Spline (VBA)</a><br />
+            <a href="Create_On-surface_Spline_Example_VBNET.htm">Create On-surface Spline (VB.NET)</a><br />
+            <a href="Create_On-surface_Spline_Example_CSharp.htm">Create On-surface Spline (C#)</a>
+        </div>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager">ISketchManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager_members">ISketchManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~CreateSplineByEqnParams">ISketchManager::CreateSplineByEqnParams Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~CreateSplinesByEqnParams2">ISketchManager::CreateSplinesByEqnParams2 Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchManager~CreateSpline3.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "GetPathName",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetImportedPath",
+      "IModelDoc2.GetPathName"
+    ],
+    "keywords": [
+      "getpathname",
+      "icomponent2",
+      "component2",
+      "path",
+      "name",
+      "string",
+      "component",
+      "selected",
+      "entity",
+      "vba",
+      "components",
+      "properties",
+      "drawing",
+      "view",
+      "part",
+      "corresponding",
+      "make",
+      "assembly",
+      "lightweight",
+      "all",
+      "resolved",
+      "keep",
+      "solidworks",
+      "invisible",
+      "while",
+      "activating",
+      "documents",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IComponent2.GetPathName",
+  "description": "Gets the full path name for this component.",
+  "signature": "System.String GetPathName()",
+  "parameters": [],
+  "returns": "Full path name for this component, including the filename",
+  "remarks": "The underlying document for this component might not have been loaded into memory if the component is lightweight or suppressed. In this situation,\nIComponent2::GetModelDoc\nor\nIComponent2::IGetModelDoc\nmay return NULL and the file and path name returned by this method will be the As-Saved file and path name for the IComponent2.\nThis method does not apply search criteria or look in the current working directory for the component file reference if the component is lightweight or suppressed.",
+  "examples": [
+    {
+      "title": "Get Component for Selected Entity (VBA)",
+      "href": "Get_Component_for_Selected_Entity_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Components Properties in Drawing View (VBA)",
+      "href": "Get_Components_Properties_in_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Part for Corresponding Component (VBA)",
+      "href": "Get_Part_for_Corresponding_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Make Assembly Components Lightweight (VBA)",
+      "href": "Make_Assembly_Components_Lightweight_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set All Assembly Components Lightweight or Resolved (VBA)",
+      "href": "Set_All_Assembly_Components_Lightweight_or_Resolved_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Keep SOLIDWORKS Invisible While Activating Documents (C#)",
+      "href": "Keep_SOLIDWORKS_Invisible_While_Activating_Documents_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Keep SOLIDWORKS Invisible While Activating Documents (VB.NET)",
+      "href": "Keep_SOLIDWORKS_Invisible_While_Activating_Documents_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Keep SOLIDWORKS Invisible While Activating Documents (VBA)",
+      "href": "Keep_SOLIDWORKS_Invisible_While_Activating_Documents_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.GetImportedPath",
+    "IModelDoc2.GetPathName"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBalloonStack",
+    "member": "IGetStack",
+    "returns": "Note",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Number of balloons"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IBalloonStack.Stack"
+    ],
+    "keywords": [
+      "igetstack",
+      "iballoonstack",
+      "balloon",
+      "stack",
+      "count",
+      "int32",
+      "note"
+    ]
+  },
+  "title": "IBalloonStack.IGetStack",
+  "description": "Gets the stacked notes in this balloon stack, excluding the master balloon.",
+  "signature": "Note IGetStack( \n   System.Int32\nCount\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Number of balloons"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of stacked notes of size Count in the balloon stack VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use\nIBalloonStack::Count\nto get the number of balloons in the balloon stack.\nThis method does not return the master balloon in the stack, only the other stacked notes. Use\nIBalloonStack::Master\nto get the master balloon of the stack.",
+  "examples": [],
+  "related": [
+    "IBalloonStack.Stack"
+  ]
+}

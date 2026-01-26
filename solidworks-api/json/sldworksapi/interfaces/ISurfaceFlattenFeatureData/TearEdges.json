@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISurfaceFlattenFeatureData",
+    "member": "TearEdges",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "ISurfaceFlattenFeatureData.MapEdges"
+    ],
+    "keywords": [
+      "tearedges",
+      "isurfaceflattenfeaturedata",
+      "surface",
+      "flatten",
+      "feature",
+      "data",
+      "tear",
+      "edges",
+      "object",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "ISurfaceFlattenFeatureData.TearEdges",
+  "description": "Gets or sets the tear edges for the relief cuts for this surface-flatten feature.",
+  "signature": "System.Object TearEdges {get; set;}",
+  "parameters": [],
+  "returns": "Array of entities that lie on the selected faces or surfaces to flatten (see Remarks )",
+  "remarks": "Tear edges:\nindicate where to make relief cuts before flattening the surface. During flattening, regions of the flattened surface are stretched while other regions are compressed. Adding tear edges through regions of high stress can reduce these deformations, which increases the accuracy of the flattened surface.\nallow users to flatten closed surfaces, such as spheres or entire solid bodies, that would otherwise not be flattened. See the\nExample\nsection.\ncan be any of these types of selected entities:\nedges,\nreference curves, and\n2D/3D splines.\nmust each intersect the face or surface being flattened while touching one boundary edge, which is an edge adjacent to exactly one face or surface.\nare only applied when\nISurfaceFlattenFeatureData::ShouldMakeTears\nis true.\nThe SOLIDWORKS API returns\nedges\nfor the entities selected for the tear edges in a surface-flatten feature.",
+  "examples": [
+    {
+      "title": "Get Data for Surface-flatten Feature (C#)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Data for Surface-flatten Feature (VB.NET)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Data for Surface-flatten Feature (VBA)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurfaceFlattenFeatureData.MapEdges"
+  ]
+}

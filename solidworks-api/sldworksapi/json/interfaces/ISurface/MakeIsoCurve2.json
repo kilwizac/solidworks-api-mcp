@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "MakeIsoCurve2",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "UorV",
+        "type": "System.Boolean",
+        "description": "True to specify the surface function's v parameter in UvValue, false to specify its u parameter"
+      },
+      {
+        "name": "UvValue",
+        "type": "System.Double",
+        "description": "If UorV is... Then UvValue is the surface function's... True V parameter False U parameter"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.CreateTrimmedCurve2",
+      "ISurface.IGetMakeIsoCurvesCount",
+      "ISurface.IMakeIsoCurve",
+      "ISurface.IMakeIsoCurves",
+      "ISurface.MakeIsoCurves"
+    ],
+    "keywords": [
+      "makeisocurve2",
+      "isurface",
+      "surface",
+      "make",
+      "iso",
+      "curve2",
+      "uor",
+      "boolean",
+      "uv",
+      "value",
+      "double",
+      "curve",
+      "create",
+      "trimmed",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISurface.MakeIsoCurve2",
+  "description": "Creates an untrimmed curve on a surface using the specified u or v surface function parameter.",
+  "signature": "Curve MakeIsoCurve2( \n   System.Boolean\nUorV\n,\n   out System.Double\nUvValue\n)",
+  "parameters": [
+    {
+      "name": "UorV",
+      "type": "System.Boolean",
+      "description": "True to specify the surface function's v parameter in UvValue, false to specify its u parameter"
+    },
+    {
+      "name": "UvValue",
+      "type": "System.Double",
+      "description": "If UorV is... Then UvValue is the surface function's... True V parameter False U parameter"
+    }
+  ],
+  "returns": "Curve",
+  "remarks": "This method supersedes the now obsolete ISurface::MakeIsoCurve by normalizing UvValue when it exceeds a specific value.",
+  "examples": [
+    {
+      "title": "Create Trimmed Curve (VBA)",
+      "href": "Return_Untrimmed_Curve_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (VB.NET)",
+      "href": "Return_Untrimmed_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (C#)",
+      "href": "Return_Untrimmed_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.CreateTrimmedCurve2",
+    "ISurface.IGetMakeIsoCurvesCount",
+    "ISurface.IMakeIsoCurve",
+    "ISurface.IMakeIsoCurves",
+    "ISurface.MakeIsoCurves"
+  ]
+}

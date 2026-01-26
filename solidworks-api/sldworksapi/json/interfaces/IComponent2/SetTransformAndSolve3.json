@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "SetTransformAndSolve3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "XformIn",
+        "type": "MathTransform",
+        "description": "Pointer to the IMathTransform object to use to set and solve"
+      },
+      {
+        "name": "ThisConfiguration",
+        "type": "System.Boolean",
+        "description": "True to transform this configuration, false to transform all configurations"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IComponent2.GetSpecificTransform",
+      "IComponent2.GetTotalTransform",
+      "IComponent2.Transform2"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "transform",
+      "settransformandsolve3",
+      "component2",
+      "solve3",
+      "xform",
+      "math",
+      "configuration",
+      "boolean"
+    ]
+  },
+  "title": "IComponent2.SetTransformAndSolve3",
+  "description": "Sets the transform and solves for the mates for this component.",
+  "signature": "System.Boolean SetTransformAndSolve3( \n   MathTransform\nXformIn\n,\n   System.Boolean\nThisConfiguration\n)",
+  "parameters": [
+    {
+      "name": "XformIn",
+      "type": "MathTransform",
+      "description": "Pointer to the IMathTransform object to use to set and solve"
+    },
+    {
+      "name": "ThisConfiguration",
+      "type": "System.Boolean",
+      "description": "True to transform this configuration, false to transform all configurations"
+    }
+  ],
+  "returns": "True if the transform was set and solved, false if not",
+  "remarks": "If making multiple calls to this method, consider using\nIDragOperator::Drag\n, which is more efficient because it reuses the solver. However, DragOperator::Drag does not support clash detection or dynamic clearance.\nThe transform specified must be in relation to the root component. See\nIConfiguration::GetRootComponent\nor\nIConfiguration::IGetRootComponent2\n.\nSOLIDWORKS moves the destination component, or any component above it in the assembly tree, so that the destination component's transform is set to the desired one. Transforming an object using this method can cause SOLIDWORKS to transform other mated or constrained objects.\nAfter you have changed a component's transform, you can call\nIAssemblyDoc::UpdateBox\nto avoid clipping in shaded display mode.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetSpecificTransform",
+    "IComponent2.GetTotalTransform",
+    "IComponent2.Transform2"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAdvancedSelectionCriteria",
+    "member": "SaveCriteria",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CriteriaFileName",
+        "type": "System.String",
+        "description": "Path and filename ( *.xml ) to which to save the current query"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "file-io",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "savecriteria",
+      "iadvancedselectioncriteria",
+      "advanced",
+      "selection",
+      "criteria",
+      "save",
+      "file",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IAdvancedSelectionCriteria.SaveCriteria",
+  "description": "Saves the current query to the specified XML file.",
+  "signature": "System.Boolean SaveCriteria( \n   System.String\nCriteriaFileName\n)",
+  "parameters": [
+    {
+      "name": "CriteriaFileName",
+      "type": "System.String",
+      "description": "Path and filename ( *.xml ) to which to save the current query"
+    }
+  ],
+  "returns": "True if current query is saved successfully, false if not",
+  "remarks": "Call this method after\nadding\ncriteria to the current advanced component selection criteria list.\nAs of SOLIDWORKS 2021, you can save queries only in XML format.\nAs is done using the Advanced Component Selection dialog (\nStandard toolbar > Advanced Select\n), this method creates a query file in XML format with one or more <Query> and <Boolean> elements. Each <Query> element represents a particular search by Category (Category1 in the user interface) and SubCategory (Category2 in the user interface) to satisfy a Condition expression:\n?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SWQueryList>\n<Query Name=\"SelectPegs\" Favourites_Index=\"1\">\n<Boolean Name=\"And\" Category=\"Custom Property\" SubCategory=\"IsPeg\" Condition=\"=\" Value=\"Yes\"/>\n</Query>\n<Query Name=\"SelectBlockParts\" Favourites_Index=\"2\">\n<Boolean Name=\"And\" Category=\"Custom Property\" SubCategory=\"IsBlockPart\" Condition=\"=\" Value=\"Yes\"/>\n</Query>\n</SWQueryList>",
+  "examples": [],
+  "related": []
+}

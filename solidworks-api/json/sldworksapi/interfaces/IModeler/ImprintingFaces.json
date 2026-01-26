@@ -1,0 +1,124 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ImprintingFaces",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TargetFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that describe the target body"
+      },
+      {
+        "name": "ToolFaceArray",
+        "type": "System.Object",
+        "description": "Array of faces that describe the tool body"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options for this operation as defined in swImprintingFacesOpts_e"
+      },
+      {
+        "name": "TargetEdges",
+        "type": "System.Object",
+        "description": "Array target edges"
+      },
+      {
+        "name": "ToolEdges",
+        "type": "System.Object",
+        "description": "Array of tool edges"
+      },
+      {
+        "name": "TargetVertices",
+        "type": "System.Object",
+        "description": "Array of target vertices"
+      },
+      {
+        "name": "ToolVertices",
+        "type": "System.Object",
+        "description": "Array of tool vertices"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.IImprintingFaces",
+      "IModeler.IImprintingFacesCount2"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "imprinted",
+      "faces",
+      "imprintingfaces",
+      "imodeler",
+      "modeler",
+      "imprinting",
+      "target",
+      "array",
+      "object",
+      "tool",
+      "options",
+      "int32",
+      "edges",
+      "vertices",
+      "boolean"
+    ]
+  },
+  "title": "IModeler.ImprintingFaces",
+  "description": "Imprints the specified tool faces onto the specified target faces.",
+  "signature": "System.Boolean ImprintingFaces( \n   System.Object\nTargetFaceArray\n,\n   System.Object\nToolFaceArray\n,\n   System.Int32\nOptions\n,\n   out System.Object\nTargetEdges\n,\n   out System.Object\nToolEdges\n,\n   out System.Object\nTargetVertices\n,\n   out System.Object\nToolVertices\n)",
+  "parameters": [
+    {
+      "name": "TargetFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that describe the target body"
+    },
+    {
+      "name": "ToolFaceArray",
+      "type": "System.Object",
+      "description": "Array of faces that describe the tool body"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options for this operation as defined in swImprintingFacesOpts_e"
+    },
+    {
+      "name": "TargetEdges",
+      "type": "System.Object",
+      "description": "Array target edges"
+    },
+    {
+      "name": "ToolEdges",
+      "type": "System.Object",
+      "description": "Array of tool edges"
+    },
+    {
+      "name": "TargetVertices",
+      "type": "System.Object",
+      "description": "Array of target vertices"
+    },
+    {
+      "name": "ToolVertices",
+      "type": "System.Object",
+      "description": "Array of tool vertices"
+    }
+  ],
+  "returns": "True if the operation was successful, false if not",
+  "remarks": "The target and tool faces must:\nbelong to different bodies.\nintersect each other.",
+  "examples": [],
+  "related": [
+    "IModeler.IImprintingFaces",
+    "IModeler.IImprintingFacesCount2"
+  ]
+}

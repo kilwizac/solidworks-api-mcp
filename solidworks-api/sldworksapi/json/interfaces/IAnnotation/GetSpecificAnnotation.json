@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetSpecificAnnotation",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.IGetSpecificAnnotation",
+      "ICThread",
+      "ICenterLine",
+      "ICenterMark",
+      "IDatumOrigin",
+      "IDatumTag",
+      "IDatumTargetSym",
+      "IDisplayDimension",
+      "IDowelSymbol",
+      "IGtol",
+      "IMultiJogLeader",
+      "INote",
+      "ISFSymbol",
+      "ITableAnnotation",
+      "IWeldBead",
+      "IWeldSymbol"
+    ],
+    "keywords": [
+      "getspecificannotation",
+      "iannotation",
+      "annotation",
+      "specific",
+      "object",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "vba",
+      "dimxpert",
+      "feature",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAnnotation.GetSpecificAnnotation",
+  "description": "Gets the specific underlying object associated with this annotation.",
+  "signature": "System.Object GetSpecificAnnotation()",
+  "parameters": [],
+  "returns": "Specific object underlying this annotation or null (see Remarks )",
+  "remarks": "If this annotation contains only Product and Manufacturing Information (PMI), then this method returns null. In that case, use\nIAnnotation::GetPMIType\nand\nIAnnotation::GetPMIData\nto obtain the PMI data associated with this annotation.\nIf this annotation is a note, then this method returns the underlying\nINote\n.\nDispatch applications can use\nIAnnotation::GetType\nto determine the type of underlying object supported. For example, if the return value from IAnnotation::GetType is swWeldSymbol, then you know that you can use the Dispatch pointer returned from this method with the\nIWeldSymbol\nclass.\nCOM applications can also use IAnnotation::GetType to determine the underlying object supported. Or, COM applications can use QueryInterface to determine which object is supported and get the interface from the LPUNKNOWN return value.",
+  "examples": [
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (C#)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VB.NET)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VBA)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.IGetSpecificAnnotation",
+    "ICThread",
+    "ICenterLine",
+    "ICenterMark",
+    "IDatumOrigin",
+    "IDatumTag",
+    "IDatumTargetSym",
+    "IDisplayDimension",
+    "IDowelSymbol",
+    "IGtol",
+    "IMultiJogLeader",
+    "INote",
+    "ISFSymbol",
+    "ITableAnnotation",
+    "IWeldBead",
+    "IWeldSymbol"
+  ]
+}

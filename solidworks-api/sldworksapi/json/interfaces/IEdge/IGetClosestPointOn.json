@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IGetClosestPointOn",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X value of the input point"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y value of the input point"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z value of the input point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ICurve.GetClosestPointOn",
+      "ICurve.IGetClosestPointOn",
+      "IEdge.GetClosestPointOn",
+      "IFace2.GetClosestPointOn",
+      "IFace2.IGetClosestPointOn",
+      "ISurface.GetClosestPointOn",
+      "ISurface.IGetClosestPointOn",
+      "IVertex.GetClosestPointOn",
+      "IVertex.IGetClosestPointOn"
+    ],
+    "keywords": [
+      "points",
+      "closest",
+      "igetclosestpointon",
+      "iedge",
+      "edge",
+      "point",
+      "double"
+    ]
+  },
+  "title": "IEdge.IGetClosestPointOn",
+  "description": "Uses the X,Y,Z input point and returns the closest point on the edge.",
+  "signature": "System.Double IGetClosestPointOn( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X value of the input point"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y value of the input point"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z value of the input point"
+    }
+  ],
+  "returns": "Pointer to an array of five doubles (see Remarks )",
+  "remarks": "This method returns only one point, regardless of how many points achieve the minimum distance.\nThis method returns an array that contains the following values:\n[\nPointX, PointY, PointZ, UParameter, NotUsed\n]\nwhere the point values represent the point on the edge, and\nUParameter\nis the parameter on the edge that is closest to the input point. Ignore the fifth array element.",
+  "examples": [],
+  "related": [
+    "ICurve.GetClosestPointOn",
+    "ICurve.IGetClosestPointOn",
+    "IEdge.GetClosestPointOn",
+    "IFace2.GetClosestPointOn",
+    "IFace2.IGetClosestPointOn",
+    "ISurface.GetClosestPointOn",
+    "ISurface.IGetClosestPointOn",
+    "IVertex.GetClosestPointOn",
+    "IVertex.IGetClosestPointOn"
+  ]
+}

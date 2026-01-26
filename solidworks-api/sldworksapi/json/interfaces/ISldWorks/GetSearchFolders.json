@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetSearchFolders",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "FolderType",
+        "type": "System.Int32",
+        "description": "Search folder type; the only type supported is swDocumentType; for an up-to-date listing, see swSearchFolderTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDataFolder",
+      "ISldWorks.SetMissingReferencePathName",
+      "ISldWorks.SetSearchFolders"
+    ],
+    "keywords": [
+      "external",
+      "references",
+      "search",
+      "folders",
+      "files",
+      "getsearchfolders",
+      "isldworks",
+      "sld",
+      "works",
+      "folder",
+      "type",
+      "int32",
+      "string",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.GetSearchFolders",
+  "description": "Gets the current folder search path as shown in Tools &gt; Options &gt; System Options &gt; File Locations &gt; Show folders for &gt; Referenced Documents.",
+  "signature": "System.String GetSearchFolders( \n   System.Int32\nFolderType\n)",
+  "parameters": [
+    {
+      "name": "FolderType",
+      "type": "System.Int32",
+      "description": "Search folder type; the only type supported is swDocumentType; for an up-to-date listing, see swSearchFolderTypes_e"
+    }
+  ],
+  "returns": "String containing all of the search folders; each search folder is separated by a semicolon",
+  "remarks": "Search folder settings are ignored unless\nTools > Options > System Options > External References >\nSearch file locations for external references\nis selected. To get and set\nSearch file locations for external references\nin the SOLIDWORKS API, use\nswUserPreferenceToggle_e\n.swUseFolderSearchRules with\nISldWorks::GetUserPreferenceToggle\nand\nISldWorks::SetUserPreferenceToggle\n, respectively.",
+  "examples": [
+    {
+      "title": "Get and Set Search Folders (VBA)",
+      "href": "Get_and_Set_Search_Folders_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Search Folders (VB.NET)",
+      "href": "Get_and_Set_Search_Folders_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Search Folders (C#)",
+      "href": "Get_and_Set_Search_Folders_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetDataFolder",
+    "ISldWorks.SetMissingReferencePathName",
+    "ISldWorks.SetSearchFolders"
+  ]
+}

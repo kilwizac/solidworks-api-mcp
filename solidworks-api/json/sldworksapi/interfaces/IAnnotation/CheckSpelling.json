@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "CheckSpelling",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Spell-check options as defined in swCheckSpellingOptions_e"
+      },
+      {
+        "name": "Dictionary",
+        "type": "System.String",
+        "description": "Full path and filename of user dictionary to use (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "checkspelling",
+      "iannotation",
+      "annotation",
+      "check",
+      "spelling",
+      "options",
+      "int32",
+      "dictionary",
+      "string",
+      "object"
+    ]
+  },
+  "title": "IAnnotation.CheckSpelling",
+  "description": "Spell checks the text in this annotation.",
+  "signature": "System.Object CheckSpelling( \n   System.Int32\nOptions\n,\n   System.String\nDictionary\n)",
+  "parameters": [
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Spell-check options as defined in swCheckSpellingOptions_e"
+    },
+    {
+      "name": "Dictionary",
+      "type": "System.String",
+      "description": "Full path and filename of user dictionary to use (see Remarks )"
+    }
+  ],
+  "returns": "Array of the misspelled words in this annotation",
+  "remarks": "The SOLIDWORKS spell checker always uses a main dictionary, which is language specific. Use the Dictionary argument to specify an additional dictionary. If Dictionary is left blank, then no additional user dictionary is used.\nYou can also specify additional custom dictionaries by adding them in the appropriate location in the SOLIDWORKS registry.",
+  "examples": [],
+  "related": []
+}

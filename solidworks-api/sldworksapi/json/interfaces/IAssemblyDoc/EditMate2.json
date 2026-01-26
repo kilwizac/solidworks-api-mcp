@@ -1,0 +1,180 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "EditMate2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "MateTypeFromEnum",
+        "type": "System.Int32",
+        "description": "Type of mate as defined in swMateType_e"
+      },
+      {
+        "name": "AlignFromEnum",
+        "type": "System.Int32",
+        "description": "Type of alignment desired as defined in swMateAlign_e"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "True to flip the component, false to not"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance value to use with distance or limit mates"
+      },
+      {
+        "name": "DistanceAbsUpperLimit",
+        "type": "System.Double",
+        "description": "Absolute maximum distance allowed"
+      },
+      {
+        "name": "DistanceAbsLowerLimit",
+        "type": "System.Double",
+        "description": "Absolute minimum distance allowed"
+      },
+      {
+        "name": "GearRatioNumerator",
+        "type": "System.Double",
+        "description": "Gear ratio numerator value for gear mates"
+      },
+      {
+        "name": "GearRatioDenominator",
+        "type": "System.Double",
+        "description": "Gear ratio denominator value for gear mates"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle value to use with angle mates"
+      },
+      {
+        "name": "AngleAbsUpperLimit",
+        "type": "System.Double",
+        "description": "Absolute maximum angle allowed"
+      },
+      {
+        "name": "AngleAbsLowerLimit",
+        "type": "System.Double",
+        "description": "Absolute minimum angle allowed"
+      },
+      {
+        "name": "ErrorStatus",
+        "type": "System.Int32",
+        "description": "Success or error as defined by swAddMateError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddMate3"
+    ],
+    "keywords": [
+      "editmate2",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "edit",
+      "mate2",
+      "mate",
+      "type",
+      "int32",
+      "align",
+      "flip",
+      "boolean",
+      "distance",
+      "double",
+      "abs",
+      "upper",
+      "limit",
+      "lower",
+      "gear",
+      "ratio",
+      "numerator",
+      "denominator",
+      "angle",
+      "error",
+      "status",
+      "void"
+    ]
+  },
+  "title": "IAssemblyDoc.EditMate2",
+  "description": "Obsolete. Superseded by IAssemblyDoc::EditMate3.",
+  "signature": "void EditMate2( \n   System.Int32\nMateTypeFromEnum\n,\n   System.Int32\nAlignFromEnum\n,\n   System.Boolean\nFlip\n,\n   System.Double\nDistance\n,\n   System.Double\nDistanceAbsUpperLimit\n,\n   System.Double\nDistanceAbsLowerLimit\n,\n   System.Double\nGearRatioNumerator\n,\n   System.Double\nGearRatioDenominator\n,\n   System.Double\nAngle\n,\n   System.Double\nAngleAbsUpperLimit\n,\n   System.Double\nAngleAbsLowerLimit\n,\n   out System.Int32\nErrorStatus\n)",
+  "parameters": [
+    {
+      "name": "MateTypeFromEnum",
+      "type": "System.Int32",
+      "description": "Type of mate as defined in swMateType_e"
+    },
+    {
+      "name": "AlignFromEnum",
+      "type": "System.Int32",
+      "description": "Type of alignment desired as defined in swMateAlign_e"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "True to flip the component, false to not"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance value to use with distance or limit mates"
+    },
+    {
+      "name": "DistanceAbsUpperLimit",
+      "type": "System.Double",
+      "description": "Absolute maximum distance allowed"
+    },
+    {
+      "name": "DistanceAbsLowerLimit",
+      "type": "System.Double",
+      "description": "Absolute minimum distance allowed"
+    },
+    {
+      "name": "GearRatioNumerator",
+      "type": "System.Double",
+      "description": "Gear ratio numerator value for gear mates"
+    },
+    {
+      "name": "GearRatioDenominator",
+      "type": "System.Double",
+      "description": "Gear ratio denominator value for gear mates"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle value to use with angle mates"
+    },
+    {
+      "name": "AngleAbsUpperLimit",
+      "type": "System.Double",
+      "description": "Absolute maximum angle allowed"
+    },
+    {
+      "name": "AngleAbsLowerLimit",
+      "type": "System.Double",
+      "description": "Absolute minimum angle allowed"
+    },
+    {
+      "name": "ErrorStatus",
+      "type": "System.Int32",
+      "description": "Success or error as defined by swAddMateError_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "The first selection should be the two items that are mated (that is, two faces, edge and face, and so on), and the third selection should be the mate feature to be edited. The mate feature must be selected last. The two mated items must be selected with a selection mark of 1. See\nISelectData\nor\nIModelDocExtension::SelectByID2\nfor details on using selection marks.\nIf mateType is swMateDISTANCE or swMateANGLE when the mate is applied to the closest position that meets the mate condition specified by distance or angle, then setting flip to True moves the assembly to the other possible mate position.\nThis method does not support editing\nInplace\nmates.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.AddMate3"
+  ]
+}

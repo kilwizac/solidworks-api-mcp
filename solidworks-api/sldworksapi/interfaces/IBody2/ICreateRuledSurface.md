@@ -1,0 +1,74 @@
+---
+type: method
+interface: IBody2
+member: ICreateRuledSurface
+returns: Surface
+parameters:
+  -
+    name: Curve1
+    type: Curve
+    description: Pointer to first curve
+  -
+    name: Curve2
+    type: Curve
+    description: Pointer to second curve
+  -
+    name: ApexPoint
+    type: System.Double
+    description: Array of 3 doubles (x, y, z) being the apex point
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+  - geometry
+related: []
+keywords:
+  - surface
+  - see
+  - also
+  - isurface
+  - ruled
+  - icreateruledsurface
+  - ibody2
+  - body2
+  - create
+  - curve1
+  - curve
+  - curve2
+  - apex
+  - point
+  - double
+---
+
+# IBody2.ICreateRuledSurface
+
+Creates a ruled surface from the specified curves and apex point.
+
+## Signature
+
+```csharp
+Surface ICreateRuledSurface( 
+   Curve
+Curve1
+,
+   Curve
+Curve2
+,
+   ref System.Double
+ApexPoint
+)
+```
+## Parameters
+
+- `Curve1` (Curve): Pointer to first curve
+- `Curve2` (Curve): Pointer to second curve
+- `ApexPoint` (System.Double): Array of 3 doubles (x, y, z) being the apex point
+
+## Return Value
+
+Pointer to ruled surface
+
+## Remarks
+
+Any existing object created by this method is destroyed if you call this method again.

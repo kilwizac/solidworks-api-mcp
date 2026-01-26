@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "Hide",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Part",
+        "type": "System.Object",
+        "description": "IModelDoc2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IHide"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "hide",
+      "body2",
+      "part",
+      "object",
+      "void",
+      "cut",
+      "body",
+      "half",
+      "using",
+      "macro",
+      "feature",
+      "vba",
+      "create",
+      "convert",
+      "non",
+      "manifold",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBody2.Hide",
+  "description": "Hides this temporary body in the context of the specified part.",
+  "signature": "void Hide( \n   System.Object\nPart\n)",
+  "parameters": [
+    {
+      "name": "Part",
+      "type": "System.Object",
+      "description": "IModelDoc2"
+    }
+  ],
+  "returns": "",
+  "remarks": "While SOLIDWORKS is displaying your IBody2 object using\nIBody2::Display3\n, you cannot release it explicitly or implicitly. Before releasing or allowing your IBody2 object to be released, you must call this method to prevent it from being displayed.\nCOM applications should avoid explicitly releasing the IBody2 object by calling IBody2->Release() while it is being displayed by SOLIDWORKS. Dispatch applications should avoid allowing the IBody2 object to go out of scope while it is being displayed by SOLIDWORKS, and be destroyed when the ReleaseDispatch method is called automatically. Dispatch applications should also avoid explicitly releasing the IBody2 object by calling ReleaseDispatch while it is being displayed by SOLIDWORKS.",
+  "examples": [
+    {
+      "title": "Cut Body in Half Using Macro Feature (VBA)",
+      "href": "Cut_Body_in_Half_using_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (C#)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VB.NET)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VBA)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IHide"
+  ]
+}

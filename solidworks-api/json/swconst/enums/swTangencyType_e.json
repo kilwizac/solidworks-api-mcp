@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swTangencyType_e",
+    "description": "Tangency options for lofts and profile twist options for sweeps.",
+    "member_count": 5,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swTangencyType_e",
+  "description": "Tangency options for lofts and profile twist options for sweeps.",
+  "values": [
+    {
+      "member": "swMinimumTwist",
+      "value": "10",
+      "description": "= Prevents the profile from becoming self-intersecting as it follows the sweep or loft path; valid only for 3D paths; corresponds to Profile Twist > Minimum Twist in the Sweep PropertyManager"
+    },
+    {
+      "member": "swTangencyAllFaces",
+      "value": "3",
+      "description": "= Makes the adjacent faces tangent at the profile; valid only if swTwistControlType_e is set to swTwistControlFollowPath and only when attaching a sweep or loft to existing geometry; corresponds to Profile Twist > Tangent to Adjacent Faces in the Sweep PropertyManager"
+    },
+    {
+      "member": "swTangencyDirectionVector",
+      "value": "2",
+      "description": "= Sets a direction plane, planar face, line, edge, cylinder, axis, or a pair of vertices; valid only if swTwistControlType_e is set to swTwistControlFollowPath; corresponds to Profile Twist > Specify Direction Vector in the Sweep PropertyManager"
+    },
+    {
+      "member": "swTangencyNone",
+      "value": "0",
+      "description": ""
+    },
+    {
+      "member": "swTangencyNormalToProfile",
+      "value": "1",
+      "description": "= Aligns the profile normal to the sweep or loft path; valid only for 2D paths; corresponds to Profile Twist > None in the Sweep PropertyManager"
+    }
+  ]
+}

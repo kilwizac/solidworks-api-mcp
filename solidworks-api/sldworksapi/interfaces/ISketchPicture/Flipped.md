@@ -1,0 +1,58 @@
+---
+type: property
+interface: ISketchPicture
+member: Flipped
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - sketches
+related:
+  - ISketchPicture.GetOrigin
+  - ISketchPicture.SetOrigin
+keywords:
+  - flipped
+  - isketchpicture
+  - sketch
+  - picture
+  - boolean
+readonly: true
+---
+
+# ISketchPicture.Flipped
+
+Gets whether the picture has been flipped in the sketch.
+
+## Signature
+
+```csharp
+System.Boolean Flipped {get;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if the picture has been flipped either side to side or top to bottom, false if not (see Remarks )
+
+## Remarks
+
+When a picture has not been flipped, as when you initially insert it, the bottom of the picture is defined by starting at the origin and proceeding in the direction of the
+angle
+. If a picture has been flipped, then the bottom of the picture is defined by starting at the origin and proceeding in a direction opposite the angle. In other words, the picture is mirrored or reflected, but not duplicated.
+If a picture has been
+flipped
+both side to side and top to bottom, then this property returns false.
+
+## Examples
+
+- ISketchPicture (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchPicture)
+
+## See Also
+
+- `ISketchPicture.GetOrigin`
+- `ISketchPicture.SetOrigin`

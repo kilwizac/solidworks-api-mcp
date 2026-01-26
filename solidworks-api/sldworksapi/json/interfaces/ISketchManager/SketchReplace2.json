@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SketchReplace2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "MakeConstruction",
+        "type": "System.Boolean",
+        "description": "True to convert the replaced sketch entity to construction geometry, false to delete it"
+      },
+      {
+        "name": "MakeContour",
+        "type": "System.Boolean",
+        "description": "True to make the replacement sketch entity a contour, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketch",
+      "entities",
+      "replace",
+      "sketchreplace2",
+      "isketchmanager",
+      "manager",
+      "replace2",
+      "make",
+      "construction",
+      "boolean",
+      "contour",
+      "entity",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchManager.SketchReplace2",
+  "description": "Replaces a sketch entity in a model with another sketch entity, preserving all references.",
+  "signature": "System.Boolean SketchReplace2( \n   System.Boolean\nMakeConstruction\n,\n   System.Boolean\nMakeContour\n)",
+  "parameters": [
+    {
+      "name": "MakeConstruction",
+      "type": "System.Boolean",
+      "description": "True to convert the replaced sketch entity to construction geometry, false to delete it"
+    },
+    {
+      "name": "MakeContour",
+      "type": "System.Boolean",
+      "description": "True to make the replacement sketch entity a contour, false to not"
+    }
+  ],
+  "returns": "True if the the sketch entity is successfully replaced, false if not",
+  "remarks": "Before calling this method, call\nIModelDocExtension::SelectByID2\nwith Append set to true to select each of the following entities:\nSketch entity to be replaced.\nReplacement sketch entity that does not reference downstream geometry or have references outside of the sketch.\nAfter calling this method, call\nISketchManager::InsertSketch\nto rebuild the model with the replacement sketch.",
+  "examples": [
+    {
+      "title": "Replace Sketch Entity (VBA)",
+      "href": "Replace_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Replace Sketch Entity (VB.NET)",
+      "href": "Replace_Sketch_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Replace Sketch Entity (C#)",
+      "href": "Replace_Sketch_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

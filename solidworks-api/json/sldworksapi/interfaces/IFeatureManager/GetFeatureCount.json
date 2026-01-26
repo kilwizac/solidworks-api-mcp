@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "GetFeatureCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ToplevelOnly",
+        "type": "System.Boolean",
+        "description": "True to get only the number of features at the top level of the FeatureManager design tree, false to get the number of top-level features and all child features in the FeatureManager design tree"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IComponent2.FirstFeature",
+      "IFeature.GetChildren",
+      "IFeature.GetFirstSubFeature",
+      "IFeature.GetNextFeature",
+      "IFeature.GetNextSubFeature",
+      "IFeature.GetOwnerFeature",
+      "IFeature.GetParents",
+      "IFeature.IGetChildCount",
+      "IFeature.IGetChildren",
+      "IFeature.IGetFirstSubFeature",
+      "IFeature.IGetNextFeature",
+      "IFeature.IGetNextSubFeature",
+      "IFeature.IGetParentCount",
+      "IFeature.IGetParents",
+      "IFeatureManager.GetFeatures",
+      "IModelDoc2.FirstFeature",
+      "IModelDoc2.GetFeatureCount",
+      "IModelDoc2.IFirstFeature",
+      "IPartDoc.FirstFeature",
+      "IPartDoc.IFirstFeature"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "number",
+      "getfeaturecount",
+      "ifeaturemanager",
+      "manager",
+      "count",
+      "toplevel",
+      "only",
+      "boolean",
+      "int32",
+      "create",
+      "loft",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.GetFeatureCount",
+  "description": "Gets the number of features in this document.",
+  "signature": "System.Int32 GetFeatureCount( \n   System.Boolean\nToplevelOnly\n)",
+  "parameters": [
+    {
+      "name": "ToplevelOnly",
+      "type": "System.Boolean",
+      "description": "True to get only the number of features at the top level of the FeatureManager design tree, false to get the number of top-level features and all child features in the FeatureManager design tree"
+    }
+  ],
+  "returns": "Number of features",
+  "remarks": "Call this method before calling\nIFeatureManager::IGetFeatures\nto determine the size of the array to pass into that method.\nIf TopLevelOnly is false, then this method counts all of the feature and child features in this document.\nIt does not count features in components.",
+  "examples": [
+    {
+      "title": "Create Loft Body (VB.NET)",
+      "href": "Create_Loft_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (VBA)",
+      "href": "Create_Loft_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (C#)",
+      "href": "Create_Loft_Body_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.FirstFeature",
+    "IFeature.GetChildren",
+    "IFeature.GetFirstSubFeature",
+    "IFeature.GetNextFeature",
+    "IFeature.GetNextSubFeature",
+    "IFeature.GetOwnerFeature",
+    "IFeature.GetParents",
+    "IFeature.IGetChildCount",
+    "IFeature.IGetChildren",
+    "IFeature.IGetFirstSubFeature",
+    "IFeature.IGetNextFeature",
+    "IFeature.IGetNextSubFeature",
+    "IFeature.IGetParentCount",
+    "IFeature.IGetParents",
+    "IFeatureManager.GetFeatures",
+    "IModelDoc2.FirstFeature",
+    "IModelDoc2.GetFeatureCount",
+    "IModelDoc2.IFirstFeature",
+    "IPartDoc.FirstFeature",
+    "IPartDoc.IFirstFeature"
+  ]
+}

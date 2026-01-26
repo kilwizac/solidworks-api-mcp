@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfiguration",
+    "member": "SetParameters",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Params",
+        "type": "System.Object",
+        "description": "Array of the names of the parameters"
+      },
+      {
+        "name": "Values",
+        "type": "System.Object",
+        "description": "Array of the values for the parameters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.GetParameterCount",
+      "IConfiguration.GetParameters",
+      "IConfiguration.IGetParameters",
+      "IConfiguration.ISetParameters",
+      "IConfigurationManager.GetConfigurationParams",
+      "IConfigurationManager.GetConfigurationParamsCount",
+      "IConfigurationManager.IGetConfigurationParams",
+      "IConfigurationManager.ISetConfigurationParams",
+      "IConfigurationManager.SetConfigurationParams"
+    ],
+    "keywords": [
+      "parameters",
+      "see",
+      "also",
+      "iparameter",
+      "configurations",
+      "setparameters",
+      "iconfiguration",
+      "configuration",
+      "params",
+      "object",
+      "values",
+      "void"
+    ]
+  },
+  "title": "IConfiguration.SetParameters",
+  "description": "Sets the parameters (suppression state of features, suppression state or visibility of components, dimensions, and so on) for this configuration.",
+  "signature": "void SetParameters( \n   ref System.Object\nParams\n,\n   ref System.Object\nValues\n)",
+  "parameters": [
+    {
+      "name": "Params",
+      "type": "System.Object",
+      "description": "Array of the names of the parameters"
+    },
+    {
+      "name": "Values",
+      "type": "System.Object",
+      "description": "Array of the values for the parameters"
+    }
+  ],
+  "returns": "",
+  "remarks": "You can control these parameters in a part document:\nDimension values. Specify the dimension name in Params for example, D1@Sketch1) and the value in Values (for example, 60.0mm).\nSuppression state of features. Specify the feature name in Params (for example, $STATE@Extrude2) and the suppression state in Values (S=Suppressed or R=Resolved).",
+  "examples": [],
+  "related": [
+    "IConfiguration.GetParameterCount",
+    "IConfiguration.GetParameters",
+    "IConfiguration.IGetParameters",
+    "IConfiguration.ISetParameters",
+    "IConfigurationManager.GetConfigurationParams",
+    "IConfigurationManager.GetConfigurationParamsCount",
+    "IConfigurationManager.IGetConfigurationParams",
+    "IConfigurationManager.ISetConfigurationParams",
+    "IConfigurationManager.SetConfigurationParams"
+  ]
+}

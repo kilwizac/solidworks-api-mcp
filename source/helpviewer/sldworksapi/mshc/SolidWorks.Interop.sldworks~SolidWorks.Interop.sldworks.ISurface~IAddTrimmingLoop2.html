@@ -1,0 +1,312 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>IAddTrimmingLoop2 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IAddTrimmingLoop2" />
+    <meta name="Description" content="Creates a trimming loop out of specified surface parametric (UV-curves) and adds it to a list of such loops." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.ISurface.IAddTrimmingLoop2" />
+    <meta name="Microsoft.Help.Keywords" content="IAddTrimmingLoop2 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                IAddTrimmingLoop2 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a> : IAddTrimmingLoop2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="CurveCountPopupContent" class="i-popup-content">
+        <p>Number of surface parametric (UV) curves constituting the loop; the size of Order, Dim, Periodic, NumKnots, and NumControlPnts arrays</p>
+    </div>
+
+    <div id="OrderPopupContent" class="i-popup-content">
+        Orders of the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)
+    </div>
+
+    <div id="DimPopupContent" class="i-popup-content">
+        Dimensions of the curves' control points; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++); if you set the first value in this array to negative of&#160;its absolute value, then 3D trim curves are expected
+    </div>
+
+    <div id="PeriodicPopupContent" class="i-popup-content">
+        0 for non-periodic or&#160;1 for periodic; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)
+    </div>
+
+    <div id="NumKnotsPopupContent" class="i-popup-content">
+        Number of knots in the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)
+    </div>
+
+    <div id="NumCtrlPointsPopupContent" class="i-popup-content">
+        Number of control points in the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)
+    </div>
+
+    <div id="KnotsPopupContent" class="i-popup-content">
+        Knot vectors of the curves; array of &lt;TotalNumKnots&gt; doubles, where TotalNumKnots = (TotalNumKnots + NumKnots[i]) for i = 1 to CurveCount
+    </div>
+
+    <div id="CtrlPointDblsPopupContent" class="i-popup-content">
+        Control point coordinates of the curves; array of &lt;TotalNumCPCoords&gt; doubles, where TotalNumCPCoords = (TotalNumCPCoords + (Dim[i] * NumCtrlPoints[i])) for i = 1 to CurveCount
+    </div>
+
+    <div id="UvRangePopupContent" class="i-popup-content">
+        Array of four doubles defining U Low U High V Low V High
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates a trimming loop out of specified surface parametric (UV-curves) and adds it to a list of such loops.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Sub IAddTrimmingLoop2( _
+   ByVal <i><a class="i-popup-link" id="CurveCountPopupLink" data-popup-contentsource="#CurveCountPopupContent" data-popup-showevent="click mouseenter">CurveCount</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="OrderPopupLink" data-popup-contentsource="#OrderPopupContent" data-popup-showevent="click mouseenter">Order</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="DimPopupLink" data-popup-contentsource="#DimPopupContent" data-popup-showevent="click mouseenter">Dim</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="PeriodicPopupLink" data-popup-contentsource="#PeriodicPopupContent" data-popup-showevent="click mouseenter">Periodic</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="NumKnotsPopupLink" data-popup-contentsource="#NumKnotsPopupContent" data-popup-showevent="click mouseenter">NumKnots</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="NumCtrlPointsPopupLink" data-popup-contentsource="#NumCtrlPointsPopupContent" data-popup-showevent="click mouseenter">NumCtrlPoints</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="KnotsPopupLink" data-popup-contentsource="#KnotsPopupContent" data-popup-showevent="click mouseenter">Knots</a></i> As System.Double, _
+   ByRef <i><a class="i-popup-link" id="CtrlPointDblsPopupLink" data-popup-contentsource="#CtrlPointDblsPopupContent" data-popup-showevent="click mouseenter">CtrlPointDbls</a></i> As System.Double, _
+   ByRef <i><a class="i-popup-link" id="UvRangePopupLink" data-popup-contentsource="#UvRangePopupContent" data-popup-showevent="click mouseenter">UvRange</a></i> As System.Double _
+) 
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface</a>
+Dim CurveCount As System.Integer
+Dim Order As System.Integer
+Dim Dim As System.Integer
+Dim Periodic As System.Integer
+Dim NumKnots As System.Integer
+Dim NumCtrlPoints As System.Integer
+Dim Knots As System.Double
+Dim CtrlPointDbls As System.Double
+Dim UvRange As System.Double
+ 
+instance.IAddTrimmingLoop2(CurveCount, Order, Dim, Periodic, NumKnots, NumCtrlPoints, Knots, CtrlPointDbls, UvRange)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+void IAddTrimmingLoop2( 
+   System.int <i><a class="i-popup-link" id="CurveCountPopupLink" data-popup-contentsource="#CurveCountPopupContent" data-popup-showevent="click mouseenter">CurveCount</a></i>,
+   ref System.int <i><a class="i-popup-link" id="OrderPopupLink" data-popup-contentsource="#OrderPopupContent" data-popup-showevent="click mouseenter">Order</a></i>,
+   ref System.int <i><a class="i-popup-link" id="DimPopupLink" data-popup-contentsource="#DimPopupContent" data-popup-showevent="click mouseenter">Dim</a></i>,
+   ref System.int <i><a class="i-popup-link" id="PeriodicPopupLink" data-popup-contentsource="#PeriodicPopupContent" data-popup-showevent="click mouseenter">Periodic</a></i>,
+   ref System.int <i><a class="i-popup-link" id="NumKnotsPopupLink" data-popup-contentsource="#NumKnotsPopupContent" data-popup-showevent="click mouseenter">NumKnots</a></i>,
+   ref System.int <i><a class="i-popup-link" id="NumCtrlPointsPopupLink" data-popup-contentsource="#NumCtrlPointsPopupContent" data-popup-showevent="click mouseenter">NumCtrlPoints</a></i>,
+   ref System.double <i><a class="i-popup-link" id="KnotsPopupLink" data-popup-contentsource="#KnotsPopupContent" data-popup-showevent="click mouseenter">Knots</a></i>,
+   ref System.double <i><a class="i-popup-link" id="CtrlPointDblsPopupLink" data-popup-contentsource="#CtrlPointDblsPopupContent" data-popup-showevent="click mouseenter">CtrlPointDbls</a></i>,
+   ref System.double <i><a class="i-popup-link" id="UvRangePopupLink" data-popup-contentsource="#UvRangePopupContent" data-popup-showevent="click mouseenter">UvRange</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+void IAddTrimmingLoop2( 
+   System.int <i><a class="i-popup-link" id="CurveCountPopupLink" data-popup-contentsource="#CurveCountPopupContent" data-popup-showevent="click mouseenter">CurveCount</a></i>,
+   System.int% <i><a class="i-popup-link" id="OrderPopupLink" data-popup-contentsource="#OrderPopupContent" data-popup-showevent="click mouseenter">Order</a></i>,
+   System.int% <i><a class="i-popup-link" id="DimPopupLink" data-popup-contentsource="#DimPopupContent" data-popup-showevent="click mouseenter">Dim</a></i>,
+   System.int% <i><a class="i-popup-link" id="PeriodicPopupLink" data-popup-contentsource="#PeriodicPopupContent" data-popup-showevent="click mouseenter">Periodic</a></i>,
+   System.int% <i><a class="i-popup-link" id="NumKnotsPopupLink" data-popup-contentsource="#NumKnotsPopupContent" data-popup-showevent="click mouseenter">NumKnots</a></i>,
+   System.int% <i><a class="i-popup-link" id="NumCtrlPointsPopupLink" data-popup-contentsource="#NumCtrlPointsPopupContent" data-popup-showevent="click mouseenter">NumCtrlPoints</a></i>,
+   System.double% <i><a class="i-popup-link" id="KnotsPopupLink" data-popup-contentsource="#KnotsPopupContent" data-popup-showevent="click mouseenter">Knots</a></i>,
+   System.double% <i><a class="i-popup-link" id="CtrlPointDblsPopupLink" data-popup-contentsource="#CtrlPointDblsPopupContent" data-popup-showevent="click mouseenter">CtrlPointDbls</a></i>,
+   System.double% <i><a class="i-popup-link" id="UvRangePopupLink" data-popup-contentsource="#UvRangePopupContent" data-popup-showevent="click mouseenter">UvRange</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>CurveCount</i></dt>
+
+                <dd>
+                    <p>Number of surface parametric (UV) curves constituting the loop; the size of Order, Dim, Periodic, NumKnots, and NumControlPnts arrays</p>
+                </dd>
+
+                <dt><i>Order</i></dt>
+
+                <dd>Orders of the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)</dd>
+
+                <dt><i>Dim</i></dt>
+
+                <dd>Dimensions of the curves' control points; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++); if you set the first value in this array to negative of&#160;its absolute value, then 3D trim curves are expected</dd>
+
+                <dt><i>Periodic</i></dt>
+
+                <dd>0 for non-periodic or&#160;1 for periodic; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)</dd>
+
+                <dt><i>NumKnots</i></dt>
+
+                <dd>Number of knots in the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)</dd>
+
+                <dt><i>NumCtrlPoints</i></dt>
+
+                <dd>Number of control points in the curves; array of CurveCount longs (VBA), Integers (VB.NET), or ints (C#, C++)</dd>
+
+                <dt><i>Knots</i></dt>
+
+                <dd>Knot vectors of the curves; array of &lt;TotalNumKnots&gt; doubles, where TotalNumKnots = (TotalNumKnots + NumKnots[i]) for i = 1 to CurveCount</dd>
+
+                <dt><i>CtrlPointDbls</i></dt>
+
+                <dd>Control point coordinates of the curves; array of &lt;TotalNumCPCoords&gt; doubles, where TotalNumCPCoords = (TotalNumCPCoords + (Dim[i] * NumCtrlPoints[i])) for i = 1 to CurveCount</dd>
+
+                <dt><i>UvRange</i></dt>
+
+                <dd>Array of four doubles defining U Low U High V Low V High</dd>
+            </dl>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>The list of trimming loops&#160;is created&#160;by a previous call to one of the base surface creation functions,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreateRevolutionSurface">IBody2::CreateRevolutionSurface</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreatePlanarSurface">IBody2::CreatePlanarSurface.</a></p>
+
+            <p>The information on each UV-curve is in b-spline form (knots and control point coordinates) and&#160;is compacted into two arrays, VKnots and VCtrlPointDbls.</p>
+
+            <p>Order of&#160;each curve in Order is, at a minimum, 2. A second order curve is a linear curve.</p>
+
+            <p>For each curve in NumCtrlPoints, Order, and NumKnots, (NumCtrlPoints &gt;= Order) and (NumKnots = NumCtrlPoints + Order).</p>
+
+            <p>Dim for each curve in Dim&#160;specifies the dimension of each CtrlPointDbl set in CtrlPointDbls. This method expects 2D-polynomial (X,Y) or 2D-rational (X,Y,Weight) curves to be passed as trimming curves. However, you can set a flag so that this method accepts 3D-polynomial (X,Y,Z) or 3D-rational (X,Y,Z,Weight) trim curves. To do this,&#160;negate the absolute value of&#160;the first value in the VDim array. For example, if the first VDim value is 3, set it to -3. When you do this, 3D trim curves&#160;are expected.</p>
+
+            <p>If Dim is:</p>
+
+            <ul>
+                <li>2,&#160;specify (X,Y) control points&#160;in each&#160;CtrlPointDbl sub-array.</li>
+
+                <li>-2, specify (X,Y,Z) control points in each CtrlPointDbl sub-array.&#160;</li>
+
+                <li>3,&#160;specify (X,Y,Weight) control points&#160;in each&#160;CtrlPointDbl sub-array.</li>
+
+                <li>-3, specify (X,Y,Z,Weight) control points&#160;in each CtrlPointDbl sub-array.</li>
+            </ul>
+
+            <p>Multiplicity of a knot is the number of times it is repeated in the knot vector. There are&#160;specific rules around number of knots, knot multiplicity, and curve order. For example, if a curve's Periodic value is:</p>
+
+            <ul>
+                <li>0 (non-periodic), there must be (NumCtrlPoints + Order) knots and&#160;the maximum multiplicity of any knot is&#160;Order.</li>
+
+                <li>1 (periodic), there must be (NumCtrlPoints + 1) knots and the maximum multiplicity of any knot is Order. If a knot has multiplicity greater than 1, repetitions must occur at the end of the knot vector.</li>
+            </ul>
+
+            <p>If you do not want to specify a UV range, use null or Nothing in the UvRange array elements.</p>
+
+            <p>After calling this method to&#160;add a&#160;trimming loop, you can generate a trimmed surface by calling <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreateTrimmedSurface">IBody2::CreateTrimmedSurface</a>. You can create a body from trimmed surfaces using&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreateBodyFromSurfaces">IBody2::CreateBodyFromSurfaces</a>.</p>
+
+            <p><span style="FONT-WEIGHT: bold">NOTE:</span> It is highly recommended that you consult other resources for the mathematics behind&#160;b-splines, knots, knot multiplicity, and control points before attempting to use this method.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">ISurface Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface_members">ISurface Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~AddTrimmingLoop2">ISurface::AddTrimmingLoop2 Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface~IAddTrimmingLoop2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

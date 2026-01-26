@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCSYSEulersAngularRotation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "phiAngle",
+        "type": "System.Double",
+        "description": "Roll or rotation about the longitudinal axis (see Remarks )"
+      },
+      {
+        "name": "thetaAngle",
+        "type": "System.Double",
+        "description": "Pitch or rotation about the lateral axis (see Remarks )"
+      },
+      {
+        "name": "psiAngle",
+        "type": "System.Double",
+        "description": "Yaw or rotation about the vertical axis (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetCSYSDistances",
+      "IModelDocExtension.GetCSYSXYZAngularRotation"
+    ],
+    "keywords": [
+      "coordinate",
+      "transform",
+      "getcsyseulersangularrotation",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "csys",
+      "eulers",
+      "angular",
+      "rotation",
+      "phi",
+      "angle",
+      "double",
+      "theta",
+      "psi",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.GetCSYSEulersAngularRotation",
+  "description": "Gets the specified Eulers angular rotation values that transform one selected coordinate system into another.",
+  "signature": "System.Boolean GetCSYSEulersAngularRotation( \n   out System.Double\nphiAngle\n,\n   out System.Double\nthetaAngle\n,\n   out System.Double\npsiAngle\n)",
+  "parameters": [
+    {
+      "name": "phiAngle",
+      "type": "System.Double",
+      "description": "Roll or rotation about the longitudinal axis (see Remarks )"
+    },
+    {
+      "name": "thetaAngle",
+      "type": "System.Double",
+      "description": "Pitch or rotation about the lateral axis (see Remarks )"
+    },
+    {
+      "name": "psiAngle",
+      "type": "System.Double",
+      "description": "Yaw or rotation about the vertical axis (see Remarks )"
+    }
+  ],
+  "returns": "True if rotation values successfully retrieved, false if not",
+  "remarks": "phiAngle is the roll or rotation about the longitudinal axis. Rolling corresponds to moving one side of an object upward while moving the other side downward (no pitch or yaw).\nthetaAngle is the pitch or rotation around the lateral axis. Pitching corresponds to tilting the front of an object up or down (no yaw or roll).\npsiAngle is the yaw or rotation about the vertical axis. Yawing corresponds to turning the front of an object left or right (no pitch or roll).\nThis method corresponds to the SOLIDWORKS measure tool's calculation of angular rotation between two coordinate systems. See\nSOLIDWORKS online help > Fundamentals > Measure Tool\nfor more information.\nUse Wikipedia to learn more about Euler's angles.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetCSYSDistances",
+    "IModelDocExtension.GetCSYSXYZAngularRotation"
+  ]
+}

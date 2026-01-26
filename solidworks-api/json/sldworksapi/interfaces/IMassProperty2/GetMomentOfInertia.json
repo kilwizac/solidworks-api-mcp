@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassProperty2",
+    "member": "GetMomentOfInertia",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "WhereTaken",
+        "type": "System.Int32",
+        "description": "Coordinate system as defined in swMassPropertyMoment_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty2.PrincipalAxesOfInertia",
+      "IMassProperty2.PrincipalMomentsOfInertia",
+      "IMassPropertyOverrideOptions.GetOverrideMomentsOfInertiaValue",
+      "IMassPropertyOverrideOptions.SetOverrideMomentsOfInertiaValue"
+    ],
+    "keywords": [
+      "getmomentofinertia",
+      "imassproperty2",
+      "mass",
+      "property2",
+      "moment",
+      "inertia",
+      "where",
+      "taken",
+      "int32",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IMassProperty2.GetMomentOfInertia",
+  "description": "Gets the moment of inertia at the specified coordinate system for the selected bodies/components.",
+  "signature": "System.Object GetMomentOfInertia( \n   System.Int32\nWhereTaken\n)",
+  "parameters": [
+    {
+      "name": "WhereTaken",
+      "type": "System.Int32",
+      "description": "Coordinate system as defined in swMassPropertyMoment_e"
+    }
+  ],
+  "returns": "Array containing the moment of inertia calculations (see Remarks )",
+  "remarks": "The return value is a 0-based array of nine doubles:\n[\nLxx, Lxy, Lxz, Lyx, Lyy, Lyz, Lzx, Lzy, Lzz\n]",
+  "examples": [
+    {
+      "title": "IMassProperty2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMassProperty2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty2.PrincipalAxesOfInertia",
+    "IMassProperty2.PrincipalMomentsOfInertia",
+    "IMassPropertyOverrideOptions.GetOverrideMomentsOfInertiaValue",
+    "IMassPropertyOverrideOptions.SetOverrideMomentsOfInertiaValue"
+  ]
+}

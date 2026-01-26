@@ -1,0 +1,144 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertBomTable2",
+    "returns": "BomTableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "If true and the appropriate sheet format anchor point exists, then insert table at this point; if false, then use the values specified for the X and Y arguments as the insertion point"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate for the placement of the BOM table"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate for the placement of the BOM table"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "BomType",
+        "type": "System.Int32",
+        "description": "Type of BOM table as defined by swBomType_e"
+      },
+      {
+        "name": "Configuration",
+        "type": "System.String",
+        "description": "Name of the configuration for this BOM table (see Remarks )"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and filename of the template that you want to use that corresponds to this type of table (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetKeepLinkedToBOM",
+      "IView.GetKeepLinkedToBOMName",
+      "IView.SetKeepLinkedToBOM"
+    ],
+    "keywords": [
+      "insertbomtable2",
+      "iview",
+      "view",
+      "insert",
+      "bom",
+      "table2",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "configuration",
+      "string",
+      "table",
+      "template",
+      "annotation",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.InsertBomTable2",
+  "description": "Obsolete. Superseded by IView::InsertBomTable3.",
+  "signature": "BomTableAnnotation InsertBomTable2( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.Int32\nBomType\n,\n   System.String\nConfiguration\n,\n   System.String\nTableTemplate\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "If true and the appropriate sheet format anchor point exists, then insert table at this point; if false, then use the values specified for the X and Y arguments as the insertion point"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate for the placement of the BOM table"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate for the placement of the BOM table"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "BomType",
+      "type": "System.Int32",
+      "description": "Type of BOM table as defined by swBomType_e"
+    },
+    {
+      "name": "Configuration",
+      "type": "System.String",
+      "description": "Name of the configuration for this BOM table (see Remarks )"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and filename of the template that you want to use that corresponds to this type of table (see Remarks )"
+    }
+  ],
+  "returns": "BOM table annotation",
+  "remarks": "If BomType is swBomType_TopLevelOnly, then do not specify Configuration. Instead, use\nIBomFeature::GetConfigurations\nor\nIBomFeature::IGetConfigurations\nand\nIBomFeature::SetConfigurations\nor\nIBomFeature::ISetConfigurations\nto work with configurations in BOM tables.\nIf the drawing was created using a configuration other than the Default configuration, then the configuration active at the time the drawing was created is the configuration used in the BOM table when an empty string is specified for the Configuration parameter.\nBy default, the BOM table templates are in the\ninstall_dir\n\\\nlang\n\\<\nlanguage\n> folder and have a filename extension of\n.sldbomtbt\n. The template and table must be of the same type. For example, you could specify\nC:\\Program Files\\SOLIDWORKS\\lang\\English\\bom-standard.sldbomtbt\nfor TableTemplate if you wanted to insert an English-version of the standard BOM table template.\nIf the BOM table is a parts-only or indented-style BOM and the Configuration specified is invalid, then the BOM is not created.\nNOTE:\nUse\nIView::InsertBomTable\nor\nIView::IInsertBomTable\nto insert a BOM using Microsoft Excel.",
+  "examples": [
+    {
+      "title": "Insert BOM Table (C#)",
+      "href": "Insert_BOM_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert BOM Table (VB.NET)",
+      "href": "Insert_BOM_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Bom Table (VBA)",
+      "href": "Insert_BOM_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetKeepLinkedToBOM",
+    "IView.GetKeepLinkedToBOMName",
+    "IView.SetKeepLinkedToBOM"
+  ]
+}

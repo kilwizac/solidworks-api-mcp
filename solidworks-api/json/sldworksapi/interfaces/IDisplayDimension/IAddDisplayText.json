@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "IAddDisplayText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text to display"
+      },
+      {
+        "name": "Position",
+        "type": "System.Double",
+        "description": "Location of the text; pointer to an array of 3 doubles"
+      },
+      {
+        "name": "Format",
+        "type": "TextFormat",
+        "description": "Pointer to ITextFormat object"
+      },
+      {
+        "name": "Attachment",
+        "type": "System.Int32",
+        "description": "Justification of the text as defined in swTextJustification_e"
+      },
+      {
+        "name": "WidthFactor",
+        "type": "System.Double",
+        "description": "Horizontal scale factor of the text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.AddDisplayText"
+    ],
+    "keywords": [
+      "iadddisplaytext",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "add",
+      "text",
+      "string",
+      "position",
+      "double",
+      "format",
+      "attachment",
+      "int32",
+      "width",
+      "factor",
+      "boolean"
+    ]
+  },
+  "title": "IDisplayDimension.IAddDisplayText",
+  "description": "Overrides the display text for this display dimension.",
+  "signature": "System.Boolean IAddDisplayText( \n   System.String\nText\n,\n   ref System.Double\nPosition\n,\n   TextFormat\nFormat\n,\n   System.Int32\nAttachment\n,\n   System.Double\nWidthFactor\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text to display"
+    },
+    {
+      "name": "Position",
+      "type": "System.Double",
+      "description": "Location of the text; pointer to an array of 3 doubles"
+    },
+    {
+      "name": "Format",
+      "type": "TextFormat",
+      "description": "Pointer to ITextFormat object"
+    },
+    {
+      "name": "Attachment",
+      "type": "System.Int32",
+      "description": "Justification of the text as defined in swTextJustification_e"
+    },
+    {
+      "name": "WidthFactor",
+      "type": "System.Double",
+      "description": "Horizontal scale factor of the text"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The new graphics displayed by this method are temporary. When the user changes the dimension, this display dimension reverts back to the SOLIDWORKS standard.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.AddDisplayText"
+  ]
+}

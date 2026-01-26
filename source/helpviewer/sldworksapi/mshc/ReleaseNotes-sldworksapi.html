@@ -1,0 +1,191 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+    <title>Release Notes</title>
+    <meta name="Title" content="Release Notes" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-topics/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-topics/css/topics.css" data-mshv2-stylesheet="/template/packages/core-topics/topics.mshv2.css" data-mshv1-stylesheet="/template/packages/core-topics/topics.mshv1.css" data-responsive-mobile="template/packages/core-topics/topics.mobile.css" data-responsive-tablet="template/packages/core-topics/topics.tablet.css" />
+    <script src="template/packages/plugins-topics/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-topics/script/topics.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="f9c84e96-6767-430a-bba9-fc6cb6247712" />
+    <meta name="Microsoft.Help.TocParent" content="-1" />
+    <meta name="Microsoft.Help.TocOrder" content="2" />
+    <meta name="Microsoft.Help.F1" content="" />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <meta name="Microsoft.Help.Keywords" content="Release Notes" />
+    <meta name="Microsoft.Help.Keywords" content="Release notes" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                Release Notes
+            </div>
+        </div>
+    </div>
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span>
+    </div>
+    <div id="i-body-content" class="i-body-content">
+        <p></p>
+        <p><a id="Top" name="Top"></a>This topic provides you with quick access to the enhancements in SOLIDWORKS API 2026.</p>
+        <h5>Service Pack 0</h5>
+        <ul>
+            <li><a href="#NewFunctionality0">New functionality</a></li>
+            <li><a href="#newinterfaces">New interfaces</a></li>
+            <li><a href="#NewMethods0">New delegates, methods, and properties</a></li>
+        </ul>
+        <h6><a id="NewFunctionality0" name="NewFunctionality0"></a>New functionality</h6>
+        <ul>
+            <li>Display the&#160;Dassault Systemes Physically Based Rendering (DSPBR) appearance visual style. See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial">IDSPBRMaterial</a>,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRenderMaterial~GetDSPBRMaterial">IRenderMaterial::GetDSPBRMaterial</a>, and&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRenderMaterial~HasDSPBRProperties">IRenderMaterial::HasDSPBRProperties</a>.</li>
+            <li>Add family tables to drawings and edit them. See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableAnnotation">IFamilyTableAnnotation</a>,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature">IFamilyTableFeature</a>,&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet~InsertFamilyTable">ISheet::InsertFamilyTable</a>.</li>
+            <li>Get top-level items in body folders. See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatureCount">IBodyFolder::GetTopLevelFeatureCount</a> and&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatures">IBodyFolder::GetTopLevelFeatures</a>.</li>
+            <li>Receive notifications when reordering&#160;solid body folders. See <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DAssemblyDocEvents_SolidBodyFolderReorderNotifyEventHandler">DAssemblyDocEvents_SolidBodyFolderReorderNotifyEventHandler</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DPartDocEvents_SolidBodyFolderReorderNotifyEventHandler">DPartDocEvents_SolidBodyFolderReorderNotifyEventHandler</a>.</li>
+            <li>Get and set the edge thickness when the&#160;display style is set to "Shaded with Edges". See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ShadedEdgeThickness">ISldWorks::ShadedEdgeThickness</a>.</li>
+            <li>Move parent drawing views independently of child views and receive notifications when changing view positions. See&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~SetViewPosition">IView::SetViewPosition</a>&#160;and <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DDrawingDocEvents_ViewPositionChangeNotifyEventHandler">DDrawingDocEvents_ViewPositionChangeNotifyEventHandler</a>.<a id="newinterfaces" name="newinterfaces"></a></li>
+        </ul>
+        <h6>New interfaces</h6>
+        <h4><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial">IDSPBRMaterial</a> Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~AbbeNumber">IDSPBRMaterial::AbbeNumber</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Albedo">IDSPBRMaterial::Albedo</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~AlbedoTexture">IDSPBRMaterial::AlbedoTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Anisotropy">IDSPBRMaterial::Anisotropy</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~AnisotropyRotation">IDSPBRMaterial::AnisotropyRotation</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~AttenuationColor">IDSPBRMaterial::AttenuationColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~AttenuationDistance">IDSPBRMaterial::AttenuationDistance</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Clearcoat">IDSPBRMaterial::ClearCoat</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ClearcoatNormalTexture">IDSPBRMaterial::ClearCoatNormalTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ClearcoatRoughness">IDSPBRMaterial::ClearCoatRoughness</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~CutoutOpacity">IDSPBRMaterial::CutoutOpacity</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~CutoutOpacityTexture">IDSPBRMaterial::CutoutOpacityTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Displacement">IDSPBRMaterial::Displacement</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~DisplacementTexture">IDSPBRMaterial::DisplacementTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~EmissionColor">IDSPBRMaterial::EmissionColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~EmissionEnergyNormalization">IDSPBRMaterial::EmissionEnergyNormalization</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~EmissionMode">IDSPBRMaterial::EmissionMode</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~EmissionValue">IDSPBRMaterial::EmissionValue</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlakeColor">IDSPBRMaterial::FlakeColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlakeCoverage">IDSPBRMaterial::FlakeCoverage</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlakeRoughness">IDSPBRMaterial::FlakeRoughness</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlakeSize">IDSPBRMaterial::FlakeSize</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlakeTexture">IDSPBRMaterial::FlakeTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlipFlop">IDSPBRMaterial::FlipFlop</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~FlipFlopColor">IDSPBRMaterial::FlipFlopColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~IndexOfRefraction">IDSPBRMaterial::IndexOfRefraction</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Metallic">IDSPBRMaterial::Metallic</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~NormalTexture">IDSPBRMaterial::NormalTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~RealViewToDSPBRTextureScale">IDSPBRMaterial::RealViewToDSPBRTextureScale</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Roughness">IDSPBRMaterial::Roughness</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~RoughnessTexture">IDSPBRMaterial::RoughnessTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SheenColor">IDSPBRMaterial::SheenColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SheenRoughness">IDSPBRMaterial::SheenRoughness</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Specular">IDSPBRMaterial::Specular</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SpecularTintColor">IDSPBRMaterial::SpecularTintColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SubsurfaceAnisotropy">IDSPBRMaterial::SubsurfaceAnisotropy</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SubsurfaceColor">IDSPBRMaterial::SubsurfaceColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~SubType">IDSPBRMaterial::SubType</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ThinFilm">IDSPBRMaterial::ThinFilm</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ThinFilmIOR">IDSPBRMaterial::ThinFilmIOR</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ThinFilmThickness">IDSPBRMaterial::ThinFilmThickness</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ThinFilmThicknessTexture">IDSPBRMaterial::ThinFilmThicknessTexture</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~ThinWalled">IDSPBRMaterial::ThinWalled</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Translucency">IDSPBRMaterial::Translucency</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~TranslucencyColor">IDSPBRMaterial::TranslucencyColor</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Transparency">IDSPBRMaterial::Transparency</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDSPBRMaterial~Version">IDSPBRMaterial::Version</a></li>
+        </ul>
+        <h4><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableAnnotation">IFamilyTableAnnotation</a> Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableAnnotation~FamilyTableFeature">IFamilyTableAnnotation::FamilyTableFeature</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableAnnotation~GetSheet">IFamilyTableAnnotation::GetSheet</a></li>
+        </ul>
+        <h4><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature">IFamilyTableFeature</a> Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetConfigurations">IFamilyTableFeature::GetConfigurations</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetFeature">IFamilyTableFeature::GetFeature</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetFollowConfigTreeOrder">IFamilyTableFeature::GetFollowConfigTreeOrder</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetModelName">IFamilyTableFeature::GetModelName</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetSequenceNumberIncrement">IFamilyTableFeature::GetSequenceNumberIncrement</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetSequenceStartNumber">IFamilyTableFeature::GetSequenceStartNumber</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetTableAnnotationCount">IFamilyTableFeature::GetTableAnnotationCount</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetTableAnnotations">IFamilyTableFeature::GetTableAnnotations</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~GetUseAllConfigurations">IFamilyTableFeature::GetUseAllConfigurations</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~SetConfigurations">IFamilyTableFeature::SetConfigurations</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~SetFollowConfigTreeOrder">IFamilyTableFeature::SetFollowConfigTreeOrder</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~SetSequenceNumberIncrement">IFamilyTableFeature::SetSequenceNumberIncrement</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~SetSequenceStartNumber">IFamilyTableFeature::SetSequenceStartNumber</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFamilyTableFeature~SetUseAllConfigurations">IFamilyTableFeature::SetUseAllConfigurations</a></li>
+        </ul>
+        <h6><a id="NewMethods0" name="NewMethods0"></a>New delegates, methods, and properties</h6>
+        <h4 align="left">DAssemblyDocEvents Handlers</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DAssemblyDocEvents_SolidBodyFolderReorderNotifyEventHandler">DAssemblyDocEvents_SolidBodyFolderReorderNotifyEventHandler</a></li>
+        </ul>
+        <h4 align="left">DDrawingDocEvents Handlers</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DDrawingDocEvents_ViewPositionChangeNotifyEventHandler">DDrawingDocEvents_ViewPositionChangeNotifyEventHandler</a></li>
+        </ul>
+        <h4>DPartDocEvents Handlers</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.DPartDocEvents_SolidBodyFolderReorderNotifyEventHandler">DPartDocEvents_SolidBodyFolderReorderNotifyEventHandler</a></li>
+        </ul>
+        <h4>IBodyFolder Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatureCount">IBodyFolder::GetTopLevelFeatureCount</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBodyFolder~GetTopLevelFeatures">IBodyFolder::GetTopLevelFeatures</a></li>
+        </ul>
+        <h4>ISheet Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet~InsertFamilyTable">ISheet::InsertFamilyTable</a></li>
+        </ul>
+        <h4>IRenderMaterial Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRenderMaterial~GetDSPBRMaterial">IRenderMaterial::GetDSPBRMaterial</a></li>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRenderMaterial~HasDSPBRProperties">IRenderMaterial::HasDSPBRProperties</a></li>
+        </ul>
+        <h4>ISldWorks Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~ShadedEdgeThickness">ISldWorks::ShadedEdgeThickness</a></li>
+        </ul>
+        <h4>IView Interface</h4>
+        <ul>
+            <li><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~SetViewPosition">IView::SetViewPosition</a></li>
+        </ul>
+        <p align="center"><a href="#Top">Back to top</a></p>
+        <p align="center">&#160;</p>
+        <p></p><a name="seealsobookmark"></a>
+    </div>
+    <div id="i-footer-content" class="i-footer-content"></div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "GetAlternateTolPrecision2",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetPrimaryPrecision2",
+      "IDisplayDimension.GetPrimaryTolPrecision2"
+    ],
+    "keywords": [
+      "getalternatetolprecision2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "alternate",
+      "tol",
+      "precision2",
+      "int32",
+      "precisions",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.GetAlternateTolPrecision2",
+  "description": "Gets the displayed precision for the dual tolerance portion of this dimension.",
+  "signature": "System.Int32 GetAlternateTolPrecision2()",
+  "parameters": [],
+  "returns": "Precision setting as defined in swDimensionPrecisionSettings_e",
+  "remarks": "If the return value equals swPrecisionFollowsDocumentSetting, then the precision being used is the document default for dual dimension values. You can retrieve the value using\nIModelDocExtension::GetUserPreferenceInteger\nwith swDetailingAltLinearTolPrecision.\nIf the return value equals swTolerancePrecisionFollowsNominal, then the precision being used is the same as the precision being used for the dual dimension value. You can retrieve the value using\nIDisplayDimension::GetAlternatePrecision2\n.\nOtherwise, the return value is the precision in the dimensions dual units.\nUse\nIDisplayDimension::SetPrecision2\nto set precision values on this display dimension.",
+  "examples": [
+    {
+      "title": "Get Precisions for a Dimension (VBA)",
+      "href": "Get_Precisions_for_a_Dimension_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetPrimaryPrecision2",
+    "IDisplayDimension.GetPrimaryTolPrecision2"
+  ]
+}

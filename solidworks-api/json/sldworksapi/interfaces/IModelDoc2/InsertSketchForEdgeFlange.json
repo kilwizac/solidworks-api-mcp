@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertSketchForEdgeFlange",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FlangeEdge",
+        "type": "System.Object",
+        "description": "Edge with which to create an edge flange"
+      },
+      {
+        "name": "DAngle",
+        "type": "System.Double",
+        "description": "Angle of flange"
+      },
+      {
+        "name": "FlipDir",
+        "type": "System.Boolean",
+        "description": "True reverses the offset direction of the flange, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "geometry",
+      "sketches",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "edge",
+      "flanges",
+      "see",
+      "iedgeflangefeaturedata",
+      "insertsketchforedgeflange",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "sketch",
+      "flange",
+      "object",
+      "angle",
+      "double",
+      "flip",
+      "dir",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.InsertSketchForEdgeFlange",
+  "description": "Inserts a profile sketch of an edge flange in this sheet metal part.",
+  "signature": "System.Object InsertSketchForEdgeFlange( \n   System.Object\nFlangeEdge\n,\n   System.Double\nDAngle\n,\n   System.Boolean\nFlipDir\n)",
+  "parameters": [
+    {
+      "name": "FlangeEdge",
+      "type": "System.Object",
+      "description": "Edge with which to create an edge flange"
+    },
+    {
+      "name": "DAngle",
+      "type": "System.Double",
+      "description": "Angle of flange"
+    },
+    {
+      "name": "FlipDir",
+      "type": "System.Boolean",
+      "description": "True reverses the offset direction of the flange, false does not"
+    }
+  ],
+  "returns": "Sketch for the edge flange, returned as a feature",
+  "remarks": "After calling this method, you must create the profile for the flange on the appropriate plane. Then use\nIFeatureManager::CreateDefinition\n,\nIEdgeFlangeFeatureData\n, and\nIFeatureManager::CreateFeature\nto create the edge flange.",
+  "examples": [
+    {
+      "title": "IEdgeFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdgeFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetArrowHeadAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the arrow head"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetArrowHeadAtIndex",
+      "IGtol.GetArrowHeadCount",
+      "IGtol.GetArrowHeadInfo",
+      "IGtol.IGetArrowHeadInfo"
+    ],
+    "keywords": [
+      "arrows",
+      "geometric",
+      "tolerancing",
+      "igetarrowheadatindex",
+      "igtol",
+      "gtol",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetArrowHeadAtIndex",
+  "description": "Gets information on the specified arrow head in this GTol.",
+  "signature": "System.Double IGetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the arrow head"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is an array of doubles in the following format:\n[\narrowHeadPt\n[3],\narrowHeadDir\n[3],\narrowHeadWidth\n,\narrowHeadHeight\n,\narrowHeadStyle\n]\nwhere:\narrowHeadPt\n[3]\nXYZ arrow head tip location\narrowHeadDir\n[3]\nXYZ arrow head direction\narrowHeadWidth\nArrow head width where the width is measured along the arrow head direction\narrowHeadHeight\nArrow head height\narrowHeadStyle\nArrow head style as defined in\nswArrowStyle_e",
+  "examples": [],
+  "related": [
+    "IGtol.GetArrowHeadAtIndex",
+    "IGtol.GetArrowHeadCount",
+    "IGtol.GetArrowHeadInfo",
+    "IGtol.IGetArrowHeadInfo"
+  ]
+}

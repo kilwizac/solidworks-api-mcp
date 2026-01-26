@@ -1,0 +1,50 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetTitle2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "NewTitle",
+        "type": "System.String",
+        "description": "Name to give to the document window"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "document",
+      "title",
+      "settitle2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "title2",
+      "new",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.SetTitle2",
+  "description": "Sets the title of a new document.",
+  "signature": "System.Boolean SetTitle2( \n   System.String\nNewTitle\n)",
+  "parameters": [
+    {
+      "name": "NewTitle",
+      "type": "System.String",
+      "description": "Name to give to the document window"
+    }
+  ],
+  "returns": "True if successfully renamed, false otherwise",
+  "remarks": "This title appears in the active window's title bar.\nThis method:\nDoes not save this model document to disk; instead, it renames the document window.\nIs only valid when for a new document that has not yet been saved.\nDoes not change the title of a document that has already been saved and exists on disk. If you want to rename an existing document, use ModelDoc2::SaveAs.\nTo retrieve the title of a document, use\nIModelDoc2::GetTitle\n.",
+  "examples": [],
+  "related": []
+}

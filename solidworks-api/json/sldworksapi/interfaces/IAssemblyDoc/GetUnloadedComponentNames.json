@@ -1,0 +1,120 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "GetUnloadedComponentNames",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "UnloadedComponentPathNames",
+        "type": "System.Object",
+        "description": "Array of the paths of the unloaded components"
+      },
+      {
+        "name": "UnloadedComponentReferencedConfigurationNames",
+        "type": "System.Object",
+        "description": "Array of the referenced configuration names of the unloaded components"
+      },
+      {
+        "name": "ReasonForUnloadingComponents",
+        "type": "System.Object",
+        "description": "Array indicating the reason each component is unloaded as defined by swComponentLoadStatus_e"
+      },
+      {
+        "name": "DocTypes",
+        "type": "System.Object",
+        "description": "Array of document types as defined in swDocumentTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IComponent2.GetHiddenUnloadedChildrenCount",
+      "IComponent2.GetUnloadedComponentNames",
+      "IComponent2.HasUnloadedComponents"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "components",
+      "hidden",
+      "icomponent2",
+      "unloaded",
+      "suppressed",
+      "name",
+      "names",
+      "getunloadedcomponentnames",
+      "assembly",
+      "doc",
+      "component",
+      "path",
+      "object",
+      "referenced",
+      "configuration",
+      "reason",
+      "unloading",
+      "types",
+      "filenames",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.GetUnloadedComponentNames",
+  "description": "Gets the unloaded components' paths, referenced configuration names, reasons why they are unloaded, document types, and names.",
+  "signature": "System.Object GetUnloadedComponentNames( \n   out System.Object\nUnloadedComponentPathNames\n,\n   out System.Object\nUnloadedComponentReferencedConfigurationNames\n,\n   out System.Object\nReasonForUnloadingComponents\n,\n   out System.Object\nDocTypes\n)",
+  "parameters": [
+    {
+      "name": "UnloadedComponentPathNames",
+      "type": "System.Object",
+      "description": "Array of the paths of the unloaded components"
+    },
+    {
+      "name": "UnloadedComponentReferencedConfigurationNames",
+      "type": "System.Object",
+      "description": "Array of the referenced configuration names of the unloaded components"
+    },
+    {
+      "name": "ReasonForUnloadingComponents",
+      "type": "System.Object",
+      "description": "Array indicating the reason each component is unloaded as defined by swComponentLoadStatus_e"
+    },
+    {
+      "name": "DocTypes",
+      "type": "System.Object",
+      "description": "Array of document types as defined in swDocumentTypes_e"
+    }
+  ],
+  "returns": "Array of the names of the unloaded components",
+  "remarks": "This method is useful when the assembly document was opened with\nQuick View/Selective open\nor\nDo not load hidden components\n.\nTo get whether an assembly has hidden or suppressed unloaded components, call\nIAssemblyDoc::HasUnloadedComponents\n.",
+  "examples": [
+    {
+      "title": "Get Hidden Components Filenames (C#)",
+      "href": "Get_Hidden_Components_Filenames_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Hidden Components Filenames (VB.NET)",
+      "href": "Get_Hidden_Components_Filenames_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Hidden Components Filenames (VBA)",
+      "href": "Get_Hidden_Components_Filenames_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.GetHiddenUnloadedChildrenCount",
+    "IComponent2.GetUnloadedComponentNames",
+    "IComponent2.HasUnloadedComponents"
+  ]
+}

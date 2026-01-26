@@ -1,0 +1,168 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddDistanceMate",
+    "returns": "Mate2",
+    "parameters": [
+      {
+        "name": "AlignFromEnum",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined in swMateAlign_e"
+      },
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "True to flip mate entities, false to not (see Remarks )"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance value (see Remarks )"
+      },
+      {
+        "name": "DistanceAbsUpperLimit",
+        "type": "System.Double",
+        "description": "Absolute maximum distance value (see Remarks )"
+      },
+      {
+        "name": "DistanceAbsLowerLimit",
+        "type": "System.Double",
+        "description": "Absolute minimum distance value (see Remarks )"
+      },
+      {
+        "name": "FirstArcCondition",
+        "type": "System.Int32",
+        "description": "First arc condition as defined in swDistanceMateArcConditions_e ; valid only for cylindrical distance mates (see Remarks )"
+      },
+      {
+        "name": "SecondArcCondition",
+        "type": "System.Int32",
+        "description": "Second arc condition as defined in swDistanceMateArcConditions_e; valid only for cylindrical distance mates (see Remarks )"
+      },
+      {
+        "name": "ErrorStatus",
+        "type": "System.Int32",
+        "description": "Success or error as defined by swAddMateError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddMate5",
+      "IAssemblyDoc.EditDistanceMate",
+      "IMate2.DistanceFirstArcCondition",
+      "IMate2.DistanceSecondArcCondition"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "mates",
+      "imate2",
+      "add",
+      "adddistancemate",
+      "assembly",
+      "doc",
+      "distance",
+      "mate",
+      "align",
+      "int32",
+      "flip",
+      "boolean",
+      "double",
+      "abs",
+      "upper",
+      "limit",
+      "lower",
+      "first",
+      "arc",
+      "condition",
+      "second",
+      "error",
+      "status",
+      "mate2",
+      "edit",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAssemblyDoc.AddDistanceMate",
+  "description": "Adds a distance mate to this assembly.",
+  "signature": "Mate2 AddDistanceMate( \n   System.Int32\nAlignFromEnum\n,\n   System.Boolean\nFlip\n,\n   System.Double\nDistance\n,\n   System.Double\nDistanceAbsUpperLimit\n,\n   System.Double\nDistanceAbsLowerLimit\n,\n   System.Int32\nFirstArcCondition\n,\n   System.Int32\nSecondArcCondition\n,\n   out System.Int32\nErrorStatus\n)",
+  "parameters": [
+    {
+      "name": "AlignFromEnum",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined in swMateAlign_e"
+    },
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "True to flip mate entities, false to not (see Remarks )"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance value (see Remarks )"
+    },
+    {
+      "name": "DistanceAbsUpperLimit",
+      "type": "System.Double",
+      "description": "Absolute maximum distance value (see Remarks )"
+    },
+    {
+      "name": "DistanceAbsLowerLimit",
+      "type": "System.Double",
+      "description": "Absolute minimum distance value (see Remarks )"
+    },
+    {
+      "name": "FirstArcCondition",
+      "type": "System.Int32",
+      "description": "First arc condition as defined in swDistanceMateArcConditions_e ; valid only for cylindrical distance mates (see Remarks )"
+    },
+    {
+      "name": "SecondArcCondition",
+      "type": "System.Int32",
+      "description": "Second arc condition as defined in swDistanceMateArcConditions_e; valid only for cylindrical distance mates (see Remarks )"
+    },
+    {
+      "name": "ErrorStatus",
+      "type": "System.Int32",
+      "description": "Success or error as defined by swAddMateError_e"
+    }
+  ],
+  "returns": "IMate2",
+  "remarks": "To specify a distance mate without limits, set the DistanceAbsUpperLimit and DistanceAbsLowerLimit parameters equal to the Distance parameter.\nIf the mate is applied to the closest position that meets the mate condition specified by Distance, then setting Flip to true moves the components to the other possible mate position.\nFor cylindrical distance mates only, the following FirstArcCondition-to-SecondArcCondition distance combinations are possible:\nFirstArcCondition as defined in\nswDistanceMateArcConditions_e\nto\nSecondArcCondition as defined in swDistanceMateArcConditions_e\nswArcCondition_Center\nswArcCondition_Center\nswArcCondition_Center\nswArcCondition_Minimum\nswArcCondition_Center\nswArcCondition_Maximum\nswArcCondition_Minimum\nswArcCondition_Center\nswArcCondition_Minimum\nswArcCondition_Minimum\nswArcCondition_Minimum\nswArcCondition_Maximum\nswArcCondition_Maximum\nswArcCondition_Center\nswArcCondition_Maximum\nswArcCondition_Minimum\nswArcCondition_Maximum\nswArcCondition_Maximum\nTo add a distance mate:\nCall\nIModelDocExtension::SelectByRay\nand\nISelectionMgr::GetSelectedObject6\nto get each mate entity. (For cylindrical distance mates, the selections must be two cylindrical faces or one cylindrical face and one axis.)\nCall\nIModelDoc2::ClearSelection2\n.\nCall\nIEntity::Select4\nto select each entity.\nCall this method.\nCall\nIModelDoc2::EditRebuild3\nafter the mate is created.\nIf entities are not preselected, then ErrorStatus is swAddMateError_e.swAddMateError_IncorrectSelections, and nothing is returned.",
+  "examples": [
+    {
+      "title": "Add and Edit Distance Mate (VBA)",
+      "href": "Add_and_Edit_Distance_Mate_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Edit Distance Mate (VB.NET)",
+      "href": "Add_and_Edit_Distance_Mate_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Edit Distance Mate (C#)",
+      "href": "Add_and_Edit_Distance_Mate_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddMate5",
+    "IAssemblyDoc.EditDistanceMate",
+    "IMate2.DistanceFirstArcCondition",
+    "IMate2.DistanceSecondArcCondition"
+  ]
+}

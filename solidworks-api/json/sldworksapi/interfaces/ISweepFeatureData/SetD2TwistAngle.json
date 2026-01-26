@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "SetD2TwistAngle",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of twist in radians in Direction 2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.D2ReverseTwistDir",
+      "ISweepFeatureData.GetD2TwistAngle",
+      "ISweepFeatureData.SetTwistAngle"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "twist",
+      "setd2twistangle",
+      "sweep",
+      "feature",
+      "data",
+      "d2",
+      "angle",
+      "double",
+      "void"
+    ]
+  },
+  "title": "ISweepFeatureData.SetD2TwistAngle",
+  "description": "Sets the twist angle in Direction 2 of this bidirectional sweep feature.",
+  "signature": "void SetD2TwistAngle( \n   System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of twist in radians in Direction 2"
+    }
+  ],
+  "returns": "",
+  "remarks": "This property is valid only if:\nISweepFeatureData::TwistControlType\nis set to\nswTwistControlType_e\n.swTwistControlConstantTwistAlongPath.\nISweepFeatureData::Direction\nis set to\nswSweepDirection_e\n.swSweepBidirectional.\nIn the Sweep PropertyManager, you can specify revolutions, degrees, or radians. To specify Angle, you must convert revolutions and degrees to radians:\n1 revolution = 360 degrees = 2*pi = 6.28319 radians\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.D2ReverseTwistDir",
+    "ISweepFeatureData.GetD2TwistAngle",
+    "ISweepFeatureData.SetTwistAngle"
+  ]
+}

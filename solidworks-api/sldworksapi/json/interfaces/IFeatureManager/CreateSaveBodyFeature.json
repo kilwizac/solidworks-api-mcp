@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "CreateSaveBodyFeature",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Bodies",
+        "type": "System.Object",
+        "description": "Array of solid bodies to save as parts (See Remarks)"
+      },
+      {
+        "name": "FilePaths",
+        "type": "System.Object",
+        "description": "Array of solid bodies to save as parts (See Remarks)"
+      },
+      {
+        "name": "AssemName",
+        "type": "System.String",
+        "description": "Array of paths and filenames of the part documents to which to save Bodies"
+      },
+      {
+        "name": "ConsumeBody",
+        "type": "System.Boolean",
+        "description": "Array of paths and filenames of the part documents to which to save Bodies"
+      },
+      {
+        "name": "CopyCustomProperty",
+        "type": "System.Boolean",
+        "description": "Path and filename of the assembly document to which to save Bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "file-io",
+      "geometry"
+    ],
+    "related": [
+      "ISaveBodyFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "save",
+      "bodies",
+      "createsavebodyfeature",
+      "ifeaturemanager",
+      "manager",
+      "create",
+      "body",
+      "object",
+      "file",
+      "paths",
+      "assem",
+      "name",
+      "string",
+      "consume",
+      "boolean",
+      "copy",
+      "custom",
+      "assembly",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.CreateSaveBodyFeature",
+  "description": "Creates a Save Bodies feature and creates part and assembly documents of the save bodies.",
+  "signature": "System.Object CreateSaveBodyFeature( \n   System.Object\nBodies\n,\n   System.Object\nFilePaths\n,\n   System.String\nAssemName\n,\n   System.Boolean\nConsumeBody\n,\n   System.Boolean\nCopyCustomProperty\n)",
+  "parameters": [
+    {
+      "name": "Bodies",
+      "type": "System.Object",
+      "description": "Array of solid bodies to save as parts (See Remarks)"
+    },
+    {
+      "name": "FilePaths",
+      "type": "System.Object",
+      "description": "Array of solid bodies to save as parts (See Remarks)"
+    },
+    {
+      "name": "AssemName",
+      "type": "System.String",
+      "description": "Array of paths and filenames of the part documents to which to save Bodies"
+    },
+    {
+      "name": "ConsumeBody",
+      "type": "System.Boolean",
+      "description": "Array of paths and filenames of the part documents to which to save Bodies"
+    },
+    {
+      "name": "CopyCustomProperty",
+      "type": "System.Boolean",
+      "description": "Path and filename of the assembly document to which to save Bodies"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "If any solid bodies in Bodies are invalid, they are skipped/ignored.\nFor parameter...\nSpecify...\nConsumeBody\nVARIANT_TRUE (-1) to consume all bodies in the original part, VARIANT_FALSE (0) to not\nCopyCustomProperty\nVARIANT_TRUE (-1) to copy custom properties to the new parts, VARIANT_FALSE (0) to not",
+  "examples": [
+    {
+      "title": "Create Save Bodies Feature and Create an Assembly (VBA)",
+      "href": "Create_Save_Bodies_Feature_and_Create_Assembly_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISaveBodyFeatureData"
+  ]
+}

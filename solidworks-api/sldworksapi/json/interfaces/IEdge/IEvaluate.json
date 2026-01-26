@@ -1,0 +1,49 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IEvaluate",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Parameter",
+        "type": "System.Double",
+        "description": "Value of the edge parameter"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.Evaluate"
+    ],
+    "keywords": [
+      "ievaluate",
+      "iedge",
+      "edge",
+      "evaluate",
+      "parameter",
+      "double"
+    ]
+  },
+  "title": "IEdge.IEvaluate",
+  "description": "Obsolete. Superseded by IEdge::IEvaluate2.",
+  "signature": "System.Double IEvaluate( \n   System.Double\nParameter\n)",
+  "parameters": [
+    {
+      "name": "Parameter",
+      "type": "System.Double",
+      "description": "Value of the edge parameter"
+    }
+  ],
+  "returns": "Pointer to an array of doubles (see Remarks )",
+  "remarks": "Use\nIEdge::GetCurveParams2\nor\nIEdge::IGetCurveParams2\nto determine the valid parameter range for this method.\nThis OLE implementation of this method returns an array of doubles as follows:\n[\nPointX, PointY, PointZ, TangentX, TangentY, TangentZ, Success\n]\nwhere the point values are in meters and\nSuccess\nis True if successful and false if not.\nThe return value for the COM implementation is different. To determine success, check the HRESULT return value. The array is as follows:\n[\nPointX, PointY, PointZ, TangentX, TangentY, TangentZ\n]\nwhere the point values are specified in meters.",
+  "examples": [],
+  "related": [
+    "IEdge.Evaluate"
+  ]
+}

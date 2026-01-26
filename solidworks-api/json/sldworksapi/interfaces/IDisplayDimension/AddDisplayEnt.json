@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "AddDisplayEnt",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of graphical entity (see Remarks )"
+      },
+      {
+        "name": "Data",
+        "type": "System.Object",
+        "description": "Geometric data describing the entity (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.IAddDisplayText"
+    ],
+    "keywords": [
+      "adddisplayent",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "add",
+      "ent",
+      "type",
+      "int32",
+      "data",
+      "object",
+      "boolean",
+      "replace",
+      "text",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.AddDisplayEnt",
+  "description": "Overrides the display graphics of objects.",
+  "signature": "System.Boolean AddDisplayEnt( \n   System.Int32\nType\n,\n   System.Object\nData\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of graphical entity (see Remarks )"
+    },
+    {
+      "name": "Data",
+      "type": "System.Object",
+      "description": "Geometric data describing the entity (see Remarks )"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The new graphics displayed by this method are temporary. When the user changes the dimension, this display dimension reverts back to the SOLIDWORKS standard.\nThe type controls which geometry is added and what information is placed in the data array. All colors and line styles are taken from DisplayDimension.\ntype\nDescription\ndata\n1\nLine\n6 doubles; (x, y, z) start point and (x, y, z) end point\n2\nFilled triangle\n9 doubles; 3 (x, y, z) points of the triangle to fill\n3\nFilled 4 sided polygon\n12 doubles; 4 (x, y, z) points of the polygon to fill\n4\nArc\n12 doubles; (x, y, z) center point, (x, y, z) normal vector, (x, y, z) start point and (x, y, z) end point\n5\nCircle\n7 doubles; (x, y, z) center point, (x, y, z) normal vector and radius\n6\nFilled dot\n4 doubles; (x, y, z) center point and radius",
+  "examples": [
+    {
+      "title": "Replace Dimension with Text (VBA)",
+      "href": "Replace_Dimension_with_Text_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.IAddDisplayText"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTableAnnotation",
+    "member": "GetComponentsCount",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "RowIndex",
+        "type": "System.Int32",
+        "description": "Row in the BOM table where to get the number of components; 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IBomTableAnnotation.GetComponents"
+    ],
+    "keywords": [
+      "getcomponentscount",
+      "ibomtableannotation",
+      "bom",
+      "table",
+      "annotation",
+      "components",
+      "count",
+      "row",
+      "index",
+      "int32"
+    ]
+  },
+  "title": "IBomTableAnnotation.GetComponentsCount",
+  "description": "Obsolete. Superseded by IBomTableAnnotation::GetComponentsCount2.",
+  "signature": "System.Int32 GetComponentsCount( \n   System.Int32\nRowIndex\n)",
+  "parameters": [
+    {
+      "name": "RowIndex",
+      "type": "System.Int32",
+      "description": "Row in the BOM table where to get the number of components; 0-based index"
+    }
+  ],
+  "returns": "Number of components in the specified row",
+  "remarks": "Call this method before calling\nIBomTableAnnotation::IGetComponents\nto determine the size of the array for that method.",
+  "examples": [],
+  "related": [
+    "IBomTableAnnotation.GetComponents"
+  ]
+}

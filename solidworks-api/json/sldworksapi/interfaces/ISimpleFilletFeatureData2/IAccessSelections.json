@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "IAccessSelections",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TopDoc",
+        "type": "ModelDoc2",
+        "description": "Top-level document (see Remarks )"
+      },
+      {
+        "name": "Component",
+        "type": "Component2",
+        "description": "Component in which the feature is to be modified (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.AccessSelections"
+    ],
+    "keywords": [
+      "iaccessselections",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "access",
+      "selections",
+      "top",
+      "doc",
+      "model",
+      "doc2",
+      "component",
+      "component2",
+      "boolean"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.IAccessSelections",
+  "description": "Gains access to the selections used to define a simple fillet feature.",
+  "signature": "System.Boolean IAccessSelections( \n   ModelDoc2\nTopDoc\n,\n   Component2\nComponent\n)",
+  "parameters": [
+    {
+      "name": "TopDoc",
+      "type": "ModelDoc2",
+      "description": "Top-level document (see Remarks )"
+    },
+    {
+      "name": "Component",
+      "type": "Component2",
+      "description": "Component in which the feature is to be modified (see Remarks )"
+    }
+  ],
+  "returns": "True if the selections were successfully accessed, false if not",
+  "remarks": "To modify a feature in a...\nThen...\nPart\nTopDoc argument is the\nIModelDoc2\nfor the part\nComponent argument is NULL\nAssembly\nTopDoc is the IModelDoc2 object for the assembly\nComponent argument is the\nIComponent2\nobject in which the feature is to be modified\nThis method puts the model into a rollback state to allow access to the selections that define this feature. You must use either of the following methods to restore the rollback state:\nIFeature::ModifyDefinition\nor\nIFeature::IModifyDefinition2\nif you modified the feature\nISimpleFilletFeatureData2::ReleaseSelectionAccess\nif you did not",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.AccessSelections"
+  ]
+}

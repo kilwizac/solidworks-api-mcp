@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetTextPlaneAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Zero-based index of the text whose plane rotation matrix to retrieve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IAnnotation.GetPlane",
+      "IDisplayData.GetTextAngleAtIndex",
+      "IDisplayData.GetTextAtIndex",
+      "IDisplayData.GetTextFontAtIndex",
+      "IDisplayData.GetTextHeightAtIndex",
+      "IDisplayData.GetTextInBoxHeightAtIndex",
+      "IDisplayData.GetTextInBoxStyleAtIndex",
+      "IDisplayData.GetTextInBoxWidthAtIndex",
+      "IDisplayData.GetTextInvertAtIndex",
+      "IDisplayData.GetTextLineSpacingAtIndex",
+      "IDisplayData.GetTextPositionAtIndex",
+      "IDisplayData.GetTextRefPositionAtIndex"
+    ],
+    "keywords": [
+      "gettextplaneatindex",
+      "idisplaydata",
+      "display",
+      "data",
+      "text",
+      "plane",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetTextPlaneAtIndex",
+  "description": "Gets the rotation matrix of the specified text relative to the X-Y plane of the model.",
+  "signature": "System.Object GetTextPlaneAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Zero-based index of the text whose plane rotation matrix to retrieve (see Remarks )"
+    }
+  ],
+  "returns": "Array of nine doubles of the text plane rotation matrix (see Remarks )",
+  "remarks": "Use\nIDisplayData::GetTextCount\nto specify Index.\nThe nine values of the returned rotation matrix (coord(\ni\n)) are ordered differently from other plane APIs. If you need to manipulate the text plane axes as is shown in the Example section, use the following assignments:\nX-axis: coord(0), coord(3), coord(6)\nY-axis: coord(1), coord(4), coord(7)\nZ-axis: coord(2), coord(5), coord(8)",
+  "examples": [],
+  "related": [
+    "IAnnotation.GetPlane",
+    "IDisplayData.GetTextAngleAtIndex",
+    "IDisplayData.GetTextAtIndex",
+    "IDisplayData.GetTextFontAtIndex",
+    "IDisplayData.GetTextHeightAtIndex",
+    "IDisplayData.GetTextInBoxHeightAtIndex",
+    "IDisplayData.GetTextInBoxStyleAtIndex",
+    "IDisplayData.GetTextInBoxWidthAtIndex",
+    "IDisplayData.GetTextInvertAtIndex",
+    "IDisplayData.GetTextLineSpacingAtIndex",
+    "IDisplayData.GetTextPositionAtIndex",
+    "IDisplayData.GetTextRefPositionAtIndex"
+  ]
+}

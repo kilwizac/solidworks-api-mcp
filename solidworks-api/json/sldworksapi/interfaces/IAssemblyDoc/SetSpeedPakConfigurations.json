@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "SetSpeedPakConfigurations",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configuration option as defined in swInConfigurationOpts_e (see Remarks )"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of the names of the configurations in the selected subassemblies to which to apply SpeedPak; valid only if Config_opt = swInConfigurationOpts_e.swSpecifyConfiguration (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.CreateSpeedPak",
+      "IAssemblyDoc.SetSpeedPakToParent",
+      "IAssemblyDoc.UpdateSpeedPak",
+      "IAssemblyDoc.UseSpeedPak",
+      "IComponent2.IsSpeedPak"
+    ],
+    "keywords": [
+      "speedpak",
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "components",
+      "icomponent2",
+      "setspeedpakconfigurations",
+      "assembly",
+      "doc",
+      "speed",
+      "pak",
+      "configurations",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IAssemblyDoc.SetSpeedPakConfigurations",
+  "description": "Sets the configurations in the selected subassemblies to which to apply SpeedPak in this assembly.",
+  "signature": "System.Boolean SetSpeedPakConfigurations( \n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configuration option as defined in swInConfigurationOpts_e (see Remarks )"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of the names of the configurations in the selected subassemblies to which to apply SpeedPak; valid only if Config_opt = swInConfigurationOpts_e.swSpecifyConfiguration (see Remarks )"
+    }
+  ],
+  "returns": "True if the specified configurations in the selected subassemblies are applied SpeedPak, false if not",
+  "remarks": "Valid option for Config_opt is:\nswInConfigurationOpts_e.swAllConfiguration,\nswInConfigurationOpts_e.swSpecifyConfiguration, or\nswInConfigurationOpts_e.swThisConfiguration\nIf Config_names = swInConfigurationOpts_e.swAllConfiguration or swInConfigurationOpts_e.swThisConfiguration, then pass Nothing or null.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.CreateSpeedPak",
+    "IAssemblyDoc.SetSpeedPakToParent",
+    "IAssemblyDoc.UpdateSpeedPak",
+    "IAssemblyDoc.UseSpeedPak",
+    "IComponent2.IsSpeedPak"
+  ]
+}

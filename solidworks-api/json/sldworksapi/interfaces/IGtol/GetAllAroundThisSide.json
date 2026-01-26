@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "GetAllAroundThisSide",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetAllOverThisSide",
+      "IGtol.SetAllAroundThisSide"
+    ],
+    "keywords": [
+      "getallaroundthisside",
+      "igtol",
+      "gtol",
+      "all",
+      "around",
+      "side",
+      "boolean"
+    ]
+  },
+  "title": "IGtol.GetAllAroundThisSide",
+  "description": "Gets whether this GTol uses an All Around This Side leader.",
+  "signature": "System.Boolean GetAllAroundThisSide()",
+  "parameters": [],
+  "returns": "True if this GTol uses an All Around This Side leader, false if not",
+  "remarks": "This property is valid only for bent, perpendicular, and multi-jog leaders. Call\nIGtol::GetLeaderAtIndex2\nto determine which type of leader is set for this GTol.\nUse:\nIGtol::IsAttached\nto determine whether this symbol is currently using a leader.\nIGtol::HasExtraLeader\nto determine whether this symbol is using a bent leader.\nIGtol::GetLeaderSide\nto determine where the leader is attached to the symbol.\nIGtol::SetLeader\nto set the characteristics of the leader on this symbol.",
+  "examples": [],
+  "related": [
+    "IGtol.GetAllOverThisSide",
+    "IGtol.SetAllAroundThisSide"
+  ]
+}

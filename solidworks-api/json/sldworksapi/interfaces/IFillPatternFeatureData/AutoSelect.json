@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFillPatternFeatureData",
+    "member": "AutoSelect",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [],
+    "keywords": [
+      "autoselect",
+      "ifillpatternfeaturedata",
+      "fill",
+      "pattern",
+      "feature",
+      "data",
+      "auto",
+      "select",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IFillPatternFeatureData.AutoSelect",
+  "description": "Gets or sets whether to automatically select all or only specific bodies in a multibody part to be affected by this fill pattern feature.",
+  "signature": "System.Boolean AutoSelect {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically select all bodies, false to select specific bodies",
+  "remarks": "This property is valid only if:\nIFillPatternFeatureData::GeometryPattern\nis true,\n- and -\nIFillPatternFeatureData::FeatureScope\nis true.\nIf IFillPatternFeatureData::FeatureScope is set to false, then this property defaults to false.\nIf this property is set to false, then specify the affected bodies using\nIFillPatternFeatureData::FeatureScopeBodies\n.\nFor more information, see the\nFill Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": []
+}

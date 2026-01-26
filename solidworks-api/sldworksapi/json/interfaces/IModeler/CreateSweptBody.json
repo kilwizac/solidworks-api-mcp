@@ -1,0 +1,253 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateSweptBody",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "PModDoc",
+        "type": "ModelDoc2",
+        "description": "Model document"
+      },
+      {
+        "name": "Propagate",
+        "type": "System.Boolean",
+        "description": "True propagates the swept protrusion to the next tangent edge, false does not"
+      },
+      {
+        "name": "Alignment",
+        "type": "System.Boolean",
+        "description": "True causes the swept protrusion to go through the end faces if the curve used for the sweep goes from one face to another or from one edge to another, false causes the swept protrusion to begin and end perpendicular to the sweep curve and it cannot break through the two end faces of the body"
+      },
+      {
+        "name": "TwistCtrlOption",
+        "type": "System.Int16",
+        "description": "Twist control options as defined by swTwistControlType_e"
+      },
+      {
+        "name": "KeepTangency",
+        "type": "System.Boolean",
+        "description": "If the sweep section has tangent segments, then True to cause the corresponding surfaces in the resulting sweep to be tangent, false to not"
+      },
+      {
+        "name": "BAdvancedSmoothing",
+        "type": "System.Boolean",
+        "description": "If the sweep section has circular or elliptical arcs, then True to approximate the sections and smooth the surfaces, false to not"
+      },
+      {
+        "name": "StartMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type as defined by swTangencyType_e"
+      },
+      {
+        "name": "EndMatchingType",
+        "type": "System.Int16",
+        "description": "Tangency type as defined by swTangencyType_e"
+      },
+      {
+        "name": "IsThinBody",
+        "type": "System.Boolean",
+        "description": "True if this feature is a thin body, false if not"
+      },
+      {
+        "name": "Thickness1",
+        "type": "System.Double",
+        "description": "Thickness value for the first direction"
+      },
+      {
+        "name": "Thickness2",
+        "type": "System.Double",
+        "description": "Thickness value for the second direction"
+      },
+      {
+        "name": "ThinType",
+        "type": "System.Int16",
+        "description": "Thin wall type as defined by swThinWallType_e"
+      },
+      {
+        "name": "PathAlign",
+        "type": "System.Int16",
+        "description": "Align path type (see Remarks )"
+      },
+      {
+        "name": "TwistAngle",
+        "type": "System.Double",
+        "description": "If TwistCtrlOption set to swTwistControlConstantTwistAlongPath, then specify end twist angle"
+      },
+      {
+        "name": "BMergeSmoothFaces",
+        "type": "System.Boolean",
+        "description": "True to merge smooth faces, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "body",
+      "bodies",
+      "ibody2",
+      "swept",
+      "createsweptbody",
+      "imodeler",
+      "modeler",
+      "create",
+      "mod",
+      "doc",
+      "model",
+      "doc2",
+      "propagate",
+      "boolean",
+      "alignment",
+      "twist",
+      "ctrl",
+      "option",
+      "int16",
+      "keep",
+      "tangency",
+      "advanced",
+      "smoothing",
+      "start",
+      "matching",
+      "type",
+      "end",
+      "thin",
+      "thickness1",
+      "double",
+      "thickness2",
+      "path",
+      "align",
+      "angle",
+      "merge",
+      "smooth",
+      "faces",
+      "body2"
+    ]
+  },
+  "title": "IModeler.CreateSweptBody",
+  "description": "Creates a swept body.",
+  "signature": "Body2 CreateSweptBody( \n   ModelDoc2\nPModDoc\n,\n   System.Boolean\nPropagate\n,\n   System.Boolean\nAlignment\n,\n   System.Int16\nTwistCtrlOption\n,\n   System.Boolean\nKeepTangency\n,\n   System.Boolean\nBAdvancedSmoothing\n,\n   System.Int16\nStartMatchingType\n,\n   System.Int16\nEndMatchingType\n,\n   System.Boolean\nIsThinBody\n,\n   System.Double\nThickness1\n,\n   System.Double\nThickness2\n,\n   System.Int16\nThinType\n,\n   System.Int16\nPathAlign\n,\n   System.Double\nTwistAngle\n,\n   System.Boolean\nBMergeSmoothFaces\n)",
+  "parameters": [
+    {
+      "name": "PModDoc",
+      "type": "ModelDoc2",
+      "description": "Model document"
+    },
+    {
+      "name": "Propagate",
+      "type": "System.Boolean",
+      "description": "True propagates the swept protrusion to the next tangent edge, false does not"
+    },
+    {
+      "name": "Alignment",
+      "type": "System.Boolean",
+      "description": "True causes the swept protrusion to go through the end faces if the curve used for the sweep goes from one face to another or from one edge to another, false causes the swept protrusion to begin and end perpendicular to the sweep curve and it cannot break through the two end faces of the body"
+    },
+    {
+      "name": "TwistCtrlOption",
+      "type": "System.Int16",
+      "description": "Twist control options as defined by swTwistControlType_e"
+    },
+    {
+      "name": "KeepTangency",
+      "type": "System.Boolean",
+      "description": "If the sweep section has tangent segments, then True to cause the corresponding surfaces in the resulting sweep to be tangent, false to not"
+    },
+    {
+      "name": "BAdvancedSmoothing",
+      "type": "System.Boolean",
+      "description": "If the sweep section has circular or elliptical arcs, then True to approximate the sections and smooth the surfaces, false to not"
+    },
+    {
+      "name": "StartMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type as defined by swTangencyType_e"
+    },
+    {
+      "name": "EndMatchingType",
+      "type": "System.Int16",
+      "description": "Tangency type as defined by swTangencyType_e"
+    },
+    {
+      "name": "IsThinBody",
+      "type": "System.Boolean",
+      "description": "True if this feature is a thin body, false if not"
+    },
+    {
+      "name": "Thickness1",
+      "type": "System.Double",
+      "description": "Thickness value for the first direction"
+    },
+    {
+      "name": "Thickness2",
+      "type": "System.Double",
+      "description": "Thickness value for the second direction"
+    },
+    {
+      "name": "ThinType",
+      "type": "System.Int16",
+      "description": "Thin wall type as defined by swThinWallType_e"
+    },
+    {
+      "name": "PathAlign",
+      "type": "System.Int16",
+      "description": "Align path type (see Remarks )"
+    },
+    {
+      "name": "TwistAngle",
+      "type": "System.Double",
+      "description": "If TwistCtrlOption set to swTwistControlConstantTwistAlongPath, then specify end twist angle"
+    },
+    {
+      "name": "BMergeSmoothFaces",
+      "type": "System.Boolean",
+      "description": "True to merge smooth faces, false to not"
+    }
+  ],
+  "returns": "Swept body",
+  "remarks": "Use\nIModelDocExtension::SelectByID2\nto select the profile and sweep curves. The mark for:\n1 = Profile selection\n2 = Guide curve selection, if provided\n4 = Sweep path\nThe PathAlign argument is available when twistCtrlOption is set to 0 (follow path) and can take one of these values:\n0 = None; no correction (default)\n2 = Direction vector; a plane, planar face, or line defines the path\n3 = All faces; includes neighboring faces",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateWireBody"
+  ]
+}

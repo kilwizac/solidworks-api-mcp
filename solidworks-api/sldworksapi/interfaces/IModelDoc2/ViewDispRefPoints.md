@@ -1,0 +1,57 @@
+---
+type: method
+interface: IModelDoc2
+member: ViewDispRefPoints
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - IModelDoc2.ViewDispRefaxes
+  - IModelDoc2.ViewDispRefplanes
+  - IModelDoc2.ViewDispTempRefaxes
+  - IRefPoint
+keywords:
+  - display
+  - reference
+  - points
+  - hide
+  - show
+  - viewdisprefpoints
+  - imodeldoc2
+  - model
+  - doc2
+  - view
+  - disp
+  - ref
+  - void
+---
+
+# IModelDoc2.ViewDispRefPoints
+
+Shows and hides the reference points for the current model document.
+
+## Signature
+
+```csharp
+void ViewDispRefPoints()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IModelDoc2.ViewDispRefaxes`
+- `IModelDoc2.ViewDispRefplanes`
+- `IModelDoc2.ViewDispTempRefaxes`
+- `IRefPoint`

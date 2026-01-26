@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetSaveFlag",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.GetSaveFlag"
+    ],
+    "keywords": [
+      "document",
+      "dirty",
+      "save",
+      "setsaveflag",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "flag",
+      "void",
+      "remove",
+      "textures",
+      "assembly",
+      "components",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.SetSaveFlag",
+  "description": "Flags the document as dirty.",
+  "signature": "void SetSaveFlag()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "If the user tries to close the part, the\nDo you wish to save changes?\ndialog is displayed.\nIf SOLIDWORKS data has changed, this method marks the SOLIDWORKS document as dirty so that the end-user is prompted when attempting to close the document. You might want to use this method with applications that use\nIModelDoc2::IGet3rdPartyStorage\nto save stream data in SOLIDWORKS files.\nIf you have programmatically changed the SOLIDWORKS model, using this method is not necessary because the SOLIDWORKS document is flagged as dirty automatically.",
+  "examples": [
+    {
+      "title": "Remove Textures from Assembly Components (VBA)",
+      "href": "Remove_Textures_from_Assembly_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.GetSaveFlag"
+  ]
+}

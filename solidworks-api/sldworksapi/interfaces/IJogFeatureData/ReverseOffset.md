@@ -1,0 +1,51 @@
+---
+type: property
+interface: IJogFeatureData
+member: ReverseOffset
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IJogFeatureData.GetOffsetReferenceType
+  - IJogFeatureData.OffsetDistance
+  - IJogFeatureData.OffsetReference
+  - IJogFeatureData.OffsetType
+keywords:
+  - reverseoffset
+  - ijogfeaturedata
+  - jog
+  - feature
+  - data
+  - reverse
+  - offset
+  - boolean
+readonly: null
+---
+
+# IJogFeatureData.ReverseOffset
+
+Gets or sets whether to reverse the offset of this jog feature.
+
+## Signature
+
+```csharp
+System.Boolean ReverseOffset {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True enables the reverse offset, false disables it
+
+## See Also
+
+- `IJogFeatureData.GetOffsetReferenceType`
+- `IJogFeatureData.OffsetDistance`
+- `IJogFeatureData.OffsetReference`
+- `IJogFeatureData.OffsetType`

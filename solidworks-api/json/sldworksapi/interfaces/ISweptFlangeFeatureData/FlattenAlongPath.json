@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweptFlangeFeatureData",
+    "member": "FlattenAlongPath",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "flattenalongpath",
+      "isweptflangefeaturedata",
+      "swept",
+      "flange",
+      "feature",
+      "data",
+      "flatten",
+      "along",
+      "path",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweptFlangeFeatureData.FlattenAlongPath",
+  "description": "Gets or sets whether to flatten the flange profile along the sweep path of this swept flange feature.",
+  "signature": "System.Boolean FlattenAlongPath {get; set;}",
+  "parameters": [],
+  "returns": "True to flatten the profile along the sweep path, false to not",
+  "remarks": "This property is valid only when not creating the swept flange on an existing sheet metal feature.\nIf this property is true, then you can also specify\nISweptFlangeFeatureData::MaterialInside\n.\nIf this property is:\nTrue, then when the model is flattened the\nprofile\nflattens and is rotated parallel to the plane of the path. The\npath\nis not flattened, and the result is a the shape of the path.\nFalse, then when the model is flattened the profile flattens and is rotated perpendicular to the plane of the path. The path is flattened, and the result is a rectangular shape.",
+  "examples": [
+    {
+      "title": "ISweptFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweptFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

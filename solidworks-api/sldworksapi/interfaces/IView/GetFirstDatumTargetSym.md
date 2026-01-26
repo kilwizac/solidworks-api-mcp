@@ -1,0 +1,59 @@
+---
+type: method
+interface: IView
+member: GetFirstDatumTargetSym
+returns: System.Object
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - drawings
+  - ui
+related:
+  - IDatumTargetSym.GetNext
+  - IDatumTargetSym.IGetNext
+  - IView.GetDatumTargetSyms
+  - IView.IGetDatumTargetSyms
+  - IView.IGetFirstDatumTargetSym
+keywords:
+  - datum
+  - targets
+  - see
+  - idatumtargetsym
+  - drawing
+  - views
+  - also
+  - iview
+  - view
+  - getfirstdatumtargetsym
+  - first
+  - target
+  - sym
+  - object
+---
+
+# IView.GetFirstDatumTargetSym
+
+Gets the first datum target symbol in the view.
+
+## Signature
+
+```csharp
+System.Object GetFirstDatumTargetSym()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+First datum target symbol
+
+## See Also
+
+- `IDatumTargetSym.GetNext`
+- `IDatumTargetSym.IGetNext`
+- `IView.GetDatumTargetSyms`
+- `IView.IGetDatumTargetSyms`
+- `IView.IGetFirstDatumTargetSym`

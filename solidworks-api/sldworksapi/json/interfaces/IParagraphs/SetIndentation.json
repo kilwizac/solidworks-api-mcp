@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IParagraphs",
+    "member": "SetIndentation",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FirstlineIndent",
+        "type": "System.Double",
+        "description": "Indentation of first line"
+      },
+      {
+        "name": "Indent",
+        "type": "System.Double",
+        "description": "Indentation of lines other than the first line"
+      },
+      {
+        "name": "IndentIncrement",
+        "type": "System.Double",
+        "description": "Amount by which to increment the current indents"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IParagraphs.GetIndentation"
+    ],
+    "keywords": [
+      "setindentation",
+      "iparagraphs",
+      "paragraphs",
+      "indentation",
+      "firstline",
+      "indent",
+      "double",
+      "increment",
+      "boolean"
+    ]
+  },
+  "title": "IParagraphs.SetIndentation",
+  "description": "Sets the indentation of the current paragraph.",
+  "signature": "System.Boolean SetIndentation( \n   System.Double\nFirstlineIndent\n,\n   System.Double\nIndent\n,\n   System.Double\nIndentIncrement\n)",
+  "parameters": [
+    {
+      "name": "FirstlineIndent",
+      "type": "System.Double",
+      "description": "Indentation of first line"
+    },
+    {
+      "name": "Indent",
+      "type": "System.Double",
+      "description": "Indentation of lines other than the first line"
+    },
+    {
+      "name": "IndentIncrement",
+      "type": "System.Double",
+      "description": "Amount by which to increment the current indents"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, set the current paragraph using\nIParagraphs::CurrentParagraph\n.\nAfter calling this method, call\nIParagraphs::UpdateParagraph\nto update the model.",
+  "examples": [],
+  "related": [
+    "IParagraphs.GetIndentation"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "MakeSubFeature",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SubFeature",
+        "type": "Feature",
+        "description": "Pointer to the feature to become a subfeature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.GetFirstSubFeature",
+      "IFeature.GetNextSubFeature",
+      "IFeature.IGetFirstSubFeature",
+      "IFeature.IGetNextSubFeature"
+    ],
+    "keywords": [
+      "subfeatures",
+      "makesubfeature",
+      "ifeature",
+      "feature",
+      "make",
+      "sub",
+      "boolean",
+      "create",
+      "macro",
+      "subfeature",
+      "vba"
+    ]
+  },
+  "title": "IFeature.MakeSubFeature",
+  "description": "Makes a feature become a subfeature of this feature.",
+  "signature": "System.Boolean MakeSubFeature( \n   Feature\nSubFeature\n)",
+  "parameters": [
+    {
+      "name": "SubFeature",
+      "type": "Feature",
+      "description": "Pointer to the feature to become a subfeature"
+    }
+  ],
+  "returns": "True if the feature becomes a subfeature, false if not",
+  "remarks": "This method is not supported in assembly documents.\nThis method can only be used to make subfeatures to a macro feature.\nThe feature and subfeature must have a parent-child relationship. If the subfeature is a reference plane, then the feature and subfeatures of the feature are the only parents of the subfeature to be inserted.",
+  "examples": [
+    {
+      "title": "Create Macro Feature Subfeature (VBA)",
+      "href": "Create_Macro_Feature_Subfeature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetFirstSubFeature",
+    "IFeature.GetNextSubFeature",
+    "IFeature.IGetFirstSubFeature",
+    "IFeature.IGetNextSubFeature"
+  ]
+}

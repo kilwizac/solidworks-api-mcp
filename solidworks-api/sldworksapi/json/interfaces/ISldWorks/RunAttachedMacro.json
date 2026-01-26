@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RunAttachedMacro",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Filename of macro to run (do not include a path)"
+      },
+      {
+        "name": "ModuleName",
+        "type": "System.String",
+        "description": "Module of specified macro to run"
+      },
+      {
+        "name": "ProcedureName",
+        "type": "System.String",
+        "description": "Procedure of specified macro to run"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.RunMacro2"
+    ],
+    "keywords": [
+      "macros",
+      "run",
+      "design",
+      "binder",
+      "runattachedmacro",
+      "isldworks",
+      "sld",
+      "works",
+      "attached",
+      "macro",
+      "file",
+      "name",
+      "string",
+      "module",
+      "procedure",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.RunAttachedMacro",
+  "description": "Runs the specified attached macro, module, and procedure.",
+  "signature": "System.Boolean RunAttachedMacro( \n   System.String\nFileName\n,\n   System.String\nModuleName\n,\n   System.String\nProcedureName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Filename of macro to run (do not include a path)"
+    },
+    {
+      "name": "ModuleName",
+      "type": "System.String",
+      "description": "Module of specified macro to run"
+    },
+    {
+      "name": "ProcedureName",
+      "type": "System.String",
+      "description": "Procedure of specified macro to run"
+    }
+  ],
+  "returns": "True if macro runs, false if not",
+  "remarks": "An example of an attached macro is a macro that is attached to the active document's Design Binder.",
+  "examples": [],
+  "related": [
+    "ISldWorks.RunMacro2"
+  ]
+}

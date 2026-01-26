@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "AddComment",
+    "returns": "Comment",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Comment to add to the document's Comment folder"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IComment.Delete"
+    ],
+    "keywords": [
+      "comment",
+      "see",
+      "also",
+      "icomment",
+      "add",
+      "addcomment",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "text",
+      "string",
+      "assembly",
+      "component",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.AddComment",
+  "description": "Adds a comment to this document's Comment Folder.",
+  "signature": "Comment AddComment( \n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Comment to add to the document's Comment folder"
+    }
+  ],
+  "returns": "Comment folder",
+  "remarks": "A comment is added to the document's Comment folder, and the comment is associated with the preselected item when this method is run.\nFor example:\nIf...\nThen the comment is...\nA feature is preselected\nAssociated with the feature (equivalent to running the\nIFeature::AddComment\non the selected feature)\nThe Comment folder is preselected\nNot associated with any feature, but is added to the Comment folder (equivalent to running the\nICommentFolder::AddComment\nmethod)\nAlthough it might appear that ModelDocExtension::AddComment duplicates IFeature::AddComment and ICommentFolder::AddComment, IModelDocExtension::AddComment is used when recording macros, so it is different. I\nModelDocExtension::AddComment shares code with the user interface, so it should behave identical to the user interface.\nIModelDocExtension::AddComment rebuilds the FeatureManager design tree automatically, which can be a time-consuming operation if the FeatureManager design tree gets large. Take this into consideration before using it.",
+  "examples": [
+    {
+      "title": "Add Comment to Assembly Component (VBA)",
+      "href": "Add_Comment_to_Assembly_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Comment to Assembly Component (VB.NET)",
+      "href": "Add_Comment_to_Assembly_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Comment to Assembly Component (C#)",
+      "href": "Add_Comment_to_Assembly_Component_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComment.Delete"
+  ]
+}

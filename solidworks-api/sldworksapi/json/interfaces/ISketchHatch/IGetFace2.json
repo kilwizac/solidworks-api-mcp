@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchHatch",
+    "member": "IGetFace2",
+    "returns": "Face2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "geometry",
+      "sketches"
+    ],
+    "related": [
+      "ISketchHatch.GetFace"
+    ],
+    "keywords": [
+      "igetface2",
+      "isketchhatch",
+      "sketch",
+      "hatch",
+      "face2"
+    ]
+  },
+  "title": "ISketchHatch.IGetFace2",
+  "description": "Gets the face associated with this sketch hatch.",
+  "signature": "Face2 IGetFace2()",
+  "parameters": [],
+  "returns": "Face associated with the sketch hatch or null if the operation fails",
+  "remarks": "You should not select the returned face. Only use the returned face for getting the geometry of the sketch hatch: loops, edges, equations for the edges, and so on. Do not hold onto the pointer the face after it is used as the face is transient.",
+  "examples": [],
+  "related": [
+    "ISketchHatch.GetFace"
+  ]
+}

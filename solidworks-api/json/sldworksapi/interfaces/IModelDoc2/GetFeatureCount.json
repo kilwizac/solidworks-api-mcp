@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetFeatureCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "features",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "number",
+      "getfeaturecount",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "count",
+      "int32",
+      "traverse",
+      "features",
+      "reverse",
+      "position",
+      "vb",
+      "net",
+      "vba",
+      "order"
+    ]
+  },
+  "title": "IModelDoc2.GetFeatureCount",
+  "description": "Gets the number of features in this document.",
+  "signature": "System.Int32 GetFeatureCount()",
+  "parameters": [],
+  "returns": "Number of features in this document; this number does not include subfeatures",
+  "remarks": "The number of features returned by this method does\nnot include subfeatures. Subfeatures include, for example, mate features within a mategroup, drawing views on a sheet, and so on. One way to identify a subfeature is whether it can be returned by:\nIFeature::GetFirstSubFeature\nor\nIFeature::IGetFirstSubFeature\nIFeature::GetNextSubFeature\nor\nIFeature::IGetNextSubFeature\n.\nThis method returns the number of features returned when traversing the Feature list with\nIModelDoc2::FirstFeature\nor\nIModelDoc2::IFirstFeature\nand\nIFeature::GetNextFeature\nor\nIFeature::IGetNextFeature\n. This value may be useful in feature traversal or if accessing the feature by position using\nIModelDoc2::FeatureByPositionReverse\nor\nIModelDoc2::IFeatureByPositionReverse\n.",
+  "examples": [
+    {
+      "title": "Traverse Features By Reverse Position (C#)",
+      "href": "Traverse_Features_By_Reverse_Position_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Features By Reverse Position (VB.NET)",
+      "href": "Traverse_Features_By_Reverse_Position_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Features By Reverse Position (VBA)",
+      "href": "Traverse_Features_By_Reverse_Position_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Features in Reverse Order (C#)",
+      "href": "Get_Features_in_Reverse_Order_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Features in Reverse Order (VB.NET)",
+      "href": "Get_Features_in_Reverse_Order_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Features in Reverse Order (VBA)",
+      "href": "Get_Features_in_Reverse_Order_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "GetFeatures",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ToplevelOnly",
+        "type": "System.Boolean",
+        "description": "True to get only the features at the top level of the FeatureManager design tree, false to get the top-level features and all child features in the FeatureManager design tree"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IComponent2.FirstFeature",
+      "IFeature.GetChildren",
+      "IFeature.GetOwnerFeature",
+      "IFeature.GetParents",
+      "IFeature.IGetChildCount",
+      "IFeature.IGetChildren",
+      "IFeature.IGetParentCount",
+      "IFeature.IGetParents",
+      "IFeatureManager.GetFeatureCount",
+      "IFeatureManager.IGetFeatures"
+    ],
+    "keywords": [
+      "getfeatures",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "features",
+      "toplevel",
+      "only",
+      "boolean",
+      "object",
+      "create",
+      "loft",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.GetFeatures",
+  "description": "Gets the features in this document.",
+  "signature": "System.Object GetFeatures( \n   System.Boolean\nToplevelOnly\n)",
+  "parameters": [
+    {
+      "name": "ToplevelOnly",
+      "type": "System.Boolean",
+      "description": "True to get only the features at the top level of the FeatureManager design tree, false to get the top-level features and all child features in the FeatureManager design tree"
+    }
+  ],
+  "returns": "Array of all of the features",
+  "remarks": "If TopLevelOnly is false, then this method gets all of the feature and child features in this document.\nIt does not get features in components.\nThe features that are returned by this method can be in any order. You should not rely on the order to indicate anything about children or parents. If hierarchy and order information is needed, then use\nIPartDoc::FirstFeature\nor\nIPartDoc::IFirstFeature\nor\nIModelDoc2::FirstFeature\nor\nIModelDoc2::FirstFeature\n,\nIFeature::GetNextFeature\nor\nIFeatureIGetNextFeature\n,\nIFeature::GetFirstSubFeature\nor\nIFeature::IGetFirstSubFeature\n, and\nIFeature::GetNextSubFeature\nor\nIFeature::IGetNextSubFeature\nto retrieve your information.",
+  "examples": [
+    {
+      "title": "Create Loft Body (VB.NET)",
+      "href": "Create_Loft_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (VBA)",
+      "href": "Create_Loft_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Loft Body (C#)",
+      "href": "Create_Loft_Body_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IComponent2.FirstFeature",
+    "IFeature.GetChildren",
+    "IFeature.GetOwnerFeature",
+    "IFeature.GetParents",
+    "IFeature.IGetChildCount",
+    "IFeature.IGetChildren",
+    "IFeature.IGetParentCount",
+    "IFeature.IGetParents",
+    "IFeatureManager.GetFeatureCount",
+    "IFeatureManager.IGetFeatures"
+  ]
+}

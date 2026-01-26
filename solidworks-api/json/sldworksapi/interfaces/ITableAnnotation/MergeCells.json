@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "MergeCells",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RowStart",
+        "type": "System.Int32",
+        "description": "Index of row at which start the merge"
+      },
+      {
+        "name": "ColumnStart",
+        "type": "System.Int32",
+        "description": "Index of column at which to start the merge"
+      },
+      {
+        "name": "RowEnd",
+        "type": "System.Int32",
+        "description": "Index of row at which to end the merge"
+      },
+      {
+        "name": "ColumnEnd",
+        "type": "System.Int32",
+        "description": "Index of column at which to end the merge"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.GetCellRange",
+      "ITableAnnotation.GetSplitInformation",
+      "ITableAnnotation.IsCellMerged",
+      "ITableAnnotation.Merge",
+      "ITableAnnotation.Split",
+      "ITableAnnotation.UnmergeCells"
+    ],
+    "keywords": [
+      "cells",
+      "tables",
+      "table",
+      "merge",
+      "mergecells",
+      "itableannotation",
+      "annotation",
+      "row",
+      "start",
+      "int32",
+      "column",
+      "end",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.MergeCells",
+  "description": "Merges the cells in the specified range.",
+  "signature": "System.Boolean MergeCells( \n   System.Int32\nRowStart\n,\n   System.Int32\nColumnStart\n,\n   System.Int32\nRowEnd\n,\n   System.Int32\nColumnEnd\n)",
+  "parameters": [
+    {
+      "name": "RowStart",
+      "type": "System.Int32",
+      "description": "Index of row at which start the merge"
+    },
+    {
+      "name": "ColumnStart",
+      "type": "System.Int32",
+      "description": "Index of column at which to start the merge"
+    },
+    {
+      "name": "RowEnd",
+      "type": "System.Int32",
+      "description": "Index of row at which to end the merge"
+    },
+    {
+      "name": "ColumnEnd",
+      "type": "System.Int32",
+      "description": "Index of column at which to end the merge"
+    }
+  ],
+  "returns": "True if the cells in the specified range merge successfully, false if not",
+  "remarks": "The index for both rows and columns is 0-based.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.GetCellRange",
+    "ITableAnnotation.GetSplitInformation",
+    "ITableAnnotation.IsCellMerged",
+    "ITableAnnotation.Merge",
+    "ITableAnnotation.Split",
+    "ITableAnnotation.UnmergeCells"
+  ]
+}

@@ -1,0 +1,530 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>FeatureFillet2 Method (IFeatureManager)</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureFillet2" />
+    <meta name="Description" content="Obsolete. Superseded by IFeatureManager::FeatureFillet3." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.FeatureFillet2" />
+    <meta name="Microsoft.Help.Keywords" content="FeatureFillet2 Method (IFeatureManager)" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                FeatureFillet2 Method (IFeatureManager)
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : FeatureFillet2 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="OptionsPopupContent" class="i-popup-content">
+        Feature fillet options as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>
+    </div>
+
+    <div id="R1PopupContent" class="i-popup-content">
+        <p>Uniform radius of the fillet; valid only if:</p>
+
+        <ul>
+            <li>Ftyp&#160;!= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius&#160;</li>
+
+            <li>Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius</li>
+        </ul>
+    </div>
+
+    <div id="RhoPopupContent" class="i-popup-content">
+        <p>Value that determines the conic shape of the fillet:</p>
+
+        <ul>
+            <li>Conic rho value [0.05, 0.95], if ConicRhoType&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletProfileType_e.html">swFeatureFilletProfileType_e</a>.swFeatureFilletConicRho (see <strong>Remarks</strong>)</li>
+
+            <li>Conic radius value, if ConicRhoType&#160;= swFeatureFilletProfileType_e.swFeatureFilletConicRadius&#160;</li>
+
+            <li>Circular radius&#160;value, if&#160;ConicRhoType&#160;= swFeatureFilletProfileType_e.swFeatureFilletCircular&#160;</li>
+        </ul>
+    </div>
+
+    <div id="FtypPopupContent" class="i-popup-content">
+        Type of fillet as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>&#160;(see <strong>Remarks</strong>)
+    </div>
+
+    <div id="OverflowTypePopupContent" class="i-popup-content">
+        Control of fillet overflowing onto adjacent surfaces as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFilletOverFlowType_e.html">swFilletOverFlowType_e</a>
+    </div>
+
+    <div id="ConicRhoTypePopupContent" class="i-popup-content">
+        Conic fillet profile type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletProfileType_e.html">swFeatureFilletProfileType_e</a>
+    </div>
+
+    <div id="RadiiPopupContent" class="i-popup-content">
+        <p>Array containing the radii for the variable radius<!--ParamDesc--> fillet; valid only if:</p>
+
+        <ul>
+            <li>
+                <div class="apiParametersOLE">
+                    Ftyp&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+                </div>
+            </li>
+
+            <li>
+                <div class="apiParametersOLE">
+                    Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletVarRadiusType
+                </div>
+            </li>
+
+            <li>
+                <div class="apiParametersOLE">
+                    Options&#160;do not include&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="RhoArrPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Array of&#160;Rho values&#160;for the specified ConicRhoType&#160;for the variable radius fillet<!--ParamDesc-->; valid only if:</p>
+
+        <ul>
+            <li>
+                <div class="apiParametersOLE">
+                    Ftyp&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+                </div>
+            </li>
+
+            <li>
+                <div class="apiParametersOLE">
+                    Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletVarRadiusType
+                </div>
+            </li>
+
+            <li>
+                <div class="apiParametersOLE">
+                    Options&#160;do not include&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="SetBackDistancesPopupContent" class="i-popup-content">
+        Array containing setback distances along the fillet edge
+    </div>
+
+    <div id="PointRadiusArrayPopupContent" class="i-popup-content">
+        Array containing radii at various control points along the length of the edge; valid only if Ftyp = <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+    </div>
+
+    <div id="PointRhoArrayPopupContent" class="i-popup-content">
+        Array&#160;of Rho&#160;values for the specified ConicRhoType at various control points along the length of the edge; valid only if Ftyp = <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <span style="COLOR: #ff0000">Obsolete. Superseded by&#160;</span><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureFillet3">IFeatureManager::FeatureFillet3</a><span style="COLOR: #ff0000">.</span>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function FeatureFillet2( _
+   ByVal <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="R1PopupLink" data-popup-contentsource="#R1PopupContent" data-popup-showevent="click mouseenter">R1</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="RhoPopupLink" data-popup-contentsource="#RhoPopupContent" data-popup-showevent="click mouseenter">Rho</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="FtypPopupLink" data-popup-contentsource="#FtypPopupContent" data-popup-showevent="click mouseenter">Ftyp</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="OverflowTypePopupLink" data-popup-contentsource="#OverflowTypePopupContent" data-popup-showevent="click mouseenter">OverflowType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ConicRhoTypePopupLink" data-popup-contentsource="#ConicRhoTypePopupContent" data-popup-showevent="click mouseenter">ConicRhoType</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="RadiiPopupLink" data-popup-contentsource="#RadiiPopupContent" data-popup-showevent="click mouseenter">Radii</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="RhoArrPopupLink" data-popup-contentsource="#RhoArrPopupContent" data-popup-showevent="click mouseenter">RhoArr</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SetBackDistancesPopupLink" data-popup-contentsource="#SetBackDistancesPopupContent" data-popup-showevent="click mouseenter">SetBackDistances</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="PointRadiusArrayPopupLink" data-popup-contentsource="#PointRadiusArrayPopupContent" data-popup-showevent="click mouseenter">PointRadiusArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="PointRhoArrayPopupLink" data-popup-contentsource="#PointRhoArrayPopupContent" data-popup-showevent="click mouseenter">PointRhoArray</a></i> As System.Object _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim Options As System.Integer
+Dim R1 As System.Double
+Dim Rho As System.Double
+Dim Ftyp As System.Integer
+Dim OverflowType As System.Integer
+Dim ConicRhoType As System.Integer
+Dim Radii As System.Object
+Dim RhoArr As System.Object
+Dim SetBackDistances As System.Object
+Dim PointRadiusArray As System.Object
+Dim PointRhoArray As System.Object
+Dim value As System.Object
+ 
+value = instance.FeatureFillet2(Options, R1, Rho, Ftyp, OverflowType, ConicRhoType, Radii, RhoArr, SetBackDistances, PointRadiusArray, PointRhoArray)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object FeatureFillet2( 
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>,
+   System.double <i><a class="i-popup-link" id="R1PopupLink" data-popup-contentsource="#R1PopupContent" data-popup-showevent="click mouseenter">R1</a></i>,
+   System.double <i><a class="i-popup-link" id="RhoPopupLink" data-popup-contentsource="#RhoPopupContent" data-popup-showevent="click mouseenter">Rho</a></i>,
+   System.int <i><a class="i-popup-link" id="FtypPopupLink" data-popup-contentsource="#FtypPopupContent" data-popup-showevent="click mouseenter">Ftyp</a></i>,
+   System.int <i><a class="i-popup-link" id="OverflowTypePopupLink" data-popup-contentsource="#OverflowTypePopupContent" data-popup-showevent="click mouseenter">OverflowType</a></i>,
+   System.int <i><a class="i-popup-link" id="ConicRhoTypePopupLink" data-popup-contentsource="#ConicRhoTypePopupContent" data-popup-showevent="click mouseenter">ConicRhoType</a></i>,
+   System.object <i><a class="i-popup-link" id="RadiiPopupLink" data-popup-contentsource="#RadiiPopupContent" data-popup-showevent="click mouseenter">Radii</a></i>,
+   System.object <i><a class="i-popup-link" id="RhoArrPopupLink" data-popup-contentsource="#RhoArrPopupContent" data-popup-showevent="click mouseenter">RhoArr</a></i>,
+   System.object <i><a class="i-popup-link" id="SetBackDistancesPopupLink" data-popup-contentsource="#SetBackDistancesPopupContent" data-popup-showevent="click mouseenter">SetBackDistances</a></i>,
+   System.object <i><a class="i-popup-link" id="PointRadiusArrayPopupLink" data-popup-contentsource="#PointRadiusArrayPopupContent" data-popup-showevent="click mouseenter">PointRadiusArray</a></i>,
+   System.object <i><a class="i-popup-link" id="PointRhoArrayPopupLink" data-popup-contentsource="#PointRhoArrayPopupContent" data-popup-showevent="click mouseenter">PointRhoArray</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ FeatureFillet2( 
+   System.int <i><a class="i-popup-link" id="OptionsPopupLink" data-popup-contentsource="#OptionsPopupContent" data-popup-showevent="click mouseenter">Options</a></i>,
+   System.double <i><a class="i-popup-link" id="R1PopupLink" data-popup-contentsource="#R1PopupContent" data-popup-showevent="click mouseenter">R1</a></i>,
+   System.double <i><a class="i-popup-link" id="RhoPopupLink" data-popup-contentsource="#RhoPopupContent" data-popup-showevent="click mouseenter">Rho</a></i>,
+   System.int <i><a class="i-popup-link" id="FtypPopupLink" data-popup-contentsource="#FtypPopupContent" data-popup-showevent="click mouseenter">Ftyp</a></i>,
+   System.int <i><a class="i-popup-link" id="OverflowTypePopupLink" data-popup-contentsource="#OverflowTypePopupContent" data-popup-showevent="click mouseenter">OverflowType</a></i>,
+   System.int <i><a class="i-popup-link" id="ConicRhoTypePopupLink" data-popup-contentsource="#ConicRhoTypePopupContent" data-popup-showevent="click mouseenter">ConicRhoType</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="RadiiPopupLink" data-popup-contentsource="#RadiiPopupContent" data-popup-showevent="click mouseenter">Radii</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="RhoArrPopupLink" data-popup-contentsource="#RhoArrPopupContent" data-popup-showevent="click mouseenter">RhoArr</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="SetBackDistancesPopupLink" data-popup-contentsource="#SetBackDistancesPopupContent" data-popup-showevent="click mouseenter">SetBackDistances</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="PointRadiusArrayPopupLink" data-popup-contentsource="#PointRadiusArrayPopupContent" data-popup-showevent="click mouseenter">PointRadiusArray</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="PointRhoArrayPopupLink" data-popup-contentsource="#PointRhoArrayPopupContent" data-popup-showevent="click mouseenter">PointRhoArray</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Options</i></dt>
+
+                <dd>Feature fillet options as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a></dd>
+
+                <dt><i>R1</i></dt>
+
+                <dd>
+                    <p>Uniform radius of the fillet; valid only if:</p>
+
+                    <ul>
+                        <li>Ftyp&#160;!= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius&#160;</li>
+
+                        <li>Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius</li>
+                    </ul>
+                </dd>
+
+                <dt><i>Rho</i></dt>
+
+                <dd>
+                    <p>Value that determines the conic shape of the fillet:</p>
+
+                    <ul>
+                        <li>Conic rho value [0.05, 0.95], if ConicRhoType&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletProfileType_e.html">swFeatureFilletProfileType_e</a>.swFeatureFilletConicRho (see <strong>Remarks</strong>)</li>
+
+                        <li>Conic radius value, if ConicRhoType&#160;= swFeatureFilletProfileType_e.swFeatureFilletConicRadius&#160;</li>
+
+                        <li>Circular radius&#160;value, if&#160;ConicRhoType&#160;= swFeatureFilletProfileType_e.swFeatureFilletCircular&#160;</li>
+                    </ul>
+                </dd>
+
+                <dt><i>Ftyp</i></dt>
+
+                <dd>Type of fillet as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>&#160;(see <strong>Remarks</strong>)</dd>
+
+                <dt><i>OverflowType</i></dt>
+
+                <dd>Control of fillet overflowing onto adjacent surfaces as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFilletOverFlowType_e.html">swFilletOverFlowType_e</a></dd>
+
+                <dt><i>ConicRhoType</i></dt>
+
+                <dd>Conic fillet profile type as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletProfileType_e.html">swFeatureFilletProfileType_e</a></dd>
+
+                <dt><i>Radii</i></dt>
+
+                <dd>
+                    <p>Array containing the radii for the variable radius<!--ParamDesc--> fillet; valid only if:</p>
+
+                    <ul>
+                        <li>
+                            <div class="apiParametersOLE">
+                                Ftyp&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="apiParametersOLE">
+                                Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletVarRadiusType
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="apiParametersOLE">
+                                Options&#160;do not include&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius
+                            </div>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>RhoArr</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Array of&#160;Rho values&#160;for the specified ConicRhoType&#160;for the variable radius fillet<!--ParamDesc-->; valid only if:</p>
+
+                    <ul>
+                        <li>
+                            <div class="apiParametersOLE">
+                                Ftyp&#160;= <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="apiParametersOLE">
+                                Options&#160;include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletVarRadiusType
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="apiParametersOLE">
+                                Options&#160;do not include&#160;<a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFeatureFilletUniformRadius
+                            </div>
+                        </li>
+                    </ul>
+                </dd>
+
+                <dt><i>SetBackDistances</i></dt>
+
+                <dd>Array containing setback distances along the fillet edge</dd>
+
+                <dt><i>PointRadiusArray</i></dt>
+
+                <dd>Array containing radii at various control points along the length of the edge; valid only if Ftyp = <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius</dd>
+
+                <dt><i>PointRhoArray</i></dt>
+
+                <dd>Array&#160;of Rho&#160;values for the specified ConicRhoType at various control points along the length of the edge; valid only if Ftyp = <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">IFeature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>If the conic rho value specified in parameter, Rho, is not in the valid range, then&#160;this method&#160;replaces it with the&#160;closest value in the valid range. For example, 0.01 is replaced by 0.05, and 0.99 is replaced by 0.95.&#160;</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Before calling this method to create...</th>
+
+                        <th>You must...</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Simple fillets</td>
+
+                        <td>
+                            <ol>
+                                <li>Call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">IModelDocExtension::SelectByID2</a>&#160;with Mark = 1 to select the edges to fillet.</li>
+
+                                <li>Specify Ftyp&#160;with <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_Simple.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Face blend fillets</td>
+
+                        <td>
+                            <ol>
+                                <li>Call IModelDocExtension::SelectByID2&#160;with:</li>
+                            </ol>
+
+                            <div style="margin-left: 2em">
+                                <ul>
+                                    <li>Mark = 2 to select the first set of faces.</li>
+
+                                    <li>Mark = 4 to select the second set of faces.</li>
+                                </ul>
+                            </div>
+
+                            <ol style="COUNTER-RESET: item 1" start="2">
+                                <li>Specify Ftyp&#160;with <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_Face.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Variable radius fillets</td>
+
+                        <td>
+                            <ol>
+                                <li>Call IModelDocExtension::SelectByID2&#160;with Mark = 1 to select the edges to fillet.</li>
+
+                                <li>Call IModelDocExtension::SelectByID2&#160;with Mark = 256 to select the control point references along the length of the selected edge; one control point reference for each radius in PointRadiusArray.</li>
+
+                                <li>Specify Ftyp with <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_VariableRadius.</li>
+
+                                <li>Specify multiple radii in Radii.</li>
+
+                                <li>Specify multiple control point radii in PointRadiusArray.</li>
+
+                                <li>Do not include <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletOptions_e.html">swFeatureFilletOptions_e</a>.swFilletUniformRadius in Options.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Full-round fillets</td>
+
+                        <td>
+                            <ol>
+                                <li>Call IModelDocExtension::SelectByID2 with:</li>
+                            </ol>
+
+                            <div style="margin-left: 2em">
+                                <ul>
+                                    <li>Mark = 2 to select the first set of side&#160;faces.</li>
+
+                                    <li>Mark = 512 to select the set of center faces.</li>
+
+                                    <li>Mark = 4 to select the second set of side faces.</li>
+                                </ul>
+                            </div>
+
+                            <ol style="COUNTER-RESET: item 1" start="2">
+                                <li>Specify Ftyp&#160;with <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swFeatureFilletType_e.html">swFeatureFilletType_e</a>.swFeatureFilletType_FullRound.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Setback fillets</td>
+
+                        <td>See the SOLIDWORKS&#160;Help for details.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Conic fillets</td>
+
+                        <td>See the SOLIDWORKS&#160;Help for details.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~IFeatureFillet2">IFeatureManager::IFeatureFillet2 Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISimpleFilletFeatureData2">ISimpleFilletFeatureData2 Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVariableFilletFeatureData2">IVariableFilletFeatureData2 Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FilletXpertChange">IFeatureManager::FilletXpertChange Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FilletXpertMakeCorner">IFeatureManager::FilletXpertMakeCorner Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FilletXpertRemove">IFeatureManager::FilletXpertRemove Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~FeatureFillet2.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

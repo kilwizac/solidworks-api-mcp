@@ -1,0 +1,135 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "Operations2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "OperationType",
+        "type": "System.Int32",
+        "description": "Operation type as defined in swBodyOperationType_e"
+      },
+      {
+        "name": "ToolBody",
+        "type": "System.Object",
+        "description": "Tool body"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "Error indicator as defined in swBodyOperationError_e ; returns swBodyOperationNoError if SOLIDWORKS does not generate an error"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.IOperations2"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "sheet",
+      "operations2",
+      "ibody2",
+      "body2",
+      "operation",
+      "type",
+      "int32",
+      "tool",
+      "body",
+      "object",
+      "error",
+      "code",
+      "combine",
+      "assembly",
+      "components",
+      "part",
+      "vba",
+      "create",
+      "solid",
+      "using",
+      "geometry",
+      "topology",
+      "cut",
+      "half",
+      "macro",
+      "feature",
+      "differences",
+      "between",
+      "parts",
+      "convert",
+      "non",
+      "manifold",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBody2.Operations2",
+  "description": "Performs add, cut, and intersect (unite, subtract, and interfere) operations between two temporary bodies.",
+  "signature": "System.Object Operations2( \n   System.Int32\nOperationType\n,\n   System.Object\nToolBody\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "OperationType",
+      "type": "System.Int32",
+      "description": "Operation type as defined in swBodyOperationType_e"
+    },
+    {
+      "name": "ToolBody",
+      "type": "System.Object",
+      "description": "Tool body"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "Error indicator as defined in swBodyOperationError_e ; returns swBodyOperationNoError if SOLIDWORKS does not generate an error"
+    }
+  ],
+  "returns": "Array of pointers to the resulting bodies",
+  "remarks": "If the target and tool bodies are the same in geometry, the result body of this method is NULL, and the return value is S_false.\nThis method works with two temporary bodies; one is the target and one is the tool. The output is a list of bodies resulting from the operation.\nThe two temporary bodies used in this function (the Body2 and ToolBody pointers) are invalid once the operation is complete. COM applications should release these two pointers after using this method. If your application needs to maintain these bodies, then you should make a copy of them using\nIBody2::Copy\nbefore passing them to this routine.\nTo perform a\nswBodyOperationType_e\n.SWBODYINTERSECT between a sheet (surface)\nand a solid body, the sheet body must be the target body.\nUse\nIBody2::Check3\nfor both bodies before using this method to ensure that both bodies are valid solids. Using this method with invalid bodies can cause unexpected results.\nIf a non-manifold error is returned, use\nIBody2::ResetEdgeTolerances\nto visit all of the edges in the body to reset their tolerances. Then use IBody2::Operations2 again.",
+  "examples": [
+    {
+      "title": "Combine Assembly Components into Part (VBA)",
+      "href": "Combine_Assembly_Components_into_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Solid Bodies Using Geometry and Topology (VBA)",
+      "href": "Create_Solid_Bodies_using_Geometry_and_Topology_APIs_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Cut Body in Half Using Macro Feature (VBA)",
+      "href": "Cut_Body_in_Half_using_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Differences Between Parts (VBA)",
+      "href": "Get_Differences_Between_Parts_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (C#)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VB.NET)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Convert Non-manifold Bodies (VBA)",
+      "href": "Create_and_Convert_Non-manifold_Bodies_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.IOperations2"
+  ]
+}

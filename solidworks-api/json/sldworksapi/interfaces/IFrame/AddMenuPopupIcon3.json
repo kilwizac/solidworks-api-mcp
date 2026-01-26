@@ -1,0 +1,183 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFrame",
+    "member": "AddMenuPopupIcon3",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DocType",
+        "type": "System.Int32",
+        "description": "Document type whose context-sensitive menus display the icon"
+      },
+      {
+        "name": "SelectType",
+        "type": "System.Int32",
+        "description": "Selection type whose context-sensitive menus display the icon"
+      },
+      {
+        "name": "HintString",
+        "type": "System.String",
+        "description": "Text displayed in the SOLIDWORKS status bar when the user moves the pointer over the icon"
+      },
+      {
+        "name": "Identifier",
+        "type": "System.Int32",
+        "description": "ID of the add-in; value of the Cookie argument passed by ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "CallbackFunction",
+        "type": "System.String",
+        "description": "Function called when user clicks the context-sensitive menu icon ( see Remarks )"
+      },
+      {
+        "name": "CallbackUpdateFunction",
+        "type": "System.String",
+        "description": "Optional function that controls the state of the icon; if specified, then SOLIDWORKS calls this function before displaying the icon If CallbackUpdateFunction returns... Then SOLIDWORKS... 0 Deselects and disables the item 1 Deselects and enables the item; this is the default state if no update function is specified 4 Hides the item (see Remarks )"
+      },
+      {
+        "name": "CustomNames",
+        "type": "System.String",
+        "description": "Names of custom feature types (see Remarks )"
+      },
+      {
+        "name": "ImageList",
+        "type": "System.Object",
+        "description": "Array of strings for the paths for the image files for the context-sensitive menu icon (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IFrame.AddMenu",
+      "IFrame.AddMenuItem2",
+      "IFrame.AddMenuPopupIcon",
+      "IFrame.AddMenuPopupItem2",
+      "IFrame.GetMenu",
+      "IFrame.GetMenux64",
+      "IFrame.GetSubMenuCount",
+      "IFrame.GetSubMenus",
+      "IFrame.IGetSubMenus",
+      "IFrame.MenuPinned",
+      "IFrame.RemoveMenu",
+      "IFrame.RemoveMenuPopupIcon",
+      "IFrame.RenameMenu",
+      "ISldWorks.AddItemToThirdPartyPopupMenu2",
+      "ISldWorks.GetImageSize"
+    ],
+    "keywords": [
+      "context",
+      "sensitive",
+      "menus",
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "frames",
+      "addmenupopupicon3",
+      "add",
+      "menu",
+      "popup",
+      "icon3",
+      "doc",
+      "type",
+      "int32",
+      "select",
+      "hint",
+      "string",
+      "identifier",
+      "callback",
+      "function",
+      "update",
+      "custom",
+      "names",
+      "image",
+      "list",
+      "object",
+      "boolean",
+      "button",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFrame.AddMenuPopupIcon3",
+  "description": "Adds an icon to a context-sensitive menu of a SOLIDWORKS add-in.",
+  "signature": "System.Boolean AddMenuPopupIcon3( \n   System.Int32\nDocType\n,\n   System.Int32\nSelectType\n,\n   System.String\nHintString\n,\n   System.Int32\nIdentifier\n,\n   System.String\nCallbackFunction\n,\n   System.String\nCallbackUpdateFunction\n,\n   System.String\nCustomNames\n,\n   System.Object\nImageList\n)",
+  "parameters": [
+    {
+      "name": "DocType",
+      "type": "System.Int32",
+      "description": "Document type whose context-sensitive menus display the icon"
+    },
+    {
+      "name": "SelectType",
+      "type": "System.Int32",
+      "description": "Selection type whose context-sensitive menus display the icon"
+    },
+    {
+      "name": "HintString",
+      "type": "System.String",
+      "description": "Text displayed in the SOLIDWORKS status bar when the user moves the pointer over the icon"
+    },
+    {
+      "name": "Identifier",
+      "type": "System.Int32",
+      "description": "ID of the add-in; value of the Cookie argument passed by ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "CallbackFunction",
+      "type": "System.String",
+      "description": "Function called when user clicks the context-sensitive menu icon ( see Remarks )"
+    },
+    {
+      "name": "CallbackUpdateFunction",
+      "type": "System.String",
+      "description": "Optional function that controls the state of the icon; if specified, then SOLIDWORKS calls this function before displaying the icon If CallbackUpdateFunction returns... Then SOLIDWORKS... 0 Deselects and disables the item 1 Deselects and enables the item; this is the default state if no update function is specified 4 Hides the item (see Remarks )"
+    },
+    {
+      "name": "CustomNames",
+      "type": "System.String",
+      "description": "Names of custom feature types (see Remarks )"
+    },
+    {
+      "name": "ImageList",
+      "type": "System.Object",
+      "description": "Array of strings for the paths for the image files for the context-sensitive menu icon (see Remarks )"
+    }
+  ],
+  "returns": "True if the context-sensitive menu icon is added, false if not",
+  "remarks": "See\nAdd-in Callback and Enable Methods\nto learn how to specify CallbackFunction and CallbackUpdateFunction.\nWhen the icon is clicked, the function specified in CallbackFunction can perform actions such as\ndisplaying a third-party pop-up menu\n.\nCustomNames is a semi-colon separated list of the names of the custom feature types. This argument is applicable only if SelectType is a custom feature type (like swSelATTRIBUTES); in the case of swSelATTRIBUTES, set this field to the name of the attribute definition.\nThis method supports scaling for high resolution screens with high resolution operating system scaling options.\nImageList images can be:\n20 x 20 pixels\n32 x 32 pixels\n40 x 40 pixels\n64 x 64 pixels\n96 x 96 pixels\n128 x128 pixels\nImages should use 256-color palette.",
+  "examples": [
+    {
+      "title": "Add Button to Context-sensitive Menu (C#)",
+      "href": "Add_Button_to_Context-sensitive_Menu_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Button to Context-sensitive Menu (VB.NET)",
+      "href": "Add_Button_to_Context-sensitive_Menu_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFrame.AddMenu",
+    "IFrame.AddMenuItem2",
+    "IFrame.AddMenuPopupIcon",
+    "IFrame.AddMenuPopupItem2",
+    "IFrame.GetMenu",
+    "IFrame.GetMenux64",
+    "IFrame.GetSubMenuCount",
+    "IFrame.GetSubMenus",
+    "IFrame.IGetSubMenus",
+    "IFrame.MenuPinned",
+    "IFrame.RemoveMenu",
+    "IFrame.RemoveMenuPopupIcon",
+    "IFrame.RenameMenu",
+    "ISldWorks.AddItemToThirdPartyPopupMenu2",
+    "ISldWorks.GetImageSize"
+  ]
+}

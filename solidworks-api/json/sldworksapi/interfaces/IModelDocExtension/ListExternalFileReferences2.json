@@ -1,0 +1,179 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "ListExternalFileReferences2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "ModelPathName",
+        "type": "System.Object",
+        "description": "Array of path names of externally referenced model documents"
+      },
+      {
+        "name": "ComponentPathName",
+        "type": "System.Object",
+        "description": "Array of path names of externally referenced assembly components"
+      },
+      {
+        "name": "Feature",
+        "type": "System.Object",
+        "description": "Array of in-context items (e.g., FeatureManager design tree sketches, features, and so on) that externally reference ModelPathName and ComponentPathName elements"
+      },
+      {
+        "name": "DataType",
+        "type": "System.Object",
+        "description": "Array of data types used to create RefEntity (e.g., arc, line, sketch plane, converted edge or face, converted or offset sketch entity, body, and so on)"
+      },
+      {
+        "name": "Status",
+        "type": "System.Object",
+        "description": "Array of statuses of the external references as defined by swExternalReferenceStatus_e"
+      },
+      {
+        "name": "RefEntity",
+        "type": "System.Object",
+        "description": "Array of actual items being used (FeatureManager design tree entities in the Feature parameter's external references) and the names of the documents containing the items"
+      },
+      {
+        "name": "FeatCom",
+        "type": "System.Object",
+        "description": "Array of names of the components in which the affected Features exist; valid only if one or more RefEntity is in a different component in an assembly; not valid for derived parts"
+      },
+      {
+        "name": "ConfigOptions",
+        "type": "System.Object",
+        "description": "Array of configuration options as defined by swExternalFileReferencesConfig_e"
+      },
+      {
+        "name": "ConfigNames",
+        "type": "System.Object",
+        "description": "Array of configuration names when corresponding element of ConfigOptions array contains swExternalFileReferencesNamedConfig, empty strings otherwise"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.BreakAllExternalReferences",
+      "IModelDoc2.ListAuxiliaryExternalFileReferences",
+      "IModelDoc2.LockAllExternalReferences",
+      "IModelDocExtension.ListExternalFileReferencesCount",
+      "IModelDocExtension.UpdateExternalFileReferences"
+    ],
+    "keywords": [
+      "dependent",
+      "documents",
+      "external",
+      "references",
+      "list",
+      "listexternalfilereferences2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "file",
+      "references2",
+      "path",
+      "name",
+      "object",
+      "component",
+      "feature",
+      "data",
+      "type",
+      "status",
+      "ref",
+      "entity",
+      "feat",
+      "com",
+      "config",
+      "options",
+      "names",
+      "void",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.ListExternalFileReferences2",
+  "description": "Gets the specified external file reference information for this part or assembly.",
+  "signature": "void ListExternalFileReferences2( \n   out System.Object\nModelPathName\n,\n   out System.Object\nComponentPathName\n,\n   out System.Object\nFeature\n,\n   out System.Object\nDataType\n,\n   out System.Object\nStatus\n,\n   out System.Object\nRefEntity\n,\n   out System.Object\nFeatCom\n,\n   out System.Object\nConfigOptions\n,\n   out System.Object\nConfigNames\n)",
+  "parameters": [
+    {
+      "name": "ModelPathName",
+      "type": "System.Object",
+      "description": "Array of path names of externally referenced model documents"
+    },
+    {
+      "name": "ComponentPathName",
+      "type": "System.Object",
+      "description": "Array of path names of externally referenced assembly components"
+    },
+    {
+      "name": "Feature",
+      "type": "System.Object",
+      "description": "Array of in-context items (e.g., FeatureManager design tree sketches, features, and so on) that externally reference ModelPathName and ComponentPathName elements"
+    },
+    {
+      "name": "DataType",
+      "type": "System.Object",
+      "description": "Array of data types used to create RefEntity (e.g., arc, line, sketch plane, converted edge or face, converted or offset sketch entity, body, and so on)"
+    },
+    {
+      "name": "Status",
+      "type": "System.Object",
+      "description": "Array of statuses of the external references as defined by swExternalReferenceStatus_e"
+    },
+    {
+      "name": "RefEntity",
+      "type": "System.Object",
+      "description": "Array of actual items being used (FeatureManager design tree entities in the Feature parameter's external references) and the names of the documents containing the items"
+    },
+    {
+      "name": "FeatCom",
+      "type": "System.Object",
+      "description": "Array of names of the components in which the affected Features exist; valid only if one or more RefEntity is in a different component in an assembly; not valid for derived parts"
+    },
+    {
+      "name": "ConfigOptions",
+      "type": "System.Object",
+      "description": "Array of configuration options as defined by swExternalFileReferencesConfig_e"
+    },
+    {
+      "name": "ConfigNames",
+      "type": "System.Object",
+      "description": "Array of configuration names when corresponding element of ConfigOptions array contains swExternalFileReferencesNamedConfig, empty strings otherwise"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method conveniently collects the same information that is displayed when you right-click on a feature or component with\n{ -> }\nat the end of its name in the FeatureManager design tree and select\nExternal References...\nfrom the context menu.\nThe External References dialog displays the assembly or part name of the external reference, configuration if applicable, name of the feature in this document that has an external reference, status of the external reference, the entity in the external reference to which this feature or component points, and the data type of the external reference entity.\nFor more information, see the\nSOLIDWORKS Design user-interface help > Assemblies > Top-Down Design > External References > External References Dialog Box\n.\nThe elements of the arrays returned by this method map one to one.",
+  "examples": [
+    {
+      "title": "Get External References (VBA)",
+      "href": "Get_External_References_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get External References (VB.NET)",
+      "href": "Get_External_References_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get External References (C#)",
+      "href": "Get_External_References_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.BreakAllExternalReferences",
+    "IModelDoc2.ListAuxiliaryExternalFileReferences",
+    "IModelDoc2.LockAllExternalReferences",
+    "IModelDocExtension.ListExternalFileReferencesCount",
+    "IModelDocExtension.UpdateExternalFileReferences"
+  ]
+}

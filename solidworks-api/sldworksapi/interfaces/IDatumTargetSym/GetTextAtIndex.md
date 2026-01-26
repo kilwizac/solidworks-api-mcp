@@ -1,0 +1,64 @@
+---
+type: method
+interface: IDatumTargetSym
+member: GetTextAtIndex
+returns: System.String
+parameters:
+  -
+    name: Index
+    type: System.Int32
+    description: Index of the text; index begins at 0
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+related:
+  - IDatumTargetSym.GetTextAngleAtIndex
+  - IDatumTargetSym.GetTextCount
+  - IDatumTargetSym.GetTextHeightAtIndex
+  - IDatumTargetSym.GetTextInvertAtIndex
+  - IDatumTargetSym.GetTextPositionAtIndex
+  - IDatumTargetSym.GetTextRefPositionAtIndex
+  - IDatumTargetSym.IGetTextPositionAtIndex
+keywords:
+  - gettextatindex
+  - idatumtargetsym
+  - datum
+  - target
+  - sym
+  - text
+  - index
+  - int32
+  - string
+---
+
+# IDatumTargetSym.GetTextAtIndex
+
+Gets the specified text string from this datum target symbol.
+
+## Signature
+
+```csharp
+System.String GetTextAtIndex( 
+   System.Int32
+Index
+)
+```
+## Parameters
+
+- `Index` (System.Int32): Index of the text; index begins at 0
+
+## Return Value
+
+Text string for the specified text
+
+## See Also
+
+- `IDatumTargetSym.GetTextAngleAtIndex`
+- `IDatumTargetSym.GetTextCount`
+- `IDatumTargetSym.GetTextHeightAtIndex`
+- `IDatumTargetSym.GetTextInvertAtIndex`
+- `IDatumTargetSym.GetTextPositionAtIndex`
+- `IDatumTargetSym.GetTextRefPositionAtIndex`
+- `IDatumTargetSym.IGetTextPositionAtIndex`

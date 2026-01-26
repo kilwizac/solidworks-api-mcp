@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetImageSize",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Small",
+        "type": "System.Int32",
+        "description": "Small image size suitable for the current DPI setting of the display device"
+      },
+      {
+        "name": "Medium",
+        "type": "System.Int32",
+        "description": "Medium image size suitable for the current DPI setting of the display device"
+      },
+      {
+        "name": "Large",
+        "type": "System.Int32",
+        "description": "Large image size suitable for the current DPI setting of the display device"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.IconList",
+      "ICommandGroup.MainIconList",
+      "ICommandManager.CreateFlyoutGroup2",
+      "IFlyoutGroup.IconList",
+      "IFlyoutGroup.MainIconList",
+      "IFrame.AddMenuPopupIcon3",
+      "IPropertyManagerPageBitmapButton.SetBitmapsByName3",
+      "ISldWorks.AddMenuItem5",
+      "ISldWorks.AddToolbar5",
+      "ISldWorks.CreateTaskpaneView3",
+      "ITaskpaneView.AddCustomButton2"
+    ],
+    "keywords": [
+      "solidworks",
+      "image",
+      "sizes",
+      "getimagesize",
+      "isldworks",
+      "sld",
+      "works",
+      "size",
+      "small",
+      "int32",
+      "medium",
+      "large",
+      "create",
+      "flyouts",
+      "commandmanager",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.GetImageSize",
+  "description": "Gets:",
+  "signature": "System.Int32 GetImageSize( \n   out System.Int32\nSmall\n,\n   out System.Int32\nMedium\n,\n   out System.Int32\nLarge\n)",
+  "parameters": [
+    {
+      "name": "Small",
+      "type": "System.Int32",
+      "description": "Small image size suitable for the current DPI setting of the display device"
+    },
+    {
+      "name": "Medium",
+      "type": "System.Int32",
+      "description": "Medium image size suitable for the current DPI setting of the display device"
+    },
+    {
+      "name": "Large",
+      "type": "System.Int32",
+      "description": "Large image size suitable for the current DPI setting of the display device"
+    }
+  ],
+  "returns": "Default image size for the current DPI setting of the display device for images that are not based on the SOLIDWORKS icon size setting as defined in swImageSizeToUse_e",
+  "remarks": "You can use this method to determine the correct size for:\nbuttons for your PropertyManager pages.\nicons for your macro features.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandGroup.IconList",
+    "ICommandGroup.MainIconList",
+    "ICommandManager.CreateFlyoutGroup2",
+    "IFlyoutGroup.IconList",
+    "IFlyoutGroup.MainIconList",
+    "IFrame.AddMenuPopupIcon3",
+    "IPropertyManagerPageBitmapButton.SetBitmapsByName3",
+    "ISldWorks.AddMenuItem5",
+    "ISldWorks.AddToolbar5",
+    "ISldWorks.CreateTaskpaneView3",
+    "ITaskpaneView.AddCustomButton2"
+  ]
+}

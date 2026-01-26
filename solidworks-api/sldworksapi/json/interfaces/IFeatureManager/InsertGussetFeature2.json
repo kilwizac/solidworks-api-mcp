@@ -1,0 +1,250 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertGussetFeature2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Depth",
+        "type": "System.Double",
+        "description": "Depth of the gusset"
+      },
+      {
+        "name": "DirType",
+        "type": "System.Int16",
+        "description": "Direction in which to extrude the gusset: 0 = left side 1 = center 2 = right side"
+      },
+      {
+        "name": "LocType",
+        "type": "System.Int16",
+        "description": "Location of the reference plane for the sketch of the gusset: 0 = start point 1 = midpoint 2 = end point"
+      },
+      {
+        "name": "BIsProfile",
+        "type": "System.Boolean",
+        "description": "True to use a polygon profile, false to use a triangle"
+      },
+      {
+        "name": "ProfileD1",
+        "type": "System.Double",
+        "description": "Length for Direction 1"
+      },
+      {
+        "name": "ProfileD2",
+        "type": "System.Double",
+        "description": "Length for Direction 2"
+      },
+      {
+        "name": "ProfileD3",
+        "type": "System.Double",
+        "description": "Length for Direction 3"
+      },
+      {
+        "name": "ProfileAngle",
+        "type": "System.Double",
+        "description": "Value for profile angle"
+      },
+      {
+        "name": "ProfileD4",
+        "type": "System.Double",
+        "description": "Length for Direction 4"
+      },
+      {
+        "name": "BOffset",
+        "type": "System.Boolean",
+        "description": "True to offset the reference plane for the sketch, false to not"
+      },
+      {
+        "name": "DProfileOffset",
+        "type": "System.Double",
+        "description": "Value by which to offset the reference plane for the sketch"
+      },
+      {
+        "name": "CrvIndex",
+        "type": "System.Int32",
+        "description": "Index of the edge to use if multiple intersecting edges exist"
+      },
+      {
+        "name": "BReverseDir",
+        "type": "System.Boolean",
+        "description": "If BOffset set to true, then true to reverse direction, false to not"
+      },
+      {
+        "name": "BReverseFace",
+        "type": "System.Boolean",
+        "description": "Reverse ProfileD1 and ProfileD2 if triangle profile - or - Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile"
+      },
+      {
+        "name": "BUseLenDim",
+        "type": "System.Boolean",
+        "description": "True to use ProfileD4, false to use ProfileAngle"
+      },
+      {
+        "name": "Faces",
+        "type": "System.Object",
+        "description": "Array of faces that form the bases of this gusset feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IGussetFeatureData"
+    ],
+    "keywords": [
+      "weldments",
+      "gussets",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "gusset",
+      "igussetfeaturedata",
+      "insertgussetfeature2",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "feature2",
+      "depth",
+      "double",
+      "dir",
+      "type",
+      "int16",
+      "loc",
+      "profile",
+      "boolean",
+      "d1",
+      "d2",
+      "d3",
+      "angle",
+      "d4",
+      "offset",
+      "crv",
+      "index",
+      "int32",
+      "reverse",
+      "face",
+      "use",
+      "len",
+      "dim",
+      "faces",
+      "object",
+      "weldment",
+      "features",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.InsertGussetFeature2",
+  "description": "Inserts a gusset feature for the specified faces.",
+  "signature": "Feature InsertGussetFeature2( \n   System.Double\nDepth\n,\n   System.Int16\nDirType\n,\n   System.Int16\nLocType\n,\n   System.Boolean\nBIsProfile\n,\n   System.Double\nProfileD1\n,\n   System.Double\nProfileD2\n,\n   System.Double\nProfileD3\n,\n   System.Double\nProfileAngle\n,\n   System.Double\nProfileD4\n,\n   System.Boolean\nBOffset\n,\n   System.Double\nDProfileOffset\n,\n   System.Int32\nCrvIndex\n,\n   System.Boolean\nBReverseDir\n,\n   System.Boolean\nBReverseFace\n,\n   System.Boolean\nBUseLenDim\n,\n   System.Object\nFaces\n)",
+  "parameters": [
+    {
+      "name": "Depth",
+      "type": "System.Double",
+      "description": "Depth of the gusset"
+    },
+    {
+      "name": "DirType",
+      "type": "System.Int16",
+      "description": "Direction in which to extrude the gusset: 0 = left side 1 = center 2 = right side"
+    },
+    {
+      "name": "LocType",
+      "type": "System.Int16",
+      "description": "Location of the reference plane for the sketch of the gusset: 0 = start point 1 = midpoint 2 = end point"
+    },
+    {
+      "name": "BIsProfile",
+      "type": "System.Boolean",
+      "description": "True to use a polygon profile, false to use a triangle"
+    },
+    {
+      "name": "ProfileD1",
+      "type": "System.Double",
+      "description": "Length for Direction 1"
+    },
+    {
+      "name": "ProfileD2",
+      "type": "System.Double",
+      "description": "Length for Direction 2"
+    },
+    {
+      "name": "ProfileD3",
+      "type": "System.Double",
+      "description": "Length for Direction 3"
+    },
+    {
+      "name": "ProfileAngle",
+      "type": "System.Double",
+      "description": "Value for profile angle"
+    },
+    {
+      "name": "ProfileD4",
+      "type": "System.Double",
+      "description": "Length for Direction 4"
+    },
+    {
+      "name": "BOffset",
+      "type": "System.Boolean",
+      "description": "True to offset the reference plane for the sketch, false to not"
+    },
+    {
+      "name": "DProfileOffset",
+      "type": "System.Double",
+      "description": "Value by which to offset the reference plane for the sketch"
+    },
+    {
+      "name": "CrvIndex",
+      "type": "System.Int32",
+      "description": "Index of the edge to use if multiple intersecting edges exist"
+    },
+    {
+      "name": "BReverseDir",
+      "type": "System.Boolean",
+      "description": "If BOffset set to true, then true to reverse direction, false to not"
+    },
+    {
+      "name": "BReverseFace",
+      "type": "System.Boolean",
+      "description": "Reverse ProfileD1 and ProfileD2 if triangle profile - or - Reverse ProfileD1 and ProfileD2 and reverse ProfileD3 and ProfileD4 if polygon profile"
+    },
+    {
+      "name": "BUseLenDim",
+      "type": "System.Boolean",
+      "description": "True to use ProfileD4, false to use ProfileAngle"
+    },
+    {
+      "name": "Faces",
+      "type": "System.Object",
+      "description": "Array of faces that form the bases of this gusset feature"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Instead of using this method, you can:\nSelect two faces in the graphics area that are the supporting legs of this gusset.\nCall\nIFeatureManager::InsertGussetFeature3\n.",
+  "examples": [
+    {
+      "title": "Insert Weldment Features (VBA)",
+      "href": "Insert_Weldment_Features_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (VB.NET)",
+      "href": "Insert_Weldment_Features_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (C#)",
+      "href": "Insert_Weldment_Features_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGussetFeatureData"
+  ]
+}

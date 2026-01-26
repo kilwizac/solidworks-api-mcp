@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelView",
+    "member": "Scale2",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.GetEyePoint",
+      "IModelView.GetIsoPlaneDistance",
+      "IModelView.GetViewPlaneDistance",
+      "IModelView.IGetEyePoint",
+      "IModelView.ISetEyePoint",
+      "IModelView.SetEyePoint"
+    ],
+    "keywords": [
+      "scale",
+      "see",
+      "also",
+      "iscalefeaturedata",
+      "model",
+      "view",
+      "scale2",
+      "imodelview",
+      "double",
+      "factor",
+      "each",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IModelView.Scale2",
+  "description": "Gets and sets the model view scale factor.",
+  "signature": "System.Double Scale2 {get; set;}",
+  "parameters": [],
+  "returns": "Scale factor",
+  "remarks": "If you want to zoom in by a factor of 2, then you should get the current scale using this method, multiply the return value by 2, and then pass that value back into this method, which will increase the model view scale.\nUsing data returned from this property along with information from\nIModelView::Orientation3\nand\nIModelView::Translation3\nshould be multiplied in this\norder: orientation > scale > transform.\nTo map your coordinates from 3D space to the screen, use\nIModelView::Transform\n.",
+  "examples": [
+    {
+      "title": "Get Scale Factor of Each Model View (C++)",
+      "href": "Get_Scale_of_Each_Model_View_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Scale Factor of Each Model View (C#)",
+      "href": "Get_Scale_of_Each_Model_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Scale Factor of Each Model View (VB.NET)",
+      "href": "Get_Scale_of_Each_Model_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Scale Factor of Each Model View (VBA)",
+      "href": "Get_Scale_of_Each_Model_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelView.GetEyePoint",
+    "IModelView.GetIsoPlaneDistance",
+    "IModelView.GetViewPlaneDistance",
+    "IModelView.IGetEyePoint",
+    "IModelView.ISetEyePoint",
+    "IModelView.SetEyePoint"
+  ]
+}

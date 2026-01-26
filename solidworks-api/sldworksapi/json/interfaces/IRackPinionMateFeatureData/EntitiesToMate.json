@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IRackPinionMateFeatureData",
+    "member": "EntitiesToMate",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "EntityType",
+        "type": "System.Int32",
+        "description": "Entity type to mate as defined in swRackPinionMateEntityType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "entitiestomate",
+      "irackpinionmatefeaturedata",
+      "rack",
+      "pinion",
+      "mate",
+      "feature",
+      "data",
+      "entities",
+      "entity",
+      "type",
+      "int32",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IRackPinionMateFeatureData.EntitiesToMate",
+  "description": "Gets or sets the entities to mate in this rack and pinion mate feature.",
+  "signature": "System.Object EntitiesToMate( \n   System.Int32\nEntityType\n) {get; set;}",
+  "parameters": [
+    {
+      "name": "EntityType",
+      "type": "System.Int32",
+      "description": "Entity type to mate as defined in swRackPinionMateEntityType_e"
+    }
+  ],
+  "returns": "Array of entities to mate (see Remarks )",
+  "remarks": "If EntityType is set to swRackPinionMateEntityType_e.:\nswRackPinionMateEntityType_Pinion, then set the array with a a cylindrical\nface\n, circular\nedge\nor\narc\n, sketch circle,\naxis\n, or revolved\nsurface\n.\nswRackPinionMateEntityType_Rack, then set the array with a linear edge,\nsketch line\n,\ncenterline\n, axis, or cylindrical face.\nInstead of specifying this property, you can use\nIModelDocExtension::SelectByID2\nto pre-select the entities to mate using Mark = 64 for the rack and Mark = 128 for the pinion. You can pre-select mate entities during mate creation, but not during mate editing.",
+  "examples": [],
+  "related": []
+}

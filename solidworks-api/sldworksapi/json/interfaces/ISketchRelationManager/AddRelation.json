@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelationManager",
+    "member": "AddRelation",
+    "returns": "SketchRelation",
+    "parameters": [
+      {
+        "name": "Entities",
+        "type": "System.Object",
+        "description": "Array of entities to which add the relation"
+      },
+      {
+        "name": "RelationType",
+        "type": "System.Int32",
+        "description": "Type of relation as defined by swConstraintType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelationManager.GetRelationsCount",
+      "ISketchRelationManager.IAddRelation"
+    ],
+    "keywords": [
+      "relations",
+      "addrelation",
+      "isketchrelationmanager",
+      "sketch",
+      "relation",
+      "manager",
+      "add",
+      "entities",
+      "object",
+      "type",
+      "int32"
+    ]
+  },
+  "title": "ISketchRelationManager.AddRelation",
+  "description": "Adds a relation to the specified entities in the active sketch.",
+  "signature": "SketchRelation AddRelation( \n   System.Object\nEntities\n,\n   System.Int32\nRelationType\n)",
+  "parameters": [
+    {
+      "name": "Entities",
+      "type": "System.Object",
+      "description": "Array of entities to which add the relation"
+    },
+    {
+      "name": "RelationType",
+      "type": "System.Int32",
+      "description": "Type of relation as defined by swConstraintType_e"
+    }
+  ],
+  "returns": "Sketch relation",
+  "remarks": "A sketch must be active for this method to have any effect. Use\nIModelDoc2::GetActiveSketch2\nor\nIModelDoc2::IGetActiveSketch2\nto determine if a sketch is active.",
+  "examples": [],
+  "related": [
+    "ISketchRelationManager.GetRelationsCount",
+    "ISketchRelationManager.IAddRelation"
+  ]
+}

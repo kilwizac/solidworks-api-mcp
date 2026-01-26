@@ -1,0 +1,45 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IEdgeFlangeFeatureData",
+    "member": "ReliefDepth",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IEdgeFlangeFeatureData.ReliefRatio",
+      "IEdgeFlangeFeatureData.ReliefTearType",
+      "IEdgeFlangeFeatureData.ReliefWidth"
+    ],
+    "keywords": [
+      "reliefdepth",
+      "iedgeflangefeaturedata",
+      "edge",
+      "flange",
+      "feature",
+      "data",
+      "relief",
+      "depth",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IEdgeFlangeFeatureData.ReliefDepth",
+  "description": "Gets or sets the relief depth of the edge flange.",
+  "signature": "System.Double ReliefDepth {get; set;}",
+  "parameters": [],
+  "returns": "Depth of relief; default value is 0.0003683 m",
+  "remarks": "This property is valid only if:\nIEdgeFlangeFeatureData::UseDefaultBendRelief\nis set to false,\n- and -\nIEdgeFlangeFeatureData::UseReliefRatio\nis true.\n- and -\nIEdgeFlangeFeatureData::AutoReliefType\nis set to\nswSheetMetalReliefTypes_e\n.:\nswSheetMetalReliefObround\n- or -\nswSheetMetalReliefRectangle.",
+  "examples": [],
+  "related": [
+    "IEdgeFlangeFeatureData.ReliefRatio",
+    "IEdgeFlangeFeatureData.ReliefTearType",
+    "IEdgeFlangeFeatureData.ReliefWidth"
+  ]
+}

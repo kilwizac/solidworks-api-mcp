@@ -1,0 +1,47 @@
+---
+type: property
+interface: IPropertyManagerPageActiveX
+member: GetControl
+returns: System.Object
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related: []
+keywords:
+  - getcontrol
+  - ipropertymanagerpageactivex
+  - manager
+  - page
+  - active
+  - control
+  - object
+readonly: null
+---
+
+# IPropertyManagerPageActiveX.GetControl
+
+Gets the interface to this ActiveX control.
+
+## Signature
+
+```csharp
+System.Object GetControl()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+ActiveX control
+
+## Remarks
+
+Do not call this method until the PropertyManager page is displayed. If you call this method before the PropertyManager page is displayed, then the method will fails and retval is NULL.
+When the ActiveX control is created, the program creating the PropertyManager page should receive notification from the IPropertyManagerPage2Handler5::OnActiveXControlCreated method. Your program should not call IPropertyManagerPageActiveX::GetControl or
+IPropertyManagerPageActiveX::IGetControl
+to get the interface object for this ActiveX control, because the PropertyManager page is not displayed when this notification is sent.
+When the page is displayed, your program can now initialize the control properties so that the control looks how you want it to appear when it the PropertyManager page is initially displayed. You can set up the event sink for the control so that you receive notification when certain events happen to the control.

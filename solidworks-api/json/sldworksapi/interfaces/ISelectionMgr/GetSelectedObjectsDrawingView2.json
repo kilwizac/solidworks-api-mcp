@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISelectionMgr",
+    "member": "GetSelectedObjectsDrawingView2",
+    "returns": "View",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index position with in the current list of selected items, where AtIndex ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+      },
+      {
+        "name": "Mark",
+        "type": "System.Int32",
+        "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "drawings",
+      "selections",
+      "ui"
+    ],
+    "related": [
+      "ISelectionMgr.DeSelect2",
+      "ISelectionMgr.GetSelectByIdSpecification",
+      "ISelectionMgr.GetSelectedObject6",
+      "ISelectionMgr.GetSelectedObjectLoop2",
+      "ISelectionMgr.GetSelectedObjectMark",
+      "ISelectionMgr.GetSelectedObjectType3",
+      "ISelectionMgr.GetSelectionPoint2",
+      "ISelectionMgr.GetSelectionPointInSketchSpace2",
+      "ISelectionMgr.GetSelectionSpecification",
+      "ISelectionMgr.IDeSelect2",
+      "ISelectionMgr.IGetSelectionPoint2",
+      "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+    ],
+    "keywords": [
+      "selection",
+      "see",
+      "also",
+      "iselectionmgr",
+      "view",
+      "select",
+      "iview",
+      "drawing",
+      "views",
+      "getselectedobjectsdrawingview2",
+      "mgr",
+      "selected",
+      "objects",
+      "view2",
+      "index",
+      "int32",
+      "mark",
+      "labels",
+      "datum",
+      "origin",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISelectionMgr.GetSelectedObjectsDrawingView2",
+  "description": "Gets the drawing view for the selected object.",
+  "signature": "View GetSelectedObjectsDrawingView2( \n   System.Int32\nIndex\n,\n   System.Int32\nMark\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index position with in the current list of selected items, where AtIndex ranges from 1 to ISelectionMgr::GetSelectedObjectCount2 (see Remarks )"
+    },
+    {
+      "name": "Mark",
+      "type": "System.Int32",
+      "description": "-1 = All selections regardless of marks 0 = only the selections without marks Any other value = Value that was used to mark and select an object"
+    }
+  ],
+  "returns": "Drawing view",
+  "remarks": "The index starts at 1, even when using C++. However, if you specify -1 for the Index argument, then the Mark argument is ignored and the dynamically highlighted view is selected if dynamic highlighting is turned on. See also IDrawingDoc event\nDynamicHighlightNotify\n.",
+  "examples": [
+    {
+      "title": "Get Labels of Datum Origin (C#)",
+      "href": "Get_Labels_of_Datum_Origin_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Labels of Datum Origin (VB.NET)",
+      "href": "Get_Labels_of_Datum_Origin_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Labels of Datum Origin (VBA)",
+      "href": "Get_Labels_of_Datum_Origin_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISelectionMgr.DeSelect2",
+    "ISelectionMgr.GetSelectByIdSpecification",
+    "ISelectionMgr.GetSelectedObject6",
+    "ISelectionMgr.GetSelectedObjectLoop2",
+    "ISelectionMgr.GetSelectedObjectMark",
+    "ISelectionMgr.GetSelectedObjectType3",
+    "ISelectionMgr.GetSelectionPoint2",
+    "ISelectionMgr.GetSelectionPointInSketchSpace2",
+    "ISelectionMgr.GetSelectionSpecification",
+    "ISelectionMgr.IDeSelect2",
+    "ISelectionMgr.IGetSelectionPoint2",
+    "ISelectionMgr.IGetSelectionPointInSketchSpace2"
+  ]
+}

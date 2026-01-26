@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "IImprintingFaces",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "TargetEdges",
+        "type": "Edge",
+        "description": "Array of target edges"
+      },
+      {
+        "name": "ToolEdges",
+        "type": "Edge",
+        "description": "Array of tool edges"
+      },
+      {
+        "name": "TargetVertices",
+        "type": "Vertex",
+        "description": "Array of target vertices"
+      },
+      {
+        "name": "ToolVertices",
+        "type": "Vertex",
+        "description": "Array of tool vertices"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.ImprintingFaces"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "imprinted",
+      "faces",
+      "iimprintingfaces",
+      "imodeler",
+      "modeler",
+      "imprinting",
+      "target",
+      "edges",
+      "edge",
+      "tool",
+      "vertices",
+      "vertex",
+      "void"
+    ]
+  },
+  "title": "IModeler.IImprintingFaces",
+  "description": "Imprints the specified tool faces onto the specified target faces.",
+  "signature": "void IImprintingFaces( \n   out Edge\nTargetEdges\n,\n   out Edge\nToolEdges\n,\n   out Vertex\nTargetVertices\n,\n   out Vertex\nToolVertices\n)",
+  "parameters": [
+    {
+      "name": "TargetEdges",
+      "type": "Edge",
+      "description": "Array of target edges"
+    },
+    {
+      "name": "ToolEdges",
+      "type": "Edge",
+      "description": "Array of tool edges"
+    },
+    {
+      "name": "TargetVertices",
+      "type": "Vertex",
+      "description": "Array of target vertices"
+    },
+    {
+      "name": "ToolVertices",
+      "type": "Vertex",
+      "description": "Array of tool vertices"
+    }
+  ],
+  "returns": "",
+  "remarks": "Call\nIModeler::IImprintingFacesCount2\nbefore calling this method.\nThe target and tool faces must:\nbelong to different bodies.\nintersect each other.",
+  "examples": [],
+  "related": [
+    "IModeler.ImprintingFaces"
+  ]
+}

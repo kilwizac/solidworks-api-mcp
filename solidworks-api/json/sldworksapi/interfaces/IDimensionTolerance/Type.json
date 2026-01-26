@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDimensionTolerance",
+    "member": "Type",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "type",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IDimensionTolerance.Type",
+  "description": "Gets or sets the type of tolerance.",
+  "signature": "System.Int32 Type {get; set;}",
+  "parameters": [],
+  "returns": "Type of tolerance as defined in swTolType_e (see Remarks )",
+  "remarks": "In SOLIDWORKS 2016 and later, use\nICalloutVariable::ToleranceType\nto set the type of tolerance for a hole's display dimension with multiple values in a callout. Calling IDimensionTolerance::Type to set the type of tolerance for a hole's display dimension with multiple values in a callout does not override ICalloutVariable::ToleranceType's setting.\nTo see the effects of changing the tolerance type, use\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [
+    {
+      "title": "IDimensionTolerance",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDimensionTolerance",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IRayTraceRendererOptions",
+    "member": "ClientWorkload",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IRayTraceRendererOptions.OffloadedRendering"
+    ],
+    "keywords": [
+      "clientworkload",
+      "iraytracerendereroptions",
+      "ray",
+      "trace",
+      "renderer",
+      "options",
+      "client",
+      "workload",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IRayTraceRendererOptions.ClientWorkload",
+  "description": "Gets or sets how many buckets (sections of rendering) are sent to each client processor.",
+  "signature": "System.Int32 ClientWorkload {get; set;}",
+  "parameters": [],
+  "returns": "Number of buckets sent to each client processor (see Remarks )",
+  "remarks": "A high client workload setting is appropriate if the client machines are more powerful than the coordinator machine.\nUsing a\nshared network directory\nfor\nnetwork renders\n:\ncan be faster when using many client machines.\navoids having to\nsend scene asset data to each node on the network\n.\nNOTE:\nOnly SOLIDWORKS Subscription Services customers can share the effort of rendering across multiple computers.",
+  "examples": [],
+  "related": [
+    "IRayTraceRendererOptions.OffloadedRendering"
+  ]
+}

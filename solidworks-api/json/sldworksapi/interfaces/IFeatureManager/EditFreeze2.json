@@ -1,0 +1,121 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "EditFreeze2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Location",
+        "type": "System.Int32",
+        "description": "Location as defined in swMoveFreezeBarTo_e"
+      },
+      {
+        "name": "FeatureName",
+        "type": "System.String",
+        "description": "Name of the feature"
+      },
+      {
+        "name": "UpdateAllConfigs",
+        "type": "System.Boolean",
+        "description": "True to update all configurations, false to not"
+      },
+      {
+        "name": "UnlockConfigs",
+        "type": "System.Boolean",
+        "description": "True to unlock configurations, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeature.HasFrozenUpdatePending",
+      "IFeature.IsFrozen",
+      "IFeature.IsHiddenLock",
+      "IFeature.MoveFreezeBarTo2",
+      "IFeatureManager.GetFreezeLocation",
+      "IModelDocExtension.NeedsRebuild2",
+      "IModelDocExtension.UpdateFrozenFeatures"
+    ],
+    "keywords": [
+      "freeze",
+      "bar",
+      "editfreeze2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "edit",
+      "freeze2",
+      "location",
+      "int32",
+      "name",
+      "string",
+      "update",
+      "all",
+      "configs",
+      "boolean",
+      "unlock",
+      "move",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeatureManager.EditFreeze2",
+  "description": "Moves the freeze bar to the specified location in the FeatureManager design tree.",
+  "signature": "System.Int32 EditFreeze2( \n   System.Int32\nLocation\n,\n   System.String\nFeatureName\n,\n   System.Boolean\nUpdateAllConfigs\n,\n   System.Boolean\nUnlockConfigs\n)",
+  "parameters": [
+    {
+      "name": "Location",
+      "type": "System.Int32",
+      "description": "Location as defined in swMoveFreezeBarTo_e"
+    },
+    {
+      "name": "FeatureName",
+      "type": "System.String",
+      "description": "Name of the feature"
+    },
+    {
+      "name": "UpdateAllConfigs",
+      "type": "System.Boolean",
+      "description": "True to update all configurations, false to not"
+    },
+    {
+      "name": "UnlockConfigs",
+      "type": "System.Boolean",
+      "description": "True to unlock configurations, false to not"
+    }
+  ],
+  "returns": "1 indicates that the freeze bar did not move to the specified location in the FeatureManager design tree; 0 indicates that the freeze bar did move to the specified location in the FeatureManager design tree",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Move Freeze Bar (VBA)",
+      "href": "Move_Freeze_Bar_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Freeze Bar (VB.NET)",
+      "href": "Move_Freeze_Bar_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Move Freeze Bar (C#)",
+      "href": "Move_Freeze_Bar_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.HasFrozenUpdatePending",
+    "IFeature.IsFrozen",
+    "IFeature.IsHiddenLock",
+    "IFeature.MoveFreezeBarTo2",
+    "IFeatureManager.GetFreezeLocation",
+    "IModelDocExtension.NeedsRebuild2",
+    "IModelDocExtension.UpdateFrozenFeatures"
+  ]
+}

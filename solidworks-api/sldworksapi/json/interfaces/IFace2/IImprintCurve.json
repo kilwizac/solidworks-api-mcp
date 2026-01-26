@@ -1,0 +1,100 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IImprintCurve",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Curve",
+        "type": "Curve",
+        "description": "Pointer to the curve to imprint on the face"
+      },
+      {
+        "name": "NewEdgeCount",
+        "type": "System.Int32",
+        "description": "Number of new edges to create"
+      },
+      {
+        "name": "NewEdges",
+        "type": "Edge",
+        "description": "Array of new edges created by the imprinted curve of size NewEdgeCount"
+      },
+      {
+        "name": "NewFaceCount",
+        "type": "System.Int32",
+        "description": "Number of new faces to create"
+      },
+      {
+        "name": "NewFaces",
+        "type": "Face2",
+        "description": "Array of new faces created by the imprinted curve of size NewFaceCount"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.ImprintCurve"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "faces",
+      "face",
+      "iface2",
+      "curves",
+      "iimprintcurve",
+      "face2",
+      "imprint",
+      "new",
+      "edge",
+      "count",
+      "int32",
+      "edges",
+      "void"
+    ]
+  },
+  "title": "IFace2.IImprintCurve",
+  "description": "Imprints a curve on the selected face.",
+  "signature": "void IImprintCurve( \n   Curve\nCurve\n,\n   System.Int32\nNewEdgeCount\n,\n   out Edge\nNewEdges\n,\n   System.Int32\nNewFaceCount\n,\n   out Face2\nNewFaces\n)",
+  "parameters": [
+    {
+      "name": "Curve",
+      "type": "Curve",
+      "description": "Pointer to the curve to imprint on the face"
+    },
+    {
+      "name": "NewEdgeCount",
+      "type": "System.Int32",
+      "description": "Number of new edges to create"
+    },
+    {
+      "name": "NewEdges",
+      "type": "Edge",
+      "description": "Array of new edges created by the imprinted curve of size NewEdgeCount"
+    },
+    {
+      "name": "NewFaceCount",
+      "type": "System.Int32",
+      "description": "Number of new faces to create"
+    },
+    {
+      "name": "NewFaces",
+      "type": "Face2",
+      "description": "Array of new faces created by the imprinted curve of size NewFaceCount"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before calling this method, call\nIFace2::ImprintCurveCount\nto get the size of the arrays.\nThe specified curve must lie on the face.\nTo imprint a curve on a new face of a temporary body, create a copy of the original curve and imprint the copy of the curve on the new face.",
+  "examples": [],
+  "related": [
+    "IFace2.ImprintCurve"
+  ]
+}

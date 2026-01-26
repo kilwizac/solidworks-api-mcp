@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "ClosestDistance",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Object1",
+        "type": "System.Object",
+        "description": "Pointer to first object (see Remarks )"
+      },
+      {
+        "name": "Object2",
+        "type": "System.Object",
+        "description": "Pointer to second object (see Remarks )"
+      },
+      {
+        "name": "Point1",
+        "type": "System.Object",
+        "description": "Array of x, y, z coordinates for the point on Object1 that is nearest to Point2"
+      },
+      {
+        "name": "Point2",
+        "type": "System.Object",
+        "description": "Array of x, y, z coordinates for the point on Object2 that is nearest to Point1"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "distance",
+      "measure",
+      "closestdistance",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "closest",
+      "object1",
+      "object",
+      "object2",
+      "point1",
+      "point2",
+      "double",
+      "calculate",
+      "between",
+      "faces",
+      "vba",
+      "components"
+    ]
+  },
+  "title": "IModelDoc2.ClosestDistance",
+  "description": "Calculates the minimum distance between the specified geometric objects.",
+  "signature": "System.Double ClosestDistance( \n   System.Object\nObject1\n,\n   System.Object\nObject2\n,\n   out System.Object\nPoint1\n,\n   out System.Object\nPoint2\n)",
+  "parameters": [
+    {
+      "name": "Object1",
+      "type": "System.Object",
+      "description": "Pointer to first object (see Remarks )"
+    },
+    {
+      "name": "Object2",
+      "type": "System.Object",
+      "description": "Pointer to second object (see Remarks )"
+    },
+    {
+      "name": "Point1",
+      "type": "System.Object",
+      "description": "Array of x, y, z coordinates for the point on Object1 that is nearest to Point2"
+    },
+    {
+      "name": "Point2",
+      "type": "System.Object",
+      "description": "Array of x, y, z coordinates for the point on Object2 that is nearest to Point1"
+    }
+  ],
+  "returns": "Distance in meters between Point1 and Point2; -1.0 if no solution",
+  "remarks": "Supported types of Object1 and Object2 include\nswSelectType_e\n:\nswSelFACES (face)\nswSelEDGES (edge)\nswSelVERTICES (vertex)\nswSelSKETCHSEGS (sketch segment)\nswSelDATUMPLANES (reference plane)\nswSelEXTSKETCHPOINTS (point on origin)\nswSelDATUMAXES (reference axis)\nswSelCOMPONENTS (component; multi-body part supported, but not multi-part sub-assembly)\nswSelREFCURVES (reference curve)\nswSelSOLIDBODIES (solid bodies only; surface bodies not supported)\nThis method has these restrictions for drawings:\nCannot measure between a sketch entity and a model entity\nMeasured sketch entities have to belong to the same sheet\nModel entity measurements are based on the model origin\nMeasured object cannot be a temporary geometric entity",
+  "examples": [
+    {
+      "title": "Calculate Closest Distance Between Faces (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Calculate Closest Distance Between Model Components (VBA)",
+      "href": "Calculate_Closest_Distance_Between_Model_Components_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "InsertImportedComponent",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path name of the third-party native CAD file to insert"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X-coordinate of the component center"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y-coordinate of the component center"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Z-coordinate of the component center"
+      },
+      {
+        "name": "CompInserted",
+        "type": "System.Object",
+        "description": "IComponent2 ; null or Nothing if unsuccessful"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.InsertImportedFeature",
+      "ISldWorks.LoadFile4"
+    ],
+    "keywords": [
+      "insertimportedcomponent",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "insert",
+      "imported",
+      "component",
+      "file",
+      "name",
+      "string",
+      "double",
+      "comp",
+      "inserted",
+      "object",
+      "int32"
+    ]
+  },
+  "title": "IAssemblyDoc.InsertImportedComponent",
+  "description": "Inserts a third-party native CAD part or assembly into the current configuration of this assembly.",
+  "signature": "System.Int32 InsertImportedComponent( \n   System.String\nFileName\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   out System.Object\nCompInserted\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path name of the third-party native CAD file to insert"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X-coordinate of the component center"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y-coordinate of the component center"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Z-coordinate of the component center"
+    },
+    {
+      "name": "CompInserted",
+      "type": "System.Object",
+      "description": "IComponent2 ; null or Nothing if unsuccessful"
+    }
+  ],
+  "returns": "Error code as defined in sw3DInterconnectImportErrors_e",
+  "remarks": "To successfully use this method, you must first turn on 3D Interconnect by either:\nSetting\nTools > Options > System Options > Import > Enable 3D Interconnect\n- or -\nCalling\nISldWorks::SetUserPreferenceToggle\n(\nswUserPreferenceToggle_e\n.swMultiCAD_Enable3DInterconnect, True)\nTo edit the imported assembly, save the SOLIDWORKS assembly and then use\nIFeature::GetImportedFeatureParameters\nand\nIFeature::SetImportedFeatureParameters\n.\nSee the\nIImport3DInterconnectData\nRemarks.\nIf 3D Interconnect is turned off, use\nIAssemblyDoc::AddComponent5\ninstead of this method.",
+  "examples": [],
+  "related": [
+    "IPartDoc.InsertImportedFeature",
+    "ISldWorks.LoadFile4"
+  ]
+}

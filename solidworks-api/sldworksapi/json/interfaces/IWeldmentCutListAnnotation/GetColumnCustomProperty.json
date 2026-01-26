@@ -1,0 +1,56 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IWeldmentCutListAnnotation",
+    "member": "GetColumnCustomProperty",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Column for which to get the custom property"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IWeldmentCutListAnnotation.GetAllCustomPropertiesCount",
+      "IWeldmentCutListAnnotation.SetColumnCustomProperty"
+    ],
+    "keywords": [
+      "getcolumncustomproperty",
+      "iweldmentcutlistannotation",
+      "weldment",
+      "cut",
+      "list",
+      "annotation",
+      "column",
+      "custom",
+      "index",
+      "int32",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IWeldmentCutListAnnotation.GetColumnCustomProperty",
+  "description": "Gets the custom property for the specified user-defined column.",
+  "signature": "System.String GetColumnCustomProperty( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Column for which to get the custom property"
+    }
+  ],
+  "returns": "Custom property for this user-defined column",
+  "remarks": "This method returns an empty string if the column is not a user-defined column.\nTo get the list of custom properties, use\nIWeldmentCutListAnnotation::GetAllCustomProperties\nor\nIWeldmentCutListAnnotation::IGetAllCustomProperties\n. The list of possible custom properties includes all of the items in the weldment cut list annotation table, which includes items from the file summary items and file custom properties that have been set.",
+  "examples": [],
+  "related": [
+    "IWeldmentCutListAnnotation.GetAllCustomPropertiesCount",
+    "IWeldmentCutListAnnotation.SetColumnCustomProperty"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateEquationSpline2",
+    "returns": "SketchSpline",
+    "parameters": [
+      {
+        "name": "XExpression",
+        "type": "System.String",
+        "description": "For a parametric curve, equation for x in terms of t; for an explicit curve, an empty string (see Remarks )"
+      },
+      {
+        "name": "YExpression",
+        "type": "System.String",
+        "description": "For a parametric curve, equation for y in terms of t; for an explicit curve, equation for y in terms of x (see Remarks )"
+      },
+      {
+        "name": "ZExpression",
+        "type": "System.String",
+        "description": "Equation for z in terms of t (see Remarks )"
+      },
+      {
+        "name": "RangeStart",
+        "type": "System.String",
+        "description": "Start value for x, if explicit; start value for t, if parametric (see Remarks )"
+      },
+      {
+        "name": "RangeEnd",
+        "type": "System.String",
+        "description": "End value for x, if explicit; start value for t, if parametric (see Remarks )"
+      },
+      {
+        "name": "IsAngleRange",
+        "type": "System.Boolean",
+        "description": "True if the range and x value represent an angle (in radians), false if not (see Remarks )"
+      },
+      {
+        "name": "RotationAngle",
+        "type": "System.Double",
+        "description": "True if the range and x value represent an angle (in radians), false if not (see Remarks )"
+      },
+      {
+        "name": "XOffset",
+        "type": "System.Double",
+        "description": "Rotation angle (in radians) for the curve (see Remarks )"
+      },
+      {
+        "name": "YOffset",
+        "type": "System.Double",
+        "description": "Translation in the x direction of the curve (see Remarks )"
+      },
+      {
+        "name": "LockStart",
+        "type": "System.Boolean",
+        "description": "Translation in the y direction of the curve (see Remarks )"
+      },
+      {
+        "name": "LockEnd",
+        "type": "System.Boolean",
+        "description": "True to lock the start point (RangeStart) of the curve, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSpline.GetEquationParameters2",
+      "ISketchSpline.SetEquationParameters2"
+    ],
+    "keywords": [
+      "equation",
+      "see",
+      "also",
+      "iequationmgr",
+      "curves",
+      "splines",
+      "driven",
+      "curve",
+      "icurve",
+      "createequationspline2",
+      "isketchmanager",
+      "sketch",
+      "manager",
+      "create",
+      "spline2",
+      "expression",
+      "string",
+      "range",
+      "start",
+      "end",
+      "angle",
+      "boolean",
+      "rotation",
+      "double",
+      "offset",
+      "lock",
+      "spline"
+    ]
+  },
+  "title": "ISketchManager.CreateEquationSpline2",
+  "description": "Creates an equation-driven 2D explicit or parametric curve or a 3D parametric curve.",
+  "signature": "SketchSpline CreateEquationSpline2( \n   System.String\nXExpression\n,\n   System.String\nYExpression\n,\n   System.String\nZExpression\n,\n   System.String\nRangeStart\n,\n   System.String\nRangeEnd\n,\n   System.Boolean\nIsAngleRange\n,\n   System.Double\nRotationAngle\n,\n   System.Double\nXOffset\n,\n   System.Double\nYOffset\n,\n   System.Boolean\nLockStart\n,\n   System.Boolean\nLockEnd\n)",
+  "parameters": [
+    {
+      "name": "XExpression",
+      "type": "System.String",
+      "description": "For a parametric curve, equation for x in terms of t; for an explicit curve, an empty string (see Remarks )"
+    },
+    {
+      "name": "YExpression",
+      "type": "System.String",
+      "description": "For a parametric curve, equation for y in terms of t; for an explicit curve, equation for y in terms of x (see Remarks )"
+    },
+    {
+      "name": "ZExpression",
+      "type": "System.String",
+      "description": "Equation for z in terms of t (see Remarks )"
+    },
+    {
+      "name": "RangeStart",
+      "type": "System.String",
+      "description": "Start value for x, if explicit; start value for t, if parametric (see Remarks )"
+    },
+    {
+      "name": "RangeEnd",
+      "type": "System.String",
+      "description": "End value for x, if explicit; start value for t, if parametric (see Remarks )"
+    },
+    {
+      "name": "IsAngleRange",
+      "type": "System.Boolean",
+      "description": "True if the range and x value represent an angle (in radians), false if not (see Remarks )"
+    },
+    {
+      "name": "RotationAngle",
+      "type": "System.Double",
+      "description": "True if the range and x value represent an angle (in radians), false if not (see Remarks )"
+    },
+    {
+      "name": "XOffset",
+      "type": "System.Double",
+      "description": "Rotation angle (in radians) for the curve (see Remarks )"
+    },
+    {
+      "name": "YOffset",
+      "type": "System.Double",
+      "description": "Translation in the x direction of the curve (see Remarks )"
+    },
+    {
+      "name": "LockStart",
+      "type": "System.Boolean",
+      "description": "Translation in the y direction of the curve (see Remarks )"
+    },
+    {
+      "name": "LockEnd",
+      "type": "System.Boolean",
+      "description": "True to lock the start point (RangeStart) of the curve, false to not"
+    }
+  ],
+  "returns": "Equation-driven curve",
+  "remarks": "XExpression\nIf you want:\nan explicit curve (only in 2D) of the form y=f(x), then this input should be \"\".\na parametric curve given in terms of the parameter t, then this input is the value of x given in terms of the parameter. For example:\nx=sin(t)\nYExpression\nIf you want:\nan explicit curve (only in 2D) of the form y=f(x), then this input should be a function in terms of x to use to compute the value of y. For example:\ny=exp(x)\na parametric curve given in terms of the parameter t, then this input is the value of y given in terms of the parameter. For example:\ny=cos(t)\nZExpression\nFor 3D parametric curves, this input is the value of z given in terms of parameter t. For example:\nz = t\nRangeStart\nand\nRangeEnd\nStrings so that you can input dimension names or pi; for example,\n\"10* width_dimension1\"\nor\n\"-pi/2\"\n.\nXOffset\n,\nYOffset\n,\nIsAngleRange\n, and\nRotationAngle\nIn general, these parameters are not needed. They are for legacy support only. There are no equivalent 3D variables for positioning in 3D.",
+  "examples": [],
+  "related": [
+    "ISketchSpline.GetEquationParameters2",
+    "ISketchSpline.SetEquationParameters2"
+  ]
+}

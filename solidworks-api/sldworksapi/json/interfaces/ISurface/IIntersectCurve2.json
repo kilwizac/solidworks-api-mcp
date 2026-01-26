@@ -1,0 +1,109 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IIntersectCurve2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "OtherCurve",
+        "type": "Curve",
+        "description": "Curve"
+      },
+      {
+        "name": "CurveBound",
+        "type": "System.Double",
+        "description": "Array of 6 doubles representing the start and end points of the curve"
+      },
+      {
+        "name": "PointCount",
+        "type": "System.Int32",
+        "description": "Number of points"
+      },
+      {
+        "name": "PointArray",
+        "type": "System.Double",
+        "description": "Array of points of size PointCount*3"
+      },
+      {
+        "name": "TArray",
+        "type": "System.Double",
+        "description": "Array of parameters on curve of size PointCount"
+      },
+      {
+        "name": "UvArray",
+        "type": "System.Double",
+        "description": "Array of parameters on surface of size PointCount*2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IntersectCurve2"
+    ],
+    "keywords": [
+      "intersection",
+      "curves",
+      "iintersectcurve2",
+      "isurface",
+      "surface",
+      "intersect",
+      "curve2",
+      "other",
+      "curve",
+      "bound",
+      "double",
+      "point",
+      "count",
+      "int32",
+      "array",
+      "uv",
+      "boolean"
+    ]
+  },
+  "title": "ISurface.IIntersectCurve2",
+  "description": "Gets a surface-curve intersection.",
+  "signature": "System.Boolean IIntersectCurve2( \n   Curve\nOtherCurve\n,\n   ref System.Double\nCurveBound\n,\n   System.Int32\nPointCount\n,\n   out System.Double\nPointArray\n,\n   out System.Double\nTArray\n,\n   out System.Double\nUvArray\n)",
+  "parameters": [
+    {
+      "name": "OtherCurve",
+      "type": "Curve",
+      "description": "Curve"
+    },
+    {
+      "name": "CurveBound",
+      "type": "System.Double",
+      "description": "Array of 6 doubles representing the start and end points of the curve"
+    },
+    {
+      "name": "PointCount",
+      "type": "System.Int32",
+      "description": "Number of points"
+    },
+    {
+      "name": "PointArray",
+      "type": "System.Double",
+      "description": "Array of points of size PointCount*3"
+    },
+    {
+      "name": "TArray",
+      "type": "System.Double",
+      "description": "Array of parameters on curve of size PointCount"
+    },
+    {
+      "name": "UvArray",
+      "type": "System.Double",
+      "description": "Array of parameters on surface of size PointCount*2"
+    }
+  ],
+  "returns": "True if getting the intersection succeeded, false if not",
+  "remarks": "The curves must be bounded.\nBefore calling this method, call\nISurface::GetIntersectCurveCount2\nto get the number of points for this surface-curve intersection.",
+  "examples": [],
+  "related": [
+    "ISurface.IntersectCurve2"
+  ]
+}

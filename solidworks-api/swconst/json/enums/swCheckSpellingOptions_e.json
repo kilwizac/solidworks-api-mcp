@@ -1,0 +1,47 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swCheckSpellingOptions_e",
+    "description": "Spell check options. Bitmask.",
+    "member_count": 6,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swCheckSpellingOptions_e",
+  "description": "Spell check options. Bitmask.",
+  "values": [
+    {
+      "member": "swSpellingIgnoreCapitalizedWords",
+      "value": "8",
+      "description": "or 0x8; Capitalized words are not checked"
+    },
+    {
+      "member": "swSpellingIgnoreInternetAndFiles",
+      "value": "16",
+      "description": "or 0x10; Words containing a web address are not checked"
+    },
+    {
+      "member": "swSpellingIgnoreMixedCase",
+      "value": "2",
+      "description": "or 0x2; Words that are mixed-case (upper case and lowercase, e.g., eDrawings) are not checked"
+    },
+    {
+      "member": "swSpellingIgnoreUpperCase",
+      "value": "1",
+      "description": "or 0x1; Words that are all uppercase are not checked"
+    },
+    {
+      "member": "swSpellingIgnoreWordsWithNumbers",
+      "value": "4",
+      "description": "or 0x4; Words containing both letters and numbers are not checked"
+    },
+    {
+      "member": "swSpellingLeaveEngineRunning",
+      "value": "32",
+      "description": "or 0x20; Do not stop Microsoft Word, which is the spell-check engine, after checking the first and any subsequent annotations if you have a significant number of annotations to spell check; however, on the last use of IAnnotation::CheckSpelling , you must disable this flag so that Microsoft Word is shut down after that call"
+    }
+  ]
+}

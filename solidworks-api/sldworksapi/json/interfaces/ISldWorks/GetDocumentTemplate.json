@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetDocumentTemplate",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Mode",
+        "type": "System.Int32",
+        "description": "Document type as defined in swDocumentTypes_e (see Remarks )"
+      },
+      {
+        "name": "TemplateName",
+        "type": "System.String",
+        "description": "Name of custom template including full directory path"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Size of paper as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Width of paper; used only when paperSize is swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Height of paper; used only when paperSize is swDwgPapersUserDefined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetTemplateSizes",
+      "ISldWorks.IGetTemplateSizes",
+      "ISldWorks.PreSelectDwgTemplateSize"
+    ],
+    "keywords": [
+      "document",
+      "templates",
+      "documents",
+      "getdocumenttemplate",
+      "isldworks",
+      "sld",
+      "works",
+      "template",
+      "mode",
+      "int32",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "width",
+      "double",
+      "height",
+      "locations",
+      "names",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetDocumentTemplate",
+  "description": "Gets the name of document template that can be used in ISldWorks::NewDocument or ISldWorks::INewDocument2.",
+  "signature": "System.String GetDocumentTemplate( \n   System.Int32\nMode\n,\n   System.String\nTemplateName\n,\n   System.Int32\nPaperSize\n,\n   System.Double\nWidth\n,\n   System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "Mode",
+      "type": "System.Int32",
+      "description": "Document type as defined in swDocumentTypes_e (see Remarks )"
+    },
+    {
+      "name": "TemplateName",
+      "type": "System.String",
+      "description": "Name of custom template including full directory path"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Size of paper as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Width of paper; used only when paperSize is swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Height of paper; used only when paperSize is swDwgPapersUserDefined"
+    }
+  ],
+  "returns": "Name of the selected document template",
+  "remarks": "If type is...\nThen...\nswDocPART or swDocASSEMBLY\nRemaining arguments are not used.\nswDocDRAWING\nRemaining arguments are used to determine which drawing template to use.",
+  "examples": [
+    {
+      "title": "Get Locations and Names of Document Templates (VBA)",
+      "href": "Get_Locations_and_Names_of_Document_Templates_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetTemplateSizes",
+    "ISldWorks.IGetTemplateSizes",
+    "ISldWorks.PreSelectDwgTemplateSize"
+  ]
+}

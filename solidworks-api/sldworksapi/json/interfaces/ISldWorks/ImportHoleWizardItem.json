@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "ImportHoleWizardItem",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "StdToImport",
+        "type": "System.String",
+        "description": "Standard to import (see Remarks )"
+      },
+      {
+        "name": "DestinationFilePath",
+        "type": "System.String",
+        "description": "Path and name of file to import (see Remarks )"
+      },
+      {
+        "name": "ReplaceData",
+        "type": "System.Boolean",
+        "description": "True to replace data, false to not"
+      },
+      {
+        "name": "ErrorFile",
+        "type": "System.Boolean",
+        "description": "True to create an error file, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.ExportHoleWizardItem"
+    ],
+    "keywords": [
+      "importholewizarditem",
+      "isldworks",
+      "sld",
+      "works",
+      "import",
+      "hole",
+      "wizard",
+      "item",
+      "std",
+      "string",
+      "destination",
+      "file",
+      "path",
+      "replace",
+      "data",
+      "boolean",
+      "error",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.ImportHoleWizardItem",
+  "description": "Imports data for the specified Hole Wizard standard.",
+  "signature": "System.Int32 ImportHoleWizardItem( \n   System.String\nStdToImport\n,\n   System.String\nDestinationFilePath\n,\n   System.Boolean\nReplaceData\n,\n   System.Boolean\nErrorFile\n)",
+  "parameters": [
+    {
+      "name": "StdToImport",
+      "type": "System.String",
+      "description": "Standard to import (see Remarks )"
+    },
+    {
+      "name": "DestinationFilePath",
+      "type": "System.String",
+      "description": "Path and name of file to import (see Remarks )"
+    },
+    {
+      "name": "ReplaceData",
+      "type": "System.Boolean",
+      "description": "True to replace data, false to not"
+    },
+    {
+      "name": "ErrorFile",
+      "type": "System.Boolean",
+      "description": "True to create an error file, false to not"
+    }
+  ],
+  "returns": "0 if the Hole Wizard standard imported successfully, 1 if not",
+  "remarks": "Specify StdToImport with the path and file name as shown on the Hole Wizard tab of the Toolbox, e.g., \"\nansi inch\\Counterbore Holes\\Hex Bolt\n\".\nSpecify DestinationFilePath with the path and file name of the Excel Workbook (\n*.xslx\n) you want to import. The Excel file name is formatted as follows:\nstandard\n_\nhole class\n_\nhole type\n.xslx",
+  "examples": [],
+  "related": [
+    "ISldWorks.ExportHoleWizardItem"
+  ]
+}

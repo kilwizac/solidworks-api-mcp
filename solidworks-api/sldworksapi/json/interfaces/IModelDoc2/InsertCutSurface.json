@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertCutSurface",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Flip",
+        "type": "System.Boolean",
+        "description": "True to flip the direction, false to not"
+      },
+      {
+        "name": "KeepPieceIndex",
+        "type": "System.Int32",
+        "description": "Piece to keep if there is ambiguity"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISurfaceCutFeatureData"
+    ],
+    "keywords": [
+      "insertcutsurface",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "cut",
+      "surface",
+      "flip",
+      "boolean",
+      "keep",
+      "piece",
+      "index",
+      "int32",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.InsertCutSurface",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertCutSurface.",
+  "signature": "void InsertCutSurface( \n   System.Boolean\nFlip\n,\n   System.Int32\nKeepPieceIndex\n)",
+  "parameters": [
+    {
+      "name": "Flip",
+      "type": "System.Boolean",
+      "description": "True to flip the direction, false to not"
+    },
+    {
+      "name": "KeepPieceIndex",
+      "type": "System.Int32",
+      "description": "Piece to keep if there is ambiguity"
+    }
+  ],
+  "returns": "",
+  "remarks": "When there is ambiguity in the result of a cut, KeepPieceIndex is used to resolve which of the possible results is used. This can be set to -1 if there is no ambiguity; otherwise, it should be the index of the result, starting from 0 (up to one less than the possible number of outcomes).",
+  "examples": [],
+  "related": [
+    "ISurfaceCutFeatureData"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "GetTotalRowCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.AddRow",
+      "IDesignTable.GetRowCount",
+      "IDesignTable.GetStartRowNumber",
+      "IDesignTable.GetVisibleRowCount",
+      "IDesignTable.GetVisibleTopRowNumber",
+      "IDesignTable.RowHidden"
+    ],
+    "keywords": [
+      "gettotalrowcount",
+      "idesigntable",
+      "design",
+      "table",
+      "total",
+      "row",
+      "count",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDesignTable.GetTotalRowCount",
+  "description": "Gets the number of rows in the design table.",
+  "signature": "System.Int32 GetTotalRowCount()",
+  "parameters": [],
+  "returns": "Total number of rows in this design table",
+  "remarks": "The row index ranges from 1 to the return value.\nBefore you use any of the\nIDesignTable\nmethods, use\nIDesignTable::Attach\nto activate the IDesignTable. After you finish getting IDesignTable data, use\nIDesignTable::Detach\nto deactivate the table.\nThis method differs from\nIDesignTable::GetRowCount\nin that it counts all the rows in the design table. IDesignTable::GetRowCount counts only the rows that are currently visible in the\nIModelView\n.\nTo get information outside of the visible region of the design table, get the Microsoft Excel worksheet activated by IDesignTable::Attach. Then, you can use the Microsoft Excel API to make additional queries.",
+  "examples": [
+    {
+      "title": "Get Design Table (C#)",
+      "href": "Get_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VB.NET)",
+      "href": "Get_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VBA)",
+      "href": "Get_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDesignTable.AddRow",
+    "IDesignTable.GetRowCount",
+    "IDesignTable.GetStartRowNumber",
+    "IDesignTable.GetVisibleRowCount",
+    "IDesignTable.GetVisibleTopRowNumber",
+    "IDesignTable.RowHidden"
+  ]
+}

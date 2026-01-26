@@ -1,0 +1,19 @@
+---
+type: enum
+name: swRayTraceRenderType_e
+description: Ray trace rendering methods.
+member_count: 0
+docset: swconst
+categories:
+  - constants
+used_by: []
+---
+
+# swRayTraceRenderType_e
+
+Ray trace rendering methods.
+
+## Values
+
+| Member | Value | Description |
+|---|---|---|

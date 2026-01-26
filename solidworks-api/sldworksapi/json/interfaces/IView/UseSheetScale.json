@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IView",
+    "member": "UseSheetScale",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.IScaleRatio",
+      "IView.ScaleDecimal",
+      "IView.ScaleRatio"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "scale",
+      "iscalefeaturedata",
+      "view",
+      "usesheetscale",
+      "use",
+      "sheet",
+      "int32",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IView.UseSheetScale",
+  "description": "Gets or sets whether the scale of the drawing view is the same as the scale of the drawing sheet on which this view is located.",
+  "signature": "System.Int32 UseSheetScale {get; set;}",
+  "parameters": [],
+  "returns": "1 if the view scale is the same as the sheet scale, 0 if the view scale is independent of the sheet scale",
+  "remarks": "If the property is 0, then it is possible that the view scale is the same as the sheet scale.\nChanging this property can cause changes to the graphics of the drawing. After making all of the view-related changes, call the\nIModelDoc2::EditRebuild3\nmethod to regenerate the drawing to see these changes.\nTo set the drawing view's scale to be the same as the parent's drawing sheet's scale, use\nIView::UseParentScale\n.",
+  "examples": [
+    {
+      "title": "Set View Scale (VBA)",
+      "href": "Set_View_Scale_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.IScaleRatio",
+    "IView.ScaleDecimal",
+    "IView.ScaleRatio"
+  ]
+}

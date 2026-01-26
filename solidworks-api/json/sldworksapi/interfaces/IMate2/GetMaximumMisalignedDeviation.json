@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMate2",
+    "member": "GetMaximumMisalignedDeviation",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IMate2.GetUseMisalignedDeviationDocumentProperty",
+      "IMate2.SetMaximumMisalignedDeviation"
+    ],
+    "keywords": [
+      "mates",
+      "see",
+      "also",
+      "imate2",
+      "misaligned",
+      "concentric",
+      "maximum",
+      "deviation",
+      "getmaximummisaligneddeviation",
+      "mate2",
+      "double"
+    ]
+  },
+  "title": "IMate2.GetMaximumMisalignedDeviation",
+  "description": "Gets the maximum allowed misalignment deviation for this misaligned concentric mate.",
+  "signature": "System.Double GetMaximumMisalignedDeviation()",
+  "parameters": [],
+  "returns": "Maximum allowed misalignment deviation",
+  "remarks": "If\nIMate2::GetCurrentMisalignedDeviation\nis greater than the value returned by this method, then the mate fails to solve.\nThe current deviation and the maximum deviation are cumulative across both concentric mates in the Hole Set. For example, if\nIMate2::GetConcentricAlignmentType\nis set to\nswConcentricAlignmentType_e\n.swConcentricAlignSymmetric, the deviation from both holes is summed before comparison with the maximum deviation.",
+  "examples": [],
+  "related": [
+    "IMate2.GetUseMisalignedDeviationDocumentProperty",
+    "IMate2.SetMaximumMisalignedDeviation"
+  ]
+}

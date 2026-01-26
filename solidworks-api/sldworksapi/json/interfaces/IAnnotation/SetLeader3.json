@@ -1,0 +1,153 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "SetLeader3",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "LeaderStyle",
+        "type": "System.Int32",
+        "description": "Leader style as defined in swLeaderStyle_e (see Remarks )"
+      },
+      {
+        "name": "LeaderSide",
+        "type": "System.Int32",
+        "description": "Leader side as defined in swLeaderSide_e (see Remarks )"
+      },
+      {
+        "name": "SmartArrowHeadStyle",
+        "type": "System.Boolean",
+        "description": "True to enable smart arrowhead style, false to disable it (see Remarks )"
+      },
+      {
+        "name": "Perpendicular",
+        "type": "System.Boolean",
+        "description": "True to enable perpendicular bent leader display, false to disable it (see Remarks )"
+      },
+      {
+        "name": "AllAround",
+        "type": "System.Boolean",
+        "description": "True to enable all around (weld, surface finish, or Gtol) symbol display, false to disable it (see Remarks )"
+      },
+      {
+        "name": "Dashed",
+        "type": "System.Boolean",
+        "description": "True to enable dashed line leader display; false to enable solid-line leader (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.BentLeaderLength",
+      "IAnnotation.GetLeader",
+      "IAnnotation.GetLeaderCount",
+      "IAnnotation.GetLeaderPointsAtIndex",
+      "IAnnotation.GetMultiJogLeaderCount",
+      "IAnnotation.GetMultiJogLeaders",
+      "IAnnotation.LeaderLineStyle",
+      "IAnnotation.LeaderThickness",
+      "IAnnotation.LeaderThicknessCustom",
+      "IAnnotation.SetLeaderAttachmentPointAtIndex",
+      "IAnnotation.UseDocDispLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "annotations",
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "setleader3",
+      "leader3",
+      "leader",
+      "style",
+      "int32",
+      "side",
+      "smart",
+      "arrow",
+      "head",
+      "boolean",
+      "perpendicular",
+      "all",
+      "around",
+      "dashed",
+      "insert",
+      "gtol",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IAnnotation.SetLeader3",
+  "description": "Sets the leader characteristics for this annotation.",
+  "signature": "System.Int32 SetLeader3( \n   System.Int32\nLeaderStyle\n,\n   System.Int32\nLeaderSide\n,\n   System.Boolean\nSmartArrowHeadStyle\n,\n   System.Boolean\nPerpendicular\n,\n   System.Boolean\nAllAround\n,\n   System.Boolean\nDashed\n)",
+  "parameters": [
+    {
+      "name": "LeaderStyle",
+      "type": "System.Int32",
+      "description": "Leader style as defined in swLeaderStyle_e (see Remarks )"
+    },
+    {
+      "name": "LeaderSide",
+      "type": "System.Int32",
+      "description": "Leader side as defined in swLeaderSide_e (see Remarks )"
+    },
+    {
+      "name": "SmartArrowHeadStyle",
+      "type": "System.Boolean",
+      "description": "True to enable smart arrowhead style, false to disable it (see Remarks )"
+    },
+    {
+      "name": "Perpendicular",
+      "type": "System.Boolean",
+      "description": "True to enable perpendicular bent leader display, false to disable it (see Remarks )"
+    },
+    {
+      "name": "AllAround",
+      "type": "System.Boolean",
+      "description": "True to enable all around (weld, surface finish, or Gtol) symbol display, false to disable it (see Remarks )"
+    },
+    {
+      "name": "Dashed",
+      "type": "System.Boolean",
+      "description": "True to enable dashed line leader display; false to enable solid-line leader (see Remarks )"
+    }
+  ],
+  "returns": "Indicates whether the operation was successful (see Remarks )",
+  "remarks": "Not all annotations support all styles of leaders or leader characteristics. Only notes, GTols, surface finish symbols, weld symbols, datum target symbols, and block instances support leaders of any kind.\nWeld symbol leaders can be hidden, but are always bent; straight leaders (swSTRAIGHT) are not supported.\nDatum target symbols can have straight or bent leaders, but cannot be hidden (swNO_LEADER is not supported).\nOnly notes support underline leaders (swUNDERLINED).\nGTols are the only type of annotation that supports perpendicular bent leaders.\nGTols and weld symbols are the only types of annotations that support all around leader symbols.\nDatum target symbols are the only type of annotation that supports dashed leaders\n.\nThis method sets the characteristics of the annotation, not the individual leaders. You can get or set these characteristics whether leaders are displayed.\nUse...\nTo...\nIAnnotation::GetDashedLeader\nDetermine whether this leader is a dashed line or a solid line.\nIAnnotation::GetLeaderAllARound\nDetermine whether all around symbol display is enabled or disabled.\nIAnnotation::GetLeaderPerpendicular\nDetermine whether perpendicular bent leader display is enabled or disabled.\nIAnnotation::GetLeaderSide\nGet the leader attachment side setting.\nIAnnotation::GetLeaderStyle\nGet style of leader (hidden, straight, bent, or underline).\nIAnnotation::GetSmartArrowHeadStyle\nDetermine whether smart arrowhead style is enabled or disabled.\nYou can set the leader side, smart arrowhead style, and bent leader values at any time. However, if leader display is disabled, you cannot affect the display of the annotation by setting these values. You can also set the perpendicular bent leader and all around symbol display at any time, but if bent leaders are disabled, you cannot affect the display of the annotation by setting these values.\nThe return status of this operation can have the following values:\n0 =\nLeader characteristics were successfully set\n-1 =\nLeader characteristics were not set because of an unknown error\n-2\n=\nLeader attachment side setting is invalid\n-3\n=\nLeaders are not supported on this type of annotation\n-4 =\nLeaders cannot be disabled on this type of annotation\n-5\n=\nBent leaders cannot be disabled on this type of annotation\n-6 = Underline style leaders are not allowed on this type of annotation\nIf leader display is enabled, then this method changes the visible model.",
+  "examples": [
+    {
+      "title": "Insert GTol (C#)",
+      "href": "Insert_GTol_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VB.NET)",
+      "href": "Insert_GTol_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VBA)",
+      "href": "Insert_GTol_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.BentLeaderLength",
+    "IAnnotation.GetLeader",
+    "IAnnotation.GetLeaderCount",
+    "IAnnotation.GetLeaderPointsAtIndex",
+    "IAnnotation.GetMultiJogLeaderCount",
+    "IAnnotation.GetMultiJogLeaders",
+    "IAnnotation.LeaderLineStyle",
+    "IAnnotation.LeaderThickness",
+    "IAnnotation.LeaderThicknessCustom",
+    "IAnnotation.SetLeaderAttachmentPointAtIndex",
+    "IAnnotation.UseDocDispLeader"
+  ]
+}

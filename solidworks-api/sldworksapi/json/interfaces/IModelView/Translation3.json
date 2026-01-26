@@ -1,0 +1,33 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelView",
+    "member": "Translation3",
+    "returns": "MathVector",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "translation3",
+      "imodelview",
+      "model",
+      "view",
+      "math",
+      "vector"
+    ],
+    "readonly": null
+  },
+  "title": "IModelView.Translation3",
+  "description": "Gets or sets the model view translation vector.",
+  "signature": "MathVector Translation3 {get; set;}",
+  "parameters": [],
+  "returns": "Model view translation vector",
+  "remarks": "When modifying a model view transform, you must use\nIModelView::Orientation3\nand IModelView::Translation3. For example:\n...\nDim xyzOrigin As SldWorks.MathPoint\ndPoint(0) = 0#: dPoint(1) = 0#: dPoint(2) = 0#\nSet xyzOrigin = swMathUtil.\nCreatePoint\n((dPoint))\nSet swVectorZ = swVectorZ.\nScale\n(-1)\nSet swMathTrans = swMathUtil.\nComposeTransform\n(swVectorX, swVectorY, swVectorZ, xyzOrigin.\nConvertToVector\n, 1#)\nSet swMathTrans = swMathTrans.\nInverse\nSet swModelView = swModel.\nActiveView\nSet swViewTrans = swModelView.\nOrientation3\nswModelView.\nOrientation3\n= swMathTrans\nDim u As Double\nu = swModelView.\nScale2\nSet swMathPoint = swVectorT.\nConvertToPoint\nSet swMathPoint = swMathPoint.\nScale\n(-1 * u)\nSet swMathPoint = swMathPoint.\nMultiplyTransform\n(swMathTrans)\nswModelView.\nTranslation3\n= swMathPoint.\nConvertToVector\n...\nAlso, check the vectors by looking at the triad in the model view.",
+  "examples": [],
+  "related": []
+}

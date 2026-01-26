@@ -1,0 +1,93 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IntersectCurve",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "OtherCurve",
+        "type": "System.Object",
+        "description": "Curve to intersect with this curve"
+      },
+      {
+        "name": "ThisStartPoint",
+        "type": "System.Object",
+        "description": "Array containing the start point of this curve"
+      },
+      {
+        "name": "ThisEndPoint",
+        "type": "System.Object",
+        "description": "Array containing the end point of this curve"
+      },
+      {
+        "name": "OtherStartPoint",
+        "type": "System.Object",
+        "description": "Array containing the start point of otherCurve"
+      },
+      {
+        "name": "OtherEndPoint",
+        "type": "System.Object",
+        "description": "Array containing the end point of otherCurve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.IIntersectCurve",
+      "ICurve.IIntersectCurveSize"
+    ],
+    "keywords": [
+      "intersectcurve",
+      "icurve",
+      "curve",
+      "intersect",
+      "other",
+      "object",
+      "start",
+      "point",
+      "end"
+    ]
+  },
+  "title": "ICurve.IntersectCurve",
+  "description": "Gets a set of points that represent the intersection of two trimmed curves.",
+  "signature": "System.Object IntersectCurve( \n   System.Object\nOtherCurve\n,\n   System.Object\nThisStartPoint\n,\n   System.Object\nThisEndPoint\n,\n   System.Object\nOtherStartPoint\n,\n   System.Object\nOtherEndPoint\n)",
+  "parameters": [
+    {
+      "name": "OtherCurve",
+      "type": "System.Object",
+      "description": "Curve to intersect with this curve"
+    },
+    {
+      "name": "ThisStartPoint",
+      "type": "System.Object",
+      "description": "Array containing the start point of this curve"
+    },
+    {
+      "name": "ThisEndPoint",
+      "type": "System.Object",
+      "description": "Array containing the end point of this curve"
+    },
+    {
+      "name": "OtherStartPoint",
+      "type": "System.Object",
+      "description": "Array containing the start point of otherCurve"
+    },
+    {
+      "name": "OtherEndPoint",
+      "type": "System.Object",
+      "description": "Array containing the end point of otherCurve"
+    }
+  ],
+  "returns": "Array containing the intersection points (see Remarks )",
+  "remarks": "The array of doubles returned contains the x, y, z location of the tessellation points and a code for each point that indicates the intersection class:\n[\nx1, y1, z1, k1, x2, y2, z2, k2....\n]\nReturn codes are defined in\nswIntersectionType_e\n.",
+  "examples": [],
+  "related": [
+    "ICurve.IIntersectCurve",
+    "ICurve.IIntersectCurveSize"
+  ]
+}

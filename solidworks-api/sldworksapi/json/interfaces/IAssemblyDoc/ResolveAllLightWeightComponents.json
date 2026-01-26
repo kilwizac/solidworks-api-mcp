@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "ResolveAllLightWeightComponents",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "WarnUser",
+        "type": "System.Boolean",
+        "description": "True prompts the user to resolve components, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.GetLightWeightComponentCount",
+      "IAssemblyDoc.LightweightAllResolved",
+      "IAssemblyDoc.ResolveAllLightweight",
+      "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+      "IAssemblyDoc.SelectiveOpen",
+      "IAssemblyDoc.SetComponentSuppression"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "lightweight",
+      "components",
+      "icomponent2",
+      "resolve",
+      "resolved",
+      "resolvealllightweightcomponents",
+      "assembly",
+      "doc",
+      "all",
+      "light",
+      "weight",
+      "warn",
+      "user",
+      "boolean",
+      "int32",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "vba",
+      "visibility",
+      "lock",
+      "external",
+      "references",
+      "fix",
+      "component",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAssemblyDoc.ResolveAllLightWeightComponents",
+  "description": "Resolves the lightweight components in this assembly.",
+  "signature": "System.Int32 ResolveAllLightWeightComponents( \n   System.Boolean\nWarnUser\n)",
+  "parameters": [
+    {
+      "name": "WarnUser",
+      "type": "System.Boolean",
+      "description": "True prompts the user to resolve components, false does not"
+    }
+  ],
+  "returns": "Status of resolving the components as defined in swComponentResolveStatus_e",
+  "remarks": "The assembly must be open in its own window. Call\nISldWorks::ActivateDoc2\nor\nIModelDoc2::Visible\nto ensure that it is. If the assembly is only open as a reference in another document, then this method returns swComponentResolveStatus_e.swResolveNotPerformed.",
+  "examples": [
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Visibility of and Resolve Lightweight Components (VBA)",
+      "href": "Get_Visibility_of_and_Resolve_Lightweight_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Lock all External References (VBA)",
+      "href": "Lock_All_External_References_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Resolve All Components and Fix a Component (C#)",
+      "href": "Resolve_All_Components_Fix_A_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Resolve All Components and Fix a Component (VB.NET)",
+      "href": "Resolve_All_Components_Fix_A_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Resolve All Components and Fix a Component (VBA)",
+      "href": "Resolve_All_Components_Fix_A_Component_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetLightWeightComponentCount",
+    "IAssemblyDoc.LightweightAllResolved",
+    "IAssemblyDoc.ResolveAllLightweight",
+    "IAssemblyDoc.ResolveOutOfDateLightWeightComponents",
+    "IAssemblyDoc.SelectiveOpen",
+    "IAssemblyDoc.SetComponentSuppression"
+  ]
+}

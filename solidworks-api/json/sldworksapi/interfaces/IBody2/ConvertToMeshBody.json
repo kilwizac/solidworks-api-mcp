@@ -1,0 +1,156 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ConvertToMeshBody",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "GroupFacetsIntoFaces",
+        "type": "System.Boolean",
+        "description": "True to group facets into multiple faces, false to convert the mesh into a single face; valid only for graphics bodies"
+      },
+      {
+        "name": "KeepOriginalBody",
+        "type": "System.Boolean",
+        "description": "True to maintain a reference copy of the original solid or surface body; false to not"
+      },
+      {
+        "name": "HideOriginalBody",
+        "type": "System.Boolean",
+        "description": "True to hide the original body, false to not; valid only of KeepOriginalBody is true"
+      },
+      {
+        "name": "MeshRefinement",
+        "type": "System.Double",
+        "description": "0.0 (larger mesh facets) <= Percent refinement <= 100.0 (smaller mesh facets); valid only if AdvancedMeshRefinement is false"
+      },
+      {
+        "name": "AdvancedMeshRefinement",
+        "type": "System.Boolean",
+        "description": "True to specify maximum distance and angle, false to not"
+      },
+      {
+        "name": "MaximumDistance",
+        "type": "System.Double",
+        "description": "Maximum distance deviation in meters"
+      },
+      {
+        "name": "MaximumAngle",
+        "type": "System.Double",
+        "description": "Maximum angle deviation in radians"
+      },
+      {
+        "name": "DefineMaxElementSize",
+        "type": "System.Boolean",
+        "description": "True to specify the maximum length of the fins, false to not"
+      },
+      {
+        "name": "ElementSize",
+        "type": "System.Double",
+        "description": "Length of fins in meters; valid only if DefineMaxElementSize is true"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "0 if successful, -1 if errors"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "converttomeshbody",
+      "ibody2",
+      "body2",
+      "convert",
+      "mesh",
+      "body",
+      "group",
+      "facets",
+      "faces",
+      "boolean",
+      "keep",
+      "original",
+      "hide",
+      "refinement",
+      "double",
+      "advanced",
+      "maximum",
+      "distance",
+      "angle",
+      "define",
+      "max",
+      "element",
+      "size",
+      "error",
+      "code",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IBody2.ConvertToMeshBody",
+  "description": "Converts a solid body to a mesh BREP (boundary representation) body.",
+  "signature": "System.Object ConvertToMeshBody( \n   System.Boolean\nGroupFacetsIntoFaces\n,\n   System.Boolean\nKeepOriginalBody\n,\n   System.Boolean\nHideOriginalBody\n,\n   System.Double\nMeshRefinement\n,\n   System.Boolean\nAdvancedMeshRefinement\n,\n   System.Double\nMaximumDistance\n,\n   System.Double\nMaximumAngle\n,\n   System.Boolean\nDefineMaxElementSize\n,\n   System.Double\nElementSize\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "GroupFacetsIntoFaces",
+      "type": "System.Boolean",
+      "description": "True to group facets into multiple faces, false to convert the mesh into a single face; valid only for graphics bodies"
+    },
+    {
+      "name": "KeepOriginalBody",
+      "type": "System.Boolean",
+      "description": "True to maintain a reference copy of the original solid or surface body; false to not"
+    },
+    {
+      "name": "HideOriginalBody",
+      "type": "System.Boolean",
+      "description": "True to hide the original body, false to not; valid only of KeepOriginalBody is true"
+    },
+    {
+      "name": "MeshRefinement",
+      "type": "System.Double",
+      "description": "0.0 (larger mesh facets) <= Percent refinement <= 100.0 (smaller mesh facets); valid only if AdvancedMeshRefinement is false"
+    },
+    {
+      "name": "AdvancedMeshRefinement",
+      "type": "System.Boolean",
+      "description": "True to specify maximum distance and angle, false to not"
+    },
+    {
+      "name": "MaximumDistance",
+      "type": "System.Double",
+      "description": "Maximum distance deviation in meters"
+    },
+    {
+      "name": "MaximumAngle",
+      "type": "System.Double",
+      "description": "Maximum angle deviation in radians"
+    },
+    {
+      "name": "DefineMaxElementSize",
+      "type": "System.Boolean",
+      "description": "True to specify the maximum length of the fins, false to not"
+    },
+    {
+      "name": "ElementSize",
+      "type": "System.Double",
+      "description": "Length of fins in meters; valid only if DefineMaxElementSize is true"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "0 if successful, -1 if errors"
+    }
+  ],
+  "returns": "Array of: One body (if this is a solid body) - or - Multiple surface bodies (if this is a graphics body)",
+  "remarks": "Call this method for each body you want to convert.\nThis method creates\nBody-Convert to Mesh Body\nin the FeatureManager design tree.\nThis method is analogous to the\nSOLIDWORKS menu Insert > Mesh > Convert To Mesh Body\n. For more information, see the\nSOLIDWORKS Design user-interface help > Parts and Features > Graphics Mesh and Mesh BREP Bodies > Converting Solid, Surface or Graphics Bodies to Mesh\ntopic.",
+  "examples": [],
+  "related": []
+}

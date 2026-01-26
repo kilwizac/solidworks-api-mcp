@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "GetTessNorms",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetTessTriStripEdges",
+      "IPartDoc.GetTessTriStripNorms",
+      "IPartDoc.GetTessTriStripSize",
+      "IPartDoc.GetTessTriStripTextures",
+      "IPartDoc.GetTessTriangleCount",
+      "IPartDoc.GetTessTriangles",
+      "IPartDoc.IGetTessNorms",
+      "IPartDoc.IGetTessTriStripEdgeSize",
+      "IPartDoc.IGetTessTriStripEdges",
+      "IPartDoc.IGetTessTriStripNorms",
+      "IPartDoc.IGetTessTriStrips",
+      "IPartDoc.IGetTessTriangles",
+      "ITessellation"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "parts",
+      "ipartdoc",
+      "gettessnorms",
+      "part",
+      "doc",
+      "tess",
+      "norms",
+      "object"
+    ]
+  },
+  "title": "IPartDoc.GetTessNorms",
+  "description": "Gets the normal vector for each of the triangles, which make up the shaded picture tessellation.",
+  "signature": "System.Object GetTessNorms()",
+  "parameters": [],
+  "returns": "Array of floats (see Remarks )",
+  "remarks": "The total size of the data is:\n[\n9 x sizeof(float) x (number of triangles)\n]\n.\nThe format of the returned data is:\nfloat\nx, y, z first point's unit normal\nfloat\nx, y, z second point's unit normal\nfloat\nx, y, z third point's unit normal\nfor the set of triangles for the part.",
+  "examples": [],
+  "related": [
+    "IPartDoc.GetTessTriStripEdges",
+    "IPartDoc.GetTessTriStripNorms",
+    "IPartDoc.GetTessTriStripSize",
+    "IPartDoc.GetTessTriStripTextures",
+    "IPartDoc.GetTessTriangleCount",
+    "IPartDoc.GetTessTriangles",
+    "IPartDoc.IGetTessNorms",
+    "IPartDoc.IGetTessTriStripEdgeSize",
+    "IPartDoc.IGetTessTriStripEdges",
+    "IPartDoc.IGetTessTriStripNorms",
+    "IPartDoc.IGetTessTriStrips",
+    "IPartDoc.IGetTessTriangles",
+    "ITessellation"
+  ]
+}

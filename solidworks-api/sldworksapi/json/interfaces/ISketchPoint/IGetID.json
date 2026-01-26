@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchPoint",
+    "member": "IGetID",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchPoint.GetID"
+    ],
+    "keywords": [
+      "id",
+      "sketch",
+      "point",
+      "points",
+      "igetid",
+      "isketchpoint",
+      "int32"
+    ]
+  },
+  "title": "ISketchPoint.IGetID",
+  "description": "Gets the sketch point ID for this sketch point.",
+  "signature": "System.Int32 IGetID()",
+  "parameters": [],
+  "returns": "Array with two longs or integers (see Long vs. Integer ) identifying this sketch point ID",
+  "remarks": "The ID of the sketch point:\nis an ordered pair (i1, i2). For sketch points, the combination of these two numbers is always unique within a specific sketch.\ncannot be assigned by applications or users.\nis not the same as a\npersistent reference ID\n.\nEach point within a specific sketch has a unique ID. However, a point and other sketch objects can have the same ID. Likewise, in a second sketch, you may find a different sketch element with the same ID. Therefore, your application must keep track of:\nsketch element type (that is, point, line, arc, spline, and so on)\nowning sketch name\nsketch element ID to uniquely identify a sketched item",
+  "examples": [],
+  "related": [
+    "ISketchPoint.GetID"
+  ]
+}

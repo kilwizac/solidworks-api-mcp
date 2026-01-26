@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IView",
+    "member": "ReferencedDocument",
+    "returns": "ModelDoc2",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetReferencedModelName",
+      "IView.ReferencedConfiguration",
+      "IView.ReferencedConfigurationID"
+    ],
+    "keywords": [
+      "document",
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "documents",
+      "view",
+      "referenceddocument",
+      "referenced",
+      "model",
+      "doc2",
+      "vba",
+      "body",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IView.ReferencedDocument",
+  "description": "Gets the document referenced by this drawing view.",
+  "signature": "ModelDoc2 ReferencedDocument {get;}",
+  "parameters": [],
+  "returns": "Model document",
+  "remarks": "Because section views do not have referenced documents, this method returns an empty string for this type of view. Instead, use\nIView::GetBaseView\nor\nIView::IGetBaseView\nto get the parent view of a section, and then get its referenced document from that view.",
+  "examples": [
+    {
+      "title": "Get Document Referenced by Drawing View (VBA)",
+      "href": "Get_Document_Referenced_by_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for View (C#)",
+      "href": "Set_Body_for_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for View (VB.NET)",
+      "href": "Set_Body_for_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Body for View (VBA)",
+      "href": "Set_Body_for_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetReferencedModelName",
+    "IView.ReferencedConfiguration",
+    "IView.ReferencedConfigurationID"
+  ]
+}

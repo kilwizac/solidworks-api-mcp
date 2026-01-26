@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimPatternFeatureData",
+    "member": "AddInstanceAt",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "IsSuppressed",
+        "type": "System.Boolean",
+        "description": "True to suppress this pattern instance, false to not"
+      },
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index indicating where to add this pattern instance in the pattern table and pattern; -1 indicates to add this pattern instance to the end of the pattern table and pattern (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IDimPatternFeatureData.DeleteInstanceAt"
+    ],
+    "keywords": [
+      "addinstanceat",
+      "idimpatternfeaturedata",
+      "dim",
+      "pattern",
+      "feature",
+      "data",
+      "add",
+      "instance",
+      "suppressed",
+      "boolean",
+      "index",
+      "int32",
+      "delete",
+      "insert",
+      "instances",
+      "variable",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimPatternFeatureData.AddInstanceAt",
+  "description": "Adds a pattern instance to this variable pattern feature.",
+  "signature": "System.Boolean AddInstanceAt( \n   System.Boolean\nIsSuppressed\n,\n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "IsSuppressed",
+      "type": "System.Boolean",
+      "description": "True to suppress this pattern instance, false to not"
+    },
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index indicating where to add this pattern instance in the pattern table and pattern; -1 indicates to add this pattern instance to the end of the pattern table and pattern (see Remarks )"
+    }
+  ],
+  "returns": "True if the pattern instance is added, false if not",
+  "remarks": "Use\nIDimPatternFeatureData::GetInstanceCount\nto get the number of pattern instances.\nBy default, this pattern instance inherits the default values of the parent sketch or feature of the variable pattern feature. Use\nIDimPatternFeatureData::SetInstanceDimensionValue\nto modify this pattern instance's values.",
+  "examples": [
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (C#)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (VB.NET)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete and Insert Instances in Variable Pattern Feature (VBA)",
+      "href": "Delete_and_Insert_Instances_in_Variable_Pattern_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDimPatternFeatureData.DeleteInstanceAt"
+  ]
+}

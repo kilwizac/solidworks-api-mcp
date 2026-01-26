@@ -1,0 +1,106 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "GetComponents",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ToplevelOnly",
+        "type": "System.Boolean",
+        "description": "True to get only the top-level components of the FeatureManager design tree, false to get both the top-level and child components in the FeatureManager design tree"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.GetComponentByID",
+      "IAssemblyDoc.GetComponentCount",
+      "IAssemblyDoc.IGetComponents",
+      "IAssemblyDoc.SelectiveOpen",
+      "IComponent2.GetChildren",
+      "IComponent2.GetParent",
+      "IConfiguration.GetRootComponent3",
+      "IConfiguration.IGetRootComponent2",
+      "IConfigurationManager.ActiveConfiguration"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "assemblies",
+      "iassemblydoc",
+      "getcomponents",
+      "assembly",
+      "doc",
+      "toplevel",
+      "only",
+      "boolean",
+      "object",
+      "insert",
+      "midsurface",
+      "component",
+      "vb",
+      "net",
+      "vba",
+      "mates"
+    ]
+  },
+  "title": "IAssemblyDoc.GetComponents",
+  "description": "Gets all of the components in the active configuration of this assembly.",
+  "signature": "System.Object GetComponents( \n   System.Boolean\nToplevelOnly\n)",
+  "parameters": [
+    {
+      "name": "ToplevelOnly",
+      "type": "System.Boolean",
+      "description": "True to get only the top-level components of the FeatureManager design tree, false to get both the top-level and child components in the FeatureManager design tree"
+    }
+  ],
+  "returns": "Array of IComponent2 s (see Remarks )",
+  "remarks": "The components returned by this method can be in any order. You should not rely on the order to indicate anything about children or parents. If the hierarchy and order are important, then use\nIModelDoc2::FirstFeature\n,\nIFeature::GetTypeName2\n,\nIFeature::GetSpecificFeature2\n,\nIComponent2::FirstFeature\n, and\nIFeature::GetNextFeature\nto retrieve your information.",
+  "examples": [
+    {
+      "title": "Insert MidSurface in Components (C#)",
+      "href": "Insert_MidSurface_in_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert MidSurface in Component (VB.NET)",
+      "href": "Insert_MidSurface_in_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert MidSurface in Component (VBA)",
+      "href": "Insert_MidSurface_in_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mates (VB.NET)",
+      "href": "Get_Mates_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mates (C#)",
+      "href": "Get_Mates_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.GetComponentByID",
+    "IAssemblyDoc.GetComponentCount",
+    "IAssemblyDoc.IGetComponents",
+    "IAssemblyDoc.SelectiveOpen",
+    "IComponent2.GetChildren",
+    "IComponent2.GetParent",
+    "IConfiguration.GetRootComponent3",
+    "IConfiguration.IGetRootComponent2",
+    "IConfigurationManager.ActiveConfiguration"
+  ]
+}

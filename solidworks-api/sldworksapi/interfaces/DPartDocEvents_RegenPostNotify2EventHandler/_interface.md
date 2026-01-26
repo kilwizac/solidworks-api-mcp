@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DPartDocEvents_RegenPostNotify2EventHandler
+inherits: null
+description: Post-notifies the user program when a part document has been rebuilt or rolled back.
+member_count: 0
+docset: sldworksapi
+categories:
+  - parts
+common_members: []
+---
+
+# DPartDocEvents_RegenPostNotify2EventHandler
+
+Post-notifies the user program when a part document has been rebuilt or rolled back.

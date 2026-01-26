@@ -1,0 +1,154 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "AddAngularRunningDim",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "DisplayAsChain",
+        "type": "System.Boolean",
+        "description": "True to chain the angular dimensions together, false to not"
+      },
+      {
+        "name": "RunBidirectionally",
+        "type": "System.Boolean",
+        "description": "True if each angular dimension runs in a direction closest to the baseline, false if all angular dimensions run in the same direction (see Remarks )"
+      },
+      {
+        "name": "ExtensionLineExtendsFromCenterOfSet",
+        "type": "System.Boolean",
+        "description": "True to extend the extension lines from the center of the set of angular running dimensions, false to not"
+      },
+      {
+        "name": "LocX",
+        "type": "System.Double",
+        "description": "X coordinate of baseline dimension (see Remarks )"
+      },
+      {
+        "name": "LocY",
+        "type": "System.Double",
+        "description": "Y coordinate of baseline dimension (see Remarks )"
+      },
+      {
+        "name": "LocZ",
+        "type": "System.Double",
+        "description": "Z coordinate of baseline dimension (see Remarks )"
+      },
+      {
+        "name": "Retval",
+        "type": "System.Int32",
+        "description": "Error as defined by swCreateAngRunDimError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.InsertAngularRunningDim",
+      "IModelDocExtension.AlignRunningDimension",
+      "IModelDocExtension.ReJogRunningDimension"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "angular",
+      "running",
+      "dimensions",
+      "addangularrunningdim",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "add",
+      "dim",
+      "display",
+      "chain",
+      "boolean",
+      "run",
+      "bidirectionally",
+      "line",
+      "extends",
+      "center",
+      "loc",
+      "double",
+      "retval",
+      "int32",
+      "object",
+      "insert",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.AddAngularRunningDim",
+  "description": "Adds the specified angular running dimension for selected entities.",
+  "signature": "System.Object AddAngularRunningDim( \n   System.Boolean\nDisplayAsChain\n,\n   System.Boolean\nRunBidirectionally\n,\n   System.Boolean\nExtensionLineExtendsFromCenterOfSet\n,\n   System.Double\nLocX\n,\n   System.Double\nLocY\n,\n   System.Double\nLocZ\n,\n   out System.Int32\nRetval\n)",
+  "parameters": [
+    {
+      "name": "DisplayAsChain",
+      "type": "System.Boolean",
+      "description": "True to chain the angular dimensions together, false to not"
+    },
+    {
+      "name": "RunBidirectionally",
+      "type": "System.Boolean",
+      "description": "True if each angular dimension runs in a direction closest to the baseline, false if all angular dimensions run in the same direction (see Remarks )"
+    },
+    {
+      "name": "ExtensionLineExtendsFromCenterOfSet",
+      "type": "System.Boolean",
+      "description": "True to extend the extension lines from the center of the set of angular running dimensions, false to not"
+    },
+    {
+      "name": "LocX",
+      "type": "System.Double",
+      "description": "X coordinate of baseline dimension (see Remarks )"
+    },
+    {
+      "name": "LocY",
+      "type": "System.Double",
+      "description": "Y coordinate of baseline dimension (see Remarks )"
+    },
+    {
+      "name": "LocZ",
+      "type": "System.Double",
+      "description": "Z coordinate of baseline dimension (see Remarks )"
+    },
+    {
+      "name": "Retval",
+      "type": "System.Int32",
+      "description": "Error as defined by swCreateAngRunDimError_e"
+    }
+  ],
+  "returns": "Array of IDisplayDimension s",
+  "remarks": "Before calling this method, call\nIModelDocExtension::SelectByID2\nwith Append set to true to select the baseline entity and all entities whose angles from the baseline entity you want to measure and display.\nA vertical line is constructed between [LocX, LocY, LocZ] and the baseline entity. The baseline dimension (0\n\u2070\n) is displayed at [LocX, LocY, LocZ].\nIf RunBidirectionally is...\nThen...\nTrue\nNo angle dimension in the angular running dimension is greater than 180\n\u2070\nfrom the baseline, and each angle is measured from a direction that is closest to the baseline.\nFalse\nThe running direction of all angle dimensions is determined by the first angle dimension added. For example, if the user places the baseline dimension at the top of the part, clicking on a feature to the right of the baseline dimension forces all subsequent angular dimensions to be measured clockwise from the baseline.\nSelections made after this method is called add angular dimensions to the set. When you have finished adding angular dimensions to the set, call\nIModelDoc2::SetPickMode\n.",
+  "examples": [
+    {
+      "title": "Insert Angular Running Dimension (VBA)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (VB.NET)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Angular Running Dimension (C#)",
+      "href": "Set_Properties_of_Angular_Running_Dimension_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.InsertAngularRunningDim",
+    "IModelDocExtension.AlignRunningDimension",
+    "IModelDocExtension.ReJogRunningDimension"
+  ]
+}

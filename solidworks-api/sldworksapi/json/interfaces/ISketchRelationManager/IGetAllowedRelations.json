@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchRelationManager",
+    "member": "IGetAllowedRelations",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "NumEntities",
+        "type": "System.Int32",
+        "description": "Number of entities"
+      },
+      {
+        "name": "EntityArray",
+        "type": "System.Object",
+        "description": "Array of entities"
+      },
+      {
+        "name": "NumAllowedRelations",
+        "type": "System.Int32",
+        "description": "Number of relations valid for the specified entities"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchRelationManager.GetAllowedRelations"
+    ],
+    "keywords": [
+      "relations",
+      "igetallowedrelations",
+      "isketchrelationmanager",
+      "sketch",
+      "relation",
+      "manager",
+      "allowed",
+      "num",
+      "entities",
+      "int32",
+      "entity",
+      "array",
+      "object"
+    ]
+  },
+  "title": "ISketchRelationManager.IGetAllowedRelations",
+  "description": "Gets the types of sketch relations valid for the specified entities.",
+  "signature": "System.Int32 IGetAllowedRelations( \n   System.Int32\nNumEntities\n,\n   ref System.Object\nEntityArray\n,\n   System.Int32\nNumAllowedRelations\n)",
+  "parameters": [
+    {
+      "name": "NumEntities",
+      "type": "System.Int32",
+      "description": "Number of entities"
+    },
+    {
+      "name": "EntityArray",
+      "type": "System.Object",
+      "description": "Array of entities"
+    },
+    {
+      "name": "NumAllowedRelations",
+      "type": "System.Int32",
+      "description": "Number of relations valid for the specified entities"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of sketch relation types valid for the specified entities as defined in swConstraintType_e VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Call\nISketchRelationManager::IGetAllowedRelationsCount\nbefore calling this method to get the value for NumEntities.",
+  "examples": [],
+  "related": [
+    "ISketchRelationManager.GetAllowedRelations"
+  ]
+}

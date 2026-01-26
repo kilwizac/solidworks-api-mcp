@@ -1,0 +1,137 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SketchOffset2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Offset",
+        "type": "System.Double",
+        "description": "Offset value; negative value offsets the sketch entities in the opposite direction"
+      },
+      {
+        "name": "BothDirections",
+        "type": "System.Boolean",
+        "description": "True to offset the sketch entities in both directions, false to offset the sketch entities in one direction"
+      },
+      {
+        "name": "Chain",
+        "type": "System.Boolean",
+        "description": "True to offset the chain of sketch entities, false to offset only the selected sketch entities (see Remarks )"
+      },
+      {
+        "name": "CapEnds",
+        "type": "System.Int32",
+        "description": "Cap the ends as defined by swSkOffsetCapEndType_e"
+      },
+      {
+        "name": "MakeConstruction",
+        "type": "System.Int32",
+        "description": "Convert original and offset sketch entities to construction sketch entities as defined by swSkOffsetMakeConstructionType_e"
+      },
+      {
+        "name": "AddDimensions",
+        "type": "System.Boolean",
+        "description": "True to include the offset distance in the sketch, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "IModelDoc2.SketchOffsetEdges",
+      "IModelDoc2.SketchOffsetEntities2",
+      "IModelDocExtension.SketchOffsetOnSurface"
+    ],
+    "keywords": [
+      "offset",
+      "sketch",
+      "entities",
+      "see",
+      "also",
+      "isketch",
+      "sketchoffset2",
+      "isketchmanager",
+      "manager",
+      "offset2",
+      "double",
+      "both",
+      "directions",
+      "boolean",
+      "chain",
+      "cap",
+      "ends",
+      "int32",
+      "make",
+      "construction",
+      "add",
+      "dimensions",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.SketchOffset2",
+  "description": "Offsets the selected sketch entities.",
+  "signature": "System.Boolean SketchOffset2( \n   System.Double\nOffset\n,\n   System.Boolean\nBothDirections\n,\n   System.Boolean\nChain\n,\n   System.Int32\nCapEnds\n,\n   System.Int32\nMakeConstruction\n,\n   System.Boolean\nAddDimensions\n)",
+  "parameters": [
+    {
+      "name": "Offset",
+      "type": "System.Double",
+      "description": "Offset value; negative value offsets the sketch entities in the opposite direction"
+    },
+    {
+      "name": "BothDirections",
+      "type": "System.Boolean",
+      "description": "True to offset the sketch entities in both directions, false to offset the sketch entities in one direction"
+    },
+    {
+      "name": "Chain",
+      "type": "System.Boolean",
+      "description": "True to offset the chain of sketch entities, false to offset only the selected sketch entities (see Remarks )"
+    },
+    {
+      "name": "CapEnds",
+      "type": "System.Int32",
+      "description": "Cap the ends as defined by swSkOffsetCapEndType_e"
+    },
+    {
+      "name": "MakeConstruction",
+      "type": "System.Int32",
+      "description": "Convert original and offset sketch entities to construction sketch entities as defined by swSkOffsetMakeConstructionType_e"
+    },
+    {
+      "name": "AddDimensions",
+      "type": "System.Boolean",
+      "description": "True to include the offset distance in the sketch, false to not"
+    }
+  ],
+  "returns": "True if the selected sketch entities are offset, false if not",
+  "remarks": "Specifying true for Chain offsets the selected sketch entities and any other sketch entities that belong to the same contour or chain (contiguous geometric entities like edges).",
+  "examples": [
+    {
+      "title": "Offset Sketch (C#)",
+      "href": "Sketch_Offset_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Offset Sketch (VB.NET)",
+      "href": "Sketch_Offset_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Offset Sketch (VBA)",
+      "href": "Sketch_Offset_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.SketchOffsetEdges",
+    "IModelDoc2.SketchOffsetEntities2",
+    "IModelDocExtension.SketchOffsetOnSurface"
+  ]
+}

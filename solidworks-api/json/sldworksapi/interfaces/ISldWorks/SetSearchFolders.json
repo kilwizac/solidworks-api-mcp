@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetSearchFolders",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FolderType",
+        "type": "System.Int32",
+        "description": "The search folder type; the only type currently supported is swDocumentType; for an up-to-date listing, see swSearchFolderTypes_e"
+      },
+      {
+        "name": "Folders",
+        "type": "System.String",
+        "description": "String containing all of the search folders; each search folder should be separated by a semicolon"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDataFolder",
+      "ISldWorks.GetSearchFolders",
+      "ISldWorks.SetMissingReferencePathName"
+    ],
+    "keywords": [
+      "external",
+      "references",
+      "search",
+      "folders",
+      "files",
+      "setsearchfolders",
+      "isldworks",
+      "sld",
+      "works",
+      "folder",
+      "type",
+      "int32",
+      "string",
+      "boolean",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.SetSearchFolders",
+  "description": "Sets the current folder search path as shown in Tools &gt; Options &gt; System Options &gt; File Locations &gt; Show folders for &gt; Referenced Documents.",
+  "signature": "System.Boolean SetSearchFolders( \n   System.Int32\nFolderType\n,\n   System.String\nFolders\n)",
+  "parameters": [
+    {
+      "name": "FolderType",
+      "type": "System.Int32",
+      "description": "The search folder type; the only type currently supported is swDocumentType; for an up-to-date listing, see swSearchFolderTypes_e"
+    },
+    {
+      "name": "Folders",
+      "type": "System.String",
+      "description": "String containing all of the search folders; each search folder should be separated by a semicolon"
+    }
+  ],
+  "returns": "True if the search folders were set, false if not",
+  "remarks": "The search folders are used by SOLIDWORKS based on their order. Folders at the top of the list get searched first and folders at the bottom of the list get searched last.\nThis method does not allow you to incrementally add to the search folders list. Calling this method overwrites the existing search folder settings. If you want to add a folder to the existing search folder list, you must get the current search folder list using\nISldWorks::GetSearchFolders\nand then add your folder string at the appropriate location.\nSearch folder settings are ignored unless\nTools > Options > System Options > External References >\nSearch file locations for external references\nis selected. To get and set\nSearch file locations for external references\nin the SOLIDWORKS API, use\nswUserPreferenceToggle_e\n.swUseFolderSearchRules with\nISldWorks::GetUserPreferenceToggle\nand\nISldWorks::SetUserPreferenceToggle\n, respectively.",
+  "examples": [
+    {
+      "title": "Get and Set Search Folders (VBA)",
+      "href": "Get_and_Set_Search_Folders_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Search Folders (VB.NET)",
+      "href": "Get_and_Set_Search_Folders_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Search Folders (C#)",
+      "href": "Get_and_Set_Search_Folders_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetDataFolder",
+    "ISldWorks.GetSearchFolders",
+    "ISldWorks.SetMissingReferencePathName"
+  ]
+}

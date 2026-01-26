@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "ReloadTemplate",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "KeepNoteChanges",
+        "type": "System.Boolean",
+        "description": "True to keep note modifications made to the sheet format and reload all other elements from the original sheet format template, false to reload all elements from the original sheet format template and discard any note modifications made to the sheet format"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IDrawingDoc.EditTemplate",
+      "ISheet.SaveFormat"
+    ],
+    "keywords": [
+      "templates",
+      "sheets",
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "format",
+      "drawing",
+      "reloadtemplate",
+      "reload",
+      "template",
+      "keep",
+      "note",
+      "changes",
+      "boolean",
+      "int32",
+      "modify",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISheet.ReloadTemplate",
+  "description": "Reloads the sheet format from the original sheet format template.",
+  "signature": "System.Int32 ReloadTemplate( \n   System.Boolean\nKeepNoteChanges\n)",
+  "parameters": [
+    {
+      "name": "KeepNoteChanges",
+      "type": "System.Boolean",
+      "description": "True to keep note modifications made to the sheet format and reload all other elements from the original sheet format template, false to reload all elements from the original sheet format template and discard any note modifications made to the sheet format"
+    }
+  ],
+  "returns": "Status as defined in swReloadTemplateResult_e",
+  "remarks": "If new notes are added or existing notes modified or deleted on the sheet format, then specifying true for KeepNoteChanges:\nadds the new notes to the sheet format template, but does not duplicate the new notes on the sheet format.\nrestores any deleted notes from the sheet format template on the sheet format.\nduplicates all other notes in their original position from the sheet format template on the sheet format.",
+  "examples": [
+    {
+      "title": "Modify and Reload Sheet Format Template (C#)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VB.NET)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VBA)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.EditTemplate",
+    "ISheet.SaveFormat"
+  ]
+}

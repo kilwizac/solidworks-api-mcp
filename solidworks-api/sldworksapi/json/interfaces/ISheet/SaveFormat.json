@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "SaveFormat",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Path and file name to which to save the sheet format (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "file-io"
+    ],
+    "related": [
+      "IDrawingDoc.EditTemplate",
+      "ISheet.ReloadTemplate"
+    ],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "format",
+      "saveformat",
+      "save",
+      "file",
+      "name",
+      "string",
+      "boolean",
+      "modify",
+      "reload",
+      "template",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISheet.SaveFormat",
+  "description": "Saves the sheet format in the specified file.",
+  "signature": "System.Boolean SaveFormat( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Path and file name to which to save the sheet format (see Remarks )"
+    }
+  ],
+  "returns": "True if the sheet format is saved to the specified file, false if not",
+  "remarks": "You must specify the path, file name, and filename extension to which to save the sheet format. Use .\nslddrt\nfor the filename extension.\nBefore calling this method, use\nIDrawingDoc::ActivateSheet\nto make the sheet active.",
+  "examples": [
+    {
+      "title": "Modify and Reload Sheet Format Template (C#)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VB.NET)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VBA)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.EditTemplate",
+    "ISheet.ReloadTemplate"
+  ]
+}

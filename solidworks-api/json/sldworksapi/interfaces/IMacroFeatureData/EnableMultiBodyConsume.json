@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMacroFeatureData",
+    "member": "EnableMultiBodyConsume",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IMacroFeatureData.EditBodies",
+      "IMacroFeatureData.GetEditBodiesCount",
+      "IMacroFeatureData.IGetEditBodies"
+    ],
+    "keywords": [
+      "multibody",
+      "macro",
+      "feature",
+      "enablemultibodyconsume",
+      "imacrofeaturedata",
+      "data",
+      "enable",
+      "multi",
+      "body",
+      "consume",
+      "boolean",
+      "create",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IMacroFeatureData.EnableMultiBodyConsume",
+  "description": "Gets or sets whether to replace the original edit body with multiple solid bodies created during regeneration of a multibody macro feature.",
+  "signature": "System.Boolean EnableMultiBodyConsume {get; set;}",
+  "parameters": [],
+  "returns": "True to replace the original edit body with multiple solid bodies, false to not",
+  "remarks": "This method was designed to work specifically with macro features that generate multiple solid bodies. The\nrebuild\nfunction of a macro feature creates or regenerates the macro feature in the FeatureManager design tree. By default, if the rebuild function creates multiple solid bodies, it appends the new solid bodies to the original edit body in the Solid Bodies folder of the FeatureManager design tree.\nAlways set this property to true in the rebuild function when working with macro features involving multiple input or output bodies.",
+  "examples": [
+    {
+      "title": "Create Multibody Macro Feature (VBA)",
+      "href": "Create_Multibody_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (VB.NET)",
+      "href": "Create_Multibody_Macro_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Multibody Macro Feature (C#)",
+      "href": "Create_Multibody_Macro_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMacroFeatureData.EditBodies",
+    "IMacroFeatureData.GetEditBodiesCount",
+    "IMacroFeatureData.IGetEditBodies"
+  ]
+}

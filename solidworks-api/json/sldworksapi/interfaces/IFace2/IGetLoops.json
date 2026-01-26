@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFace2",
+    "member": "IGetLoops",
+    "returns": "Loop2",
+    "parameters": [
+      {
+        "name": "NumberOfLoops",
+        "type": "System.Int32",
+        "description": "Number of loops on the face"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IFace2.GetFirstLoop",
+      "IFace2.GetLoops",
+      "IFace2.IGetFirstLoop",
+      "ILoop2.GetNext",
+      "ILoop2.IGetNext"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "loops",
+      "iloop2",
+      "faces",
+      "igetloops",
+      "face2",
+      "number",
+      "int32",
+      "loop2"
+    ]
+  },
+  "title": "IFace2.IGetLoops",
+  "description": "Gets all of the loops on this face.",
+  "signature": "Loop2 IGetLoops( \n   System.Int32\nNumberOfLoops\n)",
+  "parameters": [
+    {
+      "name": "NumberOfLoops",
+      "type": "System.Int32",
+      "description": "Number of loops on the face"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of all of the loops on the face (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Before calling this method, call\nIFace2::GetLoopCount\nto get NumberOfLoops.\nIf a face has one or more holes on it, then this method gets a loop for the face and a loop for every hole on the face.",
+  "examples": [],
+  "related": [
+    "IFace2.GetFirstLoop",
+    "IFace2.GetLoops",
+    "IFace2.IGetFirstLoop",
+    "ILoop2.GetNext",
+    "ILoop2.IGetNext"
+  ]
+}

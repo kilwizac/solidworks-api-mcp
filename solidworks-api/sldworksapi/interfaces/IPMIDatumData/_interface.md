@@ -1,0 +1,24 @@
+---
+type: interface
+interface: IPMIDatumData
+inherits: null
+description: Allows access to the Product and Manufacturing Information (PMI) for a datum annotation in a STEP 242 model.
+member_count: 3
+docset: sldworksapi
+categories:
+  - dimensions
+common_members:
+  - GetDatumFeature
+  - GetDatumTarget
+  - GetDatumType
+---
+
+# IPMIDatumData
+
+Allows access to the Product and Manufacturing Information (PMI) for a datum annotation in a STEP 242 model.
+
+## Common Members
+
+- `GetDatumFeature`
+- `GetDatumTarget`
+- `GetDatumType`

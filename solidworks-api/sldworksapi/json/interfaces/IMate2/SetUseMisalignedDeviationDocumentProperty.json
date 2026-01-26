@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMate2",
+    "member": "SetUseMisalignedDeviationDocumentProperty",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "UseDocumentProperty",
+        "type": "System.Boolean",
+        "description": "True to use the document property value for maximum misalignment deviation, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IMate2.GetUseMisalignedDeviationDocumentProperty",
+      "IMate2.SetMaximumMisalignedDeviation"
+    ],
+    "keywords": [
+      "mates",
+      "see",
+      "also",
+      "imate2",
+      "misaligned",
+      "concentric",
+      "maximum",
+      "deviation",
+      "setusemisaligneddeviationdocumentproperty",
+      "mate2",
+      "use",
+      "document",
+      "boolean",
+      "void"
+    ],
+    "readonly": null
+  },
+  "title": "IMate2.SetUseMisalignedDeviationDocumentProperty",
+  "description": "Sets whether to use the document property value for the maximum misalignment deviation for the misaligned concentric mate.",
+  "signature": "void SetUseMisalignedDeviationDocumentProperty( \n   System.Boolean\nUseDocumentProperty\n)",
+  "parameters": [
+    {
+      "name": "UseDocumentProperty",
+      "type": "System.Boolean",
+      "description": "True to use the document property value for maximum misalignment deviation, false to not"
+    }
+  ],
+  "returns": "",
+  "remarks": "If\nIMate2::GetCurrentMisalignedDeviation\nis greater than the document property value of the maximum misalignment deviation, then the mate fails to solve.\nThe current deviation and the maximum deviation are cumulative across both concentric mates in the Hole Set. For example, if\nIMate2::GetConcentricAlignmentType\nis set to\nswConcentricAlignmentType_e\n.swConcentricAlignSymmetric, the deviation from both holes is summed before comparison with the maximum deviation.",
+  "examples": [],
+  "related": [
+    "IMate2.GetUseMisalignedDeviationDocumentProperty",
+    "IMate2.SetMaximumMisalignedDeviation"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "SetEyePoint",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Eyept",
+        "type": "System.Object",
+        "description": "Array of 3 doubles describing the eye position in screen space"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.AddPerspective",
+      "IModelView.GetEyePoint",
+      "IModelView.GetIsoPlaneDistance",
+      "IModelView.GetViewPlaneDistance",
+      "IModelView.HasPerspective",
+      "IModelView.IGetEyePoint",
+      "IModelView.ISetEyePoint",
+      "IModelView.RemovePerspective",
+      "IModelView.Scale2"
+    ],
+    "keywords": [
+      "perspective",
+      "model",
+      "views",
+      "seteyepoint",
+      "imodelview",
+      "view",
+      "eye",
+      "point",
+      "eyept",
+      "object",
+      "boolean"
+    ]
+  },
+  "title": "IModelView.SetEyePoint",
+  "description": "Sets the eye position for perspective viewing.",
+  "signature": "System.Boolean SetEyePoint( \n   System.Object\nEyept\n)",
+  "parameters": [
+    {
+      "name": "Eyept",
+      "type": "System.Object",
+      "description": "Array of 3 doubles describing the eye position in screen space"
+    }
+  ],
+  "returns": "True if the eye point is set successfully, false if not",
+  "remarks": "The values are returned in pixels and are the location of the eye point relative to the screen-space origin (upper-left corner of window). The Z value, in pixels, reflects the distance from the eye point to the object center. These values will be affected by the view scale.\nTo use these values, you should apply them after you have obtained the current view orientation matrix using\nIModelView::Transform\n.\nThe Z value typically are close to\n[(\nIModelView::GetViewPlaneDistance\n/ (\"Object Sizes Away\")) * (\"Object Sizes Away\" + 0.5) ]",
+  "examples": [],
+  "related": [
+    "IModelView.AddPerspective",
+    "IModelView.GetEyePoint",
+    "IModelView.GetIsoPlaneDistance",
+    "IModelView.GetViewPlaneDistance",
+    "IModelView.HasPerspective",
+    "IModelView.IGetEyePoint",
+    "IModelView.ISetEyePoint",
+    "IModelView.RemovePerspective",
+    "IModelView.Scale2"
+  ]
+}

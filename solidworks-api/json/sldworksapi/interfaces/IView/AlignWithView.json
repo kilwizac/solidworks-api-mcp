@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "AlignWithView",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "AlignType",
+        "type": "System.Int32",
+        "description": "Type of alignment to set as defined by swAlignViewTypes_e"
+      },
+      {
+        "name": "BaseView",
+        "type": "View",
+        "description": "View with which to align, if aligning with another view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.AlignDrawingView",
+      "IView.GetAlignment",
+      "IView.RemoveAlignment",
+      "IView.UseDefaultAlignment"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "alignment",
+      "view",
+      "alignwithview",
+      "align",
+      "type",
+      "int32",
+      "base",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IView.AlignWithView",
+  "description": "Sets view alignment.",
+  "signature": "System.Boolean AlignWithView( \n   System.Int32\nAlignType\n,\n   View\nBaseView\n)",
+  "parameters": [
+    {
+      "name": "AlignType",
+      "type": "System.Int32",
+      "description": "Type of alignment to set as defined by swAlignViewTypes_e"
+    },
+    {
+      "name": "BaseView",
+      "type": "View",
+      "description": "View with which to align, if aligning with another view"
+    }
+  ],
+  "returns": "True if view alignment is set, false if not",
+  "remarks": "AlignType tells how to align this view.\nIf AlignType is set to...\nThen BaseView...\nswAlignViewHorizontalCenter\nmust be specified as the view with which to align.\nswAlignViewVerticalCenter\nmust be specified as the view with which to align.\nswAlignViewHorizontalOrigin\nmust be specified as the view with which to align.\nswAlignViewVerticalOrigin\nmust be specified as the view with which to align.\nswNoViewAlignment\nis ignored.\nswDefaultViewAlignment\nis ignored.",
+  "examples": [
+    {
+      "title": "Align Drawing Views (C#)",
+      "href": "Align_Drawing_Views_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Align Drawing Views (VB.NET)",
+      "href": "Align_Drawing_Views_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Align Drawing Views (VBA)",
+      "href": "Align_Drawing_Views_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.AlignDrawingView",
+    "IView.GetAlignment",
+    "IView.RemoveAlignment",
+    "IView.UseDefaultAlignment"
+  ]
+}

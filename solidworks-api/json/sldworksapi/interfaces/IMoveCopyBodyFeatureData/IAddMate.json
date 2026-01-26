@@ -1,0 +1,131 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMoveCopyBodyFeatureData",
+    "member": "IAddMate",
+    "returns": "Mate2",
+    "parameters": [
+      {
+        "name": "Nsize",
+        "type": "System.Int32",
+        "description": "Number of entities to use to create a mate"
+      },
+      {
+        "name": "MateEntArr",
+        "type": "System.Object",
+        "description": "Array of entities to sue to create a mate (see Remarks )"
+      },
+      {
+        "name": "MateTypeFromEnum",
+        "type": "System.Int32",
+        "description": "Type of mate as defined in swMateType_e"
+      },
+      {
+        "name": "AlignFromEnum",
+        "type": "System.Int32",
+        "description": "Type of alignment as defined in swMateAlign_e"
+      },
+      {
+        "name": "Distance",
+        "type": "System.Double",
+        "description": "Distance to use with distance or limit mates"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle to use with angle mates"
+      },
+      {
+        "name": "ErrorStatus",
+        "type": "System.Int32",
+        "description": "Success or error as defined by swAddMateError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IMoveCopyBodyFeatureData.AddMate"
+    ],
+    "keywords": [
+      "mates",
+      "see",
+      "also",
+      "imate2",
+      "multibody",
+      "parts",
+      "iaddmate",
+      "imovecopybodyfeaturedata",
+      "move",
+      "copy",
+      "body",
+      "feature",
+      "data",
+      "add",
+      "mate",
+      "nsize",
+      "int32",
+      "ent",
+      "arr",
+      "object",
+      "type",
+      "align",
+      "distance",
+      "double",
+      "angle",
+      "error",
+      "status",
+      "mate2"
+    ]
+  },
+  "title": "IMoveCopyBodyFeatureData.IAddMate",
+  "description": "Adds a mate to the feature.",
+  "signature": "Mate2 IAddMate( \n   System.Int32\nNsize\n,\n   ref System.Object\nMateEntArr\n,\n   System.Int32\nMateTypeFromEnum\n,\n   System.Int32\nAlignFromEnum\n,\n   System.Double\nDistance\n,\n   System.Double\nAngle\n,\n   out System.Int32\nErrorStatus\n)",
+  "parameters": [
+    {
+      "name": "Nsize",
+      "type": "System.Int32",
+      "description": "Number of entities to use to create a mate"
+    },
+    {
+      "name": "MateEntArr",
+      "type": "System.Object",
+      "description": "Array of entities to sue to create a mate (see Remarks )"
+    },
+    {
+      "name": "MateTypeFromEnum",
+      "type": "System.Int32",
+      "description": "Type of mate as defined in swMateType_e"
+    },
+    {
+      "name": "AlignFromEnum",
+      "type": "System.Int32",
+      "description": "Type of alignment as defined in swMateAlign_e"
+    },
+    {
+      "name": "Distance",
+      "type": "System.Double",
+      "description": "Distance to use with distance or limit mates"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle to use with angle mates"
+    },
+    {
+      "name": "ErrorStatus",
+      "type": "System.Int32",
+      "description": "Success or error as defined by swAddMateError_e"
+    }
+  ],
+  "returns": "Mate",
+  "remarks": "You can specify MateEntArr with either an array of mate entities or null. If you specify null, then before calling this method, you must call\nIModelDocExtension::SelectByID2\nwith a selection mark of 1 to select each mate entity.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IMoveCopyBodyFeatureData.AddMate"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetMultipleFilenamesPrompt",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.Object",
+        "description": "Array of filenames"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.SetNewFilename",
+      "ISldWorks.SetPromptFilename"
+    ],
+    "keywords": [
+      "document",
+      "open",
+      "files",
+      "setmultiplefilenamesprompt",
+      "isldworks",
+      "sld",
+      "works",
+      "multiple",
+      "filenames",
+      "prompt",
+      "file",
+      "name",
+      "object",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.SetMultipleFilenamesPrompt",
+  "description": "Sets the new filenames to open in response to the ISldWorks PromptForMultipleFileNamesNotify event.",
+  "signature": "void SetMultipleFilenamesPrompt( \n   System.Object\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.Object",
+      "description": "Array of filenames"
+    }
+  ],
+  "returns": "",
+  "remarks": "The filenames specified are only used if the SOLIDWORKS\nPromptForMultipleFileNamesNotify\nevent returns S_FALSE. This implies that you cannot specify initial filenames for SOLIDWORKS to use in the standard dialog. Instead, you must provide your own file dialog and return the filenames after the user selects them.\nGuidelines for using this method when the cause argument of the SOLIDWORKS PromptForMultipleFileNamesNotify event is set to\nswSaveVirtualComponentExternally\n:\nLength of the Filename argument array must be equal to the length of the suggestedFileNames argument array passed into ISldWorks::SetMultipleFilenamesPrompt. If there is a mismatch, all virtual components will be saved internal to the assembly with the suggested file name passed by the SOLIDWORKS PromptForMultipleFileNamesNotify event .\nSupplying a full path and file name will save a virtual component external to the assembly using that path and file name.\nSupplying only a file name (i.e., no path) will save the virtual component internal to the assembly with the suggested file name passed by the SOLIDWORKS PromptForMultipleFileNamesNotify event .\nThis method cannot be used to change the name of an internally saved virtual component.\nSupplying an empty string will save the virtual component external to the assembly and in the same folder as the assembly with the suggested file name passed by the SOLIDWORKS PromptForMultipleFileNamesNotify event.\nSupplying an invalid path and file name or insufficient access rights will save the virtual component internal to the assembly with the suggested file name passed by the SOLIDWORKS PromptForMultipleFileNamesNotify event.\nInsufficient access rights to the path and file name will save the virtual component internal to the assembly with the suggested file name passed by the SOLIDWORKS PromptForMultipleFileNamesNotify event.",
+  "examples": [],
+  "related": [
+    "ISldWorks.SetNewFilename",
+    "ISldWorks.SetPromptFilename"
+  ]
+}

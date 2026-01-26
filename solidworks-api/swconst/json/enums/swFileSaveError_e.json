@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFileSaveError_e",
+    "description": "File save errors. Bitmask.",
+    "member_count": 15,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFileSaveError_e",
+  "description": "File save errors. Bitmask.",
+  "values": [
+    {
+      "member": "swFileLockError",
+      "value": "16",
+      "description": "or 0x10"
+    },
+    {
+      "member": "swFileNameContainsAtSign",
+      "value": "8",
+      "description": "or 0x8 = File name cannot contain the at symbol (@)"
+    },
+    {
+      "member": "swFileNameEmpty",
+      "value": "4",
+      "description": "or 0x4 = File name cannot be empty"
+    },
+    {
+      "member": "swFileSaveAsBadEDrawingsVersion",
+      "value": "1024",
+      "description": "or 0x400"
+    },
+    {
+      "member": "swFileSaveAsDetachedDrawingsNotSupported",
+      "value": "16384",
+      "description": "or 0x4000 = Detached drawing save as options is not supported"
+    },
+    {
+      "member": "swFileSaveAsDoNotOverwrite",
+      "value": "128",
+      "description": "or 0x80 = Do not overwrite an existing file"
+    },
+    {
+      "member": "swFileSaveAsInvalidFileExtension",
+      "value": "256",
+      "description": "or 0x100 = File name extension does not match the SOLIDWORKS document type"
+    },
+    {
+      "member": "swFileSaveAsNameExceedsMaxPathLength",
+      "value": "2048",
+      "description": "or 0x800 = File name cannot exceed 255 characters"
+    },
+    {
+      "member": "swFileSaveAsNoSelection",
+      "value": "512",
+      "description": "or 0x200 = Save the selected bodies in a part document. Valid option for IPartDoc::SaveToFile2 ; however, not a valid option for IModelDocExtension::SaveAs"
+    },
+    {
+      "member": "swFileSaveAsNotSupported",
+      "value": "4096",
+      "description": "or 0x1000 = Save As operation: is not supported was executed is such a way that the resulting file might not be complete, possibly because SOLIDWORKS is hidden; if the error persists after setting SOLIDWORKS to visible and re-attempting the Save As operation, contact SOLIDWORKS API support ."
+    },
+    {
+      "member": "swFileSaveFormatNotAvailable",
+      "value": "32",
+      "description": "or 0x20 = Save As file type is not valid"
+    },
+    {
+      "member": "swFileSaveRequiresSavingReferences",
+      "value": "8192",
+      "description": "or 0x2000 = Saving an assembly with renamed components requires saving the references"
+    },
+    {
+      "member": "swFileSaveWithRebuildError",
+      "value": "",
+      "description": "Obsolete = See swFileSaveWarning_e"
+    },
+    {
+      "member": "swGenericSaveError",
+      "value": "1",
+      "description": "or 0x1"
+    },
+    {
+      "member": "swReadOnlySaveError",
+      "value": "2",
+      "description": "or 0x2"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IOneBendFeatureData",
+    "member": "FlatPatternSketchSegments",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "sketches"
+    ],
+    "related": [
+      "IOneBendFeatureData.GetFlatPatternSketchSegmentCount",
+      "IOneBendFeatureData.IFlatPatternSketchSegments"
+    ],
+    "keywords": [
+      "flatpatternsketchsegments",
+      "ionebendfeaturedata",
+      "one",
+      "bend",
+      "feature",
+      "data",
+      "flat",
+      "pattern",
+      "sketch",
+      "segments",
+      "object",
+      "names",
+      "vba",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IOneBendFeatureData.FlatPatternSketchSegments",
+  "description": "Obsolete. Superseded by IOneBendFeatureData::FlatPatternSketchSegments2.",
+  "signature": "System.Object FlatPatternSketchSegments {get;}",
+  "parameters": [],
+  "returns": "Array of ISketchSegment s",
+  "remarks": "The sketch segments are calculated in the flattened model. Before calling this method, flatten the model either by un-suppressing the flat pattern in the FeatureManager design tree or by calling\nIModelDoc2::SetBendState\nto set BendState to\nswSMBendState_e\n.swSMBendStateFlattened.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "Get Names of Sketch Segments (VBA)",
+      "href": "Get_Names_of_Sketch_Segments_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Sketch Segments (VB.NET)",
+      "href": "Get_Names_of_Sketch_Segments_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Sketch Segments (C#)",
+      "href": "Get_Names_of_Sketch_Segments_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IOneBendFeatureData.GetFlatPatternSketchSegmentCount",
+    "IOneBendFeatureData.IFlatPatternSketchSegments"
+  ]
+}

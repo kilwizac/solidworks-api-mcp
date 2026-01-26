@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IWeldmentBeadFeatureData",
+    "member": "SetVirtualEdges",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Side",
+        "type": "System.Int32",
+        "description": "Side as defined in swWeldBeadSide_e"
+      },
+      {
+        "name": "EdgesIn",
+        "type": "System.Object",
+        "description": "Array of edges to which to apply this weld bead"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IWeldmentBeadFeatureData.GetVirtualEdges",
+      "IWeldmentBeadFeatureData.GetVirtualEdgesCount",
+      "IWeldmentBeadFeatureData.IGetVirtualEdges",
+      "IWeldmentBeadFeatureData.ISetFaces",
+      "IWeldmentBeadFeatureData.ISetVirtualEdges"
+    ],
+    "keywords": [
+      "setvirtualedges",
+      "iweldmentbeadfeaturedata",
+      "weldment",
+      "bead",
+      "feature",
+      "data",
+      "virtual",
+      "edges",
+      "side",
+      "int32",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IWeldmentBeadFeatureData.SetVirtualEdges",
+  "description": "Sets the edges to which to apply this weld bead.",
+  "signature": "void SetVirtualEdges( \n   System.Int32\nSide\n,\n   System.Object\nEdgesIn\n)",
+  "parameters": [
+    {
+      "name": "Side",
+      "type": "System.Int32",
+      "description": "Side as defined in swWeldBeadSide_e"
+    },
+    {
+      "name": "EdgesIn",
+      "type": "System.Object",
+      "description": "Array of edges to which to apply this weld bead"
+    }
+  ],
+  "returns": "",
+  "remarks": "After using\nIWeldmentBeadFeatureData::SetFaces\n, use\nIWeldmentBeadFeatureData::GetVirtualEdges\nto get the new intersections. Then use IWeldmentBeadFeatureData::SetVirtualEdges to specify the edges to which you want the weld bead\napplied. By default, IWeldmentBeadFeatureData::SetFaces creates the bead on all virtual edges. IWeldmentBeadFeatureData::SetVirtualEdges lets you exclude any of these edges.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "IWeldmentBeadFeatureData.GetVirtualEdges",
+    "IWeldmentBeadFeatureData.GetVirtualEdgesCount",
+    "IWeldmentBeadFeatureData.IGetVirtualEdges",
+    "IWeldmentBeadFeatureData.ISetFaces",
+    "IWeldmentBeadFeatureData.ISetVirtualEdges"
+  ]
+}

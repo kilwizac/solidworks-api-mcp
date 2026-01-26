@@ -1,0 +1,798 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>CreateBrepBody3 Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBrepBody3" />
+    <meta name="Description" content="Creates a temporary body from BREP (boundary representation) data." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModeler.CreateBrepBody3" />
+    <meta name="Microsoft.Help.Keywords" content="Bodies (see also IBody2 Interface), BREP" />
+    <meta name="Microsoft.Help.Keywords" content="BREP bodies" />
+    <meta name="Microsoft.Help.Keywords" content="CreateBrepBody3 Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                CreateBrepBody3 Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a> : CreateBrepBody3 Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="TypePopupContent" class="i-popup-content">
+        Type of body to create as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swTopology_e.html">swTopology_e</a>
+    </div>
+
+    <div id="NTopologiesPopupContent" class="i-popup-content">
+        Number of topological entities in the topologies argument
+    </div>
+
+    <div id="TopologiesPopupContent" class="i-popup-content">
+        Array of topologies (see <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swTopoEntity_e.html">swTopoEntity_e</a>), one for each topological entity
+    </div>
+
+    <div id="EdgeToleranceArrayPopupContent" class="i-popup-content">
+        Array of tolerances for edges
+    </div>
+
+    <div id="VertexToleranceArrayPopupContent" class="i-popup-content">
+        Array of tolerances for vertices
+    </div>
+
+    <div id="PointArrayPopupContent" class="i-popup-content">
+        Array of coordinates of vertices (geometry for vertices)
+    </div>
+
+    <div id="CurveArray1PopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a> (geometry for edges; 3D curve) and coedges (geometry for coedges; 2D curve)
+    </div>
+
+    <div id="CurveSurfaceArray1PopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> that lie on CurveArray1 2D curve
+    </div>
+
+    <div id="CurveArray2PopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a>&#160;(geometry for edges; 3D curve) and array of coedges (geometry for coedges; 2D curve)
+    </div>
+
+    <div id="CurveSurfaceArray2PopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> that on lie on CurveArray2 2D curve
+    </div>
+
+    <div id="SurfaceArrayPopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> (geometry for faces)
+    </div>
+
+    <div id="NRelationsPopupContent" class="i-popup-content">
+        Number of 1-to-1 relationships between topological entities
+    </div>
+
+    <div id="ParentsPopupContent" class="i-popup-content">
+        Array of parents, one in each relationship
+    </div>
+
+    <div id="ChildrenPopupContent" class="i-popup-content">
+        Array of parents, one in each relationship
+    </div>
+
+    <div id="SensesPopupContent" class="i-popup-content">
+        Array of senses in which child is used by parent in the relationship
+    </div>
+
+    <div id="OptionPopupContent" class="i-popup-content">
+        <ul>
+            <li>0 = Default</li>
+        </ul>
+
+        <p class="apiBulletLeftJustified">1 = Repair and simplify body</p>
+
+        <p class="apiBulletLeftJustified">2 = Simplify body</p>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates a temporary body from BREP (boundary representation) data.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function CreateBrepBody3( _
+   ByVal <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="NTopologiesPopupLink" data-popup-contentsource="#NTopologiesPopupContent" data-popup-showevent="click mouseenter">NTopologies</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="TopologiesPopupLink" data-popup-contentsource="#TopologiesPopupContent" data-popup-showevent="click mouseenter">Topologies</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="EdgeToleranceArrayPopupLink" data-popup-contentsource="#EdgeToleranceArrayPopupContent" data-popup-showevent="click mouseenter">EdgeToleranceArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="VertexToleranceArrayPopupLink" data-popup-contentsource="#VertexToleranceArrayPopupContent" data-popup-showevent="click mouseenter">VertexToleranceArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="PointArrayPopupLink" data-popup-contentsource="#PointArrayPopupContent" data-popup-showevent="click mouseenter">PointArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="CurveArray1PopupLink" data-popup-contentsource="#CurveArray1PopupContent" data-popup-showevent="click mouseenter">CurveArray1</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="CurveSurfaceArray1PopupLink" data-popup-contentsource="#CurveSurfaceArray1PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray1</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="CurveArray2PopupLink" data-popup-contentsource="#CurveArray2PopupContent" data-popup-showevent="click mouseenter">CurveArray2</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="CurveSurfaceArray2PopupLink" data-popup-contentsource="#CurveSurfaceArray2PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray2</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SurfaceArrayPopupLink" data-popup-contentsource="#SurfaceArrayPopupContent" data-popup-showevent="click mouseenter">SurfaceArray</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="NRelationsPopupLink" data-popup-contentsource="#NRelationsPopupContent" data-popup-showevent="click mouseenter">NRelations</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ParentsPopupLink" data-popup-contentsource="#ParentsPopupContent" data-popup-showevent="click mouseenter">Parents</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="ChildrenPopupLink" data-popup-contentsource="#ChildrenPopupContent" data-popup-showevent="click mouseenter">Children</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SensesPopupLink" data-popup-contentsource="#SensesPopupContent" data-popup-showevent="click mouseenter">Senses</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="OptionPopupLink" data-popup-contentsource="#OptionPopupContent" data-popup-showevent="click mouseenter">Option</a></i> As System.Integer _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler</a>
+Dim Type As System.Integer
+Dim NTopologies As System.Integer
+Dim Topologies As System.Object
+Dim EdgeToleranceArray As System.Object
+Dim VertexToleranceArray As System.Object
+Dim PointArray As System.Object
+Dim CurveArray1 As System.Object
+Dim CurveSurfaceArray1 As System.Object
+Dim CurveArray2 As System.Object
+Dim CurveSurfaceArray2 As System.Object
+Dim SurfaceArray As System.Object
+Dim NRelations As System.Integer
+Dim Parents As System.Object
+Dim Children As System.Object
+Dim Senses As System.Object
+Dim Option As System.Integer
+Dim value As System.Object
+ 
+value = instance.CreateBrepBody3(Type, NTopologies, Topologies, EdgeToleranceArray, VertexToleranceArray, PointArray, CurveArray1, CurveSurfaceArray1, CurveArray2, CurveSurfaceArray2, SurfaceArray, NRelations, Parents, Children, Senses, Option)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object CreateBrepBody3( 
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="NTopologiesPopupLink" data-popup-contentsource="#NTopologiesPopupContent" data-popup-showevent="click mouseenter">NTopologies</a></i>,
+   System.object <i><a class="i-popup-link" id="TopologiesPopupLink" data-popup-contentsource="#TopologiesPopupContent" data-popup-showevent="click mouseenter">Topologies</a></i>,
+   System.object <i><a class="i-popup-link" id="EdgeToleranceArrayPopupLink" data-popup-contentsource="#EdgeToleranceArrayPopupContent" data-popup-showevent="click mouseenter">EdgeToleranceArray</a></i>,
+   System.object <i><a class="i-popup-link" id="VertexToleranceArrayPopupLink" data-popup-contentsource="#VertexToleranceArrayPopupContent" data-popup-showevent="click mouseenter">VertexToleranceArray</a></i>,
+   System.object <i><a class="i-popup-link" id="PointArrayPopupLink" data-popup-contentsource="#PointArrayPopupContent" data-popup-showevent="click mouseenter">PointArray</a></i>,
+   System.object <i><a class="i-popup-link" id="CurveArray1PopupLink" data-popup-contentsource="#CurveArray1PopupContent" data-popup-showevent="click mouseenter">CurveArray1</a></i>,
+   System.object <i><a class="i-popup-link" id="CurveSurfaceArray1PopupLink" data-popup-contentsource="#CurveSurfaceArray1PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray1</a></i>,
+   System.object <i><a class="i-popup-link" id="CurveArray2PopupLink" data-popup-contentsource="#CurveArray2PopupContent" data-popup-showevent="click mouseenter">CurveArray2</a></i>,
+   System.object <i><a class="i-popup-link" id="CurveSurfaceArray2PopupLink" data-popup-contentsource="#CurveSurfaceArray2PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray2</a></i>,
+   System.object <i><a class="i-popup-link" id="SurfaceArrayPopupLink" data-popup-contentsource="#SurfaceArrayPopupContent" data-popup-showevent="click mouseenter">SurfaceArray</a></i>,
+   System.int <i><a class="i-popup-link" id="NRelationsPopupLink" data-popup-contentsource="#NRelationsPopupContent" data-popup-showevent="click mouseenter">NRelations</a></i>,
+   System.object <i><a class="i-popup-link" id="ParentsPopupLink" data-popup-contentsource="#ParentsPopupContent" data-popup-showevent="click mouseenter">Parents</a></i>,
+   System.object <i><a class="i-popup-link" id="ChildrenPopupLink" data-popup-contentsource="#ChildrenPopupContent" data-popup-showevent="click mouseenter">Children</a></i>,
+   System.object <i><a class="i-popup-link" id="SensesPopupLink" data-popup-contentsource="#SensesPopupContent" data-popup-showevent="click mouseenter">Senses</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionPopupLink" data-popup-contentsource="#OptionPopupContent" data-popup-showevent="click mouseenter">Option</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ CreateBrepBody3( 
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.int <i><a class="i-popup-link" id="NTopologiesPopupLink" data-popup-contentsource="#NTopologiesPopupContent" data-popup-showevent="click mouseenter">NTopologies</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="TopologiesPopupLink" data-popup-contentsource="#TopologiesPopupContent" data-popup-showevent="click mouseenter">Topologies</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="EdgeToleranceArrayPopupLink" data-popup-contentsource="#EdgeToleranceArrayPopupContent" data-popup-showevent="click mouseenter">EdgeToleranceArray</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="VertexToleranceArrayPopupLink" data-popup-contentsource="#VertexToleranceArrayPopupContent" data-popup-showevent="click mouseenter">VertexToleranceArray</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="PointArrayPopupLink" data-popup-contentsource="#PointArrayPopupContent" data-popup-showevent="click mouseenter">PointArray</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="CurveArray1PopupLink" data-popup-contentsource="#CurveArray1PopupContent" data-popup-showevent="click mouseenter">CurveArray1</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="CurveSurfaceArray1PopupLink" data-popup-contentsource="#CurveSurfaceArray1PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray1</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="CurveArray2PopupLink" data-popup-contentsource="#CurveArray2PopupContent" data-popup-showevent="click mouseenter">CurveArray2</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="CurveSurfaceArray2PopupLink" data-popup-contentsource="#CurveSurfaceArray2PopupContent" data-popup-showevent="click mouseenter">CurveSurfaceArray2</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="SurfaceArrayPopupLink" data-popup-contentsource="#SurfaceArrayPopupContent" data-popup-showevent="click mouseenter">SurfaceArray</a></i>,
+   System.int <i><a class="i-popup-link" id="NRelationsPopupLink" data-popup-contentsource="#NRelationsPopupContent" data-popup-showevent="click mouseenter">NRelations</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ParentsPopupLink" data-popup-contentsource="#ParentsPopupContent" data-popup-showevent="click mouseenter">Parents</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ChildrenPopupLink" data-popup-contentsource="#ChildrenPopupContent" data-popup-showevent="click mouseenter">Children</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="SensesPopupLink" data-popup-contentsource="#SensesPopupContent" data-popup-showevent="click mouseenter">Senses</a></i>,
+   System.int <i><a class="i-popup-link" id="OptionPopupLink" data-popup-contentsource="#OptionPopupContent" data-popup-showevent="click mouseenter">Option</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Type</i></dt>
+
+                <dd>Type of body to create as defined in <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swTopology_e.html">swTopology_e</a></dd>
+
+                <dt><i>NTopologies</i></dt>
+
+                <dd>Number of topological entities in the topologies argument</dd>
+
+                <dt><i>Topologies</i></dt>
+
+                <dd>Array of topologies (see <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swTopoEntity_e.html">swTopoEntity_e</a>), one for each topological entity</dd>
+
+                <dt><i>EdgeToleranceArray</i></dt>
+
+                <dd>Array of tolerances for edges</dd>
+
+                <dt><i>VertexToleranceArray</i></dt>
+
+                <dd>Array of tolerances for vertices</dd>
+
+                <dt><i>PointArray</i></dt>
+
+                <dd>Array of coordinates of vertices (geometry for vertices)</dd>
+
+                <dt><i>CurveArray1</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a> (geometry for edges; 3D curve) and coedges (geometry for coedges; 2D curve)</dd>
+
+                <dt><i>CurveSurfaceArray1</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> that lie on CurveArray1 2D curve</dd>
+
+                <dt><i>CurveArray2</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve">curves</a>&#160;(geometry for edges; 3D curve) and array of coedges (geometry for coedges; 2D curve)</dd>
+
+                <dt><i>CurveSurfaceArray2</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> that on lie on CurveArray2 2D curve</dd>
+
+                <dt><i>SurfaceArray</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISurface">surfaces</a> (geometry for faces)</dd>
+
+                <dt><i>NRelations</i></dt>
+
+                <dd>Number of 1-to-1 relationships between topological entities</dd>
+
+                <dt><i>Parents</i></dt>
+
+                <dd>Array of parents, one in each relationship</dd>
+
+                <dt><i>Children</i></dt>
+
+                <dd>Array of parents, one in each relationship</dd>
+
+                <dt><i>Senses</i></dt>
+
+                <dd>Array of senses in which child is used by parent in the relationship</dd>
+
+                <dt><i>Option</i></dt>
+
+                <dd>
+                    <ul>
+                        <li>0 = Default</li>
+                    </ul>
+
+                    <p class="apiBulletLeftJustified">1 = Repair and simplify body</p>
+
+                    <p class="apiBulletLeftJustified">2 = Simplify body</p>
+                </dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">Body</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p class="apiRemarksText">The CurveArray1 and CurveArray2 must be paired with CurveSurfaceArray1 and CurveSurfaceArray2, respectively. Order is not important. The 2D curve has to be created in the direction of the loop.</p>
+
+            <p class="apiRemarksText">If non-negative values are packed into the EdgeToleranceArray and VertexToleranceArray arrays, then tolerances are applied to the corresponding edges or vertices. These arrays should be the same size as CurveArray1 and PointArray, respectively. Otherwise, a default value of 1.0e-8 (modeler precision) is used.</p>
+
+            <p><span style="FONT-WEIGHT: bold">NOTE</span>: <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~SetInitKnitGapWidth">IModeler::SetInitKnitGapWidth</a> does not affect this method.</p>
+
+            <p>Useful methods for creating geometry for the topological entities are:</p>
+
+            <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                <li class="kadov-p" style="MARGIN-LEFT: -20px">
+                    <p style="MARGIN-LEFT: 60px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreatePlanarSurface">IBody2::CreatePlanarSurface</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ICreatePlanarSurface">IBody2::ICreatePlanarSurface</a></p>
+                </li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: -20px">
+                    <p style="MARGIN-LEFT: 60px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~AddProfileArc">IBody2::AddProfileArc</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~IAddProfileArc">IBody2::IAddProfileArc</a></p>
+                </li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: -20px">
+                    <p style="MARGIN-LEFT: 60px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~AddProfileLine">IBody2::AddProfileLine</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~IAddProfileLine">IBody2::IAddProfileLine</a></p>
+                </li>
+
+                <li class="kadov-p" style="MARGIN-LEFT: -20px">
+                    <p style="MARGIN-LEFT: 60px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreateRevolutionSurface">IBody2::CreateRevolutionSurface</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ICreateRevolutionSurface">IBody2::ICreateRevolutionSurface</a></p>
+                </li>
+            </ul>
+
+            <p style="FONT-WEIGHT: normal">For example, to create a cone, find topological relationships and form relevant arrays. A <!--kadov_tag{{</spaces>}}-->complete solid cone consists of 8 topological entities:</p>
+
+            <div style="LIST-STYLE-TYPE: disc; margin-left: 2em" type="disc">
+                <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">1 shell</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">2 faces</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">3 loops</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">1 edge</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">1 vertex</p>
+                    </li>
+                </ul>
+            </div>
+
+            <p>There are 8 relations:</p>
+
+            <div style="LIST-STYLE-TYPE: disc; margin-left: 2em" type="disc">
+                <ul style="LIST-STYLE-TYPE: disc" type="disc">
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">the shell is the parent of 2 faces - 2</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">the planar end face has 1 loop - 1</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">the conical face has 2 loops - 2</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">two loops are each the parent of 1 edge - 2</p>
+                    </li>
+
+                    <li class="kadov-p">
+                        <p style="MARGIN-LEFT: 0px">one loop is the parent of 1 vertex 1</p>
+                    </li>
+                </ul>
+            </div>
+
+            <p>The topologies array:</p>
+
+            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p><!--(Table)=========================================================-->
+
+            <table style="WIDTH: 191px; MARGIN-LEFT: 30.6pt; BORDER-SPACING: 0px" cellspacing="0" width="191" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 14.46%" />
+                    <col style="WIDTH: 134px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" bgcolor="#DBDBDB">
+                            <p class="apiTableColHeading"><strong>Index</strong></p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB" width="134">
+                            <p class="apiTableColHeading"><strong>Value</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoShell</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">1</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoFace</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">2</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoFace</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">3</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoLoop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">4</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoEdge</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">5</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoLoop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">6</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoLoop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">7</p>
+                        </td>
+
+                        <td style="WIDTH: 134px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="134">
+                            <p>swTopoVertex</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p>The set of arrays:</p>
+
+            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p><!--(Table)=========================================================-->
+
+            <table style="WIDTH: 397px; MARGIN-LEFT: 30.6pt; BORDER-SPACING: 0px" cellspacing="0" width="397" x-use-null-cells="">
+                <colgroup>
+                    <col style="WIDTH: 16.62%" />
+                    <col style="WIDTH: 67px" />
+                    <col style="WIDTH: 70px" />
+                    <col style="WIDTH: 62px" />
+                    <col style="WIDTH: 120px" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" bgcolor="#DBDBDB">
+                            <p><span style="FONT-WEIGHT: bold">index</span></p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB" width="67">
+                            <p><span style="FONT-WEIGHT: bold">parents</span></p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB" width="70">
+                            <p><span style="FONT-WEIGHT: bold">children</span></p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB" width="62">
+                            <p><span style="FONT-WEIGHT: bold">senses</span></p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND-COLOR: #dbdbdb" bgcolor="#DBDBDB" width="120">
+                            <p><span style="FONT-WEIGHT: bold">relation</span></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">1</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>shell to face</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">1</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">2</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>shell to face</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">2</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">1</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">3</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>face to loop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">3</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">3</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">4</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center; MARGIN-RIGHT: 14px" align="center">-1</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>loop to edge</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">4</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">2</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">5</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>face to loop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">5</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">2</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">6</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>face to loop</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">6</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">5</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">4</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">1</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>loop to edge</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px">
+                            <p style="TEXT-ALIGN: center" align="center">7</p>
+                        </td>
+
+                        <td style="WIDTH: 67px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="67">
+                            <p style="TEXT-ALIGN: center" align="center">6</p>
+                        </td>
+
+                        <td style="WIDTH: 70px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="70">
+                            <p style="TEXT-ALIGN: center" align="center">7</p>
+                        </td>
+
+                        <td style="WIDTH: 62px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="62">
+                            <p style="TEXT-ALIGN: center" align="center">0</p>
+                        </td>
+
+                        <td style="WIDTH: 120px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px" width="120">
+                            <p>loop to vertex</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p>Values in the parents and children arrays correspond to the indices of the topology array.</p>
+
+            <p>Each face or edge created by IModeler::CreateBrepBody3 or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBrepBody3">IModeler::ICreateBrepBody3</a>&#160;has an associated integer ID that is the same as the index to the input topologies. Use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace2~GetFaceId">IFace2::GetFaceId</a> or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdge~GetID">IEdge::GetId</a> to get the associated integer ID.</p>
+
+            <p class="apiRemarksText">Every shell should be a closed shell.&#160;Sheet bodies&#160;should have additional back faces to form a closed shell. When creating a sheet body, these extra back faces are retained in the result and should be removed using <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~DeleteFacesFromSheetBody">IModeler::DeleteFacesFromSheetBody</a>&#160;or <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~IDeleteFacesFromSheetBody">IModeler::IDeleteFacesFromSheetBody</a>.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_members">IModeler Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBodiesFromSheets2">IModeler::CreateBodiesFromSheets2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBodyFromBox">IModeler::CreateBodyFromBox Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBodyFromCone">IModeler::CreateBodyFromCone Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBodyFromCyl">IModeler::CreateBodyFromCyl Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBodyFromFaces2">IModeler::CreateBodyFromFaces2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateSweptBody">IModeler::CreateSweptBody Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateWireBody">IModeler::CreateWireBody Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBodiesFromSheets2">IModeler::ICreateBodiesFromSheets2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBodyFromBox2">IModeler::ICreateBodyFromBox2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBodyFromCone2">IModeler::ICreateBodyFromCone2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBodyFromCyl2">IModeler::ICreateBodyFromCyl2 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateBodyFromFaces3">IModeler::ICreateBodyFromFaces3 Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateWireBody">IModeler::ICreateWireBody Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateBrepBody3.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

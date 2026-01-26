@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPage2",
+    "member": "SetMessage2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Message",
+        "type": "System.String",
+        "description": "Message text"
+      },
+      {
+        "name": "Visibility",
+        "type": "System.Int32",
+        "description": "Visibility state of this message as defined by swPropertyManagerPageMessageVisibility"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Caption for message"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "setmessage2",
+      "ipropertymanagerpage2",
+      "manager",
+      "page2",
+      "message2",
+      "message",
+      "string",
+      "visibility",
+      "int32",
+      "caption",
+      "boolean"
+    ]
+  },
+  "title": "IPropertyManagerPage2.SetMessage2",
+  "description": "Obsolete. Superseded by PropertyManagerPage2::SetMessage3.",
+  "signature": "System.Boolean SetMessage2( \n   System.String\nMessage\n,\n   System.Int32\nVisibility\n,\n   System.String\nCaption\n)",
+  "parameters": [
+    {
+      "name": "Message",
+      "type": "System.String",
+      "description": "Message text"
+    },
+    {
+      "name": "Visibility",
+      "type": "System.Int32",
+      "description": "Visibility state of this message as defined by swPropertyManagerPageMessageVisibility"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Caption for message"
+    }
+  ],
+  "returns": "True if the message is set, false if not",
+  "remarks": "If Caption is empty, then the current caption is not changed.\nThis method should be useful when creating multi-page PropertyManager pages where you want different informational messages on each page.",
+  "examples": [],
+  "related": []
+}

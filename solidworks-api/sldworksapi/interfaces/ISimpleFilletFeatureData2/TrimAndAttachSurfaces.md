@@ -1,0 +1,46 @@
+---
+type: property
+interface: ISimpleFilletFeatureData2
+member: TrimAndAttachSurfaces
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related: []
+keywords:
+  - trimandattachsurfaces
+  - isimplefilletfeaturedata2
+  - simple
+  - fillet
+  - feature
+  - data2
+  - trim
+  - attach
+  - surfaces
+  - int32
+readonly: null
+---
+
+# ISimpleFilletFeatureData2.TrimAndAttachSurfaces
+
+Gets or sets the Trim surfaces option for surface face fillets.
+
+## Signature
+
+```csharp
+System.Int32 TrimAndAttachSurfaces {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+0 = Trim and attach (trims the filleted face and knits the surfaces into one surface body) 1 = Don't trim or attach (adds a new fillet surface, but does not trim the faces or knit the surfaces) -1 = Not applicable
+
+## Examples
+
+- ISimpleFilletFeatureData2 (ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISimpleHoleFeatureData2)

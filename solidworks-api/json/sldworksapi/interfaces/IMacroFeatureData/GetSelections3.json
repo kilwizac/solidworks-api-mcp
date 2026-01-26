@@ -1,0 +1,116 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMacroFeatureData",
+    "member": "GetSelections3",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Objects",
+        "type": "System.Object",
+        "description": "Array of selected objects"
+      },
+      {
+        "name": "ObjectTypes",
+        "type": "System.Object",
+        "description": "Array of selected object types as defined in swSelectType_e"
+      },
+      {
+        "name": "SelMarks",
+        "type": "System.Object",
+        "description": "Array of marks for the selected objects"
+      },
+      {
+        "name": "DrViews",
+        "type": "System.Object",
+        "description": "Array of drawing views"
+      },
+      {
+        "name": "ComponentXForms",
+        "type": "System.Object",
+        "description": "Array of transforms for the selections' components"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IMacroFeatureData.GetSelectionCount",
+      "IMacroFeatureData.IGetSelections3",
+      "IMacroFeatureData.ISetSelections2",
+      "IMacroFeatureData.SetSelections2"
+    ],
+    "keywords": [
+      "getselections3",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "selections3",
+      "objects",
+      "object",
+      "types",
+      "sel",
+      "marks",
+      "dr",
+      "views",
+      "component",
+      "forms",
+      "void",
+      "cut",
+      "body",
+      "half",
+      "using",
+      "vba"
+    ]
+  },
+  "title": "IMacroFeatureData.GetSelections3",
+  "description": "Gets the selected objects for the macro feature.",
+  "signature": "void GetSelections3( \n   out System.Object\nObjects\n,\n   out System.Object\nObjectTypes\n,\n   out System.Object\nSelMarks\n,\n   out System.Object\nDrViews\n,\n   out System.Object\nComponentXForms\n)",
+  "parameters": [
+    {
+      "name": "Objects",
+      "type": "System.Object",
+      "description": "Array of selected objects"
+    },
+    {
+      "name": "ObjectTypes",
+      "type": "System.Object",
+      "description": "Array of selected object types as defined in swSelectType_e"
+    },
+    {
+      "name": "SelMarks",
+      "type": "System.Object",
+      "description": "Array of marks for the selected objects"
+    },
+    {
+      "name": "DrViews",
+      "type": "System.Object",
+      "description": "Array of drawing views"
+    },
+    {
+      "name": "ComponentXForms",
+      "type": "System.Object",
+      "description": "Array of transforms for the selections' components"
+    }
+  ],
+  "returns": "",
+  "remarks": "When a macro feature is inserted in-context and an entity on a different component is selected, you may need to know that component's transform.\nIf the assembly is the active document, then you can use\nIEntity::GetComponent\nor\nIComponent2::Transform2\nto get the component's transform.\nHowever, if the part for the component is open for editing and a\nmacro feature is being edited\n, then you must use I\nMacroFeatureData::GetSelections3 to get the component's transform. This method returns the transform and the selection. If the selection belongs to the same part as the macro feature, then NULL is returned. See also\nMacro Features and Component Transforms\n.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [
+    {
+      "title": "Cut Body in Half Using Macro Feature (VBA)",
+      "href": "Cut_Body_in_Half_using_Macro_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMacroFeatureData.GetSelectionCount",
+    "IMacroFeatureData.IGetSelections3",
+    "IMacroFeatureData.ISetSelections2",
+    "IMacroFeatureData.SetSelections2"
+  ]
+}

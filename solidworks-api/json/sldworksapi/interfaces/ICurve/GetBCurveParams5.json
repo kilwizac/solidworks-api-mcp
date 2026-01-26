@@ -1,0 +1,163 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetBCurveParams5",
+    "returns": "SplineParamData",
+    "parameters": [
+      {
+        "name": "WantCubicIn",
+        "type": "System.Boolean",
+        "description": "True to return cubic parameters, false to not"
+      },
+      {
+        "name": "WantNRational",
+        "type": "System.Boolean",
+        "description": "True to return non-rational parameters; false to return rational parameters"
+      },
+      {
+        "name": "ForceNonPeriodic",
+        "type": "System.Boolean",
+        "description": "True to convert the curve from periodic to nonperiodic, false to not (see Remarks )"
+      },
+      {
+        "name": "IsClosed",
+        "type": "System.Boolean",
+        "description": "True for a closed curve, false for an open curve (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICoEdge.GetCurveParams",
+      "ICoEdge.IGetCurveParams",
+      "ICurve.CircleParams",
+      "ICurve.ConvertArcToBcurve",
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.GetEllipseParams",
+      "ICurve.GetPCurveParams2",
+      "ICurve.ICircleParams",
+      "ICurve.IGetBCurveParamsSize3",
+      "ICurve.IGetEllipseParams",
+      "ICurve.IGetPCurveParams",
+      "ICurve.ILineParams",
+      "ICurve.Identity",
+      "ICurve.IsBcurve",
+      "ICurve.IsCircle",
+      "ICurve.IsEllipse",
+      "ICurve.IsLine",
+      "ICurve.LineParams",
+      "ICurve.MakeBsplineCurve2",
+      "IEdge.GetCurveParams3",
+      "IEdge.IGetCurveParams2",
+      "IModeler.CreatePCurve",
+      "IModeler.ICreatePCurve"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "spline",
+      "points",
+      "splines",
+      "splineparamdata",
+      "isplineparamdata",
+      "getbcurveparams5",
+      "params5",
+      "want",
+      "cubic",
+      "boolean",
+      "rational",
+      "force",
+      "non",
+      "periodic",
+      "closed",
+      "param",
+      "data",
+      "bcurve",
+      "vb",
+      "net",
+      "vba",
+      "edit"
+    ]
+  },
+  "title": "ICurve.GetBCurveParams5",
+  "description": "Gets a data object containing the parameters of a B\u00e9zier curve.",
+  "signature": "SplineParamData GetBCurveParams5( \n   System.Boolean\nWantCubicIn\n,\n   System.Boolean\nWantNRational\n,\n   System.Boolean\nForceNonPeriodic\n,\n   System.Boolean\nIsClosed\n)",
+  "parameters": [
+    {
+      "name": "WantCubicIn",
+      "type": "System.Boolean",
+      "description": "True to return cubic parameters, false to not"
+    },
+    {
+      "name": "WantNRational",
+      "type": "System.Boolean",
+      "description": "True to return non-rational parameters; false to return rational parameters"
+    },
+    {
+      "name": "ForceNonPeriodic",
+      "type": "System.Boolean",
+      "description": "True to convert the curve from periodic to nonperiodic, false to not (see Remarks )"
+    },
+    {
+      "name": "IsClosed",
+      "type": "System.Boolean",
+      "description": "True for a closed curve, false for an open curve (see Remarks )"
+    }
+  ],
+  "returns": "An ISplineParamData object (see Remarks )",
+  "remarks": "To control the accuracy of the curve data, see\nIModeler::SetToleranceValue\n.\nIf a\nB\u00e9zier\ncurve is closed (IsClosed = true) and periodic (ForceNonPeriodic = false), the seam at the juncture of the beginning and end of the curve is continuous and smooth. The data returned in this form contains a single knot at the juncture.\nIf a B\u00e9zier curve is closed (IsClosed = true) and non-periodic (ForceNonPeriodic = true), the seam at the juncture is continuous, contains a cusp, and is not smooth. The data returned in this form contains multiple knots at each end of the curve.\nObsolete versions of this method automatically treated closed B\u00e9zier curves as periodic. The cusp at the juncture of a closed non-periodic curve (e.g., a tear drop) was lost using these methods. This method provides more flexibility for specifying precisely which form of the curve to get to prevent unintentional data loss.\nThis method returns the parameterization data of the B\u00e9zier curve in an ISplineParamData object instead of an array. Call the methods and properties of\nISplineParamData\nto obtain the control points, knot points, dimension, order, and periodicity of the curve.",
+  "examples": [
+    {
+      "title": "Get BCurve Spline Points (C#)",
+      "href": "Get_BCurve_Spline_Points_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BCurve Spline Points (VB.NET)",
+      "href": "Get_BCurve_Spline_Points_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get BCurve Spline Points (VBA)",
+      "href": "Get_BCurve_Spline_Points_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Edit Spline (VBA)",
+      "href": "Edit_Spline_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICoEdge.GetCurveParams",
+    "ICoEdge.IGetCurveParams",
+    "ICurve.CircleParams",
+    "ICurve.ConvertArcToBcurve",
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.GetEllipseParams",
+    "ICurve.GetPCurveParams2",
+    "ICurve.ICircleParams",
+    "ICurve.IGetBCurveParamsSize3",
+    "ICurve.IGetEllipseParams",
+    "ICurve.IGetPCurveParams",
+    "ICurve.ILineParams",
+    "ICurve.Identity",
+    "ICurve.IsBcurve",
+    "ICurve.IsCircle",
+    "ICurve.IsEllipse",
+    "ICurve.IsLine",
+    "ICurve.LineParams",
+    "ICurve.MakeBsplineCurve2",
+    "IEdge.GetCurveParams3",
+    "IEdge.IGetCurveParams2",
+    "IModeler.CreatePCurve",
+    "IModeler.ICreatePCurve"
+  ]
+}

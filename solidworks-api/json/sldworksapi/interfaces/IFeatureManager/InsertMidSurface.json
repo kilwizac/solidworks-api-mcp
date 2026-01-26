@@ -1,0 +1,128 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMidSurface",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "PBodyIn",
+        "type": "Body2",
+        "description": "Body in the context of an assembly; otherwise, null or Nothing (see Remarks )"
+      },
+      {
+        "name": "PPartDocIn",
+        "type": "ModelDoc2",
+        "description": "Model document in the context of an assembly; otherwise, null or Nothing (see Remarks )"
+      },
+      {
+        "name": "Placement",
+        "type": "System.Double",
+        "description": "Value from -1 to 1 that indicates the desired location of the midsurface relative to the face pair; a value of 0.0 places the midsurface equally between the face pair"
+      },
+      {
+        "name": "KnitFlag",
+        "type": "System.Boolean",
+        "description": "True to sew all the reference surfaces (neutral sheets) into a single sheet (surface) body, false for the midsurface feature to contain individual reference surface geometry"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "midsurface",
+      "insertmidsurface",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "mid",
+      "surface",
+      "body",
+      "body2",
+      "part",
+      "doc",
+      "model",
+      "doc2",
+      "placement",
+      "double",
+      "knit",
+      "flag",
+      "boolean",
+      "object",
+      "component",
+      "vb",
+      "net",
+      "vba",
+      "areas",
+      "faces"
+    ]
+  },
+  "title": "IFeatureManager.InsertMidSurface",
+  "description": "Inserts a midsurface feature.",
+  "signature": "System.Object InsertMidSurface( \n   Body2\nPBodyIn\n,\n   ModelDoc2\nPPartDocIn\n,\n   System.Double\nPlacement\n,\n   System.Boolean\nKnitFlag\n)",
+  "parameters": [
+    {
+      "name": "PBodyIn",
+      "type": "Body2",
+      "description": "Body in the context of an assembly; otherwise, null or Nothing (see Remarks )"
+    },
+    {
+      "name": "PPartDocIn",
+      "type": "ModelDoc2",
+      "description": "Model document in the context of an assembly; otherwise, null or Nothing (see Remarks )"
+    },
+    {
+      "name": "Placement",
+      "type": "System.Double",
+      "description": "Value from -1 to 1 that indicates the desired location of the midsurface relative to the face pair; a value of 0.0 places the midsurface equally between the face pair"
+    },
+    {
+      "name": "KnitFlag",
+      "type": "System.Boolean",
+      "description": "True to sew all the reference surfaces (neutral sheets) into a single sheet (surface) body, false for the midsurface feature to contain individual reference surface geometry"
+    }
+  ],
+  "returns": "Newly created midsurface feature",
+  "remarks": "The pPartDocIn parameter is the component's model document where you want to add the midsurface feature, and the pBody parameter is the body of that component.\nA midsurface feature is calculated from the solid body in your part document. This method first finds all parallel pairs of faces from the part solid. For each pair of parallel faces found, it creates a neutral reference surface between the two faces. The placement position of the reference surface is controlled by the placement parameter. This process repeats itself until all parallel body faces are processed. At the end of this process, all the reference surfaces are sewn into a single reference surface if knitFlag is set to true.\nThe hierarchy of a midsurface feature is a midsurface feature contains one or more reference surfaces. If sewn successfully using the KnitFlag = True option, then the midsurface feature contains only one reference surface. Each reference surface is considered a sheet body. The sheet body has the normal topology that you would expect to find on a body object (for example, faces, edges, and so on). See\nIMidSurface3\nfor methods that provide access to this topology.",
+  "examples": [
+    {
+      "title": "Insert MidSurface in Component (C#)",
+      "href": "Insert_MidSurface_in_Component_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert MidSurface in Component (VB.NET)",
+      "href": "Insert_MidSurface_in_Component_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert MidSurface in Component (VBA)",
+      "href": "Insert_MidSurface_in_Component_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of Midsurface Faces (C#)",
+      "href": "Get_Areas_of_MidSurface_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of Midsurface Faces (VB.NET)",
+      "href": "Get_Areas_of_MidSurface_FAces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Areas of Midsurface Faces (VBA)",
+      "href": "Get_Areas_of_MidSurface_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

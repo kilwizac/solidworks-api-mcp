@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RemoveToolbar2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Resource ID of the toolbar; this is the same cookie that you specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "ToolbarId",
+        "type": "System.Int32",
+        "description": "Toolbar ID"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.DragToolbarButton",
+      "ISldWorks.HideToolbar2"
+    ],
+    "keywords": [
+      "toolbars",
+      "removetoolbar2",
+      "isldworks",
+      "sld",
+      "works",
+      "remove",
+      "toolbar2",
+      "cookie",
+      "int32",
+      "toolbar",
+      "id",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.RemoveToolbar2",
+  "description": "Removes a toolbar created with ISldWorks::AddToolbar5.",
+  "signature": "System.Boolean RemoveToolbar2( \n   System.Int32\nCookie\n,\n   System.Int32\nToolbarId\n)",
+  "parameters": [
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Resource ID of the toolbar; this is the same cookie that you specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "ToolbarId",
+      "type": "System.Int32",
+      "description": "Toolbar ID"
+    }
+  ],
+  "returns": "True if the toolbar is removed, false if not",
+  "remarks": "If the SOLIDWORKS Design application is exiting and your application is still added-in, then you should not call this method. You should, however, clean up all other items such as the Cbitmap objects, which allows your toolbar to get reloaded in the same position next time you start the SOLIDWORKS Design application.",
+  "examples": [],
+  "related": [
+    "ISldWorks.DragToolbarButton",
+    "ISldWorks.HideToolbar2"
+  ]
+}

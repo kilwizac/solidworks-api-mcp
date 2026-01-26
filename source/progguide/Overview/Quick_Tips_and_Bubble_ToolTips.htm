@@ -1,0 +1,170 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Quick Tips and Bubble ToolTips</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta NAME=MS-HAID CONTENT=QuickTipsBubbleToolTipsOverview>
+<meta NAME=MS-HKWD CONTENT="Add-ins,Quick Tips and Bubble ToolTips">
+<meta NAME=MS-HKWD CONTENT="Bubble ToolTips">
+<meta NAME=MS-HKWD CONTENT="Quick Tips">
+<meta NAME=MS-HKWD CONTENT=Add-ins>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=805>
+<meta name=layout-width content=782>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Quick Tips and Bubble ToolTips</h1>
+
+<p><a name=Top></a>Typically an add-in's Quick Tips tells a user how to 
+ use the add-in application from start to finish. Creating Quick Tips and 
+ Bubble ToolTips for an add-in requires:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p><a href="#Add-in">Add-in application</a> to create 
+ a copy of the Quick Tips interface</p></li>
+	
+	<li class=kadov-p><p><a href="#HTML">Each HTML page of the add-in's 
+ Quick Tips</a> to create a copy of Quick Tips HTML object</p></li>
+</ul>
+
+<h2><a name=Add-in></a>Add-in application</h2>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Implements a copy of the Quick Tips interface, 
+ <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwQuickTip.html">ISwQuickTip</a>, 
+ which defines the add-in's Quick Tips environment.</p></li>
+	
+	<li class=kadov-p><p>Creates a copy of the Quick Tips interface using 
+ <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~InstallQuickTipGuide.html">ISldWorks::InstallQuickTipGuide</a><span 
+ style="margin-left: 48px;"><br>
+	<br>
+	When an add-in application implements a copy of the Quick Tips interface, 
+ the SOLIDWORKS Design application adds a selection to its Help menu 
+ indicating the existence of that add-in's Quick Tips.</span></p></li>
+</ol>
+
+<p style="margin-left: 48px;">By default, the SOLIDWORKS Quick Tips is 
+ the active Quick Tips. When a user selects an add-in's Quick Tips on the 
+ Help menu, that add-in's Quick Tips becomes active and the 
+ SOLIDWORKS Quick Tips becomes inactive. If a user clicks the Quick Tips 
+ button on the SOLIDWORKS Design status bar, the SOLIDWORKS Quick Tips becomes 
+ active and any active add-in's Quick Tips becomes inactive. Only one application's 
+ Quick Tips can be active at any one time.</p>
+
+<p style="margin-left: 48px;">Because an add-in does not know whether or 
+ not its Quick Tips window is active, the add-in should assume that it 
+ is active. The state of the add-in application determines which HTML page 
+ of its Quick Tips is displayed.<span style="margin-left: 8px;"> </span></p>
+
+<ol start=3
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Calls <a href="swpublishedAPI.chm::/SolidWorks.interop.swpublished~SolidWorks.interop.swpublished.ISwQuickTip~AppState.html">ISwQuickTip::AppState</a> 
+ to tell the Quick Tips interface that the state of the add-in application 
+ has changed. Examples of SOLIDWORKS states are:</p></li>
+	
+	<ol style="list-style: lower-alpha;"
+		type=a>
+		
+		<li class=kadov-p><p>Create a part.</p></li>
+		
+		<li class=kadov-p><p>Create a sketch.</p></li>
+		
+		<li class=kadov-p><p>Create an extrusion.</p></li>
+	</ol>
+	
+	<li class=kadov-p><p style="margin-left: 8px;">Calls <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~RefreshQuickTipWindow.html">ISldWorks::RefreshQuickTipWindow</a>, 
+ which causes the SOLIDWORKS Design application to request a new URL to display 
+ in the Quick Tips window. The new URL is then returned to the SOLIDWORKS 
+    Design application and displayed in the Quick Tips window.</p></li>
+	
+	<li class=kadov-p><p style="margin-left: 8px;">When the add-in application 
+ is closing, calls<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.ISldWorks~UnInstallQuickTipGuide.html"> 
+ ISldWorks::<!--kadov_tag{{<ignored>}}-->UnInstallQuickTipGuide<!--kadov_tag{{</ignored>}}--></a> 
+ to <!--kadov_tag{{<ignored>}}-->uninstall<!--kadov_tag{{</ignored>}}--> 
+ the add-in's Quick Tips.</p></li>
+</ol>
+
+<p style="margin-left: 8px; text-align: center;"
+	align=center><a href="#Top">Back to top</a></p>
+
+<h2><a name=HTML></a>Each Quick Tips HTML page</h2>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Must specify the correct background color of the 
+ Quick Tips HTML page as follows:</p></li>
+</ol>
+
+<p class=apiCode
+	style="margin-left: 89px;">&lt;style&gt;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">body</p>
+
+<p class=apiCode
+	style="margin-left: 89px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{</p>
+
+<p class=apiCode
+	style="margin-left: 89px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->background-color: 
+ #ffffe1;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->}</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">&lt;/style&gt;</p>
+
+<ol start=2
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Creates a copy of ISwHtmlInterface, which defines 
+ the add-in's Quick Tips environment for that HTML page.</p></li>
+	
+	<li class=kadov-p><p>Calls <a href="swhtmlcontrolAPI.chm::/SolidWorks.Interop.swhtmlcontrol~SolidWorks.Interop.swhtmlcontrol.ISwHtmlInterface~ShowBubbleTooltipAt.html">ISwHtmlInterface::ShowBubbleToolTipAt</a> 
+ or <a href="swhtmlcontrolAPI.chm::/SolidWorks.Interop.swhtmlcontrol~SolidWorks.Interop.swhtmlcontrol.ISwHtmlInterface~ShowBubbleTooltip.html">ISwHtmlInterface::ShowBubbleTooltip</a>, 
+ which displays a Bubble ToolTip and causes a toolbar or toolbar buttons 
+ to flash, when a user clicks a link on the Quick Tips HTML page.</p></li>
+</ol>
+
+</body>
+
+</html>

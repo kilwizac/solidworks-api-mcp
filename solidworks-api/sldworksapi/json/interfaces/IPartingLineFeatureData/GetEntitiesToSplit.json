@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartingLineFeatureData",
+    "member": "GetEntitiesToSplit",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "TypeArr",
+        "type": "System.Object",
+        "description": "Array of these entities as defined in swSelectType_e : swSelVERTICES swSelSKETCHSEGS"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "parts"
+    ],
+    "related": [
+      "IPartingLineFeatureData.GetEntitiesToSplitCount",
+      "IPartingLineFeatureData.ISetEntitiesToSplit",
+      "IPartingLineFeatureData.SetEntitiesToSplit",
+      "IPartingLineFeatureData.SplitFaces",
+      "IPartingLineFeatureData.SplitFacesOption"
+    ],
+    "keywords": [
+      "getentitiestosplit",
+      "ipartinglinefeaturedata",
+      "parting",
+      "line",
+      "feature",
+      "data",
+      "entities",
+      "split",
+      "type",
+      "arr",
+      "object"
+    ]
+  },
+  "title": "IPartingLineFeatureData.GetEntitiesToSplit",
+  "description": "Gets the entities that are used to split a face.",
+  "signature": "System.Object GetEntitiesToSplit( \n   out System.Object\nTypeArr\n)",
+  "parameters": [
+    {
+      "name": "TypeArr",
+      "type": "System.Object",
+      "description": "Array of these entities as defined in swSelectType_e : swSelVERTICES swSelSKETCHSEGS"
+    }
+  ],
+  "returns": "Array of vertices or sketch segments",
+  "remarks": "The resulting edges are added to the parting line feature.\nWhen two vertices are specified, then an edge is created between them for the parting line feature.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IPartingLineFeatureData.GetEntitiesToSplitCount",
+    "IPartingLineFeatureData.ISetEntitiesToSplit",
+    "IPartingLineFeatureData.SetEntitiesToSplit",
+    "IPartingLineFeatureData.SplitFaces",
+    "IPartingLineFeatureData.SplitFacesOption"
+  ]
+}

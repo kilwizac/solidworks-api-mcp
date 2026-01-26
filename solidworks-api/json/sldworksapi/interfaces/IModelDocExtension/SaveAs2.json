@@ -1,0 +1,157 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "SaveAs2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )"
+      },
+      {
+        "name": "Version",
+        "type": "System.Int32",
+        "description": "Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )"
+      },
+      {
+        "name": "ExportData",
+        "type": "System.Object",
+        "description": "IExportPdfData object for exporting drawing sheets to PDF (see Remarks )"
+      },
+      {
+        "name": "ReferencePrefixOrSuffixText",
+        "type": "System.String",
+        "description": "Text to prefix names of reference files (AddTextAsPrefix is true) or text to suffix them (AddTextAsPrefix is false); empty string to neither prefix nor suffix the names of reference files; valid only for assemblies (see Remarks )"
+      },
+      {
+        "name": "AddTextAsPrefix",
+        "type": "System.Boolean",
+        "description": "True to prefix names of reference files with ReferencePrefixOrSuffixText, false to suffix names of reference files with ReferencePrefixOrSuffixText; valid only for assemblies and when ReferencePrefixOrSuffixText is a non-empty string (see Remarks )"
+      },
+      {
+        "name": "Errors",
+        "type": "System.Int32",
+        "description": "Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )"
+      },
+      {
+        "name": "Warnings",
+        "type": "System.Int32",
+        "description": "Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.SaveDeFeaturedFile",
+      "ISldWorks.ActivateDoc3",
+      "ISldWorks.ActiveDoc",
+      "ISldWorks.CheckpointConvertedDocument",
+      "ISldWorks.CloseAllDocuments",
+      "ISldWorks.CloseDoc",
+      "ISldWorks.CopyDocument",
+      "ISldWorks.ExitApp",
+      "ISldWorks.LoadFile4",
+      "ISldWorks.OpenDoc7",
+      "ISldWorks.QuitDoc"
+    ],
+    "keywords": [
+      "saveas2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "save",
+      "as2",
+      "name",
+      "string",
+      "version",
+      "int32",
+      "options",
+      "export",
+      "data",
+      "object",
+      "reference",
+      "prefix",
+      "suffix",
+      "text",
+      "add",
+      "boolean",
+      "errors",
+      "warnings"
+    ]
+  },
+  "title": "IModelDocExtension.SaveAs2",
+  "description": "Obsolete. Superseded by IModelDocExtension::SaveAs3.",
+  "signature": "System.Boolean SaveAs2( \n   System.String\nName\n,\n   System.Int32\nVersion\n,\n   System.Int32\nOptions\n,\n   System.Object\nExportData\n,\n   System.String\nReferencePrefixOrSuffixText\n,\n   System.Boolean\nAddTextAsPrefix\n,\n   out System.Int32\nErrors\n,\n   out System.Int32\nWarnings\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Full pathname of the document to save; the file extension indicates any conversion that should be performed (for example, Part1.igs to save in IGES format) (see Remarks )"
+    },
+    {
+      "name": "Version",
+      "type": "System.Int32",
+      "description": "Format in which to save this document as defined in swSaveAsVersion_e (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option indicating how to save the document as defined in swSaveAsOptions_e (see Remarks )"
+    },
+    {
+      "name": "ExportData",
+      "type": "System.Object",
+      "description": "IExportPdfData object for exporting drawing sheets to PDF (see Remarks )"
+    },
+    {
+      "name": "ReferencePrefixOrSuffixText",
+      "type": "System.String",
+      "description": "Text to prefix names of reference files (AddTextAsPrefix is true) or text to suffix them (AddTextAsPrefix is false); empty string to neither prefix nor suffix the names of reference files; valid only for assemblies (see Remarks )"
+    },
+    {
+      "name": "AddTextAsPrefix",
+      "type": "System.Boolean",
+      "description": "True to prefix names of reference files with ReferencePrefixOrSuffixText, false to suffix names of reference files with ReferencePrefixOrSuffixText; valid only for assemblies and when ReferencePrefixOrSuffixText is a non-empty string (see Remarks )"
+    },
+    {
+      "name": "Errors",
+      "type": "System.Int32",
+      "description": "Errors that caused the save to fail as defined in swFileSaveError_e (see Remarks )"
+    },
+    {
+      "name": "Warnings",
+      "type": "System.Int32",
+      "description": "Warnings or extra information generated during the save operation as defined in swFileSaveWarning_e (see Remarks )"
+    }
+  ],
+  "returns": "True if the save is successful, false if not",
+  "remarks": "The difference between this method and the now obsolete\nIModelDocExtension::SaveAs\nis that when you save assemblies using this method, you can prefix or suffix reference file names by specifying AddTextAsPrefix and ReferencePrefixOrSuffixText. To save references in the assembly, specify Options by bitwise ANDing swSaveAsOptions_e:\nswSaveAsOptions_SaveReferenced\nswSaveAsOptions_Copy or swSaveAsOptions_CopyAndOpen\nswSaveAsOptions_Silent\nTo save as an IGES, STL, or STEP file, the document to convert must be the active document. Before calling this method:\nCall\nISldWorks::ActivateDoc3\nto make the document to convert the active document.\nCall\nISldWorks::ActiveDoc\nto get the active document.\nThis method:\nExports the entire model, unless faces or bodies are selected, in which case, it exports only those. Call\nIModelDoc2::ClearSelection2\nbefore calling IModelDocExtension::SaveAs to clear the selection list and export the entire model.\nOverwrites existing files unless they are read only.\nResults in the FileSaveNotify event being sent to any application listening.\nRemoves any configuration-specific bitmap previews, except the current configuration's.\nSaving a document as PDF when the document is open as view only is not supported.\nDo not use ModelDocExtension::SaveAs to copy assemblies, drawings, or parts with in-context references. Instead, use\nISldWorks::CopyDocument\nor\nISldWorks::ICopyDocument\n.\nUse Name to specify the full pathname of the saved document. If you specify only the file name, then it is saved in the active document's directory. The filename extension indicates the conversion that should be performed (for example,\nPart1.igs\nto save to IGES). If the filename extension does not uniquely indicate how the file should be formatted, use Version to specify how to save the file. For example, to save:\nA standard drawing document as a detached drawing, specify swSaveAsDetachedDrawing for Version.\nA detached drawing as a standard drawing, specify swSaveAsStandardDrawing for Version.\nA standard or detached drawing document in the same format, specify swSaveAsCurrentVersion for Version.\nUse ExportData to specify which drawings sheets to save to PDF. If ExportData is Nothing or null, then all sheets are saved to PDF. Saving a document as PDF when the document is open as view-only is not supported.\nUse Options to specify save options. You can specify additional options using\nISldWorks::SetUserPreferenceIntegerValue\n. For example:\n' Save assembly as multibody part and save exterior faces as surface bodies\nswApp.SetUserPreferenceIntegerValue swSaveAssemblyAsPartOptions, _\nswSaveAsmAsPart_ExteriorFaces\nswModelDocExt.SaveAs \"H:\\Assem1.SLDPRT\", swSaveAsCurrentVersion, _\nswSaveAsOptions_Silent, Nothing, nErrors, nWarnings\n- or -\n' Save all drawing sheets in active drawing document as an eDrawings file\nswApp.SetUserPreferenceIntegerValue swEdrawingsSaveAsSelectionOption, swEdrawingSaveAll\nswModelDocExt.SaveAs \"H:\\Grid.edrw\", swSaveAsCurrentVersion, _\nswSaveAsOptions_Silent, Nothing, nErrors, nWarnings\nIf the file is saved successfully, then the returned value is true and Errors is 0. If the save is not successful, then the returned value is false and Errors contains a bitwise OR of the error codes that were generated in saving the document. Check the masks against the\nswFileSaveError_e\nenumeration. If you do not want SOLIDWORKS to return error information, set Errors to Nothing or null.\nEven if the file is saved successfully, there might be warnings or information that occur during the save operation in which you might be interested. Warnings contains a bitwise OR of the warning codes that were generated when saving the document. Check the masks against the\nswFileSaveWarning_e\nenumeration. If you do not want warning information returned, set Warnings to Nothing or null.\nUse\nIModelDoc2::Save3\nto save a file using its current name.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.SaveDeFeaturedFile",
+    "ISldWorks.ActivateDoc3",
+    "ISldWorks.ActiveDoc",
+    "ISldWorks.CheckpointConvertedDocument",
+    "ISldWorks.CloseAllDocuments",
+    "ISldWorks.CloseDoc",
+    "ISldWorks.CopyDocument",
+    "ISldWorks.ExitApp",
+    "ISldWorks.LoadFile4",
+    "ISldWorks.OpenDoc7",
+    "ISldWorks.QuitDoc"
+  ]
+}

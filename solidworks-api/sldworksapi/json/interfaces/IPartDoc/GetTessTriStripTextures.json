@@ -1,0 +1,57 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "GetTessTriStripTextures",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IFace2.GetTessTextures",
+      "IFace2.GetTessTriStripTextures",
+      "IPartDoc.GetTessNorms",
+      "IPartDoc.GetTessTriStripEdges",
+      "IPartDoc.GetTessTriStripNorms",
+      "IPartDoc.GetTessTriStripSize",
+      "IPartDoc.GetTessTriStrips",
+      "IPartDoc.GetTessTriangleCount",
+      "IPartDoc.GetTessTriangles"
+    ],
+    "keywords": [
+      "gettesstristriptextures",
+      "ipartdoc",
+      "part",
+      "doc",
+      "tess",
+      "tri",
+      "strip",
+      "textures",
+      "object"
+    ]
+  },
+  "title": "IPartDoc.GetTessTriStripTextures",
+  "description": "Gets the texture coordinate components for each vertex on each triangle strip on each face of this part.",
+  "signature": "System.Object GetTessTriStripTextures()",
+  "parameters": [],
+  "returns": "Array containing the triangle strip texture coordinate components (see Remarks )",
+  "remarks": "The format of the returned data is:\nDWORD\nFaceCount\nDWORD\nStripCount\nDWORD\nVertex\nCount\nDWORD\nFaceStripCount\nDWORD []\nVertexesPerTriStrip\nDouble []\nTextureCoords\nwhere:\nFaceCount\n:\nNumber of faces on the body\nStripCount\n:\nTotal number of tri strips on the body\nVertexCount\n:\nTotal number of vertexes (multiplied by 2 for U and V coordinates)\nFaceStripCount\n:\nNumber of tri strips on each face\nVertexesPerTriStrip\n:\nArray from 0 to (\nFaceStripCount\n- 1 ) containing the number of vertexes on each face tri strip\nTextureCoords\n:\nArray from 0 to (\nVertexesPerTriStrip\n- 1) containing the U,V texture coordinate components for each vertex on each face tri strip",
+  "examples": [],
+  "related": [
+    "IFace2.GetTessTextures",
+    "IFace2.GetTessTriStripTextures",
+    "IPartDoc.GetTessNorms",
+    "IPartDoc.GetTessTriStripEdges",
+    "IPartDoc.GetTessTriStripNorms",
+    "IPartDoc.GetTessTriStripSize",
+    "IPartDoc.GetTessTriStrips",
+    "IPartDoc.GetTessTriangleCount",
+    "IPartDoc.GetTessTriangles"
+  ]
+}

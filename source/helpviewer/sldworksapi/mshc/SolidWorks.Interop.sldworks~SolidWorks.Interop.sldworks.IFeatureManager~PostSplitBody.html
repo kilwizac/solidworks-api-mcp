@@ -1,0 +1,262 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>PostSplitBody Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~PostSplitBody" />
+    <meta name="Description" content="Obsolete. Superseded by IFeatureManager::PostSplitBody2." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IFeatureManager.PostSplitBody" />
+    <meta name="Microsoft.Help.Keywords" content="PostSplitBody Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                PostSplitBody Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a> : PostSplitBody Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="BodiesToMarkPopupContent" class="i-popup-content">
+        Bodies to mark for the split operation
+    </div>
+
+    <div id="ConsumeCutPopupContent" class="i-popup-content">
+        True to remove the bodies from the part, false to not
+    </div>
+
+    <div id="OriginsPopupContent" class="i-popup-content">
+        Array of origins of the bodies to save
+    </div>
+
+    <div id="SavePathsPopupContent" class="i-popup-content">
+        Array of paths and filenames of part documents to which to save BodiesToMark
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <font color="red">Obsolete. Superseded by <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~PostSplitBody2">IFeatureManager::PostSplitBody2</a>.</font>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function PostSplitBody( _
+   ByVal <i><a class="i-popup-link" id="BodiesToMarkPopupLink" data-popup-contentsource="#BodiesToMarkPopupContent" data-popup-showevent="click mouseenter">BodiesToMark</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="ConsumeCutPopupLink" data-popup-contentsource="#ConsumeCutPopupContent" data-popup-showevent="click mouseenter">ConsumeCut</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="OriginsPopupLink" data-popup-contentsource="#OriginsPopupContent" data-popup-showevent="click mouseenter">Origins</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="SavePathsPopupLink" data-popup-contentsource="#SavePathsPopupContent" data-popup-showevent="click mouseenter">SavePaths</a></i> As System.Object _
+) As Feature
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager</a>
+Dim BodiesToMark As System.Object
+Dim ConsumeCut As System.Boolean
+Dim Origins As System.Object
+Dim SavePaths As System.Object
+Dim value As Feature
+ 
+value = instance.PostSplitBody(BodiesToMark, ConsumeCut, Origins, SavePaths)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+Feature PostSplitBody( 
+   System.object <i><a class="i-popup-link" id="BodiesToMarkPopupLink" data-popup-contentsource="#BodiesToMarkPopupContent" data-popup-showevent="click mouseenter">BodiesToMark</a></i>,
+   System.bool <i><a class="i-popup-link" id="ConsumeCutPopupLink" data-popup-contentsource="#ConsumeCutPopupContent" data-popup-showevent="click mouseenter">ConsumeCut</a></i>,
+   System.object <i><a class="i-popup-link" id="OriginsPopupLink" data-popup-contentsource="#OriginsPopupContent" data-popup-showevent="click mouseenter">Origins</a></i>,
+   System.object <i><a class="i-popup-link" id="SavePathsPopupLink" data-popup-contentsource="#SavePathsPopupContent" data-popup-showevent="click mouseenter">SavePaths</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+Feature^ PostSplitBody( 
+   System.Object^ <i><a class="i-popup-link" id="BodiesToMarkPopupLink" data-popup-contentsource="#BodiesToMarkPopupContent" data-popup-showevent="click mouseenter">BodiesToMark</a></i>,
+   System.bool <i><a class="i-popup-link" id="ConsumeCutPopupLink" data-popup-contentsource="#ConsumeCutPopupContent" data-popup-showevent="click mouseenter">ConsumeCut</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="OriginsPopupLink" data-popup-contentsource="#OriginsPopupContent" data-popup-showevent="click mouseenter">Origins</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="SavePathsPopupLink" data-popup-contentsource="#SavePathsPopupContent" data-popup-showevent="click mouseenter">SavePaths</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>BodiesToMark</i></dt>
+
+                <dd>Bodies to mark for the split operation</dd>
+
+                <dt><i>ConsumeCut</i></dt>
+
+                <dd>True to remove the bodies from the part, false to not</dd>
+
+                <dt><i>Origins</i></dt>
+
+                <dd>Array of origins of the bodies to save</dd>
+
+                <dt><i>SavePaths</i></dt>
+
+                <dd>Array of paths and filenames of part documents to which to save BodiesToMark</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Pointer to the split-body <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature">feature</a>
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>To create a split-body feature:</p>
+
+            <ol style="LIST-STYLE-TYPE: decimal" type="1">
+                <li class="kadov-p">
+                    <p>Select the entities to use to split the part into multiple bodies.</p>
+                </li>
+
+                <li class="kadov-p">
+                    <p>Call <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~PreSplitBody">IFeatureManager::PreSplitBody</a>&#160;to get all of the bodies&#160;created by&#160;splitting the part.</p>
+                </li>
+
+                <li class="kadov-p">
+                    <p>Call this method to create the split-body feature.</p>
+                </li>
+            </ol>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">The size of the BodiesToMark, Origins, and SavePaths arrays must be equal and greater than 0. If you pass an empty path and filename for a body, then that body is only marked and not saved. It remains with the original part.</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">To find out if the bodies in a split-body feature were consumed, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplitBodyFeatureData~Consume">ISplitBodyFeatureData::Consume</a>.</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&#160;</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature~GetTypeName2">IFeature::GetTypeName2</a>&#160;and&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeature~GetTypeName">IFeature::GetTypeName</a>&#160;return:<br /></p>
+
+            <ul>
+                <li>
+                    <div class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                        <strong>Split</strong> for a feature that was created by splitting a&#160;part into multiple parts&#160;by using either this method or&#160;the <strong>Split</strong> feature in the user interface. You can access a split-body feature's data using the&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplitBodyFeatureData">ISplitBodyFeatureData</a> interface.
+                    </div>
+                </li>
+
+                <li>
+                    <div class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                        <strong>SplitBody</strong> for a body created by splitting a part and saving the body&#160;to a part. You cannot access the data of a split body&#160;saved to&#160;a part.
+                    </div>
+                </li>
+            </ul>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager">IFeatureManager Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager_members">IFeatureManager Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplitBodyFeatureData~GetSplitBodies">ISplitBodyFeatureData::GetSplitBodies Method ()</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplitBodyFeatureData~SetSplitBodies2">ISplitBodyFeatureData::SetSplitBodies2 Method ()</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~PostSplitBody.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

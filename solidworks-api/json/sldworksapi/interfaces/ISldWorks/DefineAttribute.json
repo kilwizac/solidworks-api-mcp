@@ -1,0 +1,108 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "DefineAttribute",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name to give to the attribute definition; the name must be unique and qualified among the attributes defined in the current session (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.IDefineAttribute"
+    ],
+    "keywords": [
+      "attribute",
+      "see",
+      "also",
+      "iattribute",
+      "create",
+      "defineattribute",
+      "isldworks",
+      "sld",
+      "works",
+      "define",
+      "name",
+      "string",
+      "object",
+      "vba",
+      "delete",
+      "faces",
+      "add",
+      "feature",
+      "include",
+      "library",
+      "vb",
+      "net",
+      "blended"
+    ]
+  },
+  "title": "ISldWorks.DefineAttribute",
+  "description": "Creates an attribute definition, which is the first step in generating attributes.",
+  "signature": "System.Object DefineAttribute( \n   System.String\nName\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name to give to the attribute definition; the name must be unique and qualified among the attributes defined in the current session (see Remarks )"
+    }
+  ],
+  "returns": "Attribute definition",
+  "remarks": "An attribute definition is a container that can hold a group of parameters. For example, you can use this container to hold machining information or BOM data. Instances of this container may then be created as\nIAttribute\nobjects on the document object, or on faces, edges, vertices, and features within the document. Once created, you can get any of the IAttribute objects and query or change its parameter values.\nThe Name argument used for this attribute definition must be unique and qualified among the attributes defined in the current session. To ensure this, the first three letters of the name must be an officially recognized third-party identifier. Contact SOLIDWORKS Corporation if you need one. You can also use the prefix: \"pub\" ( for \"public\" ) if you are just testing.\nGeneral sequence of steps in attribute creation\nCreate an attribute definition (ISldWorks::DefineAttribute or\nISldWorks::IDefineAttribute\n)\nAdd parameters to the attribute definition (\nIAttributeDef::AddParameter\n)\nRegister the attribute definition (\nIAttributeDef::Register\n)\nCreate instances of the attribute definition on objects throughout the model (\nIAttributeDef::CreateInstance5\n)\nPerform steps 1 through 3 only once for each working session. In other words, perform steps 1 through 3 when your DLL or EXE is initially loaded or run. Until the DLL is unloaded, or the EXE is closed, you can create as many instances of the attribute definition as you want as shown in step 4.\nCalling this method attaches to an existing attribute definition with the specified Name or creates\nnew attribute definition if a match is not found. The attribute definition exists throughout the current SOLIDWORKS Design session and persistent across SOLIDWORKS Design sessions if an attribute instance with that definition exists in the document. If an attribute definition exists, you cannot add or remove its parameters.\nAfter an attribute instance is added to a face, edge, vertex, loop, feature, or document, there are several ways to get back to the attribute for query or modification.\nBecause an attribute instance is a feature, you can use any of the standard feature traversal routines (the FeatureByName methods,\nIModelDoc2::FirstFeature\nor\nIModelDoc2::IFirstFeature\n, and\nIFeature::GetNextFeature\nor\nIModelDoc2::IGetNextFeature\n) to grab the feature representation of the attribute. After you have the\nIFeature\nobject that represents the attribute instance, you can call\nIFeature::GetSpecificFeature2\nto get the underlying\nIAttribute\nobject.\nIf the end-user selected the attribute in the FeatureManager design tree, you can use standard selection control to get the IFeature object representing the attribute instance (\nISelectionMgr::GetSelectedObject6\n) and then call IFeature::GetSpecificFeature2 to get the underlying IAttribute object.\nIf you are traversing body topology, then you can locate any IAttribute objects with a call to\nIEntity::FindAttribute\nor\nIEntity::IFindAttribute\nfrom the particular\nIEntity\nobject (that is, face, edge, and so on). If the attribute instance was placed on the document, then you would need to use option 1 to get back to it.\nAfter you have the IAttribute object that you want to query or modify, use the\nIAttribute::GetParameter\nor\nIAttribute::IGetParameter\nmethod to return the desired attribute parameter object. The\nIParameter\nobject provides a set of functions to query or modify specific attribute values.",
+  "examples": [
+    {
+      "title": "Create Attribute (VBA)",
+      "href": "Create_Attribute_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Faces (VBA)",
+      "href": "Delete_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (C#)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VB.NET)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VBA)",
+      "href": "Add_Attribute_to_Feature_and_Include_In_Library_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (C#)",
+      "href": "Delete_Blended_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VB.NET)",
+      "href": "Delete_Blended_Faces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VBA)",
+      "href": "Delete_Blended_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.IDefineAttribute"
+  ]
+}

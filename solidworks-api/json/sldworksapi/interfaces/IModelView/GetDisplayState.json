@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "GetDisplayState",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DisplayType",
+        "type": "System.Int32",
+        "description": "Display setting to check as defined in swViewDisplayType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "display",
+      "states",
+      "getdisplaystate",
+      "imodelview",
+      "model",
+      "view",
+      "state",
+      "type",
+      "int32",
+      "boolean",
+      "vba"
+    ]
+  },
+  "title": "IModelView.GetDisplayState",
+  "description": "Gets the display state of this model view.",
+  "signature": "System.Boolean GetDisplayState( \n   System.Int32\nDisplayType\n)",
+  "parameters": [
+    {
+      "name": "DisplayType",
+      "type": "System.Int32",
+      "description": "Display setting to check as defined in swViewDisplayType_e"
+    }
+  ],
+  "returns": "True if the setting specified is turned on, false if not",
+  "remarks": "By passing in an available DisplayType option, you can check various display conditions for the view. For example, if you want to know if a view is shaded, you could make the following call in Visual Basic:\nres = mView.GetDisplayState( swIsViewShaded )",
+  "examples": [
+    {
+      "title": "Get Display State (VBA)",
+      "href": "Get_Display_State_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

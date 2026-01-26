@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMassPropertyOverrideOptions",
+    "member": "SetOverrideCenterOfMassValue",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Value",
+        "type": "System.Object",
+        "description": "Array of three doubles of the x, y, and z coordinates of the center of mass"
+      },
+      {
+        "name": "CoordinateSystemName",
+        "type": "System.String",
+        "description": "Name of the coordinate system in which the center of mass is defined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMassProperty2.CenterOfMass"
+    ],
+    "keywords": [
+      "setoverridecenterofmassvalue",
+      "imasspropertyoverrideoptions",
+      "mass",
+      "override",
+      "options",
+      "center",
+      "value",
+      "object",
+      "coordinate",
+      "name",
+      "string",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IMassPropertyOverrideOptions.SetOverrideCenterOfMassValue",
+  "description": "Overrides the calculated center of mass of the model currently being edited.",
+  "signature": "System.Boolean SetOverrideCenterOfMassValue( \n   System.Object\nValue\n,\n   System.String\nCoordinateSystemName\n)",
+  "parameters": [
+    {
+      "name": "Value",
+      "type": "System.Object",
+      "description": "Array of three doubles of the x, y, and z coordinates of the center of mass"
+    },
+    {
+      "name": "CoordinateSystemName",
+      "type": "System.String",
+      "description": "Name of the coordinate system in which the center of mass is defined"
+    }
+  ],
+  "returns": "True if the center of mass is successfully overridden, false if not",
+  "remarks": "This method is valid only if\nIMassPropertyOverrideOptions::OverrideCenterOfMass\nis set to true.",
+  "examples": [],
+  "related": [
+    "IMassProperty2.CenterOfMass"
+  ]
+}

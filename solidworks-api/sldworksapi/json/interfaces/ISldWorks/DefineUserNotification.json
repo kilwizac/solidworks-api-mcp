@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "DefineUserNotification",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "UniqueName",
+        "type": "System.String",
+        "description": "Unique ID of this user notification"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "defineusernotification",
+      "isldworks",
+      "sld",
+      "works",
+      "define",
+      "user",
+      "notification",
+      "unique",
+      "name",
+      "string",
+      "object",
+      "iusernotificationhandler"
+    ]
+  },
+  "title": "ISldWorks.DefineUserNotification",
+  "description": "Called by a SOLIDWORKS add-in, creates a user notification definition object.",
+  "signature": "System.Object DefineUserNotification( \n   System.String\nUniqueName\n)",
+  "parameters": [
+    {
+      "name": "UniqueName",
+      "type": "System.String",
+      "description": "Unique ID of this user notification"
+    }
+  ],
+  "returns": "IUserNotificationDefinition",
+  "remarks": "It is the add-in's responsibility to ensure that the ID is unique by using, for example, a combination of add-in module name and unique notification identifier:\n\"MyAddInName+ID_MYNOTIFICATION1\"",
+  "examples": [
+    {
+      "title": "IUserNotificationHandler",
+      "href": "ms-its:swpublishedapi.chm::/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IUserNotificationHandler.html",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "AddCallback",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Cookie specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "CallbackFunction",
+        "type": "System.String",
+        "description": "Name of the function to call (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.CallBack",
+      "ISldWorks.PostMessageToApplication",
+      "ISldWorks.RemoveCallback",
+      "ISldWorks.SetAddinCallbackInfo"
+    ],
+    "keywords": [
+      "callback",
+      "addcallback",
+      "isldworks",
+      "sld",
+      "works",
+      "add",
+      "cookie",
+      "int32",
+      "function",
+      "string",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.AddCallback",
+  "description": "Registers a general purpose callback handler.",
+  "signature": "void AddCallback( \n   System.Int32\nCookie\n,\n   System.String\nCallbackFunction\n)",
+  "parameters": [
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Cookie specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "CallbackFunction",
+      "type": "System.String",
+      "description": "Name of the function to call (see Remarks )"
+    }
+  ],
+  "returns": "",
+  "remarks": "The callback function has three arguments:\nCallback function parameter name in example\nData Type\nDescription\ncmd\nInteger\nCommand ID as defined in\nswAppCallBackCmd_e\ndata\nInteger\nData related to the event\ndsp\nLPDISPATCH\nNot currently used",
+  "examples": [],
+  "related": [
+    "ISldWorks.CallBack",
+    "ISldWorks.PostMessageToApplication",
+    "ISldWorks.RemoveCallback",
+    "ISldWorks.SetAddinCallbackInfo"
+  ]
+}

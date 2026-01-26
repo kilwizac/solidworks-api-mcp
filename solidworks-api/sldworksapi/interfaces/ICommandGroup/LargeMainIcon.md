@@ -1,0 +1,62 @@
+---
+type: property
+interface: ICommandGroup
+member: LargeMainIcon
+returns: System.String
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - ui
+related:
+  - ICommandGroup.AddCommandItem2
+  - ICommandGroup.LargeIconList
+  - ICommandGroup.SmallIconList
+  - ICommandGroup.SmallMainIcon
+keywords:
+  - largemainicon
+  - icommandgroup
+  - command
+  - group
+  - large
+  - main
+  - icon
+  - string
+  - create
+  - submenus
+  - commandmanager
+readonly: null
+---
+
+# ICommandGroup.LargeMainIcon
+
+Obsolete. Superseded by ICommandGroup::MainIconList.
+
+## Signature
+
+```csharp
+System.String LargeMainIcon {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Path of the large bitmap or PNG for this CommandGroup
+
+## Remarks
+
+The large bitmap or PNG must be 24x24 and use a 256-color palette.
+
+## Examples
+
+- Create Submenus in the CommandManager (C#) (Create_Submenus_in_the_CommandManager_Example_CSharp.htm)
+
+## See Also
+
+- `ICommandGroup.AddCommandItem2`
+- `ICommandGroup.LargeIconList`
+- `ICommandGroup.SmallIconList`
+- `ICommandGroup.SmallMainIcon`

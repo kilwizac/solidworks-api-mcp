@@ -1,0 +1,112 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "FindMinimumRadius",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Bound",
+        "type": "System.Object",
+        "description": "Array of doubles containing the start and end boundaries (see Remarks )"
+      },
+      {
+        "name": "NumOfRadius",
+        "type": "System.Int32",
+        "description": "Number of radius returned; can be 0 or 1"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Object",
+        "description": "Minimum radius of curvature (see Remarks )"
+      },
+      {
+        "name": "Location",
+        "type": "System.Object",
+        "description": "Position where minimum radius curvature occurred (see Remarks )"
+      },
+      {
+        "name": "Parameter",
+        "type": "System.Object",
+        "description": "Curve parameter (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.GetEndParams",
+      "ICurve.IFindMinimumRadius",
+      "ISurface.FindMinimumRadius",
+      "ISurface.IFindMinimumRadius"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "radius",
+      "curvature",
+      "curves",
+      "findminimumradius",
+      "find",
+      "minimum",
+      "bound",
+      "object",
+      "num",
+      "int32",
+      "location",
+      "parameter",
+      "boolean",
+      "vba"
+    ]
+  },
+  "title": "ICurve.FindMinimumRadius",
+  "description": "Finds the minimum radius of curvature of the selected curve and its position and u-v parameters.",
+  "signature": "System.Boolean FindMinimumRadius( \n   System.Object\nBound\n,\n   out System.Int32\nNumOfRadius\n,\n   out System.Object\nRadius\n,\n   out System.Object\nLocation\n,\n   out System.Object\nParameter\n)",
+  "parameters": [
+    {
+      "name": "Bound",
+      "type": "System.Object",
+      "description": "Array of doubles containing the start and end boundaries (see Remarks )"
+    },
+    {
+      "name": "NumOfRadius",
+      "type": "System.Int32",
+      "description": "Number of radius returned; can be 0 or 1"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Object",
+      "description": "Minimum radius of curvature (see Remarks )"
+    },
+    {
+      "name": "Location",
+      "type": "System.Object",
+      "description": "Position where minimum radius curvature occurred (see Remarks )"
+    },
+    {
+      "name": "Parameter",
+      "type": "System.Object",
+      "description": "Curve parameter (see Remarks )"
+    }
+  ],
+  "returns": "True if operation succeeds, false if it fails",
+  "remarks": "The search is confined to the portion of the selected curve lying inside of Bound.\nCOM returns these data types for these parameters:\nRadius: VARIANT of SafeDoubleArray\nLocation: VARIANT of SafeDispatchArray of\nIMathpoint\nParameter: VARIANT of SafeDoubleArray",
+  "examples": [
+    {
+      "title": "Find Minimum Radius of Curve (VBA)",
+      "href": "Find_Minimum_Radius_of_Curve_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.GetEndParams",
+    "ICurve.IFindMinimumRadius",
+    "ISurface.FindMinimumRadius",
+    "ISurface.IFindMinimumRadius"
+  ]
+}

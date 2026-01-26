@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "SetDirectionOfLay",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction of lay value as defined in swSFLaySym_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setdirectionoflay",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "direction",
+      "lay",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "ISFSymbol.SetDirectionOfLay",
+  "description": "Sets the direction of lay value for this surface finish symbol.",
+  "signature": "System.Boolean SetDirectionOfLay( \n   System.Int32\nDirection\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction of lay value as defined in swSFLaySym_e"
+    }
+  ],
+  "returns": "True if the direction of lay value is set, false if not",
+  "remarks": "If an invalid direction of lay value is specified, the symbol is not changed, and false is returned.\nTo see the model or drawing changes caused by running this method, you must redraw your window. See\nIModelDoc2::GraphicsRedraw2\nfor details.\nTo get the direction of lay value, use\nISFSymbol::GetDirectionOfLay\n.",
+  "examples": [],
+  "related": []
+}

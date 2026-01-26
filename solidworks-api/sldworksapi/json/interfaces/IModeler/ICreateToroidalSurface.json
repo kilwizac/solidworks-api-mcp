@@ -1,0 +1,141 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateToroidalSurface",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "Center",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (see Remarks )"
+      },
+      {
+        "name": "Axis",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (see Remarks )"
+      },
+      {
+        "name": "RefDirection",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (see Remarks )"
+      },
+      {
+        "name": "MajorRadius",
+        "type": "System.Double",
+        "description": "See Remarks"
+      },
+      {
+        "name": "MinorRadius",
+        "type": "System.Double",
+        "description": "See Remarks"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateBsplineSurface",
+      "IModeler.CreateConicalSurface2",
+      "IModeler.CreateCoonsBSurface",
+      "IModeler.CreateCylindricalSurface2",
+      "IModeler.CreateExtrusionSurface",
+      "IModeler.CreateLoftSurface",
+      "IModeler.CreateOffsetSurface",
+      "IModeler.CreatePlanarSurface2",
+      "IModeler.CreateRuledSurface",
+      "IModeler.CreateSphericalSurface2",
+      "IModeler.CreateSweptSurface",
+      "IModeler.CreateToroidalSurface",
+      "IModeler.ICreateBsplineSurface",
+      "IModeler.ICreateConicalSurface2",
+      "IModeler.ICreateCylindricalSurface2",
+      "IModeler.ICreateExtrusionSurface",
+      "IModeler.ICreateLoftSurface",
+      "IModeler.ICreateOffsetSurface",
+      "IModeler.ICreatePlanarSurface2",
+      "IModeler.ICreateRuledSurface",
+      "IModeler.ICreateSweptSurface"
+    ],
+    "keywords": [
+      "toroidal",
+      "surfaces",
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "untrimmed",
+      "icreatetoroidalsurface",
+      "imodeler",
+      "modeler",
+      "create",
+      "center",
+      "double",
+      "axis",
+      "ref",
+      "direction",
+      "major",
+      "radius",
+      "minor"
+    ]
+  },
+  "title": "IModeler.ICreateToroidalSurface",
+  "description": "Creates an untrimmed toroidal surface from the specified arguments.",
+  "signature": "Surface ICreateToroidalSurface( \n   ref System.Double\nCenter\n,\n   ref System.Double\nAxis\n,\n   ref System.Double\nRefDirection\n,\n   System.Double\nMajorRadius\n,\n   System.Double\nMinorRadius\n)",
+  "parameters": [
+    {
+      "name": "Center",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (see Remarks )"
+    },
+    {
+      "name": "Axis",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (see Remarks )"
+    },
+    {
+      "name": "RefDirection",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (see Remarks )"
+    },
+    {
+      "name": "MajorRadius",
+      "type": "System.Double",
+      "description": "See Remarks"
+    },
+    {
+      "name": "MinorRadius",
+      "type": "System.Double",
+      "description": "See Remarks"
+    }
+  ],
+  "returns": "",
+  "remarks": "Input arguments:\nCenter XYZ location that represents the center of the spherical surface.\nAxis XYZ direction of the axis of the spherical surface.\nRefDirection XYZ direction of the reference axis of the spherical surface; it must be perpendicular to the axis.\nMajorRadius major radius of the toroidal surface.\nMinorRadius minor radius of the toroidal surface.\nThe resulting surface can be trimmed using a method like\nISurface::CreateTrimmedSheet\nto generate a sheet body.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBsplineSurface",
+    "IModeler.CreateConicalSurface2",
+    "IModeler.CreateCoonsBSurface",
+    "IModeler.CreateCylindricalSurface2",
+    "IModeler.CreateExtrusionSurface",
+    "IModeler.CreateLoftSurface",
+    "IModeler.CreateOffsetSurface",
+    "IModeler.CreatePlanarSurface2",
+    "IModeler.CreateRuledSurface",
+    "IModeler.CreateSphericalSurface2",
+    "IModeler.CreateSweptSurface",
+    "IModeler.CreateToroidalSurface",
+    "IModeler.ICreateBsplineSurface",
+    "IModeler.ICreateConicalSurface2",
+    "IModeler.ICreateCylindricalSurface2",
+    "IModeler.ICreateExtrusionSurface",
+    "IModeler.ICreateLoftSurface",
+    "IModeler.ICreateOffsetSurface",
+    "IModeler.ICreatePlanarSurface2",
+    "IModeler.ICreateRuledSurface",
+    "IModeler.ICreateSweptSurface"
+  ]
+}

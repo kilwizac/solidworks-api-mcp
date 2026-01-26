@@ -1,0 +1,54 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "IRestore2",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "StreamIn",
+        "type": "System.Object",
+        "description": "IStream interface for storage inside the SOLIDWORKS document"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.Restore"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "stream",
+      "see",
+      "also",
+      "ibody2",
+      "irestore2",
+      "imodeler",
+      "modeler",
+      "restore2",
+      "object",
+      "body2"
+    ]
+  },
+  "title": "IModeler.IRestore2",
+  "description": "Restores a temporary body object from the specified stream.",
+  "signature": "Body2 IRestore2( \n   System.Object\nStreamIn\n)",
+  "parameters": [
+    {
+      "name": "StreamIn",
+      "type": "System.Object",
+      "description": "IStream interface for storage inside the SOLIDWORKS document"
+    }
+  ],
+  "returns": "Temporary body",
+  "remarks": "You can use a temporary body object for display purposes. You can generate temporary bodies using such methods as\nIModeler::CreateBodyFromFaces2\nor\nIModeler::ICreateBodyFromFaces3\n. Temporary bodies are not saved with the document unless you explicitly save them using\nIBody2::Save\nor\nIBody2::ISave\n.\nYou can obtain the StreamIn object by calling\nIModelDoc2::IGet3rdPartyStorage\nand by specifying the stream name that was used during the body save operation.",
+  "examples": [],
+  "related": [
+    "IModeler.Restore"
+  ]
+}

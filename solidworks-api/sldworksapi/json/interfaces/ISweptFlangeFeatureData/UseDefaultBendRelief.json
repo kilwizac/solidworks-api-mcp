@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweptFlangeFeatureData",
+    "member": "UseDefaultBendRelief",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "usedefaultbendrelief",
+      "isweptflangefeaturedata",
+      "swept",
+      "flange",
+      "feature",
+      "data",
+      "use",
+      "default",
+      "bend",
+      "relief",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweptFlangeFeatureData.UseDefaultBendRelief",
+  "description": "Gets or sets whether to use the bend relief from the original sheet metal feature in this swept flange feature.",
+  "signature": "System.Boolean UseDefaultBendRelief {get; set;}",
+  "parameters": [],
+  "returns": "True to use the default bend relief, false to specify custom bend relief values (see Remarks )",
+  "remarks": "For cylindrical/conical swept flanges, this property is valid only during creation.\nIf this property is false, then you can set:\nISweptFlangeFeatureData::ReliefType\nISweptFlangeFeatureData::UseReliefRatio\nIf ISweptFlangeFeatureData::UseReliefRatio is:\nTrue, then you can set\nISweptFlangeFeatureData::ReliefRatio\n.\nFalse, then you can set\nISweptFlangeFeatureData::ReliefDepth\nand\nISweptFlangeFeatureData::ReliefWidth\n.",
+  "examples": [
+    {
+      "title": "ISweptFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweptFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

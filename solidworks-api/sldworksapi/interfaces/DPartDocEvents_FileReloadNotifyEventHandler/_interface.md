@@ -1,0 +1,16 @@
+---
+type: interface
+interface: DPartDocEvents_FileReloadNotifyEventHandler
+inherits: null
+description: Post-notifies the user program when a part document is reloaded.
+member_count: 0
+docset: sldworksapi
+categories:
+  - file-io
+  - parts
+common_members: []
+---
+
+# DPartDocEvents_FileReloadNotifyEventHandler
+
+Post-notifies the user program when a part document is reloaded.

@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweptFlangeFeatureData",
+    "member": "MaterialInside",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "materialinside",
+      "isweptflangefeaturedata",
+      "swept",
+      "flange",
+      "feature",
+      "data",
+      "material",
+      "inside",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ISweptFlangeFeatureData.MaterialInside",
+  "description": "Gets or sets whether to flatten the flange profile with material inside of this swept flange feature.",
+  "signature": "System.Boolean MaterialInside {get; set;}",
+  "parameters": [],
+  "returns": "True to flatten the flange profile with material inside, false to not",
+  "remarks": "This property is valid only:\nif\nISweptFlangeFeatureData::FlattenAlongPath\nis true,\n- and -\nwhen not creating the swept flange on an existing sheet metal feature.\nThe flat pattern of the model may fail for either setting of this property, depending on whether self-intersecting geometry occurs with material inside or outside. You should test your model to determine which setting of this property successfully flattens the flange\nprofile\n.",
+  "examples": [],
+  "related": []
+}

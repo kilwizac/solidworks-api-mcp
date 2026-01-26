@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ILocalCurvePatternFeatureData",
+    "member": "D1FaceNormal",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "d1facenormal",
+      "ilocalcurvepatternfeaturedata",
+      "local",
+      "curve",
+      "pattern",
+      "feature",
+      "data",
+      "d1",
+      "face",
+      "normal",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ILocalCurvePatternFeatureData.D1FaceNormal",
+  "description": "Gets or sets the face on which the 3D curve lies for this curve-driven component pattern feature.",
+  "signature": "System.Object D1FaceNormal {get; set;}",
+  "parameters": [],
+  "returns": "IFace2",
+  "remarks": "If you pre-select a 3D curve for Direction 1, then before creating the feature definition, you must also pre-select the face normal entity using selection Mark = 64.\nUse this property only when editing the pattern feature.\nThis property is valid only when specifying\nILocalCurvePatternFeatureData::D1Direction\nusing a 3D curve.\nIf you try to change this property to null or Nothing,\nIFeature::ModifyDefinition\nreturns true but the property does not change.\nFor more information, see the\nCurve Driven Component Pattern\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": []
+}

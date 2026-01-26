@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swAnnotationVisibilityState_e",
+    "description": "Annotation visibility states.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swAnnotationVisibilityState_e",
+  "description": "Annotation visibility states.",
+  "values": [
+    {
+      "member": "swAnnotationHalfHidden",
+      "value": "2",
+      "description": "= Annotation is half-hidden (grayed out) or hidden depending on the interactive user's actions. For example, if the annotation's visibility is set to swAnnotationHalfHidden by IAnnotation::Visible , then that annotation is in a half-hidden state, which is not a permanent state. During a Hide/Show Annotations operation in a drawing, a half-hidden annotation is displayed in gray if the interactive user selects to show all annotations. Any annotation set to swAnnotationHalfHidden is hidden when the interactive user finishes using Hide/Show Annotations."
+    },
+    {
+      "member": "swAnnotationHidden",
+      "value": "3",
+      "description": "= Annotation is hidden"
+    },
+    {
+      "member": "swAnnotationVisibilityUnknown",
+      "value": "0",
+      "description": "= Annotation visibility is not known"
+    },
+    {
+      "member": "swAnnotationVisible",
+      "value": "1",
+      "description": "= Annotation is visible"
+    }
+  ]
+}

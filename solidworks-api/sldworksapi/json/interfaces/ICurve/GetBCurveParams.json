@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetBCurveParams",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "WantCubicIn",
+        "type": "System.Boolean",
+        "description": "True returns cubic rational parameters, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.ConvertArcToBcurve",
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.IConvertPcurveToBcurveSize",
+      "ICurve.IGetBCurveParamsSize2",
+      "ICurve.IsBcurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "getbcurveparams",
+      "icurve",
+      "curve",
+      "params",
+      "want",
+      "cubic",
+      "boolean",
+      "object",
+      "spline",
+      "points",
+      "vba",
+      "select",
+      "edges",
+      "all",
+      "holes",
+      "face",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICurve.GetBCurveParams",
+  "description": "Obsolete. Superseded by ICurve::GetBCurveParams3.",
+  "signature": "System.Object GetBCurveParams( \n   System.Boolean\nWantCubicIn\n)",
+  "parameters": [
+    {
+      "name": "WantCubicIn",
+      "type": "System.Boolean",
+      "description": "True returns cubic rational parameters, false does not"
+    }
+  ],
+  "returns": "Array describing the parameters of the curve (see Remarks )",
+  "remarks": "To control the accuracy of the curve data, see\nIModeler::SetToleranceValue\n.\nThe return value is an array of doubles. The array size is ( 2 + numKnots + numControlPointDoubles) where numKnots is (numControlPoints + order). The array is as follows:\n[\npackedDouble1, packedDouble2, knot1, knot2,..., ControlPoint1[Dimension], ControlPoint2[Dimension],...\n]\nwhere:\npackedDouble1\nis an integer pair containing the\nDimension\nand\nOrder\npackedDouble2\nis an integer pair containing the\nNumControlPoints\nand\nPeriodicity\nknot1\nknot2\n...\nControlPoint1[dimension]\nControlPoint2[dimension]\n...\nThe size of the control point array is based on the curve dimension:\nIf\nDimension\n= 3, then\nControlPoint\nis an array of 3 doubles ( x, y, z )\nIf\nDimension\n= 4, then\nControlPoint\nis an array of 4 doubles ( x, y, z, w ) where\nw = weight",
+  "examples": [
+    {
+      "title": "Get Curve Spline Points (VBA)",
+      "href": "Get_Curve_Spline_Points_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (C#)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VB.NET)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Edges of All Holes on Face (VBA)",
+      "href": "Select_Edges_of_All_Holes_on_Face_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.ConvertArcToBcurve",
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.IConvertPcurveToBcurveSize",
+    "ICurve.IGetBCurveParamsSize2",
+    "ICurve.IsBcurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

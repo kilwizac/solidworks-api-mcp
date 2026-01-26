@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExplodeStep",
+    "member": "GetExplodeDirection",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ExplDirIndex",
+        "type": "System.Int32",
+        "description": "Explode direction manipulator index as defined in swExplodeDirectionIndex_e ; valid only for regular explode steps"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IExplodeStep.SetExplodeDirection"
+    ],
+    "keywords": [
+      "getexplodedirection",
+      "iexplodestep",
+      "explode",
+      "step",
+      "direction",
+      "expl",
+      "dir",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IExplodeStep.GetExplodeDirection",
+  "description": "Gets the explode direction (manipulator index and entity) for this explode step.",
+  "signature": "System.Object GetExplodeDirection( \n   out System.Int32\nExplDirIndex\n)",
+  "parameters": [
+    {
+      "name": "ExplDirIndex",
+      "type": "System.Int32",
+      "description": "Explode direction manipulator index as defined in swExplodeDirectionIndex_e ; valid only for regular explode steps"
+    }
+  ],
+  "returns": "Explode direction entity; Nothing or null if an explode direction entity was not selected during creation of this explode step",
+  "remarks": "This method is not valid for subassembly explode steps.",
+  "examples": [],
+  "related": [
+    "IExplodeStep.SetExplodeDirection"
+  ]
+}

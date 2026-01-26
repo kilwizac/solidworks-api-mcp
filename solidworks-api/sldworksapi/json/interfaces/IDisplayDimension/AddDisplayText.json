@@ -1,0 +1,110 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "AddDisplayText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text to display"
+      },
+      {
+        "name": "Position",
+        "type": "System.Object",
+        "description": "Location of the text; array of 3 doubles"
+      },
+      {
+        "name": "Format",
+        "type": "System.Object",
+        "description": "Object for the text format"
+      },
+      {
+        "name": "Attachment",
+        "type": "System.Int32",
+        "description": "Justification of the text as defined in swTextJustification_e"
+      },
+      {
+        "name": "WidthFactor",
+        "type": "System.Double",
+        "description": "Horizontal scale factor of the text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.HorizontalJustification",
+      "IDisplayDimension.IAddDisplayText",
+      "IDisplayDimension.VerticalJustification"
+    ],
+    "keywords": [
+      "adddisplaytext",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "add",
+      "text",
+      "string",
+      "position",
+      "object",
+      "format",
+      "attachment",
+      "int32",
+      "width",
+      "factor",
+      "double",
+      "boolean",
+      "replace",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.AddDisplayText",
+  "description": "Overrides the display text.",
+  "signature": "System.Boolean AddDisplayText( \n   System.String\nText\n,\n   System.Object\nPosition\n,\n   System.Object\nFormat\n,\n   System.Int32\nAttachment\n,\n   System.Double\nWidthFactor\n)",
+  "parameters": [
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text to display"
+    },
+    {
+      "name": "Position",
+      "type": "System.Object",
+      "description": "Location of the text; array of 3 doubles"
+    },
+    {
+      "name": "Format",
+      "type": "System.Object",
+      "description": "Object for the text format"
+    },
+    {
+      "name": "Attachment",
+      "type": "System.Int32",
+      "description": "Justification of the text as defined in swTextJustification_e"
+    },
+    {
+      "name": "WidthFactor",
+      "type": "System.Double",
+      "description": "Horizontal scale factor of the text"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "The new graphics displayed by this method are temporary. When the user changes the dimension, this display dimension reverts back to the SOLIDWORKS standard.",
+  "examples": [
+    {
+      "title": "Replace Dimension with Text (VBA)",
+      "href": "Replace_Dimension_with_Text_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.HorizontalJustification",
+    "IDisplayDimension.IAddDisplayText",
+    "IDisplayDimension.VerticalJustification"
+  ]
+}

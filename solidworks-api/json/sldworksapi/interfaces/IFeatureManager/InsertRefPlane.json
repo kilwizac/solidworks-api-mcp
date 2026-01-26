@@ -1,0 +1,156 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertRefPlane",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FirstConstraint",
+        "type": "System.Int32",
+        "description": "First constraint as defined in swRefPlaneReferenceConstraints_e"
+      },
+      {
+        "name": "FirstConstraintAngleOrDistance",
+        "type": "System.Double",
+        "description": "Angle or distance of the first constraint"
+      },
+      {
+        "name": "SecondConstraint",
+        "type": "System.Int32",
+        "description": "Second constraint as defined in swRefPlaneReferenceConstraints_e"
+      },
+      {
+        "name": "SecondConstraintAngleOrDistance",
+        "type": "System.Double",
+        "description": "Angle or distance of the second constraint"
+      },
+      {
+        "name": "ThirdConstraint",
+        "type": "System.Int32",
+        "description": "Third constraint as defined in swRefPlaneReferenceConstraints_e"
+      },
+      {
+        "name": "ThirdConstraintAngleOrDistance",
+        "type": "System.Double",
+        "description": "Angle or distance of the third constraint"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IRefPlane",
+      "IRefPlaneFeatureData"
+    ],
+    "keywords": [
+      "reference",
+      "geometry",
+      "planes",
+      "plane",
+      "see",
+      "irefplane",
+      "irefplanefeaturedata",
+      "interfaces",
+      "also",
+      "create",
+      "refplane",
+      "insertrefplane",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "ref",
+      "first",
+      "constraint",
+      "int32",
+      "angle",
+      "distance",
+      "double",
+      "second",
+      "third",
+      "object",
+      "vb",
+      "net",
+      "vba",
+      "fill",
+      "surface"
+    ]
+  },
+  "title": "IFeatureManager.InsertRefPlane",
+  "description": "Inserts a constraint-based reference plane using the selected reference entities.",
+  "signature": "System.Object InsertRefPlane( \n   System.Int32\nFirstConstraint\n,\n   System.Double\nFirstConstraintAngleOrDistance\n,\n   System.Int32\nSecondConstraint\n,\n   System.Double\nSecondConstraintAngleOrDistance\n,\n   System.Int32\nThirdConstraint\n,\n   System.Double\nThirdConstraintAngleOrDistance\n)",
+  "parameters": [
+    {
+      "name": "FirstConstraint",
+      "type": "System.Int32",
+      "description": "First constraint as defined in swRefPlaneReferenceConstraints_e"
+    },
+    {
+      "name": "FirstConstraintAngleOrDistance",
+      "type": "System.Double",
+      "description": "Angle or distance of the first constraint"
+    },
+    {
+      "name": "SecondConstraint",
+      "type": "System.Int32",
+      "description": "Second constraint as defined in swRefPlaneReferenceConstraints_e"
+    },
+    {
+      "name": "SecondConstraintAngleOrDistance",
+      "type": "System.Double",
+      "description": "Angle or distance of the second constraint"
+    },
+    {
+      "name": "ThirdConstraint",
+      "type": "System.Int32",
+      "description": "Third constraint as defined in swRefPlaneReferenceConstraints_e"
+    },
+    {
+      "name": "ThirdConstraintAngleOrDistance",
+      "type": "System.Double",
+      "description": "Angle or distance of the third constraint"
+    }
+  ],
+  "returns": "Reference plane",
+  "remarks": "Before calling this method, you must have selected the reference entities using these marks with\nIModelDocExtension::SelectByID2\n:\n0 = First reference entity\n1 = Second reference entity\n2 = Third reference entity",
+  "examples": [
+    {
+      "title": "Insert Reference Plane (C#)",
+      "href": "Insert_Reference_Plane_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Reference Plane (VB.NET)",
+      "href": "Insert_Reference_Plane_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Reference Plane (VBA)",
+      "href": "Insert_Reference_Plane_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (C#)",
+      "href": "Insert_Fill-surface_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VB.NET)",
+      "href": "Insert_Fill-surface_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Fill-surface Feature (VBA)",
+      "href": "Insert_Fill-surface_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IRefPlane",
+    "IRefPlaneFeatureData"
+  ]
+}

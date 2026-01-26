@@ -1,0 +1,108 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreatePCurve",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Surface",
+        "type": "System.Object",
+        "description": "Surface associated with the pcurve"
+      },
+      {
+        "name": "Props",
+        "type": "System.Object",
+        "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+      },
+      {
+        "name": "Knots",
+        "type": "System.Object",
+        "description": "Array of numKnots (see Remarks )"
+      },
+      {
+        "name": "CtrlPtCoords",
+        "type": "System.Object",
+        "description": "Array of numCtrlPtCoord (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.GetPCurveParams",
+      "ICurve.IGetPCurveParams",
+      "ICurve.IGetPCurveParamsSize",
+      "IModeler.CreateBsplineCurve",
+      "IModeler.ICreateBsplineCurve",
+      "IModeler.ICreatePCurve"
+    ],
+    "keywords": [
+      "curve",
+      "see",
+      "also",
+      "icurve",
+      "pcurve",
+      "pcurves",
+      "createpcurve",
+      "imodeler",
+      "modeler",
+      "create",
+      "surface",
+      "object",
+      "props",
+      "knots",
+      "ctrl",
+      "pt",
+      "coords",
+      "space",
+      "parameter",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CreatePCurve",
+  "description": "Creates a pcurve.",
+  "signature": "System.Object CreatePCurve( \n   System.Object\nSurface\n,\n   System.Object\nProps\n,\n   System.Object\nKnots\n,\n   System.Object\nCtrlPtCoords\n)",
+  "parameters": [
+    {
+      "name": "Surface",
+      "type": "System.Object",
+      "description": "Surface associated with the pcurve"
+    },
+    {
+      "name": "Props",
+      "type": "System.Object",
+      "description": "Array containing 4 integers packed into 2 double elements (see Remarks )"
+    },
+    {
+      "name": "Knots",
+      "type": "System.Object",
+      "description": "Array of numKnots (see Remarks )"
+    },
+    {
+      "name": "CtrlPtCoords",
+      "type": "System.Object",
+      "description": "Array of numCtrlPtCoord (see Remarks )"
+    }
+  ],
+  "returns": "Pcurve",
+  "remarks": "The Props argument contains the following values:\nDimensionControlPoints\nOrder\nNumCtrlPoints\nPeriodicity\nLength of this array...\nGiven by...\nKnots\nnumKnots = NumCtrlPoints + Order\nCtrlPtCoords\nNumCtrlPtCoord = NumCtrlPoints * DimensionControlPoints",
+  "examples": [
+    {
+      "title": "Create Space Parameter Curve On Surface (VBA)",
+      "href": "Create_Space_Parameter_Curve_on_Surface_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.GetPCurveParams",
+    "ICurve.IGetPCurveParams",
+    "ICurve.IGetPCurveParamsSize",
+    "IModeler.CreateBsplineCurve",
+    "IModeler.ICreateBsplineCurve",
+    "IModeler.ICreatePCurve"
+  ]
+}

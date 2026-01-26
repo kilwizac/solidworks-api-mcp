@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetSymTextPoints",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymEdgeCounts",
+      "IGtol.GetSymLines",
+      "IGtol.GetSymName",
+      "IGtol.GetSymText",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymLines",
+      "IGtol.IGetSymText"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymtextpoints",
+      "igtol",
+      "gtol",
+      "sym",
+      "text",
+      "points",
+      "idx",
+      "int16",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetSymTextPoints",
+  "description": "Gets the text points for the specified symbol.",
+  "signature": "System.Double IGetSymTextPoints( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The size of the return array is based on the number of text pieces in this GTol, which you can determine using the return value from\nIGtol::IGetSymEdgeCounts\n.\nThe format of the returned data is an array of doubles:\nretval\n[0]  - X location of text 1\nretval\n[1]  - Y location of text 1\nretval\n[2]  - Z location of text 1\nretval\n[3]  - X location of text 2\nretval\n[4]  - Y location of text 2\nretval\n[5]  - Z location of text 2\nretval\n[ (n*3-3)] - X location of text n\nretval\n[ (n*3-2)] - Y location of text n\nretval\n[ (n*3-1)] - Z location of text n",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymEdgeCounts",
+    "IGtol.GetSymLines",
+    "IGtol.GetSymName",
+    "IGtol.GetSymText",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymLines",
+    "IGtol.IGetSymText"
+  ]
+}

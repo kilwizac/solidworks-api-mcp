@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetConfigurationCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IConfiguration",
+      "IConfigurationManager",
+      "IModelDoc2.AddConfiguration3",
+      "IModelDoc2.ConfigurationManager",
+      "IModelDoc2.DeleteConfiguration2",
+      "IModelDoc2.GetConfigurationByName",
+      "IModelDoc2.GetConfigurationNames",
+      "IModelDoc2.IAddConfiguration3",
+      "IModelDoc2.IGetConfigurationByName",
+      "IModelDoc2.IGetConfigurationNames",
+      "IModelDoc2.ShowConfiguration2"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "number",
+      "getconfigurationcount",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "count",
+      "int32",
+      "names",
+      "configurations",
+      "using",
+      "variant"
+    ]
+  },
+  "title": "IModelDoc2.GetConfigurationCount",
+  "description": "Gets the number of configurations.",
+  "signature": "System.Int32 GetConfigurationCount()",
+  "parameters": [],
+  "returns": "Number of configurations",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Get Names of Configurations Using Variant (C++)",
+      "href": "ConfigurationTraversalCPP.htm",
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "code": "//-------------------------------------------------------\n//\u00a0Preconditions:\n//\u00a01.\u00a0Start\u00a0up\u00a0SOLIDWORKS\u00a0and\u00a0open\u00a0a\u00a0part\u00a0or\u00a0assembly\u00a0document.\n//\u00a02.\u00a0Start\u00a0Microsoft\u00a0Visual\u00a0Studio\u00a02010.\n//\u00a0\u00a0\u00a0\u00a0a.\u00a0Click\nFile\u00a0>\u00a0New\u00a0>\u00a0Project\u00a0>\u00a0Visual\u00a0C++\u00a0>\u00a0Win32\u00a0Console\u00a0Application\n.\n//\u00a0\u00a0\u00a0\u00a0b.\u00a0Type\u00a0the\u00a0name\u00a0of\u00a0your\u00a0project\u00a0in\nName\n.\n//\u00a0\u00a0\u00a0\u00a0c.\u00a0Click\nOK\n.\n//\u00a0\u00a0\u00a0\u00a0d.\u00a0Click\nNext\n.\n//\u00a0\u00a0\u00a0\u00a0e.\u00a0Select\nATL\nand\u00a0click\nFinish\n.\n//\u00a0\u00a0\u00a0\u00a0f.\u00a0Click\nProject\u00a0>\u00a0Properties\u00a0>\u00a0Configuration\u00a0Properties\u00a0>\n//\nC/C++\nand\u00a0type\u00a0the path\u00a0to\nsldworks.tlb\nand\nswconst.tlb\n,\u00a0\n//       typically\nC:\\Program\u00a0Files\\SOLIDWORKS\u00a0Corp\\SOLIDWORKS\n, in\n//\nAdditional\u00a0Include\u00a0Directories\n.\n//\u00a0\u00a0\u00a0\u00a0g.\u00a0Click\nOK\n.\n//\u00a03.\u00a0Replace\u00a0the\u00a0code\u00a0in\u00a0the\u00a0code\u00a0window\u00a0with\nthis\u00a0code\n.\n//\u00a04.\u00a0Click\nDebug\u00a0>\u00a0Start\u00a0Debugging\n.\n//\u00a05.\u00a0Click\nYes\n.\n//\n//\u00a0Postconditions:\n//\u00a01.\u00a0Pops\u00a0up\u00a0a\u00a0message\u00a0box\u00a0for each configuration in the active\n//    model, containing the name of that configuration.\n//\u00a02.\u00a0Click\nOK\nto\u00a0close\u00a0each\u00a0message\u00a0box.\n//--------------------------------------------------------\n//This code\n#include\n\"stdafx.h\"\n#import\n\"sldworks.tlb\"\nraw_interfaces_only,\u00a0raw_native_types,\u00a0no_namespace,\u00a0named_guids\n//\u00a0SOLIDWORKS\u00a0type\u00a0library\n#import\n\"swconst.tlb\"\nraw_interfaces_only,\u00a0raw_native_types,\u00a0no_namespace,\u00a0named_guids\n//\u00a0SOLIDWORKS\u00a0constants\u00a0type\u00a0library\nint\n_tmain(\nint\nargc,\u00a0_TCHAR*\u00a0argv[])\n{\n//\u00a0Initialize\u00a0COM\n//\u00a0Do\u00a0this\u00a0before\u00a0using\u00a0ATL\u00a0smart\u00a0pointers\u00a0so\u00a0that\n//\u00a0COM\u00a0is\u00a0available\nCoInitialize(NULL);\n//\u00a0Use\u00a0a\u00a0block\u00a0so\u00a0that\u00a0the\u00a0smart\u00a0pointers\u00a0are\u00a0destructed\u00a0when\n//\u00a0the\u00a0scope\u00a0of\u00a0this\u00a0block\u00a0is\u00a0exited\n{\n//\u00a0Use\u00a0ATL\u00a0smart\u00a0pointers\nCComPtr<ISldWorks>\u00a0 pSwApp;\nif\n(pSwApp.CoCreateInstance(\n__uuidof\n(SldWorks),\u00a0NULL,\u00a0CLSCTX_LOCAL_SERVER)\u00a0!=\u00a0S_OK)\u00a0{\nreturn\n(0);\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t}\u00a0\n \n\t\tpSwApp->\nput_UserControl\n(VARIANT_TRUE);\n\t\tpSwApp->\nput_Visible\n(VARIANT_TRUE);\u00a0\n \n\t\tCComPtr<IModelDoc2>\u00a0\u00a0pSwModel;\n\t\tpSwApp->\nget_IActiveDoc2\n(&pSwModel);\nif\n(!\u00a0pSwModel)\u00a0{\nreturn\n(0);\n\t\t}\u00a0\n \n\t\tCComBSTR\u00a0strModelTitle;\nlong\nnDocumentType;\n//\u00a0swDocumentTypes_e\npSwModel->\nGetTitle\n(&strModelTitle);\n\t\tpSwModel->\nGetType\n(&nDocumentType);\u00a0\n \n\t\tVARIANT\u00a0\u00a0vConfigurationNames;\u00a0\n\t\t::VariantInit(&vConfigurationNames);\n//\u00a0Get the names of the configurations in the active model\n                  // NOTE: This\u00a0is\u00a0an\u00a0out-of-process\u00a0client,\u00a0so\u00a0you\u00a0cannot\u00a0\n                  // use\u00a0ModelDoc2::IGetConfigurationNames\npSwModel->\nGetConfigurationNames\n(&vConfigurationNames);\u00a0\n\t\t\n\t\tCComPtr<IDispatch>\u00a0pDispatchSafeArray\u00a0=\u00a0NULL;\n\t\tCComPtr<ISafeArrayUtility>\u00a0pSwSafeArray\u00a0=\u00a0NULL;\n\t\tHRESULT\u00a0hres;\n\t\thres\u00a0=\u00a0pSwApp->\nGetSafeArrayUtility\n(&pDispatchSafeArray);\n\t\thres\u00a0=\u00a0pDispatchSafeArray.QueryInterface<ISafeArrayUtility>(&pSwSafeArray);\nlong\nsaCount\u00a0=\u00a00;\nlong\nsaType\u00a0=\u00a00;\nlong\n*\u00a0visible\u00a0=\u00a00;\nlong\nnbrConfigs\u00a0=\u00a00;\n\t\tpSwModel->\nGetConfigurationCount\n(&nbrConfigs);\n//Get the name of each configuration\nfor\n(\nlong\ni\u00a0=\u00a00;\u00a0i\u00a0<\u00a0nbrConfigs;\u00a0i++)\u00a0{\n\t\t\tBSTR\u00a0configurationName;\n\t\t\tpSwSafeArray->\nGetBstr\n(vConfigurationNames,\u00a0i,\u00a0&configurationName);\n\t\t\tCComBSTR\u00a0msg;\n\t\t\tmsg\u00a0=\u00a0(OLESTR(\n\"Name\u00a0of\u00a0configuration:\u00a0\"\n));\n\t\t\tmsg.Append(configurationName);\nlong\nres;\n\t\t\tpSwApp->\nSendMsgToUser2\n(msg,\u00a00,0,\u00a0&res);\n\t\t}\n\u00a0\n \n\t}\n//\u00a0ATL\u00a0smart\u00a0pointers\u00a0are\u00a0destructed\u00a0so\u00a0that\u00a0all\u00a0COM\u00a0objects\n//\u00a0held\u00a0on\u00a0to\u00a0are\u00a0released\n//\u00a0Shut\u00a0down\u00a0COM\u00a0because\u00a0you\u00a0no\u00a0longer\u00a0need\u00a0it\n//\u00a0Stop\u00a0COM\nCoUninitialize();\nreturn\n(0);\n}"
+        }
+      ]
+    }
+  ],
+  "related": [
+    "IConfiguration",
+    "IConfigurationManager",
+    "IModelDoc2.AddConfiguration3",
+    "IModelDoc2.ConfigurationManager",
+    "IModelDoc2.DeleteConfiguration2",
+    "IModelDoc2.GetConfigurationByName",
+    "IModelDoc2.GetConfigurationNames",
+    "IModelDoc2.IAddConfiguration3",
+    "IModelDoc2.IGetConfigurationByName",
+    "IModelDoc2.IGetConfigurationNames",
+    "IModelDoc2.ShowConfiguration2"
+  ]
+}

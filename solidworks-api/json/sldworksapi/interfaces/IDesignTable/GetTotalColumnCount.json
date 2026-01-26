@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "GetTotalColumnCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.ColumnHidden",
+      "IDesignTable.GetColumnCount",
+      "IDesignTable.GetStartColumnNumber",
+      "IDesignTable.GetVisibleColumnCount",
+      "IDesignTable.GetVisibleLeftColumnNumber"
+    ],
+    "keywords": [
+      "gettotalcolumncount",
+      "idesigntable",
+      "design",
+      "table",
+      "total",
+      "column",
+      "count",
+      "int32",
+      "microsoft",
+      "excel",
+      "worksheet",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDesignTable.GetTotalColumnCount",
+  "description": "Gets the number of columns in the design table.",
+  "signature": "System.Int32 GetTotalColumnCount()",
+  "parameters": [],
+  "returns": "Number of columns in the design table",
+  "remarks": "The column index ranges from 1 to the return value.\nBefore you use any of the\nIDesignTable\nmethods, use\nIDesignTable::Attach\nto activate the IDesignTable. After you finish getting IDesignTable data, use\nIDesignTable::Detach\nto deactivate the table.\nThis method differs from\nIDesignTable::GetColumnCount\nin that it counts all the columns in the design table. IDesignTable::GetColumnCount counts only the columns that are currently visible in the\nIModelView\n.\nTo get information outside of the visible region of the design table, get the Microsoft Excel worksheet activated by IDesignTable::Attach. Then, you can use the Microsoft Excel API to make additional queries.",
+  "examples": [
+    {
+      "title": "Get Microsoft Excel Design Table Worksheet (VBA)",
+      "href": "Get_Excel_Design_Table_Worksheet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (C#)",
+      "href": "Get_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VB.NET)",
+      "href": "Get_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VBA)",
+      "href": "Get_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDesignTable.ColumnHidden",
+    "IDesignTable.GetColumnCount",
+    "IDesignTable.GetStartColumnNumber",
+    "IDesignTable.GetVisibleColumnCount",
+    "IDesignTable.GetVisibleLeftColumnNumber"
+  ]
+}

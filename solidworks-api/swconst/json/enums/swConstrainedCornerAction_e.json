@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swConstrainedCornerAction_e",
+    "description": "Actions to take if the corner to be filleted is constrained or has a dimension.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swConstrainedCornerAction_e",
+  "description": "Actions to take if the corner to be filleted is constrained or has a dimension.",
+  "values": [
+    {
+      "member": "swConstrainedCornerDeleteGeometry",
+      "value": "2",
+      "description": "= Delete the constraint or dimension and add the fillet"
+    },
+    {
+      "member": "swConstrainedCornerInteract",
+      "value": "0",
+      "description": "= Ask the user whether to delete the geometry or stop processing"
+    },
+    {
+      "member": "swConstrainedCornerKeepGeometry",
+      "value": "1",
+      "description": "= Keep the constraint or dimension by creating a virtual intersection point before adding the fillet"
+    },
+    {
+      "member": "swConstrainedCornerStopProcessing",
+      "value": "3",
+      "description": "= Do not delete the constraint or dimension and do not create the fillet"
+    }
+  ]
+}

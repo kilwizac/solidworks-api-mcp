@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "GetEntryValue",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Row number of the desired cell; this is a 0-based index"
+      },
+      {
+        "name": "Col",
+        "type": "System.Int32",
+        "description": "Column number of the desired cell; this is a 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "getentryvalue",
+      "ibomtable",
+      "bom",
+      "table",
+      "entry",
+      "value",
+      "row",
+      "int32",
+      "col",
+      "object"
+    ]
+  },
+  "title": "IBomTable.GetEntryValue",
+  "description": "Gets the contents of the specified cell.",
+  "signature": "System.Object GetEntryValue( \n   System.Int32\nRow\n,\n   System.Int32\nCol\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Row number of the desired cell; this is a 0-based index"
+    },
+    {
+      "name": "Col",
+      "type": "System.Int32",
+      "description": "Column number of the desired cell; this is a 0-based index"
+    }
+  ],
+  "returns": "Object containing the information from the specified cell",
+  "remarks": "After you receive a valid return value, you can evaluate the for the object's data type.\nTo return the cell contents as a string, use\nIBomTable::GetEntryText\n.\nBefore you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": []
+}

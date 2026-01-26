@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPunchTable",
+    "member": "CombineSameSize",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "combinesamesize",
+      "ipunchtable",
+      "punch",
+      "table",
+      "combine",
+      "same",
+      "size",
+      "boolean",
+      "insert",
+      "vb",
+      "net",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IPunchTable.CombineSameSize",
+  "description": "Gets or sets whether to merge Punch ID column cells that have the same contents.",
+  "signature": "System.Boolean CombineSameSize {get; set;}",
+  "parameters": [],
+  "returns": "True to merge Punch ID column cells that have the same contents, false to not; only valid if IPunchTable::CombineTags is false (see Remarks )",
+  "remarks": "Set this property to true to create a punch table with a PUNCH ID column that contains column cells that have been merged because they contain the same value within each tag group (e.g., A1, A2, A3).\nIf this property is set to false, the punch table looks like this:\nTAG\nPUNCH ID\nX LOCATION\nY LOCATION\nANGLE\nQUANTITY\nA1\n135\n107\n300\n90\n1\nA2\n135\n200\n150\n90\n1\nA3\n135\n300\n200\n90\n1\nIf this property is set to true, the punch table looks like this:\nTAG\nPUNCH ID\nX LOCATION\nY LOCATION\nANGLE\nQUANTITY\nA1\n135\n107\n300\n90\n1\nA2\n200\n150\n90\n1\nA3\n300\n200\n90\n1",
+  "examples": [
+    {
+      "title": "Insert Punch Table (C#)",
+      "href": "Insert_Punch_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Punch Table (VB.NET)",
+      "href": "Insert_Punch_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Punch Table (VBA)",
+      "href": "Insert_Punch_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

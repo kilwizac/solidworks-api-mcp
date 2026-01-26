@@ -1,0 +1,91 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchSegment",
+    "member": "GetID",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSegment.IGetID"
+    ],
+    "keywords": [
+      "id",
+      "sketch",
+      "segment",
+      "getid",
+      "isketchsegment",
+      "object",
+      "all",
+      "elements",
+      "vba",
+      "segments",
+      "drawing",
+      "template",
+      "names",
+      "curve",
+      "data",
+      "whether",
+      "trimmed",
+      "relations",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISketchSegment.GetID",
+  "description": "Gets the for this sketch segment.",
+  "signature": "System.Object GetID()",
+  "parameters": [],
+  "returns": "Array with two longs or integers (see Long vs. Integer ) identifying this sketch segment ID",
+  "remarks": "The ID of the sketch segment:\nis an ordered pair (i1, i2). For the specific sketch segment type, for example, line, arc, spline, and so on), the combination of these two numbers is always unique within a specific sketch.\ncannot be assigned by applications or users.\nis not the same as a\npersistent reference ID\n.\nEach entity within a specific sketch has a unique ID. However, a sketch line may have the same ID values as a sketch arc within the same sketch. Likewise, in a second sketch, you may find a different sketch element with the same ID Therefore, your application must keep track of:\nsketch element type (that is, point, line, arc, spline, and so on)\nowning sketch name\nsketch element id to uniquely identify a sketched item\nYou can determine the sketch element type by using\nISketchSegment::GetType\n.",
+  "examples": [
+    {
+      "title": "Get All Elements of Sketch (VBA)",
+      "href": "Get_All_Elements_of_Sketch_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get All Sketch Segments in Drawing Template (VBA)",
+      "href": "Get_All_Sketch_Segments_in_Drawing_Template_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Names of Sketch Segments (VBA)",
+      "href": "Get_Names_of_Sketch_Segments_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Segment and Curve Data (VBA)",
+      "href": "Get_Sketch_Segment_and_Curve_Data_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Whether Sketch Segment is Trimmed (VBA)",
+      "href": "Get_Whether_Sketch_Segment_is_Trimmed_or_Not_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (VBA)",
+      "href": "Get_Sketch_Relations_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (VB.NET)",
+      "href": "Get_Sketch_Relations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Sketch Relations (C#)",
+      "href": "Get_Sketch_Relations_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISketchSegment.IGetID"
+  ]
+}

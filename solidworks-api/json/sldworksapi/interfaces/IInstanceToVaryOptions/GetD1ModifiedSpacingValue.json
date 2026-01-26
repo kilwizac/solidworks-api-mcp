@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInstanceToVaryOptions",
+    "member": "GetD1ModifiedSpacingValue",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Instance",
+        "type": "System.Int32",
+        "description": "Pattern instance number (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "getd1modifiedspacingvalue",
+      "iinstancetovaryoptions",
+      "instance",
+      "vary",
+      "options",
+      "d1",
+      "modified",
+      "spacing",
+      "value",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IInstanceToVaryOptions.GetD1ModifiedSpacingValue",
+  "description": "Gets the spacing in Direction 1 of the specified modified pattern instance.",
+  "signature": "System.Double GetD1ModifiedSpacingValue( \n   System.Int32\nInstance\n)",
+  "parameters": [
+    {
+      "name": "Instance",
+      "type": "System.Int32",
+      "description": "Pattern instance number (see Remarks )"
+    }
+  ],
+  "returns": "Spacing value in Direction 1",
+  "remarks": "To specify Instance, you can use\nIInstanceToVaryOptions::GetModifiedInstances\nto learn which pattern instances are modified.\nTo calculate Instance:\nEnsure that the D2PatternSeedOnly property in the pattern feature data object is set to false.\nCalculate:\nFor a bi-directional pattern:\nI\n=\nn2\n* (\ni\n- 1) + (\nj\n- 1)\nFor a uni-directional pattern:\nI\n=\ni\n- 1\nwhere:\nI\n= pattern instance number\nn2\n= number of instances in Direction 2\ni\n= index for Direction 1\nj\n= index for Direction 2\nIn the pattern's PropertyManager, find\nn2\nin the\nDirection 2\n> Spacing and Instances > Number of instances\nfield and find [\ni,j\n] in the\nModified Instances\nsection.",
+  "examples": [
+    {
+      "title": "IInstanceToVaryOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IInstanceToVaryOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

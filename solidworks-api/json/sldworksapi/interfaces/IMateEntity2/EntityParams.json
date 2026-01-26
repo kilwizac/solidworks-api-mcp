@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMateEntity2",
+    "member": "EntityParams",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IMateEntity2.GetEntityParamsSize",
+      "IMateEntity2.IGetEntityParams"
+    ],
+    "keywords": [
+      "entityparams",
+      "imateentity2",
+      "mate",
+      "entity2",
+      "entity",
+      "params",
+      "object",
+      "edit",
+      "vba",
+      "definition",
+      "mates",
+      "entities",
+      "vb",
+      "net"
+    ],
+    "readonly": true
+  },
+  "title": "IMateEntity2.EntityParams",
+  "description": "Gets the parameters for this mate entity.",
+  "signature": "System.Object EntityParams {get;}",
+  "parameters": [],
+  "returns": "Array of doubles representing the mate entity parameters (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\npointX, pointY, pointZ, vectorI, vectorJ, vectorK, radius1, radius2\n]\nwhere\npointX\nis the X location of this mate entity in the assembly model space\npointY\nis the Y location of this mate entity in the assembly model space\npointZ\nis the Z location of this mate entity in the assembly model space\nvectorI\nis the i component of the assembly mate vector\nvectorJ\nis the j component of the assembly mate vector\nvectorK\nis the k component of the assembly mate vector\nradius1\nis the value for the first radius\nradius2\nis the value for the second radius\nTo define the mate entity, the following information is returned based on the mate type. All coordinate information is given in terms of the assembly coordinate system where the mate resides.\nMate Type\nReturned\nswMatePoint\npointX, pointY, pointZ\nswMateLine\npointX, pointY, pointZ, vectorI, vectorJ, vectorK\nwhere the point is a point on the line and the vector represents the line direction.\nswMatePlane\npointX, pointY, pointZ, vectorI, vectorJ, vectorK\nwhere the point is a point on the plane and the vector represents the plane normal.\nswMateCylinder\npointX, pointY, pointZ, vectorI, vectorJ, vectorK, radius1\nwhere the point is a point on the cylinder axis and the vector represents the cylinder axis.\nswMateCone\npointX, pointY, pointZ, vectorI, vectorJ, vectorK, radius1, radius2\nwhere the point is a point on the cone axis and the vector represents the cone axis.\nTo get the\nIMateEntity2\ninterface, use\nIMate2::MateEntity\n.",
+  "examples": [
+    {
+      "title": "Edit Mate (VBA)",
+      "href": "Edit_Mate_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mate Definition (VBA)",
+      "href": "Get_Mate_Definition_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mates and Mate Entities (C#)",
+      "href": "Get_Mates_and_Mate_Entities_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mates and Mate Entities (VB.NET)",
+      "href": "Get_Mates_and_Mate_Entities_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Mates and Mate Entities (VBA)",
+      "href": "Get_Mates_and_Mate_Entities_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMateEntity2.GetEntityParamsSize",
+    "IMateEntity2.IGetEntityParams"
+  ]
+}

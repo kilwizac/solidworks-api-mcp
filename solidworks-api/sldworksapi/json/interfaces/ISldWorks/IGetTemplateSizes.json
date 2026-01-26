@@ -1,0 +1,100 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "IGetTemplateSizes",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Name of template with full directory path"
+      },
+      {
+        "name": "PaperSize",
+        "type": "System.Int32",
+        "description": "Paper size as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "Custom paper width if PaperSize is set to swDwgPapersUserDefined"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Custom paper height if PaperSize is set to swDwgPapersUserDefined"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetDocumentTemplate",
+      "ISldWorks.GetTemplateSizes",
+      "ISldWorks.PreSelectDwgTemplateSize"
+    ],
+    "keywords": [
+      "sheet",
+      "see",
+      "also",
+      "isheet",
+      "templates",
+      "sheets",
+      "igettemplatesizes",
+      "isldworks",
+      "sld",
+      "works",
+      "template",
+      "sizes",
+      "file",
+      "name",
+      "string",
+      "paper",
+      "size",
+      "int32",
+      "width",
+      "double",
+      "height",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.IGetTemplateSizes",
+  "description": "Gets the sheet properties from a template document.",
+  "signature": "System.Boolean IGetTemplateSizes( \n   System.String\nFileName\n,\n   out System.Int32\nPaperSize\n,\n   out System.Double\nWidth\n,\n   out System.Double\nHeight\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Name of template with full directory path"
+    },
+    {
+      "name": "PaperSize",
+      "type": "System.Int32",
+      "description": "Paper size as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "Custom paper width if PaperSize is set to swDwgPapersUserDefined"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Custom paper height if PaperSize is set to swDwgPapersUserDefined"
+    }
+  ],
+  "returns": "True if the operation is successful, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "ISldWorks.GetDocumentTemplate",
+    "ISldWorks.GetTemplateSizes",
+    "ISldWorks.PreSelectDwgTemplateSize"
+  ]
+}

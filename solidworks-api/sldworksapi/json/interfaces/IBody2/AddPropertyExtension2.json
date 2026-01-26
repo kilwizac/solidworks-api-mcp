@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBody2",
+    "member": "AddPropertyExtension2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "PropertyExtension",
+        "type": "System.Object",
+        "description": "Value of the property extension to add to this body (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.ResetPropertyExtension2"
+    ],
+    "keywords": [
+      "extension",
+      "addpropertyextension2",
+      "ibody2",
+      "body2",
+      "add",
+      "extension2",
+      "object",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IBody2.AddPropertyExtension2",
+  "description": "Adds a property extension to this body.",
+  "signature": "System.Int32 AddPropertyExtension2( \n   System.Object\nPropertyExtension\n)",
+  "parameters": [
+    {
+      "name": "PropertyExtension",
+      "type": "System.Object",
+      "description": "Value of the property extension to add to this body (see Remarks )"
+    }
+  ],
+  "returns": "Size of the array to which the property extension value is added",
+  "remarks": "To use this method:\nDeclare the variable.\nAssign the variable a value: float, integer, or string.\nCall this method to add the value to the body.\nThe 1-based array is a first-in-last-out structured list, whose size is used by\nIBody2::GetPropertyExtension2\nto access the property extension.\nNOTE\n: SOLIDWORKS recommends that you use the\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninterfaces instead of this method. These interfaces provide more flexibility.",
+  "examples": [],
+  "related": [
+    "IBody2.ResetPropertyExtension2"
+  ]
+}

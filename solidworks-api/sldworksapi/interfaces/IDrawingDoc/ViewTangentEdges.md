@@ -1,0 +1,72 @@
+---
+type: method
+interface: IDrawingDoc
+member: ViewTangentEdges
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - drawings
+  - geometry
+  - ui
+related:
+  - IDrawingDoc.ViewDisplayHidden
+  - IDrawingDoc.ViewDisplayHiddengreyed
+  - IDrawingDoc.ViewDisplayShaded
+  - IDrawingDoc.ViewDisplayWireframe
+  - IDrawingDoc.ViewFullPage
+  - IDrawingDoc.ViewHlrQuality
+  - IDrawingDoc.ViewModelEdges
+  - IView.GetRelatedTangentEdgeCount
+  - IView.GetRelatedTangentEdges
+  - IView.IGetRelatedTangentEdges
+keywords:
+  - tangent
+  - edges
+  - drawings
+  - see
+  - also
+  - idrawingdoc
+  - display
+  - modes
+  - edge
+  - iedge
+  - viewtangentedges
+  - drawing
+  - doc
+  - view
+  - void
+---
+
+# IDrawingDoc.ViewTangentEdges
+
+Toggles display of tangent edges in the selected drawing view.
+
+## Signature
+
+```csharp
+void ViewTangentEdges()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IDrawingDoc.ViewDisplayHidden`
+- `IDrawingDoc.ViewDisplayHiddengreyed`
+- `IDrawingDoc.ViewDisplayShaded`
+- `IDrawingDoc.ViewDisplayWireframe`
+- `IDrawingDoc.ViewFullPage`
+- `IDrawingDoc.ViewHlrQuality`
+- `IDrawingDoc.ViewModelEdges`
+- `IView.GetRelatedTangentEdgeCount`
+- `IView.GetRelatedTangentEdges`
+- `IView.IGetRelatedTangentEdges`

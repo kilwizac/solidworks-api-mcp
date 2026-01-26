@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "SetText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "WhichOne",
+        "type": "System.Int32",
+        "description": "Text item to set as defined in swSurfaceFinishSymbolText_e"
+      },
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text string"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.GetTextAngleAtIndex",
+      "ISFSymbol.GetTextAtIndex",
+      "ISFSymbol.GetTextCount",
+      "ISFSymbol.GetTextFontAtIndex",
+      "ISFSymbol.GetTextHeightAtIndex",
+      "ISFSymbol.GetTextInvertAtIndex",
+      "ISFSymbol.GetTextPositionAtIndex",
+      "ISFSymbol.GetTextRefPositionAtIndex",
+      "ISFSymbol.IGetTextPositionAtIndex"
+    ],
+    "keywords": [
+      "settext",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "text",
+      "which",
+      "one",
+      "int32",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "ISFSymbol.SetText",
+  "description": "Sets a text string in this surface finish symbol.",
+  "signature": "System.Boolean SetText( \n   System.Int32\nWhichOne\n,\n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "WhichOne",
+      "type": "System.Int32",
+      "description": "Text item to set as defined in swSurfaceFinishSymbolText_e"
+    },
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text string"
+    }
+  ],
+  "returns": "True if the text string is successfully set, false if not",
+  "remarks": "If an invalid text item is specified, the symbol is not changed, and false is returned.\nTo see the model or drawing changes caused by running this method, you must redraw your window. See\nIModelDoc2::GraphicsRedraw2\nfor details.\nTo get the text strings, use\nISFSymbol::GetText\n.",
+  "examples": [],
+  "related": [
+    "ISFSymbol.GetTextAngleAtIndex",
+    "ISFSymbol.GetTextAtIndex",
+    "ISFSymbol.GetTextCount",
+    "ISFSymbol.GetTextFontAtIndex",
+    "ISFSymbol.GetTextHeightAtIndex",
+    "ISFSymbol.GetTextInvertAtIndex",
+    "ISFSymbol.GetTextPositionAtIndex",
+    "ISFSymbol.GetTextRefPositionAtIndex",
+    "ISFSymbol.IGetTextPositionAtIndex"
+  ]
+}

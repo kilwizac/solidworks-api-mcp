@@ -1,0 +1,67 @@
+---
+type: property
+interface: ISurfaceKnitFeatureData
+member: UseGapFilters
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - ISurfaceKnitFeatureData.KnitTolerance
+  - ISurfaceKnitFeatureData.MaxValueForGapRange
+  - ISurfaceKnitFeatureData.MinValueForGapRange
+keywords:
+  - usegapfilters
+  - isurfaceknitfeaturedata
+  - surface
+  - knit
+  - feature
+  - data
+  - use
+  - gap
+  - filters
+  - boolean
+  - create
+  - vb
+  - net
+  - vba
+readonly: null
+---
+
+# ISurfaceKnitFeatureData.UseGapFilters
+
+Gets or sets whether to use gap filters for this Surface-Knit feature.
+
+## Signature
+
+```csharp
+System.Boolean UseGapFilters {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to use gap filters, false to not
+
+## Remarks
+
+See
+Accessing Selections that Define Features
+for additional details.
+
+## Examples
+
+- Create Knit Surface Feature (VB.NET) (Create_Surface_Knit_Feature_Example_VBNET.htm)
+- Create Knit Surface Feature (VBA) (Create_Surface_Knit_Feature_Example_VB6.htm)
+- Create Knit Surface Feature (C#) (Create_Surface_Knit_Feature_Example_CSharp.htm)
+
+## See Also
+
+- `ISurfaceKnitFeatureData.KnitTolerance`
+- `ISurfaceKnitFeatureData.MaxValueForGapRange`
+- `ISurfaceKnitFeatureData.MinValueForGapRange`

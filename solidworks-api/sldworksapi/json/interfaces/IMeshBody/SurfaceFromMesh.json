@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMeshBody",
+    "member": "SurfaceFromMesh",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "SurfaceType",
+        "type": "System.Int32",
+        "description": "Type of surface to create as defined by swSurfaceTypes_e (see Remarks )"
+      },
+      {
+        "name": "FacetTolerance",
+        "type": "System.Double",
+        "description": "0.0 (High tolerance) <= Percent facet selection <= 100.0 (Low tolerance)"
+      },
+      {
+        "name": "ExtendSurfaceSize",
+        "type": "System.Double",
+        "description": "Extension in meters of the surface body to fit the selected facets and geometric shape"
+      },
+      {
+        "name": "ErrorCode",
+        "type": "System.Int32",
+        "description": "0 if successful, -1 if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "surfacefrommesh",
+      "imeshbody",
+      "mesh",
+      "body",
+      "surface",
+      "type",
+      "int32",
+      "facet",
+      "tolerance",
+      "double",
+      "extend",
+      "size",
+      "error",
+      "code",
+      "object",
+      "ibody2",
+      "converttomeshbody"
+    ]
+  },
+  "title": "IMeshBody.SurfaceFromMesh",
+  "description": "Creates a surface from the selected facets in this mesh body.",
+  "signature": "System.Object SurfaceFromMesh( \n   System.Int32\nSurfaceType\n,\n   System.Double\nFacetTolerance\n,\n   System.Double\nExtendSurfaceSize\n,\n   out System.Int32\nErrorCode\n)",
+  "parameters": [
+    {
+      "name": "SurfaceType",
+      "type": "System.Int32",
+      "description": "Type of surface to create as defined by swSurfaceTypes_e (see Remarks )"
+    },
+    {
+      "name": "FacetTolerance",
+      "type": "System.Double",
+      "description": "0.0 (High tolerance) <= Percent facet selection <= 100.0 (Low tolerance)"
+    },
+    {
+      "name": "ExtendSurfaceSize",
+      "type": "System.Double",
+      "description": "Extension in meters of the surface body to fit the selected facets and geometric shape"
+    },
+    {
+      "name": "ErrorCode",
+      "type": "System.Int32",
+      "description": "0 if successful, -1 if not"
+    }
+  ],
+  "returns": "IBody2",
+  "remarks": "This method:\nis analogous to the\nInsert menu > Mesh > Surface From Mesh\nfunctionality in the user interface.\ncreates a\nSurface-From-Mesh\nX\nfeature in the FeatureManager design tree.\nBefore calling this method, select as many facets in the mesh body as are needed to create the type of surface.\nSurfaceType can be one of only swSurfaceTypes_e.:\nPLANE_TYPE\nSPHERE_TYPE\nCYLINDER_TYPE\nCONE_TYPE\nFor more information, see the\nSOLIDWORKS Design user-interface help > Parts and Features > Graphics Mesh and Mesh BREP Bodies > Creating a Surface from Mesh Featur\ne topic.",
+  "examples": [
+    {
+      "title": "IBody2::ConvertToMeshBody",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ConvertToMeshBody",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

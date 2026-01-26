@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateLine",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "RootPoint",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (x, y, z) for the start point of the line"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Double",
+        "description": "Array containing 3 doubles (x, y, z) for the end point of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateEllipse",
+      "IModeler.ICreateEllipse"
+    ],
+    "keywords": [
+      "lines",
+      "create",
+      "icreateline",
+      "imodeler",
+      "modeler",
+      "line",
+      "root",
+      "point",
+      "double",
+      "direction",
+      "curve"
+    ]
+  },
+  "title": "IModeler.ICreateLine",
+  "description": "Creates a line.",
+  "signature": "Curve ICreateLine( \n   ref System.Double\nRootPoint\n,\n   ref System.Double\nDirection\n)",
+  "parameters": [
+    {
+      "name": "RootPoint",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (x, y, z) for the start point of the line"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Double",
+      "description": "Array containing 3 doubles (x, y, z) for the end point of the line"
+    }
+  ],
+  "returns": "Newly created line",
+  "remarks": "If your application uses\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\n, then your application must also use\nICurve::CreateTrimmedCurve2\nfor the curves created by\nIModeler::CreateArc\nor\nIModeler::ICreateArc\nand\nIModeler::CreateLine\nor IModeler::ICreateLine.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateEllipse",
+    "IModeler.ICreateEllipse"
+  ]
+}

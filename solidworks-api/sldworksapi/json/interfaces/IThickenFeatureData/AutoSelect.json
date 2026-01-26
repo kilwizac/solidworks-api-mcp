@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IThickenFeatureData",
+    "member": "AutoSelect",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "selections"
+    ],
+    "related": [
+      "IThickenFeatureData.FeatureScope",
+      "IThickenFeatureData.IGetFeatureScopeBodies"
+    ],
+    "keywords": [
+      "feature",
+      "scope",
+      "autoselect",
+      "ithickenfeaturedata",
+      "thicken",
+      "data",
+      "auto",
+      "select",
+      "boolean",
+      "create",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IThickenFeatureData.AutoSelect",
+  "description": "Gets or sets whether to automatically select all or only specific bodies for the thicken feature to affect in a multibody part.",
+  "signature": "System.Boolean AutoSelect {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically select all bodies, false to select specific bodies using IThickenFeatureData::FeatureScopeBodies or IThickenFeatureData::ISetFeatureScopeBodies .",
+  "remarks": "This property is only available when the\nIThickenFeatureData::FeatureScope\nproperty is true. The thicken feature is expanded along the plane on which the feature is created and selects all or only the specified bodies it intersects.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "Create Thicken Feature (VBA)",
+      "href": "Create_Thicken_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IThickenFeatureData.FeatureScope",
+    "IThickenFeatureData.IGetFeatureScopeBodies"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICircularPatternFeatureData",
+    "member": "InstancesToVary",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "instancestovary",
+      "icircularpatternfeaturedata",
+      "circular",
+      "pattern",
+      "feature",
+      "data",
+      "instances",
+      "vary",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ICircularPatternFeatureData.InstancesToVary",
+  "description": "Gets or sets whether to vary the spacing of pattern instances in this circular pattern feature.",
+  "signature": "System.Boolean InstancesToVary {get; set;}",
+  "parameters": [],
+  "returns": "True to vary the spacing of pattern instances, false to not",
+  "remarks": "This property is valid only when editing the circular pattern feature. You cannot set this property during creation of the feature.\nTo vary instances in a circular pattern feature:\nCall\nIFeature::GetDefinition\n.\nCall\nICircularPatternFeatureData::AccessSelections\n.\nSet this property to true.\nCall\nIFeature::ModifyDefinition\n.\nCall ICircularPatternFeatureData::AccessSelections.\nCall\nICircularPatternFeatureData::GetInstanceToVaryOptions\n.\nModify\nIInstanceToVaryOptions\nproperties.\nCall\nICircularPatternFeatureData::SetInstanceToVaryOptions\n.\nCall IFeature::ModifyDefinition.",
+  "examples": [],
+  "related": []
+}

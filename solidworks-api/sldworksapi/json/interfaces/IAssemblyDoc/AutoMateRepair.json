@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AutoMateRepair",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ProcessedMates",
+        "type": "System.Object",
+        "description": "Array of successfully repaired IMate2 s"
+      },
+      {
+        "name": "FailedMates",
+        "type": "System.Object",
+        "description": "Array of failed IMate2s"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.CreateMate"
+    ],
+    "keywords": [
+      "automaterepair",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "auto",
+      "mate",
+      "repair",
+      "processed",
+      "mates",
+      "object",
+      "failed",
+      "int32"
+    ]
+  },
+  "title": "IAssemblyDoc.AutoMateRepair",
+  "description": "Automatically repairs broken mates in this assembly.",
+  "signature": "System.Int32 AutoMateRepair( \n   out System.Object\nProcessedMates\n,\n   out System.Object\nFailedMates\n)",
+  "parameters": [
+    {
+      "name": "ProcessedMates",
+      "type": "System.Object",
+      "description": "Array of successfully repaired IMate2 s"
+    },
+    {
+      "name": "FailedMates",
+      "type": "System.Object",
+      "description": "Array of failed IMate2s"
+    }
+  ],
+  "returns": "Mate repair errors as defined by swAutoMateRepairErrors_e",
+  "remarks": "Before calling this method you must:\nensure that the entities needed to repair the broken mates are present in the assembly\n- and -\nselect the Mates folder in the FeatureManager design tree.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.CreateMate"
+  ]
+}

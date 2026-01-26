@@ -1,0 +1,78 @@
+---
+type: method
+interface: IWeldmentBeadFeatureData
+member: GetVirtualEdgesCount
+returns: System.Int32
+parameters:
+  -
+    name: FromFeature
+    type: System.Boolean
+    description: True gets the virtual edges used by the feature, false gets all of the virtual edges
+  -
+    name: Side
+    type: System.Int32
+    description: Side as defined in swWeldBeadSide_e
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - geometry
+related:
+  - IWeldmentBeadFeatureData.GetVirtualEdges
+  - IWeldmentBeadFeatureData.ISetFaces
+  - IWeldmentBeadFeatureData.ISetVirtualEdges
+  - IWeldmentBeadFeatureData.SetFaces
+  - IWeldmentBeadFeatureData.SetVirtualEdges
+keywords:
+  - getvirtualedgescount
+  - iweldmentbeadfeaturedata
+  - weldment
+  - bead
+  - feature
+  - data
+  - virtual
+  - edges
+  - count
+  - boolean
+  - side
+  - int32
+---
+
+# IWeldmentBeadFeatureData.GetVirtualEdgesCount
+
+Gets the number of edges to which the weld bead is applied.
+
+## Signature
+
+```csharp
+System.Int32 GetVirtualEdgesCount( 
+   System.Boolean
+FromFeature
+,
+   System.Int32
+Side
+)
+```
+## Parameters
+
+- `FromFeature` (System.Boolean): True gets the virtual edges used by the feature, false gets all of the virtual edges
+- `Side` (System.Int32): Side as defined in swWeldBeadSide_e
+
+## Return Value
+
+Number of edges
+
+## Remarks
+
+Call this method before calling
+IWeldmentBeadFeatureData::GetVirtualEdges
+.
+
+## See Also
+
+- `IWeldmentBeadFeatureData.GetVirtualEdges`
+- `IWeldmentBeadFeatureData.ISetFaces`
+- `IWeldmentBeadFeatureData.ISetVirtualEdges`
+- `IWeldmentBeadFeatureData.SetFaces`
+- `IWeldmentBeadFeatureData.SetVirtualEdges`

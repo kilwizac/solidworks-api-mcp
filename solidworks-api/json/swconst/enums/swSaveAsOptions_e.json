@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swSaveAsOptions_e",
+    "description": "Save As options. Bitmask.",
+    "member_count": 13,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swSaveAsOptions_e",
+  "description": "Save As options. Bitmask.",
+  "values": [
+    {
+      "member": "swSaveAsOptions_AvoidRebuildOnSave",
+      "value": "8",
+      "description": "or 0x8"
+    },
+    {
+      "member": "swSaveAsOptions_Copy",
+      "value": "2",
+      "description": "or 0x2; Save the document as a copy and continue editing"
+    },
+    {
+      "member": "swSaveAsOptions_CopyAndOpen",
+      "value": "512",
+      "description": "or 0x200; Save the document as a copy and open it"
+    },
+    {
+      "member": "swSaveAsOptions_DetachedDrawing",
+      "value": "",
+      "description": "Obsolete ."
+    },
+    {
+      "member": "swSaveAsOptions_ExportTo2DPdfFromInspection",
+      "value": "2048",
+      "description": "or 0x800; Export drawing sheets from Inspection to 2DPdf"
+    },
+    {
+      "member": "swSaveAsOptions_IgnoreBiography",
+      "value": "256",
+      "description": "or 0x100; Prune a SOLIDWORKS file's revision history to just the current file name"
+    },
+    {
+      "member": "swSaveAsOptions_IncludeVirtualSubAsmComps",
+      "value": "1024",
+      "description": "or 0x400; Save regular components in virtual subassemblies"
+    },
+    {
+      "member": "swSaveAsOptions_OverrideSaveEmodel",
+      "value": "32",
+      "description": "or 0x20; Saves eDrawings-related information into a section of the file being saved; specifying this setting overrides the Tools, Options, System Options, General, Save eDrawings data in SOLIDWORKS document setting; not a valid option for IPartDoc::SaveToFile2"
+    },
+    {
+      "member": "swSaveAsOptions_PropagateVisualProperties",
+      "value": "4096",
+      "description": "or 0x1000; Export drawing sheets from Inspection to 2DPdf"
+    },
+    {
+      "member": "swSaveAsOptions_SaveEmodelData",
+      "value": "",
+      "description": "Obsolete ."
+    },
+    {
+      "member": "swSaveAsOptions_SaveReferenced",
+      "value": "4",
+      "description": "or 0x4; Supports parts, assemblies, and drawings; this setting indicates to save all components (sub-assemblies and parts) in both assemblies and drawings; if a part has an external reference, then this setting indicates to save the external reference"
+    },
+    {
+      "member": "swSaveAsOptions_Silent",
+      "value": "1",
+      "description": "or 0x1"
+    },
+    {
+      "member": "swSaveAsOptions_UpdateInactiveViews",
+      "value": "16",
+      "description": "or 0x10; Not a valid option for IPartDoc::SaveToFile2 ; this setting is only applicable for a drawing that has one or more sheets; this setting updates the views on inactive sheets"
+    }
+  ]
+}

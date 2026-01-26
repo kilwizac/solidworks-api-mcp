@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ILinearPatternFeatureData
+inherits: null
+description: Allows access to a linear pattern feature.
+member_count: 60
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - AutoSelect
+  - BodyPattern
+  - D1Axis
+  - D1EndCondition
+  - D1EndRefOffset
+  - D1EndRefReverseOffset
+  - D1EndReference
+---
+
+# ILinearPatternFeatureData
+
+Allows access to a linear pattern feature.
+
+## Common Members
+
+- `AccessSelections`
+- `AutoSelect`
+- `BodyPattern`
+- `D1Axis`
+- `D1EndCondition`
+- `D1EndRefOffset`
+- `D1EndRefReverseOffset`
+- `D1EndReference`

@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDimensionTolerance",
+    "member": "ShowParenthesis",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ICalloutVariable.ShowParenthesis"
+    ],
+    "keywords": [
+      "showparenthesis",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "show",
+      "parenthesis",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDimensionTolerance.ShowParenthesis",
+  "description": "Indicates whether to show parentheses around linear tolerance dimensions.",
+  "signature": "System.Boolean ShowParenthesis {get; set;}",
+  "parameters": [],
+  "returns": "True to show parentheses around linear tolerance dimensions, false to not",
+  "remarks": "This property supports bilateral, symmetric, or fit-with-tolerance types only.\nIn SOLIDWORKS 2016 and later, use\nICalloutVariable::ShowParenthesis\nto set whether to show parentheses in a hole's display dimension with multiple values in a callout. Calling IDimensionTolerance::ShowParenthesis to set whether to show parentheses in a hole's display dimension with multiple values in a callout does not override ICalloutVariable::ShowParenthesis' setting.\nTo see the effects of changing this property, use\nIModelDoc2::GraphicsRedraw2\n.",
+  "examples": [],
+  "related": [
+    "ICalloutVariable.ShowParenthesis"
+  ]
+}

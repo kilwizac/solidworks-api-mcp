@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMirrorFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BMirrorBody",
+        "type": "System.Boolean",
+        "description": "True to mirror solid bodies; false to mirror a feature or face"
+      },
+      {
+        "name": "BGeometryPattern",
+        "type": "System.Boolean",
+        "description": "True to mirror only the feature geometry, false to solve the entire feature; applies to mirroring features only"
+      },
+      {
+        "name": "BMerge",
+        "type": "System.Boolean",
+        "description": "True to merge any mirrored solid bodies, false to not; applies to mirroring solid bodies only"
+      },
+      {
+        "name": "BKnit",
+        "type": "System.Boolean",
+        "description": "True to knit surfaces, false to not; applies to mirroring surfaces only"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMirrorPatternFeatureData",
+      "IMirrorSolidFeatureData"
+    ],
+    "keywords": [
+      "insertmirrorfeature",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "mirror",
+      "body",
+      "boolean",
+      "geometry",
+      "pattern",
+      "merge",
+      "knit"
+    ]
+  },
+  "title": "IFeatureManager.InsertMirrorFeature",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertMirrorFeature2.",
+  "signature": "Feature InsertMirrorFeature( \n   System.Boolean\nBMirrorBody\n,\n   System.Boolean\nBGeometryPattern\n,\n   System.Boolean\nBMerge\n,\n   System.Boolean\nBKnit\n)",
+  "parameters": [
+    {
+      "name": "BMirrorBody",
+      "type": "System.Boolean",
+      "description": "True to mirror solid bodies; false to mirror a feature or face"
+    },
+    {
+      "name": "BGeometryPattern",
+      "type": "System.Boolean",
+      "description": "True to mirror only the feature geometry, false to solve the entire feature; applies to mirroring features only"
+    },
+    {
+      "name": "BMerge",
+      "type": "System.Boolean",
+      "description": "True to merge any mirrored solid bodies, false to not; applies to mirroring solid bodies only"
+    },
+    {
+      "name": "BKnit",
+      "type": "System.Boolean",
+      "description": "True to knit surfaces, false to not; applies to mirroring surfaces only"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "This method attempts to create the mirror feature without displaying a dialog box to get information from the user. It relies on preselected and marked entities, as well as arguments.\nAny...\nMust be preselected and marked with a value of...\nFeatures to be mirrored\n1\nFaces to be mirrored\n128\nBodies to be mirrored\n256\nPlane or planar face\n2\nFor information on selecting and marking entities, see\nIModelDocExtension::SelectByID2\n.",
+  "examples": [],
+  "related": [
+    "IMirrorPatternFeatureData",
+    "IMirrorSolidFeatureData"
+  ]
+}

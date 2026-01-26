@@ -1,0 +1,40 @@
+---
+type: method
+interface: IAssemblyDoc
+member: EditRebuild
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: true
+since_version: unknown
+categories:
+  - assemblies
+  - core
+  - ui
+related: []
+keywords:
+  - editrebuild
+  - iassemblydoc
+  - assembly
+  - doc
+  - edit
+  - rebuild
+  - void
+---
+
+# IAssemblyDoc.EditRebuild
+
+Obsolete. Superseded by IModelDoc2::EditRebuild3.
+
+## Signature
+
+```csharp
+void EditRebuild()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.

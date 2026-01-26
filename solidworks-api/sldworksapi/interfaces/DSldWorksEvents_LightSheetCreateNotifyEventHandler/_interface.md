@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DSldWorksEvents_LightSheetCreateNotifyEventHandler
+inherits: null
+description: Fired when a lighting sheet has been created.
+member_count: 0
+docset: sldworksapi
+categories:
+  - documents
+common_members: []
+---
+
+# DSldWorksEvents_LightSheetCreateNotifyEventHandler
+
+Fired when a lighting sheet has been created.

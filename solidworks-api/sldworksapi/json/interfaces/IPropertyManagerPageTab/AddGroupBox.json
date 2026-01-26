@@ -1,0 +1,84 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageTab",
+    "member": "AddGroupBox",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Resource ID of the group box"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Title of the group box"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swAddGroupBoxOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageTab.IAddGroupBox"
+    ],
+    "keywords": [
+      "addgroupbox",
+      "ipropertymanagerpagetab",
+      "manager",
+      "page",
+      "tab",
+      "add",
+      "group",
+      "box",
+      "id",
+      "int32",
+      "caption",
+      "string",
+      "options",
+      "object",
+      "ipropertymanagerpage2"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageTab.AddGroupBox",
+  "description": "Adds a group box to this tab on a PropertyManager page.",
+  "signature": "System.Object AddGroupBox( \n   System.Int32\nID\n,\n   System.String\nCaption\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Resource ID of the group box"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Title of the group box"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swAddGroupBoxOptions_e"
+    }
+  ],
+  "returns": "Newly created PropertyManager Page group box",
+  "remarks": "You can only use this method to set properties on the PropertyManager page before it is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\n.\nTo change the title of an existing group box, use\nIPropertyManagerPageTab::Caption\n.",
+  "examples": [
+    {
+      "title": "IPropertyManagerPage2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPage2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IPropertyManagerPageTab.IAddGroupBox"
+  ]
+}

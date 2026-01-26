@@ -1,0 +1,67 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetPosition",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.IGetPosition",
+      "IAnnotation.SetPosition",
+      "INote.LockPosition"
+    ],
+    "keywords": [
+      "getposition",
+      "iannotation",
+      "annotation",
+      "position",
+      "object",
+      "insert",
+      "autoballoons",
+      "vba",
+      "traverse",
+      "annotations",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAnnotation.GetPosition",
+  "description": "Gets the position of this annotation.",
+  "signature": "System.Object GetPosition()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The retval is an array of 3 doubles, the x, y, z origin of the annotation.\nIf this method is not successful in retrieving the position of the annotation in Visual Basic for Applications (VBA), then the VARIANT SafeArray is empty (OLE Automation only), or the status value is S_false (COM only). Make sure that you check this value before using the returned position.\nThe following table lists the types of annotations that this method supports and the position of the x, y, z origin. In a drawing, the x, y, z origin is relative to the origin of the drawing sheet (the lower-left corner of the sheet).\nType of Annotation\nPosition of XYZ Origin\nDatum Feature Symbols\nPoint where leader hits symbol\nDatum Target Symbols\nCenterpoint of the circle that is attached to the leader\nDisplay Dimensions\nPoint of leader attachment centered on a text box border / center point of bottom border of text box\nGeometric Tolerances\nUpper-left corner of the symbol\nNotes\nUpper-left corner of the text box\nSurface Finish Symbols\nLower-left point of symbol\nTable Annotation\nPosition of x,y,z determined by\nITableAnnotation::AnchorType\nWeld Symbols\nLeft endpoint of the main horizontal line in the symbol\nIf you use this method on any other types of annotations, SOLIDWORKS takes no action and returns false.",
+  "examples": [
+    {
+      "title": "Insert Autoballoons (VBA)",
+      "href": "Insert_Autoballoons_Example_VB_AutoBalloon2_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (C#)",
+      "href": "Traverse_Annotations_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (VB.NET)",
+      "href": "Traverse_Annotations_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Annotations (VBA)",
+      "href": "Traverse_Annotations_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.IGetPosition",
+    "IAnnotation.SetPosition",
+    "INote.LockPosition"
+  ]
+}

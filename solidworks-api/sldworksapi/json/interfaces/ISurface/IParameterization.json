@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IParameterization",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.Evaluate",
+      "ISurface.EvaluateAtPoint",
+      "ISurface.IEvaluate",
+      "ISurface.IEvaluateAtPoint",
+      "ISurface.Parameterization"
+    ],
+    "keywords": [
+      "iparameterization",
+      "isurface",
+      "surface",
+      "parameterization",
+      "double"
+    ]
+  },
+  "title": "ISurface.IParameterization",
+  "description": "Gets the parameterization of the surface.",
+  "signature": "System.Double IParameterization()",
+  "parameters": [],
+  "returns": "Pointer to an array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of 11 doubles:\n[\nuRange\n[2]\n, vRange\n[2]\n, uBoundType, vBoundType, uProps\n[2]\n, vProps\n[2]\n, numProps\n]\nwhere:\nuRange\n[2] = array of two doubles describing the low and high range, respectively, for U.\nvRange\n[2] =\narray of two doubles describing the low and high range, respectively, for V.\nuBoundType\n= two\nintegers packed into a double. Each integer describes the behavior at the start and at the end of the U range. Valid values and their meanings are:\n13733 -  Infinite\n13734 -  Extendable\n13735 -  Not Extendable\n13701 -  Periodic\n13736 -  Periodic, but not continuously differentiable across the boundary\n13741 -  Degenerate\nIf the behavior at the start of the U range is Degenerate', then the V parameter is degenerate when U = urange[0]'. The derivative of the parameterization function with respect to v is 0whenever u = urange[0]', for all values of v, and the parameter curve corresponding to u = urange[0]' degenerates to a single point. A parameterization can only degenerate at the end of its range, unless the surface is a type of Bsurface.\nvBoundType\n= two integers packed into a double. Each integer describes the behavior at the start and end of the V range. For valid values and their meanings, see description of\nuBoundType\n.\nuProps\n[2]  = four\nintegers packed into two doubles representing U parameterization properties. The\nuProps\narray of two doubles will contain a total of one or more integer values with a maximum of four. Valid values and their meanings are:\n13701 -  Periodic parameterization.\n13737 -  All derivatives continuous.\n13738 -  All derivatives non necessarily continuous.\n13739 -  Linear. Corresponding parameter is proportional to the distance along a straight line. Straight line corresponds to a constant value of the other parameter.\n13740 -  Circular. Corresponding parameter represents an angle around a circle. Circle corresponds to a constant value of the other parameter.\n13746 -  Bounds at the ends of the parameter range are coincident.\nvProps\n[2]  = four integers packed into two doubles representing V parameterization properties. The\nvProps\narray of two doubles will contain a total of one or more integer values with a maximum of four. For valid values and their meanings, see description of\nuProps\n.\nnumProps\n= two integers packed into a double. Each integer represents the number of properties returned in\nuProps\nand\nvProps,\nrespectively.\nIf a surface is periodic in one direction (that is, cylinder, cone, torus (apple and lemon shapes), spheres), then U is the periodic direction.\nThe -10000 to 10000 parameter range is the modeling limit for the modeler. This means that the values are effectively infinite in size. To get the parameter range from a given face, use\nIFace2::GetBox\nor\nIFace2::IGetBox\n,\nISurface::GetClosestPointOn\nor\nISurface::IGetClosestPointOn\n, and\nISurface::ReverseEvaluate\nor\nISurface::IReverseEvaluate\n.\nThese methods provide a true parameter range that the face is using on the surface.",
+  "examples": [],
+  "related": [
+    "ISurface.Evaluate",
+    "ISurface.EvaluateAtPoint",
+    "ISurface.IEvaluate",
+    "ISurface.IEvaluateAtPoint",
+    "ISurface.Parameterization"
+  ]
+}

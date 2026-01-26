@@ -1,0 +1,97 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "AddDimension2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "Dimension text location in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.InsertChainDim",
+      "IModelDoc2.AddDiameterDimension2",
+      "IModelDoc2.AddHorizontalDimension2",
+      "IModelDoc2.AddRadialDimension2",
+      "IModelDoc2.AddVerticalDimension2",
+      "IModelDoc2.IAddDiameterDimension2",
+      "IModelDoc2.IAddDimension2",
+      "IModelDoc2.IAddHorizontalDimension2",
+      "IModelDoc2.IAddRadialDimension2",
+      "IModelDoc2.IAddVerticalDimension2",
+      "IModelDocExtension.AddSpecificDimension"
+    ],
+    "keywords": [
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "add",
+      "adddimension2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "dimension2",
+      "double",
+      "object"
+    ]
+  },
+  "title": "IModelDoc2.AddDimension2",
+  "description": "Creates a display dimension at the specified location for selected entities.",
+  "signature": "System.Object AddDimension2( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "Dimension text location in meters"
+    }
+  ],
+  "returns": "Newly created dimension",
+  "remarks": "Before calling this method, you must select the entities for which to add a display dimension.\nIf extension lines are needed during dimensioning because the selected entities do not unambiguously define what needs to be dimensioned, call\nIModelDocExtension::AddDimension\ninstead of this method.\nTo dimension, make selections based on location and not name. For example, creating an angular dimension between two lines gets different results based on which line endpoints are selected. Therefore, if you are using\nIModelDocExtension::SelectByID2\nto select the entities for dimensioning, then you should specify the X, Y,  and Z selection coordinates. You must also leave the object name argument empty, because if you pass the object name to IModelDocExtension::SelectByID2, then the selection routines use the object name instead of the coordinates to locate that item.\nNOTE:\nTo change the angle in an angular dimension to its supplementary angle, use\nIDisplayDimension::SupplementaryAngle\n.\nBecause coordinates are ignored when the object name is passed, the dimensioning routines are not able to use a specific selection location for the dimension. This causes unpredictable results during dimension creation. IModelDocExtension::SelectByID2 randomly selects the line endpoint.\nYou should only use this method on visible documents. Before using this method, check to see if the document is visible by using\nISldWorks::Visible\n.\nWhen you use this method, you might also want to use\nISldWorks::SetUserPreferenceToggle\nwith swInputDimValOnCreate to suppress the dialog box that lets the user type a dimension value.",
+  "examples": [],
+  "related": [
+    "IDrawingDoc.InsertChainDim",
+    "IModelDoc2.AddDiameterDimension2",
+    "IModelDoc2.AddHorizontalDimension2",
+    "IModelDoc2.AddRadialDimension2",
+    "IModelDoc2.AddVerticalDimension2",
+    "IModelDoc2.IAddDiameterDimension2",
+    "IModelDoc2.IAddDimension2",
+    "IModelDoc2.IAddHorizontalDimension2",
+    "IModelDoc2.IAddRadialDimension2",
+    "IModelDoc2.IAddVerticalDimension2",
+    "IModelDocExtension.AddSpecificDimension"
+  ]
+}

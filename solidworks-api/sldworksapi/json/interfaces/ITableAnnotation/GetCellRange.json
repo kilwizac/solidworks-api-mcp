@@ -1,0 +1,124 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "GetCellRange",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FirstRow",
+        "type": "System.Int32",
+        "description": "Index of row of first selected cell"
+      },
+      {
+        "name": "LastRow",
+        "type": "System.Int32",
+        "description": "Index of row of last selected cell"
+      },
+      {
+        "name": "FirstColumn",
+        "type": "System.Int32",
+        "description": "Index of column of first selected cell"
+      },
+      {
+        "name": "LastColumn",
+        "type": "System.Int32",
+        "description": "Index of column of last selected cell"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.CellTextHorizontalJustification",
+      "ITableAnnotation.CellTextVerticalJustification",
+      "ITableAnnotation.DisplayedText",
+      "ITableAnnotation.GetCellTextFormat",
+      "ITableAnnotation.GetCellUseDocTextFormat",
+      "ITableAnnotation.IsCellMerged",
+      "ITableAnnotation.IsCellTextEditable",
+      "ITableAnnotation.MergeCells",
+      "ITableAnnotation.SetCellRange",
+      "ITableAnnotation.SetCellTextFormat"
+    ],
+    "keywords": [
+      "cells",
+      "tables",
+      "table",
+      "getcellrange",
+      "itableannotation",
+      "annotation",
+      "cell",
+      "range",
+      "first",
+      "row",
+      "int32",
+      "last",
+      "column",
+      "void",
+      "select",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ITableAnnotation.GetCellRange",
+  "description": "Gets the selected table cells' row and column index ranges.",
+  "signature": "void GetCellRange( \n   out System.Int32\nFirstRow\n,\n   out System.Int32\nLastRow\n,\n   out System.Int32\nFirstColumn\n,\n   out System.Int32\nLastColumn\n)",
+  "parameters": [
+    {
+      "name": "FirstRow",
+      "type": "System.Int32",
+      "description": "Index of row of first selected cell"
+    },
+    {
+      "name": "LastRow",
+      "type": "System.Int32",
+      "description": "Index of row of last selected cell"
+    },
+    {
+      "name": "FirstColumn",
+      "type": "System.Int32",
+      "description": "Index of column of first selected cell"
+    },
+    {
+      "name": "LastColumn",
+      "type": "System.Int32",
+      "description": "Index of column of last selected cell"
+    }
+  ],
+  "returns": "",
+  "remarks": "The returned indexes are all 0-based.\nIf you don't multi-select table cells before you call this method, then the cell row/column index range for the entire table is returned.\nBefore calling this method, you can select the table cells in the graphics area whose row/column index range you want to get. How you make these selections determines what this method returns.\nSelection\nSteps\nCell range returned\nTable cell\nPlace the cursor on the desired table cell.\nClick the left-mouse button.\nSelected cell\nHold down the Ctrl key and place the cursor on the desired table cell.\nClick the left-mouse button.\nSelected cell\nMultiple table cells\nPlace the cursor on a desired table cell.\nClick and hold down the left-mouse button.\nDrag the cursor over the other desired table cells.\nRelease the left-mouse button when the cursor is on the last table cell that you want selected.\nAll selected cells\nHold down the Ctrl key and place the cursor on a desired table cell.\nClick the left-mouse button.\nRepeat steps 1 and 2 until all desired table cells are selected.\nEach selected cell\nTable column\nPlace the cursor just above the desired column and click the left-mouse button when the cursor changes to a solid arrow\nAll selected cells\nTable row\nPlace the cursor to just left of the desired row and click the left-mouse button when the cursor changes to a solid arrow\nAll selected cells\nRun any of the examples in the\nExample\nsection to better understand the values returned by this method.",
+  "examples": [
+    {
+      "title": "Select Table Cells (C#)",
+      "href": "Select_Table_Cells_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Table Cells (VB.NET)",
+      "href": "Select_Table_Cells_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Select Table Cells (VBA)",
+      "href": "Select_Table_Cells_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITableAnnotation.CellTextHorizontalJustification",
+    "ITableAnnotation.CellTextVerticalJustification",
+    "ITableAnnotation.DisplayedText",
+    "ITableAnnotation.GetCellTextFormat",
+    "ITableAnnotation.GetCellUseDocTextFormat",
+    "ITableAnnotation.IsCellMerged",
+    "ITableAnnotation.IsCellTextEditable",
+    "ITableAnnotation.MergeCells",
+    "ITableAnnotation.SetCellRange",
+    "ITableAnnotation.SetCellTextFormat"
+  ]
+}

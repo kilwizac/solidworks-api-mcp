@@ -1,0 +1,124 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "GetBSurfParams3",
+    "returns": "BSurfParamData",
+    "parameters": [
+      {
+        "name": "WantCubic",
+        "type": "System.Boolean",
+        "description": "True if cubic is needed, false if not; specifying true converts any surface to a cubic B-spline surface"
+      },
+      {
+        "name": "WantNonRational",
+        "type": "System.Boolean",
+        "description": "True if non-rational is needed, false if not; specifying true converts any surface to a non-rational B-spline surface; if you specify true, then you should only use this method for surfaces that are of B-spline or blend type; otherwise, the underlying call is not made and the values returned from this are not initialized, or they contain the values from the last call"
+      },
+      {
+        "name": "VP0",
+        "type": "System.Object",
+        "description": "ISurfaceParameterizationData"
+      },
+      {
+        "name": "Tolerance",
+        "type": "System.Double",
+        "description": "Tolerance, in meters, between the approximated B-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired"
+      },
+      {
+        "name": "Sense",
+        "type": "System.Boolean",
+        "description": "Approximated B-spline surface is not always in the same direction as the original surface; if Sense is true, then the underlying surface and the B-spline surface are in the same direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.IGetBSurfParams",
+      "ISurface.IGetBSurfParamsSize3"
+    ],
+    "keywords": [
+      "spline",
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "parameterization",
+      "getbsurfparams3",
+      "surf",
+      "params3",
+      "want",
+      "cubic",
+      "boolean",
+      "non",
+      "rational",
+      "vp0",
+      "object",
+      "tolerance",
+      "double",
+      "sense",
+      "param",
+      "data",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISurface.GetBSurfParams3",
+  "description": "Gets the parameterization data for a B-spline surface.",
+  "signature": "BSurfParamData GetBSurfParams3( \n   System.Boolean\nWantCubic\n,\n   System.Boolean\nWantNonRational\n,\n   System.Object\nVP0\n,\n   System.Double\nTolerance\n,\n   out System.Boolean\nSense\n)",
+  "parameters": [
+    {
+      "name": "WantCubic",
+      "type": "System.Boolean",
+      "description": "True if cubic is needed, false if not; specifying true converts any surface to a cubic B-spline surface"
+    },
+    {
+      "name": "WantNonRational",
+      "type": "System.Boolean",
+      "description": "True if non-rational is needed, false if not; specifying true converts any surface to a non-rational B-spline surface; if you specify true, then you should only use this method for surfaces that are of B-spline or blend type; otherwise, the underlying call is not made and the values returned from this are not initialized, or they contain the values from the last call"
+    },
+    {
+      "name": "VP0",
+      "type": "System.Object",
+      "description": "ISurfaceParameterizationData"
+    },
+    {
+      "name": "Tolerance",
+      "type": "System.Double",
+      "description": "Tolerance, in meters, between the approximated B-spline surface and the underlying surface; the default value is 0.01 and should generally be reduced to the tolerance desired"
+    },
+    {
+      "name": "Sense",
+      "type": "System.Boolean",
+      "description": "Approximated B-spline surface is not always in the same direction as the original surface; if Sense is true, then the underlying surface and the B-spline surface are in the same direction"
+    }
+  ],
+  "returns": "An IBSurfParamData object",
+  "remarks": "Before calling this method, call\nISurface:Parameterization2\nto populate VP0.\nIf you want to use the B-spline surface in combination with its trim curves, you should use the\nIFace2::GetTrimCurves2\nmethod to extract both the trim curves and the B-spline surface. The\nIFace2::GetTrimCurves2\nmethod provides much better alignment of the trim curves with the B-spline surface, because they are both generated at the same time.",
+  "examples": [
+    {
+      "title": "Get B-Spline Surface Parameterization Data (C#)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get B-Spline Surface Parameterization Data (VB.NET)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get B-Spline Surface Parameterization Data (VBA)",
+      "href": "Get_B-Spline_Surface_Parameterization_Data_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurface.IGetBSurfParams",
+    "ISurface.IGetBSurfParamsSize3"
+  ]
+}

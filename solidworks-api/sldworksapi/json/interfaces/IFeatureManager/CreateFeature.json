@@ -1,0 +1,148 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "CreateFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FeatureData",
+        "type": "System.Object",
+        "description": "thread , sweep , library , library form tool (see Remarks ), tab/slot , bounding box , ground plane , mirror components , projection curve , sheet metal normal cut , sheet metal swept flange , sheet metal gusset , sheet metal edge flange , convert solid to sheet metal (see Remarks ), simple fillet/chamfer , belt/chain , sheet metal base flange , sheet metal corner relief , sheet metal sketched bend , mate controller , or a pattern-specific feature data object (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBaseFlangeFeatureData.Initialize",
+      "IConvertSolidFeatureData.Initialize",
+      "ICornerReliefFeatureData.Initialize",
+      "IFeature.GetDefinition",
+      "IFeatureManager.CreateDefinition",
+      "ILibraryFeatureData.Initialize",
+      "IMateControllerFeatureData.Initialize",
+      "ISimpleFilletFeatureData2.Initialize",
+      "IThreadFeatureData.InitializeThreadData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "holes",
+      "library",
+      "isimpleholefeaturedata2",
+      "iwizardholefeaturedata2",
+      "interfaces",
+      "wizard",
+      "ilibraryfeaturedata",
+      "create",
+      "createfeature",
+      "ifeaturemanager",
+      "manager",
+      "data",
+      "object",
+      "ibaseflangefeaturedata",
+      "ibeltchainfeaturedata",
+      "icornerrelieffeaturedata",
+      "iedgeflangefeaturedata",
+      "imatecontrollerfeaturedata",
+      "imirrorcomponentfeaturedata",
+      "ipartialedgefilletdata",
+      "isimplefilletfeaturedata2",
+      "isketchedbendfeaturedata",
+      "ismgussetfeaturedata",
+      "isweptflangefeaturedata",
+      "itabandslotfeaturedata"
+    ]
+  },
+  "title": "IFeatureManager.CreateFeature",
+  "description": "Creates the specified feature.",
+  "signature": "Feature CreateFeature( \n   System.Object\nFeatureData\n)",
+  "parameters": [
+    {
+      "name": "FeatureData",
+      "type": "System.Object",
+      "description": "thread , sweep , library , library form tool (see Remarks ), tab/slot , bounding box , ground plane , mirror components , projection curve , sheet metal normal cut , sheet metal swept flange , sheet metal gusset , sheet metal edge flange , convert solid to sheet metal (see Remarks ), simple fillet/chamfer , belt/chain , sheet metal base flange , sheet metal corner relief , sheet metal sketched bend , mate controller , or a pattern-specific feature data object (see Remarks )"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Before calling this method to create ConvertSolid and Library form tool features, ensure that the Sheet Metal tab is visible on the CommandManager toolbar.\nUse:\nIFeature::GetErrorCode2\nto get any errors that occurred during the creation of the feature.\nIFeatureManager::GetCreateFeatureErrors\nto get any errors that occurred during the creation of a Mate Controller feature.\nFor additional information, see:\nLibrary Features and LibraryFeatureData Objects\nPattern Features and their Feature Data Objects\nSweep Features and SweepFeatureData Objects\nThread Features and ThreadFeatureData Objects",
+  "examples": [
+    {
+      "title": "IBaseFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBaseFlangeFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "IBeltChainFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBeltChainFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "ICornerReliefFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICornerReliefFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "IEdgeFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEdgeFlangeFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "IMateControllerFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMateControllerFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "IMirrorComponentFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IMirrorComponentFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "IPartialEdgeFilletData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartialEdgeFilletData",
+      "code_blocks": []
+    },
+    {
+      "title": "ISimpleFilletFeatureData2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISimpleFilletFeatureData2",
+      "code_blocks": []
+    },
+    {
+      "title": "ISketchedBendFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchedBendFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "ISMGussetFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISMGussetFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "ISweptFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweptFlangeFeatureData",
+      "code_blocks": []
+    },
+    {
+      "title": "ITabAndSlotFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ITabAndSlotFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBaseFlangeFeatureData.Initialize",
+    "IConvertSolidFeatureData.Initialize",
+    "ICornerReliefFeatureData.Initialize",
+    "IFeature.GetDefinition",
+    "IFeatureManager.CreateDefinition",
+    "ILibraryFeatureData.Initialize",
+    "IMateControllerFeatureData.Initialize",
+    "ISimpleFilletFeatureData2.Initialize",
+    "IThreadFeatureData.InitializeThreadData"
+  ]
+}

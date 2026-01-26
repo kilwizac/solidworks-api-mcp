@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICoincidentMateFeatureData",
+    "member": "EntitiesToMate",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "entitiestomate",
+      "icoincidentmatefeaturedata",
+      "coincident",
+      "mate",
+      "feature",
+      "data",
+      "entities",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "ICoincidentMateFeatureData.EntitiesToMate",
+  "description": "Gets or sets the entities to mate in this coincident mate.",
+  "signature": "System.Object EntitiesToMate {get; set;}",
+  "parameters": [],
+  "returns": "Array of entities to mate (see Remarks )",
+  "remarks": "Instead of specifying this property, you can use\nIModelDocExtension::SelectByID2\nto pre-select the entities to mate using Mark = 1. You can pre-select mate entities during mate creation, but not during mate editing.\nPopulate the array of this property by using either IModelDocExtension::SelectByID2 or\nIModelDocExtension::SelectByRay\nand\nISelectionMgr::GetSelectedObject6\n.\nCreate coincident mates with the following mate entity combinations:\nMate entity/Mate entity\nIEdge\n(arc, circular edge)\nISurface\n,\nIFace2\n(cone)\nIFeature\n(coordinate system)\nICurve\n(arc, spline, helix)\nISurface,\nIFace2\n(cylinder)\nIFace2\n(extrusion face, draft is not allowed)\nIEdge,\nIRefAxis\n,\nICenterLine\n,\nISketchLine\n(line)\nIEntity\n(coordinate system origin)\nIRefPlane\nIRefPoint\n,\nIVertex\n,\nISketchPoint\nISurface,\nIFace2\n(sphere)\nISurface\nIEdge (arc, circular edge)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nISurface, IFace2 (cone)\n\u25cf\n\u25cf Both cones must be of the same half angle\n\u25cf\nIFeature (coordinate system)\n\u25cf\n\u25cf\nICurve (arc, spline, helix)\n\u25cf\nISurface, IFace2 (cylinder)\n\u25cf\n\u25cf\nIFace2 (extrusion face, draft is not allowed)\n\u25cf\nIEdge, IRefAxis, ICenterLine, ISketchLine (line)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIEntity (coordinate system origin)\n\u25cf\n\u25cf\nIRefPlane\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIRefPoint, IVertex, ISketchPoint\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nISurface, IFace2 (sphere)\n\u25cf\nISurface\n\u25cf\nAfter specifying the entities to mate, specify their\nICoincidentMateFeatureData::PickPoints\nto fully define the position of the mate.",
+  "examples": [
+    {
+      "title": "ICoincidentMateFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICoincidentMateFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

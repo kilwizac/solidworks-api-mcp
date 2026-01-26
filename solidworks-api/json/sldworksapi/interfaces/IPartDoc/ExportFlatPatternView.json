@@ -1,0 +1,71 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "ExportFlatPatternView",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "type": "System.String",
+        "description": "Path and filename to which to save the sheet metal part in its flattened state to a DXF/DWG file"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Option as described in swExportFlatPatternViewOptions_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "file-io",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.ExportToDWG2",
+      "IPartDoc.IExportToDWG2"
+    ],
+    "keywords": [
+      "exportflatpatternview",
+      "ipartdoc",
+      "part",
+      "doc",
+      "export",
+      "flat",
+      "pattern",
+      "view",
+      "file",
+      "path",
+      "string",
+      "options",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IPartDoc.ExportFlatPatternView",
+  "description": "Obsolete. Superseded by IPartDoc::ExportToDWG2.}}-->",
+  "signature": "System.Boolean ExportFlatPatternView( \n   System.String\nFilePath\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "FilePath",
+      "type": "System.String",
+      "description": "Path and filename to which to save the sheet metal part in its flattened state to a DXF/DWG file"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Option as described in swExportFlatPatternViewOptions_e"
+    }
+  ],
+  "returns": "True if the sheet metal part is enabled to be saved in its flattened state to a DXF/DWG file at the specified path and filename, false if not",
+  "remarks": "Call this method before calling\nIModelDocExtension::SaveAs\n.",
+  "examples": [],
+  "related": [
+    "IPartDoc.ExportToDWG2",
+    "IPartDoc.IExportToDWG2"
+  ]
+}

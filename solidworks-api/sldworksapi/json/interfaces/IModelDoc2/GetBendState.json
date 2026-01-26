@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetBendState",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.SetBendState"
+    ],
+    "keywords": [
+      "bends",
+      "state",
+      "getbendstate",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "bend",
+      "int32",
+      "flatten",
+      "sheet",
+      "metal",
+      "part",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.GetBendState",
+  "description": "Gets the current bend state of a sheet metal part.",
+  "signature": "System.Int32 GetBendState()",
+  "parameters": [],
+  "returns": "Current state of sheet metal bends as defined in swSMBendState_e",
+  "remarks": "If...\nThen...\nA part with bend information is being edited in context of the assembly (see\nIAssemblyDoc::EditPart2\n)\nThe bend state for that part is returned.\nThis method is run on a part without bend information or directly on an assembly\nswSMBendStateNone is returned, and the return status is S_false (COM only).",
+  "examples": [
+    {
+      "title": "Flatten Sheet Metal Part (VBA)",
+      "href": "Flatten_Sheet_Metal_Part_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.SetBendState"
+  ]
+}

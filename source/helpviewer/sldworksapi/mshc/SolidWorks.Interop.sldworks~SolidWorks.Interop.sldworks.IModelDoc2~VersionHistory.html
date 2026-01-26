@@ -1,0 +1,505 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>VersionHistory Method (IModelDoc2)</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~VersionHistory" />
+    <meta name="Description" content="Gets an array of strings indicating the versions in which this document was saved, including the SOLIDWORKS Design version in which the model document is currently opened and which is the last value returned in the array." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModelDoc2.VersionHistory" />
+    <meta name="Microsoft.Help.Keywords" content="Version number, SOLIDWORKS" />
+    <meta name="Microsoft.Help.Keywords" content="SOLIDWORKS, version number" />
+    <meta name="Microsoft.Help.Keywords" content="VersionHistory Method (IModelDoc2)" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                VersionHistory Method (IModelDoc2)
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">IModelDoc2 Interface</a> : VersionHistory Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Gets an array of strings indicating the versions in which this document was saved, including the SOLIDWORKS Design&#160;version in which the model document is currently opened and which is the last value returned in the array.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function VersionHistory() As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">IModelDoc2</a>
+Dim value As System.Object
+ 
+value = instance.VersionHistory()
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object VersionHistory()
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ VersionHistory(); 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Array of strings that describe the version history of the document
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>There is one array entry for each major release of the SOLIDWORKS Design software in which the document has been saved. The format for each entry is a major release code followed by one or more minor release codes separated by commas:</p>
+
+            <p style="MARGIN-LEFT: 48px">&#160;&lt;major release code&gt;[&lt;minor release code&gt;]<br />
+            <br />
+            - or -</p>
+
+            <p style="MARGIN-LEFT: 48px">&#160;&lt;major release code&gt;[&lt;minor release code&gt;,&lt;minor release code&gt;...]</p>
+
+            <p>where &lt;major release code&gt; equals a number that remains constant through a major release of the SOLIDWORKS Design&#160;software. For example, the following values are returned based on the corresponding major SOLIDWORKS Design&#160;version:</p><!--(Table)=========================================================-->
+
+            <table style="BORDER-SPACING: 0px; x-cell-content-align: top" cellspacing="0">
+                <colgroup>
+                    <col style="WIDTH: 59.6%" />
+                    <col style="WIDTH: 40.39%" />
+                </colgroup>
+
+                <tbody>
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(219,219,219)">
+                            <p class="apiTableColHeading"><strong>SOLIDWORKS Release</strong></p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(219,219,219)">
+                            <p class="apiTableColHeading" align="center"><strong>Version Number</strong></p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 95&#160;</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">44</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 96</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">243</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 97&#160;</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">483</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 97Plus</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">629</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 98</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">822</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 98Plus&#160;</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">1008</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 99&#160;</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">1137</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2000&#160;</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">1500</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2001</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">1750</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2001Plus</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">1950</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2003</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">2200</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2004</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">2500</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2005</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">2800</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2006</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">3100</p>
+                        </td>
+                    </tr>
+
+                    <tr style="x-cell-content-align: top" valign="top">
+                        <td style="PADDING-LEFT: 10px">
+                            <p>SOLIDWORKS 2007</p>
+                        </td>
+
+                        <td style="PADDING-LEFT: 10px">
+                            <p align="center">3400</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2008</td>
+
+                        <td>
+                            <p align="center">3800</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2009</td>
+
+                        <td>
+                            <p align="center">4100</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2010</td>
+
+                        <td>
+                            <p align="center">4400</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2011</td>
+
+                        <td>
+                            <p align="center">4700</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2012</td>
+
+                        <td>
+                            <p align="center">5000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2013</td>
+
+                        <td>
+                            <p align="center">6000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2014</td>
+
+                        <td>
+                            <p align="center">7000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2015</td>
+
+                        <td>
+                            <p align="center">8000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2016</td>
+
+                        <td>
+                            <p align="center">9000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2017</td>
+
+                        <td>
+                            <p align="center">10000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2018</td>
+
+                        <td>
+                            <p align="center">11000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2019</td>
+
+                        <td>
+                            <p align="center">12000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2020</td>
+
+                        <td>
+                            <p align="center">13000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2021</td>
+
+                        <td>
+                            <p align="center">14000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2022</td>
+
+                        <td>
+                            <p align="center">15000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2023</td>
+
+                        <td>
+                            <p align="center">16000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2024</td>
+
+                        <td>
+                            <p align="center">17000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLDWORKS 2025</td>
+
+                        <td>
+                            <p align="center">18000</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&#160;SOLIDWORKS 2026</td>
+
+                        <td>
+                            <p align="center">19000</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>The &lt;minor release code&gt; equals the year and day of manufacture of a saving version (for example, 1997/320).</p>
+
+            <p>To get the version in which a model document was last saved, use <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~VersionHistory">ISldWorks::VersionHistory</a>.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">IModelDoc2 Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2_members">IModelDoc2 Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~IVersionHistory">IModelDoc2::IVersionHistory Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~RevisionNumber">ISldWorks::RevisionNumber Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~IsFutureVersion">IModelDocExtension::IsFutureVersion Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~VersionHistory.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

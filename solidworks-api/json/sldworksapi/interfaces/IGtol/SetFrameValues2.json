@@ -1,0 +1,135 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "SetFrameValues2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FrameNumber",
+        "type": "System.Int16",
+        "description": "Symbol frame number; 1 for first frame (see Remarks )"
+      },
+      {
+        "name": "Tol1",
+        "type": "System.String",
+        "description": "Tolerance 1 value"
+      },
+      {
+        "name": "Tol2",
+        "type": "System.String",
+        "description": "Tolerance 2 value"
+      },
+      {
+        "name": "Datum1",
+        "type": "System.String",
+        "description": "Primary datum with material conditions ( see Remarks )"
+      },
+      {
+        "name": "Datum2",
+        "type": "System.String",
+        "description": "Secondary datum with material conditions ( see Remarks )"
+      },
+      {
+        "name": "Datum3",
+        "type": "System.String",
+        "description": "Tertiary datum with material conditions ( see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetFrameDiameterSymbols",
+      "IGtol.GetFrameSymbols2",
+      "IGtol.GetFrameValues"
+    ],
+    "keywords": [
+      "frame",
+      "see",
+      "also",
+      "iframe",
+      "geometric",
+      "tolerancing",
+      "setframevalues2",
+      "igtol",
+      "gtol",
+      "values2",
+      "number",
+      "int16",
+      "tol1",
+      "string",
+      "tol2",
+      "datum1",
+      "datum2",
+      "datum3",
+      "boolean",
+      "insert",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IGtol.SetFrameValues2",
+  "description": "Sets the geometric tolerance values and datum references in the specified frame of this GTol symbol.",
+  "signature": "System.Boolean SetFrameValues2( \n   System.Int16\nFrameNumber\n,\n   System.String\nTol1\n,\n   System.String\nTol2\n,\n   System.String\nDatum1\n,\n   System.String\nDatum2\n,\n   System.String\nDatum3\n)",
+  "parameters": [
+    {
+      "name": "FrameNumber",
+      "type": "System.Int16",
+      "description": "Symbol frame number; 1 for first frame (see Remarks )"
+    },
+    {
+      "name": "Tol1",
+      "type": "System.String",
+      "description": "Tolerance 1 value"
+    },
+    {
+      "name": "Tol2",
+      "type": "System.String",
+      "description": "Tolerance 2 value"
+    },
+    {
+      "name": "Datum1",
+      "type": "System.String",
+      "description": "Primary datum with material conditions ( see Remarks )"
+    },
+    {
+      "name": "Datum2",
+      "type": "System.String",
+      "description": "Secondary datum with material conditions ( see Remarks )"
+    },
+    {
+      "name": "Datum3",
+      "type": "System.String",
+      "description": "Tertiary datum with material conditions ( see Remarks )"
+    }
+  ],
+  "returns": "True if frame values are set, false if not",
+  "remarks": "This method is valid only if this Gtol was created in a version of SOLIDWORKS earlier than 2022.\nBefore calling this method, call:\nIGtol::SetFrameSymbols2\nto specify the GTol symbol for this frame.\nIGtol::GetFrameCount\nto specify FrameNumber.\nGeometric tolerance and material condition symbols are defined in\nC:\\ProgramData\\SolidWorks\\SolidWorks\n20\nnn\n\\lang\\english\\\ngtol.sym.\nInspect this file as you specify Datum1, Datum2, and Datum3 in <\nLibraryName-SymbolName\n> format.\nFor example, for datum tags A, B, and C:\nbRet = aGTol.SetFrameValues2(1, \"0.2\", \"\", \"B-A-C<MOD-MMC>\", \"B<MOD-MMC>-C<MOD-LMC>\", \"C<MOD-MMC>-A\")\nsets the first symbol frame of this GTol with:\nTolerance 1 = 0.2\nPrimary datum = B-A-C<MOD-MMC>\nSecondary datum = B<MOD-MMC>-C<MOD-LMC>\nTeritiary datum = C<MOD-MMC>-A",
+  "examples": [
+    {
+      "title": "Insert GTol (VBA)",
+      "href": "Insert_GTol_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VB.NET)",
+      "href": "Insert_GTol_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (C#)",
+      "href": "Insert_GTol_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IGtol.GetFrameDiameterSymbols",
+    "IGtol.GetFrameSymbols2",
+    "IGtol.GetFrameValues"
+  ]
+}

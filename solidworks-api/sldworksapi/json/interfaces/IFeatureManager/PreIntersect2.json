@@ -1,0 +1,89 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "PreIntersect2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "CapPlanar",
+        "type": "System.Boolean",
+        "description": "True to cap the flat openings of surfaces to define closed volumes, false to not"
+      },
+      {
+        "name": "RegionType",
+        "type": "System.Int32",
+        "description": "Type of regions to create: 0 = Intersecting regions 1 = Internal regions 2 = Intersecting and internal regions"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IIntersectFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "intersect",
+      "preintersect2",
+      "ifeaturemanager",
+      "manager",
+      "pre",
+      "intersect2",
+      "cap",
+      "planar",
+      "boolean",
+      "region",
+      "type",
+      "int32",
+      "object",
+      "create",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.PreIntersect2",
+  "description": "Prepares an intersect feature.",
+  "signature": "System.Object PreIntersect2( \n   System.Boolean\nCapPlanar\n,\n   System.Int32\nRegionType\n)",
+  "parameters": [
+    {
+      "name": "CapPlanar",
+      "type": "System.Boolean",
+      "description": "True to cap the flat openings of surfaces to define closed volumes, false to not"
+    },
+    {
+      "name": "RegionType",
+      "type": "System.Int32",
+      "description": "Type of regions to create: 0 = Intersecting regions 1 = Internal regions 2 = Intersecting and internal regions"
+    }
+  ],
+  "returns": "Array of intersecting bodies",
+  "remarks": "Before calling this method, you must select the intersecting\nsurfaces\n,\nsolids\n, or\nplanes\nthat make up the intersect feature.\nAfter calling this method, call\nIFeatureManager::PostIntersect\nto create the intersect feature.",
+  "examples": [
+    {
+      "title": "Create Intersect Feature (C#)",
+      "href": "Create_Intersect_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Intersect Feature (VB.NET)",
+      "href": "Create_Intersect_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Intersect Feature (VBA)",
+      "href": "Create_Intersect_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IIntersectFeatureData"
+  ]
+}

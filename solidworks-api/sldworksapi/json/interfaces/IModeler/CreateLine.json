@@ -1,0 +1,86 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "CreateLine",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "RootPoint",
+        "type": "System.Object",
+        "description": "Array containing 3 doubles (x, y, z) for the start point of the line"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Object",
+        "description": "Array containing 3 doubles (x, y, z) for the end point of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateEllipse",
+      "IModeler.ICreateEllipse"
+    ],
+    "keywords": [
+      "lines",
+      "create",
+      "createline",
+      "imodeler",
+      "modeler",
+      "line",
+      "root",
+      "point",
+      "object",
+      "direction",
+      "temporary",
+      "extruded",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModeler.CreateLine",
+  "description": "Creates a line.",
+  "signature": "System.Object CreateLine( \n   System.Object\nRootPoint\n,\n   System.Object\nDirection\n)",
+  "parameters": [
+    {
+      "name": "RootPoint",
+      "type": "System.Object",
+      "description": "Array containing 3 doubles (x, y, z) for the start point of the line"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Object",
+      "description": "Array containing 3 doubles (x, y, z) for the end point of the line"
+    }
+  ],
+  "returns": "Newly created line",
+  "remarks": "If your application uses\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\n, then your application must also use\nICurve::CreateTrimmedCurve2\nfor the curves created by\nIModeler::CreateArc\nor\nIModeler::ICreateArc\nand IModeler::CreateLine or\nIModeler::ICreateLine\n.",
+  "examples": [
+    {
+      "title": "Create Temporary Extruded Body (C#)",
+      "href": "Create_Temporary_Extruded_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VB.NET)",
+      "href": "Create_Temporary_Extruded_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Extruded Body (VBA)",
+      "href": "Create_Temporary_Extruded_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModeler.CreateEllipse",
+    "IModeler.ICreateEllipse"
+  ]
+}

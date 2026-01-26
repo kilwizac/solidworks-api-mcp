@@ -1,0 +1,80 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEquationMgr",
+    "member": "Delete",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the equation to delete"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IEquationMgr.Add2",
+      "IEquationMgr.Add3",
+      "IEquationMgr.Disabled",
+      "IEquationMgr.Equation",
+      "IEquationMgr.GetCount",
+      "IEquationMgr.GetDisabledEquationCount"
+    ],
+    "keywords": [
+      "delete",
+      "iequationmgr",
+      "equation",
+      "mgr",
+      "index",
+      "int32",
+      "add",
+      "evalute",
+      "all",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IEquationMgr.Delete",
+  "description": "Deletes the equation at the specified index.",
+  "signature": "System.Int32 Delete( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the equation to delete"
+    }
+  ],
+  "returns": "0 if the equation is deleted; -1 if there was an error",
+  "remarks": "When you delete an equation, you are removing it from the list of relations. Thus, do not delete an equation while traversing the equations in a model, because SOLIDWORKS could crash.",
+  "examples": [
+    {
+      "title": "Add Equation and Evalute All (C#)",
+      "href": "Add_Equation_And_Evaluate_All_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Equation and Evalute All (VB.NET)",
+      "href": "Add_Equation_And_Evaluate_All_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Equation and Evalute All (VBA)",
+      "href": "Add_Equation_And_Evaluate_All_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IEquationMgr.Add2",
+    "IEquationMgr.Add3",
+    "IEquationMgr.Disabled",
+    "IEquationMgr.Equation",
+    "IEquationMgr.GetCount",
+    "IEquationMgr.GetDisabledEquationCount"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeature",
+    "member": "GetFaceCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IFeature.GetFaces"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "feature",
+      "getfacecount",
+      "ifeature",
+      "count",
+      "int32",
+      "faces",
+      "affected",
+      "draft",
+      "vba",
+      "scale",
+      "associated",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IFeature.GetFaceCount",
+  "description": "Gets the number of faces in this feature.",
+  "signature": "System.Int32 GetFaceCount()",
+  "parameters": [],
+  "returns": "Number of faces in this feature",
+  "remarks": "Call this method before calling\nIFeature::IGetFaces2\n.\nA face:\nis the result of evaluating a feature.\ncan be owned by several features.\nThis method returns all of the faces owned by a feature. This is different from the faces highlighted in the user interface when the feature is selected. The user interface filters out multiple feature faces. This filter is only for display purposes.\nNOTES\n:\nThis method does not return any faces for draft features because draft features do not create any new faces. Drafting only modifies existing faces.\nThe number of faces for rolled hems is 0 because all of the faces belong to the children bends.\nTo filter out multiple feature faces, call\nIFace2::GetFeature\nor\nIFace2::IGetFeature\n. Only the oldest feature from the face is returned; that is, the first owning feature in the FeatureManager design tree.",
+  "examples": [
+    {
+      "title": "Get Faces Affected by Draft Feature (VBA)",
+      "href": "Get_Faces_Affected_by_Draft_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Affected by Scale Feature (VBA)",
+      "href": "Get_Faces_Affected_by_Scale_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (C#)",
+      "href": "Get_Faces_Associated_with_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VB.NET)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Faces Associated with Feature (VBA)",
+      "href": "Get_Faces_Associated_with_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeature.GetFaces"
+  ]
+}

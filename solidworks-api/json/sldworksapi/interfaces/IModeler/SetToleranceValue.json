@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "SetToleranceValue",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ToleranceID",
+        "type": "System.Int32",
+        "description": "Type of tolerance you want to set as defined in swTolerances_e"
+      },
+      {
+        "name": "NewToleranceValue",
+        "type": "System.Double",
+        "description": "New tolerance value in meters for the specified tolerance type"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.GetToleranceValue",
+      "IModeler.UnsetTolerances"
+    ],
+    "keywords": [
+      "tolerance",
+      "settolerancevalue",
+      "imodeler",
+      "modeler",
+      "value",
+      "id",
+      "int32",
+      "new",
+      "double"
+    ]
+  },
+  "title": "IModeler.SetToleranceValue",
+  "description": "Sets tolerances governing geometry output.",
+  "signature": "System.Double SetToleranceValue( \n   System.Int32\nToleranceID\n,\n   System.Double\nNewToleranceValue\n)",
+  "parameters": [
+    {
+      "name": "ToleranceID",
+      "type": "System.Int32",
+      "description": "Type of tolerance you want to set as defined in swTolerances_e"
+    },
+    {
+      "name": "NewToleranceValue",
+      "type": "System.Double",
+      "description": "New tolerance value in meters for the specified tolerance type"
+    }
+  ],
+  "returns": "Original value of the specified tolerance type",
+  "remarks": "The default tolerance setting for 3D geometry output is 0.01 meters, while 2D geometry uses a 1e-4 dimensionless tolerance value. If your 3D trim curves are coming out too far from the surfaces they are trimming or are not close to the 2D trim curves, then you might want to tighten the tolerance. Set the tolerances before any extraction of geometry.\nThe tolerance values can be reset by other AddIns such as IGES. Make sure that they are set to your values when you need them. The tolerance settings only affect other AddIn applications. However, you should be careful to reset the tolerances so that other AddIn applications are not affected by your choice of tolerance.\nThe swUVCurveOutputTol tolerance is used during the extraction of UV (SP) trim curves. The\nIFace2::GetTrimCurves2\nmethod is affected by this setting. This tolerance value represents a fraction of the characteristic small dimension of a face (the tolerance is dimensionless). For example, if you set the swUVCurveOutputTol tolerance value to 3e-6 and the smallest dimension of the face is 0.4 meters, then the largest deviation of the trim curve will be:\n(0.4 x 3e-6) meters\nFor reference, the SOLIDWORKS IGES processor lets you control the swUVCurveOutputTol tolerance setting in the user preferences area. The normal setting under IGES uses a tolerance of 1e-4, while the high setting changes this tolerance to 3e-6. The IGES setting does not affect your application. Higher tolerance settings can increase processing time and the size of any output results.",
+  "examples": [],
+  "related": [
+    "IModeler.GetToleranceValue",
+    "IModeler.UnsetTolerances"
+  ]
+}

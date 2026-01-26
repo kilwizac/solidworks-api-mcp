@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "IGetWeldBeads",
+    "returns": "WeldBead",
+    "parameters": [
+      {
+        "name": "NumWeldBead",
+        "type": "System.Int32",
+        "description": "Total number of weld beads on this drawing view"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetWeldBeads"
+    ],
+    "keywords": [
+      "weld",
+      "beads",
+      "see",
+      "iweldmentbeadfeaturedata",
+      "iweldbead",
+      "interfaces",
+      "annotation",
+      "also",
+      "iannotation",
+      "view",
+      "iview",
+      "igetweldbeads",
+      "num",
+      "bead",
+      "int32"
+    ]
+  },
+  "title": "IView.IGetWeldBeads",
+  "description": "Gets all of the weld beads on this drawing view.",
+  "signature": "WeldBead IGetWeldBeads( \n   System.Int32\nNumWeldBead\n)",
+  "parameters": [
+    {
+      "name": "NumWeldBead",
+      "type": "System.Int32",
+      "description": "Total number of weld beads on this drawing view"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of weld beads VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Use this method to obtain the array of weld beads all at once instead of calling\nIView::GetFirstWeldBead\nand then repeatedly calling\nIWeldBead::GetNext\nto obtain the weld beads in the drawing view.\nBefore calling this method, call\nIView::GetWeldBeadCount\nto get the value for numWeldBead.",
+  "examples": [],
+  "related": [
+    "IView.GetWeldBeads"
+  ]
+}

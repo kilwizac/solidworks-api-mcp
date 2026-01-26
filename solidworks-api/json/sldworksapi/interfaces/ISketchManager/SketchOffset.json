@@ -1,0 +1,104 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SketchOffset",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Offset",
+        "type": "System.Double",
+        "description": "Offset value; negative value offsets in opposite direction"
+      },
+      {
+        "name": "BothDirections",
+        "type": "System.Boolean",
+        "description": "True to offset the sketch entities in both directions, false to not"
+      },
+      {
+        "name": "Chain",
+        "type": "System.Boolean",
+        "description": "True to offset the chain of sketch entities, false if you want only the selected sketch entities offset (see Remarks )"
+      },
+      {
+        "name": "CapEnds",
+        "type": "System.Boolean",
+        "description": "True to cap the bidirectional offset with arcs, false to not"
+      },
+      {
+        "name": "MakeConstruction",
+        "type": "System.Boolean",
+        "description": "True to make the sketch entities construction geometry after offsetting, false to not"
+      },
+      {
+        "name": "AddDimensions",
+        "type": "System.Boolean",
+        "description": "True to include the offset distance in the sketch, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketchoffset",
+      "isketchmanager",
+      "sketch",
+      "manager",
+      "offset",
+      "double",
+      "both",
+      "directions",
+      "boolean",
+      "chain",
+      "cap",
+      "ends",
+      "make",
+      "construction",
+      "add",
+      "dimensions"
+    ]
+  },
+  "title": "ISketchManager.SketchOffset",
+  "description": "Obsolete. Superseded by ISketchManager::SketchOffset2.",
+  "signature": "System.Boolean SketchOffset( \n   System.Double\nOffset\n,\n   System.Boolean\nBothDirections\n,\n   System.Boolean\nChain\n,\n   System.Boolean\nCapEnds\n,\n   System.Boolean\nMakeConstruction\n,\n   System.Boolean\nAddDimensions\n)",
+  "parameters": [
+    {
+      "name": "Offset",
+      "type": "System.Double",
+      "description": "Offset value; negative value offsets in opposite direction"
+    },
+    {
+      "name": "BothDirections",
+      "type": "System.Boolean",
+      "description": "True to offset the sketch entities in both directions, false to not"
+    },
+    {
+      "name": "Chain",
+      "type": "System.Boolean",
+      "description": "True to offset the chain of sketch entities, false if you want only the selected sketch entities offset (see Remarks )"
+    },
+    {
+      "name": "CapEnds",
+      "type": "System.Boolean",
+      "description": "True to cap the bidirectional offset with arcs, false to not"
+    },
+    {
+      "name": "MakeConstruction",
+      "type": "System.Boolean",
+      "description": "True to make the sketch entities construction geometry after offsetting, false to not"
+    },
+    {
+      "name": "AddDimensions",
+      "type": "System.Boolean",
+      "description": "True to include the offset distance in the sketch, false to not"
+    }
+  ],
+  "returns": "True if the sketch entities are offset, false if not",
+  "remarks": "Specifying true to the Chain argument offsets the selected entity and any other entities that belong to the same contour or chain (contiguous geometric entities like edges).",
+  "examples": [],
+  "related": []
+}

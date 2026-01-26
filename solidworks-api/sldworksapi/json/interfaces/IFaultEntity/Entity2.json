@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IFaultEntity",
+    "member": "Entity2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index number indicating the entity to get"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "entity2",
+      "ifaultentity",
+      "fault",
+      "entity",
+      "index",
+      "int32",
+      "object"
+    ],
+    "readonly": true
+  },
+  "title": "IFaultEntity.Entity2",
+  "description": "Gets the specified entity.",
+  "signature": "System.Object Entity2( \n   System.Int32\nIndex\n) {get;}",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index number indicating the entity to get"
+    }
+  ],
+  "returns": "Entity at Index or NULL if the object at Index is not an entity",
+  "remarks": "To determine the value for Index, call\nIFaultEntity::Count\nbefore calling this property. Call\nIFaultEntity::ErrorCode\nto determine the error code.\nThis method might return NULL if the entity is absorbed by the fault.",
+  "examples": [],
+  "related": []
+}

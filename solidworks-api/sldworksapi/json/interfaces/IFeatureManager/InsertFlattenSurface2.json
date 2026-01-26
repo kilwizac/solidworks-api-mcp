@@ -1,0 +1,90 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFlattenSurface2",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "AccuracyFactor",
+        "type": "System.Int32",
+        "description": "10 >= Accuracy of flattened triangle mesh >= 1; 1 is highest accuracy"
+      },
+      {
+        "name": "ShouldUseTears",
+        "type": "System.Boolean",
+        "description": "True to use relief cuts, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISurfaceFlattenFeatureData"
+    ],
+    "keywords": [
+      "surfaceflattenfeaturedata",
+      "see",
+      "isurfaceflattenfeaturedata",
+      "insertflattensurface2",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "flatten",
+      "surface2",
+      "accuracy",
+      "factor",
+      "int32",
+      "should",
+      "use",
+      "tears",
+      "boolean",
+      "data",
+      "surface",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IFeatureManager.InsertFlattenSurface2",
+  "description": "Inserts a surface-flatten feature in the model.",
+  "signature": "Feature InsertFlattenSurface2( \n   System.Int32\nAccuracyFactor\n,\n   System.Boolean\nShouldUseTears\n)",
+  "parameters": [
+    {
+      "name": "AccuracyFactor",
+      "type": "System.Int32",
+      "description": "10 >= Accuracy of flattened triangle mesh >= 1; 1 is highest accuracy"
+    },
+    {
+      "name": "ShouldUseTears",
+      "type": "System.Boolean",
+      "description": "True to use relief cuts, false to not"
+    }
+  ],
+  "returns": "Surface-flatten feature",
+  "remarks": "Before calling this method, select...\nBy calling\nIModelDocExtension::SelectByID2\nwith Mark...\nFaces or surfaces to flatten\n1\nEdges to guide the shape and length of the flattened surface\n2\nMap edges\n4\nTear edges\n8\nAnchor point from which to flatten\n16\nMap edges:\nare entities to map to the flattened surface. By default, any entity that lies on top of a face or surface to flatten is ignored unless the user selects the entity as a map edge.\nare useful when users want to see where a selected entity on the original body would lie on a flattened surface. For example, users might select edges as map lines to serve as bend lines in the flattened surface.\ncan be any of these types of selected entities:\nedges.\nreference curves,\n2D/3D splines,\nsketches, and\nsketch text.\nTear edges:\nindicate where to make relief cuts before flattening the surface. During flattening, regions of the flattened surface are stretched while other regions are compressed. Adding tear edges through regions of high stress can reduce these deformations, which increases the accuracy of the flattened surface.\nallow users to flatten closed surfaces, such as spheres or entire solid bodies, that would otherwise not be flattened.\ncan be any of these types of selected entities:\nedges,\nreference curves, and\n2D/3D splines.\nmust each intersect the face or surface being flattened while touching one boundary edge, which is an edge adjacent to exactly one face or surface.\nare only applied when ShouldUseTears is true.\nAn anchor point can be a vertex or point on an edge.",
+  "examples": [
+    {
+      "title": "Get Data for Surface-flatten Feature (C#)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Data for Surface-flatten Feature (VB.NET)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Data for Surface-flatten Feature (VBA)",
+      "href": "Get_Data_for_Surface_Flatten_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISurfaceFlattenFeatureData"
+  ]
+}

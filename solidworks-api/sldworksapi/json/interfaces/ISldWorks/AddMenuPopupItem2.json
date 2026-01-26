@@ -1,0 +1,148 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "AddMenuPopupItem2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Document type as defined by swDocumentTypes_e"
+      },
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Cookie specified as defined in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "SelectType",
+        "type": "System.Int32",
+        "description": "Selection type as defined in swSelectType_e"
+      },
+      {
+        "name": "PopupItemName",
+        "type": "System.String",
+        "description": "Description displayed on the shortcut menu"
+      },
+      {
+        "name": "MenuCallback",
+        "type": "System.String",
+        "description": "Function to be called when the user clicks your menu item (see description in ISldWorks::AddMenuItem3 )"
+      },
+      {
+        "name": "MenuEnableMethod",
+        "type": "System.String",
+        "description": "Optional function that controls the state of the menu item If specified: SOLIDWORKS calls this function before displaying the menu Display of the menu item is controlled by the return value of MenuEnableMethod If your method returns... Then SOLIDWORKS... 0 Deselects and disables the menu item. 1 Deselects and enables the menu item (this is the default menu state if no update function is specified) 2 Selects and disables the menu item 3 Selects and enables the menu item 4 Hides the menu item"
+      },
+      {
+        "name": "HintString",
+        "type": "System.String",
+        "description": "Text to show in the SOLIDWORKS status bar when the user moves their mouse over this menu item; if you specify a HintString, it must be preceded by a comma"
+      },
+      {
+        "name": "CustomNames",
+        "type": "System.String",
+        "description": "Semi-colon separated list of the names of the custom feature types; this argument is applicable only if SelectType is a custom feature type (like swSelATTRIBUTES); in the case of swSelATTRIBUTES, set this field to the name of the attribute definition"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddMenu",
+      "ISldWorks.AddToolbar4",
+      "ISldWorks.AddToolbarCommand2",
+      "ISldWorks.RemoveFromMenu",
+      "ISldWorks.RemoveFromPopupMenu",
+      "ISldWorks.RemoveMenu",
+      "ISldWorks.RemoveMenuPopupItem2"
+    ],
+    "keywords": [
+      "addmenupopupitem2",
+      "isldworks",
+      "sld",
+      "works",
+      "add",
+      "menu",
+      "popup",
+      "item2",
+      "document",
+      "type",
+      "int32",
+      "cookie",
+      "select",
+      "item",
+      "name",
+      "string",
+      "callback",
+      "enable",
+      "hint",
+      "custom",
+      "names",
+      "boolean"
+    ]
+  },
+  "title": "ISldWorks.AddMenuPopupItem2",
+  "description": "Obsolete. Superseded by ISldWorks::AddMenuPopupItem3 and ISldWorks::AddMenuPopupItem4.",
+  "signature": "System.Boolean AddMenuPopupItem2( \n   System.Int32\nDocumentType\n,\n   System.Int32\nCookie\n,\n   System.Int32\nSelectType\n,\n   System.String\nPopupItemName\n,\n   System.String\nMenuCallback\n,\n   System.String\nMenuEnableMethod\n,\n   System.String\nHintString\n,\n   System.String\nCustomNames\n)",
+  "parameters": [
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Document type as defined by swDocumentTypes_e"
+    },
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Cookie specified as defined in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "SelectType",
+      "type": "System.Int32",
+      "description": "Selection type as defined in swSelectType_e"
+    },
+    {
+      "name": "PopupItemName",
+      "type": "System.String",
+      "description": "Description displayed on the shortcut menu"
+    },
+    {
+      "name": "MenuCallback",
+      "type": "System.String",
+      "description": "Function to be called when the user clicks your menu item (see description in ISldWorks::AddMenuItem3 )"
+    },
+    {
+      "name": "MenuEnableMethod",
+      "type": "System.String",
+      "description": "Optional function that controls the state of the menu item If specified: SOLIDWORKS calls this function before displaying the menu Display of the menu item is controlled by the return value of MenuEnableMethod If your method returns... Then SOLIDWORKS... 0 Deselects and disables the menu item. 1 Deselects and enables the menu item (this is the default menu state if no update function is specified) 2 Selects and disables the menu item 3 Selects and enables the menu item 4 Hides the menu item"
+    },
+    {
+      "name": "HintString",
+      "type": "System.String",
+      "description": "Text to show in the SOLIDWORKS status bar when the user moves their mouse over this menu item; if you specify a HintString, it must be preceded by a comma"
+    },
+    {
+      "name": "CustomNames",
+      "type": "System.String",
+      "description": "Semi-colon separated list of the names of the custom feature types; this argument is applicable only if SelectType is a custom feature type (like swSelATTRIBUTES); in the case of swSelATTRIBUTES, set this field to the name of the attribute definition"
+    }
+  ],
+  "returns": "True if the item was added, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "ISldWorks.AddMenu",
+    "ISldWorks.AddToolbar4",
+    "ISldWorks.AddToolbarCommand2",
+    "ISldWorks.RemoveFromMenu",
+    "ISldWorks.RemoveFromPopupMenu",
+    "ISldWorks.RemoveMenu",
+    "ISldWorks.RemoveMenuPopupItem2"
+  ]
+}

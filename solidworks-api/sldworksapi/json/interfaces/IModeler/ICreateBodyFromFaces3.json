@@ -1,0 +1,134 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateBodyFromFaces3",
+    "returns": "Body2",
+    "parameters": [
+      {
+        "name": "NumOfFaces",
+        "type": "System.Int32",
+        "description": "Number of faces to use to create the body"
+      },
+      {
+        "name": "Faces",
+        "type": "Face2",
+        "description": "Array of faces"
+      },
+      {
+        "name": "ActionType",
+        "type": "System.Int32",
+        "description": "Type of action as defined in swCreateFacesBodyAction_e"
+      },
+      {
+        "name": "DoLocalCheck",
+        "type": "System.Boolean",
+        "description": "True to perform local checking on the resulting body, false to not"
+      },
+      {
+        "name": "LocalCheckResult",
+        "type": "System.Boolean",
+        "description": "If DoLocalCheck is True, then True if body is okay, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodiesFromSheets2",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "see",
+      "also",
+      "ibody2",
+      "faces",
+      "icreatebodyfromfaces3",
+      "imodeler",
+      "modeler",
+      "create",
+      "body",
+      "faces3",
+      "num",
+      "int32",
+      "face2",
+      "action",
+      "type",
+      "do",
+      "local",
+      "check",
+      "boolean",
+      "result",
+      "body2"
+    ]
+  },
+  "title": "IModeler.ICreateBodyFromFaces3",
+  "description": "Creates a temporary body from a list of faces.",
+  "signature": "Body2 ICreateBodyFromFaces3( \n   System.Int32\nNumOfFaces\n,\n   ref Face2\nFaces\n,\n   System.Int32\nActionType\n,\n   System.Boolean\nDoLocalCheck\n,\n   out System.Boolean\nLocalCheckResult\n)",
+  "parameters": [
+    {
+      "name": "NumOfFaces",
+      "type": "System.Int32",
+      "description": "Number of faces to use to create the body"
+    },
+    {
+      "name": "Faces",
+      "type": "Face2",
+      "description": "Array of faces"
+    },
+    {
+      "name": "ActionType",
+      "type": "System.Int32",
+      "description": "Type of action as defined in swCreateFacesBodyAction_e"
+    },
+    {
+      "name": "DoLocalCheck",
+      "type": "System.Boolean",
+      "description": "True to perform local checking on the resulting body, false to not"
+    },
+    {
+      "name": "LocalCheckResult",
+      "type": "System.Boolean",
+      "description": "If DoLocalCheck is True, then True if body is okay, false if not"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is useful when you attempt to copy a body with changes to that body. All of the input faces must be from the same body.\nIf you call this method to remove a hole, then the value that you specify for ActionType indicates to the modeler how to handle filling the hole. The result must be a solid.\nThis method is the opposite of\nIBody2::DeleteFaces3\nor\nIBody2::IDeleteFaces3\n, which allows you to specify faces to remove.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodiesFromSheets2",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateWireBody"
+  ]
+}

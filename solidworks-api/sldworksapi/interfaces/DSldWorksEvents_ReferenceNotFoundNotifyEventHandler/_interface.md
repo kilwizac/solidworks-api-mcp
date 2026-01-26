@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DSldWorksEvents_ReferenceNotFoundNotifyEventHandler
+inherits: null
+description: Notifies the user program before SOLIDWORKS displays a dialog box prompting the end-user to browse for the referenced file.
+member_count: 0
+docset: sldworksapi
+categories:
+  - documents
+common_members: []
+---
+
+# DSldWorksEvents_ReferenceNotFoundNotifyEventHandler
+
+Notifies the user program before SOLIDWORKS displays a dialog box prompting the end-user to browse for the referenced file.

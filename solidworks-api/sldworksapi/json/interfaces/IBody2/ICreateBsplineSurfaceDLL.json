@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "ICreateBsplineSurfaceDLL",
+    "returns": "Surface",
+    "parameters": [
+      {
+        "name": "Properties",
+        "type": "System.Int32",
+        "description": "Contains 8 longs (see Remarks )"
+      },
+      {
+        "name": "UKnotArray",
+        "type": "System.Double",
+        "description": "Array of numUKnots doubles (see Remarks )"
+      },
+      {
+        "name": "VKnotArray",
+        "type": "System.Double",
+        "description": "Array of numVKnots doubles (see Remarks )"
+      },
+      {
+        "name": "ControlPointCoordArray",
+        "type": "System.Double",
+        "description": "Array of numCtrlPtCoord doubles (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "surface",
+      "see",
+      "also",
+      "isurface",
+      "bodies",
+      "icreatebsplinesurfacedll",
+      "ibody2",
+      "body2",
+      "create",
+      "bspline",
+      "dll",
+      "properties",
+      "int32",
+      "knot",
+      "array",
+      "double",
+      "control",
+      "point",
+      "coord"
+    ]
+  },
+  "title": "IBody2.ICreateBsplineSurfaceDLL",
+  "description": "Creates a B-spline surface in this body.",
+  "signature": "Surface ICreateBsplineSurfaceDLL( \n   ref System.Int32\nProperties\n,\n   ref System.Double\nUKnotArray\n,\n   ref System.Double\nVKnotArray\n,\n   ref System.Double\nControlPointCoordArray\n)",
+  "parameters": [
+    {
+      "name": "Properties",
+      "type": "System.Int32",
+      "description": "Contains 8 longs (see Remarks )"
+    },
+    {
+      "name": "UKnotArray",
+      "type": "System.Double",
+      "description": "Array of numUKnots doubles (see Remarks )"
+    },
+    {
+      "name": "VKnotArray",
+      "type": "System.Double",
+      "description": "Array of numVKnots doubles (see Remarks )"
+    },
+    {
+      "name": "ControlPointCoordArray",
+      "type": "System.Double",
+      "description": "Array of numCtrlPtCoord doubles (see Remarks )"
+    }
+  ],
+  "returns": "New B-spline surface",
+  "remarks": "You can use this method with trimming curve creation routines (for example,\nISurface::AddTrimmingLoop2\n) to construct a trimmed surface.\nThe Properties argument contains the following elements. These are integers packed into a double array in the Dispatch version.\nUorder, Vorder\nnumV_CtrlPoints, numU_CtrlPoints\nUperiodicity, Vperiodicity\nDimensionControlPoints, UNUSED ( set = 0 )\nThe number of elements in UKnotArray is:\nnumUKnots = numU_CtrlPoints + Uorder\nThe number of elements in VKnotArray is:\nnumVKnots = numV_CtrlPoints + Vorder\nThe number of elements in ControlPointCoordArray is :\nnumCtrlPtCoord =( NumV_CtrlPoints * NumU_CtrlPoints * DimensionControlPoints )\nNOTE:\nThe order of the UV control points are reversed if you used\nISurface::GetBSurfParams3\nor\nISurface::IGetBSurfParams\nto get the data. You do not need to reverse the UV control points; instead, you can switch the UV knots and related parameters.\nFor periodics, the first knot must have multiplicity = 1 and all excess multiplicity must be imposed on the last knot. Therefore, a valid periodic knot vector would be { 0, 1, 2, 3, 3, 3 } for a cubic curve. The control point on the seam of the closed curve cannot be replicated at both ends; it should occur only at the beginning.\nTo convert a clamped periodic curve (numKnots = numCtrlPts + Order, ctrlPts replicated, knot multiplicity = order at each end) to a SOLIDWORKS periodic curve, remove all but one of the knots at the beginning of the vector and remove one at the end. Also, remove the last control point to avoid the point replication.\nAny existing object created by this method is destroyed if you call this method again.",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,121 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "FeatureCutThicken",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Wall thickness"
+      },
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "0 = Thicken side 1 1 = Thicken side 2 2 = Thicken both sides"
+      },
+      {
+        "name": "FaceIndex",
+        "type": "System.Int32",
+        "description": "Not currently used"
+      },
+      {
+        "name": "FillVolume",
+        "type": "System.Boolean",
+        "description": "True to make the solid from a knitted surface, false to not (see Remarks )"
+      },
+      {
+        "name": "UseFeatScope",
+        "type": "System.Boolean",
+        "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+      },
+      {
+        "name": "UseAutoSelect",
+        "type": "System.Boolean",
+        "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.FeatureBossThicken",
+      "IFeatureManager.FeatureCut2",
+      "IFeatureManager.FeatureCutThin",
+      "IThickenFeatureData"
+    ],
+    "keywords": [
+      "cut",
+      "thicken",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "featurecutthicken",
+      "ifeaturemanager",
+      "manager",
+      "thickness",
+      "double",
+      "direction",
+      "int32",
+      "face",
+      "index",
+      "fill",
+      "volume",
+      "boolean",
+      "use",
+      "feat",
+      "scope",
+      "auto",
+      "select"
+    ]
+  },
+  "title": "IFeatureManager.FeatureCutThicken",
+  "description": "Thickens the selected reference surface feature, and then generates a cut.",
+  "signature": "Feature FeatureCutThicken( \n   System.Double\nThickness\n,\n   System.Int32\nDirection\n,\n   System.Int32\nFaceIndex\n,\n   System.Boolean\nFillVolume\n,\n   System.Boolean\nUseFeatScope\n,\n   System.Boolean\nUseAutoSelect\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Wall thickness"
+    },
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "0 = Thicken side 1 1 = Thicken side 2 2 = Thicken both sides"
+    },
+    {
+      "name": "FaceIndex",
+      "type": "System.Int32",
+      "description": "Not currently used"
+    },
+    {
+      "name": "FillVolume",
+      "type": "System.Boolean",
+      "description": "True to make the solid from a knitted surface, false to not (see Remarks )"
+    },
+    {
+      "name": "UseFeatScope",
+      "type": "System.Boolean",
+      "description": "True if the feature only affects selected bodies, false if the feature affects all bodies"
+    },
+    {
+      "name": "UseAutoSelect",
+      "type": "System.Boolean",
+      "description": "True to automatically select all bodies and have the feature affect those bodies, false to select the bodies the feature affects (see Remarks )"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "This method creates a cut feature by thickening a selected reference surface. If FillVolume is True, other arguments are ignored. A closed surface is required when FillVolume is True.\nWhen UseAutoSelect is false, the user must select the bodies that the feature will affect.\nWhen using cut or cavity features that result in multiple bodies, you cannot select to keep all of the resulting bodies or one or more selected bodies.",
+  "examples": [],
+  "related": [
+    "IFeatureManager.FeatureBossThicken",
+    "IFeatureManager.FeatureCut2",
+    "IFeatureManager.FeatureCutThin",
+    "IThickenFeatureData"
+  ]
+}

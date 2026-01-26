@@ -1,0 +1,48 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IAssemblyDoc",
+    "member": "EnablePresentation",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IComponent2.GetTotalTransform",
+      "IComponent2.RemovePresentationTransform",
+      "IComponent2.Transform2"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "presentation",
+      "mode",
+      "enablepresentation",
+      "assembly",
+      "doc",
+      "enable",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IAssemblyDoc.EnablePresentation",
+  "description": "Gets or sets whether the assembly is in presentation mode.",
+  "signature": "System.Boolean EnablePresentation {get; set;}",
+  "parameters": [],
+  "returns": "True enables presentation mode, false disables it",
+  "remarks": "Call this property before calling\nIComponent2::PresentationTransform\nbecause presentation transforms are effective only in this mode. This property prohibits reconfiguring the FeatureManager design tree when SOLIDWORKS is using the presentation transforms. This property also prohibits selections in the model view.",
+  "examples": [],
+  "related": [
+    "IComponent2.GetTotalTransform",
+    "IComponent2.RemovePresentationTransform",
+    "IComponent2.Transform2"
+  ]
+}

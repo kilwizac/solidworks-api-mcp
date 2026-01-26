@@ -1,0 +1,117 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetRunningCommandInfo",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "CommandID",
+        "type": "System.Int32",
+        "description": "Command's ID or PropertyManager page's command ID as defined in swCommands_e"
+      },
+      {
+        "name": "PMTitle",
+        "type": "System.String",
+        "description": "Title of PropertyManager page"
+      },
+      {
+        "name": "IsUiActive",
+        "type": "System.Boolean",
+        "description": "True if command or PropertyManager page is active in the user-interface, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "DSldWorksEvents_CommandCloseNotifyEventHandler",
+      "DSldWorksEvents_CommandOpenPreNotifyEventHandler",
+      "ISldWorks.IsCommandEnabled",
+      "ISldWorks.RunCommand"
+    ],
+    "keywords": [
+      "propertymanager",
+      "page",
+      "see",
+      "also",
+      "ipropertymanagerpage2",
+      "title",
+      "active",
+      "command",
+      "id",
+      "solidworks",
+      "commands",
+      "getrunningcommandinfo",
+      "isldworks",
+      "sld",
+      "works",
+      "running",
+      "info",
+      "int32",
+      "pm",
+      "string",
+      "ui",
+      "boolean",
+      "void",
+      "fire",
+      "events",
+      "when",
+      "opened",
+      "canceled",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.GetRunningCommandInfo",
+  "description": "Get a command's ID or PropertyManager page's command ID, title, and whether it is active in the user-interface.",
+  "signature": "void GetRunningCommandInfo( \n   out System.Int32\nCommandID\n,\n   out System.String\nPMTitle\n,\n   out System.Boolean\nIsUiActive\n)",
+  "parameters": [
+    {
+      "name": "CommandID",
+      "type": "System.Int32",
+      "description": "Command's ID or PropertyManager page's command ID as defined in swCommands_e"
+    },
+    {
+      "name": "PMTitle",
+      "type": "System.String",
+      "description": "Title of PropertyManager page"
+    },
+    {
+      "name": "IsUiActive",
+      "type": "System.Boolean",
+      "description": "True if command or PropertyManager page is active in the user-interface, false if not"
+    }
+  ],
+  "returns": "",
+  "remarks": "Before using this method, you must add a reference to the SOLIDWORKS commands type library or DLL to access the SOLIDWORKS commands.",
+  "examples": [
+    {
+      "title": "Fire Events When PropertyManager Page Opened and Canceled (VBA)",
+      "href": "Fire_Events_When_PropertyManager_Page_Opened_and_Canceled_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Events When PropertyManager Page Opened and Canceled (VB.NET)",
+      "href": "Fire_Events_When_PropertyManager_Page_Opened_and_Canceled_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Fire Events When PropertyManager Page Opened and Canceled (C#)",
+      "href": "Fire_Events_When_PropertyManager_Page_Opened_and_Canceled_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "DSldWorksEvents_CommandCloseNotifyEventHandler",
+    "DSldWorksEvents_CommandOpenPreNotifyEventHandler",
+    "ISldWorks.IsCommandEnabled",
+    "ISldWorks.RunCommand"
+  ]
+}

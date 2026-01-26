@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "LoadAdminSettingsFile",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "type": "System.String",
+        "description": "Full local path name of the *.sldsettings file to load"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.RestoreSettings",
+      "ISldWorks.SaveSettings"
+    ],
+    "keywords": [
+      "solidworks",
+      "connected",
+      "3dexperience",
+      "loadadminsettingsfile",
+      "isldworks",
+      "sld",
+      "works",
+      "load",
+      "admin",
+      "settings",
+      "file",
+      "path",
+      "string",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.LoadAdminSettingsFile",
+  "description": "Loads the specified *.sldsettings file into SOLIDWORKS Design Augmented.",
+  "signature": "System.Int32 LoadAdminSettingsFile( \n   System.String\nFilePath\n)",
+  "parameters": [
+    {
+      "name": "FilePath",
+      "type": "System.String",
+      "description": "Full local path name of the *.sldsettings file to load"
+    }
+  ],
+  "returns": "True if settings successfully applied, false if not",
+  "remarks": "The 3DEXPERIENCE platform Admin authors the\n*.sldsettings\nplatform file with settings appropriate for SOLIDWORKS Design Augmented. At launch, SOLIDWORKS Design Augmented reads a local copy. This method is used primarily by the 3DEXPERIENCE Add-in.",
+  "examples": [],
+  "related": [
+    "ISldWorks.RestoreSettings",
+    "ISldWorks.SaveSettings"
+  ]
+}

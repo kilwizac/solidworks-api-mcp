@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBomTableAnnotation",
+    "member": "GetColumnCustomProperty",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Column from which to get the custom property"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IBomTableAnnotation.GetAllCustomPropertiesCount",
+      "IBomTableAnnotation.SetColumnCustomProperty"
+    ],
+    "keywords": [
+      "bill",
+      "materials",
+      "custom",
+      "properties",
+      "see",
+      "also",
+      "icustompropertymanager",
+      "columns",
+      "getcolumncustomproperty",
+      "ibomtableannotation",
+      "bom",
+      "table",
+      "annotation",
+      "column",
+      "index",
+      "int32",
+      "string",
+      "vba"
+    ],
+    "readonly": null
+  },
+  "title": "IBomTableAnnotation.GetColumnCustomProperty",
+  "description": "Gets the custom property used to fill the values in a specified user-defined column.",
+  "signature": "System.String GetColumnCustomProperty( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Column from which to get the custom property"
+    }
+  ],
+  "returns": "Custom property used to fill the values in this user-defined column",
+  "remarks": "This method will return an empty string if the column is not a user-defined column.\nTo get the list of custom properties, use\nIBomTableAnnotation::GetAllCustomProperties\nor\nIBomTableAnnotation::IGetAllCustomProperties\n. The list of possible custom properties includes all of the items in the BOM table, which includes items from the file summary items and file custom properties that have been set.",
+  "examples": [
+    {
+      "title": "Get Custom Properties for BOM Table Columns (VBA)",
+      "href": "Get_Custom_Properties_for_BOM_Table_Columns_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBomTableAnnotation.GetAllCustomPropertiesCount",
+    "IBomTableAnnotation.SetColumnCustomProperty"
+  ]
+}

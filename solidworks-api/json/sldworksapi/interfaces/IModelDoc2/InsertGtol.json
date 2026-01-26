@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "InsertGtol",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IInsertGtol"
+    ],
+    "keywords": [
+      "geometric",
+      "tolerancing",
+      "see",
+      "also",
+      "igtol",
+      "insert",
+      "insertgtol",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "gtol",
+      "object",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.InsertGtol",
+  "description": "Creates a new geometric tolerance symbol (GTol) in this document.",
+  "signature": "System.Object InsertGtol()",
+  "parameters": [],
+  "returns": "Newly created GTol",
+  "remarks": "The leader attachment point for the newly created GTol object comes from the selection made before calling this method. The initial location of the symbol is near the selection location. If there is no selection, then the GTol does not have a leader, is free standing, and is initially at the origin of the model or drawing.\nThis method creates an empty symbol. To fill in the text and symbols of this GTol, use the pointer\nreturned by this method to access the various get and set methods of the\nIGTol\ninterface, such as\nIGtol::SetFrameSymbols2\nand\nIGtol::SetFrameValues\n. Use\nIGtol::GetAnnotation\nto retrieve the\nIAnnotation\nobject.",
+  "examples": [
+    {
+      "title": "Insert GTol (C#)",
+      "href": "Insert_GTol_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VB.NET)",
+      "href": "Insert_GTol_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert GTol (VBA)",
+      "href": "Insert_GTol_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IInsertGtol"
+  ]
+}

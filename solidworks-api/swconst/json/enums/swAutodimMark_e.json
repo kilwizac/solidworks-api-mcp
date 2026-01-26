@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swAutodimMark_e",
+    "description": "Selection mark values. Bitmask.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swAutodimMark_e",
+  "description": "Selection mark values. Bitmask.",
+  "values": [
+    {
+      "member": "swAutodimMarkEntities",
+      "value": "1",
+      "description": "or 0x1; Sketch entities to autodimension when swAutodimEntitiesSelected is passed as the entitiesToDimension argument to ISketch::AutoDimension2"
+    },
+    {
+      "member": "swAutodimMarkHorizontalDatum",
+      "value": "2",
+      "description": "or 0x2; Sketch entities to autodimension when swAutodimEntitiesSelected is passed as the entitiesToDimension argument to ISketch::AutoDimension2"
+    },
+    {
+      "member": "swAutodimMarkOriginDatum",
+      "value": "8",
+      "description": "or 0x8; Unique datum for the origin dimension scheme. Datum must be either a sketch point or a vertical sketch line."
+    },
+    {
+      "member": "swAutodimMarkVerticalDatum",
+      "value": "4",
+      "description": "or 0x4; Unique datum for the horizontal dimension scheme; datum must be either a sketch point or a vertical sketch line"
+    }
+  ]
+}

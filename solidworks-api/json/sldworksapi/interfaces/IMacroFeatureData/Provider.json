@@ -1,0 +1,43 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IMacroFeatureData",
+    "member": "Provider",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMacroFeatureData.EmbedMacroFile",
+      "IMacroFeatureData.MacroFileEmbedded",
+      "IModelDocExtension.GetWhatsWrong"
+    ],
+    "keywords": [
+      "what",
+      "wrong",
+      "provider",
+      "imacrofeaturedata",
+      "macro",
+      "feature",
+      "data",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "IMacroFeatureData.Provider",
+  "description": "Gets or sets the error message to display in the What's Wrong dialog when a non-embedded macro feature fails to rebuild due to missing files.",
+  "signature": "System.String Provider {get; set;}",
+  "parameters": [],
+  "returns": "Error message",
+  "remarks": "This property allows you to replace the generic error message that appears in the What's Wrong dialog with a more detailed error message when this non-embedded macro feature fails to load or rebuild due to missing files.\nPossible causes of macro feature rebuild failure:\nThe model contains this COM-based macro feature, but the rebuild, edit, and security callbacks exist in an add-in that SOLIDWORKS cannot locate.\nThe model references this non-embedded macro feature which exists in a VBA macro that SOLIDWORKS cannot locate.\nThird-party DLLs, add-in files, or other files associated with this non-embedded macro feature are missing.\nNOTE:\nAll files required by embedded macro features are serialized with the model, so\nFile not found\nerrors do not occur for embedded macros, and this property need not be set for them.",
+  "examples": [],
+  "related": [
+    "IMacroFeatureData.EmbedMacroFile",
+    "IMacroFeatureData.MacroFileEmbedded",
+    "IModelDocExtension.GetWhatsWrong"
+  ]
+}

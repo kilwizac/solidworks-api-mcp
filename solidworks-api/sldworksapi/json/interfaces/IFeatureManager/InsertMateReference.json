@@ -1,0 +1,156 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMateReference",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BstrMateReferenceName",
+        "type": "System.String",
+        "description": "Name of mate reference"
+      },
+      {
+        "name": "PrimaryReferenceEntity",
+        "type": "Entity",
+        "description": "Pointer to the primary mate, the IEntity object"
+      },
+      {
+        "name": "PrimaryReferenceType",
+        "type": "System.Int32",
+        "description": "Primary mate's reference type as defined by swMateReferenceType_e"
+      },
+      {
+        "name": "PrimaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Primary mate's reference alignment type as defined swMateReferenceAlignment_e"
+      },
+      {
+        "name": "SecondaryReferenceEntity",
+        "type": "Entity",
+        "description": "Pointer to the secondary mate, the IEntity object"
+      },
+      {
+        "name": "SecondaryReferenceType",
+        "type": "System.Int32",
+        "description": "Secondary mate's reference type as defined by swMateReferenceType_e"
+      },
+      {
+        "name": "SecondaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Secondary mate's alignment type as defined swMateReferenceAlignment_e"
+      },
+      {
+        "name": "TertiaryReferenceEntity",
+        "type": "Entity",
+        "description": "Pointer to the tertiary mate, the IEntity object"
+      },
+      {
+        "name": "TertiaryReferenceType",
+        "type": "System.Int32",
+        "description": "Tertiary mate's reference type as defined by swMateReferenceType_e"
+      },
+      {
+        "name": "TertiaryReferenceAlignment",
+        "type": "System.Int32",
+        "description": "Tertiary mate's reference alignment as defined by swMateReferenceAlignment_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IMateReference"
+    ],
+    "keywords": [
+      "mate",
+      "references",
+      "see",
+      "also",
+      "imatereference",
+      "mates",
+      "imate2",
+      "feature",
+      "ifeature",
+      "reference",
+      "insertmatereference",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "bstr",
+      "name",
+      "string",
+      "primary",
+      "entity",
+      "type",
+      "int32",
+      "alignment",
+      "secondary",
+      "tertiary"
+    ]
+  },
+  "title": "IFeatureManager.InsertMateReference",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertMateReference2.",
+  "signature": "Feature InsertMateReference( \n   System.String\nBstrMateReferenceName\n,\n   Entity\nPrimaryReferenceEntity\n,\n   System.Int32\nPrimaryReferenceType\n,\n   System.Int32\nPrimaryReferenceAlignment\n,\n   Entity\nSecondaryReferenceEntity\n,\n   System.Int32\nSecondaryReferenceType\n,\n   System.Int32\nSecondaryReferenceAlignment\n,\n   Entity\nTertiaryReferenceEntity\n,\n   System.Int32\nTertiaryReferenceType\n,\n   System.Int32\nTertiaryReferenceAlignment\n)",
+  "parameters": [
+    {
+      "name": "BstrMateReferenceName",
+      "type": "System.String",
+      "description": "Name of mate reference"
+    },
+    {
+      "name": "PrimaryReferenceEntity",
+      "type": "Entity",
+      "description": "Pointer to the primary mate, the IEntity object"
+    },
+    {
+      "name": "PrimaryReferenceType",
+      "type": "System.Int32",
+      "description": "Primary mate's reference type as defined by swMateReferenceType_e"
+    },
+    {
+      "name": "PrimaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Primary mate's reference alignment type as defined swMateReferenceAlignment_e"
+    },
+    {
+      "name": "SecondaryReferenceEntity",
+      "type": "Entity",
+      "description": "Pointer to the secondary mate, the IEntity object"
+    },
+    {
+      "name": "SecondaryReferenceType",
+      "type": "System.Int32",
+      "description": "Secondary mate's reference type as defined by swMateReferenceType_e"
+    },
+    {
+      "name": "SecondaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Secondary mate's alignment type as defined swMateReferenceAlignment_e"
+    },
+    {
+      "name": "TertiaryReferenceEntity",
+      "type": "Entity",
+      "description": "Pointer to the tertiary mate, the IEntity object"
+    },
+    {
+      "name": "TertiaryReferenceType",
+      "type": "System.Int32",
+      "description": "Tertiary mate's reference type as defined by swMateReferenceType_e"
+    },
+    {
+      "name": "TertiaryReferenceAlignment",
+      "type": "System.Int32",
+      "description": "Tertiary mate's reference alignment as defined by swMateReferenceAlignment_e"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Either select the mate references interactively or select them programmatically using\nIModelDocExtension::SelectByID2\nwith marks of 1, 2, and 4. If the mate references are interactively selected, then specify NOTHING for PrimaryReferenceEntity, SecondaryReferenceEntity, and TertiaryReferenceEntity.",
+  "examples": [],
+  "related": [
+    "IMateReference"
+  ]
+}

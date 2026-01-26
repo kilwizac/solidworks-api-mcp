@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayStateSetting",
+    "member": "ISetEntities",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "EntityCount",
+        "type": "System.Int32",
+        "description": "Number of entities in the Entities array"
+      },
+      {
+        "name": "Entities",
+        "type": "System.Object",
+        "description": "in-process, unmanaged C++: Pointer to an array of entities VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IDisplayStateSetting.Entities",
+      "IDisplayStateSetting.IGetEntities"
+    ],
+    "keywords": [
+      "isetentities",
+      "idisplaystatesetting",
+      "display",
+      "state",
+      "setting",
+      "entities",
+      "entity",
+      "count",
+      "int32",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IDisplayStateSetting.ISetEntities",
+  "description": "Sets the entities for this display state setting.",
+  "signature": "void ISetEntities( \n   System.Int32\nEntityCount\n,\n   ref System.Object\nEntities\n)",
+  "parameters": [
+    {
+      "name": "EntityCount",
+      "type": "System.Int32",
+      "description": "Number of entities in the Entities array"
+    },
+    {
+      "name": "Entities",
+      "type": "System.Object",
+      "description": "in-process, unmanaged C++: Pointer to an array of entities VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "After calling this method:\nCall\nIDisplayStateSetting::ISetNames\nto specify the display states.\nCall\nIDisplayStateSetting::Option\nto specify the display state scope of the setting.\nGet or set one or more of the following properties for the specified display states, components, and scope:\nIModelDocExtension::DisplayMode\nIModelDocExtension::Transparency\nIModelDocExtension::Visibility\nCall\nIModelDocExtension::GetAppearanceSetting\nto obtain an\nIAppearanceSetting\nobject.\nSet the properties in the IAppearanceSetting object.\nGet or set the material properties for the specified display states, components, and scope:\nIModelDocExtension::DisplayStateSpecMaterialPropertyValues",
+  "examples": [],
+  "related": [
+    "IDisplayStateSetting.Entities",
+    "IDisplayStateSetting.IGetEntities"
+  ]
+}

@@ -1,0 +1,289 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Assign SOLIDWORKS Macro to Button</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Macros,button">
+<meta name=MS-HKWD content="Macros,edit">
+<meta name=MS-HKWD content="Macros,delete">
+<meta name=MS-HKWD content=Macros>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1038>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Assign SOLIDWORKS Macro to Button</h1>
+
+<p>When you create a SOLIDWORKS macro, you can assign a bitmap to a macro 
+ button on a SOLIDWORKS toolbar. The SOLIDWORKS installation includes sample 
+ bitmaps, or you can create your own bitmap. If you create a bitmap for 
+ a macro button, the bitmap must meet these requirements:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Dimension = 16 x 16 pixels</p></li>
+	
+	<li class=kadov-p><p>Color = 16 colors</p></li>
+	
+	<li class=kadov-p><p>Background color = white </p></li>
+</ul>
+
+<h3>To assign a macro to a button:</h3>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>With a document open, click <span style="font-weight: bold;">Tools 
+ &gt; Customize</span>.</p></li>
+	
+	<li class=kadov-p><p>In the dialog box, on the <span style="font-weight: bold;">Commands</span> 
+ tab:</p></li>
+	
+	<ol style="list-style: lower-alpha;"
+		type=a>
+		
+		<li class=kadov-p><p>Select <span style="font-weight: bold;">Macro</span> 
+ in <span style="font-weight: bold;">Categories</span>.</p></li>
+		
+		<li class=kadov-p><p>Under <span style="font-weight: bold;">Buttons</span>, 
+ drag the <span style="font-weight: bold;">New Macro</span> <b>Button</b> 
+ to any toolbar or the CommandManager in SOLIDWORKS.</p></li>
+	</ol>
+	
+	<li class=kadov-p><p>In the <span style="font-weight: bold;">Customize</span> 
+ <span style="font-weight: bold;">Macro</span> <span style="font-weight: bold;">Button</span> 
+ dialog box: </p></li>
+	
+	<ol style="list-style: lower-alpha;"
+		type=a>
+		
+		<li class=kadov-p><p>Under <span style="font-weight: bold;">Appearance</span>:</p></li>
+	</ol>
+</ol>
+
+<ol start=1
+	style="list-style: decimal;"
+	type=1>
+	
+	<li style="list-style: decimal;"
+		type=1
+		class=kadov-p><p style="margin-left: 88px;">Click <span style="font-weight: bold;">Choose 
+ Image</span>.</p></li>
+	
+	<li style="list-style: decimal;"
+		type=1
+		class=kadov-p><p style="margin-left: 88px;">In the <span style="font-weight: bold;">Icon 
+ path</span> dialog box, select a bitmap image (*.<span style="font-weight: bold;">bmp</span>), 
+ then click <span style="font-weight: bold;">Open</span>.<span style="font-weight: bold;"><br>
+	<br>
+	NOTE:</span> The SOLIDWORKS installation provides bitmap images to use as custom 
+	buttons. These are located in <span style="font-style: italic;">install_dir</span>/<span 
+ style="font-weight: bold;">data</span>/<span style="font-weight: bold;">user</span> 
+ <span style="font-weight: bold;">macro icons</span>. Select <span style="font-weight: bold;">Thumbnail 
+ </span>to see the image in the <span style="font-weight: bold;">Icon</span> 
+ <span style="font-weight: bold;">path</span> dialog box.</p></li>
+	
+	<li style="list-style: decimal;"
+		type=1
+		class=kadov-p><p style="margin-left: 88px;">Type a <span style="font-weight: bold;">Tooltip</span> 
+ and <span style="font-weight: bold;">Prompt</span> message, which should 
+ provide a brief description of the function of the tool on the status 
+ bar. Both the ToolTip and message are displayed when the pointer is on 
+ the bitmap.</p></li>
+	
+	<ol start=2
+		style="list-style: lower-alpha;"
+		type=a>
+		
+		<li class=kadov-p><p>Under <span style="font-weight: bold;">Action</span>:</p></li>
+		
+		<ol style="list-style: decimal;"
+			type=1>
+			
+			<li class=kadov-p><p>Click <img src="../IMAGE/BROWSE.GIF"
+											x-maintain-ratio=TRUE
+											style="border-style: none;
+													border: none;
+													width: 29px;
+													height: 23px;
+													float: none;"
+											width=29
+											height=23
+											border=0> and navigate to the 
+ folder where the macro is stored.</p></li>
+			
+			<li class=kadov-p><p>In the Macro Path dialog:</p></li>
+		</ol>
+	</ol>
+</ol>
+
+<ol start=1
+	style="list-style: decimal;"
+	type=1>
+	
+	<li style="list-style: lower-alpha;"
+		type=a
+		class=kadov-p><p style="margin-left: 120px;">Select <span style="font-weight: bold;">SW 
+ VBA Macros (*.swp)</span> if adding a VBA macro (selected by default).<br>
+	<br>
+	- or - <br>
+	<br>
+	Select <span style="font-weight: bold;">SW VSTA Macros (*.dll) </span>if 
+ adding a VB.NET or C# macro. <br>
+	<br>
+	<b>NOTE: </b>
+	<a href="VSTA_2015.htm">SOLIDWORKS 2018 offers Visual Studio Tools for 
+	Applications (VSTA)</a>, impacting how you develop and run VB.NET and C# 
+	macros in SOLIDWORKS 2018 and later.</p></li>
+	
+	<li style="list-style: lower-alpha;"
+		type=a
+		class=kadov-p><p style="margin-left: 120px;"><span>Select the macro.</span></p></li>
+	
+	<li style="list-style: lower-alpha;"
+		type=a
+		class=kadov-p><p style="margin-left: 120px;">Click <span style="font-weight: bold;">Open</span>.</p></li>
+	
+	<ol start=2
+		style="list-style: lower-alpha;"
+		type=a>
+		
+		<ol start=3
+			style="list-style: decimal;"
+			type=1>
+			
+			<li class=kadov-p><p>Select the macro that you want to assign 
+ to the button.</p></li>
+			
+			<li class=kadov-p><p>Click <span style="font-weight: bold;">Open</span>.</p></li>
+		</ol>
+	</ol>
+</ol>
+
+<ol start=1
+	style="list-style: decimal;"
+	type=1>
+	
+	<ol start=3
+		style="list-style: lower-alpha;"
+		type=a>
+		
+		<li class=kadov-p><p>Click <span style="font-weight: bold;">OK</span>.</p></li>
+	</ol>
+</ol>
+
+<ol start=4
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>Click <span style="font-weight: bold;">OK</span> 
+ to close the <span style="font-weight: bold;">Customize</span> dialog 
+ box.</p></li>
+</ol>
+
+<h3>To edit a macro button on a toolbar or CommandManager:</h3>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>In an open SOLIDWORKS document, click <span style="font-weight: bold;">Tools 
+ &gt;</span> <span style="font-weight: bold;">Customize</span>. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p></li>
+	
+	<li class=kadov-p><p>If on a toolbar, right-click the macro button that you 
+	want to edit. </p></li>
+	<li class=kadov-p>
+	<p>If in CommandManager, right-click the macro button that you want to edit. 
+	Select <b>Properties</b>.</p></li>
+	
+	<li class=kadov-p><p>In the <span style="font-weight: bold;">Customize 
+ Macro Button</span> dialog, edit the macro button and click <span style="font-weight: bold;">OK</span>.</p></li>
+	
+	<li class=kadov-p><p>Click <span style="font-weight: bold;">OK</span> 
+ to close the <span style="font-weight: bold;">Customize</span> dialog.</p></li>
+</ol>
+
+<h3>To delete a macro button from a toolbar or CommandManager:</h3>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p><p>In an open SOLIDWORKS document, click <span style="font-weight: bold;">Tools 
+ &gt;</span> <span style="font-weight: bold;">Customize</span>. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p></li>
+	
+	<li class=kadov-p><p>If on a toolbar, drag and drop the macro button from 
+	the toolbar to the Recycle Bin.</p></li>
+	<li class=kadov-p>
+	<p>If in CommandManager, right-click the macro button that you want to 
+	delete. Select <b>Delete</b>.</p></li>
+	
+	<li class=kadov-p><p>Click <span style="font-weight: bold;">OK</span> 
+ to close the <span style="font-weight: bold;">Customize</span> dialog.</p></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>For more information about assigning macros to toolbars, see SOLIDWORKS 
+Design user-interface 
+ Help.</p>
+
+<!--kadov_tag{{<implicit_p>}}-->
+<!--Metadata type="DesignerControl" startspan
+<object id="RelatedTopic1" classid="clsid:A2F1FA63-C1E6-11d2-9140-006DC83B9955" dtcid="1" height="1" style="width: 1px; height: 1px;" type="application/x-oleobject" width="1">
+	<param name="_Version" value="65536">
+	<param name="_ExtentX" value="26">
+	<param name="_ExtentY" value="26">
+	<param name="_StockProps" value="13">
+	<param name="ForeColor" value="0">
+	<param name="BackColor" value="13160660">
+	<param name="UseButton" value="0">
+	<param name="ControlLabel" value="See Also">
+	<param name="UseIcon" value="0">
+	<param name="Items" value="RecordSolidWorksMacro$$**$$EditSolidWorksMacro$$**$$RunSolidWorksMacro$$**$$AssignSolidWorksMacroShortcutKeyMenu$$**$$VBAMacroOverview$$**$$">
+	<param name="Image" value="">
+	<param name="FontInfo" value="MS Sans Serif,8,0,,">
+	<param name="_CURRENTFILEPATH" value="K:\HELP\Cheryle_Working_Folder\SW2010\ROBOHELP\sldworksAPIProgGuide\GettingStarted\Assign_SolidWorks_Macro_to_Button.htm">
+	<param name="_ID" value="RelatedTopic1">
+	<param name="DialogDisplay" value="0">
+	<param name="Frame" value="">
+	<param name="Window" value="">
+	<param name="ChmFile" value="">
+	<param name="DisableJump" value="0">
+</object>
+--><!--metadata endspan type="DesignerControl"-->
+ 
+
+</body>
+
+</html>

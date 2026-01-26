@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "IGetLeaderAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of leader"
+      },
+      {
+        "name": "PointCount",
+        "type": "System.Int32",
+        "description": "Number of (x,y,z) points returned in the array"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetLeaderAtIndex",
+      "INote.GetLeaderInfo",
+      "INote.HasExtraLeader",
+      "INote.IGetLeaderInfo",
+      "INote.IsAttached",
+      "INote.SetZeroLengthLeader"
+    ],
+    "keywords": [
+      "leaders",
+      "notes",
+      "note",
+      "see",
+      "also",
+      "inote",
+      "igetleaderatindex",
+      "leader",
+      "index",
+      "int32",
+      "point",
+      "count",
+      "double"
+    ]
+  },
+  "title": "INote.IGetLeaderAtIndex",
+  "description": "Gets information about the specified leader on this note.",
+  "signature": "System.Double IGetLeaderAtIndex( \n   System.Int32\nIndex\n,\n   out System.Int32\nPointCount\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of leader"
+    },
+    {
+      "name": "PointCount",
+      "type": "System.Int32",
+      "description": "Number of (x,y,z) points returned in the array"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "There can be 0, 1, or 2 lines used with the leader line. In other words, if the note is not attached, then there are 0 lines; otherwise, you can have a straight leaderline (1 line) or a bent leaderline (2 lines). You must infer the number of leader lines based on IsAttached() and HasExtraLeader().\nIsAttached() == false implies no leaderline and no leaderline points (PointCount=0).\nHasExtraLeader() == false implies that this is a straight leaderline and 1 line (PointCount=2)\nHasExtraLeader() == True means that this is a bent leaderline and 2 lines (PointCount=3)\nFormat of return information is the following array of doubles:\nreturn value\n[0] = x coordinate of first leader point\nreturn value\n[1] = y coordinate of first leader point\nreturn value\n[2] = z coordinate of first leader point\nreturn value\n[3] = x coordinate of second leader point\nreturn value\n[4] = y coordinate of second leader point\nreturn value\n[5] = z coordinate of second leader point\nreturn value\n[6] = x coordinate of third leader point\nreturn value\n[7] = y coordinate of third leader point\nreturn value\n[8] = z coordinate of third leader point\nUse\nINote::GetLeaderCount\nto see how many leaders there are on the note.",
+  "examples": [],
+  "related": [
+    "INote.GetLeaderAtIndex",
+    "INote.GetLeaderInfo",
+    "INote.HasExtraLeader",
+    "INote.IGetLeaderInfo",
+    "INote.IsAttached",
+    "INote.SetZeroLengthLeader"
+  ]
+}

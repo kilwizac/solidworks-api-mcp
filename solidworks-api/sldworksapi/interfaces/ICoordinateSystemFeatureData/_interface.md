@@ -1,0 +1,34 @@
+---
+type: interface
+interface: ICoordinateSystemFeatureData
+inherits: null
+description: Allows access to a coordinate system feature.
+member_count: 30
+docset: sldworksapi
+categories:
+  - features
+common_members:
+  - AccessSelections
+  - GetOriginEntityType
+  - GetXAxisEntitiesCount
+  - GetXAxisEntitiesTypes
+  - GetYAxisEntitiesCount
+  - GetYAxisEntitiesTypes
+  - GetZAxisEntitiesCount
+  - GetZAxisEntitiesTypes
+---
+
+# ICoordinateSystemFeatureData
+
+Allows access to a coordinate system feature.
+
+## Common Members
+
+- `AccessSelections`
+- `GetOriginEntityType`
+- `GetXAxisEntitiesCount`
+- `GetXAxisEntitiesTypes`
+- `GetYAxisEntitiesCount`
+- `GetYAxisEntitiesTypes`
+- `GetZAxisEntitiesCount`
+- `GetZAxisEntitiesTypes`

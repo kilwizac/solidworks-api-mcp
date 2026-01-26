@@ -1,0 +1,62 @@
+---
+type: method
+interface: IModelDocExtension
+member: GetAnnotationCount
+returns: System.Int32
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - dimensions
+  - ui
+related:
+  - IAnnotation
+  - IModelDocExtension.GetAnnotations
+  - IModelDocExtension.GetAnnotationsByType
+  - IView.GetAnnotationCount
+keywords:
+  - annotation
+  - see
+  - also
+  - iannotation
+  - number
+  - getannotationcount
+  - imodeldocextension
+  - model
+  - doc
+  - extension
+  - count
+  - int32
+---
+
+# IModelDocExtension.GetAnnotationCount
+
+Gets the number of annotations on this part.
+
+## Signature
+
+```csharp
+System.Int32 GetAnnotationCount()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Number of annotations
+
+## Remarks
+
+Call this method before calling
+IModelDocExtension::IGetAnnotations
+.
+
+## See Also
+
+- `IAnnotation`
+- `IModelDocExtension.GetAnnotations`
+- `IModelDocExtension.GetAnnotationsByType`
+- `IView.GetAnnotationCount`

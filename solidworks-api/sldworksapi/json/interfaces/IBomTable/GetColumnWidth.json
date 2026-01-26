@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomTable",
+    "member": "GetColumnWidth",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Col",
+        "type": "System.Int32",
+        "description": "Column number; this is a 0-based index"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IBomTable.GetTotalColumnCount"
+    ],
+    "keywords": [
+      "getcolumnwidth",
+      "ibomtable",
+      "bom",
+      "table",
+      "column",
+      "width",
+      "col",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IBomTable.GetColumnWidth",
+  "description": "Gets the specified column width in meters.",
+  "signature": "System.Double GetColumnWidth( \n   System.Int32\nCol\n)",
+  "parameters": [
+    {
+      "name": "Col",
+      "type": "System.Int32",
+      "description": "Column number; this is a 0-based index"
+    }
+  ],
+  "returns": "Width of the specified column in meters",
+  "remarks": "Before you use any of the IBomTable methods, activate the BOM table using\nIBomTable::Attach3\n. After you finish getting BOM data, use\nIBomTable::Detach\nto deactivate the table.",
+  "examples": [],
+  "related": [
+    "IBomTable.GetTotalColumnCount"
+  ]
+}

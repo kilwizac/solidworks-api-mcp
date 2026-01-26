@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBody2",
+    "member": "SetCurrentSurface",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "SurfaceIn",
+        "type": "System.Object",
+        "description": "Surface, which might have been created using other surface creation routines, such as IModeler::CreateCylindricalSurface2"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IBody2.ISetCurrentSurface"
+    ],
+    "keywords": [
+      "temporary",
+      "bodies",
+      "setcurrentsurface",
+      "ibody2",
+      "body2",
+      "current",
+      "surface",
+      "object",
+      "void"
+    ]
+  },
+  "title": "IBody2.SetCurrentSurface",
+  "description": "Places an existing surface into a temporary body that is under construction.",
+  "signature": "void SetCurrentSurface( \n   System.Object\nSurfaceIn\n)",
+  "parameters": [
+    {
+      "name": "SurfaceIn",
+      "type": "System.Object",
+      "description": "Surface, which might have been created using other surface creation routines, such as IModeler::CreateCylindricalSurface2"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is used with a set of related methods that construct a body from trimmed surfaces. This method takes an ISurface object created elsewhere and adds it to the temporary body object, which acts as a placeholder for the trimmed surfaces.\nFollow calls to this method with one or more calls to the trimming-curve creation methods, such as\nISurface::AddTrimmingLoop2\n. Then, trim the surface using\nIBody2::CreateTrimmedSurface\n. After you add all the surfaces to the body and trim appropriately, you can sew the body to create an imported SOLIDWORKS body feature using\nIBody2::CreateBodyFromSurfaces\n.",
+  "examples": [],
+  "related": [
+    "IBody2.ISetCurrentSurface"
+  ]
+}

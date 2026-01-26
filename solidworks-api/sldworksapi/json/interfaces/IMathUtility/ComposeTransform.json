@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMathUtility",
+    "member": "ComposeTransform",
+    "returns": "MathTransform",
+    "parameters": [
+      {
+        "name": "XVec",
+        "type": "MathVector",
+        "description": "X-axis of the transform origin"
+      },
+      {
+        "name": "YVec",
+        "type": "MathVector",
+        "description": "Y-axis of the transform origin"
+      },
+      {
+        "name": "ZVec",
+        "type": "MathVector",
+        "description": "Z-axis of the transform origin"
+      },
+      {
+        "name": "TransVec",
+        "type": "MathVector",
+        "description": "Translation of the origin in space"
+      },
+      {
+        "name": "Scale",
+        "type": "System.Double",
+        "description": "Scale factor (typically 1; must be > 0)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IMathUtility.CreateTransform",
+      "IMathUtility.CreateTransformRotateAxis",
+      "IMathUtility.ICreateTransform",
+      "IMathUtility.ICreateTransformRotateAxis"
+    ],
+    "keywords": [
+      "transform",
+      "compose",
+      "composetransform",
+      "imathutility",
+      "math",
+      "utility",
+      "vec",
+      "vector",
+      "trans",
+      "scale",
+      "double"
+    ]
+  },
+  "title": "IMathUtility.ComposeTransform",
+  "description": "Creates a new transform matrix.",
+  "signature": "MathTransform ComposeTransform( \n   MathVector\nXVec\n,\n   MathVector\nYVec\n,\n   MathVector\nZVec\n,\n   MathVector\nTransVec\n,\n   System.Double\nScale\n)",
+  "parameters": [
+    {
+      "name": "XVec",
+      "type": "MathVector",
+      "description": "X-axis of the transform origin"
+    },
+    {
+      "name": "YVec",
+      "type": "MathVector",
+      "description": "Y-axis of the transform origin"
+    },
+    {
+      "name": "ZVec",
+      "type": "MathVector",
+      "description": "Z-axis of the transform origin"
+    },
+    {
+      "name": "TransVec",
+      "type": "MathVector",
+      "description": "Translation of the origin in space"
+    },
+    {
+      "name": "Scale",
+      "type": "System.Double",
+      "description": "Scale factor (typically 1; must be > 0)"
+    }
+  ],
+  "returns": "New transform",
+  "remarks": "XVec, YVec and ZVec are expected to be mutually orthogonal. These three vectors can be non-unit vectors and are unitized during the construction of the\nIMathTransform\n.",
+  "examples": [],
+  "related": [
+    "IMathUtility.CreateTransform",
+    "IMathUtility.CreateTransformRotateAxis",
+    "IMathUtility.ICreateTransform",
+    "IMathUtility.ICreateTransformRotateAxis"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandTabBox",
+    "member": "AddCommands",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CommandIDs",
+        "type": "System.Object",
+        "description": "Array of command IDs for the buttons (see Remarks )"
+      },
+      {
+        "name": "TextDisplayStyles",
+        "type": "System.Object",
+        "description": "Array of the text display styles for the buttons as defined in swCommandTabButtonTextDisplay_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandTabBox.IAddCommands"
+    ],
+    "keywords": [
+      "addcommands",
+      "icommandtabbox",
+      "command",
+      "tab",
+      "box",
+      "add",
+      "commands",
+      "ds",
+      "object",
+      "text",
+      "display",
+      "styles",
+      "boolean",
+      "create",
+      "commandmanager",
+      "boxes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICommandTabBox.AddCommands",
+  "description": "Adds buttons to this CommandManager tab box.",
+  "signature": "System.Boolean AddCommands( \n   System.Object\nCommandIDs\n,\n   System.Object\nTextDisplayStyles\n)",
+  "parameters": [
+    {
+      "name": "CommandIDs",
+      "type": "System.Object",
+      "description": "Array of command IDs for the buttons (see Remarks )"
+    },
+    {
+      "name": "TextDisplayStyles",
+      "type": "System.Object",
+      "description": "Array of the text display styles for the buttons as defined in swCommandTabButtonTextDisplay_e"
+    }
+  ],
+  "returns": "True if the buttons are added to the CommandManager tab box, false if not",
+  "remarks": "You can add both CommandGroup and FlyoutGroup items to CommandManager. Populate CommandIDs by calling\nIFlyoutGroup::CmdID\nfor FlyoutGroups and\nICommandGroup::CommandID\nor\nICommandGroup::ToolbarId\nafter calling\nICommandGroup::Activate\nfor CommandGroups.",
+  "examples": [
+    {
+      "title": "Create CommandManager Tab and Tab Boxes (VB.NET)",
+      "href": "Create_CommandManager_Tab_and_Tab_Boxes_Example_VB.NET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create CommandManager Tab and Tab Boxes (C#)",
+      "href": "Create_CommandManager_Tab_and_Tab_Boxes_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandTabBox.IAddCommands"
+  ]
+}

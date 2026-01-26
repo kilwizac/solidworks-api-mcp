@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "GetSplinePts",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ParamsArrayIn",
+        "type": "System.Object",
+        "description": "Array containing the definition of the spline"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.IGetSplinePts"
+    ],
+    "keywords": [
+      "getsplinepts",
+      "icurve",
+      "curve",
+      "spline",
+      "pts",
+      "params",
+      "array",
+      "object",
+      "points",
+      "vba",
+      "length",
+      "elliptical",
+      "edge",
+      "parameters"
+    ]
+  },
+  "title": "ICurve.GetSplinePts",
+  "description": "Gets the spline points for this curve.",
+  "signature": "System.Object GetSplinePts( \n   System.Object\nParamsArrayIn\n)",
+  "parameters": [
+    {
+      "name": "ParamsArrayIn",
+      "type": "System.Object",
+      "description": "Array containing the definition of the spline"
+    }
+  ],
+  "returns": "Array containing the spline points",
+  "remarks": "For OLE Automation applications, the ParamsIn argument contains an array defining the spline. This array contains the values for propArray, knotsArray and cntrlPntCoordArray, all packed into a single array (propArray is packed as four integers into the first two elements of the array.) The contents of these arrays is described in\nICurve::IGetSplinePtsSize\n.\nThe array returned contains the x, y, z location of the spline points:\n[\nx1, y1, z1, x2, y2, z2\n,....\n]\nData passed into this method must satisfy the following requirements:\nIf the curve is periodic, it must not have any repeated knots.\nIf the curve is non-periodic, it must only have repeated knots at its ends.\nThe curve must be cubic or lower degree, non-rational, and have continuous first\nand second derivatives.\nNOTE:\nFor a linear or quadratic curve to satisfy these continuity requirements, it must consist of a single segment.",
+  "examples": [
+    {
+      "title": "Get Curve Spline Points (VBA)",
+      "href": "Get_Curve_Spline_Points_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Length of Spline or Elliptical Edge (VBA)",
+      "href": "Get_Length_of_Spline_or_Elliptical_Edge_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Parameters and Spline Points for Curve (VBA)",
+      "href": "Get_Parameters_and_Spline_Points_for_Curve_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.IGetSplinePts"
+  ]
+}

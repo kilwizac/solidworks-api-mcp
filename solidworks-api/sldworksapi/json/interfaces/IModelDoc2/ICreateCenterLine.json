@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "ICreateCenterLine",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "P1",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x1, y1, z1) in meters that describe the first point of the line"
+      },
+      {
+        "name": "P2",
+        "type": "System.Double",
+        "description": "Array of 3 doubles (x2, y2, z2) in meters that describe the second point of the line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.CreateCenterLine"
+    ],
+    "keywords": [
+      "centerlines",
+      "see",
+      "also",
+      "icenterline",
+      "create",
+      "icreatecenterline",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "center",
+      "line",
+      "p1",
+      "double",
+      "p2",
+      "void"
+    ]
+  },
+  "title": "IModelDoc2.ICreateCenterLine",
+  "description": "Creates a center line from P1 to P2.",
+  "signature": "void ICreateCenterLine( \n   ref System.Double\nP1\n,\n   ref System.Double\nP2\n)",
+  "parameters": [
+    {
+      "name": "P1",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x1, y1, z1) in meters that describe the first point of the line"
+    },
+    {
+      "name": "P2",
+      "type": "System.Double",
+      "description": "Array of 3 doubles (x2, y2, z2) in meters that describe the second point of the line"
+    }
+  ],
+  "returns": "True if success, false if not",
+  "remarks": "Use\nIModelDoc2::CreateCenterLineVB\nfor Visual Basic for Applications (VBA) and other forms of Basic that do not support SafeArrays.\nYou can also create centerline construction geometry using\nIModelDoc2::ICreateLine2\nand\nISketchSegment::ConstructionGeometry\n.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.CreateCenterLine"
+  ]
+}

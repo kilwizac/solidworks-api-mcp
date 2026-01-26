@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetOpenFileName",
+    "returns": "System.String",
+    "parameters": [
+      {
+        "name": "DialogTitle",
+        "type": "System.String",
+        "description": "Title of the dialog"
+      },
+      {
+        "name": "InitialFileName",
+        "type": "System.String",
+        "description": "Path and file name of the file to open"
+      },
+      {
+        "name": "FileFilter",
+        "type": "System.String",
+        "description": "File name extension of the file to open"
+      },
+      {
+        "name": "OpenOptions",
+        "type": "System.Int32",
+        "description": "Not used"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Name of the configuration"
+      },
+      {
+        "name": "DisplayName",
+        "type": "System.String",
+        "description": "Recommended file name to use"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.EnumDocuments2",
+      "ISldWorks.GetOpenDocument",
+      "ISldWorks.GetOpenDocumentByName",
+      "ISldWorks.GetOpenedFileInfo",
+      "ISldWorks.IGetOpenDocumentByName2"
+    ],
+    "keywords": [
+      "getopenfilename",
+      "isldworks",
+      "sld",
+      "works",
+      "open",
+      "file",
+      "name",
+      "dialog",
+      "title",
+      "string",
+      "initial",
+      "filter",
+      "options",
+      "int32",
+      "config",
+      "display"
+    ]
+  },
+  "title": "ISldWorks.GetOpenFileName",
+  "description": "Obsolete. Superseded by ISldWorks::GetOpenFileName2.",
+  "signature": "System.String GetOpenFileName( \n   System.String\nDialogTitle\n,\n   System.String\nInitialFileName\n,\n   System.String\nFileFilter\n,\n   out System.Int32\nOpenOptions\n,\n   out System.String\nConfigName\n,\n   out System.String\nDisplayName\n)",
+  "parameters": [
+    {
+      "name": "DialogTitle",
+      "type": "System.String",
+      "description": "Title of the dialog"
+    },
+    {
+      "name": "InitialFileName",
+      "type": "System.String",
+      "description": "Path and file name of the file to open"
+    },
+    {
+      "name": "FileFilter",
+      "type": "System.String",
+      "description": "File name extension of the file to open"
+    },
+    {
+      "name": "OpenOptions",
+      "type": "System.Int32",
+      "description": "Not used"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Name of the configuration"
+    },
+    {
+      "name": "DisplayName",
+      "type": "System.String",
+      "description": "Recommended file name to use"
+    }
+  ],
+  "returns": "Path and file name of the file to open",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "ISldWorks.EnumDocuments2",
+    "ISldWorks.GetOpenDocument",
+    "ISldWorks.GetOpenDocumentByName",
+    "ISldWorks.GetOpenedFileInfo",
+    "ISldWorks.IGetOpenDocumentByName2"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IBaseFlangeFeatureData",
+    "member": "Thickness",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBaseFlangeFeatureData.ReverseThickness"
+    ],
+    "keywords": [
+      "thickness",
+      "ibaseflangefeaturedata",
+      "base",
+      "flange",
+      "feature",
+      "data",
+      "double"
+    ],
+    "readonly": null
+  },
+  "title": "IBaseFlangeFeatureData.Thickness",
+  "description": "Gets or sets the thickness for this base flange feature.",
+  "signature": "System.Double Thickness {get; set;}",
+  "parameters": [],
+  "returns": "Value for thickness",
+  "remarks": "This property is valid only when not creating the base flange on an existing sheet metal feature.\nThe setter of this property is valid only if\nIBaseFlangeFeatureData::OverrideDefaultSheetMetalParameters\nis true and\nIBaseFlangeFeatureData::UseMaterialSheetMetalParameters\nis false.\nThis property gets:\nDefault thickness if IBaseFlangeFeatureData::OverrideDefaultSheetMetalParameters is false.\nCustom thickness if IBaseFlangeFeatureData::OverrideDefaultSheetMetalParameters is true.",
+  "examples": [
+    {
+      "title": "IBaseFlangeFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBaseFlangeFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBaseFlangeFeatureData.ReverseThickness"
+  ]
+}

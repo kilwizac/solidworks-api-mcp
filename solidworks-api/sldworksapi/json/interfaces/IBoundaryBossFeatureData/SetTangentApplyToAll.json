@@ -1,0 +1,95 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBoundaryBossFeatureData",
+    "member": "SetTangentApplyToAll",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int32",
+        "description": "Direction as defined in swBoundaryBossDirection_e"
+      },
+      {
+        "name": "GuideIndex",
+        "type": "System.Int32",
+        "description": "Index of the curve (see Remarks )"
+      },
+      {
+        "name": "Apply",
+        "type": "System.Boolean",
+        "description": "True to display one handle that controls all constraints for the entire profile, false to display multiple handles that permit individual segment control"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBoundaryBossFeatureData.GetGuideTangencyType",
+      "IBoundaryBossFeatureData.GetTangentApplyToAll",
+      "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.GetTangentInfluence",
+      "IBoundaryBossFeatureData.GetTangentLength",
+      "IBoundaryBossFeatureData.MergeTangentFaces",
+      "IBoundaryBossFeatureData.SetGuideTangencyType",
+      "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+      "IBoundaryBossFeatureData.SetTangentInfluence",
+      "IBoundaryBossFeatureData.SetTangentLength"
+    ],
+    "keywords": [
+      "settangentapplytoall",
+      "iboundarybossfeaturedata",
+      "boundary",
+      "boss",
+      "feature",
+      "data",
+      "tangent",
+      "apply",
+      "all",
+      "direction",
+      "int32",
+      "guide",
+      "index",
+      "boolean",
+      "void"
+    ]
+  },
+  "title": "IBoundaryBossFeatureData.SetTangentApplyToAll",
+  "description": "Sets whether to display one handle that controls all constraints for the entire profile for the specified curve in the specified direction in this boundary feature.",
+  "signature": "void SetTangentApplyToAll( \n   System.Int32\nDirection\n,\n   System.Int32\nGuideIndex\n,\n   System.Boolean\nApply\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int32",
+      "description": "Direction as defined in swBoundaryBossDirection_e"
+    },
+    {
+      "name": "GuideIndex",
+      "type": "System.Int32",
+      "description": "Index of the curve (see Remarks )"
+    },
+    {
+      "name": "Apply",
+      "type": "System.Boolean",
+      "description": "True to display one handle that controls all constraints for the entire profile, false to display multiple handles that permit individual segment control"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method is only available for a single-direction boundary feature.\nCall\nIBoundaryBossFeatureData::GetCurvesCount\nto get a valid range of values for GuideIndex.",
+  "examples": [],
+  "related": [
+    "IBoundaryBossFeatureData.GetGuideTangencyType",
+    "IBoundaryBossFeatureData.GetTangentApplyToAll",
+    "IBoundaryBossFeatureData.GetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.GetTangentInfluence",
+    "IBoundaryBossFeatureData.GetTangentLength",
+    "IBoundaryBossFeatureData.MergeTangentFaces",
+    "IBoundaryBossFeatureData.SetGuideTangencyType",
+    "IBoundaryBossFeatureData.SetTangentDirectionReversed",
+    "IBoundaryBossFeatureData.SetTangentInfluence",
+    "IBoundaryBossFeatureData.SetTangentLength"
+  ]
+}

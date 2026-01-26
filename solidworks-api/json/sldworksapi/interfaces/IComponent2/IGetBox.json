@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IComponent2",
+    "member": "IGetBox",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "IncludeRefPlanes",
+        "type": "System.Boolean",
+        "description": "True includes reference planes with the returned bounding box, false does not"
+      },
+      {
+        "name": "IncludeSketches",
+        "type": "System.Boolean",
+        "description": "True includes sketches with the returned bounding box, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.GetBox",
+      "IAssemblyDoc.IGetBox",
+      "IBody2.GetBodyBox",
+      "IBody2.IGetBodyBox",
+      "IComponent2.GetBox",
+      "IFace2.GetBox",
+      "IFace2.IGetBox",
+      "IFeature.GetBox",
+      "IFeature.IGetBox",
+      "IModelDocExtension.GetVisibleBox",
+      "IModelDocExtension.RemoveVisibleBox",
+      "IModelDocExtension.SetVisibleBox"
+    ],
+    "keywords": [
+      "bounding",
+      "box",
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "igetbox",
+      "component2",
+      "include",
+      "ref",
+      "planes",
+      "boolean",
+      "sketches",
+      "double"
+    ]
+  },
+  "title": "IComponent2.IGetBox",
+  "description": "Gets the bounding box for component.",
+  "signature": "System.Double IGetBox( \n   System.Boolean\nIncludeRefPlanes\n,\n   System.Boolean\nIncludeSketches\n)",
+  "parameters": [
+    {
+      "name": "IncludeRefPlanes",
+      "type": "System.Boolean",
+      "description": "True includes reference planes with the returned bounding box, false does not"
+    },
+    {
+      "name": "IncludeSketches",
+      "type": "System.Boolean",
+      "description": "True includes sketches with the returned bounding box, false does not"
+    }
+  ],
+  "returns": "Two diagonal points that bound the component; the format is a pointer to an array of 6 doubles",
+  "remarks": "The resulting box encloses the object, but it might not be the tightest box.\nThe X, Y, Z points returned by SOLIDWORKS are the lower- and upper-diagonal corners that bound the component with the box sides parallel to the X, Y and Z axes. SOLIDWORKS returns box dimensions that enclose the component and are typically close to the minimum possible size.\nThe return value is an array of doubles as follows:\n[\nXCorner1, YCorner1, ZCorner1, XCorner2, YCorner2, ZCorner2\n]\nIt is possible for this method to return S_false for COM or a NULL VARIANT for Dispatch. This occurs if your application calls IComponent2::IGetBox with a component that represented a subassembly and that subassembly is not loaded. Once the subassembly is loaded, SOLIDWORKS returns the correct bounds and IComponent2::IGetBox returns S_OK.\nThe user interface behavior is the same. When the user selects a subassembly that is not loaded, there is no selection box around the subassembly. However, once the subassembly is loaded, there is a selection box.\nIMPORTANT:\nThe values returned are approximate and should not be used for comparison or calculation purposes. Furthermore, the bounding box may vary after rebuilding the model.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.GetBox",
+    "IAssemblyDoc.IGetBox",
+    "IBody2.GetBodyBox",
+    "IBody2.IGetBodyBox",
+    "IComponent2.GetBox",
+    "IFace2.GetBox",
+    "IFace2.IGetBox",
+    "IFeature.GetBox",
+    "IFeature.IGetBox",
+    "IModelDocExtension.GetVisibleBox",
+    "IModelDocExtension.RemoveVisibleBox",
+    "IModelDocExtension.SetVisibleBox"
+  ]
+}

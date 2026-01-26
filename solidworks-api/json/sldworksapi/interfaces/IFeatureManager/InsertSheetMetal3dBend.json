@@ -1,0 +1,121 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertSheetMetal3dBend",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of the bend in radians"
+      },
+      {
+        "name": "BUseDefaultRadius",
+        "type": "System.Boolean",
+        "description": "True to use the default radius, false to use the value specified in radius"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Value for the radius of the bend if bUseDefaultRadius is false"
+      },
+      {
+        "name": "FlipDir",
+        "type": "System.Boolean",
+        "description": "True to flip the bend direction, false to not"
+      },
+      {
+        "name": "BendPos",
+        "type": "System.Int16",
+        "description": "Bend position: 0 = bend centerline 1 = material inside 2 = material outside 3 = bend outside"
+      },
+      {
+        "name": "PCBA",
+        "type": "CustomBendAllowance",
+        "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IBendsFeatureData",
+      "ISheetMetalFeatureData"
+    ],
+    "keywords": [
+      "sheet",
+      "metal",
+      "see",
+      "also",
+      "isheetmetalfeaturedata",
+      "3d",
+      "bends",
+      "insertsheetmetal3dbend",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "insert",
+      "metal3d",
+      "bend",
+      "angle",
+      "double",
+      "use",
+      "default",
+      "radius",
+      "boolean",
+      "flip",
+      "dir",
+      "pos",
+      "int16",
+      "pcba",
+      "custom",
+      "allowance"
+    ]
+  },
+  "title": "IFeatureManager.InsertSheetMetal3dBend",
+  "description": "Inserts a 3D bend in sheet metal part.",
+  "signature": "Feature InsertSheetMetal3dBend( \n   System.Double\nAngle\n,\n   System.Boolean\nBUseDefaultRadius\n,\n   System.Double\nRadius\n,\n   System.Boolean\nFlipDir\n,\n   System.Int16\nBendPos\n,\n   CustomBendAllowance\nPCBA\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of the bend in radians"
+    },
+    {
+      "name": "BUseDefaultRadius",
+      "type": "System.Boolean",
+      "description": "True to use the default radius, false to use the value specified in radius"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Value for the radius of the bend if bUseDefaultRadius is false"
+    },
+    {
+      "name": "FlipDir",
+      "type": "System.Boolean",
+      "description": "True to flip the bend direction, false to not"
+    },
+    {
+      "name": "BendPos",
+      "type": "System.Int16",
+      "description": "Bend position: 0 = bend centerline 1 = material inside 2 = material outside 3 = bend outside"
+    },
+    {
+      "name": "PCBA",
+      "type": "CustomBendAllowance",
+      "description": "If... Then... non-NULL Pointer to ICustomBendAllowance object for which required values have been set NULL Parent bend's bend allowance is used"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IBendsFeatureData",
+    "ISheetMetalFeatureData"
+  ]
+}

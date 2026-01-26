@@ -1,0 +1,33 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "IGetAttachedEntityTypes",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "igetattachedentitytypes",
+      "iannotation",
+      "annotation",
+      "attached",
+      "entity",
+      "types",
+      "int32"
+    ]
+  },
+  "title": "IAnnotation.IGetAttachedEntityTypes",
+  "description": "Gets the types of all entities attached to this annotation.",
+  "signature": "System.Int32 IGetAttachedEntityTypes()",
+  "parameters": [],
+  "returns": "in-process, in-process, unmanaged C++: Pointer to an array of longs that indicate the types of all entities attached to this annotation as defined in swSelectType_e VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "This method supports all annotation types. Use\nIAnnotation::GetType\nto determine the annotation type.\nThis method returns an array of longs or integers\nindicating object types. The list of object types corresponds to the list of objects returned by\nIAnnotation::IGetAttachedEntities\n.\nYou can associate annotations with additional items not listed in\nswSelectType_e\n. If this annotation is attached to one or more entities not listed in swSelectType_e, then this method and\nIAnnotation::GetAttachedEntityTypes\nreturn swSelNOTHING in a position in the array corresponding to the unlisted item.\nIAnnotation::IGetAttachedEntities indicates an unsupported entity by returning a null value in the position in the array corresponding to the unsupported entity. COM applications that call\nIAnnotation::GetAttachedEntityCount3\ninclude the null value in the total count of associated entities.\nIf an annotation is disassociated from its geometry (i.e., dangling), then IAnnotation::IGetAttachedEntities returns a null value in the position in the array corresponding to the dangling item, and this method returns swSelNOTHING in the position in the array corresponding to the dangling item.\nNOTE:\nIf this annotation is not associated with any geometry, then this method and IAnnotation::IGetAttachedEntities return empty arrays.",
+  "examples": [],
+  "related": []
+}

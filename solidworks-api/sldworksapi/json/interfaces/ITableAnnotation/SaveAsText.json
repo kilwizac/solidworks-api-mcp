@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "SaveAsText",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path and filename of text data file (see Remarks )"
+      },
+      {
+        "name": "Separator",
+        "type": "System.String",
+        "description": "Character or string to use to separate each of the text within each of the cells in the table in the text file"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "file-io"
+    ],
+    "related": [
+      "ITableAnnotation.SaveAsPDF",
+      "ITableAnnotation.SaveAsTemplate"
+    ],
+    "keywords": [
+      "saveastext",
+      "itableannotation",
+      "table",
+      "annotation",
+      "save",
+      "text",
+      "file",
+      "name",
+      "string",
+      "separator",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.SaveAsText",
+  "description": "Obsolete. Superseded by ITableAnnotation::SaveAsText2.",
+  "signature": "System.Boolean SaveAsText( \n   System.String\nFileName\n,\n   System.String\nSeparator\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path and filename of text data file (see Remarks )"
+    },
+    {
+      "name": "Separator",
+      "type": "System.String",
+      "description": "Character or string to use to separate each of the text within each of the cells in the table in the text file"
+    }
+  ],
+  "returns": "True if table is saved as a text file, false if not",
+  "remarks": "You must specify a filename. It should include the path, filename, and filename extension to which to save the table as a text file.\nIf a file of the specified name in the specified path...\nThen it is...\nExists\nOverwritten\nDoes not exist\nCreated\nThe Separator argument is typically a single character, but it can be a string. If Separator is empty, then the tab character is used.\nNOTE\n: Although you can save a table as a text file for use with other applications like Microsoft Excel, you cannot currently import a text file to a table in SOLIDWORKS.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.SaveAsPDF",
+    "ITableAnnotation.SaveAsTemplate"
+  ]
+}

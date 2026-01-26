@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetPromptFilename2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full pathname of file to open"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Configuration name of file to open"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.LoadFile4",
+      "ISldWorks.OpenDoc7",
+      "ISldWorks.SetMultipleFilenamesPrompt",
+      "ISldWorks.SetNewFilename"
+    ],
+    "keywords": [
+      "setpromptfilename2",
+      "isldworks",
+      "sld",
+      "works",
+      "prompt",
+      "filename2",
+      "file",
+      "name",
+      "string",
+      "config",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.SetPromptFilename2",
+  "description": "Sets the file to open in response to a SOLIDWORKS event.",
+  "signature": "void SetPromptFilename2( \n   System.String\nFileName\n,\n   System.String\nConfigName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full pathname of file to open"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Configuration name of file to open"
+    }
+  ],
+  "returns": "",
+  "remarks": "FileName is used only:\nWhen the handler of this event...\nReturns...\nFileCloseNotify\nnon-\n0\nvalue\nPromptForFileNameNotify\nnon-\n0\nvalue\nReferencedFilePreNotify\nnon-\n0\nvalue\nBecause the filename specified is used only when\nPromptForFileNameNotify\nand\nReferencedFilePreNotify\nreturn S_FALSE, you cannot specify an initial filename for SOLIDWORKS to use in the standard dialog. Instead, you must provide your own file dialog and return the filename after the user selects it.",
+  "examples": [],
+  "related": [
+    "ISldWorks.LoadFile4",
+    "ISldWorks.OpenDoc7",
+    "ISldWorks.SetMultipleFilenamesPrompt",
+    "ISldWorks.SetNewFilename"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "IGetFeatureScope",
+    "returns": "Component2",
+    "parameters": [
+      {
+        "name": "FeatureIn",
+        "type": "Feature",
+        "description": "IFeature"
+      },
+      {
+        "name": "NumComponents",
+        "type": "System.Int32",
+        "description": "Number of components affected by this feature"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "features",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddToFeatureScope",
+      "IAssemblyDoc.GetFeatureScope",
+      "IAssemblyDoc.GetFeatureScopeCount",
+      "IAssemblyDoc.UpdateFeatureScope"
+    ],
+    "keywords": [
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "feature",
+      "scope",
+      "igetfeaturescope",
+      "assembly",
+      "doc",
+      "num",
+      "components",
+      "int32",
+      "component2"
+    ]
+  },
+  "title": "IAssemblyDoc.IGetFeatureScope",
+  "description": "Gets the components affected by this feature.",
+  "signature": "Component2 IGetFeatureScope( \n   Feature\nFeatureIn\n,\n   System.Int32\nNumComponents\n)",
+  "parameters": [
+    {
+      "name": "FeatureIn",
+      "type": "Feature",
+      "description": "IFeature"
+    },
+    {
+      "name": "NumComponents",
+      "type": "System.Int32",
+      "description": "Number of components affected by this feature"
+    }
+  ],
+  "returns": "Array of components of size NumComponents",
+  "remarks": "Feature scope information is only provided if the assembly is opened in its own window.\nCOM users must call\nIAssemblyDoc::GetFeatureScopeCount\nbefore calling this method.\nThis method gets both the components affected and potentially affected by this feature. Thus, not all of the components in this list are necessarily affected by this feature.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.AddToFeatureScope",
+    "IAssemblyDoc.GetFeatureScope",
+    "IAssemblyDoc.GetFeatureScopeCount",
+    "IAssemblyDoc.UpdateFeatureScope"
+  ]
+}

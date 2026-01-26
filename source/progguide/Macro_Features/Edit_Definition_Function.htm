@@ -1,0 +1,129 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Edit Definition Function</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 17, 2002 11:46:54 AM">
+<meta NAME=MS-HAID CONTENT=EditFunction>
+<meta NAME=MS-HKWD CONTENT="Macro feature (see also IMacroFeatureData Interface),edit definition function">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=537>
+<meta name=layout-width content=831>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../APIHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Edit Definition Function</h1>
+
+<p>The edit definition function for a macro feature:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Obtains the <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData.html">IMacroFeatureData</a> 
+ object from the input <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature.html">IFeature</a> 
+ object</p></li>
+	
+	<li class=kadov-p><p>Obtains the selections and parameters from the 
+ IMacroFeatureData object</p></li>
+	
+	<li class=kadov-p><p>Calls <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~AccessSelections.html">IMacroFeatureData::AccessSelections</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IMacroFeatureData~IAccessSelections.html">IMacroFeatureData::IAccessSelections 
+ to put SOLIDWORKS in a rollback state</a></p></li>
+	<li class=kadov-p>
+	<p>Provides a user interface, which:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li>allows the user to change the selections.</li>
+	<li>allows the user to modify the input data.</li>
+	<li>modifies features; possibly allows the user to change the input body.</li>
+	<li>creates features; ensures that IMacroFeatureData::EditBodies or 
+	IMacroFeatureData::IGetEditBodies is Nothing.</li>
+</ul></li>
+	<li class=kadov-p>
+	<p>Sets all of the selections and parameters back 
+ into the IMacroFeatureData object</p></li>
+	<li class=kadov-p>
+	<p>Calls 
+	<a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~ModifyDefinition.html">IFeature::ModifyDefinition</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~IModifyDefinition2.html">IFeature::IModifyDefinition2</a> 
+ on the input feature, which flags the feature as dirty and needing a rebuild</p>
+	</li>
+</ul>
+
+<p>The edit definition function is called by SOLIDWORKS whenever the user 
+ edits the definition of a macro feature. This function should handle all 
+ user-interface activity needed for acquiring and editing selections and 
+ parametric data for the macro feature. The <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IPropertyManagerPage2.html">IPropertyManagerPage2</a> 
+ interface is well suited for handling the user interaction, but it is 
+ not required. Other user interface options are VBA UserForm or an external 
+ application.</p>
+
+<p>The data should be stored using the macro feature’s IMacroFeatureData 
+ interface. User inputs should be validated and body operations checked 
+ before calling <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~ModifyDefinition.html">IFeature::ModifyDefinition</a> 
+ or <a href="sldworksAPI.chm::/SolidWorks.interop.sldworks~SolidWorks.interop.sldworks.IFeature~IModifyDefinition2.html">IFeature::IModifyDefinition2</a>, 
+ which causes the macro feature <a href="Rebuild_Function.htm">rebuild 
+ function</a> to be called. </p>
+
+<p>The following example illustrates an VBA-based edit definition function.</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">Function swmEdit(app As Variant, part As 
+ Variant, feature As Variant) As Variant</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">msgbox &quot;Edit definition function called.&quot;</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">.</p>
+
+<p class=apiCode
+	style="margin-left: 89px;">swmEdit= True</p>
+
+<p class=apiCode
+	style="margin-left: 49px;">End Function</p>
+
+
+</body>
+
+</html>

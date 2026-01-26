@@ -1,0 +1,159 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "CreateTrimmedCurve2",
+    "returns": "Curve",
+    "parameters": [
+      {
+        "name": "X1",
+        "type": "System.Double",
+        "description": "x start point"
+      },
+      {
+        "name": "Y1",
+        "type": "System.Double",
+        "description": "y start point"
+      },
+      {
+        "name": "Z1",
+        "type": "System.Double",
+        "description": "z end point"
+      },
+      {
+        "name": "X2",
+        "type": "System.Double",
+        "description": "x end point"
+      },
+      {
+        "name": "Y2",
+        "type": "System.Double",
+        "description": "y end point"
+      },
+      {
+        "name": "Z2",
+        "type": "System.Double",
+        "description": "z end point"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.ExtentCurve",
+      "ICurve.IConvertPcurveToBcurveSize",
+      "ICurve.IsTrimmedCurve",
+      "ICurve.JoinCurves",
+      "ICurve.ReverseCurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "createtrimmedcurve2",
+      "icurve",
+      "curve",
+      "create",
+      "trimmed",
+      "curve2",
+      "x1",
+      "double",
+      "y1",
+      "z1",
+      "x2",
+      "y2",
+      "z2",
+      "temporary",
+      "extruded",
+      "body",
+      "vba",
+      "elliptical",
+      "extrusion",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICurve.CreateTrimmedCurve2",
+  "description": "Creates a trimmed curve.",
+  "signature": "Curve CreateTrimmedCurve2( \n   System.Double\nX1\n,\n   System.Double\nY1\n,\n   System.Double\nZ1\n,\n   System.Double\nX2\n,\n   System.Double\nY2\n,\n   System.Double\nZ2\n)",
+  "parameters": [
+    {
+      "name": "X1",
+      "type": "System.Double",
+      "description": "x start point"
+    },
+    {
+      "name": "Y1",
+      "type": "System.Double",
+      "description": "y start point"
+    },
+    {
+      "name": "Z1",
+      "type": "System.Double",
+      "description": "z end point"
+    },
+    {
+      "name": "X2",
+      "type": "System.Double",
+      "description": "x end point"
+    },
+    {
+      "name": "Y2",
+      "type": "System.Double",
+      "description": "y end point"
+    },
+    {
+      "name": "Z2",
+      "type": "System.Double",
+      "description": "z end point"
+    }
+  ],
+  "returns": "Pointer to the ICurve object (see Remarks )",
+  "remarks": "This method trims the curve from the start point to the end point in a parametric direction. It returns NULL if the curve is discontinued or non-linear between the points.\nIf your application calls\nISurface::CreateTrimmedSheet4\nor\nISurface::ICreateTrimmedSheet4\nto create a sheet with a boundary defined by arcs (\nIModeler::CreateArc\nor\nIModeler::ICreateArc\n) or lines (\nIModeler::CreateLine\nor\nIModeler::ICreateLine\n), then your application must first call this method to trim the arc and line curves before passing them to ISurface::CreateTrimmedSheet4 or ISurface::ICreateTrimmedSheet4.\nIf your application calls ISurface::CreateTrimmedSheet4 or ISurface::ICreateTrimmedSheet4 to create a sheet with an elliptical boundary (\nIModeler::CreateEllipse\nor\nIModeler::ICreateEllipse\n), then you do not need to trim the elliptical curve before passing it to ISurface::CreateTrimmedSheet4 or ISurface::ICreateTrimmedSheet4.",
+  "examples": [
+    {
+      "title": "Create Temporary Extruded Body (VBA)",
+      "href": "Create_Temporary_Extruded_Body_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Elliptical Extrusion (VBA)",
+      "href": "Create_Temporary_Elliptical_Extrusion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Elliptical Extrusion (VB.NET)",
+      "href": "Create_Temporary_Elliptical_Extrusion_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Temporary Elliptical Extrusion (C#)",
+      "href": "Create_Temporary_Elliptical_Extrusion_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (VBA)",
+      "href": "Return_Untrimmed_Curve_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (VB.NET)",
+      "href": "Return_Untrimmed_Curve_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Trimmed Curve (C#)",
+      "href": "Return_Untrimmed_Curve_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICurve.ExtentCurve",
+    "ICurve.IConvertPcurveToBcurveSize",
+    "ICurve.IsTrimmedCurve",
+    "ICurve.JoinCurves",
+    "ICurve.ReverseCurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

@@ -1,0 +1,52 @@
+---
+type: method
+interface: ISurface
+member: IsOffset
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related:
+  - IModeler.CreateOffsetSurface
+  - IModeler.ICreateOffsetSurface
+  - ISurface.GetOffsetSurfParams2
+  - ISurface.IGetOffsetSurfParams2
+  - ISurfaceOffsetFeatureData
+keywords:
+  - surface
+  - see
+  - also
+  - isurface
+  - offset
+  - surfaces
+  - isoffset
+  - boolean
+---
+
+# ISurface.IsOffset
+
+Gets whether the surface is an offset surface.
+
+## Signature
+
+```csharp
+System.Boolean IsOffset()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if the surface is an offset surface, false if not
+
+## See Also
+
+- `IModeler.CreateOffsetSurface`
+- `IModeler.ICreateOffsetSurface`
+- `ISurface.GetOffsetSurfParams2`
+- `ISurface.IGetOffsetSurfParams2`
+- `ISurfaceOffsetFeatureData`

@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAttributeDef",
+    "member": "CreateInstance5",
+    "returns": "Attribute",
+    "parameters": [
+      {
+        "name": "OwnerDoc",
+        "type": "ModelDoc2",
+        "description": "Document whose FeatureManager design tree to which to add this attribute"
+      },
+      {
+        "name": "OwnerObj",
+        "type": "System.Object",
+        "description": "Component or entity to which to add this attribute: IBODY2 ICOMPONENT2 IENTITY , which can be a face, loop, edge, vertex, or feature MODELDOC2 if NULL"
+      },
+      {
+        "name": "NameIn",
+        "type": "System.String",
+        "description": "Name to assign to this attribute instance (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Creation control options (see Remarks )"
+      },
+      {
+        "name": "ConfigurationOption",
+        "type": "System.Int32",
+        "description": "Configuration options as defined in swInConfigurationOpts_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "createinstance5",
+      "iattributedef",
+      "attribute",
+      "def",
+      "create",
+      "instance5",
+      "owner",
+      "doc",
+      "model",
+      "doc2",
+      "obj",
+      "object",
+      "name",
+      "string",
+      "options",
+      "int32",
+      "configuration",
+      "option",
+      "vba",
+      "delete",
+      "faces",
+      "add",
+      "feature",
+      "include",
+      "library",
+      "vb",
+      "net",
+      "blended"
+    ]
+  },
+  "title": "IAttributeDef.CreateInstance5",
+  "description": "Creates an instance of this attribute on the specified object with the specified options.",
+  "signature": "Attribute CreateInstance5( \n   ModelDoc2\nOwnerDoc\n,\n   System.Object\nOwnerObj\n,\n   System.String\nNameIn\n,\n   System.Int32\nOptions\n,\n   System.Int32\nConfigurationOption\n)",
+  "parameters": [
+    {
+      "name": "OwnerDoc",
+      "type": "ModelDoc2",
+      "description": "Document whose FeatureManager design tree to which to add this attribute"
+    },
+    {
+      "name": "OwnerObj",
+      "type": "System.Object",
+      "description": "Component or entity to which to add this attribute: IBODY2 ICOMPONENT2 IENTITY , which can be a face, loop, edge, vertex, or feature MODELDOC2 if NULL"
+    },
+    {
+      "name": "NameIn",
+      "type": "System.String",
+      "description": "Name to assign to this attribute instance (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Creation control options (see Remarks )"
+    },
+    {
+      "name": "ConfigurationOption",
+      "type": "System.Int32",
+      "description": "Configuration options as defined in swInConfigurationOpts_e"
+    }
+  ],
+  "returns": "Newly created IAttribute object",
+  "remarks": "When you add an attribute to a feature, the FeatureManager design tree might not reflect the new state of the model. This discrepancy exists for performance reasons (rebuilding the FeatureManager design tree is very time-consuming). You can request a rebuild after you have added a number of attributes to save time.\nThe attribute is created as a feature and displayed in the FeatureManager design tree, which means that the name specified in nameIn must be unique in the FeatureManager design tree for the document.\nYou can create attributes on entity objects such as faces and edges, on features, or on the document itself. Do not use this method to set an attribute to or get an attribute from an assembly body. Instead, use\nIFace2::SetFaceId\nor\nIFace2::GetFaceId\nto set or get the attribute.\nSetting or clearing bits in the options argument controls the creation of the attribute:\nBit\nValue\nMeaning\n1\n1\nAttribute is created hidden in the FeatureManager design tree (see\nIFeature::SetUIState\n)\n1\n0\nAttribute is created visible in the FeatureManager design tree\nFor example, options = 1 creates an attribute that is hidden in the FeatureManager design tree.\nNOTE:\nBy default, SOLIDWORKS adds attributes only to the active configuration. SOLIDWORKS adds the attribute to all other configurations as a suppressed feature. You can unsuppress the attribute by selecting it with\nIModelDocExtension::SelectByID2\nand calling\nIModelDoc2::EditUnsuppressDependent2\n. If you want to add your attributes to a non-active configuration, then the user must edit the properties of that particular configuration and make sure that the\nSuppress New Features\noption is disabled.\nIf you add an attribute to an entity, SOLIDWORKS strips the attribute feature from the entity if the entity is included in your export to a library feature or library feature part. See the SOLIDWORKS Help for more information about library features.\nNOTE:\nAn attribute is a feature; thus, this method respects the\nIConfiguration::SuppressNewFeatures\nsetting.",
+  "examples": [
+    {
+      "title": "Create Attribute (VBA)",
+      "href": "Create_Attribute_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Faces (VBA)",
+      "href": "Delete_Faces_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VB.NET)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (C#)",
+      "href": "Add_Attribute_to_Feature_and_Include_in_Library_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add Attribute to Feature and Include in Library Feature (VBA)",
+      "href": "Add_Attribute_to_Feature_and_Include_In_Library_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (C#)",
+      "href": "Delete_Blended_Faces_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VB.NET)",
+      "href": "Delete_Blended_Faces_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Delete Blended Faces (VBA)",
+      "href": "Delete_Blended_Faces_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

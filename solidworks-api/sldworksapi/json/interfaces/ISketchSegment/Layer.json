@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISketchSegment",
+    "member": "Layer",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchSegment.Color",
+      "ISketchSegment.LayerOverride",
+      "ISketchSegment.Style",
+      "ISketchSegment.Width"
+    ],
+    "keywords": [
+      "layer",
+      "isketchsegment",
+      "sketch",
+      "segment",
+      "string"
+    ],
+    "readonly": null
+  },
+  "title": "ISketchSegment.Layer",
+  "description": "gets or sets the layer used by this sketch segment.",
+  "signature": "System.String Layer {get; set;}",
+  "parameters": [],
+  "returns": "Name of the layer used for this sketch segment",
+  "remarks": "Layers are only supported in drawing documents.\nSketch segments can be created on a specific layer. This property gets or sets the layer used by this sketch segment.\nThe return value may be an empty string because an old document may not contain layers. This also occurs if sketch segments have been generated in a new document that has no layers defined.",
+  "examples": [],
+  "related": [
+    "ISketchSegment.Color",
+    "ISketchSegment.LayerOverride",
+    "ISketchSegment.Style",
+    "ISketchSegment.Width"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetText",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "WhichText",
+        "type": "System.Int32",
+        "description": "Aspect of the text to get as defined in swDimensionTextParts_e (see Remarks )"
+      },
+      {
+        "name": "Text",
+        "type": "System.String",
+        "description": "Text to create above the dimension line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetLowerText",
+      "IDisplayDimension.GetText",
+      "IDisplayDimension.SetLowerText"
+    ],
+    "keywords": [
+      "display",
+      "dimensions",
+      "see",
+      "also",
+      "idisplaydimension",
+      "text",
+      "settext",
+      "dimension",
+      "which",
+      "int32",
+      "string",
+      "void",
+      "grid",
+      "bubble",
+      "vba"
+    ]
+  },
+  "title": "IDisplayDimension.SetText",
+  "description": "Sets the text above the dimension line in a display dimension.",
+  "signature": "void SetText( \n   System.Int32\nWhichText\n,\n   System.String\nText\n)",
+  "parameters": [
+    {
+      "name": "WhichText",
+      "type": "System.Int32",
+      "description": "Aspect of the text to get as defined in swDimensionTextParts_e (see Remarks )"
+    },
+    {
+      "name": "Text",
+      "type": "System.String",
+      "description": "Text to create above the dimension line"
+    }
+  ],
+  "returns": "",
+  "remarks": "Use swDimensionTextParts_e.swDimensionTextAll to create or replace the entire dimension text. SOLIDWORKS places the input text in the prefix portion of the dimension text, clears the suffix and callout texts, and turns off the dimension value (see\nIDisplayDimension::ShowDimensionValue\n).\nAfter using this method, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.\nNOTE:\nThis method does not support\nhole callouts\n.",
+  "examples": [
+    {
+      "title": "Display Grid Bubble (VBA)",
+      "href": "Display_Grid_Bubble_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetLowerText",
+    "IDisplayDimension.GetText",
+    "IDisplayDimension.SetLowerText"
+  ]
+}

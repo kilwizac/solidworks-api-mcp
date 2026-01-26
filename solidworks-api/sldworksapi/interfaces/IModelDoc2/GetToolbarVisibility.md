@@ -1,0 +1,74 @@
+---
+type: method
+interface: IModelDoc2
+member: GetToolbarVisibility
+returns: System.Boolean
+parameters:
+  -
+    name: Toolbar
+    type: System.Int32
+    description: Identifier of toolbar as defined in swToolbar_e
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - documents
+  - ui
+related:
+  - ICommandGroup
+  - ICommandManager
+  - IModelDoc2.SetToolbarVisibility
+  - IModelDoc2.Toolbars
+  - ISldWorks.AddToolbar4
+  - ISldWorks.GetToolbarDock2
+  - ISldWorks.GetToolbarState2
+  - ISldWorks.HideToolbar2
+  - ISldWorks.RemoveToolbar2
+  - ISldWorks.SetToolbarDock2
+  - ISldWorks.ShowToolbar2
+keywords:
+  - toolbars
+  - gettoolbarvisibility
+  - imodeldoc2
+  - model
+  - doc2
+  - toolbar
+  - visibility
+  - int32
+  - boolean
+---
+
+# IModelDoc2.GetToolbarVisibility
+
+Gets the visibility of a toolbar.
+
+## Signature
+
+```csharp
+System.Boolean GetToolbarVisibility( 
+   System.Int32
+Toolbar
+)
+```
+## Parameters
+
+- `Toolbar` (System.Int32): Identifier of toolbar as defined in swToolbar_e
+
+## Return Value
+
+True if the toolbar is visible, false if it is hidden
+
+## See Also
+
+- `ICommandGroup`
+- `ICommandManager`
+- `IModelDoc2.SetToolbarVisibility`
+- `IModelDoc2.Toolbars`
+- `ISldWorks.AddToolbar4`
+- `ISldWorks.GetToolbarDock2`
+- `ISldWorks.GetToolbarState2`
+- `ISldWorks.HideToolbar2`
+- `ISldWorks.RemoveToolbar2`
+- `ISldWorks.SetToolbarDock2`
+- `ISldWorks.ShowToolbar2`

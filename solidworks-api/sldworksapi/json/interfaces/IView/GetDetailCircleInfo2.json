@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "GetDetailCircleInfo2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IView.GetDetail",
+      "IView.GetDetailCircles",
+      "IView.IGetDetail",
+      "IView.IGetDetailCircleInfo2",
+      "IView.IGetDetailCircles"
+    ],
+    "keywords": [
+      "detail",
+      "circles",
+      "see",
+      "idetailcircle",
+      "view",
+      "also",
+      "iview",
+      "drawing",
+      "views",
+      "getdetailcircleinfo2",
+      "circle",
+      "info2",
+      "object",
+      "information",
+      "vba"
+    ]
+  },
+  "title": "IView.GetDetailCircleInfo2",
+  "description": "Gets all of the information about each detail circle in the view.",
+  "signature": "System.Object GetDetailCircleInfo2()",
+  "parameters": [],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\nnumDetailCircles\n,\n[\nlayer\n,\ncenterPt[3], startPt[3], endPt[3], lineType, textPt[3], textHeight, numArrows\n, [\narrowTip[3], arrowComponent[3], arrowWidth, arrowHeight, arrowStyle\n] ] ]\nwhere:\nnumDetailCircles\n= the number of detail circles in this view. See also\nIView::GetDetailCircleCount2\n.\nThe following set of data repeats itself for each detail circle in the view. The number of times the following information is given is\nnumDetailCircles\n:\nlayer =\ninteger value indicating which layer holds this entity. Obtain the\nILayer\nobject by passing this integer value to\nILayerMgr::GetLayerById\nor\nILayerMgr::IGetLayerById\n.\ncenterPt[3]\n= X,Y,Z center point for this detail circle\nstartPt[3]\n= X,Y,Z start point for this detail circle\nendPt[3]\n= X,Y,Z end point for this detail circle\nlineType\n= line type for this detail circle as defined in\nswLineTypes_e\ntextPt[3]\n= X,Y,Z point for the text location.\ntextHeight\n= text height in meters\nnumArrows\n= number of arrows for this detail circle.\nThe following set of data repeats itself for each arrow in the current detail circle. The number of times the following information is given is\nnumArrows\n:\narrowTip[3]\n= X,Y,Z start point for this arrow head\narrowComponent[3]\n= X,Y,Z component for this arrow head\narrowWidth\n= width of this arrow head\narrowHeight\n= height of this arrow head\narrowStyle\n= style of this arrow head as defined in\nswArrowStyle_e\nTo get the actual text value, see\nIView::GetDetailCircleStrings\nor\nIView::IGetDetailCircleStrings\n.\nThe number of line segments, line segment geometry, and line type returned depend on the drawing's display standard.",
+  "examples": [
+    {
+      "title": "Get Detail Circle Information (VBA)",
+      "href": "Get_Detail_Circle_Information_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IView.GetDetail",
+    "IView.GetDetailCircles",
+    "IView.IGetDetail",
+    "IView.IGetDetailCircleInfo2",
+    "IView.IGetDetailCircles"
+  ]
+}

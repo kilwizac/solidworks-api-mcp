@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "GetArrowHeadAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the arrow head where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ISFSymbol.GetArrowHeadCount",
+      "ISFSymbol.GetArrowHeadInfo",
+      "ISFSymbol.IGetArrowHeadInfo"
+    ],
+    "keywords": [
+      "getarrowheadatindex",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "arrow",
+      "head",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISFSymbol.GetArrowHeadAtIndex",
+  "description": "Gets information on the specified arrow head in this surface finish symbol.",
+  "signature": "System.Object GetArrowHeadAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the arrow head where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Call\nISFSymbol::GetArrowHeadCount\nbefore calling this method to get the number of arrow heads for this surface finish symbol.\nThe return value is the following array of doubles :\n[\narrowHeadPt\n[3],\narrowHeadDir\n[3],\narrowHeadWidth\n,\narrowHeadHeight\n,\narrowHeadStyle\n]\nwhere:\narrowHeadPt\n[3]\n= XYZ arrow head tip location\narrowHeadDir\n[3]\n= XYZ arrow head direction\narrowHeadWidth\n= Arrow head width where the width is measured along the arrow head direction\narrowHeadHeight\n= Arrow head height\narrowHeadStyle\n= Arrow head style (for example, open or closed) as defined in\nswArrowStyle_e",
+  "examples": [],
+  "related": [
+    "ISFSymbol.GetArrowHeadCount",
+    "ISFSymbol.GetArrowHeadInfo",
+    "ISFSymbol.IGetArrowHeadInfo"
+  ]
+}

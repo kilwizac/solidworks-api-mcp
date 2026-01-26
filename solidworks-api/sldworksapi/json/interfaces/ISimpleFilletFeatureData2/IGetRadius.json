@@ -1,0 +1,58 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISimpleFilletFeatureData2",
+    "member": "IGetRadius",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "System.Object",
+        "description": "Fillet item whose radius you want"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISimpleFilletFeatureData2.DefaultRadius",
+      "ISimpleFilletFeatureData2.ISetRadius",
+      "ISimpleFilletFeatureData2.IsMultipleRadius",
+      "ISimpleFilletFeatureData2.SetRadius"
+    ],
+    "keywords": [
+      "igetradius",
+      "isimplefilletfeaturedata2",
+      "simple",
+      "fillet",
+      "feature",
+      "data2",
+      "radius",
+      "item",
+      "object",
+      "double"
+    ]
+  },
+  "title": "ISimpleFilletFeatureData2.IGetRadius",
+  "description": "Gets the radius value for specified fillet item.",
+  "signature": "System.Double IGetRadius( \n   System.Object\nPFilletItem\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "System.Object",
+      "description": "Fillet item whose radius you want"
+    }
+  ],
+  "returns": "Radius value",
+  "remarks": "To obtain a pointer to a fillet item, see\nISimpleFilletFeatureData2::GetFilletItemAtIndex\nand\nISimpleFilletFeatureData2::FilletItemsCount\n. Fillets can be made from multiple edges or faces and these methods get a pointer to any of the entities that helped to create the particular fillet and pass it into the PFilletItem parameter of this method.",
+  "examples": [],
+  "related": [
+    "ISimpleFilletFeatureData2.DefaultRadius",
+    "ISimpleFilletFeatureData2.ISetRadius",
+    "ISimpleFilletFeatureData2.IsMultipleRadius",
+    "ISimpleFilletFeatureData2.SetRadius"
+  ]
+}

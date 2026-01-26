@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetTriangleAtIndex",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "0-based index of the piece of text"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetTriangleAtIndex",
+      "IGtol.GetTriangleCount"
+    ],
+    "keywords": [
+      "igettriangleatindex",
+      "igtol",
+      "gtol",
+      "triangle",
+      "index",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetTriangleAtIndex",
+  "description": "Gets the triangle at the specified index.",
+  "signature": "System.Double IGetTriangleAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "0-based index of the piece of text"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "The return value is the following array of doubles:\n[\nvertexPt1[3], vertexPt2[3], vertexPt3[3], isFilled, lineType\n]\nwhere:\nvertexPt1[3]\n= First XYZ vertex point\nvertexPt2[3]\n= Second XYZ vertex point\nvertexPt3[3]\n= Third XYZ vertex point\nisFilled\n= Boolean returned as a double and is True if the triangle is filled, false if not\nlineType\n= Line type (see\nswLineTypes_e\n)",
+  "examples": [],
+  "related": [
+    "IGtol.GetTriangleAtIndex",
+    "IGtol.GetTriangleCount"
+  ]
+}

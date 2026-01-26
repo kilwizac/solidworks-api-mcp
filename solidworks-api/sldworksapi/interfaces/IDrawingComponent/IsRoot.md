@@ -1,0 +1,49 @@
+---
+type: method
+interface: IDrawingComponent
+member: IsRoot
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - drawings
+related: []
+keywords:
+  - isroot
+  - idrawingcomponent
+  - drawing
+  - component
+  - root
+  - boolean
+  - components
+  - properties
+  - view
+  - vba
+---
+
+# IDrawingComponent.IsRoot
+
+Gets whether this is the root drawing component.
+
+## Signature
+
+```csharp
+System.Boolean IsRoot()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True if this component is the root drawing component, false if not
+
+## Remarks
+
+This method assists with traversal.
+
+## Examples
+
+- Get Components' Properties in Drawing View (VBA) (Get_Components_Properties_in_Drawing_View_Example_VB.htm)

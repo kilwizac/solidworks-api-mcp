@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "StopDynamics",
+    "returns": "void",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.DynamicMode",
+      "IModelView.HlrQuality",
+      "IModelView.RotateAboutAxis",
+      "IModelView.RotateAboutCenter",
+      "IModelView.RotateAboutPoint"
+    ],
+    "keywords": [
+      "rotate",
+      "model",
+      "views",
+      "hidden",
+      "lines",
+      "removed",
+      "visible",
+      "hlr",
+      "see",
+      "hlv",
+      "stopdynamics",
+      "imodelview",
+      "view",
+      "stop",
+      "dynamics",
+      "void",
+      "dynamic",
+      "rotation"
+    ]
+  },
+  "title": "IModelView.StopDynamics",
+  "description": "Ends dynamic model view motion.",
+  "signature": "void StopDynamics()",
+  "parameters": [],
+  "returns": "",
+  "remarks": "Use this method with\nIModelView::StartDynamics\nat the end of dynamic view motion. This method returns the view to its previous HLR,  HLV, or shaded mode and recalculates the\ndisplay.\nAfter calling this method, you must call\nIModelDoc2::GraphicsRedraw2\nor\nIModelDoc2::WindowRedraw\nto update the display for the end-user.\nIf the SOLIDWORKS file is in view-only mode and is not displaying a shaded image, then you cannot perform any view rotations. Do not call any of the view rotation functions.\nTo determine if the file is in view-only mode and is not displaying a shaded image, use\nIModelDoc2::IsOpenedViewOnly\nand\nIModelView::GetDisplayState\n.",
+  "examples": [
+    {
+      "title": "Dynamic View Rotation (C++)",
+      "href": "Dynamic_View_Rotation_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelView.DynamicMode",
+    "IModelView.HlrQuality",
+    "IModelView.RotateAboutAxis",
+    "IModelView.RotateAboutCenter",
+    "IModelView.RotateAboutPoint"
+  ]
+}

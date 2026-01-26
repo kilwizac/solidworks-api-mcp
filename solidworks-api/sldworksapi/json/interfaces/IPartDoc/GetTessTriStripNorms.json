@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartDoc",
+    "member": "GetTessTriStripNorms",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "IPartDoc.GetTessNorms",
+      "IPartDoc.GetTessTriStripEdges",
+      "IPartDoc.GetTessTriStripSize",
+      "IPartDoc.GetTessTriStripTextures",
+      "IPartDoc.GetTessTriStrips",
+      "IPartDoc.GetTessTriangleCount",
+      "IPartDoc.GetTessTriangles",
+      "IPartDoc.IGetTessNorms",
+      "IPartDoc.IGetTessTriStripEdgeSize",
+      "IPartDoc.IGetTessTriStripEdges",
+      "IPartDoc.IGetTessTriStripNorms",
+      "IPartDoc.IGetTessTriStrips",
+      "IPartDoc.IGetTessTriangles",
+      "ITessellation"
+    ],
+    "keywords": [
+      "tessellation",
+      "see",
+      "also",
+      "itessellation",
+      "parts",
+      "ipartdoc",
+      "gettesstristripnorms",
+      "part",
+      "doc",
+      "tess",
+      "tri",
+      "strip",
+      "norms",
+      "object"
+    ]
+  },
+  "title": "IPartDoc.GetTessTriStripNorms",
+  "description": "Gets the normal vector for each of the triangles, which make up the shaded picture tessellation for this part.",
+  "signature": "System.Object GetTessTriStripNorms()",
+  "parameters": [],
+  "returns": "Array containing the tri strip normals (see Remarks )",
+  "remarks": "The format of the returned data is:\nDWORD\nFaceCount\nDWORD\nStripCount\nDWORD (\nVertexCount\n) x 3\nDWORD\nNumStrips\nDWORD [\nVertexPerStrip\n] = array from 0 to (\nNumstrips\n-1).\nFloat [\nNormals\n] = array of X,Y,Z normal components for each strip from 0 to (\nVertexPerStrip\n-1).\nwhere\nFaceCount\n= Number of faces on the body.\nStripCount\n= Total number of strips on the body.\nVertexCount\nx 3  = Total number of vertices. Multiplied by 3 to cover X, Y, and Z.\nNumStrips\n= Number of strips on a particular face.\nVertexPerStrip\n= Array containing the number of vertex points on particular face strip.\nNormalComp\n= Array of X,Y,Z normal components for each vertex on the particular face strip.",
+  "examples": [],
+  "related": [
+    "IPartDoc.GetTessNorms",
+    "IPartDoc.GetTessTriStripEdges",
+    "IPartDoc.GetTessTriStripSize",
+    "IPartDoc.GetTessTriStripTextures",
+    "IPartDoc.GetTessTriStrips",
+    "IPartDoc.GetTessTriangleCount",
+    "IPartDoc.GetTessTriangles",
+    "IPartDoc.IGetTessNorms",
+    "IPartDoc.IGetTessTriStripEdgeSize",
+    "IPartDoc.IGetTessTriStripEdges",
+    "IPartDoc.IGetTessTriStripNorms",
+    "IPartDoc.IGetTessTriStrips",
+    "IPartDoc.IGetTessTriangles",
+    "ITessellation"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetPrecision2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Primary",
+        "type": "System.Int32",
+        "description": "Number of digits displayed after the decimal point in the dimension value (see Remarks )"
+      },
+      {
+        "name": "Dual",
+        "type": "System.Int32",
+        "description": "Number of digits displayed after the decimal point in the dual dimension value"
+      },
+      {
+        "name": "PrimaryTol",
+        "type": "System.Int32",
+        "description": "Number of digits displayed after the decimal point in the tolerance value (see Remarks )"
+      },
+      {
+        "name": "DualTol",
+        "type": "System.Int32",
+        "description": "Number of digits displayed after the decimal point in the dual tolerance value"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setprecision2",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "precision2",
+      "primary",
+      "int32",
+      "dual",
+      "tol"
+    ]
+  },
+  "title": "IDisplayDimension.SetPrecision2",
+  "description": "Obsolete. Superseded by IDisplayDimension::SetPrecision3.",
+  "signature": "System.Int32 SetPrecision2( \n   System.Int32\nPrimary\n,\n   System.Int32\nDual\n,\n   System.Int32\nPrimaryTol\n,\n   System.Int32\nDualTol\n)",
+  "parameters": [
+    {
+      "name": "Primary",
+      "type": "System.Int32",
+      "description": "Number of digits displayed after the decimal point in the dimension value (see Remarks )"
+    },
+    {
+      "name": "Dual",
+      "type": "System.Int32",
+      "description": "Number of digits displayed after the decimal point in the dual dimension value"
+    },
+    {
+      "name": "PrimaryTol",
+      "type": "System.Int32",
+      "description": "Number of digits displayed after the decimal point in the tolerance value (see Remarks )"
+    },
+    {
+      "name": "DualTol",
+      "type": "System.Int32",
+      "description": "Number of digits displayed after the decimal point in the dual tolerance value"
+    }
+  ],
+  "returns": "Return status (see Remarks )",
+  "remarks": "The specified precision values must be in the range from 0 to 8, which indicates the number of digits after the decimal place to display that value.\nAlternatively, the precision values can be defined by\nswDimensionPrecisionSettings_e\n.\nParameter\nswDimensionPrecisionSettings_e value\nResult\nPrimary\nDual\nPrimaryTol\nDualTol\nswDoNotChangePrecisionSetting\nThe current setting is not changed.\nPrimary\nDual\nPrimaryTol\nDualTol\nswPrecisionFollowsDocumentSetting\nThe number of decimal places to display adheres to the document setting.\nUse\nIModelDocExtension::GetUserPreferenceInteger\n/\nIModelDocExtension::SetUserPreferenceInteger\n.swDetailingLinearDimPrecision, swDetailingAngularDimPrecision, or swDetailingAltLinearDimPrecision to get or set that value.\nPrimaryTol\nDualTol\nswTolerancePrecisionFollowsNominal\nThe number of decimal places to display is the same as for the dimension or dual dimension value.\nThe return value indicates the success or failure of this method. In general, a value less than 0 indicates that the method failed and SOLIDWORKS did not set any precision values. A value of 0 indicates success. A value greater than 0 indicates that a problem occurred, but the method did not fail.\n-1\nMethod failed; no precision values were set.\n0\nMethod was successful; all precision values were set.\n1\nPrimary precision value was invalid.\n2\nAlternate precision value was invalid.\n3\nPrimary tolerance precision value was invalid.\n4\nAlternate tolerance precision value was invalid.\nAfter using this method, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": []
+}

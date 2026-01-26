@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "GetGuideCurvesCount",
+    "returns": "System.Int16",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.GetGuideCurvesType",
+      "ISweepFeatureData.GuideCurves",
+      "ISweepFeatureData.IGetGuideCurves",
+      "ISweepFeatureData.IGetGuideCurvesType",
+      "ISweepFeatureData.ISetGuideCurves",
+      "ISweepFeatureData.MergeSmoothFaces"
+    ],
+    "keywords": [
+      "guide",
+      "curves",
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "getguidecurvescount",
+      "sweep",
+      "feature",
+      "data",
+      "count",
+      "int16"
+    ]
+  },
+  "title": "ISweepFeatureData.GetGuideCurvesCount",
+  "description": "Gets a number of guide curves for this sweep feature.",
+  "signature": "System.Int16 GetGuideCurvesCount()",
+  "parameters": [],
+  "returns": "Number of guide curves",
+  "remarks": "This method is not valid if:\nISweepFeatureData::Direction\nis set to\nswSweepDirection_e\n.swSweepBiDirectional.\n- or -\nISweepFeatureData::TwistControlType\nis set to\nswTwistControlType_e\n.swTwistControlConstantTwistAlongPath.\nCall this method before calling\nISweepFeatureData::IGetGuideCurves\nto get the size of the array for that method.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISweepFeatureData.GetGuideCurvesType",
+    "ISweepFeatureData.GuideCurves",
+    "ISweepFeatureData.IGetGuideCurves",
+    "ISweepFeatureData.IGetGuideCurvesType",
+    "ISweepFeatureData.ISetGuideCurves",
+    "ISweepFeatureData.MergeSmoothFaces"
+  ]
+}

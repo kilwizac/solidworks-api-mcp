@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IComponent2",
+    "member": "ReferencedConfiguration",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IAssemblyDoc.CompConfigProperties5",
+      "IChainPatternFeatureData.ForceUseSeedConfiguration",
+      "IDerivedPatternFeatureData.ForceUseSeedConfiguration",
+      "ILocalCircularPatternFeatureData.ForceUseSeedConfiguration",
+      "ILocalCurvePatternFeatureData.ForceUseSeedConfiguration",
+      "ILocalLinearPatternFeatureData.ForceUseSeedConfiguration",
+      "ILocalSketchPatternFeatureData.ForceUseSeedConfiguration",
+      "IMirrorComponentFeatureData.ForceUseSeedConfiguration"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "configurations",
+      "referencedconfiguration",
+      "component2",
+      "referenced",
+      "configuration",
+      "string",
+      "names",
+      "bodies",
+      "multibody",
+      "part",
+      "vba",
+      "transforms",
+      "assembly",
+      "change",
+      "traverse",
+      "component",
+      "feature",
+      "levels",
+      "using",
+      "recursion",
+      "vb",
+      "net"
+    ],
+    "readonly": null
+  },
+  "title": "IComponent2.ReferencedConfiguration",
+  "description": "Gets or sets the active configuration used by this component.",
+  "signature": "System.String ReferencedConfiguration {get; set;}",
+  "parameters": [],
+  "returns": "Name of the configuration",
+  "remarks": "You can use this property to change the active configuration of:\na pattern seed component.\npattern instance components, but only when the pattern's ForceUseSeedConfiguration property is set to false.\nWhen the configuration is changed, components might become suppressed or unsuppressed. This means that the array previously returned from\nIComponent2::GetChildren\nor\nIComponent2::IGetChildren\nbecomes invalid. If an application is traversing an assembly and calls IComponent2::ReferencedConfiguration, then it should stop the traversal and start again by getting the assembly's\nIModelDoc2\nand active configuration. The array previously returned from IComponent2::GetChildren or IComponent2::IGetChildren should be released before calling IComponent2::ReferencedConfiguration. To hold onto the changed component, you can perform an extra AddRef() on that component before freeing the array.\nAfter changing the referenced configuration, you must call\nIModelDoc2::EditRebuild3\nto display the changes.",
+  "examples": [
+    {
+      "title": "Get Names of Bodies in Multibody Part (VBA)",
+      "href": "Get_Names_of_Bodies_in_MultiBody_Part_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Transforms of Assembly Components (VBA)",
+      "href": "Get_Transforms_of_Assembly_Components_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Referenced Configuration (VBA)",
+      "href": "Change_Referenced_Configuration_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VBA)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (VB.NET)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Traverse Assembly at Component and Feature Levels Using Recursion (C#)",
+      "href": "Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.CompConfigProperties5",
+    "IChainPatternFeatureData.ForceUseSeedConfiguration",
+    "IDerivedPatternFeatureData.ForceUseSeedConfiguration",
+    "ILocalCircularPatternFeatureData.ForceUseSeedConfiguration",
+    "ILocalCurvePatternFeatureData.ForceUseSeedConfiguration",
+    "ILocalLinearPatternFeatureData.ForceUseSeedConfiguration",
+    "ILocalSketchPatternFeatureData.ForceUseSeedConfiguration",
+    "IMirrorComponentFeatureData.ForceUseSeedConfiguration"
+  ]
+}

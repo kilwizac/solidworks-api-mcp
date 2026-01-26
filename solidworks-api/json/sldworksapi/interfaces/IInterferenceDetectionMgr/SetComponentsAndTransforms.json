@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInterferenceDetectionMgr",
+    "member": "SetComponentsAndTransforms",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ComponentList",
+        "type": "System.Object",
+        "description": "Array of interfering components"
+      },
+      {
+        "name": "TransformList",
+        "type": "System.Object",
+        "description": "Array of transforms"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies"
+    ],
+    "related": [
+      "IInterferenceDetectionMgr.GetComponentsAndTransforms"
+    ],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "interfering",
+      "setcomponentsandtransforms",
+      "iinterferencedetectionmgr",
+      "interference",
+      "detection",
+      "mgr",
+      "transforms",
+      "component",
+      "list",
+      "object",
+      "transform",
+      "int32",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IInterferenceDetectionMgr.SetComponentsAndTransforms",
+  "description": "Sets the interfering components and their transforms.",
+  "signature": "System.Int32 SetComponentsAndTransforms( \n   System.Object\nComponentList\n,\n   System.Object\nTransformList\n)",
+  "parameters": [
+    {
+      "name": "ComponentList",
+      "type": "System.Object",
+      "description": "Array of interfering components"
+    },
+    {
+      "name": "TransformList",
+      "type": "System.Object",
+      "description": "Array of transforms"
+    }
+  ],
+  "returns": "Status as defined by swSetComponentsAndTransformsStatus_e",
+  "remarks": "You must pass in absolute transforms to this method.\nIf you want to transform a component incrementally before interference detection, then you must multiply that incremental transform by the component's existing transform before passing in the resultant transform.\nTo produce the effect of identity transforms on components (i.e., the components do not move while participating in interference detection), the transforms for those components passed in can be null or Nothing. However, passing in null or Nothing for all of the transforms is interpreted as invalid input.\nNOTE:\nA null or Nothing is interpreted as the component\u2019s existing transform (i.e., an identity incremental transform).",
+  "examples": [
+    {
+      "title": "Set Components and Transforms for Interference Detection (C#)",
+      "href": "Set_Components_and_Transforms_for_Interference_Detection_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Components and Transforms for Interference Detection (VB.NET)",
+      "href": "Set_Components_and_Transforms_for_Interference_Detection_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Set Components and Transforms for Interference Detection (VBA)",
+      "href": "Set_Components_and_Transforms_for_Interference_Detection_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IInterferenceDetectionMgr.GetComponentsAndTransforms"
+  ]
+}

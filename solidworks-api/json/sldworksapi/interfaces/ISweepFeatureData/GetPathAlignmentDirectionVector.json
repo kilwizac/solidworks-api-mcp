@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISweepFeatureData",
+    "member": "GetPathAlignmentDirectionVector",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "Type of direction vector as defined in swSelectType_e : swSelDATAMAXES (axis) swSelDATUMPLANES (plane) swSelEDGES (edge) swSelFACES (face)"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.GetPathType",
+      "ISweepFeatureData.Path",
+      "ISweepFeatureData.PathAlignmentType",
+      "ISweepFeatureData.SetPathAlignmentDirectionVector"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "path",
+      "getpathalignmentdirectionvector",
+      "sweep",
+      "feature",
+      "data",
+      "alignment",
+      "direction",
+      "vector",
+      "type",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "ISweepFeatureData.GetPathAlignmentDirectionVector",
+  "description": "Gets the direction vector of the specified type for this sweep feature.",
+  "signature": "System.Object GetPathAlignmentDirectionVector( \n   out System.Int32\nType\n)",
+  "parameters": [
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "Type of direction vector as defined in swSelectType_e : swSelDATAMAXES (axis) swSelDATUMPLANES (plane) swSelEDGES (edge) swSelFACES (face)"
+    }
+  ],
+  "returns": "Plane , planar face , line , edge , cylinder , axis , or a pair of vertices that defines the direction",
+  "remarks": "This method is valid only if:\nISweepFeatureData:TwistControlType\nis set to\nswTwistControlType_e\n.swTwistControlFollowPath.\n- and -\nISweepFeatureData::PathAlignmentType\nis set to\nswTangencyType_e\n.swTangencyDirectionVector.\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [],
+  "related": [
+    "ISweepFeatureData.GetPathType",
+    "ISweepFeatureData.Path",
+    "ISweepFeatureData.PathAlignmentType",
+    "ISweepFeatureData.SetPathAlignmentDirectionVector"
+  ]
+}

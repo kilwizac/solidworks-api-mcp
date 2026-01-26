@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "CreateSketchPlane",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Relation1",
+        "type": "System.Int32",
+        "description": "Relation as defined in swConstraintType_e for the first selection to position the 3D sketch plane"
+      },
+      {
+        "name": "Relation2",
+        "type": "System.Int32",
+        "description": "Relation as defined in swConstraintType_e for the second selection to position the 3D sketch plane"
+      },
+      {
+        "name": "Relation3",
+        "type": "System.Int32",
+        "description": "Relation as defined in swConstraintType_e for the third selection to position the 3D sketch plane"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "3d",
+      "sketch",
+      "planes",
+      "see",
+      "also",
+      "irefplane",
+      "isketch",
+      "plane",
+      "createsketchplane",
+      "isketchmanager",
+      "manager",
+      "create",
+      "relation1",
+      "int32",
+      "relation2",
+      "relation3",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ISketchManager.CreateSketchPlane",
+  "description": "Creates a 3D sketch plane.",
+  "signature": "System.Boolean CreateSketchPlane( \n   System.Int32\nRelation1\n,\n   System.Int32\nRelation2\n,\n   System.Int32\nRelation3\n)",
+  "parameters": [
+    {
+      "name": "Relation1",
+      "type": "System.Int32",
+      "description": "Relation as defined in swConstraintType_e for the first selection to position the 3D sketch plane"
+    },
+    {
+      "name": "Relation2",
+      "type": "System.Int32",
+      "description": "Relation as defined in swConstraintType_e for the second selection to position the 3D sketch plane"
+    },
+    {
+      "name": "Relation3",
+      "type": "System.Int32",
+      "description": "Relation as defined in swConstraintType_e for the third selection to position the 3D sketch plane"
+    }
+  ],
+  "returns": "True if the 3D sketch plane is created, false if not",
+  "remarks": "This method gets the selected items from the selection list in the order in which they were selected and applies the specified relation to them. If fewer than three items were selected, then only the first, or first and second, values are used.",
+  "examples": [
+    {
+      "title": "Create 3D Sketch Plane (C#)",
+      "href": "Create_3D_Sketch_Plane_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create 3D Sketch Plane (VB.NET)",
+      "href": "Create_3D_Sketch_Plane_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create 3D Sketch Plane (VBA)",
+      "href": "Create_3D_Sketch_Plane_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

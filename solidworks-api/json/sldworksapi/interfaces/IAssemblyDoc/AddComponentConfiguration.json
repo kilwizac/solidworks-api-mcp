@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddComponentConfiguration",
+    "returns": "Configuration",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of new configuration"
+      },
+      {
+        "name": "Comment",
+        "type": "System.String",
+        "description": "Comment displayed in Configuration Properties"
+      },
+      {
+        "name": "AlternateName",
+        "type": "System.String",
+        "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to true (see Remarks )"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "names",
+      "addcomponentconfiguration",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "add",
+      "component",
+      "configuration",
+      "name",
+      "string",
+      "comment",
+      "alternate",
+      "options",
+      "int32"
+    ]
+  },
+  "title": "IAssemblyDoc.AddComponentConfiguration",
+  "description": "Adds a new configuration for the last selected assembly component.",
+  "signature": "Configuration AddComponentConfiguration( \n   System.String\nName\n,\n   System.String\nComment\n,\n   System.String\nAlternateName\n,\n   System.Int32\nOptions\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of new configuration"
+    },
+    {
+      "name": "Comment",
+      "type": "System.String",
+      "description": "Comment displayed in Configuration Properties"
+    },
+    {
+      "name": "AlternateName",
+      "type": "System.String",
+      "description": "Alternate configuration name; used if swConfigOption_UseAlternateName is set to true (see Remarks )"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Combination of one or more BOOLEAN configuration options as defined in swConfigurationOptions2_e (see Remarks )"
+    }
+  ],
+  "returns": "IConfiguration",
+  "remarks": "The Options argument can be a combination of any of the following values:\nswConfigOption_SuppressByDefault True if you want to suppress newly added features and mates in this configuration, false if not\nswConfigOption_HideByDefault - True if you want newly added components to be hidden, false if not\nswConfigOption_MinFeatureManager True if you want newly added components to only display their component name in the FeatureManager design tree, false if you want newly added components to display their name and each of their features in the FeatureManager design tree\nswConfigOption_DontActivate - True if you do not want the new configuration activated, false if not",
+  "examples": [],
+  "related": []
+}

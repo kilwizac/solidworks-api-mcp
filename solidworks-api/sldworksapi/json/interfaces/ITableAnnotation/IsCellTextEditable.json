@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITableAnnotation",
+    "member": "IsCellTextEditable",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Row",
+        "type": "System.Int32",
+        "description": "Index of row in which cell resides"
+      },
+      {
+        "name": "Column",
+        "type": "System.Int32",
+        "description": "Index of column in which cell resides"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ITableAnnotation.CellTextHorizontalJustification",
+      "ITableAnnotation.CellTextVerticalJustification",
+      "ITableAnnotation.DisplayedText",
+      "ITableAnnotation.GetCellRange",
+      "ITableAnnotation.GetCellTextFormat",
+      "ITableAnnotation.GetCellUseDocTextFormat",
+      "ITableAnnotation.IsCellMerged",
+      "ITableAnnotation.MergeCells",
+      "ITableAnnotation.SetCellRange",
+      "ITableAnnotation.SetCellTextFormat",
+      "ITableAnnotation.UnmergeCells"
+    ],
+    "keywords": [
+      "cells",
+      "tables",
+      "table",
+      "iscelltexteditable",
+      "itableannotation",
+      "annotation",
+      "cell",
+      "text",
+      "editable",
+      "row",
+      "int32",
+      "column",
+      "boolean"
+    ]
+  },
+  "title": "ITableAnnotation.IsCellTextEditable",
+  "description": "Gets whether the text in this cell can be edited.",
+  "signature": "System.Boolean IsCellTextEditable( \n   System.Int32\nRow\n,\n   System.Int32\nColumn\n)",
+  "parameters": [
+    {
+      "name": "Row",
+      "type": "System.Int32",
+      "description": "Index of row in which cell resides"
+    },
+    {
+      "name": "Column",
+      "type": "System.Int32",
+      "description": "Index of column in which cell resides"
+    }
+  ],
+  "returns": "True if text in this cell can be edited, false if not",
+  "remarks": "The index for both rows and columns is 0-based.\nTables and cells:\nBOM table annotation\n: All cells can be edited.\nGeneral table annotation\n: All cells can be edited.\nHole table annotation\n: Only some columns can be edited because some information is automatically generated, thus, that information cannot be edited. The header row and custom columns can be edited.\nRevision table annotation\n: All cells can be edited.",
+  "examples": [],
+  "related": [
+    "ITableAnnotation.CellTextHorizontalJustification",
+    "ITableAnnotation.CellTextVerticalJustification",
+    "ITableAnnotation.DisplayedText",
+    "ITableAnnotation.GetCellRange",
+    "ITableAnnotation.GetCellTextFormat",
+    "ITableAnnotation.GetCellUseDocTextFormat",
+    "ITableAnnotation.IsCellMerged",
+    "ITableAnnotation.MergeCells",
+    "ITableAnnotation.SetCellRange",
+    "ITableAnnotation.SetCellTextFormat",
+    "ITableAnnotation.UnmergeCells"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IModelDoc2",
+    "member": "AddPropertyExtension",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "PropertyExtension",
+        "type": "System.Object",
+        "description": "Value of the property extension to add to the model (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ResetPropertyExtension"
+    ],
+    "keywords": [
+      "model",
+      "documents",
+      "see",
+      "also",
+      "imodeldoc2",
+      "imodeldocextension",
+      "interfaces",
+      "extensions",
+      "extension",
+      "addpropertyextension",
+      "doc2",
+      "add",
+      "object",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "IModelDoc2.AddPropertyExtension",
+  "description": "Adds a property extension to this model.",
+  "signature": "System.Int32 AddPropertyExtension( \n   System.Object\nPropertyExtension\n)",
+  "parameters": [
+    {
+      "name": "PropertyExtension",
+      "type": "System.Object",
+      "description": "Value of the property extension to add to the model (see Remarks )"
+    }
+  ],
+  "returns": "Size of the array to which the property extension value is added",
+  "remarks": "To use this method:\nDeclare the variable.\nAssign the variable a value: float, integer, or string.\nCall this method to add the value to the model.\nThe 1-based array is a first-in-last-out structured list, whose size is used by\nIModelDoc2::GetPropertyExtension\nto access the property extension..\nNOTE\n: SOLIDWORKS recommends that you use\nIAttribute\n,\nIAttributeDef\n, and\nIParameter\ninstead of this method. These interfaces provide more flexibility.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ResetPropertyExtension"
+  ]
+}

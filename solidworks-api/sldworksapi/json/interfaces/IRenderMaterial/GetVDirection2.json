@@ -1,0 +1,78 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRenderMaterial",
+    "member": "GetVDirection2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "VDir_X",
+        "type": "System.Double",
+        "description": "X coordinate of the V direction"
+      },
+      {
+        "name": "VDir_Y",
+        "type": "System.Double",
+        "description": "Y coordinate of the V direction"
+      },
+      {
+        "name": "VDir_Z",
+        "type": "System.Double",
+        "description": "Z coordinate of the V direction"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IRenderMaterial.SetUDirection2",
+      "IRenderMaterial.SetVDirection2"
+    ],
+    "keywords": [
+      "getvdirection2",
+      "irendermaterial",
+      "render",
+      "material",
+      "direction2",
+      "dir",
+      "double",
+      "void"
+    ]
+  },
+  "title": "IRenderMaterial.GetVDirection2",
+  "description": "Gets the V direction of the texture-based appearance.",
+  "signature": "void GetVDirection2( \n   out System.Double\nVDir_X\n,\n   out System.Double\nVDir_Y\n,\n   out System.Double\nVDir_Z\n)",
+  "parameters": [
+    {
+      "name": "VDir_X",
+      "type": "System.Double",
+      "description": "X coordinate of the V direction"
+    },
+    {
+      "name": "VDir_Y",
+      "type": "System.Double",
+      "description": "Y coordinate of the V direction"
+    },
+    {
+      "name": "VDir_Z",
+      "type": "System.Double",
+      "description": "Z coordinate of the V direction"
+    }
+  ],
+  "returns": "",
+  "remarks": "The\nmapping type\n(surface, projection, automatic, etc.) indirectly determines the V direction. This vector is perpendicular to the U direction.\nCall\nIRenderMaterial::GetUDirection2\nto get the U direction of the appearance.",
+  "examples": [
+    {
+      "title": "IRenderMaterial",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IRenderMaterial",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IRenderMaterial.SetUDirection2",
+    "IRenderMaterial.SetVDirection2"
+  ]
+}

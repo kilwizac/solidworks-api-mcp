@@ -1,0 +1,92 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SetLightSourceName",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "ID of the light source whose name you want to set"
+      },
+      {
+        "name": "NewName",
+        "type": "System.String",
+        "description": "Name to be given to the specified light source"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.AddLightSource",
+      "IModelDoc2.AddLightSourceExtProperty",
+      "IModelDoc2.AddLightToScene",
+      "IModelDoc2.AddSceneExtProperty",
+      "IModelDoc2.DeleteLightSource",
+      "IModelDoc2.GetLightSourceExtProperty",
+      "IModelDoc2.GetLightSourceIdFromName",
+      "IModelDoc2.GetLightSourceName",
+      "IModelDoc2.ILightSourcePropertyValues",
+      "IModelDoc2.LightSourcePropertyValues",
+      "IModelDoc2.ResetLightSourceExtProperty",
+      "IModelDoc2.ResetSceneExtProperty",
+      "IModelDoc2.SetLightSourcePropertyValuesVB"
+    ],
+    "keywords": [
+      "lighting",
+      "names",
+      "setlightsourcename",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "light",
+      "source",
+      "name",
+      "id",
+      "int32",
+      "new",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.SetLightSourceName",
+  "description": "Sets the light source name used internally by the SOLIDWORKS Design software.",
+  "signature": "System.Boolean SetLightSourceName( \n   System.Int32\nID\n,\n   System.String\nNewName\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "ID of the light source whose name you want to set"
+    },
+    {
+      "name": "NewName",
+      "type": "System.String",
+      "description": "Name to be given to the specified light source"
+    }
+  ],
+  "returns": "True if the name is set successfully, false otherwise",
+  "remarks": "The light source ID ranges from 0 to\nn\n, where\nn\n= (the total number of light sources - 1). To get the total number of light sources, call\nIModelDoc2::GetLightSourceCount\n.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.AddLightSource",
+    "IModelDoc2.AddLightSourceExtProperty",
+    "IModelDoc2.AddLightToScene",
+    "IModelDoc2.AddSceneExtProperty",
+    "IModelDoc2.DeleteLightSource",
+    "IModelDoc2.GetLightSourceExtProperty",
+    "IModelDoc2.GetLightSourceIdFromName",
+    "IModelDoc2.GetLightSourceName",
+    "IModelDoc2.ILightSourcePropertyValues",
+    "IModelDoc2.LightSourcePropertyValues",
+    "IModelDoc2.ResetLightSourceExtProperty",
+    "IModelDoc2.ResetSceneExtProperty",
+    "IModelDoc2.SetLightSourcePropertyValuesVB"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILoop2",
+    "member": "EnumCoEdges",
+    "returns": "EnumCoEdges",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ILoop2.GetFirstCoEdge",
+      "ILoop2.IGetFirstCoEdge"
+    ],
+    "keywords": [
+      "enumcoedges",
+      "iloop2",
+      "loop2",
+      "co",
+      "edges"
+    ]
+  },
+  "title": "ILoop2.EnumCoEdges",
+  "description": "Enumerates the coedges in a loop.",
+  "signature": "EnumCoEdges EnumCoEdges()",
+  "parameters": [],
+  "returns": "Coedges enumeration",
+  "remarks": "The\nICoEdge\nobjects are returned in a CW or CCW manner based on the direction of the\nILoop2\n.\nThe loop direction is determined as follows: if a loop is viewed along its direction, with the face normal pointing upwards, then the face that owns the loop is to the left. This means that inner loops are CW and outer loops are CCW. To determine if a loop is an outer loop, see\nILoop2::IsOuter\n.\nThe coedge direction always aligns with the direction of the ILoop2.",
+  "examples": [],
+  "related": [
+    "ILoop2.GetFirstCoEdge",
+    "ILoop2.IGetFirstCoEdge"
+  ]
+}

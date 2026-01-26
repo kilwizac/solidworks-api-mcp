@@ -1,0 +1,34 @@
+---
+type: interface
+interface: IDisplayData
+inherits: null
+description: Allows access to display information for certain items, including reference planes and reference axes shown in a drawing view.
+member_count: 55
+docset: sldworksapi
+categories:
+  - documents
+common_members:
+  - GetArcAtIndex
+  - GetArcAtIndex2
+  - GetArcCount
+  - GetArrowHeadAtIndex
+  - GetArrowHeadAtIndex2
+  - GetArrowHeadCount
+  - GetEllipseAtIndex
+  - GetEllipseAtIndex2
+---
+
+# IDisplayData
+
+Allows access to display information for certain items, including reference planes and reference axes shown in a drawing view.
+
+## Common Members
+
+- `GetArcAtIndex`
+- `GetArcAtIndex2`
+- `GetArcCount`
+- `GetArrowHeadAtIndex`
+- `GetArrowHeadAtIndex2`
+- `GetArrowHeadCount`
+- `GetEllipseAtIndex`
+- `GetEllipseAtIndex2`

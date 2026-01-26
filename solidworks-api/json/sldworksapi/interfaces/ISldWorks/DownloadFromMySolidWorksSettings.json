@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "DownloadFromMySolidWorksSettings",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "SystemOptions",
+        "type": "System.Boolean",
+        "description": "True to download, false to not"
+      },
+      {
+        "name": "FileLocations",
+        "type": "System.Boolean",
+        "description": "True to download, false to not"
+      },
+      {
+        "name": "Customizations",
+        "type": "System.Boolean",
+        "description": "True to download, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.UploadToMySolidWorksSettings"
+    ],
+    "keywords": [
+      "3dexperience",
+      "solidworks",
+      "connected",
+      "downloadfrommysolidworkssettings",
+      "isldworks",
+      "sld",
+      "works",
+      "download",
+      "my",
+      "solid",
+      "settings",
+      "options",
+      "boolean",
+      "file",
+      "locations",
+      "customizations",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.DownloadFromMySolidWorksSettings",
+  "description": "Downloads the specified SOLIDWORKS Design Augmented settings to SOLIDWORKS Design.",
+  "signature": "System.Int32 DownloadFromMySolidWorksSettings( \n   System.Boolean\nSystemOptions\n,\n   System.Boolean\nFileLocations\n,\n   System.Boolean\nCustomizations\n)",
+  "parameters": [
+    {
+      "name": "SystemOptions",
+      "type": "System.Boolean",
+      "description": "True to download, false to not"
+    },
+    {
+      "name": "FileLocations",
+      "type": "System.Boolean",
+      "description": "True to download, false to not"
+    },
+    {
+      "name": "Customizations",
+      "type": "System.Boolean",
+      "description": "True to download, false to not"
+    }
+  ],
+  "returns": "Return code as defined by swConnectedSyncSettingsErrors_e",
+  "remarks": "In order to use this method, you must be logged into SOLIDWORKS Design Augmented.\nTo turn on auto synchronization of settings, call:\nISldWorks::SetUserPreferenceToggle\n(\nswUserPreferenceToggle_e\n.swAutomaticSyncSettings, True)\nand then call one, two, or all three of:\nISldWorks::SetUserPreferenceToggle(swUserPreferenceToggle_e.swAutoSyncSettingsToInclude_SystemOptions, True)\nISldWorks::SetUserPreferenceToggle(swUserPreferenceToggle_e.swAutoSyncSettingsToInclude_FileLocations, True)\nISldWorks::SetUserPreferenceToggle(swUserPreferenceToggle_e.swAutoSyncSettingsToInclude_Customizations, True)\nTo get the timestamp of the last synchronization, call\nISldWorks::GetUserPreferenceStringValue\n(\nswUserPreferenceStringValue_e\n.swLastSynchronizationTimeStamp).",
+  "examples": [],
+  "related": [
+    "ISldWorks.UploadToMySolidWorksSettings"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchManager",
+    "member": "SketchReplace",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "MakeConstruction",
+        "type": "System.Boolean",
+        "description": "True to convert the replaced sketch entity to construction geometry, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [],
+    "keywords": [
+      "sketchreplace",
+      "isketchmanager",
+      "sketch",
+      "manager",
+      "replace",
+      "make",
+      "construction",
+      "boolean"
+    ]
+  },
+  "title": "ISketchManager.SketchReplace",
+  "description": "Obsolete. Superseded by ISketchManager::SketchReplace2.",
+  "signature": "System.Boolean SketchReplace( \n   System.Boolean\nMakeConstruction\n)",
+  "parameters": [
+    {
+      "name": "MakeConstruction",
+      "type": "System.Boolean",
+      "description": "True to convert the replaced sketch entity to construction geometry, false to not"
+    }
+  ],
+  "returns": "True if the the sketch entity is successfully replaced, false if not",
+  "remarks": "Before calling this method, call\nIModelDocExtension::SelectByID2\nwith Append set to true to select each of the following entities:\nSketch entity to be replaced.\nReplacement sketch entity that does not reference downstream geometry or have references outside of the sketch.\nAfter calling this method, call\nISketchManager::InsertSketch\nto rebuild the model with the replacement sketch.",
+  "examples": [],
+  "related": []
+}

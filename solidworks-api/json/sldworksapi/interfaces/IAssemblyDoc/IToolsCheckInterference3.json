@@ -1,0 +1,113 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "IToolsCheckInterference3",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NumComponents",
+        "type": "System.Int32",
+        "description": "Number of components to check"
+      },
+      {
+        "name": "LpComponents",
+        "type": "Component2",
+        "description": "Array of components being checked for interference"
+      },
+      {
+        "name": "CoincidentInterference",
+        "type": "System.Boolean",
+        "description": "True to check for coincident interference, false to not"
+      },
+      {
+        "name": "PComp",
+        "type": "System.Object",
+        "description": "Array of components where interference has been found"
+      },
+      {
+        "name": "PFace",
+        "type": "System.Object",
+        "description": "Array of faces where interference has been found"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.ToolsCheckInterference2",
+      "IInterference",
+      "IInterferenceDetectionMgr",
+      "IModeler.CheckInterference3",
+      "IModeler.ICheckInterference3",
+      "IModeler.ICheckInterferenceCount3"
+    ],
+    "keywords": [
+      "itoolscheckinterference3",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "tools",
+      "check",
+      "interference3",
+      "num",
+      "components",
+      "int32",
+      "lp",
+      "component2",
+      "coincident",
+      "interference",
+      "boolean",
+      "comp",
+      "object",
+      "face",
+      "void"
+    ]
+  },
+  "title": "IAssemblyDoc.IToolsCheckInterference3",
+  "description": "Obsolete.",
+  "signature": "void IToolsCheckInterference3( \n   System.Int32\nNumComponents\n,\n   ref Component2\nLpComponents\n,\n   System.Boolean\nCoincidentInterference\n,\n   out System.Object\nPComp\n,\n   out System.Object\nPFace\n)",
+  "parameters": [
+    {
+      "name": "NumComponents",
+      "type": "System.Int32",
+      "description": "Number of components to check"
+    },
+    {
+      "name": "LpComponents",
+      "type": "Component2",
+      "description": "Array of components being checked for interference"
+    },
+    {
+      "name": "CoincidentInterference",
+      "type": "System.Boolean",
+      "description": "True to check for coincident interference, false to not"
+    },
+    {
+      "name": "PComp",
+      "type": "System.Object",
+      "description": "Array of components where interference has been found"
+    },
+    {
+      "name": "PFace",
+      "type": "System.Object",
+      "description": "Array of faces where interference has been found"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method returns:\nan empty array of faces for components that have coincident faces that touch.\nan array of components for components that touch.\nFor each face that intersects, there is a corresponding component.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.ToolsCheckInterference2",
+    "IInterference",
+    "IInterferenceDetectionMgr",
+    "IModeler.CheckInterference3",
+    "IModeler.ICheckInterference3",
+    "IModeler.ICheckInterferenceCount3"
+  ]
+}

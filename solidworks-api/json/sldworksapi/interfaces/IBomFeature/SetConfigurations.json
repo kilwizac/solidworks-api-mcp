@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBomFeature",
+    "member": "SetConfigurations",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "OnlyVisible",
+        "type": "System.Boolean",
+        "description": "Indicator of the contents of the arrays (see Remarks )"
+      },
+      {
+        "name": "Visible",
+        "type": "System.Object",
+        "description": "Array of Booleans indicating the visibility of the configurations"
+      },
+      {
+        "name": "Names",
+        "type": "System.Object",
+        "description": "Array of strings of the names of the configurations"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "features"
+    ],
+    "related": [
+      "IBomFeature.GetConfigurations",
+      "IBomFeature.ISetConfigurations"
+    ],
+    "keywords": [
+      "bill",
+      "materials",
+      "configurations",
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "setconfigurations",
+      "ibomfeature",
+      "bom",
+      "feature",
+      "only",
+      "visible",
+      "boolean",
+      "object",
+      "names",
+      "insert",
+      "table",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IBomFeature.SetConfigurations",
+  "description": "Sets the configurations used in this BOM table.",
+  "signature": "System.Boolean SetConfigurations( \n   System.Boolean\nOnlyVisible\n,\n   System.Object\nVisible\n,\n   System.Object\nNames\n)",
+  "parameters": [
+    {
+      "name": "OnlyVisible",
+      "type": "System.Boolean",
+      "description": "Indicator of the contents of the arrays (see Remarks )"
+    },
+    {
+      "name": "Visible",
+      "type": "System.Object",
+      "description": "Array of Booleans indicating the visibility of the configurations"
+    },
+    {
+      "name": "Names",
+      "type": "System.Object",
+      "description": "Array of strings of the names of the configurations"
+    }
+  ],
+  "returns": "True if configurations are set, false if not",
+  "remarks": "Although this method works on all styles of BOM tables (top-level only, parts-only, indented subassemblies), it is only necessary for top-level only style tables.\nFor the other style tables, where only a single configuration is shown at a time, using\nIBomFeature::Configuration\nis simpler and more efficient.\nNOTE:\nIf the\nRestrict top-level only BOMs to one configuration\noption on the\nDocument Properties > Tables > Bill of Materials\ndialog or\nIModelDocExtension::GetUserPreferenceToggle\n(\nswUserPreferenceToggle_e\n.swOneConfigOnlyTopLevelBom) returns true, then only the active or default configuration of the drawing view is inserted in the BOM.\nThe view associated with this BOM can contain a model with multiple configurations. For a top-level only style BOM table, there can be several Quantity columns, each showing the results for a different configuration.\nFor the other styles of BOM tables, only a particular configuration can be shown in the table, and that configuration can be changed. To determine the BOM table style, use the\nIBomFeature::TableType\nproperty.\nIf OnlyVisible is...\nThen Names contains the names of...\nAnd Visible...\nTrue\nOnly the configurations currently shown in the BOM table.\nFor a top-level only style BOM table, this could be any number of configurations. For the other styles of BOM tables, it is one configuration name.\nCan be passed in as null or nothing.\nIf it is passed in as non-null or non-nothing, then the array contains true for all items.\nFalse\nAll configurations available.\nContains Booleans that correspond to each item in Names indicating if that particular configuration is shown in the BOM table or not.\nTo get the number of configurations, use\nIBomFeature::GetConfigurationCount\n.",
+  "examples": [
+    {
+      "title": "Insert BOM Table (C#)",
+      "href": "Insert_BOM_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert BOM Table (VB.NET)",
+      "href": "Insert_BOM_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert BOM Table (VBA)",
+      "href": "Insert_BOM_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBomFeature.GetConfigurations",
+    "IBomFeature.ISetConfigurations"
+  ]
+}

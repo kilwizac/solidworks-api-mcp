@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDimension",
+    "member": "ReferencePoints",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "documents"
+    ],
+    "related": [
+      "IDimension.GetReferencePointsCount",
+      "IDimension.IGetReferencePoints",
+      "IDimension.ISetReferencePoints"
+    ],
+    "keywords": [
+      "referencepoints",
+      "idimension",
+      "dimension",
+      "reference",
+      "points",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IDimension.ReferencePoints",
+  "description": "Gets or sets the reference points for this dimension.",
+  "signature": "System.Object ReferencePoints {get; set;}",
+  "parameters": [],
+  "returns": "Reference points (see Remarks )",
+  "remarks": "The returned objects, the reference points, are actually\nIMathPoint\nobjects.\nReference point 1 and reference point 2 are valid for linear dimensions. Reference point 3 is the vertex for angular dimensions. This property does not distinguish between linear or angular dimensions or other types of dimensions. Three reference points are always returned.\nNOTE:\nWhen regenerating a\nmacro feature\n, this property gets and sets the reference points of a display dimension (\nIDisplayDimension\nobject).\nIn all other cases, this property gets and sets the reference points of a dimension (\nIDimension\nobject).",
+  "examples": [],
+  "related": [
+    "IDimension.GetReferencePointsCount",
+    "IDimension.IGetReferencePoints",
+    "IDimension.ISetReferencePoints"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IImportDxfDwgData",
+    "member": "GetPaperSize",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Sheet",
+        "type": "System.String",
+        "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+      },
+      {
+        "name": "Size",
+        "type": "System.Int32",
+        "description": "Size as defined in swDwgPaperSizes_e"
+      },
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "If Size is swDwgPapersUserDefined, then the height of the paper in meters"
+      },
+      {
+        "name": "Width",
+        "type": "System.Double",
+        "description": "If Size is swDwgPapersUserDefined, then the width of the paper in meters"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "file-io"
+    ],
+    "related": [
+      "IImportDxfDwgData.SetPaperSize"
+    ],
+    "keywords": [
+      "getpapersize",
+      "iimportdxfdwgdata",
+      "import",
+      "dxf",
+      "dwg",
+      "data",
+      "paper",
+      "size",
+      "sheet",
+      "string",
+      "int32",
+      "height",
+      "double",
+      "width",
+      "void"
+    ]
+  },
+  "title": "IImportDxfDwgData.GetPaperSize",
+  "description": "Gets the size of the paper for the drawing.",
+  "signature": "void GetPaperSize( \n   System.String\nSheet\n,\n   out System.Int32\nSize\n,\n   out System.Double\nHeight\n,\n   out System.Double\nWidth\n)",
+  "parameters": [
+    {
+      "name": "Sheet",
+      "type": "System.String",
+      "description": "Sheet (layout) name of the input file or an empty string for all sheets"
+    },
+    {
+      "name": "Size",
+      "type": "System.Int32",
+      "description": "Size as defined in swDwgPaperSizes_e"
+    },
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "If Size is swDwgPapersUserDefined, then the height of the paper in meters"
+    },
+    {
+      "name": "Width",
+      "type": "System.Double",
+      "description": "If Size is swDwgPapersUserDefined, then the width of the paper in meters"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method only supports importing to a drawing; it does not support importing to a part sketch.",
+  "examples": [],
+  "related": [
+    "IImportDxfDwgData.SetPaperSize"
+  ]
+}

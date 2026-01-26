@@ -1,0 +1,137 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Smart Pointers</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=MS-HKWD content="Smart pointers">
+<meta name=MS-HKWD content=CComPtr>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=621>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API 
+ Help</span></h1>
+
+<h1>Smart Pointers</h1>
+
+<p>Microsoft's Active Template Library (ATL) contains helper classes that 
+ simplify the use of commonly used COM interfaces, components, and structures, 
+ such as BSTRs, interface pointers, and variants.</p>
+
+<p>The ATL <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CComPtr</span> 
+ helper class provides a smart pointer wrapper around COM interface pointers. 
+ In this context, a smart pointer is a pointer that properly releases its 
+ reference counts toward COM interfaces when it goes out of scope. </p>
+
+<p>To instantiate the interface types that you will be accessing, you use 
+ <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CComPtr</span> 
+ with the interface type. For example:</p>
+
+<p style="font-family: 'Courier New', monospace;
+			margin-left: 48px;
+			font-size: 10pt;">CComPtr&lt;ISldWorks&gt; swApp</p>
+
+<p style="font-family: 'Courier New', monospace;
+			margin-left: 48px;
+			font-size: 10pt;">CComPtr&lt;IModelDoc2&gt; swModel</p>
+
+<p style="font-family: 'Courier New', monospace;
+			margin-left: 48px;
+			font-size: 10pt;">CComPtr&lt;ISelectionMgr&gt; swSelMgr</p>
+
+<p>You can assign an interface pointer to your smart pointer in any of 
+ the following ways:</p>
+
+<ul style="list-style: disc;"
+	type=disc>
+	
+	<li class=kadov-p><p>Call the smart pointer's <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CoCreateInstance</span> 
+ member function.</p></li>
+	
+	<li class=kadov-p><p>Pass the interface's raw interface pointer to 
+ <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CoCreateInstance</span><span 
+ style="font-family: 'Courier New', monospace;">.</span></p></li>
+	
+	<li class=kadov-p><p>Call the smart pointer's <span style="font-family: 'Courier New', monospace; font-size: 10pt;">Attach</span> 
+ member function to assign a previously created interface pointer to the 
+ smart pointer. This does not cause the smart pointer to call the smart 
+ pointer's <span style="font-family: 'Courier New', monospace; font-size: 10pt;">AddRef</span> 
+ function through the new interface pointer.</p></li>
+	
+	<li class=kadov-p><p>Simple assignment through the smart pointer's 
+ assignment operator causes the smart pointer to call <span style="font-family: 'Courier New', monospace; font-size: 10pt;">AddRef</span> 
+ through the new interface pointer.</p></li>
+</ul>
+
+<p>Calling the smart pointer's <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CoCreateInstance</span> 
+ member function is the simplest way to create a new interface pointer. 
+ For example, to attach to the currently running instance of the <span 
+ style="font-weight: bold;">sldworks.exe</span> COM server on your local 
+ computer, use:</p>
+
+<p style="font-family: 'Courier New', monospace;
+			margin-left: 48px;
+			font-size: 10pt;">hres = swApp.CoCreateInstance(__uuidof(SldWorks), 
+ NULL, CLSCTX_LOCAL_SERVER);</p>
+
+<p>Like most other smart pointers, <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CComPtr</span> 
+ overrides C++ operators to make the smart pointers act like normal C++ 
+ pointers.</p>
+
+<p>To set a smart pointer to the value of a pointer returned from a function, 
+ you can use the <span style="font-family: 'Courier New', monospace;">&amp;</span> 
+ operator, which works just like a non-smart pointer. If you need to decrement 
+ a reference count, use the smart pointer's <span style="font-family: 'Courier New', monospace; font-size: 10pt;">Release</span> 
+ member function.</p>
+
+<p>To use ATL helper classes in your program, include <span style="font-weight: bold;">atlbase.h</span> 
+ in <span style="font-weight: bold;">stdafx.h.</span> For an example of 
+ using smart pointers, see  
+ <a href="sldworksAPI.chm::/Access_Assembly_Example_CPlusPlus_COM.htm">Access 
+ Assembly Example (C++ COM)</a>. </p>
+
+<p>For more information about using smart pointers with container classes, see
+<a href="STL_Container_Classes_and_Smart_Pointers.htm">STL Container Classes and Smart Pointers</a>.</p>
+<p>For more information about <span style="font-family: 'Courier New', monospace; font-size: 10pt;">CComPtr</span> 
+ and smart pointers, see MSDN.</p>
+
+<p><span class=expandspot>Source: </span>Williams, Mickey and Bennett, 
+ David. <span style="font-style: italic;">Visual C++ Unleashed</span>. 
+ Sams Publishing, 2000.</p>
+
+<p style="font-family: 'Courier New', monospace; margin-left: 48px;">&nbsp;</p>
+
+<p style="font-family: 'Courier New', monospace;">&nbsp;</p>
+
+</body>
+
+</html>

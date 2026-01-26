@@ -1,0 +1,149 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "MoveRotateLiveSectionPlane",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Feat",
+        "type": "System.String",
+        "description": "Name of the Live Section Plane as it appears in the FeatureManager design tree"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int16",
+        "description": "0 = Move only, then (XorDeltaX, YorDeltaY, and ZorDeltaZ) is delta vector 1 = Rotate only, then (XorDeltaX, YorDeltaY, and ZorDeltaZ) is the pivot point for rotation, (axisX, axisY, axisZ) is rotating axis"
+      },
+      {
+        "name": "XorDeltaX",
+        "type": "System.Double",
+        "description": "Delta X"
+      },
+      {
+        "name": "YorDeltaY",
+        "type": "System.Double",
+        "description": "Delta Y"
+      },
+      {
+        "name": "ZorDeltaZ",
+        "type": "System.Double",
+        "description": "Delta Z"
+      },
+      {
+        "name": "Axisx",
+        "type": "System.Double",
+        "description": "X axis"
+      },
+      {
+        "name": "Axisy",
+        "type": "System.Double",
+        "description": "Y axis"
+      },
+      {
+        "name": "Axisz",
+        "type": "System.Double",
+        "description": "Z axis"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Value by to rotate the Live Section Plane"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertLiveSectionPlane"
+    ],
+    "keywords": [
+      "live",
+      "section",
+      "planes",
+      "see",
+      "also",
+      "irefplane",
+      "moverotatelivesectionplane",
+      "ifeaturemanager",
+      "feature",
+      "manager",
+      "move",
+      "rotate",
+      "plane",
+      "feat",
+      "string",
+      "type",
+      "int16",
+      "xor",
+      "delta",
+      "double",
+      "yor",
+      "zor",
+      "axisx",
+      "axisy",
+      "axisz",
+      "angle",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.MoveRotateLiveSectionPlane",
+  "description": "Moves or rotates the selected Live Section Plane using the selected Live Section Plane and its manipulator.",
+  "signature": "System.Boolean MoveRotateLiveSectionPlane( \n   System.String\nFeat\n,\n   System.Int16\nType\n,\n   System.Double\nXorDeltaX\n,\n   System.Double\nYorDeltaY\n,\n   System.Double\nZorDeltaZ\n,\n   System.Double\nAxisx\n,\n   System.Double\nAxisy\n,\n   System.Double\nAxisz\n,\n   System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "Feat",
+      "type": "System.String",
+      "description": "Name of the Live Section Plane as it appears in the FeatureManager design tree"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int16",
+      "description": "0 = Move only, then (XorDeltaX, YorDeltaY, and ZorDeltaZ) is delta vector 1 = Rotate only, then (XorDeltaX, YorDeltaY, and ZorDeltaZ) is the pivot point for rotation, (axisX, axisY, axisZ) is rotating axis"
+    },
+    {
+      "name": "XorDeltaX",
+      "type": "System.Double",
+      "description": "Delta X"
+    },
+    {
+      "name": "YorDeltaY",
+      "type": "System.Double",
+      "description": "Delta Y"
+    },
+    {
+      "name": "ZorDeltaZ",
+      "type": "System.Double",
+      "description": "Delta Z"
+    },
+    {
+      "name": "Axisx",
+      "type": "System.Double",
+      "description": "X axis"
+    },
+    {
+      "name": "Axisy",
+      "type": "System.Double",
+      "description": "Y axis"
+    },
+    {
+      "name": "Axisz",
+      "type": "System.Double",
+      "description": "Z axis"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Value by to rotate the Live Section Plane"
+    }
+  ],
+  "returns": "True if the Live Section Plane moves or rotates, false if not",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertLiveSectionPlane"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "GetFirstAnnotation2",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "dimensions",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.IGetFirstAnnotation2"
+    ],
+    "keywords": [
+      "annotation",
+      "see",
+      "also",
+      "iannotation",
+      "first",
+      "getfirstannotation2",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "annotation2",
+      "object",
+      "display",
+      "dimensions",
+      "gtols",
+      "surface",
+      "finish",
+      "symbols",
+      "vba",
+      "dimxpert",
+      "feature",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDoc2.GetFirstAnnotation2",
+  "description": "Gets the first annotation in the model.",
+  "signature": "System.Object GetFirstAnnotation2()",
+  "parameters": [],
+  "returns": "First annotation",
+  "remarks": "For parts and assemblies, this method returns the first\nIAnnotation\nobject in the model. For drawings, access the annotations using the\nIView::GetFirstAnnotation3\nmethod.\nA dimension becomes suppressed or hidden when you specifically select a dimension and hide it, or when you select a feature and you select to hide all dimensions. If you need to filter out these dimensions, use\nIAnnotation::Visible\nto check that status.\nNOTE:\nThe difference between the obsoleted IModelDoc2::GetFirstAnnotation and this method, IModelDoc2::GetFirstAnnotation2, is that IModelDoc2::GetFirstAnnotation2 retrieves any display dimension, including suppressed, hidden, or dangling dimensions.\nTo get the next annotation in the model, call\nIAnnotation::GetNext3\n.",
+  "examples": [
+    {
+      "title": "Get Display Dimensions, GTols, and Surface-finish Symbols (VBA)",
+      "href": "Get_Display_Dimensions,_Gtols,_and_Surface-Finish_Symbols_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (C#)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VB.NET)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get DimXpert Display Dimensions and Feature (VBA)",
+      "href": "Get_DimXpert_Display_Dimensions_and_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDoc2.IGetFirstAnnotation2"
+  ]
+}

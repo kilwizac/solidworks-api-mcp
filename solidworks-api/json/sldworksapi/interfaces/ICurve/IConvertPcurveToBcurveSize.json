@@ -1,0 +1,139 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICurve",
+    "member": "IConvertPcurveToBcurveSize",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Dim",
+        "type": "System.Int32",
+        "description": "Dimension of the curve: 3 = nonrational 4 = rational"
+      },
+      {
+        "name": "Order",
+        "type": "System.Int32",
+        "description": "Order of the curve; minimum is 2 (linear)"
+      },
+      {
+        "name": "Nsegs",
+        "type": "System.Int32",
+        "description": "Number of segments in the curve; must be at least 1"
+      },
+      {
+        "name": "Coeffs",
+        "type": "System.Double",
+        "description": "Array of coefficients"
+      },
+      {
+        "name": "Basis",
+        "type": "System.Int32",
+        "description": "0; not currently used"
+      },
+      {
+        "name": "Xform",
+        "type": "System.Double",
+        "description": "Transformation matrix to apply after conversion to b-curve"
+      },
+      {
+        "name": "ScaleFactor",
+        "type": "System.Double",
+        "description": "Units conversion factor to apply after conversion to b-curve"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ICurve.ConvertArcToBcurve",
+      "ICurve.ConvertLineToBcurve",
+      "ICurve.ExtentCurve",
+      "ICurve.GetBCurveParams",
+      "ICurve.IConvertArcToBcurveSize",
+      "ICurve.IConvertLineToBcurveSize",
+      "ICurve.IGetBCurveParams",
+      "ICurve.IGetBCurveParamsSize2",
+      "ICurve.IsBcurve",
+      "ICurve.MakeBsplineCurve",
+      "ICurve.SimplifyBCurve"
+    ],
+    "keywords": [
+      "iconvertpcurvetobcurvesize",
+      "icurve",
+      "curve",
+      "convert",
+      "pcurve",
+      "bcurve",
+      "size",
+      "dim",
+      "int32",
+      "order",
+      "nsegs",
+      "coeffs",
+      "double",
+      "basis",
+      "xform",
+      "scale",
+      "factor"
+    ]
+  },
+  "title": "ICurve.IConvertPcurveToBcurveSize",
+  "description": "Creates a b-curve from piecewise data.",
+  "signature": "System.Int32 IConvertPcurveToBcurveSize( \n   System.Int32\nDim\n,\n   System.Int32\nOrder\n,\n   System.Int32\nNsegs\n,\n   ref System.Double\nCoeffs\n,\n   System.Int32\nBasis\n,\n   ref System.Double\nXform\n,\n   System.Double\nScaleFactor\n)",
+  "parameters": [
+    {
+      "name": "Dim",
+      "type": "System.Int32",
+      "description": "Dimension of the curve: 3 = nonrational 4 = rational"
+    },
+    {
+      "name": "Order",
+      "type": "System.Int32",
+      "description": "Order of the curve; minimum is 2 (linear)"
+    },
+    {
+      "name": "Nsegs",
+      "type": "System.Int32",
+      "description": "Number of segments in the curve; must be at least 1"
+    },
+    {
+      "name": "Coeffs",
+      "type": "System.Double",
+      "description": "Array of coefficients"
+    },
+    {
+      "name": "Basis",
+      "type": "System.Int32",
+      "description": "0; not currently used"
+    },
+    {
+      "name": "Xform",
+      "type": "System.Double",
+      "description": "Transformation matrix to apply after conversion to b-curve"
+    },
+    {
+      "name": "ScaleFactor",
+      "type": "System.Double",
+      "description": "Units conversion factor to apply after conversion to b-curve"
+    }
+  ],
+  "returns": "Indicates that conversion succeeded or failed",
+  "remarks": "Dimension of coefficient vectors dim:\nFor rational curves dim = 4.\nFor non-rational curves dim = 3.\nOrder of each segment of the curve order:\nThe order of the curve = degree + 1.\nThe minimum order is 2.\nNumber of segments in the curve nseg:\nThere must be at least one segment (nseg >= 1).\nAdjacent segments must meet.\nCoefficient data coeffs:\nContains order * nseg vectors of dimension dim. If dim = 3, then the vectors are 3-D vectors giving the x, y and z components. If dim = 4, then each vector has a weight (w) associated with it, and x, y, z and w components are supplied for each vector. The weights supplied must be greater than 0.\nThe coefficients are supplied in order, segment by segment.\nThe interpretation of the coefficients depends on the representation method chosen; this is determined by the value of the argument basis.\nRepresentation method basis:\nThe expressions for each segment of the B-curve P(t) in the various representations are shown next. For generality, the rational form is given.\nThe simplification to the non-rational form can be obtained by setting both the weights and the denominator equal to 1.0\nPolynomial coefficients:\nThe curve equation is given by a rational polynomial of order 'order':\nn\nn\n--\ni\n/ --\ni\nP(t)\n=\n>\nw\nA\nt\n/\n>\nw\nt\n--\ni\ni\n/\n--\ni\ni=0\ni=0\nwhere n = order-1\nA = polynomial coefficient\ni\nw = weight for A\ni\ni\nThe polynomial coefficients are supplied starting with the constant\nterm and ending with the term of highest degree.",
+  "examples": [],
+  "related": [
+    "ICurve.ConvertArcToBcurve",
+    "ICurve.ConvertLineToBcurve",
+    "ICurve.ExtentCurve",
+    "ICurve.GetBCurveParams",
+    "ICurve.IConvertArcToBcurveSize",
+    "ICurve.IConvertLineToBcurveSize",
+    "ICurve.IGetBCurveParams",
+    "ICurve.IGetBCurveParamsSize2",
+    "ICurve.IsBcurve",
+    "ICurve.MakeBsplineCurve",
+    "ICurve.SimplifyBCurve"
+  ]
+}

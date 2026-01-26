@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetLineAtIndex2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired line where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetLineCount",
+      "IDisplayData.IGetLineAtIndex2"
+    ],
+    "keywords": [
+      "getlineatindex2",
+      "idisplaydata",
+      "display",
+      "data",
+      "line",
+      "index2",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetLineAtIndex2",
+  "description": "Obsolete. Superseded by DislayData::GetLineAtIndex3.",
+  "signature": "System.Object GetLineAtIndex2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired line where the index begins at zero"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\ncolor, lineType, Unused, Unused, startPt[3], endPt[3]\n]\nwhere:\ncolor\nCOLORREF returned as an integer; return value can be 0 or -1 for default color\nlineType\nLine type as defined in\nswLineTypes_e\nstartPt[3]\nx, y, z\nline start point\nendPt[3]\nx, y, z line end point",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetLineCount",
+    "IDisplayData.IGetLineAtIndex2"
+  ]
+}

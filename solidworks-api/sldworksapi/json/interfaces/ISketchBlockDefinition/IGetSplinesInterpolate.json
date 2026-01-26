@@ -1,0 +1,64 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISketchBlockDefinition",
+    "member": "IGetSplinesInterpolate",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "ArraySize",
+        "type": "System.Int32",
+        "description": "Number of elements in the return array"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "sketches"
+    ],
+    "related": [
+      "ISketchBlockDefinition.GetSplineCount",
+      "ISketchBlockDefinition.GetSplineParams",
+      "ISketchBlockDefinition.GetSplinesInterpolate",
+      "ISketchBlockDefinition.IGetSplineParams"
+    ],
+    "keywords": [
+      "blocks",
+      "see",
+      "also",
+      "isketchblockdefinition",
+      "isketchblockinstance",
+      "interfaces",
+      "splines",
+      "igetsplinesinterpolate",
+      "sketch",
+      "block",
+      "definition",
+      "interpolate",
+      "array",
+      "size",
+      "int32",
+      "double"
+    ]
+  },
+  "title": "ISketchBlockDefinition.IGetSplinesInterpolate",
+  "description": "Gets all of the parameers of the splines by interpolation instead of by tessellation as is done by ISketch::GetSplines2 and ISketch::IGetSplines2.",
+  "signature": "System.Double IGetSplinesInterpolate( \n   System.Int32\nArraySize\n)",
+  "parameters": [
+    {
+      "name": "ArraySize",
+      "type": "System.Int32",
+      "description": "Number of elements in the return array"
+    }
+  ],
+  "returns": "",
+  "remarks": "Call\nISketchBlockDefinition::GetSplineInterpolateCount\nbefore calling this method to get the value for ArraySize.\nThe return value is an array of doubles formatted as:\n[\n[NumSplinePoints, [x, y, z] ],\n]\nThis complete set of data repeats itself for each spline found in the sketch block definition. For each spline, the array returned contains the number of spline points in the spline, and the X,Y,Z value for each of those points.\nThe\n[x,y,z]\nparameter is an array of NumSplinePoints. For example, if your sketch block definition has two splines and each spline has three points, then the data would be in the following format:\n[\n3, x1_1, y1_1, z1_1, x2_1, y2_1, z2_1, x3_1, y3_1, z3_1, 3, x1_2, y1_2, z1_2, x2_2, y2_2, z2_2, x3_2, y3_2, z3_2\n]\nThe\n[x,y,z]\npoints for each spline are the same points used to generate the spline.",
+  "examples": [],
+  "related": [
+    "ISketchBlockDefinition.GetSplineCount",
+    "ISketchBlockDefinition.GetSplineParams",
+    "ISketchBlockDefinition.GetSplinesInterpolate",
+    "ISketchBlockDefinition.IGetSplineParams"
+  ]
+}

@@ -1,0 +1,54 @@
+---
+type: method
+interface: IProjectionCurveFeatureData
+member: ReleaseSelectionAccess
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+  - selections
+related: []
+keywords:
+  - releaseselectionaccess
+  - iprojectioncurvefeaturedata
+  - projection
+  - curve
+  - feature
+  - data
+  - release
+  - selection
+  - access
+  - void
+---
+
+# IProjectionCurveFeatureData.ReleaseSelectionAccess
+
+Releases access to the selections that created this projected curve.
+
+## Signature
+
+```csharp
+void ReleaseSelectionAccess()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## Remarks
+
+IProjectionCurveFeatureData::AccessSelections
+and
+IProjectionCurveFeatureData::IAccessSelections2
+put the model in a rollback state to allow access to the selections that define the feature.
+Use this method to restore the rollback state if you did not modify the feature, or use
+IFeature::ModifyDefinition
+or
+IFeature::IModifyDefinition2
+if you did modify the feature.

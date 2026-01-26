@@ -1,0 +1,222 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertFlexFeature",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "RotX",
+        "type": "System.Double",
+        "description": "x coordinate for the rotation axis"
+      },
+      {
+        "name": "RotY",
+        "type": "System.Double",
+        "description": "y coordinate for the rotation axis"
+      },
+      {
+        "name": "RotZ",
+        "type": "System.Double",
+        "description": "z coordinate for the rotation axis"
+      },
+      {
+        "name": "TanX",
+        "type": "System.Double",
+        "description": "x coordinate for the tangent axis"
+      },
+      {
+        "name": "TanY",
+        "type": "System.Double",
+        "description": "y coordinate for the tangent axis"
+      },
+      {
+        "name": "TanZ",
+        "type": "System.Double",
+        "description": "z coordinate for the tangent axis"
+      },
+      {
+        "name": "RadX",
+        "type": "System.Double",
+        "description": "x coordinate for the radius axis"
+      },
+      {
+        "name": "RadY",
+        "type": "System.Double",
+        "description": "y coordinate for the radius axis"
+      },
+      {
+        "name": "RadZ",
+        "type": "System.Double",
+        "description": "z coordinate for the radius axis"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle"
+      },
+      {
+        "name": "PivotX",
+        "type": "System.Double",
+        "description": "x coordinate for the pivot triad reference"
+      },
+      {
+        "name": "PivotY",
+        "type": "System.Double",
+        "description": "y coordinate for the pivot triad reference"
+      },
+      {
+        "name": "PivotZ",
+        "type": "System.Double",
+        "description": "z coordinate for the pivot triad reference"
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "-1 =None 0 = Bending 1 = Twisting 2 = Tapering 3 = Stretching 4 = Experimental"
+      },
+      {
+        "name": "LeftTrim",
+        "type": "System.Double",
+        "description": "Left trimming distance"
+      },
+      {
+        "name": "RightTrim",
+        "type": "System.Double",
+        "description": "Right trimming distance"
+      },
+      {
+        "name": "HardEdges",
+        "type": "System.Boolean",
+        "description": "True to embed edges where the trim planes intersect the body, false to create smoother continuous faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "flexes",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "flex",
+      "insertflexfeature",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "rot",
+      "double",
+      "tan",
+      "rad",
+      "angle",
+      "pivot",
+      "type",
+      "int32",
+      "left",
+      "trim",
+      "right",
+      "hard",
+      "edges",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.InsertFlexFeature",
+  "description": "Inserts a Flex feature using the selected solid or surface body.",
+  "signature": "Feature InsertFlexFeature( \n   System.Double\nRotX\n,\n   System.Double\nRotY\n,\n   System.Double\nRotZ\n,\n   System.Double\nTanX\n,\n   System.Double\nTanY\n,\n   System.Double\nTanZ\n,\n   System.Double\nRadX\n,\n   System.Double\nRadY\n,\n   System.Double\nRadZ\n,\n   System.Double\nAngle\n,\n   System.Double\nPivotX\n,\n   System.Double\nPivotY\n,\n   System.Double\nPivotZ\n,\n   System.Int32\nType\n,\n   System.Double\nLeftTrim\n,\n   System.Double\nRightTrim\n,\n   System.Boolean\nHardEdges\n)",
+  "parameters": [
+    {
+      "name": "RotX",
+      "type": "System.Double",
+      "description": "x coordinate for the rotation axis"
+    },
+    {
+      "name": "RotY",
+      "type": "System.Double",
+      "description": "y coordinate for the rotation axis"
+    },
+    {
+      "name": "RotZ",
+      "type": "System.Double",
+      "description": "z coordinate for the rotation axis"
+    },
+    {
+      "name": "TanX",
+      "type": "System.Double",
+      "description": "x coordinate for the tangent axis"
+    },
+    {
+      "name": "TanY",
+      "type": "System.Double",
+      "description": "y coordinate for the tangent axis"
+    },
+    {
+      "name": "TanZ",
+      "type": "System.Double",
+      "description": "z coordinate for the tangent axis"
+    },
+    {
+      "name": "RadX",
+      "type": "System.Double",
+      "description": "x coordinate for the radius axis"
+    },
+    {
+      "name": "RadY",
+      "type": "System.Double",
+      "description": "y coordinate for the radius axis"
+    },
+    {
+      "name": "RadZ",
+      "type": "System.Double",
+      "description": "z coordinate for the radius axis"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle"
+    },
+    {
+      "name": "PivotX",
+      "type": "System.Double",
+      "description": "x coordinate for the pivot triad reference"
+    },
+    {
+      "name": "PivotY",
+      "type": "System.Double",
+      "description": "y coordinate for the pivot triad reference"
+    },
+    {
+      "name": "PivotZ",
+      "type": "System.Double",
+      "description": "z coordinate for the pivot triad reference"
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "-1 =None 0 = Bending 1 = Twisting 2 = Tapering 3 = Stretching 4 = Experimental"
+    },
+    {
+      "name": "LeftTrim",
+      "type": "System.Double",
+      "description": "Left trimming distance"
+    },
+    {
+      "name": "RightTrim",
+      "type": "System.Double",
+      "description": "Right trimming distance"
+    },
+    {
+      "name": "HardEdges",
+      "type": "System.Boolean",
+      "description": "True to embed edges where the trim planes intersect the body, false to create smoother continuous faces"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "",
+  "examples": [],
+  "related": []
+}

@@ -1,0 +1,62 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "IRelease3rdPartyStorageStore",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "SubStorageName",
+        "type": "System.String",
+        "description": "Name of the third-party storage"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "parts",
+      "ui"
+    ],
+    "related": [
+      "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+      "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+      "DPartDocEvents_LoadFromStorageNotifyEventHandler"
+    ],
+    "keywords": [
+      "stream",
+      "storage",
+      "irelease3rdpartystoragestore",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "release3rd",
+      "party",
+      "store",
+      "sub",
+      "name",
+      "string",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.IRelease3rdPartyStorageStore",
+  "description": "Releases the specified third-party storage in this document.",
+  "signature": "System.Boolean IRelease3rdPartyStorageStore( \n   System.String\nSubStorageName\n)",
+  "parameters": [
+    {
+      "name": "SubStorageName",
+      "type": "System.String",
+      "description": "Name of the third-party storage"
+    }
+  ],
+  "returns": "True if the data is released, false if not",
+  "remarks": "You can use this method with\nIModelDocExtension::IGet3rdPartyStorageStore\n. You must use it if you are not using the LoadFromStorageStoreNotify event. You must call this method when the call to IModelDocExtension::IGet3rdPartyStorageStore returns a NULL stream.\nNOTE\n:\nIf you are using serialization, then be careful with the standard MFC macros; otherwise, you can get messages like \"\nUnexpected File Format\n\" after your application is unloaded. One way of using IMPLEMENT_SERIAL is:\nIMPLEMENT_SERIAL( CCustomAttr, CObject, VERSIONABLE_SCHEMA|0 )",
+  "examples": [],
+  "related": [
+    "DAssemblyDocEvents_LoadFromStorageNotifyEventHandler",
+    "DDrawingDocEvents_LoadFromStorageNotifyEventHandler",
+    "DPartDocEvents_LoadFromStorageNotifyEventHandler"
+  ]
+}

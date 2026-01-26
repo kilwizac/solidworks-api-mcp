@@ -1,0 +1,68 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandTab",
+    "member": "AddSeparator",
+    "returns": "CommandTabBox",
+    "parameters": [
+      {
+        "name": "CommandTabBoxIn",
+        "type": "CommandTabBox",
+        "description": "CommandManager tab box to which to add the separator"
+      },
+      {
+        "name": "CommandID",
+        "type": "System.Int32",
+        "description": "Button before which to place the separator (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "addseparator",
+      "icommandtab",
+      "command",
+      "tab",
+      "add",
+      "separator",
+      "box",
+      "id",
+      "int32",
+      "create",
+      "commandmanager",
+      "boxes",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ICommandTab.AddSeparator",
+  "description": "Adds a separator to this CommandManager tab.",
+  "signature": "CommandTabBox AddSeparator( \n   CommandTabBox\nCommandTabBoxIn\n,\n   System.Int32\nCommandID\n)",
+  "parameters": [
+    {
+      "name": "CommandTabBoxIn",
+      "type": "CommandTabBox",
+      "description": "CommandManager tab box to which to add the separator"
+    },
+    {
+      "name": "CommandID",
+      "type": "System.Int32",
+      "description": "Button before which to place the separator (see Remarks )"
+    }
+  ],
+  "returns": "New CommandManager tab box",
+  "remarks": "The specified CommandManager tab is split into two. The left side is the original CommandManager tab box, and the right side is the new CommandManager tab box. The first button on the new CommandManager tab box is the button specified by CommandID.\nIf the CommandManager tab box has multiple commands with the same CommandID, then a separator is added before the first matching CommandID.\nYou can get the CommandID using\nICommandGroup::CommandID\nor\nICommandGroup::ToolbarId\nafter calling\nICommandGroup::Activate\n.",
+  "examples": [
+    {
+      "title": "Create CommandManager Tab and Tab Boxes (VB.NET)",
+      "href": "Create_CommandManager_Tab_and_Tab_Boxes_Example_VB.NET.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

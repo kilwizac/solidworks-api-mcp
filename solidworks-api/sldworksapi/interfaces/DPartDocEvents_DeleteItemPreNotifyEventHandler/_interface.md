@@ -1,0 +1,15 @@
+---
+type: interface
+interface: DPartDocEvents_DeleteItemPreNotifyEventHandler
+inherits: null
+description: Notifies the user program when an item is about to be deleted from one of the SOLIDWORKS tree structures, such as the FeatureManager design tree and the ConfigurationManager.
+member_count: 0
+docset: sldworksapi
+categories:
+  - parts
+common_members: []
+---
+
+# DPartDocEvents_DeleteItemPreNotifyEventHandler
+
+Notifies the user program when an item is about to be deleted from one of the SOLIDWORKS tree structures, such as the FeatureManager design tree and the ConfigurationManager.

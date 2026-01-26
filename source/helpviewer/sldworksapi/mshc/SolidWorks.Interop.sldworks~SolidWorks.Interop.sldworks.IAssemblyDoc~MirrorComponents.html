@@ -1,0 +1,276 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>MirrorComponents Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~MirrorComponents" />
+    <meta name="Description" content="Obsolete. Superseded by IAssemblyDoc::MirrorComponents2." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IAssemblyDoc.MirrorComponents" />
+    <meta name="Microsoft.Help.Keywords" content="MirrorComponents Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                MirrorComponents Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc Interface</a> : MirrorComponents Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="PlanePopupContent" class="i-popup-content">
+        Plane or planar face about which to mirror the components
+    </div>
+
+    <div id="ComponentsToInstancePopupContent" class="i-popup-content">
+        Array of instances of the component to mirror
+    </div>
+
+    <div id="ComponentsToMirrorPopupContent" class="i-popup-content">
+        Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2">components</a> to mirror
+    </div>
+
+    <div id="MirroredComponentFilenamesPopupContent" class="i-popup-content">
+        Array of filenames for the newly created mirrored assemblies or parts
+    </div>
+
+    <div id="RecreateMatesPopupContent" class="i-popup-content">
+        True to preserve any mates between the selected components if more than one component is to be mirrored, false to not
+    </div>
+
+    <div id="ComponentModifierPopupContent" class="i-popup-content">
+        Prefix or suffix for the newly mirrored components if MirroredComponentFilenames is not specified, as defined by <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swMirrorComponentNameModifier_e.html">swMirrorComponentNameModifier_e</a>
+    </div>
+
+    <div id="ComponentNameModifierPopupContent" class="i-popup-content">
+        String to add to the prefix or suffix of the name of the newly mirrored component if MirroredComponentFilenames is not specified
+    </div>
+
+    <div id="MirroredFileLocationPopupContent" class="i-popup-content">
+        <p class="apiParametersOLE">Name of the folder where to store the file of the newly created mirrored components</p>
+    </div>
+
+    <div id="CopyCustomPropertiesPopupContent" class="i-popup-content">
+        True to copy the custom properties from the selected components to the mirrored components, false to not
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            <span style="COLOR: #ff0000">Obsolete. Superseded by</span>&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~MirrorComponents2">IAssemblyDoc::MirrorComponents2<span style="COLOR: #ff0000">.</span></a>
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function MirrorComponents( _
+   ByVal <i><a class="i-popup-link" id="PlanePopupLink" data-popup-contentsource="#PlanePopupContent" data-popup-showevent="click mouseenter">Plane</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="ComponentsToInstancePopupLink" data-popup-contentsource="#ComponentsToInstancePopupContent" data-popup-showevent="click mouseenter">ComponentsToInstance</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="ComponentsToMirrorPopupLink" data-popup-contentsource="#ComponentsToMirrorPopupContent" data-popup-showevent="click mouseenter">ComponentsToMirror</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="MirroredComponentFilenamesPopupLink" data-popup-contentsource="#MirroredComponentFilenamesPopupContent" data-popup-showevent="click mouseenter">MirroredComponentFilenames</a></i> As System.Object, _
+   ByVal <i><a class="i-popup-link" id="RecreateMatesPopupLink" data-popup-contentsource="#RecreateMatesPopupContent" data-popup-showevent="click mouseenter">RecreateMates</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="ComponentModifierPopupLink" data-popup-contentsource="#ComponentModifierPopupContent" data-popup-showevent="click mouseenter">ComponentModifier</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="ComponentNameModifierPopupLink" data-popup-contentsource="#ComponentNameModifierPopupContent" data-popup-showevent="click mouseenter">ComponentNameModifier</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="MirroredFileLocationPopupLink" data-popup-contentsource="#MirroredFileLocationPopupContent" data-popup-showevent="click mouseenter">MirroredFileLocation</a></i> As System.String, _
+   ByVal <i><a class="i-popup-link" id="CopyCustomPropertiesPopupLink" data-popup-contentsource="#CopyCustomPropertiesPopupContent" data-popup-showevent="click mouseenter">CopyCustomProperties</a></i> As System.Boolean _
+) As System.Object
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc</a>
+Dim Plane As System.Object
+Dim ComponentsToInstance As System.Object
+Dim ComponentsToMirror As System.Object
+Dim MirroredComponentFilenames As System.Object
+Dim RecreateMates As System.Boolean
+Dim ComponentModifier As System.Integer
+Dim ComponentNameModifier As System.String
+Dim MirroredFileLocation As System.String
+Dim CopyCustomProperties As System.Boolean
+Dim value As System.Object
+ 
+value = instance.MirrorComponents(Plane, ComponentsToInstance, ComponentsToMirror, MirroredComponentFilenames, RecreateMates, ComponentModifier, ComponentNameModifier, MirroredFileLocation, CopyCustomProperties)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.object MirrorComponents( 
+   System.object <i><a class="i-popup-link" id="PlanePopupLink" data-popup-contentsource="#PlanePopupContent" data-popup-showevent="click mouseenter">Plane</a></i>,
+   System.object <i><a class="i-popup-link" id="ComponentsToInstancePopupLink" data-popup-contentsource="#ComponentsToInstancePopupContent" data-popup-showevent="click mouseenter">ComponentsToInstance</a></i>,
+   System.object <i><a class="i-popup-link" id="ComponentsToMirrorPopupLink" data-popup-contentsource="#ComponentsToMirrorPopupContent" data-popup-showevent="click mouseenter">ComponentsToMirror</a></i>,
+   System.object <i><a class="i-popup-link" id="MirroredComponentFilenamesPopupLink" data-popup-contentsource="#MirroredComponentFilenamesPopupContent" data-popup-showevent="click mouseenter">MirroredComponentFilenames</a></i>,
+   System.bool <i><a class="i-popup-link" id="RecreateMatesPopupLink" data-popup-contentsource="#RecreateMatesPopupContent" data-popup-showevent="click mouseenter">RecreateMates</a></i>,
+   System.int <i><a class="i-popup-link" id="ComponentModifierPopupLink" data-popup-contentsource="#ComponentModifierPopupContent" data-popup-showevent="click mouseenter">ComponentModifier</a></i>,
+   System.string <i><a class="i-popup-link" id="ComponentNameModifierPopupLink" data-popup-contentsource="#ComponentNameModifierPopupContent" data-popup-showevent="click mouseenter">ComponentNameModifier</a></i>,
+   System.string <i><a class="i-popup-link" id="MirroredFileLocationPopupLink" data-popup-contentsource="#MirroredFileLocationPopupContent" data-popup-showevent="click mouseenter">MirroredFileLocation</a></i>,
+   System.bool <i><a class="i-popup-link" id="CopyCustomPropertiesPopupLink" data-popup-contentsource="#CopyCustomPropertiesPopupContent" data-popup-showevent="click mouseenter">CopyCustomProperties</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.Object^ MirrorComponents( 
+   System.Object^ <i><a class="i-popup-link" id="PlanePopupLink" data-popup-contentsource="#PlanePopupContent" data-popup-showevent="click mouseenter">Plane</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ComponentsToInstancePopupLink" data-popup-contentsource="#ComponentsToInstancePopupContent" data-popup-showevent="click mouseenter">ComponentsToInstance</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="ComponentsToMirrorPopupLink" data-popup-contentsource="#ComponentsToMirrorPopupContent" data-popup-showevent="click mouseenter">ComponentsToMirror</a></i>,
+   System.Object^ <i><a class="i-popup-link" id="MirroredComponentFilenamesPopupLink" data-popup-contentsource="#MirroredComponentFilenamesPopupContent" data-popup-showevent="click mouseenter">MirroredComponentFilenames</a></i>,
+   System.bool <i><a class="i-popup-link" id="RecreateMatesPopupLink" data-popup-contentsource="#RecreateMatesPopupContent" data-popup-showevent="click mouseenter">RecreateMates</a></i>,
+   System.int <i><a class="i-popup-link" id="ComponentModifierPopupLink" data-popup-contentsource="#ComponentModifierPopupContent" data-popup-showevent="click mouseenter">ComponentModifier</a></i>,
+   System.String^ <i><a class="i-popup-link" id="ComponentNameModifierPopupLink" data-popup-contentsource="#ComponentNameModifierPopupContent" data-popup-showevent="click mouseenter">ComponentNameModifier</a></i>,
+   System.String^ <i><a class="i-popup-link" id="MirroredFileLocationPopupLink" data-popup-contentsource="#MirroredFileLocationPopupContent" data-popup-showevent="click mouseenter">MirroredFileLocation</a></i>,
+   System.bool <i><a class="i-popup-link" id="CopyCustomPropertiesPopupLink" data-popup-contentsource="#CopyCustomPropertiesPopupContent" data-popup-showevent="click mouseenter">CopyCustomProperties</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>Plane</i></dt>
+
+                <dd>Plane or planar face about which to mirror the components</dd>
+
+                <dt><i>ComponentsToInstance</i></dt>
+
+                <dd>Array of instances of the component to mirror</dd>
+
+                <dt><i>ComponentsToMirror</i></dt>
+
+                <dd>Array of <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2">components</a> to mirror</dd>
+
+                <dt><i>MirroredComponentFilenames</i></dt>
+
+                <dd>Array of filenames for the newly created mirrored assemblies or parts</dd>
+
+                <dt><i>RecreateMates</i></dt>
+
+                <dd>True to preserve any mates between the selected components if more than one component is to be mirrored, false to not</dd>
+
+                <dt><i>ComponentModifier</i></dt>
+
+                <dd>Prefix or suffix for the newly mirrored components if MirroredComponentFilenames is not specified, as defined by <a href="ms-help://SolidWorks.Interop.swconst/SolidWorks/SOLIDWORKS.Interop.swconst~SOLIDWORKS.Interop.swconst.swMirrorComponentNameModifier_e.html">swMirrorComponentNameModifier_e</a></dd>
+
+                <dt><i>ComponentNameModifier</i></dt>
+
+                <dd>String to add to the prefix or suffix of the name of the newly mirrored component if MirroredComponentFilenames is not specified</dd>
+
+                <dt><i>MirroredFileLocation</i></dt>
+
+                <dd>
+                    <p class="apiParametersOLE">Name of the folder where to store the file of the newly created mirrored components</p>
+                </dd>
+
+                <dt><i>CopyCustomProperties</i></dt>
+
+                <dd>True to copy the custom properties from the selected components to the mirrored components, false to not</dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                Array of the newly created <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2">components</a>
+            </div>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc">IAssemblyDoc Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc_members">IAssemblyDoc Members</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~MirrorComponents.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

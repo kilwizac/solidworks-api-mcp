@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCorresponding2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "InputObject",
+        "type": "System.Object",
+        "description": "Object in this drawing view or assembly (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetCorrespondingEntity2"
+    ],
+    "keywords": [
+      "corresponding",
+      "objects",
+      "getcorresponding2",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "corresponding2",
+      "input",
+      "object",
+      "entities",
+      "between",
+      "parts",
+      "drawing",
+      "views",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.GetCorresponding2",
+  "description": "Gets the object in the underlying part or subassembly document that corresponds to the specified input object in this drawing view or assembly.",
+  "signature": "System.Object GetCorresponding2( \n   System.Object\nInputObject\n)",
+  "parameters": [
+    {
+      "name": "InputObject",
+      "type": "System.Object",
+      "description": "Object in this drawing view or assembly (see Remarks )"
+    }
+  ],
+  "returns": "Corresponding object in the underlying part or subassembly; null or Nothing if none found (see Remarks )",
+  "remarks": "InputObject can be any object assigned a persistent reference ID; for example, a\nIFeature\n,\nIAnnotation\nor\nISketch\nobject.\nTo get the assembly object corresponding to a given component object, use\nIComponent2::GetCorresponding\n.\nTo get the drawing view object corresponding to a given part or assembly object, use\nIView::GetCorresponding\n.",
+  "examples": [
+    {
+      "title": "Get Corresponding Entities Between Parts and Drawing Views (VBA)",
+      "href": "Get_Corresponding_Entities_Between_Parts_and_Views_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Corresponding Entities Between Parts and Drawing Views (VB.NET)",
+      "href": "Get_Corresponding_Entities_Between_Parts_and_Views_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Corresponding Entities Between Parts and Drawing Views (C#)",
+      "href": "Get_Corresponding_Entities_Between_Parts_and_Views_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.GetCorrespondingEntity2"
+  ]
+}

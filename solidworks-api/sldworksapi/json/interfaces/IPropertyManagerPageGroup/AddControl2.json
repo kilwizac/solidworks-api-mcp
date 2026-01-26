@@ -1,0 +1,114 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPropertyManagerPageGroup",
+    "member": "AddControl2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ID",
+        "type": "System.Int32",
+        "description": "Resource ID of the control"
+      },
+      {
+        "name": "ControlType",
+        "type": "System.Int16",
+        "description": "Type of control as defined in swPropertyManagerPageControlType_e"
+      },
+      {
+        "name": "Caption",
+        "type": "System.String",
+        "description": "Caption of the control"
+      },
+      {
+        "name": "LeftAlign",
+        "type": "System.Int16",
+        "description": "Left alignment of this control as defined in swPropertyManagerPageControlLeftAlign_e"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Options as defined in swAddControlOptions_e (see Remarks )"
+      },
+      {
+        "name": "Tip",
+        "type": "System.String",
+        "description": "ToolTip text for the control"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "addcontrol2",
+      "ipropertymanagerpagegroup",
+      "manager",
+      "page",
+      "group",
+      "add",
+      "control2",
+      "id",
+      "int32",
+      "control",
+      "type",
+      "int16",
+      "caption",
+      "string",
+      "left",
+      "align",
+      "options",
+      "tip",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IPropertyManagerPageGroup.AddControl2",
+  "description": "Adds a control to this PropertyManager page group box.",
+  "signature": "System.Object AddControl2( \n   System.Int32\nID\n,\n   System.Int16\nControlType\n,\n   System.String\nCaption\n,\n   System.Int16\nLeftAlign\n,\n   System.Int32\nOptions\n,\n   System.String\nTip\n)",
+  "parameters": [
+    {
+      "name": "ID",
+      "type": "System.Int32",
+      "description": "Resource ID of the control"
+    },
+    {
+      "name": "ControlType",
+      "type": "System.Int16",
+      "description": "Type of control as defined in swPropertyManagerPageControlType_e"
+    },
+    {
+      "name": "Caption",
+      "type": "System.String",
+      "description": "Caption of the control"
+    },
+    {
+      "name": "LeftAlign",
+      "type": "System.Int16",
+      "description": "Left alignment of this control as defined in swPropertyManagerPageControlLeftAlign_e"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Options as defined in swAddControlOptions_e (see Remarks )"
+    },
+    {
+      "name": "Tip",
+      "type": "System.String",
+      "description": "ToolTip text for the control"
+    }
+  ],
+  "returns": "Newly created control for this PropertyManager page group box",
+  "remarks": "You can only use this method to set properties on the PropertyManager page before it is displayed or while it is closed. See\nIPropertyManagerPage2::Show2\nand\nIPropertyManagerPage2::Close\n.\nWhen you specify swAddControlOptions_e.swControlOptions_SmallGapAbove for the Options parameter, the gap created between a new control and the previous control is smaller than the typical gap. Also, the control is hidden unless you specify swAddControlOptions_e.swControlOptions_Visible for the Options parameter. In the previous versions of this method, IPropertyManagerPageGroup::AddControl and IPropertyManagerGroup::IAddControl, the control was visible regardless if the Options parameter was set or not set to swAddControlOptions_e.swControlOptions_Visible.",
+  "examples": [
+    {
+      "title": "IPropertyManagerPageGroup",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageGroup",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

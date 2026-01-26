@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "Attach",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "attach",
+      "idesigntable",
+      "design",
+      "table",
+      "boolean",
+      "microsoft",
+      "excel",
+      "worksheet",
+      "vba",
+      "save",
+      "file",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDesignTable.Attach",
+  "description": "Activates the design table within the part or assembly document.",
+  "signature": "System.Boolean Attach()",
+  "parameters": [],
+  "returns": "True if the design table is successfully activated, false if not",
+  "remarks": "If you want SOLIDWORKS to run in the background, then do not use this method. Using this method will cause SOLIDWORKS to become visible.\nDo not use this method and\nIDesignTable::EditTable2\nin the same macro. Using IDesignTable::EditTable2 is preferable because it returns a pointer to the Microsoft Excel worksheet being operated on.\nIf you use IDesignTable::Attach, then you must call this method before calling any of the other IDesignTable methods. When your application is finished extracting data from the design table, use\nIDesignTable::Detach\nto detach the IDesignTable object from the Microsoft Excel object.",
+  "examples": [
+    {
+      "title": "Get Microsoft Excel Design Table Worksheet (VBA)",
+      "href": "Get_Excel_Design_Table_Worksheet_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Design Table as Microsoft Excel File (VBA)",
+      "href": "Save_Design_Table_as_Microsoft_Excel_File_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (C#)",
+      "href": "Get_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VB.NET)",
+      "href": "Get_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VBA)",
+      "href": "Get_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

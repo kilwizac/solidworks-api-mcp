@@ -1,0 +1,73 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ITessellation",
+    "member": "GetFaceFacets",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Facedisp",
+        "type": "System.Object",
+        "description": "Face from which to return the corresponding facet IDs"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "ITessellation.IGetFaceFacets2",
+      "ITessellation.IGetFaceFacetsCount2"
+    ],
+    "keywords": [
+      "getfacefacets",
+      "itessellation",
+      "tessellation",
+      "face",
+      "facets",
+      "facedisp",
+      "object",
+      "tessellate",
+      "body",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ITessellation.GetFaceFacets",
+  "description": "Gets the facets IDs that correspond to a SOLIDWORKS face.",
+  "signature": "System.Object GetFaceFacets( \n   System.Object\nFacedisp\n)",
+  "parameters": [
+    {
+      "name": "Facedisp",
+      "type": "System.Object",
+      "description": "Face from which to return the corresponding facet IDs"
+    }
+  ],
+  "returns": "Array of longs or integers (see Long vs. Integer ) that describe the facet IDs that correspond to the face",
+  "remarks": "ITessellation::NeedFaceFacetMap\nmust be set to true to return results.",
+  "examples": [
+    {
+      "title": "Tessellate a Body (C#)",
+      "href": "Tessellate_a_Body_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Tessellate a Body (VB.NET)",
+      "href": "Tessellate_a_Body_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Tessellate a Body (VBA)",
+      "href": "Tessellate_a_Body_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ITessellation.IGetFaceFacets2",
+    "ITessellation.IGetFaceFacetsCount2"
+  ]
+}

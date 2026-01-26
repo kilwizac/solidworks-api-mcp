@@ -1,0 +1,101 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "SaveBMP",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "FileNameIn",
+        "type": "System.String",
+        "description": "Path and file name of the new BMP file"
+      },
+      {
+        "name": "WidthIn",
+        "type": "System.Int32",
+        "description": "Width of the BMP"
+      },
+      {
+        "name": "HeightIn",
+        "type": "System.Int32",
+        "description": "Height of the BMP"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetPreviewBitmap",
+      "ISldWorks.GetPreviewBitmapFile"
+    ],
+    "keywords": [
+      "bitmaps",
+      "bmp",
+      "savebmp",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "save",
+      "file",
+      "name",
+      "string",
+      "width",
+      "int32",
+      "height",
+      "boolean",
+      "bitmap",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IModelDoc2.SaveBMP",
+  "description": "Saves the current view as a bitmap (BMP) file.",
+  "signature": "System.Boolean SaveBMP( \n   System.String\nFileNameIn\n,\n   System.Int32\nWidthIn\n,\n   System.Int32\nHeightIn\n)",
+  "parameters": [
+    {
+      "name": "FileNameIn",
+      "type": "System.String",
+      "description": "Path and file name of the new BMP file"
+    },
+    {
+      "name": "WidthIn",
+      "type": "System.Int32",
+      "description": "Width of the BMP"
+    },
+    {
+      "name": "HeightIn",
+      "type": "System.Int32",
+      "description": "Height of the BMP"
+    }
+  ],
+  "returns": "True if file is created successfully, false if not",
+  "remarks": "Include the full path to the file in FilenameIn and use filename extension of .bmp.\nIf WidthIn or the HeightIn is less than or equal to 0, then the view size is based on the current window size.",
+  "examples": [
+    {
+      "title": "Save Model as Bitmap (C#)",
+      "href": "Save_Model_as_Bitmap_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Model as Bitmap (VB.NET)",
+      "href": "Save_Model_as_Bitmap_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Save Model as Bitmap (VBA)",
+      "href": "Save_Model_as_Bitmap_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetPreviewBitmap",
+    "ISldWorks.GetPreviewBitmapFile"
+  ]
+}

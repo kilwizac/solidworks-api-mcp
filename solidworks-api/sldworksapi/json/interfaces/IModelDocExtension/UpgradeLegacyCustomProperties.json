@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "UpgradeLegacyCustomProperties",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "UpgradeAllAssemComps",
+        "type": "System.Boolean",
+        "description": "True to upgrade custom properties of this top-level assembly and all of its components, false to upgrade custom properties of this top-level assembly only"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "upgradelegacycustomproperties",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "upgrade",
+      "legacy",
+      "custom",
+      "properties",
+      "all",
+      "assem",
+      "comps",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.UpgradeLegacyCustomProperties",
+  "description": "Upgrades custom properties in this legacy (created prior to SOLIDWORKS 2018) model to the latest custom properties architecture.",
+  "signature": "System.Boolean UpgradeLegacyCustomProperties( \n   System.Boolean\nUpgradeAllAssemComps\n)",
+  "parameters": [
+    {
+      "name": "UpgradeAllAssemComps",
+      "type": "System.Boolean",
+      "description": "True to upgrade custom properties of this top-level assembly and all of its components, false to upgrade custom properties of this top-level assembly only"
+    }
+  ],
+  "returns": "True if custom properties are successfully upgraded, false if not",
+  "remarks": "This method is valid only for parts, assemblies, and drawings:\ncreated prior to 2018.\nopened in resolved mode.\ncorresponds to the user-interface command,\nfeature_manager_design_tree_top_node\nRMB\n> Upgrade custom properties\n.\nThis method upgrades the custom properties of:\nparent parts only, not derived parts\ndrawings, but not models in drawing views\nweldment cutlists\n(optionally) all components in assemblies\nAfter running this method, you:\nmust rebuild configurations to have their custom properties updated.\ncannot return to the old custom properties architecture.",
+  "examples": [],
+  "related": []
+}

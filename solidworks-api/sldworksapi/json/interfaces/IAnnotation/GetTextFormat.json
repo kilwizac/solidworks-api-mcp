@@ -1,0 +1,102 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAnnotation",
+    "member": "GetTextFormat",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Number indicating which text within this annotation to check"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IAnnotation.GetTextFormatCount",
+      "IAnnotation.IGetTextFormat",
+      "IAnnotation.ISetTextFormat",
+      "IAnnotation.SetTextFormat"
+    ],
+    "keywords": [
+      "gettextformat",
+      "iannotation",
+      "annotation",
+      "text",
+      "format",
+      "index",
+      "int32",
+      "object",
+      "change",
+      "vba",
+      "whether",
+      "note",
+      "contains",
+      "rich",
+      "embedded",
+      "increase",
+      "width",
+      "modify",
+      "reload",
+      "sheet",
+      "template",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IAnnotation.GetTextFormat",
+  "description": "Gets the text format for the specified text in this annotation.",
+  "signature": "System.Object GetTextFormat( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Number indicating which text within this annotation to check"
+    }
+  ],
+  "returns": "ITextFormat",
+  "remarks": "The behavior of this method differs depending on the type of annotation.\nDatum target\nand\nDatum feature symbols\nThese symbols always use the document default setting for dimension text format to\ndisplay text within the symbol. The index argument is not used and should be set\nto 0.\nGeometric Tolerance\n,\ndisplay dimensions\n,\nsimple notes\n,\nsurface finish\n, and\nweld symbols\nThese symbols can either use the document default setting to display text within\nthe symbol (dimension text setting for the geometric tolerance symbols and display\ndimensions, or note text setting for notes) or they can use a local format. The index\nargument is not used and should be set to 0.\nBlocks\n(and compound notes for documents created in SOLIDWORKS 2015 and earlier)\nThese symbols might contain several different pieces of text; each piece can use\nthe document default setting for notes or a local format. The index argument identifies\nthe text. The index value is 0-based. If the index value is invalid, then this method\nreturns a Nothing or null pointer. To get the number of text or\nITextFormat\nobjects, use\nIAnnotation::GetTextFormatCount\n.\nRich text format\nIf a note contains embedded rich text information in the string, then this method returns\na text format that does not necessarily reflect what is displayed on the screen for\nthat note. Use\nINote::HasMultipleFonts\nto determine if the note contains embedded\nrich text information.\nITextFormat is returned if it is for a local setting or for the document\ndefault setting. To determine whether or not this annotation is using the document\ndefault settings for text format, use\nIAnnotation::GetUseDocTextFormat\n. To set the\ntext format information, use\nIAnnotation::SetTextFormat\n.",
+  "examples": [
+    {
+      "title": "Change Text Format (VBA)",
+      "href": "Change_Text_Format_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Whether Note Contains Rich Embedded Text (VBA)",
+      "href": "Get_Whether_Note_Contains_Rich-embedded_Text_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Increase Width of Text (VBA)",
+      "href": "Increase_Width_of_Text_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (C#)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VB.NET)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Modify and Reload Sheet Format Template (VBA)",
+      "href": "Modify_and_Reload_Sheet_Format_Template_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAnnotation.GetTextFormatCount",
+    "IAnnotation.IGetTextFormat",
+    "IAnnotation.ISetTextFormat",
+    "IAnnotation.SetTextFormat"
+  ]
+}

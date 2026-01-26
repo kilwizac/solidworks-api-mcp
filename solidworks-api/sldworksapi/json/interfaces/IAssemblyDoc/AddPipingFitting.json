@@ -1,0 +1,79 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "AddPipingFitting",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "PathName",
+        "type": "System.String",
+        "description": "Full name and directory location of part file used for this fitting"
+      },
+      {
+        "name": "ConfigName",
+        "type": "System.String",
+        "description": "Configuration within the fitting part file which should be used"
+      },
+      {
+        "name": "AlignmentIndex",
+        "type": "System.Int16",
+        "description": "Each fitting has a varying number of alignment positions; this value allows you to choose the alignment position"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddPipePenetration"
+    ],
+    "keywords": [
+      "piping",
+      "fitting",
+      "addpipingfitting",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "add",
+      "path",
+      "name",
+      "string",
+      "config",
+      "alignment",
+      "index",
+      "int16",
+      "boolean"
+    ]
+  },
+  "title": "IAssemblyDoc.AddPipingFitting",
+  "description": "Adds a pipe fitting to the current piping assembly.",
+  "signature": "System.Boolean AddPipingFitting( \n   System.String\nPathName\n,\n   System.String\nConfigName\n,\n   System.Int16\nAlignmentIndex\n)",
+  "parameters": [
+    {
+      "name": "PathName",
+      "type": "System.String",
+      "description": "Full name and directory location of part file used for this fitting"
+    },
+    {
+      "name": "ConfigName",
+      "type": "System.String",
+      "description": "Configuration within the fitting part file which should be used"
+    },
+    {
+      "name": "AlignmentIndex",
+      "type": "System.Int16",
+      "description": "Each fitting has a varying number of alignment positions; this value allows you to choose the alignment position"
+    }
+  ],
+  "returns": "True if successful, false otherwise",
+  "remarks": "This method adds a piping fitting to the selected sketch point. The sketch must be the active sketch of the piping assembly.\nThe alignmentIndex argument controls the alignment of the fitting. For example, you can align a t-piece in two ways: passing 0 aligns the t-piece one way, and passing 1 aligns it the other way.\nIf the routing DLL is not available, then COM returns ITF_E_ROUTINGNOTLOADED.",
+  "examples": [],
+  "related": [
+    "IAssemblyDoc.AddPipePenetration"
+  ]
+}

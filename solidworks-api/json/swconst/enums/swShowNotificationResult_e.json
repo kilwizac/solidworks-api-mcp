@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swShowNotificationResult_e",
+    "description": "User notification display return values.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swShowNotificationResult_e",
+  "description": "User notification display return values.",
+  "values": [
+    {
+      "member": "swShowNotificationResult_DontShowAgain",
+      "value": "1",
+      "description": "= The user notification is not shown when \"Don't show again\" is selected"
+    },
+    {
+      "member": "swShowNotificationResult_FailedInvalidDefinition",
+      "value": "2",
+      "description": "= The user notification could not be displayed due to an invalid definition (e.g., empty title/description)"
+    },
+    {
+      "member": "swShowNotificationResult_FailedInvalidHandler",
+      "value": "3",
+      "description": "= The user notification could not be desiplayed because the Handler argument is NULL or does not support the expected interface"
+    },
+    {
+      "member": "swShowNotificationResult_Shown",
+      "value": "0",
+      "description": "= The user notification is shown"
+    }
+  ]
+}

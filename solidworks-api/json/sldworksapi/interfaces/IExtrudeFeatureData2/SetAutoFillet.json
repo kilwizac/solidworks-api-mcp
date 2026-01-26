@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExtrudeFeatureData2",
+    "member": "SetAutoFillet",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "AutoFillet",
+        "type": "System.Boolean",
+        "description": "True to fillet the corners automatically, false to not"
+      },
+      {
+        "name": "Radius",
+        "type": "System.Double",
+        "description": "Fillet radius, if automatic corner fillets is enabled"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IExtrudeFeatureData2.IsThinFeature"
+    ],
+    "keywords": [
+      "automatic",
+      "corner",
+      "fillets",
+      "setautofillet",
+      "iextrudefeaturedata2",
+      "extrude",
+      "feature",
+      "data2",
+      "auto",
+      "fillet",
+      "boolean",
+      "radius",
+      "double"
+    ]
+  },
+  "title": "IExtrudeFeatureData2.SetAutoFillet",
+  "description": "Sets the automatic corner fillet properties of this thin feature.",
+  "signature": "System.Boolean SetAutoFillet( \n   System.Boolean\nAutoFillet\n,\n   System.Double\nRadius\n)",
+  "parameters": [
+    {
+      "name": "AutoFillet",
+      "type": "System.Boolean",
+      "description": "True to fillet the corners automatically, false to not"
+    },
+    {
+      "name": "Radius",
+      "type": "System.Double",
+      "description": "Fillet radius, if automatic corner fillets is enabled"
+    }
+  ],
+  "returns": "True if the corners are automatically filleted, false if not",
+  "remarks": "This method only applies to thin feature extrusions. If the feature is not a thin feature extrusion, then no action is taken and the COM version of this method returns S_false in the status return value.\nIf disabling the automatic corner fillets property (AutoFillet = false), then the Radius value is not used.\nTo get the automatic corner fillet flag, use\nIExtrudeFeatureData2::GetAutoFilletCorners\n. To get the fillet radius, use\nIExtrudeFeatureData2::GetAutoFilletRadius\n.",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2.IsThinFeature"
+  ]
+}

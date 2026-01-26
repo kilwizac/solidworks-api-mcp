@@ -1,0 +1,82 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IBreakLine",
+    "member": "SetPosition",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Position1",
+        "type": "System.Double",
+        "description": "Location of the first break line"
+      },
+      {
+        "name": "Position2",
+        "type": "System.Double",
+        "description": "Location of the second break line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "IBreakLine.GetPosition"
+    ],
+    "keywords": [
+      "setposition",
+      "ibreakline",
+      "break",
+      "line",
+      "position",
+      "position1",
+      "double",
+      "position2",
+      "boolean",
+      "create",
+      "view",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IBreakLine.SetPosition",
+  "description": "Sets the locations of the break lines in the drawing view.",
+  "signature": "System.Boolean SetPosition( \n   System.Double\nPosition1\n,\n   System.Double\nPosition2\n)",
+  "parameters": [
+    {
+      "name": "Position1",
+      "type": "System.Double",
+      "description": "Location of the first break line"
+    },
+    {
+      "name": "Position2",
+      "type": "System.Double",
+      "description": "Location of the second break line"
+    }
+  ],
+  "returns": "True if the break lines are positioned, false if not",
+  "remarks": "Call\nIModelDoc2::EditRebuild3\nafter calling this method.",
+  "examples": [
+    {
+      "title": "Create Break View (VBA)",
+      "href": "Create_Broken_View_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Break View (VB.NET)",
+      "href": "Create_Broken_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Break View (C#)",
+      "href": "Create_Broken_View_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBreakLine.GetPosition"
+  ]
+}

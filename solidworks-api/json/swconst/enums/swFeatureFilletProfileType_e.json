@@ -1,0 +1,37 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swFeatureFilletProfileType_e",
+    "description": "Fillet cross-sectional profile shapes.",
+    "member_count": 4,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swFeatureFilletProfileType_e",
+  "description": "Fillet cross-sectional profile shapes.",
+  "values": [
+    {
+      "member": "swFeatureFilletCircular",
+      "value": "0",
+      "description": "= Circular for symmetric fillets; elliptical for asymmetric fillets"
+    },
+    {
+      "member": "swFeatureFilletConicRadius",
+      "value": "2",
+      "description": "= Requires that you set the radius of curvature at the shoulder point along the fillet's cross section"
+    },
+    {
+      "member": "swFeatureFilletConicRho",
+      "value": "1",
+      "description": "= Requires that you set a ratio in the range [0.5, 0.95] which indicates the weight of the cross-section"
+    },
+    {
+      "member": "swFeatureFilletConicRhoZeroChamfer",
+      "value": "3",
+      "description": "= Chamfer cross section"
+    }
+  ]
+}

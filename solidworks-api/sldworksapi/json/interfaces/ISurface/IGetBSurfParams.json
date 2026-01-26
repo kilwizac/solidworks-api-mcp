@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISurface",
+    "member": "IGetBSurfParams",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISurface.GetBSurfParams2"
+    ],
+    "keywords": [
+      "igetbsurfparams",
+      "isurface",
+      "surface",
+      "surf",
+      "params",
+      "double"
+    ]
+  },
+  "title": "ISurface.IGetBSurfParams",
+  "description": "Gets the b-spline surface parameters for the surface.",
+  "signature": "System.Double IGetBSurfParams()",
+  "parameters": [],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "For COM applications, the following values must be set up in a previous call to\nISurface::IGetBSurfParamsSize3\n:\nvP0 [0] & vP0 [2] are the lower bounds of the U & V surface parameters, respectively.\nvP0 [1] & vP0 [3] are the upper bounds of the U & V surface parameters, respectively.\nIf you want to use the Bsurface in combination with its trim curves, you should use the\nIFace2::GetTrimCurves2\nmethod to extract the trim curves and the Bsurface. The IFace2::GetTrimCurves method provides better alignment of the trim curves with the Bsurface because they are both generated at the same time.\nEvaluation is as follows:\nNumber of returned double elements is (4 + NumUKnots + NumVKnots + NumControlPointDoubles), where NumUKnots = (NumColumnsControlPoints + Uorder) and NumVKnots = (NumRowsControlPoints + Vorder).\nThe returned data are arranged in the following order:\nUorder, Vorder - These are two ints packed into a double\nUorder - Order of surface in U direction.\nVorder - Order of surface in V direction.\nNumColumnsControlPoints, NumRowsControlPoints - These are two ints packed into a double\nNumColumnsControlPoints - Number of columns for the control points.\nNumRowsControlPoints - Number of rows for the control points.\nUperiodicity, Vperiodicity - These are two ints packed into a double. Because you may be generating a Bsurface with this function, the U,V periodicity values may be opposite from the original surface. See\nISurface::Parameterization\nor\nISurface::IParameterization\n.\nUperiodicity - TRUE if surface is periodic in U direction.\nVperiodicity - TRUE if surface is periodic in V direction.\nDimensionControlPoints, dummy - These are two ints packed into a double\nDimensionControlPoints - Dimension for control points.\nDimensionControlPoints = 3 for non-rational surfaces and control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].\nDimensionControlPoints = 4 for rational surfaces and control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].\ndummy - a system used filler.\nUKnots - Knot vector in the u direction\nThere will be (NumColumnsControlPoints + Uorder) knot values. If the surface is periodic in the U direction, then data will be converted and returned in a non-periodic form with additional knots added to the surface ends.\nVKnots - Knot vector in the v direction.\nThere will be (NumRowsControlPoints + Vorder) knot values. If the surface is periodic in the V direction, then data will be converted and returned in a non-periodic form with additional knots added to the surface ends.\nControlPoints - This is a list of control points output in (NumColumnsControlPoints*NumRowsControlPoints) vectors of dimension DimensionControlPoints. The vectors are output row by row. The U direction of surface is in the row direction. The V direction of surface is in the column direction.\nFor non-rational surfaces, control point coordinates are output as [x0,y0,z0,x1,y1,z1,.........].\nFor rational surfaces, control point coordinates and the weight are output as [x0,y0,z0,w0,x1,y1,z1,w1,........].",
+  "examples": [],
+  "related": [
+    "ISurface.GetBSurfParams2"
+  ]
+}

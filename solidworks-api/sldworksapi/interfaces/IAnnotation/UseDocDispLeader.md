@@ -1,0 +1,75 @@
+---
+type: property
+interface: IAnnotation
+member: UseDocDispLeader
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - dimensions
+related:
+  - IAnnotation.BentLeaderLength
+  - IAnnotation.GetDashedLeader
+  - IAnnotation.GetLeaderAllAround
+  - IAnnotation.GetLeaderCount
+  - IAnnotation.GetLeaderPerpendicular
+  - IAnnotation.GetLeaderPointsAtIndex
+  - IAnnotation.GetLeaderSide
+  - IAnnotation.GetLeaderStyle
+  - IAnnotation.GetMultiJogLeaderCount
+  - IAnnotation.GetMultiJogLeaders
+  - IAnnotation.LeaderLineStyle
+  - IAnnotation.LeaderThickness
+  - IAnnotation.LeaderThicknessCustom
+  - IAnnotation.SetLeader3
+keywords:
+  - leaders
+  - annotations
+  - annotation
+  - see
+  - also
+  - iannotation
+  - usedocdispleader
+  - use
+  - doc
+  - disp
+  - leader
+  - boolean
+readonly: null
+---
+
+# IAnnotation.UseDocDispLeader
+
+Gets or sets whether to use the document's leader's line style and thickness or a specified line style and thickness for this annotation.
+
+## Signature
+
+```csharp
+System.Boolean UseDocDispLeader {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to use the document's leaders' line style and thickness, false to use a specified line style and thickness
+
+## See Also
+
+- `IAnnotation.BentLeaderLength`
+- `IAnnotation.GetDashedLeader`
+- `IAnnotation.GetLeaderAllAround`
+- `IAnnotation.GetLeaderCount`
+- `IAnnotation.GetLeaderPerpendicular`
+- `IAnnotation.GetLeaderPointsAtIndex`
+- `IAnnotation.GetLeaderSide`
+- `IAnnotation.GetLeaderStyle`
+- `IAnnotation.GetMultiJogLeaderCount`
+- `IAnnotation.GetMultiJogLeaders`
+- `IAnnotation.LeaderLineStyle`
+- `IAnnotation.LeaderThickness`
+- `IAnnotation.LeaderThicknessCustom`
+- `IAnnotation.SetLeader3`

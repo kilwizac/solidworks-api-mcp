@@ -1,0 +1,140 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertPunchTable",
+    "returns": "PunchTableAnnotation",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then insert the table at the location specified by the X and Y parameters"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate for the anchor of this punch table"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate for the anchor of this punch table"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "StartValue",
+        "type": "System.String",
+        "description": "Starting value for datum tags; a letter from A to Z, if TableTemplate uses letter tags; a positive integer, if TableTemplate uses number tags (see Remarks )"
+      },
+      {
+        "name": "TableTemplate",
+        "type": "System.String",
+        "description": "Path and filename of the table template that corresponds to the type of table you want to use (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IFeatureManager.CreateFormTool",
+      "ILibraryFormToolFeatureData",
+      "IPunchTable"
+    ],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "punch",
+      "tables",
+      "ipunchtable",
+      "view",
+      "table",
+      "insertpunchtable",
+      "insert",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "start",
+      "value",
+      "string",
+      "template",
+      "annotation",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IView.InsertPunchTable",
+  "description": "Inserts a punch table in the flat pattern drawing view of a sheet metal part.",
+  "signature": "PunchTableAnnotation InsertPunchTable( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nStartValue\n,\n   System.String\nTableTemplate\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then insert the table at the location specified by the X and Y parameters"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate for the anchor of this punch table"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate for the anchor of this punch table"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "StartValue",
+      "type": "System.String",
+      "description": "Starting value for datum tags; a letter from A to Z, if TableTemplate uses letter tags; a positive integer, if TableTemplate uses number tags (see Remarks )"
+    },
+    {
+      "name": "TableTemplate",
+      "type": "System.String",
+      "description": "Path and filename of the table template that corresponds to the type of table you want to use (see Remarks )"
+    }
+  ],
+  "returns": "IPunchTableAnnotation",
+  "remarks": "Punch tables contain information about the punches that are created by forming tools in sheet metal parts. This method inserts a punch table with the following information for pre-selected punches:\nColumn\nDescription\nTAG\nDatum tag added to each punch in the flat pattern view\nPUNCH ID\nProperty of the forming tool or library feature\nX Location\nDistance from the x-axis to the point of insertion of the forming tool in the flat pattern view\nY Location\nDistance from the y-axis to the point of insertion of the forming tool in the flat pattern view\nANGLE\nAngle between the x-axis and the forming tool\nQUANTITY\nNumber of times that the punch occurs in the flat pattern view\nThe locations of the datum tags are relative to a datum origin that is pre-selected in the view.\nBefore calling this method, call\nIModelDocExtension::SelectByID2\nto select the datum origin, punch edges, and punch faces (for multiple punches) as follows:\nSelection\nMark\nDatum origin vertex\n1\nPunch edges and faces\n2\nDatum origin x-axis direction reference\n4\nDatum origin y-axis direction reference\n8\nSpecify TableTemplate using a punch table template (\n*.sldpuntbt\n) in\ninstall_dir\n\\\nlang\n\\\nl\nanguage\n.\nSpecify a StartValue that matches the table you want to create. For example, to insert a punch table with letter tags, specify a StartValue with a letter from A to Z.",
+  "examples": [
+    {
+      "title": "Insert Punch Table (VBA)",
+      "href": "Insert_Punch_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Punch Table (VB.NET)",
+      "href": "Insert_Punch_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Punch Table (C#)",
+      "href": "Insert_Punch_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.CreateFormTool",
+    "ILibraryFormToolFeatureData",
+    "IPunchTable"
+  ]
+}

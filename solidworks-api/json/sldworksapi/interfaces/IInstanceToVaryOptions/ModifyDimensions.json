@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IInstanceToVaryOptions",
+    "member": "ModifyDimensions",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Instance",
+        "type": "System.Int32",
+        "description": "Pattern instance number (see Remarks )"
+      },
+      {
+        "name": "Dimensions",
+        "type": "System.Object",
+        "description": "Array of dimensions"
+      },
+      {
+        "name": "Values",
+        "type": "System.Object",
+        "description": "Array of values"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "modifydimensions",
+      "iinstancetovaryoptions",
+      "instance",
+      "vary",
+      "options",
+      "modify",
+      "dimensions",
+      "int32",
+      "object",
+      "values",
+      "boolean"
+    ]
+  },
+  "title": "IInstanceToVaryOptions.ModifyDimensions",
+  "description": "Modifies the specified dimensions of the specified pattern instance.",
+  "signature": "System.Boolean ModifyDimensions( \n   System.Int32\nInstance\n,\n   System.Object\nDimensions\n,\n   System.Object\nValues\n)",
+  "parameters": [
+    {
+      "name": "Instance",
+      "type": "System.Int32",
+      "description": "Pattern instance number (see Remarks )"
+    },
+    {
+      "name": "Dimensions",
+      "type": "System.Object",
+      "description": "Array of dimensions"
+    },
+    {
+      "name": "Values",
+      "type": "System.Object",
+      "description": "Array of values"
+    }
+  ],
+  "returns": "True if dimensions modified successfully, false if not",
+  "remarks": "To calculate Instance:\nEnsure that the D2PatternSeedOnly property in the pattern feature data object is set to false.\nCalculate:\nFor a bi-directional pattern:\nI\n=\nn2\n* (\ni\n- 1) + (\nj\n- 1)\nFor a uni-directional pattern:\nI\n=\ni\n- 1\nwhere:\nI\n= pattern instance number\nn2\n= number of instances in Direction 2\ni\n= index for Direction 1\nj\n= index for Direction 2\nIn the pattern's PropertyManager, find\nn2\nin the\nDirection 2\n> Spacing and Instances > Number of instances\nfield and find [\ni,j\n] in the\nModified Instances\nsection.",
+  "examples": [
+    {
+      "title": "IInstanceToVaryOptions",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IInstanceToVaryOptions",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

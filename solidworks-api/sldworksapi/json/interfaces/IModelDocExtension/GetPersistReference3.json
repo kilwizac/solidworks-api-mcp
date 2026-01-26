@@ -1,0 +1,108 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetPersistReference3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "DispObj",
+        "type": "System.Object",
+        "description": "Object"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.IGetPersistReference3",
+      "IModelDocExtension.IsSamePersistentID",
+      "IView.ReferencedConfigurationID"
+    ],
+    "keywords": [
+      "persistent",
+      "reference",
+      "ids",
+      "objects",
+      "id",
+      "getpersistreference3",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "persist",
+      "reference3",
+      "disp",
+      "obj",
+      "object",
+      "check",
+      "faces",
+      "faults",
+      "vba",
+      "use",
+      "compare",
+      "selected",
+      "their",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IModelDocExtension.GetPersistReference3",
+  "description": "Gets the persistent reference ID for the specified object in this model document.",
+  "signature": "System.Object GetPersistReference3( \n   System.Object\nDispObj\n)",
+  "parameters": [
+    {
+      "name": "DispObj",
+      "type": "System.Object",
+      "description": "Object"
+    }
+  ],
+  "returns": "Array containing the persistent reference ID assigned to that object",
+  "remarks": "Persistent reference ID values obtained using the now obsolete IModelDocExtension::GetPersistReference and its related obsolete methods, IModelDocExtension::GetPersistReferenceCount and IModelDocExtension::GetObjectByPersistReference2, are not compatible with persistent reference IDs obtained using this method and its related methods,\nIModelDocExtension::GetPersistReferenceCount3\nand\nIModelDocExtension::GetObjectByPersistReference3\nor\nIModelDocExtension::IGetObjectByPersistReference3\n.\nA persistent reference ID is related to a model. It is portable and can be saved within the model or in other places. Some persistent reference IDs are general to all models and can be instantiated from all models. Your application must handle persistent reference IDs and their relationships among models.\nThe internal representations of the return value array may change, possibly from rebuild to rebuild, or more likely, from one release of SOLIDWORKS to the next, but their usage in finding the correct entity will be consistent across rebuilds and SOLIDWORKS releases.\nTo compare the referenced entities, you could use the Visual Basic\nIs\noperator to find out if the entities are the same.\nSee\nPersistent Reference IDs\nfor more information.",
+  "examples": [
+    {
+      "title": "Check Faces for Faults (VBA)",
+      "href": "Check_Faces_for_Faults_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Use Persistent Reference (VBA)",
+      "href": "Use_Persistent_Reference_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Object's Persistent Reference ID (VBA)",
+      "href": "Get_Object_s_Persistent_Reference_ID_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Object's Persistent Reference ID (C++)",
+      "href": "Get_Object_s_Persistent_Reference_ID_Example_CPlusPlus_COM.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Compare Selected Objects and Their Persistent Reference IDs (C#)",
+      "href": "Compare_Selected_Objects_and_Their_Persistent_Reference_IDs_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Compare Selected Objects and Their Persistent Reference IDs (VB.NET)",
+      "href": "Compare_Selected_Objects_and_Their_Persistent_Reference_IDs_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Compare Selected Objects and Their Persistent Reference IDs (VBA)",
+      "href": "Compare_Selected_Objects_and_Their_Persistent_Reference_IDs_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.IGetPersistReference3",
+    "IModelDocExtension.IsSamePersistentID",
+    "IView.ReferencedConfigurationID"
+  ]
+}

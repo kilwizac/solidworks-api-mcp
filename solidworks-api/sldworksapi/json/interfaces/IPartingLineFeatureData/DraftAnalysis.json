@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPartingLineFeatureData",
+    "member": "DraftAnalysis",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Draft angle"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "parts"
+    ],
+    "related": [
+      "IPartingLineFeatureData.Angle",
+      "IPartingLineFeatureData.GetFacesByType",
+      "IPartingLineFeatureData.GetFacesByTypeCount",
+      "IPartingLineFeatureData.IGetFacesByType",
+      "IPartingLineFeatureData.PullDirection",
+      "IPartingLineFeatureData.PullDirectionType"
+    ],
+    "keywords": [
+      "drafts",
+      "see",
+      "also",
+      "idraftfeaturedata2",
+      "parting",
+      "lines",
+      "draftanalysis",
+      "ipartinglinefeaturedata",
+      "line",
+      "feature",
+      "data",
+      "draft",
+      "analysis",
+      "angle",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IPartingLineFeatureData.DraftAnalysis",
+  "description": "Performs draft analysis for the input angle and the direction of pull.",
+  "signature": "System.Boolean DraftAnalysis( \n   System.Double\nAngle\n)",
+  "parameters": [
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Draft angle"
+    }
+  ],
+  "returns": "True if draft analysis is performed, false if not",
+  "remarks": "If you want a different pull direction, then use\nIPartingLineFeatureData::PullDirectionBase\nto change the direction. Once this method is called, only the information for different faces (negative, positive, and so on) is generated.",
+  "examples": [],
+  "related": [
+    "IPartingLineFeatureData.Angle",
+    "IPartingLineFeatureData.GetFacesByType",
+    "IPartingLineFeatureData.GetFacesByTypeCount",
+    "IPartingLineFeatureData.IGetFacesByType",
+    "IPartingLineFeatureData.PullDirection",
+    "IPartingLineFeatureData.PullDirectionType"
+  ]
+}

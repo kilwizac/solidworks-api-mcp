@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertMoldPartingLine",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "BFlipDir",
+        "type": "System.Boolean",
+        "description": "True to flip the direction of the pull, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "parts"
+    ],
+    "related": [
+      "IFeatureManager.InsertMoldCoreCavitySolids",
+      "IFeatureManager.InsertMoldShutOffSurface",
+      "IPartingLineFeatureData"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "parting",
+      "line",
+      "mold",
+      "tools",
+      "lines",
+      "ipartinglinefeaturedata",
+      "features",
+      "insertmoldpartingline",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "flip",
+      "dir",
+      "boolean"
+    ]
+  },
+  "title": "IFeatureManager.InsertMoldPartingLine",
+  "description": "Inserts a mold parting line feature.",
+  "signature": "Feature InsertMoldPartingLine( \n   System.Boolean\nBFlipDir\n)",
+  "parameters": [
+    {
+      "name": "BFlipDir",
+      "type": "System.Boolean",
+      "description": "True to flip the direction of the pull, false to not"
+    }
+  ],
+  "returns": "Pointer to the IFeature object",
+  "remarks": "Before calling this method, you must select the direction of pull and the edges for the parting line by calling\nIModelDocExtension::SelectByID2\nwith the following Marks:\nSelection\nMark\nDirection of pull\n1\nParting line edges\n4",
+  "examples": [],
+  "related": [
+    "IFeatureManager.InsertMoldCoreCavitySolids",
+    "IFeatureManager.InsertMoldShutOffSurface",
+    "IPartingLineFeatureData"
+  ]
+}

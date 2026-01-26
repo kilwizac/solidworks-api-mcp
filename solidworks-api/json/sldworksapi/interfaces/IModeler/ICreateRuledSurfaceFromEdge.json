@@ -1,0 +1,222 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateRuledSurfaceFromEdge",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "ModDoc",
+        "type": "ModelDoc2",
+        "description": "Model document in which to create surface body"
+      },
+      {
+        "name": "NumOfEdges",
+        "type": "System.Int32",
+        "description": "Number of edges on which to create ruled surface"
+      },
+      {
+        "name": "Edges",
+        "type": "Edge",
+        "description": "Array of edges on which to create ruled surface NOTE: Currently only a single edge is supported."
+      },
+      {
+        "name": "Type",
+        "type": "System.Int32",
+        "description": "0 = Tangent to Surface 1 = Normal to Surface 2 = Tapered to Vector 3 = Perpendicular to Vector 4 = Sweep"
+      },
+      {
+        "name": "Length",
+        "type": "System.Double",
+        "description": "Distance at which to create the surface; valid for Tangent to Surface, Tapered to Vector, Perpendicular to Vector, and Sweep types only"
+      },
+      {
+        "name": "FlipPullDir",
+        "type": "System.Boolean",
+        "description": "True to flip the pull direction, false to not; valid for Normal to Surface and Tapered to Vector types only"
+      },
+      {
+        "name": "FlipDir",
+        "type": "System.Boolean",
+        "description": "True to flip the direction, false to not; valid for Perpendicular to Vector type only"
+      },
+      {
+        "name": "TrimAndSew",
+        "type": "System.Boolean",
+        "description": "True to trim and knit the surface, false to not"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle for Tapered to Vector type only"
+      },
+      {
+        "name": "CoordInput",
+        "type": "System.Boolean",
+        "description": "True to enable coordinate input, false if not; for Sweep type only"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x coordinate"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y coordinate"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z coordinate"
+      },
+      {
+        "name": "BConnectSurface",
+        "type": "System.Boolean",
+        "description": "True to remove any connecting surfaces, false to not"
+      },
+      {
+        "name": "RuledSurface",
+        "type": "Body2",
+        "description": "Ruled surface body"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IModeler.CreateRuledSurface",
+      "IModeler.CreateRuledSurfaceFromEdge",
+      "IModeler.ICreateRuledSurface"
+    ],
+    "keywords": [
+      "ruled",
+      "surfaces",
+      "see",
+      "iruledsurfacefeaturedata",
+      "bodies",
+      "also",
+      "ibody2",
+      "surface",
+      "isurface",
+      "icreateruledsurfacefromedge",
+      "imodeler",
+      "modeler",
+      "create",
+      "edge",
+      "mod",
+      "doc",
+      "model",
+      "doc2",
+      "num",
+      "edges",
+      "int32",
+      "type",
+      "length",
+      "double",
+      "flip",
+      "pull",
+      "dir",
+      "boolean",
+      "trim",
+      "sew",
+      "angle",
+      "coord",
+      "input",
+      "connect",
+      "body2"
+    ]
+  },
+  "title": "IModeler.ICreateRuledSurfaceFromEdge",
+  "description": "Creates a ruled surface using the specified edges and returns a surface body.",
+  "signature": "System.Int32 ICreateRuledSurfaceFromEdge( \n   ModelDoc2\nModDoc\n,\n   System.Int32\nNumOfEdges\n,\n   ref Edge\nEdges\n,\n   System.Int32\nType\n,\n   System.Double\nLength\n,\n   System.Boolean\nFlipPullDir\n,\n   System.Boolean\nFlipDir\n,\n   System.Boolean\nTrimAndSew\n,\n   System.Double\nAngle\n,\n   System.Boolean\nCoordInput\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Boolean\nBConnectSurface\n,\n   out Body2\nRuledSurface\n)",
+  "parameters": [
+    {
+      "name": "ModDoc",
+      "type": "ModelDoc2",
+      "description": "Model document in which to create surface body"
+    },
+    {
+      "name": "NumOfEdges",
+      "type": "System.Int32",
+      "description": "Number of edges on which to create ruled surface"
+    },
+    {
+      "name": "Edges",
+      "type": "Edge",
+      "description": "Array of edges on which to create ruled surface NOTE: Currently only a single edge is supported."
+    },
+    {
+      "name": "Type",
+      "type": "System.Int32",
+      "description": "0 = Tangent to Surface 1 = Normal to Surface 2 = Tapered to Vector 3 = Perpendicular to Vector 4 = Sweep"
+    },
+    {
+      "name": "Length",
+      "type": "System.Double",
+      "description": "Distance at which to create the surface; valid for Tangent to Surface, Tapered to Vector, Perpendicular to Vector, and Sweep types only"
+    },
+    {
+      "name": "FlipPullDir",
+      "type": "System.Boolean",
+      "description": "True to flip the pull direction, false to not; valid for Normal to Surface and Tapered to Vector types only"
+    },
+    {
+      "name": "FlipDir",
+      "type": "System.Boolean",
+      "description": "True to flip the direction, false to not; valid for Perpendicular to Vector type only"
+    },
+    {
+      "name": "TrimAndSew",
+      "type": "System.Boolean",
+      "description": "True to trim and knit the surface, false to not"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle for Tapered to Vector type only"
+    },
+    {
+      "name": "CoordInput",
+      "type": "System.Boolean",
+      "description": "True to enable coordinate input, false if not; for Sweep type only"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x coordinate"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y coordinate"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z coordinate"
+    },
+    {
+      "name": "BConnectSurface",
+      "type": "System.Boolean",
+      "description": "True to remove any connecting surfaces, false to not"
+    },
+    {
+      "name": "RuledSurface",
+      "type": "Body2",
+      "description": "Ruled surface body"
+    }
+  ],
+  "returns": "0 if ruled surface body created, -1 if not",
+  "remarks": "This method returns a surface body, unlike\nIFeatureManager::InsertRuledSurfaceFromEdge2\n, which returns a feature.\nIf you\nselect\nan edge with a selection mark of 4, the default face is used.\nIf you select an edge with a selection mark of 6, the alternate face is used.",
+  "examples": [],
+  "related": [
+    "IModeler.CreateRuledSurface",
+    "IModeler.CreateRuledSurfaceFromEdge",
+    "IModeler.ICreateRuledSurface"
+  ]
+}

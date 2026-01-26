@@ -1,0 +1,69 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "VersionHistory",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FileName",
+        "type": "System.String",
+        "description": "Full path name of the model for which to get the version history"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.IsFutureVersion",
+      "ISldWorks.GetBuildNumbers2",
+      "ISldWorks.IVersionHistory",
+      "ISldWorks.RevisionNumber"
+    ],
+    "keywords": [
+      "solidworks",
+      "version",
+      "number",
+      "versionhistory",
+      "isldworks",
+      "sld",
+      "works",
+      "history",
+      "file",
+      "name",
+      "string",
+      "object",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.VersionHistory",
+  "description": "Gets a list of strings indicating the versions in which a model was saved.",
+  "signature": "System.Object VersionHistory( \n   System.String\nFileName\n)",
+  "parameters": [
+    {
+      "name": "FileName",
+      "type": "System.String",
+      "description": "Full path name of the model for which to get the version history"
+    }
+  ],
+  "returns": "Array of strings containing the version history",
+  "remarks": "This information is retrieved from the file on disk, not from the open document.\nThere is one array entry for each major release of the SOLIDWORKS Design software in which the document has been saved. The format for each entry is a major release code followed by one or more minor release codes separated by commas:\n<major release code>[<minor release code>]\n- or -\n<major release code>[<minor release code>,<minor release code>...]\nwhere <major release code> equals a number that remains constant through a major release of the SOLIDWORKS Design software. For example, the following values are returned based on the corresponding major SOLIDWORKS Design version:\nSOLIDWORKS Release\nVersion Number\nSOLIDWORKS 95\n44\nSOLIDWORKS 96\n243\nSOLIDWORKS 97\n483\nSOLIDWORKS 97Plus\n629\nSOLIDWORKS 98\n822\nSOLIDWORKS 98Plus\n1008\nSOLIDWORKS 99\n1137\nSOLIDWORKS 2000\n1500\nSOLIDWORKS 2001\n1750\nSOLIDWORKS 2001Plus\n1950\nSOLIDWORKS 2003\n2200\nSOLIDWORKS 2004\n2500\nSOLIDWORKS 2005\n2800\nSOLIDWORKS 2006\n3100\nSOLIDWORKS 2007\n3400\nSOLIDWORKS 2008\n3800\nSOLIDWORKS 2009\n4100\nSOLIDWORKS 2010\n4400\nSOLIDWORKS 2011\n4700\nSOLIDWORKS 2012\n5000\nSOLIDWORKS 2013\n6000\nSOLIDWORKS 2014\n7000\nSOLIDWORKS 2015\n8000\nSOLIDWORKS 2016\n9000\nSOLIDWORKS 2017\n10000\nSOLIDWORKS 2018\n11000\nSOLIDWORKS 2019\n12000\nSOLIDWORKS 2020\n13000\nSOLIDWORKS 2021\n14000\nSOLIDWORKS 2022\n15000\nSOLIDWORKS 2023\n16000\nSOLIDWORKS 2024\n17000\nSOLIDWORKS 2025\n18000\nSOLIDWORKS 2026\n19000\nThe <minor release code> equals the year and day of manufacture of a saving version (for example, 1997/320).\nTo get the version history of a document that is currently open, use\nIModelDoc2::VersionHistory\n.",
+  "examples": [
+    {
+      "title": "Get Version History (VBA)",
+      "href": "Get_Version_History_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IModelDocExtension.IsFutureVersion",
+    "ISldWorks.GetBuildNumbers2",
+    "ISldWorks.IVersionHistory",
+    "ISldWorks.RevisionNumber"
+  ]
+}

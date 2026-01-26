@@ -1,0 +1,55 @@
+---
+type: property
+interface: ISpring
+member: BaseProfile
+returns: Body2
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related:
+  - ISpring.GetProfilePoints
+  - ISpring.ProfileParameters
+  - ISpring.ProfileType
+  - ISpring.SectionProfile
+  - ISpring.SectionProfileCenter
+keywords:
+  - baseprofile
+  - ispring
+  - spring
+  - base
+  - profile
+  - body2
+readonly: null
+---
+
+# ISpring.BaseProfile
+
+Gets or sets the base profile of the spring.
+
+## Signature
+
+```csharp
+Body2 BaseProfile {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Body (see Remarks )
+
+## Remarks
+
+This body references an edge that sets the overall diameter of the spring. The profile of the coil (called a section profile) is swept around the radius of this circular edge.
+
+## See Also
+
+- `ISpring.GetProfilePoints`
+- `ISpring.ProfileParameters`
+- `ISpring.ProfileType`
+- `ISpring.SectionProfile`
+- `ISpring.SectionProfileCenter`

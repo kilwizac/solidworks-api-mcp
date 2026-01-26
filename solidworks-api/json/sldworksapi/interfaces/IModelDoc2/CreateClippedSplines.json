@@ -1,0 +1,98 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "CreateClippedSplines",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "ParamsIn",
+        "type": "System.Object",
+        "description": "See Remarks"
+      },
+      {
+        "name": "X1",
+        "type": "System.Double",
+        "description": "x component of the lower corner of the clipping rectangle"
+      },
+      {
+        "name": "Y1",
+        "type": "System.Double",
+        "description": "y component of the lower corner of the clipping rectangle"
+      },
+      {
+        "name": "X2",
+        "type": "System.Double",
+        "description": "x component of the upper corner of the clipping rectangle"
+      },
+      {
+        "name": "Y2",
+        "type": "System.Double",
+        "description": "y component of the upper corner of the clipping rectangle"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.ICreateClippedSplines"
+    ],
+    "keywords": [
+      "splines",
+      "clipped",
+      "createclippedsplines",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "create",
+      "params",
+      "object",
+      "x1",
+      "double",
+      "y1",
+      "x2",
+      "y2"
+    ]
+  },
+  "title": "IModelDoc2.CreateClippedSplines",
+  "description": "Creates one or more sketch spline segments that are clipped against a given (x1, y1), (x2, y2) rectangle. This rectangle lies in the space of the active 2D sketch.",
+  "signature": "System.Object CreateClippedSplines( \n   System.Object\nParamsIn\n,\n   System.Double\nX1\n,\n   System.Double\nY1\n,\n   System.Double\nX2\n,\n   System.Double\nY2\n)",
+  "parameters": [
+    {
+      "name": "ParamsIn",
+      "type": "System.Object",
+      "description": "See Remarks"
+    },
+    {
+      "name": "X1",
+      "type": "System.Double",
+      "description": "x component of the lower corner of the clipping rectangle"
+    },
+    {
+      "name": "Y1",
+      "type": "System.Double",
+      "description": "y component of the lower corner of the clipping rectangle"
+    },
+    {
+      "name": "X2",
+      "type": "System.Double",
+      "description": "x component of the upper corner of the clipping rectangle"
+    },
+    {
+      "name": "Y2",
+      "type": "System.Double",
+      "description": "y component of the upper corner of the clipping rectangle"
+    }
+  ],
+  "returns": "Array of newly created sketch segments",
+  "remarks": "The rectangle lies in the space of the active 2D sketch. The results are undefined for calls made in an active 3D sketch.\nThe ParamsIn argument in Visual Basic for Applications (VBA) is a SafeArray of size (4 + numKnots + numControlPointDoubles) as follows:\n[\nDimension, Order, NumControlPoints, Periodicity, knot1, knot2,..., ControlPoint1[Dimension], ControlPoint2[Dimension],...\n]\nwhere:\nDimension\n,\nOrder\n,\nNumControlPoints\n, and\nPeriodicity\nare integer values.\nThe size of the knot array is determined by (\nNumControlPoints\n+\nOrder\n).\nThe size of the control point array is based upon the curve dimension:\nIf\nDimension\n= 3, then\nControlPoint\nis an array of 3 doubles ( x, y, z ).\nIf\nDimension\n= 4, then\nControlPoint\nis an array of 4 doubles ( x, y, z, w ) where w = weight.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.ICreateClippedSplines"
+  ]
+}

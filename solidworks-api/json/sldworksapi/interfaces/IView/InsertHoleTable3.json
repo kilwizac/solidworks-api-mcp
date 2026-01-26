@@ -1,0 +1,167 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IView",
+    "member": "InsertHoleTable3",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "UseAnchorPoint",
+        "type": "System.Boolean",
+        "description": "If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then insert the table at the location specified by the X and Y parameters"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate in meters for the anchor of this hole table"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate in meters for the anchor of this hole table"
+      },
+      {
+        "name": "AnchorType",
+        "type": "System.Int32",
+        "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+      },
+      {
+        "name": "StartValue",
+        "type": "System.String",
+        "description": "Starting value for the specified TagType"
+      },
+      {
+        "name": "Template",
+        "type": "System.String",
+        "description": "Path and filename of the hole table template that corresponds to the hole table you want to create (see Remarks )"
+      },
+      {
+        "name": "TagOrder",
+        "type": "System.Int32",
+        "description": "Tag numbering as defined in swHoleTableTagOrder_e"
+      },
+      {
+        "name": "TagType",
+        "type": "System.Int32",
+        "description": "Tag type as defined in swHoleTableTagStyle_e"
+      },
+      {
+        "name": "ManualTags",
+        "type": "System.Object",
+        "description": "Array of custom tags; valid only if TagType is swHoleTableTagStyle_e.swHoleTable_ManualTags"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "drawing",
+      "views",
+      "see",
+      "also",
+      "iview",
+      "hole",
+      "tables",
+      "iholetable",
+      "table",
+      "view",
+      "insertholetable3",
+      "insert",
+      "table3",
+      "use",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "type",
+      "int32",
+      "start",
+      "value",
+      "string",
+      "template",
+      "tag",
+      "order",
+      "manual",
+      "tags",
+      "object",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IView.InsertHoleTable3",
+  "description": "Inserts a hole table in this drawing view.",
+  "signature": "System.Object InsertHoleTable3( \n   System.Boolean\nUseAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Int32\nAnchorType\n,\n   System.String\nStartValue\n,\n   System.String\nTemplate\n,\n   System.Int32\nTagOrder\n,\n   System.Int32\nTagType\n,\n   System.Object\nManualTags\n)",
+  "parameters": [
+    {
+      "name": "UseAnchorPoint",
+      "type": "System.Boolean",
+      "description": "If true, and the sheet format anchor point exists, then insert table at the anchor point; if false, then insert the table at the location specified by the X and Y parameters"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate in meters for the anchor of this hole table"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate in meters for the anchor of this hole table"
+    },
+    {
+      "name": "AnchorType",
+      "type": "System.Int32",
+      "description": "Anchor type as defined by swBomConfigurationAnchorType_e"
+    },
+    {
+      "name": "StartValue",
+      "type": "System.String",
+      "description": "Starting value for the specified TagType"
+    },
+    {
+      "name": "Template",
+      "type": "System.String",
+      "description": "Path and filename of the hole table template that corresponds to the hole table you want to create (see Remarks )"
+    },
+    {
+      "name": "TagOrder",
+      "type": "System.Int32",
+      "description": "Tag numbering as defined in swHoleTableTagOrder_e"
+    },
+    {
+      "name": "TagType",
+      "type": "System.Int32",
+      "description": "Tag type as defined in swHoleTableTagStyle_e"
+    },
+    {
+      "name": "ManualTags",
+      "type": "System.Object",
+      "description": "Array of custom tags; valid only if TagType is swHoleTableTagStyle_e.swHoleTable_ManualTags"
+    }
+  ],
+  "returns": "Hole table annotation",
+  "remarks": "This method inserts a hole table with the following information for selected holes:\nDatum tag\nX-location of hole center\nY-location of hole center\nSize of the hole\nThis method displays datum tags next to holes that have been pre-selected in the view. The location of the datum tags is relative to a datum origin that is also pre-selected in the view.\nBefore calling this method, call\nIModelDocExtension::SelectByID2\nto select the datum origin, hole edges, and faces (for multiple holes) as follows:\nSelection\nMark\nDatum origin vertex\n1\nHole edges and faces\n2\nDatum origin x axis direction reference\n4\nDatum origin y axis direction reference\n8\nSpecify Template using a hole table template (\n*.sldholtbt\n):\nin\ninstall_dir\n\\\nlang\n\\\nl\nanguage\n.\nthat matches the table you want to create. For example, to insert a hole table with letter tags, specify Template using\ninstall_dir\n\\\nlang\\English\\standard hole table--letters.sldholtbt\n.",
+  "examples": [
+    {
+      "title": "Insert Hole Table (VBA)",
+      "href": "Insert_Hole_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Table (VB.NET)",
+      "href": "Insert_Hole_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Hole Table (C#)",
+      "href": "Insert_Hole_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

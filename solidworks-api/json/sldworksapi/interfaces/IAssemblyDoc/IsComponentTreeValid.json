@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "IsComponentTreeValid",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "components",
+      "see",
+      "also",
+      "icomponent2",
+      "tree",
+      "iscomponenttreevalid",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "component",
+      "valid",
+      "boolean"
+    ]
+  },
+  "title": "IAssemblyDoc.IsComponentTreeValid",
+  "description": "Checks the validity of the component tree for this assembly.",
+  "signature": "System.Boolean IsComponentTreeValid()",
+  "parameters": [],
+  "returns": "True if the component tree is currently valid, false if the tree is currently invalid",
+  "remarks": "In certain cases, the current assembly component tree is invalid.\nYou cannot query the assembly for a list of components\n(IComponent2::GetChildren\n) or use existing IComponent2 objects to make function calls.\nIf you use the IComponent2 object's methods, then this method returns a NULL or empty value.",
+  "examples": [],
+  "related": []
+}

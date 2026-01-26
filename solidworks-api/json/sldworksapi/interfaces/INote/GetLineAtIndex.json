@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetLineAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Zero-based index of the desired line"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetLineCount",
+      "INote.IGetLineAtIndex"
+    ],
+    "keywords": [
+      "lines",
+      "notes",
+      "note",
+      "see",
+      "also",
+      "inote",
+      "getlineatindex",
+      "line",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "INote.GetLineAtIndex",
+  "description": "Gets information for the specified line.",
+  "signature": "System.Object GetLineAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Zero-based index of the desired line"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles :\n[\nlineType\n,\nstartPt\n[3],\nendPt\n[3]\nwhere:\nlineType\n= the line type. Refer to the\nswLineTypes_e\nenumeration.\nstartPt\n[3]\n= the XYZ line start point\nendPt\n[3]\n= the XYZ line end point\nThe data returned from this method is in terms of document space. If the document containing this note is a drawing, then the coordinates returned are based on the sheet origin. If the document is a part or assembly, then the coordinates are based on the model origin.",
+  "examples": [],
+  "related": [
+    "INote.GetLineCount",
+    "INote.IGetLineAtIndex"
+  ]
+}

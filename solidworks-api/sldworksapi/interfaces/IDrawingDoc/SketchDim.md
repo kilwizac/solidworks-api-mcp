@@ -1,0 +1,101 @@
+---
+type: method
+interface: IDrawingDoc
+member: SketchDim
+returns: void
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - core
+  - drawings
+  - sketches
+  - ui
+related:
+  - IDimension
+  - IDrawingDoc.AddChamferDim
+  - IDrawingDoc.AddOrdinateDimension2
+  - IDrawingDoc.AttachDimensions
+  - IDrawingDoc.AutoDimension
+  - IDrawingDoc.Create3rdAngleViews2
+  - IDrawingDoc.CreateAngDim4
+  - IDrawingDoc.CreateDiamDim4
+  - IDrawingDoc.CreateLinearDim4
+  - IDrawingDoc.CreateOrdinateDim4
+  - IDrawingDoc.Dimensions
+  - IDrawingDoc.DragModelDimension
+  - IDrawingDoc.HideShowDimensions
+  - IDrawingDoc.IAddChamferDim
+  - IDrawingDoc.ICreateAngDim4
+  - IDrawingDoc.ICreateDiamDim4
+  - IDrawingDoc.ICreateLinearDim4
+  - IDrawingDoc.ICreateOrdinateDim4
+  - IDrawingDoc.InsertBaseDim
+  - IDrawingDoc.InsertModelAnnotations3
+  - IDrawingDoc.InsertModelDimensions
+  - IDrawingDoc.InsertOrdinate
+  - IDrawingDoc.InsertRefDim
+  - IDrawingDoc.InsertVerticalOrdinate
+  - ISketch
+keywords:
+  - drawings
+  - see
+  - also
+  - idrawingdoc
+  - dimensions
+  - sketch
+  - isketch
+  - dimension
+  - idimension
+  - sketchdim
+  - drawing
+  - doc
+  - dim
+  - void
+---
+
+# IDrawingDoc.SketchDim
+
+Inserts a sketch dimension in this drawing.
+
+## Signature
+
+```csharp
+void SketchDim()
+```
+## Parameters
+
+None.
+
+## Return Value
+
+Unknown.
+
+## See Also
+
+- `IDimension`
+- `IDrawingDoc.AddChamferDim`
+- `IDrawingDoc.AddOrdinateDimension2`
+- `IDrawingDoc.AttachDimensions`
+- `IDrawingDoc.AutoDimension`
+- `IDrawingDoc.Create3rdAngleViews2`
+- `IDrawingDoc.CreateAngDim4`
+- `IDrawingDoc.CreateDiamDim4`
+- `IDrawingDoc.CreateLinearDim4`
+- `IDrawingDoc.CreateOrdinateDim4`
+- `IDrawingDoc.Dimensions`
+- `IDrawingDoc.DragModelDimension`
+- `IDrawingDoc.HideShowDimensions`
+- `IDrawingDoc.IAddChamferDim`
+- `IDrawingDoc.ICreateAngDim4`
+- `IDrawingDoc.ICreateDiamDim4`
+- `IDrawingDoc.ICreateLinearDim4`
+- `IDrawingDoc.ICreateOrdinateDim4`
+- `IDrawingDoc.InsertBaseDim`
+- `IDrawingDoc.InsertModelAnnotations3`
+- `IDrawingDoc.InsertModelDimensions`
+- `IDrawingDoc.InsertOrdinate`
+- `IDrawingDoc.InsertRefDim`
+- `IDrawingDoc.InsertVerticalOrdinate`
+- `ISketch`

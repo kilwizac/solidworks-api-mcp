@@ -1,0 +1,141 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDrawingDoc",
+    "member": "CreateRelativeView",
+    "returns": "View",
+    "parameters": [
+      {
+        "name": "ModelName",
+        "type": "System.String",
+        "description": "Path and filename of the model for which to create a relative drawing view"
+      },
+      {
+        "name": "XPos",
+        "type": "System.Double",
+        "description": "x coordinate where to create the relative drawing view"
+      },
+      {
+        "name": "YPos",
+        "type": "System.Double",
+        "description": "y coordinate where to create a relative drawing view"
+      },
+      {
+        "name": "ViewDirFront",
+        "type": "System.Int32",
+        "description": "Orientation as defined by swRelativeViewCreationDirection_e"
+      },
+      {
+        "name": "ViewDirRight",
+        "type": "System.Int32",
+        "description": "Orientation as defined by swRelativeViewCreationDirection_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "drawings",
+      "ui"
+    ],
+    "related": [
+      "IDrawingDoc.Create1stAngleViews2",
+      "IDrawingDoc.Create3rdAngleViews2",
+      "IDrawingDoc.CreateAuxiliaryViewAt2",
+      "IDrawingDoc.CreateDetailViewAt3",
+      "IDrawingDoc.CreateDrawViewFromModelView3",
+      "IDrawingDoc.CreateSectionViewAt4",
+      "IDrawingDoc.CreateViewport3",
+      "IDrawingDoc.ICreateAuxiliaryViewAt2",
+      "IDrawingDoc.ICreateDetailViewAt3",
+      "IDrawingDoc.ICreateSectionViewAt4"
+    ],
+    "keywords": [
+      "relative",
+      "view",
+      "see",
+      "also",
+      "iview",
+      "drawing",
+      "views",
+      "createrelativeview",
+      "idrawingdoc",
+      "doc",
+      "create",
+      "model",
+      "name",
+      "string",
+      "pos",
+      "double",
+      "dir",
+      "front",
+      "int32",
+      "right",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDrawingDoc.CreateRelativeView",
+  "description": "Creates a relative drawing view.",
+  "signature": "View CreateRelativeView( \n   System.String\nModelName\n,\n   System.Double\nXPos\n,\n   System.Double\nYPos\n,\n   System.Int32\nViewDirFront\n,\n   System.Int32\nViewDirRight\n)",
+  "parameters": [
+    {
+      "name": "ModelName",
+      "type": "System.String",
+      "description": "Path and filename of the model for which to create a relative drawing view"
+    },
+    {
+      "name": "XPos",
+      "type": "System.Double",
+      "description": "x coordinate where to create the relative drawing view"
+    },
+    {
+      "name": "YPos",
+      "type": "System.Double",
+      "description": "y coordinate where to create a relative drawing view"
+    },
+    {
+      "name": "ViewDirFront",
+      "type": "System.Int32",
+      "description": "Orientation as defined by swRelativeViewCreationDirection_e"
+    },
+    {
+      "name": "ViewDirRight",
+      "type": "System.Int32",
+      "description": "Orientation as defined by swRelativeViewCreationDirection_e"
+    }
+  ],
+  "returns": "View",
+  "remarks": "Select:\nthe first orientation component using selection mark 1.\nthe second orientation component using selection mark 2.\nFor multi-body parts only, select bodies to be shown in the created view using selection mark 4.",
+  "examples": [
+    {
+      "title": "Create Relative Drawing View (C#)",
+      "href": "Create_Relative_Drawing_View_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Relative Drawing View (VB.NET)",
+      "href": "Create_Relative_Drawing_View_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Relative Drawing View (VBA)",
+      "href": "Create_Relative_Drawing_View_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDrawingDoc.Create1stAngleViews2",
+    "IDrawingDoc.Create3rdAngleViews2",
+    "IDrawingDoc.CreateAuxiliaryViewAt2",
+    "IDrawingDoc.CreateDetailViewAt3",
+    "IDrawingDoc.CreateDrawViewFromModelView3",
+    "IDrawingDoc.CreateSectionViewAt4",
+    "IDrawingDoc.CreateViewport3",
+    "IDrawingDoc.ICreateAuxiliaryViewAt2",
+    "IDrawingDoc.ICreateDetailViewAt3",
+    "IDrawingDoc.ICreateSectionViewAt4"
+  ]
+}

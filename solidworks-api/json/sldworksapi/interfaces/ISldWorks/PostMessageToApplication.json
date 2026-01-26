@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "PostMessageToApplication",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Cookie specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "UserData",
+        "type": "System.Int32",
+        "description": "Additional message-specific information defined by the application"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddCallback"
+    ],
+    "keywords": [
+      "postmessagetoapplication",
+      "isldworks",
+      "sld",
+      "works",
+      "post",
+      "message",
+      "application",
+      "cookie",
+      "int32",
+      "user",
+      "data",
+      "void"
+    ]
+  },
+  "title": "ISldWorks.PostMessageToApplication",
+  "description": "Posts a message to the application that invoked this method.",
+  "signature": "void PostMessageToApplication( \n   System.Int32\nCookie\n,\n   System.Int32\nUserData\n)",
+  "parameters": [
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Cookie specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "UserData",
+      "type": "System.Int32",
+      "description": "Additional message-specific information defined by the application"
+    }
+  ],
+  "returns": "",
+  "remarks": "If your application must be x64 compatible, then use\nISldWorks::PostMessageToApplicationx64\n.",
+  "examples": [],
+  "related": [
+    "ISldWorks.AddCallback"
+  ]
+}

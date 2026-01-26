@@ -1,0 +1,44 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ILayerMgr",
+    "member": "GetCurrentLayer",
+    "returns": "System.String",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [
+      "ILayerMgr.SetCurrentLayer"
+    ],
+    "keywords": [
+      "getcurrentlayer",
+      "ilayermgr",
+      "layer",
+      "mgr",
+      "current",
+      "string",
+      "layers",
+      "vba"
+    ]
+  },
+  "title": "ILayerMgr.GetCurrentLayer",
+  "description": "Gets the name of the current (active) layer in this drawing document.",
+  "signature": "System.String GetCurrentLayer()",
+  "parameters": [],
+  "returns": "Name of the active layer",
+  "remarks": "If an empty string is returned, then there is no active layer and\n-None-\nis displayed in the Layer toolbar.\nTo access information about a layer, get the\nILayer\nobject by passing the layer name to\nILayerMgr::GetLayer\n.\nTo change the currently active layer, use\nILayerMgr::SetCurrentLayer\n.",
+  "examples": [
+    {
+      "title": "Get Layers (VBA)",
+      "href": "Get_Layers_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ILayerMgr.SetCurrentLayer"
+  ]
+}

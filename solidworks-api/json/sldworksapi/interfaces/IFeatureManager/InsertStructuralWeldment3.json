@@ -1,0 +1,147 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "InsertStructuralWeldment3",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Path",
+        "type": "System.String",
+        "description": "Path, filename, and name of the type of structural member to insert"
+      },
+      {
+        "name": "EndCond",
+        "type": "System.Int32",
+        "description": "End condition as defined in swSOLIDWORKSWeldmentEndCondOptions_e"
+      },
+      {
+        "name": "Angle",
+        "type": "System.Double",
+        "description": "Angle of rotation of the sketch about the sketch segment"
+      },
+      {
+        "name": "Merge",
+        "type": "System.Boolean",
+        "description": "True to merge the bodies of the arc segments to the adjacent bodies, false to not"
+      },
+      {
+        "name": "Groups",
+        "type": "System.Object",
+        "description": "Array of IStructuralMemberGroup"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IStructuralMemberFeatureData",
+      "IStructuralMemberGroup"
+    ],
+    "keywords": [
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "structural",
+      "member",
+      "weldments",
+      "members",
+      "istructuralmemberfeaturedata",
+      "insertstructuralweldment3",
+      "ifeaturemanager",
+      "manager",
+      "insert",
+      "weldment3",
+      "path",
+      "string",
+      "end",
+      "cond",
+      "int32",
+      "angle",
+      "double",
+      "merge",
+      "boolean",
+      "groups",
+      "object",
+      "weldment",
+      "features",
+      "vba",
+      "vb",
+      "net",
+      "create",
+      "group"
+    ]
+  },
+  "title": "IFeatureManager.InsertStructuralWeldment3",
+  "description": "Obsolete. Superseded by IFeatureManager::InsertStructuralWeldment4.",
+  "signature": "Feature InsertStructuralWeldment3( \n   System.String\nPath\n,\n   System.Int32\nEndCond\n,\n   System.Double\nAngle\n,\n   System.Boolean\nMerge\n,\n   System.Object\nGroups\n)",
+  "parameters": [
+    {
+      "name": "Path",
+      "type": "System.String",
+      "description": "Path, filename, and name of the type of structural member to insert"
+    },
+    {
+      "name": "EndCond",
+      "type": "System.Int32",
+      "description": "End condition as defined in swSOLIDWORKSWeldmentEndCondOptions_e"
+    },
+    {
+      "name": "Angle",
+      "type": "System.Double",
+      "description": "Angle of rotation of the sketch about the sketch segment"
+    },
+    {
+      "name": "Merge",
+      "type": "System.Boolean",
+      "description": "True to merge the bodies of the arc segments to the adjacent bodies, false to not"
+    },
+    {
+      "name": "Groups",
+      "type": "System.Object",
+      "description": "Array of IStructuralMemberGroup"
+    }
+  ],
+  "returns": "IFeature",
+  "remarks": "Use\nIFeatureManager::CreateStructuralMemberGroup\n,\nIStructuralMemberFeatureData::Groups\n, or\nIStructuralMemberFeatureData::IGetGroups\nto populate the\nGroups\nparameter.",
+  "examples": [
+    {
+      "title": "Insert Weldment Features (VBA)",
+      "href": "Insert_Weldment_Features_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (VB.NET)",
+      "href": "Insert_Weldment_Features_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Structural-Member Group (VBA)",
+      "href": "Create_Structural_Member_Group_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Structural-Member Group (VB.NET)",
+      "href": "Create_Structural_Member_Group_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Structural-Member Group (C#)",
+      "href": "Create_Structural_Member_Group_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Weldment Features (C#)",
+      "href": "Insert_Weldment_Features_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IStructuralMemberFeatureData",
+    "IStructuralMemberGroup"
+  ]
+}

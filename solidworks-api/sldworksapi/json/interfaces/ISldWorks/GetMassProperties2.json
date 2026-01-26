@@ -1,0 +1,94 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetMassProperties2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "FilePathName",
+        "type": "System.String",
+        "description": "Document path and file name"
+      },
+      {
+        "name": "ConfigurationName",
+        "type": "System.String",
+        "description": "Name of the configuration to use"
+      },
+      {
+        "name": "Accuracy",
+        "type": "System.Int32",
+        "description": "0 = as is 1 = default 2 = maximum"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "IMassProperty",
+      "ISldWorks.IGetMassProperties2"
+    ],
+    "keywords": [
+      "configuration",
+      "see",
+      "also",
+      "iconfiguration",
+      "mass",
+      "properties",
+      "imassproperty",
+      "getmassproperties2",
+      "isldworks",
+      "sld",
+      "works",
+      "properties2",
+      "file",
+      "path",
+      "name",
+      "string",
+      "accuracy",
+      "int32",
+      "object",
+      "inactive",
+      "document",
+      "vba"
+    ]
+  },
+  "title": "ISldWorks.GetMassProperties2",
+  "description": "Gets the mass properties from the specified document for the specified configuration.",
+  "signature": "System.Object GetMassProperties2( \n   System.String\nFilePathName\n,\n   System.String\nConfigurationName\n,\n   System.Int32\nAccuracy\n)",
+  "parameters": [
+    {
+      "name": "FilePathName",
+      "type": "System.String",
+      "description": "Document path and file name"
+    },
+    {
+      "name": "ConfigurationName",
+      "type": "System.String",
+      "description": "Name of the configuration to use"
+    },
+    {
+      "name": "Accuracy",
+      "type": "System.Int32",
+      "description": "0 = as is 1 = default 2 = maximum"
+    }
+  ],
+  "returns": "Array of doubles of size 13; last element is the accuracy at which mass properties are calculated",
+  "remarks": "You can get the density of the current SOLIDWORKS part using\nISldWorks::GetUserPreferenceDoubleValue\nand swMaterialPropertyDensity. If the density has not been explicitly set by the user, then SOLIDWORKS uses 1.0. You can also derive the density of the body from the following calculation:\nDensity = ( Mass / Volume )\nConsistent with all other functions, this method returns metric units unless otherwise specified.\nIf this\nIModelDoc2\nobject is an assembly, then any suppressed components are not included in the mass property analysis. See\nIComponent2::GetSuppression\nto determine the state of each of the assembly components.\nThis method returns an empty array if mass properties are not calculated when saving the model. This is a system-level setting and is controlled by\nISldWorks::SetUserPreferenceToggle\nand swUpdateMassPropsDuringSave.\nNOTE:\nThe calculated origin for the return values is based on the default coordinate systems of the IModelDoc2, not on the a selected coordinate system.",
+  "examples": [
+    {
+      "title": "Get Mass Properties of Inactive Document (VBA)",
+      "href": "Get_Mass_Properties_of_Inactive_Document_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IMassProperty",
+    "ISldWorks.IGetMassProperties2"
+  ]
+}

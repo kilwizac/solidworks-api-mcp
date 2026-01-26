@@ -1,0 +1,115 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "AddVariablePitchHelixSegment",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Height",
+        "type": "System.Double",
+        "description": "Helix segment revolution; 1.0 = 360 degrees"
+      },
+      {
+        "name": "Diameter",
+        "type": "System.Double",
+        "description": "Diameter, which determines how far the variable-pitch helix segment extends"
+      },
+      {
+        "name": "Pitch",
+        "type": "System.Double",
+        "description": "Pitch, which determines the width of one complete helix turn, measured parallel to the axis of the helix"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IHelixFeatureData"
+    ],
+    "keywords": [
+      "variable",
+      "pitch",
+      "helix",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "ihelixfeaturedata",
+      "addvariablepitchhelixsegment",
+      "ifeaturemanager",
+      "manager",
+      "add",
+      "segment",
+      "height",
+      "double",
+      "diameter",
+      "boolean",
+      "create",
+      "vb",
+      "net",
+      "vba",
+      "modify"
+    ]
+  },
+  "title": "IFeatureManager.AddVariablePitchHelixSegment",
+  "description": "Adds a segment to a variable-pitch helix.",
+  "signature": "System.Boolean AddVariablePitchHelixSegment( \n   System.Double\nHeight\n,\n   System.Double\nDiameter\n,\n   System.Double\nPitch\n)",
+  "parameters": [
+    {
+      "name": "Height",
+      "type": "System.Double",
+      "description": "Helix segment revolution; 1.0 = 360 degrees"
+    },
+    {
+      "name": "Diameter",
+      "type": "System.Double",
+      "description": "Diameter, which determines how far the variable-pitch helix segment extends"
+    },
+    {
+      "name": "Pitch",
+      "type": "System.Double",
+      "description": "Pitch, which determines the width of one complete helix turn, measured parallel to the axis of the helix"
+    }
+  ],
+  "returns": "True if the variable-pitch helix segment is added, false if not",
+  "remarks": "To create and insert a variable-pitch helix, call:\nIFeatureManager::InsertVariablePitchHelix\nto create it.\nIFeatureManager::AddVariablePitchHelixFirstPitchAndDiameter\nto add the first segment.\nIFeatureManager::AddVariablePitchHelixSegment one or more times to add the remaining segments.\nIFeatureManager::EndVariablePitchHelix\nto insert it.",
+  "examples": [
+    {
+      "title": "Create Variable-pitch Helix (C#)",
+      "href": "Create_Variable_Pitch_Helix_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Variable-pitch Helix (VB.NET)",
+      "href": "Create_Variable_Pitch_Helix_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Variable-pitch Helix (VBA)",
+      "href": "Create_Variable_Pitch_Helix_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Variable-pitch Helix (C#)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Variable-pitch Helix (VB.NET)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create and Modify Variable-pitch Helix (VBA)",
+      "href": "Create_and_Modify_Variable-pitch_Helix_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IHelixFeatureData"
+  ]
+}

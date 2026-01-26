@@ -1,0 +1,123 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "RemoveFileSaveAsItem2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Cookie",
+        "type": "System.Int32",
+        "description": "Cookie specified in ISwAddin::ConnectToSW"
+      },
+      {
+        "name": "MethodName",
+        "type": "System.String",
+        "description": "Name of the application function used to save the file as specified in ISldWorks::AddFileSaveAsItem2"
+      },
+      {
+        "name": "Description",
+        "type": "System.String",
+        "description": "File description in the Save as type list"
+      },
+      {
+        "name": "Extension",
+        "type": "System.String",
+        "description": "File name extension"
+      },
+      {
+        "name": "DocumentType",
+        "type": "System.Int32",
+        "description": "Type of document to save as defined in swDocumentTypes_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "file-io",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.AddFileOpenItem3",
+      "ISldWorks.RemoveFileOpenItem2"
+    ],
+    "keywords": [
+      "filename",
+      "extensions",
+      "remove",
+      "save",
+      "removefilesaveasitem2",
+      "isldworks",
+      "sld",
+      "works",
+      "file",
+      "item2",
+      "cookie",
+      "int32",
+      "name",
+      "string",
+      "description",
+      "extension",
+      "document",
+      "type",
+      "boolean",
+      "add",
+      "items",
+      "open",
+      "menus",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.RemoveFileSaveAsItem2",
+  "description": "Removes a file type from the File &gt; Save As dialog box that was added using ISldWorks::AddFileSaveAsItem2.",
+  "signature": "System.Boolean RemoveFileSaveAsItem2( \n   System.Int32\nCookie\n,\n   System.String\nMethodName\n,\n   System.String\nDescription\n,\n   System.String\nExtension\n,\n   System.Int32\nDocumentType\n)",
+  "parameters": [
+    {
+      "name": "Cookie",
+      "type": "System.Int32",
+      "description": "Cookie specified in ISwAddin::ConnectToSW"
+    },
+    {
+      "name": "MethodName",
+      "type": "System.String",
+      "description": "Name of the application function used to save the file as specified in ISldWorks::AddFileSaveAsItem2"
+    },
+    {
+      "name": "Description",
+      "type": "System.String",
+      "description": "File description in the Save as type list"
+    },
+    {
+      "name": "Extension",
+      "type": "System.String",
+      "description": "File name extension"
+    },
+    {
+      "name": "DocumentType",
+      "type": "System.Int32",
+      "description": "Type of document to save as defined in swDocumentTypes_e"
+    }
+  ],
+  "returns": "True if the file type is removed from the Save as type list, false if not",
+  "remarks": "Call this method in your add-in's DisconnectFromSW method.",
+  "examples": [
+    {
+      "title": "Add and Remove Items to File Save As and Open Menus (VB.NET)",
+      "href": "Add_and_Remove_Items_to_File_Save_As_and_Open_Menus_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Add and Remove Items to File Save As and Open Menus (C#)",
+      "href": "Add_and_Remove_Items_to_File_Save_As_and_Open_Menus_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.AddFileOpenItem3",
+    "ISldWorks.RemoveFileOpenItem2"
+  ]
+}

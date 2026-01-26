@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDocExtension",
+    "member": "GetCSYSDistances",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "TotDistance",
+        "type": "System.Double",
+        "description": "Distance between origins"
+      },
+      {
+        "name": "XDistance",
+        "type": "System.Double",
+        "description": "Distance between X axes"
+      },
+      {
+        "name": "YDistance",
+        "type": "System.Double",
+        "description": "Distance between Y axes"
+      },
+      {
+        "name": "ZDistance",
+        "type": "System.Double",
+        "description": "Distance between Z axes"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IModelDocExtension.GetCSYSEulersAngularRotation",
+      "IModelDocExtension.GetCSYSXYZAngularRotation"
+    ],
+    "keywords": [
+      "coordinate",
+      "transform",
+      "getcsysdistances",
+      "imodeldocextension",
+      "model",
+      "doc",
+      "extension",
+      "csys",
+      "distances",
+      "tot",
+      "distance",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "IModelDocExtension.GetCSYSDistances",
+  "description": "Gets the specified distances between two selected coordinate systems.",
+  "signature": "System.Boolean GetCSYSDistances( \n   out System.Double\nTotDistance\n,\n   out System.Double\nXDistance\n,\n   out System.Double\nYDistance\n,\n   out System.Double\nZDistance\n)",
+  "parameters": [
+    {
+      "name": "TotDistance",
+      "type": "System.Double",
+      "description": "Distance between origins"
+    },
+    {
+      "name": "XDistance",
+      "type": "System.Double",
+      "description": "Distance between X axes"
+    },
+    {
+      "name": "YDistance",
+      "type": "System.Double",
+      "description": "Distance between Y axes"
+    },
+    {
+      "name": "ZDistance",
+      "type": "System.Double",
+      "description": "Distance between Z axes"
+    }
+  ],
+  "returns": "True if distances successfully retrieved, false if not",
+  "remarks": "This method corresponds to the SOLIDWORKS measure tool's calculation of distance between two coordinate systems. See\nSOLIDWORKS online help > Fundamentals > Measure Tool\nfor more information.",
+  "examples": [],
+  "related": [
+    "IModelDocExtension.GetCSYSEulersAngularRotation",
+    "IModelDocExtension.GetCSYSXYZAngularRotation"
+  ]
+}

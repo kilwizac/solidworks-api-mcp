@@ -1,0 +1,119 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "ToolsCheckInterference2",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "NumComponents",
+        "type": "System.Int32",
+        "description": "Number of components to check"
+      },
+      {
+        "name": "LpComponents",
+        "type": "System.Object",
+        "description": "Array of components being checked for interference"
+      },
+      {
+        "name": "CoincidentInterference",
+        "type": "System.Boolean",
+        "description": "True to treat coincident entities as interference, false to not"
+      },
+      {
+        "name": "PComp",
+        "type": "System.Object",
+        "description": "Array of components where interferences have been found"
+      },
+      {
+        "name": "PFace",
+        "type": "System.Object",
+        "description": "Array of faces where interferences have been found"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.IToolsCheckInterference3",
+      "IInterference",
+      "IInterferenceDetectionMgr",
+      "IModeler.CheckInterference3",
+      "IModeler.ICheckInterference3",
+      "IModeler.ICheckInterferenceCount3"
+    ],
+    "keywords": [
+      "toolscheckinterference2",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "tools",
+      "check",
+      "interference2",
+      "num",
+      "components",
+      "int32",
+      "lp",
+      "object",
+      "coincident",
+      "interference",
+      "boolean",
+      "comp",
+      "face",
+      "void",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.ToolsCheckInterference2",
+  "description": "Checks for interference between parts in this assembly.",
+  "signature": "void ToolsCheckInterference2( \n   System.Int32\nNumComponents\n,\n   System.Object\nLpComponents\n,\n   System.Boolean\nCoincidentInterference\n,\n   out System.Object\nPComp\n,\n   out System.Object\nPFace\n)",
+  "parameters": [
+    {
+      "name": "NumComponents",
+      "type": "System.Int32",
+      "description": "Number of components to check"
+    },
+    {
+      "name": "LpComponents",
+      "type": "System.Object",
+      "description": "Array of components being checked for interference"
+    },
+    {
+      "name": "CoincidentInterference",
+      "type": "System.Boolean",
+      "description": "True to treat coincident entities as interference, false to not"
+    },
+    {
+      "name": "PComp",
+      "type": "System.Object",
+      "description": "Array of components where interferences have been found"
+    },
+    {
+      "name": "PFace",
+      "type": "System.Object",
+      "description": "Array of faces where interferences have been found"
+    }
+  ],
+  "returns": "",
+  "remarks": "This method returns:\nan empty array of faces for components that have coincident faces that touch.\nan array of components for components that touch.\nFor each face that intersects, there is a corresponding component.\nNOTE:\nThe obsolete method, IAssemblyDoc::ToolsCheckInterference, displays the Interference Detection PropertyManager, but this method does not.",
+  "examples": [
+    {
+      "title": "Check Interference (VBA)",
+      "href": "Check_Interference_using_AssemblyDoc_ToolsCheckInterference2_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.IToolsCheckInterference3",
+    "IInterference",
+    "IInterferenceDetectionMgr",
+    "IModeler.CheckInterference3",
+    "IModeler.ICheckInterference3",
+    "IModeler.ICheckInterferenceCount3"
+  ]
+}

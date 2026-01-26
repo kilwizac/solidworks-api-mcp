@@ -1,0 +1,66 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDesignTable",
+    "member": "GetRowCount",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDesignTable.AddRow",
+      "IDesignTable.GetStartRowNumber",
+      "IDesignTable.GetVisibleRowCount",
+      "IDesignTable.GetVisibleTopRowNumber",
+      "IDesignTable.RowHidden",
+      "IDesignTable.SetRowChanged"
+    ],
+    "keywords": [
+      "getrowcount",
+      "idesigntable",
+      "design",
+      "table",
+      "row",
+      "count",
+      "int32",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "IDesignTable.GetRowCount",
+  "description": "Gets the number of rows in the design table that are currently visible in the model view.",
+  "signature": "System.Int32 GetRowCount()",
+  "parameters": [],
+  "returns": "Number of rows currently visible in the model view",
+  "remarks": "Before you use any of the\nIDesignTable\nmethods, you must first activate the IDesignTable using\nIDesignTable::Attach\n. Once you are finished getting IDesignTable data, you can deactivate the table using\nIDesignTable::Detach\n.\nUse\nIDesignTable::GetTotalRowCount\nto get the total number of rows in the design table.\nTo get information outside the visible region of the IDesignTable, get the Microsoft Excel worksheet activated by IDesignTable::Attach. Then, you can use the Microsoft Excel API to make additional queries.",
+  "examples": [
+    {
+      "title": "Get Design Table (VBA)",
+      "href": "Get_Design_Table_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (VB.NET)",
+      "href": "Get_Design_Table_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Design Table (C#)",
+      "href": "Get_Design_Table_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDesignTable.AddRow",
+    "IDesignTable.GetStartRowNumber",
+    "IDesignTable.GetVisibleRowCount",
+    "IDesignTable.GetVisibleTopRowNumber",
+    "IDesignTable.RowHidden",
+    "IDesignTable.SetRowChanged"
+  ]
+}

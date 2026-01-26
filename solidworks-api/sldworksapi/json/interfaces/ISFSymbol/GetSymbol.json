@@ -1,0 +1,31 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISFSymbol",
+    "member": "GetSymbol",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "getsymbol",
+      "isfsymbol",
+      "isf",
+      "symbol",
+      "int32"
+    ]
+  },
+  "title": "ISFSymbol.GetSymbol",
+  "description": "Gets the type of symbol for this surface finish symbol.",
+  "signature": "System.Int32 GetSymbol()",
+  "parameters": [],
+  "returns": "Type of symbol as defined in swSFSymType_e (see Remarks )",
+  "remarks": "This method returns one of the following values from the\nswSFSymType_e\nenumeration: swSFBasic, swSFMachining_Req, swSFDont_Machine, swSFJIS_No_Machining, swSFJIS_Basic, or swSFJIS_Machining_Req.\nIf the symbol is...\nThen use...\nswSFJIS_No_Machining or swSFJIS_Basic\nISFSymbol::GetSymbolSurfaceTexture\nto retrieve more information about the symbol.\nIt returns one of these values from the swSFSymType_e enumeration: swSFJIS_Surface_Texture_1, swSFJIS_Surface_Texture_2, swSFJIS_Surface_Texture_3, or swSFJIS_Surface_Texture_4.\nswSFBasic, swSFMachining_Req, or swSFDont_Machine\nISFSymbol::GetSymbolAllAround\nto retrieve more information about the symbol. This method returns a Boolean indicating whether this is an All Around or Local symbol.\nTo set the symbol type, use\nISFSymbol::SetSymbol\n.",
+  "examples": [],
+  "related": []
+}

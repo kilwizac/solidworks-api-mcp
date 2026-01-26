@@ -1,0 +1,76 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IVariableFilletFeatureData2",
+    "member": "GetRadius2",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "PFilletItem",
+        "type": "Vertex",
+        "description": "Vertex at which to get the radius"
+      },
+      {
+        "name": "IsAssigned",
+        "type": "System.Boolean",
+        "description": "True if the radius is assigned to a control point, false if not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IVariableFilletFeatureData2.DefaultRadius",
+      "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+      "IVariableFilletFeatureData2.ISetRadius",
+      "IVariableFilletFeatureData2.SetRadius"
+    ],
+    "keywords": [
+      "getradius2",
+      "ivariablefilletfeaturedata2",
+      "variable",
+      "fillet",
+      "feature",
+      "data2",
+      "radius2",
+      "item",
+      "vertex",
+      "assigned",
+      "boolean",
+      "double"
+    ]
+  },
+  "title": "IVariableFilletFeatureData2.GetRadius2",
+  "description": "Gets the value of the Distance 1 radius at the specified vertex.",
+  "signature": "System.Double GetRadius2( \n   Vertex\nPFilletItem\n,\n   out System.Boolean\nIsAssigned\n)",
+  "parameters": [
+    {
+      "name": "PFilletItem",
+      "type": "Vertex",
+      "description": "Vertex at which to get the radius"
+    },
+    {
+      "name": "IsAssigned",
+      "type": "System.Boolean",
+      "description": "True if the radius is assigned to a control point, false if not"
+    }
+  ],
+  "returns": "Fillet radius at the vertex specified by PFilletItem for the symmetric fillet; Distance 1 radius at the vertex for the asymmetric fillet (see Remarks )",
+  "remarks": "Call\nIVariableFilletFeatureData2::GetDistance\nto get the Distance 2 radius at the vertex for the asymmetric fillet.",
+  "examples": [
+    {
+      "title": "IVariableFilletFeatureData2",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IVariableFilletFeatureData2",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IVariableFilletFeatureData2.DefaultRadius",
+    "IVariableFilletFeatureData2.GetConicRhoOrRadius2",
+    "IVariableFilletFeatureData2.ISetRadius",
+    "IVariableFilletFeatureData2.SetRadius"
+  ]
+}

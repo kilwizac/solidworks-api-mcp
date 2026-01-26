@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "GetCommandID",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Clsid",
+        "type": "System.String",
+        "description": "Add-in's class ID"
+      },
+      {
+        "name": "UserCmdID",
+        "type": "System.Int32",
+        "description": "User-defined command ID for the add-in's control (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.CommandID"
+    ],
+    "keywords": [
+      "id",
+      "command",
+      "getcommandid",
+      "isldworks",
+      "sld",
+      "works",
+      "clsid",
+      "string",
+      "user",
+      "cmd",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.GetCommandID",
+  "description": "Gets the SOLIDWORKS command ID for an instance of an add-in's control (e.g., an add-in's toolbar button).",
+  "signature": "System.Int32 GetCommandID( \n   System.String\nClsid\n,\n   System.Int32\nUserCmdID\n)",
+  "parameters": [
+    {
+      "name": "Clsid",
+      "type": "System.String",
+      "description": "Add-in's class ID"
+    },
+    {
+      "name": "UserCmdID",
+      "type": "System.Int32",
+      "description": "User-defined command ID for the add-in's control (see Remarks )"
+    }
+  ],
+  "returns": "Actual runtime value that SOLIDWORKS assigned the add-in's control",
+  "remarks": "UserCmdId is the same user-defined command ID specified when you created the add-in control using\nICommandGroup::AddCommandItem2\n. You need the SOLIDWORKS command ID if you want to do something like cause an add-in's toolbar button to flash when visible in SOLIDWORKS.",
+  "examples": [],
+  "related": [
+    "ICommandGroup.CommandID"
+  ]
+}

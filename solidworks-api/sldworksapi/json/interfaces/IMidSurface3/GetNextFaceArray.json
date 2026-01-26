@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMidSurface3",
+    "member": "GetNextFaceArray",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Thickness",
+        "type": "System.Double",
+        "description": "Thickness between the faces"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IMidSurface3.GetFaceCount",
+      "IMidSurface3.GetFirstFaceArray",
+      "IMidSurface3.IGetFirstFaceArray",
+      "IMidSurface3.IGetNextFaceArray"
+    ],
+    "keywords": [
+      "getnextfacearray",
+      "imidsurface3",
+      "mid",
+      "surface3",
+      "next",
+      "face",
+      "array",
+      "thickness",
+      "double",
+      "object"
+    ]
+  },
+  "title": "IMidSurface3.GetNextFaceArray",
+  "description": "Gets the next face from the original paired faces and the thickness between the faces.",
+  "signature": "System.Object GetNextFaceArray( \n   out System.Double\nThickness\n)",
+  "parameters": [
+    {
+      "name": "Thickness",
+      "type": "System.Double",
+      "description": "Thickness between the faces"
+    }
+  ],
+  "returns": "Next face",
+  "remarks": "A separator is needed between the front faces and back faces. Thus, a NULL always exists between the front faces and the back faces.\nFor example, if there are five faces in the model, then the mid-surface has five faces. To get the five faces:\nCall\nIMidSurface3::GetGetFirstFaceArray\nonce.\nCall IMidSurface2::GetNextFaceArray four times.\nAt each call, the data is arranged as follows if there is one front face in the array:\n[\nNeutral face\n]\n,\n[\nfront face\n]\n, NULL,\n[\nback face\n]\nIf there are more than one front face in the array, then the data is arranged as follows:\n[\nNeutral face\n]\n,\n[\nfront face1, front face2\n]\n, NULL,\n[\nback face1, back face2\n]\nCall\nIMidSurface3::GetFirstFaceArray\nto get the first face from the original paired faces.",
+  "examples": [],
+  "related": [
+    "IMidSurface3.GetFaceCount",
+    "IMidSurface3.GetFirstFaceArray",
+    "IMidSurface3.IGetFirstFaceArray",
+    "IMidSurface3.IGetNextFaceArray"
+  ]
+}

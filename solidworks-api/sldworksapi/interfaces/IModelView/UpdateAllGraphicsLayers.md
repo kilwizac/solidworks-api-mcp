@@ -1,0 +1,45 @@
+---
+type: property
+interface: IModelView
+member: UpdateAllGraphicsLayers
+returns: System.Boolean
+parameters: []
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - ui
+related: []
+keywords:
+  - updateallgraphicslayers
+  - imodelview
+  - model
+  - view
+  - update
+  - all
+  - graphics
+  - layers
+  - boolean
+readonly: null
+---
+
+# IModelView.UpdateAllGraphicsLayers
+
+Gets or sets whether to update all graphic layers in any mode.
+
+## Signature
+
+```csharp
+System.Boolean UpdateAllGraphicsLayers {get; set;}
+```
+## Parameters
+
+None.
+
+## Return Value
+
+True to enable all graphic layers in any mode, false to not
+
+## Remarks
+
+SceneGraph organizes contents into layer 0 and 1. Layer 0 contains general geometry, and layer 1 contains sketch geometry. By default this property is set to false, which means only layer 1 is updated when in edit mode. When this property is set to true, then all layers are updated regardless of mode, including edit mode.

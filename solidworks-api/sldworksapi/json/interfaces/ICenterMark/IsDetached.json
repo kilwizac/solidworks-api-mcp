@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICenterMark",
+    "member": "IsDetached",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of center mark (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "ICenterMark.AddToCenterMarkGroup",
+      "ICenterMark.GroupCount",
+      "ICenterMark.HasDetachCenterMark",
+      "ICenterMark.IsGrouped",
+      "ICenterMark.ReattachToCenterMarkGroup"
+    ],
+    "keywords": [
+      "isdetached",
+      "icentermark",
+      "center",
+      "mark",
+      "detached",
+      "index",
+      "int32",
+      "boolean",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "ICenterMark.IsDetached",
+  "description": "Gets whether the specified center mark is detached.",
+  "signature": "System.Boolean IsDetached( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of center mark (see Remarks )"
+    }
+  ],
+  "returns": "True if the center mark specified by Index is detached, false if not",
+  "remarks": "This method is available to center marks in a center mark set and center marks in an array of center marks.\nUse:\nICenterMark::IsGrouped\nto determine if the center mark is in a center mark set (i.e., a linear or circular pattern).\nICenterMark::GroupCount\nto get a valid value for Index for a center mark in a center mark set.\nUse\nICenterMark::ReattachToCenterMarkGroup\nto reattach a detached center mark in a center mark set. You cannot reattach a detached center mark that is not in a center mark set.",
+  "examples": [
+    {
+      "title": "Get and Set Center Mark Set (C#)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VB.NET)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get and Set Center Mark Set (VBA)",
+      "href": "Get_and_Set_Center_Marks_Set_Example_VBA.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICenterMark.AddToCenterMarkGroup",
+    "ICenterMark.GroupCount",
+    "ICenterMark.HasDetachCenterMark",
+    "ICenterMark.IsGrouped",
+    "ICenterMark.ReattachToCenterMarkGroup"
+  ]
+}

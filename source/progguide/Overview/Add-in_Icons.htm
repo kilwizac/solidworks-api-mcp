@@ -1,0 +1,238 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html LANG=EN-US>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Add-in Icons</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=date content="10 16, 2002 1:52:32 PM">
+<meta name=MS-HKWD content="Icons">
+<meta name=MS-HKWD content="Add-ins,icons">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2124>
+<meta name=layout-width content=842>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../ApiHelp.css">
+
+
+
+<style type="text/css">
+.auto-style1 {
+	font-family: Verdana;
+}
+.auto-style2 {
+	font-weight: normal;
+}
+.auto-style3 {
+	font-family: "Courier New";
+	font-size: 9.5pt;
+}
+.auto-style4 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 8pt;
+}
+.auto-style5 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body LANG=EN-US>
+
+<h1><span style="font-weight: normal; font-size: 7.5pt;">SOLIDWORKS API Help</span></h1>
+
+<h1>Add-in Icons</h1>
+
+<p>An add-in's icon displays next to its name in the SOLIDWORKS Add-in Manager (<strong>Tools 
+&gt; Add-ins...</strong>). <font face="Verdana" style="font-size: 8pt">As of SOLIDWORKS 
+2022, the SOLIDWORKS Add-in Manager supports scaled icons for third-party 
+add-ins. </font> </p>
+<p><font face="Verdana" style="font-size: 8pt">The SOLIDWORKS .NET add-in templates 
+are installed with the SOLIDWORKS API SDK. When you create an add-in project in 
+Visual Studio using one of the add-in templates (SwCSharpAddin or SwVBAddin), 
+default icons of various sizes are added 
+to the same folder as the .NET template project class files. During the add-in's 
+post-build event (Right-click Project in Solution Explorer &gt; Properties &gt; Build 
+Events &gt; Post-build event command line), the scaled icons are renamed to match the DLL name and registered in the same folder 
+where the DLL resides, so that at runtime SOLIDWORKS can select an icon that is 
+appropriately scaled for your resolution and display it next to your 
+add-in's name in the Add-in Manager. </font> </p>
+<p>Instead of using the default scaled icons, y<font face="Verdana" style="font-size: 8pt">ou 
+can add your own set of scaled icons to your add-in's DLL folder. Provide icons 
+of the following sizes:</font></p>
+<ul>
+	<li>
+	<p class="auto-style1">20 X 20</p>
+	</li>
+	<li>
+	<p class="auto-style1">32 X 32</p>
+	</li>
+	<li>
+	<p class="auto-style1">40 X 40</p>
+	</li>
+	<li>
+	<p class="auto-style1">64 X 64</p>
+	</li>
+	<li>
+	<p class="auto-style1">96 X 96</p>
+	</li>
+	<li>
+	<p class="auto-style1">128 X 128</p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p>SOLIDWORKS loads the add-in icon in the following order of precedence:</p>
+<ol>
+	<li class=kadov-p>Icon file at registry-specified location:<p>Version-specific: 
+	<span style="font-size: 11.0pt; font-family: Courier New">HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\SOLIDWORKS 
+	<i>version</i>\Addins\{CLSID}\</span><span style="font-size: 9.5pt; font-family: Courier New"><strong>Icon 
+	Path <em>&lt;<span class="auto-style2">size</span>&gt;</em></strong></span><span style="font-size: 9.5pt; font-family: Courier New; font-style: italic"><br>
+	</span><font face="Verdana">Version-independent:</font><span style="font-size: 9.5pt; font-family: Courier New">
+	</span><span style="font-size: 11.0pt; font-family: Courier New">HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\AddIns\{CLSID}\</span><span style="font-size: 9.5pt; font-family: Courier New"><strong>Icon 
+	Path <em>&lt;<span class="auto-style2">size</span>&gt;<br><br></em></strong>
+	</span><span class="auto-style5">Where &lt;size&gt; is:</span><ul>
+		<li>
+		<p class="auto-style3">20</li>
+		<li>
+		<p class="auto-style3">32</li>
+		<li>
+		<p class="auto-style3">40</li>
+		<li>
+		<p class="auto-style3">64</li>
+		<li>
+		<p class="auto-style3">96</li>
+		<li>
+		<p class="auto-style3">128</li>
+	</ul>
+	<p class="auto-style3"><br><span class="auto-style4">If <em>&lt;size&gt;</em> is 
+	not specified, then the 16 X 16 icon is registered.</span><p>
+	<span style="font-size: 9.5pt; font-family: Courier New"><br></span>
+	<font face="Verdana"><b>NOTE</b>: You can specify </font>
+	<font face="Courier New" size="2"><strong>Icon Path</strong></font><b><font face="Verdana">
+	</font></b><font face="Verdana">in the registry-specified location using the 
+	icon image's 
+	full path name, its UNC path, or the path where your add-in's DLL is 
+	located. <br><br>In SOLIDWORKS 2013 SP0, and later, you can specify <strong>
+	Icon Path</strong> using a path relative to the 
+	SOLIDWORKS <i>install_dir </i>folder (typically <b>C:\Program 
+	Files\SOLIDWORKS Corp\SOLIDWORKS</b>):<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subfolder1\subfolder2\image.png</i></font><br>&nbsp;</li>
+	<li class=kadov-p>PNG scaled icon files whose names match the DLL name 
+	(e.g., MySwAddin.dll) and reside in 
+	the DLL folder, e.g., MySwAddin_20.png, MySwAddin_40.png, MySwAddin_64.png, 
+	etc.</li>
+	<li class=kadov-p>BMP scaled icon files whose names match the DLL name 
+	(e.g., MySwAddin.dll) and reside in 
+	the DLL folder, e.g., MySwAddin_20.bmp, MySwAddin_40.bmp, MySwAddin_64.bmp, 
+	etc.</li>
+</ol>
+<p>It is recommended that you add your scaled icons to the add-in project's DLL 
+folder. But if your scaled icons must reside in a folder other than the DLL 
+folder, then you must explicitly register them in <strong>SwAddin.RegisterFunction()</strong> as 
+follows:</p>
+<p class="APICODE" style="margin-left:.5in">#region SOLIDWORKS Registration <br>
+<br>
+[ComRegisterFunctionAttribute] <br>
+<br>
+public static void <strong>RegisterFunction</strong>(Type t) <br>
+<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Microsoft.Win32.RegistryKey hklm = Microsoft.Win32.Registry.LocalMachine;
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Microsoft.Win32.RegistryKey hkcu = Microsoft.Win32.Registry.CurrentUser;
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;string keyname = &quot;SOFTWARE\\SOLIDWORKS\\Addins\\{&quot; + t.GUID.ToString() + 
+&quot;}&quot;; <br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;Microsoft.Win32.RegistryKey addinkey = hklm.CreateSubKey(keyname); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; addinkey.SetValue(null, 0); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addinkey.SetValue(&quot;Description&quot;, SWattr.Description); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addinkey.SetValue(&quot;Title&quot;, SWattr.Title); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <b>#region Extract icon during registration <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BitmapHandler iBmp = new BitmapHandler(); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assembly thisAssembly; <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thisAssembly = System.Reflection.Assembly.GetExecutingAssembly(); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String tempPath = <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iBmp.CreateFileFromResourceBitmap(&quot;_2012_PMP_Interfaces.AddInMgrIcon.bmp&quot;,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thisAssembly); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Copy the bitmap to a suitable permanent location with a meaningful 
+filename <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String addInPath = 
+System.IO.Path.GetDirectoryName(thisAssembly.Location); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String iconPath = System.IO.Path.Combine(addInPath, &quot;AddInMgrIcon.bmp&quot;);
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.IO.File.Copy(tempPath, iconPath, true); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Register the icon location <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addinkey.SetValue(&quot;<i>Icon 
+Path</i>&quot;, iconPath );<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Repeat steps above for all of your scaled icons</b></p>
+<p class="APICODE" style="margin-left:.5in">&nbsp;<b> <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; #endregion</b> <b><br>
+</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp; keyname = &quot;Software\\SOLIDWORKS\\AddInsStartup\\{&quot; + t.GUID.ToString() + 
+&quot;}&quot;; <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; addinkey = hkcu.CreateSubKey(keyname); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; addinkey.SetValue(null, Convert.ToInt32(SWattr.LoadAtStartup), <br>
+&nbsp;&nbsp;&nbsp;&nbsp; Microsoft.Win32.RegistryValueKind.DWord); <br>
+<br>
+}</p>
+
+<p>Changes to the icon file or registry take effect only after SOLIDWORKS is 
+restarted.</p>
+<p>To learn more about add-ins and their menu items and toolbars:</p>
+<ul>
+	<li class=kadov-p><p style="line-height: 150%">
+	<a href="Add-in_Callbacks.htm">Add-in Callbacks</a></p></li>
+	<li class=kadov-p>
+	<p style="line-height: 150%"><a href="Add-in_Shortcut_Menus.htm">Add-in Shortcut Menus</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Add-in_Toolbars.htm">Add-in Toolbars</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%"><a href="Using_SwAddin_to_Create_a_SolidWorks_Addin.htm">
+	Using SwAddin to Create a SOLIDWORKS Add-in</a></p></li>
+	<li class=kadov-p><p style="line-height: 150%">
+	<a href="SolidWorks_API_Add-Ins,_Project_Templates,_and_Wizards.htm">
+	SOLIDWORKS API Add-in Templates and Wizards</a></p></li>
+</ul>
+
+</body>
+
+</html>

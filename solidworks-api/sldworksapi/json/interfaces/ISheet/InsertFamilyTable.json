@@ -1,0 +1,170 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISheet",
+    "member": "InsertFamilyTable",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "AttachToAnchorPoint",
+        "type": "System.Boolean",
+        "description": "True to insert the family table at the existing family table anchor point, false to anchor the table at the point specified by X and Y"
+      },
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "X coordinate for the placement of the family table annotation"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "Y coordinate for the placement of the family table annotation"
+      },
+      {
+        "name": "ModelName",
+        "type": "System.String",
+        "description": "Name of part or assembly on whose drawing sheet to insert the family table"
+      },
+      {
+        "name": "TableTemplateName",
+        "type": "System.String",
+        "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+      },
+      {
+        "name": "DimColumnType",
+        "type": "System.Int32",
+        "description": "Dimension column type as defined by swFamilyTableDimColumnType_e"
+      },
+      {
+        "name": "UseAllConfigs",
+        "type": "System.Boolean",
+        "description": "True to use all configurations, false to only use ConfigArray configurations"
+      },
+      {
+        "name": "ConfigArray",
+        "type": "System.Object",
+        "description": "Array of configurations to use; valid only if UseAllConfigs is false"
+      },
+      {
+        "name": "ItemNumberStart",
+        "type": "System.Int32",
+        "description": "Starting item number"
+      },
+      {
+        "name": "ItemNumberIncrement",
+        "type": "System.Int32",
+        "description": "Item number increment"
+      },
+      {
+        "name": "FollowConfigTreeOrder",
+        "type": "System.Boolean",
+        "description": "True to follow the configuration tree order, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "drawings"
+    ],
+    "related": [],
+    "keywords": [
+      "insertfamilytable",
+      "isheet",
+      "sheet",
+      "insert",
+      "family",
+      "table",
+      "attach",
+      "anchor",
+      "point",
+      "boolean",
+      "double",
+      "model",
+      "name",
+      "string",
+      "template",
+      "dim",
+      "column",
+      "type",
+      "int32",
+      "use",
+      "all",
+      "configs",
+      "config",
+      "array",
+      "object",
+      "item",
+      "number",
+      "start",
+      "increment",
+      "follow",
+      "tree",
+      "order"
+    ]
+  },
+  "title": "ISheet.InsertFamilyTable",
+  "description": "Inserts a family table in this drawing sheet.",
+  "signature": "System.Object InsertFamilyTable( \n   System.Boolean\nAttachToAnchorPoint\n,\n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.String\nModelName\n,\n   System.String\nTableTemplateName\n,\n   System.Int32\nDimColumnType\n,\n   System.Boolean\nUseAllConfigs\n,\n   System.Object\nConfigArray\n,\n   System.Int32\nItemNumberStart\n,\n   System.Int32\nItemNumberIncrement\n,\n   System.Boolean\nFollowConfigTreeOrder\n)",
+  "parameters": [
+    {
+      "name": "AttachToAnchorPoint",
+      "type": "System.Boolean",
+      "description": "True to insert the family table at the existing family table anchor point, false to anchor the table at the point specified by X and Y"
+    },
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "X coordinate for the placement of the family table annotation"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "Y coordinate for the placement of the family table annotation"
+    },
+    {
+      "name": "ModelName",
+      "type": "System.String",
+      "description": "Name of part or assembly on whose drawing sheet to insert the family table"
+    },
+    {
+      "name": "TableTemplateName",
+      "type": "System.String",
+      "description": "Path and filename of the template that corresponds to this type of table (see Remarks )"
+    },
+    {
+      "name": "DimColumnType",
+      "type": "System.Int32",
+      "description": "Dimension column type as defined by swFamilyTableDimColumnType_e"
+    },
+    {
+      "name": "UseAllConfigs",
+      "type": "System.Boolean",
+      "description": "True to use all configurations, false to only use ConfigArray configurations"
+    },
+    {
+      "name": "ConfigArray",
+      "type": "System.Object",
+      "description": "Array of configurations to use; valid only if UseAllConfigs is false"
+    },
+    {
+      "name": "ItemNumberStart",
+      "type": "System.Int32",
+      "description": "Starting item number"
+    },
+    {
+      "name": "ItemNumberIncrement",
+      "type": "System.Int32",
+      "description": "Item number increment"
+    },
+    {
+      "name": "FollowConfigTreeOrder",
+      "type": "System.Boolean",
+      "description": "True to follow the configuration tree order, false to not"
+    }
+  ],
+  "returns": "IFamilyTableAnnotation",
+  "remarks": "Family tables display the variations in part and assembly configurations or custom properties in table format.\nBy default, the family table templates are in\ninstall_dir\n\\\nlang\n\\\nlanguage\nand have a filename extension of\n.sldfamtbt\n. The template and table must be of the same type. For example, you must specify TableTemplate with\ninstall_dir\n\\lang\\English\\family-standard.sldfamtbt\nif you want to insert the English version of a family table.\nFor more information about family tables, see the\nSOLIDWORKS Design user-interface Help > Detailing and Drawings > Tables > Family Tables\ntopics.",
+  "examples": [],
+  "related": []
+}

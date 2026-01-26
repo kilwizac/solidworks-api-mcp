@@ -1,0 +1,36 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ICurveDrivenPatternFeatureData",
+    "member": "GeometryPattern",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "geometrypattern",
+      "icurvedrivenpatternfeaturedata",
+      "curve",
+      "driven",
+      "pattern",
+      "feature",
+      "data",
+      "geometry",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "ICurveDrivenPatternFeatureData.GeometryPattern",
+  "description": "Gets or sets whether to create the pattern using only the geometry (faces and edges) of the feature.",
+  "signature": "System.Boolean GeometryPattern {get; set;}",
+  "parameters": [],
+  "returns": "True to use only the geometry of the feature to create the pattern (faster), false to pattern and solve each instance of the feature in its entirety (slower)",
+  "remarks": "This property is valid only if\nICurveDrivenPatternFeatureData::BodyPattern\nis false.\nIf this property is true, you can call\nICurveDrivenPatternFeatureData::SetFeatureScope\n.\nFor more information, see the\nCurve Driven Patterns and the\nCurve Driven Pattern PropertyManager\ntopic in the SOLIDWORKS Design user-interface help.",
+  "examples": [],
+  "related": []
+}

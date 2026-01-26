@@ -1,0 +1,87 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IPropertyManagerPageBitmapButton",
+    "member": "SetBitmapsx64",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "ModuleHandle",
+        "type": "System.Int64",
+        "description": "Module handle of the application instance that contains the image resource"
+      },
+      {
+        "name": "BitmapUp",
+        "type": "System.Int32",
+        "description": "Resource ID of the not-clicked state image resource"
+      },
+      {
+        "name": "BitmapDown",
+        "type": "System.Int32",
+        "description": "Resource ID of the clicked state image resource"
+      },
+      {
+        "name": "BitmapDisabled",
+        "type": "System.Int32",
+        "description": "Resource ID of the disabled state image resource"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IPropertyManagerPageBitmapButton.SetBitmaps"
+    ],
+    "keywords": [
+      "setbitmapsx64",
+      "ipropertymanagerpagebitmapbutton",
+      "manager",
+      "page",
+      "bitmap",
+      "button",
+      "bitmapsx64",
+      "module",
+      "handle",
+      "int64",
+      "up",
+      "int32",
+      "down",
+      "disabled",
+      "boolean"
+    ]
+  },
+  "title": "IPropertyManagerPageBitmapButton.SetBitmapsx64",
+  "description": "Sets the images for this button in 64-bit applications.",
+  "signature": "System.Boolean SetBitmapsx64( \n   System.Int64\nModuleHandle\n,\n   System.Int32\nBitmapUp\n,\n   System.Int32\nBitmapDown\n,\n   System.Int32\nBitmapDisabled\n)",
+  "parameters": [
+    {
+      "name": "ModuleHandle",
+      "type": "System.Int64",
+      "description": "Module handle of the application instance that contains the image resource"
+    },
+    {
+      "name": "BitmapUp",
+      "type": "System.Int32",
+      "description": "Resource ID of the not-clicked state image resource"
+    },
+    {
+      "name": "BitmapDown",
+      "type": "System.Int32",
+      "description": "Resource ID of the clicked state image resource"
+    },
+    {
+      "name": "BitmapDisabled",
+      "type": "System.Int32",
+      "description": "Resource ID of the disabled state image resource"
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "This method is only available through early binding and with 64-bit versions of the SOLIDWORKS Design software.\nThe ModuleHandle argument for this method is the handle to the instance ( HINSTANCE ) of the user DLL, and the resource IDs for the not-clicked, clicked, and disabled states are the image resource integers. The SOLIDWORKS Design application loads the images from the user DLL and uses them on this bitmap button control.\nYou must call this method after calling either of the following methods to create the bitmap button control:\nIPropertyManagerPage2::AddControl\nor\nIPropertyManagerPage2::IAddControl\nIPropertyManagerPageGroup::AddControl\nor\nIPropertyManagerPageGroup::IAddControl",
+  "examples": [],
+  "related": [
+    "IPropertyManagerPageBitmapButton.SetBitmaps"
+  ]
+}

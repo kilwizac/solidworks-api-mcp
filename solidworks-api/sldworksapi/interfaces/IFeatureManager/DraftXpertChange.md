@@ -1,0 +1,106 @@
+---
+type: method
+interface: IFeatureManager
+member: DraftXpertChange
+returns: Feature
+parameters:
+  -
+    name: Angle
+    type: System.Double
+    description: Draft angle in radians
+  -
+    name: FlipDir
+    type: System.Boolean
+    description: True to flip the direction of the draft (the draft direction is determined by the selected direction, which could be a planar face, a reference plane, an edge, or two vertices; if you refer to the last argument in IModelDocExtension::SelectByID2 , then these items have a selection mark of 1; the faces to draft have a selection mark of 2, and the draft edges have a selection mark of 4), false to not
+  -
+    name: EdgeDraft
+    type: System.Boolean
+    description: True if this is an edge draft and the user selects edges to draft, false if this is a face draft and the user selects faces to draft (SOLIDWORKS automatically selects the faces next to the edge to be drafted)
+  -
+    name: PropType
+    type: System.Int32
+    description: Propagation type: 0 = no propagation 1 = propagate to the next tangent faces that share the base neutral plane; valid for edge draft or neutral plane draft 2 = propagate to all faces that are a neighbor of the neutral plane 3 = propagate to all faces that a neighbor of the neutral plane on all inner loops (for example, all faces of a pocket or a boss) 4 = propagate to all faces that are a neighbor of the neutral plane on the outer loop (for example, the sides of a box with the bottom face as the neutral plane)
+  -
+    name: IsStepDraft
+    type: System.Boolean
+    description: True if the draft is a step draft, false if not
+  -
+    name: IsBodyDraft
+    type: System.Boolean
+    description: True if the draft is a body draft, false if not
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - features
+related:
+  - IFeatureManager.DraftXpertRemove
+keywords:
+  - drafts
+  - see
+  - also
+  - idraftfeaturedata2
+  - draftxpert
+  - draftxpertchange
+  - ifeaturemanager
+  - feature
+  - manager
+  - draft
+  - xpert
+  - change
+  - angle
+  - double
+  - flip
+  - dir
+  - boolean
+  - edge
+  - prop
+  - type
+  - int32
+  - step
+  - body
+---
+
+# IFeatureManager.DraftXpertChange
+
+Changes the parameters on the selected drafted faces, regardless of whether the drafted faces were created manually or with DraftXpert, provided that DraftXpert can process them.
+
+## Signature
+
+```csharp
+Feature DraftXpertChange( 
+   System.Double
+Angle
+,
+   System.Boolean
+FlipDir
+,
+   System.Boolean
+EdgeDraft
+,
+   System.Int32
+PropType
+,
+   System.Boolean
+IsStepDraft
+,
+   System.Boolean
+IsBodyDraft
+)
+```
+## Parameters
+
+- `Angle` (System.Double): Draft angle in radians
+- `FlipDir` (System.Boolean): True to flip the direction of the draft (the draft direction is determined by the selected direction, which could be a planar face, a reference plane, an edge, or two vertices; if you refer to the last argument in IModelDocExtension::SelectByID2 , then these items have a selection mark of 1; the faces to draft have a selection mark of 2, and the draft edges have a selection mark of 4), false to not
+- `EdgeDraft` (System.Boolean): True if this is an edge draft and the user selects edges to draft, false if this is a face draft and the user selects faces to draft (SOLIDWORKS automatically selects the faces next to the edge to be drafted)
+- `PropType` (System.Int32): Propagation type: 0 = no propagation 1 = propagate to the next tangent faces that share the base neutral plane; valid for edge draft or neutral plane draft 2 = propagate to all faces that are a neighbor of the neutral plane 3 = propagate to all faces that a neighbor of the neutral plane on all inner loops (for example, all faces of a pocket or a boss) 4 = propagate to all faces that are a neighbor of the neutral plane on the outer loop (for example, the sides of a box with the bottom face as the neutral plane)
+- `IsStepDraft` (System.Boolean): True if the draft is a step draft, false if not
+- `IsBodyDraft` (System.Boolean): True if the draft is a body draft, false if not
+
+## Return Value
+
+Pointer to the modified draft feature
+
+## See Also
+
+- `IFeatureManager.DraftXpertRemove`

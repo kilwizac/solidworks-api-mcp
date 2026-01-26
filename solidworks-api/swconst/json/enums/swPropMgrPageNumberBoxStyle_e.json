@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "enum",
+    "name": "swPropMgrPageNumberBoxStyle_e",
+    "description": "PropertyManager page number box styles. Bitmask.",
+    "member_count": 7,
+    "docset": "swconst",
+    "categories": [
+      "constants"
+    ],
+    "used_by": []
+  },
+  "title": "swPropMgrPageNumberBoxStyle_e",
+  "description": "PropertyManager page number box styles. Bitmask.",
+  "values": [
+    {
+      "member": "swPropMgrPageNumberBoxStyle_AvoidSelectionText",
+      "value": "4",
+      "description": "or 0x4; The item the user selects in the attached drop-down list does not appear in the number box. Instead, the user's selection causes the add-in to get a callback via IPropertyManagerPage2Handler9::OnComboboxSelectionChanged ; the Id argument will be the number box; the add-in is expected to respond by setting the value for the number box using IPropertyManagerPageNumberbox::Value ."
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_ComboEditBox",
+      "value": "1",
+      "description": "or 0x1; Enables the attached drop-down list for the number box; user can type a value or select a value from the attached drop-down list for the number box"
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_EditBoxReadOnly",
+      "value": "2",
+      "description": "or 0x2; User can only select a value from the attached drop-down list for the number box NOTE: You can set swPropMgrPageNumberBoxStyle_EditBoxReadOnly either before or after the PropertyManager page is displayed. If set after the PropertyManager page is displayed and the number box contains editable text, then that text cannot be edited by the user"
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_NoScrollArrows",
+      "value": "8",
+      "description": "or 0x8; Do not show the up and down arrows in the number box, thus, disallowing incrementing or decrementing the value in the number box"
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_Slider",
+      "value": "16",
+      "description": "or 0x10; Slider"
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_SuppressNotifyWhileTracking",
+      "value": "64",
+      "description": "or 0x40; Suppress sending multiple notifications when a user is dragging or spinning the slider of a number box on a PropertyManager page; instead, send only one notification; see IPropertyManagerPage2Handler9::OnNumberboxChanged for details"
+    },
+    {
+      "member": "swPropMgrPageNumberBoxStyle_Thumbwheel",
+      "value": "32",
+      "description": "or 0x20; Thumbwheel"
+    }
+  ]
+}

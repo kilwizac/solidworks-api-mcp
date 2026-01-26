@@ -1,0 +1,131 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IConfigurationManager",
+    "member": "AddCADFamilyConfiguration",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the configuration to add"
+      },
+      {
+        "name": "Description",
+        "type": "System.String",
+        "description": "Details about the configuration"
+      },
+      {
+        "name": "IsPhysicalProduct",
+        "type": "System.Boolean",
+        "description": "True to add a parent configuration (Physical Product), false to add a derived configuration (Representation)"
+      },
+      {
+        "name": "RepresentationParentName",
+        "type": "System.String",
+        "description": "Parent Physical Product name of derived configuration (Representation); valid only if IsPhysicalProduct is false"
+      },
+      {
+        "name": "ConfigOptions",
+        "type": "System.Int32",
+        "description": "Configuration options as defined by swCADFamilyCfgOptions_e"
+      },
+      {
+        "name": "ChildCompDisplayOption",
+        "type": "System.Int32",
+        "description": "Child component display option as defined in swChildComponentInBOMOption_e"
+      },
+      {
+        "name": "Rebuild",
+        "type": "System.Boolean",
+        "description": "True to rebuild the model after adding this configuration, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IConfiguration.Get3DExperienceType",
+      "IConfiguration.Set3DExperienceType"
+    ],
+    "keywords": [
+      "3dexperience",
+      "solidworks",
+      "connected",
+      "addcadfamilyconfiguration",
+      "iconfigurationmanager",
+      "configuration",
+      "manager",
+      "add",
+      "cad",
+      "family",
+      "name",
+      "string",
+      "description",
+      "physical",
+      "product",
+      "boolean",
+      "representation",
+      "parent",
+      "config",
+      "options",
+      "int32",
+      "child",
+      "comp",
+      "display",
+      "option",
+      "rebuild",
+      "object"
+    ]
+  },
+  "title": "IConfigurationManager.AddCADFamilyConfiguration",
+  "description": "Adds the specified configuration to SOLIDWORKS Design Augmented.",
+  "signature": "System.Object AddCADFamilyConfiguration( \n   System.String\nName\n,\n   System.String\nDescription\n,\n   System.Boolean\nIsPhysicalProduct\n,\n   System.String\nRepresentationParentName\n,\n   System.Int32\nConfigOptions\n,\n   System.Int32\nChildCompDisplayOption\n,\n   System.Boolean\nRebuild\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the configuration to add"
+    },
+    {
+      "name": "Description",
+      "type": "System.String",
+      "description": "Details about the configuration"
+    },
+    {
+      "name": "IsPhysicalProduct",
+      "type": "System.Boolean",
+      "description": "True to add a parent configuration (Physical Product), false to add a derived configuration (Representation)"
+    },
+    {
+      "name": "RepresentationParentName",
+      "type": "System.String",
+      "description": "Parent Physical Product name of derived configuration (Representation); valid only if IsPhysicalProduct is false"
+    },
+    {
+      "name": "ConfigOptions",
+      "type": "System.Int32",
+      "description": "Configuration options as defined by swCADFamilyCfgOptions_e"
+    },
+    {
+      "name": "ChildCompDisplayOption",
+      "type": "System.Int32",
+      "description": "Child component display option as defined in swChildComponentInBOMOption_e"
+    },
+    {
+      "name": "Rebuild",
+      "type": "System.Boolean",
+      "description": "True to rebuild the model after adding this configuration, false to not"
+    }
+  ],
+  "returns": "IConfiguration",
+  "remarks": "",
+  "examples": [],
+  "related": [
+    "IConfiguration.Get3DExperienceType",
+    "IConfiguration.Set3DExperienceType"
+  ]
+}

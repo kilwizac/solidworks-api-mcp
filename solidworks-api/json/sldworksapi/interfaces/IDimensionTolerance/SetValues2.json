@@ -1,0 +1,105 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimensionTolerance",
+    "member": "SetValues2",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "MinValue",
+        "type": "System.Double",
+        "description": "Dimension tolerance minimum value"
+      },
+      {
+        "name": "MaxValue",
+        "type": "System.Double",
+        "description": "Dimension tolerance maximum value"
+      },
+      {
+        "name": "WhichConfigurations",
+        "type": "System.Int32",
+        "description": "Configurations to which to set the dimension tolerance minimum and maximum values as defined in swSetValueInConfiguration_e"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Names of the configurations for which to set dimension tolerance values"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [],
+    "keywords": [
+      "setvalues2",
+      "idimensiontolerance",
+      "dimension",
+      "tolerance",
+      "values2",
+      "min",
+      "value",
+      "double",
+      "max",
+      "which",
+      "configurations",
+      "int32",
+      "config",
+      "names",
+      "object",
+      "boolean",
+      "change",
+      "configuration",
+      "vb",
+      "net",
+      "vba"
+    ]
+  },
+  "title": "IDimensionTolerance.SetValues2",
+  "description": "Sets the tolerance minimum and maximum values of a dimension.",
+  "signature": "System.Boolean SetValues2( \n   System.Double\nMinValue\n,\n   System.Double\nMaxValue\n,\n   System.Int32\nWhichConfigurations\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "MinValue",
+      "type": "System.Double",
+      "description": "Dimension tolerance minimum value"
+    },
+    {
+      "name": "MaxValue",
+      "type": "System.Double",
+      "description": "Dimension tolerance maximum value"
+    },
+    {
+      "name": "WhichConfigurations",
+      "type": "System.Int32",
+      "description": "Configurations to which to set the dimension tolerance minimum and maximum values as defined in swSetValueInConfiguration_e"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Names of the configurations for which to set dimension tolerance values"
+    }
+  ],
+  "returns": "True if the dimension tolerance values are set, false if not",
+  "remarks": "You cannot set the dimension tolerance values if the\ntolerance type\nis\nswTolType_e.swTolNONE\n. Depending on the tolerance type, the dimension tolerance minimum and maximum values might not be visible.\nTo get the dimension tolerance...\nUse...\nMinimum value\nIDimensionTolerance::GetMinValue\nMaximum value\nIDimensionTolerance::GetMaxValue\nTo see the effects of changing the dimension tolerance values, call\nIModelView::GraphicsRedraw\n.",
+  "examples": [
+    {
+      "title": "Change Dimension Tolerance in a Configuration (C#)",
+      "href": "Change_Dimension_Tolerance_in_Configuration_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Dimension Tolerance in a Configuration (VB.NET)",
+      "href": "Change_Dimension_Tolerance_in_Configuration_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Change Dimension Tolerance in a Configuration (VBA)",
+      "href": "Change_Dimension_Tolerance_in_Configuration_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

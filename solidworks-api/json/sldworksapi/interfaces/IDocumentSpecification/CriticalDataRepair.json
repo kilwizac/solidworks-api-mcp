@@ -1,0 +1,35 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDocumentSpecification",
+    "member": "CriticalDataRepair",
+    "returns": "System.Boolean",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [],
+    "keywords": [
+      "criticaldatarepair",
+      "idocumentspecification",
+      "document",
+      "specification",
+      "critical",
+      "data",
+      "repair",
+      "boolean"
+    ],
+    "readonly": null
+  },
+  "title": "IDocumentSpecification.CriticalDataRepair",
+  "description": "Gets or sets whether to automatically repair critical data errors in the file to be opened.",
+  "signature": "System.Boolean CriticalDataRepair {get; set;}",
+  "parameters": [],
+  "returns": "True to automatically repair critical data errors, false to not",
+  "remarks": "This property is valid only if\nIDocumentSpecification::Silent\nis set to true.\nIf you set this property to true, and the file to open has critical data corruption:\nCritical data repair proceeds.\nISldWorks::OpenDoc7\nreturns the document with warning,\nswFileLoadWarning_e\n.swFileLoadWarning_CriticalDataRepair.\nAll non-critical data errors are ignored, because repairing critical errors obliterates all non-critical data in the file.\nIf set to true, this property instructs SOLIDWORKS to repair critical data by importing Parasolid bodies into a new file. The repaired file contains only Parasolid bodies.\nThe following files are created in c\n:\\Users\\\nuser\n\\AppData\\Local\\Temp:\nRepaired_\nfile_name.sld*\nBackup of\nfile_name.sld*\nIf you set this property to false, and the file to open has critical data corruption:\nThe document does not open.\nISldWorks::OpenDoc7 fails and returns null with error code,\nswFileLoadError_e\n.FileRequiresCriticalDataRepair.\nUse\nIDocumentSpecification::AutoRepair\nto handle non-critical data corruption of files.\nFor C++ only, VARIANT_TRUE (-1) automatically repairs the file, and VARIANT_FALSE (0) does not.",
+  "examples": [],
+  "related": []
+}

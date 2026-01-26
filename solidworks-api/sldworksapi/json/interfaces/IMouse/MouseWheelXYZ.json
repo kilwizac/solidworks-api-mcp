@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IMouse",
+    "member": "MouseWheelXYZ",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "X",
+        "type": "System.Double",
+        "description": "x coordinate where to move the pointer"
+      },
+      {
+        "name": "Y",
+        "type": "System.Double",
+        "description": "y coordinate where to move the pointer"
+      },
+      {
+        "name": "Z",
+        "type": "System.Double",
+        "description": "z coordinate where to move the pointer"
+      },
+      {
+        "name": "Clicks",
+        "type": "System.Int32",
+        "description": "Number of clicks to zoom in and out; specify -120 to to zoom in one click and specify 120 to to zoom out"
+      },
+      {
+        "name": "Flags",
+        "type": "System.Int32",
+        "description": "Mouse command as defined in swMouse_e (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "mousewheelxyz",
+      "imouse",
+      "mouse",
+      "wheel",
+      "xyz",
+      "double",
+      "clicks",
+      "int32",
+      "flags",
+      "boolean"
+    ]
+  },
+  "title": "IMouse.MouseWheelXYZ",
+  "description": "Zoom in or zoom out using the mouse.",
+  "signature": "System.Boolean MouseWheelXYZ( \n   System.Double\nX\n,\n   System.Double\nY\n,\n   System.Double\nZ\n,\n   System.Int32\nClicks\n,\n   System.Int32\nFlags\n)",
+  "parameters": [
+    {
+      "name": "X",
+      "type": "System.Double",
+      "description": "x coordinate where to move the pointer"
+    },
+    {
+      "name": "Y",
+      "type": "System.Double",
+      "description": "y coordinate where to move the pointer"
+    },
+    {
+      "name": "Z",
+      "type": "System.Double",
+      "description": "z coordinate where to move the pointer"
+    },
+    {
+      "name": "Clicks",
+      "type": "System.Int32",
+      "description": "Number of clicks to zoom in and out; specify -120 to to zoom in one click and specify 120 to to zoom out"
+    },
+    {
+      "name": "Flags",
+      "type": "System.Int32",
+      "description": "Mouse command as defined in swMouse_e (see Remarks )"
+    }
+  ],
+  "returns": "True if the operation succeeded, false if not",
+  "remarks": "To use this method and access SOLIDWORKS commands, you must add a reference to\nSOLIDWORKS\nversion\nCommands type library\n(substitute the actual SOLIDWORKS version number for\nversion\n) or\nSolidWorks.Interop.swcommands.dll\n, typically installed in\ninstall_dir\n\\api\\redist.\nThe coordinate system is the model's coordinate system.",
+  "examples": [],
+  "related": []
+}

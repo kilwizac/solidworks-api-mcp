@@ -1,0 +1,52 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "CheckpointConvertedDocument",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "DocName",
+        "type": "System.String",
+        "description": "Full pathname of the file to save"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [],
+    "keywords": [
+      "document",
+      "convert",
+      "checkpointconverteddocument",
+      "isldworks",
+      "sld",
+      "works",
+      "checkpoint",
+      "converted",
+      "doc",
+      "name",
+      "string",
+      "int32"
+    ]
+  },
+  "title": "ISldWorks.CheckpointConvertedDocument",
+  "description": "Saves the specified open document if its version is older than the version of the SOLIDWORKS Design product being used.",
+  "signature": "System.Int32 CheckpointConvertedDocument( \n   System.String\nDocName\n)",
+  "parameters": [
+    {
+      "name": "DocName",
+      "type": "System.String",
+      "description": "Full pathname of the file to save"
+    }
+  ],
+  "returns": "0 for no error or a bitwise OR of the errors encountered as defined in swFileSaveError_e",
+  "remarks": "This saves the document even if the document is read-only.\nThis method requires that the document is currently open in your SOLIDWORKS Design session. It specifically checks if the document has been upgraded to the current version of the\nSOLIDWORKS Design product in this session. If it has not, then this method has no effect.\nBe careful when using this method because this method attempts to change the file permissions to read-write if the file is read-only, and if successful , it\noverwrites the file and restores the permission to read-only. Although it may appear the file is safe because it is read-only before and after the operation, it might have been overwritten by this method.\nThis method was designed to be used with the ISldWorks event\nDocumentConversionNotify\n. It does not require that the notification be used, but it should work in response to that notification.",
+  "examples": [],
+  "related": []
+}

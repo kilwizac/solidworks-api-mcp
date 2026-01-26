@@ -1,0 +1,131 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFeatureManager",
+    "member": "SetNetBlendDirectionData",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "System.Int16",
+        "description": "0 = Direction 1 1 = Direction 2"
+      },
+      {
+        "name": "InfluenceType",
+        "type": "System.Int16",
+        "description": "0 = Global 1 = To Next Curve 2 = To Next Sharp 3 = To Next Edge"
+      },
+      {
+        "name": "TrimCurves",
+        "type": "System.Int16",
+        "description": "0 = False to trim curves 1 = True to trim curves"
+      },
+      {
+        "name": "BlendClosed",
+        "type": "System.Boolean",
+        "description": "True closes this boundary feature or boundary surface feature, false leaves this boundary feature or boundary surface feature open"
+      },
+      {
+        "name": "SplitSurfaces",
+        "type": "System.Boolean",
+        "description": "Not used"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IFeatureManager.InsertNetBlend",
+      "IFeatureManager.SetNetBlendCurveData"
+    ],
+    "keywords": [
+      "boundary",
+      "surface",
+      "feature",
+      "see",
+      "also",
+      "ifeature",
+      "isurface",
+      "setnetblenddirectiondata",
+      "ifeaturemanager",
+      "manager",
+      "net",
+      "blend",
+      "direction",
+      "data",
+      "int16",
+      "influence",
+      "type",
+      "trim",
+      "curves",
+      "closed",
+      "boolean",
+      "split",
+      "surfaces",
+      "insert",
+      "vba",
+      "vb"
+    ]
+  },
+  "title": "IFeatureManager.SetNetBlendDirectionData",
+  "description": "Sets the curve set data (one for each of the two directions) for this boundary feature or boundary surface feature.",
+  "signature": "Feature SetNetBlendDirectionData( \n   System.Int16\nDirection\n,\n   System.Int16\nInfluenceType\n,\n   System.Int16\nTrimCurves\n,\n   System.Boolean\nBlendClosed\n,\n   System.Boolean\nSplitSurfaces\n)",
+  "parameters": [
+    {
+      "name": "Direction",
+      "type": "System.Int16",
+      "description": "0 = Direction 1 1 = Direction 2"
+    },
+    {
+      "name": "InfluenceType",
+      "type": "System.Int16",
+      "description": "0 = Global 1 = To Next Curve 2 = To Next Sharp 3 = To Next Edge"
+    },
+    {
+      "name": "TrimCurves",
+      "type": "System.Int16",
+      "description": "0 = False to trim curves 1 = True to trim curves"
+    },
+    {
+      "name": "BlendClosed",
+      "type": "System.Boolean",
+      "description": "True closes this boundary feature or boundary surface feature, false leaves this boundary feature or boundary surface feature open"
+    },
+    {
+      "name": "SplitSurfaces",
+      "type": "System.Boolean",
+      "description": "Not used"
+    }
+  ],
+  "returns": "Feature",
+  "remarks": "",
+  "examples": [
+    {
+      "title": "Insert Boundary Surface Feature (VBA)",
+      "href": "Insert_Boundary_Surface_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (C#)",
+      "href": "Insert_Boundary_Feature_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VB.NET)",
+      "href": "Insert_Boundary_Feature_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Insert Boundary Feature (VBA)",
+      "href": "Insert_Boundary_Feature_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IFeatureManager.InsertNetBlend",
+    "IFeatureManager.SetNetBlendCurveData"
+  ]
+}

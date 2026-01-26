@@ -1,0 +1,65 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDimension",
+    "member": "SetArcEndCondition",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the endpoint on which to set the end condition; 1 is the first endpoint, 2 is the second endpoint"
+      },
+      {
+        "name": "Condition",
+        "type": "System.Int32",
+        "description": "End condition as defined in swArcEndCondition_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions",
+      "documents"
+    ],
+    "related": [
+      "IDimension.GetArcEndCondition"
+    ],
+    "keywords": [
+      "arcs",
+      "dimensions",
+      "dimension",
+      "see",
+      "also",
+      "idimension",
+      "setarcendcondition",
+      "arc",
+      "end",
+      "condition",
+      "index",
+      "int32"
+    ]
+  },
+  "title": "IDimension.SetArcEndCondition",
+  "description": "Sets the end conditions for linear dimensions that end on an arc.",
+  "signature": "System.Int32 SetArcEndCondition( \n   System.Int32\nIndex\n,\n   System.Int32\nCondition\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the endpoint on which to set the end condition; 1 is the first endpoint, 2 is the second endpoint"
+    },
+    {
+      "name": "Condition",
+      "type": "System.Int32",
+      "description": "End condition as defined in swArcEndCondition_e"
+    }
+  ],
+  "returns": "Indicates the success or failure of this method: 0 Command was successful; the arc end condition was set -1 Command failed for an unknown reason; the arc end condition was not set -2 Index parameter is invalid -3 Condition parameter is invalid -4 Endpoint 1 is not related to an arc -5 Endpoint 2 is not related to an arc",
+  "remarks": "Linear dimensions measure the distance from one point to another. If one or both of those points is on an arc, the point can be changed to the center point of the arc, the nearest point on the arc, or the furthest point on the arc. The arc end condition describes which point to use.\nUse\nIDimension::GetArcEndCondition\nto get the arc end conditions.\nTo see the effects of changing the arc endpoint conditions, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window.",
+  "examples": [],
+  "related": [
+    "IDimension.GetArcEndCondition"
+  ]
+}

@@ -1,0 +1,16 @@
+---
+type: interface
+interface: DDrawingDocEvents_FeatureManagerTabActivatedNotifyEventHandler
+inherits: null
+description: Fired when the active tab in the Manager Pane changes.
+member_count: 0
+docset: sldworksapi
+categories:
+  - drawings
+  - features
+common_members: []
+---
+
+# DDrawingDocEvents_FeatureManagerTabActivatedNotifyEventHandler
+
+Fired when the active tab in the Manager Pane changes.

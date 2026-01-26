@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelView",
+    "member": "GetEyePoint",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IModelView.AddPerspective",
+      "IModelView.GetViewPlaneDistance",
+      "IModelView.HasPerspective",
+      "IModelView.IGetEyePoint",
+      "IModelView.ISetEyePoint",
+      "IModelView.RemovePerspective",
+      "IModelView.Scale2",
+      "IModelView.SetEyePoint"
+    ],
+    "keywords": [
+      "perspective",
+      "model",
+      "views",
+      "geteyepoint",
+      "imodelview",
+      "view",
+      "eye",
+      "point",
+      "object"
+    ]
+  },
+  "title": "IModelView.GetEyePoint",
+  "description": "Gets the eye position for perspective viewing.",
+  "signature": "System.Object GetEyePoint()",
+  "parameters": [],
+  "returns": "Array of 3 doubles describing the eye position in screen space",
+  "remarks": "The values are returned in pixels and are the location of the eyepoint relative to the screen space origin (upper-left corner of window). The Z value reflects the distance from the eye point to the object center. These values are affected by the view scale.\nTo use these values, you should apply them after you have obtained the current view orientation matrix using ModelView::Xform.\nThe Z value (in pixels) will typically be close to\n[(\nIModelView::GetViewPlaneDistance\n/ (\"Object Sizes Away\")) * (\"Object Sizes Away\" + 0.5) ]\nThe perspective view is created based on the value entered by the end-user for\nObject Sizes Away\n. If the user specifies\n3 objects away\n, then the eye point is positioned 3 body diameters from the view plane, where the view plane is located at the front of the body as seen from this particular orientation.",
+  "examples": [],
+  "related": [
+    "IModelView.AddPerspective",
+    "IModelView.GetViewPlaneDistance",
+    "IModelView.HasPerspective",
+    "IModelView.IGetEyePoint",
+    "IModelView.ISetEyePoint",
+    "IModelView.RemovePerspective",
+    "IModelView.Scale2",
+    "IModelView.SetEyePoint"
+  ]
+}

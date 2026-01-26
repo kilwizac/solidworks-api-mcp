@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IPerpendicularMateFeatureData",
+    "member": "EntitiesToMate",
+    "returns": "System.Object",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "features"
+    ],
+    "related": [],
+    "keywords": [
+      "entitiestomate",
+      "iperpendicularmatefeaturedata",
+      "perpendicular",
+      "mate",
+      "feature",
+      "data",
+      "entities",
+      "object"
+    ],
+    "readonly": null
+  },
+  "title": "IPerpendicularMateFeatureData.EntitiesToMate",
+  "description": "Gets or sets the entities to mate in this perpendicular mate.",
+  "signature": "System.Object EntitiesToMate {get; set;}",
+  "parameters": [],
+  "returns": "Entities to mate (see Remarks )",
+  "remarks": "You can create perpendicular mates with the following mate entity combinations:\nMate entity/Mate entity\nIRefAxis\n(cone, cylinder)\nIFace2\n(extrusion face,\ndraft is not allowed)\nIEdge\n,\nIRefAxis,\nICenterLine\n,\nISketchLine\n(line)\nIRefPlane\nISurface\n,\nIFace2\n(non-analytic\nsurface)\nIRefAxis (cone, cylinder)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIFace2 (extrusion face,\ndraft is not allowed)\n\u25cf\n\u25cf\n\u25cf\nIEdge, IRefAxis, ICenterLine, ISketchLine (line)\n\u25cf\n\u25cf\n\u25cf\n\u25cf\n\u25cf\nIRefPlane\n\u25cf\n\u25cf\nISurface, IFace2\n(non-analytic surface)\n\u25cf\n\u25cf\n\u25cf\nInstead of specifying this property, you can use\nIModelDocExtension::SelectByID2\nto pre-select the entities to mate using Mark = 1. You can pre-select mate entities during mate creation, but not during mate editing.",
+  "examples": [
+    {
+      "title": "IPerpendicularMateFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPerpendicularMateFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": []
+}

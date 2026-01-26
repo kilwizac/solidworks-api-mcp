@@ -1,0 +1,40 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEdge",
+    "member": "IGetStartVertex",
+    "returns": "Vertex",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [
+      "IEdge.GetEndVertex",
+      "IEdge.GetStartVertex",
+      "IEdge.IGetEndVertex"
+    ],
+    "keywords": [
+      "igetstartvertex",
+      "iedge",
+      "edge",
+      "start",
+      "vertex"
+    ]
+  },
+  "title": "IEdge.IGetStartVertex",
+  "description": "Gets the starting vertex for this edge.",
+  "signature": "Vertex IGetStartVertex()",
+  "parameters": [],
+  "returns": "Pointer to the vertex",
+  "remarks": "If no vertex exists for this edge (such as the edge of a newly created cylinder), then this method returns NULL.\nThis method and\nIEdge::GetEndVertex\nor\nIEdge::IGetEndVertex\nreturn distinct vertices, unless the edge is closed.\nBecause edges have no natural direction, you cannot necessarily predict which of the two points you will get first and which last.\nUse\nICoEdge::GetCurveParams\nor\nICoEdge::IGetCurveParams\nto get consistent start and end positions.",
+  "examples": [],
+  "related": [
+    "IEdge.GetEndVertex",
+    "IEdge.GetStartVertex",
+    "IEdge.IGetEndVertex"
+  ]
+}

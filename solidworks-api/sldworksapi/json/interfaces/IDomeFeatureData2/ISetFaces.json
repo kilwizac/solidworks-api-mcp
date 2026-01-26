@@ -1,0 +1,72 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDomeFeatureData2",
+    "member": "ISetFaces",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "FaceCount",
+        "type": "System.Int32",
+        "description": "Number of planar or non-planar faces"
+      },
+      {
+        "name": "FaceList",
+        "type": "Face2",
+        "description": "in-process, unmanaged C++: Pointer to an array of planar and non-planar faces of this dome feature VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features",
+      "geometry"
+    ],
+    "related": [
+      "IDomeFeatureData2.Faces",
+      "IDomeFeatureData2.GetFaceCount",
+      "IDomeFeatureData2.IGetFaces"
+    ],
+    "keywords": [
+      "face",
+      "see",
+      "also",
+      "iface2",
+      "isetfaces",
+      "idomefeaturedata2",
+      "dome",
+      "feature",
+      "data2",
+      "faces",
+      "count",
+      "int32",
+      "list",
+      "face2",
+      "void"
+    ]
+  },
+  "title": "IDomeFeatureData2.ISetFaces",
+  "description": "Sets the planar or non-planar faces of this dome feature.",
+  "signature": "void ISetFaces( \n   System.Int32\nFaceCount\n,\n   ref Face2\nFaceList\n)",
+  "parameters": [
+    {
+      "name": "FaceCount",
+      "type": "System.Int32",
+      "description": "Number of planar or non-planar faces"
+    },
+    {
+      "name": "FaceList",
+      "type": "Face2",
+      "description": "in-process, unmanaged C++: Pointer to an array of planar and non-planar faces of this dome feature VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "",
+  "remarks": "This method does not affect geometry until you call\nIFeature::IModifyDefintion2.\nSee\nAccessing Selections that Define Features\nfor additional details on using this method.",
+  "examples": [],
+  "related": [
+    "IDomeFeatureData2.Faces",
+    "IDomeFeatureData2.GetFaceCount",
+    "IDomeFeatureData2.IGetFaces"
+  ]
+}

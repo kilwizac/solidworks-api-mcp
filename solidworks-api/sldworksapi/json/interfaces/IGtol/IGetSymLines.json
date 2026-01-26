@@ -1,0 +1,75 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IGtol",
+    "member": "IGetSymLines",
+    "returns": "System.Double",
+    "parameters": [
+      {
+        "name": "SymIdx",
+        "type": "System.Int16",
+        "description": "Indexed position of the symbol"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IGtol.GetSymArcs",
+      "IGtol.GetSymCircles",
+      "IGtol.GetSymDesc",
+      "IGtol.GetSymEdgeCounts",
+      "IGtol.GetSymName",
+      "IGtol.GetSymText",
+      "IGtol.GetSymTextPoints",
+      "IGtol.IGetSymArcs",
+      "IGtol.IGetSymCircles",
+      "IGtol.IGetSymEdgeCounts",
+      "IGtol.IGetSymText",
+      "IGtol.IGetTextPositionAtIndex"
+    ],
+    "keywords": [
+      "symbols",
+      "geometric",
+      "tolerancing",
+      "igetsymlines",
+      "igtol",
+      "gtol",
+      "sym",
+      "lines",
+      "idx",
+      "int16",
+      "double"
+    ]
+  },
+  "title": "IGtol.IGetSymLines",
+  "description": "Gets an array that defines all lines in the symbol.",
+  "signature": "System.Double IGetSymLines( \n   System.Int16\nSymIdx\n)",
+  "parameters": [
+    {
+      "name": "SymIdx",
+      "type": "System.Int16",
+      "description": "Indexed position of the symbol"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of doubles (see Remarks ) VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Each line in the symbol is defined by two points.\nFormat of return information is the following array of doubles:\nFor the\ni\nth line:\nretval\n[6 *\ni\n+ 0] = X-coordinate of first point\nretval\n[6 *\ni\n+ 1] = Y-coordinate of first point\nretval\n[6 *\ni\n+ 2] = Z-coordinate of first point\nretval\n[6 *\ni\n+ 3] = X-coordinate of second point\nretval\n[6 *\ni\n+ 4] = Y-coordinate of second point\nretval\n[6 *\ni\n+ 5] = Z-coordinate of second point",
+  "examples": [],
+  "related": [
+    "IGtol.GetSymArcs",
+    "IGtol.GetSymCircles",
+    "IGtol.GetSymDesc",
+    "IGtol.GetSymEdgeCounts",
+    "IGtol.GetSymName",
+    "IGtol.GetSymText",
+    "IGtol.GetSymTextPoints",
+    "IGtol.IGetSymArcs",
+    "IGtol.IGetSymCircles",
+    "IGtol.IGetSymEdgeCounts",
+    "IGtol.IGetSymText",
+    "IGtol.IGetTextPositionAtIndex"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "ISweepFeatureData",
+    "member": "PathAlignmentType",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "ISweepFeatureData.GetPathAlignmentDirectionVector",
+      "ISweepFeatureData.GetPathType"
+    ],
+    "keywords": [
+      "sweeps",
+      "see",
+      "also",
+      "isweepfeaturedata",
+      "path",
+      "pathalignmenttype",
+      "sweep",
+      "feature",
+      "data",
+      "alignment",
+      "type",
+      "int32"
+    ],
+    "readonly": null
+  },
+  "title": "ISweepFeatureData.PathAlignmentType",
+  "description": "Gets or sets the alignment of the sweep path in this sweep feature.",
+  "signature": "System.Int32 PathAlignmentType {get; set;}",
+  "parameters": [],
+  "returns": "Sweep path alignment as defined in swTangencyType_e : swTangencyAllFaces swTangencyDirectionVector swTangencyNone",
+  "remarks": "For user interface option...\nSet...\nProfile Orientation set to...\nAnd Profile Twist set to...\nISweepFeatureData::TwistControlType\nas defined in\nswTwistControlType_e\nto...\nAnd\nISweepFeatureData::PathAlignmentType\nas defined in swTangencyType_e to...\nFollow Path\nNone\nswTwistControlFollowPath\nswTangencyNone\nSpecify Twist Value\nswTwistControlConstantTwistAlongPath\nswTangencyNone\nSpecify Direction Vector\nswTwistControlFollowPath\nswTangencyDirectionVector; call\nISweepFeatureData::SetPathAlignmentDirectionVector\nto specify the direction vector\nFollow Path and First Guide Curve (option appears with at least one guide curve)\nswTwistControlFollowPathFirstGuideCurve\nswTangencyNone\nFollow Path and First and Second Guide Curves (option appears with at least two guide curves)\nswTwistControlFollowFirstSecondGuideCurves\nswTangencyNone\nTangent to Adjacent Faces\nswTwistControlFollowPath\nswTangencyAllFaces\nMinimum Twist (available only with a 3D path)\nswTwistControlFollowPath\nswMinimumTwist\nNatural\nswTwistControlFollowPath\nswTangencyNone\nKeep Normal Constant\nNone\nswTwistControlKeepNormalConstant\nswTangencyNone\nSpecify Twist Value\nswTwistControlConstantTwistAlongPath + swTwistControlKeepNormalConstant\nswTangencyNone\nSee\nAccessing Selections that Define Features\nfor additional details.",
+  "examples": [
+    {
+      "title": "ISweepFeatureData",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISweepFeatureData",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISweepFeatureData.GetPathAlignmentDirectionVector",
+    "ISweepFeatureData.GetPathType"
+  ]
+}

@@ -1,0 +1,402 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>ICreateRuledSurfaceFromEdge Method</title>
+    <meta name="Title" content="" />
+    <script src="template/packages/jquery/script/chm.mshc/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="template/packages/jquery-ui/script/chm.mshc/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="template/packages/jquery-ui/css/chm.mshc/jquery-ui-1.8.18.custom.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    var Innovasys=(Innovasys||{});$.extend(true,Innovasys,{settings:{versions:{popupContainer:'#i-after-header-content'}}},{settings:{"currentLocale":"-","isFrameless":false,"versions":{"locale":{"currentId":"-"}}}});
+    //]]>
+    </script>
+    <link rel="stylesheet" type="text/css" href="template/packages/plugins-dotnet/css/chm.mshc/jquery-plugins.css" />
+    <link rel="stylesheet" type="text/css" href="template/packages/core-dotnet/css/dx.net.css" data-mshv2-stylesheet="/template/packages/core-dotnet/dx.net.mshv2.css" data-mshv1-stylesheet="/template/packages/core-dotnet/dx.net.mshv1.css" data-responsive-mobile="template/packages/core-dotnet/dx.net.mobile.css" data-responsive-tablet="template/packages/core-dotnet/dx.net.tablet.css" />
+    <script src="template/packages/plugins-dotnet/script/chm.mshc/jquery-plugins.min.js" type="text/javascript">
+</script>
+    <script src="template/packages/core-dotnet/script/dx.net.min.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateRuledSurfaceFromEdge" />
+    <meta name="Description" content="Creates a ruled surface using the specified edges and returns a surface body." />
+    <meta name="Microsoft.Help.TocParent" content="SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_methods" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.F1" content="SolidWorks.Interop.sldworks.IModeler.ICreateRuledSurfaceFromEdge" />
+    <meta name="Microsoft.Help.Keywords" content="Ruled surfaces. See IRuledSurfaceFeatureData Interface" />
+    <meta name="Microsoft.Help.Keywords" content="Bodies (see also IBody2 Interface), ruled surface" />
+    <meta name="Microsoft.Help.Keywords" content="Surface (see also ISurface Interface), ruled" />
+    <meta name="Microsoft.Help.Keywords" content="ICreateRuledSurfaceFromEdge Method" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+</head>
+
+<body>
+    <div id="i-before-header-content" class="i-before-header-content"></div>
+
+    <div id="i-header-content" class="i-header-content">
+        <div class="i-project-title">
+            SOLIDWORKS API Help
+        </div>
+
+        <div class="i-page-title">
+            <div class="i-page-title-text">
+                ICreateRuledSurfaceFromEdge Method
+            </div>
+        </div>
+    </div>
+
+    <div id="i-after-header-content" class="i-after-header-content">
+        <!-- Spacing --> <span class="i-toggle-all-sections i-function-link"><label class="i-collapse-all">Collapse All</label>&#160;<label class="i-expand-all" style="display: none;">Expand All</label></span> <!-- Spacing --> <span class="i-language-filter i-popup-link" data-popup-contentsource="#i-language-options" data-popup-title='Language Filter'><label class="i-language-filter-all">Language Filter: All</label>&#160;<label class="i-language-filter-multiple" style="display: none;">Language Filter: Multiple</label>&#160;<label class="i-language-filter-vball" style="display: none;">Language Filter: Visual Basic</label>&#160;<label class="i-VB-label" style="display: none;">Language Filter: Visual Basic (Declaration)</label>&#160;<label class="i-VBUsage-label" style="display: none;">Language Filter: Visual Basic (Usage)</label>&#160;<label class="i-CS-label" style="display: none;">Language Filter: C#</label>&#160;<label class="i-CPP2005-label" style="display: none;">Language Filter: C++/CLI</label></span>
+
+        <div class="i-popup-content" id="i-language-options">
+            <input data-languagename="VB" id="i-VB-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VB" /> <label class="i-language-filter" for="i-VB-language-checkbox">Visual Basic (Declaration)</label><br />
+            <input data-languagename="VBUsage" id="i-VBUsage-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-VBUsage" /> <label class="i-language-filter" for="i-VBUsage-language-checkbox">Visual Basic (Usage)</label><br />
+            <input data-languagename="CS" id="i-CS-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CS" /> <label class="i-language-filter" for="i-CS-language-checkbox">C#</label><br />
+            <input data-languagename="CPP2005" id="i-CPP2005-language-checkbox" type="checkbox" class="i-toggle-language-checkbox" checked="true" data-toggleclass="i-filtered-content-CPP2005" /> <label class="i-language-filter" for="i-CPP2005-language-checkbox">C++/CLI</label>
+        </div>
+    </div>
+
+    <div class="i-breadcrumbs-container">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace">SolidWorks.Interop.sldworks Namespace</a> &gt; <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a> : ICreateRuledSurfaceFromEdge Method</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ModDocPopupContent" class="i-popup-content">
+        <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">Model document</a> in which to create surface body
+    </div>
+
+    <div id="NumOfEdgesPopupContent" class="i-popup-content">
+        Number of edges on which to create ruled surface
+    </div>
+
+    <div id="EdgesPopupContent" class="i-popup-content">
+        <p>Array of edges on which to create ruled surface</p>
+
+        <p><strong>NOTE:</strong> Currently only a single edge is supported.</p>
+    </div>
+
+    <div id="TypePopupContent" class="i-popup-content">
+        <p class="apiBulletLeftJustified">0 = Tangent to Surface</p>
+
+        <p class="apiBulletLeftJustified">1 = Normal to Surface</p>
+
+        <p class="apiBulletLeftJustified">2 = Tapered to Vector</p>
+
+        <p class="apiBulletLeftJustified">3 = Perpendicular to Vector</p>
+
+        <p class="apiBulletLeftJustified">4 = Sweep</p>
+    </div>
+
+    <div id="LengthPopupContent" class="i-popup-content">
+        <p>Distance at which to create the surface; valid for Tangent to Surface, Tapered to Vector, Perpendicular to Vector, and Sweep types only</p>
+    </div>
+
+    <div id="FlipPullDirPopupContent" class="i-popup-content">
+        <p>True to flip the pull direction, false to not; valid for Normal to Surface and Tapered to Vector types only</p>
+    </div>
+
+    <div id="FlipDirPopupContent" class="i-popup-content">
+        <p>True to flip the direction, false to not; valid for Perpendicular to Vector type only</p>
+    </div>
+
+    <div id="TrimAndSewPopupContent" class="i-popup-content">
+        <p>True to trim and knit the surface, false to not</p>
+    </div>
+
+    <div id="AnglePopupContent" class="i-popup-content">
+        <p>Angle for Tapered to Vector type only</p>
+    </div>
+
+    <div id="CoordInputPopupContent" class="i-popup-content">
+        True to enable coordinate input, false if not; for Sweep type only
+    </div>
+
+    <div id="XPopupContent" class="i-popup-content">
+        <p>x coordinate</p>
+    </div>
+
+    <div id="YPopupContent" class="i-popup-content">
+        y coordinate
+    </div>
+
+    <div id="ZPopupContent" class="i-popup-content">
+        <p>z coordinate</p>
+    </div>
+
+    <div id="BConnectSurfacePopupContent" class="i-popup-content">
+        <p>True to remove any connecting surfaces, false to not</p>
+    </div>
+
+    <div id="RuledSurfacePopupContent" class="i-popup-content">
+        Ruled surface&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">body</a>
+    </div>
+
+    <div id="i-body-content" class="i-body-content">
+        <div class="i-description-content">
+            Creates a ruled surface using&#160;the specified edges and returns a surface body.
+        </div>
+
+        <div class="i-section-heading" id="i-syntax-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Syntax</span>
+        </div>
+
+        <div id="i-syntax-section-content" class="i-section-content">
+            <div class="i-tab-container i-tab-container">
+                <ul>
+                    <li class="i-filtered-content-VB"><a href="#i-syntax-VB">Visual Basic (Declaration)</a></li>
+
+                    <li class="i-filtered-content-VBUsage"><a href="#i-syntax-VBUsage">Visual Basic (Usage)</a></li>
+
+                    <li class="i-filtered-content-CS"><a href="#i-syntax-CS">C#</a></li>
+
+                    <li class="i-filtered-content-CPP2005"><a href="#i-syntax-CPP2005">C++/CLI</a></li>
+                </ul>
+
+                <div id="i-syntax-VB" class="i-filtered-content-VB">
+                    <pre>
+Function ICreateRuledSurfaceFromEdge( _
+   ByVal <i><a class="i-popup-link" id="ModDocPopupLink" data-popup-contentsource="#ModDocPopupContent" data-popup-showevent="click mouseenter">ModDoc</a></i> As ModelDoc2, _
+   ByVal <i><a class="i-popup-link" id="NumOfEdgesPopupLink" data-popup-contentsource="#NumOfEdgesPopupContent" data-popup-showevent="click mouseenter">NumOfEdges</a></i> As System.Integer, _
+   ByRef <i><a class="i-popup-link" id="EdgesPopupLink" data-popup-contentsource="#EdgesPopupContent" data-popup-showevent="click mouseenter">Edges</a></i> As Edge, _
+   ByVal <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i> As System.Integer, _
+   ByVal <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="FlipPullDirPopupLink" data-popup-contentsource="#FlipPullDirPopupContent" data-popup-showevent="click mouseenter">FlipPullDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="FlipDirPopupLink" data-popup-contentsource="#FlipDirPopupContent" data-popup-showevent="click mouseenter">FlipDir</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="TrimAndSewPopupLink" data-popup-contentsource="#TrimAndSewPopupContent" data-popup-showevent="click mouseenter">TrimAndSew</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="AnglePopupLink" data-popup-contentsource="#AnglePopupContent" data-popup-showevent="click mouseenter">Angle</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="CoordInputPopupLink" data-popup-contentsource="#CoordInputPopupContent" data-popup-showevent="click mouseenter">CoordInput</a></i> As System.Boolean, _
+   ByVal <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i> As System.Double, _
+   ByVal <i><a class="i-popup-link" id="BConnectSurfacePopupLink" data-popup-contentsource="#BConnectSurfacePopupContent" data-popup-showevent="click mouseenter">BConnectSurface</a></i> As System.Boolean, _
+   ByRef <i><a class="i-popup-link" id="RuledSurfacePopupLink" data-popup-contentsource="#RuledSurfacePopupContent" data-popup-showevent="click mouseenter">RuledSurface</a></i> As Body2 _
+) As System.Integer
+</pre>
+                </div>
+
+                <div id="i-syntax-VBUsage" class="i-filtered-content-VBUsage">
+                    <pre>
+Dim instance As <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler</a>
+Dim ModDoc As ModelDoc2
+Dim NumOfEdges As System.Integer
+Dim Edges As Edge
+Dim Type As System.Integer
+Dim Length As System.Double
+Dim FlipPullDir As System.Boolean
+Dim FlipDir As System.Boolean
+Dim TrimAndSew As System.Boolean
+Dim Angle As System.Double
+Dim CoordInput As System.Boolean
+Dim X As System.Double
+Dim Y As System.Double
+Dim Z As System.Double
+Dim BConnectSurface As System.Boolean
+Dim RuledSurface As Body2
+Dim value As System.Integer
+ 
+value = instance.ICreateRuledSurfaceFromEdge(ModDoc, NumOfEdges, Edges, Type, Length, FlipPullDir, FlipDir, TrimAndSew, Angle, CoordInput, X, Y, Z, BConnectSurface, RuledSurface)
+</pre>
+                </div>
+
+                <div id="i-syntax-CS" class="i-filtered-content-CS">
+                    <pre>
+System.int ICreateRuledSurfaceFromEdge( 
+   ModelDoc2 <i><a class="i-popup-link" id="ModDocPopupLink" data-popup-contentsource="#ModDocPopupContent" data-popup-showevent="click mouseenter">ModDoc</a></i>,
+   System.int <i><a class="i-popup-link" id="NumOfEdgesPopupLink" data-popup-contentsource="#NumOfEdgesPopupContent" data-popup-showevent="click mouseenter">NumOfEdges</a></i>,
+   ref Edge <i><a class="i-popup-link" id="EdgesPopupLink" data-popup-contentsource="#EdgesPopupContent" data-popup-showevent="click mouseenter">Edges</a></i>,
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.double <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipPullDirPopupLink" data-popup-contentsource="#FlipPullDirPopupContent" data-popup-showevent="click mouseenter">FlipPullDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipDirPopupLink" data-popup-contentsource="#FlipDirPopupContent" data-popup-showevent="click mouseenter">FlipDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="TrimAndSewPopupLink" data-popup-contentsource="#TrimAndSewPopupContent" data-popup-showevent="click mouseenter">TrimAndSew</a></i>,
+   System.double <i><a class="i-popup-link" id="AnglePopupLink" data-popup-contentsource="#AnglePopupContent" data-popup-showevent="click mouseenter">Angle</a></i>,
+   System.bool <i><a class="i-popup-link" id="CoordInputPopupLink" data-popup-contentsource="#CoordInputPopupContent" data-popup-showevent="click mouseenter">CoordInput</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>,
+   System.bool <i><a class="i-popup-link" id="BConnectSurfacePopupLink" data-popup-contentsource="#BConnectSurfacePopupContent" data-popup-showevent="click mouseenter">BConnectSurface</a></i>,
+   out Body2 <i><a class="i-popup-link" id="RuledSurfacePopupLink" data-popup-contentsource="#RuledSurfacePopupContent" data-popup-showevent="click mouseenter">RuledSurface</a></i>
+)
+</pre>
+                </div>
+
+                <div id="i-syntax-CPP2005" class="i-filtered-content-CPP2005">
+                    <pre>
+System.int ICreateRuledSurfaceFromEdge( 
+   ModelDoc2^ <i><a class="i-popup-link" id="ModDocPopupLink" data-popup-contentsource="#ModDocPopupContent" data-popup-showevent="click mouseenter">ModDoc</a></i>,
+   System.int <i><a class="i-popup-link" id="NumOfEdgesPopupLink" data-popup-contentsource="#NumOfEdgesPopupContent" data-popup-showevent="click mouseenter">NumOfEdges</a></i>,
+   Edge^% <i><a class="i-popup-link" id="EdgesPopupLink" data-popup-contentsource="#EdgesPopupContent" data-popup-showevent="click mouseenter">Edges</a></i>,
+   System.int <i><a class="i-popup-link" id="TypePopupLink" data-popup-contentsource="#TypePopupContent" data-popup-showevent="click mouseenter">Type</a></i>,
+   System.double <i><a class="i-popup-link" id="LengthPopupLink" data-popup-contentsource="#LengthPopupContent" data-popup-showevent="click mouseenter">Length</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipPullDirPopupLink" data-popup-contentsource="#FlipPullDirPopupContent" data-popup-showevent="click mouseenter">FlipPullDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="FlipDirPopupLink" data-popup-contentsource="#FlipDirPopupContent" data-popup-showevent="click mouseenter">FlipDir</a></i>,
+   System.bool <i><a class="i-popup-link" id="TrimAndSewPopupLink" data-popup-contentsource="#TrimAndSewPopupContent" data-popup-showevent="click mouseenter">TrimAndSew</a></i>,
+   System.double <i><a class="i-popup-link" id="AnglePopupLink" data-popup-contentsource="#AnglePopupContent" data-popup-showevent="click mouseenter">Angle</a></i>,
+   System.bool <i><a class="i-popup-link" id="CoordInputPopupLink" data-popup-contentsource="#CoordInputPopupContent" data-popup-showevent="click mouseenter">CoordInput</a></i>,
+   System.double <i><a class="i-popup-link" id="XPopupLink" data-popup-contentsource="#XPopupContent" data-popup-showevent="click mouseenter">X</a></i>,
+   System.double <i><a class="i-popup-link" id="YPopupLink" data-popup-contentsource="#YPopupContent" data-popup-showevent="click mouseenter">Y</a></i>,
+   System.double <i><a class="i-popup-link" id="ZPopupLink" data-popup-contentsource="#ZPopupContent" data-popup-showevent="click mouseenter">Z</a></i>,
+   System.bool <i><a class="i-popup-link" id="BConnectSurfacePopupLink" data-popup-contentsource="#BConnectSurfacePopupContent" data-popup-showevent="click mouseenter">BConnectSurface</a></i>,
+   [Out] Body2^ <i><a class="i-popup-link" id="RuledSurfacePopupLink" data-popup-contentsource="#RuledSurfacePopupContent" data-popup-showevent="click mouseenter">RuledSurface</a></i>
+) 
+</pre>
+                </div>
+            </div>
+
+            <h4 class="dxh4">Parameters</h4>
+
+            <dl>
+                <dt><i>ModDoc</i></dt>
+
+                <dd><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2">Model document</a> in which to create surface body</dd>
+
+                <dt><i>NumOfEdges</i></dt>
+
+                <dd>Number of edges on which to create ruled surface</dd>
+
+                <dt><i>Edges</i></dt>
+
+                <dd>
+                    <p>Array of edges on which to create ruled surface</p>
+
+                    <p><strong>NOTE:</strong> Currently only a single edge is supported.</p>
+                </dd>
+
+                <dt><i>Type</i></dt>
+
+                <dd>
+                    <p class="apiBulletLeftJustified">0 = Tangent to Surface</p>
+
+                    <p class="apiBulletLeftJustified">1 = Normal to Surface</p>
+
+                    <p class="apiBulletLeftJustified">2 = Tapered to Vector</p>
+
+                    <p class="apiBulletLeftJustified">3 = Perpendicular to Vector</p>
+
+                    <p class="apiBulletLeftJustified">4 = Sweep</p>
+                </dd>
+
+                <dt><i>Length</i></dt>
+
+                <dd>
+                    <p>Distance at which to create the surface; valid for Tangent to Surface, Tapered to Vector, Perpendicular to Vector, and Sweep types only</p>
+                </dd>
+
+                <dt><i>FlipPullDir</i></dt>
+
+                <dd>
+                    <p>True to flip the pull direction, false to not; valid for Normal to Surface and Tapered to Vector types only</p>
+                </dd>
+
+                <dt><i>FlipDir</i></dt>
+
+                <dd>
+                    <p>True to flip the direction, false to not; valid for Perpendicular to Vector type only</p>
+                </dd>
+
+                <dt><i>TrimAndSew</i></dt>
+
+                <dd>
+                    <p>True to trim and knit the surface, false to not</p>
+                </dd>
+
+                <dt><i>Angle</i></dt>
+
+                <dd>
+                    <p>Angle for Tapered to Vector type only</p>
+                </dd>
+
+                <dt><i>CoordInput</i></dt>
+
+                <dd>True to enable coordinate input, false if not; for Sweep type only</dd>
+
+                <dt><i>X</i></dt>
+
+                <dd>
+                    <p>x coordinate</p>
+                </dd>
+
+                <dt><i>Y</i></dt>
+
+                <dd>y coordinate</dd>
+
+                <dt><i>Z</i></dt>
+
+                <dd>
+                    <p>z coordinate</p>
+                </dd>
+
+                <dt><i>BConnectSurface</i></dt>
+
+                <dd>
+                    <p>True to remove any connecting surfaces, false to not</p>
+                </dd>
+
+                <dt><i>RuledSurface</i></dt>
+
+                <dd>Ruled surface&#160;<a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2">body</a></dd>
+            </dl>
+
+            <h4 class="dxh4">Return Value</h4>
+
+            <div class="i-returns-content">
+                0 if ruled surface body created, -1 if not
+            </div>
+        </div>
+
+        <div class="i-section-heading" id="i-remarks-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Remarks</span>
+        </div>
+
+        <div id="i-remarks-section-content" class="i-section-content">
+            <p>This method returns a surface body, unlike <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFeatureManager~InsertRuledSurfaceFromEdge2">IFeatureManager::InsertRuledSurfaceFromEdge2</a>, which returns a feature.</p>
+
+            <p class="apiRemarksText" style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">If you <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~SelectByID2">select</a> an edge with a selection mark of 4, the default face is used. <!--kadov_tag{{<spaces>}}-->&#160;<!--kadov_tag{{</spaces>}}-->If you select an edge with a selection mark of 6, the alternate face is used.</p>
+        </div><a name="exampleBookmark"></a>
+
+        <div class="i-section-heading" id="i-requirements-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">Requirements</span>
+        </div>
+
+        <div id="i-requirements-section-content" class="i-section-content">
+            <p><b>Target Platforms:</b> Windows 7, Windows Vista SP1 or later, Windows XP SP3, Windows Server 2008 (Server Core not supported), Windows Server 2008 R2 (Server Core supported with SP1 or later), Windows Server 2003 SP2</p>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="i-section-heading" id="i-seealso-section-heading">
+            <span class="i-section-heading-icon"><!-- --></span><span class="i-section-heading-text">See Also</span>
+        </div>
+
+        <div id="i-seealso-section-content" class="i-section-content">
+            <h4 class="i-sub-heading">Reference</h4>
+
+            <p><a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler">IModeler Interface</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler_members">IModeler Members</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateRuledSurface">IModeler::ICreateRuledSurface Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateRuledSurfaceFromEdge">IModeler::CreateRuledSurfaceFromEdge Method</a><br />
+            <a href="ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~CreateRuledSurface">IModeler::CreateRuledSurface Method</a></p>
+        </div>
+    </div>
+
+    <div id="i-footer-content" class="i-footer-content">
+        <a href="mailto:support@company.com?subject=Documentation Feedback: SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModeler~ICreateRuledSurfaceFromEdge.html">Send Feedback</a>
+    </div><script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var documentInstance = new Innovasys.Content.Document(document.body);
+            documentInstance.isNew = !(typeof setIsNew === "undefined");
+            documentInstance.isResponsiveEnabled = !(typeof setIsResponsiveEnabled === "undefined");
+            documentInstance.load();
+        });
+    //]]>
+    </script>
+</body>
+</html>

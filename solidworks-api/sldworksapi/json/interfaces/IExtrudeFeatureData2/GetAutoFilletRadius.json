@@ -1,0 +1,42 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IExtrudeFeatureData2",
+    "member": "GetAutoFilletRadius",
+    "returns": "System.Double",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IExtrudeFeatureData2.IsThinFeature"
+    ],
+    "keywords": [
+      "automatic",
+      "corner",
+      "fillets",
+      "getautofilletradius",
+      "iextrudefeaturedata2",
+      "extrude",
+      "feature",
+      "data2",
+      "auto",
+      "fillet",
+      "radius",
+      "double"
+    ]
+  },
+  "title": "IExtrudeFeatureData2.GetAutoFilletRadius",
+  "description": "Gets the automatic corner fillet radius for this thin feature.",
+  "signature": "System.Double GetAutoFilletRadius()",
+  "parameters": [],
+  "returns": "Fillet radius, if feature has automatic corner fillets enabled",
+  "remarks": "This method only applies to thin feature extrusions. If the feature is not a thin feature extrusion, then the return value is 0.0, and the COM version of this method returns S_false in the status return value.\nIf the feature does not have automatic corner fillets enabled, then the return value is 0.0 and the COM version of this method returns S_false in the status return value.\nTo get whether automatic corner fillet is enabled, use\nIExtrudeFeatureData2::GetAutoFilletCorners\n.\nTo set automatic fillets and radius, use\nIExtrudeFeatureData2::SetAutoFillet\n.",
+  "examples": [],
+  "related": [
+    "IExtrudeFeatureData2.IsThinFeature"
+  ]
+}

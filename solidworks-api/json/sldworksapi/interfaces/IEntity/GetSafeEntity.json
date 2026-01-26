@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IEntity",
+    "member": "GetSafeEntity",
+    "returns": "Entity",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IBody2.GetSafeBody",
+      "IBody2.IsSafe"
+    ],
+    "keywords": [
+      "getsafeentity",
+      "ientity",
+      "entity",
+      "safe",
+      "faces",
+      "affected",
+      "scale",
+      "feature",
+      "vba",
+      "use"
+    ]
+  },
+  "title": "IEntity.GetSafeEntity",
+  "description": "Gets a safe entity.",
+  "signature": "Entity GetSafeEntity()",
+  "parameters": [],
+  "returns": "Pointer to the IEntity object",
+  "remarks": "A safe entity is an entity that continues to be valid after rebuilds until the pointer becomes invalid if the entity object to which it points is deleted.\nTo determine if an entity is safe, use the\nIEntity::IsSafe\nproperty. This property is read-only and does not persist from session to session.",
+  "examples": [
+    {
+      "title": "Get Faces Affected By Scale Feature (VBA)",
+      "href": "Get_Faces_Affected_by_Scale_Feature_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Use Safe Entity (VBA)",
+      "href": "Use_Safe_Entity_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IBody2.GetSafeBody",
+    "IBody2.IsSafe"
+  ]
+}

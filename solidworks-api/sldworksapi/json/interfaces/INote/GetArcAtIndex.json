@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "INote",
+    "member": "GetArcAtIndex",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired arc where the index begins at 0"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "INote.GetArcCount",
+      "INote.IGetArcAtIndex"
+    ],
+    "keywords": [
+      "note",
+      "see",
+      "also",
+      "inote",
+      "arcs",
+      "notes",
+      "getarcatindex",
+      "arc",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "INote.GetArcAtIndex",
+  "description": "Gets information for the specified arc in this note.",
+  "signature": "System.Object GetArcAtIndex( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired arc where the index begins at 0"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "Return value is an array of doubles:\n[\nLineType, StartPt[3], EndPt[3], CenterPt[3], RotDir\n]\nwhere :\nLineType\nLine type. Valid returns are defined in\nswLineTypes_e\n. A LineType is a combination of a line style and line weight.\nStartPt[3]\nArray of 3 doubles (X,Y,Z) describing the start point.\nEndPt[3]\nArray of 3 doubles (X,Y,Z) describing the end point. If the arc is closed, then this is the same point as the\nStartPt\n.\nCenterPt[3]\nArray of 3 doubles (X,Y,Z) describing the center point.\nRotDir\nRotational direction (CW = -1, CCW = 1)\nThe data returned from this method is in terms of document apace.\nIf the document containing this note is...\nThen the coordinates returned are based on the...\nDrawing\nSheet origin\nPart or assembly\nModel origin",
+  "examples": [],
+  "related": [
+    "INote.GetArcCount",
+    "INote.IGetArcAtIndex"
+  ]
+}

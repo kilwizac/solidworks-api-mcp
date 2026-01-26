@@ -1,0 +1,142 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModeler",
+    "member": "ICreateBodiesFromSheets2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "NSheets",
+        "type": "System.Int32",
+        "description": "Number of sheets"
+      },
+      {
+        "name": "Sheets",
+        "type": "Body2",
+        "description": "Array containing the sheets"
+      },
+      {
+        "name": "Options",
+        "type": "System.Int32",
+        "description": "Type of body to create as defined by swSheetSewingOption_e"
+      },
+      {
+        "name": "KnittingTolerance",
+        "type": "System.Double",
+        "description": "Knitting tolerance"
+      },
+      {
+        "name": "NResults",
+        "type": "System.Int32",
+        "description": "Number of sheet or solid bodies created"
+      },
+      {
+        "name": "Results",
+        "type": "Body2",
+        "description": "Array of the sheet or solid bodies"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IModeler.CreateBodiesFromSheets2",
+      "IModeler.CreateBodyFromBox",
+      "IModeler.CreateBodyFromCone",
+      "IModeler.CreateBodyFromCyl",
+      "IModeler.CreateBodyFromFaces2",
+      "IModeler.CreateBrepBody3",
+      "IModeler.CreateExtrudedBody",
+      "IModeler.CreateSweptBody",
+      "IModeler.CreateWireBody",
+      "IModeler.ICreateBodyFromBox2",
+      "IModeler.ICreateBodyFromCone2",
+      "IModeler.ICreateBodyFromCyl2",
+      "IModeler.ICreateBodyFromFaces3",
+      "IModeler.ICreateBrepBody3",
+      "IModeler.ICreateWireBody"
+    ],
+    "keywords": [
+      "sheet",
+      "bodies",
+      "solid",
+      "create",
+      "sew",
+      "knit",
+      "see",
+      "also",
+      "ibody2",
+      "surface",
+      "icreatebodiesfromsheets2",
+      "imodeler",
+      "modeler",
+      "sheets2",
+      "sheets",
+      "int32",
+      "body2",
+      "options",
+      "knitting",
+      "tolerance",
+      "double",
+      "results"
+    ]
+  },
+  "title": "IModeler.ICreateBodiesFromSheets2",
+  "description": "Sews sheets to make a sheet (surface) or solid bodies.",
+  "signature": "System.Int32 ICreateBodiesFromSheets2( \n   System.Int32\nNSheets\n,\n   ref Body2\nSheets\n,\n   System.Int32\nOptions\n,\n   System.Double\nKnittingTolerance\n,\n   out System.Int32\nNResults\n,\n   out Body2\nResults\n)",
+  "parameters": [
+    {
+      "name": "NSheets",
+      "type": "System.Int32",
+      "description": "Number of sheets"
+    },
+    {
+      "name": "Sheets",
+      "type": "Body2",
+      "description": "Array containing the sheets"
+    },
+    {
+      "name": "Options",
+      "type": "System.Int32",
+      "description": "Type of body to create as defined by swSheetSewingOption_e"
+    },
+    {
+      "name": "KnittingTolerance",
+      "type": "System.Double",
+      "description": "Knitting tolerance"
+    },
+    {
+      "name": "NResults",
+      "type": "System.Int32",
+      "description": "Number of sheet or solid bodies created"
+    },
+    {
+      "name": "Results",
+      "type": "Body2",
+      "description": "Array of the sheet or solid bodies"
+    }
+  ],
+  "returns": "Error as defined by swSheetSewingError_e",
+  "remarks": "It is safest to assume that the maximum number of bodies that can be returned by this method is the number of sheet input bodies. Your code should look like this:\naBodies = new IBody2*[lNumSheetBodies];\nhres = swModeler->ICreateBodiesFromSheets2(lNumSheetBodies, aSheetBodies, swSewToSheets, 1e-6, &lNumBodies, aBodies, &lErrors);",
+  "examples": [],
+  "related": [
+    "IModeler.CreateBodiesFromSheets2",
+    "IModeler.CreateBodyFromBox",
+    "IModeler.CreateBodyFromCone",
+    "IModeler.CreateBodyFromCyl",
+    "IModeler.CreateBodyFromFaces2",
+    "IModeler.CreateBrepBody3",
+    "IModeler.CreateExtrudedBody",
+    "IModeler.CreateSweptBody",
+    "IModeler.CreateWireBody",
+    "IModeler.ICreateBodyFromBox2",
+    "IModeler.ICreateBodyFromCone2",
+    "IModeler.ICreateBodyFromCyl2",
+    "IModeler.ICreateBodyFromFaces3",
+    "IModeler.ICreateBrepBody3",
+    "IModeler.ICreateWireBody"
+  ]
+}

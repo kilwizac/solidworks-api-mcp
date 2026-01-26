@@ -1,0 +1,53 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayData",
+    "member": "GetEllipseAtIndex2",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index of the desired ellipse where the index begins at zero"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "IDisplayData.GetEllipseCount",
+      "IDisplayData.IGetEllipseAtIndex2"
+    ],
+    "keywords": [
+      "getellipseatindex2",
+      "idisplaydata",
+      "display",
+      "data",
+      "ellipse",
+      "index2",
+      "index",
+      "int32",
+      "object"
+    ]
+  },
+  "title": "IDisplayData.GetEllipseAtIndex2",
+  "description": "Gets information for the specified ellipse.",
+  "signature": "System.Object GetEllipseAtIndex2( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index of the desired ellipse where the index begins at zero"
+    }
+  ],
+  "returns": "Array of doubles (see Remarks )",
+  "remarks": "The return value is the following array of doubles:\n[\ncolor, lineType, Unused, Unused, StartPt[3], EndPt[3], CenterPt[3], MajorPt[3], MinorPt[3],\n]\nwhere:\ncolor\nCOLORREF returned as an integer. Return value could be 0 or -1 for default color.\nLineType\nLine type as defined in\nswLineTypes_e\n.\nStartPt[3]\nArray of 3 doubles (X,Y,Z) describing the ellipse start point.\nEndPt[3]\nArray of 3 doubles (X,Y,Z) describing the ellipse end point. If the ellipse is closed, then this will be the same point as the StartPt.\nCenterPt[3]\nArray of 3 doubles (X,Y,Z) describing the ellipse center point.\nMajorPt[3]\nArray of 3 doubles (X,Y,Z) describing a point on the ellipse and the major axis.\nMinorPt[3]\nArray of 3 doubles (X,Y,Z) describing a point on the ellipse and the minor axis.",
+  "examples": [],
+  "related": [
+    "IDisplayData.GetEllipseCount",
+    "IDisplayData.IGetEllipseAtIndex2"
+  ]
+}

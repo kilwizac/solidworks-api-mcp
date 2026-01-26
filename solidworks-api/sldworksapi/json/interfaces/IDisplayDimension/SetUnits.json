@@ -1,0 +1,99 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDisplayDimension",
+    "member": "SetUnits",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "UseDoc",
+        "type": "System.Boolean",
+        "description": "True uses the document settings for units, false uses the setting values passed to the arguments (see Remarks )"
+      },
+      {
+        "name": "UType",
+        "type": "System.Int32",
+        "description": "Unit display setting as defined in swLengthUnits_e or swAngleUnits_e"
+      },
+      {
+        "name": "FractBase",
+        "type": "System.Int32",
+        "description": "Decimal or fraction display setting as defined in swFractionDisplay_e"
+      },
+      {
+        "name": "FractDenom",
+        "type": "System.Int32",
+        "description": "Denominator for fraction display"
+      },
+      {
+        "name": "RoundToFraction",
+        "type": "System.Boolean",
+        "description": "True rounds values to the nearest fraction, false displays fractions only if the values are exact"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": true,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetUnits",
+      "IDisplayDimension.GetUseDocUnits"
+    ],
+    "keywords": [
+      "setunits",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "units",
+      "use",
+      "doc",
+      "boolean",
+      "type",
+      "int32",
+      "fract",
+      "base",
+      "denom",
+      "round",
+      "fraction"
+    ]
+  },
+  "title": "IDisplayDimension.SetUnits",
+  "description": "Obsolete. Superseded by IDisplayDimension::SetUnits2.",
+  "signature": "System.Int32 SetUnits( \n   System.Boolean\nUseDoc\n,\n   System.Int32\nUType\n,\n   System.Int32\nFractBase\n,\n   System.Int32\nFractDenom\n,\n   System.Boolean\nRoundToFraction\n)",
+  "parameters": [
+    {
+      "name": "UseDoc",
+      "type": "System.Boolean",
+      "description": "True uses the document settings for units, false uses the setting values passed to the arguments (see Remarks )"
+    },
+    {
+      "name": "UType",
+      "type": "System.Int32",
+      "description": "Unit display setting as defined in swLengthUnits_e or swAngleUnits_e"
+    },
+    {
+      "name": "FractBase",
+      "type": "System.Int32",
+      "description": "Decimal or fraction display setting as defined in swFractionDisplay_e"
+    },
+    {
+      "name": "FractDenom",
+      "type": "System.Int32",
+      "description": "Denominator for fraction display"
+    },
+    {
+      "name": "RoundToFraction",
+      "type": "System.Boolean",
+      "description": "True rounds values to the nearest fraction, false displays fractions only if the values are exact"
+    }
+  ],
+  "returns": "Return status (see Remarks )",
+  "remarks": "The unit display settings of a display dimension are controlled by a value stored in one of two places: on the owning document, or on the individual display dimension. This method allows you to determine which setting to use, the document default or the values specified by UType\n,\nFractBase\n,\nFractDenom\n,\nand RoundToFraction.\nIf the UseDoc argument is true, then the display dimension unit information follows the document settings, and SOLIDWORKS ignores the remaining arguments. SOLIDWORKS also removes any local settings so that if you switch back to the local settings, they are set to default values.\nThe UType argument indicates the units. Depending on the type of dimension (angular or linear), this parameter takes a value from\nswLengthUnits_e\nor\nswAngleUnits_e\n. If the specified value is invalid, SOLIDWORKS does not change the existing setting and returns an error in the return value.\nThe FractBase argument indicates whether the dimension is displayed as a fraction or a decimal. This must take a value from\nswFractionDisplay_e\n. SOLIDWORKS displays this value as a fraction only if it can be precisely represented as a fraction based on the fraction denominator setting specified in FractDenom. However, if the RoundToFraction argument is true, then SOLIDWORKS forces fraction display by rounding the value to the nearest fraction.\nThe FractDenom argument indicates the fraction precision by specifying the largest fraction denominator used (for example, 4 for 1/4 or 32 for 1/32). Fraction display is valid only if UType is swINCHES or swFEETINCHES.\nThe return value indicates the success or failure of this function. It may take one of the following values:\n-2\nCommand failed because UType is invalid\n-1\nCommand failed for an unknown reason\n0\nCommand was successful\nAfter using this method, use\nIModelDoc2::GraphicsRedraw2\nto redraw the graphics window to see your changes.",
+  "examples": [],
+  "related": [
+    "IDisplayDimension.GetUnits",
+    "IDisplayDimension.GetUseDocUnits"
+  ]
+}

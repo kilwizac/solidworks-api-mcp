@@ -1,0 +1,63 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISplineParamData",
+    "member": "IGetKnotPoints",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Count",
+        "type": "System.Int32",
+        "description": "Size of KnotPoints array"
+      },
+      {
+        "name": "KnotPoints",
+        "type": "System.Double",
+        "description": "in-process, unmanaged C++: Pointer to an array of double values between 0 and 1, inclusive VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents"
+    ],
+    "related": [
+      "ISplineParamData.GetKnotPoints"
+    ],
+    "keywords": [
+      "igetknotpoints",
+      "isplineparamdata",
+      "spline",
+      "param",
+      "data",
+      "knot",
+      "points",
+      "count",
+      "int32",
+      "double",
+      "boolean"
+    ]
+  },
+  "title": "ISplineParamData.IGetKnotPoints",
+  "description": "Gets all of the knot points of the spline.",
+  "signature": "System.Boolean IGetKnotPoints( \n   System.Int32\nCount\n,\n   out System.Double\nKnotPoints\n)",
+  "parameters": [
+    {
+      "name": "Count",
+      "type": "System.Int32",
+      "description": "Size of KnotPoints array"
+    },
+    {
+      "name": "KnotPoints",
+      "type": "System.Double",
+      "description": "in-process, unmanaged C++: Pointer to an array of double values between 0 and 1, inclusive VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method."
+    }
+  ],
+  "returns": "True if successful, false if not",
+  "remarks": "Before calling this method, call\nISplineParamData::KnotPointsCount\nto populate the Count parameter.\nTogether with\ncontrol points\n, knots determine the shape and smoothness of a spline. The knot vector divides the parametric space into intervals or knot spans. These intervals may be uniform or non-uniform. Each interval governs a different control point.",
+  "examples": [],
+  "related": [
+    "ISplineParamData.GetKnotPoints"
+  ]
+}

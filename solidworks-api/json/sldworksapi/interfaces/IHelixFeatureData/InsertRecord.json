@@ -1,0 +1,60 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IHelixFeatureData",
+    "member": "InsertRecord",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index after which to insert a new record"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "features"
+    ],
+    "related": [
+      "IHelixFeatureData.DeleteRecord",
+      "IHelixFeatureData.GetRegionParameterAtIndex",
+      "IHelixFeatureData.PitchCount",
+      "IHelixFeatureData.SetRegionParameterAtIndex",
+      "IHelixFeatureData.VariablePitch"
+    ],
+    "keywords": [
+      "insertrecord",
+      "ihelixfeaturedata",
+      "helix",
+      "feature",
+      "data",
+      "insert",
+      "record",
+      "index",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IHelixFeatureData.InsertRecord",
+  "description": "Inserts a record before the specified index in the Region parameters table of this variable-pitch helix.",
+  "signature": "System.Boolean InsertRecord( \n   System.Int32\nIndex\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index after which to insert a new record"
+    }
+  ],
+  "returns": "True if the record is inserted, false if not",
+  "remarks": "When inserting a record, the SOLIDWORKS Design software calculates the new region's parameters. You cannot add a record to the beginning of the Region parameters table. To add a record to the end of the Region parameters table, use\nIHelixFeatureData::AddLastRecord\n.",
+  "examples": [],
+  "related": [
+    "IHelixFeatureData.DeleteRecord",
+    "IHelixFeatureData.GetRegionParameterAtIndex",
+    "IHelixFeatureData.PitchCount",
+    "IHelixFeatureData.SetRegionParameterAtIndex",
+    "IHelixFeatureData.VariablePitch"
+  ]
+}

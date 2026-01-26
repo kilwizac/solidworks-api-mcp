@@ -1,0 +1,77 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "GetActiveGroundPlane",
+    "returns": "System.Object",
+    "parameters": [
+      {
+        "name": "Config_opt",
+        "type": "System.Int32",
+        "description": "Configurations from which to retrieve active ground planes as defined in swInConfigurationOpts_e : swThisConfiguration swAllConfigurations swSpecifyConfiguration (see Remarks )"
+      },
+      {
+        "name": "Config_names",
+        "type": "System.Object",
+        "description": "Array of the names of configurations from which to retrieve active ground planes; valid only if Config_opt is set to swInConfiguration_e.swSpecifyConfiguration (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.ActivateGroundPlane",
+      "IFeatureManager.InsertGroundPlane"
+    ],
+    "keywords": [
+      "getactivegroundplane",
+      "iassemblydoc",
+      "assembly",
+      "doc",
+      "active",
+      "ground",
+      "plane",
+      "config",
+      "opt",
+      "int32",
+      "names",
+      "object",
+      "insert",
+      "activate",
+      "vba"
+    ]
+  },
+  "title": "IAssemblyDoc.GetActiveGroundPlane",
+  "description": "Gets the active ground plane for the specified configurations.",
+  "signature": "System.Object GetActiveGroundPlane( \n   System.Int32\nConfig_opt\n,\n   System.Object\nConfig_names\n)",
+  "parameters": [
+    {
+      "name": "Config_opt",
+      "type": "System.Int32",
+      "description": "Configurations from which to retrieve active ground planes as defined in swInConfigurationOpts_e : swThisConfiguration swAllConfigurations swSpecifyConfiguration (see Remarks )"
+    },
+    {
+      "name": "Config_names",
+      "type": "System.Object",
+      "description": "Array of the names of configurations from which to retrieve active ground planes; valid only if Config_opt is set to swInConfiguration_e.swSpecifyConfiguration (see Remarks )"
+    }
+  ],
+  "returns": "Array of ground plane features",
+  "remarks": "If Config_opt is set to swInConfiguration_e...\nThen the returned array contains one active ground plane or null for...\nswAllConfigurations\nEach configuration in the assembly.\nswSpecifyConfiguration\nEach configuration in Config_names.\nswThisConfiguration\nThe current configuration.\nTo populate config_names, use\nIModelDoc2::GetConfigurationNames\n.",
+  "examples": [
+    {
+      "title": "Insert and Activate Ground Plane (VBA)",
+      "href": "Insert_Ground_Plane_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.ActivateGroundPlane",
+    "IFeatureManager.InsertGroundPlane"
+  ]
+}

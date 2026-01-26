@@ -1,0 +1,85 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ISldWorks",
+    "member": "SetCurrentWorkingDirectory",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "CurrentWorkingDirectory",
+        "type": "System.String",
+        "description": "Directory to set as the current working directory"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "ui"
+    ],
+    "related": [
+      "ISldWorks.GetCurrentMacroPathFolder",
+      "ISldWorks.GetCurrentMacroPathName",
+      "ISldWorks.GetCurrentWorkingDirectory",
+      "ISldWorks.GetExecutablePath"
+    ],
+    "keywords": [
+      "external",
+      "references",
+      "file",
+      "management",
+      "solidworks",
+      "directory",
+      "setcurrentworkingdirectory",
+      "isldworks",
+      "sld",
+      "works",
+      "current",
+      "working",
+      "string",
+      "boolean",
+      "open",
+      "document",
+      "vba",
+      "vb",
+      "net"
+    ]
+  },
+  "title": "ISldWorks.SetCurrentWorkingDirectory",
+  "description": "Sets the current working directory to be used by SOLIDWORKS.",
+  "signature": "System.Boolean SetCurrentWorkingDirectory( \n   System.String\nCurrentWorkingDirectory\n)",
+  "parameters": [
+    {
+      "name": "CurrentWorkingDirectory",
+      "type": "System.String",
+      "description": "Directory to set as the current working directory"
+    }
+  ],
+  "returns": "True if specified direction is set as the current working directory, false if not",
+  "remarks": "The current working directory is used when opening documents containing references. If explicit search folders are not set (see\nISldWorks::SetSearchFolders\n), then SOLIDWORKS will initially try to locate file references (for example, assembly component parts) in the current working directory. Interactively, the current working directory is used by the File Open dialog and is set when you choose the Open dialog button.\nThe\nISldWorks::OpenDoc6\nmethod does not set the current working directory. Therefore, you may want to set the current working directory using ISldWorks::SetCurrentWorkingDirectory before opening a file that contains references. By doing so, you will get the same behavior as if the file was opened interactively using the File Open dialog.\nFor more information on the search criteria used by SOLIDWORKS when loading file references, see SOLIDWORKS Help.",
+  "examples": [
+    {
+      "title": "Open Document (VBA)",
+      "href": "Open_Document_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Document (VB.NET)",
+      "href": "Open_Document_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Open Document (C#)",
+      "href": "Open_Document_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ISldWorks.GetCurrentMacroPathFolder",
+    "ISldWorks.GetCurrentMacroPathName",
+    "ISldWorks.GetCurrentWorkingDirectory",
+    "ISldWorks.GetExecutablePath"
+  ]
+}

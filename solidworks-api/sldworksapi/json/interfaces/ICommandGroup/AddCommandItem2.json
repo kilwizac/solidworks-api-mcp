@@ -1,0 +1,172 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "ICommandGroup",
+    "member": "AddCommandItem2",
+    "returns": "System.Int32",
+    "parameters": [
+      {
+        "name": "Name",
+        "type": "System.String",
+        "description": "Name of the item to add to the CommandGroup"
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position of the item within the CommandGroup NOTE: Specify 0 to add this item to the beginning of the CommandGroup, or specify -1 to add it to the end of the CommandGroup. This argument specifies the position of the item in relation to its immediate parent item."
+      },
+      {
+        "name": "HintString",
+        "type": "System.String",
+        "description": "Text displayed in the SOLIDWORKS status bar when the pointer is on the item"
+      },
+      {
+        "name": "ToolTip",
+        "type": "System.String",
+        "description": "ToolTip displayed when the pointer is on the item"
+      },
+      {
+        "name": "ImageListIndex",
+        "type": "System.Int32",
+        "description": "Index number of the image for the item in the parent CommandGroup (see Remarks )"
+      },
+      {
+        "name": "CallbackFunction",
+        "type": "System.String",
+        "description": "Function to call when this item is selected (see Remarks )"
+      },
+      {
+        "name": "EnableMethod",
+        "type": "System.String",
+        "description": "Optional function that controls the state of the item; if specified, then SOLIDWORKS calls this function before displaying the item If your method returns... Then SOLIDWORKS... 0 Deselects and disables the item 1 Deselects and enables the item; this is the default state if no update function is specified 2 Selects and disables the item 3 Selects and enables the item 4 Not supported (see Remarks )"
+      },
+      {
+        "name": "UserID",
+        "type": "System.Int32",
+        "description": "User-defined command ID or 0 if not used"
+      },
+      {
+        "name": "MenuTBOption",
+        "type": "System.Int32",
+        "description": "Command item type as defined in swCommandItemType_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "ICommandGroup.CommandID",
+      "ICommandGroup.HasEnabledButton",
+      "ISldWorks.GetCommandID"
+    ],
+    "keywords": [
+      "id",
+      "command",
+      "addcommanditem2",
+      "icommandgroup",
+      "group",
+      "add",
+      "item2",
+      "name",
+      "string",
+      "position",
+      "int32",
+      "hint",
+      "tool",
+      "tip",
+      "image",
+      "list",
+      "index",
+      "callback",
+      "function",
+      "enable",
+      "user",
+      "menu",
+      "tb",
+      "option",
+      "create",
+      "flyouts",
+      "commandmanager",
+      "vb",
+      "net",
+      "submenus"
+    ]
+  },
+  "title": "ICommandGroup.AddCommandItem2",
+  "description": "Adds a combination menu item and toolbar item to a CommandGroup.",
+  "signature": "System.Int32 AddCommandItem2( \n   System.String\nName\n,\n   System.Int32\nPosition\n,\n   System.String\nHintString\n,\n   System.String\nToolTip\n,\n   System.Int32\nImageListIndex\n,\n   System.String\nCallbackFunction\n,\n   System.String\nEnableMethod\n,\n   System.Int32\nUserID\n,\n   System.Int32\nMenuTBOption\n)",
+  "parameters": [
+    {
+      "name": "Name",
+      "type": "System.String",
+      "description": "Name of the item to add to the CommandGroup"
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position of the item within the CommandGroup NOTE: Specify 0 to add this item to the beginning of the CommandGroup, or specify -1 to add it to the end of the CommandGroup. This argument specifies the position of the item in relation to its immediate parent item."
+    },
+    {
+      "name": "HintString",
+      "type": "System.String",
+      "description": "Text displayed in the SOLIDWORKS status bar when the pointer is on the item"
+    },
+    {
+      "name": "ToolTip",
+      "type": "System.String",
+      "description": "ToolTip displayed when the pointer is on the item"
+    },
+    {
+      "name": "ImageListIndex",
+      "type": "System.Int32",
+      "description": "Index number of the image for the item in the parent CommandGroup (see Remarks )"
+    },
+    {
+      "name": "CallbackFunction",
+      "type": "System.String",
+      "description": "Function to call when this item is selected (see Remarks )"
+    },
+    {
+      "name": "EnableMethod",
+      "type": "System.String",
+      "description": "Optional function that controls the state of the item; if specified, then SOLIDWORKS calls this function before displaying the item If your method returns... Then SOLIDWORKS... 0 Deselects and disables the item 1 Deselects and enables the item; this is the default state if no update function is specified 2 Selects and disables the item 3 Selects and enables the item 4 Not supported (see Remarks )"
+    },
+    {
+      "name": "UserID",
+      "type": "System.Int32",
+      "description": "User-defined command ID or 0 if not used"
+    },
+    {
+      "name": "MenuTBOption",
+      "type": "System.Int32",
+      "description": "Command item type as defined in swCommandItemType_e"
+    }
+  ],
+  "returns": "Index of the item within the CommandGroup as assigned by SOLIDWORKS",
+  "remarks": "See\nAdd-in Callback and Enable Methods\nto learn how to specify CallbackFunction and EnableMethod.\nImageListIndex is 0-based. The size of the index is equal to number of the images in the image files for that CommandGroup. See\nICommandGroup::IconList\nfor details. You can use -1 for ImageListIndex to specify that no icon is needed for a command item of type swCommandItemType_e.swMenuItem; however, command items of type swCommandItemType_e.swToolbarItem always need an icon.",
+  "examples": [
+    {
+      "title": "Create Flyouts in the CommandManager (C#)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Flyouts in the CommandManager (VB.NET)",
+      "href": "Create_Flyouts_in_the_CommandManager_Example_VBNET.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Create Submenus in the CommandManager (C#)",
+      "href": "Create_Submenus_in_the_CommandManager_Example_CSharp.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "ICommandGroup.CommandID",
+    "ICommandGroup.HasEnabledButton",
+    "ISldWorks.GetCommandID"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "frontmatter": {
+    "type": "property",
+    "interface": "IDisplayDimension",
+    "member": "ArrowSide",
+    "returns": "System.Int32",
+    "parameters": [],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IDisplayDimension.GetSecondArrow",
+      "IDisplayDimension.GetUseDocSecondArrow",
+      "IDisplayDimension.SetSecondArrow"
+    ],
+    "keywords": [
+      "arrows",
+      "dimensions",
+      "arrowside",
+      "idisplaydimension",
+      "display",
+      "dimension",
+      "arrow",
+      "side",
+      "int32",
+      "values",
+      "drawing",
+      "vba",
+      "properties"
+    ],
+    "readonly": null
+  },
+  "title": "IDisplayDimension.ArrowSide",
+  "description": "Gets or sets the position of the dimension arrows.",
+  "signature": "System.Int32 ArrowSide {get; set;}",
+  "parameters": [],
+  "returns": "Dimension arrow side state as defined in swDimensionArrowsSide_e",
+  "remarks": "By specifying one of the following values in the Dimension Arrow Side state, the location of the dimension arrow with respect to the extension lines can be controlled. Valid values are listed in the\nswDimensionArrowsSide_e\nenumeration.\nThe graphics of the drawing change when you change this property. After you finish changing the drawing, use\nIModelDoc2::WindowRedraw\nto regenerate the drawing and display your changes.",
+  "examples": [
+    {
+      "title": "Get Dimension Values in Drawing (VBA)",
+      "href": "Get_Dimension_Values_in_Drawing_Example_VB.htm",
+      "code_blocks": []
+    },
+    {
+      "title": "Get Display Dimension Properties (VBA)",
+      "href": "Get_Display_Dimension_Properties_Example_VB.htm",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IDisplayDimension.GetSecondArrow",
+    "IDisplayDimension.GetUseDocSecondArrow",
+    "IDisplayDimension.SetSecondArrow"
+  ]
+}

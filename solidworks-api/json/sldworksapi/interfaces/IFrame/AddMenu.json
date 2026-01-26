@@ -1,0 +1,81 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IFrame",
+    "member": "AddMenu",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "Menu",
+        "type": "System.String",
+        "description": "Name of the menu item to add; including parent menu names, e.g., subMenuString@menuString (see Remarks )"
+      },
+      {
+        "name": "Position",
+        "type": "System.Int32",
+        "description": "Position of the existing menu item before which to insert the new menu item; the first menu item is at position 0; if Position is 1, the new menu item is appended to the end of the menu (see Remarks )"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "ui"
+    ],
+    "related": [
+      "IFrame.AddMenuItem2",
+      "IFrame.AddMenuPopupItem",
+      "IFrame.AddMenuPopupItem2",
+      "IFrame.GetSubMenuCount",
+      "IFrame.GetSubMenus",
+      "IFrame.IGetSubMenus",
+      "IFrame.RemoveMenu",
+      "IFrame.RemoveMenuPopupIcon",
+      "IFrame.RenameMenu",
+      "ISldWorks.GetLocalizedMenuName"
+    ],
+    "keywords": [
+      "menus",
+      "frames",
+      "addmenu",
+      "iframe",
+      "frame",
+      "add",
+      "menu",
+      "string",
+      "position",
+      "int32",
+      "boolean"
+    ]
+  },
+  "title": "IFrame.AddMenu",
+  "description": "Adds a menu item.",
+  "signature": "System.Boolean AddMenu( \n   System.String\nMenu\n,\n   System.Int32\nPosition\n)",
+  "parameters": [
+    {
+      "name": "Menu",
+      "type": "System.String",
+      "description": "Name of the menu item to add; including parent menu names, e.g., subMenuString@menuString (see Remarks )"
+    },
+    {
+      "name": "Position",
+      "type": "System.Int32",
+      "description": "Position of the existing menu item before which to insert the new menu item; the first menu item is at position 0; if Position is 1, the new menu item is appended to the end of the menu (see Remarks )"
+    }
+  ],
+  "returns": "True if menu item was successfully added, false if not",
+  "remarks": "If the name of a parent menu name is not specified in Menu, then:\nthe menu item appears on the Tools menu below the\nXPress products\nmenu item.\nPosition is ignored.\nThis method is only valid when the application is implemented as a DLL, not as an EXE.",
+  "examples": [],
+  "related": [
+    "IFrame.AddMenuItem2",
+    "IFrame.AddMenuPopupItem",
+    "IFrame.AddMenuPopupItem2",
+    "IFrame.GetSubMenuCount",
+    "IFrame.GetSubMenus",
+    "IFrame.IGetSubMenus",
+    "IFrame.RemoveMenu",
+    "IFrame.RemoveMenuPopupIcon",
+    "IFrame.RenameMenu",
+    "ISldWorks.GetLocalizedMenuName"
+  ]
+}

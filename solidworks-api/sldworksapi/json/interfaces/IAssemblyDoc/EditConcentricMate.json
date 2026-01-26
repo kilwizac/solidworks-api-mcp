@@ -1,0 +1,117 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IAssemblyDoc",
+    "member": "EditConcentricMate",
+    "returns": "void",
+    "parameters": [
+      {
+        "name": "AlignFromEnum",
+        "type": "System.Int32",
+        "description": "Type of mate alignment as defined in swMateAlign_e"
+      },
+      {
+        "name": "ConcentricPositionType",
+        "type": "System.Int32",
+        "description": "Misaligned concentric mate position as defined in swConcentricAlignmentType_e"
+      },
+      {
+        "name": "ConcentricToleranceCheck",
+        "type": "System.Boolean",
+        "description": "True to override the deviation, false to have SOLIDWORKS calculate the deviation"
+      },
+      {
+        "name": "ConcentricToleranceValue",
+        "type": "System.Double",
+        "description": "Maximum deviation; valid only when ConcentricToleranceCheck is true"
+      },
+      {
+        "name": "ErrorStatus",
+        "type": "System.Int32",
+        "description": "Success or error as defined by swAddMateError_e"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "assemblies",
+      "core",
+      "ui"
+    ],
+    "related": [
+      "IAssemblyDoc.AddConcentricMateWithTolerance",
+      "IAssemblyDoc.AddMate5"
+    ],
+    "keywords": [
+      "edit",
+      "mates",
+      "assemblies",
+      "see",
+      "also",
+      "iassemblydoc",
+      "imate2",
+      "editconcentricmate",
+      "assembly",
+      "doc",
+      "concentric",
+      "mate",
+      "align",
+      "int32",
+      "position",
+      "type",
+      "tolerance",
+      "check",
+      "boolean",
+      "value",
+      "double",
+      "error",
+      "status",
+      "void",
+      "addconcentricmatewithtolerance"
+    ]
+  },
+  "title": "IAssemblyDoc.EditConcentricMate",
+  "description": "Edits a misaligned concentric mate.",
+  "signature": "void EditConcentricMate( \n   System.Int32\nAlignFromEnum\n,\n   System.Int32\nConcentricPositionType\n,\n   System.Boolean\nConcentricToleranceCheck\n,\n   System.Double\nConcentricToleranceValue\n,\n   out System.Int32\nErrorStatus\n)",
+  "parameters": [
+    {
+      "name": "AlignFromEnum",
+      "type": "System.Int32",
+      "description": "Type of mate alignment as defined in swMateAlign_e"
+    },
+    {
+      "name": "ConcentricPositionType",
+      "type": "System.Int32",
+      "description": "Misaligned concentric mate position as defined in swConcentricAlignmentType_e"
+    },
+    {
+      "name": "ConcentricToleranceCheck",
+      "type": "System.Boolean",
+      "description": "True to override the deviation, false to have SOLIDWORKS calculate the deviation"
+    },
+    {
+      "name": "ConcentricToleranceValue",
+      "type": "System.Double",
+      "description": "Maximum deviation; valid only when ConcentricToleranceCheck is true"
+    },
+    {
+      "name": "ErrorStatus",
+      "type": "System.Int32",
+      "description": "Success or error as defined by swAddMateError_e"
+    }
+  ],
+  "returns": "",
+  "remarks": "Select these entities before calling this method:\nTwo entities that define the misaligned concentric mate\nMisaligned concentric mate\nA parent non-misaligned (i.e., standard) concentric mate must already exist for the selected misaligned concentric mate. If a suitable parent concentric mate does not exist, then the selected misaligned concentric mate changes to a standard concentric mate. You can also change a misaligned concentric mate to a standard concentric mate using\nIAssemblyDoc::EditMate4\n.\nAfter calling IAssemblyDoc::EditConcentricMate, call\nIModelDoc2::EditRebuild3\n.",
+  "examples": [
+    {
+      "title": "IAssemblyDoc::AddConcentricMateWithTolerance",
+      "href": "ms-xhelp:///?id=SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~AddConcentricMateWithTolerance",
+      "code_blocks": []
+    }
+  ],
+  "related": [
+    "IAssemblyDoc.AddConcentricMateWithTolerance",
+    "IAssemblyDoc.AddMate5"
+  ]
+}

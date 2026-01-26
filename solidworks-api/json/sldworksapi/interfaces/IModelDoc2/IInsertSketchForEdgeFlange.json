@@ -1,0 +1,88 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IModelDoc2",
+    "member": "IInsertSketchForEdgeFlange",
+    "returns": "Feature",
+    "parameters": [
+      {
+        "name": "FlangeEdge",
+        "type": "Edge",
+        "description": "Edge to which to apply flange"
+      },
+      {
+        "name": "DAngle",
+        "type": "System.Double",
+        "description": "Angle of flange"
+      },
+      {
+        "name": "FlipDir",
+        "type": "System.Boolean",
+        "description": "True reverses the offset direction of the flange, false does not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "core",
+      "documents",
+      "geometry",
+      "sketches",
+      "ui"
+    ],
+    "related": [
+      "IModelDoc2.InsertSheetMetalMiterFlange"
+    ],
+    "keywords": [
+      "edge",
+      "flanges",
+      "see",
+      "iedgeflangefeaturedata",
+      "sheet",
+      "metal",
+      "also",
+      "isheetmetalfeaturedata",
+      "feature",
+      "ifeature",
+      "flange",
+      "iinsertsketchforedgeflange",
+      "imodeldoc2",
+      "model",
+      "doc2",
+      "insert",
+      "sketch",
+      "angle",
+      "double",
+      "flip",
+      "dir",
+      "boolean"
+    ]
+  },
+  "title": "IModelDoc2.IInsertSketchForEdgeFlange",
+  "description": "Inserts a sketch for IFeatureManager::InsertSheetMetalEdgeFlange2 in this sheet metal part.",
+  "signature": "Feature IInsertSketchForEdgeFlange( \n   Edge\nFlangeEdge\n,\n   System.Double\nDAngle\n,\n   System.Boolean\nFlipDir\n)",
+  "parameters": [
+    {
+      "name": "FlangeEdge",
+      "type": "Edge",
+      "description": "Edge to which to apply flange"
+    },
+    {
+      "name": "DAngle",
+      "type": "System.Double",
+      "description": "Angle of flange"
+    },
+    {
+      "name": "FlipDir",
+      "type": "System.Boolean",
+      "description": "True reverses the offset direction of the flange, false does not"
+    }
+  ],
+  "returns": "Sketch for the edge flagne, returned as a feature",
+  "remarks": "After calling this method, you must create the profile for the flange on the appropriate plane. After creating the profile, call\nIFeatureManager::InsertSheetMetalEdgeFlange2\nto create the flange.",
+  "examples": [],
+  "related": [
+    "IModelDoc2.InsertSheetMetalMiterFlange"
+  ]
+}

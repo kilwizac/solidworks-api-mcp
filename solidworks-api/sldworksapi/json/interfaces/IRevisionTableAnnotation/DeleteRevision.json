@@ -1,0 +1,70 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IRevisionTableAnnotation",
+    "member": "DeleteRevision",
+    "returns": "System.Boolean",
+    "parameters": [
+      {
+        "name": "RevisionId",
+        "type": "System.Int32",
+        "description": "Revision ID"
+      },
+      {
+        "name": "DeleteSymbols",
+        "type": "System.Boolean",
+        "description": "True to delete all associated symbols, false to not"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "dimensions"
+    ],
+    "related": [
+      "IRevisionTableAnnotation.AddRevision",
+      "IRevisionTableAnnotation.CurrentRevision",
+      "IRevisionTableAnnotation.GetIdForRowNumber",
+      "IRevisionTableAnnotation.GetRevisionForId",
+      "IRevisionTableAnnotation.GetRowNumberForId"
+    ],
+    "keywords": [
+      "deleterevision",
+      "irevisiontableannotation",
+      "revision",
+      "table",
+      "annotation",
+      "delete",
+      "id",
+      "int32",
+      "symbols",
+      "boolean"
+    ]
+  },
+  "title": "IRevisionTableAnnotation.DeleteRevision",
+  "description": "Deletes a revision from this revision table.",
+  "signature": "System.Boolean DeleteRevision( \n   System.Int32\nRevisionId\n,\n   System.Boolean\nDeleteSymbols\n)",
+  "parameters": [
+    {
+      "name": "RevisionId",
+      "type": "System.Int32",
+      "description": "Revision ID"
+    },
+    {
+      "name": "DeleteSymbols",
+      "type": "System.Boolean",
+      "description": "True to delete all associated symbols, false to not"
+    }
+  ],
+  "returns": "True if revision ID is deleted, false if not",
+  "remarks": "This method deletes the row in which the revision ID exists.",
+  "examples": [],
+  "related": [
+    "IRevisionTableAnnotation.AddRevision",
+    "IRevisionTableAnnotation.CurrentRevision",
+    "IRevisionTableAnnotation.GetIdForRowNumber",
+    "IRevisionTableAnnotation.GetRevisionForId",
+    "IRevisionTableAnnotation.GetRowNumberForId"
+  ]
+}

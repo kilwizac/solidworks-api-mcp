@@ -1,0 +1,61 @@
+{
+  "frontmatter": {
+    "type": "method",
+    "interface": "IDiagnoseResult",
+    "member": "IGetCoEdgesAtGap",
+    "returns": "CoEdge",
+    "parameters": [
+      {
+        "name": "Index",
+        "type": "System.Int32",
+        "description": "Index number of the gap to get"
+      },
+      {
+        "name": "CoEdgeCount",
+        "type": "System.Int32",
+        "description": "Number of coedges at that gap"
+      }
+    ],
+    "docset": "sldworksapi",
+    "deprecated": false,
+    "since_version": "unknown",
+    "categories": [
+      "documents",
+      "geometry"
+    ],
+    "related": [],
+    "keywords": [
+      "gap",
+      "coedges",
+      "igetcoedgesatgap",
+      "idiagnoseresult",
+      "diagnose",
+      "result",
+      "co",
+      "edges",
+      "index",
+      "int32",
+      "edge",
+      "count"
+    ]
+  },
+  "title": "IDiagnoseResult.IGetCoEdgesAtGap",
+  "description": "Gets the coedges at the specified gap.",
+  "signature": "CoEdge IGetCoEdgesAtGap( \n   System.Int32\nIndex\n,\n   System.Int32\nCoEdgeCount\n)",
+  "parameters": [
+    {
+      "name": "Index",
+      "type": "System.Int32",
+      "description": "Index number of the gap to get"
+    },
+    {
+      "name": "CoEdgeCount",
+      "type": "System.Int32",
+      "description": "Number of coedges at that gap"
+    }
+  ],
+  "returns": "in-process, unmanaged C++: Pointer to an array of ICoEdge objects VBA, VB.NET, C#, and C++/CLI: Not supported See In-process Methods for details about this type of method.",
+  "remarks": "Call:\nIDiagnoseResult::GetGapsCount\nbefore calling this method to determine the index number of the gap to get on this body.\nIDiagnoseResult::GetCoEdgesCountAtGap\nbefore calling this method to get the number of coedges at the gap on this body.",
+  "examples": [],
+  "related": []
+}

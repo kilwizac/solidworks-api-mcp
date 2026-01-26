@@ -1,0 +1,135 @@
+---
+type: method
+interface: IModeler
+member: CreateRuledSurface
+returns: System.Object
+parameters:
+  -
+    name: Curve1In
+    type: System.Object
+    description: First curve
+  -
+    name: Curve2In
+    type: System.Object
+    description: Second curve
+  -
+    name: Apex
+    type: System.Object
+    description: Array of 3 doubles, (x, y, z), the apex point
+docset: sldworksapi
+deprecated: false
+since_version: unknown
+categories:
+  - documents
+related:
+  - IFeatureManager.InsertRuledSurfaceFromEdge2
+  - IModeler.CreateBsplineSurface
+  - IModeler.CreateConicalSurface2
+  - IModeler.CreateCoonsBSurface
+  - IModeler.CreateCylindricalSurface2
+  - IModeler.CreateExtrudedBody
+  - IModeler.CreateExtrusionSurface
+  - IModeler.CreateLoftSurface
+  - IModeler.CreateOffsetSurface
+  - IModeler.CreatePlanarSurface2
+  - IModeler.CreateRuledSurfaceFromEdge
+  - IModeler.CreateSphericalSurface2
+  - IModeler.CreateSweptSurface
+  - IModeler.CreateToroidalSurface
+  - IModeler.ICreateBsplineSurface
+  - IModeler.ICreateConicalSurface2
+  - IModeler.ICreateCylindricalSurface2
+  - IModeler.ICreateExtrusionSurface
+  - IModeler.ICreateLoftSurface
+  - IModeler.ICreateOffsetSurface
+  - IModeler.ICreatePlanarSurface2
+  - IModeler.ICreateRuledSurface
+  - IModeler.ICreateRuledSurfaceFromEdge
+  - IModeler.ICreateSheetFromSurface2
+  - IModeler.ICreateSphericalSurface2
+  - IModeler.ICreateSweptSurface
+  - IModeler.ICreateToroidalSurface
+keywords:
+  - surface
+  - see
+  - also
+  - isurface
+  - ruled
+  - surfaces
+  - iruledsurfacefeaturedata
+  - createruledsurface
+  - imodeler
+  - modeler
+  - create
+  - curve1
+  - object
+  - curve2
+  - apex
+  - vba
+---
+
+# IModeler.CreateRuledSurface
+
+Creates a ruled surface from the curves.
+
+## Signature
+
+```csharp
+System.Object CreateRuledSurface( 
+   System.Object
+Curve1In
+,
+   System.Object
+Curve2In
+,
+   System.Object
+Apex
+)
+```
+## Parameters
+
+- `Curve1In` (System.Object): First curve
+- `Curve2In` (System.Object): Second curve
+- `Apex` (System.Object): Array of 3 doubles, (x, y, z), the apex point
+
+## Return Value
+
+Newly created ruled surface
+
+## Remarks
+
+Valid input curves are b-curves.
+
+## Examples
+
+- Create Ruled Surface (VBA) (Create_Ruled_Surface_Example_VB.htm)
+
+## See Also
+
+- `IFeatureManager.InsertRuledSurfaceFromEdge2`
+- `IModeler.CreateBsplineSurface`
+- `IModeler.CreateConicalSurface2`
+- `IModeler.CreateCoonsBSurface`
+- `IModeler.CreateCylindricalSurface2`
+- `IModeler.CreateExtrudedBody`
+- `IModeler.CreateExtrusionSurface`
+- `IModeler.CreateLoftSurface`
+- `IModeler.CreateOffsetSurface`
+- `IModeler.CreatePlanarSurface2`
+- `IModeler.CreateRuledSurfaceFromEdge`
+- `IModeler.CreateSphericalSurface2`
+- `IModeler.CreateSweptSurface`
+- `IModeler.CreateToroidalSurface`
+- `IModeler.ICreateBsplineSurface`
+- `IModeler.ICreateConicalSurface2`
+- `IModeler.ICreateCylindricalSurface2`
+- `IModeler.ICreateExtrusionSurface`
+- `IModeler.ICreateLoftSurface`
+- `IModeler.ICreateOffsetSurface`
+- `IModeler.ICreatePlanarSurface2`
+- `IModeler.ICreateRuledSurface`
+- `IModeler.ICreateRuledSurfaceFromEdge`
+- `IModeler.ICreateSheetFromSurface2`
+- `IModeler.ICreateSphericalSurface2`
+- `IModeler.ICreateSweptSurface`
+- `IModeler.ICreateToroidalSurface`
