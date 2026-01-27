@@ -117,8 +117,8 @@ class DataStore:
         self._progguide_titles = titles
         return titles
 
-    def search_api(self, query, limit=10):
-        """Search API documentation by query string."""
+    def search_api_scored(self, query, docset=None):
+        """Search API documentation and return scored results."""
         tokens = tokenize(query)
         if not tokens:
             return []
@@ -126,36 +126,84 @@ class DataStore:
         docs = self.search().get("documents", [])
         scored = []
         for doc in docs:
+            if docset and doc.get("docset") != docset:
+                continue
             score = score_doc(doc, tokens)
             if score > 0:
-                scored.append((score, doc))
+                scored.append({"score": score, "doc": doc})
 
-        scored.sort(reverse=True, key=lambda x: x[0])
-        return [doc for score, doc in scored[:limit]]
+        scored.sort(key=lambda item: item["score"], reverse=True)
+        return scored
 
-    def get_interface_info(self, interface_name):
+    def search_api(self, query, limit=10, docset=None):
+        """Search API documentation by query string."""
+        scored = self.search_api_scored(query, docset=docset)
+        if limit is None:
+            return [item["doc"] for item in scored]
+        return [item["doc"] for item in scored[:limit]]
+
+    def _get_interface_entry(self, interface_name, docset):
+        if not interface_name:
+            return None, None
+        idx = self.json_index().get("docsets", {}).get(docset, {})
+        interfaces = idx.get("interfaces", {})
+        if interface_name in interfaces:
+            return interface_name, interfaces[interface_name]
+        target = interface_name.lower()
+        for name, data in interfaces.items():
+            if name.lower() == target:
+                return name, data
+        return None, None
+
+    def _get_member_entry(self, interface_name, member_name, docset):
+        iface_name, iface = self._get_interface_entry(interface_name, docset)
+        if not iface or not member_name:
+            return iface_name, None, None
+        members = iface.get("members", {})
+        if member_name in members:
+            return iface_name, member_name, members[member_name]
+        target = member_name.lower()
+        for name, path in members.items():
+            if name.lower() == target:
+                return iface_name, name, path
+        return iface_name, None, None
+
+    def get_interface_info(self, interface_name, docset="sldworksapi"):
         """Get detailed information about a specific interface."""
-        search_results = self.search_api(interface_name, limit=5)
+        iface_name, iface = self._get_interface_entry(interface_name, docset)
+        if not iface:
+            return None
+        path = iface.get("file")
+        if not path:
+            return None
+        full_path = os.path.join(self.root, path)
+        data = load_json(full_path)
+        members = sorted(iface.get("members", {}).keys())
+        return {
+            "interface": iface_name,
+            "docset": docset,
+            "path": full_path,
+            "member_count": iface.get("member_count", len(members)),
+            "members": members,
+            "data": data,
+        }
 
-        for doc in search_results:
-            if doc.get("interface", "").lower() == interface_name.lower():
-                return doc
-
-        return None
-
-    def get_method_info(self, interface_name, method_name):
+    def get_method_info(self, interface_name, method_name, docset="sldworksapi"):
         """Get information about a specific method."""
-        query = f"{interface_name} {method_name}"
-        results = self.search_api(query, limit=10)
-
-        for doc in results:
-            if (
-                doc.get("interface", "").lower() == interface_name.lower()
-                and doc.get("title", "").lower() == method_name.lower()
-            ):
-                return doc
-
-        return None
+        iface_name, member_name, rel_path = self._get_member_entry(
+            interface_name, method_name, docset
+        )
+        if not rel_path:
+            return None
+        full_path = os.path.join(self.root, rel_path)
+        data = load_json(full_path)
+        return {
+            "interface": iface_name,
+            "member": member_name,
+            "docset": docset,
+            "path": full_path,
+            "data": data,
+        }
 
 
 def main():
@@ -186,16 +234,18 @@ def main():
         Returns:
             List of matching documentation entries with titles, summaries, and relevance scores.
         """
-        results = store.search_api(query, limit=limit)
+        limit = max(0, int(limit))
+        results = store.search_api_scored(query)[:limit]
         return [
             {
-                "title": doc.get("title"),
-                "summary": doc.get("summary"),
-                "interface": doc.get("interface"),
-                "docset": doc.get("docset"),
-                "href": doc.get("href"),
+                "title": item["doc"].get("title"),
+                "summary": item["doc"].get("summary"),
+                "interface": item["doc"].get("interface"),
+                "docset": item["doc"].get("docset"),
+                "href": item["doc"].get("href"),
+                "score": item["score"],
             }
-            for doc in results
+            for item in results
         ]
 
     @mcp.tool()
@@ -247,17 +297,16 @@ def main():
         Returns:
             List of matching programming guides with summaries and links.
         """
-        results = store.search_api(query, limit=limit)
-        progguide_results = [doc for doc in results if doc.get("docset") == "progguide"]
-
+        limit = max(0, int(limit))
+        results = store.search_api_scored(query, docset="progguide")[:limit]
         return [
             {
-                "title": doc.get("title"),
-                "summary": doc.get("summary"),
-                "href": doc.get("href"),
-                "categories": doc.get("categories"),
+                "title": item["doc"].get("title"),
+                "summary": item["doc"].get("summary"),
+                "href": item["doc"].get("href"),
+                "categories": item["doc"].get("categories"),
             }
-            for doc in progguide_results
+            for item in results
         ]
 
     return mcp
