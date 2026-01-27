@@ -16,8 +16,8 @@ This guide explains how to deploy the SolidWorks API MCP Server to different pla
 
 **Setup:**
 ```bash
-git clone https://github.com/ZCAD-Products/sw-api-mcp.git
-cd sw-api-mcp
+git clone https://github.com/ZCAD-Products/solidworks-api-mcp.git
+cd solidworks-api-mcp
 python server/solidworks_mcp_server.py
 ```
 
@@ -43,7 +43,7 @@ python server/solidworks_mcp_server.py
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ZCAD-Products/sw-api-mcp.git
+git clone https://github.com/ZCAD-Products/solidworks-api-mcp.git
 ```
 
 2. Locate your Claude Desktop config file:
@@ -58,7 +58,7 @@ git clone https://github.com/ZCAD-Products/sw-api-mcp.git
   "mcpServers": {
     "solidworks-api": {
       "command": "python",
-      "args": ["/path/to/sw-api-mcp/server/solidworks_mcp_server.py"]
+      "args": ["/path/to/solidworks-api-mcp/server/solidworks_mcp_server.py"]
     }
   }
 }
@@ -70,7 +70,7 @@ git clone https://github.com/ZCAD-Products/sw-api-mcp.git
   "mcpServers": {
     "solidworks-api": {
       "command": "python",
-      "args": ["C:\\path\\to\\sw-api-mcp\\server\\solidworks_mcp_server.py"]
+      "args": ["C:\\path\\to\\solidworks-api-mcp\\server\\solidworks_mcp_server.py"]
     }
   }
 }
@@ -86,7 +86,7 @@ git clone https://github.com/ZCAD-Products/sw-api-mcp.git
   "mcpServers": {
     "solidworks-api": {
       "command": "python",
-      "args": ["/path/to/sw-api-mcp/server/solidworks_mcp_server.py"],
+      "args": ["/path/to/solidworks-api-mcp/server/solidworks_mcp_server.py"],
       "env": {
         "SW_API_DATA_ROOT": "/custom/path/to/solidworks-api"
       }
@@ -110,8 +110,8 @@ git clone https://github.com/ZCAD-Products/sw-api-mcp.git
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ZCAD-Products/sw-api-mcp.git
-cd sw-api-mcp
+git clone https://github.com/ZCAD-Products/solidworks-api-mcp.git
+cd solidworks-api-mcp
 ```
 
 2. Install dependencies:
@@ -120,7 +120,7 @@ pip install -r requirements.txt
 ```
 
 3. Deploy to FastMCP Cloud:
-   - Repository: `https://github.com/ZCAD-Products/sw-api-mcp.git`
+   - Repository: `https://github.com/ZCAD-Products/solidworks-api-mcp.git`
    - Entrypoint: `server/solidworks_mcp_server_fastmcp.py:main`
    - Python Version: 3.12 (recommended)
 
@@ -254,7 +254,7 @@ Automatically set by FastMCP Cloud platform (cloud deployment only).
 ## File Structure
 
 ```
-sw-api-mcp/
+solidworks-api-mcp/
 ├── server/
 │   ├── solidworks_mcp_server.py           # Standard MCP (recommended)
 │   └── solidworks_mcp_server_fastmcp.py   # FastMCP Cloud version

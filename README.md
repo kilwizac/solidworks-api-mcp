@@ -22,8 +22,8 @@ A Model Context Protocol (MCP) server that provides intelligent access to SolidW
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/kilwizac/sw-api-mcp.git
-cd sw-api-mcp
+git clone https://github.com/ZCAD-Products/solidworks-api-mcp.git
+cd solidworks-api-mcp
 ```
 
 2. Install dependencies (FastMCP Cloud version):
@@ -63,7 +63,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "solidworks-api": {
       "command": "python",
-      "args": ["/path/to/sw-api-mcp/server/solidworks_mcp_server.py"]
+      "args": ["/path/to/solidworks-api-mcp/server/solidworks_mcp_server.py"]
     }
   }
 }
@@ -75,7 +75,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "solidworks-api": {
       "command": "python",
-      "args": ["C:\\path\\to\\sw-api-mcp\\server\\solidworks_mcp_server.py"]
+      "args": ["C:\\path\\to\\solidworks-api-mcp\\server\\solidworks_mcp_server.py"]
     }
   }
 }
@@ -107,7 +107,7 @@ python server/solidworks_mcp_server_fastmcp.py
 ## Project Structure
 
 ```
-sw-api-mcp/
+solidworks-api-mcp/
 ├── server/
 │   ├── solidworks_mcp_server.py           # Standard MCP server (recommended for local/Claude)
 │   └── solidworks_mcp_server_fastmcp.py   # FastMCP Cloud compatible version

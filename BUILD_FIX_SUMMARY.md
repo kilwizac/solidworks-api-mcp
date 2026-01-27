@@ -111,7 +111,7 @@ Both server versions expose similar functionality but with different method sign
 ### For FastMCP Cloud Build
 
 Use these settings:
-- **Repository**: `https://github.com/ZCAD-Products/sw-api-mcp.git`
+- **Repository**: `https://github.com/ZCAD-Products/solidworks-api-mcp.git`
 - **Entrypoint**: `server/solidworks_mcp_server_fastmcp.py:main`
 - **Python Version**: 3.12 (recommended)
 - **Auto-detect dependencies**: Yes (will find `requirements.txt`)
