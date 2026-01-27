@@ -1,0 +1,39 @@
+---
+description: How to use the SolidWorks API MCP server tools
+alwaysApply: true
+---
+
+# SolidWorks API MCP Server
+
+This project includes an MCP server (`user-SolidWorks-API`) with tools to query SolidWorks API documentation.
+
+## Available Tools
+
+Use `CallMcpTool` with `server: "user-SolidWorks-API"` and these tool names:
+
+| Tool | Purpose | Required Parameters |
+|------|---------|---------------------|
+| `search_solidworks_api` | Search API docs | `query` (string) |
+| `get_method_details` | Get method/property details | `interface_name`, `method_name` |
+| `get_interface_details` | Get full interface info | `interface_name` |
+| `search_programming_guides` | Search guides/examples | `query` (string) |
+
+## Example Calls
+
+```json
+// Search for API methods
+{"query": "AddConfiguration2", "limit": 5}
+
+// Get method details
+{"interface_name": "IConfigurationManager", "method_name": "AddConfiguration2"}
+
+// Get interface overview
+{"interface_name": "IModelDoc2"}
+```
+
+## When to Use
+
+- User asks about SolidWorks API methods or interfaces
+- Reviewing/writing VBA macros or C# add-ins
+- Validating API parameter order and types
+- Finding code examples and best practices
