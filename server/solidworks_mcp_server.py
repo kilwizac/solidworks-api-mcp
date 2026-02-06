@@ -8,6 +8,9 @@ PROTOCOL_VERSION = "2024-11-05"
 SERVER_NAME = "solidworks-mcp"
 SERVER_VERSION = "0.1.0"
 
+_TOKEN_RE = re.compile(r"[a-z0-9]+")
+_EXAMPLE_MEMBER_RE = re.compile(r"- `([^`]+)`")
+
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as handle:
@@ -20,7 +23,7 @@ def read_text(path):
 
 
 def tokenize(text):
-    return re.findall(r"[a-z0-9]+", text.lower()) if text else []
+    return _TOKEN_RE.findall(text.lower()) if text else []
 
 
 def score_doc(doc, tokens):
@@ -93,7 +96,7 @@ class DataStore:
             if line.startswith("## "):
                 current = line[3:].strip()
                 continue
-            match = re.match(r"- `([^`]+)`", line)
+            match = _EXAMPLE_MEMBER_RE.match(line)
             if match and current:
                 member = match.group(1)
                 mapping[member].append(current)
@@ -298,7 +301,7 @@ class MCPServer:
                 continue
             if interface and doc.get("interface") != interface:
                 continue
-            if categories and not categories.issubset(set(doc.get("categories") or [])):
+            if categories and not categories.issubset(doc.get("categories") or []):
                 continue
             score = score_doc(doc, tokens)
             if score == 0:
@@ -400,24 +403,23 @@ class MCPServer:
 
         return {"error": "No query or member provided"}
 
+    _TOOL_DISPATCH = {
+        "solidworks_lookup_method": "tool_lookup_method",
+        "solidworks_search_api": "tool_search_api",
+        "solidworks_get_interface_members": "tool_get_interface_members",
+        "solidworks_get_enum_values": "tool_get_enum_values",
+        "solidworks_find_related": "tool_find_related",
+        "solidworks_get_examples": "tool_get_examples",
+    }
+
     def handle_tools_call(self, request_id, params):
         name = params.get("name")
         args = params.get("arguments") or {}
-        if name == "solidworks_lookup_method":
-            result = self.tool_lookup_method(args)
-        elif name == "solidworks_search_api":
-            result = self.tool_search_api(args)
-        elif name == "solidworks_get_interface_members":
-            result = self.tool_get_interface_members(args)
-        elif name == "solidworks_get_enum_values":
-            result = self.tool_get_enum_values(args)
-        elif name == "solidworks_find_related":
-            result = self.tool_find_related(args)
-        elif name == "solidworks_get_examples":
-            result = self.tool_get_examples(args)
-        else:
+        handler_name = self._TOOL_DISPATCH.get(name)
+        if handler_name is None:
             self.error(request_id, -32601, "Unknown tool")
             return
+        result = getattr(self, handler_name)(args)
         self.result(request_id, {"content": [{"type": "text", "text": json.dumps(result, indent=2)}]})
 
     def handle(self, message):

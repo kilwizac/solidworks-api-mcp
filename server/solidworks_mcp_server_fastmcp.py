@@ -10,6 +10,9 @@ PROTOCOL_VERSION = "2024-11-05"
 SERVER_NAME = "solidworks-mcp"
 SERVER_VERSION = "0.1.0"
 
+_TOKEN_RE = re.compile(r"[a-z0-9]+")
+_EXAMPLE_MEMBER_RE = re.compile(r"- `([^`]+)`")
+
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as handle:
@@ -22,7 +25,7 @@ def read_text(path):
 
 
 def tokenize(text):
-    return re.findall(r"[a-z0-9]+", text.lower()) if text else []
+    return _TOKEN_RE.findall(text.lower()) if text else []
 
 
 def score_doc(doc, tokens):
@@ -99,7 +102,7 @@ class DataStore:
             if line.startswith("## "):
                 current = line[3:].strip()
                 continue
-            match = re.match(r"- `([^`]+)`", line)
+            match = _EXAMPLE_MEMBER_RE.match(line)
             if match and current:
                 member = match.group(1)
                 mapping[member].append(current)
