@@ -25,18 +25,19 @@ Convert SolidWorks API HTML documentation into normalized Markdown files and ind
 ## Workflow
 1. Extract and stage HTML sources per docset (see `references/source-extraction.md`).
 2. Extract the programming guide (`sldworksapiprogguide.chm`) if you want example code pages available.
-3. Run `scripts/convert_solidworks_api.py` to generate MCP-ready Markdown and indexes (and JSON corpus).
+3. Run `scripts/convert_solidworks_api.ts` to generate MCP-ready Markdown and indexes (and JSON corpus).
 3. Spot-check output formatting for a few interfaces and members.
 4. Validate output with `references/quality-checklist.md`.
-5. Optionally run `scripts/build_embeddings.py` to generate semantic search vectors.
+5. Optionally run `scripts/build_embeddings.ts` to generate semantic search vectors.
 
 Notes:
 - Example pages are linked from member docs; if example HTML exists in the source, the script embeds code blocks.
+- The TypeScript embeddings script uses TF-IDF + deterministic random projection (not scikit-learn SVD), so vector values differ from legacy Python output.
 
 ### Script Usage
 
 ```powershell
-python scripts/convert_solidworks_api.py `
+bun run scripts/convert_solidworks_api.ts `
   --sldworks "F:\solidworks api mcp\source\helpviewer\sldworksapi\mshc" `
   --swconst "F:\solidworks api mcp\source\helpviewer\swconst\mshc" `
   --examples "F:\solidworks api mcp\source\progguide" `
@@ -46,7 +47,7 @@ python scripts/convert_solidworks_api.py `
 Generate embeddings:
 
 ```powershell
-python scripts/build_embeddings.py `
+bun run scripts/build_embeddings.ts `
   --search "F:\solidworks api mcp\solidworks-api\_search_index.json" `
   --output "F:\solidworks api mcp\solidworks-api\_embeddings.jsonl" `
   --meta "F:\solidworks api mcp\solidworks-api\_embeddings.meta.json"

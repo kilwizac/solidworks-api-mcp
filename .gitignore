@@ -27,10 +27,12 @@ wheels/
 tools/7zip/
 tools/__pycache__/
 tools/*.pyc
+tmp/
 
-# Documentation converter (development only)
-solidworks-api-docs-converter/
+# Documentation converter artifacts
 solidworks-api-docs-converter.skill
+solidworks-api-docs-converter/scripts/__pycache__/
+solidworks-api-docs-converter/scripts/*.pyc
 
 # Source help files (reference only, not needed for runtime)
 source/
@@ -55,3 +57,16 @@ htmlcov/
 # Environment variables
 .env
 .env.local
+
+# Cursor
+.cursor/
+
+# JavaScript tooling (Bun-only workflow)
+node_modules/
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+coverage/
+*.tsbuildinfo
