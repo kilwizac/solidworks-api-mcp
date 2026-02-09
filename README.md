@@ -99,17 +99,6 @@ Run type checking:
 bun run typecheck
 ```
 
-## Docs Converter Scripts
-
-The converter scripts are also TypeScript/Bun:
-
-```bash
-bun run convert:solidworks-api -- --sldworks <path> --swconst <path> --output <path> [--examples <path>]
-bun run build:embeddings -- --search <search_index.json> --output <embeddings.jsonl> --meta <meta.json>
-```
-
-`build:embeddings` currently generates TF-IDF random-projection vectors and records that method in the metadata file.
-
 ## Project Structure
 
 ```text
@@ -125,11 +114,6 @@ solidworks-api-mcp/
 |- tests/
 |  |- performance.test.ts
 |  `- regression-contracts.test.ts
-|- solidworks-api-docs-converter/
-|  |- SKILL.md
-|  `- scripts/
-|     |- convert_solidworks_api.ts
-|     `- build_embeddings.ts
 |- package.json
 |- tsconfig.json
 `- README.md
