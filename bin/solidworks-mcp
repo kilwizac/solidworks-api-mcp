@@ -1,5 +1,11 @@
-#!/usr/bin/env bun
+#!/usr/bin/env bash
+set -euo pipefail
 
-import { main } from "../server/solidworks_mcp_server";
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$REPO_ROOT"
 
-await main();
+if [[ -x "target/release/solidworks-mcp-rs" ]]; then
+  exec "target/release/solidworks-mcp-rs"
+fi
+
+exec cargo run --release --quiet

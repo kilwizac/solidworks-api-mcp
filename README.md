@@ -1,82 +1,49 @@
-# SolidWorks API MCP Server
+# SolidWorks API MCP Server (Rust-only)
 
-TypeScript MCP server that provides search and lookup access to the SolidWorks API documentation corpus in this repository.
+High-performance Rust MCP server for search and lookup access to the SolidWorks API documentation corpus.
 
-## Features
+## Status
 
-- Full-text and keyword search over SolidWorks API docs.
-- Interface/member lookup for methods, properties, and events.
-- Enum value lookup from JSON or markdown sources.
-- Related member and example discovery helpers.
-- Stdio MCP JSON-RPC transport for local and Claude Desktop usage.
+This repository is now **100% switched to Rust runtime/tooling** for the MCP server:
 
-## Runtime and Tooling
+- Runtime and server implementation: Rust (`src/main.rs`)
+- Build/test toolchain: Cargo
+- Launcher: `bin/solidworks-mcp` -> Rust release binary / `cargo run --release`
+- Legacy TypeScript MCP server/tooling removed
 
-- Runtime: Bun + TypeScript
-- MCP transport: stdio (`stdin`/`stdout`)
-- Test framework: Vitest
-- Type checking: TypeScript compiler (`tsc`)
+## Performance architecture
 
-This repository uses Bun-only JavaScript tooling:
+- Startup-prepared search corpora for markdown and JSON docs.
+- Inverted index (`token -> [(doc_index, weight)]`) for postings-based scoring.
+- Query-time score accumulation only across matched postings (avoids full corpus scans).
+- Top-K heap selection when `limit` is set (avoids sorting all hits).
+- Case-insensitive interface/member resolution maps precomputed at startup.
+- Release profile tuning: `lto=fat`, `codegen-units=1`, `panic=abort`, `strip=true`.
 
-- Install dependencies: `bun install`
-- Run package scripts: `bun run <script>`
-- Run one-off CLIs: `bunx <tool>`
-
-## Quick Start
-
-1. Install dependencies:
+## Build and run
 
 ```bash
-bun install
+cargo build --release
+./target/release/solidworks-mcp-rs
 ```
 
-2. Start the MCP server:
+Or with the launcher:
 
 ```bash
-bun run start
+./bin/solidworks-mcp
 ```
 
-## Data Root Configuration
+## Data root
 
-By default the server reads from:
+Default data root: `<repo>/solidworks-api`
 
-`<repo>/solidworks-api`
+Override with:
 
-You can override this with `SW_API_DATA_ROOT`.
-
-PowerShell:
-
-```powershell
-$env:SW_API_DATA_ROOT = "C:\path\to\solidworks-api"
-bun run start
+```bash
+SW_API_DATA_ROOT=/path/to/solidworks-api ./bin/solidworks-mcp
 ```
 
-## Claude Desktop Configuration
-
-Add an MCP server entry to `claude_desktop_config.json`.
-
-Windows example:
-
-```json
-{
-  "mcpServers": {
-    "solidworks-api": {
-      "command": "bun",
-      "args": [
-        "run",
-        "C:\\path\\to\\solidworks-api-mcp\\server\\solidworks_mcp_server.ts"
-      ]
-    }
-  }
-}
-```
-
-Restart Claude Desktop after updating the config.
-
-## Available Tools
-
-The stdio MCP server exposes these tool names:
+## MCP tools
 
 - `solidworks_lookup_method`
 - `solidworks_search_api`
@@ -84,37 +51,3 @@ The stdio MCP server exposes these tool names:
 - `solidworks_get_enum_values`
 - `solidworks_find_related`
 - `solidworks_get_examples`
-
-## Development
-
-Run tests:
-
-```bash
-bun run test
-```
-
-Run type checking:
-
-```bash
-bun run typecheck
-```
-
-## Project Structure
-
-```text
-solidworks-api-mcp/
-|- server/
-|  |- solidworks_mcp_server.ts
-|  |- solidworks_server_shared.ts
-|  `- types.ts
-|- solidworks-api/
-|  |- _index.json
-|  |- _search_index.json
-|  `- json/
-|- tests/
-|  |- performance.test.ts
-|  `- regression-contracts.test.ts
-|- package.json
-|- tsconfig.json
-`- README.md
-```
