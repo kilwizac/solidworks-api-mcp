@@ -49,7 +49,7 @@ function getString(value: unknown): string | undefined {
 }
 
 function asDocFormat(value: unknown, fallback: DocFormat): DocFormat {
-  return value === "json" ? "json" : fallback;
+  return value === "json" || value === "markdown" ? value : fallback;
 }
 
 function asStringArray(value: unknown): string[] {
@@ -57,6 +57,33 @@ function asStringArray(value: unknown): string[] {
     return [];
   }
   return value.filter((entry): entry is string => typeof entry === "string");
+}
+
+function getErrorMessage(error: unknown): string {
+  return error instanceof Error && error.message ? error.message : "Unexpected tool failure";
+}
+
+function isMarkdownTableSeparator(cols: string[]): boolean {
+  return cols.every((col) => /^:?-{3,}:?$/.test(col));
+}
+
+function findRecordEntry(
+  record: Record<string, unknown>,
+  key: string | undefined,
+): [string | undefined, unknown] {
+  if (!key) {
+    return [undefined, undefined];
+  }
+  if (Object.prototype.hasOwnProperty.call(record, key)) {
+    return [key, record[key]];
+  }
+  const lowered = key.toLowerCase();
+  for (const [entryKey, value] of Object.entries(record)) {
+    if (entryKey.toLowerCase() === lowered) {
+      return [entryKey, value];
+    }
+  }
+  return [undefined, undefined];
 }
 
 function _dumps_json(payload: unknown): string {
@@ -250,10 +277,16 @@ export class MCPServer {
   }
 
   error(requestId: JsonRpcId | undefined, code: number, message: string): void {
+    if (requestId === undefined) {
+      return;
+    }
     this.send({ jsonrpc: "2.0", id: requestId, error: { code, message } });
   }
 
   result(requestId: JsonRpcId | undefined, result: unknown): void {
+    if (requestId === undefined) {
+      return;
+    }
     this.send({ jsonrpc: "2.0", id: requestId, result });
   }
 
@@ -366,7 +399,8 @@ export class MCPServer {
     const docsets = asRecord(rootIndex.docsets);
     const docsetEntry = asRecord(docsets[docset]);
     const interfaces = asRecord(docsetEntry.interfaces);
-    const iface = asRecord(interfaces[interfaceName ?? ""]);
+    const [resolvedInterface, ifaceEntry] = findRecordEntry(interfaces, interfaceName);
+    const iface = asRecord(ifaceEntry);
     if (Object.keys(iface).length === 0) {
       return { error: "Not found" };
     }
@@ -376,7 +410,7 @@ export class MCPServer {
     const memberCount = typeof memberCountValue === "number" ? memberCountValue : members.length;
 
     return {
-      interface: interfaceName,
+      interface: resolvedInterface,
       member_count: memberCount,
       members,
     };
@@ -419,6 +453,9 @@ export class MCPServer {
         .split("|")
         .map((value) => value.trim());
       if (cols.length >= 3) {
+        if (isMarkdownTableSeparator(cols)) {
+          continue;
+        }
         const member = cols[0] ?? "";
         const enumValue = cols[1] ?? "";
         const description = cols[2] ?? "";
@@ -509,9 +546,14 @@ export class MCPServer {
       return;
     }
 
-    const result = handler(toolArgs);
-    const serialized = _dumps_json(result);
-    this.result(requestId, { content: [{ type: "text", text: serialized }] });
+    try {
+      const result = handler(toolArgs);
+      const serialized = _dumps_json(result);
+      this.result(requestId, { content: [{ type: "text", text: serialized }] });
+    } catch (error) {
+      const serialized = _dumps_json({ error: "Internal error", message: getErrorMessage(error) });
+      this.result(requestId, { content: [{ type: "text", text: serialized }], isError: true });
+    }
   }
 
   handle(message: JsonRpcRequest): void {
@@ -539,6 +581,20 @@ export class MCPServer {
       this.error(requestId, -32601, "Method not found");
     }
   }
+
+  handle_raw_line(rawLine: string): void {
+    const line = rawLine.trim();
+    if (!line) {
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(line) as JsonRpcRequest;
+      this.handle(parsed);
+    } catch {
+      this.error(null, -32700, "Parse error");
+    }
+  }
 }
 
 export async function main(): Promise<void> {
@@ -556,17 +612,7 @@ export async function main(): Promise<void> {
   });
 
   for await (const rawLine of input) {
-    const line = rawLine.trim();
-    if (!line) {
-      continue;
-    }
-
-    try {
-      const parsed = JSON.parse(line) as JsonRpcRequest;
-      server.handle(parsed);
-    } catch {
-      continue;
-    }
+    server.handle_raw_line(rawLine);
   }
 }
 

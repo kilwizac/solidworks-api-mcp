@@ -2,7 +2,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import {
   DataStore,
@@ -40,6 +40,25 @@ function asStringArray(value: unknown): string[] {
 function writeJson(filePath: string, data: unknown): void {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, JSON.stringify(data), "utf8");
+}
+
+function writeText(filePath: string, data: string): void {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, data, "utf8");
+}
+
+function captureStdout(run: () => void): string {
+  const writes: string[] = [];
+  const spy = vi.spyOn(process.stdout, "write").mockImplementation(((chunk: string | Uint8Array) => {
+    writes.push(String(chunk));
+    return true;
+  }) as typeof process.stdout.write);
+  try {
+    run();
+  } finally {
+    spy.mockRestore();
+  }
+  return writes.join("");
 }
 
 class FakeStore {
@@ -512,5 +531,195 @@ describe("Missing docs and error safety", () => {
     } finally {
       fs.rmSync(tempRoot, { recursive: true, force: true });
     }
+  });
+});
+
+describe("Code review issue regressions", () => {
+  it("skips markdown enum separator rows", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      const enumPath = path.join(tempRoot, "swconst", "enums", "Foo_e.md");
+      writeText(
+        enumPath,
+        [
+          "# Foo_e",
+          "",
+          "| Member | Value | Description |",
+          "|---|---|---|",
+          "| `Foo_A` | 1 | Alpha |",
+          "| `Foo_B` | 2 | Beta |",
+          "",
+        ].join("\n"),
+      );
+      const store = new FakeStore({
+        root: tempRoot,
+        indexData: {
+          docsets: {
+            swconst: {
+              interfaces: {},
+              enums: { Foo_e: "enums/Foo_e.md" },
+            },
+          },
+        },
+      });
+      const server = new MCPServer(store);
+
+      const result = server.tool_get_enum_values({ enum: "Foo_e", format: "markdown" });
+
+      expect(result.values).toEqual([
+        { member: "Foo_A", value: "1", description: "Alpha" },
+        { member: "Foo_B", value: "2", description: "Beta" },
+      ]);
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("returns parse errors for malformed JSON-RPC input", () => {
+    const server = new MCPServer(new FakeStore());
+
+    const output = captureStdout(() => server.handle_raw_line("{"));
+
+    expect(JSON.parse(output)).toEqual({
+      jsonrpc: "2.0",
+      id: null,
+      error: { code: -32700, message: "Parse error" },
+    });
+  });
+
+  it("does not respond to notifications without IDs", () => {
+    const server = new MCPServer(new FakeStore());
+
+    const output = captureStdout(() => {
+      server.handle({ jsonrpc: "2.0", method: "tools/list" });
+    });
+
+    expect(output).toBe("");
+  });
+
+  it("turns tool handler exceptions into MCP tool errors", () => {
+    const store = new FakeStore() as FakeStore & {
+      search_api_scored: () => SearchResult[];
+    };
+    store.search_api_scored = () => {
+      throw new Error("boom");
+    };
+    const server = new MCPServer(store);
+
+    const output = captureStdout(() => {
+      server.handle({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "tools/call",
+        params: { name: "solidworks_search_api", arguments: { query: "feature" } },
+      });
+    });
+
+    const response = JSON.parse(output) as Record<string, unknown>;
+    const result = asRecord(response.result);
+    const content = result.content as Array<Record<string, unknown>>;
+    expect(result.isError).toBe(true);
+    expect(JSON.parse(String(content[0]?.text))).toEqual({
+      error: "Internal error",
+      message: "boom",
+    });
+  });
+
+  it("resolves DataStore lookup and search filters case-insensitively", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      const markdownIndex: RootIndex = {
+        docsets: {
+          sldworksapi: {
+            interfaces: {
+              IFoo: {
+                file: "interfaces/IFoo/_interface.md",
+                member_count: 1,
+                members: { Bar: "interfaces/IFoo/Bar.md" },
+              },
+            },
+            enums: {},
+          },
+          swconst: {
+            interfaces: {},
+            enums: { Foo_e: "enums/Foo_e.md" },
+          },
+        },
+      };
+      writeJson(path.join(tempRoot, "_index.json"), markdownIndex);
+      writeJson(path.join(tempRoot, "_search_index.json"), {
+        documents: [
+          {
+            title: "Feature Bar",
+            summary: "feature details",
+            keywords: ["feature"],
+            categories: ["api"],
+            interface: "IFoo",
+            type: "method",
+            docset: "sldworksapi",
+          },
+        ],
+      });
+      writeJson(path.join(tempRoot, "json", "_index.json"), {
+        docsets: {
+          sldworksapi: {
+            interfaces: {
+              IFoo: {
+                file: "json/sldworksapi/interfaces/IFoo/_interface.json",
+                member_count: 1,
+                members: { Bar: "json/sldworksapi/interfaces/IFoo/Bar.json" },
+              },
+            },
+            enums: {},
+          },
+          swconst: {
+            interfaces: {},
+            enums: { Foo_e: "json/swconst/enums/Foo_e.json" },
+          },
+        },
+      });
+      writeJson(path.join(tempRoot, "json", "_search_index.json"), { documents: [] });
+      writeText(path.join(tempRoot, "sldworksapi", "interfaces", "IFoo", "Bar.md"), "bar");
+      writeText(path.join(tempRoot, "swconst", "enums", "Foo_e.md"), "foo");
+      writeJson(path.join(tempRoot, "json", "sldworksapi", "interfaces", "IFoo", "Bar.json"), {});
+      writeJson(path.join(tempRoot, "json", "swconst", "enums", "Foo_e.json"), {});
+      const store = new DataStore(tempRoot);
+
+      expect(store.resolve_member_path("ifoo", "bar", "sldworksapi", "markdown")).toBe(
+        path.join(tempRoot, "sldworksapi", "interfaces", "IFoo", "Bar.md"),
+      );
+      expect(store.resolve_enum_path("foo_e", "swconst", "markdown")).toBe(
+        path.join(tempRoot, "swconst", "enums", "Foo_e.md"),
+      );
+      expect(store.search_api_scored("feature", { interface: "ifoo" })).toHaveLength(1);
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("lists interface members case-insensitively", () => {
+    const server = new MCPServer(
+      new FakeStore({
+        indexData: {
+          docsets: {
+            sldworksapi: {
+              interfaces: {
+                IFoo: {
+                  member_count: 1,
+                  members: { Bar: "interfaces/IFoo/Bar.md" },
+                },
+              },
+              enums: {},
+            },
+          },
+        },
+      }),
+    );
+
+    expect(server.tool_get_interface_members({ interface: "ifoo" })).toEqual({
+      interface: "IFoo",
+      member_count: 1,
+      members: ["Bar"],
+    });
   });
 });
