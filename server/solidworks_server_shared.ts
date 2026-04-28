@@ -27,6 +27,7 @@ type PreparedDoc = {
   docset: string;
   type: string;
   interfaceName: string;
+  interfaceNameLower: string;
   categories: ReadonlySet<string>;
   hayTitle: string;
   haySummary: string;
@@ -41,6 +42,7 @@ type BaseScoredDoc = {
   doc: SearchDocument;
   type: string;
   interfaceName: string;
+  interfaceNameLower: string;
   categories: ReadonlySet<string>;
 };
 
@@ -243,6 +245,7 @@ export class DataStore {
   private _progguide_titles: Record<string, SearchDocument> | null = null;
   private _interface_name_lookup = new Map<string, Record<string, string>>();
   private _member_name_lookup = new Map<string, Record<string, string>>();
+  private _enum_name_lookup = new Map<string, Record<string, string>>();
 
   private _member_path_cache = new Map<string, string | null>();
   private _interface_path_cache = new Map<string, string | null>();
@@ -380,12 +383,8 @@ export class DataStore {
       return this._member_path_cache.get(key) ?? null;
     }
 
-    const docsetIndex = this._docset_index(docset, format);
-    const interfaces = asRecord(docsetIndex.interfaces);
-    const iface = asRecord(interfaces[interfaceName ?? ""]);
-    const members = asRecord(iface.members);
-    const relativePath = getString(members[memberName ?? ""]) || undefined;
-    const fullPath = this._full_doc_path(relativePath, docset, format);
+    const [, , relativePath] = this._get_member_entry(interfaceName, memberName, docset, format);
+    const fullPath = this._full_doc_path(relativePath ?? undefined, docset, format);
     cacheSet(this._member_path_cache, key, fullPath, _PATH_CACHE_SIZE);
     return fullPath;
   }
@@ -400,10 +399,8 @@ export class DataStore {
       return this._interface_path_cache.get(key) ?? null;
     }
 
-    const docsetIndex = this._docset_index(docset, format);
-    const interfaces = asRecord(docsetIndex.interfaces);
-    const iface = asRecord(interfaces[interfaceName ?? ""]);
-    const relativePath = getString(iface.file) || undefined;
+    const [, iface] = this._get_interface_entry(interfaceName, docset, format);
+    const relativePath = getString(iface?.file) || undefined;
     const fullPath = this._full_doc_path(relativePath, docset, format);
     cacheSet(this._interface_path_cache, key, fullPath, _PATH_CACHE_SIZE);
     return fullPath;
@@ -417,7 +414,23 @@ export class DataStore {
 
     const docsetIndex = this._docset_index(docset, format);
     const enums = asRecord(docsetIndex.enums);
-    const relativePath = getString(enums[enumName ?? ""]) || undefined;
+    let resolvedEnum = enumName && getString(enums[enumName]) ? enumName : null;
+    if (!resolvedEnum && enumName) {
+      const lookupKey = `${format}|${docset}`;
+      let lookup = this._enum_name_lookup.get(lookupKey);
+      if (!lookup) {
+        lookup = {};
+        for (const name of Object.keys(enums)) {
+          const lowered = name.toLowerCase();
+          if (!(lowered in lookup)) {
+            lookup[lowered] = name;
+          }
+        }
+        this._enum_name_lookup.set(lookupKey, lookup);
+      }
+      resolvedEnum = lookup[enumName.toLowerCase()] ?? null;
+    }
+    const relativePath = getString(enums[resolvedEnum ?? ""]) || undefined;
     const fullPath = this._full_doc_path(relativePath, docset, format);
     cacheSet(this._enum_path_cache, key, fullPath, _PATH_CACHE_SIZE);
     return fullPath;
@@ -444,11 +457,13 @@ export class DataStore {
     const prepared: PreparedDoc[] = [];
     for (const doc of this._search_docs(format)) {
       const categories = asStringList(doc.categories);
+      const interfaceName = getString(doc.interface);
       prepared.push({
         doc,
         docset: getString(doc.docset),
         type: getString(doc.type),
-        interfaceName: getString(doc.interface),
+        interfaceName,
+        interfaceNameLower: interfaceName.toLowerCase(),
         categories: new Set(categories),
         hayTitle: getString(doc.title).toLowerCase(),
         haySummary: getString(doc.summary).toLowerCase(),
@@ -518,6 +533,7 @@ export class DataStore {
           doc: item.doc,
           type: item.type,
           interfaceName: item.interfaceName,
+          interfaceNameLower: item.interfaceNameLower,
           categories: item.categories,
         });
       }
@@ -536,7 +552,8 @@ export class DataStore {
     categoriesKey: ReadonlySet<string>,
   ): readonly SearchResult[] {
     const categoryToken = Array.from(categoriesKey).sort().join(",");
-    const cacheKey = `${format}|${docset ?? ""}|${docType ?? ""}|${interfaceName ?? ""}|${categoryToken}|${queryKey}`;
+    const interfaceFilter = interfaceName?.toLowerCase();
+    const cacheKey = `${format}|${docset ?? ""}|${docType ?? ""}|${interfaceFilter ?? ""}|${categoryToken}|${queryKey}`;
     const cached = this._search_filtered_cache.get(cacheKey);
     if (cached) {
       return cached;
@@ -553,7 +570,7 @@ export class DataStore {
       if (docType && item.type !== docType) {
         continue;
       }
-      if (interfaceName && item.interfaceName !== interfaceName) {
+      if (interfaceFilter && item.interfaceNameLower !== interfaceFilter) {
         continue;
       }
       if (categoriesKey.size > 0) {
@@ -639,18 +656,20 @@ export class DataStore {
   private _get_interface_entry(
     interfaceName: string | undefined,
     docset: string,
+    format: DocFormat,
   ): [string | null, InterfaceIndexEntry | null] {
     if (!interfaceName) {
       return [null, null];
     }
 
-    const docsetIndex = this._docset_index(docset, "json");
+    const docsetIndex = this._docset_index(docset, format);
     const interfaces = asRecord(docsetIndex.interfaces) as Record<string, InterfaceIndexEntry>;
     if (interfaces[interfaceName]) {
       return [interfaceName, interfaces[interfaceName]];
     }
 
-    let lookup = this._interface_name_lookup.get(docset);
+    const lookupKey = `${format}|${docset}`;
+    let lookup = this._interface_name_lookup.get(lookupKey);
     if (!lookup) {
       lookup = {};
       for (const name of Object.keys(interfaces)) {
@@ -659,7 +678,7 @@ export class DataStore {
           lookup[lowered] = name;
         }
       }
-      this._interface_name_lookup.set(docset, lookup);
+      this._interface_name_lookup.set(lookupKey, lookup);
     }
 
     const resolved = lookup[interfaceName.toLowerCase()];
@@ -673,8 +692,9 @@ export class DataStore {
     interfaceName: string | undefined,
     memberName: string | undefined,
     docset: string,
+    format: DocFormat,
   ): [string | null, string | null, string | null] {
-    const [resolvedInterface, iface] = this._get_interface_entry(interfaceName, docset);
+    const [resolvedInterface, iface] = this._get_interface_entry(interfaceName, docset, format);
     if (!iface || !memberName || !resolvedInterface) {
       return [resolvedInterface, null, null];
     }
@@ -684,7 +704,7 @@ export class DataStore {
       return [resolvedInterface, memberName, members[memberName] ?? null];
     }
 
-    const lookupKey = `${docset}|${resolvedInterface}`;
+    const lookupKey = `${format}|${docset}|${resolvedInterface}`;
     let lookup = this._member_name_lookup.get(lookupKey);
     if (!lookup) {
       lookup = {};
@@ -708,7 +728,7 @@ export class DataStore {
     interfaceName: string | undefined,
     docset = "sldworksapi",
   ): Record<string, unknown> | null {
-    const [resolvedInterface, iface] = this._get_interface_entry(interfaceName, docset);
+    const [resolvedInterface, iface] = this._get_interface_entry(interfaceName, docset, "json");
     if (!iface || !resolvedInterface) {
       return null;
     }
@@ -741,6 +761,7 @@ export class DataStore {
       interfaceName,
       methodName,
       docset,
+      "json",
     );
     if (!resolvedInterface || !resolvedMember || !relativePath) {
       return null;
