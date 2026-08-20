@@ -272,6 +272,12 @@ export class MCPServer {
           this._pendingWrites = null;
           for (const chunk of pending) {
             this._write(chunk);
+            if (this._pendingWrites !== null) {
+              // Backpressure was reapplied mid-flush: the remaining chunks
+              // are already queued on the new pending list, so stop here
+              // and let its drain handler finish the job.
+              break;
+            }
           }
         });
       }
