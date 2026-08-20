@@ -209,17 +209,27 @@ export function parse_limit(value: unknown, defaultValue: number | null): number
     return defaultValue;
   }
 
-  if (!Number.isInteger(parsed)) {
+  if (!Number.isFinite(parsed)) {
     return defaultValue;
   }
-  if (parsed < 0) {
+  const truncated = Math.trunc(parsed);
+  if (truncated < 0) {
     return 0;
   }
-  return parsed;
+  return truncated;
 }
 
 export function parseLimit(value: unknown, defaultValue: number | null): number | null {
   return parse_limit(value, defaultValue);
+}
+
+function resolve_within_root(root: string, ...segments: string[]): string | null {
+  const fullPath = path.resolve(root, ...segments);
+  const relative = path.relative(root, fullPath);
+  if (relative.startsWith("..") || path.isAbsolute(relative)) {
+    return null;
+  }
+  return fullPath;
 }
 
 export function resolve_data_root(envValue?: string | null): string {
@@ -367,9 +377,9 @@ export class DataStore {
       return null;
     }
     if (format === "json") {
-      return path.join(this.root, relativePath);
+      return resolve_within_root(this.root, relativePath);
     }
-    return path.join(this.root, docset, relativePath);
+    return resolve_within_root(this.root, docset, relativePath);
   }
 
   resolve_member_path(
@@ -738,7 +748,10 @@ export class DataStore {
       return null;
     }
 
-    const fullPath = path.join(this.root, interfaceFile);
+    const fullPath = resolve_within_root(this.root, interfaceFile);
+    if (!fullPath) {
+      return null;
+    }
     const data = load_json(fullPath);
     const members = Object.keys(asRecord(iface.members)).sort();
 
@@ -766,7 +779,10 @@ export class DataStore {
     if (!resolvedInterface || !resolvedMember || !relativePath) {
       return null;
     }
-    const fullPath = path.join(this.root, relativePath);
+    const fullPath = resolve_within_root(this.root, relativePath);
+    if (!fullPath) {
+      return null;
+    }
     const data = load_json(fullPath);
     return {
       interface: resolvedInterface,

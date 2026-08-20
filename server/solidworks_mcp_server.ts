@@ -241,9 +241,9 @@ type ToolHandler = (args: ToolArguments) => ToolResult;
 
 export class MCPServer {
   private readonly store: DataStoreLike;
-  private readonly _write: (text: string) => boolean;
-  private readonly _flush: () => void;
+  private readonly _write: (text: string) => void;
   private readonly _tool_handlers: Record<string, ToolHandler>;
+  private _pendingWrites: string[] | null = null;
 
   static readonly _TOOL_DISPATCH = {
     solidworks_lookup_method: "tool_lookup_method",
@@ -256,9 +256,31 @@ export class MCPServer {
 
   constructor(store: DataStoreLike) {
     this.store = store;
-    this._write = (text) => process.stdout.write(text);
-    this._flush = () => {
-      process.stdout.write("");
+    // Never drop output when the stdout buffer is full: queue writes and
+    // flush them in order once the stream drains.
+    this._write = (text) => {
+      if (this._pendingWrites !== null) {
+        this._pendingWrites.push(text);
+        return;
+      }
+      if (!process.stdout.write(text)) {
+        // The chunk that received `false` was still buffered by the stream;
+        // only later writes need to be queued until the drain event.
+        this._pendingWrites = [];
+        process.stdout.once("drain", () => {
+          const pending = this._pendingWrites ?? [];
+          this._pendingWrites = null;
+          for (const chunk of pending) {
+            this._write(chunk);
+            if (this._pendingWrites !== null) {
+              // Backpressure was reapplied mid-flush: the remaining chunks
+              // are already queued on the new pending list, so stop here
+              // and let its drain handler finish the job.
+              break;
+            }
+          }
+        });
+      }
     };
     this._tool_handlers = {};
 
@@ -273,7 +295,6 @@ export class MCPServer {
   send(payload: unknown): void {
     this._write(_dumps_json(payload));
     this._write("\n");
-    this._flush();
   }
 
   error(requestId: JsonRpcId | undefined, code: number, message: string): void {
@@ -565,15 +586,17 @@ export class MCPServer {
       this.handle_initialize(requestId);
       return;
     }
+    // `initialized` is a client notification: ignore it unconditionally,
+    // even if a non-compliant client attaches an id to it.
+    if (method === "initialized") {
+      return;
+    }
     if (method === "tools/list") {
       this.handle_tools_list(requestId);
       return;
     }
     if (method === "tools/call") {
       this.handle_tools_call(requestId, params);
-      return;
-    }
-    if (method === "initialized") {
       return;
     }
 
@@ -589,8 +612,12 @@ export class MCPServer {
     }
 
     try {
-      const parsed = JSON.parse(line) as JsonRpcRequest;
-      this.handle(parsed);
+      const parsed: unknown = JSON.parse(line);
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+        this.error(null, -32700, "Parse error");
+        return;
+      }
+      this.handle(parsed as JsonRpcRequest);
     } catch {
       this.error(null, -32700, "Parse error");
     }

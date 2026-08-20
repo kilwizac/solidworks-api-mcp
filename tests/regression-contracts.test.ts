@@ -7,6 +7,7 @@ import { describe, expect, it, vi } from "vitest";
 import {
   DataStore,
   MCPServer,
+  parse_limit,
   score_doc,
   tokenize,
 } from "../server/solidworks_mcp_server";
@@ -721,5 +722,115 @@ describe("Code review issue regressions", () => {
       member_count: 1,
       members: ["Bar"],
     });
+  });
+
+  it("refuses to resolve paths that escape the data root", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      writeJson(path.join(tempRoot, "_index.json"), {
+        docsets: {
+          sldworksapi: {
+            interfaces: {
+              IEvil: {
+                file: "../../secret/_interface.md",
+                members: { Steal: "../../etc/passwd" },
+              },
+            },
+            enums: { Evil_e: "../../../etc/hosts" },
+          },
+        },
+      });
+      const store = new DataStore(tempRoot);
+
+      expect(store.resolve_member_path("IEvil", "Steal", "sldworksapi", "markdown")).toBeNull();
+      expect(store.resolve_interface_path("IEvil", "sldworksapi", "markdown")).toBeNull();
+      expect(store.resolve_enum_path("Evil_e", "sldworksapi", "markdown")).toBeNull();
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("rejects non-object JSON-RPC payloads with a parse error", () => {
+    const server = new MCPServer(new FakeStore());
+
+    for (const line of ["42", '"text"', "[1,2,3]", "null"]) {
+      const output = captureStdout(() => server.handle_raw_line(line));
+      expect(JSON.parse(output)).toEqual({
+        jsonrpc: "2.0",
+        id: null,
+        error: { code: -32700, message: "Parse error" },
+      });
+    }
+  });
+
+  it("ignores initialized notifications even with a spurious id", () => {
+    const server = new MCPServer(new FakeStore());
+
+    const output = captureStdout(() => {
+      server.handle({ jsonrpc: "2.0", id: 7, method: "initialized" });
+    });
+
+    expect(output).toBe("");
+  });
+
+  it("buffers stdout writes when the stream applies backpressure", () => {
+    const server = new MCPServer(new FakeStore());
+    const writes: string[] = [];
+    const dropped: string[] = [];
+    const listeners = new Map<string, () => void>();
+    let accepting = true;
+    // A stream buffers the chunk that reports backpressure, so the mock
+    // keeps it in `writes` while signalling `false`, like a real stream.
+    const spy = vi
+      .spyOn(process.stdout, "write")
+      .mockImplementation(((chunk: string | Uint8Array) => {
+        writes.push(String(chunk));
+        if (!accepting) {
+          dropped.push(String(chunk));
+          return false;
+        }
+        return true;
+      }) as typeof process.stdout.write);
+    const onceSpy = vi
+      .spyOn(process.stdout, "once")
+      .mockImplementation(((event: string, listener: () => void) => {
+        listeners.set(event, listener);
+        return process.stdout;
+      }) as typeof process.stdout.once);
+
+    try {
+      server.result(1, { first: true });
+      expect(writes).toHaveLength(2);
+
+      accepting = false;
+      server.result(2, { second: true });
+      expect(writes).toHaveLength(3);
+
+      accepting = true;
+      listeners.get("drain")?.();
+      expect(writes).toHaveLength(4);
+
+      server.result(3, { third: true });
+      expect(writes).toHaveLength(6);
+    } finally {
+      spy.mockRestore();
+      onceSpy.mockRestore();
+    }
+
+    expect(dropped).toEqual(['{"jsonrpc":"2.0","id":2,"result":{"second":true}}']);
+
+    const payloads = writes
+      .join("")
+      .split("\n")
+      .filter((line) => line.trim() !== "")
+      .map((line) => JSON.parse(line));
+    expect(payloads.map((payload) => payload.id)).toEqual([1, 2, 3]);
+  });
+
+  it("parse_limit truncates fractional values toward zero", () => {
+    expect(parse_limit(2.7, 20)).toBe(2);
+    expect(parse_limit(-2.7, 20)).toBe(0);
+    expect(parse_limit(Number.NaN, 20)).toBe(20);
+    expect(parse_limit(Number.POSITIVE_INFINITY, 20)).toBe(20);
   });
 });
