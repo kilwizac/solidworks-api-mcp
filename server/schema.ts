@@ -21,7 +21,19 @@ function describeSchemaProblem(spec: Record<string, unknown>, value: unknown): s
         typeof value === "number"
           ? Number.isInteger(value)
           : typeof value === "string" && /^\s*-?\d+\s*$/.test(value);
-      return isInteger ? null : "must be an integer";
+      if (!isInteger) {
+        return "must be an integer";
+      }
+      const number = Number(value);
+      const minimum = typeof spec.minimum === "number" ? spec.minimum : -Infinity;
+      const maximum = typeof spec.maximum === "number" ? spec.maximum : Infinity;
+      if (number >= minimum && number <= maximum) {
+        return null;
+      }
+      if (Number.isFinite(minimum) && Number.isFinite(maximum)) {
+        return `must be between ${minimum} and ${maximum}`;
+      }
+      return Number.isFinite(minimum) ? `must be at least ${minimum}` : `must be at most ${maximum}`;
     }
     case "array": {
       if (!Array.isArray(value)) {

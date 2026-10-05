@@ -156,6 +156,40 @@ describe("SearchEngine", () => {
     expect(ids(engine.search("sketch"))[0]).toBe("ISketch");
   });
 
+  it("ranks current members above obsolete ones", () => {
+    const versions = new SearchEngine([
+      doc({ title: "OpenDoc", interface: "ISldWorks", summary: "Obsolete. Superseded by ISldWorks::OpenDoc6." }),
+      doc({ title: "OpenDoc6", interface: "ISldWorks", summary: "Opens an existing document." }),
+      doc({ title: "OpenDoc6", interface: "IOld", summary: "Obsolete. Superseded by ISldWorks::OpenDoc6." }),
+    ]);
+    expect(ids(versions.search("open document"))[0]).toBe("ISldWorks.OpenDoc6");
+    // Exact name matches stay on top, the current one first.
+    expect(ids(versions.search("OpenDoc6"))).toEqual(["ISldWorks.OpenDoc6", "IOld.OpenDoc6", "ISldWorks.OpenDoc"]);
+    expect(ids(versions.search("OpenDoc"))[0]).toBe("ISldWorks.OpenDoc");
+  });
+
+  it("matches numbered versions of an identifier", () => {
+    const versions = new SearchEngine([
+      doc({ title: "FeatureExtrusion3", interface: "IFeatureManager" }),
+      doc({ title: "FeatureExtrusionThin", interface: "IFeatureManager" }),
+    ]);
+    expect(ids(versions.search("FeatureExtrusion"))[0]).toBe("IFeatureManager.FeatureExtrusion3");
+  });
+
+  it("treats a name with underscores as one exact name", () => {
+    const enums = new SearchEngine([
+      doc({ title: "swSelectType_e", type: "enum", docset: "swconst", summary: "Selection types." }),
+      doc({
+        title: "swSelectTypeEx_e",
+        type: "enum",
+        docset: "swconst",
+        summary: "Select type select type select type.",
+      }),
+    ]);
+    expect(ids(enums.search("swselecttype_e"))[0]).toBe("swSelectType_e");
+    expect(ids(enums.search("swSelectType_e"))[0]).toBe("swSelectType_e");
+  });
+
   it("does not boost names shared by many members", () => {
     const shared = new SearchEngine([
       doc({ title: "Name", interface: "IA" }),
@@ -248,17 +282,16 @@ describe.skipIf(!fs.existsSync(dataRoot))("ranking on the real corpus", () => {
     ["how do I create an extrusion feature", 3, "IFeatureManager.FeatureExtrusion3"],
     ["insert a revolve feature", 5, "IFeatureManager.FeatureRevolve2"],
     ["open a document", 8, "ISldWorks.OpenDoc6"],
-    ["add mate", 6, "IAssemblyDoc.AddMate3"],
+    ["create mate", 1, "IAssemblyDoc.CreateMate"],
     ["custom properties", 3, "ICustomPropertyManager"],
     ["insert sketch", 3, "ISketchManager.InsertSketch"],
     ["create sketch line", 3, "ISketchManager.CreateLine"],
-    ["hide a component", 5, "IAssemblyDoc.HideComponent"],
+    ["hide a component", 1, "IModelDoc2.HideComponent2"],
+    ["save as", 1, "IModelDocExtension.SaveAs3"],
+    ["swselecttype_e", 1, "swSelectType_e"],
+    ["FeatureExtrusion", 5, "IFeatureManager.FeatureExtrusion3"],
   ])("%s -> top %i includes %s", (query, count, expected) => {
     expect(top(query, count)).toContain(expected);
-  });
-
-  it("finds SaveAs members for 'save as'", () => {
-    expect(top("save as", 10).some((id) => /\.SaveAs/.test(id))).toBe(true);
   });
 
   it("respects filters on the real corpus", () => {

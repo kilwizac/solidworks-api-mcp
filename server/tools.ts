@@ -1,3 +1,5 @@
+import path from "node:path";
+
 import { catalogFor, type Catalog } from "./catalog";
 import type { DataStoreLike } from "./store";
 import { suggestNames } from "./suggest";
@@ -12,7 +14,15 @@ const DEFAULT_SEARCH_LIMIT = 10;
 const DEFAULT_RELATED_LIMIT = 20;
 const DEFAULT_EXAMPLES_LIMIT = 10;
 const DEFAULT_LIST_LIMIT = 100;
+// Caps keep a single response from flooding the client's context.
+const MAX_SEARCH_LIMIT = 50;
+const MAX_RELATED_LIMIT = 100;
+const MAX_EXAMPLES_LIMIT = 50;
+const MAX_LIST_LIMIT = 1000;
 const MAX_SUGGESTIONS = 5;
+
+/** The `type` values found in the search index. */
+const DOC_TYPES = ["method", "property", "interface", "enum", "pattern"] as const;
 
 const DOCSET_DESCRIPTIONS: Record<string, string> = {
   sldworksapi: "SOLIDWORKS API reference: interfaces with their methods, properties and events.",
@@ -49,6 +59,15 @@ const MEMBER_PROPERTY = {
   description: "Method, property or event name, e.g. 'SelectByID2'. Case-insensitive.",
 } as const;
 
+function limitProperty(what: string, defaultValue: number, maximum: number) {
+  return {
+    type: "integer",
+    minimum: 1,
+    maximum,
+    description: `Maximum number of ${what} (default ${defaultValue}, at most ${maximum}).`,
+  } as const;
+}
+
 const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
   {
     name: "solidworks_search_api",
@@ -65,7 +84,8 @@ const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
         docset: DOCSET_PROPERTY,
         type: {
           type: "string",
-          description: "Restrict to one kind: 'method', 'property', 'interface', 'enum' or 'pattern'.",
+          enum: DOC_TYPES,
+          description: "Restrict to one kind of page ('pattern' = programming-guide example).",
         },
         interface: { ...INTERFACE_PROPERTY, description: "Restrict to members of this interface." },
         categories: {
@@ -73,10 +93,7 @@ const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
           items: { type: "string" },
           description: "Only docs tagged with all of these categories (e.g. 'selections').",
         },
-        limit: {
-          type: "integer",
-          description: `Maximum number of hits (default ${DEFAULT_SEARCH_LIMIT}).`,
-        },
+        limit: limitProperty("hits", DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT),
         format: FORMAT_PROPERTY,
         verbose: {
           type: "boolean",
@@ -146,10 +163,7 @@ const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
         interface: INTERFACE_PROPERTY,
         member: MEMBER_PROPERTY,
         docset: DOCSET_PROPERTY,
-        limit: {
-          type: "integer",
-          description: `Maximum number of related members (default ${DEFAULT_RELATED_LIMIT}).`,
-        },
+        limit: limitProperty("related members", DEFAULT_RELATED_LIMIT, MAX_RELATED_LIMIT),
       },
       required: ["interface", "member"],
     },
@@ -167,10 +181,7 @@ const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
         interface: INTERFACE_PROPERTY,
         member: MEMBER_PROPERTY,
         query: { type: "string", description: "Keywords to search the programming-guide examples." },
-        limit: {
-          type: "integer",
-          description: `Maximum number of examples of each kind (default ${DEFAULT_EXAMPLES_LIMIT}).`,
-        },
+        limit: limitProperty("examples of each kind", DEFAULT_EXAMPLES_LIMIT, MAX_EXAMPLES_LIMIT),
         docset: {
           ...DOCSET_PROPERTY,
           description: "Defaults to 'sldworksapi' for interface + member, 'progguide' for query.",
@@ -207,10 +218,7 @@ const TOOL_DEFINITIONS: readonly ToolDefinition[] = [
           description: "What to list. Defaults to whatever the docset contains.",
         },
         filter: { type: "string", description: "Only names containing this text (case-insensitive)." },
-        limit: {
-          type: "integer",
-          description: `Maximum number of names (default ${DEFAULT_LIST_LIMIT}).`,
-        },
+        limit: limitProperty("names", DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT),
       },
     },
     annotations: { title: "List interface or enum names", ...READ_ONLY },
@@ -240,6 +248,11 @@ function strings(value: unknown): string[] {
   return Array.isArray(value)
     ? value.filter((entry): entry is string => typeof entry === "string")
     : [];
+}
+
+/** A user-supplied limit, defaulted and capped (negatives clamp to 0). */
+function limitArg(value: unknown, defaultValue: number, maximum: number): number {
+  return Math.min(parse_limit(value, defaultValue) ?? defaultValue, maximum);
 }
 
 function isMarkdownTableSeparator(cols: string[]): boolean {
@@ -328,6 +341,28 @@ export class SolidWorksTools {
     };
   }
 
+  /** Search hits, plus a note when they are empty because the docset doesn't exist. */
+  private searchPayload(
+    results: SearchResult[],
+    docset: string | undefined,
+    format: DocFormat,
+    verbose: boolean,
+  ): ToolResult {
+    const payload: ToolResult = { results: slimResults(results, verbose) };
+    if (results.length === 0 && docset) {
+      const unknown = this.unknownDocset(docset, this.catalog(format));
+      if (unknown) {
+        payload.note = unknown.message;
+      }
+    }
+    return payload;
+  }
+
+  /** A doc file's location relative to the data root, so local directory layout stays private. */
+  private displayPath(fullPath: string): string {
+    return path.relative(this.store.root, fullPath).split(path.sep).join("/");
+  }
+
   private memberNotFound(
     catalog: Catalog,
     docset: string,
@@ -357,7 +392,6 @@ export class SolidWorksTools {
     const query = str(args.query) ?? "";
     const docset = str(args.docset);
     const format = asDocFormat(args.format, "markdown");
-    const limit = parse_limit(args.limit, DEFAULT_SEARCH_LIMIT);
 
     const results = this.store.search_api_scored(query, {
       docset,
@@ -365,17 +399,9 @@ export class SolidWorksTools {
       doc_type: str(args.type),
       interface: str(args.interface),
       categories: new Set(strings(args.categories)),
-      limit,
+      limit: limitArg(args.limit, DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT),
     });
-
-    const payload: ToolResult = { results: slimResults(results, args.verbose === true) };
-    if (results.length === 0 && docset) {
-      const unknown = this.unknownDocset(docset, this.catalog(format));
-      if (unknown) {
-        payload.note = unknown.message;
-      }
-    }
-    return payload;
+    return this.searchPayload(results, docset, format, args.verbose === true);
   }
 
   lookup_method(args: ToolArguments): ToolResult {
@@ -399,10 +425,11 @@ export class SolidWorksTools {
       interface: canonical?.interface ?? interfaceName,
       member: canonical?.member ?? memberName,
     };
+    const docPath = this.displayPath(resolvedPath);
     if (format === "json") {
-      return { ...names, path: resolvedPath, data: load_json(resolvedPath) };
+      return { ...names, path: docPath, data: load_json(resolvedPath) };
     }
-    return { ...names, path: resolvedPath, content: read_text(resolvedPath) };
+    return { ...names, path: docPath, content: read_text(resolvedPath) };
   }
 
   get_interface_members(args: ToolArguments): ToolResult {
@@ -444,11 +471,12 @@ export class SolidWorksTools {
       };
     }
     const name = catalog.findEnum(docset, enumName)?.name ?? enumName;
+    const docPath = this.displayPath(resolvedPath);
 
     if (format === "json") {
       const data = asRecord(load_json(resolvedPath));
       const values = Array.isArray(data.values) ? data.values : [];
-      return { enum: name, values, path: resolvedPath };
+      return { enum: name, values, path: docPath };
     }
 
     const values: Array<Record<string, string>> = [];
@@ -478,14 +506,14 @@ export class SolidWorksTools {
         });
       }
     }
-    return { enum: name, values, path: resolvedPath };
+    return { enum: name, values, path: docPath };
   }
 
   find_related(args: ToolArguments): ToolResult {
     const interfaceName = str(args.interface);
     const memberName = str(args.member);
     const docset = str(args.docset) ?? "sldworksapi";
-    const limit = parse_limit(args.limit, DEFAULT_RELATED_LIMIT) ?? DEFAULT_RELATED_LIMIT;
+    const limit = limitArg(args.limit, DEFAULT_RELATED_LIMIT, MAX_RELATED_LIMIT);
     const catalog = this.catalog("json");
 
     const unknown = this.unknownDocset(docset, catalog);
@@ -512,7 +540,7 @@ export class SolidWorksTools {
     const memberName = str(args.member);
     const query = str(args.query);
     const docset = str(args.docset);
-    const limit = parse_limit(args.limit, DEFAULT_EXAMPLES_LIMIT) ?? DEFAULT_EXAMPLES_LIMIT;
+    const limit = limitArg(args.limit, DEFAULT_EXAMPLES_LIMIT, MAX_EXAMPLES_LIMIT);
     const verbose = args.verbose === true;
 
     if (interfaceName && memberName) {
@@ -559,13 +587,19 @@ export class SolidWorksTools {
     }
 
     if (query) {
-      const results = this.store.search_api_scored(query, {
-        docset: docset ?? "progguide",
-        limit,
-      });
-      return { results: slimResults(results, verbose) };
+      const exampleDocset = docset ?? "progguide";
+      const results = this.store.search_api_scored(query, { docset: exampleDocset, limit });
+      return this.searchPayload(results, exampleDocset, "markdown", verbose);
     }
 
+    if (interfaceName || memberName) {
+      return {
+        error: "Missing argument",
+        message: interfaceName
+          ? `Pass member together with interface '${interfaceName}', or a query.`
+          : `Pass interface together with member '${memberName ?? ""}', or a query.`,
+      };
+    }
     return {
       error: "No query or member provided",
       message: "Pass interface and member, or a query to search the programming-guide examples.",
@@ -601,7 +635,7 @@ export class SolidWorksTools {
           ? "interface"
           : "enum";
     const filter = str(args.filter)?.toLowerCase();
-    const limit = parse_limit(args.limit, DEFAULT_LIST_LIMIT) ?? DEFAULT_LIST_LIMIT;
+    const limit = limitArg(args.limit, DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT);
 
     const matching = (kind === "interface" ? interfaces : enums)
       .filter((name) => !filter || name.toLowerCase().includes(filter))

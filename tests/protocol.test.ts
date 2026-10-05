@@ -17,6 +17,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(repoRoot, "package.json"),
 
 function emptyStore(overrides: Partial<DataStoreLike> = {}): DataStoreLike {
   return {
+    root: "",
     index: () => ({ docsets: { sldworksapi: { interfaces: {}, enums: {} } } }),
     json_index: () => ({ docsets: { sldworksapi: { interfaces: {}, enums: {} } } }),
     examples_map: () => ({}),
@@ -41,12 +42,13 @@ function harness(store: DataStoreLike = emptyStore()) {
     once: () => undefined,
   };
   const server = new MCPServer(store, new Outbox(() => stream));
-  const send = (message: Message): Message[] => {
+  const sendRaw = (line: string): unknown[] => {
     chunks.length = 0;
-    server.handle_raw_line(JSON.stringify(message));
-    return chunks.join("").split("\n").filter(Boolean).map((line) => JSON.parse(line) as Message);
+    server.handle_raw_line(line);
+    return chunks.join("").split("\n").filter(Boolean).map((output) => JSON.parse(output) as unknown);
   };
-  return { server, send };
+  const send = (message: Message): Message[] => sendRaw(JSON.stringify(message)) as Message[];
+  return { server, send, sendRaw };
 }
 
 afterEach(() => {
@@ -163,6 +165,42 @@ describe("JSON-RPC handling", () => {
       { jsonrpc: "2.0", id: 9, error: { code: -32603, message: "Internal error" } },
     ]);
     expect(stderr).toHaveBeenCalledWith(expect.stringContaining("kaput"));
+
+    // Even a failing notification gets no reply.
+    expect(send({ jsonrpc: "2.0", method: "initialize" })).toEqual([]);
+  });
+
+  it("ignores responses sent by the client", () => {
+    const { send } = harness();
+    expect(send({ jsonrpc: "2.0", id: 4, result: {} })).toEqual([]);
+    expect(send({ jsonrpc: "2.0", id: 4, error: { code: -1, message: "no" } })).toEqual([]);
+  });
+
+  it("answers a batch with one array, skipping notifications", () => {
+    const { sendRaw } = harness();
+    const replies = sendRaw(
+      JSON.stringify([
+        { jsonrpc: "2.0", id: 1, method: "ping" },
+        { jsonrpc: "2.0", method: "notifications/initialized" },
+        7,
+        { jsonrpc: "2.0", id: 2, method: "nope" },
+      ]),
+    );
+    expect(replies).toEqual([
+      [
+        { jsonrpc: "2.0", id: 1, result: {} },
+        { jsonrpc: "2.0", id: null, error: { code: -32600, message: "Invalid Request" } },
+        { jsonrpc: "2.0", id: 2, error: { code: -32601, message: "Method not found" } },
+      ],
+    ]);
+
+    // A batch of notifications gets no reply at all; an empty batch is invalid.
+    expect(sendRaw(JSON.stringify([{ jsonrpc: "2.0", method: "notifications/initialized" }]))).toEqual(
+      [],
+    );
+    expect(sendRaw("[]")).toEqual([
+      { jsonrpc: "2.0", id: null, error: { code: -32600, message: "Invalid Request" } },
+    ]);
   });
 });
 

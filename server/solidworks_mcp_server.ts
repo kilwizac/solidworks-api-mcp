@@ -61,6 +61,8 @@ export class MCPServer {
   readonly tools: SolidWorksTools;
   private readonly store: DataStoreLike;
   private readonly outbox: Outbox;
+  /** Collects responses while a JSON-RPC batch is being handled. */
+  private batchResponses: unknown[] | null = null;
 
   constructor(store: DataStoreLike, outbox: Outbox = new Outbox()) {
     this.store = store;
@@ -69,6 +71,10 @@ export class MCPServer {
   }
 
   send(payload: unknown): void {
+    if (this.batchResponses) {
+      this.batchResponses.push(payload);
+      return;
+    }
     this.outbox.write(`${JSON.stringify(payload)}\n`);
   }
 
@@ -148,6 +154,10 @@ export class MCPServer {
       this.error(null, JSON_RPC_INVALID_REQUEST, "Invalid Request");
       return;
     }
+    // A response from the client: this server never sends requests, so there is nothing to match.
+    if (method === undefined && ("result" in message || "error" in message)) {
+      return;
+    }
     if (typeof method !== "string") {
       this.error(requestId, JSON_RPC_INVALID_REQUEST, "Invalid Request");
       return;
@@ -194,6 +204,30 @@ export class MCPServer {
       this.error(null, JSON_RPC_PARSE_ERROR, "Parse error");
       return;
     }
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      this.handle_batch(parsed);
+      return;
+    }
+    this.dispatch(parsed);
+  }
+
+  /** JSON-RPC batch (allowed up to protocol 2025-03-26): one array holding every reply. */
+  private handle_batch(entries: unknown[]): void {
+    const responses: unknown[] = [];
+    this.batchResponses = responses;
+    try {
+      for (const entry of entries) {
+        this.dispatch(entry);
+      }
+    } finally {
+      this.batchResponses = null;
+    }
+    if (responses.length > 0) {
+      this.send(responses);
+    }
+  }
+
+  private dispatch(parsed: unknown): void {
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
       this.error(null, JSON_RPC_INVALID_REQUEST, "Invalid Request");
       return;
@@ -204,7 +238,9 @@ export class MCPServer {
       this.handle(message);
     } catch (error) {
       process.stderr.write(`Unhandled error: ${getErrorMessage(error)}\n`);
-      this.error(isRequestId(message.id) ? message.id : null, JSON_RPC_INTERNAL_ERROR, "Internal error");
+      // Notifications (no id) never get a reply, not even an error.
+      const replyId = message.id === undefined ? undefined : isRequestId(message.id) ? message.id : null;
+      this.error(replyId, JSON_RPC_INTERNAL_ERROR, "Internal error");
     }
   }
 

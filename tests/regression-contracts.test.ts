@@ -368,6 +368,16 @@ describe("Limit parsing contracts", () => {
     expect(result.results).toEqual([]);
   });
 
+  it("caps oversized limits even when the schema check is bypassed", () => {
+    const many: SearchDoc[] = Array.from({ length: 80 }, (_, index) => ({
+      title: `Feature ${index}`,
+      summary: "feature docs",
+      docset: "sldworksapi",
+    }));
+    const server = new MCPServer(new FakeStore({ searchDocs: many }));
+    expect(server.tools.search_api({ query: "feature", limit: 100_000 }).results).toHaveLength(50);
+  });
+
   it("member tool limits parse strings and clamp negatives", () => {
     const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
     try {
@@ -571,6 +581,8 @@ describe("Code review issue regressions", () => {
         { member: "Foo_A", value: "1", description: "Alpha" },
         { member: "Foo_B", value: "2", description: "Beta" },
       ]);
+      // Reported relative to the data root, never as a local absolute path.
+      expect(result.path).toBe("swconst/enums/Foo_e.md");
     } finally {
       fs.rmSync(tempRoot, { recursive: true, force: true });
     }
@@ -753,7 +765,7 @@ describe("Code review issue regressions", () => {
   it("rejects non-object JSON-RPC payloads as invalid requests", () => {
     const server = new MCPServer(new FakeStore());
 
-    for (const line of ["42", '"text"', "[1,2,3]", "null"]) {
+    for (const line of ["42", '"text"', "[]", "null"]) {
       const output = captureStdout(() => server.handle_raw_line(line));
       expect(JSON.parse(output)).toEqual({
         jsonrpc: "2.0",
@@ -949,6 +961,9 @@ describe("Second code review regressions", () => {
       [{ query: "feature", categories: "api" }, "categories must be an array"],
       [{ query: "feature", categories: ["api", 1] }, "categories must be an array of strings"],
       [{ query: "feature", limit: "many" }, "limit must be an integer"],
+      [{ query: "feature", limit: 0 }, "limit must be between 1 and 50"],
+      [{ query: "feature", limit: "100000" }, "limit must be between 1 and 50"],
+      [{ query: "feature", type: "methods" }, "type must be one of: method, property"],
       [{ query: "feature", format: "xml" }, "format must be one of: markdown, json"],
       ["nope", "arguments must be an object"],
     ];

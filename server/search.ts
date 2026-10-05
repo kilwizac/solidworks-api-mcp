@@ -12,7 +12,9 @@ import { LruCache, asStringList, cacheKey, getString } from "./util";
  *   language queries ("how do I create an extrusion feature") don't match on
  *   `i`, `do`, `an`, ...
  * - Query terms also match longer words by prefix and a few domain synonyms,
- *   at reduced weight.
+ *   at reduced weight. An identifier also matches its numbered versions
+ *   (`SaveAs` -> `SaveAs3`) at full weight.
+ * - Members documented as obsolete rank below current ones.
  * - An exact match on a member's name or `Interface.Member` is always on top.
  */
 
@@ -30,7 +32,7 @@ const BM25_K1 = 1.2;
 const BM25_B = 0.3;
 const PREFIX_WEIGHT = 0.35;
 const SYNONYM_WEIGHT = 0.6;
-const BRIDGE_WEIGHT = 0.9;
+const BRIDGE_WEIGHT = 0.7;
 const MIN_PREFIX_LENGTH = 4;
 const MAX_PREFIX_EXPANSIONS = 30;
 const MAX_PREFIX_EXTRA_CHARS = 6;
@@ -38,6 +40,8 @@ const EXACT_NAME_BONUS = 10;
 const CONCEPT_BONUS = 12;
 const MAX_EXACT_NAME_MATCHES = 8;
 const EXACT_QUALIFIED_BONUS = 25;
+/** Score multiplier (and exact-match bonus multiplier) for obsolete members. */
+const OBSOLETE_FACTOR = 0.5;
 const RESULT_CACHE_SIZE = 256;
 const MAX_CACHED_RESULTS = 200;
 
@@ -68,6 +72,8 @@ const SYNONYM_GROUPS: string[][] = [
 
 const WORD_RE = /[A-Za-z0-9]+/g;
 const PART_RE = /[A-Z]+(?![a-z])|[A-Z]?[a-z]+|[0-9]+/g;
+/** The docs mark superseded members with a summary like "Obsolete. Superseded by ...". */
+const OBSOLETE_RE = /^\s*obsolete\b/i;
 
 /** Conservative suffix stripping: plurals, -ing, -ed and a trailing -e. */
 export function stem(word: string): string {
@@ -232,6 +238,7 @@ export class SearchEngine {
   private readonly types: string[];
   private readonly interfacesLower: string[];
   private readonly categorySets: Array<ReadonlySet<string>>;
+  private readonly obsolete: Uint8Array;
   private readonly byName = new Map<string, number[]>();
   private readonly byQualifiedName = new Map<string, number[]>();
   private readonly byConcept = new Map<string, number[]>();
@@ -245,12 +252,14 @@ export class SearchEngine {
     this.types = new Array<string>(count);
     this.interfacesLower = new Array<string>(count);
     this.categorySets = new Array<ReadonlySet<string>>(count);
+    this.obsolete = new Uint8Array(count);
 
     const contentLengths = new Float64Array(count);
     let totalLength = 0;
 
     documents.forEach((doc, index) => {
       const title = getString(doc.title);
+      const summary = getString(doc.summary);
       const interfaceName = getString(doc.interface);
       const categories = asStringList(doc.categories);
 
@@ -258,9 +267,10 @@ export class SearchEngine {
       this.types[index] = getString(doc.type);
       this.interfacesLower[index] = interfaceName.toLowerCase();
       this.categorySets[index] = new Set(categories);
+      this.obsolete[index] = OBSOLETE_RE.test(summary) ? 1 : 0;
 
       const titleTerms = analyze(title);
-      const summaryTerms = analyze(getString(doc.summary));
+      const summaryTerms = analyze(summary);
       const weighted = new Map<string, number>();
       const add = (terms: readonly string[], weight: number): void => {
         for (const term of terms) {
@@ -398,12 +408,13 @@ export class SearchEngine {
       bestTouched.length = 0;
     }
 
-    // Reward documents that cover more of the query.
+    // Reward documents that cover more of the query; demote superseded members.
     const groupCount = groups.length;
     const finalScores = new Map<number, number>();
     for (const doc of touched) {
       const coverage = (matched[doc] as number) / groupCount;
-      finalScores.set(doc, (scores[doc] as number) * (0.5 + 0.5 * coverage));
+      const currency = this.obsolete[doc] === 1 ? OBSOLETE_FACTOR : 1;
+      finalScores.set(doc, (scores[doc] as number) * (0.5 + 0.5 * coverage) * currency);
     }
 
     this.applyExactMatches(query, finalScores, allowed);
@@ -422,7 +433,8 @@ export class SearchEngine {
     scores: Map<number, number>,
     allowed: Uint8Array | null,
   ): void {
-    const words = query.match(WORD_RE) ?? [];
+    // Whitespace-separated, so names with underscores (`swSelectType_e`) stay whole.
+    const words = query.split(/\s+/).filter((word) => normalizeName(word) !== "");
     if (words.length === 0) {
       return;
     }
@@ -431,12 +443,14 @@ export class SearchEngine {
       top = Math.max(top, score);
     }
 
+    // Exact matches go above everything else; current members above obsolete ones.
     const boost = (docs: number[] | undefined, bonus: number): void => {
       for (const doc of docs ?? []) {
         if (allowed && allowed[doc] === 0) {
           continue;
         }
-        scores.set(doc, Math.max(scores.get(doc) ?? 0, top) + bonus);
+        const currency = this.obsolete[doc] === 1 ? OBSOLETE_FACTOR : 1;
+        scores.set(doc, Math.max(scores.get(doc) ?? 0, top) + bonus * currency);
       }
     };
 
@@ -468,7 +482,10 @@ export class SearchEngine {
 
   private variantsFor({ term, bridges }: QueryTermGroup): QueryVariant[] {
     const variants: QueryVariant[] = [{ term, weight: 1 }];
-    if (!term.startsWith("#")) {
+    if (term.startsWith("#")) {
+      // `#featureextrusion` also means FeatureExtrusion2, FeatureExtrusion3, ...
+      variants.push(...this.versionedForms(term));
+    } else {
       for (const synonym of SYNONYMS.get(term) ?? []) {
         variants.push({ term: synonym, weight: SYNONYM_WEIGHT });
       }
@@ -480,9 +497,17 @@ export class SearchEngine {
     // SaveAs3): look the joined form up, including longer names that extend it.
     for (const bridge of bridges) {
       variants.push({ term: bridge, weight: 1 });
+      variants.push(...this.versionedForms(bridge));
       variants.push(...this.prefixExpansions(bridge, this.identifierVocabulary, BRIDGE_WEIGHT));
     }
     return variants;
+  }
+
+  /** Numbered versions of an identifier term (`#saveas` -> `#saveas2`, `#saveas3`), at full weight. */
+  private versionedForms(identifier: string): QueryVariant[] {
+    return this.vocabularyWithPrefix(identifier, this.identifierVocabulary)
+      .filter((candidate) => /^\d+$/.test(candidate.slice(identifier.length)))
+      .map((term) => ({ term, weight: 1 }));
   }
 
   private prefixExpansions(
@@ -490,6 +515,19 @@ export class SearchEngine {
     vocabulary: readonly string[],
     weight: number,
   ): QueryVariant[] {
+    const expansions = this.vocabularyWithPrefix(prefix, vocabulary).filter(
+      (candidate) => candidate.length - prefix.length <= MAX_PREFIX_EXTRA_CHARS,
+    );
+    // Prefer the most common continuations when a prefix is very broad.
+    expansions.sort(
+      (left, right) =>
+        (this.postings.get(right)?.docs.length ?? 0) - (this.postings.get(left)?.docs.length ?? 0),
+    );
+    return expansions.slice(0, MAX_PREFIX_EXPANSIONS).map((term) => ({ term, weight }));
+  }
+
+  /** Terms in the sorted `vocabulary` that strictly extend `prefix`. */
+  private vocabularyWithPrefix(prefix: string, vocabulary: readonly string[]): string[] {
     let low = 0;
     let high = vocabulary.length;
     while (low < high) {
@@ -501,22 +539,17 @@ export class SearchEngine {
       }
     }
 
-    const expansions: string[] = [];
+    const matches: string[] = [];
     for (let i = low; i < vocabulary.length; i += 1) {
       const candidate = vocabulary[i] as string;
       if (!candidate.startsWith(prefix)) {
         break;
       }
-      if (candidate !== prefix && candidate.length - prefix.length <= MAX_PREFIX_EXTRA_CHARS) {
-        expansions.push(candidate);
+      if (candidate !== prefix) {
+        matches.push(candidate);
       }
     }
-    // Prefer the most common continuations when a prefix is very broad.
-    expansions.sort(
-      (left, right) =>
-        (this.postings.get(right)?.docs.length ?? 0) - (this.postings.get(left)?.docs.length ?? 0),
-    );
-    return expansions.slice(0, MAX_PREFIX_EXPANSIONS).map((term) => ({ term, weight }));
+    return matches;
   }
 
   private buildFilter(filters: SearchFilters, categories: string[]): Uint8Array | null {

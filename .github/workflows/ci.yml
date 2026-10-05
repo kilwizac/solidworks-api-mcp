@@ -14,9 +14,8 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v4
+      # Installs the Bun version pinned by package.json's packageManager field.
       - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - run: bun install --frozen-lockfile
       - run: bun run typecheck
       - run: bun run test

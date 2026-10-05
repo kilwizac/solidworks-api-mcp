@@ -25,6 +25,8 @@ export interface SearchOptions {
 
 /** What the tool layer needs from a docs store (implemented by DataStore and by test fakes). */
 export interface DataStoreLike {
+  /** Data root; resolved doc paths are reported relative to it. */
+  readonly root: string;
   index(): RootIndex;
   json_index(): RootIndex;
   examples_map(): Record<string, string[]>;

@@ -20,6 +20,7 @@ describe.skipIf(!fs.existsSync(dataRoot))("tools on the real corpus", () => {
       expect(result.interface).toBe("IModelDocExtension");
       expect(result.member).toBe("SelectByID2");
       expect(String(result.content)).toContain("SelectByID2");
+      expect(result.path).toBe("sldworksapi/interfaces/IModelDocExtension/SelectByID2.md");
     });
 
     it("returns structured data for the json format", () => {
@@ -30,6 +31,7 @@ describe.skipIf(!fs.existsSync(dataRoot))("tools on the real corpus", () => {
       });
       expect(result.data).toBeTypeOf("object");
       expect(result.error).toBeUndefined();
+      expect(result.path).toBe("json/sldworksapi/interfaces/IModelDocExtension/SelectByID2.json");
     });
 
     it("suggests close interface names", () => {
@@ -104,6 +106,10 @@ describe.skipIf(!fs.existsSync(dataRoot))("tools on the real corpus", () => {
       expect(result.results).toEqual([]);
       expect(String(result.note)).toContain("nope");
     });
+
+    it("caps the number of hits", () => {
+      expect((tools.search_api({ query: "feature", limit: 100_000 }).results as unknown[]).length).toBe(50);
+    });
   });
 
   describe("solidworks_get_examples and solidworks_find_related", () => {
@@ -133,6 +139,19 @@ describe.skipIf(!fs.existsSync(dataRoot))("tools on the real corpus", () => {
 
     it("asks for input when neither a member nor a query is given", () => {
       expect(tools.get_examples({}).error).toBe("No query or member provided");
+    });
+
+    it("asks for the missing half of an interface + member pair", () => {
+      const noMember = tools.get_examples({ interface: "IModelDoc2" });
+      expect(noMember.error).toBe("Missing argument");
+      expect(String(noMember.message)).toContain("member");
+      expect(tools.get_examples({ member: "SaveAs3" }).error).toBe("Missing argument");
+    });
+
+    it("explains an empty example search caused by an unknown docset", () => {
+      const result = tools.get_examples({ query: "message pump", docset: "nope" });
+      expect(result.results).toEqual([]);
+      expect(String(result.note)).toContain("nope");
     });
 
     it("echoes canonical names for related members", () => {
