@@ -4,13 +4,7 @@ import path from "node:path";
 
 import { describe, expect, it, vi } from "vitest";
 
-import {
-  DataStore,
-  MCPServer,
-  parse_limit,
-  score_doc,
-  tokenize,
-} from "../server/solidworks_mcp_server";
+import { DataStore, MCPServer, parse_limit } from "../server/solidworks_mcp_server";
 import type { DocFormat, RootIndex, SearchResult } from "../server/types";
 
 type SearchDoc = {
@@ -184,12 +178,13 @@ class FakeStore {
       doc_type?: string;
       interface?: string;
       categories?: Iterable<string>;
+      limit?: unknown;
     } = {},
   ): SearchResult[] {
     const docs = (options.fmt ?? "markdown") === "json"
       ? this._jsonSearchData.documents
       : this._searchData.documents;
-    const tokens = tokenize(query);
+    const tokens = query.toLowerCase().match(/[a-z0-9]+/g) ?? [];
     const categoryFilter = new Set(Array.from(options.categories ?? []));
     const scored: SearchResult[] = [];
 
@@ -216,14 +211,18 @@ class FakeStore {
           continue;
         }
       }
-      const score = score_doc(doc, tokens);
+      // Deliberately naive scoring: this fake only exercises the tool layer's filtering and limits.
+      const haystack = `${doc.title ?? ""} ${doc.summary ?? ""} ${asStringArray(doc.keywords).join(" ")}`.toLowerCase();
+      const score = tokens.filter((token) => haystack.includes(token)).length;
       if (score > 0) {
         scored.push({ score, doc });
       }
     }
 
     scored.sort((left, right) => right.score - left.score);
-    return scored;
+    // Like DataStore, the store applies the limit it is handed.
+    const limit = parse_limit(options.limit, null);
+    return limit === null ? scored : scored.slice(0, limit);
   }
 }
 
@@ -278,7 +277,7 @@ describe("Search filtering contracts", () => {
     ];
 
     const server = new MCPServer(new FakeStore({ searchDocs: docs }));
-    const result = server.tool_search_api({
+    const result = server.tools.search_api({
       query: "create feature",
       docset: "sldworksapi",
       type: "method",
@@ -315,7 +314,7 @@ describe("Search filtering contracts", () => {
     ];
 
     const server = new MCPServer(new FakeStore({ searchDocs: docs }));
-    const result = server.tool_search_api({
+    const result = server.tools.search_api({
       query: "feature",
       categories: ["api"],
       docset: "sldworksapi",
@@ -359,13 +358,13 @@ describe("Limit parsing contracts", () => {
 
   it("search limit parses numeric string", () => {
     const server = new MCPServer(new FakeStore({ searchDocs: docs }));
-    const result = server.tool_search_api({ query: "feature", limit: "2" });
+    const result = server.tools.search_api({ query: "feature", limit: "2" });
     expect((result.results as SearchResult[])).toHaveLength(2);
   });
 
   it("search negative limit is clamped to zero", () => {
     const server = new MCPServer(new FakeStore({ searchDocs: docs }));
-    const result = server.tool_search_api({ query: "feature", limit: -1 });
+    const result = server.tools.search_api({ query: "feature", limit: -1 });
     expect(result.results).toEqual([]);
   });
 
@@ -429,19 +428,19 @@ describe("Limit parsing contracts", () => {
       });
       const server = new MCPServer(store);
 
-      const related = server.tool_find_related({ interface: "IFoo", member: "Bar", limit: "2" });
+      const related = server.tools.find_related({ interface: "IFoo", member: "Bar", limit: "2" });
       expect(related.related).toEqual(["A", "B"]);
 
-      const queryExamples = server.tool_get_examples({ query: "macro", limit: "1" });
+      const queryExamples = server.tools.get_examples({ query: "macro", limit: "1" });
       expect((queryExamples.results as SearchResult[])).toHaveLength(1);
 
-      const negativeRelated = server.tool_find_related({ interface: "IFoo", member: "Bar", limit: -1 });
+      const negativeRelated = server.tools.find_related({ interface: "IFoo", member: "Bar", limit: -1 });
       expect(negativeRelated.related).toEqual([]);
 
-      const negativeQuery = server.tool_get_examples({ query: "macro", limit: -1 });
+      const negativeQuery = server.tools.get_examples({ query: "macro", limit: -1 });
       expect(negativeQuery.results).toEqual([]);
 
-      const negativeMemberExamples = server.tool_get_examples({
+      const negativeMemberExamples = server.tools.get_examples({
         interface: "IFoo",
         member: "Bar",
         limit: -1,
@@ -461,8 +460,9 @@ describe("Missing docs and error safety", () => {
       jsonIndexData: { docsets: { sldworksapi: { interfaces: {} } } },
     });
     const server = new MCPServer(store);
-    expect(server.tool_lookup_method({ interface: "IFoo", member: "Bar" })).toEqual({
+    expect(server.tools.lookup_method({ interface: "IFoo", member: "Bar" })).toMatchObject({
       error: "Not found",
+      suggestions: [],
     });
   });
 
@@ -472,7 +472,7 @@ describe("Missing docs and error safety", () => {
       jsonIndexData: { docsets: { sldworksapi: { interfaces: {} } } },
     });
     const server = new MCPServer(store);
-    expect(server.tool_get_examples({ interface: "IFoo", member: "Bar" })).toEqual({
+    expect(server.tools.get_examples({ interface: "IFoo", member: "Bar" })).toMatchObject({
       error: "Not found",
     });
   });
@@ -510,7 +510,7 @@ describe("Missing docs and error safety", () => {
       });
       const server = new MCPServer(store);
 
-      const result = server.tool_get_examples({
+      const result = server.tools.get_examples({
         interface: "IFoo",
         member: "Bar",
         limit: 10,
@@ -565,7 +565,7 @@ describe("Code review issue regressions", () => {
       });
       const server = new MCPServer(store);
 
-      const result = server.tool_get_enum_values({ enum: "Foo_e", format: "markdown" });
+      const result = server.tools.get_enum_values({ enum: "Foo_e", format: "markdown" });
 
       expect(result.values).toEqual([
         { member: "Foo_A", value: "1", description: "Alpha" },
@@ -717,7 +717,7 @@ describe("Code review issue regressions", () => {
       }),
     );
 
-    expect(server.tool_get_interface_members({ interface: "ifoo" })).toEqual({
+    expect(server.tools.get_interface_members({ interface: "ifoo" })).toEqual({
       interface: "IFoo",
       member_count: 1,
       members: ["Bar"],
@@ -750,7 +750,7 @@ describe("Code review issue regressions", () => {
     }
   });
 
-  it("rejects non-object JSON-RPC payloads with a parse error", () => {
+  it("rejects non-object JSON-RPC payloads as invalid requests", () => {
     const server = new MCPServer(new FakeStore());
 
     for (const line of ["42", '"text"', "[1,2,3]", "null"]) {
@@ -758,7 +758,7 @@ describe("Code review issue regressions", () => {
       expect(JSON.parse(output)).toEqual({
         jsonrpc: "2.0",
         id: null,
-        error: { code: -32700, message: "Parse error" },
+        error: { code: -32600, message: "Invalid Request" },
       });
     }
   });
@@ -800,31 +800,35 @@ describe("Code review issue regressions", () => {
 
     try {
       server.result(1, { first: true });
-      expect(writes).toHaveLength(2);
+      expect(writes).toHaveLength(1);
 
       accepting = false;
       server.result(2, { second: true });
+      expect(writes).toHaveLength(2);
+
+      // Held back until the stream drains.
+      accepting = true;
+      server.result(3, { third: true });
+      expect(writes).toHaveLength(2);
+
+      listeners.get("drain")?.();
       expect(writes).toHaveLength(3);
 
-      accepting = true;
-      listeners.get("drain")?.();
+      server.result(4, { fourth: true });
       expect(writes).toHaveLength(4);
-
-      server.result(3, { third: true });
-      expect(writes).toHaveLength(6);
     } finally {
       spy.mockRestore();
       onceSpy.mockRestore();
     }
 
-    expect(dropped).toEqual(['{"jsonrpc":"2.0","id":2,"result":{"second":true}}']);
+    expect(dropped).toEqual(['{"jsonrpc":"2.0","id":2,"result":{"second":true}}\n']);
 
     const payloads = writes
       .join("")
       .split("\n")
       .filter((line) => line.trim() !== "")
       .map((line) => JSON.parse(line));
-    expect(payloads.map((payload) => payload.id)).toEqual([1, 2, 3]);
+    expect(payloads.map((payload) => payload.id)).toEqual([1, 2, 3, 4]);
   });
 
   it("parse_limit truncates fractional values toward zero", () => {
@@ -832,5 +836,233 @@ describe("Code review issue regressions", () => {
     expect(parse_limit(-2.7, 20)).toBe(0);
     expect(parse_limit(Number.NaN, 20)).toBe(20);
     expect(parse_limit(Number.POSITIVE_INFINITY, 20)).toBe(20);
+  });
+});
+
+function call(
+  server: MCPServer,
+  message: Record<string, unknown>,
+): Record<string, unknown> {
+  const output = captureStdout(() => {
+    server.handle(message as Parameters<MCPServer["handle"]>[0]);
+  });
+  return JSON.parse(output) as Record<string, unknown>;
+}
+
+function callTool(
+  server: MCPServer,
+  name: string,
+  args?: unknown,
+): { result: Record<string, unknown>; payload: Record<string, unknown> } {
+  const response = call(server, {
+    jsonrpc: "2.0",
+    id: 1,
+    method: "tools/call",
+    params: { name, arguments: args },
+  });
+  const result = asRecord(response.result);
+  const content = result.content as Array<Record<string, unknown>> | undefined;
+  const payload = content ? (JSON.parse(String(content[0]?.text)) as Record<string, unknown>) : {};
+  return { result, payload };
+}
+
+describe("Second code review regressions", () => {
+  it("keeps every queued response when backpressure is reapplied mid-flush", () => {
+    const server = new MCPServer(new FakeStore());
+    const writes: string[] = [];
+    const drainListeners: Array<() => void> = [];
+    let rejectNext = 1;
+    const writeSpy = vi
+      .spyOn(process.stdout, "write")
+      .mockImplementation(((chunk: string | Uint8Array) => {
+        writes.push(String(chunk));
+        if (rejectNext > 0) {
+          rejectNext -= 1;
+          return false;
+        }
+        return true;
+      }) as typeof process.stdout.write);
+    const onceSpy = vi
+      .spyOn(process.stdout, "once")
+      .mockImplementation(((_event: string, listener: () => void) => {
+        drainListeners.push(listener);
+        return process.stdout;
+      }) as typeof process.stdout.once);
+
+    try {
+      server.result(1, { n: 1 });
+      server.result(2, { n: 2 });
+      server.result(3, { n: 3 });
+
+      // The first two drains each hit backpressure again mid-flush.
+      let drains = 0;
+      while (drainListeners.length > 0 && drains < 20) {
+        rejectNext = drains < 2 ? 1 : 0;
+        drains += 1;
+        drainListeners.shift()?.();
+      }
+    } finally {
+      writeSpy.mockRestore();
+      onceSpy.mockRestore();
+    }
+
+    const ids = writes
+      .join("")
+      .split("\n")
+      .filter((line) => line.trim() !== "")
+      .map((line) => (JSON.parse(line) as { id: number }).id);
+    expect(ids).toEqual([1, 2, 3]);
+  });
+
+  it("answers ping with an empty result", () => {
+    const server = new MCPServer(new FakeStore());
+    expect(call(server, { jsonrpc: "2.0", id: 5, method: "ping" })).toEqual({
+      jsonrpc: "2.0",
+      id: 5,
+      result: {},
+    });
+  });
+
+  it("flags handler-reported failures with isError", () => {
+    const server = new MCPServer(new FakeStore({ indexData: { docsets: { sldworksapi: {} } } }));
+
+    const missing = callTool(server, "solidworks_lookup_method", {
+      interface: "IFoo",
+      member: "Nope",
+    });
+    expect(missing.result.isError).toBe(true);
+    expect(missing.payload).toMatchObject({ error: "Not found" });
+
+    const noQuery = callTool(server, "solidworks_get_examples", {});
+    expect(noQuery.result.isError).toBe(true);
+  });
+
+  it("validates tool arguments against the input schema", () => {
+    const docs: SearchDoc[] = [
+      { title: "Feature", summary: "feature", categories: ["api"], docset: "sldworksapi" },
+    ];
+    const server = new MCPServer(new FakeStore({ searchDocs: docs }));
+
+    const invalid: Array<[unknown, string]> = [
+      [{}, "query is required"],
+      [{ query: 3 }, "query must be a string"],
+      [{ query: "feature", categories: "api" }, "categories must be an array"],
+      [{ query: "feature", categories: ["api", 1] }, "categories must be an array of strings"],
+      [{ query: "feature", limit: "many" }, "limit must be an integer"],
+      [{ query: "feature", format: "xml" }, "format must be one of: markdown, json"],
+      ["nope", "arguments must be an object"],
+    ];
+    for (const [args, message] of invalid) {
+      const { result, payload } = callTool(server, "solidworks_search_api", args);
+      expect(result.isError, JSON.stringify(args)).toBe(true);
+      expect(payload.error).toBe("Invalid arguments");
+      expect(String(payload.message)).toContain(message);
+    }
+
+    const valid = callTool(server, "solidworks_search_api", {
+      query: "feature",
+      categories: ["api"],
+      limit: "5",
+    });
+    expect(valid.result.isError).toBeUndefined();
+    expect((valid.payload.results as unknown[]).length).toBe(1);
+  });
+
+  it("applies the example limit to primary examples too", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      const relativePath = "json/sldworksapi/interfaces/IFoo/members/Bar.json";
+      writeJson(path.join(tempRoot, relativePath), {
+        examples: [{ title: "A" }, { title: "B" }, { title: "C" }],
+      });
+      const server = new MCPServer(
+        new FakeStore({
+          root: tempRoot,
+          jsonIndexData: {
+            docsets: { sldworksapi: { interfaces: { IFoo: { members: { Bar: relativePath } } } } },
+          },
+        }),
+      );
+
+      const titles = (limit: number) =>
+        (
+          server.tools.get_examples({ interface: "IFoo", member: "Bar", limit })
+            .examples as Array<{ title: string }>
+        ).map((example) => example.title);
+
+      expect(titles(0)).toEqual([]);
+      expect(titles(1)).toEqual(["A"]);
+      expect(titles(10)).toEqual(["A", "B", "C"]);
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("finds related examples for non-canonical member capitalization", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      const relativePath = "json/sldworksapi/interfaces/IFoo/members/Bar.json";
+      writeJson(path.join(tempRoot, "_index.json"), { docsets: {} });
+      writeJson(path.join(tempRoot, "_search_index.json"), {
+        documents: [{ title: "Guide 1", docset: "progguide" }],
+      });
+      writeJson(path.join(tempRoot, "json", "_index.json"), {
+        docsets: {
+          sldworksapi: { interfaces: { IFoo: { members: { Bar: relativePath } } } },
+        },
+      });
+      writeJson(path.join(tempRoot, "json", "_search_index.json"), { documents: [] });
+      writeJson(path.join(tempRoot, relativePath), { examples: [] });
+      writeJson(
+        path.join(tempRoot, "json", "sldworksapi", "patterns", "examples-to-members.json"),
+        { body: ["## Guide 1", "- `IFoo.Bar`"] },
+      );
+      const server = new MCPServer(new DataStore(tempRoot));
+
+      for (const [interfaceName, member] of [
+        ["IFoo", "Bar"],
+        ["ifoo", "bar"],
+        ["IFOO", "BAR"],
+      ] as const) {
+        const result = server.tools.get_examples({ interface: interfaceName, member });
+        expect(
+          (result.related_examples as Array<{ title: string }>).map((doc) => doc.title),
+          `${interfaceName}.${member}`,
+        ).toEqual(["Guide 1"]);
+      }
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("does not collide search cache keys across category lists", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "sw-mcp-"));
+    try {
+      writeJson(path.join(tempRoot, "_search_index.json"), {
+        documents: [
+          { title: "Feature", summary: "feature", categories: ["core", "documents"], docset: "d" },
+        ],
+      });
+      const store = new DataStore(tempRoot);
+
+      expect(store.search_api_scored("feature", { categories: ["core", "documents"] })).toHaveLength(1);
+      expect(store.search_api_scored("feature", { categories: ["core,documents"] })).toEqual([]);
+    } finally {
+      fs.rmSync(tempRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("rejects inherited Object.prototype names as tools", () => {
+    const server = new MCPServer(new FakeStore());
+
+    for (const name of ["constructor", "toString", "hasOwnProperty", "__proto__"]) {
+      const response = call(server, {
+        jsonrpc: "2.0",
+        id: 1,
+        method: "tools/call",
+        params: { name, arguments: { echo: true } },
+      });
+      expect(response.error, name).toEqual({ code: -32602, message: `Unknown tool: ${name}` });
+    }
   });
 });

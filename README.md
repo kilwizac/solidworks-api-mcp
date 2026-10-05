@@ -1,120 +1,117 @@
 # SolidWorks API MCP Server
 
-TypeScript MCP server that provides search and lookup access to the SolidWorks API documentation corpus in this repository.
+TypeScript [MCP](https://modelcontextprotocol.io) server that gives an AI assistant search and lookup access to the SolidWorks API documentation corpus in this repository: about 14,000 documented interfaces, methods, properties, enums and programming-guide examples.
 
 ## Features
 
-- Full-text and keyword search over SolidWorks API docs.
-- Interface/member lookup for methods, properties, and events.
-- Enum value lookup from JSON or markdown sources.
-- Related member and example discovery helpers.
-- Stdio MCP JSON-RPC transport for local and Claude Desktop usage.
+- **Relevance-ranked search** over the whole corpus. Understands API names (`SelectByID2`, `IModelDocExtension.SelectByID2`), descriptions (`how do I create an extrusion feature`) and word variants. See [Search](#search).
+- **Exact lookup** of interface members, enum values, related members and examples, with case-insensitive names.
+- **Helpful failures**: a miss returns "did you mean" suggestions and, for members, the interfaces that actually declare them.
+- **Discovery** tools to list docsets and interface/enum names.
+- **Compact responses**: search hits omit noisy keyword lists unless asked (`verbose`).
+- Stdio transport (`stdin`/`stdout`), MCP protocol versions `2025-06-18`, `2025-03-26` and `2024-11-05` negotiated automatically.
 
 ## Runtime and Tooling
 
 - Runtime: Bun + TypeScript
-- MCP transport: stdio (`stdin`/`stdout`)
-- Test framework: Vitest
-- Type checking: TypeScript compiler (`tsc`)
-
-This repository uses Bun-only JavaScript tooling:
-
-- Install dependencies: `bun install`
-- Run package scripts: `bun run <script>`
-- Run one-off CLIs: `bunx <tool>`
+- Tests: Vitest; type checking: `tsc`
+- Bun-only JavaScript tooling: `bun install`, `bun run <script>`, `bunx <tool>`
 
 ## Quick Start
 
-1. Install dependencies:
-
 ```bash
 bun install
-```
-
-2. Start the MCP server:
-
-```bash
 bun run start
 ```
 
-## Data Root Configuration
+## Data Root
 
-By default the server reads from:
-
-`<repo>/solidworks-api`
-
-You can override this with `SW_API_DATA_ROOT`.
-
-PowerShell:
+By default the server reads from `<repo>/solidworks-api`. Override with `SW_API_DATA_ROOT`:
 
 ```powershell
 $env:SW_API_DATA_ROOT = "C:\path\to\solidworks-api"
 bun run start
 ```
 
-## Claude Desktop Configuration
+The server exits with an error if the data root does not exist.
 
-Add an MCP server entry to `claude_desktop_config.json`.
+## Client Configuration
 
-Windows example:
+Claude Desktop (`claude_desktop_config.json`), Windows example:
 
 ```json
 {
   "mcpServers": {
     "solidworks-api": {
       "command": "bun",
-      "args": [
-        "run",
-        "C:\\path\\to\\solidworks-api-mcp\\server\\solidworks_mcp_server.ts"
-      ]
+      "args": ["run", "C:\\path\\to\\solidworks-api-mcp\\server\\solidworks_mcp_server.ts"]
     }
   }
 }
 ```
 
-Restart Claude Desktop after updating the config.
+Claude Code:
 
-## Available Tools
+```bash
+claude mcp add solidworks-api -- bun run C:\path\to\solidworks-api-mcp\server\solidworks_mcp_server.ts
+```
 
-The stdio MCP server exposes these tool names:
+Restart the client after changing its configuration.
 
-- `solidworks_lookup_method`
-- `solidworks_search_api`
-- `solidworks_get_interface_members`
-- `solidworks_get_enum_values`
-- `solidworks_find_related`
-- `solidworks_get_examples`
+## Tools
+
+All tools are read-only. Names are case-insensitive. Bad arguments are reported as tool errors (`isError`) that name the offending field.
+
+| Tool | Purpose |
+| --- | --- |
+| `solidworks_search_api` | Ranked search by keywords, description or API name. Filters: `docset`, `type`, `interface`, `categories`; `limit` (default 10); `verbose`. |
+| `solidworks_lookup_method` | Full documentation page for `interface` + `member` (markdown or JSON). |
+| `solidworks_get_interface_members` | Names of all members of an interface. |
+| `solidworks_get_enum_values` | Members, values and descriptions of an enum such as `swSelectType_e`. |
+| `solidworks_find_related` | "See also" members for an interface member. |
+| `solidworks_get_examples` | Example code for a member, or a search of the programming-guide examples. |
+| `solidworks_list_docsets` | Available docsets (`sldworksapi`, `swconst`, `progguide`) with interface and enum counts. |
+| `solidworks_list_names` | Interface or enum names in a docset, with an optional substring filter. |
+
+Failed lookups return `{ "error": "Not found", "message": ..., "suggestions": [...] }`, plus `declared_on` when the member exists on other interfaces. Unknown docsets return `{ "error": "Unknown docset", "available": [...] }`.
+
+## Search
+
+Ranking is a field-weighted BM25 over identifier-aware terms (`server/search.ts`):
+
+- Identifiers are split on case and digit boundaries (`SelectByID2` becomes `select`, `id`, `2`) and also kept whole, so exact API names outrank their fragments.
+- Filler words are ignored, words are lightly stemmed, and longer words and a few domain synonyms (`extrusion`/`extrude`, `document`/`doc`, `save`/`export`, ...) match at reduced weight.
+- Stopwords next to a word are tried as part of an identifier, so `save as` finds `SaveAs3`.
+- A one-word query that is a member name ranks exact matches first; one that names a concept (`sketch`) ranks its interface (`ISketch`) first.
+
+The index is built in memory from `_search_index.json` right after the client's `initialized` notification, so the first query does not pay for it.
 
 ## Development
 
-Run tests:
-
 ```bash
-bun run test
+bun run test        # vitest
+bun run typecheck   # tsc --noEmit
 ```
 
-Run type checking:
-
-```bash
-bun run typecheck
-```
+Ranking is regression-tested against the real corpus in `tests/search.test.ts`; `tests/protocol.test.ts` also drives the server over stdio.
 
 ## Project Structure
 
 ```text
 solidworks-api-mcp/
 |- server/
-|  |- solidworks_mcp_server.ts
-|  |- solidworks_server_shared.ts
+|  |- solidworks_mcp_server.ts   JSON-RPC/MCP protocol, entry point
+|  |- tools.ts                   tool definitions and handlers
+|  |- schema.ts                  tool argument validation
+|  |- search.ts                  ranking engine
+|  |- store.ts                   data store (indexes, paths, search)
+|  |- catalog.ts                 docset/interface/member/enum name resolution
+|  |- suggest.ts                 "did you mean" suggestions
+|  |- outbox.ts                  ordered, backpressure-safe stdout writer
+|  |- util.ts                    shared helpers
 |  `- types.ts
-|- solidworks-api/
-|  |- _index.json
-|  |- _search_index.json
-|  `- json/
+|- solidworks-api/               documentation corpus (markdown + JSON)
 |- tests/
-|  |- performance.test.ts
-|  `- regression-contracts.test.ts
-|- package.json
-|- tsconfig.json
-`- README.md
+|- bin/solidworks-mcp
+`- package.json
 ```

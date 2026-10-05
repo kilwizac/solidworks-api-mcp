@@ -3,298 +3,73 @@ import path from "node:path";
 import readline from "node:readline";
 import { fileURLToPath } from "node:url";
 
-import {
-  _EXAMPLE_MEMBER_RE,
-  _TOKEN_RE,
-  DataStore,
-  load_json,
-  parse_limit,
-  read_text,
-  resolve_data_root,
-  score_doc,
-  tokenize,
-} from "./solidworks_server_shared";
-import type {
-  DocFormat,
-  JsonRpcId,
-  JsonRpcRequest,
-  RootIndex,
-  SearchResult,
-  ToolDefinition,
-} from "./types";
+import { Outbox } from "./outbox";
+import { validateArguments } from "./schema";
+import { _EXAMPLE_MEMBER_RE, DataStore, type DataStoreLike } from "./store";
+import { SolidWorksTools, type ToolResult } from "./tools";
+import type { JsonRpcId, JsonRpcRequest } from "./types";
+import { asRecord, parse_limit, resolve_data_root } from "./util";
 
-export {
-  _EXAMPLE_MEMBER_RE,
-  _TOKEN_RE,
-  DataStore,
-  parse_limit,
-  resolve_data_root,
-  score_doc,
-  tokenize,
-};
+export { _EXAMPLE_MEMBER_RE, DataStore, parse_limit, resolve_data_root, SolidWorksTools };
+export type { DataStoreLike };
 
-const PROTOCOL_VERSION = "2024-11-05";
+/** Newest first. The client's requested version is echoed back when we support it. */
+const SUPPORTED_PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"] as const;
 const SERVER_NAME = "solidworks-mcp";
-const SERVER_VERSION = "0.1.0";
+const SERVER_TITLE = "SolidWorks API Documentation";
 
-function asRecord(value: unknown): Record<string, unknown> {
-  if (value && typeof value === "object" && !Array.isArray(value)) {
-    return value as Record<string, unknown>;
+const INSTRUCTIONS =
+  "Documentation server for the SolidWorks API. Typical flow: solidworks_search_api to find a member by " +
+  "keywords, a description or a (partial) API name; solidworks_lookup_method for its full page; " +
+  "solidworks_find_related and solidworks_get_examples for related members and example code. " +
+  "Use solidworks_get_enum_values for sw*_e constants and solidworks_get_interface_members to see what an " +
+  "interface offers. Names are case-insensitive; solidworks_list_docsets and solidworks_list_names show what " +
+  "exists. A failed lookup returns a tool error with suggestions.";
+
+const JSON_RPC_INVALID_REQUEST = -32600;
+const JSON_RPC_METHOD_NOT_FOUND = -32601;
+const JSON_RPC_INVALID_PARAMS = -32602;
+const JSON_RPC_INTERNAL_ERROR = -32603;
+const JSON_RPC_PARSE_ERROR = -32700;
+
+const TOOL_SCHEMAS = new Map(
+  SolidWorksTools.definitions.map((tool) => [tool.name, tool.inputSchema] as const),
+);
+
+function readServerVersion(): string {
+  try {
+    const manifest = asRecord(
+      JSON.parse(fs.readFileSync(new URL("../package.json", import.meta.url), "utf8")),
+    );
+    return typeof manifest.version === "string" ? manifest.version : "0.0.0";
+  } catch {
+    return "0.0.0";
   }
-  return {};
 }
 
-function getString(value: unknown): string | undefined {
-  return typeof value === "string" ? value : undefined;
-}
-
-function asDocFormat(value: unknown, fallback: DocFormat): DocFormat {
-  return value === "json" || value === "markdown" ? value : fallback;
-}
-
-function asStringArray(value: unknown): string[] {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-  return value.filter((entry): entry is string => typeof entry === "string");
-}
+const SERVER_VERSION = readServerVersion();
 
 function getErrorMessage(error: unknown): string {
   return error instanceof Error && error.message ? error.message : "Unexpected tool failure";
 }
 
-function isMarkdownTableSeparator(cols: string[]): boolean {
-  return cols.every((col) => /^:?-{3,}:?$/.test(col));
+function isRequestId(value: unknown): value is JsonRpcId {
+  return value === null || typeof value === "string" || typeof value === "number";
 }
-
-function findRecordEntry(
-  record: Record<string, unknown>,
-  key: string | undefined,
-): [string | undefined, unknown] {
-  if (!key) {
-    return [undefined, undefined];
-  }
-  if (Object.prototype.hasOwnProperty.call(record, key)) {
-    return [key, record[key]];
-  }
-  const lowered = key.toLowerCase();
-  for (const [entryKey, value] of Object.entries(record)) {
-    if (entryKey.toLowerCase() === lowered) {
-      return [entryKey, value];
-    }
-  }
-  return [undefined, undefined];
-}
-
-function _dumps_json(payload: unknown): string {
-  return JSON.stringify(payload);
-}
-
-const _INITIALIZE_RESULT = {
-  protocolVersion: PROTOCOL_VERSION,
-  capabilities: {
-    tools: { listChanged: false },
-  },
-  serverInfo: { name: SERVER_NAME, version: SERVER_VERSION },
-};
-
-const _TOOLS_LIST_RESULT: { tools: ToolDefinition[] } = {
-  tools: [
-    {
-      name: "solidworks_lookup_method",
-      description: "Lookup a method/property/event by interface + member.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          interface: { type: "string" },
-          member: { type: "string" },
-          docset: { type: "string" },
-          format: { type: "string", enum: ["markdown", "json"] },
-        },
-        required: ["interface", "member"],
-      },
-    },
-    {
-      name: "solidworks_search_api",
-      description: "Search the SolidWorks API corpus by keywords or concepts.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          query: { type: "string" },
-          docset: { type: "string" },
-          type: { type: "string" },
-          interface: { type: "string" },
-          categories: { type: "array", items: { type: "string" } },
-          limit: { type: "integer" },
-          format: { type: "string", enum: ["markdown", "json"] },
-        },
-        required: ["query"],
-      },
-    },
-    {
-      name: "solidworks_get_interface_members",
-      description: "List all members of an interface.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          interface: { type: "string" },
-          docset: { type: "string" },
-          format: { type: "string", enum: ["markdown", "json"] },
-        },
-        required: ["interface"],
-      },
-    },
-    {
-      name: "solidworks_get_enum_values",
-      description: "Get enum member values and descriptions.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          enum: { type: "string" },
-          docset: { type: "string" },
-          format: { type: "string", enum: ["markdown", "json"] },
-        },
-        required: ["enum"],
-      },
-    },
-    {
-      name: "solidworks_find_related",
-      description: "Find related members for a given interface/member.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          interface: { type: "string" },
-          member: { type: "string" },
-          docset: { type: "string" },
-          limit: { type: "integer" },
-        },
-        required: ["interface", "member"],
-      },
-    },
-    {
-      name: "solidworks_get_examples",
-      description: "Find example code by member or free-text query.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          interface: { type: "string" },
-          member: { type: "string" },
-          query: { type: "string" },
-          limit: { type: "integer" },
-          docset: { type: "string" },
-        },
-      },
-    },
-  ],
-};
-
-export interface DataStoreLike {
-  index(): RootIndex;
-  search(): { documents?: unknown[] };
-  json_index(): RootIndex;
-  json_search(): { documents?: unknown[] };
-  examples_map(): Record<string, string[]>;
-  progguide_titles(): Record<string, Record<string, unknown>>;
-  resolve_member_path(
-    interfaceName: string | undefined,
-    memberName: string | undefined,
-    docset: string,
-    format: DocFormat,
-  ): string | null;
-  resolve_interface_path(
-    interfaceName: string | undefined,
-    docset: string,
-    format: DocFormat,
-  ): string | null;
-  resolve_enum_path(
-    enumName: string | undefined,
-    docset: string,
-    format: DocFormat,
-  ): string | null;
-  search_api_scored(
-    query: string,
-    options?: {
-      docset?: string | undefined;
-      fmt?: DocFormat | undefined;
-      doc_type?: string | undefined;
-      interface?: string | undefined;
-      categories?: Iterable<string> | undefined;
-      limit?: unknown;
-    },
-  ): SearchResult[];
-  search_api_scored_limited?: (
-    query: string,
-    options?: {
-      limit?: unknown;
-      docset?: string | undefined;
-      fmt?: DocFormat | undefined;
-      doc_type?: string | undefined;
-      interface?: string | undefined;
-      categories?: Iterable<string> | undefined;
-    },
-  ) => SearchResult[];
-}
-
-type ToolArguments = Record<string, unknown>;
-type ToolResult = Record<string, unknown>;
-type ToolHandler = (args: ToolArguments) => ToolResult;
 
 export class MCPServer {
+  readonly tools: SolidWorksTools;
   private readonly store: DataStoreLike;
-  private readonly _write: (text: string) => void;
-  private readonly _tool_handlers: Record<string, ToolHandler>;
-  private _pendingWrites: string[] | null = null;
+  private readonly outbox: Outbox;
 
-  static readonly _TOOL_DISPATCH = {
-    solidworks_lookup_method: "tool_lookup_method",
-    solidworks_search_api: "tool_search_api",
-    solidworks_get_interface_members: "tool_get_interface_members",
-    solidworks_get_enum_values: "tool_get_enum_values",
-    solidworks_find_related: "tool_find_related",
-    solidworks_get_examples: "tool_get_examples",
-  } as const;
-
-  constructor(store: DataStoreLike) {
+  constructor(store: DataStoreLike, outbox: Outbox = new Outbox()) {
     this.store = store;
-    // Never drop output when the stdout buffer is full: queue writes and
-    // flush them in order once the stream drains.
-    this._write = (text) => {
-      if (this._pendingWrites !== null) {
-        this._pendingWrites.push(text);
-        return;
-      }
-      if (!process.stdout.write(text)) {
-        // The chunk that received `false` was still buffered by the stream;
-        // only later writes need to be queued until the drain event.
-        this._pendingWrites = [];
-        process.stdout.once("drain", () => {
-          const pending = this._pendingWrites ?? [];
-          this._pendingWrites = null;
-          for (const chunk of pending) {
-            this._write(chunk);
-            if (this._pendingWrites !== null) {
-              // Backpressure was reapplied mid-flush: the remaining chunks
-              // are already queued on the new pending list, so stop here
-              // and let its drain handler finish the job.
-              break;
-            }
-          }
-        });
-      }
-    };
-    this._tool_handlers = {};
-
-    for (const [toolName, handlerName] of Object.entries(MCPServer._TOOL_DISPATCH)) {
-      const handler = (this as unknown as Record<string, unknown>)[handlerName];
-      if (typeof handler === "function") {
-        this._tool_handlers[toolName] = (handler as ToolHandler).bind(this);
-      }
-    }
+    this.tools = new SolidWorksTools(store);
+    this.outbox = outbox;
   }
 
   send(payload: unknown): void {
-    this._write(_dumps_json(payload));
-    this._write("\n");
+    this.outbox.write(`${JSON.stringify(payload)}\n`);
   }
 
   error(requestId: JsonRpcId | undefined, code: number, message: string): void {
@@ -311,297 +86,98 @@ export class MCPServer {
     this.send({ jsonrpc: "2.0", id: requestId, result });
   }
 
-  handle_initialize(requestId: JsonRpcId | undefined): void {
-    this.result(requestId, _INITIALIZE_RESULT);
+  handle_initialize(requestId: JsonRpcId | undefined, params: Record<string, unknown>): void {
+    const requested = params.protocolVersion;
+    const protocolVersion =
+      SUPPORTED_PROTOCOL_VERSIONS.find((version) => version === requested) ??
+      SUPPORTED_PROTOCOL_VERSIONS[0];
+    this.result(requestId, {
+      protocolVersion,
+      capabilities: { tools: { listChanged: false } },
+      serverInfo: { name: SERVER_NAME, title: SERVER_TITLE, version: SERVER_VERSION },
+      instructions: INSTRUCTIONS,
+    });
   }
 
   handle_tools_list(requestId: JsonRpcId | undefined): void {
-    this.result(requestId, _TOOLS_LIST_RESULT);
+    this.result(requestId, { tools: SolidWorksTools.definitions });
   }
 
-  resolve_member_path(
-    interfaceName: string | undefined,
-    memberName: string | undefined,
-    docset: string,
-    format: DocFormat,
-  ): string | null {
-    return this.store.resolve_member_path(interfaceName, memberName, docset, format);
-  }
-
-  resolve_interface_path(
-    interfaceName: string | undefined,
-    docset: string,
-    format: DocFormat,
-  ): string | null {
-    return this.store.resolve_interface_path(interfaceName, docset, format);
-  }
-
-  resolve_enum_path(enumName: string | undefined, docset: string, format: DocFormat): string | null {
-    return this.store.resolve_enum_path(enumName, docset, format);
-  }
-
-  private _search_api_scored(
-    query: string,
-    options: {
-      docset?: string | undefined;
-      fmt?: DocFormat | undefined;
-      doc_type?: string | undefined;
-      interface?: string | undefined;
-      categories?: Iterable<string> | undefined;
-      limit?: unknown;
-    } = {},
-  ): SearchResult[] {
-    if (typeof this.store.search_api_scored_limited === "function") {
-      return this.store.search_api_scored_limited(query, options);
-    }
-
-    const results = this.store.search_api_scored(query, {
-      docset: options.docset,
-      fmt: options.fmt,
-      doc_type: options.doc_type,
-      interface: options.interface,
-      categories: options.categories,
-    });
-
-    if (options.limit === undefined || options.limit === null) {
-      return results;
-    }
-    const parsedLimit = parse_limit(options.limit, null);
-    if (parsedLimit === null) {
-      return results;
-    }
-    return results.slice(0, parsedLimit);
-  }
-
-  tool_lookup_method(args: ToolArguments): ToolResult {
-    const interfaceName = getString(args.interface);
-    const memberName = getString(args.member);
-    const docset = getString(args.docset) ?? "sldworksapi";
-    const format = asDocFormat(args.format, "markdown");
-
-    const resolvedPath = this.resolve_member_path(interfaceName, memberName, docset, format);
-    if (!resolvedPath) {
-      return { error: "Not found" };
-    }
-
-    if (format === "json") {
-      return { path: resolvedPath, data: load_json(resolvedPath) as unknown };
-    }
-    return { path: resolvedPath, content: read_text(resolvedPath) };
-  }
-
-  tool_search_api(args: ToolArguments): ToolResult {
-    const query = getString(args.query) ?? "";
-    const docset = getString(args.docset);
-    const docType = getString(args.type);
-    const interfaceName = getString(args.interface);
-    const categories = new Set(asStringArray(args.categories));
-    const limit = parse_limit(args.limit, 20);
-    const format = asDocFormat(args.format, "markdown");
-
-    const results = this._search_api_scored(query, {
-      docset,
-      fmt: format,
-      doc_type: docType,
-      interface: interfaceName,
-      categories,
-      limit,
-    });
-
-    return { results };
-  }
-
-  tool_get_interface_members(args: ToolArguments): ToolResult {
-    const interfaceName = getString(args.interface);
-    const docset = getString(args.docset) ?? "sldworksapi";
-    const format = asDocFormat(args.format, "markdown");
-
-    const rootIndex = format === "json" ? this.store.json_index() : this.store.index();
-    const docsets = asRecord(rootIndex.docsets);
-    const docsetEntry = asRecord(docsets[docset]);
-    const interfaces = asRecord(docsetEntry.interfaces);
-    const [resolvedInterface, ifaceEntry] = findRecordEntry(interfaces, interfaceName);
-    const iface = asRecord(ifaceEntry);
-    if (Object.keys(iface).length === 0) {
-      return { error: "Not found" };
-    }
-
-    const members = Object.keys(asRecord(iface.members)).sort();
-    const memberCountValue = iface.member_count;
-    const memberCount = typeof memberCountValue === "number" ? memberCountValue : members.length;
-
-    return {
-      interface: resolvedInterface,
-      member_count: memberCount,
-      members,
-    };
-  }
-
-  tool_get_enum_values(args: ToolArguments): ToolResult {
-    const enumName = getString(args.enum);
-    const docset = getString(args.docset) ?? "swconst";
-    const format = asDocFormat(args.format, "json");
-    const resolvedPath = this.resolve_enum_path(enumName, docset, format);
-
-    if (!resolvedPath) {
-      return { error: "Not found" };
-    }
-
-    if (format === "json") {
-      const data = asRecord(load_json(resolvedPath));
-      const values = Array.isArray(data.values) ? data.values : [];
-      return { enum: enumName, values, path: resolvedPath };
-    }
-
-    const text = read_text(resolvedPath);
-    const values: Array<Record<string, string>> = [];
-    let inTable = false;
-    for (const line of text.split(/\r?\n/)) {
-      if (line.trim().startsWith("| Member")) {
-        inTable = true;
-        continue;
-      }
-      if (!inTable) {
-        continue;
-      }
-      if (!line.trim().startsWith("|")) {
-        break;
-      }
-      const cols = line
-        .trim()
-        .replace(/^\|/, "")
-        .replace(/\|$/, "")
-        .split("|")
-        .map((value) => value.trim());
-      if (cols.length >= 3) {
-        if (isMarkdownTableSeparator(cols)) {
-          continue;
-        }
-        const member = cols[0] ?? "";
-        const enumValue = cols[1] ?? "";
-        const description = cols[2] ?? "";
-        values.push({
-          member: member.replace(/^`+|`+$/g, ""),
-          value: enumValue,
-          description,
-        });
-      }
-    }
-    return { enum: enumName, values, path: resolvedPath };
-  }
-
-  tool_find_related(args: ToolArguments): ToolResult {
-    const interfaceName = getString(args.interface);
-    const memberName = getString(args.member);
-    const docset = getString(args.docset) ?? "sldworksapi";
-    const limit = parse_limit(args.limit, 20);
-    const resolvedPath = this.resolve_member_path(interfaceName, memberName, docset, "json");
-
-    if (!resolvedPath) {
-      return { error: "Not found" };
-    }
-
-    const data = asRecord(load_json(resolvedPath));
-    const related = Array.isArray(data.related) ? data.related : [];
-    const parsedLimit = limit ?? related.length;
-    return {
-      interface: interfaceName,
-      member: memberName,
-      related: related.slice(0, parsedLimit),
-    };
-  }
-
-  tool_get_examples(args: ToolArguments): ToolResult {
-    const interfaceName = getString(args.interface);
-    const memberName = getString(args.member);
-    const query = getString(args.query);
-    const limit = parse_limit(args.limit, 10);
-
-    if (interfaceName && memberName) {
-      const resolvedPath = this.resolve_member_path(interfaceName, memberName, "sldworksapi", "json");
-      if (!resolvedPath) {
-        return { error: "Not found" };
-      }
-
-      const data = asRecord(load_json(resolvedPath));
-      const examples = Array.isArray(data.examples) ? data.examples : [];
-
-      const mapping = this.store.examples_map();
-      const titles = mapping[`${interfaceName}.${memberName}`] ?? [];
-      const docsByTitle = this.store.progguide_titles();
-      const extra: Array<Record<string, unknown>> = [];
-      for (const title of titles) {
-        const doc = docsByTitle[title];
-        if (doc) {
-          extra.push(doc);
-        }
-      }
-
-      const parsedLimit = limit ?? extra.length;
-      return {
-        member: `${interfaceName}.${memberName}`,
-        examples,
-        related_examples: extra.slice(0, parsedLimit),
-      };
-    }
-
-    if (query) {
-      const results = this._search_api_scored(query, { docset: "progguide", limit });
-      return { results };
-    }
-
-    return { error: "No query or member provided" };
+  private tool_result(requestId: JsonRpcId | undefined, payload: unknown, isError: boolean): void {
+    const content = [{ type: "text", text: JSON.stringify(payload) }];
+    this.result(requestId, isError ? { content, isError: true } : { content });
   }
 
   handle_tools_call(requestId: JsonRpcId | undefined, params: Record<string, unknown>): void {
-    const toolName = getString(params.name);
-    const toolArgs = asRecord(params.arguments);
-    if (!toolName) {
-      this.error(requestId, -32601, "Unknown tool");
+    const toolName = typeof params.name === "string" ? params.name : "";
+    const schema = TOOL_SCHEMAS.get(toolName);
+    if (!schema || !this.tools.has(toolName)) {
+      this.error(requestId, JSON_RPC_INVALID_PARAMS, `Unknown tool: ${toolName}`);
       return;
     }
 
-    const handler = this._tool_handlers[toolName];
-    if (!handler) {
-      this.error(requestId, -32601, "Unknown tool");
+    const rawArgs = params.arguments;
+    const problems =
+      rawArgs !== undefined && rawArgs !== null && (typeof rawArgs !== "object" || Array.isArray(rawArgs))
+        ? ["arguments must be an object"]
+        : validateArguments(schema, asRecord(rawArgs));
+    if (problems.length > 0) {
+      this.tool_result(requestId, { error: "Invalid arguments", message: problems.join("; ") }, true);
       return;
     }
 
+    let result: ToolResult;
     try {
-      const result = handler(toolArgs);
-      const serialized = _dumps_json(result);
-      this.result(requestId, { content: [{ type: "text", text: serialized }] });
+      result = this.tools.call(toolName, asRecord(rawArgs));
     } catch (error) {
-      const serialized = _dumps_json({ error: "Internal error", message: getErrorMessage(error) });
-      this.result(requestId, { content: [{ type: "text", text: serialized }], isError: true });
+      this.tool_result(
+        requestId,
+        { error: "Internal error", message: getErrorMessage(error) },
+        true,
+      );
+      return;
     }
+    // Tools report expected failures (not found, unknown docset, ...) as `{ error }`.
+    this.tool_result(requestId, result, typeof result.error === "string");
   }
 
   handle(message: JsonRpcRequest): void {
-    const method = getString(message.method);
-    const requestId = message.id;
+    const method: unknown = message.method;
+    const requestId: unknown = message.id;
+    if (requestId !== undefined && !isRequestId(requestId)) {
+      this.error(null, JSON_RPC_INVALID_REQUEST, "Invalid Request");
+      return;
+    }
+    if (typeof method !== "string") {
+      this.error(requestId, JSON_RPC_INVALID_REQUEST, "Invalid Request");
+      return;
+    }
     const params = asRecord(message.params);
 
-    if (method === "initialize") {
-      this.handle_initialize(requestId);
+    // Notifications never get a reply, even if a non-compliant client attaches an id.
+    if (method === "initialized" || method === "notifications/initialized") {
+      this.scheduleWarmup();
       return;
     }
-    // `initialized` is a client notification: ignore it unconditionally,
-    // even if a non-compliant client attaches an id to it.
-    if (method === "initialized") {
-      return;
-    }
-    if (method === "tools/list") {
-      this.handle_tools_list(requestId);
-      return;
-    }
-    if (method === "tools/call") {
-      this.handle_tools_call(requestId, params);
+    if (method.startsWith("notifications/")) {
       return;
     }
 
-    if (requestId !== null && requestId !== undefined) {
-      this.error(requestId, -32601, "Method not found");
+    switch (method) {
+      case "initialize":
+        this.handle_initialize(requestId, params);
+        return;
+      case "ping":
+        this.result(requestId, {});
+        return;
+      case "tools/list":
+        this.handle_tools_list(requestId);
+        return;
+      case "tools/call":
+        this.handle_tools_call(requestId, params);
+        return;
+      default:
+        this.error(requestId, JSON_RPC_METHOD_NOT_FOUND, "Method not found");
     }
   }
 
@@ -611,16 +187,40 @@ export class MCPServer {
       return;
     }
 
+    let parsed: unknown;
     try {
-      const parsed: unknown = JSON.parse(line);
-      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-        this.error(null, -32700, "Parse error");
-        return;
-      }
-      this.handle(parsed as JsonRpcRequest);
+      parsed = JSON.parse(line);
     } catch {
-      this.error(null, -32700, "Parse error");
+      this.error(null, JSON_RPC_PARSE_ERROR, "Parse error");
+      return;
     }
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      this.error(null, JSON_RPC_INVALID_REQUEST, "Invalid Request");
+      return;
+    }
+
+    const message = parsed as JsonRpcRequest;
+    try {
+      this.handle(message);
+    } catch (error) {
+      process.stderr.write(`Unhandled error: ${getErrorMessage(error)}\n`);
+      this.error(isRequestId(message.id) ? message.id : null, JSON_RPC_INTERNAL_ERROR, "Internal error");
+    }
+  }
+
+  /** Builds the search index right after the handshake so the first query isn't slow. */
+  private scheduleWarmup(): void {
+    const warmup = this.store.warmup;
+    if (typeof warmup !== "function") {
+      return;
+    }
+    setImmediate(() => {
+      try {
+        warmup.call(this.store);
+      } catch (error) {
+        process.stderr.write(`Warmup failed: ${getErrorMessage(error)}\n`);
+      }
+    });
   }
 }
 
@@ -631,8 +231,15 @@ export async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const store = new DataStore(root);
-  const server = new MCPServer(store);
+  // A client that goes away mid-write is a normal shutdown, not a crash.
+  process.stdout.on("error", (error: NodeJS.ErrnoException) => {
+    if (error.code === "EPIPE") {
+      process.exit(0);
+    }
+    throw error;
+  });
+
+  const server = new MCPServer(new DataStore(root));
   const input = readline.createInterface({
     input: process.stdin,
     crlfDelay: Infinity,

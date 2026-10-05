@@ -36,14 +36,26 @@ export interface SearchResult {
   doc: SearchDocument;
 }
 
+export interface ToolAnnotations {
+  title?: string;
+  readOnlyHint?: boolean;
+  destructiveHint?: boolean;
+  idempotentHint?: boolean;
+  openWorldHint?: boolean;
+}
+
+export interface ToolInputSchema {
+  type: "object";
+  properties: Record<string, unknown>;
+  required?: string[];
+}
+
 export interface ToolDefinition {
   name: string;
+  title: string;
   description: string;
-  inputSchema: {
-    type: "object";
-    properties: Record<string, unknown>;
-    required?: string[];
-  };
+  inputSchema: ToolInputSchema;
+  annotations: ToolAnnotations;
 }
 
 export type JsonRpcId = number | string | null;
