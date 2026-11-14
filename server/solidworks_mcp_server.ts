@@ -8,9 +8,16 @@ import { validateArguments } from "./schema";
 import { _EXAMPLE_MEMBER_RE, DataStore, type DataStoreLike } from "./store";
 import { SolidWorksTools, type ToolResult } from "./tools";
 import type { JsonRpcId, JsonRpcRequest } from "./types";
-import { asRecord, parse_limit, resolve_data_root } from "./util";
+import { asRecord, parse_limit, resolve_data_root, resolve_overlay_root } from "./util";
 
-export { _EXAMPLE_MEMBER_RE, DataStore, parse_limit, resolve_data_root, SolidWorksTools };
+export {
+  _EXAMPLE_MEMBER_RE,
+  DataStore,
+  parse_limit,
+  resolve_data_root,
+  resolve_overlay_root,
+  SolidWorksTools,
+};
 export type { DataStoreLike };
 
 /** Newest first. The client's requested version is echoed back when we support it. */
@@ -266,6 +273,9 @@ export async function main(): Promise<void> {
     process.stderr.write(`Data root not found: ${root}\n`);
     process.exit(1);
   }
+  const overlay = resolve_overlay_root(
+    process.env.SW_API_DOC_OVERLAY ?? process.env.CLAUDESW_SWAPI_DOC,
+  );
 
   // A client that goes away mid-write is a normal shutdown, not a crash.
   process.stdout.on("error", (error: NodeJS.ErrnoException) => {
@@ -275,7 +285,7 @@ export async function main(): Promise<void> {
     throw error;
   });
 
-  const server = new MCPServer(new DataStore(root));
+  const server = new MCPServer(new DataStore(root, overlay));
   const input = readline.createInterface({
     input: process.stdin,
     crlfDelay: Infinity,

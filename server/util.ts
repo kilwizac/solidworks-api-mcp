@@ -134,3 +134,28 @@ export function resolve_data_root(envValue?: string | null): string {
   const currentFile = fileURLToPath(import.meta.url);
   return path.resolve(path.dirname(currentFile), "..", "solidworks-api");
 }
+
+/**
+ * Local CHM/DLL import overlay (`tools/solidworks-api/importa_doc_locale.py`).
+ * Default: `%LOCALAPPDATA%\\claude-sw\\solidworks-api-doc`. Override with
+ * `SW_API_DOC_OVERLAY` or `CLAUDESW_SWAPI_DOC`.
+ */
+export function resolve_overlay_root(
+  envValue?: string | null,
+): string | null {
+  const fromArg = envValue?.trim();
+  if (fromArg) {
+    return path.resolve(fromArg);
+  }
+  const fromEnv =
+    process.env.SW_API_DOC_OVERLAY?.trim() ||
+    process.env.CLAUDESW_SWAPI_DOC?.trim();
+  if (fromEnv) {
+    return path.resolve(fromEnv);
+  }
+  const localAppData = process.env.LOCALAPPDATA?.trim();
+  if (!localAppData) {
+    return null;
+  }
+  return path.resolve(localAppData, "claude-sw", "solidworks-api-doc");
+}

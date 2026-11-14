@@ -35,6 +35,23 @@ bun run start
 
 The server exits with an error if the data root does not exist.
 
+### Local doc overlay (CHM + DLL)
+
+Optional overlay for example **source code** and **numeric enum values** imported from the
+SolidWorks install (not shipped in this repo — Dassault copyright). Default path:
+
+`%LOCALAPPDATA%\claude-sw\solidworks-api-doc\`
+
+Override with `SW_API_DOC_OVERLAY` or `CLAUDESW_SWAPI_DOC`. Populate it with the importer in
+the claude-sw repo:
+
+```powershell
+python tools/solidworks-api/importa_doc_locale.py
+```
+
+Then `solidworks_get_examples` returns fenced `code_blocks`, and `solidworks_get_enum_values`
+fills empty `value` fields (e.g. `swFmSweepThread = 87`).
+
 ## Client Configuration
 
 Claude Desktop (`claude_desktop_config.json`), Windows example:
@@ -105,14 +122,14 @@ solidworks-api-mcp/
 |  |- tools.ts                   tool definitions and handlers
 |  |- schema.ts                  tool argument validation
 |  |- search.ts                  ranking engine
-|  |- store.ts                   data store (indexes, paths, search)
+|  |- store.ts                   data store (indexes, paths, search, overlay)
 |  |- catalog.ts                 docset/interface/member/enum name resolution
 |  |- suggest.ts                 "did you mean" suggestions
 |  |- outbox.ts                  ordered, backpressure-safe stdout writer
 |  |- util.ts                    shared helpers
 |  `- types.ts
 |- solidworks-api/               documentation corpus (markdown + JSON)
-|- tests/
+|- tests/                        includes local-overlay.test.ts (skip if no overlay)
 |- bin/solidworks-mcp
 `- package.json
 ```

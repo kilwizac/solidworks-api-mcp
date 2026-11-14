@@ -1,7 +1,7 @@
 import path from "node:path";
 
 import { catalogFor, type Catalog } from "./catalog";
-import type { DataStoreLike } from "./store";
+import { codeBlocksFromMarkdown, type DataStoreLike } from "./store";
 import { suggestNames } from "./suggest";
 import type { DocFormat, SearchResult, ToolDefinition } from "./types";
 import { asRecord, load_json, parse_limit, read_text } from "./util";
@@ -329,6 +329,31 @@ export class SolidWorksTools {
     return catalogFor(format === "json" ? this.store.json_index() : this.store.index());
   }
 
+  /**
+   * Attach fenced code from the progguide/overlay markdown when `code_blocks` is
+   * missing or empty. Titles come from member docs or examples-to-members.
+   */
+  private withCodeBlocks(entry: unknown): Record<string, unknown> {
+    const record =
+      entry && typeof entry === "object" && !Array.isArray(entry)
+        ? { ...(entry as Record<string, unknown>) }
+        : {};
+    const existing = Array.isArray(record.code_blocks) ? record.code_blocks : [];
+    if (existing.length > 0) {
+      return record;
+    }
+    const title = typeof record.title === "string" ? record.title : "";
+    if (!title || !this.store.resolve_example_markdown) {
+      return { ...record, code_blocks: existing };
+    }
+    const mdPath = this.store.resolve_example_markdown(title);
+    if (!mdPath) {
+      return { ...record, code_blocks: existing };
+    }
+    const blocks = codeBlocksFromMarkdown(mdPath);
+    return { ...record, code_blocks: blocks };
+  }
+
   private unknownDocset(docset: string, catalog: Catalog): ToolResult | null {
     if (catalog.hasDocset(docset)) {
       return null;
@@ -566,22 +591,53 @@ export class SolidWorksTools {
         member: canonical?.member ?? memberName,
       };
       const data = asRecord(load_json(resolvedPath));
-      const examples = Array.isArray(data.examples) ? data.examples : [];
+      const rawExamples = Array.isArray(data.examples) ? data.examples : [];
+      const examples = rawExamples.map((entry) => this.withCodeBlocks(entry));
 
       const docsByTitle = this.store.progguide_titles();
       const related: Array<Record<string, unknown>> = [];
-      for (const title of exampleTitles(this.store.examples_map(), names.interface, names.member)) {
+      const mappedTitles = exampleTitles(
+        this.store.examples_map(),
+        names.interface,
+        names.member,
+      );
+      for (const title of mappedTitles) {
         const doc = Object.prototype.hasOwnProperty.call(docsByTitle, title)
           ? docsByTitle[title]
           : undefined;
-        if (doc) {
-          related.push(slimDoc(doc, verbose));
+        // Skip titles with no progguide/overlay doc (same contract as before the overlay).
+        if (!doc) {
+          continue;
         }
+        related.push(this.withCodeBlocks({ ...slimDoc(doc, verbose), title }));
+      }
+
+      // Prefer mapped CHM/progguide examples (with code) at the front of `examples`.
+      const seenTitles = new Set(
+        examples
+          .map((e) => (typeof (e as { title?: unknown }).title === "string"
+            ? String((e as { title: string }).title)
+            : ""))
+          .filter(Boolean),
+      );
+      const merged: Array<Record<string, unknown>> = [];
+      for (const title of mappedTitles) {
+        if (seenTitles.has(title)) {
+          continue;
+        }
+        if (!Object.prototype.hasOwnProperty.call(docsByTitle, title)) {
+          continue;
+        }
+        merged.push(this.withCodeBlocks({ title }));
+        seenTitles.add(title);
+      }
+      for (const entry of examples) {
+        merged.push(entry as Record<string, unknown>);
       }
 
       return {
         member: `${names.interface}.${names.member}`,
-        examples: examples.slice(0, limit),
+        examples: merged.slice(0, limit),
         related_examples: related.slice(0, limit),
       };
     }
